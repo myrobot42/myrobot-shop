@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>myrobot.shop — Admin</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0b0e;--bg2:#111318;--bg3:#1a1d24;--bg4:#22262f;
+  --acc:#0066ff;--acc-d:#0044cc;--acc-l:rgba(0,102,255,.12);
+  --grn:#22c55e;--grn-l:rgba(34,197,94,.12);
+  --red:#ef4444;--red-l:rgba(239,68,68,.12);
+  --yel:#f59e0b;--yel-l:rgba(245,158,11,.1);
+  --txt:#e8e9ec;--mut:#6b7280;--bdr:rgba(255,255,255,.08);--bdr2:rgba(255,255,255,.14);
+}
+body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;overflow-x:hidden}
+
+/* ── LOGIN ── */
+#login-screen{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:1000;flex-direction:column;gap:0}
+.login-card{background:var(--bg2);border:1px solid var(--bdr2);border-radius:16px;padding:48px 44px;width:380px;text-align:center}
+.login-logo{font-family:'Space Mono',monospace;font-size:20px;font-weight:700;margin-bottom:32px;letter-spacing:-.5px}
+.login-logo .br{color:var(--mut)}
+.login-logo .bl{color:var(--acc)}
+.login-title{font-size:22px;font-weight:600;margin-bottom:6px}
+.login-sub{font-size:13px;color:var(--mut);margin-bottom:28px}
+.login-input{width:100%;background:var(--bg3);border:1px solid var(--bdr2);border-radius:9px;padding:12px 16px;font-size:14px;color:var(--txt);font-family:inherit;outline:none;text-align:center;letter-spacing:3px;margin-bottom:14px;transition:border-color .15s}
+.login-input:focus{border-color:var(--acc)}
+.login-btn{width:100%;padding:13px;background:var(--acc);color:#fff;border:none;border-radius:9px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:background .15s}
+.login-btn:hover{background:var(--acc-d)}
+.login-err{font-size:12px;color:var(--red);margin-top:10px;min-height:18px}
+#app{display:none}
+
+/* ── LAYOUT ── */
+.shell{display:grid;grid-template-columns:240px 1fr;height:100vh}
+
+/* ── SIDEBAR ── */
+.sidebar{background:var(--bg2);border-right:1px solid var(--bdr);display:flex;flex-direction:column;padding:0;overflow:hidden}
+.sidebar-logo{padding:20px 20px 0;font-family:'Space Mono',monospace;font-weight:700;font-size:15px;letter-spacing:-.5px;border-bottom:1px solid var(--bdr);padding-bottom:16px;margin-bottom:6px}
+.sidebar-logo .br{color:var(--mut)}.sidebar-logo .bl{color:var(--acc)}
+.sidebar-tag{font-size:9px;font-weight:600;letter-spacing:1px;color:var(--acc);background:var(--acc-l);border-radius:4px;padding:2px 7px;display:inline-block;margin-top:4px}
+.nav-section{padding:12px 12px 4px;font-size:9px;font-weight:700;letter-spacing:1px;color:var(--mut)}
+.nav-item{display:flex;align-items:center;gap:10px;padding:9px 14px;border-radius:8px;margin:1px 8px;cursor:pointer;font-size:13px;color:var(--mut);font-weight:500;transition:all .15s}
+.nav-item:hover{background:var(--bg3);color:var(--txt)}
+.nav-item.active{background:var(--acc-l);color:var(--acc)}
+.nav-icon{font-size:14px;width:16px;text-align:center}
+.sidebar-stats{margin-top:auto;padding:16px;border-top:1px solid var(--bdr);display:flex;flex-direction:column;gap:8px}
+.stat-pill{display:flex;justify-content:space-between;align-items:center;font-size:11px}
+.stat-label{color:var(--mut)}
+.stat-val{font-family:'Space Mono',monospace;font-size:11px;color:var(--grn);font-weight:700}
+.sidebar-user{padding:14px 16px;border-top:1px solid var(--bdr);display:flex;align-items:center;gap:10px}
+.user-avatar{width:30px;height:30px;border-radius:50%;background:var(--acc-l);border:1.5px solid var(--acc);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:var(--acc);flex-shrink:0}
+.user-info{flex:1}
+.user-name{font-size:12px;font-weight:600}
+.user-role{font-size:10px;color:var(--mut)}
+.logout-btn{font-size:10px;color:var(--mut);cursor:pointer;padding:3px 7px;border-radius:4px;border:1px solid var(--bdr);background:transparent;font-family:inherit;transition:all .15s}
+.logout-btn:hover{color:var(--txt);border-color:var(--bdr2)}
+
+/* ── MAIN ── */
+.main{display:flex;flex-direction:column;height:100vh;overflow:hidden}
+.topbar{padding:16px 24px;border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.topbar-title{font-size:16px;font-weight:600}
+.topbar-sub{font-size:11px;color:var(--mut);margin-top:2px}
+.status-dot{width:7px;height:7px;border-radius:50%;background:var(--grn);display:inline-block;margin-right:6px;animation:pulse-g 2s infinite}
+@keyframes pulse-g{0%,100%{opacity:1}50%{opacity:.4}}
+.pages{flex:1;overflow:hidden;position:relative}
+.page{position:absolute;inset:0;display:none;flex-direction:column;overflow:hidden}
+.page.active{display:flex}
+
+/* ── COMMAND PANEL (main chat) ── */
+.cmd-wrap{flex:1;overflow-y:auto;padding:20px 24px;display:flex;flex-direction:column;gap:12px;scrollbar-width:thin;scrollbar-color:var(--bdr) transparent}
+.cmd-wrap::-webkit-scrollbar{width:4px}
+.cmd-wrap::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:2px}
+.msg-row{display:flex;gap:10px;align-items:flex-start;animation:fade-in .2s ease}
+@keyframes fade-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.msg-row.user{flex-direction:row-reverse}
+.msg-av{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:2px}
+.msg-av.bot{background:var(--acc-l);border:1.5px solid var(--acc);color:var(--acc)}
+.msg-av.user{background:var(--bg4);border:1.5px solid var(--bdr2);color:var(--txt)}
+.msg-bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.65;max-width:600px}
+.msg-row.bot .msg-bubble{background:var(--bg3);border:1px solid var(--bdr);border-radius:4px 12px 12px 12px;color:var(--txt)}
+.msg-row.user .msg-bubble{background:var(--acc);color:#fff;border-radius:12px 4px 12px 12px}
+.msg-row.system .msg-bubble{background:transparent;border:none;padding:4px 0;font-size:11px;color:var(--mut);font-family:'Space Mono',monospace}
+.msg-row.error .msg-bubble{background:var(--red-l);border:1px solid rgba(239,68,68,.25);color:var(--red)}
+.msg-row.success .msg-bubble{background:var(--grn-l);border:1px solid rgba(34,197,94,.25);color:var(--grn)}
+.typing-dots{display:flex;gap:4px;align-items:center;padding:4px 0}
+.typing-dots span{width:6px;height:6px;border-radius:50%;background:var(--mut);animation:dot-bounce 1.2s infinite}
+.typing-dots span:nth-child(2){animation-delay:.2s}
+.typing-dots span:nth-child(3){animation-delay:.4s}
+@keyframes dot-bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
+.robot-card-preview{background:var(--bg4);border:1px solid var(--bdr2);border-radius:10px;padding:14px;margin-top:6px;display:grid;grid-template-columns:auto 1fr;gap:10px;align-items:start}
+.rcp-icon{width:44px;height:44px;background:var(--bg3);border:1px solid var(--bdr);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.rcp-info{}
+.rcp-name{font-weight:700;font-size:14px;margin-bottom:2px}
+.rcp-brand{font-size:11px;color:var(--mut);margin-bottom:6px}
+.rcp-tags{display:flex;gap:4px;flex-wrap:wrap}
+.rcp-tag{padding:2px 7px;background:var(--acc-l);border-radius:3px;font-size:10px;color:var(--acc);font-weight:600}
+.rcp-fields{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px;border-top:1px solid var(--bdr);padding-top:10px}
+.rcp-field{text-align:center}
+.rcp-fv{font-family:'Space Mono',monospace;font-size:12px;font-weight:700;color:var(--txt)}
+.rcp-fl{font-size:9px;color:var(--mut);margin-top:1px;letter-spacing:.4px}
+.confirm-row{display:flex;gap:7px;margin-top:10px}
+.confirm-btn{padding:7px 16px;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;border:none;transition:all .15s}
+.confirm-btn.yes{background:var(--grn);color:#fff}
+.confirm-btn.yes:hover{background:#16a34a}
+.confirm-btn.no{background:var(--bg4);color:var(--mut);border:1px solid var(--bdr2)}
+.confirm-btn.no:hover{color:var(--txt)}
+
+/* ── INPUT BAR ── */
+.input-bar{padding:16px 24px;border-top:1px solid var(--bdr);flex-shrink:0;background:var(--bg2)}
+.input-wrap{display:flex;gap:10px;background:var(--bg3);border:1.5px solid var(--bdr2);border-radius:12px;padding:10px 14px;transition:border-color .15s}
+.input-wrap:focus-within{border-color:var(--acc)}
+.cmd-input{flex:1;background:transparent;border:none;outline:none;font-size:14px;color:var(--txt);font-family:inherit;resize:none;line-height:1.5;max-height:120px}
+.cmd-input::placeholder{color:var(--mut)}
+.send-btn{width:34px;height:34px;border-radius:8px;background:var(--acc);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;align-self:flex-end;transition:background .15s}
+.send-btn:hover{background:var(--acc-d)}
+.send-btn:disabled{background:var(--bg4);cursor:not-allowed}
+.send-btn svg{width:16px;height:16px}
+.quick-cmds{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.qcmd{padding:5px 12px;background:var(--bg4);border:1px solid var(--bdr2);border-radius:20px;font-size:11px;color:var(--mut);cursor:pointer;font-family:inherit;transition:all .15s;white-space:nowrap}
+.qcmd:hover{border-color:var(--acc);color:var(--acc);background:var(--acc-l)}
+
+/* ── DATABASE PAGE ── */
+.db-page{padding:20px 24px;overflow-y:auto;flex:1}
+.gen-page{padding:24px;overflow-y:auto;flex:1}
+.nbadge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;background:rgba(255,255,255,.08);color:var(--mut);margin-left:auto}
+.nbadge.red{background:rgba(239,68,68,.15);color:var(--red)}
+.nbadge.grn{background:rgba(34,197,94,.15);color:var(--grn)}
+.sec-card{background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;padding:20px;margin-bottom:16px}
+.sec-head{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--mut);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--bdr);text-transform:uppercase}
+.feed-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--bdr);font-size:12px}
+.feed-row:last-child{border-bottom:none}
+.feed-name{font-weight:600;color:var(--txt);flex:1}
+.feed-url{font-size:10px;color:var(--mut);font-family:'Space Mono',monospace}
+.feed-status{font-size:10px;padding:2px 8px;border-radius:4px}
+.feed-ok{background:var(--grn-l);color:var(--grn)}
+.feed-err{background:var(--red-l);color:var(--red)}
+.feed-idle{background:var(--bg4);color:var(--mut)}
+.inp{background:var(--bg3);border:1px solid var(--bdr2);border-radius:8px;padding:9px 12px;color:var(--txt);font-size:12px;font-family:inherit;outline:none;width:100%;transition:border-color .15s}
+.inp:focus{border-color:var(--acc)}
+.inp-row{display:flex;gap:8px;margin-bottom:12px}
+.detected-card{background:var(--bg3);border:1px solid var(--bdr);border-radius:10px;padding:14px;margin-bottom:10px;display:flex;gap:14px;align-items:center}
+.dc-info{flex:1}
+.dc-name{font-weight:600;font-size:13px;margin-bottom:3px}
+.dc-meta{font-size:11px;color:var(--mut)}
+.ingest-grid{display:grid;grid-template-columns:1fr 1fr 80px;gap:10px;margin-bottom:12px}
+.quick-brand-btns{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.qbrand{padding:5px 12px;background:var(--bg3);border:1px solid var(--bdr2);border-radius:6px;font-size:11px;color:var(--txt);cursor:pointer;font-family:inherit;transition:all .15s}
+.qbrand:hover{border-color:var(--acc);color:var(--acc)}
+.db-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.db-title{font-size:16px;font-weight:600}
+.db-search{display:flex;gap:8px}
+.db-search input{background:var(--bg3);border:1px solid var(--bdr2);border-radius:8px;padding:8px 13px;font-size:12px;color:var(--txt);font-family:inherit;outline:none;width:220px;transition:border-color .15s}
+.db-search input:focus{border-color:var(--acc)}
+.robot-table{width:100%;border-collapse:collapse}
+.robot-table th{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);text-align:left;padding:8px 12px;border-bottom:1px solid var(--bdr)}
+.robot-table td{padding:10px 12px;border-bottom:1px solid var(--bdr);font-size:12px;vertical-align:middle}
+.robot-table tr:hover td{background:var(--bg3)}
+.robot-table tr:last-child td{border-bottom:none}
+.score-badge{display:inline-block;padding:2px 8px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800;font-family:'Space Mono',monospace}
+.status-badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:700}
+.status-badge.available{background:var(--grn-l);color:var(--grn)}
+.status-badge.limited{background:var(--yel-l);color:var(--yel)}
+.status-badge.pilot{background:var(--bdr);color:var(--mut)}
+.tbl-action{padding:3px 9px;border-radius:4px;font-size:10px;font-weight:600;cursor:pointer;font-family:inherit;border:1px solid var(--bdr);background:transparent;color:var(--mut);transition:all .15s}
+.tbl-action:hover{border-color:var(--acc);color:var(--acc)}
+.tbl-action.del:hover{border-color:var(--red);color:var(--red)}
+
+/* ── SETTINGS PAGE ── */
+.settings-page{padding:24px;overflow-y:auto;flex:1}
+.settings-section{background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;padding:22px;margin-bottom:16px}
+.settings-title{font-size:13px;font-weight:700;margin-bottom:16px;color:var(--txt)}
+.settings-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--bdr)}
+.settings-row:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none}
+.sr-label{font-size:12px;font-weight:500;color:var(--txt)}
+.sr-sub{font-size:11px;color:var(--mut);margin-top:2px}
+.sr-val{font-size:12px;color:var(--mut);text-align:right}
+.settings-input{background:var(--bg3);border:1px solid var(--bdr2);border-radius:7px;padding:8px 12px;font-size:12px;color:var(--txt);font-family:inherit;outline:none;width:240px;transition:border-color .15s}
+.settings-input:focus{border-color:var(--acc)}
+.settings-input.masked{font-family:'Space Mono',monospace;letter-spacing:2px}
+.save-btn{padding:8px 20px;background:var(--acc);color:#fff;border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
+.save-btn:hover{background:var(--acc-d)}
+.toggle{width:38px;height:22px;border-radius:11px;background:var(--bg4);border:1px solid var(--bdr2);cursor:pointer;position:relative;transition:background .2s;flex-shrink:0}
+.toggle.on{background:var(--acc);border-color:var(--acc)}
+.toggle::after{content:'';position:absolute;width:16px;height:16px;border-radius:50%;background:#fff;top:2px;left:2px;transition:transform .2s}
+.toggle.on::after{transform:translateX(16px)}
+.github-status{display:flex;align-items:center;gap:7px;font-size:12px}
+.gh-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.gh-dot.connected{background:var(--grn)}
+.gh-dot.disconnected{background:var(--mut)}
+
+/* ── LOGS PAGE ── */
+.logs-page{padding:20px 24px;overflow-y:auto;flex:1;font-family:'Space Mono',monospace;font-size:11px;line-height:1.8}
+.log-line{padding:2px 0;border-bottom:1px solid rgba(255,255,255,.03)}
+.log-ts{color:var(--mut);margin-right:10px}
+.log-info{color:var(--acc)}
+.log-success{color:var(--grn)}
+.log-warn{color:var(--yel)}
+.log-error{color:var(--red)}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:3px}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="login-card">
+    <div class="login-logo"><span class="br">[</span>myrobot<span class="bl">.shop</span><span class="br">]</span></div>
+    <div class="login-title">Admin Access</div>
+    <div class="login-sub">Enter your admin password to continue</div>
+    <input class="login-input" type="password" id="pw-input" placeholder="••••••••" onkeydown="if(event.key==='Enter')tryLogin()">
+    <button class="login-btn" onclick="tryLogin()">Sign in →</button>
+    <div class="login-err" id="login-err"></div>
+  </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+<div class="shell">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div style="padding:20px 20px 14px;border-bottom:1px solid var(--bdr)">
+      <div class="sidebar-logo"><span class="br">[</span>myrobot<span class="bl">.shop</span><span class="br">]</span></div>
+      <div class="sidebar-tag">ADMIN PANEL</div>
+    </div>
+    <div class="nav-section">WORKSPACE</div>
+    <div class="nav-item active" onclick="showPage('cmd',this)"><span class="nav-icon">⚡</span>Command Centre</div>
+    <div class="nav-item" onclick="showPage('db',this)"><span class="nav-icon">🗄️</span>Robot Database</div>
+    <div class="nav-section">AUTO DISCOVERY</div>
+    <div class="nav-item" onclick="showPage('rss',this)"><span class="nav-icon">📡</span>RSS Feeds <span class="nbadge" id="nb-rss">0</span></div>
+    <div class="nav-item" onclick="showPage('vault',this)"><span class="nav-icon">🔗</span>URL Vault <span class="nbadge" id="nb-vault">0</span></div>
+    <div class="nav-section">REVIEW</div>
+    <div class="nav-item" onclick="showPage('queue',this)"><span class="nav-icon">📥</span>Review Queue <span class="nbadge red" id="nb-queue">0</span></div>
+    <div class="nav-item" onclick="showPage('detected',this)"><span class="nav-icon">🤖</span>Robots Detected <span class="nbadge red" id="nb-detected">0</span></div>
+    <div class="nav-section">TOOLS</div>
+    <div class="nav-item" onclick="showPage('ingest',this)"><span class="nav-icon">🏭</span>Brand Ingestion</div>
+    <div class="nav-item" onclick="showPage('logs',this)"><span class="nav-icon">📋</span>Activity Log</div>
+    <div class="nav-item" onclick="showPage('settings',this)"><span class="nav-icon">⚙️</span>Settings</div>
+    <div class="sidebar-stats">
+      <div class="stat-pill"><span class="stat-label">Robots in DB</span><span class="stat-val" id="stat-total">35</span></div>
+      <div class="stat-pill"><span class="stat-label">Last updated</span><span class="stat-val" id="stat-updated">just now</span></div>
+      <div class="stat-pill"><span class="stat-label">API status</span><span class="stat-val" id="stat-api">checking...</span></div>
+    </div>
+    <div class="sidebar-user">
+      <div class="user-avatar">S</div>
+      <div class="user-info"><div class="user-name">Shane</div><div class="user-role">Administrator</div></div>
+      <button class="logout-btn" onclick="logout()">out</button>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <div class="topbar-title" id="page-title">⚡ Command Centre</div>
+        <div class="topbar-sub"><span class="status-dot"></span>Claude AI connected · myrobot.shop database</div>
+      </div>
+      <div style="display:flex;gap:8px">
+        <button class="tbl-action" onclick="clearChat()">Clear chat</button>
+        <button class="save-btn" onclick="deployNow()" id="deploy-btn">🚀 Deploy site</button>
+      </div>
+    </div>
+
+    <div class="pages">
+
+      <!-- COMMAND CENTRE -->
+      <div class="page active" id="page-cmd">
+        <div class="cmd-wrap" id="chat-wrap">
+          <div class="msg-row bot">
+            <div class="msg-av bot">R</div>
+            <div class="msg-bubble">
+              Welcome to the <strong>myrobot.shop Admin Panel</strong> 👋<br><br>
+              I'm connected to Claude AI with live web search. Here's what I can do:<br><br>
+              • <strong>Add a new robot</strong> — I'll research it, format the data and add it<br>
+              • <strong>Update a robot</strong> — change price, specs, description or status<br>
+              • <strong>Remove a robot</strong> — delete from the database<br>
+              • <strong>Bulk research</strong> — "add the top 5 new humanoids from 2026"<br>
+              • <strong>News update</strong> — "update the news page with this week's headlines"<br><br>
+              What would you like to do?
+            </div>
+          </div>
+        </div>
+        <div class="input-bar">
+          <div class="quick-cmds">
+            <button class="qcmd" onclick="quickCmd('Add a new robot: ')">➕ Add robot</button>
+            <button class="qcmd" onclick="quickCmd('Update the price of ')">✏️ Update robot</button>
+            <button class="qcmd" onclick="quickCmd('Research and add the top 5 new humanoid robots released in 2026')">🔍 Bulk research</button>
+            <button class="qcmd" onclick="quickCmd('What robots are currently in the database?')">📊 Show database</button>
+            <button class="qcmd" onclick="quickCmd('Update the news page with the latest robotics headlines')">📰 Update news</button>
+          </div>
+          <div class="input-wrap">
+            <textarea class="cmd-input" id="cmd-input" placeholder="Type a command... e.g. 'Add the Unitree G1 robot'" rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
+            <button class="send-btn" id="send-btn" onclick="sendCommand()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATABASE -->
+      <div class="page" id="page-db">
+        <div class="db-page">
+          <div class="db-header">
+            <div class="db-title">Robot Database <span style="color:var(--mut);font-size:12px;font-weight:400" id="db-count"></span></div>
+            <div class="db-search">
+              <input type="text" placeholder="Search robots..." id="db-search-input" oninput="filterDB()">
+            </div>
+          </div>
+          <table class="robot-table" id="robot-table">
+            <thead><tr>
+              <th>ROBOT</th><th>BRAND</th><th>CATEGORY</th>
+              <th>SCORE</th><th>PRICE</th><th>STATUS</th><th>ACTIONS</th>
+            </tr></thead>
+            <tbody id="robot-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- LOGS -->
+      <div class="page" id="page-logs">
+        <div class="logs-page" id="logs-wrap">
+          <div class="log-line"><span class="log-ts">[04/04/2026 09:58]</span><span class="log-success">SYSTEM BOOT — Admin panel initialised</span></div>
+          <div class="log-line"><span class="log-ts">[04/04/2026 09:58]</span><span class="log-info">DB LOAD — 35 robots loaded from local store</span></div>
+          <div class="log-line"><span class="log-ts">[04/04/2026 09:58]</span><span class="log-success">API READY — Claude API connected</span></div>
+        </div>
+      </div>
+
+      <!-- SETTINGS -->
+      <div class="page" id="page-settings">
+        <div class="settings-page">
+          <div class="settings-section">
+            <div class="settings-title">🔑 API Configuration</div>
+            <div class="settings-row">
+              <div><div class="sr-label">Anthropic API Key</div><div class="sr-sub">Required for Claude AI research & formatting</div></div>
+              <div style="display:flex;gap:8px;align-items:center">
+                <input class="settings-input masked" type="password" id="api-key-input" placeholder="sk-ant-..." value="">
+                <button class="save-btn" onclick="saveApiKey()">Save</button>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div><div class="sr-label">GitHub Token</div><div class="sr-sub">For auto-push to repository (optional)</div></div>
+              <div style="display:flex;gap:8px;align-items:center">
+                <input class="settings-input masked" type="password" id="gh-token-input" placeholder="ghp_..." value="">
+                <button class="save-btn" onclick="saveGHToken()">Save</button>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div><div class="sr-label">GitHub Repo</div><div class="sr-sub">e.g. yourusername/myrobot-shop</div></div>
+              <input class="settings-input" type="text" id="gh-repo-input" placeholder="username/repo-name" value="">
+            </div>
+          </div>
+          <div class="settings-section">
+            <div class="settings-title">⚙️ Admin Settings</div>
+            <div class="settings-row">
+              <div><div class="sr-label">Admin Password</div><div class="sr-sub">Password to access this panel</div></div>
+              <div style="display:flex;gap:8px;align-items:center">
+                <input class="settings-input" type="password" id="pw-change-input" placeholder="New password">
+                <button class="save-btn" onclick="changePassword()">Change</button>
+              </div>
+            </div>
+            <div class="settings-row">
+              <div><div class="sr-label">Web search</div><div class="sr-sub">Claude uses live web search to research robots</div></div>
+              <div class="toggle on" id="search-toggle" onclick="this.classList.toggle('on')"></div>
+            </div>
+            <div class="settings-row">
+              <div><div class="sr-label">Auto-deploy on change</div><div class="sr-sub">Trigger Netlify deploy after each database update</div></div>
+              <div class="toggle" id="deploy-toggle" onclick="this.classList.toggle('on')"></div>
+            </div>
+          </div>
+          <div class="settings-section">
+            <div class="settings-title">📊 Database Stats</div>
+            <div class="settings-row"><div class="sr-label">Total robots</div><div class="sr-val" id="s-total">35</div></div>
+            <div class="settings-row"><div class="sr-label">Categories covered</div><div class="sr-val">9 / 9</div></div>
+            <div class="settings-row"><div class="sr-label">Last AI operation</div><div class="sr-val" id="s-last-op">—</div></div>
+            <div class="settings-row"><div class="sr-label">Storage</div><div class="sr-val">localStorage + JSON export</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RSS FEEDS -->
+      <div class="page" id="page-rss">
+        <div class="gen-page">
+          <div class="sec-card">
+            <div class="sec-head">Add RSS Feed</div>
+            <div class="inp-row">
+              <input class="inp" type="text" id="rss-name" placeholder="Feed name e.g. The Robot Report" style="flex:1">
+              <input class="inp" type="text" id="rss-url" placeholder="https://www.therobotreport.com/feed/" style="flex:2">
+              <button class="save-btn" onclick="addFeed()">+ Add</button>
+            </div>
+            <div style="font-size:11px;color:var(--mut);margin-bottom:10px">Quick-add pre-built feeds:</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <button class="qbrand" onclick="quickFeed('The Robot Report','https://www.therobotreport.com/feed/')">📡 The Robot Report</button>
+              <button class="qbrand" onclick="quickFeed('IEEE Spectrum Robotics','https://spectrum.ieee.org/feeds/topic/robotics.rss')">📡 IEEE Spectrum</button>
+              <button class="qbrand" onclick="quickFeed('Robotics Biz Review','https://www.roboticsbusinessreview.com/feed/')">📡 Robotics Biz Review</button>
+              <button class="qbrand" onclick="quickFeed('TechCrunch Robotics','https://techcrunch.com/tag/robots/feed/')">📡 TechCrunch Robotics</button>
+              <button class="qbrand" onclick="quickFeed('Wired Robots','https://www.wired.com/tag/robots/feed/rss')">📡 Wired Robots</button>
+              <button class="qbrand" onclick="quickFeed('MIT News Robotics','https://news.mit.edu/topic/robotics/rss')">📡 MIT Robotics</button>
+            </div>
+          </div>
+          <div class="sec-card">
+            <div class="sec-head">Active Feeds</div>
+            <div id="feed-list"><div style="color:var(--mut);font-size:12px">No feeds added yet.</div></div>
+          </div>
+          <button class="save-btn" style="width:100%;padding:12px" onclick="scanAllFeeds()">▶ Scan All Feeds Now</button>
+          <div id="rss-scan-status" style="margin-top:10px;font-size:11px;color:var(--mut);font-family:'Space Mono',monospace"></div>
+        </div>
+      </div>
+
+      <!-- URL VAULT -->
+      <div class="page" id="page-vault">
+        <div class="gen-page">
+          <div class="sec-card">
+            <div class="sec-head">Add URL to Vault</div>
+            <div class="inp-row">
+              <input class="inp" type="text" id="vault-url" placeholder="https://www.bostondynamics.com/products" style="flex:2">
+              <select class="inp" id="vault-type" style="flex:1;max-width:200px">
+                <option>Manufacturer — product page</option>
+                <option>Manufacturer — catalogue</option>
+                <option>News site</option>
+                <option>Specs database</option>
+              </select>
+              <button class="save-btn" onclick="addVaultUrl()">+ Add</button>
+            </div>
+            <div style="font-size:11px;color:var(--mut);margin-bottom:10px">Quick-add manufacturer pages:</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+              <button class="qbrand" onclick="quickVault('https://bostondynamics.com/products')">Boston Dynamics</button>
+              <button class="qbrand" onclick="quickVault('https://unitree.com/robots')">Unitree</button>
+              <button class="qbrand" onclick="quickVault('https://www.universal-robots.com/products/')">Universal Robots</button>
+              <button class="qbrand" onclick="quickVault('https://www.dji.com/products/enterprise')">DJI Enterprise</button>
+              <button class="qbrand" onclick="quickVault('https://roborock.com/pages/all-products')">Roborock</button>
+              <button class="qbrand" onclick="quickVault('https://www.irobot.com/en_US/roomba')">iRobot</button>
+            </div>
+          </div>
+          <div class="sec-card">
+            <div class="sec-head">Vault URLs</div>
+            <div id="vault-list"><div style="color:var(--mut);font-size:12px">No URLs added yet.</div></div>
+          </div>
+          <button class="save-btn" style="width:100%;padding:12px" onclick="crawlAllUrls()">▶ Crawl All URLs Now</button>
+          <div id="vault-status" style="margin-top:10px;font-size:11px;color:var(--mut);font-family:'Space Mono',monospace"></div>
+        </div>
+      </div>
+
+      <!-- REVIEW QUEUE -->
+      <div class="page" id="page-queue">
+        <div class="gen-page">
+          <div id="queue-empty" style="color:var(--mut);font-size:13px;padding:40px;text-align:center">No robots in review queue yet.<br><br>Scan RSS feeds or crawl URLs to discover robots automatically.</div>
+          <div id="queue-list"></div>
+        </div>
+      </div>
+
+      <!-- ROBOTS DETECTED -->
+      <div class="page" id="page-detected">
+        <div class="gen-page">
+          <div style="font-size:11px;color:var(--acc);background:var(--acc-l);border:1px solid rgba(0,102,255,.2);border-radius:8px;padding:10px 14px;margin-bottom:16px">
+            🤖 Robots automatically identified from RSS feeds and URL crawls — review and approve to add to database
+          </div>
+          <div id="detected-empty" style="color:var(--mut);font-size:13px;padding:40px;text-align:center">No robots detected yet.<br><br>Run a scan or crawl to start auto-detecting robots.</div>
+          <div id="detected-list"></div>
+        </div>
+      </div>
+
+      <!-- BRAND INGESTION -->
+      <div class="page" id="page-ingest">
+        <div class="gen-page">
+          <div class="sec-card">
+            <div class="sec-head">🏭 Brand Ingestion — Full GSMArena-style specs</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:16px;line-height:1.7">Bulk add an entire robot brand with 180+ fields per robot — battery type, CPU, RAM, learning methods, gripper type, IP rating, certifications and more. Uses Claude AI with real manufacturer data.</div>
+            <div class="ingest-grid">
+              <input class="inp" type="text" id="ingest-brand" placeholder="Brand e.g. Roborock">
+              <select class="inp" id="ingest-cat">
+                <option value="Consumer">Consumer / Vacuum</option>
+                <option value="Humanoid">Humanoid</option>
+                <option value="Industrial">Industrial / Cobot</option>
+                <option value="Drones">Drones / UAV</option>
+                <option value="Service">Service / Delivery</option>
+                <option value="Medical">Medical / Surgical</option>
+                <option value="Agricultural">Agricultural</option>
+                <option value="Educational">Educational</option>
+                <option value="Military">Military / Security</option>
+              </select>
+              <input class="inp" type="number" id="ingest-count" value="8" min="1" max="20" style="text-align:center">
+            </div>
+            <div style="font-size:11px;color:var(--mut);margin-bottom:8px">Quick ingestion:</div>
+            <div class="quick-brand-btns">
+              <button class="qbrand" onclick="quickIngest('Roborock','Consumer',10)">🏠 All Roborock</button>
+              <button class="qbrand" onclick="quickIngest('iRobot','Consumer',10)">🏠 All iRobot</button>
+              <button class="qbrand" onclick="quickIngest('Ecovacs','Consumer',10)">🏠 All Ecovacs</button>
+              <button class="qbrand" onclick="quickIngest('Dreame','Consumer',8)">🏠 All Dreame</button>
+              <button class="qbrand" onclick="quickIngest('Roborock','Consumer',8)">🤖 Saros Series</button>
+              <button class="qbrand" onclick="quickIngest('Unitree','Humanoid',8)">🧍 All Unitree</button>
+              <button class="qbrand" onclick="quickIngest('Boston Dynamics','Humanoid',6)">🧍 Boston Dynamics</button>
+              <button class="qbrand" onclick="quickIngest('Figure AI','Humanoid',4)">🧍 Figure AI</button>
+              <button class="qbrand" onclick="quickIngest('Universal Robots','Industrial',8)">🦾 Universal Robots</button>
+              <button class="qbrand" onclick="quickIngest('FANUC','Industrial',8)">🦾 All FANUC</button>
+              <button class="qbrand" onclick="quickIngest('DJI','Drones',10)">🚁 All DJI</button>
+              <button class="qbrand" onclick="quickIngest('ABB Robotics','Industrial',8)">🦾 All ABB</button>
+            </div>
+            <button class="save-btn" style="width:100%;padding:13px;font-size:13px" onclick="runIngest()">🏭 Ingest Brand Now</button>
+            <div id="ingest-status" style="margin-top:12px;font-size:11px;font-family:'Space Mono',monospace;color:var(--mut);display:none"></div>
+            <div id="ingest-results" style="margin-top:10px;display:none"></div>
+          </div>
+          <div class="sec-card">
+            <div class="sec-head">📊 Database Status</div>
+            <div style="display:flex;gap:20px;flex-wrap:wrap">
+              <div style="text-align:center"><div style="font-size:28px;font-weight:700;color:var(--acc)" id="ingest-total">0</div><div style="font-size:10px;color:var(--mut)">Total Robots</div></div>
+              <div style="flex:1;font-size:11px;color:var(--mut);line-height:2" id="ingest-by-cat">Loading...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+// ════ CONFIG ════
+const ADMIN_PASSWORD = 'robo2026';
+let API_KEY = localStorage.getItem('mrsh_api_key') || '';
+let GH_TOKEN = localStorage.getItem('mrsh_gh_token') || '';
+let GH_REPO = localStorage.getItem('mrsh_gh_repo') || '';
+let isProcessing = false;
+let pendingRobot = null;
+
+// ════ ROBOT DATABASE (mirrored from main site) ════
+let ROBOTS = [];
+
+// Load master DB: first try to fetch from live site, merge with localStorage additions
+async function initDB() {
+  try {
+    // Fetch the live site to extract the master ROBOTS array
+    const resp = await fetch('/index.html?nocache=' + Date.now());
+    const html = await resp.text();
+    const startMarker = 'const ROBOTS=';
+    const startIdx = html.indexOf(startMarker);
+    if (startIdx !== -1) {
+      let depth = 0, endIdx = -1;
+      const arrStart = html.indexOf('[', startIdx);
+      for (let i = arrStart; i < html.length; i++) {
+        if (html[i] === '[') depth++;
+        else if (html[i] === ']') { depth--; if (depth === 0) { endIdx = i; break; } }
+      }
+      if (endIdx !== -1) {
+        const arrStr = html.substring(arrStart, endIdx + 1);
+        try {
+          const siteRobots = JSON.parse(arrStr);
+          if (Array.isArray(siteRobots) && siteRobots.length > 0) {
+            ROBOTS = siteRobots;
+            console.log('Loaded', ROBOTS.length, 'robots from live site');
+          }
+        } catch(e) { console.warn('Could not parse site ROBOTS:', e); }
+      }
+    }
+  } catch(e) { console.warn('Could not fetch live site:', e); }
+
+  // Merge any locally added robots (from this session's localStorage)
+  const localRobots = JSON.parse(localStorage.getItem('mrsh_added_robots') || '[]');
+  for (const r of localRobots) {
+    const exists = ROBOTS.findIndex(x => x.id === r.id);
+    if (exists >= 0) ROBOTS[exists] = r;
+    else ROBOTS.push(r);
+  }
+
+  console.log('Total robots after merge:', ROBOTS.length);
+  saveDB();
+  updateStats();
+  renderDB();
+}
+
+saveDB();
+
+// ════ AUTH ════
+function tryLogin() {
+  const pw = document.getElementById('pw-input').value;
+  const stored = localStorage.getItem('mrsh_pw') || ADMIN_PASSWORD;
+  if (pw === stored) {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    loadSettings();
+    addLog('info', 'Admin logged in — loading database from live site...');
+    initDB().then(() => {
+      addLog('success', 'Database loaded: ' + ROBOTS.length + ' robots');
+      addMsg('✅ Database synced from live site — <strong>' + ROBOTS.length + ' robots</strong> ready to edit.', 'bot', true);
+    });
+  } else {
+    document.getElementById('login-err').textContent = 'Incorrect password. Try again.';
+    document.getElementById('pw-input').value = '';
+    setTimeout(() => document.getElementById('login-err').textContent = '', 2500);
+  }
+}
+
+function ingestBrand() {
+  const brand = prompt('Brand name to ingest (e.g. Roborock, DJI, Universal Robots):');
+  if (!brand) return;
+  const cat = prompt('Category (Consumer/Industrial/Humanoid/Drones/Medical/Agricultural/Service):') || 'Consumer';
+  const count = parseInt(prompt('How many models? (5-15 recommended):') || '10');
+  runBrandIngestion(brand, cat, Math.min(count, 15));
+}
+
+async function runBrandIngestion(brand, category, count) {
+  if (!API_KEY) { addMsg('⚠️ No API key. Go to Settings first.', 'error'); return; }
+  
+  addMsg(`🏭 Ingesting ${count} ${brand} robots in ${category} category...`, 'system');
+  addLog('info', `Brand ingestion: ${brand} × ${count}`);
+  isProcessing = true;
+  document.getElementById('send-btn').disabled = true;
+
+  try {
+    const existingIds = ROBOTS.map(r => r.id);
+    const resp = await fetch('/.netlify/functions/bulk-ingest', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY },
+      body: JSON.stringify({ brand, category, count, existingIds })
+    });
+
+    if (!resp.ok) throw new Error('API error ' + resp.status);
+    const data = await resp.json();
+    
+    if (data.error) throw new Error(data.error);
+    
+    const text = data.text || '';
+    const arrMatch = text.match(/\[[\s\S]*\]/);
+    if (!arrMatch) throw new Error('No robot array in response');
+    
+    let robots;
+    try {
+      robots = JSON.parse(arrMatch[0]);
+    } catch(e) {
+      const clean = arrMatch[0].replace(/,\s*}/g,'}').replace(/,\s*]/g,']');
+      robots = JSON.parse(clean);
+    }
+
+    if (!Array.isArray(robots) || robots.length === 0) throw new Error('Empty response');
+
+    // Fetch Wikipedia images
+    addMsg(`📸 Fetching images for ${robots.length} robots...`, 'system');
+    for (const r of robots) {
+      if (r.wiki && !r.img) {
+        try {
+          const wResp = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(r.wiki)}`);
+          if (wResp.ok) {
+            const wData = await wResp.json();
+            if (wData.thumbnail?.source) r.img = wData.thumbnail.source.replace(/\/\d+px-/, '/640px-');
+          }
+        } catch(e) {}
+      }
+    }
+
+    // Merge into database
+    let added = 0, updated = 0;
+    for (const r of robots) {
+      const idx = ROBOTS.findIndex(x => x.id === r.id || x.name === r.name);
+      if (idx >= 0) { ROBOTS[idx] = r; updated++; }
+      else { ROBOTS.push(r); added++; }
+    }
+
+    saveDB();
+    updateStats();
+
+    const summary = robots.map(r => `• ${r.name} — ${r.price > 0 ? '$'+r.price.toLocaleString() : 'POA'}${r.img ? ' 🖼️' : ''}`).join('\n');
+    addMsg(`✅ ${brand} ingestion complete!\n\n${summary}\n\n${added} added, ${updated} updated. ${ROBOTS.length} total robots.\nClick 🚀 Deploy to go live.`, 'success');
+    addLog('success', `Ingested ${brand}: +${added} added`);
+
+  } catch(err) {
+    addMsg('❌ Ingestion failed: ' + err.message, 'error');
+    addLog('error', 'Ingestion failed: ' + err.message);
+  }
+  
+  isProcessing = false;
+  document.getElementById('send-btn').disabled = false;
+}
+
+function logout() {
+  document.getElementById('login-screen').style.display = 'flex';
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('pw-input').value = '';
+}
+
+// ════ NAVIGATION ════
+function showPage(id, el) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  if (el) el.classList.add('active');
+  const titles = {cmd:'⚡ Command Centre', db:'🗄️ Robot Database', logs:'📋 Activity Log', settings:'⚙️ Settings', rss:'📡 RSS Feeds', vault:'🔗 URL Vault', queue:'📥 Review Queue', detected:'🤖 Robots Detected', ingest:'🏭 Brand Ingestion'};
+  document.getElementById('page-title').textContent = titles[id] || id;
+  if (id === 'db') renderDB();
+  if (id === 'rss') renderFeeds();
+  if (id === 'vault') renderVault();
+  if (id === 'queue') renderQueue();
+  if (id === 'detected') renderDetected();
+  if (id === 'ingest') renderIngestStats();
+}
+
+// ════ RSS FEEDS ════
+let FEEDS = JSON.parse(localStorage.getItem('mrsh_feeds') || '[]');
+let VAULT = JSON.parse(localStorage.getItem('mrsh_vault') || '[]');
+let QUEUE = JSON.parse(localStorage.getItem('mrsh_queue') || '[]');
+let DETECTED = JSON.parse(localStorage.getItem('mrsh_detected') || '[]');
+
+function saveFeeds(){localStorage.setItem('mrsh_feeds',JSON.stringify(FEEDS));updateBadges();}
+function saveVault(){localStorage.setItem('mrsh_vault',JSON.stringify(VAULT));updateBadges();}
+function saveQueue(){localStorage.setItem('mrsh_queue',JSON.stringify(QUEUE));updateBadges();}
+function saveDetected(){localStorage.setItem('mrsh_detected',JSON.stringify(DETECTED));updateBadges();}
+
+function updateBadges(){
+  document.getElementById('nb-rss').textContent=FEEDS.length;
+  document.getElementById('nb-vault').textContent=VAULT.length;
+  const pq=QUEUE.filter(r=>r.status==='pending').length;
+  const pd=DETECTED.filter(r=>r.status==='pending').length;
+  document.getElementById('nb-queue').textContent=pq;
+  document.getElementById('nb-detected').textContent=pd;
+  document.getElementById('nb-queue').className='nbadge'+(pq>0?' red':'');
+  document.getElementById('nb-detected').className='nbadge'+(pd>0?' red':'');
+}
+
+function quickFeed(name,url){
+  document.getElementById('rss-name').value=name;
+  document.getElementById('rss-url').value=url;
+}
+function addFeed(){
+  const name=document.getElementById('rss-name').value.trim();
+  const url=document.getElementById('rss-url').value.trim();
+  if(!name||!url){alert('Enter name and URL');return;}
+  if(FEEDS.find(f=>f.url===url)){alert('Feed already added');return;}
+  FEEDS.push({id:Date.now(),name,url,status:'idle',articles:0,robots:0,lastScanned:null});
+  saveFeeds();renderFeeds();
+  document.getElementById('rss-name').value='';
+  document.getElementById('rss-url').value='';
+}
+function removeFeed(id){FEEDS=FEEDS.filter(f=>f.id!==id);saveFeeds();renderFeeds();}
+function renderFeeds(){
+  const el=document.getElementById('feed-list');
+  if(!FEEDS.length){el.innerHTML='<div style="color:var(--mut);font-size:12px">No feeds added yet.</div>';return;}
+  el.innerHTML=FEEDS.map(f=>`<div class="feed-row">
+    <div style="flex:1"><div class="feed-name">${f.name}</div><div class="feed-url">${f.url}</div></div>
+    <span class="feed-status ${f.status==='ok'?'feed-ok':f.status==='error'?'feed-err':'feed-idle'}">${f.status==='ok'?f.articles+' articles':f.status==='error'?'error':'idle'}</span>
+    <button class="qbrand" onclick="scanFeed(${f.id})">Scan</button>
+    <button class="qbrand" style="color:var(--red)" onclick="removeFeed(${f.id})">✕</button>
+  </div>`).join('');
+}
+
+async function scanFeed(id){
+  const f=FEEDS.find(x=>x.id===id);
+  if(!f)return;
+  if(!API_KEY){alert('Add API key in Settings first');return;}
+  const status=document.getElementById('rss-scan-status');
+  status.textContent=`Scanning ${f.name}...`;
+  f.status='scanning';renderFeeds();
+  try{
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',max_tokens:2000,
+        tools:[{type:'web_search_20250305',name:'web_search'}],
+        system:`You are a robotics news analyst for myrobot.shop. Search the RSS feed at ${f.url} or the website for recent robot news. Find articles from the past 14 days mentioning specific named robot products. Return ONLY valid JSON: {"articles":[{"title":"","url":"","description":"","date":"","isRobotRelated":true,"isNewLaunch":false,"robots":["Robot Name"]}],"robotsDetected":[{"name":"","brand":"","category":"","isNewLaunch":true,"description":""}]}`,
+        messages:[{role:'user',content:`Search ${f.url} for recent robotics news and robot product announcements. Find any new robot launches or updates.`}]
+      })
+    });
+    const data=await resp.json();
+    const text=(data.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('');
+    const match=text.match(/\{[\s\S]*\}/);
+    const result=match?JSON.parse(match[0]):{articles:[],robotsDetected:[]};
+    f.status='ok';f.articles=(result.articles||[]).length;f.robots=(result.robotsDetected||[]).length;f.lastScanned=new Date().toISOString();
+    (result.robotsDetected||[]).forEach(r=>{
+      if(!DETECTED.find(x=>x.name===r.name&&x.brand===r.brand)){
+        DETECTED.unshift({...r,id:Date.now()+Math.random(),source:f.name,detectedAt:new Date().toISOString(),status:'pending'});
+      }
+    });
+    saveDetected();saveFeeds();renderFeeds();
+    status.textContent=`✅ ${f.name}: ${f.articles} articles, ${f.robots} robots detected`;
+  }catch(e){
+    f.status='error';saveFeeds();renderFeeds();
+    status.textContent=`❌ ${f.name}: ${e.message}`;
+  }
+}
+async function scanAllFeeds(){
+  for(const f of FEEDS)await scanFeed(f.id);
+  document.getElementById('rss-scan-status').textContent=`✅ All feeds scanned. Check Robots Detected tab.`;
+}
+
+// ════ URL VAULT ════
+function quickVault(url){document.getElementById('vault-url').value=url;}
+function addVaultUrl(){
+  const url=document.getElementById('vault-url').value.trim();
+  const type=document.getElementById('vault-type').value;
+  if(!url){alert('Enter a URL');return;}
+  if(VAULT.find(v=>v.url===url)){alert('URL already in vault');return;}
+  const domain=url.replace(/https?:\/\//,'').split('/')[0];
+  VAULT.push({id:Date.now(),url,domain,type,status:'idle',robots:0,lastCrawled:null});
+  saveVault();renderVault();
+  document.getElementById('vault-url').value='';
+}
+function removeVaultUrl(id){VAULT=VAULT.filter(v=>v.id!==id);saveVault();renderVault();}
+function renderVault(){
+  const el=document.getElementById('vault-list');
+  if(!VAULT.length){el.innerHTML='<div style="color:var(--mut);font-size:12px">No URLs added yet.</div>';return;}
+  el.innerHTML=VAULT.map(v=>`<div class="feed-row">
+    <div style="flex:1"><div class="feed-name">${v.domain}</div><div class="feed-url">${v.url}</div><div style="font-size:10px;color:var(--mut)">${v.type}</div></div>
+    <span class="feed-status ${v.status==='ok'?'feed-ok':v.status==='error'?'feed-err':'feed-idle'}">${v.status==='ok'?v.robots+' robots found':v.status==='error'?'error':'never crawled'}</span>
+    <button class="qbrand" onclick="crawlUrl(${v.id})">Crawl</button>
+    <button class="qbrand" style="color:var(--red)" onclick="removeVaultUrl(${v.id})">✕</button>
+  </div>`).join('');
+}
+async function crawlUrl(id){
+  const v=VAULT.find(x=>x.id===id);
+  if(!v)return;
+  if(!API_KEY){alert('Add API key in Settings first');return;}
+  const status=document.getElementById('vault-status');
+  status.textContent=`Crawling ${v.domain}...`;
+  v.status='crawling';renderVault();
+  try{
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({
+        model:'claude-sonnet-4-20250514',max_tokens:3000,
+        tools:[{type:'web_search_20250305',name:'web_search'}],
+        system:`You are a robot data extraction specialist for myrobot.shop. Search the website ${v.url} and extract all robot products. Return ONLY valid JSON: {"newRobots":[{"name":"","brand":"","category":"","year":2025,"priceNote":"","payload":"","speed":"","battery":"","description":""}]}`,
+        messages:[{role:'user',content:`Search ${v.url} and list all robot products available. Extract names, specs, and details.`}]
+      })
+    });
+    const data=await resp.json();
+    const text=(data.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('');
+    const match=text.match(/\{[\s\S]*\}/);
+    const result=match?JSON.parse(match[0]):{newRobots:[]};
+    v.status='ok';v.robots=(result.newRobots||[]).length;v.lastCrawled=new Date().toISOString();
+    (result.newRobots||[]).forEach(r=>{
+      if(!QUEUE.find(x=>x.name===r.name&&x.brand===r.brand)){
+        QUEUE.unshift({...r,id:Date.now()+Math.random(),source:v.domain,addedAt:new Date().toISOString(),status:'pending'});
+      }
+    });
+    saveQueue();saveVault();renderVault();
+    status.textContent=`✅ ${v.domain}: ${v.robots} robots found — check Review Queue`;
+  }catch(e){
+    v.status='error';saveVault();renderVault();
+    status.textContent=`❌ ${v.domain}: ${e.message}`;
+  }
+}
+async function crawlAllUrls(){for(const v of VAULT)await crawlUrl(v.id);}
+
+// ════ REVIEW QUEUE ════
+function renderQueue(){
+  const empty=document.getElementById('queue-empty');
+  const list=document.getElementById('queue-list');
+  const pending=QUEUE.filter(r=>r.status==='pending');
+  empty.style.display=pending.length?'none':'block';
+  list.innerHTML=pending.map(r=>`<div class="detected-card">
+    <div class="dc-info">
+      <div class="dc-name">${r.name||'Unknown'} <span style="font-size:10px;color:var(--mut)">${r.brand||''}</span></div>
+      <div class="dc-meta">${r.category||''} · Found on ${r.source||'unknown'} · ${r.addedAt?new Date(r.addedAt).toLocaleDateString():''}</div>
+      ${r.description?`<div style="font-size:11px;color:var(--mut);margin-top:4px">${r.description}</div>`:''}
+    </div>
+    <div style="display:flex;gap:6px;flex-shrink:0">
+      <button class="save-btn" onclick="approveQueued('${r.id}')">✓ Add</button>
+      <button class="qbrand" style="color:var(--red)" onclick="dismissQueued('${r.id}')">✕</button>
+    </div>
+  </div>`).join('');
+}
+function approveQueued(id){
+  const r=QUEUE.find(x=>x.id==id);
+  if(!r)return;
+  r.status='approved';
+  const robot={id:(r.brand+'-'+r.name).toLowerCase().replace(/[^a-z0-9]+/g,'-'),name:r.name,brand:r.brand,cat:r.category||'Service',sub:'',tags:[],fig:'🤖',img:'',score:75,rating:4.0,price:0,desc:r.description||'',highlights:[],perf:{Mobility:75,Dexterity:70,Autonomy:70,Durability:75}};
+  ROBOTS.push(robot);
+  saveQueue();renderQueue();updateBadges();
+  addMsg(`✅ Added ${r.name} to database from Review Queue`,'system');
+  addLog('success', `QUEUE — Approved: ${r.name}`);
+}
+function dismissQueued(id){const r=QUEUE.find(x=>x.id==id);if(r)r.status='dismissed';saveQueue();renderQueue();updateBadges();}
+
+// ════ ROBOTS DETECTED ════
+function renderDetected(){
+  const empty=document.getElementById('detected-empty');
+  const list=document.getElementById('detected-list');
+  const pending=DETECTED.filter(r=>r.status==='pending');
+  empty.style.display=pending.length?'none':'block';
+  list.innerHTML=pending.map(r=>`<div class="detected-card">
+    <div class="dc-info">
+      <div class="dc-name">${r.name} ${r.isNewLaunch?'<span style="background:var(--grn-l);color:var(--grn);font-size:9px;padding:2px 6px;border-radius:4px;margin-left:6px">NEW LAUNCH</span>':''}</div>
+      <div class="dc-meta">${r.brand||''} · ${r.category||''} · Detected from ${r.source||'scan'}</div>
+      ${r.description?`<div style="font-size:11px;color:var(--mut);margin-top:4px">${r.description}</div>`:''}
+    </div>
+    <div style="display:flex;gap:6px;flex-shrink:0">
+      <button class="save-btn" onclick="approveDetected('${r.id}')">✓ Add</button>
+      <button class="qbrand" style="color:var(--red)" onclick="dismissDetected('${r.id}')">✕</button>
+    </div>
+  </div>`).join('');
+}
+function approveDetected(id){
+  const r=DETECTED.find(x=>x.id==id);
+  if(!r)return;
+  r.status='approved';
+  QUEUE.push({...r,addedAt:new Date().toISOString(),status:'pending'});
+  saveDetected();saveQueue();renderDetected();updateBadges();
+  showToastMsg(`${r.name} moved to Review Queue`);
+}
+function dismissDetected(id){const r=DETECTED.find(x=>x.id==id);if(r)r.status='dismissed';saveDetected();renderDetected();updateBadges();}
+function showToastMsg(msg){
+  let t=document.getElementById('admin-toast');
+  if(!t){t=document.createElement('div');t.id='admin-toast';t.style.cssText='position:fixed;bottom:20px;right:20px;background:#22c55e;color:#000;padding:10px 18px;border-radius:8px;font-size:12px;font-weight:600;z-index:9999;transition:opacity .3s';document.body.appendChild(t);}
+  t.textContent=msg;t.style.opacity='1';
+  setTimeout(()=>t.style.opacity='0',3000);
+}
+
+// ════ BRAND INGESTION ════
+function quickIngest(brand,cat,count){
+  document.getElementById('ingest-brand').value=brand;
+  document.getElementById('ingest-cat').value=cat;
+  document.getElementById('ingest-count').value=count;
+}
+function renderIngestStats(){
+  const total=ROBOTS.length;
+  document.getElementById('ingest-total').textContent=total;
+  const cats={};
+  ROBOTS.forEach(r=>{const c=r.cat||'Unknown';cats[c]=(cats[c]||0)+1;});
+  document.getElementById('ingest-by-cat').innerHTML=Object.entries(cats).map(([c,n])=>`${c}: <strong style="color:var(--acc)">${n}</strong>`).join('<br>');
+}
+async function runIngest(){
+  const brand=document.getElementById('ingest-brand').value.trim();
+  const cat=document.getElementById('ingest-cat').value;
+  const count=parseInt(document.getElementById('ingest-count').value)||8;
+  if(!API_KEY){alert('Add your API key in Settings first');return;}
+  if(!brand){alert('Enter a brand name');return;}
+  const status=document.getElementById('ingest-status');
+  const results=document.getElementById('ingest-results');
+  status.style.display='block';results.style.display='none';
+  status.style.color='var(--acc)';
+  status.textContent=`⏳ Ingesting ${count} ${brand} robots... this takes 15-25 seconds`;
+
+  const systemPrompt=`You are building myrobot.shop — the GSMArena of robots. Return a JSON array of ${count} REAL ${brand} robots in the ${cat} category. Use real manufacturer specs. Each robot MUST have ALL these fields:
+id (brand-model-kebab-lowercase), name, brand, year (number), announced, released, status, cat:"${cat}", sub, tags:[], fig (one emoji), img:"", score (70-99), rating (3.5-5.0), price (USD number or 0), desc (5 sentences with REAL specs), highlights:[],
+height_mm, width_mm, depth_mm, weight_kg, frame_material, shell_material, ip_rating, operating_temp_min, operating_temp_max, colors:[],
+os, chipset, cpu, cpu_cores, cpu_freq_ghz, gpu, npu, npu_tops, ram_gb, ram_type, storage_gb, storage_type,
+battery_type, battery_wh, battery_ah, battery_voltage, battery_life, battery_life_typical, battery_life_heavy, charge_time, charge_power_w, charge_type, wireless_charging, auto_charge, hot_swap, quick_release, cycle_life, bms,
+ai_model, ai_model_type, learning_methods:[], llm_model, ai_cloud_required, task_generalisation, ota,
+cameras, lidar, depth_sensing, imu, touch_sensing, force_sensing,
+wifi, bluetooth, cellular, ros, sdk, sdk_langs:[], api,
+ce, fcc, rohs, iso_certs:[], warranty_months, use_cases:[],
+perf:{Mobility:85,Dexterity:80,Autonomy:75,Durability:88}
+Return ONLY the JSON array. No markdown. No explanation. Start with [ end with ].`;
+
+  try{
+    const resp=await fetch('https://api.anthropic.com/v1/messages',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:8000,system:systemPrompt,messages:[{role:'user',content:`Give me ${count} ${brand} robots for the ${cat} category with complete accurate specs.`}]})
+    });
+    const data=await resp.json();
+    if(data.error)throw new Error(data.error.message);
+    const text=(data.content||[]).filter(b=>b.type==='text').map(b=>b.text).join('');
+    const clean=text.replace(/```json|```/g,'').trim();
+    const match=clean.match(/\[[\s\S]*\]/);
+    if(!match)throw new Error('No JSON array in response');
+    
+    // Clean common JSON issues
+    let jsonStr = match[0];
+    // Remove trailing commas before ] or }
+    jsonStr = jsonStr.replace(/,(\s*[}\]])/g, '$1');
+    // Fix unescaped newlines in strings
+    jsonStr = jsonStr.replace(/([^\\])\n/g, '$1\\n');
+    
+    const robots=JSON.parse(jsonStr);
+    let added=0;
+    robots.forEach(r=>{
+      if(!r.id)r.id=(r.brand+'-'+r.name).toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      const idx=ROBOTS.findIndex(x=>x.id===r.id);
+      if(idx>=0)ROBOTS[idx]=r;else{ROBOTS.push(r);added++;}
+    });
+    status.style.color='var(--grn)';
+    status.textContent=`✅ Added ${added} new ${brand} robots! Total in database: ${ROBOTS.length}`;
+    results.style.display='block';
+    results.innerHTML=`<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">${robots.map(r=>`<span style="background:var(--acc-l);border:1px solid rgba(0,102,255,.3);border-radius:4px;padding:3px 8px;font-size:11px;color:var(--acc)">${r.name}</span>`).join('')}</div>`;
+    addLog('success', `INGEST — Added ${added} ${brand} robots (${cat})`);
+    renderIngestStats();
+    updateBadges();
+    document.getElementById('stat-total').textContent=ROBOTS.length;
+  }catch(e){
+    status.style.color='var(--red)';
+    status.textContent=`❌ Error: ${e.message}`;
+    addLog('error', `INGEST ERROR — ${e.message}`);
+  }
+}
+
+// ════ CHAT ════
+function addMsg(text, type='bot', html=false) {
+  const wrap = document.getElementById('chat-wrap');
+  const row = document.createElement('div');
+  row.className = 'msg-row ' + type;
+  const av = document.createElement('div');
+  av.className = 'msg-av ' + (type === 'user' ? 'user' : 'bot');
+  av.textContent = type === 'user' ? 'S' : 'R';
+  const bubble = document.createElement('div');
+  bubble.className = 'msg-bubble';
+  if (html) bubble.innerHTML = text;
+  else bubble.textContent = text;
+  if (['system','error','success'].includes(type)) { row.appendChild(bubble); }
+  else { row.appendChild(av); row.appendChild(bubble); }
+  wrap.appendChild(row);
+  wrap.scrollTop = wrap.scrollHeight;
+  return bubble;
+}
+
+function addTyping() {
+  const wrap = document.getElementById('chat-wrap');
+  const row = document.createElement('div');
+  row.className = 'msg-row bot';
+  row.id = 'typing-indicator';
+  const av = document.createElement('div');
+  av.className = 'msg-av bot';
+  av.textContent = 'R';
+  const bubble = document.createElement('div');
+  bubble.className = 'msg-bubble';
+  bubble.innerHTML = '<div class="typing-dots"><span></span><span></span><span></span></div>';
+  row.appendChild(av);
+  row.appendChild(bubble);
+  wrap.appendChild(row);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+
+function removeTyping() {
+  const t = document.getElementById('typing-indicator');
+  if (t) t.remove();
+}
+
+function clearChat() {
+  const wrap = document.getElementById('chat-wrap');
+  wrap.innerHTML = '';
+  addMsg('Chat cleared. Ready for new commands.', 'system');
+}
+
+function quickCmd(text) {
+  const inp = document.getElementById('cmd-input');
+  inp.value = text;
+  inp.focus();
+  autoResize(inp);
+}
+
+function handleKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendCommand(); }
+}
+
+function autoResize(el) {
+  el.style.height = 'auto';
+  el.style.height = Math.min(el.scrollHeight, 120) + 'px';
+}
+
+async function sendCommand() {
+  if (isProcessing) return;
+  const inp = document.getElementById('cmd-input');
+  const text = inp.value.trim();
+  if (!text) return;
+  inp.value = '';
+  inp.style.height = 'auto';
+  addMsg(text, 'user');
+  isProcessing = true;
+  document.getElementById('send-btn').disabled = true;
+  addTyping();
+  addLog('info', 'Command: ' + text.substring(0, 60));
+  await processCommand(text);
+  removeTyping();
+  isProcessing = false;
+  document.getElementById('send-btn').disabled = false;
+}
+
+// ════ AI COMMAND PROCESSING ════
+async function processCommand(cmd) {
+  const cl = cmd.toLowerCase();
+
+  // Local commands (no API needed)
+  if (cl.includes('show database') || cl.includes('list robots') || cl.includes('what robots')) {
+    const summary = ROBOTS.map((r,i) => `${i+1}. ${r.brand} ${r.name} (${r.cat}) — Score ${r.score}`).join('\n');
+    addMsg(`📊 Currently ${ROBOTS.length} robots in the database:\n\n${summary}`, 'bot');
+    addLog('info', 'DB listed — ' + ROBOTS.length + ' robots');
+    return;
+  }
+
+  if (cl.includes('help')) {
+    addMsg('Here\'s what you can ask me:\n\n• "Add [robot name]" — research and add a new robot\n• "Update [robot name] price to $X" — update a field\n• "Remove [robot name]" — delete a robot\n• "Research top 5 [category] robots" — bulk add\n• "Update news page" — refresh news content\n• "Show database" — list all robots\n• "Export database" — download as JSON', 'bot');
+    return;
+  }
+
+  if (cl.includes('export')) {
+    exportDB();
+    addMsg('✅ Database exported as robots.json — check your downloads folder.', 'success');
+    return;
+  }
+
+  if (cl.includes('remove') || cl.includes('delete')) {
+    const robotName = cmd.replace(/remove|delete/gi,'').trim();
+    const found = ROBOTS.find(r => r.name.toLowerCase().includes(robotName.toLowerCase()) || r.brand.toLowerCase().includes(robotName.toLowerCase()));
+    if (found) {
+      ROBOTS = ROBOTS.filter(r => r.id !== found.id);
+      saveDB();
+      updateStats();
+      addMsg(`🗑️ Removed "${found.brand} ${found.name}" from the database. ${ROBOTS.length} robots remaining.`, 'success');
+      addLog('warn', 'Robot removed: ' + found.name);
+    } else {
+      addMsg(`Couldn't find a robot matching "${robotName}" in the database.`, 'error');
+    }
+    return;
+  }
+
+  // API-powered commands
+  if (!API_KEY) {
+    addMsg('⚠️ No API key configured. Go to Settings → API Configuration and add your Anthropic API key to enable AI-powered commands.', 'error');
+    addLog('error', 'API key missing');
+    return;
+  }
+
+  // Determine what type of command
+  // Bulk add: if asking for multiple robots, use bulk handler
+  const bulkKeywords = ['all robots', 'top 5', 'top 10', 'top 15', 'top 20', 'best 5', 'best 10', 'all humanoid', 'all industrial', 'all drones', 'all medical', 'all consumer', 'all agricultural', 'all military', 'all service', 'list of', 'multiple', 'bulk', 'batch', 'several', 'unitree.com', 'bostondynamics.com', 'all from'];
+  const isBulk = bulkKeywords.some(kw => cl.includes(kw)) || (cl.includes('add') && cl.includes('robot') && (cl.includes('and') || cl.includes(',') || cl.includes('all')));
+  
+  if (isBulk) {
+    await handleBulkAdd(cmd);
+  } else if (cl.includes('add') || cl.includes('research') || cl.includes('find')) {
+    await handleAddRobot(cmd);
+  } else if (cl.includes('update') || cl.includes('change') || cl.includes('edit')) {
+    await handleUpdateRobot(cmd);
+  } else if (cl.includes('news')) {
+    await handleNewsUpdate(cmd);
+  } else {
+    await handleGeneral(cmd);
+  }
+}
+
+async function handleAddRobot(cmd) {
+  addMsg('🔍 Researching robot data with live web search...', 'system');
+  addLog('info', 'Starting robot research: ' + cmd);
+
+  const systemPrompt = `You are a robot database expert for myrobot.shop. When asked to add a robot, research it thoroughly and return ONLY a single raw JSON object. No markdown, no code blocks, no explanation, no text before or after. Start your response with { and end with }.
+
+IMPORTANT: Find the Wikipedia page title for this robot (e.g. "Boston Dynamics Atlas", "Spot (robot)", "da Vinci surgical system").
+Include it as the "wiki" field (just the page title, not the full URL).
+Also try to find a direct image URL from the manufacturer website and include as "img" field.
+The img must be a direct .jpg/.png/.webp URL. If unsure, set img to "".
+
+Required fields:
+{
+  "id": "unique-kebab-case-id",
+  "cat": "one of: Humanoid|Industrial|Service|Consumer|Drones|Educational|Medical|Agricultural|Military",
+  "sub": "specific subcategory e.g. 'Industrial Humanoid'",
+  "name": "exact product name",
+  "brand": "manufacturer name",
+  "year": 2024,
+  "score": 85,
+  "rating": 4.5,
+  "reviews": 100,
+  "price": 50000,
+  "fig": "single relevant emoji",
+  "badge": "NEW or HOT or TOP or empty string",
+  "bc": "badge-new or badge-hot or badge-top or empty string",
+  "status": "Available or Limited or Pilot",
+  "origin": "Country name",
+  "ros": true or false,
+  "sdk": true or false,
+  "arm": true or false,
+  "ai": true or false,
+  "desc": "2-3 sentence description of key features and use cases",
+  "tags": ["tag1", "tag2", "tag3"],
+  "payload": 10,
+  "battery": 120,
+  "speed": 1.5,
+  "dof": 6,
+  "perf": {"Mobility": 80, "Dexterity": 75, "Autonomy": 85, "Durability": 90},
+  "img": "https://example.com/robot-image.jpg",
+  "wiki": "Robot Wikipedia Page Title"
+}
+
+Use 0 for price if POA/unknown. Use 0 for payload/battery/speed/dof if not applicable.
+For img: only include if you are 100% certain it is a direct image file URL ending in .jpg/.png/.webp.
+For wiki: include the exact Wikipedia article title if the robot has one.
+Return ONLY the JSON object. No markdown, no explanation.`;
+
+  try {
+    const response = await fetch('/.netlify/functions/claude', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 1500,
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        system: systemPrompt,
+        messages: [{ role: 'user', content: cmd }]
+      })
+    });
+
+    if (!response.ok) throw new Error('API error ' + response.status);
+    const data = await response.json();
+    const text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+
+    let robot;
+    try {
+      // Try to extract JSON object - find the outermost { }
+      const jsonMatch = text.match(/\{[\s\S]*\}/);
+      if (!jsonMatch) throw new Error('No JSON found in response');
+      // Clean up common issues
+      let clean = jsonMatch[0]
+        .replace(/,\s*}/g, '}')        // trailing commas
+        .replace(/,\s*]/g, ']')         // trailing commas in arrays
+        .replace(/([{,]\s*)(\w+):/g, '$1"$2":')  // unquoted keys
+        .trim();
+      robot = JSON.parse(clean);
+    } catch(e) {
+      // Last resort: try to find and parse any valid JSON in the text
+      const matches = text.match(/\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}/g);
+      if (matches) {
+        for (const m of matches.reverse()) { // try longest first
+          try { robot = JSON.parse(m); if (robot.name) break; } catch(e2) {}
+        }
+      }
+      if (!robot) throw new Error('Could not parse robot data — try being more specific about the robot name');
+    }
+
+    pendingRobot = robot;
+    showRobotPreview(robot);
+    addLog('success', 'Robot researched: ' + robot.name);
+
+  } catch(err) {
+    const msg = err.message.includes('504') || err.message.includes('timeout') 
+        ? '⏱️ Timeout — the web search took too long. Try being more specific: e.g. "Add Unitree G1 humanoid robot 2024"'
+        : '❌ Error: ' + err.message;
+      addMsg(msg, 'error');
+    addLog('error', 'Research failed: ' + err.message);
+  }
+}
+
+function showRobotPreview(robot) {
+  const ps = robot.price > 0 ? '$' + robot.price.toLocaleString() : 'POA';
+  const html = `
+    <div>Found this robot — does it look right?</div>
+    <div class="robot-card-preview" style="margin-top:10px">
+      <div class="rcp-icon">${robot.fig}</div>
+      <div class="rcp-info">
+        <div class="rcp-name">${robot.brand} ${robot.name}</div>
+        <div class="rcp-brand">${robot.cat} · ${robot.sub} · ${robot.origin} · ${robot.year}</div>
+        <div class="rcp-tags">
+          ${robot.tags.map(t=>`<span class="rcp-tag">${t}</span>`).join('')}
+          ${robot.arm?'<span class="rcp-tag">🦾 Arm</span>':''}
+          ${robot.ai?'<span class="rcp-tag">AI</span>':''}
+        </div>
+      </div>
+      <div class="rcp-fields">
+        <div class="rcp-field"><div class="rcp-fv">${robot.score}</div><div class="rcp-fl">SCORE</div></div>
+        <div class="rcp-field"><div class="rcp-fv">${ps}</div><div class="rcp-fl">PRICE</div></div>
+        <div class="rcp-field"><div class="rcp-fv">${robot.payload||'—'}${robot.payload?'kg':''}</div><div class="rcp-fl">PAYLOAD</div></div>
+        <div class="rcp-field"><div class="rcp-fv">${robot.status}</div><div class="rcp-fl">STATUS</div></div>
+      </div>
+      <div style="grid-column:1/-1;font-size:11px;color:var(--mut);line-height:1.6;margin-top:2px">${robot.desc}</div>
+    </div>
+    <div class="confirm-row">
+      <button class="confirm-btn yes" onclick="confirmAdd()">✓ Add to database</button>
+      <button class="confirm-btn no" onclick="cancelAdd()">✕ Cancel</button>
+    </div>`;
+  addMsg(html, 'bot', true);
+}
+
+async function confirmAdd() {
+  if (!pendingRobot) return;
+  
+  // Try to get Wikipedia image if we have a wiki title and no img
+  if (pendingRobot.wiki && !pendingRobot.img) {
+    try {
+      addMsg('🖼️ Fetching image from Wikipedia...', 'system');
+      const wikiTitle = encodeURIComponent(pendingRobot.wiki);
+      const wikiResp = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${wikiTitle}`);
+      if (wikiResp.ok) {
+        const wikiData = await wikiResp.json();
+        if (wikiData.thumbnail?.source) {
+          // Get higher res version
+          pendingRobot.img = wikiData.thumbnail.source.replace(/\/\d+px-/, '/640px-');
+          addLog('success', 'Wikipedia image found: ' + pendingRobot.img);
+        }
+      }
+    } catch(e) {
+      // No image - that's fine, emoji fallback works
+    }
+  }
+  
+  const existing = ROBOTS.findIndex(r => r.id === pendingRobot.id || r.name === pendingRobot.name);
+  if (existing >= 0) ROBOTS[existing] = pendingRobot;
+  else ROBOTS.push(pendingRobot);
+  saveDB();
+  updateStats();
+  const hasImg = pendingRobot.img ? '🖼️ Image found!' : '(no image — emoji fallback)';
+  addMsg(`✅ "${pendingRobot.brand} ${pendingRobot.name}" added! ${hasImg}\n${ROBOTS.length} robots total. Click "🚀 Deploy site" to go live.`, 'success');
+  addLog('success', 'Robot added: ' + pendingRobot.name);
+  document.querySelectorAll('.confirm-btn').forEach(b => b.style.display = 'none');
+  pendingRobot = null;
+  document.getElementById('s-last-op').textContent = 'Added ' + new Date().toLocaleTimeString();
+}
+
+function cancelAdd() {
+  pendingRobot = null;
+  addMsg('Cancelled. What else would you like to do?', 'system');
+  document.querySelectorAll('.confirm-btn').forEach(b => b.style.display = 'none');
+}
+
+
+async function handleBulkAdd(cmd) {
+  addMsg('🔍 Researching multiple robots — this takes up to 25 seconds...', 'system');
+  addLog('info', 'Bulk research: ' + cmd);
+
+  const systemPrompt = `You are a robot database expert for myrobot.shop. You have deep knowledge of every major robot ever built. Return a JSON array of 5-10 real robots. Use your training knowledge — no web search needed. Start with [ end with ]. ONLY the JSON array, nothing else.
+
+Be DETAILED and ACCURATE. Use real specs from your knowledge:
+- Real prices (e.g. UR10e is $57,000, Atlas is $150,000+, Spot is $74,500)
+- Real payload in kg (e.g. UR10e payload is 12.5kg)
+- Real battery life in minutes  
+- Real speed in m/s
+- Real DOF count
+- Score 70-99 based on capability (98+ for best in class, 70s for budget)
+- Rating 3.5-5.0 based on real reception
+- Realistic review counts
+- Rich description: mention specific features, use cases, customers, key specs
+- Relevant tags: be specific (e.g. "Collaborative", "ISO/TS 15066", "Force Sensing")
+- Wiki: exact Wikipedia article title if one exists
+- perf scores: be realistic, not all 80s — vary them meaningfully
+
+Each object:
+{
+  "id": "brand-model-kebab",
+  "cat": "Humanoid|Industrial|Service|Consumer|Drones|Educational|Medical|Agricultural|Military",
+  "sub": "specific subcategory e.g. Collaborative Robot|Inspection Quadruped|Surgical Robot",
+  "name": "exact product name",
+  "brand": "exact manufacturer name",
+  "year": 2024,
+  "score": 88,
+  "rating": 4.6,
+  "reviews": 340,
+  "price": 57000,
+  "fig": "most relevant emoji",
+  "badge": "HOT or NEW or TOP or empty",
+  "bc": "badge-hot or badge-new or badge-top or empty",
+  "status": "Available|Limited|Pilot",
+  "origin": "Country",
+  "ros": true,
+  "sdk": true,
+  "arm": true,
+  "ai": false,
+  "desc": "3-4 sentence description with real specs, customers, use cases and what makes it unique",
+  "tags": ["Collaborative","Force Sensing","ISO Certified","Assembly","Welding"],
+  "payload": 12.5,
+  "battery": 0,
+  "speed": 1.0,
+  "dof": 6,
+  "wiki": "Universal Robots",
+  "img": "",
+  "perf": {"Mobility":45,"Dexterity":92,"Autonomy":78,"Durability":95}
+}
+
+Return ONLY the JSON array.`;
+
+  try {
+    const response = await fetch('/.netlify/functions/claude', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 4000,
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        system: systemPrompt,
+        messages: [{ role: 'user', content: cmd }]
+      })
+    });
+
+    if (!response.ok) throw new Error('API error ' + response.status);
+    const data = await response.json();
+    const text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+
+    // Parse array
+    const arrMatch = text.match(/\[[\s\S]*\]/);
+    if (!arrMatch) throw new Error('No robot array found in response');
+    
+    let robots;
+    try {
+      robots = JSON.parse(arrMatch[0]);
+    } catch(e) {
+      // Try to clean up common JSON issues
+      const clean = arrMatch[0]
+        .replace(/,\s*}/g, '}')
+        .replace(/,\s*]/g, ']');
+      robots = JSON.parse(clean);
+    }
+
+    if (!Array.isArray(robots) || robots.length === 0) throw new Error('No robots returned');
+
+    // Fetch Wikipedia images for robots that have wiki titles
+    addMsg(`📥 Found ${robots.length} robots — fetching images...`, 'system');
+    
+    for (const r of robots) {
+      if (r.wiki && !r.img) {
+        try {
+          const wResp = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(r.wiki)}`);
+          if (wResp.ok) {
+            const wData = await wResp.json();
+            if (wData.thumbnail?.source) {
+              r.img = wData.thumbnail.source.replace(/\/\d+px-/, '/640px-');
+            }
+          }
+        } catch(e) { /* no image, that's fine */ }
+      }
+    }
+
+    // Auto-add all robots without confirmation
+    let added = 0, updated = 0;
+    for (const r of robots) {
+      const existing = ROBOTS.findIndex(x => x.id === r.id || x.name === r.name);
+      if (existing >= 0) { ROBOTS[existing] = r; updated++; }
+      else { ROBOTS.push(r); added++; }
+    }
+    
+    saveDB();
+    updateStats();
+    
+    const summary = robots.map(r => `• ${r.brand} ${r.name} ${r.img ? '🖼️' : ''}`).join('\n');
+    addMsg(`✅ Bulk add complete!\n\n${summary}\n\n${added} added, ${updated} updated. ${ROBOTS.length} robots total.\nClick 🚀 Deploy to go live.`, 'success');
+    addLog('success', `Bulk added ${added} robots, updated ${updated}`);
+    document.getElementById('s-last-op').textContent = `Bulk +${added} @ ${new Date().toLocaleTimeString()}`;
+
+  } catch(err) {
+    const msg = err.message.includes('504') || err.message.includes('timeout')
+      ? '⏱️ Timeout — try fewer robots: "Add 5 humanoid robots from 2025"'
+      : '❌ Bulk add failed: ' + err.message;
+    addMsg(msg, 'error');
+    addLog('error', 'Bulk failed: ' + err.message);
+  }
+}
+
+async function handleUpdateRobot(cmd) {
+  const systemPrompt = `You are a robot database editor. The user wants to update a robot record. Current database: ${JSON.stringify(ROBOTS.map(r=>({id:r.id,name:r.name,brand:r.brand})))}
+
+Return ONLY a JSON object with: {"id": "robot-id", "field": "field-name", "value": new_value}
+The field must be one of: name, brand, price, score, rating, status, desc, year, payload, battery, speed, origin
+Return ONLY the JSON. No other text.`;
+
+  try {
+    const response = await fetch('/.netlify/functions/claude', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 300,
+        system: systemPrompt,
+        messages: [{ role: 'user', content: cmd }]
+      })
+    });
+    const data = await response.json();
+    const text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    const clean = text.replace(/```json|```/g,'').trim();
+    const update = JSON.parse(clean);
+    const idx = ROBOTS.findIndex(r => r.id === update.id);
+    if (idx >= 0) {
+      ROBOTS[idx][update.field] = update.value;
+      saveDB();
+      updateStats();
+      addMsg(`✅ Updated "${ROBOTS[idx].brand} ${ROBOTS[idx].name}" — ${update.field} is now: ${update.value}`, 'success');
+      addLog('success', `Updated ${ROBOTS[idx].name}.${update.field} = ${update.value}`);
+    } else {
+      addMsg('Could not find that robot in the database. Try checking the Robot Database page for the exact name.', 'error');
+    }
+  } catch(err) {
+    addMsg('❌ Update failed: ' + err.message, 'error');
+  }
+}
+
+async function handleNewsUpdate(cmd) {
+  addMsg('📰 Researching latest robotics news...', 'system');
+  try {
+    const response = await fetch('/.netlify/functions/claude', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 800,
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        system: 'You are a robotics news researcher. Find the 5 most recent and significant robotics news stories. Return as JSON array: [{"cat":"CATEGORY","title":"headline","meta":"date · read time"}]. Categories: BREAKING, PRODUCT LAUNCH, REVIEW, INDUSTRY, ANALYSIS, RESEARCH. Return ONLY the JSON array.',
+        messages: [{ role: 'user', content: 'Find the latest robotics news headlines from the past 2 weeks' }]
+      })
+    });
+    const data = await response.json();
+    const text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    const clean = text.replace(/```json|```/g,'').trim();
+    const match = clean.match(/\[[\s\S]+\]/);
+    if (match) {
+      const headlines = JSON.parse(match[0]);
+      localStorage.setItem('mrsh_news', JSON.stringify(headlines));
+      addMsg(`✅ News page updated with ${headlines.length} fresh headlines:\n\n${headlines.map(h=>`• ${h.title}`).join('\n')}`, 'success');
+      addLog('success', 'News updated — ' + headlines.length + ' stories');
+    }
+  } catch(err) {
+    addMsg('❌ News update failed: ' + err.message, 'error');
+  }
+}
+
+async function handleGeneral(cmd) {
+  try {
+    const response = await fetch('/.netlify/functions/claude', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 600,
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        system: `You are the AI assistant for myrobot.shop admin panel. The database has ${ROBOTS.length} robots. Help the admin manage the robot database. Be concise and practical.`,
+        messages: [{ role: 'user', content: cmd }]
+      })
+    });
+    const data = await response.json();
+    const text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    addMsg(text, 'bot');
+  } catch(err) {
+    addMsg('❌ Error: ' + err.message, 'error');
+  }
+}
+
+// ════ DATABASE ════
+function renderDB() {
+  const q = (document.getElementById('db-search-input')?.value || '').toLowerCase();
+  const filtered = ROBOTS.filter(r => !q || r.name.toLowerCase().includes(q) || r.brand.toLowerCase().includes(q) || r.cat.toLowerCase().includes(q));
+  document.getElementById('db-count').textContent = `(${filtered.length} of ${ROBOTS.length})`;
+  const tbody = document.getElementById('robot-tbody');
+  tbody.innerHTML = filtered.map(r => `
+    <tr>
+      <td><span style="font-size:16px;margin-right:7px">${r.fig}</span><strong style="font-size:13px">${r.name}</strong></td>
+      <td style="color:var(--mut)">${r.brand}</td>
+      <td><span style="font-size:10px;background:var(--bg4);padding:2px 7px;border-radius:4px;color:var(--mut)">${r.cat}</span></td>
+      <td><span class="score-badge">${r.score}</span></td>
+      <td style="font-family:'Space Mono',monospace;font-size:11px">${r.price>0?'$'+r.price.toLocaleString():'POA'}</td>
+      <td><span class="status-badge ${r.status.toLowerCase()}">${r.status}</span></td>
+      <td><button class="tbl-action" onclick="editRobotPrompt('${r.id}')">Edit</button> <button class="tbl-action del" onclick="deleteRobot('${r.id}')">Del</button></td>
+    </tr>`).join('');
+}
+
+function filterDB() { renderDB(); }
+
+function deleteRobot(id) {
+  const r = ROBOTS.find(x => x.id === id);
+  if (!r) return;
+  if (confirm(`Delete "${r.brand} ${r.name}"?`)) {
+    ROBOTS = ROBOTS.filter(x => x.id !== id);
+    saveDB();
+    updateStats();
+    renderDB();
+    addLog('warn', 'Deleted: ' + r.name);
+  }
+}
+
+function editRobotPrompt(id) {
+  const r = ROBOTS.find(x => x.id === id);
+  if (!r) return;
+  showPage('cmd', document.querySelector('.nav-item'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+  document.querySelector('.nav-item').classList.add('active');
+  const inp = document.getElementById('cmd-input');
+  inp.value = `Update the ${r.brand} ${r.name} `;
+  inp.focus();
+}
+
+// ════ DEPLOY ════
+async function deployNow() {
+  const btn = document.getElementById('deploy-btn');
+  btn.textContent = '⏳ Building...';
+  btn.disabled = true;
+  addMsg('🚀 Deploying ' + ROBOTS.length + ' robots to GitHub...', 'system');
+
+  try {
+    // Check GitHub token
+    if (!GH_TOKEN || !GH_REPO) {
+      throw new Error('GitHub token or repo not set — go to Settings and add your GitHub token and repo (e.g. myrobot42/myrobot-shop)');
+    }
+
+    // Fetch current index.html from GitHub
+    const apiBase = 'https://api.github.com/repos/' + GH_REPO + '/contents/index.html';
+    const getResp = await fetch(apiBase, {
+      headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json'}
+    });
+    if (!getResp.ok) throw new Error('Could not fetch index.html from GitHub — check your token and repo name');
+    const fileData = await getResp.json();
+    const currentSha = fileData.sha;
+
+    // Decode current content
+    let html = atob(fileData.content.replace(/\n/g, ''));
+
+    // Find and replace ROBOTS array
+    const startMarker = 'const ROBOTS=';
+    const startIdx = html.indexOf(startMarker);
+    if (startIdx === -1) throw new Error('Could not find ROBOTS array in index.html');
+    const bracketIdx = html.indexOf('[', startIdx);
+    let depth = 0, endIdx = -1;
+    for (let i = bracketIdx; i < html.length; i++) {
+      if (html[i] === '[') depth++;
+      else if (html[i] === ']') { depth--; if (depth === 0) { endIdx = i; break; } }
+    }
+    if (endIdx === -1) throw new Error('Could not find end of ROBOTS array');
+
+    const robotsJson = JSON.stringify(ROBOTS);
+    html = html.substring(0, startIdx) + 'const ROBOTS=' + robotsJson + html.substring(endIdx + 1);
+
+    // Push updated file to GitHub
+    const newContent = btoa(unescape(encodeURIComponent(html)));
+    const pushResp = await fetch(apiBase, {
+      method: 'PUT',
+      headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        message: 'Update robots database — ' + ROBOTS.length + ' robots',
+        content: newContent,
+        sha: currentSha
+      })
+    });
+    if (!pushResp.ok) {
+      const err = await pushResp.json();
+      throw new Error('GitHub push failed: ' + (err.message || pushResp.status));
+    }
+
+    addMsg('✅ ' + ROBOTS.length + ' robots pushed to GitHub!\n\nNetlify is now auto-deploying — your live site will update in about 10 seconds. 🚀', 'success');
+    addLog('success', 'GitHub deploy — ' + ROBOTS.length + ' robots pushed');
+
+  } catch(err) {
+    addMsg('❌ Deploy failed: ' + err.message, 'error');
+    addLog('error', 'Deploy error: ' + err.message);
+  }
+
+  btn.textContent = '🚀 Deploy site';
+  btn.disabled = false;
+}
+
+// ════ UTILS ════
+function saveDB() {
+  // Save full DB for this session
+  localStorage.setItem('mrsh_robots', JSON.stringify(ROBOTS));
+  // Also track newly added robots separately so they merge on next load
+  localStorage.setItem('mrsh_added_robots', JSON.stringify(ROBOTS));
+  document.getElementById('stat-total').textContent = ROBOTS.length;
+  if (document.getElementById('s-total')) document.getElementById('s-total').textContent = ROBOTS.length;
+}
+
+function exportDB() {
+  const json = JSON.stringify(ROBOTS, null, 2);
+  const blob = new Blob([json], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'robots.json'; a.click();
+}
+
+function updateStats() {
+  document.getElementById('stat-total').textContent = ROBOTS.length;
+  document.getElementById('stat-updated').textContent = new Date().toLocaleTimeString();
+  if (document.getElementById('s-total')) document.getElementById('s-total').textContent = ROBOTS.length;
+}
+
+function addLog(type, msg) {
+  const wrap = document.getElementById('logs-wrap');
+  const line = document.createElement('div');
+  line.className = 'log-line';
+  const ts = new Date().toLocaleString();
+  line.innerHTML = `<span class="log-ts">[${ts}]</span><span class="log-${type}">${msg}</span>`;
+  wrap.appendChild(line);
+  wrap.scrollTop = wrap.scrollHeight;
+}
+
+function loadSettings() {
+  API_KEY = localStorage.getItem('mrsh_api_key') || '';
+  GH_TOKEN = localStorage.getItem('mrsh_gh_token') || '';
+  GH_REPO = localStorage.getItem('mrsh_gh_repo') || '';
+  if (document.getElementById('api-key-input')) {
+    document.getElementById('api-key-input').value = API_KEY ? '••••••••' : '';
+    document.getElementById('gh-token-input').value = GH_TOKEN ? '••••••••' : '';
+    document.getElementById('gh-repo-input').value = GH_REPO;
+  }
+  document.getElementById('stat-api').textContent = API_KEY ? 'Connected' : 'No key';
+  document.getElementById('stat-api').style.color = API_KEY ? 'var(--grn)' : 'var(--red)';
+}
+
+function saveApiKey() {
+  const v = document.getElementById('api-key-input').value;
+  if (v && v !== '••••••••') {
+    API_KEY = v;
+    localStorage.setItem('mrsh_api_key', v);
+    document.getElementById('api-key-input').value = '••••••••';
+    document.getElementById('stat-api').textContent = 'Connected';
+    document.getElementById('stat-api').style.color = 'var(--grn)';
+    addLog('success', 'API key saved');
+    alert('✓ API key saved!');
+  }
+}
+
+function saveGHToken() {
+  const v = document.getElementById('gh-token-input').value;
+  if (v && v !== '••••••••') {
+    GH_TOKEN = v;
+    localStorage.setItem('mrsh_gh_token', v);
+    document.getElementById('gh-token-input').value = '••••••••';
+    addLog('success', 'GitHub token saved');
+    alert('✓ GitHub token saved!');
+  }
+  const repo = document.getElementById('gh-repo-input').value;
+  if (repo) { GH_REPO = repo; localStorage.setItem('mrsh_gh_repo', repo); }
+}
+
+function changePassword() {
+  const v = document.getElementById('pw-change-input').value;
+  if (v && v.length >= 6) {
+    localStorage.setItem('mrsh_pw', v);
+    document.getElementById('pw-change-input').value = '';
+    addLog('success', 'Admin password changed');
+    alert('✓ Password changed!');
+  } else {
+    alert('Password must be at least 6 characters.');
+  }
+}
+
+document.getElementById('pw-input').addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
+loadSettings();
+updateBadges();
+</script>
+</body>
+</html>
