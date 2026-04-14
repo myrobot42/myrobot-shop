@@ -1620,11 +1620,12 @@ async function deployNow() {
     const fileData = await getResp.json();
     const currentSha = fileData.sha;
 
-    // Decode current content properly
-    const binaryStr = atob(fileData.content.replace(/\n/g, ''));
-    const bytes2 = new Uint8Array(binaryStr.length);
-    for (let i = 0; i < binaryStr.length; i++) bytes2[i] = binaryStr.charCodeAt(i);
-    let html = new TextDecoder().decode(bytes2);
+    // Decode current content (UTF-8 safe)
+    const _b64 = fileData.content.replace(/\n/g, '');
+    const _bin = atob(_b64);
+    const _bytes = new Uint8Array(_bin.length);
+    for (let i = 0; i < _bin.length; i++) _bytes[i] = _bin.charCodeAt(i);
+    let html = new TextDecoder().decode(_bytes);
 
     // Find and replace ROBOTS array
     const startMarker = 'const ROBOTS=';
@@ -1641,12 +1642,12 @@ async function deployNow() {
     const robotsJson = JSON.stringify(ROBOTS);
     html = html.substring(0, startIdx) + 'const ROBOTS=' + robotsJson + html.substring(endIdx + 1);
 
-    // Push updated file to GitHub
-    const encoder = new TextEncoder();
-    const bytes = encoder.encode(html);
-    let binary = '';
-    bytes.forEach(b => binary += String.fromCharCode(b));
-    const newContent = btoa(binary);
+    // Push updated file to GitHub (UTF-8 safe encode)
+    const _enc = new TextEncoder();
+    const _encBytes = _enc.encode(html);
+    let _binary = '';
+    _encBytes.forEach(b => _binary += String.fromCharCode(b));
+    const newContent = btoa(_binary);
     const pushResp = await fetch(apiBase, {
       method: 'PUT',
       headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json'},
