@@ -871,7 +871,7 @@ function approveQueued(id){
   ROBOTS.push(robot);
   saveQueue();renderQueue();updateBadges();
   addMsg(`✅ Added ${r.name} to database from Review Queue`,'system');
-  log(`QUEUE — Approved: ${r.name}`,'success');
+  addLog('success', `QUEUE — Approved: ${r.name}`);
 }
 function dismissQueued(id){const r=QUEUE.find(x=>x.id==id);if(r)r.status='dismissed';saveQueue();renderQueue();updateBadges();}
 
@@ -969,14 +969,14 @@ Return ONLY the JSON array. No markdown. No explanation. Start with [ end with ]
     status.textContent=`✅ Added ${added} new ${brand} robots! Total in database: ${ROBOTS.length}`;
     results.style.display='block';
     results.innerHTML=`<div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">${robots.map(r=>`<span style="background:var(--acc-l);border:1px solid rgba(0,102,255,.3);border-radius:4px;padding:3px 8px;font-size:11px;color:var(--acc)">${r.name}</span>`).join('')}</div>`;
-    log(`INGEST — Added ${added} ${brand} robots (${cat})`,'success');
+    addLog('success', `INGEST — Added ${added} ${brand} robots (${cat})`);
     renderIngestStats();
     updateBadges();
     document.getElementById('stat-total').textContent=ROBOTS.length;
   }catch(e){
     status.style.color='var(--red)';
     status.textContent=`❌ Error: ${e.message}`;
-    log(`INGEST ERROR — ${e.message}`,'error');
+    addLog('error', `INGEST ERROR — ${e.message}`);
   }
 }
 
@@ -1562,25 +1562,31 @@ async function deployNow() {
   const btn = document.getElementById('deploy-btn');
   btn.textContent = '⏳ Building...';
   btn.disabled = true;
-  addMsg('🚀 Building updated site with ' + ROBOTS.length + ' robots...', 'system');
+  addMsg('🚀 Deploying ' + ROBOTS.length + ' robots to GitHub...', 'system');
 
   try {
-    // Fetch the live index.html from the main site
-    const siteUrl = window.location.origin + '/index.html';
-    const resp = await fetch(siteUrl + '?nocache=' + Date.now());
-    if (!resp.ok) throw new Error('Could not fetch index.html — make sure myrobotshop-v32-DEPLOY.zip is deployed to this Netlify site');
-    let html = await resp.text();
+    // Check GitHub token
+    if (!GH_TOKEN || !GH_REPO) {
+      throw new Error('GitHub token or repo not set — go to Settings and add your GitHub token and repo (e.g. myrobot42/myrobot-shop)');
+    }
 
-    // Find the ROBOTS array and replace it entirely
+    // Fetch current index.html from GitHub
+    const apiBase = 'https://api.github.com/repos/' + GH_REPO + '/contents/index.html';
+    const getResp = await fetch(apiBase, {
+      headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json'}
+    });
+    if (!getResp.ok) throw new Error('Could not fetch index.html from GitHub — check your token and repo name');
+    const fileData = await getResp.json();
+    const currentSha = fileData.sha;
+
+    // Decode current content
+    let html = atob(fileData.content.replace(/\n/g, ''));
+
+    // Find and replace ROBOTS array
     const startMarker = 'const ROBOTS=';
     const startIdx = html.indexOf(startMarker);
-    if (startIdx === -1) throw new Error('Could not find ROBOTS array in index.html — deploy the v32 zip first');
-
-    // Find the opening bracket
+    if (startIdx === -1) throw new Error('Could not find ROBOTS array in index.html');
     const bracketIdx = html.indexOf('[', startIdx);
-    if (bracketIdx === -1) throw new Error('Could not find start of ROBOTS array');
-
-    // Find matching closing bracket
     let depth = 0, endIdx = -1;
     for (let i = bracketIdx; i < html.length; i++) {
       if (html[i] === '[') depth++;
@@ -1588,21 +1594,27 @@ async function deployNow() {
     }
     if (endIdx === -1) throw new Error('Could not find end of ROBOTS array');
 
-    // Replace with our robots
-    const robotsJson = JSON.stringify(ROBOTS, null, 0);
+    const robotsJson = JSON.stringify(ROBOTS);
     html = html.substring(0, startIdx) + 'const ROBOTS=' + robotsJson + html.substring(endIdx + 1);
 
-    // Download the updated index.html
-    const blob = new Blob([html], {type: 'text/html'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'index.html';
-    a.click();
-    URL.revokeObjectURL(url);
+    // Push updated file to GitHub
+    const newContent = btoa(unescape(encodeURIComponent(html)));
+    const pushResp = await fetch(apiBase, {
+      method: 'PUT',
+      headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        message: 'Update robots database — ' + ROBOTS.length + ' robots',
+        content: newContent,
+        sha: currentSha
+      })
+    });
+    if (!pushResp.ok) {
+      const err = await pushResp.json();
+      throw new Error('GitHub push failed: ' + (err.message || pushResp.status));
+    }
 
-    addMsg('✅ index.html downloaded with ' + ROBOTS.length + ' robots!\n\nNow drag just this index.html file onto the myrobot42 Netlify site to deploy. Done!', 'success');
-    addLog('success', 'Deploy — index.html with ' + ROBOTS.length + ' robots');
+    addMsg('✅ ' + ROBOTS.length + ' robots pushed to GitHub!\n\nNetlify is now auto-deploying — your live site will update in about 10 seconds. 🚀', 'success');
+    addLog('success', 'GitHub deploy — ' + ROBOTS.length + ' robots pushed');
 
   } catch(err) {
     addMsg('❌ Deploy failed: ' + err.message, 'error');
