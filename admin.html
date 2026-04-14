@@ -995,6 +995,14 @@ perf`;
     let added=0;
     robots.forEach(r=>{
       if(!r.id)r.id=(r.brand+'-'+r.name).toLowerCase().replace(/[^a-z0-9]+/g,'-');
+      // Clean img field - remove any bad values
+      if(!r.img || r.img==='' || r.img.includes('"') || r.img.includes("'") || !r.img.startsWith('http')) r.img='';
+      // Ensure required fields
+      if(!r.fig) r.fig='🤖';
+      if(!r.cat) r.cat=cat;
+      if(!r.score) r.score=75;
+      if(!r.rating) r.rating=4.0;
+      if(!r.perf) r.perf={Mobility:75,Dexterity:70,Autonomy:70,Durability:75};
       const idx=ROBOTS.findIndex(x=>x.id===r.id);
       if(idx>=0)ROBOTS[idx]=r;else{ROBOTS.push(r);added++;}
     });
@@ -1612,8 +1620,11 @@ async function deployNow() {
     const fileData = await getResp.json();
     const currentSha = fileData.sha;
 
-    // Decode current content
-    let html = atob(fileData.content.replace(/\n/g, ''));
+    // Decode current content properly
+    const binaryStr = atob(fileData.content.replace(/\n/g, ''));
+    const bytes2 = new Uint8Array(binaryStr.length);
+    for (let i = 0; i < binaryStr.length; i++) bytes2[i] = binaryStr.charCodeAt(i);
+    let html = new TextDecoder().decode(bytes2);
 
     // Find and replace ROBOTS array
     const startMarker = 'const ROBOTS=';
@@ -1631,7 +1642,11 @@ async function deployNow() {
     html = html.substring(0, startIdx) + 'const ROBOTS=' + robotsJson + html.substring(endIdx + 1);
 
     // Push updated file to GitHub
-    const newContent = btoa(unescape(encodeURIComponent(html)));
+    const encoder = new TextEncoder();
+    const bytes = encoder.encode(html);
+    let binary = '';
+    bytes.forEach(b => binary += String.fromCharCode(b));
+    const newContent = btoa(binary);
     const pushResp = await fetch(apiBase, {
       method: 'PUT',
       headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json'},
