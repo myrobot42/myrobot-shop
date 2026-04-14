@@ -523,7 +523,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
 const ADMIN_PASSWORD = 'robo2026';
 let API_KEY = localStorage.getItem('mrsh_api_key') || '';
 let GH_TOKEN = localStorage.getItem('mrsh_gh_token') || '';
-let GH_REPO = localStorage.getItem('mrsh_gh_repo') || '';
+let GH_REPO = localStorage.getItem('mrsh_gh_repo') || 'myrobot42/myrobot-shop'; if(!localStorage.getItem('mrsh_gh_repo')){localStorage.setItem('mrsh_gh_repo','myrobot42/myrobot-shop');}
 let isProcessing = false;
 let pendingRobot = null;
 
@@ -1699,7 +1699,7 @@ function loadSettings() {
   if (document.getElementById('api-key-input')) {
     document.getElementById('api-key-input').value = API_KEY ? '••••••••' : '';
     document.getElementById('gh-token-input').value = GH_TOKEN ? '••••••••' : '';
-    document.getElementById('gh-repo-input').value = GH_REPO;
+    document.getElementById('gh-repo-input').value = GH_REPO || 'myrobot42/myrobot-shop';
   }
   document.getElementById('stat-api').textContent = API_KEY ? 'Connected' : 'No key';
   document.getElementById('stat-api').style.color = API_KEY ? 'var(--grn)' : 'var(--red)';
