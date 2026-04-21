@@ -218,11 +218,115 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
 .img-clear-btn{position:absolute;top:2px;right:2px;width:18px;height:18px;background:var(--red);border:none;border-radius:3px;cursor:pointer;font-size:10px;color:#fff;display:flex;align-items:center;justify-content:center;opacity:0}
 .img-slot:hover .img-clear-btn{opacity:1}
 
+
+/* ── EDIT MODAL ── */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:2000;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal{background:var(--bg2);border:1px solid var(--bdr2);border-radius:16px;width:100%;max-width:680px;max-height:90vh;overflow-y:auto;padding:28px}
+.modal-title{font-size:16px;font-weight:700;margin-bottom:20px;display:flex;justify-content:space-between;align-items:center}
+.modal-close{background:var(--bg4);border:1px solid var(--bdr2);color:var(--mut);width:28px;height:28px;border-radius:6px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
+.modal-close:hover{color:var(--txt)}
+.modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.modal-field{display:flex;flex-direction:column;gap:5px}
+.modal-field.full{grid-column:1/-1}
+.modal-label{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);text-transform:uppercase}
+.modal-input{background:var(--bg3);border:1px solid var(--bdr2);border-radius:7px;padding:9px 12px;font-size:12px;color:var(--txt);font-family:inherit;outline:none;transition:border-color .15s}
+.modal-input:focus{border-color:var(--acc)}
+.modal-select{background:var(--bg3);border:1px solid var(--bdr2);border-radius:7px;padding:9px 12px;font-size:12px;color:var(--txt);font-family:inherit;outline:none}
+.modal-section{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--acc);margin:16px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--bdr);text-transform:uppercase}
+.modal-footer{display:flex;gap:8px;justify-content:flex-end;margin-top:20px;padding-top:16px;border-top:1px solid var(--bdr)}
+.perf-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.perf-field{text-align:center}
+.perf-label{font-size:10px;color:var(--mut);margin-bottom:4px}
+.perf-input{width:100%;background:var(--bg3);border:1px solid var(--bdr2);border-radius:6px;padding:6px;font-size:12px;color:var(--txt);font-family:'Space Mono',monospace;text-align:center;outline:none}
+.perf-input:focus{border-color:var(--acc)}
+
 /* ── SCROLLBAR ── */
 ::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:var(--bdr2);border-radius:3px}
 </style>
 </head>
 <body>
+
+
+<!-- EDIT ROBOT MODAL -->
+<div class="modal-overlay" id="edit-modal" style="display:none" onclick="if(event.target===this)closeEditModal()">
+  <div class="modal">
+    <div class="modal-title">
+      <span id="modal-robot-title">Edit Robot</span>
+      <button class="modal-close" onclick="closeEditModal()">✕</button>
+    </div>
+
+    <div class="modal-section">BASIC INFO</div>
+    <div class="modal-grid">
+      <div class="modal-field"><div class="modal-label">Name</div><input class="modal-input" id="edit-name" type="text"></div>
+      <div class="modal-field"><div class="modal-label">Brand</div><input class="modal-input" id="edit-brand" type="text"></div>
+      <div class="modal-field"><div class="modal-label">Year</div><input class="modal-input" id="edit-year" type="number"></div>
+      <div class="modal-field"><div class="modal-label">Category</div>
+        <select class="modal-select" id="edit-cat">
+          <option value="Consumer">Consumer / Vacuum</option>
+          <option value="Humanoid">Humanoid</option>
+          <option value="Industrial">Industrial / Cobot</option>
+          <option value="Drones">Drones / UAV</option>
+          <option value="Service">Service / Delivery</option>
+          <option value="Medical">Medical / Surgical</option>
+          <option value="Agricultural">Agricultural</option>
+          <option value="Educational">Educational</option>
+          <option value="Military">Military / Security</option>
+        </select>
+      </div>
+      <div class="modal-field"><div class="modal-label">Subcategory</div><input class="modal-input" id="edit-sub" type="text" placeholder="e.g. Vacuum, Cobot, Quadruped"></div>
+      <div class="modal-field"><div class="modal-label">Status</div>
+        <select class="modal-select" id="edit-status">
+          <option value="active">Active</option>
+          <option value="discontinued">Discontinued</option>
+          <option value="coming-soon">Coming Soon</option>
+          <option value="limited">Limited</option>
+          <option value="pilot">Pilot</option>
+        </select>
+      </div>
+      <div class="modal-field"><div class="modal-label">Price (USD)</div><input class="modal-input" id="edit-price" type="number" placeholder="0 = POA"></div>
+      <div class="modal-field"><div class="modal-label">Expert Score (0-100)</div><input class="modal-input" id="edit-score" type="number" min="0" max="100"></div>
+      <div class="modal-field"><div class="modal-label">User Rating (0-5)</div><input class="modal-input" id="edit-rating" type="number" min="0" max="5" step="0.1"></div>
+      <div class="modal-field"><div class="modal-label">Emoji Icon</div><input class="modal-input" id="edit-fig" type="text" placeholder="🤖"></div>
+    </div>
+
+    <div class="modal-section">DESCRIPTION</div>
+    <div class="modal-grid">
+      <div class="modal-field full"><div class="modal-label">Short Description</div><textarea class="modal-input" id="edit-desc" rows="3" style="resize:vertical"></textarea></div>
+      <div class="modal-field full"><div class="modal-label">Tags (comma separated)</div><input class="modal-input" id="edit-tags" type="text" placeholder="vacuum, mop, lidar, self-emptying"></div>
+      <div class="modal-field full"><div class="modal-label">Highlights (comma separated)</div><input class="modal-input" id="edit-highlights" type="text" placeholder="60-day dust bag, AI obstacle avoidance, 6000Pa suction"></div>
+    </div>
+
+    <div class="modal-section">IMAGES</div>
+    <div class="modal-grid">
+      <div class="modal-field full"><div class="modal-label">Main Image URL</div><input class="modal-input" id="edit-img" type="text" placeholder="https://upload.wikimedia.org/..."></div>
+    </div>
+
+    <div class="modal-section">KEY SPECS</div>
+    <div class="modal-grid">
+      <div class="modal-field"><div class="modal-label">Weight (kg)</div><input class="modal-input" id="edit-weight" type="number" step="0.1"></div>
+      <div class="modal-field"><div class="modal-label">Battery Life (mins)</div><input class="modal-input" id="edit-battery" type="number"></div>
+      <div class="modal-field"><div class="modal-label">Height (mm)</div><input class="modal-input" id="edit-height" type="number"></div>
+      <div class="modal-field"><div class="modal-label">IP Rating</div><input class="modal-input" id="edit-ip" type="text" placeholder="IP67"></div>
+      <div class="modal-field"><div class="modal-label">CPU / Chipset</div><input class="modal-input" id="edit-cpu" type="text"></div>
+      <div class="modal-field"><div class="modal-label">OS</div><input class="modal-input" id="edit-os" type="text" placeholder="ROS2, Android, Proprietary"></div>
+      <div class="modal-field"><div class="modal-label">Payload (kg)</div><input class="modal-input" id="edit-payload" type="number" step="0.1"></div>
+      <div class="modal-field"><div class="modal-label">Max Speed (m/s)</div><input class="modal-input" id="edit-speed" type="number" step="0.1"></div>
+    </div>
+
+    <div class="modal-section">PERFORMANCE SCORES (0–100)</div>
+    <div class="perf-grid">
+      <div class="perf-field"><div class="perf-label">Mobility</div><input class="perf-input" id="edit-perf-mobility" type="number" min="0" max="100"></div>
+      <div class="perf-field"><div class="perf-label">Dexterity</div><input class="perf-input" id="edit-perf-dexterity" type="number" min="0" max="100"></div>
+      <div class="perf-field"><div class="perf-label">Autonomy</div><input class="perf-input" id="edit-perf-autonomy" type="number" min="0" max="100"></div>
+      <div class="perf-field"><div class="perf-label">Durability</div><input class="perf-input" id="edit-perf-durability" type="number" min="0" max="100"></div>
+    </div>
+
+    <div class="modal-footer">
+      <button class="tbl-action" onclick="closeEditModal()">Cancel</button>
+      <button class="save-btn" onclick="saveEditModal()">💾 Save Robot</button>
+    </div>
+  </div>
+</div>
 
 <!-- LOGIN -->
 <div id="login-screen">
@@ -1635,15 +1739,99 @@ function deleteRobot(id) {
   }
 }
 
+let editingRobotId = null;
+
 function editRobotPrompt(id) {
   const r = ROBOTS.find(x => x.id === id);
   if (!r) return;
-  showPage('cmd', document.querySelector('.nav-item'));
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  document.querySelector('.nav-item').classList.add('active');
-  const inp = document.getElementById('cmd-input');
-  inp.value = `Update the ${r.brand} ${r.name} `;
-  inp.focus();
+  editingRobotId = id;
+  document.getElementById('modal-robot-title').textContent = 'Edit — ' + r.brand + ' ' + r.name;
+  // Basic
+  document.getElementById('edit-name').value = r.name || '';
+  document.getElementById('edit-brand').value = r.brand || '';
+  document.getElementById('edit-year').value = r.year || '';
+  document.getElementById('edit-cat').value = r.cat || 'Consumer';
+  document.getElementById('edit-sub').value = r.sub || '';
+  document.getElementById('edit-status').value = (r.status||'active').toLowerCase();
+  document.getElementById('edit-price').value = r.price || 0;
+  document.getElementById('edit-score').value = r.score || 75;
+  document.getElementById('edit-rating').value = r.rating || 4.0;
+  document.getElementById('edit-fig').value = r.fig || '🤖';
+  // Description
+  document.getElementById('edit-desc').value = r.desc || '';
+  document.getElementById('edit-tags').value = (r.tags||[]).join(', ');
+  document.getElementById('edit-highlights').value = (r.highlights||[]).join(', ');
+  // Images
+  document.getElementById('edit-img').value = r.img || '';
+  // Specs
+  document.getElementById('edit-weight').value = r.weight_kg || '';
+  document.getElementById('edit-battery').value = r.battery_life || '';
+  document.getElementById('edit-height').value = r.height_mm || '';
+  document.getElementById('edit-ip').value = r.ip_rating || '';
+  document.getElementById('edit-cpu').value = r.cpu || '';
+  document.getElementById('edit-os').value = r.os || '';
+  document.getElementById('edit-payload').value = r.payload || '';
+  document.getElementById('edit-speed').value = r.speed || '';
+  // Perf
+  const perf = r.perf || {};
+  document.getElementById('edit-perf-mobility').value = perf.Mobility || 70;
+  document.getElementById('edit-perf-dexterity').value = perf.Dexterity || 70;
+  document.getElementById('edit-perf-autonomy').value = perf.Autonomy || 70;
+  document.getElementById('edit-perf-durability').value = perf.Durability || 70;
+  // Show modal
+  document.getElementById('edit-modal').style.display = 'flex';
+}
+
+function closeEditModal() {
+  document.getElementById('edit-modal').style.display = 'none';
+  editingRobotId = null;
+}
+
+function saveEditModal() {
+  if (!editingRobotId) return;
+  const idx = ROBOTS.findIndex(x => x.id === editingRobotId);
+  if (idx < 0) return;
+  const r = ROBOTS[idx];
+  // Basic
+  r.name = document.getElementById('edit-name').value.trim();
+  r.brand = document.getElementById('edit-brand').value.trim();
+  r.year = parseInt(document.getElementById('edit-year').value) || null;
+  r.cat = document.getElementById('edit-cat').value;
+  r.sub = document.getElementById('edit-sub').value.trim();
+  r.status = document.getElementById('edit-status').value;
+  r.price = parseFloat(document.getElementById('edit-price').value) || 0;
+  r.score = parseInt(document.getElementById('edit-score').value) || 75;
+  r.rating = parseFloat(document.getElementById('edit-rating').value) || 4.0;
+  r.fig = document.getElementById('edit-fig').value.trim() || '🤖';
+  // Description
+  r.desc = document.getElementById('edit-desc').value.trim();
+  r.tags = document.getElementById('edit-tags').value.split(',').map(t=>t.trim()).filter(Boolean);
+  r.highlights = document.getElementById('edit-highlights').value.split(',').map(t=>t.trim()).filter(Boolean);
+  // Image
+  const img = document.getElementById('edit-img').value.trim();
+  r.img = img.startsWith('http') ? img : '';
+  // Specs
+  if(document.getElementById('edit-weight').value) r.weight_kg = parseFloat(document.getElementById('edit-weight').value);
+  if(document.getElementById('edit-battery').value) r.battery_life = parseInt(document.getElementById('edit-battery').value);
+  if(document.getElementById('edit-height').value) r.height_mm = parseInt(document.getElementById('edit-height').value);
+  if(document.getElementById('edit-ip').value) r.ip_rating = document.getElementById('edit-ip').value.trim();
+  if(document.getElementById('edit-cpu').value) r.cpu = document.getElementById('edit-cpu').value.trim();
+  if(document.getElementById('edit-os').value) r.os = document.getElementById('edit-os').value.trim();
+  if(document.getElementById('edit-payload').value) r.payload = parseFloat(document.getElementById('edit-payload').value);
+  if(document.getElementById('edit-speed').value) r.speed = parseFloat(document.getElementById('edit-speed').value);
+  // Perf
+  r.perf = {
+    Mobility: parseInt(document.getElementById('edit-perf-mobility').value) || 70,
+    Dexterity: parseInt(document.getElementById('edit-perf-dexterity').value) || 70,
+    Autonomy: parseInt(document.getElementById('edit-perf-autonomy').value) || 70,
+    Durability: parseInt(document.getElementById('edit-perf-durability').value) || 70,
+  };
+  ROBOTS[idx] = r;
+  saveDB();
+  renderDB();
+  closeEditModal();
+  addLog('success', 'Edited: ' + r.brand + ' ' + r.name);
+  addMsg('✅ Saved <strong>' + r.brand + ' ' + r.name + '</strong> — click Deploy when ready.', 'system');
 }
 
 // ════ DEPLOY ════
