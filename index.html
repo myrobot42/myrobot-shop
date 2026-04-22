@@ -1075,7 +1075,6 @@ function row(label, val, unit='', note='') {
   else display = val;
   const unitHtml = unit ? ` <span style="color:var(--mut);font-size:11px">${unit}</span>` : '';
   const noteHtml = note ? `<br><span style="color:var(--mut);font-size:11px">${note}</span>` : '';
-  return '📋 **' + found.name + '** by ' + found.brand + '\n\nCategory: ' + found.cat + ' · ' + (found.sub||'') + '\nScore: ' + found.score + '/100 · ' + (found.price>0?'$'+found.price.toLocaleString():'POA') + '\n\nClick View → to see full specs!';
   }
 
   // Defaults
