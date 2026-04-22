@@ -672,7 +672,6 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
                 <option value="Service">Service</option>
                 <option value="Medical">Medical</option>
               </select>
-              <button class="save-btn" style="background:var(--bg4);color:var(--txt);border:1px solid var(--bdr2)" onclick="bulkWikiFetch()">🌐 Bulk Wiki Fetch</button>
               <button class="save-btn" onclick="saveAllImages()">💾 Save All + Deploy</button>
             </div>
             <div id="img-manager-list"></div>
@@ -2066,7 +2065,6 @@ function renderImgManager() {
           value="${mainImg}" id="mainimg-${r.id}"
           oninput="updateMainPreview('${r.id}',this.value)"
           style="flex:1;font-size:11px">
-        <button class="qbrand" onclick="fetchWikiImage('${r.id}','${r.name} ${r.brand}')" title="Fetch from Wikipedia">🌐 Wiki</button>
         <button class="qbrand" onclick="uploadCloudinary('${r.id}')" title="Upload your own image">☁️ Upload</button>
         <button class="qbrand" onclick="clearMainImg('${r.id}')">Clear</button>
       </div>
@@ -2182,77 +2180,7 @@ async function handleCloudinaryUpload(robotId, input) {
   input.value = '';
 }
 
-// ════ WIKIPEDIA FETCH ════
-async function fetchWikiImage(robotId, searchTerm) {
-  const imgInput = document.getElementById('mainimg-' + robotId);
-  const thumb = document.getElementById('main-thumb-' + robotId);
-  if (thumb) thumb.innerHTML = '<span style="font-size:10px;color:var(--mut)">Fetching...</span>';
-  const query = searchTerm.replace(/[^a-zA-Z0-9 ]/g, ' ').trim();
-  try {
-    // Try direct page first
-    const resp = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(query));
-    if (resp.ok) {
-      const data = await resp.json();
-      if (data.thumbnail && data.thumbnail.source) {
-        const url = data.thumbnail.source.replace(/\/[0-9]+px-/, '/640px-');
-        if (imgInput) { imgInput.value = url; updateMainPreview(robotId, url); }
-        addLog('success', 'Wiki image: ' + query);
-        return;
-      }
-    }
-    // Try search API
-    const sResp = await fetch('https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + encodeURIComponent(query) + '&format=json&origin=*&srlimit=1');
-    const sData = await sResp.json();
-    const results = sData.query && sData.query.search;
-    if (results && results.length > 0) {
-      const title = results[0].title;
-      const pResp = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(title));
-      if (pResp.ok) {
-        const pData = await pResp.json();
-        if (pData.thumbnail && pData.thumbnail.source) {
-          const url = pData.thumbnail.source.replace(/\/[0-9]+px-/, '/640px-');
-          if (imgInput) { imgInput.value = url; updateMainPreview(robotId, url); }
-          addLog('success', 'Wiki image via search: ' + title);
-          return;
-        }
-      }
-    }
-    // Nothing found
-    const r = ROBOTS.find(x => x.id === robotId);
-    if (thumb) thumb.innerHTML = '<span style="font-size:24px">' + (r ? r.fig||'🤖' : '🤖') + '</span>';
-    addLog('warn', 'No Wiki image: ' + query);
-  } catch(err) {
-    const r = ROBOTS.find(x => x.id === robotId);
-    if (thumb) thumb.innerHTML = '<span style="font-size:24px">' + (r ? r.fig||'🤖' : '🤖') + '</span>';
-    addLog('error', 'Wiki error: ' + err.message);
-  }
-}
 
-async function bulkWikiFetch() {
-  const catFilter = document.getElementById('img-cat-filter').value;
-  const toFetch = ROBOTS.filter(r => (!catFilter || r.cat === catFilter) && !r.img);
-  if (!toFetch.length) { alert('No robots without images in this selection.'); return; }
-  if (!confirm('Fetch Wikipedia images for ' + toFetch.length + ' robots without images? This may take a minute.')) return;
-  addMsg('Bulk Wikipedia fetch for ' + toFetch.length + ' robots...', 'system');
-  let found = 0;
-  for (const r of toFetch) {
-    try {
-      const resp = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(r.name));
-      if (resp.ok) {
-        const data = await resp.json();
-        if (data.thumbnail && data.thumbnail.source) {
-          r.img = data.thumbnail.source.replace(/\/[0-9]+px-/, '/640px-');
-          found++;
-          const inp = document.getElementById('mainimg-' + r.id);
-          if (inp) { inp.value = r.img; updateMainPreview(r.id, r.img); }
-        }
-      }
-      await new Promise(res => setTimeout(res, 300));
-    } catch(e) {}
-  }
-  saveDB();
-  addMsg('Done! Found images for ' + found + ' of ' + toFetch.length + ' robots. Click Save All + Deploy.', 'success');
-}
 
 </script>
 </body>
