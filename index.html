@@ -572,6 +572,11 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .fabtn{width:100%;padding:10px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s}
 .fabtn:hover{background:#0052cc}
 
+
+.finder-field-lbl{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:6px}
+.finder-field select{background:#f8f9fa;border:1px solid #dee2e6;border-radius:5px;padding:8px 10px;font-size:12px;color:#333;font-family:inherit;outline:none;width:100%}
+.finder-field select:focus{border-color:var(--acc)}
+
 /* FINDER SPEC FILTERS */
 .ffg-section{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--acc);padding:10px 0 6px;text-transform:uppercase;border-bottom:2px solid var(--acc);margin-bottom:10px}
 .fspec-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}
@@ -1120,7 +1125,7 @@ function buildSpecTable(r) {
   if (r.surface_finish) html += row('Finish', r.surface_finish);
   if (r.ip_rating) html += row('Protection', r.ip_rating);
   if (r.mil_spec) html += row('MIL-SPEC', r.mil_spec);
-  if (r.operating_temp_min !== undefined && r.operating_temp_max !== undefined) html += row('Operating temp', `${r.operating_temp_min}Â°C to ${r.operating_temp_max}Â°C`);
+  if (r.operating_temp_min !== undefined && r.operating_temp_max !== undefined) html += row('Operating temp', `${r.operating_temp_min}°C to ${r.operating_temp_max}°C`);
   else if (r.operating_temp) html += row('Operating temp', r.operating_temp);
   if (r.storage_temp) html += row('Storage temp', r.storage_temp);
   if (r.humidity) html += row('Humidity', r.humidity);
@@ -1217,7 +1222,7 @@ function buildSpecTable(r) {
   if (r.joint_motor) html += row('Joint motor', r.joint_motor);
   if (r.joint_bearing) html += row('Joint bearing', r.joint_bearing);
   if (r.cycle_time_s) html += row('Cycle time', r.cycle_time_s, 's');
-  if (r.max_incline_deg) html += row('Max incline', r.max_incline_deg, 'Â°');
+  if (r.max_incline_deg) html += row('Max incline', r.max_incline_deg, '°');
   if (r.stair_climbing !== undefined) html += row('Stair climbing', r.stair_climbing);
   if (r.max_step_height_mm && isHumanoid) html += row('Max step height', r.max_step_height_mm, 'mm');
   if (r.fall_recovery !== undefined) html += row('Fall recovery', r.fall_recovery);
@@ -1252,7 +1257,7 @@ function buildSpecTable(r) {
     if (r.auto_empty_capacity_L) html += row('Auto-empty capacity', r.auto_empty_capacity_L, 'L');
     if (r.auto_refill !== undefined) html += row('Auto water refill', r.auto_refill);
     if (r.self_cleaning !== undefined) html += row('Self-cleaning dock', r.self_cleaning);
-    if (r.dock_auto_wash_temp) html += row('Wash temperature', r.dock_auto_wash_temp, 'Â°C');
+    if (r.dock_auto_wash_temp) html += row('Wash temperature', r.dock_auto_wash_temp, '°C');
     if (r.dock_dry_type) html += row('Drying method', r.dock_dry_type);
     if (r.dock_dry_time_min) html += row('Dry time', r.dock_dry_time_min, 'min');
     if (r.dock_w && r.dock_h) html += row('Dock dimensions', `${r.dock_w} × ${r.dock_h}${r.dock_d ? ' × '+r.dock_d : ''} mm`);
@@ -1889,105 +1894,150 @@ function getPool(){
 function buildFinderFP(){
   var pool=getPool();
   var brands=[...new Set(pool.map(function(r){return r.brand;}))].sort();
-  var years=[...new Set(pool.map(function(r){return r.year||0;}).filter(Boolean))].sort();
+  var years=[...new Set(pool.map(function(r){return r.year||0;}).filter(Boolean))].sort(function(a,b){return a-b;});
   var minYear=years.length?years[0]:2015;
   var maxYear=years.length?years[years.length-1]:2026;
   var ipRatings=[...new Set(pool.map(function(r){return r.ip_rating||'';}).filter(Boolean))].sort();
+  var osVals=[...new Set(pool.map(function(r){return r.os||'';}).filter(Boolean))].sort().slice(0,20);
+  var battTypes=[...new Set(pool.map(function(r){return r.battery_type||'';}).filter(Boolean))].sort().slice(0,12);
+  var frameVals=[...new Set(pool.map(function(r){return r.frame_material||'';}).filter(Boolean))].sort().slice(0,12);
+
+  function sel(id,opts,onch){
+    var h='<select id="'+id+'" '+(onch?'onchange="'+onch+'"':'')+'><option value="">Any</option>';
+    opts.forEach(function(o){h+='<option value="'+o+'">'+o+'</option>';});
+    return h+'</select>';
+  }
+  function numInp(id,ph,step){
+    return '<input type="number" id="'+id+'" placeholder="'+(ph||'Any')+'" '+(step?'step="'+step+'"':'')+' oninput="updateFinderCount()" style="width:100%;background:#f8f9fa;border:1px solid #dee2e6;border-radius:5px;padding:8px 10px;font-size:12px;font-family:inherit;outline:none">';
+  }
+  function chk(cls,val,lbl,cnt){
+    return '<label class="finder-check"><input type="checkbox" class="'+cls+'" data-val="'+val+'" onchange="updateFinderCount()"><span>'+lbl+'</span>'+(cnt!==undefined?'<span class="finder-check-count">'+cnt+'</span>':'')+'</label>';
+  }
+  function section(title, body){
+    return '<div class="finder-section"><div class="finder-section-title">'+title+'</div>'+body+'</div>';
+  }
+  function row2(a,b){ return '<div class="finder-row">'+a+b+'</div>'; }
+  function field(lbl,inp){ return '<div class="finder-field"><label>'+lbl+'</label>'+inp+'</div>'; }
 
   var html='<div class="finder-form">';
 
-  // GENERAL section
-  html+='<div class="finder-section">';
-  html+='<div class="finder-section-title">General</div>';
-  // Brand grid
-  html+='<div style="margin-bottom:12px"><label style="font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:6px">BRAND</label>';
-  html+='<div class="finder-brand-grid">';
-  html+=brands.map(function(b){
+  // ── GENERAL ──
+  var brandHtml='<div style="margin-bottom:12px"><label class="finder-field-lbl">BRAND</label><div class="finder-brand-grid">';
+  brandHtml+=brands.map(function(b){
     var cnt=pool.filter(function(r){return r.brand===b;}).length;
-    return '<label class="finder-brand-check"><input type="checkbox" class="fb" data-val="'+b+'" onchange="updateFinderCount()"><span>'+b+'</span><span class="finder-check-count">'+cnt+'</span></label>';
+    return chk('fb',b,b,cnt);
   }).join('');
-  html+='</div></div>';
-  // Year + Price
-  html+='<div class="finder-row">';
-  html+='<div class="finder-field"><label>Year From</label><select class="fy-min" onchange="updateFinderCount()"><option value="">Any</option>';
-  for(var y=minYear;y<=maxYear;y++) html+='<option value="'+y+'">'+y+'</option>';
-  html+='</select></div>';
-  html+='<div class="finder-field"><label>Year To</label><select class="fy-max" onchange="updateFinderCount()"><option value="">Any</option>';
-  for(var y2=maxYear;y2>=minYear;y2--) html+='<option value="'+y2+'">'+y2+'</option>';
-  html+='</select></div></div>';
-  html+='<div class="finder-row">';
-  html+='<div class="finder-field"><label>Min Price ($)</label><input type="number" id="fs-price-min" placeholder="0" oninput="updateFinderCount()"></div>';
-  html+='<div class="finder-field"><label>Max Price ($)</label><input type="number" id="fs-price-max" placeholder="Any" oninput="updateFinderCount()"></div>';
-  html+='</div>';
-  // Availability
-  html+='<div style="margin-top:8px"><label style="font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:6px">AVAILABILITY</label>';
-  html+='<div class="finder-checks">';
-  html+='<label class="finder-check"><input type="checkbox" class="fst" data-val="active" onchange="updateFinderCount()"><span>Active</span></label>';
-  html+='<label class="finder-check"><input type="checkbox" class="fst" data-val="discontinued" onchange="updateFinderCount()"><span>Discontinued</span></label>';
-  html+='<label class="finder-check"><input type="checkbox" class="fst" data-val="coming" onchange="updateFinderCount()"><span>Coming Soon</span></label>';
-  html+='</div></div>';
-  html+='</div>';
+  brandHtml+='</div></div>';
 
-  // SPECS section
-  html+='<div class="finder-section">';
-  html+='<div class="finder-section-title">Specifications</div>';
-  html+='<div class="finder-row">';
-  html+='<div class="finder-field"><label>Min Payload (kg)</label><input type="number" id="fs-payload-min" placeholder="0" step="0.1" oninput="updateFinderCount()"></div>';
-  html+='<div class="finder-field"><label>Max Weight (kg)</label><input type="number" id="fs-weight-max" placeholder="Any" step="0.1" oninput="updateFinderCount()"></div>';
-  html+='</div>';
-  html+='<div class="finder-row">';
-  html+='<div class="finder-field"><label>Min Speed (m/s)</label><input type="number" id="fs-speed-min" placeholder="0" step="0.1" oninput="updateFinderCount()"></div>';
-  html+='<div class="finder-field"><label>Min Battery (min)</label><input type="number" id="fs-battery-min" placeholder="0" oninput="updateFinderCount()"></div>';
-  html+='</div>';
+  var yearHtml='<div class="finder-row"><div class="finder-field"><label>YEAR FROM</label><select class="fy-min" onchange="updateFinderCount()"><option value="">Any</option>';
+  for(var y=minYear;y<=maxYear;y++) yearHtml+='<option value="'+y+'">'+y+'</option>';
+  yearHtml+='</select></div><div class="finder-field"><label>YEAR TO</label><select class="fy-max" onchange="updateFinderCount()"><option value="">Any</option>';
+  for(var y2=maxYear;y2>=minYear;y2--) yearHtml+='<option value="'+y2+'">'+y2+'</option>';
+  yearHtml+='</select></div></div>';
+
+  var priceHtml=row2(field('MIN PRICE ($)',numInp('fs-price-min','0')),field('MAX PRICE ($)',numInp('fs-price-max','Any')));
+
+  var availHtml='<div><label class="finder-field-lbl">AVAILABILITY</label><div class="finder-checks">';
+  availHtml+=chk('fst','active','Active',pool.filter(function(r){return (r.status||'').toLowerCase().includes('active');}).length);
+  availHtml+=chk('fst','discontinued','Discontinued',pool.filter(function(r){return (r.status||'').toLowerCase().includes('discontinued');}).length);
+  availHtml+=chk('fst','coming','Coming Soon',pool.filter(function(r){return (r.status||'').toLowerCase().includes('coming')||(r.status||'').toLowerCase().includes('pilot');}).length);
+  availHtml+='</div></div>';
+
+  html+=section('General', brandHtml+yearHtml+priceHtml+availHtml);
+
+  // ── BODY ──
+  var bodyHtml=row2(field('MIN WEIGHT (kg)',numInp('fs-weight-min','0','0.1')),field('MAX WEIGHT (kg)',numInp('fs-weight-max','Any','0.1')));
+  bodyHtml+=row2(field('MIN HEIGHT (mm)',numInp('fs-height-min','0')),field('MAX HEIGHT (mm)',numInp('fs-height-max','Any')));
   if(ipRatings.length){
-    html+='<div style="margin-top:8px"><label style="font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);text-transform:uppercase;display:block;margin-bottom:6px">IP RATING</label>';
-    html+='<div class="finder-checks">';
-    html+=ipRatings.map(function(ip){return '<label class="finder-check"><input type="checkbox" class="fip" data-val="'+ip+'" onchange="updateFinderCount()"><span>'+ip+'</span></label>';}).join('');
-    html+='</div></div>';
+    bodyHtml+='<div><label class="finder-field-lbl">IP RATING</label><div class="finder-checks">';
+    bodyHtml+=ipRatings.map(function(ip){return chk('fip',ip,ip);}).join('');
+    bodyHtml+='</div></div>';
   }
-  html+='</div>';
+  if(frameVals.length){
+    bodyHtml+=field('FRAME MATERIAL','<select class="fframe" onchange="updateFinderCount()"><option value="">Any</option>'+frameVals.map(function(v){return '<option value="'+v+'">'+v+'</option>';}).join('')+'</select>');
+  }
+  bodyHtml+=row2(field('MIN TEMP (°C)',numInp('fs-temp-min','-40')),field('MAX TEMP (°C)',numInp('fs-temp-max','60')));
+  html+=section('Body', bodyHtml);
 
-  // TECHNOLOGY section
-  html+='<div class="finder-section">';
-  html+='<div class="finder-section-title">Technology</div>';
-  html+='<div class="finder-checks">';
-  var features=[
-    {v:'ros',l:'ROS Compatible',c:pool.filter(function(r){return r.ros;}).length},
-    {v:'sdk',l:'SDK Available',c:pool.filter(function(r){return r.sdk;}).length},
-    {v:'wifi',l:'WiFi',c:pool.filter(function(r){return r.wifi;}).length},
-    {v:'bluetooth',l:'Bluetooth',c:pool.filter(function(r){return r.bluetooth;}).length},
-    {v:'lidar',l:'LiDAR',c:pool.filter(function(r){return r.lidar;}).length},
-    {v:'ota',l:'OTA Updates',c:pool.filter(function(r){return r.ota;}).length},
-    {v:'arm',l:'Robotic Arm',c:pool.filter(function(r){return r.arm;}).length},
-  ];
-  html+=features.map(function(f){
-    return '<label class="finder-check"><input type="checkbox" class="ff" data-val="'+f.v+'" onchange="updateFinderCount()"><span>'+f.l+'</span><span class="finder-check-count">'+f.c+'</span></label>';
-  }).join('');
-  html+='</div></div>';
+  // ── PLATFORM ──
+  var platHtml='';
+  if(osVals.length){
+    platHtml+=field('OPERATING SYSTEM','<select class="fos" onchange="updateFinderCount()"><option value="">Any</option>'+osVals.map(function(v){return '<option value="'+v+'">'+v+'</option>';}).join('')+'</select>');
+  }
+  platHtml+=row2(field('MIN RAM (GB)',numInp('fs-ram-min','0')),field('MIN STORAGE (GB)',numInp('fs-storage-min','0')));
+  platHtml+=field('MIN AI PERFORMANCE (TOPS)',numInp('fs-tops-min','0'));
+  html+=section('Platform', platHtml);
 
-  // SCORES section
-  html+='<div class="finder-section">';
-  html+='<div class="finder-section-title">Scores</div>';
-  html+='<div class="finder-row">';
-  html+='<div class="finder-field"><label>Min Expert Score</label><select id="finder-minscore" onchange="updateFinderCount()"><option value="0">Any</option><option value="70">70+</option><option value="75">75+</option><option value="80">80+</option><option value="85">85+</option><option value="90">90+</option><option value="95">95+</option></select></div>';
-  html+='<div class="finder-field"><label>Min User Rating</label><select id="finder-minrating" onchange="updateFinderCount()"><option value="0">Any</option><option value="3">3+ ★★★</option><option value="4">4+ ★★★★</option><option value="4.5">4.5+</option></select></div>';
-  html+='</div></div>';
+  // ── PERFORMANCE ──
+  var perfHtml=row2(field('MIN PAYLOAD (kg)',numInp('fs-payload-min','0','0.1')),field('MAX PAYLOAD (kg)',numInp('fs-payload-max','Any','0.1')));
+  perfHtml+=row2(field('MIN SPEED (m/s)',numInp('fs-speed-min','0','0.1')),field('MIN DOF',numInp('fs-dof-min','0')));
+  html+=section('Performance', perfHtml);
 
-  // SHOW BAR
+  // ── BATTERY ──
+  var battHtml='';
+  if(battTypes.length){
+    battHtml+=field('BATTERY TYPE','<select class="fbatt" onchange="updateFinderCount()"><option value="">Any</option>'+battTypes.map(function(v){return '<option value="'+v+'">'+v+'</option>';}).join('')+'</select>');
+  }
+  battHtml+=row2(field('MIN BATTERY LIFE (min)',numInp('fs-battery-min','0')),field('MIN CAPACITY (Wh)',numInp('fs-batt-wh-min','0')));
+  battHtml+=row2(field('MAX CHARGE TIME (min)',numInp('fs-charge-time-max','Any')),field('',''));
+  battHtml+='<div><label class="finder-field-lbl">BATTERY FEATURES</label><div class="finder-checks">';
+  battHtml+=chk('fbf','wireless_charging','Wireless Charging',pool.filter(function(r){return r.wireless_charging;}).length);
+  battHtml+=chk('fbf','auto_charge','Auto Return to Dock',pool.filter(function(r){return r.auto_charge;}).length);
+  battHtml+=chk('fbf','hot_swap','Hot-Swap Battery',pool.filter(function(r){return r.hot_swap;}).length);
+  battHtml+=chk('fbf','quick_release','Quick-Release Battery',pool.filter(function(r){return r.quick_release;}).length);
+  battHtml+='</div></div>';
+  html+=section('Battery', battHtml);
+
+  // ── SENSORS & CAMERAS ──
+  var sensHtml=field('MIN CAMERAS',numInp('fs-cameras-min','0'));
+  sensHtml+='<div><label class="finder-field-lbl">SENSORS</label><div class="finder-checks">';
+  sensHtml+=chk('fsen','lidar','LiDAR',pool.filter(function(r){return r.lidar;}).length);
+  sensHtml+=chk('fsen','depth_sensing','Depth Sensing',pool.filter(function(r){return r.depth_sensing;}).length);
+  sensHtml+=chk('fsen','imu','IMU',pool.filter(function(r){return r.imu;}).length);
+  sensHtml+=chk('fsen','touch_sensing','Touch Sensing',pool.filter(function(r){return r.touch_sensing;}).length);
+  sensHtml+='</div></div>';
+  html+=section('Sensors & Cameras', sensHtml);
+
+  // ── CONNECTIVITY ──
+  var connHtml='<div><label class="finder-field-lbl">CONNECTIVITY</label><div class="finder-checks">';
+  connHtml+=chk('ff','ros','ROS Compatible',pool.filter(function(r){return r.ros;}).length);
+  connHtml+=chk('ff','sdk','SDK Available',pool.filter(function(r){return r.sdk;}).length);
+  connHtml+=chk('ff','wifi','WiFi',pool.filter(function(r){return r.wifi;}).length);
+  connHtml+=chk('ff','bluetooth','Bluetooth',pool.filter(function(r){return r.bluetooth;}).length);
+  connHtml+=chk('ff','ota','OTA Updates',pool.filter(function(r){return r.ota;}).length);
+  connHtml+='</div></div>';
+  html+=section('Connectivity', connHtml);
+
+  // ── CERTIFICATIONS ──
+  var certHtml='<div><label class="finder-field-lbl">CERTIFICATIONS</label><div class="finder-checks">';
+  certHtml+=chk('fcert','ce','CE',pool.filter(function(r){return r.ce;}).length);
+  certHtml+=chk('fcert','fcc','FCC',pool.filter(function(r){return r.fcc;}).length);
+  certHtml+=chk('fcert','rohs','RoHS',pool.filter(function(r){return r.rohs;}).length);
+  certHtml+='</div></div>';
+  certHtml+=field('MIN WARRANTY (months)',numInp('fs-warranty-min','0'));
+  html+=section('Certifications', certHtml);
+
+  // ── SCORES ──
+  var scoresHtml=row2(
+    field('MIN EXPERT SCORE','<select id="finder-minscore" onchange="updateFinderCount()"><option value="0">Any</option><option value="70">70+</option><option value="75">75+</option><option value="80">80+</option><option value="85">85+</option><option value="90">90+</option><option value="95">95+</option></select>'),
+    field('MIN USER RATING','<select id="finder-minrating" onchange="updateFinderCount()"><option value="0">Any</option><option value="3">3+</option><option value="4">4+</option><option value="4.5">4.5+</option></select>')
+  );
+  html+=section('Scores', scoresHtml);
+
+  // ── SHOW BAR ──
   html+='<div class="finder-show-bar">';
-  html+='<div class="finder-show-info">Select filters above then click Show</div>';
+  html+='<div class="finder-show-info">Select filters then click Show</div>';
   html+='<button class="finder-show-btn" onclick="runFinderSearch()">SHOW <span id="finder-show-count">'+pool.length+'</span> RESULTS</button>';
-  html+='</div>';
-  html+='</div>';
+  html+='</div></div>';
 
-  // Results section (hidden until search)
+  // Results section
   html+='<div class="finder-results-section" id="finder-results-section">';
-  html+='<div class="finder-toolbar" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;padding:10px 0">';
-  html+='<div id="finder-count-wrap" style="display:none">Showing <em id="finder-count">0</em> robots</div>';
+  html+='<div style="display:flex;justify-content:space-between;align-items:center;margin:12px 0;padding:10px 0;border-bottom:1px solid var(--bdr)">';
+  html+='<div id="finder-count-wrap" style="display:none;font-size:13px;font-weight:600">Showing <em id="finder-count">0</em> robots</div>';
   html+='<div class="fatags" id="finder-atags"></div>';
-  html+='<div class="fr-right"><select class="fssel" id="finder-sort" onchange="renderFinder()"><option value="score">Best Rated</option><option value="price_asc">Price ↑</option><option value="price_desc">Price ↓</option><option value="name">A–Z</option><option value="newest">Newest</option></select>';
-  html+='<button class="fvbtn active" id="fvl" onclick="setFinderView(\'list\')">&#9776;</button>';
-  html+='<button class="fvbtn" id="fvg" onclick="setFinderView(\'grid\')">&#8862;</button></div>';
+  html+='<div style="display:flex;gap:6px;align-items:center"><select class="fssel" id="finder-sort" onchange="renderFinder()"><option value="score">Best Rated</option><option value="price_asc">Price ↑</option><option value="price_desc">Price ↓</option><option value="name">A–Z</option><option value="newest">Newest</option></select>';
+  html+='<button class="fvbtn active" id="fvl" onclick="setFinderView('list')">&#9776;</button>';
+  html+='<button class="fvbtn" id="fvg" onclick="setFinderView('grid')">&#8862;</button></div>';
   html+='</div>';
   html+='<div id="finder-results"></div>';
   html+='</div>';
@@ -2012,19 +2062,39 @@ function resetFinder(){
 
 function getFinderFiltered(){
   var pool=getPool();
+  // Selections
   var selB=[...document.querySelectorAll('.fb:checked')].map(function(el){return el.dataset.val;});
   var selSt=[...document.querySelectorAll('.fst:checked')].map(function(el){return el.dataset.val;});
   var selF=[...document.querySelectorAll('.ff:checked')].map(function(el){return el.dataset.val;});
   var selIP=[...document.querySelectorAll('.fip:checked')].map(function(el){return el.dataset.val;});
-  var priceMin=getNum('fs-price-min');var priceMax=getNum('fs-price-max');
-  var yearMinEl=document.querySelector('.fy-min');var yearMin=yearMinEl&&yearMinEl.value?parseInt(yearMinEl.value):null;
-  var yearMaxEl=document.querySelector('.fy-max');var yearMax=yearMaxEl&&yearMaxEl.value?parseInt(yearMaxEl.value):null;
-  var weightMin=getNum('fs-weight-min');var weightMax=getNum('fs-weight-max');
-  var payloadMin=getNum('fs-payload-min');var payloadMax=getNum('fs-payload-max');
-  var speedMin=getNum('fs-speed-min');var speedMax=getNum('fs-speed-max');
-  var battMin=getNum('fs-battery-min');var battMax=getNum('fs-battery-max');
-  var scoreMin=parseFloat(getVal('finder-minscore'))||0;
-  var ratingMin=parseFloat(getVal('finder-minrating'))||0;
+  var selBF=[...document.querySelectorAll('.fbf:checked')].map(function(el){return el.dataset.val;});
+  var selSen=[...document.querySelectorAll('.fsen:checked')].map(function(el){return el.dataset.val;});
+  var selCert=[...document.querySelectorAll('.fcert:checked')].map(function(el){return el.dataset.val;});
+  // Range inputs
+  function gn(id){var el=document.getElementById(id);var v=parseFloat(el?el.value:'');return isNaN(v)?null:v;}
+  function gs(cls){var el=document.querySelector('.'+cls);return el?el.value:'';}
+  var priceMin=gn('fs-price-min'); var priceMax=gn('fs-price-max');
+  var yearMinEl=document.querySelector('.fy-min'); var yearMin=yearMinEl&&yearMinEl.value?parseInt(yearMinEl.value):null;
+  var yearMaxEl=document.querySelector('.fy-max'); var yearMax=yearMaxEl&&yearMaxEl.value?parseInt(yearMaxEl.value):null;
+  var weightMin=gn('fs-weight-min'); var weightMax=gn('fs-weight-max');
+  var heightMin=gn('fs-height-min'); var heightMax=gn('fs-height-max');
+  var payloadMin=gn('fs-payload-min'); var payloadMax=gn('fs-payload-max');
+  var speedMin=gn('fs-speed-min');
+  var dofMin=gn('fs-dof-min');
+  var battMin=gn('fs-battery-min');
+  var battWhMin=gn('fs-batt-wh-min');
+  var chargeTimeMax=gn('fs-charge-time-max');
+  var ramMin=gn('fs-ram-min');
+  var storageMin=gn('fs-storage-min');
+  var topsMin=gn('fs-tops-min');
+  var camerasMin=gn('fs-cameras-min');
+  var tempMin=gn('fs-temp-min'); var tempMax=gn('fs-temp-max');
+  var warrantyMin=gn('fs-warranty-min');
+  var frameVal=gs('fframe');
+  var osVal=gs('fos');
+  var battTypeVal=gs('fbatt');
+  var scoreMin=parseFloat((document.getElementById('finder-minscore')||{}).value||'0')||0;
+  var ratingMin=parseFloat((document.getElementById('finder-minrating')||{}).value||'0')||0;
 
   return pool.filter(function(r){
     if(selB.length&&!selB.includes(r.brand))return false;
@@ -2040,37 +2110,73 @@ function getFinderFiltered(){
     }
     if(selF.length){
       var ok2=selF.every(function(f){
-        if(f==='ros')return r.ros;
-        if(f==='sdk')return r.sdk;
-        if(f==='wifi')return r.wifi;
-        if(f==='bluetooth')return r.bluetooth;
-        if(f==='lidar')return r.lidar;
-        if(f==='ota')return r.ota;
-        if(f==='arm')return r.arm;
+        if(f==='ros')return r.ros; if(f==='sdk')return r.sdk;
+        if(f==='wifi')return r.wifi; if(f==='bluetooth')return r.bluetooth;
+        if(f==='ota')return r.ota; if(f==='arm')return r.arm;
         return false;
       });
       if(!ok2)return false;
     }
     if(selIP.length&&!selIP.includes(r.ip_rating||''))return false;
+    if(selBF.length){
+      var ok3=selBF.every(function(f){
+        if(f==='wireless_charging')return r.wireless_charging;
+        if(f==='auto_charge')return r.auto_charge;
+        if(f==='hot_swap')return r.hot_swap;
+        if(f==='quick_release')return r.quick_release;
+        return false;
+      });
+      if(!ok3)return false;
+    }
+    if(selSen.length){
+      var ok4=selSen.every(function(f){
+        if(f==='lidar')return r.lidar; if(f==='depth_sensing')return r.depth_sensing;
+        if(f==='imu')return r.imu; if(f==='touch_sensing')return r.touch_sensing;
+        return false;
+      });
+      if(!ok4)return false;
+    }
+    if(selCert.length){
+      var ok5=selCert.every(function(f){
+        if(f==='ce')return r.ce; if(f==='fcc')return r.fcc; if(f==='rohs')return r.rohs;
+        return false;
+      });
+      if(!ok5)return false;
+    }
+    // Range filters
     if(priceMin!==null&&r.price>0&&r.price<priceMin)return false;
     if(priceMax!==null&&r.price>0&&r.price>priceMax)return false;
     if(yearMin!==null&&(r.year||0)<yearMin)return false;
     if(yearMax!==null&&(r.year||0)>yearMax)return false;
     if(weightMin!==null&&(r.weight_kg||0)<weightMin)return false;
     if(weightMax!==null&&r.weight_kg&&r.weight_kg>weightMax)return false;
+    if(heightMin!==null&&(r.height_mm||0)<heightMin)return false;
+    if(heightMax!==null&&r.height_mm&&r.height_mm>heightMax)return false;
     if(payloadMin!==null&&(r.payload||0)<payloadMin)return false;
     if(payloadMax!==null&&r.payload&&r.payload>payloadMax)return false;
-    if(speedMin!==null&&(r.speed||0)<speedMin)return false;
-    if(speedMax!==null&&r.speed&&r.speed>speedMax)return false;
-    var batt=r.battery_life||r.battery||0;
-    if(battMin!==null&&batt<battMin)return false;
-    if(battMax!==null&&batt&&batt>battMax)return false;
+    if(speedMin!==null&&speedMin>0&&(r.speed||0)<speedMin)return false;
+    if(dofMin!==null&&dofMin>0&&(r.dof||0)<dofMin)return false;
+    if(battMin!==null&&battMin>0&&(r.battery_life||0)<battMin)return false;
+    if(battWhMin!==null&&battWhMin>0&&(r.battery_wh||0)<battWhMin)return false;
+    if(chargeTimeMax!==null&&r.charge_time&&r.charge_time>chargeTimeMax)return false;
+    if(ramMin!==null&&ramMin>0&&(r.ram_gb||0)<ramMin)return false;
+    if(storageMin!==null&&storageMin>0&&(r.storage_gb||0)<storageMin)return false;
+    if(topsMin!==null&&topsMin>0&&(r.npu_tops||0)<topsMin)return false;
+    if(camerasMin!==null&&camerasMin>0){
+      var camCount=Array.isArray(r.cameras)?r.cameras.length:(r.cameras?1:0);
+      if(camCount<camerasMin)return false;
+    }
+    if(tempMin!==null&&r.operating_temp_min!==undefined&&r.operating_temp_min!==null&&Number(r.operating_temp_min)<tempMin)return false;
+    if(tempMax!==null&&r.operating_temp_max!==undefined&&r.operating_temp_max!==null&&Number(r.operating_temp_max)>tempMax)return false;
+    if(warrantyMin!==null&&warrantyMin>0&&(r.warranty_months||0)<warrantyMin)return false;
+    if(frameVal&&r.frame_material&&!r.frame_material.toLowerCase().includes(frameVal.toLowerCase()))return false;
+    if(osVal&&r.os&&!r.os.toLowerCase().includes(osVal.toLowerCase()))return false;
+    if(battTypeVal&&r.battery_type&&!r.battery_type.toLowerCase().includes(battTypeVal.toLowerCase()))return false;
     if(scoreMin>0&&(r.score||0)<scoreMin)return false;
     if(ratingMin>0&&(r.rating||0)<ratingMin)return false;
     return true;
   });
 }
-
 function renderFinder(){
   var sort=document.getElementById('finder-sort')?document.getElementById('finder-sort').value:'score';
   var list=getFinderFiltered();
