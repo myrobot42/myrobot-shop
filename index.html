@@ -1986,8 +1986,8 @@ function buildFinderFP(){
   html+='<div id="finder-count-wrap" style="display:none">Showing <em id="finder-count">0</em> robots</div>';
   html+='<div class="fatags" id="finder-atags"></div>';
   html+='<div class="fr-right"><select class="fssel" id="finder-sort" onchange="renderFinder()"><option value="score">Best Rated</option><option value="price_asc">Price ↑</option><option value="price_desc">Price ↓</option><option value="name">A–Z</option><option value="newest">Newest</option></select>';
-  html+='<button class="fvbtn active" id="fvl" onclick="setFinderView('list')">☰</button>';
-  html+='<button class="fvbtn" id="fvg" onclick="setFinderView('grid')">⊞</button></div>';
+  html+='<button class="fvbtn active" id="fvl" onclick="setFinderView(\'list\')">&#9776;</button>';
+  html+='<button class="fvbtn" id="fvg" onclick="setFinderView(\'grid\')">&#8862;</button></div>';
   html+='</div>';
   html+='<div id="finder-results"></div>';
   html+='</div>';
@@ -2323,21 +2323,11 @@ Open the **Compare** page for the full spec table!`;
   // Features
   if (ql.includes('arm') || ql.includes('gripper') || ql.includes('pick')) {
     const hits = DB.filter(r=>r.arm).sort((a,b)=>b.score-a.score).slice(0,4);
-    return `🦾 Robots with robotic arms:
-
-${hits.map((r,i)=>`${i+1}. **${r.name}** (${r.brand}) — ${r.cat}`).join('
-')}
-
-Filter by "Has Robotic Arm" in the **Finder**!`;
+    '🦾 Robots with robotic arms:\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ') — ' + r.cat).join('\n\n') + '\n\nFilter by "Has Robotic Arm" in the **Finder**!'
   }
   if (ql.includes('cheap') || ql.includes('affordable') || ql.includes('budget') || ql.includes('cheapest')) {
     const hits = DB.filter(r=>r.price>0).sort((a,b)=>a.price-b.price).slice(0,4);
-    return `💸 Most affordable robots:
-
-${hits.map((r,i)=>`${i+1}. **${r.name}** — $${r.price.toLocaleString()} (${r.cat})`).join('
-')}
-
-Sort by "Price ↑" in the **Database** page!`;
+    '💸 Most affordable robots:\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ')\n   $' + r.price.toLocaleString()).join('\n\n') + '\n\nUse price filter in **Finder** for more!'
   }
   if (ql.includes('best') || ql.includes('top') || ql.includes('highest')) {
     const hits = DB.sort((a,b)=>b.score-a.score).slice(0,4);
