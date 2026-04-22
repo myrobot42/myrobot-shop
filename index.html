@@ -493,6 +493,15 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   .form-row{grid-template-columns:1fr}
   .breadcrumb-inner{padding:0 20px}
 }
+
+/* ── AFFILIATE + ADS ── */
+.affiliate-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;background:#16a34a;color:#fff;border:none;border-radius:9px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;text-decoration:none;transition:background .15s;margin-top:8px}
+.affiliate-btn:hover{background:#15803d}
+.ad-banner{background:linear-gradient(135deg,#f0f4ff,#e8f0fe);border:1px solid #c7d7f9;border-radius:8px;padding:16px;text-align:center;cursor:pointer;margin:8px 16px}
+.ad-banner-text{font-size:13px;font-weight:600;color:#1d4ed8}
+.ad-banner-sub{font-size:11px;color:#6b7280;margin-top:3px}
+.gallery-video{width:100%;border-radius:10px;aspect-ratio:16/9;background:#000;display:block;border:none}
+
 </style>
 </head>
 <body>
@@ -517,7 +526,17 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- HOME -->
 <div id="page-home" class="page active">
-  <div class="top-bar">🤖 World's #1 Robot Database — 2,400+ robots catalogued and growing daily</div>
+  <div id="ad-slot-home" style="display:none;padding:8px 20px;cursor:pointer">
+    <div class="ad-banner"><div class="ad-banner-text">Sponsored</div><div class="ad-banner-sub">Advertisement</div></div>
+  </div>
+  <!-- TOP AD SLOT -->
+  <div id="ad-slot-home-top" style="display:none;padding:8px 20px">
+    <div class="ad-banner" onclick="window.open(window.AD_HOME_URL||'#','_blank')">
+      <div class="ad-banner-text" id="ad-home-text">Featured Partner</div>
+      <div class="ad-banner-sub" id="ad-home-sub">Advertisement</div>
+    </div>
+  </div>
+  <div class="top-bar">🤖 World's #1 Robot Database — 384+ robots catalogued and growing daily</div>
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-left">
@@ -531,8 +550,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         <div class="brand-tags" id="brand-tags-home"></div>
       </div>
       <div class="hero-right">
-        <div class="hero-stat"><div class="hsi">🤖</div><div><div class="hst-num">2,400+</div><div class="hst-lbl">Robots catalogued</div></div></div>
-        <div class="hero-stat"><div class="hsi">🏭</div><div><div class="hst-num">180+</div><div class="hst-lbl">Manufacturers listed</div></div></div>
+        <div class="hero-stat"><div class="hsi">🤖</div><div><div class="hst-num" id="stat-total-home">384</div><div class="hst-lbl">Robots catalogued</div></div></div>
+        <div class="hero-stat"><div class="hsi">🏭</div><div><div class="hst-num" id="stat-brands-home">56</div><div class="hst-lbl">Manufacturers listed</div></div></div>
         <div class="hero-stat"><div class="hsi">⭐</div><div><div class="hst-num">14,200+</div><div class="hst-lbl">User reviews</div></div></div>
       </div>
     </div>
@@ -542,14 +561,14 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     <div class="mw">
       <div class="sec-header"><div class="sec-title">Browse by Category</div><span class="sec-link" onclick="goPage('db')">View all categories →</span></div>
       <div class="cat-grid">
-        <div class="cat-card" onclick="filterCat('Industrial')"><div class="cat-emoji">🦾</div><div class="cat-name">Industrial</div><div class="cat-count">624</div></div>
-        <div class="cat-card" onclick="filterCat('Humanoid')"><div class="cat-emoji">🧍</div><div class="cat-name">Humanoid</div><div class="cat-count">187</div></div>
-        <div class="cat-card" onclick="filterCat('Medical')"><div class="cat-emoji">🏥</div><div class="cat-name">Medical</div><div class="cat-count">312</div></div>
-        <div class="cat-card" onclick="filterCat('Service')"><div class="cat-emoji">📦</div><div class="cat-name">Service</div><div class="cat-count">445</div></div>
-        <div class="cat-card" onclick="filterCat('Drones')"><div class="cat-emoji">🚁</div><div class="cat-name">Drones</div><div class="cat-count">398</div></div>
-        <div class="cat-card" onclick="filterCat('Consumer')"><div class="cat-emoji">🏠</div><div class="cat-name">Consumer</div><div class="cat-count">276</div></div>
+        <div class="cat-card" onclick="filterCat('Industrial')"><div class="cat-emoji">🦾</div><div class="cat-name">Industrial</div><div class="cat-count">84</div></div>
+        <div class="cat-card" onclick="filterCat('Humanoid')"><div class="cat-emoji">🧍</div><div class="cat-name">Humanoid</div><div class="cat-count">69</div></div>
+        <div class="cat-card" onclick="filterCat('Medical')"><div class="cat-emoji">🏥</div><div class="cat-name">Medical</div><div class="cat-count">35</div></div>
+        <div class="cat-card" onclick="filterCat('Service')"><div class="cat-emoji">📦</div><div class="cat-name">Service</div><div class="cat-count">37</div></div>
+        <div class="cat-card" onclick="filterCat('Drones')"><div class="cat-emoji">🚁</div><div class="cat-name">Drones</div><div class="cat-count">44</div></div>
+        <div class="cat-card" onclick="filterCat('Consumer')"><div class="cat-emoji">🏠</div><div class="cat-name">Consumer</div><div class="cat-count">73</div></div>
         <div class="cat-card" onclick="filterCat('Agricultural')"><div class="cat-emoji">🌾</div><div class="cat-name">Agriculture</div><div class="cat-count">159</div></div>
-        <div class="cat-card" onclick="filterCat('Educational')"><div class="cat-emoji">🎓</div><div class="cat-name">Education</div><div class="cat-count">203</div></div>
+        <div class="cat-card" onclick="filterCat('Educational')"><div class="cat-emoji">🎓</div><div class="cat-name">Education</div><div class="cat-count">0</div></div>
       </div>
     </div>
   </div>
@@ -590,6 +609,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- DATABASE -->
 <div id="page-db" class="page">
+  <div id="ad-slot-db" style="display:none;padding:8px 20px;cursor:pointer">
+    <div class="ad-banner"><div class="ad-banner-text">Sponsored</div><div class="ad-banner-sub">Advertisement</div></div>
+  </div>
   <div class="page-header">
     <div class="page-header-inner">
       <div class="ph-top">
@@ -597,8 +619,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         <div style="display:flex;align-items:center;gap:10px">
           <span class="result-count" id="db-count">Showing all robots</span>
           <div class="view-btns">
-            <button class="view-btn active" id="vbtn-list" onclick="setDbView('list')">☰ List</button>
-            <button class="view-btn" id="vbtn-grid" onclick="setDbView('grid')">⊞ Grid</button>
+            <button class="view-btn" id="vbtn-list" onclick="setDbView('list')">☰ List</button>
+            <button class="view-btn active" id="vbtn-grid" onclick="setDbView('grid')">⊞ Grid</button>
           </div>
         </div>
       </div>
@@ -610,7 +632,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
           <option value="price_desc">Price High–Low</option>
           <option value="name">A–Z</option>
           <option value="payload">Most Payload</option>
-          <option value="newest">Newest</option>
+          <option value="newest" selected>Newest</option>
         </select>
       </div>
     </div>
@@ -765,7 +787,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     <div class="finder-results">
       <div class="finder-toolbar">
         <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><div class="finder-count">Showing <em id="finder-count">0</em> robots</div><div class="fatags" id="finder-atags"></div></div>
-        <div class="fr-right"><select class="fssel" id="finder-sort" onchange="renderFinder()"><option value="score">Best Rated</option><option value="price_asc">Price ↑</option><option value="price_desc">Price ↓</option><option value="name">A–Z</option><option value="newest">Newest</option></select><div class="fvbtns"><button class="fvbtn active" id="fvl" onclick="setFinderView('list')">☰</button><button class="fvbtn" id="fvg" onclick="setFinderView('grid')">⊞</button></div></div>
+        <div class="fr-right"><select class="fssel" id="finder-sort" onchange="renderFinder()"><option value="score">Best Rated</option><option value="price_asc">Price ↑</option><option value="price_desc">Price ↓</option><option value="name">A–Z</option><option value="newest" selected>Newest</option></select><div class="fvbtns"><button class="fvbtn active" id="fvl" onclick="setFinderView('list')">☰</button><button class="fvbtn" id="fvg" onclick="setFinderView('grid')">⊞</button></div></div>
       </div>
       <div id="finder-results"></div>
     </div>
@@ -796,7 +818,7 @@ const ROBOTS=[{"id":"google-deepmind-gemini-robotics","name":"Gemini Robotics","
 
 window.ROBOTS = ROBOTS;
 // ════════════ GLOBALS ════════════
-let dbView='list', finderView='list', compareSlots=[null,null,null,null], activeSlot=0, currentProfile=null, finderCat='all';
+let dbView='grid', finderView='list', compareSlots=[null,null,null,null], activeSlot=0, currentProfile=null, finderCat='all';
 const ALL_BRANDS=[...new Set(ROBOTS.map(r=>r.brand).filter(b=>b&&b!=='undefined'))].sort();
 const ALL_CATS=['Humanoid','Industrial','Service','Consumer','Drones','Educational','Medical','Agricultural','Military'];
 
@@ -1915,28 +1937,29 @@ function setFinderView(v){
 // ════════════ MANUFACTURERS ════════════
 function renderManufacturers(){
   const byBrand={};
-  ROBOTS.forEach(r=>{if(!byBrand[r.brand])byBrand[r.brand]={brand:r.brand,robots:[],cats:new Set(),topScore:0,origin:r.origin,fig:r.fig};byBrand[r.brand].robots.push(r);byBrand[r.brand].cats.add(r.cat);if(r.score>byBrand[r.brand].topScore)byBrand[r.brand].topScore=r.score;});
+  ROBOTS.forEach(r=>{
+    if(!byBrand[r.brand])byBrand[r.brand]={brand:r.brand,robots:[],cats:new Set(),topScore:0,fig:r.fig,img:r.img||''};
+    byBrand[r.brand].robots.push(r);
+    byBrand[r.brand].cats.add(r.cat);
+    if(r.score>byBrand[r.brand].topScore)byBrand[r.brand].topScore=r.score;
+    if(!byBrand[r.brand].img&&r.img)byBrand[r.brand].img=r.img;
+  });
   const sorted=Object.values(byBrand).sort((a,b)=>b.robots.length-a.robots.length);
-  document.getElementById('mfr-list').innerHTML=sorted.map(m=>`
-    <div class="mfr-header" style="cursor:pointer" onclick="">
-      <div class="mfr-logo">${m.fig}</div>
-      <div class="mfr-info">
-        <div class="mfr-name">${m.brand}</div>
-        <div class="mfr-meta">${[...m.cats].join(' · ')} · ${m.origin}</div>
-        <div class="mfr-stats">
-          <div class="mfr-stat"><div class="mfr-stat-num">${m.robots.length}</div><div class="mfr-stat-lbl">Robots</div></div>
-          <div class="mfr-stat"><div class="mfr-stat-num">${m.topScore}</div><div class="mfr-stat-lbl">Top Score</div></div>
-          <div class="mfr-stat"><div class="mfr-stat-num">${m.robots.filter(r=>r.status==='Available').length}</div><div class="mfr-stat-lbl">Available</div></div>
-        </div>
+  document.getElementById('mfr-list').innerHTML=`<div class="brand-grid">${sorted.map(m=>{
+    const available=m.robots.filter(r=>r.status&&r.status.toLowerCase().includes('active')||r.status&&r.status.toLowerCase().includes('available')).length;
+    const thumb=m.img?`<img src="${m.img}" alt="${m.brand}" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.innerHTML='<span style=font-size:32px>${m.fig}</span>'">`:`<span style="font-size:32px">${m.fig}</span>`;
+    return `<div class="brand-card" onclick="searchBrand('${m.brand}')">
+      <div class="brand-card-logo">${thumb}</div>
+      <div class="brand-card-name">${m.brand}</div>
+      <div class="brand-card-cat">${[...m.cats].slice(0,2).join(' · ')}</div>
+      <div class="brand-card-stats">
+        <div class="brand-stat"><div class="brand-stat-num">${m.robots.length}</div><div class="brand-stat-lbl">Robots</div></div>
+        <div class="brand-stat"><div class="brand-stat-num" style="color:var(--acc)">${m.topScore}</div><div class="brand-stat-lbl">Top Score</div></div>
+        <div class="brand-stat"><div class="brand-stat-num" style="color:var(--grn)">${available}</div><div class="brand-stat-lbl">Active</div></div>
       </div>
-      <button class="btn btn-primary" onclick="event.stopPropagation();searchBrand('${m.brand}')">View All →</button>
-    </div>
-    <div class="mfr-robots-grid" style="margin-bottom:24px">${m.robots.slice(0,3).map(r=>`
-      <div class="robot-card" onclick="openProfile('${r.id}')">
-        <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.style.display='none'">`:''}${r.badge?`<div class="rc-badge ${r.bc}">${r.badge}</div>`:''}<span class="rc-emoji">${r.img?'':r.fig}</span></div>
-        <div class="rc-info"><div class="rc-brand">${r.sub}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${r.price>0?'$'+r.price.toLocaleString():'POA'}</span><span style="padding:2px 7px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800">${r.score}</span></div></div>
-      </div>`).join('')}
-    </div>`).join('');
+      <button class="brand-card-btn" onclick="event.stopPropagation();searchBrand('${m.brand}')">View All →</button>
+    </div>`;
+  }).join('')}</div>`;
 }
 
 // ════════════ SUBMIT REVIEW ════════════
@@ -2229,6 +2252,55 @@ setTimeout(() => {
   const b = document.getElementById('mascot-badge');
   if(b && !chatOpen) { b.textContent = 'Ask me!'; b.style.background='#22c55e'; }
 }, 4000);
+
+// ════ AFFILIATE + VIDEO + ADS ════
+function openAffiliate(robotId) {
+  const r = ROBOTS.find(x => x.id === robotId);
+  if (!r) return;
+  const url = r.affiliate_url || r.buy_url;
+  if (url) { window.open(url, '_blank'); return; }
+  window.open('https://www.amazon.com/s?k=' + encodeURIComponent((r.brand||'') + ' ' + (r.name||'')), '_blank');
+}
+
+function isVideoUrl(url) {
+  if (!url) return false;
+  return url.includes('youtube.com') || url.includes('youtu.be') || url.includes('vimeo.com') || url.endsWith('.mp4') || url.endsWith('.webm');
+}
+
+function getEmbedUrl(url) {
+  if (!url) return '';
+  if (url.includes('youtu.be/')) return 'https://www.youtube.com/embed/' + url.split('youtu.be/')[1].split('?')[0];
+  if (url.includes('youtube.com/watch')) return 'https://www.youtube.com/embed/' + new URLSearchParams(url.split('?')[1]).get('v');
+  if (url.includes('vimeo.com/')) return 'https://player.vimeo.com/video/' + url.split('vimeo.com/')[1].split('?')[0];
+  return url;
+}
+
+function renderGalleryItem(url, index) {
+  if (!url) return '';
+  if (isVideoUrl(url)) {
+    if (url.endsWith('.mp4') || url.endsWith('.webm')) return '<video class="gallery-video" controls><source src="' + url + '"></video>';
+    return '<iframe class="gallery-video" src="' + getEmbedUrl(url) + '" frameborder="0" allowfullscreen allow="accelerometer; autoplay; encrypted-media; gyroscope"></iframe>';
+  }
+  return '<img src="' + url + '" alt="Gallery ' + (index+1) + '" style="width:100%;border-radius:10px;cursor:pointer" onclick="openLightbox('' + url + '')">';
+}
+
+function openLightbox(url) {
+  const lb = document.createElement('div');
+  lb.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer';
+  lb.onclick = () => lb.remove();
+  lb.innerHTML = '<img src="' + url + '" style="max-width:90vw;max-height:90vh;border-radius:10px">';
+  document.body.appendChild(lb);
+}
+
+function setAd(slot, url, text, sub) {
+  const el = document.getElementById('ad-slot-' + slot);
+  if (!el) return;
+  el.style.display = 'block';
+  el.onclick = () => window.open(url, '_blank');
+  el.querySelector('.ad-banner-text').textContent = text || 'Sponsored';
+  el.querySelector('.ad-banner-sub').textContent = sub || 'Advertisement';
+}
+
 </script>
 
 </body>
