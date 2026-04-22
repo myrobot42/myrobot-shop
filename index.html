@@ -454,27 +454,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .star-btn{font-size:24px;cursor:pointer;color:var(--bdr2);transition:color .1s}
 .star-btn.active,.star-btn:hover{color:var(--yel)}
 .mfr-page{max-width:1100px;margin:0 auto;padding:28px 36px 50px}
-
-.ad-banner{background:linear-gradient(135deg,#f0f4ff,#e8f0fe);border:1px solid #c7d7f9;border-radius:8px;padding:14px;text-align:center;cursor:pointer;margin:8px 0}
-.ad-banner-text{font-size:13px;font-weight:600;color:#1d4ed8}
-.ad-banner-sub{font-size:11px;color:#6b7280;margin-top:2px}
-.affiliate-btn{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;background:#16a34a;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:8px}
-.affiliate-btn:hover{background:#15803d}
-
 .mfr-header{background:#fff;border:1px solid var(--bdr);border-radius:14px;padding:24px;margin-bottom:20px;display:flex;gap:20px;align-items:center}
-.brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;padding:4px 0 24px}
-.brand-card{background:#fff;border:1px solid var(--bdr);border-radius:14px;padding:20px 16px;cursor:pointer;transition:all .15s;text-align:center;display:flex;flex-direction:column;align-items:center}
-.brand-card:hover{border-color:var(--acc);box-shadow:0 4px 20px rgba(0,102,255,.1);transform:translateY(-2px)}
-.brand-card-logo{width:72px;height:72px;margin:0 auto 10px;background:var(--bg2);border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
-.brand-card-logo img{width:100%;height:100%;object-fit:cover;border-radius:12px}
-.brand-card-name{font-size:13px;font-weight:700;margin-bottom:3px}
-.brand-card-cat{font-size:10px;color:var(--mut);margin-bottom:10px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.brand-card-stats{display:flex;justify-content:space-around;width:100%;margin-bottom:10px;padding:8px 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
-.brand-stat-num{font-size:15px;font-weight:800}
-.brand-stat-lbl{font-size:9px;color:var(--mut);font-weight:600;letter-spacing:.4px}
-.brand-card-btn{width:100%;padding:7px;background:var(--acc);color:#fff;border:none;border-radius:7px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:auto}
-.brand-card-btn:hover{background:#0052cc}
-
 .mfr-logo{width:70px;height:70px;background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}
 .mfr-info{flex:1}
 .mfr-name{font-family:'Space Mono','Courier New',monospace;font-size:22px;font-weight:800;margin-bottom:4px}
@@ -513,6 +493,25 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   .form-row{grid-template-columns:1fr}
   .breadcrumb-inner{padding:0 20px}
 }
+
+.brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;padding:4px 0 24px}
+.brand-card{background:#fff;border:1px solid var(--bdr);border-radius:14px;padding:20px 16px;cursor:pointer;transition:all .15s;text-align:center;display:flex;flex-direction:column;align-items:center}
+.brand-card:hover{border-color:var(--acc);box-shadow:0 4px 20px rgba(0,102,255,.1);transform:translateY(-2px)}
+.brand-card-logo{width:72px;height:72px;margin:0 auto 10px;background:var(--bg2);border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.brand-card-logo img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.brand-card-name{font-size:13px;font-weight:700;margin-bottom:3px}
+.brand-card-cat{font-size:10px;color:var(--mut);margin-bottom:10px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.brand-card-stats{display:flex;justify-content:space-around;width:100%;margin-bottom:10px;padding:8px 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.brand-stat-num{font-size:15px;font-weight:800}
+.brand-stat-lbl{font-size:9px;color:var(--mut);font-weight:600;letter-spacing:.4px}
+.brand-card-btn{width:100%;padding:7px;background:var(--acc);color:#fff;border:none;border-radius:7px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:auto}
+.brand-card-btn:hover{background:#0052cc}
+.ad-banner{background:linear-gradient(135deg,#f0f4ff,#e8f0fe);border:1px solid #c7d7f9;border-radius:8px;padding:14px;text-align:center;cursor:pointer;margin:8px 0}
+.ad-banner-text{font-size:13px;font-weight:600;color:#1d4ed8}
+.ad-banner-sub{font-size:11px;color:#6b7280;margin-top:2px}
+.affiliate-btn{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;background:#16a34a;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:8px}
+.affiliate-btn:hover{background:#15803d}
+
 </style>
 </head>
 <body>
@@ -537,7 +536,6 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- HOME -->
 <div id="page-home" class="page active">
-  <div id="ad-slot-home" style="display:none;padding:8px 20px;cursor:pointer"><div class="ad-banner"><div class="ad-banner-text">Sponsored</div><div class="ad-banner-sub">Advertisement</div></div></div>
   <div class="top-bar">🤖 World's #1 Robot Database — 384 robots catalogued and growing daily</div>
   <div class="hero">
     <div class="hero-inner">
@@ -606,7 +604,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="footer-col"><h4>COMPANY</h4><a>About</a><a>Advertise</a><a>Contact</a><a>Privacy</a></div>
     </div>
   </footer>
-  <div class="footer-bottom"><div class="footer-bottom-inner"><span>Â© 2026 myrobot.shop — All rights reserved</span></div></div>
+  <div class="footer-bottom"><div class="footer-bottom-inner"><span>© 2026 myrobot.shop — All rights reserved</span></div></div>
 </div>
 
 <!-- DATABASE -->
@@ -1937,28 +1935,20 @@ function setFinderView(v){
 function renderManufacturers(){
   const byBrand={};
   ROBOTS.forEach(r=>{
-    if(!byBrand[r.brand])byBrand[r.brand]={brand:r.brand,robots:[],cats:new Set(),topScore:0,fig:r.fig,img:r.img||''};
+    if(!byBrand[r.brand])byBrand[r.brand]={brand:r.brand,robots:[],cats:new Set(),topScore:0,fig:r.fig,img:''};
     byBrand[r.brand].robots.push(r);
     byBrand[r.brand].cats.add(r.cat);
     if((r.score||0)>byBrand[r.brand].topScore)byBrand[r.brand].topScore=r.score||0;
     if(!byBrand[r.brand].img&&r.img)byBrand[r.brand].img=r.img;
   });
   const sorted=Object.values(byBrand).sort((a,b)=>b.robots.length-a.robots.length);
-  document.getElementById('mfr-list').innerHTML='<div class="brand-grid">'+sorted.map(m=>{
-    const available=m.robots.filter(r=>(r.status||'').toLowerCase().match(/active|available/)).length;
-    const thumb=m.img?'<img src="'+m.img+'" alt="'+m.brand+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px" onerror="this.parentNode.innerHTML='<span style=font-size:28px>'+m.fig+'</span>'">'
-      :'<span style="font-size:28px">'+m.fig+'</span>';
-    return '<div class="brand-card" onclick="searchBrand(''+m.brand+'')">'
-      +'<div class="brand-card-logo">'+thumb+'</div>'
-      +'<div class="brand-card-name">'+m.brand+'</div>'
-      +'<div class="brand-card-cat">'+[...m.cats].slice(0,2).join(' · ')+'</div>'
-      +'<div class="brand-card-stats">'
-        +'<div><div class="brand-stat-num">'+m.robots.length+'</div><div class="brand-stat-lbl">Robots</div></div>'
-        +'<div><div class="brand-stat-num" style="color:var(--acc)">'+m.topScore+'</div><div class="brand-stat-lbl">Top Score</div></div>'
-        +'<div><div class="brand-stat-num" style="color:#16a34a">'+available+'</div><div class="brand-stat-lbl">Active</div></div>'
-      +'</div>'
-      +'<button class="brand-card-btn" onclick="event.stopPropagation();searchBrand(''+m.brand+'')">View All →</button>'
-      +'</div>';
+  document.getElementById('mfr-list').innerHTML='<div class="brand-grid">'+sorted.map(function(m){
+    const available=m.robots.filter(function(r){return (r.status||'').toLowerCase().match(/active|available/);}).length;
+    const bname=m.brand.replace(/\\/g,'').replace(/'/g,'');
+    const thumb=m.img
+      ?('<img src="'+m.img+'" alt="'+m.brand+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px" onerror="this.style.display=\'none\'">')
+      :('<span style="font-size:28px">'+m.fig+'</span>');
+    return '<div class="brand-card" onclick="searchBrand(\''+bname+'\')">'      +'<div class="brand-card-logo">'+thumb+'</div>'      +'<div class="brand-card-name">'+m.brand+'</div>'      +'<div class="brand-card-cat">'+[...m.cats].slice(0,2).join(' &middot; ')+'</div>'      +'<div class="brand-card-stats">'        +'<div><div class="brand-stat-num">'+m.robots.length+'</div><div class="brand-stat-lbl">Robots</div></div>'        +'<div><div class="brand-stat-num" style="color:var(--acc)">'+m.topScore+'</div><div class="brand-stat-lbl">Top Score</div></div>'        +'<div><div class="brand-stat-num" style="color:#16a34a">'+available+'</div><div class="brand-stat-lbl">Active</div></div>'      +'</div>'      +'<button class="brand-card-btn" onclick="event.stopPropagation();searchBrand(\''+bname+'\')">View All</button>'      +'</div>';
   }).join('')+'</div>';
 }
 function setStars(n){
@@ -2250,39 +2240,31 @@ setTimeout(() => {
   if(b && !chatOpen) { b.textContent = 'Ask me!'; b.style.background='#22c55e'; }
 }, 4000);
 
-// ════ AFFILIATE LINKS ════
+// ════ AFFILIATE + VIDEO + ADS ════
 function openAffiliate(robotId){
-  const r=ROBOTS.find(x=>x.id===robotId);
+  var r=ROBOTS.find(function(x){return x.id===robotId;});
   if(!r)return;
   if(r.affiliate_url||r.buy_url){window.open(r.affiliate_url||r.buy_url,'_blank');return;}
   window.open('https://www.amazon.com/s?k='+encodeURIComponent((r.brand||'')+' '+(r.name||'')),'_blank');
 }
-// ════ VIDEO GALLERY ════
 function isVideoUrl(url){
   if(!url)return false;
-  return url.includes('youtube.com')||url.includes('youtu.be')||url.includes('vimeo.com')||url.endsWith('.mp4')||url.endsWith('.webm');
-}
-function getEmbedUrl(url){
-  if(url.includes('youtu.be/'))return 'https://www.youtube.com/embed/'+url.split('youtu.be/')[1].split('?')[0];
-  if(url.includes('youtube.com/watch'))return 'https://www.youtube.com/embed/'+new URLSearchParams(url.split('?')[1]).get('v');
-  if(url.includes('vimeo.com/'))return 'https://player.vimeo.com/video/'+url.split('vimeo.com/')[1].split('?')[0];
-  return url;
+  return url.indexOf('youtube.com')>=0||url.indexOf('youtu.be')>=0||url.indexOf('vimeo.com')>=0||url.slice(-4)==='.mp4'||url.slice(-5)==='.webm';
 }
 function openLightbox(url){
-  const lb=document.createElement('div');
+  var lb=document.createElement('div');
   lb.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer';
-  lb.onclick=()=>lb.remove();
+  lb.onclick=function(){lb.remove();};
   lb.innerHTML='<img src="'+url+'" style="max-width:90vw;max-height:90vh;border-radius:10px">';
   document.body.appendChild(lb);
 }
-// ════ AD SLOTS ════
 function setAd(slot,url,text,sub){
-  const el=document.getElementById('ad-slot-'+slot);
+  var el=document.getElementById('ad-slot-'+slot);
   if(!el)return;
   el.style.display='block';
-  el.onclick=()=>window.open(url,'_blank');
-  const t=el.querySelector('.ad-banner-text');
-  const s=el.querySelector('.ad-banner-sub');
+  el.onclick=function(){window.open(url,'_blank');};
+  var t=el.querySelector('.ad-banner-text');
+  var s=el.querySelector('.ad-banner-sub');
   if(t)t.textContent=text||'Sponsored';
   if(s)s.textContent=sub||'Advertisement';
 }
