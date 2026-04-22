@@ -1075,28 +1075,7 @@ function row(label, val, unit='', note='') {
   else display = val;
   const unitHtml = unit ? ` <span style="color:var(--mut);font-size:11px">${unit}</span>` : '';
   const noteHtml = note ? `<br><span style="color:var(--mut);font-size:11px">${note}</span>` : '';
-  }
-
-  if (found) {
-    return '📋 **' + found.name + '** by ' + found.brand + '\n\nCategory: ' + found.cat + ' · ' + (found.sub||'') + '\nScore: ' + found.score + '/100 · ' + (found.price>0?'$'+found.price.toLocaleString():'POA') + '\n\nOpen **Database** and click the robot for full specs!';
-  }
-
-  // Defaults
-  return ['I can help you find the perfect robot! Try:
-
-• "Best humanoid under $30K"
-• "Compare Atlas vs Digit"
-• "Top warehouse robots"
-• "Robots with AI vision"
-
-Or browse the **Finder** page for full filters 🔍',
-    'Great question! Our database has 35+ robots across 9 categories.
-
-Use the **Finder** in the nav to filter by specs, price, features and more. What type of robot are you looking for? 🤖',
-    'I'm not sure I have that specific answer — try asking about a robot name, brand, or category.
-
-Or visit the **Database** page for full specs and reviews on every robot! 🦾'
-  ][Math.floor(Math.random()*3)];
+  return `<tr><td class="spec-label">${label}</td><td class="spec-val">${display}${unitHtml}${noteHtml}</td></tr>`;
 }
 
 function getRobotAnswer(q) {
