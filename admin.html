@@ -693,6 +693,10 @@ let GH_REPO = localStorage.getItem('mrsh_gh_repo') || 'myrobot42/myrobot-shop'; 
 let isProcessing = false;
 let pendingRobot = null;
 
+// ════ CLOUDINARY CONFIG ════
+let CLOUDINARY_NAME = localStorage.getItem('mrsh_cloudinary_name') || '';
+let CLOUDINARY_PRESET = localStorage.getItem('mrsh_cloudinary_preset') || 'myrobot';
+
 // ════ ROBOT DATABASE (mirrored from main site) ════
 let ROBOTS = [];
 
@@ -2130,10 +2134,7 @@ function saveAllImages() {
 }
 
 
-// ════ CLOUDINARY ════
-let CLOUDINARY_NAME = localStorage.getItem('mrsh_cloudinary_name') || '';
-let CLOUDINARY_PRESET = localStorage.getItem('mrsh_cloudinary_preset') || 'myrobot';
-
+// ════ CLOUDINARY FUNCTIONS ════
 function saveCloudinary() {
   const name = document.getElementById('cloudinary-name-input').value.trim();
   const preset = document.getElementById('cloudinary-preset-input').value.trim();
@@ -2150,10 +2151,7 @@ function loadCloudinarySettings() {
 }
 
 function uploadCloudinary(robotId) {
-  if (!CLOUDINARY_NAME) {
-    alert('Add your Cloudinary Cloud Name in Settings first.');
-    return;
-  }
+  if (!CLOUDINARY_NAME) { alert('Add your Cloudinary Cloud Name in Settings first.'); return; }
   document.getElementById('cf-' + robotId).click();
 }
 
@@ -2162,129 +2160,98 @@ async function handleCloudinaryUpload(robotId, input) {
   const file = input.files[0];
   const thumb = document.getElementById('main-thumb-' + robotId);
   const imgInput = document.getElementById('mainimg-' + robotId);
-
-  // Show uploading state
   if (thumb) thumb.innerHTML = '<span style="font-size:10px;color:var(--mut)">Uploading...</span>';
-
   try {
     const formData = new FormData();
     formData.append('file', file);
     formData.append('upload_preset', CLOUDINARY_PRESET);
     formData.append('folder', 'myrobot');
-
-    const resp = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_NAME}/image/upload`, {
-      method: 'POST',
-      body: formData
+    const resp = await fetch('https://api.cloudinary.com/v1_1/' + CLOUDINARY_NAME + '/image/upload', {
+      method: 'POST', body: formData
     });
-
     if (!resp.ok) throw new Error('Upload failed: ' + resp.status);
     const data = await resp.json();
-
-    // Use the secure URL
     const url = data.secure_url;
     if (imgInput) { imgInput.value = url; updateMainPreview(robotId, url); }
     addLog('success', 'Cloudinary upload: ' + robotId);
-
   } catch(err) {
-    if (thumb) thumb.innerHTML = '<span style="font-size:20px">🤖</span>';
+    const r = ROBOTS.find(x => x.id === robotId);
+    if (thumb) thumb.innerHTML = '<span style="font-size:24px">' + (r ? r.fig||'🤖' : '🤖') + '</span>';
     alert('Upload failed: ' + err.message);
-    addLog('error', 'Cloudinary upload failed: ' + err.message);
   }
   input.value = '';
 }
 
-// ════ WIKIPEDIA AUTO-FETCH ════
+// ════ WIKIPEDIA FETCH ════
 async function fetchWikiImage(robotId, searchTerm) {
   const imgInput = document.getElementById('mainimg-' + robotId);
   const thumb = document.getElementById('main-thumb-' + robotId);
   if (thumb) thumb.innerHTML = '<span style="font-size:10px;color:var(--mut)">Fetching...</span>';
-
-  // Clean search term
   const query = searchTerm.replace(/[^a-zA-Z0-9 ]/g, ' ').trim();
-
   try {
-    // First try exact page
-    const resp = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(query)}`);
+    // Try direct page first
+    const resp = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(query));
     if (resp.ok) {
       const data = await resp.json();
       if (data.thumbnail && data.thumbnail.source) {
-        const url = data.thumbnail.source.replace(/\/\d+px-/, '/640px-');
+        const url = data.thumbnail.source.replace(/\/[0-9]+px-/, '/640px-');
         if (imgInput) { imgInput.value = url; updateMainPreview(robotId, url); }
-        addLog('success', 'Wiki image found: ' + query);
+        addLog('success', 'Wiki image: ' + query);
         return;
       }
     }
-
-    // If no exact match, try search API
-    const searchResp = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&format=json&origin=*&srlimit=1`);
-    const searchData = await searchResp.json();
-    const results = searchData.query?.search;
+    // Try search API
+    const sResp = await fetch('https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=' + encodeURIComponent(query) + '&format=json&origin=*&srlimit=1');
+    const sData = await sResp.json();
+    const results = sData.query && sData.query.search;
     if (results && results.length > 0) {
       const title = results[0].title;
-      const pageResp = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
-      if (pageResp.ok) {
-        const pageData = await pageResp.json();
-        if (pageData.thumbnail && pageData.thumbnail.source) {
-          const url = pageData.thumbnail.source.replace(/\/\d+px-/, '/640px-');
+      const pResp = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(title));
+      if (pResp.ok) {
+        const pData = await pResp.json();
+        if (pData.thumbnail && pData.thumbnail.source) {
+          const url = pData.thumbnail.source.replace(/\/[0-9]+px-/, '/640px-');
           if (imgInput) { imgInput.value = url; updateMainPreview(robotId, url); }
-          addLog('success', 'Wiki image found via search: ' + title);
+          addLog('success', 'Wiki image via search: ' + title);
           return;
         }
       }
     }
-
-    // No image found
+    // Nothing found
     const r = ROBOTS.find(x => x.id === robotId);
-    if (thumb) thumb.innerHTML = `<span style="font-size:24px">${r ? r.fig||'🤖' : '🤖'}</span>`;
-    addLog('warn', 'No Wiki image found for: ' + query);
-
+    if (thumb) thumb.innerHTML = '<span style="font-size:24px">' + (r ? r.fig||'🤖' : '🤖') + '</span>';
+    addLog('warn', 'No Wiki image: ' + query);
   } catch(err) {
     const r = ROBOTS.find(x => x.id === robotId);
-    if (thumb) thumb.innerHTML = `<span style="font-size:24px">${r ? r.fig||'🤖' : '🤖'}</span>`;
-    addLog('error', 'Wiki fetch error: ' + err.message);
+    if (thumb) thumb.innerHTML = '<span style="font-size:24px">' + (r ? r.fig||'🤖' : '🤖') + '</span>';
+    addLog('error', 'Wiki error: ' + err.message);
   }
 }
 
 async function bulkWikiFetch() {
   const catFilter = document.getElementById('img-cat-filter').value;
-  const toFetch = ROBOTS.filter(r => {
-    const matchCat = !catFilter || r.cat === catFilter;
-    const noImg = !r.img;
-    return matchCat && noImg;
-  });
-
-  if (!toFetch.length) {
-    alert('No robots without images in this selection.');
-    return;
-  }
-
-  const confirm_go = confirm(`Fetch Wikipedia images for ${toFetch.length} robots without images${catFilter ? ' in ' + catFilter : ''}? This may take a minute.`);
-  if (!confirm_go) return;
-
-  addMsg(`🌐 Bulk Wikipedia fetch started for ${toFetch.length} robots...`, 'system');
-
+  const toFetch = ROBOTS.filter(r => (!catFilter || r.cat === catFilter) && !r.img);
+  if (!toFetch.length) { alert('No robots without images in this selection.'); return; }
+  if (!confirm('Fetch Wikipedia images for ' + toFetch.length + ' robots without images? This may take a minute.')) return;
+  addMsg('Bulk Wikipedia fetch for ' + toFetch.length + ' robots...', 'system');
   let found = 0;
   for (const r of toFetch) {
-    const query = r.name + ' ' + r.brand + ' robot';
     try {
-      const resp = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(r.name)}`);
+      const resp = await fetch('https://en.wikipedia.org/api/rest_v1/page/summary/' + encodeURIComponent(r.name));
       if (resp.ok) {
         const data = await resp.json();
         if (data.thumbnail && data.thumbnail.source) {
-          r.img = data.thumbnail.source.replace(/\/\d+px-/, '/640px-');
+          r.img = data.thumbnail.source.replace(/\/[0-9]+px-/, '/640px-');
           found++;
-          // Update input if visible
           const inp = document.getElementById('mainimg-' + r.id);
           if (inp) { inp.value = r.img; updateMainPreview(r.id, r.img); }
         }
       }
-      // Small delay to avoid rate limiting
       await new Promise(res => setTimeout(res, 300));
     } catch(e) {}
   }
-
   saveDB();
-  addMsg(`✅ Bulk fetch complete! Found images for ${found} of ${toFetch.length} robots. Click Save All + Deploy to go live.`, 'success');
+  addMsg('Done! Found images for ' + found + ' of ' + toFetch.length + ' robots. Click Save All + Deploy.', 'success');
 }
 
 </script>
