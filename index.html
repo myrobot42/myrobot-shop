@@ -1077,6 +1077,10 @@ function row(label, val, unit='', note='') {
   const noteHtml = note ? `<br><span style="color:var(--mut);font-size:11px">${note}</span>` : '';
   }
 
+  if (found) {
+    return '📋 **' + found.name + '** by ' + found.brand + '\n\nCategory: ' + found.cat + ' · ' + (found.sub||'') + '\nScore: ' + found.score + '/100 · ' + (found.price>0?'$'+found.price.toLocaleString():'POA') + '\n\nOpen **Database** and click the robot for full specs!';
+  }
+
   // Defaults
   return ['I can help you find the perfect robot! Try:
 
@@ -1094,6 +1098,74 @@ Use the **Finder** in the nav to filter by specs, price, features and more. What
 Or visit the **Database** page for full specs and reviews on every robot! 🦾'
   ][Math.floor(Math.random()*3)];
 }
+
+function getRobotAnswer(q) {
+  const ql = q.toLowerCase();
+  const DB = window.ROBOTS || [];
+
+  // Compare
+  const cm = ql.match(/compare (.+?) (?:vs|versus|and) (.+)/);
+  if (cm) {
+    const r1 = DB.find(r => r.name.toLowerCase().includes(cm[1].trim()) || r.brand.toLowerCase().includes(cm[1].trim()));
+    const r2 = DB.find(r => r.name.toLowerCase().includes(cm[2].trim()) || r.brand.toLowerCase().includes(cm[2].trim()));
+    if (r1 && r2) {
+      const w = r1.score > r2.score ? r1 : r2;
+      return '⚖️ **' + r1.name + '** (Score: ' + r1.score + ') vs **' + r2.name + '** (Score: ' + r2.score + ')\n\n**' + w.name + '** wins overall at ' + w.score + '/100.\n\nKey differences:\n• Payload: ' + (r1.payload||'—') + 'kg vs ' + (r2.payload||'—') + 'kg\n• Battery: ' + (r1.battery_life||'—') + 'min vs ' + (r2.battery_life||'—') + 'min\n• Price: ' + (r1.price>0?'$'+r1.price.toLocaleString():'POA') + ' vs ' + (r2.price>0?'$'+r2.price.toLocaleString():'POA') + '\n\nOpen the **Compare** page for the full spec table!';
+    }
+  }
+
+  // Price budget
+  const pm = ql.match(/under \$?([\d,]+)k?/);
+  if (pm) {
+    const budget = parseInt(pm[1].replace(/,/g,'')) * (ql.includes('k') || parseInt(pm[1]) < 1000 ? 1000 : 1);
+    const hits = DB.filter(r => r.price > 0 && r.price <= budget).sort((a,b) => b.score-a.score).slice(0,4);
+    if (hits.length) return '💰 Top robots under $' + budget.toLocaleString() + ':\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ')\n   $' + r.price.toLocaleString() + ' · Score ' + r.score + '/100').join('\n\n') + '\n\nUse **Database → Price filter** to see all!';
+  }
+
+  // Category
+  const catMap = {'humanoid':'Humanoid','industrial':'Industrial','warehouse':'Service','medical':'Medical','drone':'Drones','agricultural':'Agricultural','military':'Military','consumer':'Consumer','educational':'Educational','cobot':'Industrial','service':'Service','security':'Military','surgical':'Medical','farm':'Agricultural'};
+  for (const [k, cat] of Object.entries(catMap)) {
+    if (ql.includes(k)) {
+      const hits = DB.filter(r => r.cat===cat || r.tags.some(t=>t.toLowerCase().includes(k))).sort((a,b)=>b.score-a.score).slice(0,4);
+      if (hits.length) return '🔍 Top **' + cat + '** robots:\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ')\n   Score ' + r.score + ' · ' + (r.price>0?'$'+r.price.toLocaleString():'POA')).join('\n\n') + '\n\nClick **Finder** tab for full filtered results!';
+    }
+  }
+
+  // Features
+  if (ql.includes('arm') || ql.includes('gripper')) {
+    const hits = DB.filter(r=>r.arm).sort((a,b)=>b.score-a.score).slice(0,4);
+    if (hits.length) return '🦾 Robots with robotic arms:\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ') — ' + r.cat).join('\n') + '\n\nFilter by Robotic Arm in the **Finder**!';
+  }
+  if (ql.includes('cheap') || ql.includes('affordable') || ql.includes('budget')) {
+    const hits = DB.filter(r=>r.price>0).sort((a,b)=>a.price-b.price).slice(0,4);
+    if (hits.length) return '💸 Most affordable robots:\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ')\n   $' + r.price.toLocaleString()).join('\n\n') + '\n\nUse price filter in **Finder** for more!';
+  }
+  if (ql.includes('best') || ql.includes('top') || ql.includes('highest')) {
+    const hits = DB.sort((a,b)=>b.score-a.score).slice(0,4);
+    return '⭐ Highest rated robots:\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ') — ' + r.score + '/100').join('\n') + '\n\nSee the full leaderboard on the **Rankings** page!';
+  }
+  if (ql.includes('ai') || ql.includes('autonomous') || ql.includes('vision')) {
+    const hits = DB.filter(r=>r.ai||r.lidar||r.depth_sensing).sort((a,b)=>b.score-a.score).slice(0,4);
+    if (hits.length) return '🧠 Top AI-powered robots:\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ') — ' + r.cat).join('\n') + '\n\nFilter by AI in the **Finder**!';
+  }
+  if (ql.includes('ros')) {
+    const hits = DB.filter(r=>r.ros).sort((a,b)=>b.score-a.score).slice(0,4);
+    if (hits.length) return '🤖 ROS-compatible robots:\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ')').join('\n') + '\n\nFilter by ROS Compatible in the **Finder**!';
+  }
+
+  // Specific robot lookup
+  const found = DB.find(r => r.name.toLowerCase().includes(ql) || r.brand.toLowerCase().includes(ql) || ql.includes(r.name.toLowerCase()) || ql.includes(r.brand.toLowerCase()));
+  if (found) {
+    return '📋 **' + found.name + '** by ' + found.brand + '\n\nCategory: ' + found.cat + (found.sub?' · '+found.sub:'') + '\nScore: ' + found.score + '/100' + '\nPrice: ' + (found.price>0?'$'+found.price.toLocaleString():'POA / Fleet pricing') + '\n\n' + (found.desc||'') + '\n\nOpen **Database** and click the robot for full specs!';
+  }
+
+  // Defaults
+  return ['I can help you find the perfect robot! Try:\n\n• "Best humanoid under $30K"\n• "Compare Atlas vs Digit"\n• "Top warehouse robots"\n• "Robots with AI vision"\n\nOr browse the **Finder** page for full filters 🔍',
+    'Great question! Our database has 384+ robots across 9 categories.\n\nUse the **Finder** in the nav to filter by specs, price, features and more. What type of robot are you looking for? 🤖',
+    'I\'m not sure I have that specific answer — try asking about a robot name, brand, or category.\n\nOr visit the **Database** page for full specs and reviews on every robot! 🦾'
+  ][Math.floor(Math.random()*3)];
+}
+
 
 function sendChat() {
   const inp = document.getElementById('mascot-in');
