@@ -1807,20 +1807,6 @@ const FINDER_CATS=[
   {id:'Educational',label:'Educational',icon:'🎓'},
 ];
 
-// Finder state
-var finderCat='all';
-var finderView='list';
-var finderState={
-  brands:[],status:[],features:[],
-  priceMin:0,priceMax:0,
-  yearMin:0,yearMax:0,
-  weightMin:0,weightMax:0,
-  payloadMin:0,payloadMax:0,
-  speedMin:0,speedMax:0,
-  batteryMin:0,batteryMax:0,
-  scoreMin:0,
-  ip:'',ros:false,sdk:false,wifi:false,lidar:false,ota:false
-};
 
 function buildFinderTabs(){
   document.getElementById('finder-tabs').innerHTML=FINDER_CATS.map(function(c){
@@ -1833,14 +1819,11 @@ function setFinderCat(cat,el){
   finderCat=cat;
   document.querySelectorAll('.ftab').forEach(function(t){t.classList.remove('active');});
   if(el)el.classList.add('active');
-  resetFinderState();
   buildFinderFP();
   renderFinder();
 }
 
-function resetFinderState(){
-  finderState={brands:[],status:[],features:[],priceMin:0,priceMax:0,yearMin:0,yearMax:0,weightMin:0,weightMax:0,payloadMin:0,payloadMax:0,speedMin:0,speedMax:0,batteryMin:0,batteryMax:0,scoreMin:0,ip:'',ros:false,sdk:false,wifi:false,lidar:false,ota:false};
-}
+function resetFinderState(){}
 
 function getPool(){
   return finderCat==='all'?ROBOTS:ROBOTS.filter(function(r){return r.cat===finderCat;});
