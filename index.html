@@ -539,6 +539,10 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .frrow-stars{font-size:12px;color:#f59e0b}
 .frrow-actions{display:flex;gap:5px;margin-top:4px}
 
+
+.fabtn{width:100%;padding:10px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s}
+.fabtn:hover{background:#0052cc}
+
 /* FINDER SPEC FILTERS */
 .ffg-section{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--acc);padding:10px 0 6px;text-transform:uppercase;border-bottom:2px solid var(--acc);margin-bottom:10px}
 .fspec-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}
@@ -821,7 +825,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     <div class="finder-fp" id="finder-fp"></div>
     <div class="finder-results">
       <div class="finder-toolbar">
-        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><div class="finder-count">Showing <em id="finder-count">0</em> robots</div><div class="fatags" id="finder-atags"></div></div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap"><div class="finder-count" id="finder-count-wrap" style="display:none">Showing <em id="finder-count">0</em> robots</div><div class="fatags" id="finder-atags"></div></div>
         <div class="fr-right"><select class="fssel" id="finder-sort" onchange="renderFinder()"><option value="score">Best Rated</option><option value="price_asc">Price ↑</option><option value="price_desc">Price ↓</option><option value="name">A–Z</option><option value="newest" selected>Newest</option></select><div class="fvbtns"><button class="fvbtn active" id="fvl" onclick="setFinderView('list')">☰</button><button class="fvbtn" id="fvg" onclick="setFinderView('grid')">⊞</button></div></div>
       </div>
       <div id="finder-results"></div>
@@ -870,7 +874,7 @@ function goPage(p){
   if(p==='db'){buildDbFilters();renderDb();}
   if(p==='compare'){renderCompare();}
   if(p==='rankings'){renderRankings('all');}
-  if(p==='finder'){buildFinderTabs();buildFinderFP();renderFinder();}
+  if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();}
   if(p==='manufacturers'){renderManufacturers();}
   if(p==='submit-review'){populateReviewSelect();}
 }
@@ -1846,7 +1850,7 @@ function setFinderCat(cat,el){
   document.querySelectorAll('.ftab').forEach(function(t){t.classList.remove('active');});
   if(el)el.classList.add('active');
   buildFinderFP();
-  renderFinder();
+  showFinderEmpty();
 }
 
 function resetFinderState(){}
@@ -1881,12 +1885,12 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>PERFORMANCE</span></div>
       <div class="fspec-row">
-        <div class="fspec-field"><label class="fspec-lbl">Payload (kg) Min</label><input class="fspec-inp" type="number" id="fs-payload-min" placeholder="0" min="0" oninput="renderFinder()"></div>
-        <div class="fspec-field"><label class="fspec-lbl">Speed (m/s) Min</label><input class="fspec-inp" type="number" id="fs-speed-min" placeholder="0" min="0" step="0.1" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Payload (kg) Min</label><input class="fspec-inp" type="number" id="fs-payload-min" placeholder="0" min="0" oninput="updateFinderCount()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Speed (m/s) Min</label><input class="fspec-inp" type="number" id="fs-speed-min" placeholder="0" min="0" step="0.1" oninput="updateFinderCount()"></div>
       </div>
       <div class="fspec-row">
-        <div class="fspec-field"><label class="fspec-lbl">Battery Life (min) Min</label><input class="fspec-inp" type="number" id="fs-battery-min" placeholder="0" min="0" oninput="renderFinder()"></div>
-        <div class="fspec-field"><label class="fspec-lbl">Weight (kg) Max</label><input class="fspec-inp" type="number" id="fs-weight-max" placeholder="Any" min="0" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Battery Life (min) Min</label><input class="fspec-inp" type="number" id="fs-battery-min" placeholder="0" min="0" oninput="updateFinderCount()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Weight (kg) Max</label><input class="fspec-inp" type="number" id="fs-weight-max" placeholder="Any" min="0" oninput="updateFinderCount()"></div>
       </div>
     </div>
     <div class="ffdiv"></div>`;
@@ -1896,8 +1900,8 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>INDUSTRIAL SPECS</span></div>
       <div class="fspec-row">
-        <div class="fspec-field"><label class="fspec-lbl">Payload (kg) Min</label><input class="fspec-inp" type="number" id="fs-payload-min" placeholder="0" min="0" oninput="renderFinder()"></div>
-        <div class="fspec-field"><label class="fspec-lbl">Reach (mm) Min</label><input class="fspec-inp" type="number" id="fs-reach-min" placeholder="0" min="0" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Payload (kg) Min</label><input class="fspec-inp" type="number" id="fs-payload-min" placeholder="0" min="0" oninput="updateFinderCount()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Reach (mm) Min</label><input class="fspec-inp" type="number" id="fs-reach-min" placeholder="0" min="0" oninput="updateFinderCount()"></div>
       </div>
     </div>
     <div class="ffdiv"></div>`;
@@ -1912,7 +1916,7 @@ function buildFinderFP(){
       <div class="ffgh"><span>BRAND</span><span class="ffgcl" onclick="clearFFC('.fb')">Clear</span></div>
       <div class="fcbl">${brands.map(function(b){
         var cnt=pool.filter(function(r){return r.brand===b;}).length;
-        return '<label class="fcbo"><input type="checkbox" class="fb" data-val="'+b+'" onchange="renderFinder()"><span class="fcbo-l">'+b+'</span><span class="fcbo-c">'+cnt+'</span></label>';
+        return '<label class="fcbo"><input type="checkbox" class="fb" data-val="'+b+'" onchange="updateFinderCount()"><span class="fcbo-l">'+b+'</span><span class="fcbo-c">'+cnt+'</span></label>';
       }).join('')}</div>
     </div>
     <div class="ffdiv"></div>
@@ -1920,11 +1924,11 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>YEAR</span><span class="ffgcl" onclick="clearFRange('fs-year')">Clear</span></div>
       <div class="fspec-row">
-        <div class="fspec-field"><label class="fspec-lbl">From</label><select class="fspec-sel" id="fs-year-min" onchange="renderFinder()">
+        <div class="fspec-field"><label class="fspec-lbl">From</label><select class="fspec-sel" id="fs-year-min" onchange="updateFinderCount()">
           <option value="">Any</option>
           ${Array.from({length:maxYear-minYear+1},(_,i)=>minYear+i).map(function(y){return '<option value="'+y+'">'+y+'</option>';}).join('')}
         </select></div>
-        <div class="fspec-field"><label class="fspec-lbl">To</label><select class="fspec-sel" id="fs-year-max" onchange="renderFinder()">
+        <div class="fspec-field"><label class="fspec-lbl">To</label><select class="fspec-sel" id="fs-year-max" onchange="updateFinderCount()">
           <option value="">Any</option>
           ${Array.from({length:maxYear-minYear+1},(_,i)=>minYear+i).reverse().map(function(y){return '<option value="'+y+'">'+y+'</option>';}).join('')}
         </select></div>
@@ -1935,8 +1939,8 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>PRICE</span><span class="ffgcl" onclick="clearFRange('fs-price')">Clear</span></div>
       <div class="fspec-row">
-        <div class="fspec-field"><label class="fspec-lbl">Min ($)</label><input class="fspec-inp" type="number" id="fs-price-min" placeholder="0" min="0" oninput="renderFinder()"></div>
-        <div class="fspec-field"><label class="fspec-lbl">Max ($)</label><input class="fspec-inp" type="number" id="fs-price-max" placeholder="Any" min="0" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Min ($)</label><input class="fspec-inp" type="number" id="fs-price-min" placeholder="0" min="0" oninput="updateFinderCount()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max ($)</label><input class="fspec-inp" type="number" id="fs-price-max" placeholder="Any" min="0" oninput="updateFinderCount()"></div>
       </div>
     </div>
     <div class="ffdiv"></div>
@@ -1944,9 +1948,9 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>AVAILABILITY</span><span class="ffgcl" onclick="clearFFC('.fst')">Clear</span></div>
       <div class="fcbl">
-        <label class="fcbo"><input type="checkbox" class="fst" data-val="active" onchange="renderFinder()"><span class="fcbo-l">Active / Available</span><span class="fcbo-c">${pool.filter(function(r){return (r.status||'').toLowerCase().includes('active');}).length}</span></label>
-        <label class="fcbo"><input type="checkbox" class="fst" data-val="discontinued" onchange="renderFinder()"><span class="fcbo-l">Discontinued</span><span class="fcbo-c">${pool.filter(function(r){return (r.status||'').toLowerCase().includes('discontinued');}).length}</span></label>
-        <label class="fcbo"><input type="checkbox" class="fst" data-val="coming" onchange="renderFinder()"><span class="fcbo-l">Coming Soon</span><span class="fcbo-c">${pool.filter(function(r){return (r.status||'').toLowerCase().includes('coming')||(r.status||'').toLowerCase().includes('pilot')||(r.status||'').toLowerCase().includes('pre');}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="fst" data-val="active" onchange="updateFinderCount()"><span class="fcbo-l">Active / Available</span><span class="fcbo-c">${pool.filter(function(r){return (r.status||'').toLowerCase().includes('active');}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="fst" data-val="discontinued" onchange="updateFinderCount()"><span class="fcbo-l">Discontinued</span><span class="fcbo-c">${pool.filter(function(r){return (r.status||'').toLowerCase().includes('discontinued');}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="fst" data-val="coming" onchange="updateFinderCount()"><span class="fcbo-l">Coming Soon</span><span class="fcbo-c">${pool.filter(function(r){return (r.status||'').toLowerCase().includes('coming')||(r.status||'').toLowerCase().includes('pilot')||(r.status||'').toLowerCase().includes('pre');}).length}</span></label>
       </div>
     </div>
     <div class="ffdiv"></div>
@@ -1956,8 +1960,8 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>WEIGHT</span><span class="ffgcl" onclick="clearFRange('fs-weight')">Clear</span></div>
       <div class="fspec-row">
-        <div class="fspec-field"><label class="fspec-lbl">Min (kg)</label><input class="fspec-inp" type="number" id="fs-weight-min" placeholder="0" min="0" step="0.1" oninput="renderFinder()"></div>
-        <div class="fspec-field"><label class="fspec-lbl">Max (kg)</label><input class="fspec-inp" type="number" id="fs-weight-max" placeholder="Any" min="0" step="0.1" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Min (kg)</label><input class="fspec-inp" type="number" id="fs-weight-min" placeholder="0" min="0" step="0.1" oninput="updateFinderCount()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max (kg)</label><input class="fspec-inp" type="number" id="fs-weight-max" placeholder="Any" min="0" step="0.1" oninput="updateFinderCount()"></div>
       </div>
     </div>
     <div class="ffdiv"></div>
@@ -1965,8 +1969,8 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>PAYLOAD (kg)</span><span class="ffgcl" onclick="clearFRange('fs-payload')">Clear</span></div>
       <div class="fspec-row">
-        <div class="fspec-field"><label class="fspec-lbl">Min</label><input class="fspec-inp" type="number" id="fs-payload-min" placeholder="0" min="0" step="0.1" oninput="renderFinder()"></div>
-        <div class="fspec-field"><label class="fspec-lbl">Max</label><input class="fspec-inp" type="number" id="fs-payload-max" placeholder="Any" min="0" step="0.1" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Min</label><input class="fspec-inp" type="number" id="fs-payload-min" placeholder="0" min="0" step="0.1" oninput="updateFinderCount()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max</label><input class="fspec-inp" type="number" id="fs-payload-max" placeholder="Any" min="0" step="0.1" oninput="updateFinderCount()"></div>
       </div>
     </div>
     <div class="ffdiv"></div>
@@ -1974,8 +1978,8 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>SPEED (m/s)</span><span class="ffgcl" onclick="clearFRange('fs-speed')">Clear</span></div>
       <div class="fspec-row">
-        <div class="fspec-field"><label class="fspec-lbl">Min</label><input class="fspec-inp" type="number" id="fs-speed-min" placeholder="0" min="0" step="0.1" oninput="renderFinder()"></div>
-        <div class="fspec-field"><label class="fspec-lbl">Max</label><input class="fspec-inp" type="number" id="fs-speed-max" placeholder="Any" min="0" step="0.1" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Min</label><input class="fspec-inp" type="number" id="fs-speed-min" placeholder="0" min="0" step="0.1" oninput="updateFinderCount()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max</label><input class="fspec-inp" type="number" id="fs-speed-max" placeholder="Any" min="0" step="0.1" oninput="updateFinderCount()"></div>
       </div>
     </div>
     <div class="ffdiv"></div>
@@ -1983,8 +1987,8 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>BATTERY LIFE (min)</span><span class="ffgcl" onclick="clearFRange('fs-battery')">Clear</span></div>
       <div class="fspec-row">
-        <div class="fspec-field"><label class="fspec-lbl">Min</label><input class="fspec-inp" type="number" id="fs-battery-min" placeholder="0" min="0" oninput="renderFinder()"></div>
-        <div class="fspec-field"><label class="fspec-lbl">Max</label><input class="fspec-inp" type="number" id="fs-battery-max" placeholder="Any" min="0" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Min</label><input class="fspec-inp" type="number" id="fs-battery-min" placeholder="0" min="0" oninput="updateFinderCount()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max</label><input class="fspec-inp" type="number" id="fs-battery-max" placeholder="Any" min="0" oninput="updateFinderCount()"></div>
       </div>
     </div>
     <div class="ffdiv"></div>
@@ -1992,7 +1996,7 @@ function buildFinderFP(){
     ${ipRatings.length?`
     <div class="ffg">
       <div class="ffgh"><span>IP RATING</span><span class="ffgcl" onclick="clearFFC('.fip')">Clear</span></div>
-      <div class="fcbl">${ipRatings.map(function(ip){return '<label class="fcbo"><input type="checkbox" class="fip" data-val="'+ip+'" onchange="renderFinder()"><span class="fcbo-l">'+ip+'</span></label>';}).join('')}</div>
+      <div class="fcbl">${ipRatings.map(function(ip){return '<label class="fcbo"><input type="checkbox" class="fip" data-val="'+ip+'" onchange="updateFinderCount()"><span class="fcbo-l">'+ip+'</span></label>';}).join('')}</div>
     </div>
     <div class="ffdiv"></div>`:''}
 
@@ -2001,13 +2005,13 @@ function buildFinderFP(){
     <div class="ffg">
       <div class="ffgh"><span>FEATURES</span></div>
       <div class="fcbl">
-        <label class="fcbo"><input type="checkbox" class="ff" data-val="ros" onchange="renderFinder()"><span class="fcbo-l">ROS Compatible</span><span class="fcbo-c">${pool.filter(function(r){return r.ros;}).length}</span></label>
-        <label class="fcbo"><input type="checkbox" class="ff" data-val="sdk" onchange="renderFinder()"><span class="fcbo-l">SDK Available</span><span class="fcbo-c">${pool.filter(function(r){return r.sdk;}).length}</span></label>
-        <label class="fcbo"><input type="checkbox" class="ff" data-val="wifi" onchange="renderFinder()"><span class="fcbo-l">WiFi</span><span class="fcbo-c">${pool.filter(function(r){return r.wifi;}).length}</span></label>
-        <label class="fcbo"><input type="checkbox" class="ff" data-val="bluetooth" onchange="renderFinder()"><span class="fcbo-l">Bluetooth</span><span class="fcbo-c">${pool.filter(function(r){return r.bluetooth;}).length}</span></label>
-        <label class="fcbo"><input type="checkbox" class="ff" data-val="lidar" onchange="renderFinder()"><span class="fcbo-l">LiDAR</span><span class="fcbo-c">${pool.filter(function(r){return r.lidar;}).length}</span></label>
-        <label class="fcbo"><input type="checkbox" class="ff" data-val="ota" onchange="renderFinder()"><span class="fcbo-l">OTA Updates</span><span class="fcbo-c">${pool.filter(function(r){return r.ota;}).length}</span></label>
-        <label class="fcbo"><input type="checkbox" class="ff" data-val="arm" onchange="renderFinder()"><span class="fcbo-l">Robotic Arm</span><span class="fcbo-c">${pool.filter(function(r){return r.arm;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="ros" onchange="updateFinderCount()"><span class="fcbo-l">ROS Compatible</span><span class="fcbo-c">${pool.filter(function(r){return r.ros;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="sdk" onchange="updateFinderCount()"><span class="fcbo-l">SDK Available</span><span class="fcbo-c">${pool.filter(function(r){return r.sdk;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="wifi" onchange="updateFinderCount()"><span class="fcbo-l">WiFi</span><span class="fcbo-c">${pool.filter(function(r){return r.wifi;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="bluetooth" onchange="updateFinderCount()"><span class="fcbo-l">Bluetooth</span><span class="fcbo-c">${pool.filter(function(r){return r.bluetooth;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="lidar" onchange="updateFinderCount()"><span class="fcbo-l">LiDAR</span><span class="fcbo-c">${pool.filter(function(r){return r.lidar;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="ota" onchange="updateFinderCount()"><span class="fcbo-l">OTA Updates</span><span class="fcbo-c">${pool.filter(function(r){return r.ota;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="arm" onchange="updateFinderCount()"><span class="fcbo-l">Robotic Arm</span><span class="fcbo-c">${pool.filter(function(r){return r.arm;}).length}</span></label>
       </div>
     </div>
     <div class="ffdiv"></div>
@@ -2016,7 +2020,7 @@ function buildFinderFP(){
 
     <div class="ffg">
       <div class="ffgh"><span>MIN EXPERT SCORE</span></div>
-      <select class="fspec-sel" id="finder-minscore" onchange="renderFinder()" style="width:100%">
+      <select class="fspec-sel" id="finder-minscore" onchange="updateFinderCount()" style="width:100%">
         <option value="0">Any score</option>
         <option value="70">70+ Good</option>
         <option value="75">75+ Very Good</option>
@@ -2030,7 +2034,7 @@ function buildFinderFP(){
 
     <div class="ffg">
       <div class="ffgh"><span>MIN USER RATING</span></div>
-      <select class="fspec-sel" id="finder-minrating" onchange="renderFinder()" style="width:100%">
+      <select class="fspec-sel" id="finder-minrating" onchange="updateFinderCount()" style="width:100%">
         <option value="0">Any rating</option>
         <option value="3">3+ ★★★</option>
         <option value="3.5">3.5+ ★★★½</option>
@@ -2041,7 +2045,7 @@ function buildFinderFP(){
     <div class="ffdiv"></div>
 
     <div style="display:flex;gap:6px;padding:4px 0 8px">
-      <button class="fabtn" style="flex:1" onclick="renderFinder()">Show Results</button>
+      <button class="fabtn" style="flex:1;font-size:13px;padding:12px" onclick="runFinderSearch()"><span id="finder-show-label">SHOW</span> <span id="finder-show-count" style="font-weight:900;font-size:16px">384</span> RESULTS</button>
       <button class="frbtn" onclick="resetFinder()">Reset</button>
     </div>
 
@@ -2371,14 +2375,7 @@ Open the **Compare** page for the full spec table!`;
   for (const [k, cat] of Object.entries(catMap)) {
     if (ql.includes(k)) {
       const hits = DB.filter(r => r.cat===cat || r.tags.some(t=>t.toLowerCase().includes(k))).sort((a,b)=>b.score-a.score).slice(0,4);
-      if (hits.length) return `🔍 Top **${cat}** robots:
-
-${hits.map((r,i)=>`${i+1}. **${r.name}** (${r.brand})
-   Score ${r.score} · ${r.price>0?'$'+r.price.toLocaleString():'POA'}`).join('
-
-')}
-
-Click **Finder → ${cat}** tab for full filtered results!`;
+      if (hits.length) return '🔍 Top **' + cat + '** robots:\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ')\n   Score ' + r.score + ' · ' + (r.price>0?'$'+r.price.toLocaleString():'POA')).join('\n\n') + '\n\nClick **Finder** tab for full filtered results!';
     }
   }
 
@@ -2506,6 +2503,28 @@ function setAd(slot,url,text,sub){
   var s=el.querySelector('.ad-banner-sub');
   if(t)t.textContent=text||'Sponsored';
   if(s)s.textContent=sub||'Advertisement';
+}
+
+
+// ════ FINDER SEARCH CONTROL ════
+function showFinderEmpty(){
+  var c=document.getElementById('finder-results');
+  if(c)c.innerHTML='<div style="text-align:center;padding:60px 20px;color:var(--mut)"><div style="font-size:48px;margin-bottom:16px">🔍</div><div style="font-size:18px;font-weight:700;margin-bottom:8px">Use the filters to find your robot</div><div style="font-size:13px">Select category, brand, specs and click SHOW RESULTS</div></div>';
+  var cw=document.getElementById('finder-count-wrap');
+  if(cw)cw.style.display='none';
+  updateFinderCount();
+}
+
+function updateFinderCount(){
+  var list=getFinderFiltered();
+  var el=document.getElementById('finder-show-count');
+  if(el)el.textContent=list.length;
+}
+
+function runFinderSearch(){
+  var cw=document.getElementById('finder-count-wrap');
+  if(cw)cw.style.display='flex';
+  renderFinder();
 }
 
 </script>
