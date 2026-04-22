@@ -496,7 +496,21 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
             </div>
           </div>
           <div class="settings-section">
-            <div class="settings-title">📊 Database Stats</div>
+            <div class="settings-title">☁️ Cloudinary (Image Hosting)</div>
+      <div class="settings-row">
+        <div><div class="sr-label">Cloud Name</div><div class="sr-sub">From your Cloudinary dashboard</div></div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <input class="settings-input" type="text" id="cloudinary-name-input" placeholder="your-cloud-name">
+          <button class="save-btn" onclick="saveCloudinary()">Save</button>
+        </div>
+      </div>
+      <div class="settings-row">
+        <div><div class="sr-label">Upload Preset</div><div class="sr-sub">Unsigned preset name e.g. myrobot</div></div>
+        <input class="settings-input" type="text" id="cloudinary-preset-input" placeholder="myrobot">
+      </div>
+    </div>
+    <div class="settings-section">
+    <div class="settings-title">📊 Database Stats</div>
             <div class="settings-row"><div class="sr-label">Total robots</div><div class="sr-val" id="s-total">35</div></div>
             <div class="settings-row"><div class="sr-label">Categories covered</div><div class="sr-val">9 / 9</div></div>
             <div class="settings-row"><div class="sr-label">Last AI operation</div><div class="sr-val" id="s-last-op">—</div></div>
@@ -658,7 +672,8 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
                 <option value="Service">Service</option>
                 <option value="Medical">Medical</option>
               </select>
-              <button class="save-btn" onclick="saveAllImages()">Save All + Deploy</button>
+              <button class="save-btn" style="background:var(--bg4);color:var(--txt);border:1px solid var(--bdr2)" onclick="bulkWikiFetch()">🌐 Bulk Wiki Fetch</button>
+              <button class="save-btn" onclick="saveAllImages()">💾 Save All + Deploy</button>
             </div>
             <div id="img-manager-list"></div>
           </div>
@@ -733,6 +748,7 @@ function tryLogin() {
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('app').style.display = 'block';
     loadSettings();
+    loadCloudinarySettings();
     addLog('info', 'Admin logged in — loading database from live site...');
     initDB().then(() => {
       addLog('success', 'Database loaded: ' + ROBOTS.length + ' robots');
@@ -1997,6 +2013,7 @@ function changePassword() {
 
 document.getElementById('pw-input').addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
 loadSettings();
+    loadCloudinarySettings();
 updateBadges();
 
 // ════ IMAGE MANAGER ════
@@ -2045,8 +2062,11 @@ function renderImgManager() {
           value="${mainImg}" id="mainimg-${r.id}"
           oninput="updateMainPreview('${r.id}',this.value)"
           style="flex:1;font-size:11px">
+        <button class="qbrand" onclick="fetchWikiImage('${r.id}','${r.name} ${r.brand}')" title="Fetch from Wikipedia">🌐 Wiki</button>
+        <button class="qbrand" onclick="uploadCloudinary('${r.id}')" title="Upload your own image">☁️ Upload</button>
         <button class="qbrand" onclick="clearMainImg('${r.id}')">Clear</button>
       </div>
+      <input type="file" id="cf-${r.id}" accept="image/*" style="display:none" onchange="handleCloudinaryUpload('${r.id}',this)">
       <div class="img-field-label">Gallery Images (up to 5) — shown when user clicks View</div>
       <div class="img-gallery-grid">${gallerySlots}</div>
     </div>`;
@@ -2107,6 +2127,164 @@ function saveAllImages() {
   addLog('success', `Image Manager: saved ${changed} main images`);
   deployNow();
   addMsg(`Saved images for ${changed} robots and deploying to live site...`, 'system');
+}
+
+
+// ════ CLOUDINARY ════
+let CLOUDINARY_NAME = localStorage.getItem('mrsh_cloudinary_name') || '';
+let CLOUDINARY_PRESET = localStorage.getItem('mrsh_cloudinary_preset') || 'myrobot';
+
+function saveCloudinary() {
+  const name = document.getElementById('cloudinary-name-input').value.trim();
+  const preset = document.getElementById('cloudinary-preset-input').value.trim();
+  if (name) { CLOUDINARY_NAME = name; localStorage.setItem('mrsh_cloudinary_name', name); }
+  if (preset) { CLOUDINARY_PRESET = preset; localStorage.setItem('mrsh_cloudinary_preset', preset); }
+  addMsg('Cloudinary settings saved.', 'system');
+}
+
+function loadCloudinarySettings() {
+  const ni = document.getElementById('cloudinary-name-input');
+  const pi = document.getElementById('cloudinary-preset-input');
+  if (ni) ni.value = CLOUDINARY_NAME;
+  if (pi) pi.value = CLOUDINARY_PRESET;
+}
+
+function uploadCloudinary(robotId) {
+  if (!CLOUDINARY_NAME) {
+    alert('Add your Cloudinary Cloud Name in Settings first.');
+    return;
+  }
+  document.getElementById('cf-' + robotId).click();
+}
+
+async function handleCloudinaryUpload(robotId, input) {
+  if (!input.files || !input.files[0]) return;
+  const file = input.files[0];
+  const thumb = document.getElementById('main-thumb-' + robotId);
+  const imgInput = document.getElementById('mainimg-' + robotId);
+
+  // Show uploading state
+  if (thumb) thumb.innerHTML = '<span style="font-size:10px;color:var(--mut)">Uploading...</span>';
+
+  try {
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', CLOUDINARY_PRESET);
+    formData.append('folder', 'myrobot');
+
+    const resp = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_NAME}/image/upload`, {
+      method: 'POST',
+      body: formData
+    });
+
+    if (!resp.ok) throw new Error('Upload failed: ' + resp.status);
+    const data = await resp.json();
+
+    // Use the secure URL
+    const url = data.secure_url;
+    if (imgInput) { imgInput.value = url; updateMainPreview(robotId, url); }
+    addLog('success', 'Cloudinary upload: ' + robotId);
+
+  } catch(err) {
+    if (thumb) thumb.innerHTML = '<span style="font-size:20px">🤖</span>';
+    alert('Upload failed: ' + err.message);
+    addLog('error', 'Cloudinary upload failed: ' + err.message);
+  }
+  input.value = '';
+}
+
+// ════ WIKIPEDIA AUTO-FETCH ════
+async function fetchWikiImage(robotId, searchTerm) {
+  const imgInput = document.getElementById('mainimg-' + robotId);
+  const thumb = document.getElementById('main-thumb-' + robotId);
+  if (thumb) thumb.innerHTML = '<span style="font-size:10px;color:var(--mut)">Fetching...</span>';
+
+  // Clean search term
+  const query = searchTerm.replace(/[^a-zA-Z0-9 ]/g, ' ').trim();
+
+  try {
+    // First try exact page
+    const resp = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(query)}`);
+    if (resp.ok) {
+      const data = await resp.json();
+      if (data.thumbnail && data.thumbnail.source) {
+        const url = data.thumbnail.source.replace(/\/\d+px-/, '/640px-');
+        if (imgInput) { imgInput.value = url; updateMainPreview(robotId, url); }
+        addLog('success', 'Wiki image found: ' + query);
+        return;
+      }
+    }
+
+    // If no exact match, try search API
+    const searchResp = await fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&format=json&origin=*&srlimit=1`);
+    const searchData = await searchResp.json();
+    const results = searchData.query?.search;
+    if (results && results.length > 0) {
+      const title = results[0].title;
+      const pageResp = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(title)}`);
+      if (pageResp.ok) {
+        const pageData = await pageResp.json();
+        if (pageData.thumbnail && pageData.thumbnail.source) {
+          const url = pageData.thumbnail.source.replace(/\/\d+px-/, '/640px-');
+          if (imgInput) { imgInput.value = url; updateMainPreview(robotId, url); }
+          addLog('success', 'Wiki image found via search: ' + title);
+          return;
+        }
+      }
+    }
+
+    // No image found
+    const r = ROBOTS.find(x => x.id === robotId);
+    if (thumb) thumb.innerHTML = `<span style="font-size:24px">${r ? r.fig||'🤖' : '🤖'}</span>`;
+    addLog('warn', 'No Wiki image found for: ' + query);
+
+  } catch(err) {
+    const r = ROBOTS.find(x => x.id === robotId);
+    if (thumb) thumb.innerHTML = `<span style="font-size:24px">${r ? r.fig||'🤖' : '🤖'}</span>`;
+    addLog('error', 'Wiki fetch error: ' + err.message);
+  }
+}
+
+async function bulkWikiFetch() {
+  const catFilter = document.getElementById('img-cat-filter').value;
+  const toFetch = ROBOTS.filter(r => {
+    const matchCat = !catFilter || r.cat === catFilter;
+    const noImg = !r.img;
+    return matchCat && noImg;
+  });
+
+  if (!toFetch.length) {
+    alert('No robots without images in this selection.');
+    return;
+  }
+
+  const confirm_go = confirm(`Fetch Wikipedia images for ${toFetch.length} robots without images${catFilter ? ' in ' + catFilter : ''}? This may take a minute.`);
+  if (!confirm_go) return;
+
+  addMsg(`🌐 Bulk Wikipedia fetch started for ${toFetch.length} robots...`, 'system');
+
+  let found = 0;
+  for (const r of toFetch) {
+    const query = r.name + ' ' + r.brand + ' robot';
+    try {
+      const resp = await fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(r.name)}`);
+      if (resp.ok) {
+        const data = await resp.json();
+        if (data.thumbnail && data.thumbnail.source) {
+          r.img = data.thumbnail.source.replace(/\/\d+px-/, '/640px-');
+          found++;
+          // Update input if visible
+          const inp = document.getElementById('mainimg-' + r.id);
+          if (inp) { inp.value = r.img; updateMainPreview(r.id, r.img); }
+        }
+      }
+      // Small delay to avoid rate limiting
+      await new Promise(res => setTimeout(res, 300));
+    } catch(e) {}
+  }
+
+  saveDB();
+  addMsg(`✅ Bulk fetch complete! Found images for ${found} of ${toFetch.length} robots. Click Save All + Deploy to go live.`, 'success');
 }
 
 </script>
