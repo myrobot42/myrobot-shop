@@ -513,6 +513,32 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .affiliate-btn:hover{background:#15803d}
 
 
+
+/* GSMArena-style finder list */
+.frrow.gsm{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 16px;border-bottom:1px solid var(--bdr);cursor:pointer;transition:background .1s;gap:16px}
+.frrow.gsm:hover{background:#f8f9ff}
+.frrow.gsm:last-child{border-bottom:none}
+.frrow-left{display:flex;gap:14px;align-items:flex-start;flex:1;min-width:0}
+.frrow-num{min-width:28px;height:28px;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--mut);flex-shrink:0;margin-top:2px}
+.frrow-num.gold{background:#fef3c7;color:#d97706}
+.frrow-num.silver{background:#f1f5f9;color:#64748b}
+.frrow-num.bronze{background:#fef6ee;color:#c2410c}
+.frrow-info{flex:1;min-width:0}
+.frrow-brand{font-size:11px;color:var(--mut);font-weight:600;margin-bottom:1px}
+.frrow-name{font-size:15px;font-weight:700;color:var(--txt);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frrow-meta{font-size:11px;color:var(--mut);margin-bottom:6px}
+.frrow-cat{color:var(--acc);font-weight:600}
+.frrow-specs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px}
+.fspec-pill{font-size:10px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:4px;padding:2px 6px;color:#374151}
+.fspec-pill b{font-weight:700;color:#111}
+.fsp-yes{background:#dcfce7;border-color:#bbf7d0;color:#15803d;font-weight:700}
+.frrow-tags{display:flex;flex-wrap:wrap;gap:3px}
+.frrow-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0;min-width:120px}
+.frrow-price{font-size:14px;font-weight:800;color:var(--txt)}
+.frrow-score{font-size:22px;font-weight:900;color:var(--acc);line-height:1}
+.frrow-stars{font-size:12px;color:#f59e0b}
+.frrow-actions{display:flex;gap:5px;margin-top:4px}
+
 /* FINDER SPEC FILTERS */
 .ffg-section{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--acc);padding:10px 0 6px;text-transform:uppercase;border-bottom:2px solid var(--acc);margin-bottom:10px}
 .fspec-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}
@@ -2121,37 +2147,19 @@ function renderFinder(){
   var ranks=['gold','silver','bronze'];
   if(finderView==='list'){
     c.innerHTML='<div class="frlist">'+list.map(function(r,i){
-      return '<div class="frrow" onclick="openProfile(\''+r.id+'\')">'
-        +'<div class="frnum '+(ranks[i]||'')+'">'+( i+1)+'</div>'
-        +'<div class="frico" style="overflow:hidden">'+(r.img?'<img src="'+r.img+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.outerHTML=\'<span style=\\\"font-size:22px\\\">'+r.fig+'</span>\'">':r.fig)+'</div>'
-        +'<div class="frinfo">'
-          +'<div class="frbrand">'+r.brand+' · '+r.year+'</div>'
-          +'<div class="frname">'+r.name+'</div>'
-          +'<div class="frsub">'+r.sub+'</div>'
-          +'<div class="frdesc">'+(r.desc||'').substring(0,90)+((r.desc||'').length>90?'...':'')+'</div>'
-          +'<div class="frpills">'
-            +(r.year>=2025?'<span class="pill" style="background:#dcfce7;border-color:#bbf7d0;color:#15803d">'+r.year+'</span>':'')
-            +r.tags.slice(0,3).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')
-          +'</div>'
-        +'</div>'
-        +'<div class="frspecs">'
-          +(r.payload?'<div class="frs"><div class="frsv">'+r.payload+'kg</div><div class="frsl">Payload</div></div>':'')
-          +(r.battery_life||r.battery?'<div class="frs"><div class="frsv">'+(r.battery_life||r.battery)+'m</div><div class="frsl">Battery</div></div>':'')
-          +(r.speed?'<div class="frs"><div class="frsv">'+r.speed+'m/s</div><div class="frsl">Speed</div></div>':'')
-          +(r.weight_kg?'<div class="frs"><div class="frsv">'+r.weight_kg+'kg</div><div class="frsl">Weight</div></div>':'')
-        +'</div>'
-        +'<div class="frright">'
-          +'<div class="frscore">'+r.score+'</div>'
-          +'<div class="frprice">'+(r.price>0?'$'+r.price.toLocaleString():'POA')+'</div>'
-          +'<div class="frstars">'+'★'.repeat(Math.round(r.rating||0))+'</div>'
-          +'<div class="fracts">'
-            +'<button class="fra" onclick="event.stopPropagation();addRobotToCompare(\''+r.id+'\');goPage(\'compare\')">Compare</button>'
-            +'<button class="fra p" onclick="event.stopPropagation();openProfile(\''+r.id+'\')">View →</button>'
-          +'</div>'
-        +'</div>'
-      +'</div>';
-    }).join('')+'</div>';
-  } else {
+      var specs=[];
+      if(r.payload)specs.push('<span class="fspec-pill"><b>Payload</b> '+r.payload+'kg</span>');
+      if(r.weight_kg)specs.push('<span class="fspec-pill"><b>Weight</b> '+r.weight_kg+'kg</span>');
+      if(r.speed)specs.push('<span class="fspec-pill"><b>Speed</b> '+r.speed+'m/s</span>');
+      if(r.battery_life||r.battery)specs.push('<span class="fspec-pill"><b>Battery</b> '+(r.battery_life||r.battery)+'min</span>');
+      if(r.dof)specs.push('<span class="fspec-pill"><b>DOF</b> '+r.dof+'</span>');
+      if(r.ip_rating)specs.push('<span class="fspec-pill"><b>IP</b> '+r.ip_rating+'</span>');
+      if(r.cpu)specs.push('<span class="fspec-pill"><b>CPU</b> '+r.cpu+'</span>');
+      if(r.ros)specs.push('<span class="fspec-pill fsp-yes">ROS</span>');
+      if(r.sdk)specs.push('<span class="fspec-pill fsp-yes">SDK</span>');
+      if(r.lidar)specs.push('<span class="fspec-pill fsp-yes">LiDAR</span>');
+      if(r.wifi)specs.push('<span class="fspec-pill fsp-yes">WiFi</span>');
+      return '<div class="frrow gsm" onclick="openProfile(\''+r.id+'\')">'        +'<div class="frrow-left">'          +'<div class="frrow-num '+(ranks[i]||'')+'">'+( i+1)+'</div>'          +'<div class="frrow-info">'            +'<div class="frrow-brand">'+r.brand+'</div>'            +'<div class="frrow-name">'+r.name+'</div>'            +'<div class="frrow-meta"><span class="frrow-cat">'+r.cat+'</span>'+(r.year?' &middot; '+r.year:'')+(r.sub?' &middot; <span style="color:var(--mut)">'+r.sub+'</span>':'')+'</div>'            +'<div class="frrow-specs">'+specs.join('')+'</div>'            +'<div class="frrow-tags">'+r.tags.slice(0,4).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')+'</div>'          +'</div>'        +'</div>'        +'<div class="frrow-right">'          +'<div class="frrow-price">'+(r.price>0?'$'+r.price.toLocaleString():'POA')+'</div>'          +'<div class="frrow-score">'+r.score+'<span style="font-size:9px;font-weight:500;opacity:.7">/100</span></div>'          +'<div class="frrow-stars">'+'★'.repeat(Math.round(r.rating||0))+'</div>'          +'<div class="frrow-actions">'            +'<button class="fra" onclick="event.stopPropagation();addRobotToCompare(\''+r.id+'\');goPage(\'compare\')">Compare</button>'            +'<button class="fra p" onclick="event.stopPropagation();openProfile(\''+r.id+'\')">View →</button>'          +'</div>'        +'</div>'      +'</div>';    }).join('')+'</div>';  } else {
     c.innerHTML='<div class="frgrid">'+list.map(function(r,i){
       return '<div class="frgc" onclick="openProfile(\''+r.id+'\')">'
         +'<div class="frgci">'+(r.img?'<img src="'+r.img+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:0" onerror="this.style.display=\'none\'">':'')+(r.img?'':r.fig)+'<div style="position:absolute;top:4px;left:4px;width:15px;height:15px;border-radius:50%;background:var(--txt);color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center">'+(i+1)+'</div></div>'
@@ -2355,14 +2363,7 @@ Open the **Compare** page for the full spec table!`;
   if (pm) {
     const budget = parseInt(pm[1].replace(/,/g,'')) * (ql.includes('k') || parseInt(pm[1]) < 1000 ? 1000 : 1);
     const hits = DB.filter(r => r.price > 0 && r.price <= budget).sort((a,b) => b.score-a.score).slice(0,4);
-    if (hits.length) return `💰 Top robots under $${budget.toLocaleString()}:
-
-${hits.map((r,i) => `${i+1}. **${r.name}** (${r.brand})
-   $${r.price.toLocaleString()} · Score ${r.score}/100`).join('
-
-')}
-
-Use **Database → Price filter** to see all!`;
+    if (hits.length) return '💰 Top robots under $' + budget.toLocaleString() + ':\n\n' + hits.map((r,i) => (i+1) + '. **' + r.name + '** (' + r.brand + ')\n   $' + r.price.toLocaleString() + ' · Score ' + r.score + '/100').join('\n\n') + '\n\nUse **Database → Price filter** to see all!';
   }
 
   // Category
