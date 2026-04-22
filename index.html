@@ -512,6 +512,18 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .affiliate-btn{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;background:#16a34a;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:8px}
 .affiliate-btn:hover{background:#15803d}
 
+
+/* FINDER SPEC FILTERS */
+.ffg-section{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--acc);padding:10px 0 6px;text-transform:uppercase;border-bottom:2px solid var(--acc);margin-bottom:10px}
+.fspec-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}
+.fspec-field{display:flex;flex-direction:column;gap:3px}
+.fspec-lbl{font-size:9px;font-weight:700;letter-spacing:.5px;color:var(--mut);text-transform:uppercase}
+.fspec-inp{background:var(--bg2);border:1px solid var(--bdr);border-radius:5px;padding:6px 8px;font-size:11px;color:var(--txt);font-family:inherit;outline:none;width:100%}
+.fspec-inp:focus{border-color:var(--acc)}
+.fspec-sel{background:var(--bg2);border:1px solid var(--bdr);border-radius:5px;padding:6px 8px;font-size:11px;color:var(--txt);font-family:inherit;outline:none;width:100%}
+.fspec-sel:focus{border-color:var(--acc)}
+.finder-fp-inner{padding:4px 2px}
+
 </style>
 </head>
 <body>
@@ -1786,141 +1798,383 @@ const FINDER_CATS=[
   {id:'all',label:'All Robots',icon:'🤖'},
   {id:'Humanoid',label:'Humanoid',icon:'🧍'},
   {id:'Industrial',label:'Industrial',icon:'🦾'},
-  {id:'Service',label:'Service',icon:'📦'},
   {id:'Consumer',label:'Consumer/Home',icon:'🏠'},
+  {id:'Service',label:'Service',icon:'📦'},
   {id:'Drones',label:'Drones',icon:'🚁'},
-  {id:'Educational',label:'Educational',icon:'🎓'},
   {id:'Medical',label:'Medical',icon:'🏥'},
   {id:'Agricultural',label:'Agriculture',icon:'🌾'},
-  {id:'Military',label:'Military/Security',icon:'🛡️'},
-
+  {id:'Military',label:'Military',icon:'🛡️'},
+  {id:'Educational',label:'Educational',icon:'🎓'},
 ];
 
+// Finder state
+var finderCat='all';
+var finderView='list';
+var finderState={
+  brands:[],status:[],features:[],
+  priceMin:0,priceMax:0,
+  yearMin:0,yearMax:0,
+  weightMin:0,weightMax:0,
+  payloadMin:0,payloadMax:0,
+  speedMin:0,speedMax:0,
+  batteryMin:0,batteryMax:0,
+  scoreMin:0,
+  ip:'',ros:false,sdk:false,wifi:false,lidar:false,ota:false
+};
+
 function buildFinderTabs(){
-  document.getElementById('finder-tabs').innerHTML=FINDER_CATS.map(c=>{
-    const cnt=c.id==='all'?ROBOTS.length:ROBOTS.filter(r=>r.cat===c.id).length;
-    return`<div class="ftab${c.id===finderCat?' active':''}" onclick="setFinderCat('${c.id}',this)">${c.icon} ${c.label}<span class="fcnt">${cnt}</span></div>`;
+  document.getElementById('finder-tabs').innerHTML=FINDER_CATS.map(function(c){
+    var cnt=c.id==='all'?ROBOTS.length:ROBOTS.filter(function(r){return r.cat===c.id;}).length;
+    return '<div class="ftab'+(c.id===finderCat?' active':'')+'" onclick="setFinderCat(\''+c.id+'\',this)">'+c.icon+' '+c.label+'<span class="fcnt">'+cnt+'</span></div>';
   }).join('');
 }
 
 function setFinderCat(cat,el){
   finderCat=cat;
-  document.querySelectorAll('.ftab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.ftab').forEach(function(t){t.classList.remove('active');});
   if(el)el.classList.add('active');
-  buildFinderFP();renderFinder();
+  resetFinderState();
+  buildFinderFP();
+  renderFinder();
+}
+
+function resetFinderState(){
+  finderState={brands:[],status:[],features:[],priceMin:0,priceMax:0,yearMin:0,yearMax:0,weightMin:0,weightMax:0,payloadMin:0,payloadMax:0,speedMin:0,speedMax:0,batteryMin:0,batteryMax:0,scoreMin:0,ip:'',ros:false,sdk:false,wifi:false,lidar:false,ota:false};
+}
+
+function getPool(){
+  return finderCat==='all'?ROBOTS:ROBOTS.filter(function(r){return r.cat===finderCat;});
 }
 
 function buildFinderFP(){
-  const pool=finderCat==='all'?ROBOTS:ROBOTS.filter(r=>r.cat===finderCat);
-  const brands=[...new Set(pool.map(r=>r.brand))].sort();
-  const subs=[...new Set(pool.map(r=>r.sub))].sort();
-  document.getElementById('finder-fp').innerHTML=`
-    <div class="ffg"><div class="ffgh"><span>BRAND</span><span class="ffgcl" onclick="clearFF('fb')">Clear</span></div><div class="fcbl">${brands.map(b=>`<label class="fcbo"><input type="checkbox" class="fb" data-val="${b}" onchange="renderFinder()"><span class="fcbo-l">${b}</span><span class="fcbo-c">${pool.filter(r=>r.brand===b).length}</span></label>`).join('')}</div></div>
-    <div class="ffdiv"></div>
-    <div class="ffg"><div class="ffgh"><span>SUBCATEGORY</span><span class="ffgcl" onclick="clearFF('fs')">Clear</span></div><div class="fcbl">${subs.map(s=>`<label class="fcbo"><input type="checkbox" class="fs" data-val="${s}" onchange="renderFinder()"><span class="fcbo-l">${s}</span></label>`).join('')}</div></div>
-    <div class="ffdiv"></div>
-    <div class="ffg"><div class="ffgh"><span>KEY FEATURES</span></div><div class="fcbl">
-      <label class="fcbo"><input type="checkbox" class="ff" data-val="arm" onchange="renderFinder()"><span class="fcbo-l">🦾 Robotic Arm</span><span class="fcbo-c">${pool.filter(r=>r.arm).length}</span></label>
-      <label class="fcbo"><input type="checkbox" class="ff" data-val="ai" onchange="renderFinder()"><span class="fcbo-l">AI / Computer Vision</span><span class="fcbo-c">${pool.filter(r=>r.ai).length}</span></label>
-      <label class="fcbo"><input type="checkbox" class="ff" data-val="ros" onchange="renderFinder()"><span class="fcbo-l">ROS Compatible</span><span class="fcbo-c">${pool.filter(r=>r.ros).length}</span></label>
-      <label class="fcbo"><input type="checkbox" class="ff" data-val="sdk" onchange="renderFinder()"><span class="fcbo-l">SDK Available</span><span class="fcbo-c">${pool.filter(r=>r.sdk).length}</span></label>
-    </div></div>
-    <div class="ffdiv"></div>
-    <div class="ffg"><div class="ffgh"><span>AVAILABILITY</span></div><div class="fcbl">
-      <label class="fcbo"><input type="checkbox" class="fst" data-val="Available" onchange="renderFinder()"><span class="fcbo-l">Available now</span><span class="fcbo-c">${pool.filter(r=>r.status==='Available').length}</span></label>
-      <label class="fcbo"><input type="checkbox" class="fst" data-val="Limited" onchange="renderFinder()"><span class="fcbo-l">Limited / Invite</span><span class="fcbo-c">${pool.filter(r=>r.status==='Limited').length}</span></label>
-      <label class="fcbo"><input type="checkbox" class="fst" data-val="Pilot" onchange="renderFinder()"><span class="fcbo-l">Pilot / Coming soon</span><span class="fcbo-c">${pool.filter(r=>r.status==='Pilot').length}</span></label>
-    </div></div>
-    <div class="ffdiv"></div>
-    <div class="ffg"><div class="ffgh"><span>PRICE RANGE</span></div><div class="fcbl">
-      <label class="fcbo"><input type="checkbox" class="fp2" data-val="u1k" onchange="renderFinder()"><span class="fcbo-l">Under $1,000</span></label>
-      <label class="fcbo"><input type="checkbox" class="fp2" data-val="u20k" onchange="renderFinder()"><span class="fcbo-l">$1K – $20K</span></label>
-      <label class="fcbo"><input type="checkbox" class="fp2" data-val="u100k" onchange="renderFinder()"><span class="fcbo-l">$20K – $100K</span></label>
-      <label class="fcbo"><input type="checkbox" class="fp2" data-val="u500k" onchange="renderFinder()"><span class="fcbo-l">$100K – $500K</span></label>
-      <label class="fcbo"><input type="checkbox" class="fp2" data-val="over500k" onchange="renderFinder()"><span class="fcbo-l">$500K+</span></label>
-      <label class="fcbo"><input type="checkbox" class="fp2" data-val="poa" onchange="renderFinder()"><span class="fcbo-l">POA / Fleet</span></label>
-    </div></div>
-    <div class="ffdiv"></div>
-    <div class="ffg"><div class="ffgh"><span>MIN SCORE</span></div>
-      <select class="fsel" id="finder-minscore" onchange="renderFinder()"><option value="0">Any</option><option value="75">75+</option><option value="80">80+</option><option value="85">85+</option><option value="90">90+</option><option value="95">95+</option></select>
+  var pool=getPool();
+  var brands=[...new Set(pool.map(function(r){return r.brand;}))].sort();
+  var statuses=[...new Set(pool.map(function(r){return r.status||'Unknown';}))].filter(Boolean).sort();
+  var prices=pool.map(function(r){return r.price||0;}).filter(function(p){return p>0;});
+  var maxPrice=prices.length?Math.max.apply(null,prices):500000;
+  var years=pool.map(function(r){return r.year||0;}).filter(Boolean);
+  var minYear=years.length?Math.min.apply(null,years):2015;
+  var maxYear=years.length?Math.max.apply(null,years):2026;
+  var weights=pool.map(function(r){return r.weight_kg||0;}).filter(Boolean);
+  var maxWeight=weights.length?Math.max.apply(null,weights):1000;
+  var payloads=pool.map(function(r){return r.payload||0;}).filter(Boolean);
+  var maxPayload=payloads.length?Math.max.apply(null,payloads):1000;
+  var speeds=pool.map(function(r){return r.speed||0;}).filter(Boolean);
+  var maxSpeed=speeds.length?Math.max.apply(null,speeds):20;
+  var batteries=pool.map(function(r){return r.battery_life||r.battery||0;}).filter(Boolean);
+  var maxBattery=batteries.length?Math.max.apply(null,batteries):600;
+  var ipRatings=[...new Set(pool.map(function(r){return r.ip_rating||'';}).filter(Boolean))].sort();
+
+  // Category-specific spec sections
+  var catSpecs='';
+  if(finderCat==='Humanoid'||finderCat==='all'){
+    catSpecs+=`
+    <div class="ffg">
+      <div class="ffgh"><span>PERFORMANCE</span></div>
+      <div class="fspec-row">
+        <div class="fspec-field"><label class="fspec-lbl">Payload (kg) Min</label><input class="fspec-inp" type="number" id="fs-payload-min" placeholder="0" min="0" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Speed (m/s) Min</label><input class="fspec-inp" type="number" id="fs-speed-min" placeholder="0" min="0" step="0.1" oninput="renderFinder()"></div>
+      </div>
+      <div class="fspec-row">
+        <div class="fspec-field"><label class="fspec-lbl">Battery Life (min) Min</label><input class="fspec-inp" type="number" id="fs-battery-min" placeholder="0" min="0" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Weight (kg) Max</label><input class="fspec-inp" type="number" id="fs-weight-max" placeholder="Any" min="0" oninput="renderFinder()"></div>
+      </div>
+    </div>
+    <div class="ffdiv"></div>`;
+  }
+  if(finderCat==='Industrial'||finderCat==='all'){
+    catSpecs+=`
+    <div class="ffg">
+      <div class="ffgh"><span>INDUSTRIAL SPECS</span></div>
+      <div class="fspec-row">
+        <div class="fspec-field"><label class="fspec-lbl">Payload (kg) Min</label><input class="fspec-inp" type="number" id="fs-payload-min" placeholder="0" min="0" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Reach (mm) Min</label><input class="fspec-inp" type="number" id="fs-reach-min" placeholder="0" min="0" oninput="renderFinder()"></div>
+      </div>
+    </div>
+    <div class="ffdiv"></div>`;
+  }
+
+  var html = `
+    <div class="finder-fp-inner">
+
+    <div class="ffg-section">GENERAL</div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>BRAND</span><span class="ffgcl" onclick="clearFFC('.fb')">Clear</span></div>
+      <div class="fcbl">${brands.map(function(b){
+        var cnt=pool.filter(function(r){return r.brand===b;}).length;
+        return '<label class="fcbo"><input type="checkbox" class="fb" data-val="'+b+'" onchange="renderFinder()"><span class="fcbo-l">'+b+'</span><span class="fcbo-c">'+cnt+'</span></label>';
+      }).join('')}</div>
     </div>
     <div class="ffdiv"></div>
-    <button class="fabtn" onclick="renderFinder()">Apply</button>
-    <button class="frbtn" onclick="resetFinder()">Reset All</button>`;
+
+    <div class="ffg">
+      <div class="ffgh"><span>YEAR</span><span class="ffgcl" onclick="clearFRange('fs-year')">Clear</span></div>
+      <div class="fspec-row">
+        <div class="fspec-field"><label class="fspec-lbl">From</label><select class="fspec-sel" id="fs-year-min" onchange="renderFinder()">
+          <option value="">Any</option>
+          ${Array.from({length:maxYear-minYear+1},(_,i)=>minYear+i).map(function(y){return '<option value="'+y+'">'+y+'</option>';}).join('')}
+        </select></div>
+        <div class="fspec-field"><label class="fspec-lbl">To</label><select class="fspec-sel" id="fs-year-max" onchange="renderFinder()">
+          <option value="">Any</option>
+          ${Array.from({length:maxYear-minYear+1},(_,i)=>minYear+i).reverse().map(function(y){return '<option value="'+y+'">'+y+'</option>';}).join('')}
+        </select></div>
+      </div>
+    </div>
+    <div class="ffdiv"></div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>PRICE</span><span class="ffgcl" onclick="clearFRange('fs-price')">Clear</span></div>
+      <div class="fspec-row">
+        <div class="fspec-field"><label class="fspec-lbl">Min ($)</label><input class="fspec-inp" type="number" id="fs-price-min" placeholder="0" min="0" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max ($)</label><input class="fspec-inp" type="number" id="fs-price-max" placeholder="Any" min="0" oninput="renderFinder()"></div>
+      </div>
+    </div>
+    <div class="ffdiv"></div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>AVAILABILITY</span><span class="ffgcl" onclick="clearFFC('.fst')">Clear</span></div>
+      <div class="fcbl">
+        <label class="fcbo"><input type="checkbox" class="fst" data-val="active" onchange="renderFinder()"><span class="fcbo-l">Active / Available</span><span class="fcbo-c">${pool.filter(function(r){return (r.status||'').toLowerCase().includes('active');}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="fst" data-val="discontinued" onchange="renderFinder()"><span class="fcbo-l">Discontinued</span><span class="fcbo-c">${pool.filter(function(r){return (r.status||'').toLowerCase().includes('discontinued');}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="fst" data-val="coming" onchange="renderFinder()"><span class="fcbo-l">Coming Soon</span><span class="fcbo-c">${pool.filter(function(r){return (r.status||'').toLowerCase().includes('coming')||(r.status||'').toLowerCase().includes('pilot')||(r.status||'').toLowerCase().includes('pre');}).length}</span></label>
+      </div>
+    </div>
+    <div class="ffdiv"></div>
+
+    <div class="ffg-section">SPECIFICATIONS</div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>WEIGHT</span><span class="ffgcl" onclick="clearFRange('fs-weight')">Clear</span></div>
+      <div class="fspec-row">
+        <div class="fspec-field"><label class="fspec-lbl">Min (kg)</label><input class="fspec-inp" type="number" id="fs-weight-min" placeholder="0" min="0" step="0.1" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max (kg)</label><input class="fspec-inp" type="number" id="fs-weight-max" placeholder="Any" min="0" step="0.1" oninput="renderFinder()"></div>
+      </div>
+    </div>
+    <div class="ffdiv"></div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>PAYLOAD (kg)</span><span class="ffgcl" onclick="clearFRange('fs-payload')">Clear</span></div>
+      <div class="fspec-row">
+        <div class="fspec-field"><label class="fspec-lbl">Min</label><input class="fspec-inp" type="number" id="fs-payload-min" placeholder="0" min="0" step="0.1" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max</label><input class="fspec-inp" type="number" id="fs-payload-max" placeholder="Any" min="0" step="0.1" oninput="renderFinder()"></div>
+      </div>
+    </div>
+    <div class="ffdiv"></div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>SPEED (m/s)</span><span class="ffgcl" onclick="clearFRange('fs-speed')">Clear</span></div>
+      <div class="fspec-row">
+        <div class="fspec-field"><label class="fspec-lbl">Min</label><input class="fspec-inp" type="number" id="fs-speed-min" placeholder="0" min="0" step="0.1" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max</label><input class="fspec-inp" type="number" id="fs-speed-max" placeholder="Any" min="0" step="0.1" oninput="renderFinder()"></div>
+      </div>
+    </div>
+    <div class="ffdiv"></div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>BATTERY LIFE (min)</span><span class="ffgcl" onclick="clearFRange('fs-battery')">Clear</span></div>
+      <div class="fspec-row">
+        <div class="fspec-field"><label class="fspec-lbl">Min</label><input class="fspec-inp" type="number" id="fs-battery-min" placeholder="0" min="0" oninput="renderFinder()"></div>
+        <div class="fspec-field"><label class="fspec-lbl">Max</label><input class="fspec-inp" type="number" id="fs-battery-max" placeholder="Any" min="0" oninput="renderFinder()"></div>
+      </div>
+    </div>
+    <div class="ffdiv"></div>
+
+    ${ipRatings.length?`
+    <div class="ffg">
+      <div class="ffgh"><span>IP RATING</span><span class="ffgcl" onclick="clearFFC('.fip')">Clear</span></div>
+      <div class="fcbl">${ipRatings.map(function(ip){return '<label class="fcbo"><input type="checkbox" class="fip" data-val="'+ip+'" onchange="renderFinder()"><span class="fcbo-l">'+ip+'</span></label>';}).join('')}</div>
+    </div>
+    <div class="ffdiv"></div>`:''}
+
+    <div class="ffg-section">TECHNOLOGY</div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>FEATURES</span></div>
+      <div class="fcbl">
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="ros" onchange="renderFinder()"><span class="fcbo-l">ROS Compatible</span><span class="fcbo-c">${pool.filter(function(r){return r.ros;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="sdk" onchange="renderFinder()"><span class="fcbo-l">SDK Available</span><span class="fcbo-c">${pool.filter(function(r){return r.sdk;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="wifi" onchange="renderFinder()"><span class="fcbo-l">WiFi</span><span class="fcbo-c">${pool.filter(function(r){return r.wifi;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="bluetooth" onchange="renderFinder()"><span class="fcbo-l">Bluetooth</span><span class="fcbo-c">${pool.filter(function(r){return r.bluetooth;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="lidar" onchange="renderFinder()"><span class="fcbo-l">LiDAR</span><span class="fcbo-c">${pool.filter(function(r){return r.lidar;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="ota" onchange="renderFinder()"><span class="fcbo-l">OTA Updates</span><span class="fcbo-c">${pool.filter(function(r){return r.ota;}).length}</span></label>
+        <label class="fcbo"><input type="checkbox" class="ff" data-val="arm" onchange="renderFinder()"><span class="fcbo-l">Robotic Arm</span><span class="fcbo-c">${pool.filter(function(r){return r.arm;}).length}</span></label>
+      </div>
+    </div>
+    <div class="ffdiv"></div>
+
+    <div class="ffg-section">SCORES</div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>MIN EXPERT SCORE</span></div>
+      <select class="fspec-sel" id="finder-minscore" onchange="renderFinder()" style="width:100%">
+        <option value="0">Any score</option>
+        <option value="70">70+ Good</option>
+        <option value="75">75+ Very Good</option>
+        <option value="80">80+ Great</option>
+        <option value="85">85+ Excellent</option>
+        <option value="90">90+ Outstanding</option>
+        <option value="95">95+ Elite</option>
+      </select>
+    </div>
+    <div class="ffdiv"></div>
+
+    <div class="ffg">
+      <div class="ffgh"><span>MIN USER RATING</span></div>
+      <select class="fspec-sel" id="finder-minrating" onchange="renderFinder()" style="width:100%">
+        <option value="0">Any rating</option>
+        <option value="3">3+ ★★★</option>
+        <option value="3.5">3.5+ ★★★½</option>
+        <option value="4">4+ ★★★★</option>
+        <option value="4.5">4.5+ ★★★★½</option>
+      </select>
+    </div>
+    <div class="ffdiv"></div>
+
+    <div style="display:flex;gap:6px;padding:4px 0 8px">
+      <button class="fabtn" style="flex:1" onclick="renderFinder()">Show Results</button>
+      <button class="frbtn" onclick="resetFinder()">Reset</button>
+    </div>
+
+    </div>`;
+
+  document.getElementById('finder-fp').innerHTML=html;
 }
 
-function clearFF(cls){document.querySelectorAll('.'+cls).forEach(el=>el.checked=false);renderFinder();}
-function resetFinder(){document.querySelectorAll('#finder-fp input[type=checkbox]').forEach(el=>el.checked=false);const ms=document.getElementById('finder-minscore');if(ms)ms.value='0';renderFinder();}
+function getVal(id){var el=document.getElementById(id);return el?el.value:'';}
+function getNum(id){var v=parseFloat(getVal(id));return isNaN(v)?null:v;}
+
+function clearFFC(cls){document.querySelectorAll(cls).forEach(function(el){el.checked=false;});renderFinder();}
+function clearFRange(prefix){
+  var mn=document.getElementById(prefix+'-min');var mx=document.getElementById(prefix+'-max');
+  if(mn)mn.value='';if(mx)mx.value='';renderFinder();
+}
+function resetFinder(){
+  document.querySelectorAll('#finder-fp input[type=checkbox]').forEach(function(el){el.checked=false;});
+  document.querySelectorAll('#finder-fp input[type=number]').forEach(function(el){el.value='';});
+  document.querySelectorAll('#finder-fp select').forEach(function(el){el.value=el.options[0]?el.options[0].value:'';});
+  renderFinder();
+}
 
 function getFinderFiltered(){
-  let pool=finderCat==='all'?[...ROBOTS]:ROBOTS.filter(r=>r.cat===finderCat);
-  const selB=[...document.querySelectorAll('.fb:checked')].map(el=>el.dataset.val);
-  const selS=[...document.querySelectorAll('.fs:checked')].map(el=>el.dataset.val);
-  const selF=[...document.querySelectorAll('.ff:checked')].map(el=>el.dataset.val);
-  const selSt=[...document.querySelectorAll('.fst:checked')].map(el=>el.dataset.val);
-  const selP=[...document.querySelectorAll('.fp2:checked')].map(el=>el.dataset.val);
-  const ms=parseInt(document.getElementById('finder-minscore')?.value||'0');
-  return pool.filter(r=>{
+  var pool=getPool();
+  var selB=[...document.querySelectorAll('.fb:checked')].map(function(el){return el.dataset.val;});
+  var selSt=[...document.querySelectorAll('.fst:checked')].map(function(el){return el.dataset.val;});
+  var selF=[...document.querySelectorAll('.ff:checked')].map(function(el){return el.dataset.val;});
+  var selIP=[...document.querySelectorAll('.fip:checked')].map(function(el){return el.dataset.val;});
+  var priceMin=getNum('fs-price-min');var priceMax=getNum('fs-price-max');
+  var yearMin=getNum('fs-year-min')||parseInt(getVal('fs-year-min'))||null;
+  var yearMax=getNum('fs-year-max')||parseInt(getVal('fs-year-max'))||null;
+  var weightMin=getNum('fs-weight-min');var weightMax=getNum('fs-weight-max');
+  var payloadMin=getNum('fs-payload-min');var payloadMax=getNum('fs-payload-max');
+  var speedMin=getNum('fs-speed-min');var speedMax=getNum('fs-speed-max');
+  var battMin=getNum('fs-battery-min');var battMax=getNum('fs-battery-max');
+  var scoreMin=parseFloat(getVal('finder-minscore'))||0;
+  var ratingMin=parseFloat(getVal('finder-minrating'))||0;
+
+  return pool.filter(function(r){
     if(selB.length&&!selB.includes(r.brand))return false;
-    if(selS.length&&!selS.includes(r.sub))return false;
-    if(selSt.length&&!selSt.includes(r.status))return false;
-    if(selF.length&&!selF.every(f=>(f==='arm'&&r.arm)||(f==='ai'&&r.ai)||(f==='ros'&&r.ros)||(f==='sdk'&&r.sdk)))return false;
-    if(selP.length){const ok=selP.some(v=>(v==='u1k'&&r.price>0&&r.price<1000)||(v==='u20k'&&r.price>=1000&&r.price<20000)||(v==='u100k'&&r.price>=20000&&r.price<100000)||(v==='u500k'&&r.price>=100000&&r.price<500000)||(v==='over500k'&&r.price>=500000)||(v==='poa'&&r.price===0));if(!ok)return false;}
-    if(ms>0&&r.score<ms)return false;
+    if(selSt.length){
+      var st=(r.status||'').toLowerCase();
+      var ok=selSt.some(function(v){
+        if(v==='active')return st.includes('active')||st.includes('available');
+        if(v==='discontinued')return st.includes('discontinued');
+        if(v==='coming')return st.includes('coming')||st.includes('pilot')||st.includes('pre');
+        return false;
+      });
+      if(!ok)return false;
+    }
+    if(selF.length){
+      var ok2=selF.every(function(f){
+        if(f==='ros')return r.ros;
+        if(f==='sdk')return r.sdk;
+        if(f==='wifi')return r.wifi;
+        if(f==='bluetooth')return r.bluetooth;
+        if(f==='lidar')return r.lidar;
+        if(f==='ota')return r.ota;
+        if(f==='arm')return r.arm;
+        return false;
+      });
+      if(!ok2)return false;
+    }
+    if(selIP.length&&!selIP.includes(r.ip_rating||''))return false;
+    if(priceMin!==null&&r.price>0&&r.price<priceMin)return false;
+    if(priceMax!==null&&r.price>0&&r.price>priceMax)return false;
+    if(yearMin!==null&&(r.year||0)<yearMin)return false;
+    if(yearMax!==null&&(r.year||0)>yearMax)return false;
+    if(weightMin!==null&&(r.weight_kg||0)<weightMin)return false;
+    if(weightMax!==null&&r.weight_kg&&r.weight_kg>weightMax)return false;
+    if(payloadMin!==null&&(r.payload||0)<payloadMin)return false;
+    if(payloadMax!==null&&r.payload&&r.payload>payloadMax)return false;
+    if(speedMin!==null&&(r.speed||0)<speedMin)return false;
+    if(speedMax!==null&&r.speed&&r.speed>speedMax)return false;
+    var batt=r.battery_life||r.battery||0;
+    if(battMin!==null&&batt<battMin)return false;
+    if(battMax!==null&&batt&&batt>battMax)return false;
+    if(scoreMin>0&&(r.score||0)<scoreMin)return false;
+    if(ratingMin>0&&(r.rating||0)<ratingMin)return false;
     return true;
   });
 }
 
 function renderFinder(){
-  const sort=document.getElementById('finder-sort')?.value||'score';
-  let list=getFinderFiltered();
-  list=[...list].sort((a,b)=>sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):b.year-a.year);
-  document.getElementById('finder-count').textContent=list.length;
-  const tags=[];
-  if(finderCat!=='all')tags.push(finderCat);
-  document.querySelectorAll('.fb:checked,.ff:checked').forEach(el=>tags.push(el.dataset.val));
-  document.getElementById('finder-atags').innerHTML=tags.slice(0,6).map(t=>`<div class="fatag">${t} ✕</div>`).join('');
-  const c=document.getElementById('finder-results');
-  if(!list.length){c.innerHTML='<div class="no-results"><h3>No robots match</h3><p>Try removing filters</p></div>';return;}
-  const ranks=['gold','silver','bronze'];
+  var sort=document.getElementById('finder-sort')?document.getElementById('finder-sort').value:'score';
+  var list=getFinderFiltered();
+  list=[...list].sort(function(a,b){
+    return sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):b.year-a.year;
+  });
+  var countEl=document.getElementById('finder-count');
+  if(countEl)countEl.textContent=list.length;
+  var tagsEl=document.getElementById('finder-atags');
+  if(tagsEl){
+    var tags=[];
+    if(finderCat!=='all')tags.push(finderCat);
+    document.querySelectorAll('.fb:checked,.ff:checked,.fst:checked').forEach(function(el){tags.push(el.dataset.val||el.value);});
+    tagsEl.innerHTML=tags.slice(0,6).map(function(t){return '<div class="fatag">'+t+' ✕</div>';}).join('');
+  }
+  var c=document.getElementById('finder-results');
+  if(!c)return;
+  if(!list.length){c.innerHTML='<div class="no-results"><h3>No robots match</h3><p>Try removing some filters</p></div>';return;}
+  var ranks=['gold','silver','bronze'];
   if(finderView==='list'){
-    c.innerHTML=`<div class="frlist">${list.map((r,i)=>`
-      <div class="frrow" onclick="openProfile('${r.id}')">
-        <div class="frnum ${ranks[i]||''}">${i+1}</div>
-        <div class="frico" style="overflow:hidden">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.outerHTML='<span style=\"font-size:22px\">${r.fig}</span>'">`:r.fig}</div>
-        <div class="frinfo">
-          <div class="frbrand">${r.brand} · ${r.year}</div>
-          <div class="frname">${r.name}</div>
-          <div class="frsub">${r.sub}</div>
-          <div class="frdesc">${r.desc.substring(0,90)}${r.desc.length>90?'...':''}</div>
-          <div class="frpills">
-            ${r.arm?'<span class="pill" style="background:#fef3c7;border-color:#fde68a;color:#b45309">🦾 Arm</span>':''}
-            ${r.ai?'<span class="pill" style="background:var(--acc-l);color:var(--acc)">AI</span>':''}
-            ${r.year>=2025?`<span class="pill" style="background:#dcfce7;border-color:#bbf7d0;color:#15803d">${r.year}</span>`:''}
-            ${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}
-          </div>
-        </div>
-        <div class="frspecs">
-          ${r.payload?`<div class="frs"><div class="frsv">${r.payload}kg</div><div class="frsl">Payload</div></div>`:''}
-          ${r.battery?`<div class="frs"><div class="frsv">${r.battery}m</div><div class="frsl">Battery</div></div>`:''}
-          ${r.speed?`<div class="frs"><div class="frsv">${r.speed}m/s</div><div class="frsl">Speed</div></div>`:''}
-        </div>
-        <div class="frright">
-          <div class="frscore">${r.score}</div>
-          <div class="frprice">${r.price>0?'$'+r.price.toLocaleString():'POA'}</div>
-          <div class="frstars">${'★'.repeat(Math.round(r.rating))}</div>
-          <div class="fracts">
-            <button class="fra" onclick="event.stopPropagation();addRobotToCompare('${r.id}');goPage('compare')">Compare</button>
-            <button class="fra p" onclick="event.stopPropagation();openProfile('${r.id}')">View →</button>
-          </div>
-        </div>
-      </div>`).join('')}</div>`;
+    c.innerHTML='<div class="frlist">'+list.map(function(r,i){
+      return '<div class="frrow" onclick="openProfile(\''+r.id+'\')">'
+        +'<div class="frnum '+(ranks[i]||'')+'">'+( i+1)+'</div>'
+        +'<div class="frico" style="overflow:hidden">'+(r.img?'<img src="'+r.img+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:cover;border-radius:8px" onerror="this.outerHTML=\'<span style=\\\"font-size:22px\\\">'+r.fig+'</span>\'">':r.fig)+'</div>'
+        +'<div class="frinfo">'
+          +'<div class="frbrand">'+r.brand+' · '+r.year+'</div>'
+          +'<div class="frname">'+r.name+'</div>'
+          +'<div class="frsub">'+r.sub+'</div>'
+          +'<div class="frdesc">'+(r.desc||'').substring(0,90)+((r.desc||'').length>90?'...':'')+'</div>'
+          +'<div class="frpills">'
+            +(r.year>=2025?'<span class="pill" style="background:#dcfce7;border-color:#bbf7d0;color:#15803d">'+r.year+'</span>':'')
+            +r.tags.slice(0,3).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')
+          +'</div>'
+        +'</div>'
+        +'<div class="frspecs">'
+          +(r.payload?'<div class="frs"><div class="frsv">'+r.payload+'kg</div><div class="frsl">Payload</div></div>':'')
+          +(r.battery_life||r.battery?'<div class="frs"><div class="frsv">'+(r.battery_life||r.battery)+'m</div><div class="frsl">Battery</div></div>':'')
+          +(r.speed?'<div class="frs"><div class="frsv">'+r.speed+'m/s</div><div class="frsl">Speed</div></div>':'')
+          +(r.weight_kg?'<div class="frs"><div class="frsv">'+r.weight_kg+'kg</div><div class="frsl">Weight</div></div>':'')
+        +'</div>'
+        +'<div class="frright">'
+          +'<div class="frscore">'+r.score+'</div>'
+          +'<div class="frprice">'+(r.price>0?'$'+r.price.toLocaleString():'POA')+'</div>'
+          +'<div class="frstars">'+'★'.repeat(Math.round(r.rating||0))+'</div>'
+          +'<div class="fracts">'
+            +'<button class="fra" onclick="event.stopPropagation();addRobotToCompare(\''+r.id+'\');goPage(\'compare\')">Compare</button>'
+            +'<button class="fra p" onclick="event.stopPropagation();openProfile(\''+r.id+'\')">View →</button>'
+          +'</div>'
+        +'</div>'
+      +'</div>';
+    }).join('')+'</div>';
   } else {
-    c.innerHTML=`<div class="frgrid">${list.map((r,i)=>`
-      <div class="frgc" onclick="openProfile('${r.id}')">
-        <div class="frgci">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:0" onerror="this.style.display='none'">`:''}${r.img?'':r.fig}<div style="position:absolute;top:4px;left:4px;width:15px;height:15px;border-radius:50%;background:var(--txt);color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center">${i+1}</div>${r.badge?`<div style="position:absolute;top:4px;right:4px;padding:1px 5px;border-radius:3px;font-size:8px;font-weight:700;background:#fef3c7;color:#d97706">${r.badge}</div>`:''}</div>
-        <div class="frgcb"><div class="frgcbrand">${r.brand}</div><div class="frgcname">${r.name}</div><div class="frgcsub">${r.sub}</div><div class="frgcfoot"><div class="frgcprice">${r.price>0?'$'+r.price.toLocaleString():'POA'}</div><div class="frgcscore">${r.score}</div></div></div>
-      </div>`).join('')}</div>`;
+    c.innerHTML='<div class="frgrid">'+list.map(function(r,i){
+      return '<div class="frgc" onclick="openProfile(\''+r.id+'\')">'
+        +'<div class="frgci">'+(r.img?'<img src="'+r.img+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:0" onerror="this.style.display=\'none\'">':'')+(r.img?'':r.fig)+'<div style="position:absolute;top:4px;left:4px;width:15px;height:15px;border-radius:50%;background:var(--txt);color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center">'+(i+1)+'</div></div>'
+        +'<div class="frgcb"><div class="frgcbrand">'+r.brand+'</div><div class="frgcname">'+r.name+'</div><div class="frgcsub">'+r.sub+'</div><div class="frgcfoot"><div class="frgcprice">'+(r.price>0?'$'+r.price.toLocaleString():'POA')+'</div><div class="frgcscore">'+r.score+'</div></div></div>'
+      +'</div>';
+    }).join('')+'</div>';
   }
 }
 
@@ -1930,6 +2184,7 @@ function setFinderView(v){
   document.getElementById('fvg').className='fvbtn'+(v==='grid'?' active':'');
   renderFinder();
 }
+
 
 // ════════════ MANUFACTURERS ════════════
 function renderManufacturers(){
