@@ -853,7 +853,9 @@ async function runBrandIngestion(brand, category, count) {
     updateStats();
 
     const summary = robots.map(r => `• ${r.name} — ${r.price > 0 ? '$'+r.price.toLocaleString() : 'POA'}${r.img ? ' 🖼️' : ''}`).join('\n');
-    addMsg(`✅ ${brand} ingestion complete!\n\n${summary}\n\n${added} added, ${updated} updated. ${ROBOTS.length} total robots.\nClick 🚀 Deploy to go live.`, 'success');
+    addMsg(`✅ ${brand} ingestion complete!\n\n${summary}\n\n${added} added, ${updated} updated. ${ROBOTS.length} total robots.\n⏳ Auto-deploying to GitHub...`, 'success');
+    // Auto-deploy immediately so robots are never lost
+    try { await deployNow(); } catch(e) { addMsg('⚠️ Auto-deploy failed — click Deploy manually', 'error'); }
     addLog('success', `Ingested ${brand}: +${added} added`);
 
   } catch(err) {
