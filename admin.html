@@ -718,22 +718,11 @@ async function initDB() {
       });
       if (apiResp.ok) {
         const fileData = await apiResp.json();
-        let b64 = '';
-        if (!fileData.content || fileData.content.trim() === '') {
-          // Large file - use blob API
-          const blobR = await fetch('https://api.github.com/repos/' + githubRepo + '/git/blobs/' + fileData.sha, {
-            headers: githubToken ? {'Authorization': 'token ' + githubToken, 'Accept': 'application/vnd.github.v3+json'} : {}
-          });
-          if (blobR.ok) { const bd = await blobR.json(); b64 = bd.content.replace(/\n/g,''); }
-        } else {
-          b64 = fileData.content.replace(/\n/g, '');
-        }
-        if (b64) {
-          const bin = atob(b64);
-          const bytes = new Uint8Array(bin.length);
-          for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-          html = new TextDecoder().decode(bytes);
-        }
+        const b64 = fileData.content.replace(/\n/g, '');
+        const bin = atob(b64);
+        const bytes = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        html = new TextDecoder().decode(bytes);
       }
     } catch(e2) {}
     // Fallback to direct fetch
@@ -818,18 +807,92 @@ async function runBrandIngestion(brand, category, count) {
 
   try {
     const existingIds = ROBOTS.map(r => r.id);
-    const resp = await fetch('/.netlify/functions/bulk-ingest', {
+    
+    const prompt = `You are a robot database expert. Generate exactly ${count} real robots made by ${brand} in the ${category} category.
+
+Return ONLY a valid JSON array. No explanation, no markdown, just the raw JSON array.
+
+Each robot must have these fields:
+{
+  "id": "brand-modelname-year (lowercase, hyphens)",
+  "name": "Full Model Name",
+  "brand": "${brand}",
+  "cat": "${category}",
+  "sub": "specific sub-type (e.g. Vacuum Only, Cobot, Bipedal, Surgical)",
+  "tags": ["tag1","tag2","tag3"],
+  "fig": "🤖",
+  "img": "",
+  "score": 75,
+  "rating": 4.0,
+  "price": 0,
+  "desc": "2-3 sentence description",
+  "highlights": ["key feature 1","key feature 2","key feature 3"],
+  "perf": {"speed_ms": 1.5, "payload_kg": 5},
+  "year": 2024,
+  "status": "Active",
+  "weight_kg": 0,
+  "payload": 0,
+  "speed": 0,
+  "dof": 0,
+  "battery_life": 0,
+  "battery_wh": 0,
+  "battery_type": "",
+  "charge_time": 0,
+  "ip_rating": "",
+  "os": "",
+  "cpu": "",
+  "ram_gb": 0,
+  "storage_gb": 0,
+  "npu_tops": 0,
+  "cameras": 0,
+  "lidar": false,
+  "depth_sensing": false,
+  "imu": false,
+  "touch_sensing": false,
+  "wifi": false,
+  "bluetooth": false,
+  "ros": false,
+  "sdk": "",
+  "ota": false,
+  "wireless_charging": false,
+  "auto_charge": false,
+  "hot_swap": false,
+  "quick_release": false,
+  "ce": false,
+  "fcc": false,
+  "rohs": false,
+  "warranty_months": 12,
+  "use_cases": [],
+  "operating_temp_min": 0,
+  "operating_temp_max": 40,
+  "frame_material": "",
+  "origin": "",
+  "affiliate_url": ""
+}
+
+Only include robots NOT in this list of existing IDs: ${JSON.stringify(existingIds.slice(0,20))}
+Use real accurate data for ${brand}. Fill in as many fields as possible.`;
+
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY },
-      body: JSON.stringify({ brand, category, count, existingIds })
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': API_KEY,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514',
+        max_tokens: 6000,
+        messages: [{ role: 'user', content: prompt }]
+      })
     });
 
     if (!resp.ok) throw new Error('API error ' + resp.status);
     const data = await resp.json();
+    if (data.error) throw new Error(data.error.message || data.error);
     
-    if (data.error) throw new Error(data.error);
-    
-    const text = data.text || '';
+    const text = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
     const arrMatch = text.match(/\[[\s\S]*\]/);
     if (!arrMatch) throw new Error('No robot array in response');
     
@@ -1904,7 +1967,7 @@ async function deployNow() {
       throw new Error('GitHub token or repo not set — go to Settings and add your GitHub token and repo (e.g. myrobot42/myrobot-shop)');
     }
 
-    // Fetch current index.html from GitHub (using blob API for large files)
+    // Fetch current index.html from GitHub
     const apiBase = 'https://api.github.com/repos/' + GH_REPO + '/contents/index.html';
     const getResp = await fetch(apiBase, {
       headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json'}
@@ -1913,28 +1976,12 @@ async function deployNow() {
     const fileData = await getResp.json();
     const currentSha = fileData.sha;
 
-    // Use blob API if file is too large for contents API (>1MB)
-    let html = '';
-    if (!fileData.content || fileData.content.trim() === '') {
-      // File too large - use Git blob API
-      const blobResp = await fetch('https://api.github.com/repos/' + GH_REPO + '/git/blobs/' + fileData.sha, {
-        headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json'}
-      });
-      if (!blobResp.ok) throw new Error('Could not fetch file blob from GitHub');
-      const blobData = await blobResp.json();
-      const _b64 = blobData.content.replace(/\n/g, '');
-      const _bin = atob(_b64);
-      const _bytes = new Uint8Array(_bin.length);
-      for (let i = 0; i < _bin.length; i++) _bytes[i] = _bin.charCodeAt(i);
-      html = new TextDecoder().decode(_bytes);
-    } else {
-      // Normal decode
-      const _b64 = fileData.content.replace(/\n/g, '');
-      const _bin = atob(_b64);
-      const _bytes = new Uint8Array(_bin.length);
-      for (let i = 0; i < _bin.length; i++) _bytes[i] = _bin.charCodeAt(i);
-      html = new TextDecoder().decode(_bytes);
-    }
+    // Decode current content (UTF-8 safe)
+    const _b64 = fileData.content.replace(/\n/g, '');
+    const _bin = atob(_b64);
+    const _bytes = new Uint8Array(_bin.length);
+    for (let i = 0; i < _bin.length; i++) _bytes[i] = _bin.charCodeAt(i);
+    let html = new TextDecoder().decode(_bytes);
 
     // Find and replace ROBOTS array
     const startMarker = 'const ROBOTS=';
