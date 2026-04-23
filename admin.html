@@ -703,8 +703,28 @@ let ROBOTS = [];
 async function initDB() {
   try {
     // Fetch the live site to extract the master ROBOTS array
-    const resp = await fetch('/index.html?nocache=' + Date.now());
-    const html = await resp.text();
+    const githubRepo = localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop';
+    const githubToken = localStorage.getItem('mrsh_github_token') || '';
+    let html = '';
+    try {
+      // Try GitHub API first (most reliable)
+      const apiResp = await fetch('https://api.github.com/repos/' + githubRepo + '/contents/index.html', {
+        headers: githubToken ? {'Authorization': 'token ' + githubToken, 'Accept': 'application/vnd.github.v3+json'} : {}
+      });
+      if (apiResp.ok) {
+        const fileData = await apiResp.json();
+        const b64 = fileData.content.replace(/\n/g, '');
+        const bin = atob(b64);
+        const bytes = new Uint8Array(bin.length);
+        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+        html = new TextDecoder().decode(bytes);
+      }
+    } catch(e2) {}
+    // Fallback to direct fetch
+    if (!html) {
+      const resp = await fetch('/index.html?nocache=' + Date.now());
+      html = await resp.text();
+    }
     const startMarker = 'const ROBOTS=';
     const startIdx = html.indexOf(startMarker);
     if (startIdx !== -1) {
