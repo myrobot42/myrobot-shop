@@ -692,8 +692,8 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
 // ════ CONFIG ════
 const ADMIN_PASSWORD = 'robo2026';
 let API_KEY = localStorage.getItem('mrsh_api_key') || '';
-let GH_TOKEN = localStorage.getItem('mrsh_gh_token') || '';
-let GH_REPO = localStorage.getItem('mrsh_gh_repo') || 'myrobot42/myrobot-shop'; if(!localStorage.getItem('mrsh_gh_repo')){localStorage.setItem('mrsh_gh_repo','myrobot42/myrobot-shop');}
+let GH_TOKEN = localStorage.getItem('mrsh_gh_token') || localStorage.getItem('mrsh_github_token') || '';
+let GH_REPO = localStorage.getItem('mrsh_gh_repo') || localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop'; if(!localStorage.getItem('mrsh_gh_repo')){localStorage.setItem('mrsh_gh_repo','myrobot42/myrobot-shop');}
 let isProcessing = false;
 let pendingRobot = null;
 
@@ -1963,62 +1963,89 @@ async function deployNow() {
 
   try {
     // Check GitHub token
-    if (!GH_TOKEN || !GH_REPO) {
-      throw new Error('GitHub token or repo not set — go to Settings and add your GitHub token and repo (e.g. myrobot42/myrobot-shop)');
+    const token = GH_TOKEN || localStorage.getItem('mrsh_gh_token') || localStorage.getItem('mrsh_github_token') || '';
+    const repo = GH_REPO || localStorage.getItem('mrsh_gh_repo') || localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop';
+    if (!token) {
+      throw new Error('GitHub token not set — go to Settings (⚙️) and add your GitHub Personal Access Token');
     }
 
-    // Fetch current index.html from GitHub
-    const apiBase = 'https://api.github.com/repos/' + GH_REPO + '/contents/index.html';
+    const apiBase = 'https://api.github.com/repos/' + repo + '/contents/index.html';
+
+    // Step 1: Fetch current index.html from GitHub to get SHA + content
+    addMsg('📥 Fetching current index.html from GitHub...', 'system');
     const getResp = await fetch(apiBase, {
-      headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json'}
+      headers: {'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json'}
     });
-    if (!getResp.ok) throw new Error('Could not fetch index.html from GitHub — check your token and repo name');
+    if (!getResp.ok) {
+      const errData = await getResp.json().catch(() => ({}));
+      throw new Error('Could not fetch index.html from GitHub (' + getResp.status + '): ' + (errData.message || 'Check your token has repo write access'));
+    }
     const fileData = await getResp.json();
     const currentSha = fileData.sha;
 
-    // Decode current content (UTF-8 safe)
+    // Step 2: Decode the file content (UTF-8 safe)
     const _b64 = fileData.content.replace(/\n/g, '');
     const _bin = atob(_b64);
     const _bytes = new Uint8Array(_bin.length);
     for (let i = 0; i < _bin.length; i++) _bytes[i] = _bin.charCodeAt(i);
     let html = new TextDecoder().decode(_bytes);
 
-    // Find and replace ROBOTS array
+    // Step 3: Find and replace ROBOTS array — with smart fallback
     const startMarker = 'const ROBOTS=';
-    const startIdx = html.indexOf(startMarker);
-    if (startIdx === -1) throw new Error('Could not find ROBOTS array in index.html');
-    const bracketIdx = html.indexOf('[', startIdx);
-    let depth = 0, endIdx = -1;
-    for (let i = bracketIdx; i < html.length; i++) {
-      if (html[i] === '[') depth++;
-      else if (html[i] === ']') { depth--; if (depth === 0) { endIdx = i; break; } }
+    let startIdx = html.indexOf(startMarker);
+
+    if (startIdx === -1) {
+      // Fallback: try alternate markers
+      const altMarker = 'var ROBOTS=';
+      startIdx = html.indexOf(altMarker);
     }
-    if (endIdx === -1) throw new Error('Could not find end of ROBOTS array');
 
-    const robotsJson = JSON.stringify(ROBOTS);
-    html = html.substring(0, startIdx) + 'const ROBOTS=' + robotsJson + html.substring(endIdx + 1);
+    if (startIdx === -1) {
+      // Last resort: inject before </script> in the data section
+      addMsg('⚠️ ROBOTS marker not found — injecting fresh...', 'system');
+      const scriptClose = html.lastIndexOf('</script>');
+      if (scriptClose === -1) throw new Error('Cannot find injection point in index.html — file may be corrupted');
+      const robotsJson = JSON.stringify(ROBOTS);
+      html = html.substring(0, scriptClose) + '\nconst ROBOTS=' + robotsJson + ';\nwindow.ROBOTS = ROBOTS;\n' + html.substring(scriptClose);
+    } else {
+      // Normal replace: find the array boundaries and swap it out
+      const bracketIdx = html.indexOf('[', startIdx);
+      if (bracketIdx === -1) throw new Error('Malformed ROBOTS array in index.html');
+      let depth = 0, endIdx = -1;
+      for (let i = bracketIdx; i < html.length; i++) {
+        if (html[i] === '[') depth++;
+        else if (html[i] === ']') { depth--; if (depth === 0) { endIdx = i; break; } }
+      }
+      if (endIdx === -1) throw new Error('Could not find end of ROBOTS array — file may be truncated');
+      const robotsJson = JSON.stringify(ROBOTS);
+      html = html.substring(0, startIdx) + 'const ROBOTS=' + robotsJson + html.substring(endIdx + 1);
+    }
 
-    // Push updated file to GitHub (UTF-8 safe encode)
+    addMsg('✅ Built index.html with ' + ROBOTS.length + ' robots — pushing to GitHub...', 'system');
+
+    // Step 4: Push updated file back to GitHub (UTF-8 safe encode)
     const _enc = new TextEncoder();
     const _encBytes = _enc.encode(html);
     let _binary = '';
     _encBytes.forEach(b => _binary += String.fromCharCode(b));
     const newContent = btoa(_binary);
+
     const pushResp = await fetch(apiBase, {
       method: 'PUT',
-      headers: {'Authorization': 'token ' + GH_TOKEN, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json'},
+      headers: {'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json'},
       body: JSON.stringify({
         message: 'Update robots database — ' + ROBOTS.length + ' robots',
         content: newContent,
         sha: currentSha
       })
     });
+
     if (!pushResp.ok) {
-      const err = await pushResp.json();
-      throw new Error('GitHub push failed: ' + (err.message || pushResp.status));
+      const err = await pushResp.json().catch(() => ({}));
+      throw new Error('GitHub push failed (' + pushResp.status + '): ' + (err.message || 'Check token has Contents: write permission'));
     }
 
-    addMsg('✅ ' + ROBOTS.length + ' robots pushed to GitHub!\n\nNetlify is now auto-deploying — your live site will update in about 10 seconds. 🚀', 'success');
+    addMsg('✅ ' + ROBOTS.length + ' robots pushed to GitHub!\n\nNetlify is now auto-deploying — your live site will update in ~30 seconds. 🚀', 'success');
     addLog('success', 'GitHub deploy — ' + ROBOTS.length + ' robots pushed');
 
   } catch(err) {
