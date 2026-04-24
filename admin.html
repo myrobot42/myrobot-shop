@@ -2001,12 +2001,12 @@ async function deployNow() {
     }
 
     if (startIdx === -1) {
-      // Last resort: inject before </script> in the data section
+      // Last resort: inject before closing body tag
       addMsg('⚠️ ROBOTS marker not found — injecting fresh...', 'system');
-      const scriptClose = html.lastIndexOf('</script>');
-      if (scriptClose === -1) throw new Error('Cannot find injection point in index.html — file may be corrupted');
+      const bodyClose = html.lastIndexOf('<' + '/body>');
+      if (bodyClose === -1) throw new Error('Cannot find injection point in index.html — file may be corrupted');
       const robotsJson = JSON.stringify(ROBOTS);
-      html = html.substring(0, scriptClose) + '\nconst ROBOTS=' + robotsJson + ';\nwindow.ROBOTS = ROBOTS;\n' + html.substring(scriptClose);
+      html = html.substring(0, bodyClose) + '<script>const ROBOTS=' + robotsJson + ';window.ROBOTS=ROBOTS;<' + '/script>' + html.substring(bodyClose);
     } else {
       // Normal replace: find the array boundaries and swap it out
       const bracketIdx = html.indexOf('[', startIdx);
