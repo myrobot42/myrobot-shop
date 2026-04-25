@@ -274,11 +274,12 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
   }
   
   function getCfg(){
-    const token = localStorage.getItem('gh_token');
-    const owner = localStorage.getItem('gh_owner') || 'myrobot42';
-    const repo  = localStorage.getItem('gh_repo')  || 'myrobot-shop';
-    const branch= localStorage.getItem('gh_branch')|| 'main';
-    if (!token) throw new Error('No GitHub token in localStorage.gh_token — set it in admin Settings first.');
+    const token = localStorage.getItem('mrsh_gh_token');
+    const repoFull = localStorage.getItem('mrsh_gh_repo') || 'myrobot42/myrobot-shop';
+    const branch = localStorage.getItem('mrsh_gh_branch') || 'main';
+    if (!token) throw new Error('No GitHub token in localStorage.mrsh_gh_token — set it in admin Settings first.');
+    const [owner, repo] = repoFull.split('/');
+    if (!owner || !repo) throw new Error('mrsh_gh_repo should be in "owner/repo" format, got: ' + repoFull);
     return {token, owner, repo, branch};
   }
   
