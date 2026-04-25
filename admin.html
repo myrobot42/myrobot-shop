@@ -1979,7 +1979,22 @@ async function deployNow() {
     const currentSha = fileData.sha;
 
     // Step 2: Decode the file content (UTF-8 safe)
-    const _b64 = fileData.content.replace(/\n/g, '');
+    // For files > 1MB, the Contents API returns empty content — use the Git Data blob API instead (100MB limit)
+    let _b64;
+    if (!fileData.content || fileData.content.length === 0) {
+      addMsg('📦 Large file detected — using blob API...', 'system');
+      const blobResp = await fetch('https://api.github.com/repos/' + repo + '/git/blobs/' + currentSha, {
+        headers: {'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json'}
+      });
+      if (!blobResp.ok) {
+        const errData = await blobResp.json().catch(() => ({}));
+        throw new Error('Could not fetch blob (' + blobResp.status + '): ' + (errData.message || 'Token may need full repo scope'));
+      }
+      const blobData = await blobResp.json();
+      _b64 = blobData.content.replace(/\n/g, '');
+    } else {
+      _b64 = fileData.content.replace(/\n/g, '');
+    }
     const _bin = atob(_b64);
     const _bytes = new Uint8Array(_bin.length);
     for (let i = 0; i < _bin.length; i++) _bytes[i] = _bin.charCodeAt(i);
