@@ -245,330 +245,6 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
 </style>
 </head>
 <body>
-<div id="json-migration-section" style="margin:24px 0;padding:20px;border:2px solid #c00;border-radius:8px;background:#fff5f5;">
-  <h2 style="margin:0 0 8px;color:#c00;">🔧 One-Time Migration: Split ROBOTS to JSON</h2>
-  <p style="margin:0 0 12px;color:#600;font-size:14px;">
-    <strong>DANGER — run this once, then delete this block.</strong>
-    Extracts the ROBOTS array from <code>index.html</code> into
-    <code>data/robots.json</code> so deploys stop choking on the 1 MB file.
-  </p>
-  <button id="btn-migrate-robots"
-          style="background:#c00;color:#fff;border:none;padding:12px 20px;font-size:15px;font-weight:600;border-radius:6px;cursor:pointer;">
-    🔧 Migrate ROBOTS to JSON
-  </button>
-  <pre id="migration-log"
-       style="margin-top:12px;padding:12px;background:#111;color:#0f0;font-family:ui-monospace,Menlo,monospace;font-size:12px;border-radius:6px;max-height:400px;overflow-y:auto;white-space:pre-wrap;display:none;"></pre>
-</div>
- 
-<script>
-(function(){
-  const btn = document.getElementById('btn-migrate-robots');
-  const logEl = document.getElementById('migration-log');
-  
-  function log(msg, color){
-    logEl.style.display = 'block';
-    const colors = {ok:'#0f0', warn:'#fc0', err:'#f44', info:'#9cf', dim:'#888'};
-    const c = colors[color] || '#0f0';
-    logEl.innerHTML += `<span style="color:${c};">${msg}</span>\n`;
-    logEl.scrollTop = logEl.scrollHeight;
-  }
-  
-  function getCfg(){
-    const token = localStorage.getItem('mrsh_gh_token');
-    const repoFull = localStorage.getItem('mrsh_gh_repo') || 'myrobot42/myrobot-shop';
-    const branch = localStorage.getItem('mrsh_gh_branch') || 'main';
-    if (!token) throw new Error('No GitHub token in localStorage.mrsh_gh_token — set it in admin Settings first.');
-    const [owner, repo] = repoFull.split('/');
-    if (!owner || !repo) throw new Error('mrsh_gh_repo should be in "owner/repo" format, got: ' + repoFull);
-    return {token, owner, repo, branch};
-  }
-  
-  async function gh(cfg, path, opts={}){
-    const url = `https://api.github.com/repos/${cfg.owner}/${cfg.repo}${path}`;
-    const r = await fetch(url, {
-      ...opts,
-      headers: {
-        'Authorization': `token ${cfg.token}`,
-        'Accept': 'application/vnd.github+json',
-        'Content-Type': 'application/json',
-        ...(opts.headers||{})
-      }
-    });
-    if (!r.ok){
-      const txt = await r.text();
-      throw new Error(`GitHub ${r.status} on ${path}: ${txt.slice(0,300)}`);
-    }
-    return r.json();
-  }
-  
-  // Fetch a file's content, using blob API if Contents API returns empty (>1MB files)
-  async function fetchFile(cfg, path){
-    const meta = await gh(cfg, `/contents/${path}?ref=${cfg.branch}`);
-    if (meta.content && meta.content.length > 0){
-      log(`  📄 ${path} read via Contents API (${meta.size} bytes)`, 'dim');
-      return {sha: meta.sha, content: atob(meta.content.replace(/\n/g,''))};
-    }
-    log(`  📦 ${path} >1MB — using blob API...`, 'dim');
-    const blob = await gh(cfg, `/git/blobs/${meta.sha}`);
-    // blob.content is base64; decode safely (handles UTF-8)
-    const bin = atob(blob.content.replace(/\n/g,''));
-    // Convert binary string to UTF-8 properly
-    const bytes = new Uint8Array(bin.length);
-    for (let i=0; i<bin.length; i++) bytes[i] = bin.charCodeAt(i);
-    const content = new TextDecoder('utf-8').decode(bytes);
-    log(`  ✓ Decoded ${content.length.toLocaleString()} chars`, 'dim');
-    return {sha: meta.sha, content};
-  }
-  
-  // Check if a file exists (returns true/false, not error)
-  async function fileExists(cfg, path){
-    try {
-      await gh(cfg, `/contents/${path}?ref=${cfg.branch}`);
-      return true;
-    } catch(e){
-      if (String(e.message).includes('404')) return false;
-      throw e;
-    }
-  }
-  
-  // Bracket-balance scan starting at openIdx (which points to the '[')
-  // Returns the index of the matching closing ']' (inclusive end).
-  // Properly handles strings, escapes, and template literals.
-  function findArrayEnd(src, openIdx){
-    if (src[openIdx] !== '[') throw new Error(`Expected '[' at position ${openIdx}, found '${src[openIdx]}'`);
-    let depth = 0;
-    let inStr = null;       // null | '"' | "'" | '`'
-    let escaped = false;
-    
-    for (let i = openIdx; i < src.length; i++){
-      const ch = src[i];
-      
-      if (escaped){ escaped = false; continue; }
-      
-      if (inStr){
-        if (ch === '\\'){ escaped = true; continue; }
-        if (ch === inStr){ inStr = null; }
-        continue;
-      }
-      
-      if (ch === '"' || ch === "'" || ch === '`'){ inStr = ch; continue; }
-      
-      if (ch === '['){ depth++; continue; }
-      if (ch === ']'){
-        depth--;
-        if (depth === 0) return i;
-      }
-    }
-    throw new Error('Could not find matching closing bracket — array appears unterminated');
-  }
-  
-  // Locate `const ROBOTS=[` (allowing whitespace variations)
-  function findRobotsArray(src){
-    const re = /\bconst\s+ROBOTS\s*=\s*\[/;
-    const m = re.exec(src);
-    if (!m) throw new Error('Could not find `const ROBOTS=[` in index.html — has the variable been renamed?');
-    const declStart = m.index;
-    const arrayOpen = m.index + m[0].length - 1;  // position of the '['
-    const arrayEnd  = findArrayEnd(src, arrayOpen);  // position of ']'
-    
-    // Walk forward from arrayEnd to consume optional ';' and trailing whitespace/newline
-    let stmtEnd = arrayEnd + 1;
-    while (stmtEnd < src.length && /[\s;]/.test(src[stmtEnd])){
-      if (src[stmtEnd] === '\n'){ stmtEnd++; break; }
-      stmtEnd++;
-    }
-    
-    return {declStart, arrayOpen, arrayEnd, stmtEnd};
-  }
-  
-  // Build the loader replacement: empty array + fetch + defensive render
-  const LOADER_STUB = `let ROBOTS=[];/* data/robots.json — loaded at runtime */
-(function(){
-  fetch('data/robots.json',{cache:'no-store'})
-    .then(r=>{if(!r.ok)throw new Error('robots.json '+r.status);return r.json();})
-    .then(data=>{
-      ROBOTS.length=0; ROBOTS.push.apply(ROBOTS,data);
-      // Defensive render: try common patterns, do nothing if none match
-      try{
-        if(typeof renderRobots==='function')renderRobots(ROBOTS);
-        else if(typeof render==='function')render(ROBOTS);
-        else if(typeof displayRobots==='function')displayRobots(ROBOTS);
-        else if(typeof init==='function')init();
-        else if(typeof main==='function')main();
-        // If page already rendered (DOMContentLoaded fired with empty array),
-        // dispatch a custom event the page can listen for:
-        document.dispatchEvent(new CustomEvent('robots-loaded',{detail:{robots:ROBOTS}}));
-      }catch(e){console.error('Robot render hook failed:',e);}
-    })
-    .catch(e=>{console.error('Failed to load robots.json:',e);});
-})();
-`;
-  
-  async function commitMultipleFiles(cfg, files, message){
-    // files = [{path, content}, ...]
-    log('  Building atomic commit via Git Data API...', 'dim');
-    
-    // 1. Get current ref
-    const ref = await gh(cfg, `/git/ref/heads/${cfg.branch}`);
-    const baseSha = ref.object.sha;
-    log(`  Base commit: ${baseSha.slice(0,7)}`, 'dim');
-    
-    // 2. Get base tree
-    const baseCommit = await gh(cfg, `/git/commits/${baseSha}`);
-    const baseTreeSha = baseCommit.tree.sha;
-    
-    // 3. Create blobs for each file
-    const tree = [];
-    for (const f of files){
-      // Encode UTF-8 to base64 properly
-      const utf8 = new TextEncoder().encode(f.content);
-      let bin = '';
-      for (let i=0; i<utf8.length; i++) bin += String.fromCharCode(utf8[i]);
-      const blob = await gh(cfg, '/git/blobs', {
-        method: 'POST',
-        body: JSON.stringify({content: btoa(bin), encoding: 'base64'})
-      });
-      log(`  Blob ${f.path}: ${blob.sha.slice(0,7)} (${f.content.length.toLocaleString()} chars)`, 'dim');
-      tree.push({path: f.path, mode: '100644', type: 'blob', sha: blob.sha});
-    }
-    
-    // 4. Create tree
-    const newTree = await gh(cfg, '/git/trees', {
-      method: 'POST',
-      body: JSON.stringify({base_tree: baseTreeSha, tree})
-    });
-    log(`  Tree: ${newTree.sha.slice(0,7)}`, 'dim');
-    
-    // 5. Create commit
-    const newCommit = await gh(cfg, '/git/commits', {
-      method: 'POST',
-      body: JSON.stringify({message, tree: newTree.sha, parents: [baseSha]})
-    });
-    log(`  Commit: ${newCommit.sha.slice(0,7)}`, 'dim');
-    
-    // 6. Update ref
-    await gh(cfg, `/git/refs/heads/${cfg.branch}`, {
-      method: 'PATCH',
-      body: JSON.stringify({sha: newCommit.sha})
-    });
-    log(`  Ref updated → ${cfg.branch}`, 'dim');
-    
-    return newCommit.sha;
-  }
-  
-  btn.onclick = async function(){
-    logEl.innerHTML = '';
-    btn.disabled = true;
-    btn.textContent = '⏳ Working...';
-    
-    try {
-      const cfg = getCfg();
-      log(`▶ Starting migration on ${cfg.owner}/${cfg.repo}@${cfg.branch}`, 'info');
-      
-      // Step 0: Pre-flight — refuse if data/robots.json already exists
-      log('\n[0/5] Pre-flight checks', 'info');
-      if (await fileExists(cfg, 'data/robots.json')){
-        throw new Error('data/robots.json already exists — migration has already run. Aborting to prevent overwrite.');
-      }
-      log('  ✓ data/robots.json does not exist — safe to proceed', 'ok');
-      
-      // Step 1: Fetch index.html
-      log('\n[1/5] Fetching index.html', 'info');
-      const idx = await fetchFile(cfg, 'index.html');
-      const oldSize = idx.content.length;
-      log(`  ✓ index.html fetched: ${oldSize.toLocaleString()} chars`, 'ok');
-      
-      // Step 2: Locate and extract ROBOTS array
-      log('\n[2/5] Locating ROBOTS array', 'info');
-      const loc = findRobotsArray(idx.content);
-      log(`  Declaration starts at char ${loc.declStart.toLocaleString()}`, 'dim');
-      log(`  Array opens at char ${loc.arrayOpen.toLocaleString()}`, 'dim');
-      log(`  Array closes at char ${loc.arrayEnd.toLocaleString()}`, 'dim');
-      
-      const arrayJson = idx.content.slice(loc.arrayOpen, loc.arrayEnd + 1);
-      log(`  Array length: ${arrayJson.length.toLocaleString()} chars`, 'dim');
-      
-      // Step 3: Validate by parsing
-      log('\n[3/5] Validating extracted array', 'info');
-      let robots;
-      try {
-        robots = JSON.parse(arrayJson);
-      } catch(e){
-        // Show context around the error
-        throw new Error(`JSON.parse failed: ${e.message}. The array may contain non-JSON syntax (comments, trailing commas, undefined). First 200 chars: ${arrayJson.slice(0,200)}`);
-      }
-      if (!Array.isArray(robots)) throw new Error('Parsed value is not an array');
-      log(`  ✓ Parsed cleanly: ${robots.length} robots`, 'ok');
-      log(`  First robot id: ${robots[0]?.id || '(none)'}`, 'dim');
-      log(`  Last robot id:  ${robots[robots.length-1]?.id || '(none)'}`, 'dim');
-      
-      // Step 4: Build new index.html
-      log('\n[4/5] Building new index.html', 'info');
-      const newIndex = idx.content.slice(0, loc.declStart) + LOADER_STUB + idx.content.slice(loc.stmtEnd);
-      const newSize = newIndex.length;
-      log(`  index.html: ${oldSize.toLocaleString()} → ${newSize.toLocaleString()} chars`, 'dim');
-      
-      // Sanity checks on new index.html size
-      if (newSize > 400_000){
-        throw new Error(`New index.html is ${newSize.toLocaleString()} chars — expected < 400,000. Aborting (something went wrong with extraction).`);
-      }
-      if (newSize < 5_000){
-        throw new Error(`New index.html is only ${newSize.toLocaleString()} chars — too small, likely truncation. Aborting.`);
-      }
-      log('  ✓ Size check passed', 'ok');
-      
-      // Build pretty-printed JSON for the data file (easier to diff in git)
-      const robotsJson = JSON.stringify(robots, null, 2);
-      log(`  data/robots.json: ${robotsJson.length.toLocaleString()} chars`, 'dim');
-      
-      // Step 5: Confirm and commit
-      log('\n[5/5] Ready to commit', 'info');
-      log(`  ┌─────────────────────────────────────────────`, 'warn');
-      log(`  │ index.html:       ${oldSize.toLocaleString()} → ${newSize.toLocaleString()} bytes`, 'warn');
-      log(`  │ data/robots.json: NEW (${robotsJson.length.toLocaleString()} bytes)`, 'warn');
-      log(`  │ Robots extracted: ${robots.length}`, 'warn');
-      log(`  └─────────────────────────────────────────────`, 'warn');
-      
-      const ok = confirm(
-        `Ready to commit:\n\n` +
-        `  • index.html: ${oldSize.toLocaleString()} → ${newSize.toLocaleString()} bytes\n` +
-        `  • data/robots.json: NEW (${robotsJson.length.toLocaleString()} bytes)\n` +
-        `  • ${robots.length} robots will be moved\n\n` +
-        `This is an atomic commit — both files change together.\n\n` +
-        `Proceed?`
-      );
-      if (!ok){
-        log('\n✗ Cancelled by user — nothing committed', 'warn');
-        return;
-      }
-      
-      log('\n  Pushing to GitHub...', 'info');
-      const sha = await commitMultipleFiles(cfg, [
-        {path: 'index.html', content: newIndex},
-        {path: 'data/robots.json', content: robotsJson}
-      ], `chore: split ROBOTS array into data/robots.json (${robots.length} robots)`);
-      
-      log(`\n✅ MIGRATION COMPLETE`, 'ok');
-      log(`Commit: ${sha}`, 'ok');
-      log(`\nNext steps:`, 'info');
-      log(`  1. Wait ~60s for Netlify to redeploy`, 'info');
-      log(`  2. Open myrobot42.netlify.app — verify robots load`, 'info');
-      log(`  3. Open browser console — should see no errors`, 'info');
-      log(`  4. If everything works, update admin's deploy function`, 'info');
-      log(`     to write data/robots.json instead of patching index.html`, 'info');
-      log(`  5. Then delete this migration block from admin.html`, 'info');
-      
-    } catch(e){
-      log(`\n❌ ERROR: ${e.message}`, 'err');
-      log(`\nNothing has been committed. Safe to retry after fixing the cause.`, 'warn');
-      console.error(e);
-    } finally {
-      btn.disabled = false;
-      btn.textContent = '🔧 Migrate ROBOTS to JSON';
-    }
-  };
-})();
-</script>
 
 <!-- EDIT ROBOT MODAL -->
 <div class="modal-overlay" id="edit-modal" style="display:none" onclick="if(event.target===this)closeEditModal()">
@@ -1022,50 +698,64 @@ let CLOUDINARY_PRESET = localStorage.getItem('mrsh_cloudinary_preset') || 'myrob
 // ════ ROBOT DATABASE (mirrored from main site) ════
 let ROBOTS = [];
 
-// Load master DB: first try to fetch from live site, merge with localStorage additions
+// Load master DB: prefer data/robots.json (post-migration), fall back to inline ROBOTS in index.html (pre-migration)
 async function initDB() {
   try {
-    // Fetch the live site to extract the master ROBOTS array
-    const githubRepo = localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop';
-    const githubToken = localStorage.getItem('mrsh_github_token') || '';
-    let html = '';
+    // Step 1: Try data/robots.json directly off the live site (fastest, public, no auth needed)
     try {
-      // Try GitHub API first (most reliable)
-      const apiResp = await fetch('https://api.github.com/repos/' + githubRepo + '/contents/index.html', {
-        headers: githubToken ? {'Authorization': 'token ' + githubToken, 'Accept': 'application/vnd.github.v3+json'} : {}
-      });
-      if (apiResp.ok) {
-        const fileData = await apiResp.json();
-        const b64 = fileData.content.replace(/\n/g, '');
-        const bin = atob(b64);
-        const bytes = new Uint8Array(bin.length);
-        for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
-        html = new TextDecoder().decode(bytes);
+      const jsonResp = await fetch('/data/robots.json?nocache=' + Date.now());
+      if (jsonResp.ok) {
+        const siteRobots = await jsonResp.json();
+        if (Array.isArray(siteRobots) && siteRobots.length > 0) {
+          ROBOTS = siteRobots;
+          console.log('Loaded', ROBOTS.length, 'robots from data/robots.json (live site)');
+          // Done — skip the legacy fallback
+          // (continues to localStorage merge below)
+        }
       }
-    } catch(e2) {}
-    // Fallback to direct fetch
-    if (!html) {
-      const resp = await fetch('/index.html?nocache=' + Date.now());
-      html = await resp.text();
-    }
-    const startMarker = 'const ROBOTS=';
-    const startIdx = html.indexOf(startMarker);
-    if (startIdx !== -1) {
-      let depth = 0, endIdx = -1;
-      const arrStart = html.indexOf('[', startIdx);
-      for (let i = arrStart; i < html.length; i++) {
-        if (html[i] === '[') depth++;
-        else if (html[i] === ']') { depth--; if (depth === 0) { endIdx = i; break; } }
+    } catch(jsonErr) { console.warn('Could not fetch data/robots.json:', jsonErr); }
+
+    // Step 2: If robots.json didn't work, fall back to legacy index.html parsing (pre-migration sites)
+    if (ROBOTS.length === 0) {
+      const githubRepo = localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop';
+      const githubToken = localStorage.getItem('mrsh_github_token') || '';
+      let html = '';
+      try {
+        const apiResp = await fetch('https://api.github.com/repos/' + githubRepo + '/contents/index.html', {
+          headers: githubToken ? {'Authorization': 'token ' + githubToken, 'Accept': 'application/vnd.github.v3+json'} : {}
+        });
+        if (apiResp.ok) {
+          const fileData = await apiResp.json();
+          const b64 = fileData.content.replace(/\n/g, '');
+          const bin = atob(b64);
+          const bytes = new Uint8Array(bin.length);
+          for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+          html = new TextDecoder().decode(bytes);
+        }
+      } catch(e2) {}
+      if (!html) {
+        const resp = await fetch('/index.html?nocache=' + Date.now());
+        html = await resp.text();
       }
-      if (endIdx !== -1) {
-        const arrStr = html.substring(arrStart, endIdx + 1);
-        try {
-          const siteRobots = JSON.parse(arrStr);
-          if (Array.isArray(siteRobots) && siteRobots.length > 0) {
-            ROBOTS = siteRobots;
-            console.log('Loaded', ROBOTS.length, 'robots from live site');
-          }
-        } catch(e) { console.warn('Could not parse site ROBOTS:', e); }
+      const startMarker = 'const ROBOTS=';
+      const startIdx = html.indexOf(startMarker);
+      if (startIdx !== -1) {
+        let depth = 0, endIdx = -1;
+        const arrStart = html.indexOf('[', startIdx);
+        for (let i = arrStart; i < html.length; i++) {
+          if (html[i] === '[') depth++;
+          else if (html[i] === ']') { depth--; if (depth === 0) { endIdx = i; break; } }
+        }
+        if (endIdx !== -1) {
+          const arrStr = html.substring(arrStart, endIdx + 1);
+          try {
+            const siteRobots = JSON.parse(arrStr);
+            if (Array.isArray(siteRobots) && siteRobots.length > 0) {
+              ROBOTS = siteRobots;
+              console.log('Loaded', ROBOTS.length, 'robots from live site (legacy index.html parse)');
+            }
+          } catch(e) { console.warn('Could not parse site ROBOTS:', e); }
+        }
       }
     }
   } catch(e) { console.warn('Could not fetch live site:', e); }
@@ -2275,102 +1965,56 @@ function saveEditModal() {
 // ════ DEPLOY ════
 async function deployNow() {
   const btn = document.getElementById('deploy-btn');
-  btn.textContent = '⏳ Building...';
+  btn.textContent = '⏳ Deploying...';
   btn.disabled = true;
-  addMsg('🚀 Deploying ' + ROBOTS.length + ' robots to GitHub...', 'system');
+  addMsg('🚀 Deploying ' + ROBOTS.length + ' robots to data/robots.json...', 'system');
 
   try {
-    // Check GitHub token
+    // Get GitHub credentials
     const token = GH_TOKEN || localStorage.getItem('mrsh_gh_token') || localStorage.getItem('mrsh_github_token') || '';
     const repo = GH_REPO || localStorage.getItem('mrsh_gh_repo') || localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop';
     if (!token) {
       throw new Error('GitHub token not set — go to Settings (⚙️) and add your GitHub Personal Access Token');
     }
 
-    const apiBase = 'https://api.github.com/repos/' + repo + '/contents/index.html';
+    const apiBase = 'https://api.github.com/repos/' + repo + '/contents/data/robots.json';
 
-    // Step 1: Fetch current index.html from GitHub to get SHA + content
-    addMsg('📥 Fetching current index.html from GitHub...', 'system');
+    // Step 1: Fetch current data/robots.json SHA (needed for update). 404 means file doesn't exist yet — fine.
+    addMsg('📥 Checking data/robots.json on GitHub...', 'system');
+    let currentSha = null;
     const getResp = await fetch(apiBase, {
       headers: {'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json'}
     });
-    if (!getResp.ok) {
+    if (getResp.ok) {
+      const fileData = await getResp.json();
+      currentSha = fileData.sha;
+    } else if (getResp.status !== 404) {
       const errData = await getResp.json().catch(() => ({}));
-      throw new Error('Could not fetch index.html from GitHub (' + getResp.status + '): ' + (errData.message || 'Check your token has repo write access'));
-    }
-    const fileData = await getResp.json();
-    const currentSha = fileData.sha;
-
-    // Step 2: Decode the file content (UTF-8 safe)
-    // For files > 1MB, the Contents API returns empty content — use the Git Data blob API instead (100MB limit)
-    let _b64;
-    if (!fileData.content || fileData.content.length === 0) {
-      addMsg('📦 Large file detected — using blob API...', 'system');
-      const blobResp = await fetch('https://api.github.com/repos/' + repo + '/git/blobs/' + currentSha, {
-        headers: {'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json'}
-      });
-      if (!blobResp.ok) {
-        const errData = await blobResp.json().catch(() => ({}));
-        throw new Error('Could not fetch blob (' + blobResp.status + '): ' + (errData.message || 'Token may need full repo scope'));
-      }
-      const blobData = await blobResp.json();
-      _b64 = blobData.content.replace(/\n/g, '');
-    } else {
-      _b64 = fileData.content.replace(/\n/g, '');
-    }
-    const _bin = atob(_b64);
-    const _bytes = new Uint8Array(_bin.length);
-    for (let i = 0; i < _bin.length; i++) _bytes[i] = _bin.charCodeAt(i);
-    let html = new TextDecoder().decode(_bytes);
-
-    // Step 3: Find and replace ROBOTS array — with smart fallback
-    const startMarker = 'const ROBOTS=';
-    let startIdx = html.indexOf(startMarker);
-
-    if (startIdx === -1) {
-      // Fallback: try alternate markers
-      const altMarker = 'var ROBOTS=';
-      startIdx = html.indexOf(altMarker);
+      throw new Error('Could not check data/robots.json (' + getResp.status + '): ' + (errData.message || 'Check your token has repo access'));
     }
 
-    if (startIdx === -1) {
-      // Last resort: inject before closing body tag
-      addMsg('⚠️ ROBOTS marker not found — injecting fresh...', 'system');
-      const bodyClose = html.lastIndexOf('<' + '/body>');
-      if (bodyClose === -1) throw new Error('Cannot find injection point in index.html — file may be corrupted');
-      const robotsJson = JSON.stringify(ROBOTS);
-      html = html.substring(0, bodyClose) + '<script>const ROBOTS=' + robotsJson + ';window.ROBOTS=ROBOTS;<' + '/script>' + html.substring(bodyClose);
-    } else {
-      // Normal replace: find the array boundaries and swap it out
-      const bracketIdx = html.indexOf('[', startIdx);
-      if (bracketIdx === -1) throw new Error('Malformed ROBOTS array in index.html');
-      let depth = 0, endIdx = -1;
-      for (let i = bracketIdx; i < html.length; i++) {
-        if (html[i] === '[') depth++;
-        else if (html[i] === ']') { depth--; if (depth === 0) { endIdx = i; break; } }
-      }
-      if (endIdx === -1) throw new Error('Could not find end of ROBOTS array — file may be truncated');
-      const robotsJson = JSON.stringify(ROBOTS);
-      html = html.substring(0, startIdx) + 'const ROBOTS=' + robotsJson + html.substring(endIdx + 1);
-    }
+    // Step 2: Build the JSON payload (pretty-printed for human-readable git diffs)
+    const robotsJson = JSON.stringify(ROBOTS, null, 2);
+    addMsg('📝 Built JSON: ' + ROBOTS.length + ' robots, ' + robotsJson.length.toLocaleString() + ' chars — pushing to GitHub...', 'system');
 
-    addMsg('✅ Built index.html with ' + ROBOTS.length + ' robots — pushing to GitHub...', 'system');
-
-    // Step 4: Push updated file back to GitHub (UTF-8 safe encode)
+    // Step 3: Encode UTF-8 → base64
     const _enc = new TextEncoder();
-    const _encBytes = _enc.encode(html);
+    const _encBytes = _enc.encode(robotsJson);
     let _binary = '';
     _encBytes.forEach(b => _binary += String.fromCharCode(b));
     const newContent = btoa(_binary);
 
+    // Step 4: PUT to GitHub
+    const body = {
+      message: 'Update robots database — ' + ROBOTS.length + ' robots',
+      content: newContent
+    };
+    if (currentSha) body.sha = currentSha;
+
     const pushResp = await fetch(apiBase, {
       method: 'PUT',
       headers: {'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        message: 'Update robots database — ' + ROBOTS.length + ' robots',
-        content: newContent,
-        sha: currentSha
-      })
+      body: JSON.stringify(body)
     });
 
     if (!pushResp.ok) {
@@ -2378,8 +2022,8 @@ async function deployNow() {
       throw new Error('GitHub push failed (' + pushResp.status + '): ' + (err.message || 'Check token has Contents: write permission'));
     }
 
-    addMsg('✅ ' + ROBOTS.length + ' robots pushed to GitHub!\n\nNetlify is now auto-deploying — your live site will update in ~30 seconds. 🚀', 'success');
-    addLog('success', 'GitHub deploy — ' + ROBOTS.length + ' robots pushed');
+    addMsg('✅ ' + ROBOTS.length + ' robots pushed to data/robots.json!\n\nNetlify is now auto-deploying — your live site will update in ~30 seconds. 🚀', 'success');
+    addLog('success', 'GitHub deploy — ' + ROBOTS.length + ' robots pushed to data/robots.json');
 
   } catch(err) {
     addMsg('❌ Deploy failed: ' + err.message, 'error');
