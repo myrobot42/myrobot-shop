@@ -638,11 +638,6 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
               <button class="qbrand" onclick="quickIngest('ABB Robotics','Industrial',8)">🦾 All ABB</button>
             </div>
             <button class="save-btn" style="width:100%;padding:13px;font-size:13px" onclick="runIngest()">🏭 Ingest Brand Now</button>
-            <div style="margin-top:16px;padding:16px;background:#0a1628;border:2px solid #1e40af;border-radius:10px">
-              <div style="font-size:13px;font-weight:800;color:#60a5fa;margin-bottom:6px">🚀 BULK INGEST — 42 Brands Auto</div>
-              <div style="font-size:11px;color:#94a3b8;margin-bottom:10px;line-height:1.6">Ingests all missing brands automatically. Deploys to GitHub after each. Click to pause/resume.</div>
-              <button id="bulk-btn" onclick="startBulkIngest()" style="width:100%;padding:13px;font-size:14px;font-weight:800;background:linear-gradient(135deg,#1d4ed8,#7c3aed);color:#fff;border:none;border-radius:8px;cursor:pointer">🚀 BULK INGEST ALL 42 BRANDS</button>
-            </div>
             <div id="ingest-status" style="margin-top:12px;font-size:11px;font-family:'Space Mono',monospace;color:var(--mut);display:none"></div>
             <div id="ingest-results" style="margin-top:10px;display:none"></div>
           </div>
@@ -2310,81 +2305,6 @@ async function handleCloudinaryUpload(robotId, input) {
 
 
 
-
-// ════ BULK INGEST ════
-const BULK_BRANDS = [
-  {brand:'Fourier Intelligence',cat:'Humanoid',count:8},
-  {brand:'NEURA Robotics',cat:'Humanoid',count:7},
-  {brand:'Engineered Arts',cat:'Humanoid',count:6},
-  {brand:'Kepler Robotics',cat:'Humanoid',count:7},
-  {brand:'AgiBot',cat:'Humanoid',count:7},
-  {brand:'Leju Robotics',cat:'Humanoid',count:6},
-  {brand:'Rainbow Robotics',cat:'Humanoid',count:7},
-  {brand:'Clone Robotics',cat:'Humanoid',count:5},
-  {brand:'Menteebot',cat:'Humanoid',count:5},
-  {brand:'Physical Intelligence',cat:'Humanoid',count:5},
-  {brand:'Franka Robotics',cat:'Industrial',count:7},
-  {brand:'Hanwha Robotics',cat:'Industrial',count:7},
-  {brand:'Staubli Robotics',cat:'Industrial',count:8},
-  {brand:'Aubo Robotics',cat:'Industrial',count:7},
-  {brand:'Jaka Robotics',cat:'Industrial',count:7},
-  {brand:'Flexiv Robotics',cat:'Industrial',count:6},
-  {brand:'Realman Robotics',cat:'Industrial',count:6},
-  {brand:'iRobot',cat:'Consumer',count:10},
-  {brand:'Dyson',cat:'Consumer',count:7},
-  {brand:'Yeedi',cat:'Consumer',count:8},
-  {brand:'Lefant',cat:'Consumer',count:7},
-  {brand:'Proscenic',cat:'Consumer',count:7},
-  {brand:'Percepto',cat:'Drones',count:6},
-  {brand:'AgEagle',cat:'Drones',count:6},
-  {brand:'Wingcopter',cat:'Drones',count:5},
-  {brand:'Volocopter',cat:'Drones',count:5},
-  {brand:'Carbon Robotics',cat:'Agricultural',count:5},
-  {brand:'FarmWise',cat:'Agricultural',count:5},
-  {brand:'Iron Ox',cat:'Agricultural',count:4},
-  {brand:'Naio Technologies',cat:'Agricultural',count:6},
-  {brand:'Burro Robotics',cat:'Agricultural',count:5},
-  {brand:'Intuitive Surgical',cat:'Medical',count:8},
-  {brand:'Globus Medical',cat:'Medical',count:6},
-  {brand:'Zimmer Biomet',cat:'Medical',count:5},
-  {brand:'Ottonomy',cat:'Service',count:5},
-  {brand:'Kiwibot',cat:'Service',count:4},
-  {brand:'Righthand Robotics',cat:'Service',count:5},
-  {brand:'Locus Robotics',cat:'Service',count:6},
-  {brand:'Geek Plus',cat:'Service',count:7},
-  {brand:'Sarcos Robotics',cat:'Military',count:5},
-  {brand:'Milrem Robotics',cat:'Military',count:6},
-  {brand:'Roboteam',cat:'Military',count:5},
-];
-
-let bulkRunning=false, bulkIdx=0;
-
-async function startBulkIngest(){
-  if(bulkRunning){bulkRunning=false;return;}
-  if(!API_KEY){addMsg('No API key — go to Settings','error');return;}
-  bulkRunning=true;
-  const btn=document.getElementById('bulk-btn');
-  addMsg('Starting bulk ingest of '+BULK_BRANDS.length+' brands. Auto-deploys after each.','system');
-  for(let i=bulkIdx;i<BULK_BRANDS.length;i++){
-    if(!bulkRunning){
-      bulkIdx=i;
-      if(btn)btn.textContent='RESUME ('+( BULK_BRANDS.length-i)+' left)';
-      addMsg('Paused at '+i+'/'+BULK_BRANDS.length,'system');
-      return;
-    }
-    bulkIdx=i;
-    const item=BULK_BRANDS[i];
-    if(btn)btn.textContent='PAUSE ['+( i+1)+'/'+BULK_BRANDS.length+'] '+item.brand;
-    addMsg('['+( i+1)+'/'+BULK_BRANDS.length+'] '+item.brand+'...','system');
-    try{
-      await runBrandIngestion(item.brand,item.cat,item.count);
-      await new Promise(r=>setTimeout(r,4000));
-    }catch(e){addMsg('Error: '+item.brand+' — '+e.message,'error');}
-  }
-  bulkRunning=false;bulkIdx=0;
-  if(btn)btn.textContent='BULK INGEST ALL '+BULK_BRANDS.length+' BRANDS';
-  addMsg('BULK INGEST COMPLETE! Total: '+ROBOTS.length+' robots!','success');
-}
 
 </script>
 </body>
