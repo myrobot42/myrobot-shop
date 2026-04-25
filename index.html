@@ -654,7 +654,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- HOME -->
 <div id="page-home" class="page active">
-  <div class="top-bar">🤖 World's #1 Robot Database — 467 robots catalogued and growing daily</div>
+  <div class="top-bar">🤖 World's #1 Robot Database — <span id="home-top-count">467</span> robots catalogued and growing daily</div>
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-left">
@@ -668,8 +668,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         <div class="brand-tags" id="brand-tags-home"></div>
       </div>
       <div class="hero-right">
-        <div class="hero-stat"><div class="hsi">🤖</div><div><div class="hst-num">467</div><div class="hst-lbl">Robots catalogued</div></div></div>
-        <div class="hero-stat"><div class="hsi">🏭</div><div><div class="hst-num">56</div><div class="hst-lbl">Manufacturers listed</div></div></div>
+        <div class="hero-stat"><div class="hsi">🤖</div><div><div class="hst-num" id="home-hero-count">467</div><div class="hst-lbl">Robots catalogued</div></div></div>
+        <div class="hero-stat"><div class="hsi">🏭</div><div><div class="hst-num" id="home-mfr-count">56</div><div class="hst-lbl">Manufacturers listed</div></div></div>
         <div class="hero-stat"><div class="hsi">⭐</div><div><div class="hst-num">14,200+</div><div class="hst-lbl">User reviews</div></div></div>
       </div>
     </div>
@@ -847,6 +847,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   <div class="compare-slot" id="cslot-2" onclick="openSlot(2)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 3</div></div>
   <div class="compare-slot" id="cslot-3" onclick="openSlot(3)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 4</div></div>
 </div>
+    <div id="compare-action" style="display:flex;justify-content:center;align-items:center;margin:18px 0 22px;min-height:48px"></div>
     <div class="robot-selector"><div class="rs-title">Select a robot <span style="color:var(--mut);font-size:12px;font-weight:400" id="slot-label">(for slot 1)</span></div><div class="rs-grid" id="rs-grid"></div></div>
     <div id="compare-table"></div>
     <div class="cta-row"><button class="btn btn-ghost" onclick="clearCompare()">Clear All</button><button class="btn btn-primary" onclick="goPage('db')">Browse More Robots</button></div>
@@ -928,31 +929,41 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 // ════════════ ROBOT DATABASE ════════════
 let ROBOTS=[];/* data/robots.json — loaded at runtime */
-(function(){
-  fetch('data/robots.json',{cache:'no-store'})
-    .then(r=>{if(!r.ok)throw new Error('robots.json '+r.status);return r.json();})
-    .then(data=>{
-      ROBOTS.length=0; ROBOTS.push.apply(ROBOTS,data);
-      // Defensive render: try common patterns, do nothing if none match
-      try{
-        if(typeof renderRobots==='function')renderRobots(ROBOTS);
-        else if(typeof render==='function')render(ROBOTS);
-        else if(typeof displayRobots==='function')displayRobots(ROBOTS);
-        else if(typeof init==='function')init();
-        else if(typeof main==='function')main();
-        // If page already rendered (DOMContentLoaded fired with empty array),
-        // dispatch a custom event the page can listen for:
-        document.dispatchEvent(new CustomEvent('robots-loaded',{detail:{robots:ROBOTS}}));
-      }catch(e){console.error('Robot render hook failed:',e);}
-    })
-    .catch(e=>{console.error('Failed to load robots.json:',e);});
-})();
-
+let ALL_BRANDS=[]; // populated after robots.json loads
 window.ROBOTS = ROBOTS;
 // ════════════ GLOBALS ════════════
 let dbView='grid', finderView='list', compareSlots=[null,null,null,null], activeSlot=0, currentProfile=null, finderCat='all';
-const ALL_BRANDS=[...new Set(ROBOTS.map(r=>r.brand).filter(b=>b&&b!=='undefined'))].sort();
 const ALL_CATS=['Humanoid','Industrial','Service','Consumer','Drones','Educational','Medical','Agricultural','Military'];
+
+// Load robots.json then refresh whatever page is currently showing
+function loadRobots(){
+  return fetch('data/robots.json',{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw new Error('robots.json '+r.status);return r.json();})
+    .then(data=>{
+      ROBOTS.length=0; ROBOTS.push.apply(ROBOTS,data);
+      window.ROBOTS = ROBOTS;
+      // Recompute brand list now that we have data
+      ALL_BRANDS.length=0;
+      const brandSet=new Set(ROBOTS.map(r=>r.brand).filter(b=>b&&b!=='undefined'));
+      [...brandSet].sort().forEach(b=>ALL_BRANDS.push(b));
+      // Re-render the currently active page
+      try{
+        const active=document.querySelector('.page.active');
+        const id=active?active.id:'page-home';
+        if(id==='page-home'&&typeof renderHome==='function')renderHome();
+        else if(id==='page-db'){if(typeof buildDbFilters==='function')buildDbFilters();if(typeof renderDb==='function')renderDb();}
+        else if(id==='page-rankings'&&typeof renderRankings==='function')renderRankings();
+        else if(id==='page-finder'&&typeof renderFinder==='function')renderFinder();
+        else if(id==='page-manufacturers'&&typeof renderManufacturers==='function')renderManufacturers();
+        else if(id==='page-news'&&typeof renderNews==='function')renderNews();
+        // Update home count badge regardless of current page
+        if(typeof renderHome==='function'&&document.getElementById('home-robots'))renderHome();
+      }catch(e){console.error('Re-render after robots load failed:',e);}
+      document.dispatchEvent(new CustomEvent('robots-loaded',{detail:{robots:ROBOTS}}));
+    })
+    .catch(e=>{console.error('Failed to load robots.json:',e);});
+}
+loadRobots();
 
 // ════════════ NAVIGATION ════════════
 function goPage(p){
@@ -974,33 +985,57 @@ function goPage(p){
 
 // ════════════ HOME ════════════
 function renderHome(){
+  // Live counts
+  const total=ROBOTS.length;
+  const mfrCount=new Set(ROBOTS.map(r=>r.brand).filter(Boolean)).size;
+  const elTop=document.getElementById('home-top-count');if(elTop)elTop.textContent=total;
+  const elHero=document.getElementById('home-hero-count');if(elHero)elHero.textContent=total;
+  const elMfr=document.getElementById('home-mfr-count');if(elMfr)elMfr.textContent=mfrCount;
   // Brand tags
-  document.getElementById('brand-tags-home').innerHTML=ALL_BRANDS.map(b=>`<span class="btag" onclick="searchBrand('${b}')">${b}</span>`).join('');
-  // Featured robots
-  const top4=[...ROBOTS].sort((a,b)=>b.score-a.score).slice(0,4);
-  document.getElementById('home-robots').innerHTML=top4.map(r=>`
-    <div class="robot-card" onclick="openProfile('${r.id}')">
-      <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.style.display='none'">`:''}${r.badge?`<div class="rc-badge ${r.bc}">${r.badge}</div>`:''}<span class="rc-emoji">${r.img?'':r.fig}</span></div>
+  const btHome=document.getElementById('brand-tags-home');
+  if(btHome)btHome.innerHTML=ALL_BRANDS.map(b=>`<span class="btag" onclick="searchBrand('${b}')">${b}</span>`).join('');
+  // Featured robots — defensive against missing fields
+  const top4=[...ROBOTS].sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,4);
+  document.getElementById('home-robots').innerHTML=top4.map(r=>{
+    const tags=Array.isArray(r.tags)?r.tags:[];
+    const rating=r.rating||0;
+    const reviews=r.reviews||0;
+    const price=r.price||0;
+    const name=r.name||'';
+    const brand=r.brand||'';
+    const fig=r.fig||'🤖';
+    const id=r.id||'';
+    return `
+    <div class="robot-card" onclick="openProfile('${id}')">
+      <div class="rc-img">${r.img?`<img src="${r.img}" alt="${name}" onerror="this.style.display='none'">`:''}${r.badge?`<div class="rc-badge ${r.bc||''}">${r.badge}</div>`:''}<span class="rc-emoji">${r.img?'':fig}</span></div>
       <div class="rc-info">
-        <div class="rc-brand">${r.brand}</div>
-        <div class="rc-name">${r.name}</div>
-        <div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div>
+        <div class="rc-brand">${brand}</div>
+        <div class="rc-name">${name}</div>
+        <div class="rc-specs">${tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div>
         <div class="rc-footer">
-          <div class="rc-rating"><span class="stars">${'★'.repeat(Math.round(r.rating))}</span><span style="margin-left:3px">${r.rating} (${r.reviews})</span></div>
-          <span style="font-size:12px;font-weight:800">${r.price>0?'$'+r.price.toLocaleString():'POA'}</span>
+          <div class="rc-rating"><span class="stars">${'★'.repeat(Math.round(rating))}</span><span style="margin-left:3px">${rating} (${reviews})</span></div>
+          <span style="font-size:12px;font-weight:800">${price>0?'$'+price.toLocaleString():'POA'}</span>
         </div>
       </div>
-    </div>`).join('');
-  // Rankings
-  const top5=[...ROBOTS].sort((a,b)=>b.score-a.score).slice(0,5);
+    </div>`;}).join('');
+  // Rankings — defensive against missing fields
+  const top5=[...ROBOTS].sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,5);
   const ranks=['gold','silver','bronze','',''];
-  document.getElementById('home-rankings').innerHTML=top5.map((r,i)=>`
-    <div class="chart-item" onclick="openProfile('${r.id}')">
+  document.getElementById('home-rankings').innerHTML=top5.map((r,i)=>{
+    const tags=Array.isArray(r.tags)?r.tags:[];
+    const score=r.score||0;
+    const fig=r.fig||'🤖';
+    const id=r.id||'';
+    const brand=r.brand||'';
+    const name=r.name||'';
+    const sub=r.sub||'';
+    return `
+    <div class="chart-item" onclick="openProfile('${id}')">
       <div class="chart-rank ${ranks[i]}">${i+1}</div>
-      <div class="chart-icon">${r.fig}</div>
-      <div class="chart-info"><div class="chart-name">${r.brand} ${r.name}</div><div class="chart-sub">${r.tags[0]} · ${r.sub}</div></div>
-      <div class="chart-score"><span class="score-num">${r.score}</span><div class="score-bar-mini"><div class="score-fill-mini" style="width:${r.score}%"></div></div></div>
-    </div>`).join('');
+      <div class="chart-icon">${fig}</div>
+      <div class="chart-info"><div class="chart-name">${brand} ${name}</div><div class="chart-sub">${tags[0]||''} · ${sub}</div></div>
+      <div class="chart-score"><span class="score-num">${score}</span><div class="score-bar-mini"><div class="score-fill-mini" style="width:${score}%"></div></div></div>
+    </div>`;}).join('');
 }
 
 function heroSearch(){
@@ -1827,44 +1862,65 @@ function selectForSlot(id){
 }
 
 function renderCompare(){
-  // Robot selector grid
-  document.getElementById('rs-grid').innerHTML=ROBOTS.map(r=>`<div class="rs-item${compareSlots.some(s=>s&&s.id===r.id)?' selected':''}" onclick="selectForSlot('${r.id}')"><div class="rs-brand">${r.brand}</div><div class="rs-name">${r.name}</div><div class="rs-score">${r.score}</div></div>`).join('');
-  // Slots
+  // Robot selector grid — defensive against missing fields
+  document.getElementById('rs-grid').innerHTML=ROBOTS.map(r=>{
+    const id=r.id||'';
+    const brand=r.brand||'';
+    const name=r.name||'(unnamed)';
+    const score=r.score||0;
+    const isSelected=compareSlots.some(s=>s&&s.id===r.id);
+    return `<div class="rs-item${isSelected?' selected':''}" onclick="selectForSlot('${id}')"><div class="rs-brand">${brand}</div><div class="rs-name">${name}</div><div class="rs-score">${score}</div></div>`;
+  }).join('');
+  // Slots — defensive
   for(let i=0;i<4;i++){
     const slot=document.getElementById('cslot-'+i);const r=compareSlots[i];
     if(r){
+      const tags=Array.isArray(r.tags)?r.tags:[];
       slot.className='compare-slot filled';slot.onclick=null;
-      slot.innerHTML=`<div class="slot-brand">${r.brand}</div><div class="slot-name">${r.fig} ${r.name}</div><div>${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join(' ')}</div><span class="slot-remove" onclick="removeSlot(${i})">✕ Remove</span>`;
+      slot.innerHTML=`<div class="slot-brand">${r.brand||''}</div><div class="slot-name">${r.fig||'🤖'} ${r.name||''}</div><div>${tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join(' ')}</div><span class="slot-remove" onclick="event.stopPropagation();removeSlot(${i})">✕ Remove</span>`;
     } else {
       slot.className='compare-slot';slot.onclick=()=>openSlot(i);
       slot.innerHTML=`<div class="slot-plus">+</div><div class="slot-placeholder">Robot ${i+1}</div>`;
     }
   }
-  // Comparison table
+  // Compare action button — show when 2+ robots are selected
   const active=compareSlots.filter(Boolean);
+  const btnWrap=document.getElementById('compare-action');
+  if(btnWrap){
+    if(active.length>=2){
+      btnWrap.style.display='flex';
+      btnWrap.innerHTML=`<button class="btn btn-primary" style="padding:12px 28px;font-size:14px" onclick="scrollToCompareTable()">📊 Compare ${active.length} Robot${active.length>1?'s':''} →</button>`;
+    } else {
+      btnWrap.style.display='flex';
+      btnWrap.innerHTML=`<div style="color:var(--mut);font-size:12px;font-style:italic">Pick at least 2 robots to compare · ${active.length} selected</div>`;
+    }
+  }
+  // Comparison table
   const wrap=document.getElementById('compare-table');
-  if(active.length<2){wrap.innerHTML='<p style="text-align:center;color:var(--mut);padding:30px;font-size:13px">Select at least 2 robots to compare</p>';return;}
-  const ps=r=>r.price>0?'$'+r.price.toLocaleString():'POA';
+  if(active.length<2){wrap.innerHTML='';return;}
+  // Defensive value helpers
+  const ps=r=>(r.price||0)>0?'$'+r.price.toLocaleString():'POA';
   const fv=(r,field,unit='')=>r[field]?(r[field]+unit):'—';
+  const perf=(r,k)=>(r.perf&&typeof r.perf[k]!=='undefined')?r.perf[k]:0;
   const fields=[
     {cat:true,label:'OVERVIEW'},
-    {label:'Category',fn:r=>r.cat},
-    {label:'Subcategory',fn:r=>r.sub},
-    {label:'Year',fn:r=>r.year,num:true,higher:true},
-    {label:'Origin',fn:r=>r.origin},
-    {label:'Status',fn:r=>r.status},
+    {label:'Category',fn:r=>r.cat||'—'},
+    {label:'Subcategory',fn:r=>r.sub||'—'},
+    {label:'Year',fn:r=>r.year||'—',num:true,nv:r=>r.year||0,higher:true},
+    {label:'Origin',fn:r=>r.origin||'—'},
+    {label:'Status',fn:r=>r.status||'—'},
     {cat:true,label:'PERFORMANCE'},
-    {label:'Expert Score',fn:r=>r.score,num:true,higher:true},
-    {label:'User Rating',fn:r=>r.rating+'★',num:true,nv:r=>r.rating,higher:true},
+    {label:'Expert Score',fn:r=>r.score||0,num:true,nv:r=>r.score||0,higher:true},
+    {label:'User Rating',fn:r=>(r.rating||0)+'★',num:true,nv:r=>r.rating||0,higher:true},
     {label:'Payload',fn:r=>fv(r,'payload','kg'),num:true,nv:r=>r.payload||0,higher:true},
     {label:'Battery',fn:r=>fv(r,'battery','min'),num:true,nv:r=>r.battery||0,higher:true},
     {label:'Speed',fn:r=>fv(r,'speed','m/s'),num:true,nv:r=>r.speed||0,higher:true},
     {label:'DOF',fn:r=>r.dof||'—',num:true,nv:r=>r.dof||0,higher:true},
     {cat:true,label:'SCORES'},
-    {label:'Mobility',fn:r=>r.perf.Mobility,num:true,higher:true},
-    {label:'Dexterity',fn:r=>r.perf.Dexterity,num:true,higher:true},
-    {label:'Autonomy',fn:r=>r.perf.Autonomy,num:true,higher:true},
-    {label:'Durability',fn:r=>r.perf.Durability,num:true,higher:true},
+    {label:'Mobility',fn:r=>perf(r,'Mobility'),num:true,nv:r=>perf(r,'Mobility'),higher:true},
+    {label:'Dexterity',fn:r=>perf(r,'Dexterity'),num:true,nv:r=>perf(r,'Dexterity'),higher:true},
+    {label:'Autonomy',fn:r=>perf(r,'Autonomy'),num:true,nv:r=>perf(r,'Autonomy'),higher:true},
+    {label:'Durability',fn:r=>perf(r,'Durability'),num:true,nv:r=>perf(r,'Durability'),higher:true},
     {cat:true,label:'TECHNOLOGY'},
     {label:'AI / Vision',fn:r=>r.ai?'✓ Yes':'—'},
     {label:'ROS Compatible',fn:r=>r.ros?'✓ Yes':'—'},
@@ -1874,17 +1930,31 @@ function renderCompare(){
     {label:'Price',fn:r=>ps(r)},
   ];
   const cols=active.length;
-  const thCells=active.map(r=>`<th>${r.fig} ${r.name}</th>`).join('');
+  const thCells=active.map(r=>`<th>${r.fig||'🤖'} ${r.name||'(unnamed)'}</th>`).join('');
   const bodyRows=fields.map(row=>{
     if(row.cat)return`<tr class="cat-row"><td colspan="${cols+1}">${row.label}</td></tr>`;
-    const vals=active.map(r=>row.fn(r));
-    const nums=row.num?active.map(r=>row.nv?row.nv(r):(typeof row.fn(r)==='number'?row.fn(r):parseFloat(row.fn(r))||0)):null;
+    let vals,nums;
+    try{
+      vals=active.map(r=>row.fn(r));
+      nums=row.num?active.map(r=>row.nv?row.nv(r):(typeof row.fn(r)==='number'?row.fn(r):parseFloat(row.fn(r))||0)):null;
+    }catch(e){
+      console.warn('Compare row failed for',row.label,e);
+      vals=active.map(()=>'—');
+      nums=null;
+    }
     let bestIdx=-1;
-    if(nums){const mx=Math.max(...nums);if(nums.filter(n=>n===mx).length===1)bestIdx=nums.indexOf(mx);}
-    const tds=vals.map((v,i)=>`<td>${i===bestIdx&&nums[i]>0?`<span class="best-val">${v}</span>`:v}</td>`).join('');
+    if(nums){const mx=Math.max(...nums);if(mx>0&&nums.filter(n=>n===mx).length===1)bestIdx=nums.indexOf(mx);}
+    const tds=vals.map((v,i)=>`<td>${i===bestIdx?`<span class="best-val">${v}</span>`:v}</td>`).join('');
     return`<tr><td>${row.label}</td>${tds}</tr>`;
   }).join('');
-  wrap.innerHTML=`<div class="compare-table-wrap"><table class="compare-table"><thead><tr><th>Specification</th>${thCells}</tr></thead><tbody>${bodyRows}</tbody></table></div>`;
+  wrap.innerHTML=`<div class="compare-table-wrap" id="compare-table-rendered"><table class="compare-table"><thead><tr><th>Specification</th>${thCells}</tr></thead><tbody>${bodyRows}</tbody></table></div>`;
+}
+
+function scrollToCompareTable(){
+  const el=document.getElementById('compare-table-rendered');
+  if(el){
+    el.scrollIntoView({behavior:'smooth',block:'start'});
+  }
 }
 
 // ════════════ RANKINGS ════════════
