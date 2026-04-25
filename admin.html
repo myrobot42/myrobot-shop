@@ -1838,17 +1838,17 @@ async function handleGeneral(cmd) {
 // ════ DATABASE ════
 function renderDB() {
   const q = (document.getElementById('db-search-input')?.value || '').toLowerCase();
-  const filtered = ROBOTS.filter(r => !q || r.name.toLowerCase().includes(q) || r.brand.toLowerCase().includes(q) || r.cat.toLowerCase().includes(q));
+  const filtered = ROBOTS.filter(r => !q || (r.name||'').toLowerCase().includes(q) || (r.brand||'').toLowerCase().includes(q) || (r.cat||'').toLowerCase().includes(q));
   document.getElementById('db-count').textContent = `(${filtered.length} of ${ROBOTS.length})`;
   const tbody = document.getElementById('robot-tbody');
   tbody.innerHTML = filtered.map(r => `
     <tr>
-      <td><span style="font-size:16px;margin-right:7px">${r.fig}</span><strong style="font-size:13px">${r.name}</strong></td>
-      <td style="color:var(--mut)">${r.brand}</td>
-      <td><span style="font-size:10px;background:var(--bg4);padding:2px 7px;border-radius:4px;color:var(--mut)">${r.cat}</span></td>
-      <td><span class="score-badge">${r.score}</span></td>
+      <td><span style="font-size:16px;margin-right:7px">${r.fig||'🤖'}</span><strong style="font-size:13px">${r.name||'(unnamed)'}</strong></td>
+      <td style="color:var(--mut)">${r.brand||''}</td>
+      <td><span style="font-size:10px;background:var(--bg4);padding:2px 7px;border-radius:4px;color:var(--mut)">${r.cat||''}</span></td>
+      <td><span class="score-badge">${r.score||0}</span></td>
       <td style="font-family:'Space Mono',monospace;font-size:11px">${r.price>0?'$'+r.price.toLocaleString():'POA'}</td>
-      <td><span class="status-badge ${r.status.toLowerCase()}">${r.status}</span></td>
+      <td><span class="status-badge ${(r.status||'unknown').toLowerCase()}">${r.status||'Unknown'}</span></td>
       <td><button class="tbl-action" onclick="editRobotPrompt('${r.id}')">Edit</button> <button class="tbl-action del" onclick="deleteRobot('${r.id}')">Del</button></td>
     </tr>`).join('');
 }
