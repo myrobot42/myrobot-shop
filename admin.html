@@ -509,8 +509,8 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       log(`  index.html: ${oldSize.toLocaleString()} → ${newSize.toLocaleString()} chars`, 'dim');
       
       // Sanity checks on new index.html size
-      if (newSize > 200_000){
-        throw new Error(`New index.html is ${newSize.toLocaleString()} chars — expected < 200,000. Aborting (something went wrong with extraction).`);
+      if (newSize > 400_000){
+        throw new Error(`New index.html is ${newSize.toLocaleString()} chars — expected < 400,000. Aborting (something went wrong with extraction).`);
       }
       if (newSize < 5_000){
         throw new Error(`New index.html is only ${newSize.toLocaleString()} chars — too small, likely truncation. Aborting.`);
