@@ -1149,6 +1149,7 @@ function approveQueued(id){
   r.status='approved';
   const robot={id:(r.brand+'-'+r.name).toLowerCase().replace(/[^a-z0-9]+/g,'-'),name:r.name,brand:r.brand,cat:r.category||'Service',sub:'',tags:[],fig:'🤖',img:'',score:75,rating:4.0,price:0,desc:r.description||'',highlights:[],perf:{Mobility:75,Dexterity:70,Autonomy:70,Durability:75}};
   ROBOTS.push(robot);
+  saveDB();
   saveQueue();renderQueue();updateBadges();
   addMsg(`✅ Added ${r.name} to database from Review Queue`,'system');
   addLog('success', `QUEUE — Approved: ${r.name}`);
