@@ -1782,6 +1782,26 @@ function buildSpecTable(r) {
 // ════════════ END spec table ════════════
 
 
+function openLightbox(src, alt){
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  img.alt = alt || '';
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(){
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+// Esc key to close
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape'){
+    const lb = document.getElementById('lightbox');
+    if(lb && lb.style.display === 'flex') closeLightbox();
+  }
+});
+
 function openProfile(id){
   const r=ROBOTS.find(x=>x.id===id);
   if(!r)return;
@@ -1791,9 +1811,13 @@ function openProfile(id){
   const figEl = document.getElementById('profile-fig');
   const safeFig = r.fig || '🤖';
   if(r.img && r.img.trim()){
-    // Use empty alt + onerror fallback, prevent text overflow if image is hotlink-blocked
-    figEl.innerHTML=`<img src="${r.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block" onerror="this.style.display='none';this.parentNode.insertAdjacentHTML('beforeend','<span style=&quot;font-size:72px&quot;>${safeFig}</span>')">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
+    const escImg = r.img.replace(/'/g,"\\'");
+    figEl.style.cursor = 'zoom-in';
+    figEl.onclick = () => openLightbox(r.img, r.name||'');
+    figEl.innerHTML=`<img src="${r.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block" onerror="this.style.display='none';this.parentNode.style.cursor='default';this.parentNode.onclick=null;this.parentNode.insertAdjacentHTML('beforeend','<span style=&quot;font-size:72px&quot;>${safeFig}</span>')">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
   } else {
+    figEl.style.cursor = 'default';
+    figEl.onclick = null;
     figEl.innerHTML=`<span style="font-size:72px">${safeFig}</span>${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
   }
   document.getElementById('profile-brand').textContent=r.brand;
@@ -1830,7 +1854,13 @@ function openProfile(id){
   ].map(rv=>`<div class="review"><div class="review-top"><div class="reviewer"><div class="avatar">${rv.init}</div><div><div class="reviewer-name">${rv.name}</div><div class="reviewer-role">${rv.role}</div></div></div><div class="review-stars">${'★'.repeat(rv.stars)+'☆'.repeat(5-rv.stars)}</div></div><div class="review-text">${rv.text}</div><span class="review-tag">Verified</span></div>`).join('');
   // Similar
   const sim=ROBOTS.filter(x=>x.id!==r.id&&(x.cat===r.cat||x.tags.some(t=>r.tags.includes(t)))).slice(0,4);
-  document.getElementById('profile-similar').innerHTML=sim.map(s=>`<div class="similar-item" onclick="openProfile('${s.id}')"><div class="similar-icon" style="overflow:hidden">${s.img?`<img src="${s.img}" alt="${s.name}" style="width:100%;height:100%;object-fit:cover;border-radius:7px" onerror="this.outerHTML='<span style=\"font-size:18px\">${s.fig}</span>'">`:s.fig}</div><div class="similar-info"><div class="similar-name">${s.name}</div><div class="similar-sub">${s.brand} · ${s.sub}</div></div><div class="similar-price">${s.price>0?'$'+s.price.toLocaleString():'POA'}</div></div>`).join('');
+  document.getElementById('profile-similar').innerHTML=sim.map(s=>{
+    const safeFig = s.fig || '🤖';
+    const imgHtml = (s.img && s.img.trim())
+      ? `<img src="${s.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:7px;display:block" onerror="this.style.display='none'">`
+      : `<span style="font-size:18px">${safeFig}</span>`;
+    return `<div class="similar-item" onclick="openProfile('${s.id}')"><div class="similar-icon" style="overflow:hidden">${imgHtml}</div><div class="similar-info"><div class="similar-name">${s.name||''}</div><div class="similar-sub">${s.brand||''} · ${s.sub||''}</div></div><div class="similar-price">${s.price>0?'$'+s.price.toLocaleString():'POA'}</div></div>`;
+  }).join('');
   // VS card
   const other=ROBOTS.find(x=>x.id!==r.id&&x.cat===r.cat);
   if(other)document.getElementById('profile-vs').textContent=r.name+' vs '+other.name;
@@ -2506,5 +2536,9 @@ function updateFinderCount(){var list=getFinderFiltered();var el=document.getEle
 function runFinderSearch(){var rs=document.getElementById('finder-results-section');if(rs){rs.classList.add('visible');setTimeout(function(){rs.scrollIntoView({behavior:'smooth',block:'start'});},50);}var cw=document.getElementById('finder-count-wrap');if(cw)cw.style.display='flex';renderFinder();}
 </script>
 
+<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;padding:32px;cursor:zoom-out">
+  <img id="lightbox-img" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:0 12px 60px rgba(0,0,0,.6)">
+  <div style="position:absolute;top:18px;right:24px;color:#fff;font-size:26px;font-weight:300;cursor:pointer;line-height:1;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.1)">×</div>
+</div>
 </body>
 </html>
