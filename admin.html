@@ -352,6 +352,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
     <div class="nav-section">WORKSPACE</div>
     <div class="nav-item active" onclick="showPage('cmd',this)"><span class="nav-icon">⚡</span>Command Centre</div>
     <div class="nav-item" onclick="showPage('db',this)"><span class="nav-icon">🗄️</span>Robot Database</div>
+    <div class="nav-item" onclick="showPage('cleanup',this)"><span class="nav-icon">🔧</span>Data Cleanup <span class="nbadge red" id="nb-cleanup">0</span></div>
     <div class="nav-section">AUTO DISCOVERY</div>
     <div class="nav-item" onclick="showPage('rss',this)"><span class="nav-icon">📡</span>RSS Feeds <span class="nbadge" id="nb-rss">0</span></div>
     <div class="nav-item" onclick="showPage('vault',this)"><span class="nav-icon">🔗</span>URL Vault <span class="nbadge" id="nb-vault">0</span></div>
@@ -436,7 +437,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
           <table class="robot-table" id="robot-table">
             <thead><tr>
               <th>ROBOT</th><th>BRAND</th><th>CATEGORY</th>
-              <th>SCORE</th><th>PRICE</th><th>STATUS</th><th>ACTIONS</th>
+              <th>SCORE</th><th>PRICE</th><th>STATUS</th><th>IMG</th><th>ACTIONS</th>
             </tr></thead>
             <tbody id="robot-tbody"></tbody>
           </table>
@@ -674,6 +675,32 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
               <button class="save-btn" onclick="saveAllImages()">💾 Save All + Deploy</button>
             </div>
             <div id="img-manager-list"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DATA CLEANUP -->
+      <div class="page" id="page-cleanup">
+        <div class="gen-page">
+          <div class="sec-card">
+            <div class="sec-head">🔧 DATA CLEANUP — Detect and fix data quality issues</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:16px;line-height:1.7">
+              Scans your entire database for common corruption patterns. Each issue type can be reviewed individually with side-by-side previews before applying. <strong style="color:var(--acc)">Nothing is committed until you click 💾 Save Cleanup.</strong>
+            </div>
+            <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap">
+              <button class="save-btn" onclick="runCleanupScan()">🔍 Re-scan database</button>
+              <button class="save-btn" onclick="undoLastCleanup()" style="background:var(--bg3);color:var(--txt)">↶ Undo last fix</button>
+              <button class="save-btn" onclick="saveCleanupChanges()" style="background:#16a34a">💾 Save Cleanup + Deploy</button>
+            </div>
+            <div id="cleanup-summary"></div>
+          </div>
+          <div class="sec-card" id="cleanup-detail-card" style="display:none">
+            <div class="sec-head" id="cleanup-detail-title">Reviewing issues</div>
+            <div style="display:flex;gap:8px;margin-bottom:14px">
+              <button class="save-btn" onclick="approveAllVisible()">✓ Approve all visible</button>
+              <button class="save-btn" onclick="cancelDetail()" style="background:var(--bg3);color:var(--txt)">← Back to summary</button>
+            </div>
+            <div id="cleanup-detail-list"></div>
           </div>
         </div>
       </div>
@@ -966,7 +993,7 @@ function showPage(id, el) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   if (el) el.classList.add('active');
-  const titles = {cmd:'⚡ Command Centre', db:'🗄️ Robot Database', logs:'📋 Activity Log', settings:'⚙️ Settings', rss:'📡 RSS Feeds', vault:'🔗 URL Vault', queue:'📥 Review Queue', detected:'🤖 Robots Detected', ingest:'🏭 Brand Ingestion', images:'🖼️ Image Manager'};
+  const titles = {cmd:'⚡ Command Centre', db:'🗄️ Robot Database', cleanup:'🔧 Data Cleanup', logs:'📋 Activity Log', settings:'⚙️ Settings', rss:'📡 RSS Feeds', vault:'🔗 URL Vault', queue:'📥 Review Queue', detected:'🤖 Robots Detected', ingest:'🏭 Brand Ingestion', images:'🖼️ Image Manager'};
   document.getElementById('page-title').textContent = titles[id] || id;
   if (id === 'db') renderDB();
   if (id === 'rss') renderFeeds();
@@ -975,6 +1002,7 @@ function showPage(id, el) {
   if (id === 'detected') renderDetected();
   if (id === 'ingest') renderIngestStats();
     if (id === 'images') renderImgManager();
+  if (id === 'cleanup') runCleanupScan();
 }
 
 // ════ RSS FEEDS ════
@@ -1842,7 +1870,15 @@ function renderDB() {
   const filtered = ROBOTS.filter(r => !q || (r.name||'').toLowerCase().includes(q) || (r.brand||'').toLowerCase().includes(q) || (r.cat||'').toLowerCase().includes(q));
   document.getElementById('db-count').textContent = `(${filtered.length} of ${ROBOTS.length})`;
   const tbody = document.getElementById('robot-tbody');
-  tbody.innerHTML = filtered.map(r => `
+  tbody.innerHTML = filtered.map(r => {
+    const hasImg = !!(r.img && r.img.trim());
+    const galleryCount = Array.isArray(r.gallery) ? r.gallery.filter(g => g && g.trim()).length : 0;
+    let imgInd = '';
+    if (hasImg && galleryCount > 0) imgInd = `<span title="Hero + ${galleryCount} gallery">🖼️ ×${1+galleryCount}</span>`;
+    else if (hasImg) imgInd = `<span title="Hero only">🖼️</span>`;
+    else if (galleryCount > 0) imgInd = `<span title="${galleryCount} gallery, no hero" style="color:#fbbf24">⚠️ ×${galleryCount}</span>`;
+    else imgInd = `<span title="No images" style="color:#ef4444">⚠️</span>`;
+    return `
     <tr>
       <td><span style="font-size:16px;margin-right:7px">${r.fig||'🤖'}</span><strong style="font-size:13px">${r.name||'(unnamed)'}</strong></td>
       <td style="color:var(--mut)">${r.brand||''}</td>
@@ -1850,8 +1886,9 @@ function renderDB() {
       <td><span class="score-badge">${r.score||0}</span></td>
       <td style="font-family:'Space Mono',monospace;font-size:11px">${r.price>0?'$'+r.price.toLocaleString():'POA'}</td>
       <td><span class="status-badge ${(r.status||'unknown').toLowerCase()}">${r.status||'Unknown'}</span></td>
+      <td style="font-size:11px;text-align:center">${imgInd}</td>
       <td><button class="tbl-action" onclick="editRobotPrompt('${r.id}')">Edit</button> <button class="tbl-action del" onclick="deleteRobot('${r.id}')">Del</button></td>
-    </tr>`).join('');
+    </tr>`;}).join('');
 }
 
 function filterDB() { renderDB(); }
@@ -2288,6 +2325,308 @@ async function handleCloudinaryUpload(robotId, input) {
 
 
 
+
+// ════════════════════════════════════════════════════════════════════
+// DATA CLEANUP TOOL — detect & fix data quality issues
+// ════════════════════════════════════════════════════════════════════
+let CLEANUP_ISSUES = {url_in_name: [], empty_name: [], bad_id: [], missing_fields: []};
+let CLEANUP_UNDO = []; // stack of {id, before, after}
+let CLEANUP_IGNORED = JSON.parse(localStorage.getItem('mrsh_cleanup_ignored') || '[]');
+let CLEANUP_PENDING = false; // becomes true once any fix is applied; clears on Save
+let CURRENT_DETAIL = null;
+
+function saveCleanupIgnored(){localStorage.setItem('mrsh_cleanup_ignored', JSON.stringify(CLEANUP_IGNORED));}
+
+// ── Detection ──────────────────────────────────────────
+const URL_REGEX = /^(https?:\/\/[^\s]+?\.(jpg|jpeg|png|webp|gif|svg))(\s+(.*))?$/i;
+const URL_ANYWHERE = /https?:\/\/[^\s]+?\.(jpg|jpeg|png|webp|gif|svg)/i;
+
+function detectUrlInName(r){
+  if (!r.name || typeof r.name !== 'string') return null;
+  const trimmed = r.name.trim();
+  // Match "https://...jpg ActualName" pattern OR pure URL as name
+  const m = URL_REGEX.exec(trimmed);
+  if (m){
+    const url = m[1];
+    const rest = (m[4] || '').trim();
+    return {
+      kind: 'url_in_name',
+      id: r.id,
+      before: {name: r.name, img: r.img || ''},
+      after: {name: rest || '(unnamed)', img: r.img && r.img.trim() ? r.img : url}
+    };
+  }
+  return null;
+}
+
+function detectEmptyName(r){
+  const n = (r.name || '').trim();
+  if (!n || n === '(unnamed)' || n.length < 2 || /^[\W_]+$/.test(n)){
+    return {kind: 'empty_name', id: r.id, before: {name: r.name||''}, after: null};
+  }
+  return null;
+}
+
+function detectBadId(r){
+  if (!r.id) return null;
+  if (/[A-Z]/.test(r.id) || /\s/.test(r.id) || /[^a-z0-9-]/.test(r.id)){
+    const proposed = ((r.brand||'') + '-' + (r.name||'')).toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    if (!proposed || proposed.length < 3) return null;
+    // Check collision
+    const collides = ROBOTS.some(x => x !== r && x.id === proposed);
+    return {
+      kind: 'bad_id',
+      id: r.id,
+      before: {id: r.id},
+      after: {id: collides ? proposed + '-' + Math.random().toString(36).slice(2,5) : proposed},
+      collides
+    };
+  }
+  return null;
+}
+
+function detectMissingFields(r){
+  const missing = [];
+  if (!r.brand || !r.brand.trim()) missing.push('brand');
+  if (!r.cat || !r.cat.trim()) missing.push('cat');
+  if (typeof r.score !== 'number' && !r.score) missing.push('score');
+  if (missing.length){
+    return {kind: 'missing_fields', id: r.id, before: {missing}, after: null};
+  }
+  return null;
+}
+
+// ── Scan ──────────────────────────────────────────
+function runCleanupScan(){
+  CLEANUP_ISSUES = {url_in_name: [], empty_name: [], bad_id: [], missing_fields: []};
+  for (const r of ROBOTS){
+    if (CLEANUP_IGNORED.includes('url_in_name:'+r.id)===false){
+      const u = detectUrlInName(r); if (u) CLEANUP_ISSUES.url_in_name.push(u);
+    }
+    if (CLEANUP_IGNORED.includes('empty_name:'+r.id)===false){
+      const e = detectEmptyName(r); if (e) CLEANUP_ISSUES.empty_name.push(e);
+    }
+    if (CLEANUP_IGNORED.includes('bad_id:'+r.id)===false){
+      const b = detectBadId(r); if (b) CLEANUP_ISSUES.bad_id.push(b);
+    }
+    if (CLEANUP_IGNORED.includes('missing_fields:'+r.id)===false){
+      const m = detectMissingFields(r); if (m) CLEANUP_ISSUES.missing_fields.push(m);
+    }
+  }
+  renderCleanupSummary();
+  // Update the badge
+  const total = CLEANUP_ISSUES.url_in_name.length + CLEANUP_ISSUES.empty_name.length + CLEANUP_ISSUES.bad_id.length + CLEANUP_ISSUES.missing_fields.length;
+  const badge = document.getElementById('nb-cleanup');
+  if (badge){ badge.textContent = total; badge.style.display = total ? '' : 'none'; }
+}
+
+function renderCleanupSummary(){
+  const el = document.getElementById('cleanup-summary');
+  const i = CLEANUP_ISSUES;
+  const total = i.url_in_name.length + i.empty_name.length + i.bad_id.length + i.missing_fields.length;
+  const pendingNote = CLEANUP_PENDING ? '<div style="background:#fde68a;color:#78350f;padding:8px 12px;border-radius:6px;font-size:12px;margin-bottom:14px">⚠️ You have unsaved cleanup changes — click 💾 Save Cleanup + Deploy to push them live.</div>' : '';
+  if (total === 0){
+    el.innerHTML = pendingNote + `<div style="text-align:center;padding:24px;color:var(--mut);font-size:13px">✓ No issues found across ${ROBOTS.length} robots. Database is clean!</div>`;
+    document.getElementById('cleanup-detail-card').style.display = 'none';
+    return;
+  }
+  el.innerHTML = pendingNote + `
+    <div style="font-size:12px;color:var(--mut);margin-bottom:12px">Found <strong style="color:var(--txt)">${total} issues</strong> across ${ROBOTS.length} robots:</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      ${cleanupRow('🔧 URL in name field', i.url_in_name.length, 'url_in_name', 'Auto-extract URL to img field, clean name')}
+      ${cleanupRow('📛 Empty / placeholder names', i.empty_name.length, 'empty_name', 'Manual fix — needs human input')}
+      ${cleanupRow('🆔 Bad ID format', i.bad_id.length, 'bad_id', 'Auto-regenerate as lowercase-hyphenated')}
+      ${cleanupRow('⚠️ Missing critical fields', i.missing_fields.length, 'missing_fields', 'Manual review — brand/category/score missing')}
+    </div>`;
+}
+
+function cleanupRow(label, count, key, desc){
+  const disabled = count === 0;
+  return `<div style="display:flex;align-items:center;gap:12px;padding:10px 14px;background:var(--bg3);border:1px solid var(--bdr);border-radius:7px;${disabled?'opacity:.4':''}">
+    <div style="flex:1">
+      <div style="font-size:13px;font-weight:600">${label}</div>
+      <div style="font-size:11px;color:var(--mut);margin-top:2px">${desc}</div>
+    </div>
+    <div style="font-size:18px;font-weight:700;color:${count>0?'var(--acc)':'var(--mut)'};min-width:40px;text-align:right">${count}</div>
+    <button class="save-btn" onclick="showCleanupDetail('${key}')" ${disabled?'disabled style="opacity:.5;cursor:not-allowed"':''}>Review →</button>
+  </div>`;
+}
+
+// ── Detail review ──────────────────────────────────────────
+function showCleanupDetail(key){
+  CURRENT_DETAIL = key;
+  const issues = CLEANUP_ISSUES[key];
+  const titles = {url_in_name: '🔧 URL in name field', empty_name: '📛 Empty / placeholder names', bad_id: '🆔 Bad ID format', missing_fields: '⚠️ Missing critical fields'};
+  document.getElementById('cleanup-detail-title').textContent = `${titles[key]} — ${issues.length} issues`;
+  document.getElementById('cleanup-detail-card').style.display = 'block';
+  renderCleanupDetailList();
+  // Scroll the detail card into view
+  document.getElementById('cleanup-detail-card').scrollIntoView({behavior:'smooth', block:'start'});
+}
+
+function renderCleanupDetailList(){
+  const issues = CLEANUP_ISSUES[CURRENT_DETAIL];
+  const el = document.getElementById('cleanup-detail-list');
+  if (!issues.length){ el.innerHTML = '<div style="padding:18px;color:var(--mut);font-size:12px;text-align:center">All issues in this category have been resolved.</div>'; return; }
+  el.innerHTML = issues.map((iss, idx) => renderCleanupDetailRow(iss, idx)).join('');
+}
+
+function renderCleanupDetailRow(iss, idx){
+  const r = ROBOTS.find(x => x.id === iss.id);
+  const figName = r ? `${r.fig||'🤖'} ${r.brand||''} — id: <code style="background:var(--bg4);padding:1px 5px;border-radius:3px;font-size:10px">${iss.id}</code>` : iss.id;
+  let body = '';
+  if (iss.kind === 'url_in_name'){
+    body = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:11px;font-family:'Space Mono',monospace">
+        <div><div style="color:var(--mut);font-size:10px;margin-bottom:4px">BEFORE</div>
+          <div><strong>name:</strong> <span style="color:#ef4444;word-break:break-all">${escapeHtml(iss.before.name)}</span></div>
+          <div><strong>img:</strong> <span style="color:var(--mut)">${escapeHtml(iss.before.img||'(empty)')}</span></div>
+        </div>
+        <div><div style="color:var(--mut);font-size:10px;margin-bottom:4px">AFTER</div>
+          <div><strong>name:</strong> <span style="color:#16a34a">${escapeHtml(iss.after.name)}</span></div>
+          <div><strong>img:</strong> <span style="color:#16a34a;word-break:break-all">${escapeHtml(iss.after.img)}</span></div>
+        </div>
+      </div>`;
+  } else if (iss.kind === 'bad_id'){
+    body = `
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;font-size:11px;font-family:'Space Mono',monospace">
+        <div><div style="color:var(--mut);font-size:10px;margin-bottom:4px">BEFORE</div><div style="color:#ef4444">${escapeHtml(iss.before.id)}</div></div>
+        <div><div style="color:var(--mut);font-size:10px;margin-bottom:4px">AFTER ${iss.collides?'<span style="color:#fbbf24">(collision suffix added)</span>':''}</div><div style="color:#16a34a">${escapeHtml(iss.after.id)}</div></div>
+      </div>`;
+  } else if (iss.kind === 'empty_name'){
+    body = `<div style="font-size:12px;color:var(--mut)">Name is empty or placeholder. Robot brand: <strong>${escapeHtml(r&&r.brand||'(no brand)')}</strong>. Use the Edit button to set a proper name, or Delete if junk.</div>`;
+  } else if (iss.kind === 'missing_fields'){
+    body = `<div style="font-size:12px;color:var(--mut)">Missing: <strong style="color:#ef4444">${iss.before.missing.join(', ')}</strong>. Robot: <strong>${escapeHtml(r&&r.name||'(unnamed)')}</strong>. Use Edit to fill in or Delete if junk.</div>`;
+  }
+  // Action buttons differ based on whether fix is auto-applicable
+  const autoFixable = (iss.kind === 'url_in_name' || iss.kind === 'bad_id');
+  const actions = autoFixable
+    ? `<button class="save-btn" onclick="approveFix('${CURRENT_DETAIL}', ${idx})">✓ Apply fix</button>
+       <button class="tbl-action" onclick="ignoreFix('${CURRENT_DETAIL}', ${idx})">Skip</button>
+       <button class="tbl-action del" onclick="deleteFromCleanup('${iss.id}', ${idx})">Delete robot</button>`
+    : `<button class="save-btn" onclick="editFromCleanup('${iss.id}')">Edit robot</button>
+       <button class="tbl-action" onclick="ignoreFix('${CURRENT_DETAIL}', ${idx})">Skip</button>
+       <button class="tbl-action del" onclick="deleteFromCleanup('${iss.id}', ${idx})">Delete robot</button>`;
+  return `<div style="padding:12px;margin-bottom:10px;background:var(--bg3);border:1px solid var(--bdr);border-radius:7px">
+    <div style="font-size:12px;margin-bottom:10px">${figName}</div>
+    ${body}
+    <div style="margin-top:12px;display:flex;gap:6px;justify-content:flex-end">${actions}</div>
+  </div>`;
+}
+
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+
+// ── Apply / approve ──────────────────────────────────────────
+function approveFix(key, idx){
+  const iss = CLEANUP_ISSUES[key][idx];
+  if (!iss) return;
+  const r = ROBOTS.find(x => x.id === iss.id);
+  if (!r){ console.warn('Robot not found:', iss.id); return; }
+  // Capture undo
+  const undoEntry = {kind: iss.kind, id: r.id, before: JSON.parse(JSON.stringify(r))};
+  if (iss.kind === 'url_in_name'){
+    r.name = iss.after.name;
+    r.img = iss.after.img;
+  } else if (iss.kind === 'bad_id'){
+    r.id = iss.after.id;
+  }
+  CLEANUP_UNDO.push(undoEntry);
+  if (CLEANUP_UNDO.length > 50) CLEANUP_UNDO.shift();
+  CLEANUP_PENDING = true;
+  saveDB(); // persist to localStorage immediately
+  CLEANUP_ISSUES[key].splice(idx, 1);
+  renderCleanupDetailList();
+  renderCleanupSummary();
+  addLog && addLog('info', `Cleanup: applied ${iss.kind} fix on ${iss.id}`);
+}
+
+function ignoreFix(key, idx){
+  const iss = CLEANUP_ISSUES[key][idx];
+  if (!iss) return;
+  CLEANUP_IGNORED.push(key + ':' + iss.id);
+  saveCleanupIgnored();
+  CLEANUP_ISSUES[key].splice(idx, 1);
+  renderCleanupDetailList();
+  renderCleanupSummary();
+}
+
+function deleteFromCleanup(id, idx){
+  if (!confirm('Delete this robot permanently? This cannot be undone via the Cleanup undo.')) return;
+  const i = ROBOTS.findIndex(x => x.id === id);
+  if (i >= 0){
+    ROBOTS.splice(i, 1);
+    CLEANUP_PENDING = true;
+    saveDB();
+  }
+  // Remove from issues across all categories that reference this id
+  for (const k of Object.keys(CLEANUP_ISSUES)){
+    CLEANUP_ISSUES[k] = CLEANUP_ISSUES[k].filter(x => x.id !== id);
+  }
+  renderCleanupDetailList();
+  renderCleanupSummary();
+  addLog && addLog('warn', `Cleanup: deleted robot ${id}`);
+}
+
+function editFromCleanup(id){
+  // Use existing edit modal
+  if (typeof openEditModal === 'function') openEditModal(id);
+  else if (typeof editRobotPrompt === 'function') editRobotPrompt(id);
+  else alert('Switch to Robot Database tab to edit ' + id);
+}
+
+function approveAllVisible(){
+  const key = CURRENT_DETAIL;
+  if (!key) return;
+  const issues = CLEANUP_ISSUES[key].slice(); // copy because we'll mutate
+  const autoFixable = (key === 'url_in_name' || key === 'bad_id');
+  if (!autoFixable){ alert('This category requires manual review — use the Edit button on each row.'); return; }
+  if (!confirm(`Auto-apply ${issues.length} fixes? Each is reversible via Undo.`)) return;
+  let applied = 0;
+  for (let i = issues.length - 1; i >= 0; i--){
+    approveFix(key, i);
+    applied++;
+  }
+  alert(`Applied ${applied} fixes. Click 💾 Save Cleanup + Deploy when satisfied.`);
+}
+
+function cancelDetail(){
+  CURRENT_DETAIL = null;
+  document.getElementById('cleanup-detail-card').style.display = 'none';
+}
+
+// ── Undo ──────────────────────────────────────────
+function undoLastCleanup(){
+  if (!CLEANUP_UNDO.length){ alert('Nothing to undo.'); return; }
+  const last = CLEANUP_UNDO.pop();
+  // Find the robot — might be at a different id now if a bad_id fix changed it
+  let r = ROBOTS.find(x => x.id === last.before.id);
+  if (!r){ // try matching on the after-id (i.e. the current id post-fix)
+    // find by name + brand match as last resort
+    r = ROBOTS.find(x => x.name === last.before.name && x.brand === last.before.brand);
+  }
+  if (!r){ alert('Could not find the robot to undo. State may be inconsistent.'); return; }
+  Object.assign(r, last.before);
+  saveDB();
+  runCleanupScan();
+  addLog && addLog('info', `Cleanup: undid ${last.kind} on ${last.before.id}`);
+}
+
+// ── Save & deploy ──────────────────────────────────────────
+async function saveCleanupChanges(){
+  if (!CLEANUP_PENDING){ alert('No pending cleanup changes to save.'); return; }
+  if (!confirm(`Push ${ROBOTS.length} robots (with cleanup fixes applied) to data/robots.json?`)) return;
+  // Reuse the existing deployNow function
+  if (typeof deployNow === 'function'){
+    await deployNow();
+    CLEANUP_PENDING = false;
+    runCleanupScan();
+  } else {
+    alert('Deploy function not available — use the main 🚀 Deploy site button.');
+  }
+}
+
+// ── Init: scan once on page load so the badge is populated ──
+setTimeout(() => { try { runCleanupScan(); } catch(e){ console.warn('Initial cleanup scan failed:', e); } }, 1500);
 
 </script>
 </body>
