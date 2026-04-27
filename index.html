@@ -1789,26 +1789,29 @@ function openProfile(id){
   document.getElementById('profile-crumb-cat').textContent=r.cat;
   document.getElementById('profile-crumb-name').textContent=r.name;
   const figEl = document.getElementById('profile-fig');
-  if(r.img){
-    figEl.innerHTML=`<img src="${r.img}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;border-radius:12px" onerror="this.outerHTML='<span style=\"font-size:72px\">${r.fig}</span>'">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
+  const safeFig = r.fig || '🤖';
+  if(r.img && r.img.trim()){
+    // Use empty alt + onerror fallback, prevent text overflow if image is hotlink-blocked
+    figEl.innerHTML=`<img src="${r.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block" onerror="this.style.display='none';this.parentNode.insertAdjacentHTML('beforeend','<span style=&quot;font-size:72px&quot;>${safeFig}</span>')">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
   } else {
-    figEl.innerHTML=r.fig+(r.badge?`<div class="gallery-badge">${r.badge}</div>`:'');
+    figEl.innerHTML=`<span style="font-size:72px">${safeFig}</span>${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
   }
   document.getElementById('profile-brand').textContent=r.brand;
-  document.getElementById('profile-year-badge').textContent=r.year+' MODEL';
+  document.getElementById('profile-year-badge').textContent=r.year?(r.year+' MODEL'):'';
+  document.getElementById('profile-year-badge').style.display=r.year?'':'none';
   document.getElementById('profile-name').textContent=r.name;
   document.getElementById('profile-tagline').textContent=r.desc;
   document.getElementById('profile-stars').textContent='★'.repeat(Math.round(r.rating))+'☆'.repeat(5-Math.round(r.rating));
   document.getElementById('profile-rating').textContent=r.rating;
-  document.getElementById('profile-reviews').textContent=r.reviews+' reviews';
+  document.getElementById('profile-reviews').textContent=(r.reviews||0)+' reviews';
   document.getElementById('profile-score').textContent=r.score;
   document.getElementById('profile-price').textContent=r.price>0?'$'+r.price.toLocaleString():'POA';
   document.getElementById('profile-price-note').textContent=r.price>0?'Starting at $'+r.price.toLocaleString():'Fleet / enterprise pricing · Quote required';
   // Quick specs
   const specs=[
-    {l:'CATEGORY',v:r.cat,u:''},
-    {l:'STATUS',v:r.status,u:''},
-    {l:'ORIGIN',v:r.origin,u:''},
+    {l:'CATEGORY',v:r.cat||'—',u:''},
+    {l:'STATUS',v:r.status||'—',u:''},
+    {l:'ORIGIN',v:r.origin||'—',u:''},
     {l:'PAYLOAD',v:r.payload||'—',u:r.payload?'kg':''},
     {l:'BATTERY',v:r.battery||'—',u:r.battery?'min':''},
     {l:'SPEED',v:r.speed||'—',u:r.speed?'m/s':''},
@@ -1816,7 +1819,8 @@ function openProfile(id){
   document.getElementById('profile-quick-specs').innerHTML=specs.map(s=>`<div class="qs"><div class="qs-label">${s.l}</div><div class="qs-val">${s.v}<span class="qs-unit"> ${s.u}</span></div></div>`).join('');
   // Performance
   const pcols=['var(--acc)','#7c3aed','var(--grn)','var(--org)'];
-  document.getElementById('profile-perf').innerHTML=Object.entries(r.perf).map(([k,v],i)=>`<div class="perf-card"><div class="perf-top"><span class="perf-label">${k}</span><span class="perf-num" style="color:${pcols[i]}">${v}</span></div><div class="perf-bar"><div class="perf-fill" style="width:${v}%;background:${pcols[i]}"></div></div></div>`).join('');
+  const perfObj=r.perf&&typeof r.perf==='object'?r.perf:{};
+  document.getElementById('profile-perf').innerHTML=Object.entries(perfObj).map(([k,v],i)=>`<div class="perf-card"><div class="perf-top"><span class="perf-label">${k}</span><span class="perf-num" style="color:${pcols[i%4]}">${v}</span></div><div class="perf-bar"><div class="perf-fill" style="width:${v}%;background:${pcols[i%4]}"></div></div></div>`).join('');
   // Specs table
   document.getElementById('profile-specs').innerHTML = buildSpecTable(r);
   // Reviews
