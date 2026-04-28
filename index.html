@@ -925,6 +925,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 // ════════════ ROBOT DATABASE ════════════
 let ROBOTS=[];/* data/robots.json — loaded at runtime */
+// Mascot fallback for any robot without an image
+const MASCOT_URL = 'https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg';
+function mascotImg(r, sz){ const s = sz||'100%'; return `<img src="${MASCOT_URL}" alt="${(r&&r.name)||'Robot'}" style="width:${s};height:${s};object-fit:contain;display:block;background:#fff" loading="lazy">`; }
 let ALL_BRANDS=[]; // populated after robots.json loads
 window.ROBOTS = ROBOTS;
 // ════════════ GLOBALS ════════════
@@ -1021,7 +1024,7 @@ function renderHome(){
     const id=r.id||'';
     return `
     <div class="robot-card" onclick="openProfile('${id}')">
-      <div class="rc-img">${r.img?`<img src="${r.img}" alt="${name}" onerror="this.style.display='none'">`:''}${r.badge?`<div class="rc-badge ${r.bc||''}">${r.badge}</div>`:''}<span class="rc-emoji">${r.img?'':fig}</span></div>
+      <div class="rc-img">${r.img?`<img src="${r.img}" alt="${name}" onerror="this.style.display='none';this.parentNode.querySelector('.rc-mascot').style.display='flex'">`:''}${r.badge?`<div class="rc-badge ${r.bc||''}">${r.badge}</div>`:''}<div class="rc-mascot" style="${r.img?'display:none;':'display:flex;'}position:absolute;inset:0;align-items:center;justify-content:center;background:#fff">${mascotImg(r,'80%')}</div></div>
       <div class="rc-info">
         <div class="rc-brand">${brand}</div>
         <div class="rc-name">${name}</div>
@@ -1046,7 +1049,7 @@ function renderHome(){
     return `
     <div class="chart-item" onclick="openProfile('${id}')">
       <div class="chart-rank ${ranks[i]}">${i+1}</div>
-      <div class="chart-icon">${fig}</div>
+      <div class="chart-icon" style="overflow:hidden;background:#fff">${r.img?`<img src="${r.img}" alt="${name}" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain'">`:`<img src="${MASCOT_URL}" alt="${name}" style="width:100%;height:100%;object-fit:contain;display:block">`}</div>
       <div class="chart-info"><div class="chart-name">${brand} ${name}</div><div class="chart-sub">${tags[0]||''} · ${sub}</div></div>
       <div class="chart-score"><span class="score-num">${score}</span><div class="score-bar-mini"><div class="score-fill-mini" style="width:${score}%"></div></div></div>
     </div>`;}).join('');
@@ -1127,7 +1130,7 @@ function renderDb(){
     c.innerHTML=`<div class="robot-list">${list.map((r,i)=>`
       <div class="robot-row" onclick="openProfile('${r.id}')">
         <div class="rr-rank ${ranks[i]||''}">${i+1}</div>
-        <div class="rr-icon">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:48px;height:48px;object-fit:cover;border-radius:9px;display:block" onerror="this.style.display='none';this.parentNode.innerHTML='<span style=\"font-size:24px\">${r.fig}</span>'">`:r.fig}</div>
+        <div class="rr-icon">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:48px;height:48px;object-fit:cover;border-radius:9px;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain';this.style.background='#fff'">`:`<img src="${MASCOT_URL}" style="width:48px;height:48px;object-fit:contain;border-radius:9px;display:block;background:#fff">`}</div>
         <div class="rr-info">
           <div class="rr-brand">${r.brand} · ${r.year}</div>
           <div class="rr-name">${r.name}</div>
@@ -1152,7 +1155,7 @@ function renderDb(){
   } else {
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
-        <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.style.display='none'">`:''}${r.img?'':r.fig}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
+        <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain';this.style.background='#fff'">`:`<img src="${MASCOT_URL}" alt="${r.name}" style="width:100%;height:100%;object-fit:contain;position:absolute;inset:0;background:#fff">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
         <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${r.price>0?'$'+r.price.toLocaleString():'POA'}</span><span style="padding:2px 7px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800">${r.score}</span></div></div>
       </div>`).join('')}</div>`;
   }
@@ -1823,16 +1826,14 @@ function openProfile(id){
   document.getElementById('profile-crumb-cat').textContent=r.cat;
   document.getElementById('profile-crumb-name').textContent=r.name;
   const figEl = document.getElementById('profile-fig');
-  const safeFig = r.fig || '🤖';
   if(r.img && r.img.trim()){
-    const escImg = r.img.replace(/'/g,"\\'");
     figEl.style.cursor = 'zoom-in';
     figEl.onclick = () => openLightbox(r.img, r.name||'');
-    figEl.innerHTML=`<img src="${r.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block" onerror="this.style.display='none';this.parentNode.style.cursor='default';this.parentNode.onclick=null;this.parentNode.insertAdjacentHTML('beforeend','<span style=&quot;font-size:72px&quot;>${safeFig}</span>')">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
+    figEl.innerHTML=`<img src="${r.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain';this.style.background='#fff'">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
   } else {
-    figEl.style.cursor = 'default';
-    figEl.onclick = null;
-    figEl.innerHTML=`<span style="font-size:72px">${safeFig}</span>${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
+    figEl.style.cursor = 'zoom-in';
+    figEl.onclick = () => openLightbox(MASCOT_URL, r.name||'');
+    figEl.innerHTML=`<img src="${MASCOT_URL}" alt="" style="width:100%;height:100%;object-fit:contain;border-radius:12px;display:block;background:#fff">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
   }
   document.getElementById('profile-brand').textContent=r.brand;
   document.getElementById('profile-year-badge').textContent=r.year?(r.year+' MODEL'):'';
@@ -1869,10 +1870,9 @@ function openProfile(id){
   // Similar
   const sim=ROBOTS.filter(x=>x.id!==r.id&&(x.cat===r.cat||x.tags.some(t=>r.tags.includes(t)))).slice(0,4);
   document.getElementById('profile-similar').innerHTML=sim.map(s=>{
-    const safeFig = s.fig || '🤖';
     const imgHtml = (s.img && s.img.trim())
-      ? `<img src="${s.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:7px;display:block" onerror="this.style.display='none'">`
-      : `<span style="font-size:18px">${safeFig}</span>`;
+      ? `<img src="${s.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:7px;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain';this.style.background='#fff'">`
+      : `<img src="${MASCOT_URL}" alt="" style="width:100%;height:100%;object-fit:contain;border-radius:7px;display:block;background:#fff">`;
     return `<div class="similar-item" onclick="openProfile('${s.id}')"><div class="similar-icon" style="overflow:hidden">${imgHtml}</div><div class="similar-info"><div class="similar-name">${s.name||''}</div><div class="similar-sub">${s.brand||''} · ${s.sub||''}</div></div><div class="similar-price">${s.price>0?'$'+s.price.toLocaleString():'POA'}</div></div>`;
   }).join('');
   // VS card
@@ -2018,7 +2018,7 @@ function renderRankings(cat){
   document.getElementById('rankings-list').innerHTML=list.map((r,i)=>`
     <div class="rank-item" onclick="openProfile('${r.id}')">
       <div class="rank-num ${ranks[i]||''}">${i+1}</div>
-      <div class="rank-icon" style="overflow:hidden">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;border-radius:9px" onerror="this.outerHTML='<span style=\"font-size:24px\">${r.fig}</span>'">`:r.fig}</div>
+      <div class="rank-icon" style="overflow:hidden;background:#fff">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;border-radius:9px" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain'">`:`<img src="${MASCOT_URL}" alt="${r.name}" style="width:100%;height:100%;object-fit:contain;border-radius:9px">`}</div>
       <div class="rank-info">
         <div class="rank-brand">${r.brand}</div>
         <div class="rank-name">${r.name}</div>
@@ -2250,7 +2250,7 @@ function renderFinder(){
   } else {
     c.innerHTML='<div class="frgrid">'+list.map(function(r,i){
       return '<div class="frgc" onclick="openProfile(\''+r.id+'\')">'
-        +'<div class="frgci">'+(r.img?'<img src="'+r.img+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:0" onerror="this.style.display=\'none\'">':'')+(r.img?'':r.fig)+'<div style="position:absolute;top:4px;left:4px;width:15px;height:15px;border-radius:50%;background:var(--txt);color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center">'+(i+1)+'</div></div>'
+        +'<div class="frgci" style="background:#fff">'+(r.img?'<img src="'+r.img+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:0" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'">':'<img src="'+MASCOT_URL+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:contain;position:absolute;inset:0">')+'<div style="position:absolute;top:4px;left:4px;width:15px;height:15px;border-radius:50%;background:var(--txt);color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">'+(i+1)+'</div></div>'
         +'<div class="frgcb"><div class="frgcbrand">'+r.brand+'</div><div class="frgcname">'+r.name+'</div><div class="frgcsub">'+r.sub+'</div><div class="frgcfoot"><div class="frgcprice">'+(r.price>0?'$'+r.price.toLocaleString():'POA')+'</div><div class="frgcscore">'+r.score+'</div></div></div>'
       +'</div>';
     }).join('')+'</div>';
@@ -2278,7 +2278,7 @@ function renderManufacturers(){
   document.getElementById('mfr-list').innerHTML='<div class="brand-grid">'+sorted.map(function(m){
     const avail=m.robots.filter(function(r){return (r.status||'').toLowerCase().match(/active|available/);}).length;
     const bn=m.brand.replace(/'/g,'');
-    const thumb=m.img?('<img src="'+m.img+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px" onerror="this.parentNode.style.display=&apos;none&apos;">'):('<span style="font-size:28px">'+m.fig+'</span>');
+    const thumb=m.img?('<img src="'+m.img+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\';this.style.background=\'#fff\'">'):('<img src="'+MASCOT_URL+'" style="width:100%;height:100%;object-fit:contain;border-radius:12px;background:#fff">');
     return '<div class="brand-card" onclick="searchBrand(&apos;'+bn+'&apos;)"><div class="brand-card-logo">'+thumb+'</div><div class="brand-card-name">'+m.brand+'</div><div class="brand-card-cat">'+[...m.cats].slice(0,2).join(' &middot; ')+'</div><div class="brand-card-stats"><div><div class="brand-stat-num">'+m.robots.length+'</div><div class="brand-stat-lbl">Robots</div></div><div><div class="brand-stat-num" style="color:var(--acc)">'+m.topScore+'</div><div class="brand-stat-lbl">Top Score</div></div><div><div class="brand-stat-num" style="color:#16a34a">'+avail+'</div><div class="brand-stat-lbl">Active</div></div></div><button class="brand-card-btn" onclick="event.stopPropagation();searchBrand(&apos;'+bn+'&apos;)">View All</button></div>';
   }).join('')+'</div>';
 }
