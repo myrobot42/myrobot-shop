@@ -349,6 +349,31 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
   </div>
 </div>
 
+<!-- WORKER SETUP SCREEN (shown on first worker login if config missing) -->
+<div id="worker-setup-screen" style="display:none;position:fixed;inset:0;background:var(--bg);z-index:1000;flex-direction:column;align-items:center;justify-content:center;padding:20px;overflow-y:auto">
+  <div style="background:var(--bg2);border:1px solid var(--bdr2);border-radius:16px;padding:42px 38px;width:480px;max-width:100%">
+    <div class="login-logo" style="text-align:center"><span class="br">[</span>myrobot<span class="bl">.shop</span><span class="br">]</span></div>
+    <div style="text-align:center;font-size:22px;font-weight:600;margin:18px 0 6px">👷 Worker Setup</div>
+    <div style="text-align:center;font-size:13px;color:var(--mut);margin-bottom:24px;line-height:1.6">First-time setup — your admin should have sent you the values below via WhatsApp. Paste them in once. You won't see this screen again.</div>
+    <div style="margin-bottom:14px">
+      <div style="font-size:11px;color:var(--mut);margin-bottom:5px;font-weight:600">GITHUB TOKEN</div>
+      <input id="ws-gh-token" type="password" class="login-input" style="text-align:left;letter-spacing:0;padding:10px 14px;font-family:'Space Mono',monospace;font-size:12px;margin-bottom:0" placeholder="github_pat_...">
+      <div style="font-size:10px;color:var(--mut);margin-top:5px">Starts with <code>github_pat_</code></div>
+    </div>
+    <div style="margin-bottom:14px">
+      <div style="font-size:11px;color:var(--mut);margin-bottom:5px;font-weight:600">CLOUDINARY CLOUD NAME</div>
+      <input id="ws-cl-name" type="text" class="login-input" style="text-align:left;letter-spacing:0;padding:10px 14px;font-family:'Space Mono',monospace;font-size:12px;margin-bottom:0" placeholder="djrojgec1">
+    </div>
+    <div style="margin-bottom:18px">
+      <div style="font-size:11px;color:var(--mut);margin-bottom:5px;font-weight:600">CLOUDINARY UPLOAD PRESET</div>
+      <input id="ws-cl-preset" type="text" class="login-input" style="text-align:left;letter-spacing:0;padding:10px 14px;font-family:'Space Mono',monospace;font-size:12px;margin-bottom:0" placeholder="myrobot">
+    </div>
+    <button class="login-btn" onclick="saveWorkerSetup()">Save & continue →</button>
+    <div id="ws-err" class="login-err" style="margin-top:10px;text-align:center;color:#ef4444;font-size:12px;min-height:16px"></div>
+    <div style="text-align:center;margin-top:14px"><a onclick="logout()" style="font-size:11px;color:var(--mut);cursor:pointer;text-decoration:underline">← Back to login</a></div>
+  </div>
+</div>
+
 <!-- APP -->
 <div id="app">
 <div class="shell">
@@ -869,6 +894,29 @@ async function initDB() {
 saveDB();
 
 // ════ AUTH ════
+function needsWorkerSetup(){
+  return !localStorage.getItem('mrsh_gh_token')
+      || !localStorage.getItem('mrsh_cloudinary_name')
+      || !localStorage.getItem('mrsh_cloudinary_preset');
+}
+
+function enterApp(role){
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('worker-setup-screen').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+  loadSettings();
+  loadCloudinarySettings();
+  applyRole();
+  addLog('info', role + ' logged in — loading database from live site...');
+  initDB().then(() => {
+    addLog('success', 'Database loaded: ' + ROBOTS.length + ' robots');
+    const greeting = role === 'worker'
+      ? '👷 Welcome — <strong>' + ROBOTS.length + ' robots</strong> in the database. Use Image Manager to add photos.'
+      : '✅ Database synced from live site — <strong>' + ROBOTS.length + ' robots</strong> ready to edit.';
+    addMsg(greeting, 'bot', true);
+  });
+}
+
 function tryLogin() {
   const pw = document.getElementById('pw-input').value;
   const adminStored = localStorage.getItem('mrsh_pw') || ADMIN_PASSWORD;
@@ -878,24 +926,56 @@ function tryLogin() {
   else if (pw === workerStored) role = 'worker';
   if (role) {
     localStorage.setItem('mrsh_role', role);
-    document.getElementById('login-screen').style.display = 'none';
-    document.getElementById('app').style.display = 'block';
-    loadSettings();
-    loadCloudinarySettings();
-    applyRole();
-    addLog('info', role + ' logged in — loading database from live site...');
-    initDB().then(() => {
-      addLog('success', 'Database loaded: ' + ROBOTS.length + ' robots');
-      const greeting = role === 'worker'
-        ? '👷 Welcome — <strong>' + ROBOTS.length + ' robots</strong> in the database. Use Image Manager to add photos.'
-        : '✅ Database synced from live site — <strong>' + ROBOTS.length + ' robots</strong> ready to edit.';
-      addMsg(greeting, 'bot', true);
-    });
+    // For workers — check if first-time setup is needed
+    if (role === 'worker' && needsWorkerSetup()){
+      document.getElementById('login-screen').style.display = 'none';
+      document.getElementById('worker-setup-screen').style.display = 'flex';
+      // Pre-fill any values that DO exist
+      const tEl = document.getElementById('ws-gh-token');
+      const nEl = document.getElementById('ws-cl-name');
+      const pEl = document.getElementById('ws-cl-preset');
+      if (tEl) tEl.value = localStorage.getItem('mrsh_gh_token') || '';
+      if (nEl) nEl.value = localStorage.getItem('mrsh_cloudinary_name') || '';
+      if (pEl) pEl.value = localStorage.getItem('mrsh_cloudinary_preset') || 'myrobot';
+      return;
+    }
+    enterApp(role);
   } else {
     document.getElementById('login-err').textContent = 'Incorrect password. Try again.';
     document.getElementById('pw-input').value = '';
     setTimeout(() => document.getElementById('login-err').textContent = '', 2500);
   }
+}
+
+function saveWorkerSetup(){
+  const tok = document.getElementById('ws-gh-token').value.trim();
+  const name = document.getElementById('ws-cl-name').value.trim();
+  const preset = document.getElementById('ws-cl-preset').value.trim();
+  const err = document.getElementById('ws-err');
+  err.textContent = '';
+  // Validate
+  if (!tok || !tok.startsWith('github_pat_')){
+    err.textContent = 'GitHub token must start with "github_pat_"';
+    return;
+  }
+  if (!name || name.length < 3){
+    err.textContent = 'Cloudinary cloud name looks wrong — should be like "djrojgec1"';
+    return;
+  }
+  if (!preset || preset.length < 3){
+    err.textContent = 'Cloudinary upload preset looks wrong — should be like "myrobot"';
+    return;
+  }
+  // Save
+  localStorage.setItem('mrsh_gh_token', tok);
+  localStorage.setItem('mrsh_cloudinary_name', name);
+  localStorage.setItem('mrsh_cloudinary_preset', preset);
+  // Also default the repo if missing
+  if (!localStorage.getItem('mrsh_gh_repo')){
+    localStorage.setItem('mrsh_gh_repo', 'myrobot42/myrobot-shop');
+  }
+  // Continue to app
+  enterApp('worker');
 }
 
 // Apply role-based UI restrictions
