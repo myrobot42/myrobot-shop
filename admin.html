@@ -467,6 +467,23 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="page" id="page-settings">
         <div class="settings-page">
           <div class="settings-section">
+            <div class="settings-title">👷 Worker Permissions <span style="font-size:10px;color:var(--mut);font-weight:400;margin-left:8px">Admin-only · Phase A</span></div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">Toggle which pages your worker can access. Worker logs in with the worker password (see below). Default access: Image Manager + Robot Database (read-only).</div>
+            <div class="settings-row">
+              <div><div class="sr-label">Worker Password</div><div class="sr-sub">Workers use this to log in. Default: <code>worker2026</code></div></div>
+              <div style="display:flex;gap:8px;align-items:center">
+                <input class="settings-input" type="text" id="worker-pw-input" placeholder="worker2026" value="">
+                <button class="save-btn" onclick="saveWorkerPassword()">Save</button>
+              </div>
+            </div>
+            <div id="worker-perms-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;padding:12px;background:var(--bg3);border-radius:9px;border:1px solid var(--bdr)"></div>
+            <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
+              <button class="save-btn" onclick="saveWorkerPerms()">💾 Save Permissions</button>
+              <button class="save-btn" style="background:var(--bg3);color:var(--txt)" onclick="resetWorkerPerms()">↺ Reset to defaults</button>
+              <button class="save-btn" style="background:#ef4444" onclick="logout()">🚪 Logout (re-test as worker)</button>
+            </div>
+          </div>
+          <div class="settings-section">
             <div class="settings-title">🔑 API Configuration</div>
             <div class="settings-row">
               <div><div class="sr-label">Anthropic API Key</div><div class="sr-sub">Required for Claude AI research & formatting</div></div>
@@ -735,6 +752,31 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
 <script>
 // ════ CONFIG ════
 const ADMIN_PASSWORD = 'robo2026';
+const WORKER_PASSWORD_DEFAULT = 'worker2026';
+// Worker permissions (admin-only editable). Stored in localStorage as mrsh_worker_perms.
+// Each key = page id; value = boolean for access. Defaults are conservative.
+const WORKER_PERM_DEFAULTS = {
+  cmd: false,
+  db: true,         // Robot Database (read-only enforced separately)
+  cleanup: false,
+  rss: false,
+  vault: false,
+  queue: false,
+  detected: false,
+  ingest: false,
+  images: true,     // Image Manager
+  logs: false,
+  settings: false   // CRITICAL: never default true. GitHub token lives here.
+};
+function getWorkerPerms(){
+  try { return Object.assign({}, WORKER_PERM_DEFAULTS, JSON.parse(localStorage.getItem('mrsh_worker_perms') || '{}')); }
+  catch(e){ return Object.assign({}, WORKER_PERM_DEFAULTS); }
+}
+function setWorkerPerms(p){ localStorage.setItem('mrsh_worker_perms', JSON.stringify(p)); }
+function getWorkerPassword(){ return localStorage.getItem('mrsh_worker_pw') || WORKER_PASSWORD_DEFAULT; }
+function getRole(){ return localStorage.getItem('mrsh_role') || 'admin'; }
+function isWorker(){ return getRole() === 'worker'; }
+function isAdmin(){ return getRole() === 'admin'; }
 let API_KEY = localStorage.getItem('mrsh_api_key') || '';
 let GH_TOKEN = localStorage.getItem('mrsh_gh_token') || localStorage.getItem('mrsh_github_token') || '';
 let GH_REPO = localStorage.getItem('mrsh_gh_repo') || localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop'; if(!localStorage.getItem('mrsh_gh_repo')){localStorage.setItem('mrsh_gh_repo','myrobot42/myrobot-shop');}
@@ -829,22 +871,105 @@ saveDB();
 // ════ AUTH ════
 function tryLogin() {
   const pw = document.getElementById('pw-input').value;
-  const stored = localStorage.getItem('mrsh_pw') || ADMIN_PASSWORD;
-  if (pw === stored) {
+  const adminStored = localStorage.getItem('mrsh_pw') || ADMIN_PASSWORD;
+  const workerStored = getWorkerPassword();
+  let role = null;
+  if (pw === adminStored) role = 'admin';
+  else if (pw === workerStored) role = 'worker';
+  if (role) {
+    localStorage.setItem('mrsh_role', role);
     document.getElementById('login-screen').style.display = 'none';
     document.getElementById('app').style.display = 'block';
     loadSettings();
     loadCloudinarySettings();
-    addLog('info', 'Admin logged in — loading database from live site...');
+    applyRole();
+    addLog('info', role + ' logged in — loading database from live site...');
     initDB().then(() => {
       addLog('success', 'Database loaded: ' + ROBOTS.length + ' robots');
-      addMsg('✅ Database synced from live site — <strong>' + ROBOTS.length + ' robots</strong> ready to edit.', 'bot', true);
+      const greeting = role === 'worker'
+        ? '👷 Welcome — <strong>' + ROBOTS.length + ' robots</strong> in the database. Use Image Manager to add photos.'
+        : '✅ Database synced from live site — <strong>' + ROBOTS.length + ' robots</strong> ready to edit.';
+      addMsg(greeting, 'bot', true);
     });
   } else {
     document.getElementById('login-err').textContent = 'Incorrect password. Try again.';
     document.getElementById('pw-input').value = '';
     setTimeout(() => document.getElementById('login-err').textContent = '', 2500);
   }
+}
+
+// Apply role-based UI restrictions
+function applyRole(){
+  const worker = isWorker();
+  const perms = getWorkerPerms();
+  // Map nav item DOM -> page id
+  const navMap = [
+    {id:'cmd', sel:'div.nav-item[onclick*="\'cmd\'"]'},
+    {id:'db', sel:'div.nav-item[onclick*="\'db\'"]'},
+    {id:'cleanup', sel:'div.nav-item[onclick*="\'cleanup\'"]'},
+    {id:'rss', sel:'div.nav-item[onclick*="\'rss\'"]'},
+    {id:'vault', sel:'div.nav-item[onclick*="\'vault\'"]'},
+    {id:'queue', sel:'div.nav-item[onclick*="\'queue\'"]'},
+    {id:'detected', sel:'div.nav-item[onclick*="\'detected\'"]'},
+    {id:'ingest', sel:'div.nav-item[onclick*="\'ingest\'"]'},
+    {id:'images', sel:'div.nav-item[onclick*="\'images\'"]'},
+    {id:'logs', sel:'div.nav-item[onclick*="\'logs\'"]'},
+    {id:'settings', sel:'div.nav-item[onclick*="\'settings\'"]'}
+  ];
+  for (const n of navMap){
+    const el = document.querySelector(n.sel);
+    if (!el) continue;
+    if (worker && !perms[n.id]) el.style.display = 'none';
+    else el.style.display = '';
+  }
+  // Hide section headers that have no visible items
+  document.querySelectorAll('.nav-section').forEach(s => {
+    const sib = [];
+    let next = s.nextElementSibling;
+    while (next && !next.classList.contains('nav-section')){ sib.push(next); next = next.nextElementSibling; }
+    const anyVisible = sib.some(n => n.style.display !== 'none');
+    s.style.display = anyVisible ? '' : 'none';
+  });
+  // Hide Deploy button for workers (they can save, you deploy)
+  const deployBtn = document.getElementById('deploy-btn');
+  if (deployBtn) deployBtn.style.display = worker ? 'none' : '';
+  // Hide Clear Chat for workers (less destructive control surface)
+  const clearBtn = document.querySelector('button[onclick*="clearChat"]');
+  if (clearBtn) clearBtn.style.display = worker ? 'none' : '';
+  // Add a small role badge to top-bar so worker sees they're in worker mode
+  let badge = document.getElementById('role-badge');
+  if (!badge){
+    badge = document.createElement('span');
+    badge.id = 'role-badge';
+    badge.style.cssText = 'padding:4px 10px;border-radius:12px;font-size:10px;font-weight:700;letter-spacing:1px;margin-right:10px;text-transform:uppercase';
+    const tb = document.querySelector('.topbar');
+    if (tb) {
+      // Insert just before the deploy button area
+      const deployBtn = document.getElementById('deploy-btn');
+      if (deployBtn && deployBtn.parentNode) deployBtn.parentNode.insertBefore(badge, deployBtn);
+      else tb.appendChild(badge);
+    }
+  }
+  if (worker){
+    badge.textContent = '👷 Worker';
+    badge.style.background = '#fbbf24';
+    badge.style.color = '#78350f';
+  } else {
+    badge.textContent = '🛡️ Admin';
+    badge.style.background = '#16a34a';
+    badge.style.color = '#fff';
+  }
+  // If currently on a forbidden page, redirect to first allowed page
+  if (worker){
+    const visibleNav = document.querySelector('div.nav-item:not([style*="display: none"])');
+    if (visibleNav) visibleNav.click();
+  }
+}
+
+// Logout (clears role + reshows login screen)
+function logout(){
+  localStorage.removeItem('mrsh_role');
+  location.reload();
 }
 
 function ingestBrand() {
@@ -1012,6 +1137,15 @@ function logout() {
 
 // ════ NAVIGATION ════
 function showPage(id, el) {
+  // Worker access guard
+  if (isWorker()){
+    const perms = getWorkerPerms();
+    if (!perms[id]){
+      addLog && addLog('warn', 'Worker access denied to page: ' + id);
+      alert('⛔ This area is admin-only. Contact your admin if you need access.');
+      return;
+    }
+  }
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
@@ -1910,13 +2044,14 @@ function renderDB() {
       <td style="font-family:'Space Mono',monospace;font-size:11px">${r.price>0?'$'+r.price.toLocaleString():'POA'}</td>
       <td><span class="status-badge ${(r.status||'unknown').toLowerCase()}">${r.status||'Unknown'}</span></td>
       <td style="font-size:11px;text-align:center">${imgInd}</td>
-      <td><button class="tbl-action" onclick="editRobotPrompt('${r.id}')">Edit</button> <button class="tbl-action del" onclick="deleteRobot('${r.id}')">Del</button></td>
+      <td><button class="tbl-action" onclick="editRobotPrompt('${r.id}')">Edit</button> ${isAdmin()?`<button class="tbl-action del" onclick="deleteRobot('${r.id}')">Del</button>`:''}</td>
     </tr>`;}).join('');
 }
 
 function filterDB() { renderDB(); }
 
 function deleteRobot(id) {
+  if (isWorker()){ alert('You don\'t have permission to delete robots.'); return; }
   const r = ROBOTS.find(x => x.id === id);
   if (!r) return;
   if (confirm(`Delete "${r.brand} ${r.name}"?`)) {
@@ -2025,6 +2160,7 @@ function saveEditModal() {
 
 // ════ DEPLOY ════
 async function deployNow() {
+  if (isWorker()){ alert('Workers cannot deploy. Save your changes — admin will deploy.'); return; }
   const btn = document.getElementById('deploy-btn');
   btn.textContent = '⏳ Deploying...';
   btn.disabled = true;
@@ -2140,6 +2276,69 @@ function loadSettings() {
   }
   document.getElementById('stat-api').textContent = API_KEY ? 'Connected' : 'No key';
   document.getElementById('stat-api').style.color = API_KEY ? 'var(--grn)' : 'var(--red)';
+  // Worker password + perms UI
+  const wpwIn = document.getElementById('worker-pw-input');
+  if (wpwIn) wpwIn.value = getWorkerPassword();
+  renderWorkerPermsGrid();
+}
+
+// ════ WORKER PERMISSIONS (admin-only) ════
+const PAGE_LABELS = {
+  cmd: '⚡ Command Centre',
+  db: '🗄️ Robot Database',
+  cleanup: '🔧 Data Cleanup',
+  rss: '📡 RSS Feeds',
+  vault: '🔗 URL Vault',
+  queue: '📥 Review Queue',
+  detected: '🤖 Robots Detected',
+  ingest: '🏭 Brand Ingestion',
+  images: '🖼️ Image Manager',
+  logs: '📋 Activity Log',
+  settings: '⚙️ Settings (DANGER)'
+};
+function renderWorkerPermsGrid(){
+  const grid = document.getElementById('worker-perms-grid');
+  if (!grid) return;
+  const perms = getWorkerPerms();
+  grid.innerHTML = Object.keys(PAGE_LABELS).map(k => {
+    const isDanger = (k === 'settings' || k === 'cmd');
+    const checked = perms[k] ? 'checked' : '';
+    const danger = isDanger ? 'background:#fef2f2;border-color:#fca5a5' : '';
+    return `<label style="display:flex;align-items:center;gap:10px;padding:8px 11px;background:var(--bg2);border:1px solid var(--bdr);border-radius:7px;cursor:pointer;${danger}">
+      <input type="checkbox" id="wp-${k}" ${checked} style="margin:0;cursor:pointer">
+      <span style="font-size:12px;flex:1">${PAGE_LABELS[k]}</span>
+      ${isDanger ? '<span style="font-size:9px;color:#ef4444;font-weight:700">⚠️</span>' : ''}
+    </label>`;
+  }).join('');
+}
+function saveWorkerPerms(){
+  const perms = {};
+  for (const k of Object.keys(PAGE_LABELS)){
+    const cb = document.getElementById('wp-' + k);
+    perms[k] = cb ? cb.checked : false;
+  }
+  // Safety net: warn if Settings is being unlocked (worker would see GitHub token)
+  if (perms.settings){
+    if (!confirm('⚠️ WARNING: Granting Settings access lets the worker see/edit your GitHub token, API keys, and worker permissions themselves.\n\nThis is almost never what you want. Continue?')){
+      return;
+    }
+  }
+  setWorkerPerms(perms);
+  alert('✅ Worker permissions saved. Worker must re-login to see changes.');
+  addLog('info', 'Worker permissions updated: ' + Object.keys(perms).filter(k => perms[k]).join(', '));
+}
+function resetWorkerPerms(){
+  if (!confirm('Reset worker permissions to defaults (Image Manager + Robot Database only)?')) return;
+  localStorage.removeItem('mrsh_worker_perms');
+  renderWorkerPermsGrid();
+  alert('✅ Reset to defaults.');
+}
+function saveWorkerPassword(){
+  const v = document.getElementById('worker-pw-input').value.trim();
+  if (!v || v.length < 4){ alert('Worker password must be at least 4 characters.'); return; }
+  localStorage.setItem('mrsh_worker_pw', v);
+  alert('✅ Worker password saved: ' + v);
+  addLog('info', 'Worker password updated.');
 }
 
 function saveApiKey() {
