@@ -737,7 +737,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
                 <option value="Social">Social</option>
                 <option value="Telepresence">Telepresence</option>
               </select>
-              <button class="save-btn" onclick="saveAllImages()">💾 Save All + Deploy</button>
+              <button class="save-btn" id="save-all-images-btn" onclick="saveAllImages()">💾 Save All + Deploy</button>
             </div>
             <div id="img-manager-list"></div>
           </div>
@@ -1010,9 +1010,13 @@ function applyRole(){
     const anyVisible = sib.some(n => n.style.display !== 'none');
     s.style.display = anyVisible ? '' : 'none';
   });
-  // Hide Deploy button for workers (they can save, you deploy)
+  // Hide global Deploy button for workers — they save through Image Manager instead.
+  // Workers CAN deploy via the Save All button (token is scoped to data/ only).
   const deployBtn = document.getElementById('deploy-btn');
   if (deployBtn) deployBtn.style.display = worker ? 'none' : '';
+  // Rename Image Manager save button for worker (less scary than "Deploy")
+  const saveAllBtn = document.getElementById('save-all-images-btn');
+  if (saveAllBtn) saveAllBtn.textContent = worker ? '💾 Save my changes' : '💾 Save All + Deploy';
   // Hide Clear Chat for workers (less destructive control surface)
   const clearBtn = document.querySelector('button[onclick*="clearChat"]');
   if (clearBtn) clearBtn.style.display = worker ? 'none' : '';
@@ -2240,10 +2244,10 @@ function saveEditModal() {
 
 // ════ DEPLOY ════
 async function deployNow() {
-  if (isWorker()){ alert('Workers cannot deploy. Save your changes — admin will deploy.'); return; }
+  // Workers CAN deploy — the fine-grained GitHub token is scoped to data/ only,
+  // which IS the safety mechanism. They can't change code or settings.
   const btn = document.getElementById('deploy-btn');
-  btn.textContent = '⏳ Deploying...';
-  btn.disabled = true;
+  if (btn) { btn.textContent = '⏳ Deploying...'; btn.disabled = true; }
   addMsg('🚀 Deploying ' + ROBOTS.length + ' robots to data/robots.json...', 'system');
 
   try {
@@ -2307,8 +2311,7 @@ async function deployNow() {
     addLog('error', 'Deploy error: ' + err.message);
   }
 
-  btn.textContent = '🚀 Deploy site';
-  btn.disabled = false;
+  if (btn) { btn.textContent = '🚀 Deploy site'; btn.disabled = false; }
 }
 
 // ════ UTILS ════
