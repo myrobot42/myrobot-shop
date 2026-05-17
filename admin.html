@@ -526,7 +526,10 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
             </div>
             <div class="settings-row">
               <div><div class="sr-label">GitHub Repo</div><div class="sr-sub">e.g. yourusername/myrobot-shop</div></div>
-              <input class="settings-input" type="text" id="gh-repo-input" placeholder="username/repo-name" value="">
+              <div style="display:flex;gap:8px;align-items:center">
+                <input class="settings-input" type="text" id="gh-repo-input" placeholder="username/repo-name" value="">
+                <button class="save-btn" onclick="saveGHRepo()">Save</button>
+              </div>
             </div>
           </div>
           <div class="settings-section">
@@ -558,7 +561,10 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       </div>
       <div class="settings-row">
         <div><div class="sr-label">Upload Preset</div><div class="sr-sub">Unsigned preset name e.g. myrobot</div></div>
-        <input class="settings-input" type="text" id="cloudinary-preset-input" placeholder="myrobot">
+        <div style="display:flex;gap:8px;align-items:center">
+          <input class="settings-input" type="text" id="cloudinary-preset-input" placeholder="myrobot">
+          <button class="save-btn" onclick="saveCloudinary()">Save</button>
+        </div>
       </div>
     </div>
     <div class="settings-section">
@@ -2448,6 +2454,18 @@ function saveGHToken() {
   }
   const repo = document.getElementById('gh-repo-input').value;
   if (repo) { GH_REPO = repo; localStorage.setItem('mrsh_gh_repo', repo); }
+}
+
+function saveGHRepo() {
+  const repo = document.getElementById('gh-repo-input').value.trim();
+  if (!repo || !repo.includes('/')) {
+    alert('Repo must be in the format username/repo-name');
+    return;
+  }
+  GH_REPO = repo;
+  localStorage.setItem('mrsh_gh_repo', repo);
+  addLog('success', 'GitHub repo saved: ' + repo);
+  alert('✓ GitHub repo saved!');
 }
 
 function changePassword() {
