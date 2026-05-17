@@ -809,6 +809,22 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
                 <option value="">All categories</option>
               </select>
             </div>
+            <!-- Bulk fill tools -->
+            <div style="background:#fef9c3;border:1px solid #facc15;border-radius:8px;padding:12px;margin-bottom:14px">
+              <div style="font-size:12px;font-weight:700;color:#713f12;margin-bottom:8px">⚡ Bulk fill tools (uses Anthropic API)</div>
+              <div style="font-size:11px;color:#713f12;line-height:1.6;margin-bottom:10px">
+                <strong>Phase 1</strong>: Fill missing year + origin (country) only — ~$0.005/robot, batches of 10.<br>
+                <strong>Phase 2</strong>: Full re-ingestion of thin records (Standard &lt; 50%) — ~$0.10/robot, one at a time.<br>
+                Both save locally as they go. Click 💾 Save + Deploy when finished to push to live site.
+              </div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap">
+                <button class="save-btn" onclick="bulkFillPhase1()" id="phase1-btn">🔬 Phase 1: Fill year + origin</button>
+                <button class="save-btn" onclick="bulkFillPhase2()" id="phase2-btn" style="background:#7c3aed">🔬 Phase 2: Re-ingest thin records</button>
+                <button class="save-btn" onclick="pauseBulkFill()" id="bulk-pause-btn" style="background:var(--bg3);color:var(--txt);display:none">⏸ Pause</button>
+                <button class="save-btn" onclick="saveDB();deployNow();" style="background:#16a34a">💾 Save + Deploy</button>
+              </div>
+              <div id="bulk-progress" style="margin-top:10px;font-size:11px;color:#713f12"></div>
+            </div>
             <div id="audit-summary"></div>
             <div id="audit-list"></div>
           </div>
@@ -3789,6 +3805,296 @@ function researchRobot(id){
       addMsg(`🔍 Audit: research "${r.brand} ${r.name}" — paste an "update ${r.name}" command in chat.`, 'system');
     }
   }, 100);
+}
+
+// ════════════════════════════════════════════════════════════════════
+// BULK FILL — Phase 1 (year + origin) and Phase 2 (full re-ingestion)
+// ════════════════════════════════════════════════════════════════════
+
+let BULK_FILL_STATE = {
+  running: false,
+  paused: false,
+  phase: null,             // 'phase1' or 'phase2'
+  queue: [],               // array of robot IDs still to process
+  done: 0,                 // count completed in current session
+  total: 0,                // total at start
+  failed: [],              // [{id, reason}]
+  filled: []               // [{id, fields: {year:..., origin:...}}]
+};
+
+function updateBulkProgress(msg){
+  const el = document.getElementById('bulk-progress');
+  if (el) el.innerHTML = msg;
+}
+
+function setBulkButtonsRunning(running){
+  document.getElementById('phase1-btn').disabled = running;
+  document.getElementById('phase2-btn').disabled = running;
+  document.getElementById('bulk-pause-btn').style.display = running ? '' : 'none';
+}
+
+function pauseBulkFill(){
+  BULK_FILL_STATE.paused = true;
+  const btn = document.getElementById('bulk-pause-btn');
+  if (btn) btn.textContent = '⏸ Pausing after current...';
+}
+
+// ── PHASE 1: Fill year + origin in batches of 10 ──────────────
+async function bulkFillPhase1(){
+  if (!API_KEY){ alert('No Anthropic API key. Go to Settings → API Configuration first.'); return; }
+  if (!AUDIT_STATE.ran){ alert('Run the audit first so we know which robots need filling.'); return; }
+
+  // Find candidates: robots missing year OR origin (treat both as critical)
+  const candidates = ROBOTS.filter(r => {
+    const hasYear = isFieldFilled(r.year) || isFieldFilled(r.announced) || isFieldFilled(r.released);
+    const hasOrigin = isFieldFilled(r.origin) || isFieldFilled(r.country) || isFieldFilled(r.country_of_origin) || isFieldFilled(r.made_in);
+    return !hasYear || !hasOrigin;
+  });
+
+  if (candidates.length === 0){ alert('All robots already have year and origin filled.'); return; }
+
+  const estCost = (candidates.length * 0.005).toFixed(2);
+  if (!confirm(`Phase 1: Fill year + origin for ${candidates.length} robots.\n\nEstimated cost: ~$${estCost} USD in Anthropic API calls.\nBatches of 10 robots per call.\n\nProceed?`)) return;
+
+  BULK_FILL_STATE = {
+    running: true, paused: false, phase: 'phase1',
+    queue: candidates.map(r => r.id),
+    done: 0, total: candidates.length,
+    failed: [], filled: []
+  };
+  setBulkButtonsRunning(true);
+  addLog('info', `Bulk fill Phase 1 started: ${candidates.length} robots`);
+
+  while (BULK_FILL_STATE.queue.length > 0 && !BULK_FILL_STATE.paused){
+    const batch = BULK_FILL_STATE.queue.splice(0, 10);
+    const batchRobots = batch.map(id => ROBOTS.find(r => r.id === id)).filter(Boolean);
+    try {
+      await fillPhase1Batch(batchRobots);
+    } catch(err){
+      addLog('error', `Phase 1 batch failed: ${err.message}`);
+      for (const r of batchRobots) BULK_FILL_STATE.failed.push({id: r.id, reason: err.message});
+    }
+    BULK_FILL_STATE.done += batchRobots.length;
+    updateBulkProgress(
+      `<strong>Phase 1:</strong> ${BULK_FILL_STATE.done}/${BULK_FILL_STATE.total} processed · ${BULK_FILL_STATE.filled.length} filled · ${BULK_FILL_STATE.failed.length} failed` +
+      `<br>Last: ${batchRobots[batchRobots.length-1]?.brand || ''} ${batchRobots[batchRobots.length-1]?.name || ''}`
+    );
+    saveDB();
+    // Small delay between batches to be polite to the API
+    await new Promise(r => setTimeout(r, 300));
+  }
+
+  BULK_FILL_STATE.running = false;
+  setBulkButtonsRunning(false);
+  if (BULK_FILL_STATE.paused){
+    updateBulkProgress(
+      `<strong>⏸ Phase 1 paused</strong> at ${BULK_FILL_STATE.done}/${BULK_FILL_STATE.total}. ${BULK_FILL_STATE.queue.length} remaining. Click 🔬 Phase 1 again to resume from where it left off.`
+    );
+    addLog('info', `Phase 1 paused: ${BULK_FILL_STATE.done}/${BULK_FILL_STATE.total} done`);
+  } else {
+    updateBulkProgress(
+      `<strong>✅ Phase 1 complete</strong> — ${BULK_FILL_STATE.filled.length} filled, ${BULK_FILL_STATE.failed.length} failed. ` +
+      `Click 💾 Save + Deploy to push to live site, or run the audit again to see new scores.`
+    );
+    addLog('success', `Phase 1 complete: ${BULK_FILL_STATE.filled.length} filled, ${BULK_FILL_STATE.failed.length} failed`);
+    runSpecAudit();  // re-score
+  }
+}
+
+async function fillPhase1Batch(robots){
+  // Build a compact list for the AI
+  const list = robots.map(r => `${r.id}: ${r.brand} ${r.name}${r.cat ? ' ('+r.cat+')' : ''}${r.year ? ', already has year '+r.year : ''}${(r.origin||r.country) ? ', already has origin '+(r.origin||r.country) : ''}`).join('\n');
+
+  const prompt = `For each robot below, look up:
+1. "year" — the year first announced or released (integer, e.g. 2023). If unknown or uncertain, use null.
+2. "origin" — the country where the manufacturer is headquartered (e.g. "USA", "China", "Japan", "South Korea", "Germany"). If unknown or uncertain, use null.
+
+DO NOT GUESS. If you can't verify a value from your training, return null. Bad data is worse than missing data.
+
+ONLY fill fields that aren't already populated (noted in the input).
+
+Return ONLY a JSON array, one object per robot, in the same order, like:
+[{"id":"robot-id","year":2023,"origin":"USA"},{"id":"another-id","year":null,"origin":"Japan"}]
+
+Robots:
+${list}`;
+
+  const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': API_KEY,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 1500,
+      messages: [{role: 'user', content: prompt}]
+    })
+  });
+
+  if (!resp.ok) throw new Error('API error ' + resp.status);
+  const data = await resp.json();
+  if (data.error) throw new Error(data.error.message || data.error);
+
+  const text = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
+  const arrMatch = text.match(/\[[\s\S]*\]/);
+  if (!arrMatch) throw new Error('No JSON array in response');
+
+  let results;
+  try { results = JSON.parse(arrMatch[0]); }
+  catch(e){
+    const clean = arrMatch[0].replace(/,\s*}/g,'}').replace(/,\s*]/g,']');
+    results = JSON.parse(clean);
+  }
+
+  // Apply results
+  for (const item of results){
+    if (!item || !item.id) continue;
+    const robot = ROBOTS.find(r => r.id === item.id);
+    if (!robot) continue;
+    let changed = false;
+    if (item.year && (item.year !== null) && !isFieldFilled(robot.year)){
+      robot.year = item.year;
+      changed = true;
+    }
+    if (item.origin && (item.origin !== null) && !isFieldFilled(robot.origin) && !isFieldFilled(robot.country)){
+      robot.origin = item.origin;
+      changed = true;
+    }
+    if (changed){
+      BULK_FILL_STATE.filled.push({id: item.id, year: robot.year, origin: robot.origin});
+    }
+  }
+}
+
+// ── PHASE 2: Full re-ingestion of thin records ─────────────────
+async function bulkFillPhase2(){
+  if (!API_KEY){ alert('No Anthropic API key. Go to Settings → API Configuration first.'); return; }
+  if (!AUDIT_STATE.ran){ alert('Run the audit first to identify thin records.'); return; }
+
+  // Find candidates: Standard < 50%
+  const candidates = AUDIT_STATE.scored
+    .filter(s => (s.standard.filled / s.standard.total) < 0.5)
+    .map(s => s.robot);
+
+  if (candidates.length === 0){ alert('No thin records found.'); return; }
+
+  const estCost = (candidates.length * 0.10).toFixed(2);
+  if (!confirm(`Phase 2: Re-ingest ${candidates.length} thin records.\n\nEstimated cost: ~$${estCost} USD in Anthropic API calls.\nOne robot per call, ~30-60 seconds each.\nTotal wall-clock time: ~${Math.ceil(candidates.length * 45 / 60)} minutes.\n\nThis runs sequentially — you can pause anytime. Proceed?`)) return;
+
+  BULK_FILL_STATE = {
+    running: true, paused: false, phase: 'phase2',
+    queue: candidates.map(r => r.id),
+    done: 0, total: candidates.length,
+    failed: [], filled: []
+  };
+  setBulkButtonsRunning(true);
+  addLog('info', `Bulk fill Phase 2 started: ${candidates.length} robots`);
+
+  while (BULK_FILL_STATE.queue.length > 0 && !BULK_FILL_STATE.paused){
+    const id = BULK_FILL_STATE.queue.shift();
+    const robot = ROBOTS.find(r => r.id === id);
+    if (!robot){ BULK_FILL_STATE.done++; continue; }
+    try {
+      await fillPhase2Robot(robot);
+      BULK_FILL_STATE.filled.push({id: robot.id});
+    } catch(err){
+      addLog('error', `Phase 2 failed for ${robot.brand} ${robot.name}: ${err.message}`);
+      BULK_FILL_STATE.failed.push({id: robot.id, reason: err.message});
+    }
+    BULK_FILL_STATE.done++;
+    updateBulkProgress(
+      `<strong>Phase 2:</strong> ${BULK_FILL_STATE.done}/${BULK_FILL_STATE.total} processed · ${BULK_FILL_STATE.filled.length} succeeded · ${BULK_FILL_STATE.failed.length} failed` +
+      `<br>Last: ${robot.brand} ${robot.name}`
+    );
+    saveDB();
+    // Longer delay for full ingestion — be polite, avoid rate limits
+    await new Promise(r => setTimeout(r, 500));
+  }
+
+  BULK_FILL_STATE.running = false;
+  setBulkButtonsRunning(false);
+  if (BULK_FILL_STATE.paused){
+    updateBulkProgress(
+      `<strong>⏸ Phase 2 paused</strong> at ${BULK_FILL_STATE.done}/${BULK_FILL_STATE.total}. ${BULK_FILL_STATE.queue.length} remaining. Click 🔬 Phase 2 again to resume.`
+    );
+    addLog('info', `Phase 2 paused: ${BULK_FILL_STATE.done}/${BULK_FILL_STATE.total} done`);
+  } else {
+    updateBulkProgress(
+      `<strong>✅ Phase 2 complete</strong> — ${BULK_FILL_STATE.filled.length} succeeded, ${BULK_FILL_STATE.failed.length} failed. Click 💾 Save + Deploy.`
+    );
+    addLog('success', `Phase 2 complete: ${BULK_FILL_STATE.filled.length} succeeded, ${BULK_FILL_STATE.failed.length} failed`);
+    runSpecAudit();
+  }
+}
+
+async function fillPhase2Robot(robot){
+  // Build a prompt that lists the existing fields and asks to fill the rest
+  const existing = {};
+  for (const k of Object.keys(robot)){
+    if (isFieldFilled(robot[k])) existing[k] = robot[k];
+  }
+
+  const prompt = `You are researching the robot "${robot.brand} ${robot.name}" (${robot.cat || 'unknown category'}${robot.sub ? ', ' + robot.sub : ''}) for an encyclopedic robot database.
+
+Here is what we already have on file (do NOT change these values):
+${JSON.stringify(existing, null, 2)}
+
+Research this robot using your knowledge. Return ONLY a JSON object with NEW fields to add. Use these standard field names where applicable:
+- year (integer), origin (country string), status (e.g. "Released", "In development"), released (year string)
+- height_mm, width_mm, depth_mm, weight_kg (numbers)
+- battery_life (string like "4 hours"), battery_life_typical, charge_time
+- speed_ms (number, m/s), payload_kg, dof (number), reach_mm
+- os, chipset, cpu, ram_gb, storage_gb, ai_model (strings)
+- wifi (boolean), bluetooth (boolean), cellular (string), ros (boolean)
+- cameras (string description), lidar (boolean), imu (boolean), depth_sensing (boolean)
+- price (USD number, 0 if POA), use_cases (array of strings), warranty_months (number)
+- manufacturer_url, product_url (string URLs)
+
+CRITICAL RULES:
+- DO NOT GUESS. If you don't know a value with confidence, omit the field.
+- DO NOT invent specs, prices, or URLs. Better to return fewer accurate fields than many invented ones.
+- DO NOT include fields that are already filled above.
+- Return ONLY the JSON object, no commentary.`;
+
+  const resp = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': API_KEY,
+      'anthropic-version': '2023-06-01',
+      'anthropic-dangerous-direct-browser-access': 'true'
+    },
+    body: JSON.stringify({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 2500,
+      messages: [{role: 'user', content: prompt}]
+    })
+  });
+
+  if (!resp.ok) throw new Error('API error ' + resp.status);
+  const data = await resp.json();
+  if (data.error) throw new Error(data.error.message || data.error);
+
+  const text = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
+  const objMatch = text.match(/\{[\s\S]*\}/);
+  if (!objMatch) throw new Error('No JSON object in response');
+
+  let fields;
+  try { fields = JSON.parse(objMatch[0]); }
+  catch(e){
+    const clean = objMatch[0].replace(/,\s*}/g,'}').replace(/,\s*]/g,']');
+    fields = JSON.parse(clean);
+  }
+
+  // Apply new fields only (don't overwrite existing)
+  for (const k of Object.keys(fields)){
+    if (isFieldFilled(robot[k])) continue;  // belt and suspenders
+    if (!isFieldFilled(fields[k])) continue;  // skip null/empty from AI
+    robot[k] = fields[k];
+  }
 }
 
 // ── Init: scan once on page load so the badge is populated ──
