@@ -773,6 +773,22 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
             </div>
             <div id="cleanup-detail-list"></div>
           </div>
+
+          <!-- DUPLICATE HUNTER -->
+          <div class="sec-card" style="margin-top:18px">
+            <div class="sec-head">🎯 DUPLICATE HUNTER — find robots listed twice under different names</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">
+              Fuzzy-matches robot model names within each brand. Matches ≥85% confidence are <strong style="color:var(--acc)">auto-merged silently</strong>: older record keeps its ID/slug (SEO-safe), all non-empty fields merge in, images combine. Lower-confidence pairs are flagged below for manual review. Field conflicts (where both records have different non-empty values) are listed so you can pick a winner.
+            </div>
+            <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+              <button class="save-btn" onclick="runDupHunter()">🔍 Scan for duplicates</button>
+              <button class="save-btn" onclick="saveDupHunterChanges()" style="background:#16a34a">💾 Save merges + Deploy</button>
+              <button class="save-btn" onclick="undoLastMerge()" style="background:var(--bg3);color:var(--txt)">↶ Undo last merge</button>
+            </div>
+            <div id="dup-hunter-summary"></div>
+            <div id="dup-hunter-flagged"></div>
+            <div id="dup-hunter-conflicts"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -3073,9 +3089,426 @@ async function saveCleanupChanges(){
   }
 }
 
+// ════════════════════════════════════════════════════════════════════
+// DUPLICATE HUNTER — fuzzy-match robots within a brand, auto-merge obvious
+// ════════════════════════════════════════════════════════════════════
+let DUP_HUNTER_STATE = {
+  autoMerged: [],        // [{keptId, droppedId, droppedName, conf, conflicts: [{field, kept, dropped}]}]
+  flagged: [],           // [{a: robot, b: robot, conf}]
+  pendingSave: false,    // becomes true after a scan that merged anything
+  undoStack: []          // [{keptId, droppedRobot, beforeKept}]
+};
+
+// Normalise a model name for fuzzy comparison.
+// Lowercase, strip accents, drop trailing year-in-parens, collapse punctuation/whitespace.
+function normModelName(name){
+  if (!name) return '';
+  return String(name)
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s*\(\s*\d{4}\s*\)\s*$/, '')         // strip trailing "(2024)"
+    .replace(/\s*\(.*?\)\s*/g, ' ')                 // strip other parentheticals
+    .replace(/[^a-z0-9 ]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// Levenshtein distance (iterative, two-row).
+function levenshtein(a, b){
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  let prev = new Array(b.length + 1);
+  let curr = new Array(b.length + 1);
+  for (let j = 0; j <= b.length; j++) prev[j] = j;
+  for (let i = 1; i <= a.length; i++){
+    curr[0] = i;
+    for (let j = 1; j <= b.length; j++){
+      const cost = a.charCodeAt(i-1) === b.charCodeAt(j-1) ? 0 : 1;
+      curr[j] = Math.min(curr[j-1] + 1, prev[j] + 1, prev[j-1] + cost);
+    }
+    [prev, curr] = [curr, prev];
+  }
+  return prev[b.length];
+}
+
+// Similarity ratio 0..1
+function similarity(a, b){
+  if (!a && !b) return 1;
+  if (!a || !b) return 0;
+  const max = Math.max(a.length, b.length);
+  if (!max) return 1;
+  return 1 - (levenshtein(a, b) / max);
+}
+
+// True if the two normalized names end in DIFFERENT numeric tokens (e.g. "692" vs "694").
+// Catches the Roomba 690/692/694 case where fuzzy similarity is misleadingly high.
+function hasDifferentNumericSuffix(a, b){
+  const ma = a.match(/(\d+)\s*$/);
+  const mb = b.match(/(\d+)\s*$/);
+  if (!ma || !mb) return false;
+  return ma[1] !== mb[1];
+}
+
+// Score how "complete" a robot record is — for tie-breaking only (older record still wins identity).
+function fieldFillScore(r){
+  let n = 0;
+  const fields = ['brand','name','cat','year','price','img','desc','specs','gallery','score','fig'];
+  for (const f of fields){
+    const v = r[f];
+    if (v == null || v === '') continue;
+    if (Array.isArray(v) && v.length === 0) continue;
+    if (typeof v === 'object' && Object.keys(v).length === 0) continue;
+    n++;
+  }
+  return n;
+}
+
+// Compare two records, return id of the OLDER one (kept), and the dropped one.
+// Older = numerically smallest id when ids are numeric strings, else first inserted (lower index).
+function pickKeeper(a, b){
+  // Numeric ID compare if both parse as numbers
+  const na = Number(a.id), nb = Number(b.id);
+  if (Number.isFinite(na) && Number.isFinite(nb) && na !== nb){
+    return na < nb ? [a, b] : [b, a];
+  }
+  // Fallback: index in ROBOTS array (earlier = older)
+  const ia = ROBOTS.indexOf(a), ib = ROBOTS.indexOf(b);
+  return ia <= ib ? [a, b] : [b, a];
+}
+
+// Merge dropped into kept. Returns {beforeKept, conflicts:[{field, kept, dropped}]}.
+// Older record wins identity (id, slug, dates). Fields merge non-empty wins.
+// Images: kept's image stays if present, else dropped's. Galleries combine (deduped by URL).
+function mergeRecords(kept, dropped){
+  const beforeKept = JSON.parse(JSON.stringify(kept));
+  const conflicts = [];
+
+  // Generic field-by-field merge
+  for (const k of Object.keys(dropped)){
+    // Skip identity fields — kept keeps these
+    if (k === 'id') continue;
+
+    const dv = dropped[k];
+    const kv = kept[k];
+
+    // Empty in dropped — nothing to pull in
+    const droppedEmpty = dv == null || dv === '' || (Array.isArray(dv) && dv.length === 0);
+    if (droppedEmpty) continue;
+
+    // Empty in kept — pull dropped's value in
+    const keptEmpty = kv == null || kv === '' || (Array.isArray(kv) && kv.length === 0);
+    if (keptEmpty){
+      kept[k] = dv;
+      continue;
+    }
+
+    // Both have values — special handling for gallery, otherwise conflict-or-keep
+    if (k === 'gallery' && Array.isArray(kv) && Array.isArray(dv)){
+      const combined = [...kv];
+      for (const url of dv){
+        if (url && !combined.includes(url)) combined.push(url);
+      }
+      // Cap at 5 (matches Image Manager slots)
+      kept[k] = combined.slice(0, 5);
+      continue;
+    }
+
+    if (k === 'specs' && typeof kv === 'object' && typeof dv === 'object'){
+      // Spec sub-fields: non-empty wins, conflicts flagged
+      for (const sk of Object.keys(dv)){
+        const sv = dv[sk];
+        if (sv == null || sv === '') continue;
+        const sk_kept = kv[sk];
+        if (sk_kept == null || sk_kept === ''){
+          kv[sk] = sv;
+        } else if (String(sk_kept).trim() !== String(sv).trim()){
+          conflicts.push({field: 'specs.' + sk, kept: sk_kept, dropped: sv});
+        }
+      }
+      continue;
+    }
+
+    // Both have non-empty primitive values
+    if (String(kv).trim() === String(dv).trim()){
+      // Same value — no action needed
+      continue;
+    }
+    // Different values — kept's value stays, conflict flagged for manual review
+    conflicts.push({field: k, kept: kv, dropped: dv});
+  }
+
+  return {beforeKept, conflicts};
+}
+
+// Threshold for auto-merge (0.85 = balanced per Shane's choice)
+const DUP_AUTO_THRESHOLD = 0.85;
+// Threshold for flagging (anything 0.60..0.85 gets manual review)
+const DUP_FLAG_THRESHOLD = 0.60;
+
+function runDupHunter(){
+  DUP_HUNTER_STATE.autoMerged = [];
+  DUP_HUNTER_STATE.flagged = [];
+  // Don't clear undoStack — undo persists across scans
+
+  // Group by brand (after brand-cleanup, brands should be canonical)
+  const byBrand = {};
+  for (const r of ROBOTS){
+    const b = (r.brand || '').trim();
+    if (!b) continue;
+    if (!byBrand[b]) byBrand[b] = [];
+    byBrand[b].push(r);
+  }
+
+  // Compare pairs within each brand
+  for (const brand of Object.keys(byBrand)){
+    const list = byBrand[brand];
+    if (list.length < 2) continue;
+    // Precompute normalized names
+    const norms = list.map(r => normModelName(r.name));
+    // Track which ids have been dropped this run so we don't merge them twice
+    const dropped = new Set();
+    for (let i = 0; i < list.length; i++){
+      if (dropped.has(list[i].id)) continue;
+      for (let j = i + 1; j < list.length; j++){
+        if (dropped.has(list[j].id)) continue;
+        const na = norms[i], nb = norms[j];
+        if (!na || !nb) continue;
+        const conf = similarity(na, nb);
+        if (conf < DUP_FLAG_THRESHOLD) continue;
+        // Guard: even at high similarity, demote to "flagged" if the two names end in
+        // different numeric tokens (Roomba 692 vs 694 = different SKUs, not duplicates).
+        const sameNumericSuffix = !hasDifferentNumericSuffix(na, nb);
+        if (conf >= DUP_AUTO_THRESHOLD && sameNumericSuffix){
+          // Auto-merge — older keeps identity, fields merge in
+          const [keeper, drop] = pickKeeper(list[i], list[j]);
+          const {beforeKept, conflicts} = mergeRecords(keeper, drop);
+          // Record undo
+          DUP_HUNTER_STATE.undoStack.push({keptId: keeper.id, droppedRobot: JSON.parse(JSON.stringify(drop)), beforeKept});
+          DUP_HUNTER_STATE.autoMerged.push({
+            keptId: keeper.id,
+            keptName: keeper.name,
+            droppedId: drop.id,
+            droppedName: drop.name,
+            brand: brand,
+            conf: conf,
+            conflicts: conflicts
+          });
+          // Remove dropped from ROBOTS
+          const dropIdx = ROBOTS.indexOf(drop);
+          if (dropIdx >= 0) ROBOTS.splice(dropIdx, 1);
+          dropped.add(drop.id);
+          // Also remove from the local working list to skip future comparisons against it
+          const localDropIdx = list.indexOf(drop);
+          if (localDropIdx >= 0){ list.splice(localDropIdx, 1); norms.splice(localDropIdx, 1); }
+          // i may now point past the new length — outer loop guard handles it
+          break; // restart inner loop for i since list shifted
+        } else {
+          DUP_HUNTER_STATE.flagged.push({a: list[i], b: list[j], brand: brand, conf: conf});
+        }
+      }
+    }
+  }
+
+  if (DUP_HUNTER_STATE.autoMerged.length > 0){
+    saveDB();
+    DUP_HUNTER_STATE.pendingSave = true;
+    addLog('success', `Duplicate Hunter: auto-merged ${DUP_HUNTER_STATE.autoMerged.length} duplicate(s)`);
+  }
+  renderDupHunter();
+}
+
+function renderDupHunter(){
+  const sum = document.getElementById('dup-hunter-summary');
+  const flag = document.getElementById('dup-hunter-flagged');
+  const conf = document.getElementById('dup-hunter-conflicts');
+  if (!sum) return;
+
+  const merged = DUP_HUNTER_STATE.autoMerged.length;
+  const flagged = DUP_HUNTER_STATE.flagged.length;
+  const conflicts = DUP_HUNTER_STATE.autoMerged.reduce((s, m) => s + m.conflicts.length, 0);
+
+  const pendingNote = DUP_HUNTER_STATE.pendingSave
+    ? '<div style="background:#fde68a;color:#78350f;padding:8px 12px;border-radius:6px;font-size:12px;margin-bottom:14px">⚠️ Auto-merges applied locally — click 💾 Save merges + Deploy to push them live.</div>'
+    : '';
+
+  sum.innerHTML = pendingNote + `
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:14px">
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Auto-merged</div>
+        <div style="font-size:22px;font-weight:700;color:#16a34a;margin-top:4px">${merged}</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Flagged for review</div>
+        <div style="font-size:22px;font-weight:700;color:#f59e0b;margin-top:4px">${flagged}</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Field conflicts</div>
+        <div style="font-size:22px;font-weight:700;color:#ef4444;margin-top:4px">${conflicts}</div>
+      </div>
+    </div>
+  `;
+
+  // Flagged list
+  if (flagged > 0){
+    flag.innerHTML = `<div class="sec-head" style="font-size:13px;margin-top:10px">⚠️ Flagged pairs — manual review</div>` +
+      DUP_HUNTER_STATE.flagged.map((f, idx) => renderFlaggedPair(f, idx)).join('');
+  } else {
+    flag.innerHTML = '';
+  }
+
+  // Conflicts list
+  if (conflicts > 0){
+    const rows = [];
+    for (const m of DUP_HUNTER_STATE.autoMerged){
+      if (m.conflicts.length === 0) continue;
+      rows.push(`
+        <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px;margin-bottom:8px">
+          <div style="font-size:12px;font-weight:600;margin-bottom:8px">${m.brand} ${m.keptName} <span style="color:var(--mut);font-weight:400">— ${m.conflicts.length} field conflict(s)</span></div>
+          <div style="font-size:11px;color:var(--mut);margin-bottom:8px">Older record kept these values; newer (merged) record had different values shown on the right. Pick which to keep.</div>
+          ${m.conflicts.map((c, ci) => `
+            <div style="display:grid;grid-template-columns:120px 1fr 1fr 90px;gap:8px;align-items:center;padding:6px 0;border-top:1px solid var(--bdr);font-size:12px">
+              <div style="font-weight:600">${c.field}</div>
+              <div style="background:#dcfce7;color:#14532d;padding:4px 8px;border-radius:4px">Kept: ${escapeHtml(String(c.kept))}</div>
+              <div style="background:#fee2e2;color:#7f1d1d;padding:4px 8px;border-radius:4px">Newer: ${escapeHtml(String(c.dropped))}</div>
+              <button class="tbl-action" onclick="acceptConflict('${m.keptId}','${escapeAttr(c.field)}',${ci})">Use newer</button>
+            </div>
+          `).join('')}
+        </div>
+      `);
+    }
+    conf.innerHTML = `<div class="sec-head" style="font-size:13px;margin-top:10px">🔀 Field conflicts from auto-merges</div>` + rows.join('');
+  } else {
+    conf.innerHTML = '';
+  }
+}
+
+function renderFlaggedPair(f, idx){
+  const pct = Math.round(f.conf * 100);
+  const a = f.a, b = f.b;
+  return `
+    <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px;margin-bottom:8px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <div style="font-size:12px;color:var(--mut)">${f.brand} · ${pct}% similar</div>
+        <div style="display:flex;gap:6px">
+          <button class="tbl-action" onclick="mergeFlagged(${idx})" style="background:#16a34a;color:#fff">Merge</button>
+          <button class="tbl-action" onclick="dismissFlagged(${idx})">Not a duplicate</button>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div style="background:var(--bg);padding:8px;border-radius:6px;font-size:12px">
+          <div style="font-weight:600">${escapeHtml(a.name)}</div>
+          <div style="color:var(--mut);font-size:11px">${a.cat||'—'} · ${a.year||'—'} · id:${a.id}</div>
+          ${a.img ? `<img src="${a.img}" style="max-width:80px;max-height:60px;margin-top:6px;border-radius:4px">` : ''}
+        </div>
+        <div style="background:var(--bg);padding:8px;border-radius:6px;font-size:12px">
+          <div style="font-weight:600">${escapeHtml(b.name)}</div>
+          <div style="color:var(--mut);font-size:11px">${b.cat||'—'} · ${b.year||'—'} · id:${b.id}</div>
+          ${b.img ? `<img src="${b.img}" style="max-width:80px;max-height:60px;margin-top:6px;border-radius:4px">` : ''}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+function escapeAttr(s){ return String(s).replace(/'/g, '\\\''); }
+
+function mergeFlagged(idx){
+  const f = DUP_HUNTER_STATE.flagged[idx];
+  if (!f) return;
+  const [keeper, drop] = pickKeeper(f.a, f.b);
+  const {beforeKept, conflicts} = mergeRecords(keeper, drop);
+  DUP_HUNTER_STATE.undoStack.push({keptId: keeper.id, droppedRobot: JSON.parse(JSON.stringify(drop)), beforeKept});
+  DUP_HUNTER_STATE.autoMerged.push({
+    keptId: keeper.id,
+    keptName: keeper.name,
+    droppedId: drop.id,
+    droppedName: drop.name,
+    brand: f.brand,
+    conf: f.conf,
+    conflicts: conflicts
+  });
+  const dropIdx = ROBOTS.indexOf(drop);
+  if (dropIdx >= 0) ROBOTS.splice(dropIdx, 1);
+  DUP_HUNTER_STATE.flagged.splice(idx, 1);
+  saveDB();
+  DUP_HUNTER_STATE.pendingSave = true;
+  addLog('success', `Duplicate Hunter: manual merge — kept ${keeper.name} (${keeper.id}), dropped ${drop.name} (${drop.id})`);
+  renderDupHunter();
+}
+
+function dismissFlagged(idx){
+  DUP_HUNTER_STATE.flagged.splice(idx, 1);
+  renderDupHunter();
+}
+
+function acceptConflict(keptId, field, conflictIdx){
+  // Find the merge record and apply the dropped value
+  const m = DUP_HUNTER_STATE.autoMerged.find(x => x.keptId === keptId);
+  if (!m) return;
+  const c = m.conflicts[conflictIdx];
+  if (!c) return;
+  const robot = ROBOTS.find(r => r.id === keptId);
+  if (!robot) return;
+  // Handle specs.field
+  if (field.startsWith('specs.')){
+    const sf = field.slice(6);
+    if (!robot.specs) robot.specs = {};
+    robot.specs[sf] = c.dropped;
+  } else {
+    robot[field] = c.dropped;
+  }
+  // Remove this conflict from the list
+  m.conflicts.splice(conflictIdx, 1);
+  saveDB();
+  DUP_HUNTER_STATE.pendingSave = true;
+  addLog('info', `Duplicate Hunter conflict resolved: ${keptId}.${field} = newer value`);
+  renderDupHunter();
+}
+
+function undoLastMerge(){
+  const last = DUP_HUNTER_STATE.undoStack.pop();
+  if (!last){ alert('Nothing to undo.'); return; }
+  // Restore kept record to its pre-merge state
+  const keptIdx = ROBOTS.findIndex(r => r.id === last.keptId);
+  if (keptIdx >= 0) ROBOTS[keptIdx] = last.beforeKept;
+  // Re-insert dropped record
+  ROBOTS.push(last.droppedRobot);
+  // Remove from autoMerged log (most recent one for this keptId)
+  for (let i = DUP_HUNTER_STATE.autoMerged.length - 1; i >= 0; i--){
+    if (DUP_HUNTER_STATE.autoMerged[i].keptId === last.keptId &&
+        DUP_HUNTER_STATE.autoMerged[i].droppedId === last.droppedRobot.id){
+      DUP_HUNTER_STATE.autoMerged.splice(i, 1);
+      break;
+    }
+  }
+  saveDB();
+  DUP_HUNTER_STATE.pendingSave = true;
+  addLog('info', `Duplicate Hunter: undid merge — restored ${last.droppedRobot.name}`);
+  renderDupHunter();
+}
+
+async function saveDupHunterChanges(){
+  if (!DUP_HUNTER_STATE.pendingSave){ alert('No pending merges to save.'); return; }
+  const merged = DUP_HUNTER_STATE.autoMerged.length;
+  if (!confirm(`Push ${ROBOTS.length} robots (with ${merged} merge(s) applied) to data/robots.json?`)) return;
+  if (typeof deployNow === 'function'){
+    await deployNow();
+    DUP_HUNTER_STATE.pendingSave = false;
+    // Clear undo stack on save — past this point you'd need to re-import to undo
+    DUP_HUNTER_STATE.undoStack = [];
+    renderDupHunter();
+  } else {
+    alert('Deploy function not available — use the main 🚀 Deploy site button.');
+  }
+}
+
 // ── Init: scan once on page load so the badge is populated ──
 setTimeout(() => { try { runCleanupScan(); } catch(e){ console.warn('Initial cleanup scan failed:', e); } }, 1500);
 
 </script>
+
+
 </body>
 </html>
