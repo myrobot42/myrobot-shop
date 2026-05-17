@@ -2652,7 +2652,7 @@ async function handleCloudinaryUpload(robotId, input) {
 // ════════════════════════════════════════════════════════════════════
 // DATA CLEANUP TOOL — detect & fix data quality issues
 // ════════════════════════════════════════════════════════════════════
-let CLEANUP_ISSUES = {url_in_name: [], empty_name: [], bad_id: [], missing_fields: []};
+let CLEANUP_ISSUES = {url_in_name: [], empty_name: [], bad_id: [], missing_fields: [], dup_brands: []};
 let CLEANUP_UNDO = []; // stack of {id, before, after}
 let CLEANUP_IGNORED = JSON.parse(localStorage.getItem('mrsh_cleanup_ignored') || '[]');
 let CLEANUP_PENDING = false; // becomes true once any fix is applied; clears on Save
@@ -2721,7 +2721,7 @@ function detectMissingFields(r){
 
 // ── Scan ──────────────────────────────────────────
 function runCleanupScan(){
-  CLEANUP_ISSUES = {url_in_name: [], empty_name: [], bad_id: [], missing_fields: []};
+  CLEANUP_ISSUES = {url_in_name: [], empty_name: [], bad_id: [], missing_fields: [], dup_brands: []};
   for (const r of ROBOTS){
     if (CLEANUP_IGNORED.includes('url_in_name:'+r.id)===false){
       const u = detectUrlInName(r); if (u) CLEANUP_ISSUES.url_in_name.push(u);
@@ -2736,17 +2736,71 @@ function runCleanupScan(){
       const m = detectMissingFields(r); if (m) CLEANUP_ISSUES.missing_fields.push(m);
     }
   }
+  // Brand dedupe runs across the whole collection, not per-robot
+  CLEANUP_ISSUES.dup_brands = detectDuplicateBrands();
   renderCleanupSummary();
   // Update the badge
-  const total = CLEANUP_ISSUES.url_in_name.length + CLEANUP_ISSUES.empty_name.length + CLEANUP_ISSUES.bad_id.length + CLEANUP_ISSUES.missing_fields.length;
+  const total = CLEANUP_ISSUES.url_in_name.length + CLEANUP_ISSUES.empty_name.length + CLEANUP_ISSUES.bad_id.length + CLEANUP_ISSUES.missing_fields.length + CLEANUP_ISSUES.dup_brands.length;
   const badge = document.getElementById('nb-cleanup');
   if (badge){ badge.textContent = total; badge.style.display = total ? '' : 'none'; }
+}
+
+// ── Duplicate brand detection ──────────────────────────────────────────
+function normBrandKey(brand){
+  if (!brand) return '';
+  let s = String(brand)
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')       // strip accents (Stäubli -> staubli)
+    .replace(/[\u2018\u2019\u201C\u201D]/g, "'")            // smart quotes
+    .replace(/\s*\(.*?\)\s*/g, ' ');                         // strip parentheticals "(Ocado Group)"
+  // Pre-split on "/" or "&" and keep only the first segment so "A / B" -> "A"
+  s = s.split(/\s*[\/&]\s*/)[0];
+  // Insert spaces between lowercase→Uppercase boundaries before lowercasing again (helps IronOx → iron ox)
+  // (already lowercased; this fallback handles already-lowered runs via known camelCase pairs)
+  return s
+    .replace(/\b(robotics|robots|robot|technologies|technology|tech|inc|corp|ltd|llc|gmbh|co|systems|labs|exploration)\b/g, '')
+    .replace(/[^a-z0-9 ]+/g, ' ')                            // punctuation -> space
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function detectDuplicateBrands(){
+  const groups = {};
+  for (const r of ROBOTS){
+    const b = r.brand || '';
+    const key = normBrandKey(b);
+    if (!key) continue;
+    if (!groups[key]) groups[key] = {};
+    groups[key][b] = (groups[key][b] || 0) + 1;
+  }
+  const clusters = [];
+  for (const key of Object.keys(groups)){
+    const variants = Object.keys(groups[key]);
+    if (variants.length < 2) continue;
+    if (CLEANUP_IGNORED.includes('dup_brands:'+key)) continue;
+    // Pick canonical default: highest robot count, ties broken by longest string
+    const sorted = variants.slice().sort((a, b) => {
+      const ca = groups[key][a], cb = groups[key][b];
+      if (cb !== ca) return cb - ca;
+      return b.length - a.length;
+    });
+    clusters.push({
+      kind: 'dup_brands',
+      id: key,                          // group key used as the issue id
+      variants: variants.map(v => ({brand: v, count: groups[key][v]})),
+      canonical: sorted[0],
+      total: variants.reduce((s, v) => s + groups[key][v], 0)
+    });
+  }
+  // Sort biggest clusters first
+  clusters.sort((a, b) => b.total - a.total);
+  return clusters;
 }
 
 function renderCleanupSummary(){
   const el = document.getElementById('cleanup-summary');
   const i = CLEANUP_ISSUES;
-  const total = i.url_in_name.length + i.empty_name.length + i.bad_id.length + i.missing_fields.length;
+  const total = i.url_in_name.length + i.empty_name.length + i.bad_id.length + i.missing_fields.length + (i.dup_brands ? i.dup_brands.length : 0);
   const pendingNote = CLEANUP_PENDING ? '<div style="background:#fde68a;color:#78350f;padding:8px 12px;border-radius:6px;font-size:12px;margin-bottom:14px">⚠️ You have unsaved cleanup changes — click 💾 Save Cleanup + Deploy to push them live.</div>' : '';
   if (total === 0){
     el.innerHTML = pendingNote + `<div style="text-align:center;padding:24px;color:var(--mut);font-size:13px">✓ No issues found across ${ROBOTS.length} robots. Database is clean!</div>`;
@@ -2760,6 +2814,7 @@ function renderCleanupSummary(){
       ${cleanupRow('📛 Empty / placeholder names', i.empty_name.length, 'empty_name', 'Manual fix — needs human input')}
       ${cleanupRow('🆔 Bad ID format', i.bad_id.length, 'bad_id', 'Auto-regenerate as lowercase-hyphenated')}
       ${cleanupRow('⚠️ Missing critical fields', i.missing_fields.length, 'missing_fields', 'Manual review — brand/category/score missing')}
+      ${cleanupRow('🏷️ Duplicate brand spellings', (i.dup_brands||[]).length, 'dup_brands', 'Merge spelling variants (e.g. Yeedi / YEEDI) into one canonical brand')}
     </div>`;
 }
 
@@ -2779,7 +2834,7 @@ function cleanupRow(label, count, key, desc){
 function showCleanupDetail(key){
   CURRENT_DETAIL = key;
   const issues = CLEANUP_ISSUES[key];
-  const titles = {url_in_name: '🔧 URL in name field', empty_name: '📛 Empty / placeholder names', bad_id: '🆔 Bad ID format', missing_fields: '⚠️ Missing critical fields'};
+  const titles = {url_in_name: '🔧 URL in name field', empty_name: '📛 Empty / placeholder names', bad_id: '🆔 Bad ID format', missing_fields: '⚠️ Missing critical fields', dup_brands: '🏷️ Duplicate brand spellings'};
   document.getElementById('cleanup-detail-title').textContent = `${titles[key]} — ${issues.length} issues`;
   document.getElementById('cleanup-detail-card').style.display = 'block';
   renderCleanupDetailList();
@@ -2795,6 +2850,10 @@ function renderCleanupDetailList(){
 }
 
 function renderCleanupDetailRow(iss, idx){
+  // Special-case dup_brands: it's a group, not a single robot
+  if (iss.kind === 'dup_brands'){
+    return renderDupBrandsRow(iss, idx);
+  }
   const r = ROBOTS.find(x => x.id === iss.id);
   const figName = r ? `${r.fig||'🤖'} ${r.brand||''} — id: <code style="background:var(--bg4);padding:1px 5px;border-radius:3px;font-size:10px">${iss.id}</code>` : iss.id;
   let body = '';
@@ -2835,6 +2894,60 @@ function renderCleanupDetailRow(iss, idx){
     ${body}
     <div style="margin-top:12px;display:flex;gap:6px;justify-content:flex-end">${actions}</div>
   </div>`;
+}
+
+function renderDupBrandsRow(iss, idx){
+  const variantOpts = iss.variants
+    .slice()
+    .sort((a, b) => b.count - a.count)
+    .map(v => `<option value="${escapeHtml(v.brand)}" ${v.brand === iss.canonical ? 'selected' : ''}>${escapeHtml(v.brand)} (${v.count} robot${v.count===1?'':'s'})</option>`)
+    .join('');
+  const variantPills = iss.variants
+    .slice()
+    .sort((a, b) => b.count - a.count)
+    .map(v => `<span style="display:inline-flex;align-items:center;gap:6px;padding:3px 9px;background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;font-size:11px;margin:2px 4px 2px 0"><strong>${escapeHtml(v.brand)}</strong><span style="color:var(--mut)">${v.count}</span></span>`)
+    .join('');
+  return `<div style="padding:12px;margin-bottom:10px;background:var(--bg3);border:1px solid var(--bdr);border-radius:7px">
+    <div style="font-size:12px;margin-bottom:8px;color:var(--mut)">${iss.variants.length} variants · ${iss.total} robots affected</div>
+    <div style="margin-bottom:10px">${variantPills}</div>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+      <label style="font-size:11px;color:var(--mut)">Merge all into:</label>
+      <select id="dup-pick-${idx}" class="inp" style="font-size:12px;padding:5px 8px;max-width:280px">${variantOpts}</select>
+      <input id="dup-custom-${idx}" class="inp" placeholder="Or type custom name..." style="font-size:12px;padding:5px 8px;width:180px">
+      <div style="flex:1"></div>
+      <button class="save-btn" onclick="mergeBrands(${idx})">✓ Merge</button>
+      <button class="tbl-action" onclick="ignoreFix('dup_brands', ${idx})">Skip</button>
+    </div>
+  </div>`;
+}
+
+function mergeBrands(idx){
+  const iss = CLEANUP_ISSUES.dup_brands[idx];
+  if (!iss) return;
+  const custom = (document.getElementById('dup-custom-' + idx).value || '').trim();
+  const pick = document.getElementById('dup-pick-' + idx).value;
+  const target = custom || pick;
+  if (!target){ alert('Pick a canonical brand or type a custom name.'); return; }
+  const variantSet = new Set(iss.variants.map(v => v.brand));
+  // Capture undo
+  const undoEntry = {kind: 'dup_brands', id: iss.id, beforeRobots: []};
+  let changed = 0;
+  for (const r of ROBOTS){
+    if (variantSet.has(r.brand) && r.brand !== target){
+      undoEntry.beforeRobots.push({id: r.id, brand: r.brand});
+      r.brand = target;
+      changed++;
+    }
+  }
+  if (!changed){ alert('Nothing to merge — every robot already uses "' + target + '".'); return; }
+  CLEANUP_UNDO.push(undoEntry);
+  if (CLEANUP_UNDO.length > 50) CLEANUP_UNDO.shift();
+  CLEANUP_PENDING = true;
+  saveDB();
+  CLEANUP_ISSUES.dup_brands.splice(idx, 1);
+  renderCleanupDetailList();
+  renderCleanupSummary();
+  addLog && addLog('info', `Cleanup: merged ${changed} robot${changed===1?'':'s'} → "${target}"`);
 }
 
 function escapeHtml(s){return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
@@ -2921,6 +3034,18 @@ function cancelDetail(){
 function undoLastCleanup(){
   if (!CLEANUP_UNDO.length){ alert('Nothing to undo.'); return; }
   const last = CLEANUP_UNDO.pop();
+  // Special-case dup_brands: restore brand on each affected robot
+  if (last.kind === 'dup_brands'){
+    let restored = 0;
+    for (const entry of (last.beforeRobots || [])){
+      const r = ROBOTS.find(x => x.id === entry.id);
+      if (r){ r.brand = entry.brand; restored++; }
+    }
+    saveDB();
+    runCleanupScan();
+    addLog && addLog('info', `Cleanup: undid brand merge — restored ${restored} robot${restored===1?'':'s'}`);
+    return;
+  }
   // Find the robot — might be at a different id now if a bad_id fix changed it
   let r = ROBOTS.find(x => x.id === last.before.id);
   if (!r){ // try matching on the after-id (i.e. the current id post-fix)
