@@ -789,6 +789,29 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
             <div id="dup-hunter-flagged"></div>
             <div id="dup-hunter-conflicts"></div>
           </div>
+
+          <!-- SPEC COMPLETENESS AUDIT -->
+          <div class="sec-card" style="margin-top:18px">
+            <div class="sec-head">📊 SPEC COMPLETENESS AUDIT — find robots with thin data</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">
+              Scores each robot against three tiers: <strong>Critical</strong> (8 fields every robot needs: brand, name, category, year, country, image, score, description), <strong>Standard</strong> (10 fields most robots should have: price, dimensions, weight, battery, speed, status, capability, connectivity, tags), and <strong>Optional</strong> (the long tail). Realistic targets: 100% critical, 70-80% standard, 30-50% optional. Click any robot to research missing fields via the Command Centre.
+            </div>
+            <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+              <button class="save-btn" onclick="runSpecAudit()">🔍 Run audit</button>
+              <select class="inp" id="audit-filter" onchange="renderSpecAudit()" style="max-width:200px">
+                <option value="critical_incomplete">Missing critical fields (URGENT)</option>
+                <option value="standard_under_50">Standard &lt; 50%</option>
+                <option value="standard_under_75">Standard &lt; 75%</option>
+                <option value="worst_first">Worst overall first</option>
+                <option value="all">All robots</option>
+              </select>
+              <select class="inp" id="audit-cat-filter" onchange="renderSpecAudit()" style="max-width:180px">
+                <option value="">All categories</option>
+              </select>
+            </div>
+            <div id="audit-summary"></div>
+            <div id="audit-list"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -3502,6 +3525,255 @@ async function saveDupHunterChanges(){
   } else {
     alert('Deploy function not available — use the main 🚀 Deploy site button.');
   }
+}
+
+// ════════════════════════════════════════════════════════════════════
+// SPEC COMPLETENESS AUDIT — score robots by tiered field completeness
+// ════════════════════════════════════════════════════════════════════
+
+// Tier 1 — every robot needs these. Targets 100%.
+const AUDIT_CRITICAL = ['brand', 'name', 'cat', 'year', 'country', 'img', 'score', 'desc'];
+
+// Tier 2 — most robots should have these. Some fields are alternates (any one counts).
+// Each entry is either a string (single field) or an array (any of these fields).
+const AUDIT_STANDARD = [
+  'price',                                            // price OR POA flag
+  ['height_mm', 'diameter_mm', 'wingspan_mm', 'body_length_mm'],  // primary dimension
+  ['weight_kg', 'weight'],                            // weight in some form
+  ['battery_life', 'battery_life_typical', 'battery_life_min'],
+  ['speed', 'speed_ms', 'run_speed', 'run_speed_ms'],
+  ['status', 'released', 'announced'],
+  ['payload', 'payload_kg', 'reach', 'reach_mm', 'dof'],  // some capability metric
+  ['wifi', 'bluetooth', 'cellular', 'connectivity'],
+  'tags',                                             // tags array
+  ['manufacturer_url', 'product_url', 'website']      // findable somewhere online
+];
+
+let AUDIT_STATE = {
+  scored: [],          // [{robot, critical: {filled, total, missing}, standard: {...}, optional: {filled, total}}]
+  ran: false
+};
+
+function isFieldFilled(v){
+  if (v === null || v === undefined) return false;
+  if (v === '') return false;
+  if (v === 0) return false;  // numeric zero treated as unfilled (e.g. weight_kg: 0)
+  if (Array.isArray(v) && v.length === 0) return false;
+  if (typeof v === 'object' && Object.keys(v).length === 0) return false;
+  return true;
+}
+
+function scoreField(robot, fieldDef){
+  // fieldDef is either a string or an array of alternate field names
+  if (typeof fieldDef === 'string'){
+    return isFieldFilled(robot[fieldDef]);
+  }
+  // Array — any one filled counts as satisfied
+  return fieldDef.some(f => isFieldFilled(robot[f]));
+}
+
+function scoreCritical(robot){
+  let filled = 0;
+  const missing = [];
+  for (const f of AUDIT_CRITICAL){
+    if (scoreField(robot, f)) filled++;
+    else missing.push(f);
+  }
+  return {filled, total: AUDIT_CRITICAL.length, missing};
+}
+
+function scoreStandard(robot){
+  let filled = 0;
+  const missing = [];
+  for (const f of AUDIT_STANDARD){
+    if (scoreField(robot, f)) filled++;
+    else missing.push(Array.isArray(f) ? f[0] : f);
+  }
+  return {filled, total: AUDIT_STANDARD.length, missing};
+}
+
+function scoreOptional(robot){
+  // Count any non-tier field that's filled on the robot record
+  const criticalSet = new Set(AUDIT_CRITICAL);
+  const standardSet = new Set();
+  for (const f of AUDIT_STANDARD){
+    if (typeof f === 'string') standardSet.add(f);
+    else f.forEach(x => standardSet.add(x));
+  }
+  // Plus internal/system fields that shouldn't be counted as "specs"
+  const skip = new Set(['id', 'fig', 'gallery', 'bc', 'badge', 'rating', 'tags', 'sub']);
+  let filled = 0;
+  let total = 0;
+  for (const k of Object.keys(robot)){
+    if (criticalSet.has(k) || standardSet.has(k) || skip.has(k)) continue;
+    total++;
+    if (isFieldFilled(robot[k])) filled++;
+  }
+  return {filled, total};
+}
+
+function runSpecAudit(){
+  AUDIT_STATE.scored = ROBOTS.map(r => ({
+    robot: r,
+    critical: scoreCritical(r),
+    standard: scoreStandard(r),
+    optional: scoreOptional(r)
+  }));
+  AUDIT_STATE.ran = true;
+  addLog('info', `Spec audit: scored ${ROBOTS.length} robots`);
+  // Populate category filter
+  const cats = [...new Set(ROBOTS.map(r => r.cat).filter(Boolean))].sort();
+  const sel = document.getElementById('audit-cat-filter');
+  if (sel){
+    sel.innerHTML = '<option value="">All categories</option>' +
+      cats.map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+  }
+  renderSpecAudit();
+}
+
+function renderSpecAudit(){
+  const sumEl = document.getElementById('audit-summary');
+  const listEl = document.getElementById('audit-list');
+  if (!sumEl || !listEl) return;
+
+  if (!AUDIT_STATE.ran){
+    sumEl.innerHTML = '<div style="color:var(--mut);font-size:12px;padding:12px">Click 🔍 Run audit to score the database.</div>';
+    listEl.innerHTML = '';
+    return;
+  }
+
+  const total = AUDIT_STATE.scored.length;
+  const criticalIncomplete = AUDIT_STATE.scored.filter(s => s.critical.filled < s.critical.total).length;
+  const standardUnder50 = AUDIT_STATE.scored.filter(s => (s.standard.filled / s.standard.total) < 0.5).length;
+  const avgCritical = total ? AUDIT_STATE.scored.reduce((a, s) => a + s.critical.filled / s.critical.total, 0) / total : 0;
+  const avgStandard = total ? AUDIT_STATE.scored.reduce((a, s) => a + s.standard.filled / s.standard.total, 0) / total : 0;
+  const avgOptional = total ? AUDIT_STATE.scored.reduce((a, s) => a + (s.optional.total ? s.optional.filled / s.optional.total : 0), 0) / total : 0;
+
+  sumEl.innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-bottom:14px">
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Critical avg</div>
+        <div style="font-size:22px;font-weight:700;color:${avgCritical >= 0.95 ? '#16a34a' : avgCritical >= 0.8 ? '#f59e0b' : '#ef4444'};margin-top:4px">${(avgCritical*100).toFixed(0)}%</div>
+        <div style="font-size:10px;color:var(--mut);margin-top:2px">target 100%</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Standard avg</div>
+        <div style="font-size:22px;font-weight:700;color:${avgStandard >= 0.7 ? '#16a34a' : avgStandard >= 0.5 ? '#f59e0b' : '#ef4444'};margin-top:4px">${(avgStandard*100).toFixed(0)}%</div>
+        <div style="font-size:10px;color:var(--mut);margin-top:2px">target 70-80%</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Optional avg</div>
+        <div style="font-size:22px;font-weight:700;color:#6b7280;margin-top:4px">${(avgOptional*100).toFixed(0)}%</div>
+        <div style="font-size:10px;color:var(--mut);margin-top:2px">target 30-50%</div>
+      </div>
+      <div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:#7f1d1d;text-transform:uppercase;letter-spacing:1px">⚠ Missing critical</div>
+        <div style="font-size:22px;font-weight:700;color:#ef4444;margin-top:4px">${criticalIncomplete}</div>
+        <div style="font-size:10px;color:#7f1d1d;margin-top:2px">fix these first</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Standard &lt; 50%</div>
+        <div style="font-size:22px;font-weight:700;color:#f59e0b;margin-top:4px">${standardUnder50}</div>
+        <div style="font-size:10px;color:var(--mut);margin-top:2px">of ${total} total</div>
+      </div>
+    </div>
+  `;
+
+  // Filter and sort
+  const filter = document.getElementById('audit-filter').value;
+  const catFilter = document.getElementById('audit-cat-filter').value;
+  let rows = AUDIT_STATE.scored.slice();
+  if (catFilter) rows = rows.filter(s => s.robot.cat === catFilter);
+  if (filter === 'critical_incomplete'){
+    rows = rows.filter(s => s.critical.filled < s.critical.total);
+    rows.sort((a, b) => a.critical.filled - b.critical.filled);
+  } else if (filter === 'standard_under_50'){
+    rows = rows.filter(s => (s.standard.filled / s.standard.total) < 0.5);
+    rows.sort((a, b) => (a.standard.filled/a.standard.total) - (b.standard.filled/b.standard.total));
+  } else if (filter === 'standard_under_75'){
+    rows = rows.filter(s => (s.standard.filled / s.standard.total) < 0.75);
+    rows.sort((a, b) => (a.standard.filled/a.standard.total) - (b.standard.filled/b.standard.total));
+  } else if (filter === 'worst_first'){
+    rows.sort((a, b) => {
+      const aw = (a.critical.filled/a.critical.total) * 2 + (a.standard.filled/a.standard.total);
+      const bw = (b.critical.filled/b.critical.total) * 2 + (b.standard.filled/b.standard.total);
+      return aw - bw;
+    });
+  }
+  // Cap to 200 to keep page responsive
+  const shown = rows.slice(0, 200);
+  const cappedNote = rows.length > 200 ? `<div style="font-size:11px;color:var(--mut);padding:6px 12px;background:var(--bg2);border-radius:6px;margin-bottom:10px">Showing first 200 of ${rows.length}. Narrow with category filter to see more.</div>` : '';
+
+  if (shown.length === 0){
+    listEl.innerHTML = '<div style="color:var(--mut);font-size:12px;padding:16px;text-align:center">No robots match the current filter.</div>';
+    return;
+  }
+
+  listEl.innerHTML = cappedNote + `
+    <table style="width:100%;border-collapse:collapse;font-size:12px">
+      <thead>
+        <tr style="background:var(--bg2);text-align:left">
+          <th style="padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--mut)">Robot</th>
+          <th style="padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--mut);width:140px">Critical</th>
+          <th style="padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--mut);width:140px">Standard</th>
+          <th style="padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--mut);width:120px">Optional</th>
+          <th style="padding:8px 10px;font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--mut);width:130px">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        ${shown.map(s => auditRow(s)).join('')}
+      </tbody>
+    </table>
+  `;
+}
+
+function auditRow(s){
+  const r = s.robot;
+  const cPct = s.critical.total ? s.critical.filled/s.critical.total : 0;
+  const sPct = s.standard.total ? s.standard.filled/s.standard.total : 0;
+  const oPct = s.optional.total ? s.optional.filled/s.optional.total : 0;
+  const cBar = barHtml(cPct, cPct >= 1 ? '#16a34a' : '#ef4444');
+  const sBar = barHtml(sPct, sPct >= 0.7 ? '#16a34a' : sPct >= 0.5 ? '#f59e0b' : '#ef4444');
+  const oBar = barHtml(oPct, '#6b7280');
+  const missingHint = s.critical.missing.length > 0 ? `<div style="font-size:10px;color:#ef4444;margin-top:2px">missing: ${s.critical.missing.join(', ')}</div>` : '';
+  return `
+    <tr style="border-bottom:1px solid var(--bdr)">
+      <td style="padding:8px 10px">
+        <div style="font-weight:600">${escapeHtml(r.brand || '—')} ${escapeHtml(r.name || '(unnamed)')}</div>
+        <div style="font-size:10px;color:var(--mut)">${escapeHtml(r.cat || '—')} · ${r.year || '—'} · id:${r.id}</div>
+        ${missingHint}
+      </td>
+      <td style="padding:8px 10px">${cBar}<div style="font-size:10px;color:var(--mut);margin-top:2px">${s.critical.filled}/${s.critical.total}</div></td>
+      <td style="padding:8px 10px">${sBar}<div style="font-size:10px;color:var(--mut);margin-top:2px">${s.standard.filled}/${s.standard.total}</div></td>
+      <td style="padding:8px 10px">${oBar}<div style="font-size:10px;color:var(--mut);margin-top:2px">${s.optional.filled}/${s.optional.total}</div></td>
+      <td style="padding:8px 10px">
+        <button class="tbl-action" onclick="researchRobot('${escapeAttr(r.id)}')" title="Send to Command Centre for AI research">🔍 Research</button>
+      </td>
+    </tr>
+  `;
+}
+
+function barHtml(pct, color){
+  const w = Math.round(pct * 100);
+  return `<div style="height:8px;background:var(--bg2);border-radius:4px;overflow:hidden"><div style="height:100%;width:${w}%;background:${color};transition:width .15s"></div></div>`;
+}
+
+function researchRobot(id){
+  const r = ROBOTS.find(x => x.id === id);
+  if (!r){ alert('Robot not found.'); return; }
+  // Switch to Command Centre and prefill an "update" prompt
+  const cmdNav = document.querySelector('div.nav-item[onclick*="\'cmd\'"]');
+  if (cmdNav) cmdNav.click();
+  setTimeout(() => {
+    const input = document.getElementById('chat-input') || document.getElementById('msg-input') || document.querySelector('#page-cmd textarea, #page-cmd input[type=text]');
+    if (input){
+      const prompt = `Research and update missing specs for "${r.brand} ${r.name}" (${r.cat}${r.year ? ', ' + r.year : ''}). Fill in any fields you can verify from the manufacturer's website or reputable reviews. Do not guess — leave fields empty if data isn't publicly available.`;
+      input.value = prompt;
+      input.focus();
+    } else {
+      addMsg(`🔍 Audit: research "${r.brand} ${r.name}" — paste an "update ${r.name}" command in chat.`, 'system');
+    }
+  }, 100);
 }
 
 // ── Init: scan once on page load so the badge is populated ──
