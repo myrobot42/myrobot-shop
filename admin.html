@@ -3532,21 +3532,31 @@ async function saveDupHunterChanges(){
 // ════════════════════════════════════════════════════════════════════
 
 // Tier 1 — every robot needs these. Targets 100%.
-const AUDIT_CRITICAL = ['brand', 'name', 'cat', 'year', 'country', 'img', 'score', 'desc'];
+// Each entry is a string (single field) or array (any of these counts as filled).
+const AUDIT_CRITICAL = [
+  'brand',
+  'name',
+  'cat',
+  ['year', 'announced', 'released'],      // any year-like field
+  ['country', 'origin', 'country_of_origin', 'made_in'],   // any country-like field
+  'img',
+  'score',
+  ['desc', 'description']                  // either spelling
+];
 
 // Tier 2 — most robots should have these. Some fields are alternates (any one counts).
 // Each entry is either a string (single field) or an array (any of these fields).
 const AUDIT_STANDARD = [
-  'price',                                            // price OR POA flag
-  ['height_mm', 'diameter_mm', 'wingspan_mm', 'body_length_mm'],  // primary dimension
-  ['weight_kg', 'weight'],                            // weight in some form
-  ['battery_life', 'battery_life_typical', 'battery_life_min'],
-  ['speed', 'speed_ms', 'run_speed', 'run_speed_ms'],
+  ['price', 'price_usd', 'price_aud'],                // price OR POA flag (POA = price 0/null is OK if there's a status)
+  ['height_mm', 'diameter_mm', 'wingspan_mm', 'body_length_mm', 'standing_height_mm'],
+  ['weight_kg', 'weight'],
+  ['battery_life', 'battery_life_typical', 'battery_life_min', 'battery_life_heavy'],
+  ['speed', 'speed_ms', 'run_speed', 'run_speed_ms', 'max_speed'],
   ['status', 'released', 'announced'],
-  ['payload', 'payload_kg', 'reach', 'reach_mm', 'dof'],  // some capability metric
+  ['payload', 'payload_kg', 'reach', 'reach_mm', 'dof', 'perf'],   // ANY capability metric, including perf scores
   ['wifi', 'bluetooth', 'cellular', 'connectivity'],
-  'tags',                                             // tags array
-  ['manufacturer_url', 'product_url', 'website']      // findable somewhere online
+  ['tags', 'highlights'],                             // tags array OR highlights array
+  ['manufacturer_url', 'product_url', 'website', 'affiliate_url']
 ];
 
 let AUDIT_STATE = {
@@ -3575,9 +3585,14 @@ function scoreField(robot, fieldDef){
 function scoreCritical(robot){
   let filled = 0;
   const missing = [];
+  // Friendly labels for the missing-fields hint
+  const FRIENDLY = {brand:'brand', name:'name', cat:'category', year:'year', country:'country', img:'image', score:'score', desc:'description'};
   for (const f of AUDIT_CRITICAL){
     if (scoreField(robot, f)) filled++;
-    else missing.push(f);
+    else {
+      const label = Array.isArray(f) ? (FRIENDLY[f[0]] || f[0]) : (FRIENDLY[f] || f);
+      missing.push(label);
+    }
   }
   return {filled, total: AUDIT_CRITICAL.length, missing};
 }
