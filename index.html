@@ -965,11 +965,39 @@ function loadRobots(){
 loadRobots();
 
 // ════════════ NAVIGATION ════════════
-function goPage(p){
+// Hash routing: every page change updates location.hash so the browser Back/Forward
+// buttons work, refresh keeps you on the current page, and profile links are shareable.
+//
+// Hash format:
+//   #db, #finder, #compare, #rankings, #news, #manufacturers, #signin, ...
+//   #profile/<robot-id>   — deep link to a specific robot
+//
+// goPage() is the public entry — called from every onclick in the markup. It updates
+// the hash, which triggers the hashchange listener, which calls _renderPage to actually
+// swap the DOM. This indirection means programmatic navigation and Back/Forward both
+// go through the same render path.
+function goPage(p, opts){
+  opts = opts || {};
+  let hash = p;
+  if (p === 'profile' && opts.id){
+    hash = 'profile/' + opts.id;
+  }
+  if (location.hash === '#' + hash){
+    // Same page clicked — re-render anyway (e.g. clicking Home from Home should still scroll up)
+    _renderPage(p, opts);
+    return;
+  }
+  // Setting location.hash pushes a history entry; hashchange listener then renders.
+  location.hash = hash;
+}
+
+function _renderPage(p, opts){
+  opts = opts || {};
   document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
   document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active'));
   const pg=document.getElementById('page-'+p);
-  if(pg) pg.classList.add('active');
+  if(!pg) return; // Unknown page id — bail silently
+  pg.classList.add('active');
   const nav=document.getElementById('nav-'+p);
   if(nav) nav.classList.add('active');
   window.scrollTo(0,0);
@@ -980,6 +1008,41 @@ function goPage(p){
   if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();}
   if(p==='manufacturers'){renderManufacturers();}
   if(p==='submit-review'){populateReviewSelect();}
+  if(p==='profile' && opts.id){
+    // openProfile sets DOM content but also calls goPage('profile') — avoid the loop
+    // by calling the internal renderer directly here when we arrive via hash.
+    _renderProfile(opts.id);
+  }
+}
+
+// Parse current location.hash into {page, opts}. Empty hash returns home.
+function parseHash(){
+  const raw = (location.hash || '').replace(/^#/, '');
+  if (!raw) return {page: 'home', opts: {}};
+  const parts = raw.split('/');
+  const page = parts[0];
+  if (page === 'profile' && parts[1]){
+    return {page: 'profile', opts: {id: parts[1]}};
+  }
+  return {page, opts: {}};
+}
+
+// Back/Forward + manual hash edits + programmatic hash changes all funnel through here.
+window.addEventListener('hashchange', () => {
+  const {page, opts} = parseHash();
+  _renderPage(page, opts);
+});
+
+// On first paint, honour any hash already in the URL (deep links, refreshed tabs).
+// Runs after DOM is ready — see the DOMContentLoaded handler below.
+function applyInitialHashRoute(){
+  const {page, opts} = parseHash();
+  _renderPage(page, opts);
+}
+if (document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', applyInitialHashRoute);
+} else {
+  applyInitialHashRoute();
 }
 
 // ════════════ HOME ════════════
@@ -1819,7 +1882,17 @@ document.addEventListener('keydown', e => {
   }
 });
 
+// Public entry — called from every onclick. Routes through hash so Back works
+// and the URL is shareable (e.g. /#profile/tesla-optimus).
 function openProfile(id){
+  if(!ROBOTS.find(x=>x.id===id)) return; // Unknown robot — fail silently
+  goPage('profile', {id: id});
+}
+
+// Internal renderer — called by _renderPage when the route resolves to a profile.
+// Populates all the profile DOM nodes. Don't call this directly from onclicks;
+// use openProfile() so the URL stays in sync.
+function _renderProfile(id){
   const r=ROBOTS.find(x=>x.id===id);
   if(!r)return;
   currentProfile=r;
@@ -1878,7 +1951,7 @@ function openProfile(id){
   // VS card
   const other=ROBOTS.find(x=>x.id!==r.id&&x.cat===r.cat);
   if(other)document.getElementById('profile-vs').textContent=r.name+' vs '+other.name;
-  goPage('profile');
+  // Note: page activation is handled by _renderPage — don't call goPage here or we'd loop.
 }
 
 function addToCompareFromProfile(){
