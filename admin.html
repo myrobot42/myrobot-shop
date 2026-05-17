@@ -1566,6 +1566,11 @@ async function runIngest(){
 
   const systemPrompt=`You are building myrobot.shop — the GSMArena of robots. Return a JSON array of ${count} REAL ${brand} robots in the ${cat} category.
 
+CATEGORY STRUCTURE (IMPORTANT):
+- "cat" field MUST be EXACTLY "${cat}" — do NOT invent variants
+- "sub" field is for the SPECIFIC product subtype (e.g. "Robot Vacuum & Mop", "Collaborative Robot", "Surgical Robot", "eVTOL Aircraft"). Always populate this.
+- Detail belongs in 'sub', NEVER in 'cat'.
+
 CRITICAL JSON RULES:
 - Return ONLY a valid JSON array, nothing else
 - No markdown, no explanation, no code blocks
@@ -1809,8 +1814,8 @@ The img must be a direct .jpg/.png/.webp URL. If unsure, set img to "".
 Required fields:
 {
   "id": "unique-kebab-case-id",
-  "cat": "one of: Humanoid|Industrial|Service|Consumer|Drones|Educational|Medical|Agricultural|Military",
-  "sub": "specific subcategory e.g. 'Industrial Humanoid'",
+  "cat": "MUST be EXACTLY one of these 19 values (case-sensitive): Aerospace, Agricultural, Aquatic, Autonomous Vehicles, Consumer, Delivery, Disaster Response, Drones, Educational, Entertainment, Exoskeletons, Humanoid, Industrial, Medical, Military, Research, Service, Social, Telepresence",
+  "sub": "the SPECIFIC product subtype here (e.g. 'Robot Vacuum & Mop', 'Industrial Humanoid', '6-Axis Cobot', 'Surgical Robot', 'eVTOL Aircraft', 'Coding Toy Robot'). Use this field for precision; never put specific types in 'cat'.",
   "name": "exact product name",
   "brand": "manufacturer name",
   "year": 2024,
@@ -1991,8 +1996,8 @@ Be DETAILED and ACCURATE. Use real specs from your knowledge:
 Each object:
 {
   "id": "brand-model-kebab",
-  "cat": "Humanoid|Industrial|Service|Consumer|Drones|Educational|Medical|Agricultural|Military",
-  "sub": "specific subcategory e.g. Collaborative Robot|Inspection Quadruped|Surgical Robot",
+  "cat": "MUST be EXACTLY one of these 19 values (case-sensitive): Aerospace, Agricultural, Aquatic, Autonomous Vehicles, Consumer, Delivery, Disaster Response, Drones, Educational, Entertainment, Exoskeletons, Humanoid, Industrial, Medical, Military, Research, Service, Social, Telepresence",
+  "sub": "the SPECIFIC product subtype (e.g. 'Robot Vacuum & Mop', 'Collaborative Robot', 'Inspection Quadruped', 'Surgical Robot'). Detail belongs HERE, not in 'cat'.",
   "name": "exact product name",
   "brand": "exact manufacturer name",
   "year": 2024,
@@ -4158,11 +4163,13 @@ Research this robot using your knowledge. Return ONLY a JSON object with NEW fie
 - cameras (string description), lidar (boolean), imu (boolean), depth_sensing (boolean)
 - price (USD number, 0 if POA), use_cases (array of strings), warranty_months (number)
 - manufacturer_url, product_url (string URLs)
+- sub (if not already filled): the SPECIFIC product subtype (e.g. "Robot Vacuum & Mop", "Industrial Humanoid", "Surgical Robot"). Detail belongs HERE, not in 'cat'.
 
 CRITICAL RULES:
 - DO NOT GUESS. If you don't know a value with confidence, omit the field.
 - DO NOT invent specs, prices, or URLs. Better to return fewer accurate fields than many invented ones.
 - DO NOT include fields that are already filled above.
+- DO NOT change "cat" — it must stay exactly as given. Only fill "sub" if it's currently empty.
 - Return ONLY the JSON object, no commentary.`;
 
   const resp = await fetch('https://api.anthropic.com/v1/messages', {
