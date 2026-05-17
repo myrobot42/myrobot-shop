@@ -3140,14 +3140,15 @@ let DUP_HUNTER_STATE = {
 
 // Normalise a model name for fuzzy comparison.
 // Lowercase, strip accents, drop trailing year-in-parens, collapse punctuation/whitespace.
+// v2: don't strip parentheticals — they often contain distinguishing variant info
+// e.g. "Atlas (DARPA)" vs "Atlas (Commercial)" should NOT normalise to identical
 function normModelName(name){
   if (!name) return '';
   return String(name)
     .toLowerCase()
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-    .replace(/\s*\(\s*\d{4}\s*\)\s*$/, '')         // strip trailing "(2024)"
-    .replace(/\s*\(.*?\)\s*/g, ' ')                 // strip other parentheticals
-    .replace(/[^a-z0-9 ]+/g, ' ')
+    .replace(/\s*\(\s*\d{4}\s*\)\s*$/, '')          // ONLY strip trailing year-in-parens like "(2024)"
+    .replace(/[^a-z0-9 ]+/g, ' ')                    // normalise punctuation to space (incl. parens content kept as words)
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -3180,13 +3181,30 @@ function similarity(a, b){
   return 1 - (levenshtein(a, b) / max);
 }
 
-// True if the two normalized names end in DIFFERENT numeric tokens (e.g. "692" vs "694").
-// Catches the Roomba 690/692/694 case where fuzzy similarity is misleadingly high.
+// True if the two names have differing tokens that look like SKU codes or version markers.
+// v2 fix: checks ALL token positions, not just the last. Catches "da Vinci Xi ..." vs
+// "da Vinci Si ..." where the distinguishing token is buried in the middle of a long name.
+// Also catches "Roomba Plus 405 Combo..." vs "Roomba Plus 508 Combo..." (numeric token mid-name).
 function hasDifferentNumericSuffix(a, b){
-  const ma = a.match(/(\d+)\s*$/);
-  const mb = b.match(/(\d+)\s*$/);
-  if (!ma || !mb) return false;
-  return ma[1] !== mb[1];
+  const tokensA = a.split(/\s+/).filter(Boolean);
+  const tokensB = b.split(/\s+/).filter(Boolean);
+  if (!tokensA.length || !tokensB.length) return false;
+
+  // Find tokens unique to each side (symmetric difference)
+  const setA = new Set(tokensA);
+  const setB = new Set(tokensB);
+  const onlyInA = tokensA.filter(t => !setB.has(t));
+  const onlyInB = tokensB.filter(t => !setA.has(t));
+
+  // No differences? Same name. Not a SKU diff.
+  if (onlyInA.length === 0 && onlyInB.length === 0) return false;
+
+  // If ANY differing token is "SKU-like" (contains a digit, OR is short 1-3 chars),
+  // treat as different products. Differing SKU/version tokens are strong signals.
+  const isSkuLike = (t) => /\d/.test(t) || t.length <= 3;
+  for (const t of onlyInA){ if (isSkuLike(t)) return true; }
+  for (const t of onlyInB){ if (isSkuLike(t)) return true; }
+  return false;
 }
 
 // Score how "complete" a robot record is — for tie-breaking only (older record still wins identity).
@@ -3280,10 +3298,49 @@ function mergeRecords(kept, dropped){
   return {beforeKept, conflicts};
 }
 
-// Threshold for auto-merge (0.85 = balanced per Shane's choice)
-const DUP_AUTO_THRESHOLD = 0.85;
-// Threshold for flagging (anything 0.60..0.85 gets manual review)
-const DUP_FLAG_THRESHOLD = 0.60;
+// Threshold for auto-merge — v2 raised to 0.95 (was 0.85)
+// Combined with variant-token check, this means: only auto-merge near-identical names
+const DUP_AUTO_THRESHOLD = 0.95;
+// Threshold for flagging — v2 raised to 0.85 (was 0.60) to cut false-positive noise
+const DUP_FLAG_THRESHOLD = 0.85;
+
+// Variant tokens — words that, when present in one name but absent in the other,
+// almost always mean different products. Built from analysis of Shane's actual data
+// (e.g. UBTECH "Walker X / Walker Pro / Walker Max" — these are different robots).
+const VARIANT_TOKENS = new Set([
+  'pro', 'plus', 'max', 'mini', 'lite', 'ultra', 'premium', 'deluxe', 'advanced',
+  'basic', 'standard', 'eco', 'sport', 'home', 'edu', 'go', 'air', 'one',
+  'hd', '4k', '8k', 'wifi', 'bt',
+  // Single-letter variant markers
+  'x', 's', 'm', 'l', 'xl',
+  // Sub-version markers
+  'v2', 'v3', 'v4', 'gen2', 'gen3', 'mk2', 'mk3', 'mkii', 'mkiii',
+  // Cleaner/vacuum subtype variants
+  'vac', 'mop', 'station', 'auto', 'dock',
+  // Other common product-line distinctions
+  'vision', 'flight', 'flex', 'compact', 'omni', 'turbo', 'flow', 'wave',
+  'maxv', 'plus+', 'pro+'
+]);
+
+// Tokenise a name into normalised tokens (for variant comparison)
+function tokenize(norm){
+  return norm.split(/\s+/).filter(Boolean);
+}
+
+// True if the two names differ in a variant token (one has 'pro', other has 'max', etc.)
+// Returns true when at least ONE variant token differs between the names.
+function hasVariantTokenDiff(normA, normB){
+  const tokensA = new Set(tokenize(normA));
+  const tokensB = new Set(tokenize(normB));
+  // Find variant tokens unique to either side
+  for (const t of tokensA){
+    if (VARIANT_TOKENS.has(t) && !tokensB.has(t)) return true;
+  }
+  for (const t of tokensB){
+    if (VARIANT_TOKENS.has(t) && !tokensA.has(t)) return true;
+  }
+  return false;
+}
 
 function runDupHunter(){
   DUP_HUNTER_STATE.autoMerged = [];
@@ -3313,16 +3370,27 @@ function runDupHunter(){
         if (dropped.has(list[j].id)) continue;
         const na = norms[i], nb = norms[j];
         if (!na || !nb) continue;
+
         const conf = similarity(na, nb);
+        // Below flag threshold? Skip entirely. v2 raises this from 0.60 to 0.85
+        // which prunes the 957 false-positive product-variant noise.
         if (conf < DUP_FLAG_THRESHOLD) continue;
-        // Guard: even at high similarity, demote to "flagged" if the two names end in
-        // different numeric tokens (Roomba 692 vs 694 = different SKUs, not duplicates).
+
+        // Three guards for auto-merge:
+        //   1. Same numeric SKU suffix (existing)
+        //   2. No differing variant tokens (NEW v2)
+        //   3. Confidence at or above 0.95
         const sameNumericSuffix = !hasDifferentNumericSuffix(na, nb);
+        const variantDiff = hasVariantTokenDiff(na, nb);
+
+        // If there's a variant-token difference, this is almost certainly two different
+        // products (Walker X vs Walker Pro). Never auto-merge, never even flag.
+        if (variantDiff) continue;
+
         if (conf >= DUP_AUTO_THRESHOLD && sameNumericSuffix){
           // Auto-merge — older keeps identity, fields merge in
           const [keeper, drop] = pickKeeper(list[i], list[j]);
           const {beforeKept, conflicts} = mergeRecords(keeper, drop);
-          // Record undo
           DUP_HUNTER_STATE.undoStack.push({keptId: keeper.id, droppedRobot: JSON.parse(JSON.stringify(drop)), beforeKept});
           DUP_HUNTER_STATE.autoMerged.push({
             keptId: keeper.id,
@@ -3333,16 +3401,15 @@ function runDupHunter(){
             conf: conf,
             conflicts: conflicts
           });
-          // Remove dropped from ROBOTS
           const dropIdx = ROBOTS.indexOf(drop);
           if (dropIdx >= 0) ROBOTS.splice(dropIdx, 1);
           dropped.add(drop.id);
-          // Also remove from the local working list to skip future comparisons against it
           const localDropIdx = list.indexOf(drop);
           if (localDropIdx >= 0){ list.splice(localDropIdx, 1); norms.splice(localDropIdx, 1); }
-          // i may now point past the new length — outer loop guard handles it
-          break; // restart inner loop for i since list shifted
+          break;
         } else {
+          // Made it past variant-diff check, but below auto-merge threshold OR
+          // different numeric SKU. Flag for manual review.
           DUP_HUNTER_STATE.flagged.push({a: list[i], b: list[j], brand: brand, conf: conf});
         }
       }
@@ -3352,8 +3419,9 @@ function runDupHunter(){
   if (DUP_HUNTER_STATE.autoMerged.length > 0){
     saveDB();
     DUP_HUNTER_STATE.pendingSave = true;
-    addLog('success', `Duplicate Hunter: auto-merged ${DUP_HUNTER_STATE.autoMerged.length} duplicate(s)`);
+    addLog('success', `Duplicate Hunter v2: auto-merged ${DUP_HUNTER_STATE.autoMerged.length} duplicate(s)`);
   }
+  addLog('info', `Duplicate Hunter v2: ${DUP_HUNTER_STATE.autoMerged.length} auto-merged, ${DUP_HUNTER_STATE.flagged.length} flagged`);
   renderDupHunter();
 }
 
