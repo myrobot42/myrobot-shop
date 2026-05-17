@@ -1133,6 +1133,7 @@ function filterCat(cat){
   goPage('db');
   setTimeout(()=>{
     document.querySelectorAll('[data-cat]').forEach(cb=>{cb.checked=cb.dataset.cat===cat;});
+    renderBrandFilter();  // narrow manufacturer list to just brands in this category
     renderDb();
   },60);
 }
@@ -1142,9 +1143,43 @@ function buildDbFilters(){
   const catF=document.getElementById('db-cat-filters');
   if(!catF||catF.dataset.built)return;
   catF.dataset.built='1';
-  catF.innerHTML=ALL_CATS.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="renderDb()"><span class="filter-opt-label">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
+  catF.innerHTML=ALL_CATS.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
+  renderBrandFilter();  // initial render: all brands
+}
+
+// Re-render the manufacturer list based on currently selected categories.
+// When no categories selected → show all brands. When categories selected → show
+// only brands that have at least one robot in those categories.
+function renderBrandFilter(){
   const brandF=document.getElementById('db-brand-filters');
-  brandF.innerHTML=ALL_BRANDS.filter(b=>b&&b!=='undefined').map(b=>`<label class="filter-opt"><input type="checkbox" data-brand="${b}" onchange="renderDb()"><span class="filter-opt-label">${b}</span></label>`).join('');
+  if(!brandF)return;
+  const selCats=[...document.querySelectorAll('[data-cat]:checked')].map(el=>el.dataset.cat);
+  const selBrands=new Set([...document.querySelectorAll('[data-brand]:checked')].map(el=>el.dataset.brand));
+  // Determine which brands are relevant given the category selection
+  let relevantBrands;
+  if(selCats.length===0){
+    relevantBrands=ALL_BRANDS.filter(b=>b&&b!=='undefined');
+  }else{
+    const brandSet=new Set();
+    for(const r of ROBOTS){
+      if(selCats.includes(r.cat)&&r.brand)brandSet.add(r.brand);
+    }
+    relevantBrands=ALL_BRANDS.filter(b=>brandSet.has(b));
+  }
+  // Compute count per brand (within the category filter)
+  const brandCounts={};
+  for(const r of ROBOTS){
+    if(selCats.length===0||selCats.includes(r.cat)){
+      brandCounts[r.brand]=(brandCounts[r.brand]||0)+1;
+    }
+  }
+  brandF.innerHTML=relevantBrands.map(b=>`<label class="filter-opt"><input type="checkbox" data-brand="${b}" onchange="renderDb()" ${selBrands.has(b)?'checked':''}><span class="filter-opt-label">${b}</span><span class="filter-opt-count">${brandCounts[b]||0}</span></label>`).join('');
+}
+
+// Called when a category checkbox changes. Rebuilds brand list, then re-renders results.
+function onCatChange(){
+  renderBrandFilter();
+  renderDb();
 }
 
 function getDbFiltered(){
@@ -1234,6 +1269,7 @@ function setDbView(v){
 function resetDb(){
   document.getElementById('db-search').value='';
   document.querySelectorAll('[data-cat],[data-brand],[data-price],[data-feat],[data-status]').forEach(el=>{if(el.type==='checkbox')el.checked=false;});
+  renderBrandFilter();  // re-render brand list now that no categories are selected
   renderDb();
 }
 
