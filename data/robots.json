@@ -35564,22 +35564,22 @@
     "cat": "Consumer",
     "sub": "Vacuum + Self-Empty",
     "tags": [
-      "smart mapping",
-      "obstacle avoidance",
-      "self-emptying",
-      "pet-friendly"
+      "autonomous",
+      "mapping",
+      "obstacle-avoidance",
+      "self-emptying"
     ],
-    "fig": "https://example.com/roomba-j7plus.jpg",
-    "img": "https://example.com/roomba-j7plus-main.jpg",
-    "score": 92,
-    "rating": 4.5,
-    "price": 849,
-    "desc": "Advanced robot vacuum with PrecisionVision Navigation to avoid obstacles like pet waste and charging cords.",
+    "fig": "https://www.irobot.com/dw/image/v2/BFXP_PRD/on/demandware.static/-/Sites-master-catalog-irobot/default/dw8c4f4e4e/images/large/R715020_roomba_j7plus_pdp_hero_R01.jpg",
+    "img": "https://www.irobot.com/dw/image/v2/BFXP_PRD/on/demandware.static/-/Sites-master-catalog-irobot/default/dw8c4f4e4e/images/large/R715020_roomba_j7plus_pdp_hero_R01.jpg",
+    "score": 8.5,
+    "rating": 4.3,
+    "price": 799,
+    "desc": "Smart vacuum with PrecisionVision Navigation to identify and avoid obstacles like pet waste, cords, and shoes. Self-empties for 60 days.",
     "highlights": [
-      "Avoids pet waste",
-      "Smart mapping",
+      "Obstacle avoidance",
       "Self-emptying base",
-      "Voice control"
+      "Smart mapping",
+      "Works with Alexa/Google"
     ],
     "height_mm": 92,
     "width_mm": 339,
@@ -35591,32 +35591,32 @@
     "operating_temp_min": 0,
     "operating_temp_max": 40,
     "colors": [
-      "Charcoal"
+      "Graphite"
     ],
     "os": "iRobot OS",
-    "chipset": "Custom ARM",
+    "chipset": "Qualcomm",
     "cpu": "ARM Cortex-A7",
     "ram_gb": 0.5,
     "ram_type": "DDR3",
-    "storage_gb": 4,
-    "storage_type": "eMMC",
+    "storage_gb": 1,
+    "storage_type": "Flash",
     "npu_tops": null,
-    "battery_type": "Lithium-ion",
-    "battery_wh": 32,
-    "battery_life": 75,
-    "charge_time": 180,
-    "charge_power_w": 30,
+    "battery_type": "Li-ion",
+    "battery_wh": 33,
+    "battery_life": "75 minutes",
+    "charge_time": "3 hours",
+    "charge_power_w": 20,
     "charge_type": "Dock",
     "wireless_charging": false,
     "auto_charge": true,
     "hot_swap": false,
     "quick_release": true,
-    "cycle_life": 300,
+    "cycle_life": 500,
     "ai_model": "PrecisionVision",
     "ai_model_type": "Computer Vision",
     "learning_methods": [
       "Visual SLAM",
-      "Behavioral learning"
+      "Behavioral Learning"
     ],
     "ai_cloud_required": false,
     "ota": true,
@@ -35626,12 +35626,9 @@
     "lidar": false,
     "depth_sensing": false,
     "imu": true,
-    "touch_sensing": [
-      "Bump sensors",
-      "Cliff sensors"
-    ],
+    "touch_sensing": true,
     "wifi": "802.11n",
-    "bluetooth": "4.0",
+    "bluetooth": "BLE 4.0",
     "ros": false,
     "sdk": "iRobot SDK",
     "sdk_langs": [
@@ -36259,10 +36256,10 @@
     ],
     "fig": 4.7,
     "img": "",
-    "score": 94,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 19900,
-    "desc": "Industrial-grade collaborative robot optimized for production environments with enhanced precision and reliability for manufacturing tasks.",
+    "desc": "Force-sensitive industrial robot platform manufactured in Germany. Features 7 degrees of freedom with torque sensors in all axes, human-like dexterity, and intuitive programming interfaces. Designed for industrial automation with App-based workflows, easy installation, and collaborative capabilities for production environments.",
     "highlights": [
       "Production certified",
       "Enhanced precision",
@@ -36350,7 +36347,9 @@
       "C++",
       "MATLAB"
     ],
-    "safety_rating": "Category 3 PLd according to ISO 13849-1"
+    "safety_rating": "Category 3 PLd according to ISO 13849-1",
+    "safety_certification": "ISO 10218-1, ISO/TS 15066",
+    "product_url": "https://www.franka.de/production-3"
   },
   {
     "id": "franka-research-3",
@@ -38182,101 +38181,6 @@
       "coverage": 94
     },
     "origin": "UK"
-  },
-  {
-    "id": "irobot-roomba-j7-plus",
-    "name": "Roomba j7+",
-    "brand": "iRobot",
-    "year": 2021,
-    "status": "Active",
-    "cat": "Consumer",
-    "sub": "Vacuum + Self-Empty",
-    "tags": [
-      "autonomous",
-      "mapping",
-      "obstacle-avoidance",
-      "self-emptying"
-    ],
-    "fig": "https://www.irobot.com/dw/image/v2/BFXP_PRD/on/demandware.static/-/Sites-master-catalog-irobot/default/dw8c4f4e4e/images/large/R715020_roomba_j7plus_pdp_hero_R01.jpg",
-    "img": "https://www.irobot.com/dw/image/v2/BFXP_PRD/on/demandware.static/-/Sites-master-catalog-irobot/default/dw8c4f4e4e/images/large/R715020_roomba_j7plus_pdp_hero_R01.jpg",
-    "score": 8.5,
-    "rating": 4.3,
-    "price": 799,
-    "desc": "Smart vacuum with PrecisionVision Navigation to identify and avoid obstacles like pet waste, cords, and shoes. Self-empties for 60 days.",
-    "highlights": [
-      "Obstacle avoidance",
-      "Self-emptying base",
-      "Smart mapping",
-      "Works with Alexa/Google"
-    ],
-    "height_mm": 92,
-    "width_mm": 339,
-    "depth_mm": 339,
-    "weight_kg": 3.4,
-    "frame_material": "ABS plastic",
-    "shell_material": "ABS plastic",
-    "ip_rating": null,
-    "operating_temp_min": 0,
-    "operating_temp_max": 40,
-    "colors": [
-      "Graphite"
-    ],
-    "os": "iRobot OS",
-    "chipset": "Qualcomm",
-    "cpu": "ARM Cortex-A7",
-    "ram_gb": 0.5,
-    "ram_type": "DDR3",
-    "storage_gb": 1,
-    "storage_type": "Flash",
-    "npu_tops": null,
-    "battery_type": "Li-ion",
-    "battery_wh": 33,
-    "battery_life": "75 minutes",
-    "charge_time": "3 hours",
-    "charge_power_w": 20,
-    "charge_type": "Dock",
-    "wireless_charging": false,
-    "auto_charge": true,
-    "hot_swap": false,
-    "quick_release": true,
-    "cycle_life": 500,
-    "ai_model": "PrecisionVision",
-    "ai_model_type": "Computer Vision",
-    "learning_methods": [
-      "Visual SLAM",
-      "Behavioral Learning"
-    ],
-    "ai_cloud_required": false,
-    "ota": true,
-    "cameras": [
-      "Front RGB camera"
-    ],
-    "lidar": false,
-    "depth_sensing": false,
-    "imu": true,
-    "touch_sensing": true,
-    "wifi": "802.11n",
-    "bluetooth": "BLE 4.0",
-    "ros": false,
-    "sdk": false,
-    "sdk_langs": null,
-    "api": false,
-    "ce": true,
-    "fcc": true,
-    "rohs": true,
-    "warranty_months": 12,
-    "use_cases": [
-      "Home cleaning",
-      "Pet hair removal",
-      "Daily maintenance"
-    ],
-    "perf": {
-      "suction_power_pa": 600,
-      "cleaning_area_sqm": 185,
-      "noise_level_db": 68,
-      "max_speed_ms": 0.3
-    },
-    "origin": "USA"
   },
   {
     "id": "irobot-roomba-692",
@@ -45400,27 +45304,6 @@
     "manufacturer_url": "https://www.sensefly.com"
   },
   {
-    "id": "sensefly-ebee-x",
-    "name": "eBee X",
-    "brand": "senseFly",
-    "cat": "Fixed-wing Mapping Drone",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Professional fixed-wing mapping drone with RTK/PPK support for survey-grade accuracy down to 1.5 cm. Can map up to 500 ha in single flight. Features multiple sensor compatibility and beginner-friendly eMotion software.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
     "id": "ageagle-ebee-tac-government",
     "name": "eBee TAC Government",
     "brand": "AgEagle",
@@ -46686,27 +46569,6 @@
     ],
     "warranty_months": 12,
     "manufacturer_url": "https://www.proscenic.com"
-  },
-  {
-    "id": "proscenic-proscenic-q8-max",
-    "name": "Proscenic Q8 MAX",
-    "brand": "Proscenic",
-    "cat": "Robot Vacuum & Mop",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Self-emptying base with dust bags, strong suction, precise mapping, only need to replace dust bag every 2 months",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
   },
   {
     "id": "proscenic-proscenic-850t",
@@ -49251,9 +49113,9 @@
   },
   {
     "id": "yeedi-yeedi-s14-plus",
-    "name": "YEEDI S14 PLUS",
+    "name": "yeedi S14 Plus",
     "brand": "Yeedi",
-    "cat": "Robot Vacuum & Mop",
+    "cat": "Robot Vacuum and Mop",
     "sub": "",
     "tags": [],
     "fig": "🤖",
@@ -49261,7 +49123,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "18,000Pa suction, OZMO Roller mopping, ZeroTangle 2.0, TruEdge 3D sensor, all-in-one station with auto hot water washing & self-drying",
+    "desc": "18,000Pa suction, OZMO Roller mopping system spinning at 200 RPM with 6.89-inch roller, ZeroTangle 2.0 anti-hair system, TruEdge 3D sensor for edge cleaning, all-in-one station with auto hot water washing and self-drying",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -49401,48 +49263,6 @@
     ],
     "warranty_months": 12,
     "manufacturer_url": "https://www.yeedi.com/"
-  },
-  {
-    "id": "yeedi-yeedi-c12-pro-plus",
-    "name": "YEEDI C12 PRO PLUS",
-    "brand": "Yeedi",
-    "cat": "Robot Vacuum & Mop",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "8000Pa suction power with high-speed motor, ZeroTangle Technology, Auto-Empty Station with PureCyclone Technology, OZMO Pro 2.0 Vibrating Mopping System (480 times per minute), 4-Stage Filtration System",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
-    "id": "yeedi-yeedi-m14-plus",
-    "name": "YEEDI M14 PLUS",
-    "brand": "Yeedi",
-    "cat": "Robot Vacuum & Mop",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "OZMO Roller instant self-washing mopping, 167°F hot water wash & self-drying, ZeroTangle 3.0 anti-hair brush, all-in-one Omni station, recognized as Top 5 pick in Best Robot Vacuum category",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
   },
   {
     "id": "yeedi-yeedi-c12-pro-plus-robot-vacuum-and-mop",
@@ -49704,7 +49524,7 @@
     "id": "realman-rmc-da-dual-arm-compound-robot",
     "name": "RMC-DA Dual-Arm Compound Robot",
     "brand": "RealMan",
-    "cat": "Dual 7-DOF Mobile Manipulator",
+    "cat": "Dual-Arm Mobile Manipulator",
     "sub": "",
     "tags": [],
     "fig": "🤖",
@@ -49712,7 +49532,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Intelligent platform with two 7-axis robotic arms, compact and flexible for advanced automation and collaborative tasks",
+    "desc": "Intelligent mobile platform with two 7-axis robotic arms, compact and flexible design, includes navigation system with laser radar and depth camera",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -51420,9 +51240,9 @@
   },
   {
     "id": "jaka-jaka-zu-5s",
-    "name": "JAKA Zu 5s",
+    "name": "JAKA Zu 5S",
     "brand": "JAKA",
-    "cat": "Collaborative Robot with Force Sensor",
+    "cat": "Force-Sensing Collaborative Robot",
     "sub": "",
     "tags": [],
     "fig": "🤖",
@@ -51430,7 +51250,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Force sensor version with built-in industrial force sensor and force control algorithm. Features tri-co interactions and full-arm collision detection. Suitable for polishing, sanding, testing, PCB assembly.",
+    "desc": "Force-sensing variant with built-in industrial force sensor and 954mm working radius. Features three force control solutions: constant force, normal tracking, and speed mode. Tri-co interaction capabilities (coexisting, cooperative, cognitive) for advanced human-robot collaboration.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -51935,27 +51755,6 @@
     "imu": true
   },
   {
-    "id": "jaka-jaka-zu-5s",
-    "name": "JAKA Zu 5S",
-    "brand": "JAKA",
-    "cat": "Force-Sensing Collaborative Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Force-sensing variant with built-in industrial force sensor and 954mm working radius. Features three force control solutions: constant force, normal tracking, and speed mode. Tri-co interaction capabilities (coexisting, cooperative, cognitive) for advanced human-robot collaboration.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
     "id": "jaka-jaka-ai-7",
     "name": "JAKA Ai 7",
     "brand": "JAKA",
@@ -52198,7 +51997,7 @@
   },
   {
     "id": "aubo-aubo-i20",
-    "name": "AUBO-i20",
+    "name": "AUBO i20",
     "brand": "AUBO",
     "cat": "Collaborative Robot",
     "sub": "",
@@ -52208,7 +52007,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty cobot with 1650mm reach, ±0.1mm repeatability, and 63kg weight. Designed for applications requiring maximum payload capacity and extended reach for large parts handling.",
+    "desc": "Maximum capacity cobot with 1650mm reach, ±0.1mm repeatability, 63kg weight. Features enhanced safety systems and designed for heavy-duty industrial applications requiring high payload capacity.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52269,7 +52068,7 @@
   },
   {
     "id": "aubo-aubo-i16",
-    "name": "AUBO-i16",
+    "name": "AUBO i16",
     "brand": "AUBO",
     "cat": "Collaborative Robot",
     "sub": "",
@@ -52279,7 +52078,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty cobot with 967.5mm reach, ±0.03-0.1mm repeatability, and 38kg weight. Suitable for applications requiring high payload capacity in compact workspaces.",
+    "desc": "Powerful cobot with 967.5mm reach, ±0.03-0.1mm repeatability, 38kg weight. Perfect for packaging applications when combined with advanced vacuum gripper. Easy machine operation automation.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52348,7 +52147,7 @@
   },
   {
     "id": "aubo-aubo-i12",
-    "name": "AUBO-i12",
+    "name": "AUBO i12",
     "brand": "AUBO",
     "cat": "Collaborative Robot",
     "sub": "",
@@ -52358,7 +52157,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High-capacity cobot with 1250mm reach, ±0.03mm repeatability, and 40kg weight. Designed for applications requiring higher payload capacity with extended reach.",
+    "desc": "Heavy-duty cobot with 1250mm reach, ±0.03mm repeatability, 40kg weight. Launched across APAC markets for industrial automation applications.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52408,7 +52207,7 @@
   },
   {
     "id": "aubo-aubo-i10",
-    "name": "AUBO-i10",
+    "name": "AUBO i10",
     "brand": "AUBO",
     "cat": "Collaborative Robot",
     "sub": "",
@@ -52418,7 +52217,7 @@
     "score": 75,
     "rating": 4,
     "price": 35000,
-    "desc": "Versatile cobot ideal for machine tending and palletizing. Features 1350mm reach, ±0.03-0.1mm repeatability, 38.5kg weight, and is designed for sub-assemblies and packaging tasks with excellent precision.",
+    "desc": "High-capacity cobot with 1350mm reach, ±0.03-0.1mm repeatability, 38.5kg weight. Designed for human-centric manufacturing including assembly, machine tending, and packaging tasks. Features 6-degrees-of-freedom motion.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52501,7 +52300,7 @@
   },
   {
     "id": "aubo-aubo-i7",
-    "name": "AUBO-i7",
+    "name": "AUBO i7",
     "brand": "AUBO",
     "cat": "Collaborative Robot",
     "sub": "",
@@ -52511,7 +52310,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Mid-range payload cobot with 786.5mm reach, ±0.02mm repeatability, and 24kg weight. Designed for applications requiring moderate payload capacity with high precision.",
+    "desc": "Mid-range cobot with 786.5mm reach, ±0.02mm repeatability, 24kg weight. Launched across APAC markets for diverse industrial applications.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52586,7 +52385,7 @@
   },
   {
     "id": "aubo-aubo-i5",
-    "name": "AUBO-i5",
+    "name": "AUBO i5",
     "brand": "AUBO",
     "cat": "Collaborative Robot",
     "sub": "",
@@ -52596,7 +52395,7 @@
     "score": 75,
     "rating": 4,
     "price": 35000,
-    "desc": "Versatile cobot optimized for flexible pick/place operations. Features 886.5mm reach, ±0.02-0.05mm repeatability, 24kg weight, and is ideal for assembly tasks, machine tending, and working closely with human operators.",
+    "desc": "Versatile cobot with 886.5mm reach, ±0.02-0.05mm repeatability, 24kg weight. Compact design with open system platform for flexible integration. Perfect for machine operating tasks and assembly applications.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52682,7 +52481,7 @@
   },
   {
     "id": "aubo-aubo-i3",
-    "name": "AUBO-i3",
+    "name": "AUBO i3",
     "brand": "AUBO",
     "cat": "Collaborative Robot",
     "sub": "",
@@ -52692,7 +52491,7 @@
     "score": 75,
     "rating": 4,
     "price": 15000,
-    "desc": "Compact lightweight cobot ideal for light assembly and repeated movement applications. Features 625mm reach, ±0.02-0.05mm repeatability, 16kg weight, and is perfect for tight clearances and small workspaces.",
+    "desc": "Compact lightweight cobot with 625mm reach, ±0.02-0.05mm repeatability, 16kg weight. Ideal for tight clearances, light assembly, and repeated movement applications. Features open SDK supporting C, C++, C#, Lua, and Python.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -61340,27 +61139,6 @@
     "manufacturer_url": "https://www.neura-robotics.com"
   },
   {
-    "id": "neura-robotics-maira",
-    "name": "MAiRA",
-    "brand": "NEURA Robotics",
-    "cat": "Cognitive Industrial Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "World's first commercially available cognitive robot with advanced machine vision, spatial audio processing, and AI. Features touchless safe human detection, 360° microphone array, and self-optimizing workflows. Can perceive, learn, and adapt like humans.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
     "id": "agile-robots-franka-robotics-diana-7-by-agile-robots-",
     "name": "Diana 7 (by Agile Robots)",
     "brand": "Agile Robots / Franka Robotics",
@@ -63186,27 +62964,6 @@
     "manufacturer_url": "https://www.jobyaviation.com"
   },
   {
-    "id": "sensefly-ageagle-ebee-vision",
-    "name": "eBee VISION",
-    "brand": "senseFly",
-    "cat": "Intelligence, Surveillance & Reconnaissance Drone",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "NDAA-compliant ISR drone with live HD video feed, dual-sensor payload (32x optical zoom RGB + thermal), day/night vision capabilities, AES-256 encryption, and GNSS-denied operation capability. Blue UAS listed and designed for defense, public safety, and surveillance missions.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
     "id": "sensefly-ageagle-ebee-tac-government",
     "name": "eBee TAC Government",
     "brand": "senseFly",
@@ -63416,9 +63173,9 @@
   },
   {
     "id": "yeedi-yeedi-c12-plus",
-    "name": "Yeedi C12 Plus",
+    "name": "yeedi C12 Plus",
     "brand": "Yeedi",
-    "cat": "Robot Vacuum & Mop",
+    "cat": "Robot Vacuum and Mop",
     "sub": "",
     "tags": [],
     "fig": "🤖",
@@ -63426,7 +63183,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Budget-friendly model with 8,000Pa powerful suction, PureCyclone Technology with 4-layer filter system and 14 small cyclones, ZeroTangle brush technology, smart app control, and environmentally-friendly reusable dustbin.",
+    "desc": "8,000Pa suction power, 7-week bagless dust storage, PureCyclone technology with 4-layer filter system and 14 small cyclones, ZeroTangle brush system, TrueMapping technology with 8-minute fast mapping",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -64377,153 +64134,6 @@
       "Packaging"
     ],
     "manufacturer_url": "https://www.jaka.com"
-  },
-  {
-    "id": "aubo-aubo-i20",
-    "name": "AUBO i20",
-    "brand": "AUBO",
-    "cat": "Collaborative Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Maximum capacity cobot with 1650mm reach, ±0.1mm repeatability, 63kg weight. Features enhanced safety systems and designed for heavy-duty industrial applications requiring high payload capacity.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
-    "id": "aubo-aubo-i16",
-    "name": "AUBO i16",
-    "brand": "AUBO",
-    "cat": "Collaborative Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Powerful cobot with 967.5mm reach, ±0.03-0.1mm repeatability, 38kg weight. Perfect for packaging applications when combined with advanced vacuum gripper. Easy machine operation automation.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
-    "id": "aubo-aubo-i12",
-    "name": "AUBO i12",
-    "brand": "AUBO",
-    "cat": "Collaborative Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Heavy-duty cobot with 1250mm reach, ±0.03mm repeatability, 40kg weight. Launched across APAC markets for industrial automation applications.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
-    "id": "aubo-aubo-i10",
-    "name": "AUBO i10",
-    "brand": "AUBO",
-    "cat": "Collaborative Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "High-capacity cobot with 1350mm reach, ±0.03-0.1mm repeatability, 38.5kg weight. Designed for human-centric manufacturing including assembly, machine tending, and packaging tasks. Features 6-degrees-of-freedom motion.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
-    "id": "aubo-aubo-i7",
-    "name": "AUBO i7",
-    "brand": "AUBO",
-    "cat": "Collaborative Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Mid-range cobot with 786.5mm reach, ±0.02mm repeatability, 24kg weight. Launched across APAC markets for diverse industrial applications.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
-    "id": "aubo-aubo-i5",
-    "name": "AUBO i5",
-    "brand": "AUBO",
-    "cat": "Collaborative Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Versatile cobot with 886.5mm reach, ±0.02-0.05mm repeatability, 24kg weight. Compact design with open system platform for flexible integration. Perfect for machine operating tasks and assembly applications.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
-    "id": "aubo-aubo-i3",
-    "name": "AUBO i3",
-    "brand": "AUBO",
-    "cat": "Collaborative Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Compact lightweight cobot with 625mm reach, ±0.02-0.05mm repeatability, 16kg weight. Ideal for tight clearances, light assembly, and repeated movement applications. Features open SDK supporting C, C++, C#, Lua, and Python.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
   },
   {
     "id": "hanwha-robotics-agv-cobot-solution",
@@ -68354,61 +67964,6 @@
     "manufacturer_url": "https://www.irobot.com"
   },
   {
-    "id": "franka-robotics-franka-production-3",
-    "name": "Franka Production 3",
-    "brand": "Franka Robotics",
-    "cat": "Industrial Robot",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Force-sensitive industrial robot platform manufactured in Germany. Features 7 degrees of freedom with torque sensors in all axes, human-like dexterity, and intuitive programming interfaces. Designed for industrial automation with App-based workflows, easy installation, and collaborative capabilities for production environments.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2023,
-    "origin": "Germany",
-    "status": "Released",
-    "released": "2023",
-    "dof": 7,
-    "reach_mm": 855,
-    "payload_kg": 3,
-    "ros": true,
-    "use_cases": [
-      "Assembly",
-      "Pick and place",
-      "Quality inspection",
-      "Machine tending",
-      "Packaging",
-      "Collaborative manufacturing"
-    ],
-    "manufacturer_url": "https://www.franka.de/",
-    "warranty_months": 12,
-    "weight_kg": 18,
-    "speed_ms": 2,
-    "repeatability_mm": 0.1,
-    "wifi": true,
-    "bluetooth": false,
-    "ethernet": true,
-    "operating_temp_min": 15,
-    "operating_temp_max": 25,
-    "ip_rating": "IP30",
-    "programming_languages": [
-      "Python",
-      "C++",
-      "MATLAB"
-    ],
-    "safety_certification": "ISO 10218-1, ISO/TS 15066",
-    "product_url": "https://www.franka.de/production-3"
-  },
-  {
     "id": "fourier-intelligence-gr-3c-cosmo",
     "name": "GR-3C Cosmo",
     "brand": "Fourier Intelligence",
@@ -69161,54 +68716,6 @@
     ]
   },
   {
-    "id": "realman-robotics-rmc-da-dual-arm-compound-robot",
-    "name": "RMC-DA Dual-Arm Compound Robot",
-    "brand": "RealMan",
-    "cat": "Dual-Arm Mobile Manipulator",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Intelligent mobile platform with two 7-axis robotic arms, compact and flexible design, includes navigation system with laser radar and depth camera",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "dof": 14,
-    "lidar": true,
-    "depth_sensing": true,
-    "cameras": "Depth camera and RGB camera for navigation and object recognition",
-    "ros": true,
-    "use_cases": [
-      "Industrial automation",
-      "Research and development",
-      "Warehouse operations",
-      "Assembly tasks",
-      "Material handling"
-    ],
-    "manufacturer_url": "https://www.realman-robotics.com",
-    "height_mm": 1600,
-    "weight_kg": 180,
-    "payload_kg": 3,
-    "reach_mm": 800,
-    "speed_ms": 1,
-    "battery_life": "8 hours",
-    "charge_time": "4 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "imu": true,
-    "warranty_months": 12
-  },
-  {
     "id": "realman-robotics-single-arm-compound-robot",
     "name": "Single Arm Compound Robot",
     "brand": "RealMan",
@@ -69329,27 +68836,6 @@
     }
   },
   {
-    "id": "yeedi-yeedi-s14-plus",
-    "name": "yeedi S14 Plus",
-    "brand": "Yeedi",
-    "cat": "Robot Vacuum and Mop",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "18,000Pa suction, OZMO Roller mopping system spinning at 200 RPM with 6.89-inch roller, ZeroTangle 2.0 anti-hair system, TruEdge 3D sensor for edge cleaning, all-in-one station with auto hot water washing and self-drying",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
     "id": "yeedi-yeedi-m12-pro-plus",
     "name": "yeedi M12 Pro Plus",
     "brand": "Yeedi",
@@ -69362,27 +68848,6 @@
     "rating": 4,
     "price": 0,
     "desc": "11,000Pa suction power, ZeroTangle hair-free brush system, dual spinning mop pads with electronic water control, auto mop washing and drying, smart obstacle avoidance, self-emptying dock with 3.4-liter water tanks",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
-    "id": "yeedi-yeedi-c12-plus",
-    "name": "yeedi C12 Plus",
-    "brand": "Yeedi",
-    "cat": "Robot Vacuum and Mop",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "8,000Pa suction power, 7-week bagless dust storage, PureCyclone technology with 4-layer filter system and 14 small cyclones, ZeroTangle brush system, TrueMapping technology with 8-minute fast mapping",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -69432,48 +68897,6 @@
       "Pet hair removal",
       "Daily cleaning maintenance"
     ]
-  },
-  {
-    "id": "yeedi-yeedi-vac-station",
-    "name": "yeedi Vac Station",
-    "brand": "Yeedi",
-    "cat": "Robot Vacuum and Mop",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "3,000Pa suction power, self-emptying system with 60-day capacity, visual mapping technology, carpet detection sensor, vacuum and mop functionality, compatible with Alexa and Google Assistant",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
-  },
-  {
-    "id": "yeedi-yeedi-vac-max",
-    "name": "yeedi Vac Max",
-    "brand": "Yeedi",
-    "cat": "Robot Vacuum and Mop",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "3,000Pa suction power, vacuum and mop combo, visual mapping technology with floor tracking sensor, carpet detection with ultrasonic technology, 3.1-inch ultra-slim body design",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
   },
   {
     "id": "yeedi-yeedi-cube",
@@ -69901,27 +69324,6 @@
     ],
     "warranty_months": 12,
     "manufacturer_url": "https://www.proscenic.com"
-  },
-  {
-    "id": "sensefly-ebee-geo",
-    "name": "eBee Geo",
-    "brand": "senseFly",
-    "cat": "Fixed-Wing Survey Drone",
-    "sub": "",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Fixed-wing mapping drone with 45.7 inch wingspan, 2.2 lb weight, rugged design with ultra-tough under-body skin, RTK option available, includes eMotion flight planning software",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    }
   },
   {
     "id": "joby-aviation-joby-s4-evtol-air-taxi",
