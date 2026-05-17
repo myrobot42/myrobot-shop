@@ -719,8 +719,8 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
               Add a main image and up to 5 gallery images per robot. Paste Wikipedia/Wikimedia URLs for best results — they never get blocked.<br>
               <strong style="color:var(--acc)">Tip:</strong> Go to en.wikipedia.org, find the robot, right-click image, Copy image address, paste below.
             </div>
-            <div style="display:flex;gap:8px;margin-bottom:16px">
-              <input class="inp" type="text" id="img-search" placeholder="Filter robots..." oninput="filterImgManager()" style="flex:1">
+            <div style="display:flex;gap:8px;margin-bottom:8px;align-items:center;flex-wrap:wrap">
+              <input class="inp" type="text" id="img-search" placeholder="Filter robots..." oninput="filterImgManager()" style="flex:1;min-width:160px">
               <select class="inp" id="img-cat-filter" onchange="filterImgManager()" style="max-width:180px">
                 <option value="">All categories</option>
                 <option value="Aerospace">Aerospace</option>
@@ -743,8 +743,13 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
                 <option value="Social">Social</option>
                 <option value="Telepresence">Telepresence</option>
               </select>
+              <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--txt);cursor:pointer;background:#fef3c7;padding:7px 12px;border-radius:6px;border:1px solid #facc15">
+                <input type="checkbox" id="img-missing-only" onchange="filterImgManager()" style="margin:0;cursor:pointer">
+                <span>🎯 Missing images only</span>
+              </label>
               <button class="save-btn" id="save-all-images-btn" onclick="saveAllImages()">💾 Save All + Deploy</button>
             </div>
+            <div id="img-manager-progress" style="font-size:11px;color:var(--mut);margin-bottom:10px"></div>
             <div id="img-manager-list"></div>
           </div>
         </div>
@@ -827,6 +832,20 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
             </div>
             <div id="audit-summary"></div>
             <div id="audit-list"></div>
+          </div>
+
+          <!-- CATEGORY NORMALIZER -->
+          <div class="sec-card" style="margin-top:18px">
+            <div class="sec-head">🗂️ CATEGORY NORMALIZER — collapse AI-invented categories into canonical 19</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">
+              Phase 2 ingestion let the AI invent categories like "Robot Vacuum & Mop" and "6-Axis Industrial Robot" instead of using your 19 canonical categories. As a result, hundreds of robots are <strong>invisible</strong> to the public site's category filter. This tool maps every non-canonical category to its best canonical match (sets <code>cat</code>) and preserves the original AI category as <code>sub</code> for future hierarchical filtering.
+            </div>
+            <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+              <button class="save-btn" onclick="previewCatNorm()">🔍 Preview mapping</button>
+              <button class="save-btn" onclick="applyCatNorm()" id="cat-norm-apply-btn" style="background:#16a34a;display:none">✓ Apply mapping + Deploy</button>
+            </div>
+            <div id="cat-norm-summary"></div>
+            <div id="cat-norm-list"></div>
           </div>
         </div>
       </div>
@@ -2544,15 +2563,34 @@ updateBadges();
 function renderImgManager() {
   const search = (document.getElementById('img-search').value || '').toLowerCase();
   const catFilter = document.getElementById('img-cat-filter').value;
+  const missingOnly = document.getElementById('img-missing-only')?.checked || false;
   const list = document.getElementById('img-manager-list');
+  const progressEl = document.getElementById('img-manager-progress');
+
+  // Compute progress numbers (across the whole DB or just the current category)
+  const scope = catFilter ? ROBOTS.filter(r => r.cat === catFilter) : ROBOTS;
+  const scopeTotal = scope.length;
+  const scopeWithImg = scope.filter(r => r.img && r.img.trim()).length;
+  const scopeMissing = scopeTotal - scopeWithImg;
+  const pctDone = scopeTotal > 0 ? Math.round(scopeWithImg / scopeTotal * 100) : 0;
+
+  if (progressEl){
+    const scopeLabel = catFilter ? catFilter : 'database';
+    progressEl.innerHTML = `📊 <strong>${scopeWithImg}/${scopeTotal}</strong> robots in ${scopeLabel} have images (${pctDone}%) — <strong style="color:#d97706">${scopeMissing} still need images</strong>`;
+  }
 
   const filtered = ROBOTS.filter(r => {
     const matchSearch = !search || (r.name+r.brand+r.cat).toLowerCase().includes(search);
     const matchCat = !catFilter || r.cat === catFilter;
-    return matchSearch && matchCat;
+    const matchMissing = !missingOnly || !r.img || !r.img.trim();
+    return matchSearch && matchCat && matchMissing;
   });
 
-  if (!filtered.length) { list.innerHTML = '<div style="color:var(--mut);padding:20px;text-align:center">No robots found.</div>'; return; }
+  if (!filtered.length) {
+    const msg = missingOnly ? '🎉 No robots missing images in this filter — great work!' : 'No robots found.';
+    list.innerHTML = `<div style="color:var(--mut);padding:20px;text-align:center">${msg}</div>`;
+    return;
+  }
 
   list.innerHTML = filtered.map(r => {
     const gallery = r.gallery || ['','','','',''];
@@ -4163,6 +4201,171 @@ CRITICAL RULES:
     if (!isFieldFilled(fields[k])) continue;  // skip null/empty from AI
     robot[k] = fields[k];
   }
+}
+
+// ════════════════════════════════════════════════════════════════════
+// CATEGORY NORMALIZER — collapse AI-invented categories into canonical 19
+// ════════════════════════════════════════════════════════════════════
+
+const CAT_CANONICAL = ['Aerospace','Agricultural','Aquatic','Autonomous Vehicles','Consumer','Delivery',
+  'Disaster Response','Drones','Educational','Entertainment','Exoskeletons','Humanoid',
+  'Industrial','Medical','Military','Research','Service','Social','Telepresence'];
+
+// Substring patterns → canonical category. Order matters — first match wins.
+// More specific rules at the top, broader catch-alls at the bottom.
+const CAT_RULES = [
+  {patterns:['surgical','rehabilitation','healthcare','medical','arthroplasty'], canon:'Medical'},
+  {patterns:['ugv','combat','military','tactical','reconnaissance','eod','bomb disposal','defense','isr','surveillance','firefighting','throwable'], canon:'Military'},
+  {patterns:['agricultur','farming','vineyard','greenhouse','tractor','weed','vegetable','mowing','crawler robot','tool carrier'], canon:'Agricultural'},
+  {patterns:['drone','uav','quadcopter','evtol','vtol','aircraft','mapping drone','air taxi','cargo drone','docking station','lidar gimbal','photogrammetry','multi-sensor gimbal','frame lidar'], canon:'Drones'},
+  {patterns:['educational','coding toy','kid','school','student','learning'], canon:'Educational'},
+  {patterns:['exoskeleton'], canon:'Exoskeletons'},
+  {patterns:['delivery'], canon:'Delivery'},
+  {patterns:['vacuum','mop','cleaning robot','lawn mower','wet-dry','wet and dry','cleaner','household'], canon:'Consumer'},
+  {patterns:['humanoid','android','robotic torso','desktop companion'], canon:'Humanoid'},
+  {patterns:['disaster response'], canon:'Disaster Response'},
+  {patterns:['underwater','aquatic'], canon:'Aquatic'},
+  {patterns:['autonomous vehicle','vehicle robotization'], canon:'Autonomous Vehicles'},
+  {patterns:['service','companion','personal assistant','customer service','advertising robot','entertainment robot','civilian'], canon:'Service'},
+  {patterns:['cobot','collaborative','manipulator','robotic arm','industrial','manufacturing','6-axis','7-axis','6-dof','7-dof','scara','gripper','robotic hand','dexterous hand','force-controlled','force-sensing','force-sensitive','force control','mobile robot','warehouse','storage','agv','amr','forklift','sorting robot','inspection','lifting','picking','pallet','tote','cleanroom','shelf-to-person','piece-picking','intralogistics','autonomous mobile','autonomous ground','mobile base','mobile platform','safety system','vision system','autonomy system','autonomy suite','control unit','control suite','mobile dual-arm','dual-arm','quadruped','transport robot','transport vehicle','automated guided','bin-to-person','navigation robot','laser navigation','mobile manipulation','heavy-payload','single-armed teleoperated','portable modular','multi-mission','autonomous systems'], canon:'Industrial'},
+  {patterns:['research','foundation model','embodied intelligence','data collection','astronomical','open-source robot','general purpose','general-purpose','general humanoid','ai foundation','ai enhancement','ai inspection','programming software','operating system software','industrial robotics cloud','software tool','robot teaching','fleet management','training equipment'], canon:'Research'},
+];
+
+let CAT_NORM_PREVIEW = null;  // {changes: [{id,name,oldCat,newCat,newSub}], unchanged: count, unmatched: [...]}
+
+function mapCategory(originalCat){
+  if (!originalCat) return null;
+  if (CAT_CANONICAL.includes(originalCat)) return {canon: originalCat, isAlready: true};
+  const s = originalCat.toLowerCase();
+  for (const rule of CAT_RULES){
+    for (const p of rule.patterns){
+      if (s.includes(p)) return {canon: rule.canon, isAlready: false};
+    }
+  }
+  return null;  // unmatched
+}
+
+function previewCatNorm(){
+  const changes = [];
+  const unmatched = [];
+  let unchanged = 0;
+  for (const r of ROBOTS){
+    const result = mapCategory(r.cat);
+    if (!result){
+      unmatched.push({id: r.id, name: r.name, cat: r.cat});
+      continue;
+    }
+    if (result.isAlready){
+      unchanged++;
+      continue;
+    }
+    changes.push({
+      id: r.id,
+      brand: r.brand,
+      name: r.name,
+      oldCat: r.cat,
+      newCat: result.canon,
+      newSub: r.cat
+    });
+  }
+  CAT_NORM_PREVIEW = {changes, unmatched, unchanged};
+
+  // Render summary
+  const sumEl = document.getElementById('cat-norm-summary');
+  const counts = {};
+  for (const c of changes){ counts[c.newCat] = (counts[c.newCat] || 0) + 1; }
+
+  sumEl.innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px">
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Total robots</div>
+        <div style="font-size:22px;font-weight:700;margin-top:4px">${ROBOTS.length}</div>
+      </div>
+      <div style="background:#dcfce7;border:1px solid #16a34a;border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:#14532d;text-transform:uppercase;letter-spacing:1px">Will be remapped</div>
+        <div style="font-size:22px;font-weight:700;color:#16a34a;margin-top:4px">${changes.length}</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Already canonical</div>
+        <div style="font-size:22px;font-weight:700;margin-top:4px">${unchanged}</div>
+      </div>
+      <div style="background:${unmatched.length ? '#fee2e2' : 'var(--bg2)'};border:1px solid ${unmatched.length ? '#ef4444' : 'var(--bdr)'};border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:${unmatched.length ? '#7f1d1d' : 'var(--mut)'};text-transform:uppercase;letter-spacing:1px">⚠ Unmatched</div>
+        <div style="font-size:22px;font-weight:700;color:${unmatched.length ? '#ef4444' : 'var(--txt)'};margin-top:4px">${unmatched.length}</div>
+      </div>
+    </div>
+    <div style="font-size:12px;color:var(--mut);margin-bottom:10px"><strong>Distribution after applying:</strong></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px;margin-bottom:14px">
+      ${CAT_CANONICAL.map(c => {
+        const before = ROBOTS.filter(r => r.cat === c).length;
+        const after = before + (counts[c] || 0);
+        const delta = after - before;
+        return `<div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:6px;padding:8px;font-size:11px">
+          <div style="font-weight:600">${c}</div>
+          <div style="color:var(--mut)">${before} → <strong style="color:var(--txt)">${after}</strong>${delta > 0 ? ` <span style="color:#16a34a">(+${delta})</span>` : ''}</div>
+        </div>`;
+      }).join('')}
+    </div>
+  `;
+
+  // Render the change list (sample) and unmatched list
+  const listEl = document.getElementById('cat-norm-list');
+  let html = '';
+
+  if (unmatched.length > 0){
+    html += `<div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:12px;margin-bottom:14px">
+      <div style="font-size:12px;font-weight:600;color:#7f1d1d;margin-bottom:6px">⚠ ${unmatched.length} robot(s) couldn't be matched — these will keep their current category:</div>
+      <div style="font-size:11px;color:#7f1d1d;line-height:1.6">
+        ${unmatched.map(u => `<div>• "${escapeHtml(u.cat)}" — ${escapeHtml(u.brand || '?')} ${escapeHtml(u.name)}</div>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  // Group changes by old-cat for readability
+  const grouped = {};
+  for (const c of changes){
+    const k = c.oldCat;
+    if (!grouped[k]) grouped[k] = {newCat: c.newCat, items: []};
+    grouped[k].items.push(c);
+  }
+  // Sort groups by size desc
+  const sortedGroups = Object.entries(grouped).sort((a,b) => b[1].items.length - a[1].items.length);
+
+  html += `<div style="font-size:12px;color:var(--mut);margin-bottom:8px"><strong>Mapping preview</strong> (grouped by source category, largest first):</div>`;
+  html += sortedGroups.map(([oldCat, info]) => `
+    <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:6px;padding:10px;margin-bottom:6px;font-size:12px">
+      <div><strong>"${escapeHtml(oldCat)}"</strong> → <strong style="color:#16a34a">${info.newCat}</strong> <span style="color:var(--mut)">(${info.items.length} robot${info.items.length !== 1 ? 's' : ''})</span></div>
+      <div style="color:var(--mut);font-size:11px;margin-top:4px">
+        ${info.items.slice(0, 3).map(c => `${escapeHtml(c.brand || '?')} ${escapeHtml(c.name)}`).join(' · ')}${info.items.length > 3 ? ` · …+${info.items.length - 3} more` : ''}
+      </div>
+    </div>
+  `).join('');
+  listEl.innerHTML = html;
+
+  // Show Apply button
+  document.getElementById('cat-norm-apply-btn').style.display = '';
+}
+
+async function applyCatNorm(){
+  if (!CAT_NORM_PREVIEW){ alert('Run preview first.'); return; }
+  const {changes} = CAT_NORM_PREVIEW;
+  if (changes.length === 0){ alert('No changes to apply.'); return; }
+  if (!confirm(`Apply ${changes.length} category remappings? Each robot's original category becomes its 'sub' field. Push to GitHub when done?`)) return;
+
+  for (const c of changes){
+    const robot = ROBOTS.find(r => r.id === c.id);
+    if (!robot) continue;
+    robot.cat = c.newCat;
+    if (!robot.sub || robot.sub === '') robot.sub = c.newSub;
+  }
+  saveDB();
+  addLog('success', `Category normalizer: remapped ${changes.length} robots to canonical categories`);
+  if (typeof deployNow === 'function'){
+    await deployNow();
+  }
+  CAT_NORM_PREVIEW = null;
+  document.getElementById('cat-norm-apply-btn').style.display = 'none';
+  previewCatNorm();  // re-run preview to show new state
 }
 
 // ── Init: scan once on page load so the badge is populated ──
