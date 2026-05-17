@@ -34,7 +34,12 @@
       "Quality inspection",
       "Material handling"
     ],
-    "manufacturer_url": "https://deepmind.google/"
+    "manufacturer_url": "https://deepmind.google/",
+    "product_url": "https://deepmind.google/discover/blog/shaping-the-future-of-advanced-robotics/",
+    "wifi": true,
+    "bluetooth": true,
+    "lidar": true,
+    "warranty_months": 12
   },
   {
     "id": "ubtech-walker-s2",
@@ -112,7 +117,17 @@
       "Field mapping",
       "Agricultural research"
     ],
-    "manufacturer_url": "https://www.scuttle-robot.org"
+    "manufacturer_url": "https://www.scuttle-robot.org",
+    "height_mm": 200,
+    "width_mm": 400,
+    "depth_mm": 600,
+    "weight_kg": 15,
+    "speed_ms": 0.5,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "RGB camera for crop monitoring and weed detection",
+    "imu": true
   },
   {
     "id": "unknown-roadrunner",
@@ -217,7 +232,18 @@
       "Industrial automation",
       "Warehouse operations",
       "Manufacturing"
-    ]
+    ],
+    "height_mm": 1700,
+    "weight_kg": 45,
+    "dof": 40,
+    "cameras": "Multiple RGB cameras for computer vision and navigation",
+    "lidar": true,
+    "imu": true,
+    "depth_sensing": true,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true,
+    "manufacturer_url": "https://noblemachines.com"
   },
   {
     "id": "rivr-formerly-swiss-mile-rivr-quadruped",
@@ -410,7 +436,13 @@
       "Assembly automation",
       "Material handling"
     ],
-    "manufacturer_url": "https://vention.com"
+    "manufacturer_url": "https://vention.com",
+    "warranty_months": 12,
+    "wifi": true,
+    "bluetooth": true,
+    "os": "Linux",
+    "ai_model": "Deep learning neural networks",
+    "product_url": "https://vention.com/rapid-operator-ai"
   },
   {
     "id": "roborock-s8-pro-ultra",
@@ -1791,6 +1823,30 @@
       "no-go zones",
       "scheduled cleaning",
       "carpet detection"
+    ],
+    "navigation_type": "LiDAR + Camera",
+    "mapping_tech": "SLAM",
+    "dock_dimensions_mm": [
+      403,
+      440,
+      470
+    ],
+    "dock_weight_kg": 6.8,
+    "mop_vibration_frequency": "3000 vibrations/min",
+    "filter_type": "HEPA",
+    "app_name": "Roborock",
+    "voice_control": [
+      "Amazon Alexa",
+      "Google Assistant"
+    ],
+    "multi_floor_maps": 4,
+    "carpet_boost": true,
+    "auto_mop_lifting": true,
+    "dock_features": [
+      "auto empty",
+      "mop wash",
+      "mop dry",
+      "water refill"
     ]
   },
   {
@@ -3416,7 +3472,9 @@
     "reach_mm": 1300,
     "speed_ms": 1.5,
     "manufacturer_url": "https://www.unitree.com",
-    "product_url": "https://www.unitree.com/h1"
+    "product_url": "https://www.unitree.com/h1",
+    "cellular": "4G LTE",
+    "battery_life_typical": "1.5 hours"
   },
   {
     "id": "unitree-g1",
@@ -3488,7 +3546,7 @@
       "RGB camera",
       "Depth sensor"
     ],
-    "lidar": null,
+    "lidar": false,
     "depth_sensing": true,
     "imu": "6-axis IMU",
     "touch_sensing": false,
@@ -3519,7 +3577,10 @@
     "origin": "Unknown",
     "released": "2024",
     "manufacturer_url": "https://www.unitree.com",
-    "product_url": "https://www.unitree.com/g1"
+    "product_url": "https://www.unitree.com/g1",
+    "speed_ms": 0.8,
+    "payload_kg": 5,
+    "reach_mm": 800
   },
   {
     "id": "unitree-walker-x",
@@ -46446,7 +46507,15 @@
       "Organic farming",
       "Chemical-free weed control"
     ],
-    "manufacturer_url": "https://farmwise.io"
+    "manufacturer_url": "https://farmwise.io",
+    "height_mm": 1829,
+    "depth_mm": 3048,
+    "weight_kg": 3175,
+    "lidar": true,
+    "imu": true,
+    "depth_sensing": true,
+    "wifi": true,
+    "ros": true
   },
   {
     "id": "farmwise-vulcan-single-bed",
@@ -46482,7 +46551,17 @@
       "Sustainable farming",
       "Organic agriculture"
     ],
-    "manufacturer_url": "https://farmwise.io"
+    "manufacturer_url": "https://farmwise.io",
+    "height_mm": 1219,
+    "depth_mm": 1524,
+    "weight_kg": 1361,
+    "lidar": false,
+    "imu": true,
+    "depth_sensing": true,
+    "wifi": true,
+    "bluetooth": false,
+    "ros": false,
+    "warranty_months": 12
   },
   {
     "id": "iron-ox-phil",
@@ -46519,7 +46598,15 @@
       "Automated greenhouse operations",
       "Precision agriculture"
     ],
-    "manufacturer_url": "https://ironox.com"
+    "manufacturer_url": "https://ironox.com",
+    "height_mm": 2400,
+    "width_mm": 1200,
+    "depth_mm": 800,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "warranty_months": 12,
+    "product_url": "https://ironox.com/technology"
   },
   {
     "id": "iron-ox-max",
@@ -46556,7 +46643,14 @@
       "Crop monitoring",
       "Precision agriculture"
     ],
-    "manufacturer_url": "https://ironox.com"
+    "manufacturer_url": "https://ironox.com",
+    "height_mm": 1500,
+    "weight_kg": 180,
+    "speed_ms": 0.5,
+    "payload_kg": 450,
+    "bluetooth": true,
+    "depth_sensing": true,
+    "warranty_months": 12
   },
   {
     "id": "iron-ox-grover",
@@ -46634,7 +46728,19 @@
       "Surveillance",
       "Emergency response"
     ],
-    "manufacturer_url": "https://www.jobyaviation.com"
+    "manufacturer_url": "https://www.jobyaviation.com",
+    "height_mm": 2900,
+    "width_mm": 11600,
+    "weight_kg": 2177,
+    "battery_life": "150+ minutes",
+    "dof": 6,
+    "cameras": "Multi-spectral imaging systems for surveillance and navigation",
+    "lidar": true,
+    "imu": true,
+    "depth_sensing": true,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": false
   },
   {
     "id": "joby-aviation-joby-s4-hydrogen-electric-demonstrator",
@@ -46667,7 +46773,18 @@
       "Regional passenger transport",
       "Zero-emission aviation"
     ],
-    "manufacturer_url": "https://www.jobyaviation.com"
+    "manufacturer_url": "https://www.jobyaviation.com",
+    "height_mm": 3050,
+    "width_mm": 11582,
+    "depth_mm": 6100,
+    "weight_kg": 2177,
+    "battery_life": "4.5 hours",
+    "cameras": "Multiple cameras for navigation and obstacle avoidance",
+    "imu": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "4G/5G",
+    "warranty_months": 12
   },
   {
     "id": "joby-aviation-joby-aviation-s4-evtol-air-taxi",
@@ -46821,7 +46938,15 @@
       "Crop monitoring",
       "Organic farming"
     ],
-    "manufacturer_url": "https://www.farmwise.io"
+    "manufacturer_url": "https://www.farmwise.io",
+    "height_mm": 1200,
+    "width_mm": 3000,
+    "weight_kg": 680,
+    "speed_ms": 0.56,
+    "bluetooth": true,
+    "cellular": "4G LTE",
+    "warranty_months": 12,
+    "product_url": "https://www.farmwise.io/vulcan"
   },
   {
     "id": "farmwise-titan-ft-35",
@@ -46858,7 +46983,18 @@
       "Leafy greens cultivation",
       "Vegetable farming"
     ],
-    "manufacturer_url": "https://farmwise.io"
+    "manufacturer_url": "https://farmwise.io",
+    "height_mm": 1800,
+    "width_mm": 3000,
+    "length_mm": 6000,
+    "weight_kg": 2700,
+    "battery_life": "10-12 hours",
+    "lidar": true,
+    "wifi": true,
+    "cellular": "4G",
+    "ros": true,
+    "warranty_months": 12,
+    "product_url": "https://farmwise.io/titan"
   },
   {
     "id": "volocopter-voloxpro",
@@ -47065,7 +47201,24 @@
     "lidar": false,
     "depth_sensing": false,
     "warranty_months": 12,
-    "product_url": "https://www.sensefly.com/drone/ebee-mapping-drone/"
+    "product_url": "https://www.sensefly.com/drone/ebee-mapping-drone/",
+    "wingspan_mm": 960,
+    "cruise_speed_ms": 11,
+    "max_altitude_m": 5000,
+    "operating_temp_min": -10,
+    "operating_temp_max": 45,
+    "wind_resistance_ms": 12,
+    "coverage_per_flight_ha": 220,
+    "gps": true,
+    "ground_sampling_distance_cm": 3,
+    "flight_planning_software": "eMotion",
+    "processing_software": "Postflight Terra 3D",
+    "regulatory_compliance": [
+      "CE",
+      "FCC"
+    ],
+    "launch_method": "Hand launch",
+    "landing_method": "Belly landing"
   },
   {
     "id": "joby-aviation-joby-s4-t-hybrid",
@@ -47096,7 +47249,18 @@
       "Cargo delivery",
       "Search and rescue"
     ],
-    "manufacturer_url": "https://www.jobyaviation.com"
+    "manufacturer_url": "https://www.jobyaviation.com",
+    "height_mm": 3050,
+    "wingspan_mm": 12200,
+    "weight_kg": 2177,
+    "battery_life": "150+ miles range",
+    "speed_ms": 89,
+    "payload_kg": 453,
+    "cameras": "Multiple cameras for navigation and surveillance",
+    "imu": true,
+    "wifi": true,
+    "cellular": "4G/5G capable",
+    "warranty_months": 24
   },
   {
     "id": "joby-aviation-joby-s4-hydrogen-electric",
@@ -47266,7 +47430,15 @@
     "os": "eMotion",
     "ros": false,
     "warranty_months": 12,
-    "product_url": "https://www.sensefly.com/drone/ebee-plus-survey-drone/"
+    "product_url": "https://www.sensefly.com/drone/ebee-plus-survey-drone/",
+    "max_altitude_m": 750,
+    "range_km": 40,
+    "gps": true,
+    "wind_resistance_ms": 12,
+    "operating_temp_min": -10,
+    "operating_temp_max": 45,
+    "landing_type": "Belly landing",
+    "max_coverage_per_flight": "220 hectares"
   },
   {
     "id": "sensefly-albris",
@@ -47314,7 +47486,13 @@
     "bluetooth": true,
     "depth_sensing": true,
     "lidar": false,
-    "ros": false
+    "ros": false,
+    "os": "eMotion 3",
+    "dof": 6,
+    "cellular": "None",
+    "warranty_months": 12,
+    "charge_time": "90 minutes",
+    "product_url": "https://www.sensefly.com/drone/albris/"
   },
   {
     "id": "sensefly-ebee-geo",
@@ -47327,7 +47505,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 25000,
     "desc": "Affordable fixed-wing mapping drone with 45.7 inch wingspan, designed for surveyors and GIS professionals with rugged airframe and S.O.D.A. camera for precise mapping",
     "highlights": [],
     "perf": {
@@ -47370,7 +47548,12 @@
     "coverage_per_flight_hectares": 220,
     "gsd_cm": 2.9,
     "rtk_compatible": false,
-    "product_url": "https://www.sensefly.com/drone/ebee-geo-drone/"
+    "product_url": "https://www.sensefly.com/drone/ebee-geo-drone/",
+    "warranty_months": 12,
+    "cellular": "None",
+    "ros": false,
+    "lidar": false,
+    "depth_sensing": false
   },
   {
     "id": "sensefly-ebee-x",
@@ -47383,7 +47566,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 25000,
     "desc": "Professional fixed-wing mapping drone with 45.7 inch wingspan, multiple sensor compatibility, RTK/PPK support for 3cm accuracy, and advanced Steep Landing technology for challenging sites",
     "highlights": [],
     "perf": {
@@ -47423,7 +47606,10 @@
     "depth_sensing": false,
     "ros": false,
     "cellular": "Optional 4G LTE",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "battery_life_typical": "90 minutes",
+    "reach_mm": 40000,
+    "os": "eMotion 3"
   },
   {
     "id": "wingcopter-wingcopter-198-lidar-surveying-variant",
@@ -47648,7 +47834,13 @@
     "ros": false,
     "cellular": "Optional 4G LTE",
     "warranty_months": 12,
-    "product_url": "https://www.sensefly.com/drone/ebee-tac/"
+    "product_url": "https://www.sensefly.com/drone/ebee-tac/",
+    "chipset": "senseFly proprietary flight controller",
+    "ram_gb": 1,
+    "storage_gb": 32,
+    "reach_mm": 3000,
+    "battery_life_typical": "45 minutes",
+    "width_mm": 960
   },
   {
     "id": "sensefly-ageagle-ebee-vision",
@@ -47701,7 +47893,23 @@
     "lidar": false,
     "depth_sensing": false,
     "warranty_months": 12,
-    "product_url": "https://www.sensefly.com/drone/ebee-vision/"
+    "product_url": "https://www.sensefly.com/drone/ebee-vision/",
+    "max_altitude_m": 750,
+    "operating_temperature_c": "-10 to +50",
+    "wind_resistance_ms": 12,
+    "gps": true,
+    "glonass": true,
+    "rtk_gps": true,
+    "coverage_area_km2": 12,
+    "ground_sampling_distance_cm": 1.5,
+    "radio_range_km": 3,
+    "autopilot": "senseFly eMotion",
+    "failsafe_modes": [
+      "Return to Home",
+      "Emergency landing"
+    ],
+    "takeoff_method": "Hand launch",
+    "landing_method": "Belly landing"
   },
   {
     "id": "sensefly-ageagle-ebee-tac",
@@ -47837,7 +48045,11 @@
     "lidar": false,
     "depth_sensing": false,
     "warranty_months": 12,
-    "product_url": "https://www.sensefly.com/drone/ebee-x-fixed-wing-drone/"
+    "product_url": "https://www.sensefly.com/drone/ebee-x-fixed-wing-drone/",
+    "cellular": "Optional 4G/LTE module",
+    "os": "eMotion flight planning software",
+    "battery_life_typical": "75 minutes",
+    "reach_mm": 25000
   },
   {
     "id": "sensefly-ebee-vision",
@@ -48123,7 +48335,12 @@
       "Solar farm monitoring",
       "Construction site monitoring"
     ],
-    "manufacturer_url": "https://www.percepto.co"
+    "manufacturer_url": "https://www.percepto.co",
+    "bluetooth": true,
+    "ros": false,
+    "lidar": false,
+    "warranty_months": 12,
+    "product_url": "https://www.percepto.co/percepto-aim"
   },
   {
     "id": "percepto-percepto-base",
@@ -48365,7 +48582,16 @@
       "Infrastructure inspection",
       "Mining surveying"
     ],
-    "warranty_months": 12
+    "warranty_months": 12,
+    "height_mm": 110,
+    "depth_mm": 96,
+    "speed_ms": 11,
+    "wifi": true,
+    "bluetooth": true,
+    "lidar": false,
+    "depth_sensing": false,
+    "manufacturer_url": "https://ageagle.com",
+    "product_url": "https://ageagle.com/drones/ebee-x/"
   },
   {
     "id": "boston-dynamics-percepto-boston-dynamics-spot-integrated-",
@@ -48892,7 +49118,18 @@
     "ros": false,
     "manufacturer_url": "https://www.proscenic.com",
     "dof": 3,
-    "speed_ms": 0.3
+    "speed_ms": 0.3,
+    "product_url": "https://www.proscenic.com/products/proscenic-q8-max-robot-vacuum-mop",
+    "dustbin_capacity_ml": 600,
+    "water_tank_ml": 300,
+    "self_empty_capacity_l": 4.3,
+    "noise_level_db": 55,
+    "carpet_boost": true,
+    "scheduling": true,
+    "no_go_zones": true,
+    "room_mapping": true,
+    "multi_floor_mapping": true,
+    "app_name": "ProscenicHome"
   },
   {
     "id": "miele-scout-rx3-obsidian-black",
@@ -50534,7 +50771,32 @@
     "carpet_boost": true,
     "scheduling": true,
     "no_go_zones": true,
-    "app_name": "Yeedi App"
+    "app_name": "Yeedi App",
+    "suction_power_pa": 3000,
+    "floor_types": [
+      "hardwood",
+      "tile",
+      "carpet",
+      "laminate"
+    ],
+    "voice_control": [
+      "Amazon Alexa",
+      "Google Assistant"
+    ],
+    "mapping_technology": "Visual SLAM",
+    "auto_resume": true,
+    "edge_cleaning": true,
+    "spot_cleaning": true,
+    "multi_floor_mapping": true,
+    "filter_type": "HEPA",
+    "mop_lift": false,
+    "vibrating_mop": false,
+    "self_emptying_base": true,
+    "base_bag_capacity_days": 60,
+    "dof": 3,
+    "ram_gb": 1,
+    "chipset": "ARM Cortex-A7",
+    "ai_model": "Visual SLAM navigation algorithm"
   },
   {
     "id": "yeedi-yeedi-c12-pro-plus",
@@ -50588,7 +50850,28 @@
     "cellular": false,
     "ros": false,
     "payload_kg": 0.6,
-    "os": "YeediOS"
+    "os": "YeediOS",
+    "dustbin_capacity_ml": 420,
+    "water_tank_ml": 180,
+    "suction_pa": 8000,
+    "noise_level_db": 58,
+    "auto_empty_station": true,
+    "carpet_detection": true,
+    "voice_control": true,
+    "app_name": "Yeedi App",
+    "cliff_sensors": true,
+    "side_brushes": 1,
+    "main_brush_type": "rubber",
+    "filter_type": "HEPA",
+    "scheduling": true,
+    "zone_cleaning": true,
+    "no_go_zones": true,
+    "multi_floor_mapping": true,
+    "ai_model": "AIVI 3D",
+    "chipset": "ARM Cortex-A7",
+    "ram_gb": 0.5,
+    "battery_life_typical": "180 minutes",
+    "reach_mm": 600
   },
   {
     "id": "yeedi-yeedi-c12",
@@ -50692,7 +50975,31 @@
     "scheduled_cleaning": true,
     "app_control": true,
     "voice_control": true,
-    "hepa_filter": true
+    "hepa_filter": true,
+    "battery_mah": 5200,
+    "suction_power_pa": 18000,
+    "station_dimensions": "385 x 260 x 465mm",
+    "auto_mop_washing": true,
+    "hot_water_washing": true,
+    "mop_drying": true,
+    "obstacle_avoidance": true,
+    "carpet_detection": true,
+    "multi_floor_mapping": true,
+    "cleaning_modes": [
+      "Auto",
+      "Spot",
+      "Edge",
+      "Manual"
+    ],
+    "water_flow_control": true,
+    "dustbin_station_capacity_l": 2.5,
+    "clean_water_tank_l": 4.5,
+    "dirty_water_tank_l": 4,
+    "ros": false,
+    "dof": 3,
+    "cellular": "None",
+    "ram_gb": 1,
+    "storage_gb": 8
   },
   {
     "id": "yeedi-yeedi-m12-pro-",
@@ -50746,7 +51053,20 @@
     "hot_water_cleaning": true,
     "mop_lifting": true,
     "carpet_detection": true,
-    "app_name": "Yeedi App"
+    "app_name": "Yeedi App",
+    "speed_ms": 0.25,
+    "dustbin_capacity_days": 30,
+    "water_tank_auto_refill": true,
+    "mop_auto_wash": true,
+    "voice_control": true,
+    "alexa_compatible": true,
+    "google_assistant_compatible": true,
+    "edge_cleaning": true,
+    "scheduling": true,
+    "no_go_zones": true,
+    "virtual_walls": true,
+    "multi_floor_mapping": true,
+    "room_specific_cleaning": true
   },
   {
     "id": "roidmi-eva",
@@ -50978,7 +51298,21 @@
     "scheduling": true,
     "voice_control": true,
     "app_control": true,
-    "hepa_filter": true
+    "hepa_filter": true,
+    "cleaning_area_sqm": 200,
+    "edge_cleaning": true,
+    "spot_cleaning": true,
+    "carpet_boost": true,
+    "return_to_dock": true,
+    "resume_cleaning": true,
+    "multi_floor_mapping": false,
+    "remote_control": true,
+    "ai_model": "Visual SLAM",
+    "cpu": "ARM Cortex processor",
+    "cellular": false,
+    "ros": false,
+    "dof": 3,
+    "payload_kg": 0.24
   },
   {
     "id": "yeedi-yeedi-m12-ultra-plus",
@@ -51037,7 +51371,11 @@
     "scheduled_cleaning": true,
     "spot_cleaning": true,
     "return_to_dock": true,
-    "resume_cleaning": true
+    "resume_cleaning": true,
+    "product_url": "https://www.yeedi.com/robot-vacuum/yeedi-m12-ultra-plus",
+    "os": "Yeedi OS",
+    "depth_sensing": true,
+    "battery_life_typical": "150 minutes"
   },
   {
     "id": "yeedi-yeedi-m12-pro-plus",
@@ -51086,7 +51424,11 @@
     "speed_ms": 0.5,
     "imu": true,
     "storage_gb": 8,
-    "battery_life_typical": "150 minutes"
+    "battery_life_typical": "150 minutes",
+    "payload_kg": 0.5,
+    "ram_gb": 1,
+    "ros": false,
+    "cellular": "none"
   },
   {
     "id": "yeedi-yeedi-m16-infinity",
@@ -51133,7 +51475,8 @@
     "released": "2025",
     "speed_ms": 0.3,
     "os": "YeediOS",
-    "manufacturer_url": "https://www.yeedi.com"
+    "manufacturer_url": "https://www.yeedi.com",
+    "product_url": "https://www.yeedi.com/products/yeedi-m16-infinity"
   },
   {
     "id": "yeedi-yeedi-s14-plus",
@@ -51185,7 +51528,35 @@
     "os": "Android-based",
     "cellular": "None",
     "ros": false,
-    "battery_life_typical": "180 minutes"
+    "battery_life_typical": "180 minutes",
+    "dustbin_capacity_ml": 400,
+    "water_tank_ml": 300,
+    "auto_empty_base": true,
+    "base_bag_capacity_l": 2.5,
+    "suction_power_pa": 18000,
+    "noise_level_db": 65,
+    "floor_types": [
+      "Hardwood",
+      "Tile",
+      "Carpet",
+      "Laminate"
+    ],
+    "navigation_type": "AIVI 3D 3.0",
+    "app_control": true,
+    "voice_control": [
+      "Alexa",
+      "Google Assistant"
+    ],
+    "scheduling": true,
+    "mapping": true,
+    "multi_floor_mapping": true,
+    "virtual_boundaries": true,
+    "carpet_detection": true,
+    "mop_lifting": true,
+    "ai_model": "AIVI 3D 3.0",
+    "chipset": "ARM-based SoC",
+    "dof": 6,
+    "payload_kg": 0.3
   },
   {
     "id": "lefant-v1",
@@ -51900,7 +52271,16 @@
       "Pick and place operations",
       "Laboratory automation"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 1200,
+    "weight_kg": 45,
+    "payload_kg": 3,
+    "reach_mm": 624,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": true,
+    "lidar": false,
+    "warranty_months": 12
   },
   {
     "id": "realman-dual-arm-compound-robot-rmc-da-",
@@ -51940,7 +52320,13 @@
       "Educational robotics",
       "Collaborative manufacturing"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 1650,
+    "weight_kg": 180,
+    "speed_ms": 1,
+    "wifi": true,
+    "bluetooth": true,
+    "warranty_months": 12
   },
   {
     "id": "realman-robotics-realman-rmc-da-dual-arm-compound-robot",
@@ -51981,7 +52367,15 @@
       "Service robotics",
       "Human-robot collaboration"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 1650,
+    "weight_kg": 120,
+    "payload_kg": 3,
+    "reach_mm": 819,
+    "speed_ms": 1,
+    "os": "Linux",
+    "warranty_months": 12,
+    "product_url": "https://www.realman-robotics.com/en/product-details/rmc-da"
   },
   {
     "id": "realman-robotics-realman-eco65-aa-",
@@ -52018,7 +52412,17 @@
       "Machine tending",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "weight_kg": 23,
+    "speed_ms": 2,
+    "repeatability_mm": 0.02,
+    "operating_temp_range": "-10°C to 50°C",
+    "power_consumption": "400W",
+    "communication": "Ethernet, RS485, Modbus TCP",
+    "programming_language": "Python, C++",
+    "safety_rating": "ISO 10218",
+    "mounting": "Floor, ceiling, wall",
+    "protection_rating": "IP54"
   },
   {
     "id": "realman-robotics-realman-eco65-aa",
@@ -52031,7 +52435,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 15000,
     "desc": "Six-degree-of-freedom standard robotic arm with precise and versatile task capabilities, includes gripper, compact design for industrial applications",
     "highlights": [],
     "perf": {
@@ -52056,7 +52460,34 @@
       "Research and development",
       "Educational robotics"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 830,
+    "repeatability_mm": 0.02,
+    "speed_ms": 2,
+    "operating_temp_c": "0-45",
+    "power_consumption_w": 200,
+    "communication": [
+      "Ethernet",
+      "RS485",
+      "Modbus"
+    ],
+    "protection_rating": "IP54",
+    "joint_rotation_deg": [
+      -170,
+      170
+    ],
+    "max_joint_speed_deg_s": 180,
+    "warranty_months": 12,
+    "certifications": [
+      "CE",
+      "FCC"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++",
+      "ROS"
+    ],
+    "product_url": "https://www.realman-robotics.com/products/eco65-aa"
   },
   {
     "id": "realman-robotics-realman-rm75-b",
@@ -52132,7 +52563,31 @@
       "Pick and place operations",
       "Assembly tasks"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 697,
+    "repeatability_mm": 0.05,
+    "speed_ms": 2,
+    "operating_voltage": "48V DC",
+    "communication": "Ethernet, RS485, Modbus TCP",
+    "programming_languages": [
+      "Python",
+      "C++",
+      "ROS"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Emergency stop",
+      "Joint torque monitoring"
+    ],
+    "ip_rating": "IP54",
+    "operating_temp_range": "0-45°C",
+    "joint_ranges": "±170° to ±360° depending on joint",
+    "control_modes": [
+      "Position control",
+      "Velocity control",
+      "Torque control",
+      "Drag teaching"
+    ]
   },
   {
     "id": "yeedi-yeedi-s14-plus",
@@ -52200,7 +52655,21 @@
     "manufacturer_url": "https://www.yeedi.com/",
     "speed_ms": 0.25,
     "depth_sensing": true,
-    "product_url": "https://www.yeedi.com/robot-vacuum/s16-plus"
+    "product_url": "https://www.yeedi.com/robot-vacuum/s16-plus",
+    "suction_power_pa": 3000,
+    "dustbin_capacity_ml": 400,
+    "water_tank_ml": 240,
+    "auto_empty_station": true,
+    "mapping": true,
+    "app_control": true,
+    "voice_control": "Alexa, Google Assistant",
+    "schedule": true,
+    "zone_cleaning": true,
+    "no_go_zones": true,
+    "carpet_boost": true,
+    "edge_cleaning": true,
+    "return_to_dock": true,
+    "resume_cleaning": true
   },
   {
     "id": "yeedi-yeedi-s20-infinity",
@@ -52325,7 +52794,31 @@
     "mapping": true,
     "voice_control": true,
     "scheduling": true,
-    "carpet_detection": true
+    "carpet_detection": true,
+    "battery_life_typical": "120 minutes",
+    "dof": 3,
+    "os": "Yeedi OS",
+    "chipset": "ARM Cortex",
+    "cpu": "Quad-core ARM processor",
+    "max_cleaning_area_sqm": 200,
+    "noise_level_db": 65,
+    "cliff_sensors": true,
+    "app_name": "Yeedi",
+    "multi_floor_mapping": true,
+    "no_go_zones": true,
+    "virtual_walls": true,
+    "spot_cleaning": true,
+    "edge_cleaning": true,
+    "return_to_dock": true,
+    "resume_cleaning": true,
+    "dustbin_auto_empty": true,
+    "washable_filter": true,
+    "side_brushes": 1,
+    "main_brush_type": "ZeroTangle roller brush",
+    "mop_attachment": true,
+    "water_flow_control": true,
+    "compatible_alexa": true,
+    "compatible_google": true
   },
   {
     "id": "yeedi-yeedi-vac-max",
@@ -52772,7 +53265,9 @@
       "Multi-brand robot integration",
       "Automation cell standardization"
     ],
-    "manufacturer_url": "https://wandelbots.com"
+    "manufacturer_url": "https://wandelbots.com",
+    "warranty_months": 12,
+    "product_url": "https://wandelbots.com/nova"
   },
   {
     "id": "realman-rmc-da-dual-arm-compound-robot",
@@ -52821,7 +53316,15 @@
     "wifi": true,
     "bluetooth": true,
     "warranty_months": 12,
-    "product_url": "https://www.realman-robotics.com/en/products/mobile-robot/rmc-da"
+    "product_url": "https://www.realman-robotics.com/en/products/mobile-robot/rmc-da",
+    "width_mm": 800,
+    "depth_mm": 600,
+    "battery_life": "8 hours",
+    "charge_time": "4 hours",
+    "cpu": "ARM Cortex-A72",
+    "ram_gb": 8,
+    "storage_gb": 64,
+    "cellular": "4G LTE"
   },
   {
     "id": "realman-eco65-aa-",
@@ -52859,7 +53362,28 @@
       "Quality inspection",
       "Force-sensitive operations"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.03,
+    "protection_rating": "IP54",
+    "operating_temp_range": "-10°C to +50°C",
+    "communication_interfaces": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++",
+      "Blockly"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Emergency stop",
+      "Safe torque off"
+    ],
+    "max_joint_speed_deg_s": 180,
+    "force_sensor": "6-axis force/torque sensor",
+    "warranty_months": 24
   },
   {
     "id": "realman-eco65-aa",
@@ -52872,7 +53396,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 15000,
     "desc": "Economic series six-degree-of-freedom standard robotic arm for precise and versatile industrial tasks",
     "highlights": [],
     "perf": {
@@ -52896,7 +53420,15 @@
       "Packaging",
       "Light manufacturing"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "weight_kg": 21,
+    "speed_ms": 1.5,
+    "repeatability_mm": 0.05,
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.realman-robotics.com/products/eco65-aa"
   },
   {
     "id": "realman-rml-63",
@@ -52933,7 +53465,13 @@
       "packaging",
       "laboratory automation"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "weight_kg": 19,
+    "speed_ms": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "warranty_months": 12,
+    "product_url": "https://www.realman-robotics.com/en/product/rml-63"
   },
   {
     "id": "realman-rmc-da-dual-arm",
@@ -52988,7 +53526,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 8000,
     "desc": "Entry-level 7-DOF robotic arm, 600mm reach, designed for education and prototyping, drag teaching capability",
     "highlights": [],
     "perf": {
@@ -53012,7 +53550,19 @@
       "Prototyping",
       "Light industrial automation"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 650,
+    "width_mm": 160,
+    "depth_mm": 160,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": false,
+    "cameras": "Optional end-effector camera support",
+    "imu": false,
+    "lidar": false,
+    "depth_sensing": false,
+    "speed_ms": 1,
+    "warranty_months": 12
   },
   {
     "id": "realman-rml63-6f",
@@ -53049,7 +53599,28 @@
       "Quality inspection",
       "Research and education"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.03,
+    "max_speed_deg_s": 180,
+    "protection_rating": "IP54",
+    "operating_temp_range": "0-50°C",
+    "power_consumption_w": 200,
+    "communication_interfaces": [
+      "Ethernet",
+      "Modbus TCP",
+      "EtherCAT"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++"
+    ],
+    "teach_pendant": true,
+    "collision_detection": true,
+    "safety_features": [
+      "Emergency stop",
+      "Collision detection",
+      "Joint torque monitoring"
+    ]
   },
   {
     "id": "realman-rml63-b",
@@ -53086,7 +53657,27 @@
       "Machine tending",
       "Research and education"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.03,
+    "speed_ms": 1,
+    "joint_range_deg": [
+      -170,
+      170
+    ],
+    "protection_rating": "IP54",
+    "operating_temp_range": "0-45°C",
+    "power_consumption_w": 200,
+    "communication": [
+      "Ethernet",
+      "Modbus TCP",
+      "TCP/IP"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++"
+    ],
+    "mounting": "Floor, ceiling, wall",
+    "joint_type": "Servo motors with harmonic drives"
   },
   {
     "id": "realman-eco65-6f",
@@ -53124,7 +53715,26 @@
       "Quality inspection",
       "Machine tending"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.03,
+    "max_speed_deg_s": 180,
+    "operating_temp_c": "0 to 45",
+    "protection_rating": "IP54",
+    "communication": [
+      "Ethernet",
+      "Modbus TCP",
+      "RS485"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++"
+    ],
+    "force_torque_sensor": true,
+    "collision_detection": true,
+    "drag_teaching": true,
+    "voltage_v": "24-48",
+    "power_consumption_w": 200,
+    "mounting": "Table mount, Wall mount, Ceiling mount"
   },
   {
     "id": "realman-eco65-b",
@@ -53162,7 +53772,19 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 580,
+    "width_mm": 180,
+    "depth_mm": 180,
+    "speed_ms": 1,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": false,
+    "cameras": "Optional external camera support",
+    "lidar": false,
+    "imu": true,
+    "depth_sensing": false,
+    "warranty_months": 12
   },
   {
     "id": "realman-rm75-6f",
@@ -53200,7 +53822,27 @@
       "Laboratory applications",
       "Educational robotics"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.03,
+    "max_speed_deg_s": 180,
+    "operating_temp_max": 45,
+    "power_consumption_w": 500,
+    "ip_rating": "IP54",
+    "communication_protocols": [
+      "Ethernet",
+      "RS485",
+      "Modbus"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Emergency stop",
+      "Force limiting"
+    ],
+    "mounting": "Floor, ceiling, wall"
   },
   {
     "id": "realman-rm75-b",
@@ -53237,7 +53879,17 @@
       "Research",
       "Education"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.02,
+    "max_speed_ms": 2.5,
+    "joint_ranges": "±170° to ±360°",
+    "communication": "Ethernet, RS485",
+    "protection_rating": "IP54",
+    "operating_temp": "-10°C to +50°C",
+    "power_consumption": "300W",
+    "control_system": "Real-time control system",
+    "programming": "Python, C++, ROS",
+    "safety_features": "Collision detection, emergency stop"
   },
   {
     "id": "realman-rm65-6f",
@@ -53275,7 +53927,17 @@
       "Machine tending",
       "Force-sensitive applications"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 638,
+    "repeatability_mm": 0.02,
+    "joint_ranges": "±170°, ±120°, ±170°, ±180°, ±120°, ±360°",
+    "max_speed_joint": "225°/s",
+    "communication": "Ethernet, Modbus TCP, RS485",
+    "protection_rating": "IP54",
+    "operating_temp": "-10°C to +50°C",
+    "force_sensor": "Built-in 6-axis force/torque sensor",
+    "programming": "RealMan Studio, Python SDK, C++ SDK",
+    "warranty_months": 12
   },
   {
     "id": "realman-rm65-b",
@@ -53313,7 +53975,32 @@
       "Pick and place",
       "Laboratory automation"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 688,
+    "repeatability_mm": 0.02,
+    "speed_ms": 2,
+    "operating_temp_range": "-10°C to +50°C",
+    "power_consumption": "200W",
+    "communication": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "protection_rating": "IP54",
+    "joint_range_deg": [
+      360,
+      360,
+      360,
+      360,
+      360,
+      360
+    ],
+    "collision_detection": true,
+    "programming_languages": [
+      "Python",
+      "C++"
+    ],
+    "product_url": "https://www.realman-robotics.com/products/rm65-b"
   },
   {
     "id": "flexiv-moonlight",
@@ -53351,7 +54038,15 @@
       "surface finishing"
     ],
     "manufacturer_url": "https://www.flexiv.com",
-    "ros": true
+    "ros": true,
+    "weight_kg": 45,
+    "speed_ms": 3,
+    "repeatability_mm": 0.03,
+    "force_sensing_n": 0.1,
+    "workspace_type": "cylindrical",
+    "control_system": "force_control",
+    "programming_interface": "visual_programming",
+    "product_url": "https://www.flexiv.com/moonlight"
   },
   {
     "id": "jaka-jaka-all-in-one-series",
@@ -53389,7 +54084,15 @@
       "Packaging",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 23,
+    "speed_ms": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "depth_sensing": false,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/products/all-in-one"
   },
   {
     "id": "jaka-jaka-s12",
@@ -53426,7 +54129,28 @@
       "Quality inspection",
       "Pick and place"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 48,
+    "speed_ms": 2,
+    "repeatability_mm": 0.03,
+    "operating_temp_celsius": "0-45",
+    "ip_rating": "IP54",
+    "power_consumption_w": 300,
+    "voltage_v": "100-240",
+    "warranty_months": 12,
+    "safety_standards": [
+      "ISO 10218",
+      "ISO/TS 15066"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++"
+    ],
+    "communication_protocols": [
+      "Ethernet",
+      "Modbus TCP",
+      "EtherCAT"
+    ]
   },
   {
     "id": "jaka-jaka-pro16",
@@ -53463,7 +54187,18 @@
       "Welding",
       "Palletizing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 45,
+    "speed_ms": 3,
+    "repeatability_mm": 0.03,
+    "protection_rating": "IP54",
+    "operating_temp_range": "-10°C to +50°C",
+    "power_consumption": "1.5 kW",
+    "communication": "Ethernet, Modbus, Profinet",
+    "programming_interface": "Drag-and-drop, Python, C++",
+    "safety_features": "Collision detection, Emergency stop, Safety monitoring",
+    "warranty_months": 24,
+    "product_url": "https://www.jaka.com/product/jaka-pro-16"
   },
   {
     "id": "jaka-jaka-pro12",
@@ -53500,7 +54235,17 @@
       "Welding",
       "Material handling"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "repeatability_mm": 0.03,
+    "max_speed_ms": 3.2,
+    "protection_rating": "IP54",
+    "operating_temp_max": 45,
+    "power_consumption_w": 1500,
+    "mounting": "Floor, wall, ceiling",
+    "communication": "Ethernet, USB, RS485",
+    "programming_language": "Python, C++",
+    "safety_features": "Collision detection, emergency stop",
+    "warranty_months": 24
   },
   {
     "id": "jaka-jaka-pro5",
@@ -53538,7 +54283,16 @@
       "Packaging",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 28,
+    "speed_ms": 3,
+    "warranty_months": 24,
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true,
+    "depth_sensing": false,
+    "cameras": "Optional end-effector camera support",
+    "lidar": false
   },
   {
     "id": "jaka-jaka-zu35",
@@ -53575,7 +54329,18 @@
       "Welding",
       "Assembly"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 85,
+    "speed_ms": 2,
+    "repeatability_mm": 0.05,
+    "ip_rating": "IP54",
+    "operating_temp_max": 45,
+    "power_consumption_w": 800,
+    "safety_rating": "ISO 10218-1/2, ISO/TS 15066",
+    "programming_interface": "Drag-and-teach, Blockly, Python",
+    "collision_detection": true,
+    "force_sensing": true,
+    "warranty_months": 24
   },
   {
     "id": "jaka-jaka-zu30",
@@ -53613,7 +54378,17 @@
       "Machine tending",
       "Palletizing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 1327,
+    "speed_ms": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "Optional",
+    "cameras": "Optional vision system compatible",
+    "imu": true,
+    "depth_sensing": false,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/zu30"
   },
   {
     "id": "jaka-jaka-zu20",
@@ -53650,7 +54425,31 @@
       "Assembly operations",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 63,
+    "speed_ms": 3,
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "operating_temp_range": "-10°C to +50°C",
+    "power_consumption": "800W",
+    "communication": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++",
+      "Blockly"
+    ],
+    "end_effector_compatible": true,
+    "vision_system_ready": true,
+    "warranty_months": 24
   },
   {
     "id": "jaka-jaka-zu18",
@@ -53688,7 +54487,22 @@
       "Machine tending",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 70,
+    "speed_ms": 2,
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "operating_temp_range": "-10°C to +50°C",
+    "power_consumption": "500W",
+    "tcp_speed_max": "2000 mm/s",
+    "joint_speed_max": "180°/s",
+    "safety_features": [
+      "Force/torque sensing",
+      "Collision detection",
+      "Emergency stop"
+    ],
+    "programming_interface": "Drag and teach",
+    "warranty_months": 12
   },
   {
     "id": "jaka-jaka-zu12",
@@ -53725,7 +54539,33 @@
       "Assembly operations",
       "Pick and place"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 33,
+    "speed_ms": 3,
+    "repeatability_mm": 0.03,
+    "operating_temp_range": "-10°C to +50°C",
+    "protection_rating": "IP54",
+    "power_consumption": "500W",
+    "joint_range_deg": "±360° (J1-J6)",
+    "collision_detection": true,
+    "safety_certified": "ISO 10218, ISO/TS 15066",
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "communication_interfaces": [
+      "Ethernet",
+      "Modbus TCP",
+      "EtherCAT"
+    ],
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Table"
+    ],
+    "warranty_months": 12
   },
   {
     "id": "jaka-jaka-zu7",
@@ -53763,7 +54603,19 @@
       "Packaging",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 650,
+    "repeatability_mm": 0.03,
+    "max_joint_speed": 180,
+    "operating_temp_range": "0-50°C",
+    "power_consumption": 200,
+    "ip_rating": "IP54",
+    "safety_certification": "ISO 10218, ISO/TS 15066",
+    "programming_interface": "Drag-and-drop, Python, C++",
+    "collision_detection": true,
+    "force_torque_sensing": true,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/zu7"
   },
   {
     "id": "jaka-jaka-zu5",
@@ -53801,7 +54653,21 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "repeatability_mm": 0.03,
+    "speed_ms": 1,
+    "operating_temp_range": "-10°C to +50°C",
+    "ip_rating": "IP54",
+    "power_consumption": "500W",
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop"
+    ],
+    "programming_interface": "Drag and drop, scripting",
+    "ethernet": true,
+    "modbus": true,
+    "warranty_months": 24
   },
   {
     "id": "jaka-jaka-zu3",
@@ -53858,7 +54724,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 15000,
     "desc": "Compact cobot with 580mm reach and improved payload capacity over MiniCobo",
     "highlights": [],
     "perf": {
@@ -53883,7 +54749,24 @@
       "Packaging",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.jaka.com/"
+    "manufacturer_url": "https://www.jaka.com/",
+    "height_mm": 664,
+    "repeatability_mm": 0.03,
+    "speed_ms": 2,
+    "operating_temp_range": "-10°C to 50°C",
+    "power_consumption": "150W",
+    "safety_rating": "ISO 13849-1 PLd, Cat.3",
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "connectivity": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "warranty_months": 12
   },
   {
     "id": "jaka-jaka-s5",
@@ -53921,7 +54804,26 @@
       "Machine tending",
       "Polishing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 22,
+    "speed_ms": 3,
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "operating_temp_range": "-10°C to +50°C",
+    "power_consumption_w": 500,
+    "wifi": true,
+    "ethernet": true,
+    "force_sensor": "Built-in 6-axis force/torque sensor",
+    "programming_methods": [
+      "Hand guidance",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "safety_certification": [
+      "CE",
+      "ISO 10218"
+    ],
+    "warranty_months": 12
   },
   {
     "id": "jaka-jaka-ai-5",
@@ -54002,7 +54904,16 @@
       "Machine tending",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 713,
+    "weight_kg": 24,
+    "speed_ms": 3,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true,
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/jaka-ai-3"
   },
   {
     "id": "jaka-jaka-pro-16",
@@ -54041,7 +54952,34 @@
       "assembly",
       "packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 45,
+    "speed_ms": 3,
+    "repeatability_mm": 0.02,
+    "protection_rating": "IP68",
+    "programming_languages": [
+      "Python",
+      "C++"
+    ],
+    "communication_protocols": [
+      "Modbus",
+      "Ethernet/IP",
+      "TCP/IP"
+    ],
+    "operating_temperature_range": "-10°C to 50°C",
+    "power_consumption_w": 500,
+    "mounting_options": [
+      "floor",
+      "ceiling",
+      "wall",
+      "angle"
+    ],
+    "safety_features": [
+      "collision detection",
+      "force limiting",
+      "emergency stop"
+    ],
+    "warranty_months": 24
   },
   {
     "id": "jaka-jaka-pro-5",
@@ -54078,7 +55016,18 @@
       "Assembly",
       "Material handling"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 583,
+    "repeatability_mm": 0.02,
+    "speed_ms": 3,
+    "ros": true,
+    "protection_rating": "IP68",
+    "operating_temp_min": -10,
+    "operating_temp_max": 50,
+    "voltage": "24V DC",
+    "communication": "Ethernet, Modbus, RS485",
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/jaka-pro"
   },
   {
     "id": "jaka-jaka-zu-20",
@@ -54115,7 +55064,17 @@
       "Material handling",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 85,
+    "speed_ms": 2,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "depth_sensing": true,
+    "cameras": "Built-in vision system for guidance and monitoring",
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/products/collaborative-robot/zu20"
   },
   {
     "id": "jaka-jaka-zu-5s",
@@ -54176,7 +55135,36 @@
       "Blockly"
     ],
     "force_sensor_range": "±300N",
-    "torque_sensor_range": "±30Nm"
+    "torque_sensor_range": "±30Nm",
+    "height_mm": 924,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/en/product/zu5s",
+    "width_mm": 180,
+    "depth_mm": 180,
+    "joint_torque": [
+      "32Nm",
+      "32Nm",
+      "20Nm",
+      "12Nm",
+      "12Nm",
+      "12Nm"
+    ],
+    "position_accuracy_mm": 0.05,
+    "voltage_v": "220-240V AC",
+    "frequency_hz": "50/60Hz",
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Table"
+    ],
+    "end_effector_interface": "ISO 9409-1-50-4-M6",
+    "tool_io": "2 digital inputs, 2 digital outputs",
+    "compliance_standards": [
+      "CE",
+      "ISO 10218",
+      "ISO/TS 15066"
+    ]
   },
   {
     "id": "jaka-jaka-zu-3s",
@@ -54214,7 +55202,16 @@
       "Polishing",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 645,
+    "repeatability_mm": 0.03,
+    "speed_ms": 3.2,
+    "ros": true,
+    "force_sensor": true,
+    "force_range_n": 300,
+    "warranty_months": 12,
+    "ip_rating": "IP54",
+    "operating_temp_range": "-10°C to 45°C"
   },
   {
     "id": "wandelbots-tracepen",
@@ -54250,7 +55247,14 @@
       "No-code robotics",
       "Production line setup"
     ],
-    "manufacturer_url": "https://www.wandelbots.com"
+    "manufacturer_url": "https://www.wandelbots.com",
+    "dof": 6,
+    "ros": true,
+    "cameras": "Built-in motion tracking sensors",
+    "depth_sensing": false,
+    "lidar": false,
+    "warranty_months": 12,
+    "product_url": "https://www.wandelbots.com/tracepen"
   },
   {
     "id": "wandelbots-wandelbots-nova-cloud",
@@ -54286,7 +55290,11 @@
       "Production monitoring"
     ],
     "manufacturer_url": "https://wandelbots.com",
-    "product_url": "https://wandelbots.com/nova"
+    "product_url": "https://wandelbots.com/nova",
+    "bluetooth": true,
+    "os": "Cloud-based platform",
+    "cameras": "Supports integration with various camera systems for visual monitoring",
+    "warranty_months": 12
   },
   {
     "id": "wandelbots-wandelbots-nova-os",
@@ -54321,7 +55329,12 @@
       "Automation cell management"
     ],
     "manufacturer_url": "https://www.wandelbots.com",
-    "product_url": "https://www.wandelbots.com/nova-os"
+    "product_url": "https://www.wandelbots.com/nova-os",
+    "warranty_months": 12,
+    "os": "NOVA OS",
+    "wifi": true,
+    "bluetooth": true,
+    "ai_model": "Machine learning for trajectory optimization"
   },
   {
     "id": "flexiv-grav-enhanced-gripper",
@@ -54357,7 +55370,15 @@
       "Manufacturing automation",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.flexiv.com"
+    "manufacturer_url": "https://www.flexiv.com",
+    "weight_kg": 0.8,
+    "reach_mm": 140,
+    "warranty_months": 12,
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "depth_sensing": false,
+    "product_url": "https://www.flexiv.com/products/grav"
   },
   {
     "id": "flexiv-grav",
@@ -54394,7 +55415,17 @@
       "Assembly operations",
       "Pick and place"
     ],
-    "manufacturer_url": "https://www.flexiv.com"
+    "manufacturer_url": "https://www.flexiv.com",
+    "height_mm": 155,
+    "width_mm": 85,
+    "depth_mm": 85,
+    "reach_mm": 140,
+    "grip_force_n": 300,
+    "finger_stroke_mm": 110,
+    "protection_rating": "IP67",
+    "communication": "Ethernet/IP, Modbus TCP",
+    "sensors": "Force/torque sensing, position feedback",
+    "operating_temp_c": "-10 to 50"
   },
   {
     "id": "flexiv-rizon-10s",
@@ -54436,7 +55467,18 @@
       "Precision handling",
       "Industrial automation"
     ],
-    "manufacturer_url": "https://www.flexiv.com"
+    "manufacturer_url": "https://www.flexiv.com",
+    "height_mm": 1020,
+    "width_mm": 180,
+    "depth_mm": 180,
+    "speed_ms": 2,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": false,
+    "cellular": "Optional",
+    "lidar": false,
+    "warranty_months": 12,
+    "product_url": "https://www.flexiv.com/rizon"
   },
   {
     "id": "flexiv-rizon-10",
@@ -54476,7 +55518,14 @@
       "Collaborative manufacturing"
     ],
     "manufacturer_url": "https://www.flexiv.com",
-    "product_url": "https://www.flexiv.com/rizon"
+    "product_url": "https://www.flexiv.com/rizon",
+    "height_mm": 1050,
+    "speed_ms": 2,
+    "os": "Flexiv OS",
+    "cameras": "Optional external vision systems supported",
+    "imu": true,
+    "depth_sensing": true,
+    "warranty_months": 12
   },
   {
     "id": "flexiv-rizon-4s",
@@ -54514,7 +55563,21 @@
       "Machine tending",
       "Collaborative manufacturing"
     ],
-    "manufacturer_url": "https://www.flexiv.com"
+    "manufacturer_url": "https://www.flexiv.com",
+    "repeatability_mm": 0.05,
+    "joint_velocities": "180°/s",
+    "protection_rating": "IP65",
+    "operating_temp": "-10°C to +50°C",
+    "power_consumption": "500W",
+    "programming_interface": "Flexiv Elements",
+    "safety_features": "Collision detection, force limitation",
+    "mounting": "Floor, ceiling, wall",
+    "warranty_months": 12,
+    "certifications": [
+      "CE",
+      "FCC"
+    ],
+    "product_url": "https://www.flexiv.com/rizon"
   },
   {
     "id": "flexiv-rizon-4",
@@ -54554,7 +55617,16 @@
       "Precision handling",
       "Force-sensitive tasks"
     ],
-    "manufacturer_url": "https://www.flexiv.com"
+    "manufacturer_url": "https://www.flexiv.com",
+    "height_mm": 750,
+    "width_mm": 180,
+    "depth_mm": 180,
+    "speed_ms": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "depth_sensing": true,
+    "warranty_months": 12,
+    "product_url": "https://www.flexiv.com/rizon"
   },
   {
     "id": "jaka-jaka-lumi",
@@ -54589,7 +55661,18 @@
       "AI Training",
       "Academic Projects"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 1200,
+    "weight_kg": 25,
+    "payload_kg": 3,
+    "reach_mm": 910,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "RGB camera for vision processing",
+    "imu": true,
+    "depth_sensing": true,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/collaborative-robot/jaka-lumi"
   },
   {
     "id": "jaka-jaka-ai-series-ai-3-5-7-12-18-",
@@ -54631,7 +55714,12 @@
       "Quality inspection",
       "Collaborative manufacturing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 27,
+    "speed_ms": 3,
+    "os": "JAKA APP",
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/products/collaborative-robot"
   },
   {
     "id": "jaka-jaka-s-series-s5-s7-s12-",
@@ -54669,7 +55757,15 @@
       "Quality inspection",
       "Collaborative manufacturing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 25,
+    "speed_ms": 3,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Optional external vision system compatible",
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/products/collaborative-robot"
   },
   {
     "id": "jaka-jaka-zu-35",
@@ -54706,7 +55802,13 @@
       "Welding",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 1200,
+    "repeatability_mm": 0.03,
+    "speed_ms": 3,
+    "ros": true,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/zu35"
   },
   {
     "id": "jaka-jaka-zu-5s",
@@ -54766,7 +55868,13 @@
       "pick and place",
       "assembly"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 1270,
+    "ros": true,
+    "wifi": true,
+    "bluetooth": true,
+    "speed_ms": 2,
+    "warranty_months": 12
   },
   {
     "id": "jaka-jaka-pro-12",
@@ -54806,7 +55914,37 @@
       "Painting",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.jaka.com/"
+    "manufacturer_url": "https://www.jaka.com/",
+    "height_mm": 900,
+    "repeatability_mm": 0.03,
+    "operating_temp_range": "-10°C to +50°C",
+    "ip_rating": "IP54",
+    "power_consumption_w": 500,
+    "max_speed_ms": 3,
+    "joint_speed_deg_s": 180,
+    "communication_protocols": [
+      "Ethernet/IP",
+      "Modbus TCP",
+      "TCP/IP"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop",
+      "Safety-rated monitored stop"
+    ],
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Table"
+    ],
+    "warranty_months": 24
   },
   {
     "id": "jaka-jaka-zu-18",
@@ -54845,7 +55983,12 @@
       "Machine tending",
       "Welding applications"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 1108,
+    "repeatability_mm": 0.03,
+    "speed_ms": 3,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/zu18"
   },
   {
     "id": "jaka-jaka-zu-12",
@@ -54884,7 +56027,34 @@
       "Welding",
       "Automotive manufacturing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "repeatability_mm": 0.03,
+    "speed_ms": 1,
+    "operating_temp_celsius": "0-45",
+    "ip_rating": "IP54",
+    "power_consumption_w": 500,
+    "joint_range_deg": "±360",
+    "control_system": "JAKA Control System",
+    "communication_protocols": [
+      "TCP/IP",
+      "Modbus",
+      "Ethernet/IP"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Speed monitoring",
+      "Force limiting"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++",
+      "JAKA Script"
+    ],
+    "certification": [
+      "CE",
+      "ISO 10218"
+    ],
+    "warranty_months": 12
   },
   {
     "id": "jaka-jaka-zu-7",
@@ -54922,7 +56092,28 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "speed_ms": 3,
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP54",
+    "operating_temp_range": "-10°C to +50°C",
+    "power_consumption_w": 350,
+    "communication_protocols": [
+      "Modbus TCP",
+      "EtherCAT",
+      "Ethernet/IP"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Safe torque off"
+    ],
+    "programming_interface": "Drag-and-teach, graphical programming",
+    "certification": [
+      "CE",
+      "ISO 10218",
+      "ISO/TS 15066"
+    ]
   },
   {
     "id": "jaka-jaka-zu-5",
@@ -54960,7 +56151,28 @@
       "machine tending",
       "packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 610,
+    "repeatability_mm": 0.03,
+    "speed_ms": 3.14,
+    "ros": true,
+    "ip_rating": "IP54",
+    "operating_temp_c": "0-45",
+    "warranty_months": 12,
+    "programming_methods": [
+      "drag teaching",
+      "graphical programming",
+      "script programming"
+    ],
+    "safety_features": [
+      "collision detection",
+      "force limiting",
+      "emergency stop"
+    ],
+    "joint_ranges": [
+      -360,
+      360
+    ]
   },
   {
     "id": "jaka-jaka-zu-3",
@@ -54997,7 +56209,13 @@
       "Quality inspection",
       "Light manufacturing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 589,
+    "ros": true,
+    "wifi": true,
+    "bluetooth": false,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/zu3"
   },
   {
     "id": "jaka-jaka-minicobo",
@@ -55078,7 +56296,14 @@
       "Machine tending",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "weight_kg": 25,
+    "speed_ms": 1,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true,
+    "warranty_months": 12
   },
   {
     "id": "aubo-aubo-is35",
@@ -55156,7 +56381,30 @@
       "Welding",
       "Pick and place operations"
     ],
-    "manufacturer_url": "https://www.aubo-cobot.com"
+    "manufacturer_url": "https://www.aubo-cobot.com",
+    "weight_kg": 68,
+    "repeatability_mm": 0.05,
+    "speed_ms": 3,
+    "operating_temp_max": 45,
+    "ip_rating": "IP54",
+    "power_consumption_w": 500,
+    "mounting": "Floor, ceiling, wall, angle",
+    "safety_certification": [
+      "ISO 10218",
+      "ISO/TS 15066",
+      "CE"
+    ],
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "communication_protocols": [
+      "Ethernet/IP",
+      "Modbus TCP",
+      "TCP/IP"
+    ],
+    "warranty_months": 24
   },
   {
     "id": "aubo-aubo-i20",
@@ -55226,7 +56474,8 @@
       "Speed and separation monitoring",
       "Emergency stop"
     ],
-    "warranty_months": 12
+    "warranty_months": 12,
+    "product_url": "https://www.aubo-cobot.com/product/aubo-i20"
   },
   {
     "id": "aubo-aubo-i16",
@@ -55278,7 +56527,34 @@
     "imu": true,
     "depth_sensing": false,
     "warranty_months": 24,
-    "product_url": "https://www.aubo-cobot.com/products/aubo-i16"
+    "product_url": "https://www.aubo-cobot.com/products/aubo-i16",
+    "repeatability_mm": 0.03,
+    "operating_temp_range": "-10°C to +50°C",
+    "ip_rating": "IP54",
+    "power_consumption": "500W",
+    "joint_ranges": "±360° (J1-J6)",
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop",
+      "Safety I/O"
+    ],
+    "communication_protocols": [
+      "Ethernet/IP",
+      "Modbus TCP",
+      "TCP/IP"
+    ],
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Angle"
+    ]
   },
   {
     "id": "aubo-aubo-i12",
@@ -55326,7 +56602,17 @@
     "imu": true,
     "depth_sensing": false,
     "warranty_months": 12,
-    "product_url": "https://www.aubo-robotics.com/products/aubo-i12"
+    "product_url": "https://www.aubo-robotics.com/products/aubo-i12",
+    "repeatability_mm": 0.03,
+    "protection_rating": "IP54",
+    "operating_temp_range": "-10°C to +50°C",
+    "power_consumption": "500W",
+    "joints": 6,
+    "tcp_speed_max": 2,
+    "programming_interface": "Drag-and-drop programming",
+    "safety_features": "Collision detection, force limiting, safety-rated monitored stop",
+    "mounting": "Floor, ceiling, wall, angle",
+    "communication_protocols": "Modbus TCP, Ethernet/IP, Profinet"
   },
   {
     "id": "aubo-aubo-i10",
@@ -55403,7 +56689,10 @@
       "Ceiling",
       "Wall",
       "Angle"
-    ]
+    ],
+    "width_mm": 185,
+    "depth_mm": 185,
+    "product_url": "https://www.aubo-robotics.com/products/aubo-i10"
   },
   {
     "id": "aubo-aubo-i7",
@@ -55453,7 +56742,24 @@
     "imu": true,
     "depth_sensing": false,
     "warranty_months": 24,
-    "product_url": "https://www.aubo-robotics.com/products/aubo-i7"
+    "product_url": "https://www.aubo-robotics.com/products/aubo-i7",
+    "repeatability_mm": 0.02,
+    "joint_range_deg": 360,
+    "protection_rating": "IP54",
+    "operating_temp_c": "0-45",
+    "power_consumption_w": 200,
+    "mounting": "Floor, ceiling, wall",
+    "safety_features": "Collision detection, force limiting, emergency stop",
+    "programming_methods": [
+      "Teach pendant",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "compliance": [
+      "ISO 10218",
+      "CE",
+      "RoHS"
+    ]
   },
   {
     "id": "aubo-aubo-i5",
@@ -55504,7 +56810,47 @@
     "imu": true,
     "depth_sensing": false,
     "warranty_months": 12,
-    "product_url": "https://www.aubo-robotics.com/products/aubo-i5"
+    "product_url": "https://www.aubo-robotics.com/products/aubo-i5",
+    "repeatability_mm": 0.02,
+    "operating_temp_c": "0 to 45",
+    "ip_rating": "IP54",
+    "power_consumption_w": 200,
+    "communication_protocols": [
+      "Ethernet",
+      "Modbus TCP",
+      "Profinet"
+    ],
+    "safety_features": [
+      "Force sensing",
+      "Collision detection",
+      "Emergency stop",
+      "Safety-rated monitoring"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++",
+      "Blockly"
+    ],
+    "joint_torque_nm": [
+      20,
+      20,
+      10,
+      10,
+      10,
+      10
+    ],
+    "working_radius_mm": 886.5,
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Table"
+    ],
+    "certifications": [
+      "CE",
+      "ISO 10218",
+      "ISO/TS 15066"
+    ]
   },
   {
     "id": "aubo-aubo-i3",
@@ -55560,7 +56906,22 @@
     "certifications": [
       "CE",
       "FCC"
-    ]
+    ],
+    "product_url": "https://www.aubo-robotics.com/aubo-i3",
+    "max_speed_ms": 2,
+    "joint_torque_nm": [
+      27,
+      27,
+      13,
+      13,
+      13,
+      13
+    ],
+    "voltage": "24V DC",
+    "teach_pendant": true,
+    "force_torque_sensor": false,
+    "collision_sensitivity": "Adjustable",
+    "backup_system": "Internal memory backup"
   },
   {
     "id": "aubo-robotics-aubo-is20l",
@@ -55598,7 +56959,25 @@
       "Palletizing",
       "Large workspace applications"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "warranty_months": 12,
+    "speed_ms": 2,
+    "repeatability_mm": 0.05,
+    "ip_rating": "IP54",
+    "operating_temp_max": 50,
+    "power_consumption_w": 800,
+    "joint_ranges": "±360° (J1,J6), ±180° (J2-J5)",
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop",
+      "Safety I/O"
+    ],
+    "programming_methods": [
+      "Teaching pendant",
+      "Graphical programming",
+      "Script programming"
+    ]
   },
   {
     "id": "aubo-robotics-aubo-i20",
@@ -55676,7 +57055,19 @@
       "Material handling",
       "Industrial automation"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "height_mm": 850,
+    "width_mm": 190,
+    "depth_mm": 190,
+    "speed_ms": 3,
+    "wifi": true,
+    "bluetooth": false,
+    "cameras": "Optional vision system compatible",
+    "lidar": false,
+    "imu": true,
+    "depth_sensing": false,
+    "warranty_months": 12,
+    "product_url": "https://www.aubo-robotics.com/products/aubo-i16"
   },
   {
     "id": "aubo-robotics-aubo-i12",
@@ -55714,7 +57105,16 @@
       "Palletizing",
       "Assembly"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "height_mm": 1420,
+    "width_mm": 190,
+    "depth_mm": 190,
+    "speed_ms": 1,
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.aubo-robotics.com/products/aubo-i12"
   },
   {
     "id": "aubo-robotics-aubo-i10",
@@ -55752,7 +57152,44 @@
       "Pick and place",
       "Assembly"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "height_mm": 876,
+    "width_mm": 190,
+    "depth_mm": 190,
+    "speed_ms": 2,
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "operating_temp_max": 50,
+    "power_consumption_w": 500,
+    "joint_range_deg": [
+      360,
+      360,
+      360,
+      360,
+      360,
+      360
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Safety-rated monitored stop"
+    ],
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "communication_protocols": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "certification": [
+      "CE",
+      "CR",
+      "ISO 10218"
+    ],
+    "warranty_months": 12
   },
   {
     "id": "aubo-robotics-aubo-i7",
@@ -55790,7 +57227,33 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "height_mm": 986,
+    "width_mm": 190,
+    "depth_mm": 190,
+    "speed_ms": 1,
+    "repeatability_mm": 0.02,
+    "joint_range_deg": 360,
+    "operating_temp_max": 45,
+    "ip_rating": "IP54",
+    "power_consumption_w": 500,
+    "communication_protocols": [
+      "TCP/IP",
+      "Modbus",
+      "Profinet"
+    ],
+    "safety_standards": [
+      "ISO 10218",
+      "ISO/TS 15066"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++"
+    ],
+    "teaching_method": "Drag teaching",
+    "collision_detection": true,
+    "force_sensing": true,
+    "warranty_months": 12
   },
   {
     "id": "aubo-robotics-aubo-i5",
@@ -55803,7 +57266,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 25000,
     "desc": "Versatile cobot with 886.5mm reach and ±0.02mm repeatability. Optimized for flexible pick/place operations, assembly tasks, and machine tending. Weighs 24kg.",
     "highlights": [],
     "perf": {
@@ -55828,7 +57291,18 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "height_mm": 835,
+    "speed_ms": 2,
+    "repeatability_mm": 0.02,
+    "working_temperature": "-10°C to +50°C",
+    "protection_rating": "IP54",
+    "power_consumption": "300W",
+    "joint_range_deg": "±360° (joints 1,2,3,6), ±180° (joint 4), ±360° (joint 5)",
+    "programming_interface": "Drag and teach, graphical programming",
+    "safety_features": "Collision detection, force limiting",
+    "warranty_months": 12,
+    "product_url": "https://www.aubo-robotics.com/products/aubo-i5"
   },
   {
     "id": "aubo-robotics-aubo-i3",
@@ -55841,7 +57315,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 15000,
     "desc": "Compact 6-axis collaborative robot with 625mm reach, ideal for pick-and-place tasks, small assembly work, and educational purposes. Features ±0.02mm repeatability and weighs 16kg.",
     "highlights": [],
     "perf": {
@@ -55866,7 +57340,21 @@
       "laboratory automation",
       "light manufacturing"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "height_mm": 514,
+    "width_mm": 165,
+    "depth_mm": 165,
+    "speed_ms": 1,
+    "repeatability_mm": 0.02,
+    "wifi": true,
+    "bluetooth": false,
+    "cellular": false,
+    "cameras": "Optional external camera support",
+    "lidar": false,
+    "imu": false,
+    "depth_sensing": false,
+    "warranty_months": 12,
+    "product_url": "https://www.aubo-robotics.com/products/aubo-i3"
   },
   {
     "id": "hanwha-robotics-agv-cobot-integrated-solution",
@@ -55904,7 +57392,13 @@
       "Logistics",
       "Manufacturing automation"
     ],
-    "manufacturer_url": "https://www.hanwha-robotics.com"
+    "manufacturer_url": "https://www.hanwha-robotics.com",
+    "payload_kg": 10,
+    "speed_ms": 1.5,
+    "wifi": true,
+    "bluetooth": true,
+    "os": "Linux",
+    "warranty_months": 12
   },
   {
     "id": "hanwha-robotics-amr-autonomous-mobile-robot-",
@@ -55983,7 +57477,19 @@
       "Quality inspection",
       "Palletizing"
     ],
-    "manufacturer_url": "https://www.hanwharobotics.com"
+    "manufacturer_url": "https://www.hanwharobotics.com",
+    "weight_kg": 33,
+    "speed_ms": 3,
+    "repeatability_mm": 0.03,
+    "operating_temp_range": "-10°C to 50°C",
+    "protection_rating": "IP54",
+    "power_consumption": "300W",
+    "tcp_speed_ms": 3,
+    "joint_speed_deg_s": 180,
+    "programming_interface": "Hanwha Teach Pendant, PC Software",
+    "safety_features": "Collision detection, Force limiting, Emergency stop",
+    "mounting_options": "Floor, Wall, Ceiling, Inverted",
+    "communication_protocols": "Ethernet/IP, Modbus TCP, TCP/IP"
   },
   {
     "id": "st-ubli-fl1500-mobile-forklift",
@@ -56134,7 +57640,18 @@
     ],
     "lidar": true,
     "cameras": "3D vision system for navigation and obstacle detection",
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "height_mm": 2100,
+    "width_mm": 1200,
+    "depth_mm": 2400,
+    "weight_kg": 2800,
+    "speed_ms": 1.5,
+    "battery_life": "8 hours",
+    "charge_time": "2 hours",
+    "imu": true,
+    "depth_sensing": true,
+    "wifi": true,
+    "ros": true
   },
   {
     "id": "st-ubli-pf-series",
@@ -56211,7 +57728,17 @@
       "Packaging",
       "Machine tending"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "height_mm": 680,
+    "weight_kg": 135,
+    "speed_ms": 10,
+    "repeatability_mm": 0.02,
+    "cycle_time_s": 0.35,
+    "protection_rating": "IP65",
+    "operating_temp_range": "-10°C to +50°C",
+    "max_acceleration": "50 m/s²",
+    "warranty_months": 12,
+    "product_url": "https://www.staubli.com/en-us/robotics/4-axis-scara-robots/ts2-scara-robots/ts2-100"
   },
   {
     "id": "st-ubli-ts2-80",
@@ -56249,7 +57776,14 @@
       "Machine tending",
       "Cleanroom applications"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "height_mm": 688,
+    "weight_kg": 55,
+    "speed_ms": 10,
+    "repeatability_mm": 0.025,
+    "warranty_months": 12,
+    "protection_rating": "IP65",
+    "product_url": "https://www.staubli.com/en-us/robotics/4-axis-scara-robots/ts2-scara-robot-series/ts2-80"
   },
   {
     "id": "st-ubli-ts2-60",
@@ -56288,7 +57822,15 @@
       "Electronics manufacturing",
       "Clean room applications"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "height_mm": 405,
+    "weight_kg": 28,
+    "repeatability_mm": 0.01,
+    "protection_rating": "IP65",
+    "working_temperature_min": 5,
+    "working_temperature_max": 45,
+    "power_consumption_w": 200,
+    "warranty_months": 12
   },
   {
     "id": "st-ubli-ts2-40",
@@ -56324,7 +57866,14 @@
       "Small parts handling",
       "Electronics manufacturing"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "weight_kg": 12,
+    "speed_ms": 10.5,
+    "repeatability_mm": 0.01,
+    "protection_rating": "IP65",
+    "ros": true,
+    "warranty_months": 12,
+    "product_url": "https://www.staubli.com/en/robotics/industrial-robots/scara-robots/ts2-series/ts2-40"
   },
   {
     "id": "st-ubli-tx2-200l",
@@ -56402,7 +57951,17 @@
       "Assembly",
       "Machine tending"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "weight_kg": 485,
+    "speed_ms": 9.5,
+    "repeatability_mm": 0.04,
+    "ip_rating": "IP65",
+    "operating_temp_min": 5,
+    "operating_temp_max": 45,
+    "power_consumption_w": 2200,
+    "mounting": "floor, ceiling, wall, angle",
+    "warranty_months": 24,
+    "product_url": "https://www.staubli.com/en-us/robotics/industrial-robots/6-axis-industrial-robots/tx2-200"
   },
   {
     "id": "st-ubli-tx2-160l",
@@ -56483,7 +58042,34 @@
       "Painting"
     ],
     "manufacturer_url": "https://www.staubli.com",
-    "product_url": "https://www.staubli.com/en/robotics/industrial-robots/6-axis-industrial-robots/tx2-160"
+    "product_url": "https://www.staubli.com/en/robotics/industrial-robots/6-axis-industrial-robots/tx2-160",
+    "height_mm": 1200,
+    "speed_ms": 8.5,
+    "repeatability_mm": 0.02,
+    "protection_rating": "IP65",
+    "operating_temp_range": "-10°C to +50°C",
+    "controller": "CS9",
+    "communication_protocols": [
+      "Ethernet",
+      "DeviceNet",
+      "Profibus",
+      "EtherCAT"
+    ],
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Angle"
+    ],
+    "joint_count": 6,
+    "wrist_payload_moment": "750 Nm",
+    "warranty_months": 24,
+    "certifications": [
+      "CE",
+      "CSA",
+      "SEMI S2"
+    ],
+    "power_consumption_kw": 2.5
   },
   {
     "id": "st-ubli-tx2-140",
@@ -56523,7 +58109,17 @@
       "Pick and place"
     ],
     "manufacturer_url": "https://www.staubli.com",
-    "product_url": "https://www.staubli.com/en/robotics/industrial-robots/6-axis-industrial-robots/tx2-series/tx2-140"
+    "product_url": "https://www.staubli.com/en/robotics/industrial-robots/6-axis-industrial-robots/tx2-series/tx2-140",
+    "height_mm": 2146,
+    "speed_ms": 10.5,
+    "os": "VAL 3",
+    "wifi": true,
+    "bluetooth": false,
+    "cameras": "Optional vision systems available",
+    "lidar": false,
+    "imu": false,
+    "depth_sensing": false,
+    "warranty_months": 12
   },
   {
     "id": "st-ubli-tx2-90xl",
@@ -56865,7 +58461,17 @@
       "Factory logistics",
       "Automated guided vehicle operations"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "height_mm": 2100,
+    "width_mm": 1200,
+    "depth_mm": 1800,
+    "weight_kg": 2800,
+    "speed_ms": 1.5,
+    "battery_life": "8 hours",
+    "charge_time": "2 hours",
+    "wifi": true,
+    "bluetooth": true,
+    "warranty_months": 24
   },
   {
     "id": "staubli-pf-series-mobile-platforms",
@@ -56941,7 +58547,12 @@
       "Material handling",
       "Machine tending"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "height_mm": 370,
+    "weight_kg": 27,
+    "repeatability_mm": 0.02,
+    "warranty_months": 12,
+    "ros": true
   },
   {
     "id": "staubli-ts2-80",
@@ -56979,7 +58590,13 @@
       "cleanroom applications"
     ],
     "manufacturer_url": "https://www.staubli.com",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "height_mm": 365,
+    "weight_kg": 40,
+    "repeatability_mm": 0.015,
+    "protection_rating": "IP65",
+    "ros": true,
+    "product_url": "https://www.staubli.com/en-us/robotics/industrial-robots/4-axis-scara-robots/ts2-scara-robots/ts2-80"
   },
   {
     "id": "staubli-ts2-60",
@@ -57017,7 +58634,10 @@
       "Light manufacturing"
     ],
     "manufacturer_url": "https://www.staubli.com",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "weight_kg": 26,
+    "ros": true,
+    "product_url": "https://www.staubli.com/en-us/robotics/industrial-robots/scara-robots/ts2-series/ts2-60"
   },
   {
     "id": "staubli-ts2-40",
@@ -57055,7 +58675,11 @@
       "Material handling",
       "Electronics manufacturing"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "height_mm": 285,
+    "weight_kg": 18,
+    "warranty_months": 12,
+    "product_url": "https://www.staubli.com/en-us/robotics/4-axis-scara-robots/ts2-scara-robots/ts2-40/"
   },
   {
     "id": "staubli-tx2-200",
@@ -57094,7 +58718,28 @@
       "Heavy part manipulation",
       "Loading/unloading"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "height_mm": 2609,
+    "speed_ms": 10,
+    "repeatability_mm": 0.02,
+    "protection_rating": "IP65",
+    "operating_temp_range": "-10°C to +50°C",
+    "power_consumption": "6.5 kW",
+    "warranty_months": 12,
+    "joint_speeds": [
+      "J1: 120°/s",
+      "J2: 120°/s",
+      "J3: 135°/s",
+      "J4: 270°/s",
+      "J5: 270°/s",
+      "J6: 450°/s"
+    ],
+    "controller": "CS9",
+    "programming_languages": [
+      "VAL3+",
+      "Python",
+      "C++"
+    ]
   },
   {
     "id": "staubli-tx2-160",
@@ -57134,7 +58779,18 @@
       "Painting",
       "Pick and place"
     ],
-    "manufacturer_url": "https://www.staubli.com"
+    "manufacturer_url": "https://www.staubli.com",
+    "height_mm": 1160,
+    "width_mm": 380,
+    "depth_mm": 380,
+    "speed_ms": 10,
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP65",
+    "operating_temp_min": 5,
+    "operating_temp_max": 45,
+    "power_consumption_w": 2000,
+    "warranty_months": 12,
+    "product_url": "https://www.staubli.com/en-us/robotics/6-axis-industrial-robot/tx2-160-robot/"
   },
   {
     "id": "staubli-tx2-140",
@@ -57172,7 +58828,10 @@
       "Assembly"
     ],
     "manufacturer_url": "https://www.staubli.com",
-    "product_url": "https://www.staubli.com/en-us/robotics/industrial-robots/6-axis-industrial-robots/tx2-series/tx2-140"
+    "product_url": "https://www.staubli.com/en-us/robotics/industrial-robots/6-axis-industrial-robots/tx2-series/tx2-140",
+    "weight_kg": 540,
+    "speed_ms": 8.5,
+    "warranty_months": 12
   },
   {
     "id": "staubli-tx2-90",
@@ -57500,7 +59159,14 @@
       "Cobot safety systems",
       "Manufacturing automation safety"
     ],
-    "manufacturer_url": "https://www.hanwharobotics.com"
+    "manufacturer_url": "https://www.hanwharobotics.com",
+    "warranty_months": 12,
+    "ros": true,
+    "wifi": true,
+    "bluetooth": false,
+    "lidar": false,
+    "imu": false,
+    "product_url": "https://www.hanwharobotics.com/en/product/rvs"
   },
   {
     "id": "hanwha-robotics-robot-ai-3d-vision-raiv-",
@@ -57536,7 +59202,10 @@
       "Collaborative robot guidance",
       "Object sorting"
     ],
-    "manufacturer_url": "https://www.hanwharobotics.com"
+    "manufacturer_url": "https://www.hanwharobotics.com",
+    "ros": true,
+    "warranty_months": 12,
+    "product_url": "https://www.hanwharobotics.com/en/product/raiv"
   },
   {
     "id": "hanwha-robotics-amr-series",
@@ -57650,7 +59319,31 @@
       "Material handling",
       "Pick and place"
     ],
-    "manufacturer_url": "https://www.hanwharobotics.com"
+    "manufacturer_url": "https://www.hanwharobotics.com",
+    "weight_kg": 33,
+    "speed_ms": 2,
+    "repeatability_mm": 0.05,
+    "operating_temp_range": "-10°C to +50°C",
+    "ip_rating": "IP54",
+    "safety_features": [
+      "Collision detection",
+      "Force/torque sensing",
+      "Emergency stop",
+      "Safety-rated monitored stop"
+    ],
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Angle"
+    ],
+    "communication": [
+      "Ethernet",
+      "Digital I/O",
+      "Analog I/O"
+    ],
+    "programming_interface": "Teach pendant and PC software",
+    "warranty_months": 12
   },
   {
     "id": "hanwha-robotics-hcr-14",
@@ -57688,7 +59381,15 @@
       "Palletizing",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.hanwharobotics.com"
+    "manufacturer_url": "https://www.hanwharobotics.com",
+    "height_mm": 1300,
+    "speed_ms": 3,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Optional vision system compatible",
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.hanwharobotics.com/products/hcr-14"
   },
   {
     "id": "hanwha-robotics-hcr-12a",
@@ -57725,7 +59426,28 @@
       "Packaging",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.hanwharobotics.com"
+    "manufacturer_url": "https://www.hanwharobotics.com",
+    "weight_kg": 33,
+    "speed_ms": 1.5,
+    "repeatability_mm": 0.05,
+    "ip_rating": "IP54",
+    "operating_temp_max": 50,
+    "power_consumption_w": 500,
+    "wifi": true,
+    "ethernet": true,
+    "safety_rated": true,
+    "programming_interface": "Teaching pendant, PC software",
+    "compliance": [
+      "ISO 10218",
+      "ISO/TS 15066",
+      "CE marking"
+    ],
+    "mounting": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Table"
+    ]
   },
   {
     "id": "hanwha-robotics-hcr-5a",
@@ -57767,7 +59489,15 @@
       "polishing",
       "dispensing"
     ],
-    "manufacturer_url": "https://www.hanwharobotics.com"
+    "manufacturer_url": "https://www.hanwharobotics.com",
+    "height_mm": 647,
+    "speed_ms": 3,
+    "wifi": true,
+    "bluetooth": false,
+    "cellular": "none",
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.hanwharobotics.com/product/hcr-5a"
   },
   {
     "id": "hanwha-robotics-hcr-3a",
@@ -57805,7 +59535,29 @@
       "pick and place",
       "electronics manufacturing"
     ],
-    "manufacturer_url": "https://www.hanwharobotics.com"
+    "manufacturer_url": "https://www.hanwharobotics.com",
+    "height_mm": 470,
+    "repeatability_mm": 0.05,
+    "max_speed_ms": 1,
+    "operating_temp_c": "0 to 45",
+    "ip_rating": "IP20",
+    "power_consumption_w": 150,
+    "joints": 6,
+    "installation": "table-mount",
+    "safety_features": [
+      "collision detection",
+      "force limiting",
+      "emergency stop"
+    ],
+    "programming_interface": [
+      "teach pendant",
+      "graphical programming"
+    ],
+    "connectivity": [
+      "Ethernet",
+      "Modbus TCP",
+      "EtherCAT"
+    ]
   },
   {
     "id": "swisslog-healthcare-hospital-agv-forklift",
@@ -58160,7 +59912,12 @@
     "battery_life": "8-12 hours",
     "charge_time": "2-4 hours",
     "depth_sensing": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "battery_life_typical": "10 hours",
+    "dof": 3,
+    "os": "Linux-based",
+    "cellular": "4G LTE optional",
+    "product_url": "https://www.swisslog-healthcare.com/en-us/products-and-services/transport-and-pharmacy-automation/automated-guided-vehicles"
   },
   {
     "id": "swisslog-healthcare-via-savioke-partnership-relay",
@@ -58510,7 +60267,17 @@
       "Retail distribution",
       "Single item picking"
     ],
-    "manufacturer_url": "https://www.swisslog.com"
+    "manufacturer_url": "https://www.swisslog.com",
+    "height_mm": 2200,
+    "width_mm": 800,
+    "depth_mm": 800,
+    "weight_kg": 29,
+    "speed_ms": 2,
+    "os": "KUKA System Software",
+    "lidar": false,
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.swisslog.com/en-us/products-systems-solutions/products/itempiq"
   },
   {
     "id": "swisslog-intramove-amr-3000",
@@ -58707,7 +60474,19 @@
       "Commercial service",
       "Research and development",
       "Educational demonstrations"
-    ]
+    ],
+    "year": 2023,
+    "status": "Released",
+    "released": "2023",
+    "battery_life": "2-4 hours",
+    "charge_time": "3-4 hours",
+    "speed_ms": 1.2,
+    "cameras": "Multiple RGB cameras for vision and navigation",
+    "imu": true,
+    "depth_sensing": true,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true
   },
   {
     "id": "galbot-galbot-g1-wheeled-bionic-robot",
@@ -59103,7 +60882,14 @@
       "Bimanual manipulation",
       "Human-robot interaction"
     ],
-    "manufacturer_url": "https://www.clonerobotics.com"
+    "manufacturer_url": "https://www.clonerobotics.com",
+    "height_mm": 850,
+    "weight_kg": 15,
+    "reach_mm": 700,
+    "ros": true,
+    "cameras": "Multiple vision sensors integrated",
+    "imu": true,
+    "product_url": "https://www.clonerobotics.com/clone-torso"
   },
   {
     "id": "clone-robotics-clone-alpha-android",
@@ -59140,7 +60926,12 @@
       "Domestic tasks",
       "Companionship"
     ],
-    "manufacturer_url": "https://www.clonerobotics.com"
+    "manufacturer_url": "https://www.clonerobotics.com",
+    "weight_kg": 85,
+    "battery_life": "8 hours",
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true
   },
   {
     "id": "clone-robotics-neoclone",
@@ -59170,7 +60961,14 @@
       "Human-robot interaction studies",
       "Advanced AI testing",
       "Future consumer applications"
-    ]
+    ],
+    "year": 2024,
+    "released": "TBA",
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Multiple high-resolution cameras for vision and facial recognition",
+    "imu": true,
+    "depth_sensing": true
   },
   {
     "id": "clone-robotics-protoclone-v1",
@@ -59201,7 +60999,14 @@
       "Humanoid development",
       "Android prototyping"
     ],
-    "manufacturer_url": "https://www.clonerobotics.com"
+    "manufacturer_url": "https://www.clonerobotics.com",
+    "height_mm": 1800,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Multiple cameras for vision and navigation",
+    "imu": true,
+    "depth_sensing": true,
+    "product_url": "https://www.clonerobotics.com/protoclone"
   },
   {
     "id": "clone-robotics-clone-hand",
@@ -59233,7 +61038,10 @@
       "Humanoid robotics",
       "Manipulation tasks"
     ],
-    "manufacturer_url": "https://www.clonerobotics.com"
+    "manufacturer_url": "https://www.clonerobotics.com",
+    "weight_kg": 1.2,
+    "ros": true,
+    "product_url": "https://www.clonerobotics.com/clone-hand"
   },
   {
     "id": "clone-robotics-clone-alpha",
@@ -59266,7 +61074,15 @@
       "cleaning",
       "domestic assistance"
     ],
-    "manufacturer_url": "https://clonerobotics.com"
+    "manufacturer_url": "https://clonerobotics.com",
+    "height_mm": 1700,
+    "weight_kg": 50,
+    "battery_life": "2-4 hours",
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Multiple RGB cameras for vision and navigation",
+    "imu": true,
+    "depth_sensing": true
   },
   {
     "id": "rainbow-robotics-hubo-2-plus",
@@ -59380,7 +61196,17 @@
     "wifi": true,
     "bluetooth": true,
     "cameras": "Multiple cameras for object recognition and customer interaction",
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "height_mm": 1650,
+    "width_mm": 800,
+    "depth_mm": 800,
+    "weight_kg": 120,
+    "dof": 6,
+    "reach_mm": 900,
+    "ros": true,
+    "lidar": true,
+    "imu": true,
+    "depth_sensing": true
   },
   {
     "id": "rainbow-robotics-fx-2",
@@ -59450,7 +61276,18 @@
     ],
     "cameras": "Color cameras in head for vision processing",
     "imu": true,
-    "ros": false
+    "ros": false,
+    "width_mm": 590,
+    "depth_mm": 300,
+    "speed_ms": 0.4,
+    "battery_life": "1 hour",
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": false,
+    "lidar": false,
+    "depth_sensing": false,
+    "warranty_months": 12,
+    "manufacturer_url": "https://www.rainbow-robotics.com"
   },
   {
     "id": "leju-robotics-roban",
@@ -59606,7 +61443,14 @@
       "Astrophotography",
       "Research telescopes"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "height_mm": 400,
+    "weight_kg": 15,
+    "dof": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": false,
+    "imu": true
   },
   {
     "id": "rainbow-robotics-rbq-series",
@@ -59808,7 +61652,35 @@
       "Machine tending",
       "Pick and place"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "weight_kg": 53,
+    "speed_ms": 1.5,
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "operating_temp_max": 45,
+    "power_consumption_w": 800,
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop",
+      "Safety-rated monitored stop"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++"
+    ],
+    "communication_protocols": [
+      "EtherCAT",
+      "Modbus TCP",
+      "TCP/IP"
+    ],
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Angle"
+    ],
+    "warranty_months": 12
   },
   {
     "id": "rainbow-robotics-rb16-900",
@@ -59846,7 +61718,14 @@
       "Palletizing",
       "Industrial automation"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "height_mm": 600,
+    "warranty_months": 12,
+    "speed_ms": 3,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "Optional",
+    "product_url": "https://www.rainbow-robotics.com/rb-series"
   },
   {
     "id": "rainbow-robotics-rb10-1300",
@@ -59883,7 +61762,13 @@
       "machine tending",
       "assembly"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "weight_kg": 34,
+    "speed_ms": 1.5,
+    "repeatability_mm": 0.03,
+    "operating_temp_range": "-10°C to 50°C",
+    "protection_rating": "IP54",
+    "warranty_months": 12
   },
   {
     "id": "rainbow-robotics-rb5-850",
@@ -59896,7 +61781,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 35000,
     "desc": "Versatile standard model with 850mm reach, optimized for manufacturing and service industries with 0.05mm repeatability",
     "highlights": [],
     "perf": {
@@ -59921,7 +61806,15 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "height_mm": 985,
+    "speed_ms": 3,
+    "warranty_months": 24,
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "cameras": "Built-in vision system with RGB camera",
+    "product_url": "https://www.rainbow-robotics.com/rb-series"
   },
   {
     "id": "rainbow-robotics-rb3-1200",
@@ -59959,7 +61852,17 @@
       "Packaging",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "height_mm": 650,
+    "width_mm": 160,
+    "depth_mm": 160,
+    "speed_ms": 1,
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "operating_temp_min": 5,
+    "operating_temp_max": 45,
+    "warranty_months": 12,
+    "product_url": "https://www.rainbow-robotics.com/rb3"
   },
   {
     "id": "rainbow-robotics-rb3-730",
@@ -59997,7 +61900,17 @@
       "pick and place",
       "machine tending"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "height_mm": 990,
+    "width_mm": 160,
+    "depth_mm": 160,
+    "speed_ms": 2,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.rainbow-robotics.com/rb3"
   },
   {
     "id": "leju-robotics-aelos-1s",
@@ -60045,7 +61958,12 @@
     "depth_sensing": false,
     "lidar": false,
     "charge_time": "2-3 hours",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "cpu": "ARM Cortex-A7",
+    "ram_gb": 1,
+    "storage_gb": 8,
+    "cellular": "None",
+    "manufacturer_url": "https://www.lejurobot.com"
   },
   {
     "id": "leju-robotics-pando",
@@ -60181,7 +62099,10 @@
     "bluetooth": true,
     "os": "Linux",
     "charge_time": "4 hours",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "manufacturer_url": "https://www.lejurobot.com",
+    "cellular": "4G/5G optional",
+    "ai_model": "Custom AI framework with computer vision and motion planning"
   },
   {
     "id": "leju-robotics-aelos-1s",
@@ -60336,7 +62257,11 @@
     "os": "Linux",
     "cellular": "4G/5G optional",
     "warranty_months": 12,
-    "product_url": "https://www.lejurobot.com/kuavo-4pro"
+    "product_url": "https://www.lejurobot.com/kuavo-4pro",
+    "cpu": "ARM Cortex-A78",
+    "ram_gb": 8,
+    "storage_gb": 128,
+    "ai_model": "Custom neural networks for perception and navigation"
   },
   {
     "id": "leju-robotics-kuavo-5-5-w",
@@ -60453,7 +62378,11 @@
       "Precise manipulation tasks",
       "Human-robot interaction"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "weight_kg": 1.2,
+    "ros": true,
+    "imu": true,
+    "product_url": "https://www.agibot.com/products/omnihand-o10"
   },
   {
     "id": "agibot-agibot-a1-raise-a1-",
@@ -60494,7 +62423,13 @@
       "Manufacturing tasks",
       "Bolt tightening",
       "Vehicle inspection"
-    ]
+    ],
+    "manufacturer_url": "https://www.agibot.com",
+    "payload_kg": 5,
+    "reach_mm": 650,
+    "battery_life": "8 hours",
+    "wifi": true,
+    "bluetooth": true
   },
   {
     "id": "agibot-agibot-c5-juechen-",
@@ -60680,7 +62615,16 @@
       "Research applications",
       "Prosthetics development",
       "Laboratory manipulation"
-    ]
+    ],
+    "height_mm": 280,
+    "width_mm": 95,
+    "depth_mm": 45,
+    "reach_mm": 200,
+    "cameras": "Integrated vision sensors in fingertips",
+    "depth_sensing": true,
+    "imu": true,
+    "warranty_months": 12,
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-agibot-omnihand-2025",
@@ -60712,7 +62656,13 @@
       "Assistive robotics",
       "Manufacturing"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "weight_kg": 1.2,
+    "ros": true,
+    "cameras": "Integrated tactile and visual sensors",
+    "depth_sensing": true,
+    "imu": true,
+    "warranty_months": 12
   },
   {
     "id": "agibot-agibot-c5",
@@ -61048,7 +62998,16 @@
       "Material handling",
       "Quality inspection",
       "Flexible manufacturing"
-    ]
+    ],
+    "height_mm": 1200,
+    "weight_kg": 45,
+    "payload_kg": 3,
+    "reach_mm": 900,
+    "wifi": true,
+    "bluetooth": true,
+    "lidar": false,
+    "warranty_months": 12,
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-agibot-a2-lite",
@@ -61082,7 +63041,16 @@
       "Theme parks",
       "Events and exhibitions",
       "Dance performances"
-    ]
+    ],
+    "battery_life": "2-4 hours",
+    "charge_time": "2 hours",
+    "speed_ms": 1.5,
+    "cameras": "Multiple RGB cameras for vision and navigation",
+    "imu": true,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true,
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-agibot-a2-ultra",
@@ -61240,7 +63208,14 @@
       "Research and development",
       "Prosthetics",
       "Laboratory tasks"
-    ]
+    ],
+    "height_mm": 280,
+    "width_mm": 120,
+    "depth_mm": 85,
+    "weight_kg": 1.2,
+    "payload_kg": 2,
+    "reach_mm": 200,
+    "warranty_months": 12
   },
   {
     "id": "agibot-omnihand-2025",
@@ -61274,7 +63249,13 @@
       "Prosthetics research",
       "Educational robotics"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "warranty_months": 12,
+    "bluetooth": true,
+    "wifi": true,
+    "imu": true,
+    "reach_mm": 200,
+    "payload_kg": 2
   },
   {
     "id": "agibot-c5",
@@ -61309,7 +63290,18 @@
       "Warehouse cleaning",
       "Industrial facility cleaning"
     ],
-    "imu": true
+    "imu": true,
+    "height_mm": 350,
+    "width_mm": 600,
+    "depth_mm": 600,
+    "weight_kg": 45,
+    "battery_life": "4-6 hours",
+    "charge_time": "2-3 hours",
+    "speed_ms": 0.8,
+    "bluetooth": true,
+    "depth_sensing": true,
+    "ros": true,
+    "warranty_months": 12
   },
   {
     "id": "agibot-d1-pro",
@@ -61473,7 +63465,16 @@
     ],
     "cameras": "Multiple cameras for navigation and object recognition",
     "imu": true,
-    "depth_sensing": true
+    "depth_sensing": true,
+    "weight_kg": 35,
+    "battery_life": "8 hours",
+    "speed_ms": 1.5,
+    "payload_kg": 3,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true,
+    "lidar": true,
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-x2-ultra",
@@ -61584,7 +63585,16 @@
       "Development",
       "AI experimentation"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "height_mm": 1700,
+    "weight_kg": 65,
+    "dof": 43,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Multiple RGB cameras and depth cameras",
+    "lidar": true,
+    "imu": true,
+    "depth_sensing": true
   },
   {
     "id": "agibot-a2-w",
@@ -61621,7 +63631,14 @@
       "Assembly line tasks",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "height_mm": 1600,
+    "payload_kg": 5,
+    "reach_mm": 900,
+    "speed_ms": 1.2,
+    "wifi": true,
+    "bluetooth": true,
+    "lidar": true
   },
   {
     "id": "agibot-a2-lite",
@@ -61728,7 +63745,17 @@
       "Research and development",
       "Manufacturing",
       "Laboratory assistance"
-    ]
+    ],
+    "battery_life": "8 hours",
+    "speed_ms": 1.4,
+    "payload_kg": 20,
+    "cameras": "Multiple RGB cameras for vision and navigation",
+    "imu": true,
+    "depth_sensing": true,
+    "ros": true,
+    "wifi": true,
+    "bluetooth": true,
+    "warranty_months": 12
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-s1",
@@ -62156,7 +64183,13 @@
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
-    "cameras": "Multiple stereo cameras for navigation and object recognition"
+    "cameras": "Multiple stereo cameras for navigation and object recognition",
+    "battery_life": "2-4 hours",
+    "speed_ms": 1.5,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true,
+    "manufacturer_url": "https://www.keplerrobotics.com"
   },
   {
     "id": "kepler-robotics-kepler-forerunner-s1",
@@ -62265,7 +64298,14 @@
     ],
     "cameras": "Multi-modal vision system",
     "imu": true,
-    "depth_sensing": true
+    "depth_sensing": true,
+    "battery_life": "2-4 hours",
+    "speed_ms": 1.4,
+    "payload_kg": 20,
+    "ros": true,
+    "lidar": true,
+    "warranty_months": 12,
+    "manufacturer_url": "https://www.keplerbots.com"
   },
   {
     "id": "engineered-arts-quinn",
@@ -62455,7 +64495,13 @@
       "Human-robot interaction studies",
       "AI development"
     ],
-    "manufacturer_url": "https://www.engineeredarts.co.uk"
+    "manufacturer_url": "https://www.engineeredarts.co.uk",
+    "height_mm": 840,
+    "weight_kg": 50,
+    "os": "Linux",
+    "depth_sensing": true,
+    "imu": true,
+    "product_url": "https://www.engineeredarts.co.uk/ameca"
   },
   {
     "id": "engineered-arts-ami",
@@ -62490,7 +64536,11 @@
       "Customer service",
       "Entertainment"
     ],
-    "manufacturer_url": "https://www.engineeredarts.co.uk"
+    "manufacturer_url": "https://www.engineeredarts.co.uk",
+    "height_mm": 400,
+    "ros": true,
+    "depth_sensing": true,
+    "warranty_months": 12
   },
   {
     "id": "engineered-arts-ameca",
@@ -62614,7 +64664,12 @@
       "Defense logistics",
       "Reconnaissance missions"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "Optional 4G/LTE connectivity",
+    "warranty_months": 24,
+    "product_url": "https://milremrobotics.com/land-systems/mifik/"
   },
   {
     "id": "milrem-robotics-type-x-rcv",
@@ -62870,7 +64925,11 @@
       "Reconnaissance missions",
       "Logistics support"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "warranty_months": 12,
+    "bluetooth": true,
+    "os": "Linux",
+    "product_url": "https://milremrobotics.com/land-systems/autonomous-functions/"
   },
   {
     "id": "milrem-robotics-arcos",
@@ -62909,7 +64968,11 @@
       "Unmanned ground vehicle fleet management",
       "Battlefield surveillance"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "depth_sensing": true,
+    "bluetooth": true,
+    "warranty_months": 24,
+    "product_url": "https://milremrobotics.com/arcos/"
   },
   {
     "id": "milrem-robotics-mrcv",
@@ -63149,7 +65212,16 @@
     "cameras": "Multiple electro-optical and thermal cameras",
     "imu": true,
     "depth_sensing": true,
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "height_mm": 2500,
+    "width_mm": 3200,
+    "depth_mm": 6500,
+    "speed_ms": 15,
+    "payload_kg": 3000,
+    "battery_life": "8-10 hours",
+    "wifi": true,
+    "cellular": "4G/5G",
+    "ros": true
   },
   {
     "id": "milrem-robotics-type-x-robotic-combat-vehicle",
@@ -63360,7 +65432,11 @@
       "Tiling"
     ],
     "manufacturer_url": "https://carbonrobotics.com",
-    "product_url": "https://carbonrobotics.com/autotractor"
+    "product_url": "https://carbonrobotics.com/autotractor",
+    "speed_ms": 4.47,
+    "bluetooth": true,
+    "ros": false,
+    "warranty_months": 12
   },
   {
     "id": "carbon-robotics-carbon-atk-autotractor-kit-",
@@ -63396,7 +65472,12 @@
       "Remote tractor operation",
       "Precision agriculture"
     ],
-    "manufacturer_url": "https://carbonrobotics.com"
+    "manufacturer_url": "https://carbonrobotics.com",
+    "wifi": true,
+    "bluetooth": true,
+    "ros": false,
+    "depth_sensing": true,
+    "warranty_months": 12
   },
   {
     "id": "carbon-robotics-laserweeder-g2-1800",
@@ -63695,7 +65776,12 @@
     "scheduling": true,
     "virtual_boundaries": true,
     "auto_return": true,
-    "edge_cleaning": true
+    "edge_cleaning": true,
+    "battery_life_typical": "35-40 minutes",
+    "payload_kg": 0.33,
+    "os": "Dyson proprietary OS",
+    "cellular": false,
+    "ros": false
   },
   {
     "id": "dyson-dyson-spot-scrub-ai-robot-vacuum-cleaner",
@@ -63911,7 +65997,16 @@
       "Physical therapy",
       "Motor function training"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "warranty_months": 12,
+    "battery_life": "8 hours",
+    "charge_time": "2 hours",
+    "reach_mm": 800,
+    "payload_kg": 15,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Integrated motion tracking cameras",
+    "depth_sensing": true
   },
   {
     "id": "fourier-rehab-armmotus-m2-pro",
@@ -63949,7 +66044,14 @@
       "Physical therapy",
       "Upper limb strength training"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "weight_kg": 25,
+    "payload_kg": 20,
+    "os": "Windows",
+    "cameras": "RGB camera for motion tracking",
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.fftai.com/products/armmotus-m2-pro"
   },
   {
     "id": "fourier-rehab-exomotus-x2",
@@ -64235,7 +66337,15 @@
     "imu": true,
     "depth_sensing": true,
     "warranty_months": 24,
-    "product_url": "https://www.dyson.com/vacuum-cleaners/robot/dyson-360-vis-nav"
+    "product_url": "https://www.dyson.com/vacuum-cleaners/robot/dyson-360-vis-nav",
+    "height_mm": 99,
+    "width_mm": 330,
+    "depth_mm": 330,
+    "weight_kg": 2.51,
+    "speed_ms": 0.17,
+    "os": "Dyson Link",
+    "cellular": "None",
+    "ros": false
   },
   {
     "id": "fourier-intelligence-fourier-rehab-metamotus-galileo",
@@ -64277,7 +66387,14 @@
       "Biomechanics research",
       "Sports medicine"
     ],
-    "manufacturer_url": "https://www.fftai.com/"
+    "manufacturer_url": "https://www.fftai.com/",
+    "height_mm": 1800,
+    "width_mm": 2000,
+    "depth_mm": 3000,
+    "weight_kg": 150,
+    "os": "Linux",
+    "warranty_months": 12,
+    "reach_mm": 1500
   },
   {
     "id": "fourier-intelligence-fourier-rehab-cyclemotus-a4",
@@ -64356,7 +66473,13 @@
       "gait training",
       "neurological rehabilitation"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "weight_kg": 15,
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.fftai.com/en/product-ankle"
   },
   {
     "id": "fourier-intelligence-fourier-rehab-balancemotus-kine-sim",
@@ -64509,7 +66632,12 @@
       "Physical therapy",
       "Motor function training"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "weight_kg": 12,
+    "payload_kg": 20,
+    "ros": true,
+    "warranty_months": 12,
+    "product_url": "https://www.fftai.com/en/rehabilitation-robot"
   },
   {
     "id": "fourier-intelligence-fourier-rehab-armmotus-m2-pro",
@@ -64547,7 +66675,12 @@
       "Physical therapy",
       "Movement assessment"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "weight_kg": 15,
+    "ros": true,
+    "cameras": "Built-in monitoring camera for patient safety",
+    "warranty_months": 12,
+    "product_url": "https://www.fftai.com/product/armmotus-m2-pro"
   },
   {
     "id": "fourier-intelligence-gr-2-humanoid-robot",
@@ -64654,7 +66787,17 @@
       "Industrial automation",
       "Object manipulation"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "height_mm": 218,
+    "width_mm": 85,
+    "depth_mm": 45,
+    "weight_kg": 0.6,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Built-in visual perception system",
+    "imu": true,
+    "depth_sensing": true,
+    "warranty_months": 12
   },
   {
     "id": "fourier-intelligence-gr-3",
@@ -64816,7 +66959,14 @@
     "dof": 7,
     "ros": true,
     "cellular": "Optional 5G",
-    "product_url": "https://www.neura-robotics.com/mipa"
+    "product_url": "https://www.neura-robotics.com/mipa",
+    "os": "NEURA OS",
+    "ai_model": "NEURA AI",
+    "speed_ms": 1.5,
+    "payload_kg": 5,
+    "reach_mm": 800,
+    "charge_time": "4 hours",
+    "warranty_months": 24
   },
   {
     "id": "neura-robotics-mav",
@@ -64866,7 +67016,10 @@
     "os": "Linux",
     "cameras": "Multiple RGB cameras for navigation and environment perception",
     "warranty_months": 24,
-    "product_url": "https://www.neura-robotics.com/mav"
+    "product_url": "https://www.neura-robotics.com/mav",
+    "released": "2021",
+    "charge_time": "2 hours",
+    "cellular": "Optional 4G/5G module"
   },
   {
     "id": "neura-robotics-lara-10",
@@ -64913,7 +67066,12 @@
     "cameras": "Integrated vision system with RGB cameras",
     "imu": true,
     "depth_sensing": true,
-    "speed_ms": 2
+    "speed_ms": 2,
+    "os": "Linux-based",
+    "cpu": "ARM-based processor",
+    "cellular": "4G/5G optional",
+    "width_mm": 150,
+    "depth_mm": 150
   },
   {
     "id": "neura-robotics-lara-5",
@@ -64959,7 +67117,13 @@
     "speed_ms": 1,
     "protection_rating": "IP66",
     "warranty_months": 24,
-    "product_url": "https://www.neura-robotics.com/lara-5"
+    "product_url": "https://www.neura-robotics.com/lara-5",
+    "width_mm": 160,
+    "depth_mm": 160,
+    "cameras": "Integrated RGB-D camera for vision-guided applications",
+    "depth_sensing": true,
+    "imu": true,
+    "ai_model": "Integrated AI for cognitive robotics"
   },
   {
     "id": "neura-robotics-maira-m",
@@ -64998,7 +67162,15 @@
       "Quality inspection",
       "Machine tending"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com"
+    "manufacturer_url": "https://www.neura-robotics.com",
+    "weight_kg": 37,
+    "speed_ms": 3,
+    "os": "NEURA OS",
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "warranty_months": 24,
+    "product_url": "https://www.neura-robotics.com/maira-m"
   },
   {
     "id": "neura-robotics-maira",
@@ -65046,7 +67218,42 @@
     "wifi": true,
     "bluetooth": true,
     "lidar": false,
-    "product_url": "https://www.neura-robotics.com/products/maira"
+    "product_url": "https://www.neura-robotics.com/products/maira",
+    "repeatability_mm": 0.03,
+    "safety_rating": "ISO 10218, ISO/TS 15066",
+    "mounting": "Floor, ceiling, wall",
+    "protection_rating": "IP54",
+    "temperature_range": "0°C to 45°C",
+    "power_consumption": "500W",
+    "joint_torque": [
+      {
+        "joint": 1,
+        "torque_nm": 176
+      },
+      {
+        "joint": 2,
+        "torque_nm": 176
+      },
+      {
+        "joint": 3,
+        "torque_nm": 176
+      },
+      {
+        "joint": 4,
+        "torque_nm": 41
+      },
+      {
+        "joint": 5,
+        "torque_nm": 41
+      },
+      {
+        "joint": 6,
+        "torque_nm": 20
+      }
+    ],
+    "programming_interface": "Drag and drop, voice commands, gesture control",
+    "safety_features": "Force/torque sensing, collision detection, safe stop",
+    "compliance": "CE, FCC"
   },
   {
     "id": "neura-robotics-4ne1-mini",
@@ -65088,7 +67295,13 @@
     "manufacturer_url": "https://neura-robotics.com",
     "weight_kg": 35,
     "ai_model": "Cognitive AI with multimodal perception",
-    "lidar": true
+    "lidar": true,
+    "battery_life": "4-6 hours",
+    "charge_time": "2-3 hours",
+    "cpu": "NVIDIA Jetson",
+    "os": "Linux-based",
+    "warranty_months": 12,
+    "speed_ms": 1
   },
   {
     "id": "neura-robotics-4ne1",
@@ -65132,7 +67345,12 @@
     "wifi": true,
     "bluetooth": true,
     "ros": true,
-    "warranty_months": 24
+    "warranty_months": 24,
+    "charge_time": "2 hours",
+    "payload_kg": 20,
+    "reach_mm": 700,
+    "cellular": "5G ready",
+    "product_url": "https://www.neura-robotics.com/4ne1"
   },
   {
     "id": "neura-robotics-neura-quadruped-robot",
@@ -65250,7 +67468,33 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com"
+    "manufacturer_url": "https://www.neura-robotics.com",
+    "weight_kg": 22,
+    "speed_ms": 7.5,
+    "repeatability_mm": 0.05,
+    "ip_rating": "IP54",
+    "operating_temp_min": 5,
+    "operating_temp_max": 45,
+    "power_consumption_w": 500,
+    "mounting": "floor, ceiling, wall",
+    "safety_features": [
+      "collision detection",
+      "force limiting",
+      "emergency stop"
+    ],
+    "certifications": [
+      "CE",
+      "ISO 10218"
+    ],
+    "connectivity": [
+      "Ethernet",
+      "USB",
+      "Digital I/O"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++"
+    ]
   },
   {
     "id": "neura-robotics-mipa",
@@ -65349,7 +67593,18 @@
       "Human-robot collaboration",
       "Laboratory applications",
       "Manipulation tasks"
-    ]
+    ],
+    "weight_kg": 18,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "cameras": "Optional external cameras for vision applications",
+    "depth_sensing": false,
+    "lidar": false,
+    "warranty_months": 12,
+    "manufacturer_url": "https://agile-robots.com",
+    "product_url": "https://agile-robots.com/diana"
   },
   {
     "id": "franka-robotics-franka-production-3-fp3-",
@@ -65389,7 +67644,24 @@
       "Collaborative manufacturing"
     ],
     "manufacturer_url": "https://www.franka.de",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "height_mm": 1096,
+    "width_mm": 190,
+    "depth_mm": 190,
+    "speed_ms": 1.7,
+    "repeatability_mm": 0.1,
+    "ip_rating": "IP30",
+    "operating_temp_min": 15,
+    "operating_temp_max": 25,
+    "ethernet": true,
+    "force_sensing": true,
+    "collision_detection": true,
+    "programming_languages": [
+      "Python",
+      "C++",
+      "MATLAB"
+    ],
+    "safety_rating": "Category 3 PLd according to ISO 13849-1"
   },
   {
     "id": "franka-robotics-franka-research-3",
@@ -65469,7 +67741,17 @@
       "Assembly tasks",
       "Laboratory manipulation"
     ],
-    "manufacturer_url": "https://www.franka.de"
+    "manufacturer_url": "https://www.franka.de",
+    "height_mm": 84,
+    "reach_mm": 87.5,
+    "grip_force_n": 140,
+    "opening_width_mm": 80,
+    "precision_mm": 0.1,
+    "operating_temp_c": "10 to 40",
+    "ip_rating": "IP30",
+    "communication": "Ethernet",
+    "power_consumption_w": 30,
+    "product_url": "https://www.franka.de/franka-hand"
   },
   {
     "id": "agile-robots-franka-ecosystem-diana-7",
@@ -65508,7 +67790,15 @@
       "Laboratory applications"
     ],
     "manufacturer_url": "https://www.agile-robots.com",
-    "product_url": "https://franka.de/diana"
+    "product_url": "https://franka.de/diana",
+    "height_mm": 1128,
+    "os": "Linux",
+    "warranty_months": 24,
+    "cameras": "Optional external vision systems supported",
+    "imu": true,
+    "wifi": true,
+    "bluetooth": false,
+    "speed_ms": 2
   },
   {
     "id": "franka-robotics-tactile-mobile-robot-tmr-",
@@ -65548,7 +67838,15 @@
       "Human-robot interaction",
       "Service robotics"
     ],
-    "manufacturer_url": "https://www.franka.de"
+    "manufacturer_url": "https://www.franka.de",
+    "height_mm": 1200,
+    "weight_kg": 45,
+    "battery_life": "8 hours",
+    "speed_ms": 1.5,
+    "payload_kg": 20,
+    "os": "Ubuntu Linux",
+    "warranty_months": 24,
+    "product_url": "https://www.franka.de/tmr"
   },
   {
     "id": "franka-robotics-mobile-fr3-duo",
@@ -65587,7 +67885,17 @@
       "Research and development",
       "Bimanual manipulation tasks"
     ],
-    "manufacturer_url": "https://www.franka.de"
+    "manufacturer_url": "https://www.franka.de",
+    "height_mm": 1800,
+    "weight_kg": 150,
+    "payload_kg": 3,
+    "reach_mm": 855,
+    "speed_ms": 1,
+    "battery_life": "4-6 hours",
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": true,
+    "warranty_months": 12
   },
   {
     "id": "qinetiq-cecil-consolidated-edison-combined-inspection-and-lancing-",
@@ -65619,7 +67927,18 @@
       "Secondary side cleaning operations"
     ],
     "cameras": "Multiple inspection cameras for steam generator tube monitoring",
-    "manufacturer_url": "https://www.qinetiq.com"
+    "manufacturer_url": "https://www.qinetiq.com",
+    "height_mm": 152,
+    "width_mm": 152,
+    "depth_mm": 1524,
+    "weight_kg": 23,
+    "dof": 6,
+    "lidar": false,
+    "imu": true,
+    "depth_sensing": false,
+    "wifi": false,
+    "bluetooth": false,
+    "ros": false
   },
   {
     "id": "qinetiq-robotic-applique-kit-rak-3-",
@@ -65652,7 +67971,14 @@
       "Explosive ordnance disposal",
       "Remote vehicle operation"
     ],
-    "manufacturer_url": "https://www.qinetiq.com"
+    "manufacturer_url": "https://www.qinetiq.com",
+    "weight_kg": 45,
+    "payload_kg": 2000,
+    "cameras": "Multiple day/night cameras for situational awareness",
+    "lidar": true,
+    "imu": true,
+    "ros": false,
+    "wifi": true
   },
   {
     "id": "qinetiq-rcv-l-robotic-command-vehicle-light-",
@@ -65824,7 +68150,9 @@
     "imu": true,
     "depth_sensing": false,
     "ros": false,
-    "warranty_months": 24
+    "warranty_months": 24,
+    "product_url": "https://www.roboteam.com/rt-7-rocu",
+    "charge_time": "4 hours"
   },
   {
     "id": "roboteam-rt-20-mtgr-",
@@ -65876,7 +68204,10 @@
     "reach_mm": 800,
     "charge_time": "2-3 hours",
     "warranty_months": 24,
-    "product_url": "https://www.roboteam.com/products/rt-20"
+    "product_url": "https://www.roboteam.com/products/rt-20",
+    "os": "Linux",
+    "battery_life_typical": "5 hours",
+    "released": "2019"
   },
   {
     "id": "roboteam-rt-200-tigr-",
@@ -65928,7 +68259,10 @@
     "reach_mm": 800,
     "cellular": "Optional 4G/LTE",
     "warranty_months": 24,
-    "product_url": "https://www.roboteam.com/products/tigr"
+    "product_url": "https://www.roboteam.com/products/tigr",
+    "os": "Linux-based",
+    "battery_life_typical": "3 hours",
+    "released": "2018"
   },
   {
     "id": "roboteam-rt-1000-probot-",
@@ -66057,7 +68391,17 @@
       "Preventive maintenance",
       "Remote infrastructure assessment"
     ],
-    "manufacturer_url": "https://www.teledyneflir.com"
+    "manufacturer_url": "https://www.teledyneflir.com",
+    "height_mm": 1200,
+    "width_mm": 800,
+    "depth_mm": 600,
+    "weight_kg": 45,
+    "battery_life": "4-6 hours",
+    "speed_ms": 1.5,
+    "depth_sensing": true,
+    "bluetooth": true,
+    "cellular": "4G LTE",
+    "warranty_months": 12
   },
   {
     "id": "flir-teledyne-flir-defense-kobra-725",
@@ -66356,7 +68700,15 @@
       "Cutting",
       "Material handling"
     ],
-    "manufacturer_url": "https://www.sarcos.com"
+    "manufacturer_url": "https://www.sarcos.com",
+    "weight_kg": 88,
+    "battery_life": "8 hours",
+    "ros": true,
+    "cameras": "Multiple HD cameras for operator vision and task monitoring",
+    "imu": true,
+    "depth_sensing": true,
+    "warranty_months": 12,
+    "product_url": "https://www.sarcos.com/products/guardian-dx"
   },
   {
     "id": "geekplus-p40-vision-guided-robot",
@@ -66884,7 +69236,10 @@
       "Order picking",
       "Package sorting"
     ],
-    "manufacturer_url": "https://www.righthandrobotics.com"
+    "manufacturer_url": "https://www.righthandrobotics.com",
+    "payload_kg": 3,
+    "reach_mm": 1200,
+    "warranty_months": 12
   },
   {
     "id": "coco-robotics-coco-delivery-robot-v3",
@@ -67094,7 +69449,10 @@
       "Revision knee surgery",
       "Kinematic alignment procedures"
     ],
-    "manufacturer_url": "https://www.zimmerbiomet.com"
+    "manufacturer_url": "https://www.zimmerbiomet.com",
+    "warranty_months": 12,
+    "dof": 6,
+    "product_url": "https://www.zimmerbiomet.com/medical-professionals/knee/rosa-knee-system.html"
   },
   {
     "id": "johnson-johnson-medtech-ethicon-ottava-robotic-surgical-system",
@@ -67129,7 +69487,15 @@
       "Upper abdominal procedures"
     ],
     "manufacturer_url": "https://www.jnjmedtech.com",
-    "ros": false
+    "ros": false,
+    "height_mm": 1800,
+    "width_mm": 2400,
+    "depth_mm": 1200,
+    "weight_kg": 450,
+    "reach_mm": 600,
+    "cameras": "4K 3D endoscopic camera with fluorescence imaging",
+    "warranty_months": 12,
+    "product_url": "https://www.jnjmedtech.com/en-US/product/ottava-surgical-robotic-platform"
   },
   {
     "id": "medrobotics-flex360-robotic-system",
@@ -67163,7 +69529,15 @@
       "Gynecological surgery",
       "Urological surgery"
     ],
-    "manufacturer_url": "https://www.medrobotics.com"
+    "manufacturer_url": "https://www.medrobotics.com",
+    "height_mm": 1500,
+    "width_mm": 800,
+    "depth_mm": 1200,
+    "weight_kg": 180,
+    "reach_mm": 400,
+    "cameras": "High-definition endoscopic camera with articulating tip",
+    "warranty_months": 12,
+    "product_url": "https://www.medrobotics.com/flex-robotic-system"
   },
   {
     "id": "burro-burro-verde",
@@ -67284,7 +69658,15 @@
       "Cargo delivery",
       "Surveillance missions"
     ],
-    "manufacturer_url": "https://www.jobyaviation.com"
+    "manufacturer_url": "https://www.jobyaviation.com",
+    "height_mm": 3960,
+    "wingspan_mm": 12200,
+    "weight_kg": 2177,
+    "battery_life": "Up to 200 miles electric range",
+    "payload_kg": 680,
+    "cameras": "Multiple cameras for navigation and situational awareness",
+    "imu": true,
+    "product_url": "https://www.jobyaviation.com/news/joby-aviation-and-l3harris-technologies-demonstrate-autonomous-flight-of-hydrogen-electric/"
   },
   {
     "id": "joby-aviation-s4-evtol-air-taxi",
@@ -67604,7 +69986,22 @@
     "manufacturer_url": "https://www.yeedi.com",
     "speed_ms": 0.26,
     "imu": true,
-    "product_url": "https://www.yeedi.com/us/robot-vacuum/vac-2-pro"
+    "product_url": "https://www.yeedi.com/us/robot-vacuum/vac-2-pro",
+    "dustbin_capacity_ml": 420,
+    "water_tank_ml": 240,
+    "max_cleaning_area_sqm": 200,
+    "suction_power_pa": 3000,
+    "noise_level_db": 58,
+    "climb_height_mm": 20,
+    "app_name": "Yeedi",
+    "voice_control": true,
+    "scheduling": true,
+    "virtual_walls": true,
+    "room_mapping": true,
+    "multi_floor_mapping": true,
+    "carpet_boost": true,
+    "edge_cleaning": true,
+    "spot_cleaning": true
   },
   {
     "id": "yeedi-yeedi-c12-plus",
@@ -67703,7 +70100,16 @@
       "Pick and place operations",
       "Laboratory automation"
     ],
-    "manufacturer_url": "https://www.flexiv.com"
+    "manufacturer_url": "https://www.flexiv.com",
+    "weight_kg": 2.5,
+    "grip_force_n": 300,
+    "opening_width_mm": 140,
+    "closing_speed_ms": 0.3,
+    "sensors": "Force/torque sensors, position feedback",
+    "communication": "Ethernet, RS485",
+    "operating_temp_c": "-10 to 50",
+    "certification": "CE, FCC",
+    "warranty_months": 12
   },
   {
     "id": "flexiv-grav-gripper",
@@ -67739,7 +70145,13 @@
       "Quality inspection",
       "Collaborative manufacturing"
     ],
-    "manufacturer_url": "https://www.flexiv.com"
+    "manufacturer_url": "https://www.flexiv.com",
+    "width_mm": 150,
+    "depth_mm": 50,
+    "weight_kg": 1.2,
+    "reach_mm": 140,
+    "warranty_months": 12,
+    "product_url": "https://www.flexiv.com/products/grav-gripper"
   },
   {
     "id": "jaka-c7",
@@ -67777,7 +70189,25 @@
       "Packaging",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 910,
+    "speed_ms": 3,
+    "repeatability_mm": 0.03,
+    "operating_temp_max": 50,
+    "ip_rating": "IP54",
+    "power_consumption_w": 500,
+    "joint_speed_deg_s": 180,
+    "programming_interface": "Drag-and-teach, Blockly, Python",
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop"
+    ],
+    "certifications": [
+      "CE",
+      "ISO 10218"
+    ],
+    "product_url": "https://www.jaka.com/products/collaborative-robot/jaka-zu-7"
   },
   {
     "id": "jaka-c5",
@@ -67815,7 +70245,37 @@
       "Packaging",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.jaka.com/"
+    "manufacturer_url": "https://www.jaka.com/",
+    "height_mm": 658,
+    "width_mm": 155,
+    "depth_mm": 155,
+    "speed_ms": 3,
+    "repeatability_mm": 0.03,
+    "operating_temp_range": "-10°C to +50°C",
+    "ip_rating": "IP54",
+    "power_consumption": "500W",
+    "communication_protocols": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop"
+    ],
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "cycle_time_typical": "2-5 seconds",
+    "warranty_months": 12,
+    "certifications": [
+      "CE",
+      "ISO 10218",
+      "ISO/TS 15066"
+    ]
   },
   {
     "id": "jaka-minicobo",
@@ -67828,7 +70288,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 15000,
     "desc": "Smallest collaborative robot designed for catering, service sectors, and education. Compact size with modest energy consumption for versatile placement.",
     "highlights": [],
     "perf": {
@@ -67853,7 +70313,16 @@
       "Pick and place"
     ],
     "ros": true,
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 381,
+    "speed_ms": 1.5,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "Optional",
+    "cameras": "Built-in vision system",
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/minicobo"
   },
   {
     "id": "jaka-pro-16",
@@ -67892,7 +70361,20 @@
       "Assembly",
       "Machine tending"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "repeatability_mm": 0.03,
+    "speed_ms": 2.5,
+    "protection_rating": "IP68",
+    "operating_temp_range": "-10°C to 50°C",
+    "power_consumption": "500W",
+    "ethernet": true,
+    "modbus": true,
+    "profinet": true,
+    "teach_pendant": true,
+    "drag_teaching": true,
+    "force_sensing": true,
+    "collision_detection": true,
+    "warranty_months": 24
   },
   {
     "id": "jaka-ai-18",
@@ -67930,7 +70412,36 @@
       "Machine tending",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "weight_kg": 52,
+    "speed_ms": 3,
+    "repeatability_mm": 0.03,
+    "operating_temp_c": "0-45",
+    "ip_rating": "IP54",
+    "power_consumption_w": 500,
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop"
+    ],
+    "mounting": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Angle"
+    ],
+    "end_effector_io": "Digital I/O, Analog I/O",
+    "communication": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "warranty_months": 12
   },
   {
     "id": "jaka-ai-12",
@@ -67969,7 +70480,17 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 1327,
+    "repeatability_mm": 0.03,
+    "speed_ms": 3,
+    "operating_temp_range": "-10°C to 50°C",
+    "ip_rating": "IP54",
+    "power_consumption": "500W",
+    "programming_interface": "Visual programming, drag-and-drop interface",
+    "safety_features": "Integrated safety monitoring, collision detection, emergency stop",
+    "connectivity": "Ethernet, USB",
+    "warranty_months": 12
   },
   {
     "id": "jaka-ai-7",
@@ -68008,7 +70529,24 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 400,
+    "repeatability_mm": 0.03,
+    "speed_ms": 2,
+    "ip_rating": "IP54",
+    "operating_temp_max": 50,
+    "power_consumption": 300,
+    "safety_certification": "ISO 10218, ISO 13849",
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "collision_detection": true,
+    "force_feedback": true,
+    "wifi": true,
+    "ethernet": true,
+    "warranty_months": 24
   },
   {
     "id": "jaka-ai-5",
@@ -68048,7 +70586,30 @@
       "Packaging",
       "Welding"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 924,
+    "ros": true,
+    "wifi": true,
+    "bluetooth": true,
+    "repeatability_mm": 0.03,
+    "operating_temp_c": "0 to 45",
+    "ip_rating": "IP54",
+    "power_consumption_w": 200,
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Emergency stop",
+      "Safety-rated monitored stop"
+    ],
+    "communication_protocols": [
+      "Ethernet",
+      "Modbus TCP",
+      "TCP/IP"
+    ]
   },
   {
     "id": "jaka-ai-3",
@@ -68166,7 +70727,37 @@
       "Material handling",
       "Machine tending"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 1153,
+    "repeatability_mm": 0.05,
+    "speed_ms": 2,
+    "ip_rating": "IP54",
+    "operating_temp_range": "-10°C to +50°C",
+    "power_consumption": "500W",
+    "communication_interfaces": [
+      "Ethernet",
+      "Modbus TCP",
+      "EtherCAT"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Emergency stop",
+      "Safe limited speed",
+      "Safe operating stop"
+    ],
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Python scripting"
+    ],
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Table"
+    ],
+    "warranty_months": 24,
+    "product_url": "https://www.jaka.com/product/zu18"
   },
   {
     "id": "jaka-zu-12",
@@ -68205,7 +70796,36 @@
       "Packaging",
       "Material handling"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 904,
+    "repeatability_mm": 0.03,
+    "speed_ms": 3,
+    "ip_rating": "IP54",
+    "operating_temp_max": 45,
+    "power_consumption_w": 500,
+    "communication_protocols": [
+      "Ethernet",
+      "Modbus TCP",
+      "TCP/IP"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop",
+      "Safety-rated monitored stop"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++",
+      "Blockly"
+    ],
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Table"
+    ],
+    "warranty_months": 24
   },
   {
     "id": "jaka-zu-7",
@@ -68244,7 +70864,13 @@
       "Material handling"
     ],
     "manufacturer_url": "https://www.jaka.com",
-    "product_url": "https://www.jaka.com/products/collaborative-robot/zu-series"
+    "product_url": "https://www.jaka.com/products/collaborative-robot/zu-series",
+    "height_mm": 1020,
+    "warranty_months": 12,
+    "speed_ms": 3,
+    "ip_rating": "IP54",
+    "repeatability_mm": 0.02,
+    "power_consumption_w": 300
   },
   {
     "id": "jaka-zu-5s",
@@ -68281,7 +70907,29 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "repeatability_mm": 0.03,
+    "max_speed_ms": 3,
+    "protection_rating": "IP54",
+    "operating_temp_max": 45,
+    "power_consumption_w": 200,
+    "voltage_v": 100,
+    "communication_protocols": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop"
+    ],
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "warranty_months": 12
   },
   {
     "id": "jaka-zu-5",
@@ -68548,7 +71196,13 @@
       "Warehouse logistics",
       "Manufacturing assembly"
     ],
-    "manufacturer_url": "https://www.hanwha-robotics.com"
+    "manufacturer_url": "https://www.hanwha-robotics.com",
+    "height_mm": 1400,
+    "weight_kg": 150,
+    "speed_ms": 1.5,
+    "os": "Linux",
+    "bluetooth": true,
+    "warranty_months": 12
   },
   {
     "id": "swisslog-autostore",
@@ -68585,7 +71239,17 @@
       "retail distribution"
     ],
     "manufacturer_url": "https://www.swisslog.com",
-    "product_url": "https://www.swisslog.com/en-us/products-systems-solutions/products/autostore"
+    "product_url": "https://www.swisslog.com/en-us/products-systems-solutions/products/autostore",
+    "height_mm": 650,
+    "width_mm": 645,
+    "depth_mm": 425,
+    "weight_kg": 20,
+    "battery_life": "continuous operation",
+    "dof": 2,
+    "wifi": true,
+    "cameras": "barcode scanner and positioning cameras",
+    "imu": true,
+    "warranty_months": 12
   },
   {
     "id": "swisslog-carrypick",
@@ -68794,7 +71458,13 @@
       "Zero-shot learning demonstrations",
       "Foundation model research"
     ],
-    "manufacturer_url": "https://physicalintelligence.company"
+    "manufacturer_url": "https://physicalintelligence.company",
+    "ai_model": "π0 Foundation Model",
+    "cameras": "RGB-D cameras for visual perception",
+    "depth_sensing": true,
+    "imu": true,
+    "dof": 7,
+    "warranty_months": 12
   },
   {
     "id": "physical-intelligence-0-5-pi-0-5-",
@@ -68832,7 +71502,12 @@
       "General manipulation tasks",
       "Language-guided robotics"
     ],
-    "manufacturer_url": "https://physicalintelligence.company"
+    "manufacturer_url": "https://physicalintelligence.company",
+    "ros": true,
+    "wifi": true,
+    "bluetooth": true,
+    "warranty_months": 12,
+    "product_url": "https://physicalintelligence.company/blog/pi0"
   },
   {
     "id": "physical-intelligence-0-pi-zero-",
@@ -68866,7 +71541,12 @@
       "Household cleaning",
       "General purpose robotics tasks"
     ],
-    "manufacturer_url": "https://physicalintelligence.company"
+    "manufacturer_url": "https://physicalintelligence.company",
+    "cameras": "Multiple RGB cameras for visual perception",
+    "depth_sensing": true,
+    "imu": true,
+    "wifi": true,
+    "ros": true
   },
   {
     "id": "clone-robotics-neo",
@@ -68897,7 +71577,14 @@
       "Advanced AI testing",
       "Future mobility research"
     ],
-    "manufacturer_url": "https://clone-robotics.com"
+    "manufacturer_url": "https://clone-robotics.com",
+    "height_mm": 1700,
+    "dof": 20,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Multiple RGB cameras for vision and interaction",
+    "imu": true,
+    "depth_sensing": true
   },
   {
     "id": "rainbow-robotics-milk-tea-barista",
@@ -68930,7 +71617,15 @@
     ],
     "wifi": true,
     "cameras": "integrated vision system for order processing and monitoring",
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "height_mm": 1800,
+    "width_mm": 800,
+    "depth_mm": 600,
+    "bluetooth": true,
+    "lidar": false,
+    "imu": true,
+    "depth_sensing": true,
+    "ros": true
   },
   {
     "id": "rainbow-robotics-rbq",
@@ -69095,7 +71790,11 @@
       "Laboratory manipulation",
       "Robotic prosthetics research"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "weight_kg": 1.2,
+    "reach_mm": 200,
+    "cameras": "Integrated tactile sensing array with force and pressure sensors",
+    "warranty_months": 12
   },
   {
     "id": "agibot-g2-genie",
@@ -69134,7 +71833,16 @@
       "Manufacturing automation",
       "Precision handling",
       "Quality inspection"
-    ]
+    ],
+    "payload_kg": 5,
+    "reach_mm": 650,
+    "speed_ms": 1,
+    "battery_life": "8 hours",
+    "charge_time": "2 hours",
+    "wifi": true,
+    "bluetooth": true,
+    "manufacturer_url": "https://www.agibot.com",
+    "warranty_months": 12
   },
   {
     "id": "agibot-d1-maxpro",
@@ -69174,7 +71882,16 @@
       "Search and rescue",
       "Outdoor surveillance",
       "Heavy payload transport"
-    ]
+    ],
+    "height_mm": 400,
+    "width_mm": 800,
+    "depth_mm": 500,
+    "weight_kg": 45,
+    "dof": 12,
+    "wifi": true,
+    "bluetooth": true,
+    "os": "Linux",
+    "warranty_months": 12
   },
   {
     "id": "agibot-d1-edu",
@@ -69371,7 +72088,12 @@
       "Passive range of motion therapy",
       "Active motor rehabilitation"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "dof": 2,
+    "ros": false,
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.fftai.com/product/cyclemotus-a4"
   },
   {
     "id": "fourier-intelligence-armmotus-emu",
@@ -69447,7 +72169,16 @@
       "Clinical physiotherapy",
       "Motor learning therapy"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "height_mm": 600,
+    "width_mm": 800,
+    "depth_mm": 400,
+    "weight_kg": 25,
+    "ros": true,
+    "cameras": "Built-in camera for patient monitoring and movement tracking",
+    "depth_sensing": true,
+    "warranty_months": 24,
+    "product_url": "https://www.fftai.com/products/armmotus-m2-pro"
   },
   {
     "id": "fourier-intelligence-exomotus-m4",
@@ -69543,7 +72274,14 @@
       "Quality inspection",
       "Packaging"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com"
+    "manufacturer_url": "https://www.neura-robotics.com",
+    "weight_kg": 25,
+    "speed_ms": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "warranty_months": 24,
+    "product_url": "https://www.neura-robotics.com/lara"
   },
   {
     "id": "neura-robotics-lara-5",
@@ -69577,7 +72315,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 15000,
     "desc": "Lightweight collaborative robot with 590mm reach and ±0.02mm repeatability. Features intuitive programming, IP66 protection, and advanced safety features. Perfect for education and SME applications.",
     "highlights": [],
     "perf": {
@@ -69603,7 +72341,15 @@
       "Quality inspection",
       "Research"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com"
+    "manufacturer_url": "https://www.neura-robotics.com",
+    "height_mm": 600,
+    "speed_ms": 1.5,
+    "warranty_months": 24,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Integrated vision system",
+    "imu": true,
+    "product_url": "https://www.neura-robotics.com/lara"
   },
   {
     "id": "franka-robotics-franka-toolbox-for-matlab",
@@ -69638,7 +72384,17 @@
       "Robot control system development"
     ],
     "manufacturer_url": "https://www.franka.de",
-    "product_url": "https://www.franka.de/research"
+    "product_url": "https://www.franka.de/research",
+    "dof": 7,
+    "reach_mm": 855,
+    "payload_kg": 3,
+    "os": "MATLAB/Simulink",
+    "wifi": true,
+    "bluetooth": false,
+    "cameras": "External camera support via toolbox",
+    "imu": true,
+    "depth_sensing": false,
+    "warranty_months": 12
   },
   {
     "id": "franka-robotics-franka-ai-companion",
@@ -69678,7 +72434,16 @@
       "Prototype development",
       "Real-time control systems"
     ],
-    "manufacturer_url": "https://www.franka.de"
+    "manufacturer_url": "https://www.franka.de",
+    "height_mm": 70,
+    "width_mm": 120,
+    "depth_mm": 85,
+    "weight_kg": 0.8,
+    "os": "Ubuntu 20.04",
+    "ram_gb": 8,
+    "storage_gb": 64,
+    "lidar": false,
+    "warranty_months": 12
   },
   {
     "id": "agile-robots-distributed-by-franka-diana-7",
@@ -69719,7 +72484,22 @@
       "Educational robotics"
     ],
     "manufacturer_url": "https://www.agile-robots.com",
-    "product_url": "https://www.franka.de/diana"
+    "product_url": "https://www.franka.de/diana",
+    "repeatability_mm": 0.1,
+    "joint_speed_deg_s": 150,
+    "cartesian_speed_ms": 1.7,
+    "ip_rating": "IP30",
+    "operating_temp_c": "15-25",
+    "power_consumption_w": 500,
+    "mounting": "Floor, ceiling, wall",
+    "safety_rating": "ISO 10218",
+    "control_interface": "Franka Control Interface (FCI)",
+    "programming_languages": [
+      "C++",
+      "Python",
+      "MATLAB"
+    ],
+    "warranty_months": 24
   },
   {
     "id": "irobot-roomba-combo-j5-robot-vacuum-and-mop",
@@ -70169,7 +72949,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 1500000,
     "desc": "Legacy system with enhanced 3D HD resolution, simplified user interface, upgradeable architecture, optional dual console capability, and ergonomic settings. Compatible with Single-Site technology for single-incision procedures. Features EndoWrist instruments and high-performance vision system.",
     "highlights": [],
     "perf": {
@@ -70192,7 +72972,20 @@
       "Thoracic surgery"
     ],
     "cameras": "Dual 3D HD cameras with up to 10x magnification",
-    "manufacturer_url": "https://www.intuitive.com"
+    "manufacturer_url": "https://www.intuitive.com",
+    "height_mm": 1520,
+    "width_mm": 1070,
+    "depth_mm": 1830,
+    "weight_kg": 454,
+    "reach_mm": 610,
+    "warranty_months": 12,
+    "wifi": false,
+    "bluetooth": false,
+    "cellular": "none",
+    "ros": false,
+    "lidar": false,
+    "imu": false,
+    "depth_sensing": true
   },
   {
     "id": "intuitive-surgical-da-vinci-sp-single-port-",
@@ -70205,7 +72998,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 3500000,
     "desc": "Single-port system designed for single-incision or natural orifice surgery. Features three multi-jointed wristed instruments and fully articulating 3DHD endoscope through single cannula. Cleared for urologic, transoral otolaryngology, colorectal, thoracic, inguinal hernia repair, cholecystectomy, and appendectomy procedures.",
     "highlights": [],
     "perf": {
@@ -70238,7 +73031,12 @@
       "Natural orifice surgery"
     ],
     "manufacturer_url": "https://www.intuitive.com",
-    "product_url": "https://www.intuitive.com/en-us/products-and-services/da-vinci/systems/da-vinci-sp"
+    "product_url": "https://www.intuitive.com/en-us/products-and-services/da-vinci/systems/da-vinci-sp",
+    "height_mm": 1676,
+    "weight_kg": 454,
+    "reach_mm": 600,
+    "os": "Proprietary",
+    "warranty_months": 12
   },
   {
     "id": "roborock-roborock-q5-max-",
@@ -70958,7 +73756,13 @@
       "Warehouse operations",
       "Research and development"
     ],
-    "manufacturer_url": "https://www.unitree.com"
+    "manufacturer_url": "https://www.unitree.com",
+    "weight_kg": 47,
+    "speed_ms": 1.5,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true,
+    "lidar": true
   },
   {
     "id": "unitree-g1",
@@ -71182,7 +73986,13 @@
       "Forestry management"
     ],
     "manufacturer_url": "https://www.dji.com",
-    "product_url": "https://enterprise.dji.com/zenmuse-l3"
+    "product_url": "https://enterprise.dji.com/zenmuse-l3",
+    "height_mm": 199,
+    "width_mm": 181,
+    "depth_mm": 166,
+    "dof": 3,
+    "depth_sensing": true,
+    "warranty_months": 12
   },
   {
     "id": "dji-dji-matrice-30-series",
@@ -73721,7 +76531,22 @@
       "Floor cleaning",
       "Pet hair removal",
       "Daily maintenance cleaning"
-    ]
+    ],
+    "released": "2024",
+    "year": 2024,
+    "height_mm": 92,
+    "width_mm": 335,
+    "depth_mm": 335,
+    "weight_kg": 3.4,
+    "battery_life": "90 minutes",
+    "charge_time": "3 hours",
+    "speed_ms": 0.3,
+    "wifi": true,
+    "bluetooth": true,
+    "lidar": true,
+    "imu": true,
+    "cameras": "Single front-facing camera",
+    "manufacturer_url": "https://www.irobot.com"
   },
   {
     "id": "irobot-roomba-j6-vac",
@@ -74109,7 +76934,23 @@
       "Collaborative manufacturing"
     ],
     "manufacturer_url": "https://www.franka.de/",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "weight_kg": 18,
+    "speed_ms": 2,
+    "repeatability_mm": 0.1,
+    "wifi": true,
+    "bluetooth": false,
+    "ethernet": true,
+    "operating_temp_min": 15,
+    "operating_temp_max": 25,
+    "ip_rating": "IP30",
+    "programming_languages": [
+      "Python",
+      "C++",
+      "MATLAB"
+    ],
+    "safety_certification": "ISO 10218-1, ISO/TS 15066",
+    "product_url": "https://www.franka.de/production-3"
   },
   {
     "id": "franka-robotics-franka-emika-panda",
@@ -74149,7 +76990,17 @@
       "Machine tending"
     ],
     "manufacturer_url": "https://www.franka.de",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "height_mm": 1160,
+    "width_mm": 200,
+    "depth_mm": 200,
+    "speed_ms": 2,
+    "os": "Linux",
+    "wifi": true,
+    "ethernet": true,
+    "cameras": "External cameras can be mounted",
+    "imu": true,
+    "product_url": "https://www.franka.de/robot-system"
   },
   {
     "id": "fourier-intelligence-gr-3c-cosmo",
@@ -74341,7 +77192,12 @@
       "Autonomous convoy operations",
       "Remote vehicle operation"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "os": "ROS-based",
+    "wifi": true,
+    "bluetooth": true,
+    "warranty_months": 12,
+    "product_url": "https://milremrobotics.com/products/mifik/"
   },
   {
     "id": "milrem-robotics-multiscope-rescue",
@@ -74499,7 +77355,14 @@
       "Development",
       "Robotics experimentation"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "height_mm": 1750,
+    "weight_kg": 85,
+    "wifi": true,
+    "bluetooth": true,
+    "cameras": "Multiple RGB cameras for vision and navigation",
+    "imu": true,
+    "depth_sensing": true
   },
   {
     "id": "agibot-agibot-c5-juechen-c5-",
@@ -74534,7 +77397,17 @@
       "Mopping",
       "Commercial cleaning"
     ],
-    "depth_sensing": true
+    "depth_sensing": true,
+    "height_mm": 360,
+    "width_mm": 430,
+    "depth_mm": 430,
+    "weight_kg": 45,
+    "battery_life": "4 hours",
+    "charge_time": "3 hours",
+    "speed_ms": 0.8,
+    "bluetooth": true,
+    "imu": true,
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-omnihand-o10",
@@ -74567,7 +77440,10 @@
       "Research and development",
       "Industrial automation",
       "Service robotics"
-    ]
+    ],
+    "weight_kg": 1.2,
+    "manufacturer_url": "https://www.agibot.com",
+    "warranty_months": 12
   },
   {
     "id": "leju-robotics-kuavo",
@@ -74963,7 +77839,14 @@
       "Vision-guided sorting",
       "Industrial automation"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "weight_kg": 20,
+    "speed_ms": 1,
+    "os": "Linux",
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true,
+    "warranty_months": 12
   },
   {
     "id": "aubo-robotics-aubo-mobile-cobot",
@@ -75047,7 +77930,13 @@
       "Surface treatment"
     ],
     "manufacturer_url": "https://wandelbots.com",
-    "product_url": "https://wandelbots.com/products/teaching"
+    "product_url": "https://wandelbots.com/products/teaching",
+    "warranty_months": 12,
+    "ram_gb": 8,
+    "storage_gb": 256,
+    "cameras": "External tracking cameras for motion capture",
+    "depth_sensing": true,
+    "imu": true
   },
   {
     "id": "realman-robotics-rm65-b",
@@ -75086,7 +77975,43 @@
       "Quality inspection",
       "Research and education"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 600,
+    "width_mm": 130,
+    "depth_mm": 130,
+    "speed_ms": 1.5,
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "operating_temp_max": 50,
+    "power_consumption_w": 200,
+    "joint_range_deg": [
+      360,
+      360,
+      360,
+      360,
+      360,
+      360
+    ],
+    "communication": [
+      "Ethernet",
+      "Modbus",
+      "RS485"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop"
+    ],
+    "programming_languages": [
+      "Python",
+      "C++",
+      "Blockly"
+    ],
+    "certifications": [
+      "CE",
+      "ISO 10218"
+    ],
+    "product_url": "https://www.realman-robotics.com/products/rm65-b"
   },
   {
     "id": "realman-robotics-rm65-6f",
@@ -75124,7 +78049,23 @@
       "Quality inspection",
       "Force-sensitive tasks"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 655,
+    "repeatability_mm": 0.05,
+    "speed_ms": 2,
+    "operating_temp_c": "0 to 45",
+    "protection_rating": "IP54",
+    "communication": "Ethernet, RS485, Modbus TCP",
+    "power_consumption_w": 200,
+    "joint_limits": "±170° to ±360°",
+    "force_sensor": "6-axis force/torque sensor",
+    "programming_languages": [
+      "Python",
+      "C++",
+      "Lua"
+    ],
+    "safety_features": "Emergency stop, collision detection, force limiting",
+    "mounting": "Floor, ceiling, wall, angle mounting"
   },
   {
     "id": "realman-robotics-rm75-b",
@@ -75163,7 +78104,32 @@
       "Quality inspection",
       "Research and education"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.02,
+    "max_speed_ms": 1.5,
+    "operating_temp_max": 45,
+    "ip_rating": "IP54",
+    "voltage": "24V DC",
+    "communication": [
+      "Ethernet",
+      "Modbus TCP",
+      "TCP/IP"
+    ],
+    "programming_language": [
+      "Python",
+      "C++"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Force limiting",
+      "Emergency stop"
+    ],
+    "joint_range_deg": [
+      -360,
+      360
+    ],
+    "base_diameter_mm": 118,
+    "warranty_months": 12
   },
   {
     "id": "realman-robotics-rm75-6f",
@@ -75201,7 +78167,40 @@
       "Education",
       "Light industrial automation"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.02,
+    "max_speed_ms": 2,
+    "operating_temp_range": "-10°C to 50°C",
+    "communication": "Ethernet, RS485, Modbus TCP",
+    "protection_rating": "IP54",
+    "joint_torque_nm": [
+      20,
+      20,
+      15,
+      10,
+      10,
+      5,
+      5
+    ],
+    "force_sensing_axes": 6,
+    "force_accuracy": "±2N",
+    "torque_accuracy": "±0.1Nm",
+    "programming_languages": [
+      "Python",
+      "C++",
+      "RealScript"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Emergency stop",
+      "Safe torque off"
+    ],
+    "mounting_options": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Table"
+    ]
   },
   {
     "id": "realman-robotics-eco65-b",
@@ -75239,7 +78238,16 @@
       "Education",
       "Light industrial automation"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 675,
+    "width_mm": 140,
+    "depth_mm": 140,
+    "speed_ms": 1.5,
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.realman-robotics.com/products/eco65-b"
   },
   {
     "id": "realman-robotics-rml63-b",
@@ -75276,7 +78284,23 @@
       "Welding",
       "Research"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "weight_kg": 38,
+    "speed_ms": 3,
+    "repeatability_mm": 0.02,
+    "working_temperature": "-10°C to +50°C",
+    "power_consumption": "500W",
+    "ip_rating": "IP54",
+    "communication": "Ethernet, RS485, Modbus TCP",
+    "programming_languages": [
+      "Python",
+      "C++",
+      "ROS"
+    ],
+    "safety_features": "Collision detection, Emergency stop, Safe torque off",
+    "mounting": "Floor, ceiling, wall",
+    "controller": "RM-2000C",
+    "product_url": "https://www.realman-robotics.com/en/product/rml63-b"
   },
   {
     "id": "realman-robotics-rml63-6f",
@@ -75313,7 +78337,16 @@
       "Quality inspection",
       "Force-sensitive tasks"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.05,
+    "speed_ms": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "operating_temp_max": 45,
+    "voltage": "220V AC",
+    "protection_rating": "IP54",
+    "mounting": "Floor/Table/Ceiling",
+    "warranty_months": 24
   },
   {
     "id": "realman-robotics-rmc-da-dual-arm-compound-robot",
@@ -75350,7 +78383,18 @@
       "Assembly tasks",
       "Material handling"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 1600,
+    "weight_kg": 180,
+    "payload_kg": 3,
+    "reach_mm": 800,
+    "speed_ms": 1,
+    "battery_life": "8 hours",
+    "charge_time": "4 hours",
+    "wifi": true,
+    "bluetooth": true,
+    "imu": true,
+    "warranty_months": 12
   },
   {
     "id": "realman-robotics-single-arm-compound-robot",
@@ -75393,7 +78437,17 @@
       "Assembly operations",
       "Quality inspection"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "height_mm": 1650,
+    "width_mm": 600,
+    "depth_mm": 600,
+    "weight_kg": 120,
+    "battery_life": "8 hours",
+    "charge_time": "2 hours",
+    "speed_ms": 1,
+    "os": "Linux",
+    "cellular": "4G LTE",
+    "warranty_months": 12
   },
   {
     "id": "realman-robotics-compound-lifting-robot",
@@ -75429,7 +78483,17 @@
       "Manufacturing assembly",
       "Palletizing"
     ],
-    "manufacturer_url": "https://www.realman-robotics.com"
+    "manufacturer_url": "https://www.realman-robotics.com",
+    "weight_kg": 420,
+    "speed_ms": 2,
+    "repeatability_mm": 0.1,
+    "protection_rating": "IP54",
+    "operating_temp_range": "-10°C to 50°C",
+    "power_consumption": "3.5kW",
+    "communication": "Ethernet, Modbus, TCP/IP",
+    "programming_language": "Python, C++",
+    "safety_features": "Emergency stop, collision detection, force limiting",
+    "mounting": "Floor, ceiling, wall"
   },
   {
     "id": "yeedi-yeedi-m14-plus",
@@ -76428,7 +79492,15 @@
     "cameras": "Multi-spectral surveillance cameras",
     "imu": true,
     "lidar": true,
-    "depth_sensing": true
+    "depth_sensing": true,
+    "height_mm": 3900,
+    "width_mm": 11600,
+    "weight_kg": 2177,
+    "speed_ms": 89,
+    "payload_kg": 680,
+    "bluetooth": false,
+    "ros": false,
+    "manufacturer_url": "https://www.jobyaviation.com/"
   },
   {
     "id": "farmwise-vulcan-intra-row-weeding-implement",
@@ -76506,7 +79578,18 @@
       "Crop harvesting",
       "Agricultural logistics"
     ],
-    "manufacturer_url": "https://www.ironox.com"
+    "manufacturer_url": "https://www.ironox.com",
+    "height_mm": 1600,
+    "width_mm": 800,
+    "depth_mm": 1200,
+    "weight_kg": 180,
+    "speed_ms": 0.5,
+    "payload_kg": 45,
+    "ros": true,
+    "imu": true,
+    "depth_sensing": true,
+    "wifi": true,
+    "bluetooth": true
   },
   {
     "id": "ironox-max",
@@ -76542,7 +79625,14 @@
     "cameras": "Multiple cameras for plant monitoring and navigation",
     "lidar": true,
     "ros": true,
-    "manufacturer_url": "https://ironox.com"
+    "manufacturer_url": "https://ironox.com",
+    "height_mm": 1800,
+    "weight_kg": 300,
+    "speed_ms": 1,
+    "payload_kg": 450,
+    "imu": true,
+    "depth_sensing": true,
+    "wifi": true
   },
   {
     "id": "ironox-phil",
@@ -76577,7 +79667,19 @@
     "cameras": "Multiple computer vision cameras for plant module detection and positioning",
     "depth_sensing": true,
     "ai_model": "Computer vision algorithms for plant module recognition",
-    "manufacturer_url": "https://ironox.com"
+    "manufacturer_url": "https://ironox.com",
+    "height_mm": 2000,
+    "width_mm": 1500,
+    "depth_mm": 1200,
+    "payload_kg": 50,
+    "dof": 6,
+    "reach_mm": 800,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true,
+    "lidar": false,
+    "imu": true,
+    "warranty_months": 12
   },
   {
     "id": "burro-burro-cortador",
@@ -76650,7 +79752,17 @@
       "Joint replacement surgery",
       "Minimally invasive surgery"
     ],
-    "manufacturer_url": "https://www.globusmedical.com"
+    "manufacturer_url": "https://www.globusmedical.com",
+    "weight_kg": 68,
+    "reach_mm": 1200,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": false,
+    "cameras": "Integrated tracking cameras for patient and instrument positioning",
+    "depth_sensing": true,
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.globusmedical.com/robotics/excelsius-gps"
   },
   {
     "id": "johnson-johnson-medtech-dualto-energy-system",
@@ -76683,7 +79795,9 @@
       "Colorectal surgery",
       "Thoracic surgery"
     ],
-    "manufacturer_url": "https://www.jnjmedtech.com/"
+    "manufacturer_url": "https://www.jnjmedtech.com/",
+    "warranty_months": 12,
+    "product_url": "https://www.jnjmedtech.com/en-US/product/dualto-energy-system"
   },
   {
     "id": "ottonomy-io-ottobot-2-0",
@@ -77081,7 +80195,10 @@
       "fleet optimization",
       "robotic system monitoring"
     ],
-    "manufacturer_url": "https://www.righthandrobotics.com"
+    "manufacturer_url": "https://www.righthandrobotics.com",
+    "ros": true,
+    "warranty_months": 12,
+    "product_url": "https://www.righthandrobotics.com/rightpick-fleet-management"
   },
   {
     "id": "righthand-robotics-rightcare",
@@ -77113,7 +80230,9 @@
       "Warehouse operations",
       "Pick and pack operations"
     ],
-    "manufacturer_url": "https://www.righthandrobotics.com"
+    "manufacturer_url": "https://www.righthandrobotics.com",
+    "warranty_months": 12,
+    "product_url": "https://www.righthandrobotics.com/rightcare"
   },
   {
     "id": "6-river-systems-ocado-chuck-amr",
@@ -77161,7 +80280,10 @@
     "manufacturer_url": "https://www.ocadogroup.com/technology/6-river-systems",
     "ros": true,
     "charge_time": "3 hours",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "bluetooth": true,
+    "os": "Linux-based",
+    "product_url": "https://www.6river.com/chuck"
   },
   {
     "id": "6-river-systems-ocado-chuck-amr",
@@ -77559,7 +80681,13 @@
       "Underwater maintenance",
       "Scientific research"
     ],
-    "manufacturer_url": "https://www.sarcos.com"
+    "manufacturer_url": "https://www.sarcos.com",
+    "weight_kg": 45,
+    "payload_kg": 23,
+    "battery_life": "8-12 hours",
+    "ros": true,
+    "warranty_months": 12,
+    "product_url": "https://www.sarcos.com/products/guardian-sea-class/"
   },
   {
     "id": "teledyne-flir-packbot-525",
@@ -78162,7 +81290,16 @@
       "Threshold crossing",
       "Autonomous vacuuming",
       "Mopping"
-    ]
+    ],
+    "height_mm": 347,
+    "width_mm": 350,
+    "depth_mm": 350,
+    "weight_kg": 6.2,
+    "charge_time": "4 hours",
+    "imu": true,
+    "depth_sensing": true,
+    "manufacturer_url": "https://www.roborock.com",
+    "warranty_months": 12
   },
   {
     "id": "dji-dji-mavic-3-multispectral-m3m-",
