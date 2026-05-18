@@ -194,12 +194,15 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .main-col{padding-top:24px;padding-right:32px;border-right:1px solid var(--bdr)}
 .sidebar{padding-top:24px;padding-left:24px}
 .robot-header{display:flex;gap:24px;margin-bottom:28px}
-.gallery-wrap{width:220px;flex-shrink:0}
-.gallery-main{width:220px;height:180px;background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:7px;position:relative;font-size:72px}
-.gallery-badge{position:absolute;top:9px;left:9px;padding:3px 9px;border-radius:4px;font-size:9px;font-weight:700;background:#fef3c7;color:#d97706}
-.gallery-thumbs{display:flex;gap:5px}
-.thumb{flex:1;height:44px;background:var(--bg2);border:1px solid var(--bdr);border-radius:7px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--mut);font-weight:500;transition:all .15s}
-.thumb.active,.thumb:hover{border-color:var(--acc);color:var(--acc);background:var(--acc-l)}
+.gallery-wrap{width:400px;flex-shrink:0}
+.gallery-main{width:400px;height:400px;background:#fff;border:1px solid var(--bdr);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;position:relative;font-size:96px;overflow:hidden;padding:14px;box-sizing:border-box}
+.gallery-main img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+.gallery-badge{position:absolute;top:9px;left:9px;padding:3px 9px;border-radius:4px;font-size:9px;font-weight:700;background:#fef3c7;color:#d97706;z-index:2}
+.gallery-thumbs{display:flex;gap:6px}
+.thumb{flex:1;height:80px;background:#fff;border:1px solid var(--bdr);border-radius:7px;cursor:pointer;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--mut);font-weight:500;transition:all .15s;padding:6px;box-sizing:border-box;min-width:0}
+.thumb img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+.thumb.active{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc-l)}
+.thumb:hover{border-color:var(--acc)}
 .title-block{flex:1}
 .brand-row{display:flex;align-items:center;gap:7px;margin-bottom:7px;flex-wrap:wrap}
 .brand-name{font-size:10px;font-weight:700;color:var(--mut);letter-spacing:1px}
@@ -809,7 +812,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="robot-header">
         <div class="gallery-wrap">
           <div class="gallery-main" id="profile-fig" style="overflow:hidden;padding:0"><div class="gallery-badge" id="profile-badge">HOT</div></div>
-          <div class="gallery-thumbs"><div class="thumb active">Front</div><div class="thumb">Side</div><div class="thumb">Back</div><div class="thumb">Action</div></div>
+          <div class="gallery-thumbs" id="profile-gallery-thumbs"></div>
         </div>
         <div class="title-block">
           <div class="brand-row"><span class="brand-name" id="profile-brand"></span><span class="badge badge-hot2" id="profile-year-badge"></span><span class="badge badge-top2">TOP RATED</span></div>
@@ -1940,14 +1943,43 @@ function _renderProfile(id){
   document.getElementById('profile-crumb-cat').textContent=r.cat;
   document.getElementById('profile-crumb-name').textContent=r.name;
   const figEl = document.getElementById('profile-fig');
-  if(r.img && r.img.trim()){
+  const thumbsEl = document.getElementById('profile-gallery-thumbs');
+  // Collect all images: main image first, then up to 5 gallery images
+  const galleryImgs = Array.isArray(r.gallery) ? r.gallery.filter(u => u && String(u).trim()) : [];
+  const allImgs = [];
+  if (r.img && r.img.trim()) allImgs.push(r.img);
+  for (const u of galleryImgs){ if (!allImgs.includes(u)) allImgs.push(u); }
+  if (allImgs.length === 0) allImgs.push(MASCOT_URL);
+
+  // Helper: render main image at given URL
+  function setMainImg(src){
     figEl.style.cursor = 'zoom-in';
-    figEl.onclick = () => openLightbox(r.img, r.name||'');
-    figEl.innerHTML=`<img src="${r.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:12px;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain';this.style.background='#fff'">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
+    figEl.onclick = () => openLightbox(src, r.name||'');
+    const isMascot = src === MASCOT_URL;
+    figEl.innerHTML = `<img src="${src}" alt="${r.name||''}" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain'">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
+  }
+
+  setMainImg(allImgs[0]);
+
+  // Render thumbnails only if we have more than 1 image — otherwise the row would be empty
+  if (allImgs.length > 1){
+    thumbsEl.style.display = '';
+    thumbsEl.innerHTML = allImgs.map((url, i) => `
+      <div class="thumb ${i === 0 ? 'active' : ''}" data-img="${url.replace(/"/g, '&quot;')}">
+        <img src="${url}" alt="" onerror="this.parentElement.style.display='none'">
+      </div>
+    `).join('');
+    // Wire click handlers
+    thumbsEl.querySelectorAll('.thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        thumbsEl.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        setMainImg(thumb.getAttribute('data-img'));
+      });
+    });
   } else {
-    figEl.style.cursor = 'zoom-in';
-    figEl.onclick = () => openLightbox(MASCOT_URL, r.name||'');
-    figEl.innerHTML=`<img src="${MASCOT_URL}" alt="" style="width:100%;height:100%;object-fit:contain;border-radius:12px;display:block;background:#fff">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
+    thumbsEl.style.display = 'none';
+    thumbsEl.innerHTML = '';
   }
   document.getElementById('profile-brand').textContent=r.brand;
   document.getElementById('profile-year-badge').textContent=r.year?(r.year+' MODEL'):'';
