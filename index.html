@@ -955,6 +955,11 @@ function loadRobots(){
         else if(id==='page-finder'&&typeof renderFinder==='function')renderFinder();
         else if(id==='page-manufacturers'&&typeof renderManufacturers==='function')renderManufacturers();
         else if(id==='page-news'&&typeof renderNews==='function')renderNews();
+        else if(id==='page-profile'){
+          // Refresh route ended up on profile page before data loaded. Re-route now that data is ready.
+          const {page, opts} = parseHash();
+          if(page==='profile'&&opts.id&&typeof _renderProfile==='function')_renderProfile(opts.id);
+        }
         // Update home count badge regardless of current page
         if(typeof renderHome==='function'&&document.getElementById('home-robots'))renderHome();
       }catch(e){console.error('Re-render after robots load failed:',e);}
@@ -2121,6 +2126,7 @@ function filterRankings(cat,el){
   renderRankings(cat);
 }
 function renderRankings(cat){
+  if (!cat) cat = 'all';
   let list=cat==='all'?[...ROBOTS]:[...ROBOTS].filter(r=>r.cat===cat);
   list.sort((a,b)=>b.score-a.score);
   const ranks=['gold','silver','bronze'];
