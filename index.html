@@ -938,30 +938,28 @@ let dbView='grid', finderView='list', compareSlots=[null,null,null,null], active
 const ALL_CATS=['Aerospace','Agricultural','Aquatic','Autonomous Vehicles','Consumer','Delivery','Disaster Response','Drones','Educational','Entertainment','Exoskeletons','Humanoid','Industrial','Medical','Military','Research','Service','Social','Telepresence'];
 
 // Load robots.json then refresh whatever page is currently showing
+let ROBOTS_LOADED = false;
 function loadRobots(){
   return fetch('data/robots.json',{cache:'no-store'})
     .then(r=>{if(!r.ok)throw new Error('robots.json '+r.status);return r.json();})
     .then(data=>{
       ROBOTS.length=0; ROBOTS.push.apply(ROBOTS,data);
       window.ROBOTS = ROBOTS;
+      ROBOTS_LOADED = true;
       // Recompute brand list now that we have data
       ALL_BRANDS.length=0;
       const brandSet=new Set(ROBOTS.map(r=>r.brand).filter(b=>b&&b!=='undefined'));
       [...brandSet].sort().forEach(b=>ALL_BRANDS.push(b));
-      // Re-render the currently active page
+      // Re-render the currently active page from scratch — clear any "built once" flags
       try{
-        const active=document.querySelector('.page.active');
-        const id=active?active.id:'page-home';
-        if(id==='page-home'&&typeof renderHome==='function')renderHome();
-        else if(id==='page-db'){if(typeof buildDbFilters==='function')buildDbFilters();if(typeof renderDb==='function')renderDb();}
-        else if(id==='page-rankings'&&typeof renderRankings==='function')renderRankings();
-        else if(id==='page-finder'&&typeof renderFinder==='function')renderFinder();
-        else if(id==='page-manufacturers'&&typeof renderManufacturers==='function')renderManufacturers();
-        else if(id==='page-news'&&typeof renderNews==='function')renderNews();
-        else if(id==='page-profile'){
-          // Refresh route ended up on profile page before data loaded. Re-route now that data is ready.
+        const catF=document.getElementById('db-cat-filters');
+        if(catF) delete catF.dataset.built;
+        // Find current page from hash, re-route fully. This rebuilds EVERY page properly
+        // (including ones that were stuck with stale empty data because they rendered before
+        // robots.json arrived).
+        if (typeof parseHash === 'function' && typeof _renderPage === 'function'){
           const {page, opts} = parseHash();
-          if(page==='profile'&&opts.id&&typeof _renderProfile==='function')_renderProfile(opts.id);
+          _renderPage(page, opts);
         }
         // Update home count badge regardless of current page
         if(typeof renderHome==='function'&&document.getElementById('home-robots'))renderHome();
@@ -1037,13 +1035,21 @@ function parseHash(){
 
 // Back/Forward + manual hash edits + programmatic hash changes all funnel through here.
 window.addEventListener('hashchange', () => {
+  if (!ROBOTS_LOADED){ return; } // loadRobots will trigger a re-route once data arrives
   const {page, opts} = parseHash();
   _renderPage(page, opts);
 });
 
 // On first paint, honour any hash already in the URL (deep links, refreshed tabs).
 // Runs after DOM is ready — see the DOMContentLoaded handler below.
+// IMPORTANT: defer until data has actually loaded — otherwise every page (Database, Rankings,
+// Profile, Compare, etc.) renders with an empty ROBOTS array and gets stuck with stale UI.
 function applyInitialHashRoute(){
+  if (!ROBOTS_LOADED){
+    // Wait for the robots-loaded event before rendering. loadRobots() will trigger a
+    // _renderPage(...) call itself when data arrives, so we don't need to do anything here.
+    return;
+  }
   const {page, opts} = parseHash();
   _renderPage(page, opts);
 }
