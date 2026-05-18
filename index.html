@@ -1992,14 +1992,30 @@ function _renderProfile(id){
   document.getElementById('profile-score').textContent=r.score;
   document.getElementById('profile-price').textContent=r.price>0?'$'+r.price.toLocaleString():'POA';
   document.getElementById('profile-price-note').textContent=r.price>0?'Starting at $'+r.price.toLocaleString():'Fleet / enterprise pricing · Quote required';
-  // Quick specs
+  // Quick specs — 4 rows × 3 cols = 12 cells. Pull from canonical field names, fall back to alternates.
+  const dims = (r.height_mm && r.width_mm && r.depth_mm) ? `${r.height_mm}×${r.width_mm}×${r.depth_mm}` : '—';
+  const dimsUnit = (r.height_mm && r.width_mm && r.depth_mm) ? 'mm' : '';
+  const connectivity = [
+    r.wifi ? 'Wi-Fi' : null,
+    r.bluetooth ? 'BT' : null,
+    r.cellular && r.cellular !== 'No' && r.cellular !== false ? (typeof r.cellular === 'string' ? r.cellular : 'Cell') : null
+  ].filter(Boolean).join(' · ') || '—';
+  const payloadVal = r.payload_kg || r.payload;
+  const speedVal = r.speed_ms || r.speed;
+  const batteryVal = r.battery_life_typical || r.battery_life || r.battery;
   const specs=[
     {l:'CATEGORY',v:r.cat||'—',u:''},
     {l:'STATUS',v:r.status||'—',u:''},
-    {l:'ORIGIN',v:r.origin||'—',u:''},
-    {l:'PAYLOAD',v:r.payload||'—',u:r.payload?'kg':''},
-    {l:'BATTERY',v:r.battery||'—',u:r.battery?'min':''},
-    {l:'SPEED',v:r.speed||'—',u:r.speed?'m/s':''},
+    {l:'ORIGIN',v:r.origin||r.country||'—',u:''},
+    {l:'PAYLOAD',v:payloadVal||'—',u:payloadVal?'kg':''},
+    {l:'BATTERY',v:batteryVal||'—',u:''},
+    {l:'SPEED',v:speedVal||'—',u:speedVal?'m/s':''},
+    {l:'DIMENSIONS',v:dims,u:dimsUnit},
+    {l:'WEIGHT',v:r.weight_kg||r.weight||'—',u:(r.weight_kg||r.weight)?'kg':''},
+    {l:'YEAR',v:r.year||'—',u:''},
+    {l:'CONNECTIVITY',v:connectivity,u:''},
+    {l:'OS',v:r.os||'—',u:''},
+    {l:'WARRANTY',v:r.warranty_months||'—',u:r.warranty_months?'mo':''},
   ];
   document.getElementById('profile-quick-specs').innerHTML=specs.map(s=>`<div class="qs"><div class="qs-label">${s.l}</div><div class="qs-val">${s.v}<span class="qs-unit"> ${s.u}</span></div></div>`).join('');
   // Performance
