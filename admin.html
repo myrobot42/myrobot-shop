@@ -405,8 +405,8 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="stat-pill"><span class="stat-label">API status</span><span class="stat-val" id="stat-api">checking...</span></div>
     </div>
     <div class="sidebar-user">
-      <div class="user-avatar">S</div>
-      <div class="user-info"><div class="user-name">Shane</div><div class="user-role">Administrator</div></div>
+      <div class="user-avatar" id="sidebar-user-avatar">S</div>
+      <div class="user-info"><div class="user-name" id="sidebar-user-name">Shane</div><div class="user-role" id="sidebar-user-role">Administrator</div></div>
       <button class="logout-btn" onclick="logout()">out</button>
     </div>
   </div>
@@ -1100,6 +1100,21 @@ function applyRole(){
   // Hide Clear Chat for workers (less destructive control surface)
   const clearBtn = document.querySelector('button[onclick*="clearChat"]');
   if (clearBtn) clearBtn.style.display = worker ? 'none' : '';
+  // Update sidebar user info to reflect actual role
+  const sidebarName = document.getElementById('sidebar-user-name');
+  const sidebarRole = document.getElementById('sidebar-user-role');
+  const sidebarAvatar = document.getElementById('sidebar-user-avatar');
+  if (sidebarName && sidebarRole){
+    if (worker){
+      sidebarName.textContent = 'Worker';
+      sidebarRole.textContent = 'Image Research';
+      if (sidebarAvatar){ sidebarAvatar.textContent = 'W'; sidebarAvatar.style.background = '#fbbf24'; sidebarAvatar.style.color = '#78350f'; }
+    } else {
+      sidebarName.textContent = 'Shane';
+      sidebarRole.textContent = 'Administrator';
+      if (sidebarAvatar){ sidebarAvatar.textContent = 'S'; sidebarAvatar.style.background = ''; sidebarAvatar.style.color = ''; }
+    }
+  }
   // Add a small role badge to top-bar so worker sees they're in worker mode
   let badge = document.getElementById('role-badge');
   if (!badge){
@@ -4222,7 +4237,7 @@ const CAT_CANONICAL = ['Aerospace','Agricultural','Aquatic','Autonomous Vehicles
 // More specific rules at the top, broader catch-alls at the bottom.
 const CAT_RULES = [
   {patterns:['surgical','rehabilitation','healthcare','medical','arthroplasty'], canon:'Medical'},
-  {patterns:['ugv','combat','military','tactical','reconnaissance','eod','bomb disposal','defense','isr','surveillance','firefighting','throwable'], canon:'Military'},
+  {patterns:['ugv','combat','military','tactical','reconnaissance','eod','bomb disposal','defense','isr','surveillance','firefighting','throwable','unmanned ground vehicle','unmanned aerial','backpackable','armed unmanned','soldier'], canon:'Military'},
   {patterns:['agricultur','farming','vineyard','greenhouse','tractor','weed','vegetable','mowing','crawler robot','tool carrier'], canon:'Agricultural'},
   {patterns:['drone','uav','quadcopter','evtol','vtol','aircraft','mapping drone','air taxi','cargo drone','docking station','lidar gimbal','photogrammetry','multi-sensor gimbal','frame lidar'], canon:'Drones'},
   {patterns:['educational','coding toy','kid','school','student','learning'], canon:'Educational'},
