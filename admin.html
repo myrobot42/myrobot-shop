@@ -3445,7 +3445,11 @@ function runDupHunter(){
         // products (Walker X vs Walker Pro). Never auto-merge, never even flag.
         if (variantDiff) continue;
 
-        if (conf >= DUP_AUTO_THRESHOLD && sameNumericSuffix){
+        // Same logic for different SKU/numeric suffix: Roborock Q7 vs Q5, ABB IRB 6700 vs 8700,
+        // Figure 01 vs 02 — these are always different products. Don't even flag.
+        if (!sameNumericSuffix) continue;
+
+        if (conf >= DUP_AUTO_THRESHOLD){
           // Auto-merge — older keeps identity, fields merge in
           const [keeper, drop] = pickKeeper(list[i], list[j]);
           const {beforeKept, conflicts} = mergeRecords(keeper, drop);
@@ -3466,8 +3470,7 @@ function runDupHunter(){
           if (localDropIdx >= 0){ list.splice(localDropIdx, 1); norms.splice(localDropIdx, 1); }
           break;
         } else {
-          // Made it past variant-diff check, but below auto-merge threshold OR
-          // different numeric SKU. Flag for manual review.
+          // Same SKU, same variant tokens, similarity 85-95% — genuinely worth a manual look.
           DUP_HUNTER_STATE.flagged.push({a: list[i], b: list[j], brand: brand, conf: conf});
         }
       }
