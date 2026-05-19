@@ -3533,15 +3533,21 @@ function renderDupHunter(){
       rows.push(`
         <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px;margin-bottom:8px">
           <div style="font-size:12px;font-weight:600;margin-bottom:8px">${m.brand} ${m.keptName} <span style="color:var(--mut);font-weight:400">— ${m.conflicts.length} field conflict(s)</span></div>
-          <div style="font-size:11px;color:var(--mut);margin-bottom:8px">Older record kept these values; newer (merged) record had different values shown on the right. Pick which to keep.</div>
+          <div style="font-size:11px;color:var(--mut);margin-bottom:8px">Older record kept these values; newer (merged) record had different values shown on the right. Pick which to keep, or skip everything with 'Keep all older' at the bottom.</div>
           ${m.conflicts.map((c, ci) => `
-            <div style="display:grid;grid-template-columns:120px 1fr 1fr 90px;gap:8px;align-items:center;padding:6px 0;border-top:1px solid var(--bdr);font-size:12px">
+            <div style="display:grid;grid-template-columns:120px 1fr 1fr 180px;gap:8px;align-items:center;padding:6px 0;border-top:1px solid var(--bdr);font-size:12px">
               <div style="font-weight:600">${c.field}</div>
               <div style="background:#dcfce7;color:#14532d;padding:4px 8px;border-radius:4px">Kept: ${escapeHtml(String(c.kept))}</div>
               <div style="background:#fee2e2;color:#7f1d1d;padding:4px 8px;border-radius:4px">Newer: ${escapeHtml(String(c.dropped))}</div>
-              <button class="tbl-action" onclick="acceptConflict('${m.keptId}','${escapeAttr(c.field)}',${ci})">Use newer</button>
+              <div style="display:flex;gap:4px">
+                <button class="tbl-action" onclick="keepOlderConflict('${m.keptId}',${ci})" style="background:#16a34a;color:#fff;border-color:#16a34a">✓ Keep older</button>
+                <button class="tbl-action" onclick="acceptConflict('${m.keptId}','${escapeAttr(c.field)}',${ci})">Use newer</button>
+              </div>
             </div>
           `).join('')}
+          <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--bdr);text-align:right">
+            <button class="tbl-action" onclick="keepAllOlder('${m.keptId}')" style="background:#16a34a;color:#fff;border-color:#16a34a;font-weight:600">✓ Keep all older (${m.conflicts.length})</button>
+          </div>
         </div>
       `);
     }
@@ -3632,6 +3638,26 @@ function acceptConflict(keptId, field, conflictIdx){
   saveDB();
   DUP_HUNTER_STATE.pendingSave = true;
   addLog('info', `Duplicate Hunter conflict resolved: ${keptId}.${field} = newer value`);
+  renderDupHunter();
+}
+
+// Keep the older (currently saved) value. No data change — just dismiss this conflict from the list.
+function keepOlderConflict(keptId, conflictIdx){
+  const m = DUP_HUNTER_STATE.autoMerged.find(x => x.keptId === keptId);
+  if (!m) return;
+  if (!m.conflicts[conflictIdx]) return;
+  m.conflicts.splice(conflictIdx, 1);
+  // No saveDB() needed — nothing changed.
+  renderDupHunter();
+}
+
+// Keep all older values for one merge — dismiss every conflict in that group at once.
+function keepAllOlder(keptId){
+  const m = DUP_HUNTER_STATE.autoMerged.find(x => x.keptId === keptId);
+  if (!m) return;
+  const count = m.conflicts.length;
+  m.conflicts = [];
+  addLog('info', `Duplicate Hunter: kept all older values for ${m.brand} ${m.keptName} (${count} conflicts dismissed)`);
   renderDupHunter();
 }
 
