@@ -1244,7 +1244,7 @@ Use real accurate data for ${brand}. Fill in as many fields as possible.`;
         'anthropic-dangerous-direct-browser-access': 'true'
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6',
         max_tokens: 6000,
         messages: [{ role: 'user', content: prompt }]
       })
@@ -1401,7 +1401,7 @@ async function scanFeed(id){
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',max_tokens:2000,
+        model:'claude-sonnet-4-6',max_tokens:2000,
         tools:[{type:'web_search_20250305',name:'web_search'}],
         system:`You are a robotics news analyst for myrobot.shop. Search the RSS feed at ${f.url} or the website for recent robot news. Find articles from the past 14 days mentioning specific named robot products. Return ONLY valid JSON: {"articles":[{"title":"","url":"","description":"","date":"","isRobotRelated":true,"isNewLaunch":false,"robots":["Robot Name"]}],"robotsDetected":[{"name":"","brand":"","category":"","isNewLaunch":true,"description":""}]}`,
         messages:[{role:'user',content:`Search ${f.url} for recent robotics news and robot product announcements. Find any new robot launches or updates.`}]
@@ -1464,7 +1464,7 @@ async function crawlUrl(id){
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
       body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',max_tokens:3000,
+        model:'claude-sonnet-4-6',max_tokens:3000,
         tools:[{type:'web_search_20250305',name:'web_search'}],
         system:`You are a robot data extraction specialist for myrobot.shop. Search the website ${v.url} and extract all robot products. Return ONLY valid JSON: {"newRobots":[{"name":"","brand":"","category":"","year":2025,"priceNote":"","payload":"","speed":"","battery":"","description":""}]}`,
         messages:[{role:'user',content:`Search ${v.url} and list all robot products available. Extract names, specs, and details.`}]
@@ -1612,7 +1612,7 @@ perf`;
     const resp=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:6000,system:systemPrompt,messages:[{role:'user',content:`Give me ${count} ${brand} robots for the ${cat} category. Return valid JSON only. Keep descriptions under 200 characters to avoid JSON errors.`}]})
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:6000,system:systemPrompt,messages:[{role:'user',content:`Give me ${count} ${brand} robots for the ${cat} category. Return valid JSON only. Keep descriptions under 200 characters to avoid JSON errors.`}]})
     });
     const data=await resp.json();
     if(data.error)throw new Error(data.error.message);
@@ -1868,7 +1868,7 @@ Return ONLY the JSON object. No markdown, no explanation.`;
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6',
         max_tokens: 1500,
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         system: systemPrompt,
@@ -2047,7 +2047,7 @@ Return ONLY the JSON array.`;
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6',
         max_tokens: 4000,
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         system: systemPrompt,
@@ -2130,7 +2130,7 @@ Return ONLY the JSON. No other text.`;
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6',
         max_tokens: 300,
         system: systemPrompt,
         messages: [{ role: 'user', content: cmd }]
@@ -2162,7 +2162,7 @@ async function handleNewsUpdate(cmd) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6',
         max_tokens: 800,
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         system: 'You are a robotics news researcher. Find the 5 most recent and significant robotics news stories. Return as JSON array: [{"cat":"CATEGORY","title":"headline","meta":"date · read time"}]. Categories: BREAKING, PRODUCT LAUNCH, REVIEW, INDUSTRY, ANALYSIS, RESEARCH. Return ONLY the JSON array.',
@@ -2190,7 +2190,7 @@ async function handleGeneral(cmd) {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514',
+        model: 'claude-sonnet-4-6',
         max_tokens: 600,
         tools: [{ type: 'web_search_20250305', name: 'web_search' }],
         system: `You are the AI assistant for myrobot.shop admin panel. The database has ${ROBOTS.length} robots. Help the admin manage the robot database. Be concise and practical.`,
@@ -4083,7 +4083,7 @@ ${list}`;
       'anthropic-dangerous-direct-browser-access': 'true'
     },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 1500,
       messages: [{role: 'user', content: prompt}]
     })
@@ -4225,7 +4225,7 @@ CRITICAL RULES:
       'anthropic-dangerous-direct-browser-access': 'true'
     },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-20250514',
+      model: 'claude-sonnet-4-6',
       max_tokens: 2500,
       messages: [{role: 'user', content: prompt}]
     })
