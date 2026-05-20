@@ -847,6 +847,20 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
             <div id="cat-norm-summary"></div>
             <div id="cat-norm-list"></div>
           </div>
+
+          <!-- SUB-CATEGORY NORMALIZER -->
+          <div class="sec-card" style="margin-top:18px">
+            <div class="sec-head">🏷️ SUB-CATEGORY NORMALIZER — collapse AI-invented sub-types into canonical sub-types per category</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">
+              The sub-category filter on the public site is cluttered with duplicates like "Robot Vacuum & Mop" / "Vacuum + Mop" / "Robot Vacuum and Mop" — all the same thing. This tool maps every AI variation to a clean canonical sub-type within each main category. The result: 5-8 useful sub-types per category instead of 20-40 fragments. Does NOT touch <code>last_verified</code> — renaming isn't verifying.
+            </div>
+            <div style="display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap">
+              <button class="save-btn" onclick="previewSubNorm()">🔍 Preview mapping</button>
+              <button class="save-btn" onclick="applySubNorm()" id="sub-norm-apply-btn" style="background:#16a34a;display:none">✓ Apply mapping + Deploy</button>
+            </div>
+            <div id="sub-norm-summary"></div>
+            <div id="sub-norm-list"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -4518,6 +4532,287 @@ async function applyCatNorm(){
   CAT_NORM_PREVIEW = null;
   document.getElementById('cat-norm-apply-btn').style.display = 'none';
   previewCatNorm();  // re-run preview to show new state
+}
+
+// ════════════════════════════════════════════════════════════════════
+// SUB-CATEGORY NORMALIZER — collapse AI-invented sub-types per main category
+// ════════════════════════════════════════════════════════════════════
+
+// Per-category canonical sub-types (in priority order) + substring rules.
+// First matching rule wins. Patterns are checked lowercase against the sub string.
+const SUB_NORM_RULES = {
+  'Consumer': [
+    {canon:'Robot Vacuum & Mop with Self-Empty', patterns:['vacuum and mop with self','vacuum & mop with self','vacuum + mop + self','vacuum + mop + auto-wash','self-cleaning station','auto-wash','self emptying station','self-emptying station']},
+    {canon:'Robot Vacuum with Self-Empty', patterns:['vacuum with self-empty','vacuum + self-empty','vacuum with self emptying','self-empty']},
+    {canon:'Robot Vacuum & Mop', patterns:['vacuum and mop','vacuum & mop','vacuum + mop','vacuum/mop','vac+mop','vac & mop','mop combo','wet-dry','wet and dry','wet/dry','mop+vac','mopping']},
+    {canon:'Mop Only', patterns:['mop only','mopping robot','mop-only']},
+    {canon:'Robot Vacuum', patterns:['vacuum only','robot vacuum','vacuum cleaner','cleaning robot','vac only']},
+    {canon:'Robot Lawn Mower', patterns:['lawn mower','lawnmower','grass cutting']},
+    {canon:'Pool Cleaner', patterns:['pool cleaner','pool robot']},
+    {canon:'Other Consumer', patterns:['companion','security','kitchen','pet care','garden','education','health','cleaning']},
+  ],
+  'Industrial': [
+    {canon:'Collaborative Robot (Cobot)', patterns:['cobot','collaborative robot','collaborative arm','collaborative']},
+    {canon:'6-Axis Articulated Arm', patterns:['6-axis','six-axis','6 axis','articulated arm','articulated']},
+    {canon:'SCARA', patterns:['scara']},
+    {canon:'Delta', patterns:['delta robot','delta arm']},
+    {canon:'Heavy Payload Arm', patterns:['heavy payload','ultra heavy','ultra-heavy','heavy duty','heavy-duty arm','heavy-duty robot']},
+    {canon:'Compact Industrial Arm', patterns:['compact arm','compact','desktop robot','ultra-compact','mid-range']},
+    {canon:'Mobile Robot / AMR', patterns:['mobile robot','mobile platform','amr','autonomous mobile']},
+    {canon:'Welding', patterns:['welding']},
+    {canon:'Palletizing', patterns:['palletizing','pallet']},
+    {canon:'Material Handling', patterns:['material handling','handling']},
+    {canon:'Assembly', patterns:['assembly']},
+    {canon:'Painting', patterns:['paint spraying','painting']},
+    {canon:'Inspection', patterns:['inspection']},
+    {canon:'Other Industrial', patterns:['general purpose','end effector','research robot','automation','software','security']},
+  ],
+  'Humanoid': [
+    {canon:'General Purpose Humanoid', patterns:['general purpose','general-purpose','next-gen humanoid','next gen']},
+    {canon:'Research Platform', patterns:['research platform','research robot','open-source','open source']},
+    {canon:'Bipedal Humanoid', patterns:['bipedal']},
+    {canon:'Service Humanoid', patterns:['service robot','service humanoid','service','hospitality','reception','customer service','professional robot','professional','commercial']},
+    {canon:'Educational Humanoid', patterns:['educational humanoid','educational robot','educational','school robot','student','coding']},
+    {canon:'Industrial Humanoid', patterns:['industrial heavy','industrial humanoid','industrial','manufacturing','logistics','warehouse','heavy duty robot','heavy-duty robot','maintenance']},
+    {canon:'Healthcare Humanoid', patterns:['healthcare','medical','elder care','patient']},
+    {canon:'Companion Robot', patterns:['companion','personal assistant','personal','social','home assistant','domestic','entertainment robot','creative robot']},
+    {canon:'Security Humanoid', patterns:['security']},
+    {canon:'Competition / Testing', patterns:['competition robot','testing robot','hybrid robot','outdoor']},
+    {canon:'Telepresence Humanoid', patterns:['telepresence']},
+  ],
+  'Drones': [
+    {canon:'Consumer Drone', patterns:['consumer drone','consumer','mini drone','mini','compact']},
+    {canon:'Professional Cinematography', patterns:['professional cinematography','cinema','cinematography','dual camera']},
+    {canon:'Enterprise / Inspection', patterns:['enterprise','inspection','thermal','professional drone','professional']},
+    {canon:'Delivery Drone', patterns:['delivery']},
+    {canon:'Heavy-Lift Drone', patterns:['heavy-lift','heavy lift']},
+    {canon:'Fixed Wing', patterns:['fixed wing','fixed-wing']},
+    {canon:'FPV / Racing', patterns:['fpv','racing']},
+    {canon:'Hybrid VTOL', patterns:['hybrid','vtol','evtol']},
+  ],
+  'Medical': [
+    {canon:'Surgical Robot', patterns:['surgical','surgery','arthroplasty']},
+    {canon:'Hospital Logistics', patterns:['hospital logistics','logistics','transport']},
+    {canon:'Pharmacy / Laboratory', patterns:['pharmacy','laboratory','lab automation']},
+    {canon:'Patient Care', patterns:['patient care','patient positioning','wound care','critical care','dental','elderly']},
+    {canon:'Disinfection / Sanitization', patterns:['disinfection','sanitization','uv','sterilization']},
+    {canon:'Rehabilitation', patterns:['rehabilitation','rehab','training system']},
+    {canon:'Medical Data System', patterns:['data system','data management']},
+  ],
+  'Military': [
+    {canon:'Quadruped UGV', patterns:['quadruped']},
+    {canon:'Tracked / Wheeled UGV', patterns:['ugv','all-terrain','combat ugv','small unmanned ground','armed unmanned','tracked','wheeled']},
+    {canon:'EOD / Bomb Disposal', patterns:['eod','bomb disposal','explosive ordnance']},
+    {canon:'Reconnaissance / ISR', patterns:['reconnaissance','isr','intelligence','target tracking','surveillance']},
+    {canon:'Patrol / Security', patterns:['patrol','perimeter','security']},
+    {canon:'Maritime / Underwater', patterns:['maritime','ocean','harbor','underwater']},
+    {canon:'Logistics / Support', patterns:['logistics','medical support','support']},
+    {canon:'Weapon Platform', patterns:['weapon platform','armed','counter-drone','counter drone']},
+    {canon:'Other Military', patterns:['tactical','stationary','backpackable','portable modular']},
+  ],
+  'Agricultural': [
+    {canon:'Harvesting', patterns:['harvest']},
+    {canon:'Spraying', patterns:['spraying','precision spraying']},
+    {canon:'Weeding', patterns:['weed','precision weeding']},
+    {canon:'Seeding / Planting', patterns:['seeding','planting','soil cultivation','cultivation','tillage','soil']},
+    {canon:'Monitoring / Mapping', patterns:['monitoring','mapping','scouting','crop monitoring','field mapping']},
+    {canon:'Autonomous Tractor', patterns:['tractor','autonomous farm']},
+    {canon:'Fertilizer / Nutrient', patterns:['fertilizer','nutrient']},
+    {canon:'Specialty Crops', patterns:['leafy greens','herb','tree care','specialty']},
+    {canon:'Hay / Land Care', patterns:['hay','land management','mowing','grass']},
+    {canon:'Multi-purpose Farm Robot', patterns:['multi-purpose','multi purpose','mobile base platform','seeding equipment','monitoring systems']},
+  ],
+  'Service': [
+    {canon:'Delivery Robot', patterns:['delivery']},
+    {canon:'Food Service', patterns:['food service','food']},
+    {canon:'Security Patrol', patterns:['security','patrol']},
+    {canon:'Cleaning', patterns:['cleaning']},
+    {canon:'Hospitality / Reception', patterns:['reception','hospitality','customer']},
+    {canon:'Inspection', patterns:['inspection']},
+    {canon:'Healthcare Service', patterns:['healthcare']},
+  ],
+  'Educational': [
+    {canon:'Programmable Kit', patterns:['programmable','arduino','robot kit','smart car kit','car kit','tank kit']},
+    {canon:'Coding Toy', patterns:['coding toy','pre-coding','color card','screen-free','screen free']},
+    {canon:'STEM Education', patterns:['stem','classroom']},
+    {canon:'Educational Humanoid', patterns:['humanoid']},
+    {canon:'Educational Quadruped', patterns:['quadruped']},
+    {canon:'Maker / DIY', patterns:['diy','maker','build-it']},
+    {canon:'Competition Robot', patterns:['competition','vex','first robotics']},
+    {canon:'Companion Education', patterns:['companion']},
+  ],
+  'Delivery': [
+    {canon:'Last-Mile Delivery', patterns:['last-mile','last mile','sidewalk','door-to-door']},
+    {canon:'Indoor Delivery', patterns:['indoor','hotel','office']},
+    {canon:'Aerial Delivery', patterns:['aerial','drone delivery']},
+  ],
+  'Exoskeletons': [
+    {canon:'Medical Exoskeleton', patterns:['medical','rehab','rehabilitation','therapy']},
+    {canon:'Industrial Exoskeleton', patterns:['industrial','worker','factory']},
+    {canon:'Military Exoskeleton', patterns:['military','soldier','combat']},
+  ],
+  'Research': [
+    {canon:'Foundation Model / Software', patterns:['foundation model','model','software','programming','operating system','ai foundation','ai enhancement','industrial robotics cloud','fleet management']},
+    {canon:'Embodied Intelligence Platform', patterns:['embodied','intelligence','general purpose','general-purpose']},
+    {canon:'Data Collection Platform', patterns:['data collection']},
+    {canon:'Open-Source Research', patterns:['open-source','open source']},
+    {canon:'Astronomical / Scientific', patterns:['astronomical','scientific']},
+  ],
+};
+
+let SUB_NORM_PREVIEW = null;
+
+// Map a (cat, sub) pair to canonical sub if rules exist for that category.
+// Returns {canon, isAlready} or null if no rules / no match.
+function mapSubcategory(cat, originalSub){
+  if (!cat || !originalSub) return null;
+  const rules = SUB_NORM_RULES[cat];
+  if (!rules) return null;  // no rules for this category — leave alone
+  const trimmed = originalSub.trim();
+  // Check if already canonical
+  for (const rule of rules){
+    if (rule.canon === trimmed) return {canon: trimmed, isAlready: true};
+  }
+  // Search by substring
+  const s = trimmed.toLowerCase();
+  for (const rule of rules){
+    for (const p of rule.patterns){
+      if (s.includes(p)) return {canon: rule.canon, isAlready: false};
+    }
+  }
+  return null;  // unmatched
+}
+
+function previewSubNorm(){
+  const changes = [];
+  const unmatched = [];
+  let unchanged = 0;
+  let noSub = 0;
+  for (const r of ROBOTS){
+    if (!r.sub || !r.sub.trim()){ noSub++; continue; }
+    const result = mapSubcategory(r.cat, r.sub);
+    if (!result){
+      // Either no rules for this cat, or sub didn't match any rule
+      if (SUB_NORM_RULES[r.cat]){
+        unmatched.push({id: r.id, name: r.name, brand: r.brand, cat: r.cat, sub: r.sub});
+      } else {
+        // No rules defined for this cat — count as unchanged (we don't touch it)
+        unchanged++;
+      }
+      continue;
+    }
+    if (result.isAlready){ unchanged++; continue; }
+    changes.push({
+      id: r.id,
+      brand: r.brand,
+      name: r.name,
+      cat: r.cat,
+      oldSub: r.sub,
+      newSub: result.canon
+    });
+  }
+  SUB_NORM_PREVIEW = {changes, unmatched, unchanged, noSub};
+
+  // Build the summary
+  const sumEl = document.getElementById('sub-norm-summary');
+  // Group changes per (cat, newSub) to count
+  const distAfter = {};
+  for (const c of changes){
+    if (!distAfter[c.cat]) distAfter[c.cat] = {};
+    distAfter[c.cat][c.newSub] = (distAfter[c.cat][c.newSub] || 0) + 1;
+  }
+  // Also include existing canonical subs
+  for (const r of ROBOTS){
+    if (!r.sub) continue;
+    const result = mapSubcategory(r.cat, r.sub);
+    if (result && result.isAlready){
+      if (!distAfter[r.cat]) distAfter[r.cat] = {};
+      distAfter[r.cat][result.canon] = (distAfter[r.cat][result.canon] || 0) + 1;
+    }
+  }
+
+  sumEl.innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px">
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Total robots</div>
+        <div style="font-size:22px;font-weight:700;margin-top:4px">${ROBOTS.length}</div>
+      </div>
+      <div style="background:#dcfce7;border:1px solid #16a34a;border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:#14532d;text-transform:uppercase;letter-spacing:1px">Sub-types will be remapped</div>
+        <div style="font-size:22px;font-weight:700;color:#16a34a;margin-top:4px">${changes.length}</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">Already canonical / no rules</div>
+        <div style="font-size:22px;font-weight:700;margin-top:4px">${unchanged}</div>
+      </div>
+      <div style="background:${unmatched.length ? '#fee2e2' : 'var(--bg2)'};border:1px solid ${unmatched.length ? '#ef4444' : 'var(--bdr)'};border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:${unmatched.length ? '#7f1d1d' : 'var(--mut)'};text-transform:uppercase;letter-spacing:1px">⚠ Unmatched</div>
+        <div style="font-size:22px;font-weight:700;color:${unmatched.length ? '#ef4444' : 'var(--txt)'};margin-top:4px">${unmatched.length}</div>
+      </div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:12px">
+        <div style="font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px">No sub field</div>
+        <div style="font-size:22px;font-weight:700;margin-top:4px">${noSub}</div>
+      </div>
+    </div>
+  `;
+
+  // Build the per-category change list and unmatched list
+  const listEl = document.getElementById('sub-norm-list');
+  let html = '';
+
+  if (unmatched.length > 0){
+    html += `<div style="background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;padding:12px;margin-bottom:14px">
+      <div style="font-size:12px;font-weight:600;color:#7f1d1d;margin-bottom:6px">⚠ ${unmatched.length} sub-type(s) couldn't be matched — these will keep their current sub:</div>
+      <div style="font-size:11px;color:#7f1d1d;line-height:1.6;max-height:200px;overflow-y:auto">
+        ${unmatched.map(u => `<div>• [${escapeHtml(u.cat)}] "${escapeHtml(u.sub)}" — ${escapeHtml(u.brand || '?')} ${escapeHtml(u.name)}</div>`).join('')}
+      </div>
+    </div>`;
+  }
+
+  // Group changes by (cat, oldSub) → newSub
+  const grouped = {};
+  for (const c of changes){
+    const k = `${c.cat}|${c.oldSub}`;
+    if (!grouped[k]) grouped[k] = {cat: c.cat, oldSub: c.oldSub, newSub: c.newSub, items: []};
+    grouped[k].items.push(c);
+  }
+  const sortedGroups = Object.values(grouped).sort((a, b) => b.items.length - a.items.length);
+
+  html += `<div style="font-size:12px;color:var(--mut);margin-bottom:8px"><strong>Mapping preview</strong> (largest groups first):</div>`;
+  html += sortedGroups.map(g => `
+    <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:6px;padding:10px;margin-bottom:6px;font-size:12px">
+      <div><span style="color:var(--mut);font-size:10px;text-transform:uppercase">${g.cat}</span></div>
+      <div style="margin-top:2px"><strong>"${escapeHtml(g.oldSub)}"</strong> → <strong style="color:#16a34a">${g.newSub}</strong> <span style="color:var(--mut)">(${g.items.length} robot${g.items.length !== 1 ? 's' : ''})</span></div>
+      <div style="color:var(--mut);font-size:11px;margin-top:4px">
+        ${g.items.slice(0, 3).map(c => `${escapeHtml(c.brand || '?')} ${escapeHtml(c.name)}`).join(' · ')}${g.items.length > 3 ? ` · …+${g.items.length - 3} more` : ''}
+      </div>
+    </div>
+  `).join('');
+  listEl.innerHTML = html;
+
+  // Show Apply button if there are changes
+  document.getElementById('sub-norm-apply-btn').style.display = changes.length > 0 ? '' : 'none';
+}
+
+async function applySubNorm(){
+  if (!SUB_NORM_PREVIEW){ alert('Run preview first.'); return; }
+  const {changes} = SUB_NORM_PREVIEW;
+  if (changes.length === 0){ alert('No changes to apply.'); return; }
+  if (!confirm(`Apply ${changes.length} sub-category remappings? This does NOT touch last_verified — renaming isn't verifying. Push to GitHub when done?`)) return;
+
+  for (const c of changes){
+    const robot = ROBOTS.find(r => r.id === c.id);
+    if (!robot) continue;
+    robot.sub = c.newSub;
+  }
+  saveDB();
+  addLog('success', `Sub-category normalizer: remapped ${changes.length} sub-types`);
+  if (typeof deployNow === 'function'){
+    await deployNow();
+  }
+  SUB_NORM_PREVIEW = null;
+  document.getElementById('sub-norm-apply-btn').style.display = 'none';
+  previewSubNorm();  // re-run preview to show new state
 }
 
 // ── Init: scan once on page load so the badge is populated ──
