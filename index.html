@@ -757,6 +757,11 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         <div class="filter-title">CATEGORY <span class="filter-clear" onclick="resetDb()">Clear all</span></div>
         <div class="filter-options" id="db-cat-filters"></div>
       </div>
+      <!-- Sub-category — appears below CATEGORY only when exactly one category is selected -->
+      <div class="filter-section" id="db-subcat-section" style="display:none">
+        <div class="filter-title">TYPE</div>
+        <div class="filter-options" id="db-subcat-filters"></div>
+      </div>
       <div class="filter-divider"></div>
       <div class="filter-section">
         <div class="filter-title">MANUFACTURER</div>
@@ -1147,6 +1152,10 @@ function filterCat(cat){
   goPage('db');
   setTimeout(()=>{
     document.querySelectorAll('[data-cat]').forEach(cb=>{cb.checked=cb.dataset.cat===cat;});
+    // Reset sub-cat selections since we're entering a new category context
+    document.querySelectorAll('[data-sub]:checked').forEach(el => el.checked = false);
+    SUBCAT_EXPANDED = false;
+    renderSubcatFilter();
     renderBrandFilter();  // narrow manufacturer list to just brands in this category
     renderDb();
   },60);
@@ -1158,12 +1167,38 @@ function buildDbFilters(){
   if(!catF||catF.dataset.built)return;
   catF.dataset.built='1';
   catF.innerHTML=ALL_CATS.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
-  renderBrandFilter();  // initial render: all brands
+  renderSubcatFilter();  // initial render: hidden (no cat selected)
+  renderBrandFilter();   // initial render: all brands
 }
 
 // Re-render the manufacturer list based on currently selected categories.
 // When no categories selected → show all brands. When categories selected → show
 // only brands that have at least one robot in those categories.
+// Editorial brand priority — when a category is selected, these brands appear at top.
+// Brands present in your data but not in any priority list still show, just sorted by count after the priority brands.
+const CAT_BRAND_PRIORITY = {
+  'Consumer': ['iRobot', 'Roborock', 'Eufy', 'Shark', 'Ecovacs', 'Yeedi', 'Proscenic', 'Lefant'],
+  'Industrial': ['Universal Robots', 'FANUC', 'ABB Robotics', 'KUKA', 'JAKA', 'AUBO', 'Stäubli'],
+  'Humanoid': ['Boston Dynamics', 'Tesla', 'Figure', 'Agility Robotics', 'Apptronik', '1X', 'UBTECH', 'Unitree', 'Fourier Intelligence', 'AGIBOT'],
+  'Drones': ['DJI', 'Skydio', 'Parrot', 'Autel Robotics', 'senseFly'],
+  'Educational': ['LEGO Education', 'Sphero', 'Wonder Workshop', 'VEX Robotics', 'Makeblock', 'Ozobot', 'ELEGOO', 'Fisher-Price', 'KinderLab Robotics', 'Learning Resources'],
+  'Medical': ['Intuitive Surgical', 'Stryker', 'Johnson & Johnson MedTech', 'Medtronic'],
+  'Agricultural': ['John Deere', 'Carbon Robotics', 'Monarch Tractor', 'Naïo Technologies'],
+  'Military': ['Milrem Robotics', 'Boston Dynamics', 'Ghost Robotics'],
+  'Service': ['SoftBank Robotics', 'Pudu Robotics', 'Bear Robotics'],
+};
+// When no category selected — show these well-known brands at top
+const GLOBAL_BRAND_PRIORITY = [
+  'iRobot', 'Boston Dynamics', 'Roborock', 'DJI', 'Tesla', 'Figure',
+  'UBTECH', 'LEGO Education', 'Sphero', 'Universal Robots', 'FANUC',
+  'ABB Robotics', 'Agility Robotics', 'Apptronik', '1X', 'Unitree',
+  'Eufy', 'Shark', 'KUKA', 'Wonder Workshop'
+];
+const BRAND_DISPLAY_LIMIT = 20;
+
+// State: whether the brand list is expanded (showing all) or collapsed (showing top 20)
+let BRANDS_EXPANDED = false;
+
 function renderBrandFilter(){
   const brandF=document.getElementById('db-brand-filters');
   if(!brandF)return;
@@ -1187,11 +1222,113 @@ function renderBrandFilter(){
       brandCounts[r.brand]=(brandCounts[r.brand]||0)+1;
     }
   }
-  brandF.innerHTML=relevantBrands.map(b=>`<label class="filter-opt"><input type="checkbox" data-brand="${b}" onchange="renderDb()" ${selBrands.has(b)?'checked':''}><span class="filter-opt-label">${b}</span><span class="filter-opt-count">${brandCounts[b]||0}</span></label>`).join('');
+
+  // Sort: priority brands first, then by robot count desc
+  let priorityList;
+  if (selCats.length === 1 && CAT_BRAND_PRIORITY[selCats[0]]){
+    priorityList = CAT_BRAND_PRIORITY[selCats[0]];
+  } else {
+    priorityList = GLOBAL_BRAND_PRIORITY;
+  }
+  // Keep checked brands always visible regardless of priority/count
+  const checkedBrands = relevantBrands.filter(b => selBrands.has(b));
+  const sortedBrands = [
+    // 1. Currently-checked brands (so user always sees what they've selected)
+    ...checkedBrands,
+    // 2. Priority brands (in their editorial order) that are relevant
+    ...priorityList.filter(b => relevantBrands.includes(b) && !selBrands.has(b)),
+    // 3. The rest, sorted by robot count desc
+    ...relevantBrands.filter(b => !priorityList.includes(b) && !selBrands.has(b))
+      .sort((a, b) => (brandCounts[b] || 0) - (brandCounts[a] || 0))
+  ];
+
+  // Decide what to actually show
+  const visibleBrands = BRANDS_EXPANDED ? sortedBrands : sortedBrands.slice(0, BRAND_DISPLAY_LIMIT);
+  const hiddenCount = sortedBrands.length - visibleBrands.length;
+
+  const html = visibleBrands.map(b =>
+    `<label class="filter-opt"><input type="checkbox" data-brand="${b}" onchange="renderDb()" ${selBrands.has(b)?'checked':''}><span class="filter-opt-label">${b}</span><span class="filter-opt-count">${brandCounts[b]||0}</span></label>`
+  ).join('');
+
+  // Add expand/collapse toggle if there are more brands than we're showing
+  let toggleHtml = '';
+  if (hiddenCount > 0){
+    toggleHtml = `<div onclick="toggleBrandsExpanded()" style="padding:8px 4px;color:var(--acc);font-size:11px;font-weight:600;cursor:pointer;text-align:center;border-top:1px solid var(--bdr);margin-top:4px">+ See ${hiddenCount} more brands</div>`;
+  } else if (BRANDS_EXPANDED && sortedBrands.length > BRAND_DISPLAY_LIMIT){
+    toggleHtml = `<div onclick="toggleBrandsExpanded()" style="padding:8px 4px;color:var(--mut);font-size:11px;font-weight:600;cursor:pointer;text-align:center;border-top:1px solid var(--bdr);margin-top:4px">− Show less</div>`;
+  }
+  brandF.innerHTML = html + toggleHtml;
+}
+
+function toggleBrandsExpanded(){
+  BRANDS_EXPANDED = !BRANDS_EXPANDED;
+  renderBrandFilter();
+}
+
+// Render the sub-category filter. Only visible when exactly one main category is selected.
+// Shows the top sub-types within that category with counts.
+const SUBCAT_DISPLAY_LIMIT = 15;
+let SUBCAT_EXPANDED = false;
+function renderSubcatFilter(){
+  const section = document.getElementById('db-subcat-section');
+  const container = document.getElementById('db-subcat-filters');
+  if (!section || !container) return;
+  const selCats = [...document.querySelectorAll('[data-cat]:checked')].map(el => el.dataset.cat);
+  // Only show sub-cat section when exactly one main category is selected
+  if (selCats.length !== 1){
+    section.style.display = 'none';
+    container.innerHTML = '';
+    return;
+  }
+  const cat = selCats[0];
+  const selSubs = new Set([...document.querySelectorAll('[data-sub]:checked')].map(el => el.dataset.sub));
+  // Count sub-types within this category
+  const subCounts = {};
+  for (const r of ROBOTS){
+    if (r.cat === cat && r.sub && r.sub.trim()){
+      subCounts[r.sub] = (subCounts[r.sub] || 0) + 1;
+    }
+  }
+  const subs = Object.keys(subCounts).sort((a, b) => subCounts[b] - subCounts[a]);
+  if (subs.length === 0){
+    section.style.display = 'none';
+    container.innerHTML = '';
+    return;
+  }
+  section.style.display = '';
+  // Keep checked sub-types always visible
+  const checkedSubs = subs.filter(s => selSubs.has(s));
+  const restSubs = subs.filter(s => !selSubs.has(s));
+  const ordered = [...checkedSubs, ...restSubs];
+  const visible = SUBCAT_EXPANDED ? ordered : ordered.slice(0, SUBCAT_DISPLAY_LIMIT);
+  const hidden = ordered.length - visible.length;
+
+  const html = visible.map(s =>
+    `<label class="filter-opt"><input type="checkbox" data-sub="${escapeAttr(s)}" onchange="renderDb()" ${selSubs.has(s)?'checked':''}><span class="filter-opt-label">${s}</span><span class="filter-opt-count">${subCounts[s]||0}</span></label>`
+  ).join('');
+  let toggle = '';
+  if (hidden > 0){
+    toggle = `<div onclick="toggleSubcatExpanded()" style="padding:8px 4px;color:var(--acc);font-size:11px;font-weight:600;cursor:pointer;text-align:center;border-top:1px solid var(--bdr);margin-top:4px">+ See ${hidden} more types</div>`;
+  } else if (SUBCAT_EXPANDED && ordered.length > SUBCAT_DISPLAY_LIMIT){
+    toggle = `<div onclick="toggleSubcatExpanded()" style="padding:8px 4px;color:var(--mut);font-size:11px;font-weight:600;cursor:pointer;text-align:center;border-top:1px solid var(--bdr);margin-top:4px">− Show less</div>`;
+  }
+  container.innerHTML = html + toggle;
+}
+function toggleSubcatExpanded(){
+  SUBCAT_EXPANDED = !SUBCAT_EXPANDED;
+  renderSubcatFilter();
+}
+// Helper for safely embedding strings into HTML attributes (handles quotes)
+function escapeAttr(s){
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
 // Called when a category checkbox changes. Rebuilds brand list, then re-renders results.
 function onCatChange(){
+  // When the user changes category, reset sub-category selections (they applied to the OLD cat)
+  document.querySelectorAll('[data-sub]:checked').forEach(el => el.checked = false);
+  SUBCAT_EXPANDED = false;
+  renderSubcatFilter();
   renderBrandFilter();
   renderDb();
 }
@@ -1199,6 +1336,7 @@ function onCatChange(){
 function getDbFiltered(){
   const q=(document.getElementById('db-search').value||'').toLowerCase();
   const selCats=[...document.querySelectorAll('[data-cat]:checked')].map(el=>el.dataset.cat);
+  const selSubs=[...document.querySelectorAll('[data-sub]:checked')].map(el=>el.dataset.sub);
   const selBrands=[...document.querySelectorAll('[data-brand]:checked')].map(el=>el.dataset.brand);
   const selPrice=[...document.querySelectorAll('[data-price]:checked')].map(el=>el.dataset.price);
   const selFeat=[...document.querySelectorAll('[data-feat]:checked')].map(el=>el.dataset.feat);
@@ -1206,6 +1344,7 @@ function getDbFiltered(){
   return ROBOTS.filter(r=>{
     if(q&&!r.name.toLowerCase().includes(q)&&!r.brand.toLowerCase().includes(q)&&!r.tags.some(t=>t.toLowerCase().includes(q))&&!r.cat.toLowerCase().includes(q))return false;
     if(selCats.length&&!selCats.includes(r.cat))return false;
+    if(selSubs.length&&!selSubs.includes(r.sub))return false;
     if(selBrands.length&&!selBrands.includes(r.brand))return false;
     if(selStatus.length&&!selStatus.includes(r.status))return false;
     if(selFeat.length&&!selFeat.every(f=>(f==='arm'&&r.arm)||(f==='ai'&&r.ai)||(f==='ros'&&r.ros)||(f==='sdk'&&r.sdk)))return false;
@@ -1282,7 +1421,10 @@ function setDbView(v){
 
 function resetDb(){
   document.getElementById('db-search').value='';
-  document.querySelectorAll('[data-cat],[data-brand],[data-price],[data-feat],[data-status]').forEach(el=>{if(el.type==='checkbox')el.checked=false;});
+  document.querySelectorAll('[data-cat],[data-sub],[data-brand],[data-price],[data-feat],[data-status]').forEach(el=>{if(el.type==='checkbox')el.checked=false;});
+  BRANDS_EXPANDED = false;
+  SUBCAT_EXPANDED = false;
+  renderSubcatFilter();  // hides the sub-cat section since no cat is selected
   renderBrandFilter();  // re-render brand list now that no categories are selected
   renderDb();
 }
