@@ -4,7 +4,7 @@
     "name": "Gemini Robotics",
     "brand": "Google DeepMind",
     "cat": "Industrial",
-    "sub": "",
+    "sub": "Vision-Language-Action AI Robotics Platform",
     "tags": [],
     "fig": "🤖",
     "img": "https://images.seeklogo.com/logo-png/49/2/google-deepmind-logo-png_seeklogo-494826.png",
@@ -39,7 +39,9 @@
     "wifi": true,
     "bluetooth": true,
     "lidar": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "cellular": "Optional",
+    "released": "2025"
   },
   {
     "id": "ubtech-walker-s2",
@@ -520,7 +522,7 @@
     "name": "Rapid Operator AI",
     "brand": "Vention",
     "cat": "Industrial",
-    "sub": "",
+    "sub": "AI Vision & Bin Picking System",
     "tags": [],
     "fig": "🤖",
     "img": "",
@@ -556,7 +558,8 @@
     "bluetooth": true,
     "os": "Linux",
     "ai_model": "Deep learning neural networks",
-    "product_url": "https://vention.com/rapid-operator-ai"
+    "product_url": "https://vention.com/rapid-operator-ai",
+    "lidar": false
   },
   {
     "id": "roborock-s8-pro-ultra",
@@ -45875,7 +45878,8 @@
     "ros": false,
     "lidar": false,
     "warranty_months": 12,
-    "product_url": "https://www.percepto.co/percepto-aim"
+    "product_url": "https://www.percepto.co/percepto-aim",
+    "os": "Cloud-based / Linux"
   },
   {
     "id": "percepto-percepto-base",
@@ -49570,7 +49574,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 799,
     "desc": "18,000Pa suction, OZMO Roller mopping system spinning at 200 RPM with 6.89-inch roller, ZeroTangle 2.0 anti-hair system, TruEdge 3D sensor for edge cleaning, all-in-one station with auto hot water washing and self-drying",
     "highlights": [],
     "perf": {
@@ -49578,7 +49582,31 @@
       "Dexterity": 70,
       "Autonomy": 70,
       "Durability": 75
-    }
+    },
+    "year": 2024,
+    "origin": "China",
+    "status": "Released",
+    "released": "2024",
+    "height_mm": 98,
+    "weight_kg": 4.5,
+    "battery_life": "3 hours",
+    "wifi": true,
+    "bluetooth": true,
+    "ros": false,
+    "lidar": true,
+    "cameras": "Front-facing obstacle avoidance camera",
+    "depth_sensing": true,
+    "imu": true,
+    "use_cases": [
+      "Home floor vacuuming",
+      "Hard floor mopping",
+      "Pet hair removal",
+      "Edge and corner cleaning",
+      "Automated multi-room cleaning"
+    ],
+    "warranty_months": 12,
+    "manufacturer_url": "https://www.yeedi.com",
+    "product_url": "https://www.yeedi.com/yeedi-s14-plus"
   },
   {
     "id": "yeedi-yeedi-s16-plus",
@@ -49966,7 +49994,10 @@
     ],
     "manufacturer_url": "https://wandelbots.com",
     "warranty_months": 12,
-    "product_url": "https://wandelbots.com/nova"
+    "product_url": "https://wandelbots.com/nova",
+    "wifi": true,
+    "cellular": "Optional",
+    "os": "Linux"
   },
   {
     "id": "realman-rmc-da-dual-arm-compound-robot",
@@ -50407,7 +50438,14 @@
     "drag_teaching": true,
     "voltage_v": "24-48",
     "power_consumption_w": 200,
-    "mounting": "Table mount, Wall mount, Ceiling mount"
+    "mounting": "Table mount, Wall mount, Ceiling mount",
+    "product_url": "https://www.realman-robotics.com/eco65-6f",
+    "imu": true,
+    "depth_sensing": false,
+    "lidar": false,
+    "wifi": false,
+    "bluetooth": false,
+    "warranty_months": 12
   },
   {
     "id": "realman-eco65-b",
@@ -50586,7 +50624,12 @@
       360
     ],
     "base_diameter_mm": 118,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "imu": true,
+    "depth_sensing": false,
+    "lidar": false,
+    "bluetooth": false,
+    "wifi": false
   },
   {
     "id": "realman-rm65-b",
@@ -51821,7 +51864,9 @@
     "depth_sensing": false,
     "lidar": false,
     "warranty_months": 12,
-    "product_url": "https://www.wandelbots.com/tracepen"
+    "product_url": "https://www.wandelbots.com/tracepen",
+    "os": "Wandelbots NOVA",
+    "cellular": "None"
   },
   {
     "id": "wandelbots-wandelbots-nova-cloud",
@@ -54322,7 +54367,11 @@
     "manufacturer_url": "https://www.hanwharobotics.com",
     "ros": true,
     "warranty_months": 12,
-    "product_url": "https://www.hanwharobotics.com/en/product/raiv"
+    "product_url": "https://www.hanwharobotics.com/en/product/raiv",
+    "lidar": false,
+    "imu": false,
+    "wifi": true,
+    "bluetooth": false
   },
   {
     "id": "hanwha-robotics-amr-series",
@@ -55973,7 +56022,9 @@
     "bluetooth": true,
     "cameras": "Multiple high-resolution cameras for vision and facial recognition",
     "imu": true,
-    "depth_sensing": true
+    "depth_sensing": true,
+    "ros": true,
+    "product_url": "https://www.clonerobotics.com/neoclone"
   },
   {
     "id": "clone-robotics-protoclone-v1",
@@ -56046,7 +56097,12 @@
     "manufacturer_url": "https://www.clonerobotics.com",
     "weight_kg": 1.2,
     "ros": true,
-    "product_url": "https://www.clonerobotics.com/clone-hand"
+    "product_url": "https://www.clonerobotics.com/clone-hand",
+    "payload_kg": 2,
+    "warranty_months": 12,
+    "bluetooth": false,
+    "lidar": false,
+    "depth_sensing": false
   },
   {
     "id": "clone-robotics-clone-alpha",
@@ -57366,7 +57422,9 @@
     "weight_kg": 1.2,
     "ros": true,
     "imu": true,
-    "product_url": "https://www.agibot.com/products/omnihand-o10"
+    "product_url": "https://www.agibot.com/products/omnihand-o10",
+    "payload_kg": 1.5,
+    "depth_sensing": true
   },
   {
     "id": "agibot-agibot-a1-raise-a1-",
@@ -57614,7 +57672,10 @@
     "cameras": "Integrated tactile and visual sensors",
     "depth_sensing": true,
     "imu": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "fingers": 5,
+    "payload_kg": 3,
+    "product_url": "https://www.agibot.com/product/omnihand"
   },
   {
     "id": "agibot-agibot-d1-edu",
@@ -59838,7 +59899,8 @@
     "bluetooth": true,
     "ros": false,
     "depth_sensing": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "product_url": "https://carbonrobotics.com/autotractor-kit"
   },
   {
     "id": "carbon-robotics-laserweeder-g2-1800",
@@ -62989,7 +63051,12 @@
     "manufacturer_url": "https://www.righthandrobotics.com",
     "payload_kg": 3,
     "reach_mm": 1200,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "wifi": true,
+    "bluetooth": false,
+    "lidar": false,
+    "imu": true,
+    "product_url": "https://www.righthandrobotics.com/rightpick"
   },
   {
     "id": "coco-robotics-coco-delivery-robot-v3",
@@ -63202,7 +63269,13 @@
     "manufacturer_url": "https://www.zimmerbiomet.com",
     "warranty_months": 12,
     "dof": 6,
-    "product_url": "https://www.zimmerbiomet.com/medical-professionals/knee/rosa-knee-system.html"
+    "product_url": "https://www.zimmerbiomet.com/medical-professionals/knee/rosa-knee-system.html",
+    "wifi": true,
+    "bluetooth": false,
+    "lidar": false,
+    "imu": true,
+    "depth_sensing": true,
+    "ros": false
   },
   {
     "id": "johnson-johnson-medtech-ethicon-ottava-robotic-surgical-system",
@@ -63471,7 +63544,32 @@
       "Dexterity": 70,
       "Autonomy": 70,
       "Durability": 75
-    }
+    },
+    "year": 2018,
+    "origin": "Switzerland",
+    "status": "Released",
+    "released": "2018",
+    "weight_kg": 1.6,
+    "battery_life": "90 minutes",
+    "speed_ms": 22,
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true,
+    "cameras": "Interchangeable payloads: RGB (S.O.D.A. 3D, WX, WX R), multispectral (Parrot Sequoia+, MicaSense RedEdge), thermal (thermoMAP), and 3D mapping sensors",
+    "lidar": false,
+    "depth_sensing": false,
+    "use_cases": [
+      "Aerial surveying",
+      "Photogrammetry",
+      "Precision agriculture",
+      "Mining and quarrying",
+      "Construction site monitoring",
+      "Land management",
+      "Environmental monitoring",
+      "Infrastructure inspection"
+    ],
+    "manufacturer_url": "https://www.sensefly.com",
+    "product_url": "https://www.sensefly.com/drone/ebee-x-fixed-wing-drone/"
   },
   {
     "id": "lefant-m3-max",
@@ -63630,7 +63728,7 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 299,
     "desc": "8,000Pa suction power, 7-week bagless dust storage, PureCyclone technology with 4-layer filter system and 14 small cyclones, ZeroTangle brush system, TrueMapping technology with 8-minute fast mapping",
     "highlights": [],
     "perf": {
@@ -63638,7 +63736,28 @@
       "Dexterity": 70,
       "Autonomy": 70,
       "Durability": 75
-    }
+    },
+    "year": 2024,
+    "origin": "China",
+    "status": "Released",
+    "released": "2024",
+    "height_mm": 92,
+    "width_mm": 350,
+    "depth_mm": 350,
+    "weight_kg": 3.8,
+    "battery_life": "3 hours",
+    "wifi": true,
+    "bluetooth": true,
+    "lidar": true,
+    "use_cases": [
+      "Home floor vacuuming",
+      "Mopping",
+      "Pet hair removal",
+      "Automated scheduled cleaning",
+      "Multi-floor mapping"
+    ],
+    "manufacturer_url": "https://www.yeedi.com",
+    "product_url": "https://www.yeedi.com/products/yeedi-c12-plus"
   },
   {
     "id": "flexiv-grav-enhanced",
@@ -63683,7 +63802,8 @@
     "communication": "Ethernet, RS485",
     "operating_temp_c": "-10 to 50",
     "certification": "CE, FCC",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "product_url": "https://www.flexiv.com/products/grav"
   },
   {
     "id": "flexiv-grav-gripper",
@@ -63725,7 +63845,12 @@
     "weight_kg": 1.2,
     "reach_mm": 140,
     "warranty_months": 12,
-    "product_url": "https://www.flexiv.com/products/grav-gripper"
+    "product_url": "https://www.flexiv.com/products/grav-gripper",
+    "wifi": false,
+    "bluetooth": false,
+    "imu": false,
+    "lidar": false,
+    "depth_sensing": false
   },
   {
     "id": "jaka-c7",
@@ -64503,7 +64628,14 @@
       "Graphical programming",
       "Script programming"
     ],
-    "warranty_months": 12
+    "warranty_months": 12,
+    "ros": true,
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true,
+    "depth_sensing": false,
+    "lidar": false,
+    "product_url": "https://www.jaka.com/products/zu5s"
   },
   {
     "id": "jaka-zu-5",
@@ -64806,7 +64938,8 @@
     "depth_sensing": true,
     "imu": true,
     "dof": 7,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "product_url": "https://physicalintelligence.company/blog/pi0"
   },
   {
     "id": "physical-intelligence-0-5-pi-0-5-",
@@ -64849,7 +64982,8 @@
     "wifi": true,
     "bluetooth": true,
     "warranty_months": 12,
-    "product_url": "https://physicalintelligence.company/blog/pi0"
+    "product_url": "https://physicalintelligence.company/blog/pi0",
+    "lidar": false
   },
   {
     "id": "physical-intelligence-0-pi-zero-",
@@ -64888,7 +65022,10 @@
     "depth_sensing": true,
     "imu": true,
     "wifi": true,
-    "ros": true
+    "ros": true,
+    "product_url": "https://physicalintelligence.company/blog/pi0",
+    "lidar": false,
+    "bluetooth": false
   },
   {
     "id": "clone-robotics-neo",
@@ -65466,7 +65603,11 @@
       "Python",
       "MATLAB"
     ],
-    "warranty_months": 24
+    "warranty_months": 24,
+    "depth_sensing": false,
+    "lidar": false,
+    "bluetooth": false,
+    "wifi": false
   },
   {
     "id": "irobot-roomba-combo-j5-robot-vacuum-and-mop",
@@ -68540,7 +68681,8 @@
     "wifi": true,
     "bluetooth": true,
     "warranty_months": 12,
-    "product_url": "https://milremrobotics.com/products/mifik/"
+    "product_url": "https://milremrobotics.com/products/mifik/",
+    "cellular": "4G LTE"
   },
   {
     "id": "milrem-robotics-multiscope-rescue",
@@ -68746,7 +68888,14 @@
     ],
     "weight_kg": 1.2,
     "manufacturer_url": "https://www.agibot.com",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "product_url": "https://www.agibot.com/product/omnihand",
+    "payload_kg": 1.5,
+    "depth_sensing": false,
+    "imu": false,
+    "lidar": false,
+    "bluetooth": false,
+    "wifi": false
   },
   {
     "id": "leju-robotics-kuavo",
@@ -69302,7 +69451,23 @@
       "Dexterity": 70,
       "Autonomy": 70,
       "Durability": 75
-    }
+    },
+    "year": 2024,
+    "origin": "China",
+    "status": "Released",
+    "released": "2024",
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "use_cases": [
+      "Home floor cleaning",
+      "Vacuuming",
+      "Mopping",
+      "Pet hair removal",
+      "Automated floor maintenance"
+    ],
+    "manufacturer_url": "https://www.yeedi.com",
+    "product_url": "https://www.yeedi.com/products/yeedi-m12-pro-plus"
   },
   {
     "id": "yeedi-yeedi-c12-combo",
@@ -70552,7 +70717,10 @@
     "manufacturer_url": "https://www.righthandrobotics.com",
     "ros": true,
     "warranty_months": 12,
-    "product_url": "https://www.righthandrobotics.com/rightpick-fleet-management"
+    "product_url": "https://www.righthandrobotics.com/rightpick-fleet-management",
+    "bluetooth": false,
+    "lidar": false,
+    "depth_sensing": false
   },
   {
     "id": "righthand-robotics-rightcare",
