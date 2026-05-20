@@ -2218,6 +2218,8 @@ CRITICAL:
 
     saveDB();
     updateStats();
+    // Auto-bump last_verified — the AI just researched this robot today
+    target.last_verified = new Date().toISOString().slice(0, 10);
     addMsg(`✅ Updated "${target.brand} ${target.name}" — filled ${applied.length} field(s):\n\n${applied.join('\n')}`, 'success');
     addLog('success', `Researched ${target.brand} ${target.name}: filled ${applied.length} fields`);
   } catch(err) {
@@ -3993,21 +3995,49 @@ function auditRow(s){
   const sBar = barHtml(sPct, sPct >= 0.7 ? '#16a34a' : sPct >= 0.5 ? '#f59e0b' : '#ef4444');
   const oBar = barHtml(oPct, '#6b7280');
   const missingHint = s.critical.missing.length > 0 ? `<div style="font-size:10px;color:#ef4444;margin-top:2px">missing: ${s.critical.missing.join(', ')}</div>` : '';
+  // Last verified — show age in colour-coded pill
+  let verifiedPill = '';
+  if (r.last_verified){
+    const v = new Date(r.last_verified);
+    const months = (Date.now() - v.getTime()) / (1000 * 60 * 60 * 24 * 30);
+    let bg = '#dcfce7', fg = '#14532d', text = 'verified';
+    if (months > 12){ bg = '#fee2e2'; fg = '#7f1d1d'; text = `${Math.floor(months)}mo old`; }
+    else if (months > 6){ bg = '#fef3c7'; fg = '#d97706'; text = `${Math.floor(months)}mo old`; }
+    else { text = `${Math.max(1, Math.floor(months))}mo ago`; }
+    verifiedPill = `<div style="display:inline-block;font-size:9px;background:${bg};color:${fg};padding:2px 6px;border-radius:3px;margin-top:3px">✓ ${text}</div>`;
+  } else {
+    verifiedPill = `<div style="display:inline-block;font-size:9px;background:#f3f4f6;color:#6b7280;padding:2px 6px;border-radius:3px;margin-top:3px">unverified</div>`;
+  }
   return `
     <tr style="border-bottom:1px solid var(--bdr)">
       <td style="padding:8px 10px">
         <div style="font-weight:600">${escapeHtml(r.brand || '—')} ${escapeHtml(r.name || '(unnamed)')}</div>
         <div style="font-size:10px;color:var(--mut)">${escapeHtml(r.cat || '—')} · ${r.year || '—'} · id:${r.id}</div>
         ${missingHint}
+        ${verifiedPill}
       </td>
       <td style="padding:8px 10px">${cBar}<div style="font-size:10px;color:var(--mut);margin-top:2px">${s.critical.filled}/${s.critical.total}</div></td>
       <td style="padding:8px 10px">${sBar}<div style="font-size:10px;color:var(--mut);margin-top:2px">${s.standard.filled}/${s.standard.total}</div></td>
       <td style="padding:8px 10px">${oBar}<div style="font-size:10px;color:var(--mut);margin-top:2px">${s.optional.filled}/${s.optional.total}</div></td>
       <td style="padding:8px 10px">
-        <button class="tbl-action" onclick="researchRobot('${escapeAttr(r.id)}')" title="Send to Command Centre for AI research">🔍 Research</button>
+        <div style="display:flex;gap:4px;flex-direction:column">
+          <button class="tbl-action" onclick="researchRobot('${escapeAttr(r.id)}')" title="Send to Command Centre for AI research">🔍 Research</button>
+          <button class="tbl-action" onclick="markVerified('${escapeAttr(r.id)}')" title="Mark this robot's data as currently accurate" style="background:#dcfce7;color:#14532d;border-color:#86efac">✓ Verified</button>
+        </div>
       </td>
     </tr>
   `;
+}
+
+// Mark a robot as verified — sets last_verified to today and saves
+function markVerified(id){
+  const r = ROBOTS.find(x => x.id === id);
+  if (!r) return;
+  r.last_verified = new Date().toISOString().slice(0, 10);  // YYYY-MM-DD
+  saveDB();
+  addLog('success', `Marked ${r.brand} ${r.name} as verified`);
+  // Re-render audit if visible
+  if (typeof renderAudit === 'function') renderAudit();
 }
 
 function barHtml(pct, color){
