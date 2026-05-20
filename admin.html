@@ -1864,9 +1864,9 @@ For wiki: include the exact Wikipedia article title if the robot has one.
 Return ONLY the JSON object. No markdown, no explanation.`;
 
   try {
-    const response = await fetch('/.netlify/functions/claude', {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
         max_tokens: 1500,
@@ -2043,7 +2043,7 @@ Each object:
 Return ONLY the JSON array.`;
 
   try {
-    const response = await fetch('/.netlify/functions/claude', {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY },
       body: JSON.stringify({
@@ -2126,9 +2126,9 @@ The field must be one of: name, brand, price, score, rating, status, desc, year,
 Return ONLY the JSON. No other text.`;
 
   try {
-    const response = await fetch('/.netlify/functions/claude', {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
         max_tokens: 300,
@@ -2158,9 +2158,9 @@ Return ONLY the JSON. No other text.`;
 async function handleNewsUpdate(cmd) {
   addMsg('📰 Researching latest robotics news...', 'system');
   try {
-    const response = await fetch('/.netlify/functions/claude', {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
         max_tokens: 800,
@@ -2186,9 +2186,9 @@ async function handleNewsUpdate(cmd) {
 
 async function handleGeneral(cmd) {
   try {
-    const response = await fetch('/.netlify/functions/claude', {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01' },
+      headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
         max_tokens: 600,
