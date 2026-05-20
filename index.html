@@ -826,6 +826,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
           <div class="rating-row"><span class="stars-lg" id="profile-stars"></span><span class="rating-num" id="profile-rating"></span><span class="rating-count" id="profile-reviews"></span><div class="overall-score"><div class="score-circle"><div class="score-circle-num" id="profile-score"></div><div class="score-circle-lbl">SCORE</div></div><span style="font-size:11px;color:var(--mut)">Overall<br>rating</span></div></div>
           <div class="quick-specs" id="profile-quick-specs"></div>
           <div class="action-row"><button class="btn-action primary">Get a Quote →</button><button class="btn-action secondary" onclick="addToCompareFromProfile()">+ Compare</button><button class="btn-action ghost">+ Watchlist</button></div>
+          <div id="profile-verified" style="margin-top:10px;font-size:11px;color:var(--mut);display:none"></div>
         </div>
       </div>
       <div class="section-block"><div class="block-title">Performance Scores</div><div class="perf-grid" id="profile-perf"></div></div>
@@ -2140,6 +2141,23 @@ function _renderProfile(id){
   document.getElementById('profile-score').textContent=r.score;
   document.getElementById('profile-price').textContent=r.price>0?'$'+r.price.toLocaleString():'POA';
   document.getElementById('profile-price-note').textContent=r.price>0?'Starting at $'+r.price.toLocaleString():'Fleet / enterprise pricing · Quote required';
+  // Last verified — set expectations honestly. Colour-coded by age.
+  const verifyEl = document.getElementById('profile-verified');
+  if (verifyEl){
+    if (r.last_verified){
+      const v = new Date(r.last_verified);
+      const months = (Date.now() - v.getTime()) / (1000 * 60 * 60 * 24 * 30);
+      const dateStr = v.toLocaleDateString('en-US', {month: 'long', year: 'numeric'});
+      let icon = '✓', color = 'var(--mut)';
+      if (months > 12){ icon = '⚠️'; color = '#d97706'; }
+      else if (months > 6){ icon = '◷'; color = 'var(--mut)'; }
+      verifyEl.style.color = color;
+      verifyEl.innerHTML = `${icon} Last verified: ${dateStr}${months > 12 ? ' <span style="margin-left:6px">— data may be out of date</span>' : ''}`;
+      verifyEl.style.display = '';
+    } else {
+      verifyEl.style.display = 'none';
+    }
+  }
   // Quick specs — 4 rows × 3 cols = 12 cells. Pull from canonical field names, fall back to alternates.
   const dims = (r.height_mm && r.width_mm && r.depth_mm) ? `${r.height_mm}×${r.width_mm}×${r.depth_mm}` : '—';
   const dimsUnit = (r.height_mm && r.width_mm && r.depth_mm) ? 'mm' : '';
