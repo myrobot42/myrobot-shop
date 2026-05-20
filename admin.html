@@ -1804,10 +1804,12 @@ async function processCommand(cmd) {
   
   if (isBulk) {
     await handleBulkAdd(cmd);
+  } else if (cl.includes('update') || cl.includes('change') || cl.includes('edit') || cl.includes('fill in') || cl.includes('missing specs')) {
+    // Check 'update' BEFORE 'research'/'add' — phrases like "Research and update missing specs"
+    // must route to updateRobot, not to addRobot.
+    await handleUpdateRobot(cmd);
   } else if (cl.includes('add') || cl.includes('research') || cl.includes('find')) {
     await handleAddRobot(cmd);
-  } else if (cl.includes('update') || cl.includes('change') || cl.includes('edit')) {
-    await handleUpdateRobot(cmd);
   } else if (cl.includes('news')) {
     await handleNewsUpdate(cmd);
   } else {
@@ -2119,11 +2121,62 @@ Return ONLY the JSON array.`;
 }
 
 async function handleUpdateRobot(cmd) {
-  const systemPrompt = `You are a robot database editor. The user wants to update a robot record. Current database: ${JSON.stringify(ROBOTS.map(r=>({id:r.id,name:r.name,brand:r.brand})))}
+  // Find the target robot from the user's prompt
+  // Strategy: look for a quoted name first, fall back to scanning for any robot name in the command
+  let target = null;
+  const quoted = cmd.match(/"([^"]+)"/);
+  if (quoted){
+    const search = quoted[1].toLowerCase();
+    target = ROBOTS.find(r =>
+      `${r.brand} ${r.name}`.toLowerCase().includes(search) ||
+      `${r.name}`.toLowerCase().includes(search) ||
+      r.id === search
+    );
+  }
+  if (!target){
+    // Scan: longest matching brand+name fragment wins (so "Boston Dynamics Atlas" beats just "Atlas" if both could match)
+    const lower = cmd.toLowerCase();
+    let bestLen = 0;
+    for (const r of ROBOTS){
+      const candidates = [`${r.brand} ${r.name}`, r.name, r.brand];
+      for (const c of candidates){
+        const cl = c.toLowerCase();
+        if (cl.length > bestLen && lower.includes(cl)){
+          target = r;
+          bestLen = cl.length;
+        }
+      }
+    }
+  }
+  if (!target){
+    addMsg('❌ Could not identify which robot to update. Use quotes around the name, e.g. Research \"Boston Dynamics Atlas\"', 'error');
+    return;
+  }
 
-Return ONLY a JSON object with: {"id": "robot-id", "field": "field-name", "value": new_value}
-The field must be one of: name, brand, price, score, rating, status, desc, year, payload, battery, speed, origin
-Return ONLY the JSON. No other text.`;
+  addMsg(`🔍 Researching "${target.brand} ${target.name}" to fill missing fields...`, 'system');
+
+  // Build a prompt that lists current data and asks for NEW fields only
+  const existing = Object.fromEntries(
+    Object.entries(target).filter(([k, v]) => v !== null && v !== undefined && v !== '' && !(Array.isArray(v) && v.length === 0))
+  );
+  const prompt = `You are researching the robot "${target.brand} ${target.name}" (${target.cat || 'unknown'}${target.sub ? ', ' + target.sub : ''}${target.year ? ', ' + target.year : ''}) for an encyclopedic robot database.
+
+Here is what we already have on file (do NOT change these):
+${JSON.stringify(existing, null, 2)}
+
+Research this robot with web search. Return ONLY a JSON object with NEW fields you can verify. Use these standard fields where applicable:
+- year, origin (country), status, released
+- height_mm, width_mm, depth_mm, weight_kg (numbers)
+- battery_life (string like "4 hours"), charge_time, payload_kg, speed_ms, dof
+- os, chipset, cpu, ram_gb, storage_gb, ai_model
+- wifi (boolean), bluetooth (boolean), cameras, lidar (boolean), imu (boolean)
+- price (USD number, 0 if POA), warranty_months, manufacturer_url, product_url
+
+CRITICAL:
+- DO NOT GUESS. If unsure, omit the field.
+- DO NOT include fields already filled above.
+- DO NOT change "cat", "sub", "name", "brand", or "id".
+- Return ONLY the JSON object, no other text.`;
 
   try {
     const response = await fetch('https://api.anthropic.com/v1/messages', {
@@ -2131,27 +2184,45 @@ Return ONLY the JSON. No other text.`;
       headers: { 'Content-Type': 'application/json', 'x-api-key': API_KEY, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        max_tokens: 300,
-        system: systemPrompt,
-        messages: [{ role: 'user', content: cmd }]
+        max_tokens: 2000,
+        tools: [{ type: 'web_search_20250305', name: 'web_search' }],
+        system: 'You are a robot database research assistant. Return only valid JSON objects, no commentary.',
+        messages: [{ role: 'user', content: prompt }]
       })
     });
+    if (!response.ok) throw new Error('API error ' + response.status);
     const data = await response.json();
-    const text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
-    const clean = text.replace(/```json|```/g,'').trim();
-    const update = JSON.parse(clean);
-    const idx = ROBOTS.findIndex(r => r.id === update.id);
-    if (idx >= 0) {
-      ROBOTS[idx][update.field] = update.value;
-      saveDB();
-      updateStats();
-      addMsg(`✅ Updated "${ROBOTS[idx].brand} ${ROBOTS[idx].name}" — ${update.field} is now: ${update.value}`, 'success');
-      addLog('success', `Updated ${ROBOTS[idx].name}.${update.field} = ${update.value}`);
-    } else {
-      addMsg('Could not find that robot in the database. Try checking the Robot Database page for the exact name.', 'error');
+    const text = (data.content || []).filter(b => b.type === 'text').map(b => b.text).join('');
+    const match = text.match(/\{[\s\S]*\}/);
+    if (!match) throw new Error('No JSON object in response');
+    const updates = JSON.parse(match[0]);
+
+    // Sanity: don't allow updates to protected fields
+    const protectedKeys = new Set(['id', 'cat', 'sub', 'name', 'brand']);
+    const applied = [];
+    for (const [key, value] of Object.entries(updates)){
+      if (protectedKeys.has(key)) continue;
+      if (value === null || value === undefined || value === '') continue;
+      // Only set if currently empty/unset
+      const current = target[key];
+      if (current === null || current === undefined || current === '' || (Array.isArray(current) && current.length === 0)){
+        target[key] = value;
+        applied.push(`${key}: ${typeof value === 'object' ? JSON.stringify(value) : value}`);
+      }
     }
+
+    if (applied.length === 0){
+      addMsg(`ℹ️ No new data found for "${target.brand} ${target.name}". The AI couldn't verify additional fields beyond what's already on file.`, 'system');
+      return;
+    }
+
+    saveDB();
+    updateStats();
+    addMsg(`✅ Updated "${target.brand} ${target.name}" — filled ${applied.length} field(s):\n\n${applied.join('\n')}`, 'success');
+    addLog('success', `Researched ${target.brand} ${target.name}: filled ${applied.length} fields`);
   } catch(err) {
-    addMsg('❌ Update failed: ' + err.message, 'error');
+    addMsg(`❌ Research failed: ${err.message}`, 'error');
+    addLog('error', `Research ${target.brand} ${target.name}: ${err.message}`);
   }
 }
 
