@@ -360,8 +360,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 /* ── FINDER ── */
 /* ── Finder: GSMArena-style ── */
 .finder-band{background:#fff;border-bottom:1px solid var(--bdr);padding:24px 20px 0}
-.finder-band h1{font-family:'Space Mono','Courier New',monospace;font-size:24px;font-weight:800;color:var(--txt);margin-bottom:4px;text-align:left}
-.finder-band p{font-size:12px;color:var(--mut);text-align:left;margin-bottom:18px}
+.finder-band h1{font-family:'Space Mono','Courier New',monospace;font-size:24px;font-weight:800;color:var(--txt);margin-bottom:4px;text-align:center}
+.finder-band p{font-size:12px;color:var(--mut);text-align:center;margin-bottom:18px}
 .cat-wrap{margin:0 -20px;padding:0 20px;border-bottom:1px solid var(--bdr);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .cat-wrap::-webkit-scrollbar{display:none}
 .ftabs{display:flex;min-width:max-content;gap:2px}
@@ -2634,6 +2634,14 @@ function getSchema(){
   return CATEGORY_SCHEMA[finderCat] || CATEGORY_SCHEMA['_default'];
 }
 
+// Get the actual displayed range for a slider — used by both renderRangeSlider and renderActivePills
+// so they agree on whether the user has moved the handles.
+function getSliderRange(def){
+  // Price uses fixed 0-200000 (manual cap), everything else uses 5th-95th percentile from data
+  if (def.field === 'price') return [def.min, def.max];
+  return computeFieldRange(def.field, def.min, def.max);
+}
+
 // Compute reasonable min/max for a numeric field using 5th–95th percentile
 // to avoid one outlier stretching the slider scale. Outliers are still filterable
 // (slider goes to the actual max), but the default range is sensible.
@@ -2664,8 +2672,7 @@ function fmtVal(v, fmtType, unit){
 
 // Render a dual-handle range slider for a numeric field
 function renderRangeSlider(key, def){
-  const fallback = [def.min, def.max];
-  const [dataMin, dataMax] = def.field === 'price' ? [def.min, def.max] : computeFieldRange(def.field, def.min, def.max);
+  const [dataMin, dataMax] = getSliderRange(def);
   const stateKey = 'rng_' + def.field;
   const state = FILTER_STATE[stateKey] || {lo: dataMin, hi: dataMax};
   FILTER_STATE[stateKey] = state;
@@ -2918,7 +2925,7 @@ function renderActivePills(){
       if (def.type === 'range'){
         const st = FILTER_STATE['rng_' + def.field];
         if (!st) continue;
-        const [dataMin, dataMax] = computeFieldRange(def.field, def.min, def.max);
+        const [dataMin, dataMax] = getSliderRange(def);
         // Only show pill if user moved either handle away from data extents
         if (st.lo > dataMin || st.hi < dataMax){
           pills.push({
