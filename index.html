@@ -711,6 +711,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <a id="nav-compare" onclick="goPage('compare')">Compare</a>
       <a id="nav-rankings" onclick="goPage('rankings')">Rankings</a>
       <a id="nav-news" onclick="goPage('news')">News</a>
+      <a id="nav-videos" onclick="goPage('videos')">Videos</a>
       <a id="nav-manufacturers" onclick="goPage('manufacturers')">Brands</a>
     </div>
     <div class="nav-right">
@@ -965,6 +966,43 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   </div>
 </div>
 
+<!-- VIDEOS -->
+<div id="page-videos" class="page">
+  <div class="videos-page" style="max-width:1200px;margin:0 auto;padding:24px 20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+      <div>
+        <div class="page-title">Robot Videos</div>
+        <p style="color:var(--mut);font-size:13px;margin-top:5px">Latest videos, reviews, and news from <strong>@MYROBOTSHOP</strong></p>
+      </div>
+      <a href="https://www.youtube.com/@MYROBOTSHOP?sub_confirmation=1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#ff0000;color:#fff;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none">
+        <svg width="18" height="13" viewBox="0 0 28 20" fill="none"><path d="M27.41 3.13a3.51 3.51 0 0 0-2.47-2.49C22.75 0 14 0 14 0S5.25 0 3.06.64A3.51 3.51 0 0 0 .59 3.13 36.6 36.6 0 0 0 0 10a36.6 36.6 0 0 0 .59 6.87 3.51 3.51 0 0 0 2.47 2.49C5.25 20 14 20 14 20s8.75 0 10.94-.64a3.51 3.51 0 0 0 2.47-2.49A36.6 36.6 0 0 0 28 10a36.6 36.6 0 0 0-.59-6.87Z" fill="currentColor"/><path d="M11.2 14.29 18.46 10 11.2 5.71v8.58Z" fill="#ff0000"/></svg>
+        Subscribe
+      </a>
+    </div>
+    <div id="videos-loading" style="text-align:center;padding:50px 20px;color:var(--mut)">
+      <div style="font-size:32px;margin-bottom:8px">📺</div>
+      <div style="font-size:14px">Loading latest videos…</div>
+    </div>
+    <div id="videos-error" style="display:none;text-align:center;padding:40px 20px;background:#fef3c7;border:1px solid #f59e0b;border-radius:10px">
+      <div style="font-size:14px;color:#92400e;margin-bottom:10px">Couldn't load videos right now.</div>
+      <a href="https://www.youtube.com/@MYROBOTSHOP" target="_blank" rel="noopener" style="color:var(--acc);font-weight:600;text-decoration:none">Visit @MYROBOTSHOP on YouTube →</a>
+    </div>
+    <div id="videos-grid" style="display:none;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px"></div>
+  </div>
+</div>
+
+<!-- Video Modal (embed player) -->
+<div id="video-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;align-items:center;justify-content:center;padding:20px" onclick="closeVideoModal(event)">
+  <div style="position:relative;width:100%;max-width:960px;background:#000;border-radius:12px;overflow:hidden" onclick="event.stopPropagation()">
+    <button onclick="closeVideoModal()" style="position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.6);border:none;color:#fff;font-size:18px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center">✕</button>
+    <div style="position:relative;padding-bottom:56.25%;height:0"><iframe id="video-modal-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div style="padding:14px 18px;background:#111;color:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+      <div id="video-modal-title" style="font-weight:600;font-size:14px;flex:1;min-width:200px"></div>
+      <a id="video-modal-yt-link" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#ff0000;color:#fff;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap">Watch on YouTube →</a>
+    </div>
+  </div>
+</div>
+
 <!-- FINDER -->
 <div id="page-finder" class="page">
   <div class="finder-band">
@@ -1107,6 +1145,7 @@ function _renderPage(p, opts){
   if(p==='rankings'){renderRankings('all');}
   if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();}
   if(p==='manufacturers'){renderManufacturers();}
+  if(p==='videos'){renderVideos();}
   if(p==='submit-review'){populateReviewSelect();}
   if(p==='profile' && opts.id){
     // openProfile sets DOM content but also calls goPage('profile') — avoid the loop
@@ -3182,6 +3221,165 @@ function populateReviewSelect(){
     ROBOTS.forEach(r=>{const o=document.createElement('option');o.value=r.id;o.textContent=`${r.brand} ${r.name}`;sel.appendChild(o);});
   }
 }
+
+// ════════════ VIDEOS (YouTube RSS) ════════════
+// Channel: @MYROBOTSHOP
+const YT_CHANNEL_ID = 'UCB6SnhND4A3b_QGetSqPYcA';
+const YT_FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${YT_CHANNEL_ID}`;
+const YT_CACHE_KEY = 'mrsh_yt_cache';
+const YT_CACHE_TTL = 60 * 60 * 1000;  // 1 hour
+
+// CORS proxies in order of preference. If one fails, try the next.
+// Public proxies are sometimes flakey; falling back gives us resilience.
+const CORS_PROXIES = [
+  url => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
+  url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+];
+
+// Parse a YouTube RSS XML string into an array of video objects.
+function parseYouTubeFeed(xmlText){
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(xmlText, 'text/xml');
+  const entries = doc.querySelectorAll('entry');
+  const videos = [];
+  entries.forEach(entry => {
+    const id = (entry.querySelector('videoId') || entry.getElementsByTagNameNS('http://www.youtube.com/xml/schemas/2015', 'videoId')[0] || {}).textContent;
+    const title = (entry.querySelector('title') || {}).textContent || '';
+    const published = (entry.querySelector('published') || {}).textContent || '';
+    // description is in media:description namespace
+    const mediaGroup = entry.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'group')[0];
+    let description = '';
+    let thumb = '';
+    if (mediaGroup){
+      const desc = mediaGroup.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'description')[0];
+      if (desc) description = desc.textContent || '';
+      const thumbEl = mediaGroup.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0];
+      if (thumbEl) thumb = thumbEl.getAttribute('url') || '';
+    }
+    if (id){
+      videos.push({
+        id,
+        title,
+        description: description.slice(0, 220),
+        published,
+        thumb: thumb || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+        url: `https://www.youtube.com/watch?v=${id}`
+      });
+    }
+  });
+  return videos;
+}
+
+// Format a published date into a relative or absolute string
+function fmtPubDate(iso){
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (isNaN(d)) return '';
+  const days = Math.floor((Date.now() - d.getTime()) / (1000 * 60 * 60 * 24));
+  if (days === 0) return 'Today';
+  if (days === 1) return 'Yesterday';
+  if (days < 7) return `${days} days ago`;
+  if (days < 30) return `${Math.floor(days/7)} week${Math.floor(days/7)>1?'s':''} ago`;
+  return d.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'});
+}
+
+// Try to fetch via proxies in order. Returns parsed videos or throws.
+async function fetchYouTubeVideos(){
+  let lastErr;
+  for (const proxy of CORS_PROXIES){
+    try {
+      const resp = await fetch(proxy(YT_FEED_URL), {cache: 'no-store'});
+      if (!resp.ok) { lastErr = new Error('Proxy returned ' + resp.status); continue; }
+      const text = await resp.text();
+      if (!text || !text.includes('<entry')) { lastErr = new Error('Invalid feed content'); continue; }
+      const videos = parseYouTubeFeed(text);
+      if (videos.length === 0) { lastErr = new Error('No videos parsed'); continue; }
+      return videos;
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr || new Error('All proxies failed');
+}
+
+async function renderVideos(){
+  const loading = document.getElementById('videos-loading');
+  const error = document.getElementById('videos-error');
+  const grid = document.getElementById('videos-grid');
+  if (!loading || !error || !grid) return;
+  // Try cache first
+  let videos = null;
+  try {
+    const cached = JSON.parse(localStorage.getItem(YT_CACHE_KEY) || 'null');
+    if (cached && cached.t && Date.now() - cached.t < YT_CACHE_TTL && Array.isArray(cached.v) && cached.v.length){
+      videos = cached.v;
+    }
+  } catch(e) {}
+  // If no cache, fetch
+  if (!videos){
+    try {
+      videos = await fetchYouTubeVideos();
+      localStorage.setItem(YT_CACHE_KEY, JSON.stringify({t: Date.now(), v: videos}));
+    } catch (e) {
+      console.error('YouTube fetch failed:', e);
+      loading.style.display = 'none';
+      error.style.display = 'block';
+      grid.style.display = 'none';
+      return;
+    }
+  }
+  // Render
+  loading.style.display = 'none';
+  error.style.display = 'none';
+  grid.style.display = 'grid';
+  grid.innerHTML = videos.map(v => `
+    <div class="video-card" onclick="openVideoModal('${v.id}', ${JSON.stringify(v.title).replace(/'/g, '&apos;')})" style="background:#fff;border:1px solid var(--bdr);border-radius:10px;overflow:hidden;cursor:pointer;transition:all .15s;display:flex;flex-direction:column" onmouseover="this.style.borderColor='var(--acc)';this.style.boxShadow='0 4px 14px rgba(0,102,255,.08)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.boxShadow='none'">
+      <div style="position:relative;width:100%;padding-bottom:56.25%;background:#000;overflow:hidden">
+        <img src="${v.thumb}" alt="${escapeHtml(v.title)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0);transition:background .15s" onmouseover="this.style.background='rgba(0,0,0,.3)';this.firstElementChild.style.transform='scale(1.1)'" onmouseout="this.style.background='rgba(0,0,0,0)';this.firstElementChild.style.transform='scale(1)'">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .15s">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7L8 5z"/></svg>
+          </div>
+        </div>
+      </div>
+      <div style="padding:12px 14px;flex:1;display:flex;flex-direction:column">
+        <div style="font-weight:600;font-size:13px;line-height:1.4;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${escapeHtml(v.title)}</div>
+        <div style="font-size:11px;color:var(--mut);margin-top:auto">${fmtPubDate(v.published)}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openVideoModal(videoId, title){
+  const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('video-modal-iframe');
+  const titleEl = document.getElementById('video-modal-title');
+  const ytLink = document.getElementById('video-modal-yt-link');
+  if (!modal) return;
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  titleEl.textContent = title || '';
+  ytLink.href = `https://www.youtube.com/watch?v=${videoId}`;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVideoModal(evt){
+  if (evt && evt.target !== evt.currentTarget && evt.type === 'click') return;
+  const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('video-modal-iframe');
+  if (!modal) return;
+  iframe.src = '';  // Stop the video
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape'){
+    const m = document.getElementById('video-modal');
+    if (m && m.style.display !== 'none') closeVideoModal();
+  }
+});
 
 // ════════════ INIT ════════════
 renderHome();
