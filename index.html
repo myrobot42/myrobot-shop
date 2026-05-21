@@ -362,10 +362,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .finder-band{background:#fff;border-bottom:1px solid var(--bdr);padding:24px 20px 0}
 .finder-band h1{font-family:'Space Mono','Courier New',monospace;font-size:24px;font-weight:800;color:var(--txt);margin-bottom:4px;text-align:center}
 .finder-band p{font-size:12px;color:var(--mut);text-align:center;margin-bottom:18px}
-.cat-wrap{margin:0 -20px;padding:0 20px;border-bottom:1px solid var(--bdr);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-.cat-wrap::-webkit-scrollbar{display:none}
-.ftabs{display:flex;min-width:max-content;gap:2px}
-.ftab{padding:10px 14px;font-size:12px;font-weight:600;color:var(--mut);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;display:flex;align-items:center;gap:6px;white-space:nowrap;background:transparent}
+.cat-wrap{margin:0 -20px;padding:0 20px;border-bottom:1px solid var(--bdr)}
+.ftabs{display:flex;flex-wrap:wrap;gap:2px}
+.ftab{padding:9px 13px;font-size:12px;font-weight:600;color:var(--mut);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;display:flex;align-items:center;gap:6px;white-space:nowrap;background:transparent}
 .ftab:hover{color:var(--txt);background:var(--bg2)}
 .ftab.active{color:var(--acc);border-bottom-color:var(--acc)}
 .fcnt{font-size:10px;color:var(--mut);font-weight:600;background:var(--bg2);padding:1px 6px;border-radius:9px}
@@ -2572,60 +2571,70 @@ const FF = {
 // Per-category sections + which FF entries to include
 const CATEGORY_SCHEMA = {
   'Humanoid': [
-    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
     {title:'Body', fields:['weight','height']},
     {title:'Performance', fields:['payload','speed','dof','battery_life']},
     {title:'Sensors & AI', fields:['sensors','connectivity']},
   ],
   'Industrial': [
-    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
     {title:'Performance', fields:['payload','reach','dof','speed']},
     {title:'Body & Environment', fields:['weight','ip_rating']},
     {title:'Platform', fields:['connectivity','os']},
   ],
   'Consumer': [
-    {title:'General', fields:['brand','sub_type','year','price','status']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status']},
     {title:'Body', fields:['weight','height']},
     {title:'Battery & Features', fields:['battery_life','sensors']},
     {title:'Smart Features', fields:['connectivity']},
   ],
   'Drones': [
-    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
     {title:'Performance', fields:['flight_time','speed','weight']},
     {title:'Camera & Sensors', fields:['sensors','connectivity']},
   ],
   'Educational': [
-    {title:'General', fields:['brand','sub_type','year','price','status']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status']},
     {title:'Audience', fields:['age_range']},
     {title:'Features', fields:['connectivity','sensors']},
   ],
   'Medical': [
-    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
     {title:'Certifications', fields:['fda_certified']},
     {title:'Performance', fields:['weight','payload']},
     {title:'Platform', fields:['connectivity']},
   ],
   'Agricultural': [
-    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
     {title:'Performance', fields:['weight','payload','speed']},
     {title:'Body & Environment', fields:['ip_rating']},
     {title:'Features', fields:['sensors','connectivity']},
   ],
   'Military': [
-    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
     {title:'Performance', fields:['weight','payload','speed']},
     {title:'Body & Environment', fields:['ip_rating']},
     {title:'Sensors', fields:['sensors','connectivity']},
   ],
   'Service': [
-    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
     {title:'Body', fields:['weight','height']},
     {title:'Battery & Features', fields:['battery_life','sensors']},
     {title:'Platform', fields:['connectivity']},
   ],
   // Generic schema for other categories
   '_default': [
-    {title:'General', fields:['brand','sub_type','year','price','status']},
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status']},
     {title:'Body', fields:['weight','height']},
     {title:'Features', fields:['connectivity','sensors']},
   ],
