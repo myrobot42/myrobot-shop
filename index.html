@@ -914,7 +914,12 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   <div class="compare-slot" id="cslot-3" onclick="openSlot(3)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 4</div></div>
 </div>
     <div id="compare-action" style="display:flex;justify-content:center;align-items:center;margin:18px 0 22px;min-height:48px"></div>
-    <div class="robot-selector"><div class="rs-title">Select a robot <span style="color:var(--mut);font-size:12px;font-weight:400" id="slot-label">(for slot 1)</span></div><div class="rs-grid" id="rs-grid"></div></div>
+    <div class="robot-selector">
+      <div class="rs-title">Select a robot <span style="color:var(--mut);font-size:12px;font-weight:400" id="slot-label">(for slot 1)</span></div>
+      <input type="text" id="rs-search" placeholder="Search by name or brand (e.g. Atlas, Boston Dynamics, Roomba)..." oninput="filterRobotSelector(this.value)" style="width:100%;padding:10px 14px;margin:12px 0 14px;border:1px solid var(--bdr);border-radius:8px;font-size:13px;font-family:inherit;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bdr)'">
+      <div style="font-size:11px;color:var(--mut);margin-bottom:8px"><span id="rs-count">0</span> robots</div>
+      <div class="rs-grid" id="rs-grid"></div>
+    </div>
     <div id="compare-table"></div>
     <div class="cta-row"><button class="btn btn-ghost" onclick="clearCompare()">Clear All</button><button class="btn btn-primary" onclick="goPage('db')">Browse More Robots</button></div>
   </div>
@@ -2310,6 +2315,42 @@ function openSlot(i){activeSlot=i;document.getElementById('slot-label').textCont
 function clearCompare(){compareSlots=[null,null];renderCompare();}
 function removeSlot(i){compareSlots[i]=null;renderCompare();}
 
+// Robot selector grid for Compare page. Filterable by search.
+// When query is empty, show only top 50 by score so the grid doesn't dump 1100+ items.
+function renderRobotSelector(query){
+  const q = (query || '').trim().toLowerCase();
+  let list;
+  if (q){
+    list = ROBOTS.filter(r => {
+      const text = `${r.brand||''} ${r.name||''} ${r.cat||''} ${r.sub||''}`.toLowerCase();
+      return text.includes(q);
+    });
+  } else {
+    // No search: show top 50 highest-scored as a sensible default
+    list = [...ROBOTS].sort((a, b) => (b.score||0) - (a.score||0)).slice(0, 50);
+  }
+  const grid = document.getElementById('rs-grid');
+  const countEl = document.getElementById('rs-count');
+  if (countEl) countEl.textContent = q ? `${list.length} matching` : `Top 50 (search to see all 1,129)`;
+  if (!grid) return;
+  if (list.length === 0){
+    grid.innerHTML = `<div style="grid-column:1/-1;padding:30px 20px;text-align:center;color:var(--mut);font-size:13px">No robots match "<em>${escapeHtml(q)}</em>"</div>`;
+    return;
+  }
+  grid.innerHTML = list.map(r => {
+    const id = r.id||'';
+    const brand = r.brand||'';
+    const name = r.name||'(unnamed)';
+    const score = r.score||0;
+    const isSelected = compareSlots.some(s => s && s.id === r.id);
+    return `<div class="rs-item${isSelected?' selected':''}" onclick="selectForSlot('${id}')"><div class="rs-brand">${escapeHtml(brand)}</div><div class="rs-name">${escapeHtml(name)}</div><div class="rs-score">${score}</div></div>`;
+  }).join('');
+}
+
+function filterRobotSelector(q){
+  renderRobotSelector(q);
+}
+
 function selectForSlot(id){
   const r=ROBOTS.find(x=>x.id===id);
   if(!r)return;
@@ -2322,15 +2363,9 @@ function selectForSlot(id){
 }
 
 function renderCompare(){
-  // Robot selector grid — defensive against missing fields
-  document.getElementById('rs-grid').innerHTML=ROBOTS.map(r=>{
-    const id=r.id||'';
-    const brand=r.brand||'';
-    const name=r.name||'(unnamed)';
-    const score=r.score||0;
-    const isSelected=compareSlots.some(s=>s&&s.id===r.id);
-    return `<div class="rs-item${isSelected?' selected':''}" onclick="selectForSlot('${id}')"><div class="rs-brand">${brand}</div><div class="rs-name">${name}</div><div class="rs-score">${score}</div></div>`;
-  }).join('');
+  // Re-render the grid (uses current search query)
+  const q = (document.getElementById('rs-search') || {}).value || '';
+  renderRobotSelector(q);
   // Slots — defensive
   for(let i=0;i<4;i++){
     const slot=document.getElementById('cslot-'+i);const r=compareSlots[i];
