@@ -437,6 +437,24 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .fvbtns{display:flex;border:1px solid var(--bdr);border-radius:5px;overflow:hidden}
 .fvbtn{padding:6px 10px;font-size:11px;cursor:pointer;border:none;font-family:inherit;background:#fff;color:var(--mut);font-weight:500}
 .fvbtn.active{background:var(--txt);color:#fff}
+
+/* Finder mobile responsive */
+@media (max-width: 640px){
+  .finder-band{padding:18px 14px 0}
+  .finder-band h1{font-size:20px}
+  .finder-band p{font-size:11px}
+  .ftab{padding:9px 11px;font-size:11px}
+  .finder-body{padding:16px 14px 110px}
+  .finder-grid{grid-template-columns:1fr;gap:10px}
+  .fsc{padding:14px}
+  .range-slider{height:32px}
+  .range-slider input[type=range]::-webkit-slider-thumb{width:22px;height:22px}
+  .range-slider input[type=range]::-moz-range-thumb{width:22px;height:22px}
+  .fsc-cb-group{grid-template-columns:1fr 1fr}
+  .finder-bottom{padding:12px 14px;margin:18px -14px 0;gap:8px}
+  .finder-show-btn{padding:11px 18px;font-size:13px;flex:1;justify-content:center}
+  .finder-reset-btn{padding:11px 12px;font-size:11px;flex-shrink:0}
+}
 .frlist{display:flex;flex-direction:column;gap:7px}
 .frrow{background:#fff;border:1px solid var(--bdr);border-radius:9px;padding:10px 12px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all .15s}
 .frrow:hover{border-color:var(--acc);box-shadow:0 2px 10px rgba(0,102,255,.06)}
@@ -2504,41 +2522,75 @@ const FF = {
   age_range: {label:'Age Range', type:'select', field:'age_range', auto:true},
   // Score
   score: {label:'Min Score', type:'range', field:'score', min:0, max:100, unit:'/100'},
+  // Sub-type (TYPE) — auto-populated from the sub field within the selected category
+  sub_type: {label:'Type', type:'cbgroup_auto', field:'sub'},
+  // Medical-specific
+  fda_certified: {label:'Certifications', type:'cbgroup', options:[
+    {val:'fda', label:'FDA cleared', match:r=>r.fda_cleared || r.fda_approved || /fda/i.test(r.certifications||'')},
+    {val:'ce', label:'CE marked', match:r=>r.ce || /ce[\s-]?mark/i.test(r.certifications||'')},
+    {val:'iso', label:'ISO certified', match:r=>r.iso || /iso/i.test(r.certifications||'')},
+  ]},
+  // Origin (country)
+  origin: {label:'Origin', type:'select', field:'origin', auto:true},
 };
 
 // Per-category sections + which FF entries to include
 const CATEGORY_SCHEMA = {
   'Humanoid': [
-    {title:'General', fields:['brand','year','price','status']},
+    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
     {title:'Body', fields:['weight','height']},
     {title:'Performance', fields:['payload','speed','dof','battery_life']},
     {title:'Sensors & AI', fields:['sensors','connectivity']},
   ],
   'Industrial': [
-    {title:'General', fields:['brand','year','price','status']},
+    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
     {title:'Performance', fields:['payload','reach','dof','speed']},
     {title:'Body & Environment', fields:['weight','ip_rating']},
     {title:'Platform', fields:['connectivity','os']},
   ],
   'Consumer': [
-    {title:'General', fields:['brand','year','price','status']},
+    {title:'General', fields:['brand','sub_type','year','price','status']},
     {title:'Body', fields:['weight','height']},
     {title:'Battery & Features', fields:['battery_life','sensors']},
     {title:'Smart Features', fields:['connectivity']},
   ],
   'Drones': [
-    {title:'General', fields:['brand','year','price','status']},
+    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
     {title:'Performance', fields:['flight_time','speed','weight']},
     {title:'Camera & Sensors', fields:['sensors','connectivity']},
   ],
   'Educational': [
-    {title:'General', fields:['brand','year','price','status']},
+    {title:'General', fields:['brand','sub_type','year','price','status']},
     {title:'Audience', fields:['age_range']},
     {title:'Features', fields:['connectivity','sensors']},
   ],
+  'Medical': [
+    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'Certifications', fields:['fda_certified']},
+    {title:'Performance', fields:['weight','payload']},
+    {title:'Platform', fields:['connectivity']},
+  ],
+  'Agricultural': [
+    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'Performance', fields:['weight','payload','speed']},
+    {title:'Body & Environment', fields:['ip_rating']},
+    {title:'Features', fields:['sensors','connectivity']},
+  ],
+  'Military': [
+    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'Performance', fields:['weight','payload','speed']},
+    {title:'Body & Environment', fields:['ip_rating']},
+    {title:'Sensors', fields:['sensors','connectivity']},
+  ],
+  'Service': [
+    {title:'General', fields:['brand','sub_type','year','price','status','origin']},
+    {title:'Body', fields:['weight','height']},
+    {title:'Battery & Features', fields:['battery_life','sensors']},
+    {title:'Platform', fields:['connectivity']},
+  ],
   // Generic schema for other categories
   '_default': [
-    {title:'General', fields:['brand','year','price','status']},
+    {title:'General', fields:['brand','sub_type','year','price','status']},
     {title:'Body', fields:['weight','height']},
     {title:'Features', fields:['connectivity','sensors']},
   ],
@@ -2582,19 +2634,26 @@ function getSchema(){
   return CATEGORY_SCHEMA[finderCat] || CATEGORY_SCHEMA['_default'];
 }
 
-// Compute actual min/max from data for a numeric field (so sliders fit your data)
+// Compute reasonable min/max for a numeric field using 5th–95th percentile
+// to avoid one outlier stretching the slider scale. Outliers are still filterable
+// (slider goes to the actual max), but the default range is sensible.
 function computeFieldRange(field, fallbackMin, fallbackMax){
   const pool = getPool();
-  let min = Infinity, max = -Infinity;
+  const values = [];
   for (const r of pool){
     const v = parseFloat(r[field]);
-    if (!isNaN(v) && v > 0){
-      if (v < min) min = v;
-      if (v > max) max = v;
-    }
+    if (!isNaN(v) && v > 0) values.push(v);
   }
-  if (min === Infinity) return [fallbackMin, fallbackMax];
-  return [Math.floor(min), Math.ceil(max)];
+  if (values.length === 0) return [fallbackMin, fallbackMax];
+  values.sort((a, b) => a - b);
+  // Use 5th and 95th percentile to stay tight to real data
+  const p5 = values[Math.max(0, Math.floor(values.length * 0.05))];
+  const p95 = values[Math.min(values.length - 1, Math.ceil(values.length * 0.95))];
+  // Round to a nice number
+  const lo = Math.max(0, Math.floor(p5));
+  const hi = Math.ceil(p95);
+  // Sanity: ensure hi > lo
+  return [lo, hi > lo ? hi : lo + 1];
 }
 
 // Format a numeric value for display
@@ -2649,6 +2708,7 @@ function onRangeChange(field, which, val){
   el.querySelector('.fsc-label-val').textContent = `${fmtVal(state.lo, def.fmt, def.unit)} – ${fmtVal(state.hi, def.fmt, def.unit)}`;
   el.querySelector('.range-track-fill').style.left = pctLo + '%';
   el.querySelector('.range-track-fill').style.width = (pctHi - pctLo) + '%';
+  renderActivePills();
   updateFinderCount();
 }
 
@@ -2714,6 +2774,7 @@ function onMsCbChange(key, cb){
     const lbl = SELECTED_BRANDS.size > 0 ? `${SELECTED_BRANDS.size} selected` : `All brands`;
     btn.innerHTML = lbl + ' ' + arrow;
   }
+  renderActivePills();
   updateFinderCount();
 }
 
@@ -2744,7 +2805,48 @@ function onCbChange(key, cb){
   if (!SELECTED_CB[key]) SELECTED_CB[key] = new Set();
   if (cb.checked) SELECTED_CB[key].add(cb.dataset.val);
   else SELECTED_CB[key].delete(cb.dataset.val);
+  renderActivePills();
   updateFinderCount();
+}
+
+// Render a checkbox group automatically derived from data (e.g. sub-types for current category).
+// Only shows top 15 by count + "more" expand link.
+const SUB_FILTER_EXPANDED = {};
+function renderCbGroupAuto(key, def){
+  // Only renders if there are 2+ unique values (otherwise pointless filter)
+  const pool = getPool();
+  const items = {};
+  for (const r of pool){
+    const v = r[def.field];
+    if (v && v.trim && v.trim()) items[v] = (items[v] || 0) + 1;
+  }
+  const sortedItems = Object.entries(items).sort((a, b) => b[1] - a[1]);
+  if (sortedItems.length < 2) return '';
+  if (!SELECTED_CB[key]) SELECTED_CB[key] = new Set();
+  const expanded = SUB_FILTER_EXPANDED[key] === true;
+  const limit = 8;
+  const visible = expanded ? sortedItems : sortedItems.slice(0, limit);
+  const hidden = sortedItems.length - visible.length;
+  const html = `
+    <div class="fsc-field">
+      <div class="fsc-label"><span>${def.label}</span><span class="fsc-label-val">${sortedItems.length} options</span></div>
+      <div class="fsc-cb-group" id="cbga-${key}">
+        ${visible.map(([item, cnt]) => `
+          <label class="fsc-cb">
+            <input type="checkbox" data-cb-key="${key}" data-val="${item.replace(/"/g, '&quot;')}" onchange="onCbChange('${key}', this)" ${SELECTED_CB[key].has(item) ? 'checked' : ''}>
+            <span>${escapeHtml(item)}</span>
+            <span class="fsc-cb-count">${cnt}</span>
+          </label>
+        `).join('')}
+      </div>
+      ${hidden > 0 ? `<div onclick="toggleSubFilterExpand('${key}')" style="font-size:11px;color:var(--acc);font-weight:600;cursor:pointer;padding:4px 7px;margin-top:2px">+ See ${hidden} more</div>` : (expanded && sortedItems.length > limit ? `<div onclick="toggleSubFilterExpand('${key}')" style="font-size:11px;color:var(--mut);font-weight:600;cursor:pointer;padding:4px 7px;margin-top:2px">− Show less</div>` : '')}
+    </div>
+  `;
+  return html;
+}
+function toggleSubFilterExpand(key){
+  SUB_FILTER_EXPANDED[key] = !SUB_FILTER_EXPANDED[key];
+  buildFinderFP();
 }
 
 // Render a single-select dropdown (auto-populated from data)
@@ -2761,7 +2863,7 @@ function renderSelect(key, def){
   return `
     <div class="fsc-field">
       <div class="fsc-label"><span>${def.label}</span></div>
-      <select class="fsel" onchange="FILTER_STATE['${stateKey}']=this.value;updateFinderCount()" style="width:100%;padding:7px 9px;border:1px solid var(--bdr2);border-radius:6px;font-size:11px;font-family:inherit;background:#fff;appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 8px center;padding-right:24px">
+      <select class="fsel" onchange="FILTER_STATE['${stateKey}']=this.value;renderActivePills();updateFinderCount()" style="width:100%;padding:7px 9px;border:1px solid var(--bdr2);border-radius:6px;font-size:11px;font-family:inherit;background:#fff;appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 8px center;padding-right:24px">
         <option value="">Any</option>
         ${sortedItems.map(([item, cnt]) => `<option value="${item.replace(/"/g, '&quot;')}" ${FILTER_STATE[stateKey]===item?'selected':''}>${item} (${cnt})</option>`).join('')}
       </select>
@@ -2772,7 +2874,10 @@ function renderSelect(key, def){
 // Master form renderer
 function buildFinderFP(){
   const schema = getSchema();
-  let html = '<div class="finder-grid">';
+  let html = '';
+  // Active filter pills (rendered ABOVE the form so user always sees what's active)
+  html += '<div id="finder-active-pills" class="fatags"></div>';
+  html += '<div class="finder-grid">';
   for (const section of schema){
     html += `<div class="fsc">`;
     html += `<div class="fsc-title">${section.title}</div>`;
@@ -2782,6 +2887,7 @@ function buildFinderFP(){
       if (def.type === 'range') html += renderRangeSlider(fieldKey, def);
       else if (def.type === 'multi') html += renderMultiSelect(fieldKey, def);
       else if (def.type === 'cbgroup') html += renderCbGroup(fieldKey, def);
+      else if (def.type === 'cbgroup_auto') html += renderCbGroupAuto(fieldKey, def);
       else if (def.type === 'select') html += renderSelect(fieldKey, def);
     }
     html += `</div>`;
@@ -2789,7 +2895,82 @@ function buildFinderFP(){
   html += '</div>';
   document.getElementById('finder-fp').innerHTML = html;
   document.getElementById('finder-bottom').style.display = '';
+  renderActivePills();
   updateFinderCount();
+}
+
+// Build the list of currently-active filter pills.
+// Each pill has a click handler that clears that one filter.
+function renderActivePills(){
+  const el = document.getElementById('finder-active-pills');
+  if (!el) return;
+  const pills = [];
+  const schema = getSchema();
+  // Range pills: only if user moved them away from defaults
+  for (const section of schema){
+    for (const fk of section.fields){
+      const def = FF[fk];
+      if (!def) continue;
+      if (def.type === 'range'){
+        const st = FILTER_STATE['rng_' + def.field];
+        if (!st) continue;
+        const [dataMin, dataMax] = computeFieldRange(def.field, def.min, def.max);
+        // Only show pill if user moved either handle away from data extents
+        if (st.lo > dataMin || st.hi < dataMax){
+          pills.push({
+            label: `${def.label}: ${fmtVal(st.lo, def.fmt, def.unit)}–${fmtVal(st.hi, def.fmt, def.unit)}`,
+            clearAction: `clearRange('${def.field}')`
+          });
+        }
+      } else if (def.type === 'cbgroup'){
+        const sel = SELECTED_CB[fk];
+        if (!sel || sel.size === 0) continue;
+        sel.forEach(v => {
+          const opt = def.options.find(o => o.val === v);
+          if (opt) pills.push({label: opt.label, clearAction: `clearCbOpt('${fk}', '${v}')`});
+        });
+      } else if (def.type === 'cbgroup_auto'){
+        const sel = SELECTED_CB[fk];
+        if (!sel || sel.size === 0) continue;
+        sel.forEach(v => {
+          pills.push({label: v, clearAction: `clearCbOpt('${fk}', '${v.replace(/'/g, "\\'")}')`});
+        });
+      } else if (def.type === 'select'){
+        const val = FILTER_STATE['sel_' + def.field];
+        if (val) pills.push({label: `${def.label}: ${val}`, clearAction: `clearSel('${def.field}')`});
+      }
+    }
+  }
+  // Brand pills
+  SELECTED_BRANDS.forEach(b => {
+    pills.push({label: b, clearAction: `clearBrand('${b.replace(/'/g, "\\'")}')`});
+  });
+  el.innerHTML = pills.map(p => `<span class="fatag" onclick="${p.clearAction}">${escapeHtml(p.label)} ✕</span>`).join('');
+}
+
+function escapeHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function clearRange(field){
+  delete FILTER_STATE['rng_' + field];
+  buildFinderFP();
+}
+
+function clearCbOpt(key, val){
+  if (SELECTED_CB[key]) SELECTED_CB[key].delete(val);
+  // Re-render just the form to refresh checkboxes
+  buildFinderFP();
+}
+
+function clearSel(field){
+  delete FILTER_STATE['sel_' + field];
+  buildFinderFP();
+}
+
+function clearBrand(brand){
+  SELECTED_BRANDS.delete(brand);
+  buildFinderFP();
 }
 
 // Close ms-dd dropdowns when clicking outside
@@ -2849,6 +3030,11 @@ function getFinderFiltered(){
           // Match if robot matches AT LEAST ONE of the selected options
           const anyMatch = def.options.some(o => sel.has(o.val) && o.match(r));
           if (!anyMatch) return false;
+        } else if (def.type === 'cbgroup_auto'){
+          const sel = SELECTED_CB[fk];
+          if (!sel || sel.size === 0) continue;
+          // Match if robot's field value is in the selected set
+          if (!sel.has(r[def.field])) return false;
         } else if (def.type === 'select'){
           const val = FILTER_STATE['sel_' + def.field];
           if (!val) continue;
