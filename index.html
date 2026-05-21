@@ -2811,8 +2811,12 @@ function onCbChange(key, cb){
 
 // Render a checkbox group automatically derived from data (e.g. sub-types for current category).
 // Only shows top 15 by count + "more" expand link.
+// IMPORTANT: For sub_type, only renders when a specific category is selected — on "All Robots"
+// the list would be a 100+ item mess of every sub-type across every category.
 const SUB_FILTER_EXPANDED = {};
 function renderCbGroupAuto(key, def){
+  // Sub-type filter is meaningless across all categories — hide on All Robots tab
+  if (def.field === 'sub' && finderCat === 'all') return '';
   // Only renders if there are 2+ unique values (otherwise pointless filter)
   const pool = getPool();
   const items = {};
