@@ -1713,6 +1713,7 @@ function bulkImportValidate(){
 
   // ════ Smart duplicate detection — find potential matches by brand + name similarity ════
   // Goes BEYOND exact-id matching: catches "Tesla Optimus" vs "Optimus Gen 2" cases.
+  // But does NOT flag different generations of the same product line as dupes.
   function _bulkNormName(s){
     return String(s||'').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
   }
@@ -1725,6 +1726,42 @@ function bulkImportValidate(){
   function _bulkSignificantTokens(name){
     const norm = _bulkNormName(name);
     return norm.split(' ').filter(t => t.length >= 4 && !FILLER.has(t) && !/^\d+$/.test(t));
+  }
+  // Extract version/generation markers: numbers, gen-numbers, single-letter-suffixed-numbers, model codes
+  // e.g. from "Optimus Gen 2" → ["gen2", "2"]
+  // from "Walker S2" → ["s2", "2"]
+  // from "Figure 03" → ["03", "3"]
+  // from "Atlas (Electric)" → ["electric"]
+  // from "LUBA 3 AWD 5000" → ["3", "5000", "awd"]
+  function _bulkVersionMarkers(name){
+    const norm = _bulkNormName(name);
+    const markers = new Set();
+    // Numbers (1-4 digits) anywhere in the name
+    const nums = norm.match(/\b\d{1,4}\b/g) || [];
+    nums.forEach(n => markers.add(n));
+    // gen/v/mk + number patterns
+    const gen = norm.match(/\b(?:gen|v|mk|mkii|mkiii)\s*\d+\b/g) || [];
+    gen.forEach(g => markers.add(g.replace(/\s+/g, '')));
+    // Single-letter+number tokens (S2, X3, H1, etc.) — common in product codes
+    const codes = norm.match(/\b[a-z]\d+\b/g) || [];
+    codes.forEach(c => markers.add(c));
+    // Differentiator words in parens like "(Electric)" → "electric"
+    const parens = name.match(/\(([^)]+)\)/g) || [];
+    parens.forEach(p => {
+      const inner = p.slice(1, -1).toLowerCase().replace(/[^a-z0-9 ]/g, '').trim();
+      inner.split(/\s+/).forEach(w => { if (w.length >= 4) markers.add(w); });
+    });
+    return markers;
+  }
+  // True if A and B have any DIFFERING version marker (one has a marker the other doesn't)
+  function _bulkDifferentVersions(nameA, nameB){
+    const va = _bulkVersionMarkers(nameA);
+    const vb = _bulkVersionMarkers(nameB);
+    if (va.size === 0 && vb.size === 0) return false;
+    // If sets are non-empty and disjoint, they're different versions
+    for (const m of va){ if (!vb.has(m)) return true; }
+    for (const m of vb){ if (!va.has(m)) return true; }
+    return false;
   }
   // Pre-index existing robots by normalized brand for fast lookup
   const _existByBrand = {};
@@ -1745,13 +1782,14 @@ function bulkImportValidate(){
     for (const ex of candidates){
       const exTokens = new Set(_bulkSignificantTokens(ex.name));
       if (exTokens.size === 0) continue;
-      // Any shared significant token = potential dupe
+      // Any shared significant token = potential dupe candidate
       let shared = null;
       for (const t of newTokens){ if (exTokens.has(t)){ shared = t; break; } }
-      if (shared){
-        potentialDupes.push({newRobot: newR, existingRobot: ex, reason: 'shares "' + shared + '"'});
-        break; // one match per new entry is enough to flag
-      }
+      if (!shared) continue;
+      // Skip if version markers differ — these are different generations of same product line
+      if (_bulkDifferentVersions(newR.name, ex.name)) continue;
+      potentialDupes.push({newRobot: newR, existingRobot: ex, reason: 'shares "' + shared + '"'});
+      break; // one match per new entry is enough to flag
     }
   });
 
