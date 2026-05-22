@@ -678,7 +678,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
                 <option value="Educational">Educational</option>
                 <option value="Military">Military / Security</option>
               </select>
-              <input class="inp" type="number" id="ingest-count" value="8" min="1" max="20" style="text-align:center">
+              <input class="inp" type="number" id="ingest-count" value="20" min="1" max="30" style="text-align:center">
             </div>
             <div style="font-size:11px;color:var(--mut);margin-bottom:8px">Quick ingestion:</div>
             <div class="quick-brand-btns">
@@ -1184,16 +1184,39 @@ async function runBrandIngestion(brand, category, count) {
   try {
     const existingIds = ROBOTS.map(r => r.id);
     
-    const prompt = `You are a robot database expert with access to web search. Your task: research ${brand} in the ${category} category and return ALL their CURRENT and RECENT real products (released 2020 or later, still relevant in 2026).
+    const prompt = `You are a robot database expert with access to web search. Your task: research ${brand} EXHAUSTIVELY and return their COMPLETE current product catalog in the ${category} category.
 
-CRITICAL INSTRUCTIONS:
-- Use web search to find the actual current catalog from ${brand}'s website
-- Return between 1 and ${count} models — return as many REAL models as you find, do not invent or fill quota
-- Include all current variants (e.g. base, X, X+, Pro, AWD, EPOS suffixes count as separate models)
-- Include recent generations (e.g. LUBA 1, LUBA 2, LUBA 3 are all separate entries)
-- For each product, find: model name, release year, current MSRP, key specs
-- If unsure about a spec, leave that field at 0 or empty string — do NOT invent values
-- Skip discontinued products unless they are still widely sold (e.g. on Amazon)
+CRITICAL — DO NOT STOP AT THE HOMEPAGE:
+- Visit ${brand}'s main product page
+- THEN follow links to each product series/family page (e.g. "X series", "i series", "H series", "Pro line")
+- Combine results from MULTIPLE pages
+- Use 4-5 web searches if needed to cover all product lines
+
+EXAMPLES of what "complete catalog" means:
+- Segway Navimow has 5 series: i, i2, X, X3, X4, H (commercial) — find models across ALL of them
+- Husqvarna Automower has 100/300/400/500 lines — find models across ALL of them
+- Mammotion has LUBA 1/2/3 + YUKA + KUMAR — find all generations
+- Roborock has Q/S/Saros/Pro lines — find all
+
+INCLUDE:
+- All current variants (base, +, X, Pro, Plus, Ultra, AWD, EPOS, LiDAR suffixes are SEPARATE models)
+- All recent generations (Gen 1, 2, 3, 4 are SEPARATE models)
+- 2025 and 2026 launches especially (latest CES products)
+
+RETURN: between 1 and ${count} models. Find as many REAL models as exist — do NOT stop at 7-8.
+If a brand only has 5 real models, return 5. If they have 25, return 25 (up to ${count}).
+
+DATA QUALITY:
+- If unsure about a spec, leave at 0 or empty string — do NOT invent
+- The "sub" field MUST describe what the PRODUCT actually is, not the parent category:
+  * Robot lawn mower → "Robot Lawn Mower"
+  * Robot vacuum → "Robot Vacuum" or "Robot Vacuum & Mop"
+  * Pool cleaner → "Pool Cleaner"
+  * Humanoid → "General Purpose Humanoid"
+  * Cobot → "Collaborative Robot (Cobot)"
+  * Drone → match type (Consumer Drone, Survey Drone, etc.)
+- DO NOT use generic "Vacuum" if it's a mower
+- Skip discontinued products unless still widely sold
 
 Return ONLY a valid JSON array. No explanation, no markdown, just the raw JSON array.
 
@@ -1594,28 +1617,54 @@ function renderIngestStats(){
 async function runIngest(){
   const brand=document.getElementById('ingest-brand').value.trim();
   const cat=document.getElementById('ingest-cat').value;
-  const count=parseInt(document.getElementById('ingest-count').value)||8;
+  const count=parseInt(document.getElementById('ingest-count').value)||20;
   if(!API_KEY){alert('Add your API key in Settings first');return;}
   if(!brand){alert('Enter a brand name');return;}
   const status=document.getElementById('ingest-status');
   const results=document.getElementById('ingest-results');
   status.style.display='block';results.style.display='none';
   status.style.color='var(--acc)';
-  status.textContent=`⏳ Ingesting ${count} ${brand} robots... this takes 15-25 seconds`;
+  status.textContent=`⏳ Researching ${brand} catalog with web search... this takes 30-60 seconds`;
 
-  const systemPrompt=`You are building myrobot.shop — the GSMArena of robots. Return a JSON array of ${count} REAL ${brand} robots in the ${cat} category.
+  const systemPrompt=`You are building myrobot.shop — the GSMArena of robots. You have web search. Research ${brand} EXHAUSTIVELY and return their COMPLETE current catalog in the ${cat} category.
 
-CATEGORY STRUCTURE (IMPORTANT):
+CRITICAL — FIND THE WHOLE CATALOG:
+- Visit ${brand}'s main product page using web search
+- THEN follow links to each product series/family (e.g. "X series", "i series", "H series", "Pro line")
+- Combine results across multiple pages — DO NOT stop at the homepage
+- Use 4-5 web searches if needed to cover all product lines
+- Return UP TO ${count} REAL models — find as many as exist, do not stop at 7-8
+
+EXAMPLES of complete catalog scope:
+- Segway Navimow has 5+ series: i, i2, X, X3, X4, H (commercial) — include ALL series
+- Husqvarna Automower has 100/300/400/500 lines plus EPOS — include all
+- Mammotion has LUBA 1/2/3 + YUKA + KUMAR generations — include all
+- Roborock has Q/S/Saros/Pro lines — include all
+
+INCLUDE:
+- All variants (base, X, X+, Pro, Plus, Ultra, AWD, EPOS, LiDAR are SEPARATE models)
+- All recent generations (Gen 1, 2, 3, 4 are SEPARATE entries)
+- 2025 and 2026 launches (latest CES products)
+
+CATEGORY STRUCTURE (CRITICAL):
 - "cat" field MUST be EXACTLY "${cat}" — do NOT invent variants
-- "sub" field is for the SPECIFIC product subtype (e.g. "Robot Vacuum & Mop", "Collaborative Robot", "Surgical Robot", "eVTOL Aircraft"). Always populate this.
+- "sub" field MUST describe what the PRODUCT actually is:
+  * Robot lawn mower → "Robot Lawn Mower" (NOT "Vacuum"!)
+  * Robot vacuum → "Robot Vacuum" or "Robot Vacuum & Mop"
+  * Pool cleaner → "Pool Cleaner"
+  * Humanoid → "General Purpose Humanoid"
+  * Cobot → "Collaborative Robot (Cobot)"
 - Detail belongs in 'sub', NEVER in 'cat'.
+
+DATA QUALITY:
+- If unsure about a spec, use null or 0 — do NOT invent values
+- Keep desc field under 150 characters
 
 CRITICAL JSON RULES:
 - Return ONLY a valid JSON array, nothing else
 - No markdown, no explanation, no code blocks
 - All string values must be properly escaped
 - No newlines inside string values — use spaces instead
-- Keep desc field under 150 characters
 - Start with [ and end with ]
 
 Each robot must have these fields (use null for unknown):
@@ -1636,7 +1685,7 @@ perf`;
     const resp=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:6000,system:systemPrompt,messages:[{role:'user',content:`Give me ${count} ${brand} robots for the ${cat} category. Return valid JSON only. Keep descriptions under 200 characters to avoid JSON errors.`}]})
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:16000,tools:[{type:'web_search_20250305',name:'web_search',max_uses:6}],system:systemPrompt,messages:[{role:'user',content:`Find ALL real ${brand} robots/products in the ${cat} category. Use web search to check their actual current catalog including all product series. Return up to ${count} models — do not stop early. Return valid JSON only.`}]})
     });
     const data=await resp.json();
     if(data.error)throw new Error(data.error.message);
