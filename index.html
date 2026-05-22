@@ -1389,11 +1389,38 @@ function renderBrandFilter(){
     }
     relevantBrands=ALL_BRANDS.filter(b=>brandSet.has(b));
   }
-  // Compute count per brand (within the category filter)
-  const brandCounts={};
-  for(const r of ROBOTS){
-    if(selCats.length===0||selCats.includes(r.cat)){
-      brandCounts[r.brand]=(brandCounts[r.brand]||0)+1;
+  // Compute count per brand using faceted-search logic:
+  // count reflects what you'd get if you added that brand to your current filters.
+  // i.e. apply all OTHER active filters (cat, sub, price, status, feat, search) but ignore brand selection.
+  const _q = (document.getElementById('db-search')?.value || '').toLowerCase();
+  const _selSubs = [...document.querySelectorAll('[data-sub]:checked')].map(el => el.dataset.sub);
+  const _selPrice = [...document.querySelectorAll('[data-price]:checked')].map(el => el.dataset.price);
+  const _selFeat = [...document.querySelectorAll('[data-feat]:checked')].map(el => el.dataset.feat);
+  const _selStatus = [...document.querySelectorAll('[data-status]:checked')].map(el => el.dataset.status);
+  function _matchesAllExceptBrand(r){
+    if (_q && !((r.name||'').toLowerCase().includes(_q) || (r.brand||'').toLowerCase().includes(_q) || (r.tags||[]).some(t => (t||'').toLowerCase().includes(_q)) || (r.cat||'').toLowerCase().includes(_q))) return false;
+    if (selCats.length && !selCats.includes(r.cat)) return false;
+    if (_selSubs.length && !_selSubs.includes(r.sub)) return false;
+    if (_selStatus.length && !_selStatus.includes(r.status)) return false;
+    if (_selFeat.length && !_selFeat.every(f => (f==='arm'&&r.arm)||(f==='ai'&&r.ai)||(f==='ros'&&r.ros)||(f==='sdk'&&r.sdk))) return false;
+    if (_selPrice.length){
+      const ok = _selPrice.some(v => {
+        if (v==='u1k') return r.price>0 && r.price<1000;
+        if (v==='u20k') return r.price>=1000 && r.price<20000;
+        if (v==='u100k') return r.price>=20000 && r.price<100000;
+        if (v==='u500k') return r.price>=100000 && r.price<500000;
+        if (v==='over500k') return r.price>=500000;
+        if (v==='poa') return r.price===0;
+        return false;
+      });
+      if (!ok) return false;
+    }
+    return true;
+  }
+  const brandCounts = {};
+  for (const r of ROBOTS){
+    if (_matchesAllExceptBrand(r) && r.brand){
+      brandCounts[r.brand] = (brandCounts[r.brand]||0) + 1;
     }
   }
 
@@ -1406,13 +1433,15 @@ function renderBrandFilter(){
   }
   // Keep checked brands always visible regardless of priority/count
   const checkedBrands = relevantBrands.filter(b => selBrands.has(b));
+  // Hide unchecked brands with 0 count after applying current filters (they're not selectable)
+  const _hasMatches = b => (brandCounts[b] || 0) > 0;
   const sortedBrands = [
     // 1. Currently-checked brands (so user always sees what they've selected)
     ...checkedBrands,
-    // 2. Priority brands (in their editorial order) that are relevant
-    ...priorityList.filter(b => relevantBrands.includes(b) && !selBrands.has(b)),
-    // 3. The rest, sorted by robot count desc
-    ...relevantBrands.filter(b => !priorityList.includes(b) && !selBrands.has(b))
+    // 2. Priority brands (in their editorial order) that are relevant AND have matches
+    ...priorityList.filter(b => relevantBrands.includes(b) && !selBrands.has(b) && _hasMatches(b)),
+    // 3. The rest, sorted by robot count desc — also requires matches
+    ...relevantBrands.filter(b => !priorityList.includes(b) && !selBrands.has(b) && _hasMatches(b))
       .sort((a, b) => (brandCounts[b] || 0) - (brandCounts[a] || 0))
   ];
 
@@ -1456,13 +1485,41 @@ function renderSubcatFilter(){
   }
   const cat = selCats[0];
   const selSubs = new Set([...document.querySelectorAll('[data-sub]:checked')].map(el => el.dataset.sub));
-  // Count sub-types within this category
+  // Count sub-types using faceted-search: respect all OTHER active filters except sub-type itself
+  const _q2 = (document.getElementById('db-search')?.value || '').toLowerCase();
+  const _selBrands2 = [...document.querySelectorAll('[data-brand]:checked')].map(el => el.dataset.brand);
+  const _selPrice2 = [...document.querySelectorAll('[data-price]:checked')].map(el => el.dataset.price);
+  const _selFeat2 = [...document.querySelectorAll('[data-feat]:checked')].map(el => el.dataset.feat);
+  const _selStatus2 = [...document.querySelectorAll('[data-status]:checked')].map(el => el.dataset.status);
+  function _matchesAllExceptSub(r){
+    if (r.cat !== cat) return false;
+    if (_q2 && !((r.name||'').toLowerCase().includes(_q2) || (r.brand||'').toLowerCase().includes(_q2) || (r.tags||[]).some(t => (t||'').toLowerCase().includes(_q2)) || (r.cat||'').toLowerCase().includes(_q2))) return false;
+    if (_selBrands2.length && !_selBrands2.includes(r.brand)) return false;
+    if (_selStatus2.length && !_selStatus2.includes(r.status)) return false;
+    if (_selFeat2.length && !_selFeat2.every(f => (f==='arm'&&r.arm)||(f==='ai'&&r.ai)||(f==='ros'&&r.ros)||(f==='sdk'&&r.sdk))) return false;
+    if (_selPrice2.length){
+      const ok = _selPrice2.some(v => {
+        if (v==='u1k') return r.price>0 && r.price<1000;
+        if (v==='u20k') return r.price>=1000 && r.price<20000;
+        if (v==='u100k') return r.price>=20000 && r.price<100000;
+        if (v==='u500k') return r.price>=100000 && r.price<500000;
+        if (v==='over500k') return r.price>=500000;
+        if (v==='poa') return r.price===0;
+        return false;
+      });
+      if (!ok) return false;
+    }
+    return true;
+  }
+  // Count sub-types within this category, respecting other filters
   const subCounts = {};
   for (const r of ROBOTS){
-    if (r.cat === cat && r.sub && r.sub.trim()){
+    if (_matchesAllExceptSub(r) && r.sub && r.sub.trim()){
       subCounts[r.sub] = (subCounts[r.sub] || 0) + 1;
     }
   }
+  // Include checked sub-types even if their count drops to 0
+  selSubs.forEach(s => { if (!(s in subCounts)) subCounts[s] = 0; });
   const subs = Object.keys(subCounts).sort((a, b) => subCounts[b] - subCounts[a]);
   if (subs.length === 0){
     section.style.display = 'none';
@@ -1470,9 +1527,9 @@ function renderSubcatFilter(){
     return;
   }
   section.style.display = '';
-  // Keep checked sub-types always visible
+  // Keep checked sub-types always visible; hide unchecked ones with 0 count
   const checkedSubs = subs.filter(s => selSubs.has(s));
-  const restSubs = subs.filter(s => !selSubs.has(s));
+  const restSubs = subs.filter(s => !selSubs.has(s) && subCounts[s] > 0);
   const ordered = [...checkedSubs, ...restSubs];
   const visible = SUBCAT_EXPANDED ? ordered : ordered.slice(0, SUBCAT_DISPLAY_LIMIT);
   const hidden = ordered.length - visible.length;
@@ -1539,6 +1596,10 @@ function getDbFiltered(){
 }
 
 function renderDb(){
+  // Faceted search: re-render sidebar counts so they reflect current filter combination
+  // (these are cheap and necessary — counts should always match the visible result set)
+  renderBrandFilter();
+  renderSubcatFilter();
   const sort=document.getElementById('db-sort')?.value||'score';
   let list=getDbFiltered();
   list=[...list].sort((a,b)=>sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):sort==='payload'?b.payload-a.payload:b.year-a.year);
