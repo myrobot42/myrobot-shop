@@ -1596,6 +1596,10 @@ function getDbFiltered(){
 }
 
 function renderDb(){
+  // Faceted search: re-render sidebar counts so they reflect current filter combination
+  // (these are cheap and necessary — counts should always match the visible result set)
+  renderBrandFilter();
+  renderSubcatFilter();
   const sort=document.getElementById('db-sort')?.value||'score';
   let list=getDbFiltered();
   list=[...list].sort((a,b)=>sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):sort==='payload'?b.payload-a.payload:b.year-a.year);
