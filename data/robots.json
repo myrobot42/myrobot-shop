@@ -82984,36 +82984,36 @@
     "sub": "Robot Lawn Mower",
     "tags": [
       "lawn mower",
-      "robotic mower",
-      "outdoor",
+      "automower",
       "garden",
-      "GPS"
+      "husqvarna",
+      "robotic mower"
     ],
     "fig": "🤖",
     "img": "https://www.husqvarna.com/content/dam/husqvarna/products/automower/430x.jpg",
     "score": 88,
     "rating": 4.5,
     "price": 2199,
-    "desc": "GPS-guided robotic lawn mower for complex gardens up to 3200 sq meters with slope handling up to 45%.",
+    "desc": "Handles complex gardens up to 3200 sqm with GPS-assisted navigation and all-wheel drive.",
     "highlights": [
-      "3200 sqm capacity",
-      "45% slope handling",
       "GPS navigation",
+      "All-wheel drive",
+      "3200 sqm capacity",
       "Anti-theft alarm",
-      "Weather timer"
+      "App control"
     ],
     "height_mm": 290,
     "width_mm": 560,
     "depth_mm": 720,
     "weight_kg": 13.8,
-    "frame_material": "plastic",
-    "shell_material": "ABS plastic",
+    "frame_material": "Plastic",
+    "shell_material": "ABS Plastic",
     "ip_rating": "IPX4",
-    "operating_temp_min": 5,
+    "operating_temp_min": 0,
     "operating_temp_max": 40,
     "colors": [
-      "orange",
-      "black"
+      "Black",
+      "Orange"
     ],
     "os": "Proprietary RTOS",
     "chipset": null,
@@ -83024,11 +83024,11 @@
     "storage_type": null,
     "npu_tops": null,
     "battery_type": "Li-ion",
-    "battery_wh": 97,
-    "battery_life": 240,
+    "battery_wh": 59,
+    "battery_life": 135,
     "charge_time": 60,
-    "charge_power_w": 30,
-    "charge_type": "Docking station",
+    "charge_power_w": 100,
+    "charge_type": "Docking Station",
     "wireless_charging": false,
     "auto_charge": true,
     "hot_swap": false,
@@ -83037,7 +83037,8 @@
     "ai_model": null,
     "ai_model_type": null,
     "learning_methods": [
-      "schedule-based"
+      "boundary wire mapping",
+      "schedule learning"
     ],
     "ai_cloud_required": false,
     "ota": true,
@@ -83045,7 +83046,7 @@
     "lidar": false,
     "depth_sensing": false,
     "imu": true,
-    "touch_sensing": true,
+    "touch_sensing": false,
     "wifi": true,
     "bluetooth": true,
     "ros": false,
@@ -83058,12 +83059,15 @@
     "warranty_months": 24,
     "use_cases": [
       "lawn mowing",
-      "garden maintenance"
+      "garden maintenance",
+      "residential use"
     ],
     "perf": {
       "area_sqm": 3200,
-      "slope_percent": 45,
-      "noise_db": 58
+      "slope_max_deg": 22,
+      "noise_db": 65,
+      "cut_height_mm_min": 20,
+      "cut_height_mm_max": 60
     }
   },
   {
@@ -83076,10 +83080,9 @@
     "sub": "Robot Lawn Mower",
     "tags": [
       "lawn mower",
-      "robotic mower",
-      "outdoor",
+      "automower",
       "garden",
-      "GPS",
+      "husqvarna",
       "large area"
     ],
     "fig": "🤖",
@@ -83087,26 +83090,26 @@
     "score": 91,
     "rating": 4.6,
     "price": 2999,
-    "desc": "Top-of-the-line GPS-guided robotic mower for large gardens up to 5000 sq meters with advanced connectivity.",
+    "desc": "Top-of-the-line Automower for large gardens up to 5000 sqm with GPS and 4G connectivity.",
     "highlights": [
-      "5000 sqm capacity",
       "GPS navigation",
-      "Cellular connectivity",
-      "Anti-theft GPS tracking",
-      "45% slope"
+      "5000 sqm capacity",
+      "4G connectivity",
+      "Anti-theft",
+      "App control"
     ],
     "height_mm": 290,
     "width_mm": 560,
     "depth_mm": 720,
-    "weight_kg": 13.8,
-    "frame_material": "plastic",
-    "shell_material": "ABS plastic",
+    "weight_kg": 14,
+    "frame_material": "Plastic",
+    "shell_material": "ABS Plastic",
     "ip_rating": "IPX4",
-    "operating_temp_min": 5,
+    "operating_temp_min": 0,
     "operating_temp_max": 40,
     "colors": [
-      "orange",
-      "black"
+      "Black",
+      "Orange"
     ],
     "os": "Proprietary RTOS",
     "chipset": null,
@@ -83117,11 +83120,11 @@
     "storage_type": null,
     "npu_tops": null,
     "battery_type": "Li-ion",
-    "battery_wh": 97,
-    "battery_life": 260,
+    "battery_wh": 59,
+    "battery_life": 145,
     "charge_time": 60,
-    "charge_power_w": 30,
-    "charge_type": "Docking station",
+    "charge_power_w": 100,
+    "charge_type": "Docking Station",
     "wireless_charging": false,
     "auto_charge": true,
     "hot_swap": false,
@@ -83130,7 +83133,8 @@
     "ai_model": null,
     "ai_model_type": null,
     "learning_methods": [
-      "schedule-based"
+      "boundary wire mapping",
+      "schedule learning"
     ],
     "ai_cloud_required": false,
     "ota": true,
@@ -83138,7 +83142,7 @@
     "lidar": false,
     "depth_sensing": false,
     "imu": true,
-    "touch_sensing": true,
+    "touch_sensing": false,
     "wifi": true,
     "bluetooth": true,
     "ros": false,
@@ -83151,12 +83155,15 @@
     "warranty_months": 24,
     "use_cases": [
       "lawn mowing",
-      "large garden maintenance"
+      "large garden maintenance",
+      "residential use"
     ],
     "perf": {
       "area_sqm": 5000,
-      "slope_percent": 45,
-      "noise_db": 58
+      "slope_max_deg": 22,
+      "noise_db": 65,
+      "cut_height_mm_min": 20,
+      "cut_height_mm_max": 60
     }
   },
   {
@@ -83169,37 +83176,36 @@
     "sub": "Robot Lawn Mower",
     "tags": [
       "lawn mower",
-      "robotic mower",
-      "outdoor",
-      "garden",
-      "GPS",
+      "automower",
+      "compact",
+      "husqvarna",
       "mid-range"
     ],
     "fig": "🤖",
     "img": "https://www.husqvarna.com/content/dam/husqvarna/products/automower/315x.jpg",
-    "score": 85,
+    "score": 84,
     "rating": 4.4,
-    "price": 1599,
-    "desc": "Mid-range GPS-guided robotic mower for gardens up to 1600 sq meters with smartphone connectivity.",
+    "price": 1499,
+    "desc": "Mid-range Automower for lawns up to 1600 sqm with GPS-assisted navigation and spot cutting.",
     "highlights": [
-      "1600 sqm capacity",
       "GPS navigation",
-      "Spot mowing",
-      "Anti-theft alarm",
-      "40% slope"
+      "1600 sqm capacity",
+      "Spot cutting",
+      "Anti-theft",
+      "Husqvarna app"
     ],
-    "height_mm": 255,
-    "width_mm": 510,
-    "depth_mm": 640,
-    "weight_kg": 10,
-    "frame_material": "plastic",
-    "shell_material": "ABS plastic",
+    "height_mm": 250,
+    "width_mm": 520,
+    "depth_mm": 620,
+    "weight_kg": 9.4,
+    "frame_material": "Plastic",
+    "shell_material": "ABS Plastic",
     "ip_rating": "IPX4",
-    "operating_temp_min": 5,
+    "operating_temp_min": 0,
     "operating_temp_max": 40,
     "colors": [
-      "orange",
-      "black"
+      "Black",
+      "Orange"
     ],
     "os": "Proprietary RTOS",
     "chipset": null,
@@ -83210,11 +83216,11 @@
     "storage_type": null,
     "npu_tops": null,
     "battery_type": "Li-ion",
-    "battery_wh": 68,
-    "battery_life": 150,
+    "battery_wh": 43,
+    "battery_life": 70,
     "charge_time": 50,
-    "charge_power_w": 25,
-    "charge_type": "Docking station",
+    "charge_power_w": 80,
+    "charge_type": "Docking Station",
     "wireless_charging": false,
     "auto_charge": true,
     "hot_swap": false,
@@ -83223,7 +83229,8 @@
     "ai_model": null,
     "ai_model_type": null,
     "learning_methods": [
-      "schedule-based"
+      "boundary wire mapping",
+      "schedule learning"
     ],
     "ai_cloud_required": false,
     "ota": true,
@@ -83231,7 +83238,7 @@
     "lidar": false,
     "depth_sensing": false,
     "imu": true,
-    "touch_sensing": true,
+    "touch_sensing": false,
     "wifi": true,
     "bluetooth": true,
     "ros": false,
@@ -83244,54 +83251,57 @@
     "warranty_months": 24,
     "use_cases": [
       "lawn mowing",
-      "medium garden maintenance"
+      "mid-size garden maintenance",
+      "residential use"
     ],
     "perf": {
       "area_sqm": 1600,
-      "slope_percent": 40,
-      "noise_db": 58
+      "slope_max_deg": 22,
+      "noise_db": 65,
+      "cut_height_mm_min": 20,
+      "cut_height_mm_max": 60
     }
   },
   {
     "id": "husqvarna-automower-305",
     "name": "Automower 305",
     "brand": "Husqvarna",
-    "year": 2020,
+    "year": 2021,
     "status": "available",
     "cat": "Consumer",
     "sub": "Robot Lawn Mower",
     "tags": [
       "lawn mower",
-      "robotic mower",
-      "outdoor",
-      "small garden",
-      "entry-level"
+      "automower",
+      "husqvarna",
+      "app control",
+      "narrow passages"
     ],
     "fig": "🤖",
     "img": "https://www.husqvarna.com/content/dam/husqvarna/products/automower/305.jpg",
-    "score": 80,
+    "score": 81,
     "rating": 4.3,
     "price": 999,
-    "desc": "Entry-level robotic mower designed for small gardens up to 600 sq meters with simple setup and use.",
+    "desc": "Smart Automower for gardens up to 600 sqm with app connectivity and narrow passage handling.",
     "highlights": [
+      "App control",
       "600 sqm capacity",
-      "Compact design",
-      "Easy installation",
-      "Anti-theft alarm",
-      "40% slope"
+      "Narrow passage handling",
+      "Anti-theft",
+      "Quiet operation"
     ],
-    "height_mm": 245,
+    "height_mm": 240,
     "width_mm": 490,
-    "depth_mm": 600,
-    "weight_kg": 7.7,
-    "frame_material": "plastic",
-    "shell_material": "ABS plastic",
+    "depth_mm": 580,
+    "weight_kg": 8,
+    "frame_material": "Plastic",
+    "shell_material": "ABS Plastic",
     "ip_rating": "IPX4",
-    "operating_temp_min": 5,
+    "operating_temp_min": 0,
     "operating_temp_max": 40,
     "colors": [
-      "orange",
-      "black"
+      "Black",
+      "Orange"
     ],
     "os": "Proprietary RTOS",
     "chipset": null,
@@ -83302,11 +83312,11 @@
     "storage_type": null,
     "npu_tops": null,
     "battery_type": "Li-ion",
-    "battery_wh": 45,
-    "battery_life": 70,
+    "battery_wh": 18,
+    "battery_life": 60,
     "charge_time": 60,
-    "charge_power_w": 18,
-    "charge_type": "Docking station",
+    "charge_power_w": 30,
+    "charge_type": "Docking Station",
     "wireless_charging": false,
     "auto_charge": true,
     "hot_swap": false,
@@ -83315,17 +83325,18 @@
     "ai_model": null,
     "ai_model_type": null,
     "learning_methods": [
-      "schedule-based"
+      "boundary wire mapping",
+      "schedule learning"
     ],
     "ai_cloud_required": false,
-    "ota": false,
+    "ota": true,
     "cameras": null,
     "lidar": false,
     "depth_sensing": false,
     "imu": true,
-    "touch_sensing": true,
-    "wifi": false,
-    "bluetooth": false,
+    "touch_sensing": false,
+    "wifi": true,
+    "bluetooth": true,
     "ros": false,
     "sdk": false,
     "sdk_langs": null,
@@ -83336,12 +83347,15 @@
     "warranty_months": 24,
     "use_cases": [
       "lawn mowing",
-      "small garden maintenance"
+      "small garden",
+      "narrow passage lawns"
     ],
     "perf": {
       "area_sqm": 600,
-      "slope_percent": 40,
-      "noise_db": 58
+      "slope_max_deg": 22,
+      "noise_db": 58,
+      "cut_height_mm_min": 20,
+      "cut_height_mm_max": 50
     }
   },
   {
@@ -83535,43 +83549,42 @@
     "id": "husqvarna-automower-520",
     "name": "Automower 520",
     "brand": "Husqvarna",
-    "year": 2021,
+    "year": 2022,
     "status": "available",
     "cat": "Consumer",
     "sub": "Robot Lawn Mower",
     "tags": [
       "lawn mower",
-      "robotic mower",
-      "outdoor",
-      "large garden",
-      "EPOS",
-      "GPS"
+      "automower",
+      "husqvarna",
+      "epos",
+      "wire-free"
     ],
     "fig": "🤖",
     "img": "https://www.husqvarna.com/content/dam/husqvarna/products/automower/520.jpg",
     "score": 89,
     "rating": 4.5,
-    "price": 2699,
-    "desc": "Systematic GPS robotic mower with EPOS precision navigation for large gardens up to 2200 sq meters.",
+    "price": 2499,
+    "desc": "EPOS-compatible wire-free Automower for up to 5000 sqm with systematic mowing pattern.",
     "highlights": [
-      "2200 sqm capacity",
-      "EPOS precise navigation",
-      "Systematic mowing pattern",
-      "45% slope",
+      "EPOS ready",
+      "Wire-free option",
+      "5000 sqm",
+      "Systematic mowing",
       "App control"
     ],
     "height_mm": 290,
     "width_mm": 560,
     "depth_mm": 720,
     "weight_kg": 14.5,
-    "frame_material": "plastic",
-    "shell_material": "ABS plastic",
+    "frame_material": "Plastic",
+    "shell_material": "ABS Plastic",
     "ip_rating": "IPX4",
-    "operating_temp_min": 5,
+    "operating_temp_min": 0,
     "operating_temp_max": 40,
     "colors": [
-      "orange",
-      "black"
+      "Black",
+      "Orange"
     ],
     "os": "Proprietary RTOS",
     "chipset": null,
@@ -83582,11 +83595,11 @@
     "storage_type": null,
     "npu_tops": null,
     "battery_type": "Li-ion",
-    "battery_wh": 97,
-    "battery_life": 240,
+    "battery_wh": 59,
+    "battery_life": 150,
     "charge_time": 60,
-    "charge_power_w": 30,
-    "charge_type": "Docking station",
+    "charge_power_w": 100,
+    "charge_type": "Docking Station",
     "wireless_charging": false,
     "auto_charge": true,
     "hot_swap": false,
@@ -83595,8 +83608,9 @@
     "ai_model": null,
     "ai_model_type": null,
     "learning_methods": [
-      "schedule-based",
-      "systematic mapping"
+      "EPOS mapping",
+      "boundary wire mapping",
+      "systematic navigation"
     ],
     "ai_cloud_required": false,
     "ota": true,
@@ -83604,7 +83618,7 @@
     "lidar": false,
     "depth_sensing": false,
     "imu": true,
-    "touch_sensing": true,
+    "touch_sensing": false,
     "wifi": true,
     "bluetooth": true,
     "ros": false,
@@ -83617,13 +83631,207 @@
     "warranty_months": 24,
     "use_cases": [
       "lawn mowing",
-      "large garden maintenance",
-      "precise boundary mowing"
+      "large garden",
+      "wire-free installation"
     ],
     "perf": {
-      "area_sqm": 2200,
-      "slope_percent": 45,
-      "noise_db": 58
+      "area_sqm": 5000,
+      "slope_max_deg": 22,
+      "noise_db": 65,
+      "cut_height_mm_min": 20,
+      "cut_height_mm_max": 60
+    }
+  },
+  {
+    "id": "husqvarna-automower-105",
+    "name": "Automower 105",
+    "brand": "Husqvarna",
+    "year": 2020,
+    "status": "available",
+    "cat": "Consumer",
+    "sub": "Robot Lawn Mower",
+    "tags": [
+      "lawn mower",
+      "automower",
+      "entry-level",
+      "husqvarna",
+      "compact"
+    ],
+    "fig": "🤖",
+    "img": "https://www.husqvarna.com/content/dam/husqvarna/products/automower/105.jpg",
+    "score": 78,
+    "rating": 4.2,
+    "price": 699,
+    "desc": "Entry-level Automower for small lawns up to 600 sqm. Simple, quiet, and efficient.",
+    "highlights": [
+      "600 sqm capacity",
+      "Ultra quiet 57 dB",
+      "Anti-theft alarm",
+      "Automatic scheduling",
+      "Low cost"
+    ],
+    "height_mm": 240,
+    "width_mm": 490,
+    "depth_mm": 580,
+    "weight_kg": 7.7,
+    "frame_material": "Plastic",
+    "shell_material": "ABS Plastic",
+    "ip_rating": "IPX4",
+    "operating_temp_min": 0,
+    "operating_temp_max": 40,
+    "colors": [
+      "Black",
+      "Orange"
+    ],
+    "os": "Proprietary RTOS",
+    "chipset": null,
+    "cpu": null,
+    "ram_gb": null,
+    "ram_type": null,
+    "storage_gb": null,
+    "storage_type": null,
+    "npu_tops": null,
+    "battery_type": "Li-ion",
+    "battery_wh": 18,
+    "battery_life": 60,
+    "charge_time": 50,
+    "charge_power_w": 30,
+    "charge_type": "Docking Station",
+    "wireless_charging": false,
+    "auto_charge": true,
+    "hot_swap": false,
+    "quick_release": false,
+    "cycle_life": 500,
+    "ai_model": null,
+    "ai_model_type": null,
+    "learning_methods": [
+      "boundary wire mapping"
+    ],
+    "ai_cloud_required": false,
+    "ota": false,
+    "cameras": null,
+    "lidar": false,
+    "depth_sensing": false,
+    "imu": true,
+    "touch_sensing": false,
+    "wifi": false,
+    "bluetooth": false,
+    "ros": false,
+    "sdk": false,
+    "sdk_langs": null,
+    "api": null,
+    "ce": true,
+    "fcc": true,
+    "rohs": true,
+    "warranty_months": 24,
+    "use_cases": [
+      "lawn mowing",
+      "small garden maintenance",
+      "residential use"
+    ],
+    "perf": {
+      "area_sqm": 600,
+      "slope_max_deg": 25,
+      "noise_db": 57,
+      "cut_height_mm_min": 20,
+      "cut_height_mm_max": 50
+    }
+  },
+  {
+    "id": "husqvarna-automower-415x",
+    "name": "Automower 415X",
+    "brand": "Husqvarna",
+    "year": 2021,
+    "status": "available",
+    "cat": "Consumer",
+    "sub": "Robot Lawn Mower",
+    "tags": [
+      "lawn mower",
+      "automower",
+      "husqvarna",
+      "gps",
+      "mid-large"
+    ],
+    "fig": "🤖",
+    "img": "https://www.husqvarna.com/content/dam/husqvarna/products/automower/415x.jpg",
+    "score": 86,
+    "rating": 4.4,
+    "price": 1799,
+    "desc": "GPS-assisted Automower for gardens up to 1500 sqm with all-terrain capability and app control.",
+    "highlights": [
+      "GPS navigation",
+      "1500 sqm capacity",
+      "All-terrain",
+      "App control",
+      "Anti-theft alarm"
+    ],
+    "height_mm": 270,
+    "width_mm": 540,
+    "depth_mm": 680,
+    "weight_kg": 11.5,
+    "frame_material": "Plastic",
+    "shell_material": "ABS Plastic",
+    "ip_rating": "IPX4",
+    "operating_temp_min": 0,
+    "operating_temp_max": 40,
+    "colors": [
+      "Black",
+      "Orange"
+    ],
+    "os": "Proprietary RTOS",
+    "chipset": null,
+    "cpu": null,
+    "ram_gb": null,
+    "ram_type": null,
+    "storage_gb": null,
+    "storage_type": null,
+    "npu_tops": null,
+    "battery_type": "Li-ion",
+    "battery_wh": 50,
+    "battery_life": 100,
+    "charge_time": 60,
+    "charge_power_w": 80,
+    "charge_type": "Docking Station",
+    "wireless_charging": false,
+    "auto_charge": true,
+    "hot_swap": false,
+    "quick_release": false,
+    "cycle_life": 500,
+    "ai_model": null,
+    "ai_model_type": null,
+    "learning_methods": [
+      "boundary wire mapping",
+      "GPS assisted navigation",
+      "schedule learning"
+    ],
+    "ai_cloud_required": false,
+    "ota": true,
+    "cameras": null,
+    "lidar": false,
+    "depth_sensing": false,
+    "imu": true,
+    "touch_sensing": false,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": false,
+    "sdk": false,
+    "sdk_langs": null,
+    "api": null,
+    "ce": true,
+    "fcc": true,
+    "rohs": true,
+    "warranty_months": 24,
+    "use_cases": [
+      "lawn mowing",
+      "medium garden maintenance",
+      "residential use"
+    ],
+    "perf": {
+      "area_sqm": 1500,
+      "slope_max_deg": 22,
+      "noise_db": 65,
+      "cut_height_mm_min": 20,
+      "cut_height_mm_max": 60
     }
   }
 ]
