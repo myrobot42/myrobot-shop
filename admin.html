@@ -665,21 +665,26 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
           <div class="sec-card">
             <div class="sec-head">🏭 Brand Ingestion — Full GSMArena-style specs</div>
             <div style="font-size:12px;color:var(--mut);margin-bottom:16px;line-height:1.7">Bulk add an entire robot brand with 180+ fields per robot — battery type, CPU, RAM, learning methods, gripper type, IP rating, certifications and more. Uses Claude AI with real manufacturer data.</div>
-            <div class="ingest-grid">
-              <input class="inp" type="text" id="ingest-brand" placeholder="Brand e.g. Roborock">
+            <div class="ingest-grid" style="display:grid;grid-template-columns:1.5fr 1fr 1.5fr 80px;gap:8px;margin-bottom:8px">
+              <input class="inp" type="text" id="ingest-brand" placeholder="Brand e.g. Husqvarna">
               <select class="inp" id="ingest-cat">
-                <option value="Consumer">Consumer / Vacuum</option>
+                <option value="Consumer">Consumer</option>
                 <option value="Humanoid">Humanoid</option>
-                <option value="Industrial">Industrial / Cobot</option>
-                <option value="Drones">Drones / UAV</option>
-                <option value="Service">Service / Delivery</option>
-                <option value="Medical">Medical / Surgical</option>
+                <option value="Industrial">Industrial</option>
+                <option value="Drones">Drones</option>
+                <option value="Service">Service</option>
+                <option value="Medical">Medical</option>
                 <option value="Agricultural">Agricultural</option>
                 <option value="Educational">Educational</option>
-                <option value="Military">Military / Security</option>
+                <option value="Military">Military</option>
+                <option value="Delivery">Delivery</option>
+                <option value="Exoskeletons">Exoskeletons</option>
+                <option value="Research">Research</option>
               </select>
+              <input class="inp" type="text" id="ingest-sub" placeholder="Sub-type (optional) e.g. Robot Lawn Mower">
               <input class="inp" type="number" id="ingest-count" value="20" min="1" max="30" style="text-align:center">
             </div>
+            <div style="font-size:10px;color:var(--mut);margin:-4px 0 10px">💡 Tip: Sub-type helps AI categorize correctly (e.g. "Robot Lawn Mower" not "Vacuum"). Leave blank to let AI choose per product.</div>
             <div style="font-size:11px;color:var(--mut);margin-bottom:8px">Quick ingestion:</div>
             <div class="quick-brand-btns">
               <button class="qbrand" onclick="quickIngest('Roborock','Consumer',10)">🏠 All Roborock</button>
@@ -698,6 +703,21 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
             <button class="save-btn" style="width:100%;padding:13px;font-size:13px" onclick="runIngest()">🏭 Ingest Brand Now</button>
             <div id="ingest-status" style="margin-top:12px;font-size:11px;font-family:'Space Mono',monospace;color:var(--mut);display:none"></div>
             <div id="ingest-results" style="margin-top:10px;display:none"></div>
+          </div>
+
+          <div class="sec-card">
+            <div class="sec-head">📥 Bulk Import JSON — paste-and-deploy</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:12px">
+              Paste a JSON array of robots (or a {"robots":[...]} object). Use this for pre-researched batches when GitHub web edit can't handle the file size.
+            </div>
+            <textarea id="bulk-import-json" placeholder='Paste JSON here — either a raw array [{...}, {...}] or a wrapper object {"robots":[...]}'
+              style="width:100%;min-height:180px;padding:10px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg);color:var(--txt);font-family:'Space Mono',monospace;font-size:11px;resize:vertical"></textarea>
+            <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+              <button class="save-btn" style="flex:1;padding:11px;font-size:12px;background:#3b82f6" onclick="bulkImportValidate()">🔍 Validate</button>
+              <button class="save-btn" style="flex:1;padding:11px;font-size:12px" onclick="bulkImportRun()" id="bulk-import-run-btn" disabled>✅ Import & Deploy</button>
+              <button class="save-btn" style="flex:0 0 auto;padding:11px 18px;font-size:12px;background:var(--mut)" onclick="document.getElementById('bulk-import-json').value=''">Clear</button>
+            </div>
+            <div id="bulk-import-status" style="margin-top:12px;font-size:11px;font-family:'Space Mono',monospace;color:var(--mut);display:none;padding:10px;border-radius:6px"></div>
           </div>
           <div class="sec-card">
             <div class="sec-head">📊 Database Status</div>
@@ -1614,9 +1634,153 @@ function renderIngestStats(){
   ROBOTS.forEach(r=>{const c=r.cat||'Unknown';cats[c]=(cats[c]||0)+1;});
   document.getElementById('ingest-by-cat').innerHTML=Object.entries(cats).map(([c,n])=>`${c}: <strong style="color:var(--acc)">${n}</strong>`).join('<br>');
 }
+// ════════════ BULK IMPORT ════════════
+// Cached parsed robots from last successful validation. Set by validate, consumed by run.
+let _bulkParsed = null;
+
+function _bulkStatus(msg, color){
+  const el = document.getElementById('bulk-import-status');
+  if (!el) return;
+  el.style.display = 'block';
+  el.style.color = color || 'var(--mut)';
+  el.style.background = color === '#16a34a' ? '#dcfce7' : (color === '#dc2626' ? '#fee2e2' : 'var(--bg)');
+  el.style.border = '1px solid ' + (color || 'var(--bdr)');
+  el.innerHTML = msg;
+}
+
+function bulkImportValidate(){
+  const txt = (document.getElementById('bulk-import-json') || {value: ''}).value.trim();
+  const runBtn = document.getElementById('bulk-import-run-btn');
+  if (runBtn) runBtn.disabled = true;
+  _bulkParsed = null;
+  if (!txt){
+    _bulkStatus('⚠️ Paste JSON first.', '#dc2626');
+    return;
+  }
+  let parsed;
+  try {
+    parsed = JSON.parse(txt);
+  } catch (e){
+    _bulkStatus('❌ Invalid JSON: ' + e.message, '#dc2626');
+    return;
+  }
+  // Accept either raw array or {robots: [...]} wrapper
+  let arr;
+  if (Array.isArray(parsed)) arr = parsed;
+  else if (parsed && Array.isArray(parsed.robots)) arr = parsed.robots;
+  else {
+    _bulkStatus('❌ Expected a JSON array, or an object with a "robots" array.', '#dc2626');
+    return;
+  }
+  if (arr.length === 0){
+    _bulkStatus('⚠️ Array is empty — nothing to import.', '#dc2626');
+    return;
+  }
+  // Validate required fields and find dupes
+  const errors = [];
+  const seenIds = new Set();
+  const existingIds = new Set(ROBOTS.map(r => r.id));
+  let newCount = 0, dupeCount = 0;
+  arr.forEach((r, i) => {
+    if (!r || typeof r !== 'object'){ errors.push('Entry ' + i + ': not an object'); return; }
+    if (!r.id){ errors.push('Entry ' + i + ' (' + (r.name || '?') + '): missing id'); return; }
+    if (!r.name){ errors.push('Entry ' + i + ' (' + r.id + '): missing name'); return; }
+    if (!r.brand){ errors.push('Entry ' + i + ' (' + r.id + '): missing brand'); return; }
+    if (!r.cat){ errors.push('Entry ' + i + ' (' + r.id + '): missing cat'); return; }
+    if (seenIds.has(r.id)){ errors.push('Duplicate id in input: ' + r.id); return; }
+    seenIds.add(r.id);
+    if (existingIds.has(r.id)) dupeCount++; else newCount++;
+  });
+  if (errors.length > 5){
+    _bulkStatus('❌ ' + errors.length + ' validation errors. First 5:<br>' + errors.slice(0,5).map(e => '• ' + e).join('<br>'), '#dc2626');
+    return;
+  }
+  if (errors.length > 0){
+    _bulkStatus('❌ Validation errors:<br>' + errors.map(e => '• ' + e).join('<br>'), '#dc2626');
+    return;
+  }
+  // Build a category breakdown
+  const cats = {};
+  const brands = {};
+  arr.forEach(r => {
+    cats[r.cat] = (cats[r.cat]||0) + 1;
+    brands[r.brand] = (brands[r.brand]||0) + 1;
+  });
+  const catSummary = Object.entries(cats).sort((a,b) => b[1]-a[1]).map(([c,n]) => c + ': ' + n).join(', ');
+  const topBrands = Object.entries(brands).sort((a,b) => b[1]-a[1]).slice(0, 5).map(([b,n]) => b + ' (' + n + ')').join(', ');
+  _bulkParsed = arr;
+  if (runBtn) runBtn.disabled = false;
+  _bulkStatus(
+    '✅ Valid! <strong>' + arr.length + '</strong> robots total — <strong>' + newCount + '</strong> new, <strong>' + dupeCount + '</strong> will update existing.<br>' +
+    '<span style="color:var(--mut)">Categories: ' + catSummary + '</span><br>' +
+    '<span style="color:var(--mut)">Top brands: ' + topBrands + '</span><br>' +
+    '<span style="color:var(--mut)">Click "Import & Deploy" to merge and push to GitHub.</span>',
+    '#16a34a'
+  );
+}
+
+async function bulkImportRun(){
+  if (!_bulkParsed){
+    _bulkStatus('⚠️ Validate first.', '#dc2626');
+    return;
+  }
+  const robots = _bulkParsed;
+  if (!confirm('Import ' + robots.length + ' robots into the database and push to GitHub?\n\nThis will merge into your existing ' + ROBOTS.length + ' robots and deploy live.')) return;
+
+  const runBtn = document.getElementById('bulk-import-run-btn');
+  if (runBtn) { runBtn.disabled = true; runBtn.textContent = '⏳ Importing...'; }
+  _bulkStatus('⏳ Merging ' + robots.length + ' robots into database...', 'var(--acc)');
+
+  // Merge: by id, new overwrites old
+  let added = 0, updated = 0;
+  const byId = {};
+  ROBOTS.forEach(r => { byId[r.id] = r; });
+  robots.forEach(r => {
+    // Sanitize: ensure required fields have safe defaults
+    if (!r.fig) r.fig = '🤖';
+    if (!r.tags) r.tags = [];
+    if (!r.img) r.img = '';
+    if (r.score == null) r.score = 75;
+    if (r.rating == null) r.rating = 4.0;
+    if (r.status == null) r.status = 'Active';
+    if (byId[r.id]){
+      // Merge — keep existing image if new is empty
+      Object.assign(byId[r.id], r);
+      if (!r.img && byId[r.id].img) byId[r.id].img = byId[r.id].img;
+      updated++;
+    } else {
+      ROBOTS.push(r);
+      added++;
+    }
+  });
+  // Persist to localStorage immediately
+  try {
+    localStorage.setItem('mrsh_robots', JSON.stringify(ROBOTS));
+  } catch (e) {
+    console.warn('localStorage write failed:', e);
+  }
+  addMsg('📦 Bulk import: ' + added + ' added, ' + updated + ' updated. Now deploying to GitHub...', 'system');
+  addLog('info', 'Bulk import: ' + added + ' added, ' + updated + ' updated');
+
+  // Deploy to GitHub
+  try {
+    await deployNow();
+    _bulkStatus('✅ Imported and deployed! <strong>' + added + '</strong> added, <strong>' + updated + '</strong> updated. Live in ~30s.', '#16a34a');
+    // Clear textarea after success
+    document.getElementById('bulk-import-json').value = '';
+    _bulkParsed = null;
+    renderIngestStats();
+  } catch (e){
+    _bulkStatus('⚠️ Imported locally but deploy failed: ' + e.message + '<br>Click "Deploy site" in the top bar to retry.', '#dc2626');
+  } finally {
+    if (runBtn) { runBtn.disabled = false; runBtn.textContent = '✅ Import & Deploy'; }
+  }
+}
+
 async function runIngest(){
   const brand=document.getElementById('ingest-brand').value.trim();
   const cat=document.getElementById('ingest-cat').value;
+  const subHint=(document.getElementById('ingest-sub')||{value:''}).value.trim();
   const count=parseInt(document.getElementById('ingest-count').value)||20;
   if(!API_KEY){alert('Add your API key in Settings first');return;}
   if(!brand){alert('Enter a brand name');return;}
@@ -1626,7 +1790,7 @@ async function runIngest(){
   status.style.color='var(--acc)';
   status.textContent=`⏳ Researching ${brand} catalog with web search... this takes 30-60 seconds`;
 
-  const systemPrompt=`You are building myrobot.shop — the GSMArena of robots. You have web search. Research ${brand} EXHAUSTIVELY and return their COMPLETE current catalog in the ${cat} category.
+  const systemPrompt=`You are building myrobot.shop — the GSMArena of robots. You have web search. Research ${brand} EXHAUSTIVELY and return their COMPLETE current catalog in the ${cat} category${subHint?` (specifically focus on: ${subHint})`:''}.
 
 CRITICAL — FIND THE WHOLE CATALOG:
 - Visit ${brand}'s main product page using web search
@@ -1648,7 +1812,7 @@ INCLUDE:
 
 CATEGORY STRUCTURE (CRITICAL):
 - "cat" field MUST be EXACTLY "${cat}" — do NOT invent variants
-- "sub" field MUST describe what the PRODUCT actually is:
+- "sub" field MUST describe what the PRODUCT actually is:${subHint?`\n  * IMPORTANT: The user specified sub-type "${subHint}". Use this as the sub-type for ALL returned products unless a product is clearly a different type.`:''}
   * Robot lawn mower → "Robot Lawn Mower" (NOT "Vacuum"!)
   * Robot vacuum → "Robot Vacuum" or "Robot Vacuum & Mop"
   * Pool cleaner → "Pool Cleaner"
@@ -1685,7 +1849,7 @@ perf`;
     const resp=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
       headers:{'Content-Type':'application/json','x-api-key':API_KEY,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:16000,tools:[{type:'web_search_20250305',name:'web_search',max_uses:6}],system:systemPrompt,messages:[{role:'user',content:`Find ALL real ${brand} robots/products in the ${cat} category. Use web search to check their actual current catalog including all product series. Return up to ${count} models — do not stop early. Return valid JSON only.`}]})
+      body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:16000,tools:[{type:'web_search_20250305',name:'web_search',max_uses:6}],system:systemPrompt,messages:[{role:'user',content:`Find ALL real ${brand} ${subHint||'robots/products'} in the ${cat} category. Use web search to check their actual current catalog including all product series. Return up to ${count} models — do not stop early. Return valid JSON only.`}]})
     });
     const data=await resp.json();
     if(data.error)throw new Error(data.error.message);
