@@ -1807,7 +1807,10 @@ function bulkImportValidate(){
       '⚠️ <strong>' + potentialDupes.length + ' potential duplicates detected</strong> (same brand + shared name tokens):<br>' +
       sample + more +
       '<br><br>' +
-      '<label style="display:block;margin-top:8px;color:#92400e"><input type="checkbox" id="bulk-skip-dupes" checked> Skip these on import (recommended — keeps existing entries intact)</label>' +
+      '<div style="margin-top:8px;color:#92400e"><strong>How to handle these:</strong></div>' +
+      '<label style="display:block;margin-top:6px;color:#92400e"><input type="radio" name="bulk-dupe-mode" value="skip" checked> <strong>Skip dupes</strong> — keep existing entries unchanged, don\'t import the new versions</label>' +
+      '<label style="display:block;margin-top:4px;color:#92400e"><input type="radio" name="bulk-dupe-mode" value="merge"> <strong>Smart merge</strong> — fill in missing fields on existing entries from new data (keeps images, existing detail specs intact)</label>' +
+      '<label style="display:block;margin-top:4px;color:#92400e"><input type="radio" name="bulk-dupe-mode" value="add"> <strong>Add anyway</strong> — keep both (creates duplicate pairs, clean up later)</label>' +
       '</div>';
   }
   _bulkStatus(
@@ -1827,29 +1830,53 @@ async function bulkImportRun(){
   }
   let robots = _bulkParsed;
 
-  // Respect the "skip dupes" checkbox shown when potential dupes were detected
-  const skipDupesCheckbox = document.getElementById('bulk-skip-dupes');
-  const skipDupes = skipDupesCheckbox ? skipDupesCheckbox.checked : false;
+  // Get the dupe-handling mode from radio buttons
+  const modeEl = document.querySelector('input[name="bulk-dupe-mode"]:checked');
+  const dupeMode = modeEl ? modeEl.value : 'skip'; // 'skip' | 'merge' | 'add'
+
+  // Build a map of new-robot-id → existing-robot for the potential dupes
+  // (so during the merge loop we can find the existing entry by my new id)
+  const dupeMap = {};
+  _bulkPotentialDupes.forEach(d => { dupeMap[d.newRobot.id] = d.existingRobot; });
+
   let skippedDupes = 0;
-  if (skipDupes && _bulkPotentialDupes.length > 0){
+  if (dupeMode === 'skip' && _bulkPotentialDupes.length > 0){
     const skipIds = new Set(_bulkPotentialDupes.map(d => d.newRobot.id));
     const before = robots.length;
     robots = robots.filter(r => !skipIds.has(r.id));
     skippedDupes = before - robots.length;
   }
 
-  if (!confirm('Import ' + robots.length + ' robots into the database and push to GitHub?' +
-    (skippedDupes > 0 ? '\n\nSkipping ' + skippedDupes + ' potential duplicates (keeping your existing entries).' : '') +
-    '\n\nThis will merge into your existing ' + ROBOTS.length + ' robots and deploy live.')) return;
+  // Sensible defaults: treat 0 / "" / null / [] as "empty" for the smart-merge
+  function _isEmpty(v){
+    if (v === undefined || v === null) return true;
+    if (typeof v === 'string' && v.trim() === '') return true;
+    if (typeof v === 'number' && v === 0) return true; // 0 weight/price/etc. treated as missing
+    if (Array.isArray(v) && v.length === 0) return true;
+    if (typeof v === 'object' && Object.keys(v).length === 0) return true;
+    return false;
+  }
+  // Fields we never overwrite — these are user/worker-curated even when "empty" looks set
+  const NEVER_OVERWRITE = new Set(['img', 'id']);
+
+  const confirmMsg =
+    'Import ' + robots.length + ' robots and push to GitHub?\n\n' +
+    'Mode: ' + (
+      dupeMode === 'skip' ? 'Skip ' + skippedDupes + ' potential duplicates' :
+      dupeMode === 'merge' ? 'Smart-merge ' + _bulkPotentialDupes.length + ' potential duplicates (preserve images & existing data)' :
+      'Add all entries (may create duplicate pairs)'
+    ) +
+    '\n\nThis will deploy live.';
+  if (!confirm(confirmMsg)) return;
 
   const runBtn = document.getElementById('bulk-import-run-btn');
   if (runBtn) { runBtn.disabled = true; runBtn.textContent = '⏳ Importing...'; }
   _bulkStatus('⏳ Merging ' + robots.length + ' robots into database...', 'var(--acc)');
 
-  // Merge: by id, new overwrites old
-  let added = 0, updated = 0;
+  let added = 0, updated = 0, smartMerged = 0;
   const byId = {};
   ROBOTS.forEach(r => { byId[r.id] = r; });
+
   robots.forEach(r => {
     // Sanitize: ensure required fields have safe defaults
     if (!r.fig) r.fig = '🤖';
@@ -1858,15 +1885,49 @@ async function bulkImportRun(){
     if (r.score == null) r.score = 75;
     if (r.rating == null) r.rating = 4.0;
     if (r.status == null) r.status = 'Active';
+
+    // Path 1: Exact id match → straight update (existing behavior, unchanged)
     if (byId[r.id]){
-      // Merge — keep existing image if new is empty
-      Object.assign(byId[r.id], r);
-      if (!r.img && byId[r.id].img) byId[r.id].img = byId[r.id].img;
+      const target = byId[r.id];
+      // Preserve image if existing has one and new is empty
+      const preservedImg = target.img && !r.img ? target.img : (r.img || target.img || '');
+      Object.assign(target, r);
+      target.img = preservedImg;
       updated++;
-    } else {
-      ROBOTS.push(r);
-      added++;
+      return;
     }
+
+    // Path 2: Potential dupe AND mode is 'merge' → smart-merge into existing entry
+    if (dupeMode === 'merge' && dupeMap[r.id]){
+      const target = dupeMap[r.id];
+      let fieldsChanged = 0;
+      for (const key of Object.keys(r)){
+        if (NEVER_OVERWRITE.has(key)) continue;
+        // Only overwrite if new has data AND (existing is empty OR new is more verbose for strings)
+        if (_isEmpty(r[key])) continue;
+        if (_isEmpty(target[key])){
+          target[key] = r[key];
+          fieldsChanged++;
+        } else if (typeof r[key] === 'string' && typeof target[key] === 'string' && r[key].length > target[key].length * 1.3){
+          // Significantly longer string → likely better description
+          target[key] = r[key];
+          fieldsChanged++;
+        } else if (Array.isArray(r[key]) && Array.isArray(target[key])){
+          // Merge tags/highlights — union, no duplicates
+          const merged = Array.from(new Set([...target[key], ...r[key]]));
+          if (merged.length > target[key].length){
+            target[key] = merged;
+            fieldsChanged++;
+          }
+        }
+      }
+      smartMerged++;
+      return;
+    }
+
+    // Path 3: New entry (or mode is 'add' for a dupe) → append
+    ROBOTS.push(r);
+    added++;
   });
   // Persist to localStorage immediately
   try {
@@ -1874,13 +1935,14 @@ async function bulkImportRun(){
   } catch (e) {
     console.warn('localStorage write failed:', e);
   }
-  addMsg('📦 Bulk import: ' + added + ' added, ' + updated + ' updated. Now deploying to GitHub...', 'system');
-  addLog('info', 'Bulk import: ' + added + ' added, ' + updated + ' updated');
+  const summary = added + ' added, ' + updated + ' updated' + (smartMerged > 0 ? ', ' + smartMerged + ' smart-merged' : '') + (skippedDupes > 0 ? ', ' + skippedDupes + ' skipped' : '');
+  addMsg('📦 Bulk import: ' + summary + '. Now deploying to GitHub...', 'system');
+  addLog('info', 'Bulk import: ' + summary);
 
   // Deploy to GitHub
   try {
     await deployNow();
-    _bulkStatus('✅ Imported and deployed! <strong>' + added + '</strong> added, <strong>' + updated + '</strong> updated' + (skippedDupes > 0 ? ', <strong>' + skippedDupes + '</strong> skipped (potential dupes)' : '') + '. Live in ~30s.', '#16a34a');
+    _bulkStatus('✅ Imported and deployed! <strong>' + added + '</strong> added, <strong>' + updated + '</strong> updated' + (smartMerged > 0 ? ', <strong>' + smartMerged + '</strong> smart-merged (existing entries enriched, images preserved)' : '') + (skippedDupes > 0 ? ', <strong>' + skippedDupes + '</strong> skipped (potential dupes)' : '') + '. Live in ~30s.', '#16a34a');
     // Clear textarea after success
     document.getElementById('bulk-import-json').value = '';
     _bulkParsed = null;
