@@ -1166,11 +1166,11 @@ function logout(){
 }
 
 function ingestBrand() {
-  const brand = prompt('Brand name to ingest (e.g. Roborock, DJI, Universal Robots):');
+  const brand = prompt('Brand name to ingest (e.g. Husqvarna, Mammotion, Segway Navimow):');
   if (!brand) return;
   const cat = prompt('Category (Consumer/Industrial/Humanoid/Drones/Medical/Agricultural/Service):') || 'Consumer';
-  const count = parseInt(prompt('How many models? (5-15 recommended):') || '10');
-  runBrandIngestion(brand, cat, Math.min(count, 15));
+  const count = parseInt(prompt('Max models to find? (15-30 for major brands, 5-10 for niche):') || '20');
+  runBrandIngestion(brand, cat, Math.min(count, 30));
 }
 
 async function runBrandIngestion(brand, category, count) {
@@ -1184,7 +1184,16 @@ async function runBrandIngestion(brand, category, count) {
   try {
     const existingIds = ROBOTS.map(r => r.id);
     
-    const prompt = `You are a robot database expert. Generate exactly ${count} real robots made by ${brand} in the ${category} category.
+    const prompt = `You are a robot database expert with access to web search. Your task: research ${brand} in the ${category} category and return ALL their CURRENT and RECENT real products (released 2020 or later, still relevant in 2026).
+
+CRITICAL INSTRUCTIONS:
+- Use web search to find the actual current catalog from ${brand}'s website
+- Return between 1 and ${count} models — return as many REAL models as you find, do not invent or fill quota
+- Include all current variants (e.g. base, X, X+, Pro, AWD, EPOS suffixes count as separate models)
+- Include recent generations (e.g. LUBA 1, LUBA 2, LUBA 3 are all separate entries)
+- For each product, find: model name, release year, current MSRP, key specs
+- If unsure about a spec, leave that field at 0 or empty string — do NOT invent values
+- Skip discontinued products unless they are still widely sold (e.g. on Amazon)
 
 Return ONLY a valid JSON array. No explanation, no markdown, just the raw JSON array.
 
@@ -1194,7 +1203,7 @@ Each robot must have these fields:
   "name": "Full Model Name",
   "brand": "${brand}",
   "cat": "${category}",
-  "sub": "specific sub-type (e.g. Vacuum Only, Cobot, Bipedal, Surgical)",
+  "sub": "specific sub-type (e.g. Robot Lawn Mower, Robot Vacuum, Cobot, Bipedal, Surgical)",
   "tags": ["tag1","tag2","tag3"],
   "fig": "🤖",
   "img": "",
@@ -1259,7 +1268,8 @@ Use real accurate data for ${brand}. Fill in as many fields as possible.`;
       },
       body: JSON.stringify({
         model: 'claude-sonnet-4-6',
-        max_tokens: 6000,
+        max_tokens: 12000,
+        tools: [{type: 'web_search_20250305', name: 'web_search', max_uses: 5}],
         messages: [{ role: 'user', content: prompt }]
       })
     });
