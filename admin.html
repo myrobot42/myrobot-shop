@@ -1637,6 +1637,7 @@ function renderIngestStats(){
 // ════════════ BULK IMPORT ════════════
 // Cached parsed robots from last successful validation. Set by validate, consumed by run.
 let _bulkParsed = null;
+let _bulkPotentialDupes = [];
 
 function _bulkStatus(msg, color){
   const el = document.getElementById('bulk-import-status');
@@ -1653,6 +1654,7 @@ function bulkImportValidate(){
   const runBtn = document.getElementById('bulk-import-run-btn');
   if (runBtn) runBtn.disabled = true;
   _bulkParsed = null;
+  _bulkPotentialDupes = [];
   if (!txt){
     _bulkStatus('⚠️ Paste JSON first.', '#dc2626');
     return;
@@ -1708,13 +1710,74 @@ function bulkImportValidate(){
   });
   const catSummary = Object.entries(cats).sort((a,b) => b[1]-a[1]).map(([c,n]) => c + ': ' + n).join(', ');
   const topBrands = Object.entries(brands).sort((a,b) => b[1]-a[1]).slice(0, 5).map(([b,n]) => b + ' (' + n + ')').join(', ');
+
+  // ════ Smart duplicate detection — find potential matches by brand + name similarity ════
+  // Goes BEYOND exact-id matching: catches "Tesla Optimus" vs "Optimus Gen 2" cases.
+  function _bulkNormName(s){
+    return String(s||'').toLowerCase().replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
+  }
+  function _bulkNormBrand(s){
+    return String(s||'').toLowerCase().replace(/[^a-z0-9]/g, '');
+  }
+  // Key signal: any non-trivial token (≥4 chars, alphanumeric) present in BOTH names
+  // means they're likely about the same product line. Filter out filler words.
+  const FILLER = new Set(['robot','robotics','humanoid','industrial','consumer','model','version','gen','generation','series']);
+  function _bulkSignificantTokens(name){
+    const norm = _bulkNormName(name);
+    return norm.split(' ').filter(t => t.length >= 4 && !FILLER.has(t) && !/^\d+$/.test(t));
+  }
+  // Pre-index existing robots by normalized brand for fast lookup
+  const _existByBrand = {};
+  for (const r of ROBOTS){
+    const nb = _bulkNormBrand(r.brand);
+    if (!nb) continue;
+    if (!_existByBrand[nb]) _existByBrand[nb] = [];
+    _existByBrand[nb].push(r);
+  }
+  const potentialDupes = []; // [{newRobot, existingRobot, reason}]
+  arr.forEach(newR => {
+    if (existingIds.has(newR.id)) return; // exact id match handled separately
+    const nb = _bulkNormBrand(newR.brand);
+    const candidates = _existByBrand[nb] || [];
+    if (candidates.length === 0) return;
+    const newTokens = new Set(_bulkSignificantTokens(newR.name));
+    if (newTokens.size === 0) return;
+    for (const ex of candidates){
+      const exTokens = new Set(_bulkSignificantTokens(ex.name));
+      if (exTokens.size === 0) continue;
+      // Any shared significant token = potential dupe
+      let shared = null;
+      for (const t of newTokens){ if (exTokens.has(t)){ shared = t; break; } }
+      if (shared){
+        potentialDupes.push({newRobot: newR, existingRobot: ex, reason: 'shares "' + shared + '"'});
+        break; // one match per new entry is enough to flag
+      }
+    }
+  });
+
   _bulkParsed = arr;
+  _bulkPotentialDupes = potentialDupes; // stored for import-time handling
   if (runBtn) runBtn.disabled = false;
+  let dupeWarning = '';
+  if (potentialDupes.length > 0){
+    const sample = potentialDupes.slice(0, 8).map(d =>
+      '• <strong>' + d.newRobot.brand + ' ' + d.newRobot.name + '</strong> ↔ existing <em>' + d.existingRobot.name + '</em> <span style="color:var(--mut)">(' + d.reason + ')</span>'
+    ).join('<br>');
+    const more = potentialDupes.length > 8 ? '<br><span style="color:var(--mut)">... and ' + (potentialDupes.length - 8) + ' more</span>' : '';
+    dupeWarning =
+      '<div style="margin-top:10px;padding:8px;background:#fef3c7;border:1px solid #f59e0b;border-radius:4px;color:#92400e">' +
+      '⚠️ <strong>' + potentialDupes.length + ' potential duplicates detected</strong> (same brand + shared name tokens):<br>' +
+      sample + more +
+      '<br><br>' +
+      '<label style="display:block;margin-top:8px;color:#92400e"><input type="checkbox" id="bulk-skip-dupes" checked> Skip these on import (recommended — keeps existing entries intact)</label>' +
+      '</div>';
+  }
   _bulkStatus(
-    '✅ Valid! <strong>' + arr.length + '</strong> robots total — <strong>' + newCount + '</strong> new, <strong>' + dupeCount + '</strong> will update existing.<br>' +
+    '✅ Valid! <strong>' + arr.length + '</strong> robots total — <strong>' + newCount + '</strong> new id, <strong>' + dupeCount + '</strong> exact-id matches will update.<br>' +
     '<span style="color:var(--mut)">Categories: ' + catSummary + '</span><br>' +
-    '<span style="color:var(--mut)">Top brands: ' + topBrands + '</span><br>' +
-    '<span style="color:var(--mut)">Click "Import & Deploy" to merge and push to GitHub.</span>',
+    '<span style="color:var(--mut)">Top brands: ' + topBrands + '</span>' +
+    dupeWarning +
+    '<br><span style="color:var(--mut)">Click "Import & Deploy" to merge and push to GitHub.</span>',
     '#16a34a'
   );
 }
@@ -1724,8 +1787,22 @@ async function bulkImportRun(){
     _bulkStatus('⚠️ Validate first.', '#dc2626');
     return;
   }
-  const robots = _bulkParsed;
-  if (!confirm('Import ' + robots.length + ' robots into the database and push to GitHub?\n\nThis will merge into your existing ' + ROBOTS.length + ' robots and deploy live.')) return;
+  let robots = _bulkParsed;
+
+  // Respect the "skip dupes" checkbox shown when potential dupes were detected
+  const skipDupesCheckbox = document.getElementById('bulk-skip-dupes');
+  const skipDupes = skipDupesCheckbox ? skipDupesCheckbox.checked : false;
+  let skippedDupes = 0;
+  if (skipDupes && _bulkPotentialDupes.length > 0){
+    const skipIds = new Set(_bulkPotentialDupes.map(d => d.newRobot.id));
+    const before = robots.length;
+    robots = robots.filter(r => !skipIds.has(r.id));
+    skippedDupes = before - robots.length;
+  }
+
+  if (!confirm('Import ' + robots.length + ' robots into the database and push to GitHub?' +
+    (skippedDupes > 0 ? '\n\nSkipping ' + skippedDupes + ' potential duplicates (keeping your existing entries).' : '') +
+    '\n\nThis will merge into your existing ' + ROBOTS.length + ' robots and deploy live.')) return;
 
   const runBtn = document.getElementById('bulk-import-run-btn');
   if (runBtn) { runBtn.disabled = true; runBtn.textContent = '⏳ Importing...'; }
@@ -1765,10 +1842,11 @@ async function bulkImportRun(){
   // Deploy to GitHub
   try {
     await deployNow();
-    _bulkStatus('✅ Imported and deployed! <strong>' + added + '</strong> added, <strong>' + updated + '</strong> updated. Live in ~30s.', '#16a34a');
+    _bulkStatus('✅ Imported and deployed! <strong>' + added + '</strong> added, <strong>' + updated + '</strong> updated' + (skippedDupes > 0 ? ', <strong>' + skippedDupes + '</strong> skipped (potential dupes)' : '') + '. Live in ~30s.', '#16a34a');
     // Clear textarea after success
     document.getElementById('bulk-import-json').value = '';
     _bulkParsed = null;
+    _bulkPotentialDupes = [];
     renderIngestStats();
   } catch (e){
     _bulkStatus('⚠️ Imported locally but deploy failed: ' + e.message + '<br>Click "Deploy site" in the top bar to retry.', '#dc2626');
