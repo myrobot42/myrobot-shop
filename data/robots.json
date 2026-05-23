@@ -34676,7 +34676,20 @@
       "autonomous",
       "ocean",
       "surveillance",
-      "long-range"
+      "long-range",
+      "wind-solar",
+      "long-endurance",
+      "ocean-data",
+      "NOAA",
+      "360-day",
+      "coastal-mapping",
+      "mid-size",
+      "bathymetric",
+      "2022-launch",
+      "ocean-mapping",
+      "large",
+      "deep-water",
+      "seafloor"
     ],
     "fig": 8.2,
     "img": "",
@@ -34688,7 +34701,20 @@
       "23-foot autonomous sailboat",
       "Solar powered",
       "Up to 12 months deployment",
-      "Real-time data transmission"
+      "Real-time data transmission",
+      "360-day endurance",
+      "Wind + solar",
+      "NOAA missions",
+      "Carbon-zero ops",
+      "Ocean science",
+      "Coastal mapping",
+      "Bathymetric surveys",
+      "30-day missions",
+      "NOAA + commercial",
+      "22m largest",
+      "7,000m seafloor mapping",
+      "Deep-water survey",
+      "Bathymetric flagship"
     ],
     "height_mm": 7010,
     "width_mm": 2300,
@@ -34760,7 +34786,8 @@
       "range_nm": "Unlimited",
       "endurance_days": 365
     },
-    "origin": "USA"
+    "origin": "USA",
+    "cellular": "5G"
   },
   {
     "id": "sd-1002",
@@ -34774,7 +34801,12 @@
       "mapping",
       "bathymetry",
       "reconnaissance",
-      "deep-sea"
+      "deep-sea",
+      "military",
+      "sub-hunting",
+      "quiet",
+      "2025-launch",
+      "defense"
     ],
     "fig": 7.8,
     "img": "",
@@ -34786,7 +34818,11 @@
       "65-foot surveyor class",
       "Deep sea mapping",
       "Multi-beam sonar",
-      "Satellite communications"
+      "Satellite communications",
+      "Sub-hunting",
+      "Super-quiet",
+      "Long-range",
+      "Military adaptation"
     ],
     "height_mm": 19800,
     "width_mm": 6400,
@@ -34857,7 +34893,8 @@
       "range_nm": "Unlimited",
       "endurance_days": 180
     },
-    "origin": "USA"
+    "origin": "USA",
+    "cellular": "5G"
   },
   {
     "id": "sd-1003",
@@ -96539,5 +96576,1069 @@
     "wifi": true,
     "bluetooth": true,
     "cellular": "5G"
+  },
+  {
+    "id": "blue-robotics-bluerov2-2016",
+    "name": "BlueROV2",
+    "brand": "Blue Robotics",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "open-source",
+      "modular",
+      "raspberry-pi",
+      "education",
+      "inspection",
+      "100m"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 89,
+    "rating": 4.7,
+    "price": 4500,
+    "desc": "Most popular sub-$10K ROV. Open-source. 6 or 8 thrusters. Raspberry Pi-based. 100m depth (300m extended).",
+    "highlights": [
+      "Open-source",
+      "Sub-$10K",
+      "Modular payloads",
+      "100m depth",
+      "Thousands deployed"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 2
+    },
+    "year": 2016,
+    "status": "Active",
+    "weight_kg": 12,
+    "battery_life": 120,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "cameras": 1,
+    "wifi": true,
+    "bluetooth": false,
+    "sdk": true,
+    "ros": true
+  },
+  {
+    "id": "blue-robotics-bluerov3-2024",
+    "name": "BlueROV3",
+    "brand": "Blue Robotics",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "open-source",
+      "modular",
+      "2024-launch",
+      "upgraded",
+      "navigator"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 91,
+    "rating": 4.7,
+    "price": 6500,
+    "desc": "Next-gen BlueROV with Navigator flight controller, BlueOS. Improved sensors, better autonomy. 2024 launch.",
+    "highlights": [
+      "Navigator FC",
+      "BlueOS platform",
+      "Improved sensors",
+      "Better autonomy"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 3
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 13,
+    "battery_life": 150,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "cameras": 1,
+    "wifi": true,
+    "bluetooth": false,
+    "sdk": true,
+    "ros": true
+  },
+  {
+    "id": "saab-seaeye-falcon-2010",
+    "name": "Seaeye Falcon",
+    "brand": "Saab Seaeye",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "portable",
+      "electric",
+      "professional",
+      "work-class",
+      "offshore"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 90,
+    "rating": 4.7,
+    "price": 150000,
+    "desc": "World's most popular professional portable electric ROV. UCO has 33-unit fleet. Offshore wind, defense, oil/gas.",
+    "highlights": [
+      "Industry-standard",
+      "Portable professional",
+      "Offshore wind",
+      "300m depth",
+      "Japan/UK fleets"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 10
+    },
+    "year": 2010,
+    "status": "Active",
+    "weight_kg": 60,
+    "ip_rating": "IPX8",
+    "origin": "UK/Sweden",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "saab-seaeye-lynx-2014",
+    "name": "Seaeye Lynx",
+    "brand": "Saab Seaeye",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "deep-water",
+      "1500m",
+      "work-class",
+      "heritage-survey"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Deep-water electric ROV (1500m). Used to survey 18th-century galleon San José.",
+    "highlights": [
+      "1500m depth",
+      "Heritage surveys",
+      "Work-class",
+      "Famous San José survey"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 12
+    },
+    "year": 2014,
+    "status": "Active",
+    "weight_kg": 150,
+    "ip_rating": "IPX8",
+    "origin": "UK/Sweden",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "saab-seaeye-sabertooth-2012",
+    "name": "Seaeye Sabertooth",
+    "brand": "Saab Seaeye",
+    "cat": "Aquatic",
+    "sub": "Hybrid AUV/ROV",
+    "tags": [
+      "hybrid",
+      "auv-rov",
+      "deep-water",
+      "3000m",
+      "360-hover"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 91,
+    "rating": 4.7,
+    "price": 0,
+    "desc": "Hybrid AUV/ROV. 360° hovering. Single hull (1200m) or double (3000m). Autonomous inspection + maintenance.",
+    "highlights": [
+      "Hybrid AUV/ROV",
+      "360° hovering",
+      "Up to 3000m depth",
+      "Autonomous inspection"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 50
+    },
+    "year": 2012,
+    "status": "Active",
+    "weight_kg": 1200,
+    "ip_rating": "IPX8",
+    "origin": "UK/Sweden",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "saab-seaeye-ewrov-2024",
+    "name": "eWROV",
+    "brand": "Saab Seaeye",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "work-class",
+      "electric",
+      "2024-launch",
+      "ocean-infinity",
+      "heavy-power"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 92,
+    "rating": 4.7,
+    "price": 0,
+    "desc": "Full-size electric work-class ROV equivalent to 250HP hydraulic. Ocean Infinity launch customer. Offshore energy.",
+    "highlights": [
+      "First electric work-class",
+      "250HP equivalent",
+      "Ocean Infinity customer",
+      "Lower lifetime cost"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 250
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 3500,
+    "ip_rating": "IPX8",
+    "origin": "UK/Sweden",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": false,
+    "cellular": "4G"
+  },
+  {
+    "id": "anduril-dive-ld-2022",
+    "name": "Dive-LD",
+    "brand": "Anduril",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "military",
+      "large-displacement",
+      "autonomous",
+      "ISR",
+      "navy"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 91,
+    "rating": 4.7,
+    "price": 0,
+    "desc": "Large-displacement AUV for military undersea ISR. Long endurance. US Navy programs.",
+    "highlights": [
+      "Large-displacement",
+      "Military ISR",
+      "Long endurance",
+      "Navy programs"
+    ],
+    "perf": {
+      "speed_ms": 3,
+      "payload_kg": 500
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 5000,
+    "origin": "USA",
+    "cameras": 2,
+    "wifi": false,
+    "bluetooth": false
+  },
+  {
+    "id": "anduril-dive-xl-2024",
+    "name": "Dive-XL",
+    "brand": "Anduril",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "military",
+      "extra-large",
+      "mothership",
+      "2024-launch",
+      "navy-camp",
+      "modular"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 94,
+    "rating": 4.8,
+    "price": 0,
+    "desc": "Extra-large AUV — underwater mothership. Launches Copperhead AUVs + Seabed Sentry. US Navy CAMP project.",
+    "highlights": [
+      "Underwater mothership",
+      "Launches smaller AUVs",
+      "Navy CAMP project",
+      "Modular payloads"
+    ],
+    "perf": {
+      "speed_ms": 3,
+      "payload_kg": 1500
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 15000,
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": false,
+    "bluetooth": false
+  },
+  {
+    "id": "anduril-copperhead-2024",
+    "name": "Copperhead",
+    "brand": "Anduril",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "military",
+      "small-AUV",
+      "torpedo-launched",
+      "mothership-launched",
+      "2024-launch"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Small launched-from-Dive-XL AUV. Torpedo-style. Multi-mission.",
+    "highlights": [
+      "Launched from Dive-XL",
+      "Compact form",
+      "Torpedo-style",
+      "Multi-mission"
+    ],
+    "perf": {
+      "speed_ms": 5,
+      "payload_kg": 20
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 150,
+    "origin": "USA",
+    "wifi": false,
+    "bluetooth": false
+  },
+  {
+    "id": "anduril-seabed-sentry-2024",
+    "name": "Seabed Sentry",
+    "brand": "Anduril",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "military",
+      "monitoring",
+      "seabed",
+      "2024-launch",
+      "persistent"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 87,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Seabed-residency monitoring AUV. Persistent undersea surveillance. Launches from Dive-XL.",
+    "highlights": [
+      "Seabed residency",
+      "Persistent monitoring",
+      "Launches from Dive-XL",
+      "Naval surveillance"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 50
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 300,
+    "origin": "USA",
+    "wifi": false,
+    "bluetooth": false
+  },
+  {
+    "id": "anduril-bluewhale-2024",
+    "name": "Blue Whale (Kraken)",
+    "brand": "Anduril",
+    "cat": "Aquatic",
+    "sub": "USV",
+    "tags": [
+      "military",
+      "surface-vessel",
+      "kraken-partnership",
+      "navy-hybrid-fleet"
+    ],
+    "fig": "⛵",
+    "img": "",
+    "score": 90,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Anduril/Kraken partnership. Long-range high-performance USV. Modular payloads. US Navy hybrid fleet.",
+    "highlights": [
+      "Anduril/Kraken",
+      "Modular payloads",
+      "Navy hybrid fleet",
+      "Long-range USV"
+    ],
+    "perf": {
+      "speed_ms": 13,
+      "payload_kg": 1000
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 5000,
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "boxfish-auv-2020",
+    "name": "Boxfish AUV",
+    "brand": "Boxfish Robotics",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "hovering",
+      "tetherless",
+      "marine-science",
+      "6-DOF",
+      "new-zealand"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Tetherless hovering AUV. 6 degrees of freedom. NZ-engineered. Marine science + environmental monitoring.",
+    "highlights": [
+      "Tetherless",
+      "6-DOF hovering",
+      "Marine science",
+      "NZ-engineered"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 15
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 75,
+    "ip_rating": "IPX8",
+    "origin": "New Zealand",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "boxfish-luna-rov-2023",
+    "name": "Luna ROV",
+    "brand": "Boxfish Robotics",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "live-streaming",
+      "exploration",
+      "freshwater",
+      "real-time"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Live underwater exploration ROV. Real-time observation. Designed for live-streamed scientific exploration.",
+    "highlights": [
+      "Live streaming",
+      "Real-time observation",
+      "Scientific exploration",
+      "Freshwater capable"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 5
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 40,
+    "ip_rating": "IPX8",
+    "origin": "New Zealand",
+    "cameras": 3,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "mbari-mola-auv-2024",
+    "name": "MOLA AUV",
+    "brand": "MBARI",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "research",
+      "portable",
+      "arctic",
+      "sea-ice",
+      "2024-launch",
+      "high-resolution-mapping"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 87,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Portable research AUV. Deployed under 2m Arctic sea ice for high-res mapping. MBARI CoMPAS Lab.",
+    "highlights": [
+      "Arctic-capable",
+      "Portable",
+      "Under-ice mapping",
+      "Research-grade"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 20
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 120,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "oceanserver-iver4-2020",
+    "name": "Iver4",
+    "brand": "L3Harris OceanServer",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "compact",
+      "portable",
+      "navy",
+      "hydrographic",
+      "survey"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Compact portable AUV. US Navy hydrographic surveys. Commercial bathymetric mapping.",
+    "highlights": [
+      "Compact portable",
+      "Navy hydrographic",
+      "Commercial mapping",
+      "Multiple sensors"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 15
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 50,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "cameras": 1,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "teledyne-gavia-2018",
+    "name": "Gavia",
+    "brand": "Teledyne Marine",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "modular",
+      "oceanographic",
+      "sensor",
+      "sub-100kg"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Modular AUV for oceanographic surveys. Customizable sensor payload. Sub-100kg.",
+    "highlights": [
+      "Modular sensors",
+      "Oceanographic",
+      "Sub-100kg",
+      "Customizable"
+    ],
+    "perf": {
+      "speed_ms": 2.5,
+      "payload_kg": 20
+    },
+    "year": 2018,
+    "status": "Active",
+    "weight_kg": 70,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "cameras": 1,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "teledyne-slocum-glider-2010",
+    "name": "Slocum Glider",
+    "brand": "Teledyne Marine",
+    "cat": "Aquatic",
+    "sub": "Underwater Glider",
+    "tags": [
+      "glider",
+      "long-endurance",
+      "buoyancy-drive",
+      "ocean-research",
+      "12-month"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 88,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Underwater glider. Buoyancy-driven (no propeller). Up to 12-month endurance. Ocean climate research.",
+    "highlights": [
+      "Buoyancy-driven",
+      "12-month endurance",
+      "Climate research",
+      "Industry-standard glider"
+    ],
+    "perf": {
+      "speed_ms": 0.25,
+      "payload_kg": 5
+    },
+    "year": 2010,
+    "status": "Active",
+    "weight_kg": 54,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "liquid-robotics-wave-glider-2009",
+    "name": "Wave Glider",
+    "brand": "Liquid Robotics (Boeing)",
+    "cat": "Aquatic",
+    "sub": "USV",
+    "tags": [
+      "wave-powered",
+      "surface-glider",
+      "persistent",
+      "boeing-owned",
+      "ocean-data"
+    ],
+    "fig": "⛵",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Wave-powered surface glider. Boeing subsidiary. Persistent ocean monitoring. Months at sea.",
+    "highlights": [
+      "Wave-powered",
+      "Boeing subsidiary",
+      "Months at sea",
+      "Persistent monitoring"
+    ],
+    "perf": {
+      "speed_ms": 0.7,
+      "payload_kg": 45
+    },
+    "year": 2009,
+    "status": "Active",
+    "weight_kg": 90,
+    "origin": "USA",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "kongsberg-hugin-superior-2019",
+    "name": "HUGIN Superior",
+    "brand": "Kongsberg",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "commercial",
+      "norwegian",
+      "oil-gas",
+      "deep-water",
+      "6000m"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 92,
+    "rating": 4.7,
+    "price": 0,
+    "desc": "Premier commercial AUV for oil/gas, hydrography. Up to 6,000m depth. Norwegian-engineered.",
+    "highlights": [
+      "Up to 6,000m",
+      "Oil/gas standard",
+      "Norwegian made",
+      "Premier commercial AUV"
+    ],
+    "perf": {
+      "speed_ms": 2.5,
+      "payload_kg": 200
+    },
+    "year": 2019,
+    "status": "Active",
+    "weight_kg": 2000,
+    "ip_rating": "IPX8",
+    "origin": "Norway",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "kongsberg-remus-100-2010",
+    "name": "REMUS 100",
+    "brand": "Kongsberg (HII)",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "military",
+      "navy-standard",
+      "mine-countermeasures",
+      "portable",
+      "100m"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Navy standard AUV. Mine countermeasures, hydrographic surveys. 100m depth. Man-portable.",
+    "highlights": [
+      "Navy standard",
+      "Mine countermeasures",
+      "Man-portable",
+      "100m depth"
+    ],
+    "perf": {
+      "speed_ms": 2.5,
+      "payload_kg": 15
+    },
+    "year": 2010,
+    "status": "Active",
+    "weight_kg": 80,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "kongsberg-remus-6000-2014",
+    "name": "REMUS 6000",
+    "brand": "Kongsberg (HII)",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "deep-water",
+      "6000m",
+      "commercial",
+      "famous-air-france",
+      "titanic"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 92,
+    "rating": 4.7,
+    "price": 0,
+    "desc": "Famous deep AUV — found Air France 447 wreckage, surveyed Titanic. 6,000m depth.",
+    "highlights": [
+      "Found AF 447 wreckage",
+      "Surveyed Titanic",
+      "6,000m depth",
+      "Famous deep AUV"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 50
+    },
+    "year": 2014,
+    "status": "Active",
+    "weight_kg": 850,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "deeptrekker-revolution-2023",
+    "name": "Revolution",
+    "brand": "Deep Trekker",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "compact",
+      "portable",
+      "inspection",
+      "battery-internal",
+      "305m"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 18000,
+    "desc": "Compact battery-internal ROV. 305m depth. Inspection-grade. No surface tether needed for power.",
+    "highlights": [
+      "Internal battery",
+      "305m depth",
+      "Compact portable",
+      "No power tether"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 5
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 28,
+    "ip_rating": "IPX8",
+    "origin": "Canada",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "qysea-fifish-v6-expert-2024",
+    "name": "FIFISH V6 Expert",
+    "brand": "QYSEA",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "consumer",
+      "prosumer",
+      "4k-camera",
+      "cinema",
+      "100m"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 3500,
+    "desc": "Consumer/prosumer ROV. 4K/100p camera. 100m depth. Most popular underwater drone for filmmakers.",
+    "highlights": [
+      "Consumer ROV",
+      "4K/100p",
+      "100m depth",
+      "Underwater filming"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 2
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 4,
+    "ip_rating": "IPX8",
+    "origin": "China",
+    "cameras": 1,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "qysea-fifish-w6-2024",
+    "name": "FIFISH W6",
+    "brand": "QYSEA",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "industrial",
+      "workclass",
+      "arm",
+      "350m",
+      "manipulator"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 15000,
+    "desc": "Industrial work-class with robotic arm. 350m depth. Inspection, light intervention.",
+    "highlights": [
+      "Robotic arm",
+      "350m depth",
+      "Industrial",
+      "Light intervention"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 5
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 18,
+    "ip_rating": "IPX8",
+    "origin": "China",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": false
+  },
+  {
+    "id": "chasing-m2-pro-2022",
+    "name": "M2 Pro",
+    "brand": "Chasing",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "consumer",
+      "4k",
+      "150m",
+      "battery-internal",
+      "compact"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 83,
+    "rating": 4.4,
+    "price": 2000,
+    "desc": "Consumer ROV. 150m depth. 4K camera. Affordable underwater drone.",
+    "highlights": [
+      "Sub-$2K",
+      "150m depth",
+      "4K camera",
+      "Consumer-friendly"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 1
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 4,
+    "ip_rating": "IPX8",
+    "origin": "China",
+    "cameras": 1,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "chasing-m2-s-2023",
+    "name": "M2 S",
+    "brand": "Chasing",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "consumer",
+      "upgraded",
+      "100m",
+      "robotic-arm-optional"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 84,
+    "rating": 4.4,
+    "price": 2500,
+    "desc": "Upgraded M2 with optional robotic arm. 100m depth. Hobbyist-prosumer bridge.",
+    "highlights": [
+      "Robotic arm option",
+      "100m depth",
+      "Affordable",
+      "Hobbyist-prosumer"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 2
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 5,
+    "ip_rating": "IPX8",
+    "origin": "China",
+    "cameras": 1,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "openrov-trident-2017",
+    "name": "Trident",
+    "brand": "OpenROV",
+    "cat": "Aquatic",
+    "sub": "ROV",
+    "tags": [
+      "open-source",
+      "wifi-tether",
+      "compact",
+      "education",
+      "100m"
+    ],
+    "fig": "🐠",
+    "img": "",
+    "score": 80,
+    "rating": 4.3,
+    "price": 1500,
+    "desc": "Open-source underwater drone. WiFi-tethered. Education + citizen science. Sofar Ocean acquisition.",
+    "highlights": [
+      "Open-source",
+      "WiFi tether",
+      "Education",
+      "Citizen science"
+    ],
+    "perf": {
+      "speed_ms": 1,
+      "payload_kg": 1
+    },
+    "year": 2017,
+    "status": "Discontinued",
+    "weight_kg": 3,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "cameras": 1,
+    "wifi": true,
+    "bluetooth": false,
+    "sdk": true
+  },
+  {
+    "id": "aquabotix-swarmdiver-2022",
+    "name": "SwarmDiver",
+    "brand": "Aquabotix (UUV Aquabotix)",
+    "cat": "Aquatic",
+    "sub": "AUV",
+    "tags": [
+      "swarm",
+      "multi-vehicle",
+      "autonomous",
+      "military",
+      "navy"
+    ],
+    "fig": "🐟",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Swarming AUV — multiple units coordinate. Navy ISR, surveillance. Multi-vehicle autonomy.",
+    "highlights": [
+      "Swarming AUV",
+      "Multi-vehicle",
+      "Navy ISR",
+      "Surveillance"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 2
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 10,
+    "ip_rating": "IPX8",
+    "origin": "USA",
+    "cameras": 1,
+    "wifi": true,
+    "bluetooth": false
   }
 ]
