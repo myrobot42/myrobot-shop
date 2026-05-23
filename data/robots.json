@@ -8859,25 +8859,35 @@
     "brand": "Tesla",
     "year": 2024,
     "status": "limited production",
-    "cat": "Humanoid",
+    "cat": "Autonomous Vehicles",
     "sub": "Industrial Humanoid",
     "tags": [
       "industrial",
       "manufacturing",
       "automation",
-      "heavy duty"
+      "heavy duty",
+      "robotaxi",
+      "vision-only",
+      "FSD",
+      "austin",
+      "2025-launch",
+      "waitlist"
     ],
     "fig": "🤖",
     "img": "",
     "score": 9,
     "rating": 4.5,
     "price": 25000,
-    "desc": "Industrial variant of Tesla Optimus optimized for manufacturing environments with enhanced durability and safety features.",
+    "desc": "Tesla's vision-only FSD robotaxi service. Launched June 2025 in Austin. Bay Area expansion. ~50% cheaper per mile than Waymo. Currently waitlist + safety drivers.",
     "highlights": [
       "Industrial grade",
       "Safety certified",
       "Heavy payload",
-      "24/7 operation"
+      "24/7 operation",
+      "Vision-only (no LiDAR)",
+      "Austin commercial",
+      "50% cheaper than Waymo",
+      "FSD platform"
     ],
     "height_mm": 1750,
     "width_mm": 620,
@@ -8949,7 +8959,8 @@
       "precision_mm": 0.1,
       "response_time_ms": 40
     },
-    "origin": "USA"
+    "origin": "USA",
+    "cellular": "5G"
   },
   {
     "id": "tesla-optimus-home",
@@ -91047,44 +91058,43 @@
   },
   {
     "id": "avride-rover-2024",
-    "name": "Rover",
+    "name": "Avride Robotaxi",
     "brand": "Avride",
-    "cat": "Delivery",
-    "sub": "Sidewalk Delivery Robot",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
     "tags": [
-      "sidewalk",
-      "grubhub",
+      "robotaxi",
+      "dallas",
       "yandex-spinoff",
-      "6-wheel",
-      "2024-launch"
+      "uber-partner"
     ],
-    "fig": "📦",
+    "fig": "🚗",
     "img": "",
-    "score": 85,
+    "score": 83,
     "rating": 4.4,
     "price": 0,
-    "desc": "Yandex-spinoff sidewalk delivery (formerly Yandex SDG). Grubhub partner. Multi-city US deployment.",
+    "desc": "Yandex spinoff. Robotaxi in Dallas via Uber partnership. Ex-Yandex self-driving team.",
     "highlights": [
-      "Grubhub partner",
       "Yandex spinoff",
-      "Multi-city US",
-      "6-wheel design"
+      "Dallas operations",
+      "Uber partner",
+      "Commercial service"
     ],
     "perf": {
-      "speed_ms": 1.8,
-      "payload_kg": 12
+      "speed_ms": 28,
+      "payload_kg": 500
     },
     "year": 2024,
     "status": "Active",
-    "weight_kg": 38,
-    "battery_life": 600,
+    "weight_kg": 2000,
+    "battery_life": 480,
     "ip_rating": "IPX4",
     "origin": "USA",
-    "cameras": 8,
+    "cameras": 10,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "5G"
   },
   {
     "id": "clevon-clevon-1-2022",
@@ -95120,6 +95130,1412 @@
     "battery_life": 21,
     "origin": "China",
     "cameras": 4,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "waymo-driver-jaguar-i-pace-2020",
+    "name": "Waymo Driver (Jaguar I-PACE)",
+    "brand": "Waymo",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "level-4",
+      "commercial",
+      "jaguar",
+      "i-pace",
+      "phoenix-sf-la"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 94,
+    "rating": 4.8,
+    "price": 0,
+    "desc": "Waymo's Level 4 robotaxi platform on Jaguar I-PACE. 2,000+ vehicles, 250,000+ weekly paid rides across SF/Phoenix/LA. Alphabet-backed.",
+    "highlights": [
+      "Level 4 autonomy",
+      "2,000+ fleet",
+      "250K+ weekly rides",
+      "Multi-city",
+      "Alphabet-owned"
+    ],
+    "perf": {
+      "speed_ms": 29,
+      "payload_kg": 500
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 2100,
+    "battery_life": 480,
+    "origin": "USA",
+    "cameras": 29,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "waymo-driver-zeekr-rt-2025",
+    "name": "Zeekr RT",
+    "brand": "Waymo",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "purpose-built",
+      "zeekr",
+      "2025-launch",
+      "next-gen"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 95,
+    "rating": 4.8,
+    "price": 0,
+    "desc": "Purpose-built Waymo robotaxi by Zeekr (Geely). Replacing I-PACE fleet. 6-seat, longer range, no steering wheel. Phoenix launch 2025.",
+    "highlights": [
+      "Purpose-built",
+      "Zeekr/Geely partner",
+      "6-seat capacity",
+      "Next-gen platform",
+      "12 new cities planned"
+    ],
+    "perf": {
+      "speed_ms": 33,
+      "payload_kg": 600
+    },
+    "year": 2025,
+    "status": "Active",
+    "weight_kg": 2200,
+    "battery_life": 540,
+    "origin": "USA",
+    "cameras": 29,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "tesla-cybercab-2026",
+    "name": "Cybercab",
+    "brand": "Tesla",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "purpose-built",
+      "no-steering-wheel",
+      "2026-launch",
+      "2-seat"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 89,
+    "rating": 4.5,
+    "price": 30000,
+    "desc": "Purpose-built Tesla robotaxi. No steering wheel. 2-seat design. Production starting 2026 Fremont. Target $30K consumer price.",
+    "highlights": [
+      "No steering wheel",
+      "Purpose-built",
+      "2-seat",
+      "Fremont production",
+      "Sub-$30K target"
+    ],
+    "perf": {
+      "speed_ms": 33,
+      "payload_kg": 300
+    },
+    "year": 2026,
+    "status": "Active",
+    "weight_kg": 1500,
+    "battery_life": 600,
+    "origin": "USA",
+    "cameras": 8,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "zoox-robotaxi-2024",
+    "name": "Zoox Robotaxi",
+    "brand": "Zoox",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "purpose-built",
+      "bidirectional",
+      "amazon",
+      "las-vegas",
+      "sf"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 91,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Amazon-owned. Purpose-built bidirectional robotaxi — no front or back. Symmetric sensor suite. SF + Las Vegas Strip + airport. Austin/Miami coming.",
+    "highlights": [
+      "Bidirectional design",
+      "Amazon-owned",
+      "Symmetric sensors",
+      "Independent 4-wheel steering",
+      "Dual 400V batteries"
+    ],
+    "perf": {
+      "speed_ms": 22,
+      "payload_kg": 400
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 1900,
+    "battery_life": 480,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "baidu-apollo-go-rt5-2022",
+    "name": "Apollo Go RT5",
+    "brand": "Baidu",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "china",
+      "baidu",
+      "wuhan",
+      "beijing",
+      "mass-deployment"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 91,
+    "rating": 4.7,
+    "price": 0,
+    "desc": "Baidu's commercial robotaxi. 17M+ rides completed, 240M+ km driven. Operating in Wuhan, Beijing, Shenzhen. Dubai expansion 2026.",
+    "highlights": [
+      "17M+ rides",
+      "240M+ km driven",
+      "Multi-city China",
+      "Dubai expansion",
+      "Largest Chinese robotaxi"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 500
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 2000,
+    "battery_life": 480,
+    "origin": "China",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "baidu-apollo-go-rt6-2024",
+    "name": "Apollo Go RT6",
+    "brand": "Baidu",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "purpose-built",
+      "2024-launch",
+      "level-4",
+      "60-percent-cheaper"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 92,
+    "rating": 4.7,
+    "price": 28000,
+    "desc": "6th-gen purpose-built robotaxi. 60% cost reduction. No steering wheel option. Production at scale starting 2024.",
+    "highlights": [
+      "Purpose-built",
+      "60% cost reduction",
+      "Optional no steering wheel",
+      "Mass production"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 500
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 1900,
+    "battery_life": 540,
+    "origin": "China",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "weride-robotaxi-gxr-2024",
+    "name": "Robotaxi GXR",
+    "brand": "WeRide",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "china",
+      "abu-dhabi",
+      "dubai",
+      "global-expansion",
+      "uber-partner"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 90,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "WeRide's robotaxi. 1,600+ vehicle fleet globally. Abu Dhabi, Dubai, Singapore, France, Belgium operations. Uber partner.",
+    "highlights": [
+      "1,600 global fleet",
+      "Abu Dhabi/Dubai",
+      "Uber partner",
+      "Multi-country",
+      "Ras Al Khaimah exclusive"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 500
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 2100,
+    "battery_life": 480,
+    "origin": "China",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "weride-robobus-2022",
+    "name": "Robobus",
+    "brand": "WeRide",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Shuttle",
+    "tags": [
+      "shuttle",
+      "belgium",
+      "leuven",
+      "level-4",
+      "autonomous-bus"
+    ],
+    "fig": "🚌",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Autonomous Level 4 shuttle bus. Belgium's first federal L4 permit. Runs between Leuven station and corridor with safety officer.",
+    "highlights": [
+      "Level 4 shuttle",
+      "Belgium first L4 permit",
+      "Leuven service",
+      "Federal permit"
+    ],
+    "perf": {
+      "speed_ms": 11,
+      "payload_kg": 1500
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 4500,
+    "battery_life": 540,
+    "origin": "China",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "pony-ai-robotaxi-7-2024",
+    "name": "PonyTaxi Gen 7",
+    "brand": "Pony.ai",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "china",
+      "global",
+      "dubai",
+      "uber-partner",
+      "2024-launch"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Pony.ai's 7th-gen robotaxi. 1,400+ fleet. Beijing, Shenzhen, Guangzhou + Dubai 2026 launch. Uber + Stellantis Europe partners.",
+    "highlights": [
+      "1,400+ fleet",
+      "Dubai launch 2026",
+      "Uber/Stellantis partners",
+      "Europe expansion",
+      "20+ cities target"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 500
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 2100,
+    "battery_life": 480,
+    "origin": "China",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "didi-roboride-2023",
+    "name": "DiDi RoboRide",
+    "brand": "DiDi",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "china",
+      "didi",
+      "ride-hailing",
+      "shanghai"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 85,
+    "rating": 4.4,
+    "price": 0,
+    "desc": "DiDi's autonomous ride-hailing service. Shanghai operations. Integrated into DiDi app for hybrid human/robot fleet.",
+    "highlights": [
+      "DiDi ecosystem",
+      "Shanghai operations",
+      "Hybrid fleet",
+      "App-integrated"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 500
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 2000,
+    "battery_life": 480,
+    "origin": "China",
+    "cameras": 10,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "saic-iv5-2024",
+    "name": "IV.5 Robotaxi",
+    "brand": "SAIC",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "china",
+      "saic",
+      "shanghai",
+      "commercial"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 83,
+    "rating": 4.4,
+    "price": 0,
+    "desc": "SAIC's autonomous taxi platform. Shanghai commercial operations.",
+    "highlights": [
+      "SAIC ecosystem",
+      "Shanghai commercial",
+      "Chinese OEM",
+      "Commercial deployment"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 500
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 2000,
+    "battery_life": 480,
+    "origin": "China",
+    "cameras": 10,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "motional-ioniq-5-2023",
+    "name": "Ioniq 5 Robotaxi",
+    "brand": "Motional",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "hyundai",
+      "aptiv-jv",
+      "las-vegas"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Hyundai-Aptiv joint venture robotaxi on Ioniq 5. Las Vegas, LA service via Uber and Lyft.",
+    "highlights": [
+      "Hyundai-Aptiv JV",
+      "Ioniq 5 platform",
+      "Las Vegas/LA",
+      "Uber+Lyft partner"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 500
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 2095,
+    "battery_life": 480,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "wayve-driver-2024",
+    "name": "Wayve Driver",
+    "brand": "Wayve",
+    "cat": "Autonomous Vehicles",
+    "sub": "Self-Driving Platform",
+    "tags": [
+      "AI-first",
+      "embodied-AI",
+      "london",
+      "uber-partner",
+      "software"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 88,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "AI-first self-driving platform — end-to-end ML, no HD maps. London testing. Uber partnership. Lyft UK/Germany 2026.",
+    "highlights": [
+      "End-to-end ML",
+      "No HD maps",
+      "London testing",
+      "Uber partner",
+      "Lyft UK/Germany"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 500
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 2000,
+    "battery_life": 480,
+    "origin": "UK",
+    "cameras": 8,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "momenta-msd-2024",
+    "name": "Momenta MSD",
+    "brand": "Momenta",
+    "cat": "Autonomous Vehicles",
+    "sub": "Self-Driving Platform",
+    "tags": [
+      "self-driving",
+      "china",
+      "oem-licensed",
+      "mercedes",
+      "stellantis"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Chinese AI self-driving platform. Licensed to Mercedes, Stellantis, Toyota, GM. Robotaxi pilots.",
+    "highlights": [
+      "OEM-licensed platform",
+      "Mercedes/Stellantis/Toyota",
+      "Software-first",
+      "Multi-OEM"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 500
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 2000,
+    "battery_life": 480,
+    "origin": "China",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "verne-2-seater-2026",
+    "name": "Verne 2-Seater Robotaxi",
+    "brand": "Verne",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "rimac-backed",
+      "2-seater",
+      "europe",
+      "zagreb",
+      "2026-launch",
+      "purpose-built"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Rimac-backed European robotaxi. Purpose-built 2-seat design. Zagreb launch 2026. Croatia/Europe focus.",
+    "highlights": [
+      "Rimac-backed",
+      "2-seat purpose-built",
+      "Zagreb launch 2026",
+      "Croatian engineering"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 200
+    },
+    "year": 2026,
+    "status": "Active",
+    "weight_kg": 1200,
+    "battery_life": 480,
+    "origin": "Croatia",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "may-mobility-shuttle-2020",
+    "name": "May Mobility Shuttle",
+    "brand": "May Mobility",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Shuttle",
+    "tags": [
+      "shuttle",
+      "public-transit",
+      "level-4",
+      "detroit",
+      "dallas"
+    ],
+    "fig": "🚐",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Public transit autonomous shuttle. Level 4. Operating in 7+ US cities for fixed-route transit. Toyota partnership.",
+    "highlights": [
+      "Public transit",
+      "Level 4",
+      "7+ US cities",
+      "Toyota partner",
+      "Fixed-route shuttle"
+    ],
+    "perf": {
+      "speed_ms": 11,
+      "payload_kg": 1500
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 2800,
+    "battery_life": 600,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "beep-shuttle-2019",
+    "name": "Beep Shuttle",
+    "brand": "Beep",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Shuttle",
+    "tags": [
+      "shuttle",
+      "public-transit",
+      "yutong",
+      "jacksonville",
+      "florida"
+    ],
+    "fig": "🚐",
+    "img": "",
+    "score": 82,
+    "rating": 4.3,
+    "price": 0,
+    "desc": "Autonomous shuttle operator. Operates Yutong/EZ10 shuttles for cities. Jacksonville and other Florida deployments.",
+    "highlights": [
+      "Shuttle operator",
+      "Multi-vehicle platform",
+      "City partnerships",
+      "Jacksonville"
+    ],
+    "perf": {
+      "speed_ms": 8,
+      "payload_kg": 1200
+    },
+    "year": 2019,
+    "status": "Active",
+    "weight_kg": 2500,
+    "battery_life": 600,
+    "origin": "USA",
+    "cameras": 8,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "4G"
+  },
+  {
+    "id": "aurora-driver-2022",
+    "name": "Aurora Driver",
+    "brand": "Aurora Innovation",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Truck",
+    "tags": [
+      "truck",
+      "level-4",
+      "hub-to-hub",
+      "commercial-launch-2024",
+      "peterbilt",
+      "volvo"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 92,
+    "rating": 4.7,
+    "price": 0,
+    "desc": "Level 4 autonomous trucking platform. Commercial launch April 2024. Peterbilt + Volvo Trucks integration. Texas highways.",
+    "highlights": [
+      "Level 4 trucking",
+      "Commercial since 2024",
+      "Peterbilt/Volvo",
+      "Texas highways",
+      "Hub-to-hub freight"
+    ],
+    "perf": {
+      "speed_ms": 31,
+      "payload_kg": 36000
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 12000,
+    "battery_life": 720,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "kodiak-driver-2018",
+    "name": "Kodiak Driver",
+    "brand": "Kodiak AI",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Truck",
+    "tags": [
+      "truck",
+      "level-4",
+      "first-driverless-2024",
+      "oil-gas",
+      "dallas-houston"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 91,
+    "rating": 4.7,
+    "price": 0,
+    "desc": "First US driverless commercial trucks (Dec 2024). 10 driverless trucks. 5,200+ paid hours. 3M+ autonomous miles. Dallas-Houston public road operations.",
+    "highlights": [
+      "First US driverless trucks",
+      "10 driverless fleet",
+      "3M+ autonomous miles",
+      "Permian Basin",
+      "Public on highways 2026"
+    ],
+    "perf": {
+      "speed_ms": 29,
+      "payload_kg": 36000
+    },
+    "year": 2018,
+    "status": "Active",
+    "weight_kg": 12000,
+    "battery_life": 720,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "waabi-driver-2024",
+    "name": "Waabi Driver",
+    "brand": "Waabi",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Truck",
+    "tags": [
+      "truck",
+      "AI-first",
+      "simulation",
+      "raquel-urtasun",
+      "commercial-2025",
+      "texas"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 90,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "AI-first autonomous truck. Simulation-heavy training. Texas commercial launch 2025. Uber Freight partnership.",
+    "highlights": [
+      "AI-first approach",
+      "Simulation-trained",
+      "Texas commercial",
+      "Uber Freight partner",
+      "Driverless 2025"
+    ],
+    "perf": {
+      "speed_ms": 29,
+      "payload_kg": 36000
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 12000,
+    "battery_life": 720,
+    "origin": "Canada",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "plus-pluscore-2023",
+    "name": "PlusCore",
+    "brand": "Plus",
+    "cat": "Autonomous Vehicles",
+    "sub": "Self-Driving Truck Platform",
+    "tags": [
+      "truck",
+      "level-4",
+      "software",
+      "international-trucks",
+      "driver-as-service"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "L4 trucking platform. Software-first. International Trucks integration. PlusDrive ADAS-as-stepping-stone strategy.",
+    "highlights": [
+      "L4 trucking",
+      "Software-first",
+      "Driver-as-Service",
+      "International Trucks",
+      "ADAS stepping-stone"
+    ],
+    "perf": {
+      "speed_ms": 29,
+      "payload_kg": 36000
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 12000,
+    "battery_life": 720,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "gatik-class-6-7-2023",
+    "name": "Gatik Class 6/7",
+    "brand": "Gatik",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Truck",
+    "tags": [
+      "middle-mile",
+      "walmart",
+      "driverless-since-2021",
+      "class-6",
+      "class-7",
+      "short-haul"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Middle-mile autonomous trucking. Walmart Bentonville driverless since 2021. Class 6/7 box trucks. Loblaw Canada partnership.",
+    "highlights": [
+      "Walmart partner",
+      "Driverless since 2021",
+      "Class 6/7 box trucks",
+      "Middle-mile",
+      "Loblaw Canada"
+    ],
+    "perf": {
+      "speed_ms": 28,
+      "payload_kg": 11000
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 8500,
+    "battery_life": 600,
+    "origin": "USA",
+    "cameras": 10,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "torc-truck-2022",
+    "name": "Torc Daimler Truck",
+    "brand": "Torc Robotics",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Truck",
+    "tags": [
+      "truck",
+      "daimler-owned",
+      "freightliner",
+      "cascadia",
+      "hub-to-hub"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 88,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Daimler-owned autonomous trucking subsidiary. Freightliner Cascadia integration. Schneider, CR England partnerships.",
+    "highlights": [
+      "Daimler-owned",
+      "Freightliner integration",
+      "Schneider partner",
+      "CR England",
+      "Hub-to-hub"
+    ],
+    "perf": {
+      "speed_ms": 29,
+      "payload_kg": 36000
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 12000,
+    "battery_life": 720,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "einride-pod-2022",
+    "name": "Einride Pod",
+    "brand": "Einride",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Truck",
+    "tags": [
+      "cabless",
+      "electric",
+      "swedish",
+      "driverless",
+      "ge-appliances"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Cabless all-electric autonomous truck. Swedish-engineered. GE Appliances commercial deployment. US public road testing.",
+    "highlights": [
+      "Cabless design",
+      "All-electric",
+      "Swedish-made",
+      "GE Appliances commercial",
+      "US public road"
+    ],
+    "perf": {
+      "speed_ms": 24,
+      "payload_kg": 16000
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 9000,
+    "battery_life": 300,
+    "origin": "Sweden",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "stackav-class-8-2024",
+    "name": "Stack AV Class 8",
+    "brand": "Stack AV",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Truck",
+    "tags": [
+      "truck",
+      "softbank",
+      "ex-argo",
+      "pittsburgh",
+      "2024-launch"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Ex-Argo AI team. SoftBank-backed. Pittsburgh-based autonomous trucking. 2024 commercial launch.",
+    "highlights": [
+      "Ex-Argo AI team",
+      "SoftBank-backed",
+      "Pittsburgh",
+      "2024 commercial",
+      "Hub-to-hub"
+    ],
+    "perf": {
+      "speed_ms": 29,
+      "payload_kg": 36000
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 12000,
+    "battery_life": 720,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "inceptio-xuanyuan-2024",
+    "name": "Xuanyuan",
+    "brand": "Inceptio Technology",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Truck",
+    "tags": [
+      "truck",
+      "china",
+      "zto-express",
+      "400-trucks",
+      "commercial-scale"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Chinese autonomous trucking leader. Delivered 400 autonomous heavy trucks to ZTO Express. Large-scale commercial.",
+    "highlights": [
+      "400 trucks to ZTO",
+      "Largest China deployment",
+      "Chinese leader",
+      "ZTO Express scale"
+    ],
+    "perf": {
+      "speed_ms": 29,
+      "payload_kg": 36000
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 12000,
+    "battery_life": 720,
+    "origin": "China",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "outrider-yardbot-2022",
+    "name": "Yardbot",
+    "brand": "Outrider",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Yard Truck",
+    "tags": [
+      "yard-truck",
+      "logistics",
+      "warehouse",
+      "short-haul",
+      "RaaS"
+    ],
+    "fig": "🚚",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Autonomous yard truck for warehouse/distribution centers. Short-haul logistics. RaaS pricing. Schneider partner.",
+    "highlights": [
+      "Yard truck automation",
+      "Warehouse logistics",
+      "Schneider partner",
+      "RaaS pricing"
+    ],
+    "perf": {
+      "speed_ms": 11,
+      "payload_kg": 30000
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 10000,
+    "battery_life": 600,
+    "origin": "USA",
+    "cameras": 8,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "forterra-aimd-2023",
+    "name": "AIMD",
+    "brand": "Forterra",
+    "cat": "Autonomous Vehicles",
+    "sub": "Military Autonomous Vehicle",
+    "tags": [
+      "military",
+      "NDAA",
+      "ground-vehicle",
+      "commercial-DoD"
+    ],
+    "fig": "🚙",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Military-grade autonomous ground vehicle platform. NDAA-compliant. US DoD pilots.",
+    "highlights": [
+      "NDAA-compliant",
+      "DoD pilots",
+      "Military-grade",
+      "Commercial+military"
+    ],
+    "perf": {
+      "speed_ms": 15,
+      "payload_kg": 2000
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 3000,
+    "battery_life": 600,
+    "origin": "USA",
+    "cameras": 8,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "applied-intuition-EpicSim-2023",
+    "name": "EpicSim",
+    "brand": "Applied Intuition",
+    "cat": "Autonomous Vehicles",
+    "sub": "Self-Driving Software Platform",
+    "tags": [
+      "software",
+      "simulation",
+      "oem-tools",
+      "scenario-testing"
+    ],
+    "fig": "💻",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 0,
+    "desc": "Simulation + testing software for AV/AD developers. Used by Ford, Toyota, Audi, Porsche. Industry-standard validation tool.",
+    "highlights": [
+      "Industry-standard sim",
+      "Ford/Toyota/Audi/Porsche",
+      "Scenario testing",
+      "Validation toolkit"
+    ],
+    "perf": {
+      "speed_ms": 0,
+      "payload_kg": 0
+    },
+    "year": 2023,
+    "status": "Active",
+    "origin": "USA",
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "hesai-at128-2022",
+    "name": "AT128 LiDAR",
+    "brand": "Hesai Technology",
+    "cat": "Autonomous Vehicles",
+    "sub": "Self-Driving Sensor",
+    "tags": [
+      "lidar",
+      "sensor",
+      "chinese-leader",
+      "cost-leader"
+    ],
+    "fig": "📡",
+    "img": "",
+    "score": 87,
+    "rating": 4.5,
+    "price": 500,
+    "desc": "Hesai's automotive LiDAR — cost-leader for L2+ ADAS and robotaxi. Industry shipment leader.",
+    "highlights": [
+      "LiDAR market leader",
+      "Cost-effective",
+      "ADAS + robotaxi",
+      "Multi-OEM"
+    ],
+    "perf": {
+      "speed_ms": 0,
+      "payload_kg": 0
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 1.5,
+    "origin": "China",
+    "wifi": false,
+    "bluetooth": false
+  },
+  {
+    "id": "luminar-iris-2022",
+    "name": "Iris LiDAR",
+    "brand": "Luminar",
+    "cat": "Autonomous Vehicles",
+    "sub": "Self-Driving Sensor",
+    "tags": [
+      "lidar",
+      "sensor",
+      "volvo",
+      "mercedes",
+      "1550nm"
+    ],
+    "fig": "📡",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 1000,
+    "desc": "Long-range 1550nm LiDAR. Volvo EX90 + Polestar 3 production. Mercedes partnership.",
+    "highlights": [
+      "1550nm long-range",
+      "Volvo EX90",
+      "Polestar 3",
+      "Mercedes partner"
+    ],
+    "perf": {
+      "speed_ms": 0,
+      "payload_kg": 0
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 1,
+    "origin": "USA",
+    "wifi": false,
+    "bluetooth": false
+  },
+  {
+    "id": "mobileye-eyeq6-2024",
+    "name": "EyeQ6",
+    "brand": "Mobileye",
+    "cat": "Autonomous Vehicles",
+    "sub": "Self-Driving Software Platform",
+    "tags": [
+      "chip",
+      "ADAS",
+      "intel-spinout",
+      "mass-market",
+      "driver-assist"
+    ],
+    "fig": "💻",
+    "img": "",
+    "score": 91,
+    "rating": 4.7,
+    "price": 0,
+    "desc": "6th-gen Mobileye chip for ADAS/AD. Intel-spinout. 800+ vehicle models use Mobileye. Industry leader in driver-assist.",
+    "highlights": [
+      "6th-gen platform",
+      "800+ vehicle models",
+      "Intel spinout",
+      "Industry leader"
+    ],
+    "perf": {
+      "speed_ms": 0,
+      "payload_kg": 0
+    },
+    "year": 2024,
+    "status": "Active",
+    "origin": "Israel",
+    "wifi": false,
+    "bluetooth": false
+  },
+  {
+    "id": "sea-machines-stormrunner-2024",
+    "name": "STORMRUNNER",
+    "brand": "Sea Machines",
+    "cat": "Autonomous Vehicles",
+    "sub": "Autonomous Marine Vessel",
+    "tags": [
+      "autonomous-boat",
+      "defense",
+      "DRS-partner",
+      "unmanned-surface",
+      "2024-launch"
+    ],
+    "fig": "⛵",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Autonomous marine vessel for defense. Leonardo DRS partnership for aerial threat neutralization. Mobile defense platform.",
+    "highlights": [
+      "Autonomous marine",
+      "Leonardo DRS partner",
+      "Defense platform",
+      "Aerial threat neutralization"
+    ],
+    "perf": {
+      "speed_ms": 15,
+      "payload_kg": 2000
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 3500,
+    "battery_life": 600,
+    "origin": "USA",
+    "cameras": 8,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "rivian-r2-robotaxi-2026",
+    "name": "R2 Robotaxi",
+    "brand": "Rivian",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "uber-partner",
+      "2026-launch",
+      "level-4",
+      "custom-5nm",
+      "50000-fleet"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 88,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Uber's $1.25B commitment for 50,000 R2-based robotaxis across 25 cities. Level 4 in-house. Custom 5nm chip + LiDAR.",
+    "highlights": [
+      "50,000-fleet Uber deal",
+      "25 cities",
+      "Custom 5nm chip",
+      "LiDAR",
+      "Late 2026 launch"
+    ],
+    "perf": {
+      "speed_ms": 33,
+      "payload_kg": 500
+    },
+    "year": 2026,
+    "status": "Active",
+    "weight_kg": 2000,
+    "battery_life": 540,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "lucid-midsize-robotaxi-2026",
+    "name": "Lucid Midsize Robotaxi",
+    "brand": "Lucid",
+    "cat": "Autonomous Vehicles",
+    "sub": "Robotaxi",
+    "tags": [
+      "robotaxi",
+      "uber-partner",
+      "2026-launch",
+      "20000-fleet",
+      "luxury"
+    ],
+    "fig": "🚗",
+    "img": "",
+    "score": 87,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Uber + Lucid robotaxi partnership. 20,000 units initially, potentially doubling. Luxury robotaxi tier.",
+    "highlights": [
+      "Uber partnership",
+      "20,000-fleet",
+      "Potential 40,000",
+      "Luxury tier",
+      "2026 launch"
+    ],
+    "perf": {
+      "speed_ms": 33,
+      "payload_kg": 500
+    },
+    "year": 2026,
+    "status": "Active",
+    "weight_kg": 2200,
+    "battery_life": 600,
+    "origin": "USA",
+    "cameras": 12,
+    "lidar": true,
     "wifi": true,
     "bluetooth": true,
     "cellular": "5G"
