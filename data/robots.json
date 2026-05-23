@@ -10078,7 +10078,7 @@
     "img": "",
     "score": 8.5,
     "rating": 4.3,
-    "price": null,
+    "price": 0,
     "desc": "Advanced humanoid robot designed for household and commercial assistance with sophisticated AI capabilities and natural movement.",
     "highlights": [
       "Neural network control",
@@ -12680,7 +12680,7 @@
   {
     "id": "shark-rv2001wd",
     "name": "Shark IQ Robot Vacuum RV2001WD",
-    "brand": "Shark",
+    "brand": "Shark Robotics",
     "year": 2020,
     "status": "Active",
     "cat": "Consumer",
@@ -12780,7 +12780,7 @@
   {
     "id": "shark-av2511ae",
     "name": "Shark AI Ultra Robot Vacuum AV2511AE",
-    "brand": "Shark",
+    "brand": "Shark Robotics",
     "year": 2021,
     "status": "Active",
     "cat": "Consumer",
@@ -12881,7 +12881,7 @@
   {
     "id": "shark-rv1001ae",
     "name": "Shark IQ Robot Self-Empty RV1001AE",
-    "brand": "Shark",
+    "brand": "Shark Robotics",
     "year": 2019,
     "status": "Active",
     "cat": "Consumer",
@@ -12981,7 +12981,7 @@
   {
     "id": "shark-ur2500sr",
     "name": "Shark Matrix Robot Vacuum UR2500SR",
-    "brand": "Shark",
+    "brand": "Shark Robotics",
     "year": 2023,
     "status": "Active",
     "cat": "Consumer",
@@ -13082,7 +13082,7 @@
   {
     "id": "shark-rv912s",
     "name": "Shark ION Robot Vacuum RV912S",
-    "brand": "Shark",
+    "brand": "Shark Robotics",
     "year": 2018,
     "status": "Discontinued",
     "cat": "Consumer",
@@ -13180,7 +13180,7 @@
   {
     "id": "shark-rv2620wd",
     "name": "Shark Matrix Plus Robot Vacuum RV2620WD",
-    "brand": "Shark",
+    "brand": "Shark Robotics",
     "year": 2023,
     "status": "Active",
     "cat": "Consumer",
@@ -27495,7 +27495,7 @@
   {
     "id": "keenon-robotics-t1",
     "name": "T1",
-    "brand": "Keenon Robotics",
+    "brand": "KEENON Robotics",
     "year": 2019,
     "status": "active",
     "cat": "Service",
@@ -27591,7 +27591,7 @@
   {
     "id": "keenon-robotics-t2",
     "name": "T2",
-    "brand": "Keenon Robotics",
+    "brand": "KEENON Robotics",
     "year": 2020,
     "status": "active",
     "cat": "Service",
@@ -27691,7 +27691,7 @@
   {
     "id": "keenon-robotics-t5",
     "name": "T5",
-    "brand": "Keenon Robotics",
+    "brand": "KEENON Robotics",
     "year": 2021,
     "status": "active",
     "cat": "Service",
@@ -27793,7 +27793,7 @@
   {
     "id": "keenon-robotics-w3",
     "name": "W3",
-    "brand": "Keenon Robotics",
+    "brand": "KEENON Robotics",
     "year": 2020,
     "status": "active",
     "cat": "Service",
@@ -27890,7 +27890,7 @@
   {
     "id": "keenon-robotics-s1",
     "name": "S1",
-    "brand": "Keenon Robotics",
+    "brand": "KEENON Robotics",
     "year": 2021,
     "status": "active",
     "cat": "Service",
@@ -27987,7 +27987,7 @@
   {
     "id": "keenon-robotics-m1",
     "name": "M1",
-    "brand": "Keenon Robotics",
+    "brand": "KEENON Robotics",
     "year": 2022,
     "status": "active",
     "cat": "Service",
@@ -28086,7 +28086,7 @@
   {
     "id": "keenon-robotics-r1",
     "name": "R1",
-    "brand": "Keenon Robotics",
+    "brand": "KEENON Robotics",
     "year": 2022,
     "status": "active",
     "cat": "Service",
@@ -56194,14 +56194,26 @@
     "brand": "Aethon",
     "cat": "Medical",
     "sub": "Hospital Logistics",
-    "tags": [],
+    "tags": [
+      "indoor",
+      "hospital",
+      "medication",
+      "laundry",
+      "food",
+      "250-hospitals"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
     "desc": "Smart autonomous mobile robot with omnidirectional 4-wheel drive, real-time multi-LIDAR navigation, sonar and infrared sensors, secure lockable compartments for hospital material transport",
-    "highlights": [],
+    "highlights": [
+      "250+ hospitals",
+      "Medication transport",
+      "Food/laundry",
+      "Hospital integration"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -56230,7 +56242,8 @@
       "Linen delivery",
       "Medical supply distribution"
     ],
-    "manufacturer_url": "https://aethon.com"
+    "manufacturer_url": "https://aethon.com",
+    "cameras": 2
   },
   {
     "id": "swisslog-healthcare-partnership-relay-robot",
@@ -59297,14 +59310,25 @@
     "brand": "AGIBOT",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
-    "tags": [],
+    "tags": [
+      "wheeled",
+      "industrial",
+      "GR00T",
+      "precision",
+      "2026-launch"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
     "desc": "Industrial-grade wheeled humanoid with IP42 protection, 7-DoF force-controlled arms, sub-mm assembly precision, and NVIDIA Jetson Thor integration",
-    "highlights": [],
+    "highlights": [
+      "Sub-mm precision",
+      "Wheeled",
+      "NVIDIA GR00T partner",
+      "Industrial focus"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -59333,7 +59357,8 @@
       "Material handling",
       "Industrial automation"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "ai_model": "NVIDIA GR00T"
   },
   {
     "id": "agibot-g1",
@@ -62166,14 +62191,24 @@
     "brand": "Fourier Intelligence",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
-    "tags": [],
+    "tags": [
+      "bipedal",
+      "companion",
+      "care",
+      "2025-launch"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
     "desc": "Care-focused humanoid robot with emotional intelligence. Features 12-DoF dexterous hands, multimodal interaction system with 31 pressure sensors for touch detection, 4-mic array for voice interaction, RGB + structured-light cameras for facial recognition. Designed for companionship, healthcare assistance, and daily living support.",
-    "highlights": [],
+    "highlights": [
+      "Caring companion",
+      "Improved arms",
+      "Patient interaction",
+      "Modern AI"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -62199,7 +62234,8 @@
       "Daily living support",
       "Rehabilitation therapy"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "battery_life": 240
   },
   {
     "id": "fourier-intelligence-gr-2",
@@ -62207,14 +62243,23 @@
     "brand": "Fourier Intelligence",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
-    "tags": [],
+    "tags": [
+      "bipedal",
+      "rehab",
+      "improved",
+      "2024-launch"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
     "desc": "Next-generation humanoid robot. 175cm tall, 63kg weight, 53 degrees of freedom. Features 12-DoF dexterous hands with tactile sensors, FSA 2.0 actuators with 380 Nm peak torque. Enhanced manipulation capabilities and developer-friendly SDK supporting ROS, NVIDIA Isaac Lab, and Mujoco.",
-    "highlights": [],
+    "highlights": [
+      "Rehab focus",
+      "Patient mobility",
+      "Improved on GR-1"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -62235,7 +62280,11 @@
       "Service robotics",
       "AI development"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "battery_life": 150,
+    "cameras": 3,
+    "wifi": true,
+    "bluetooth": true
   },
   {
     "id": "neura-robotics-mipa",
@@ -67601,15 +67650,23 @@
     "name": "H2",
     "brand": "Unitree",
     "cat": "Humanoid",
-    "sub": "",
-    "tags": [],
+    "sub": "General Purpose Humanoid",
+    "tags": [
+      "bipedal",
+      "commercial",
+      "2025-launch"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
     "desc": "180 cm humanoid design redefines industrial aesthetics with streamlined elegance. 31 degrees of freedom, 360N.m joint torque, and precise dynamic movement replication. Powered by a 2070 TOPS chip, supporting diverse intelligent models for multiple work scenarios.",
-    "highlights": [],
+    "highlights": [
+      "H1 successor",
+      "Commercial-grade",
+      "Open SDK"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -67637,22 +67694,34 @@
     "wifi": true,
     "bluetooth": true,
     "ros": true,
-    "lidar": true
+    "lidar": true,
+    "battery_life": 150,
+    "sdk": true
   },
   {
     "id": "unitree-r1",
     "name": "R1",
     "brand": "Unitree",
     "cat": "Humanoid",
-    "sub": "",
-    "tags": [],
+    "sub": "Compact Humanoid",
+    "tags": [
+      "bipedal",
+      "compact",
+      "education",
+      "affordable"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 4900,
     "desc": "Price from $4,900, fully customizable. 20-26-DOF for adaptation to complex scenarios. Lightweight structure, ≤123cm agile form, ultra-lightweight at about 29kg. Integrates a powerful multimodal model for speech and image processing, enabling seamless human-robot interaction.",
-    "highlights": [],
+    "highlights": [
+      "$5,900 cheapest",
+      "Compact",
+      "Education",
+      "Entry research"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -67677,7 +67746,9 @@
     "depth_sensing": true,
     "wifi": true,
     "bluetooth": true,
-    "manufacturer_url": "https://www.unitree.com"
+    "manufacturer_url": "https://www.unitree.com",
+    "battery_life": 100,
+    "sdk": true
   },
   {
     "id": "dji-zenmuse-l2",
@@ -73784,7 +73855,8 @@
       "https://sphero.com/cdn/shop/products/FloridaHR-0503_GALLERY_800x.jpg?v=1678385086",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "sphero-rvr-plus",
@@ -73884,7 +73956,8 @@
       "https://sphero.com/cdn/shop/files/RVRPlus-Activity2_GALLERY_26e7e239-18c7-4b71-a01a-d765bd00ae7f_800x.png?v=1750368293",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "sphero-mini-edu",
@@ -73982,7 +74055,8 @@
       "https://m.media-amazon.com/images/I/51qUXjz6EqL._AC_SL1000_.jpg",
       "https://m.media-amazon.com/images/I/71UAbSvkPAL._AC_SL1481_.jpg",
       "https://m.media-amazon.com/images/I/71S5DVqubcL._AC_SL1481_.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "sphero-indi-edu",
@@ -74075,7 +74149,8 @@
       "https://sphero.com/cdn/shop/files/indiStudentKit_5_GALLERY_e5e99c29-1a0c-476d-86c8-228a7dad74c7_800x.jpg?v=1750100076",
       "https://sphero.com/cdn/shop/files/indiStudentKit_8_GALLERY_ccb878b8-1da4-46ac-bff1-c8eee17a4d5c_800x.jpg?v=1750100076",
       "https://m.media-amazon.com/images/I/71YIpDhOyuS._AC_SX679_.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "sphero-2-0-edu",
@@ -74169,7 +74244,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "sphero-sprk-plus",
@@ -74263,7 +74339,8 @@
       "https://www.tejar.pk/media/catalog/product/cache/3/image/500x/9df78eab33525d08d6e5fb8d27136e95/s/p/sphero_sprk_4_-_tejar.jpg",
       "https://www.tejar.pk/media/catalog/product/cache/3/image/500x/9df78eab33525d08d6e5fb8d27136e95/s/p/sphero_sprk_5_-_tejar.jpg",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "sphero-bb8-edu",
@@ -74356,7 +74433,8 @@
       "https://m.media-amazon.com/images/I/51riQgRwN1L._AC_SL1000_.jpg",
       "https://m.media-amazon.com/images/I/51R09cOjTfL._AC_SL1000_.jpg",
       "https://m.media-amazon.com/images/I/61CYY6p4feL._AC_SL1500_.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ww-dash-001",
@@ -74453,7 +74531,8 @@
       "https://moravia-education.com/cdn/shop/files/Dash_img3.png?v=1767127104&width=1646",
       "https://moravia-education.com/cdn/shop/files/Dash_img4.png?v=1767127104&width=1646",
       "https://moravia-education.com/cdn/shop/files/Dash_img5.png?v=1767127104&width=1646"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ww-dot-001",
@@ -74550,7 +74629,8 @@
       "https://i.ebayimg.com/images/g/8O0AAeSw88dp-bo5/s-l1600.webp",
       "https://i.ebayimg.com/images/g/Qb0AAeSw-Bhp-bo6/s-l1600.webp",
       "https://i.ebayimg.com/images/g/Sb0AAeSwJy5p-bo6/s-l1600.webp"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ww-cue-001",
@@ -74640,7 +74720,8 @@
       "Programming",
       "AI Learning"
     ],
-    "perf": "Excellent for advanced programming and AI concepts"
+    "perf": "Excellent for advanced programming and AI concepts",
+    "origin": "USA"
   },
   {
     "id": "ww-sketch-001",
@@ -74734,7 +74815,8 @@
       "https://robotixeducation.ca/cdn/shop/files/sketch_kit_cue_2048px_840x840.webp?v=1697911063",
       "https://robotixeducation.ca/cdn/shop/files/sketch_kit_dash_2048px_840x840.webp?v=1697911063",
       "https://robotixeducation.ca/cdn/shop/files/sketch_kit_girl_cue__2048px_6cd38aab-2cd1-4620-ae6f-ac868773fa51_840x840.webp?v=1697911063"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ww-gripper-001",
@@ -74829,7 +74911,8 @@
       "https://play.makewonder.com/wp-content/uploads/sites/5/2019/01/15_gripper_dash_2000px.jpg",
       "https://play.makewonder.com/wp-content/uploads/sites/5/2019/01/9_gripper_cue_2000px.jpg",
       "https://play.makewonder.com/wp-content/uploads/sites/5/2019/01/gripper_box_content_2000px.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ww-launcher-001",
@@ -74923,7 +75006,8 @@
       "https://www.tejar.pk/media/catalog/product/cache/3/image/500x/9df78eab33525d08d6e5fb8d27136e95/w/o/wonder_workshop_launcher_for_dash_-_5tejar.jpg",
       "https://www.tejar.pk/media/catalog/product/cache/3/image/500x/9df78eab33525d08d6e5fb8d27136e95/w/o/wonder_workshop_launcher_for_dash_-_3tejar.jpg",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ww-xylophone-001",
@@ -75017,7 +75101,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ww-connect-001",
@@ -75114,7 +75199,8 @@
       "https://moravia-education.com/cdn/shop/products/17_gripper_dash_2000pxcopy.jpg?v=1765907541&width=1445",
       "https://plain-eeur-prod-public.komododecks.com/202605/19/LJfi9dVDLYw6hjemyJ5C/image.jpg",
       "https://moravia-education.com/cdn/shop/products/LauncherBlur.jpg?v=1765907541&width=1646"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ozobot-ozobot-bit-2-0",
@@ -75209,7 +75295,8 @@
       "https://static.rapidonline.com/catalogueimages/product/70/82/s70-8201p04wl.jpg",
       "https://static.rapidonline.com/catalogueimages/product/70/82/s70-8201p05wl.jpg",
       "https://static.rapidonline.com/catalogueimages/product/70/82/s70-8201p06wl.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ozobot-evo",
@@ -75306,7 +75393,8 @@
       "https://static.rapidonline.com/catalogueimages/product/74/99/s74-9977p02wj.jpg",
       "https://static.rapidonline.com/catalogueimages/product/74/99/s74-9977p03wc.jpg",
       "https://static.rapidonline.com/catalogueimages/product/74/99/s74-9977p06wc.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ozobot-bit-classroom",
@@ -75399,7 +75487,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ozobot-bit-starter",
@@ -75492,7 +75581,8 @@
       "https://www.educationaltots.com/wp-content/uploads/2025/04/ozobot-bit-starter-pack-white-toys-bb-747719.webp",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ozobot-evo-educator",
@@ -75590,7 +75680,8 @@
       "https://www.eduporium.com/media/catalog/product/cache/90584cf56e900ebba7c1b7be8e5d262f/e/v/evoentrykitslide4_1200x1200.png",
       "https://www.eduporium.com/media/catalog/product/cache/90584cf56e900ebba7c1b7be8e5d262f/o/z/ozobot-evo-entry-kit-stem-coding-robot-5_1200x1200.png",
       "https://www.eduporium.com/media/catalog/product/cache/90584cf56e900ebba7c1b7be8e5d262f/e/v/evoentrysteamlearningkitcodingroboticsk12education_1200x1200_1_.png"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ozobot-bit-single",
@@ -75684,7 +75775,8 @@
       "https://kidzinc.com.au/cdn/shop/products/ETS-OZBOT-BIT-B_Ozobot_Bit_2.0_Single_Kit_Titanium_Black_4_grande.jpg?v=1558402160",
       "https://kidzinc.com.au/cdn/shop/products/ETS-OZBOT-BIT-B_Ozobot_Bit_2.0_Single_Kit_Titanium_Black_5_grande.jpg?v=1558402166",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ozobot-evo-crystal",
@@ -75780,7 +75872,8 @@
       "https://cdn11.bigcommerce.com/s-am5zt8xfow/images/stencil/1280x1280/products/1052/2648/api37z6ur__53976.1554988937.jpg?c=2",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "ozobot-bit-dual",
@@ -75874,7 +75967,8 @@
       "https://images.mobilefun.co.uk/graphics/productgalleries/55683/c.jpg",
       "https://images.mobilefun.co.uk/graphics/productgalleries/55683/e.jpg",
       "https://images.mobilefun.co.uk/graphics/productgalleries/55683/f.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "kinderlab-robotics-kibo-21",
@@ -75969,7 +76063,8 @@
       "https://www.shopbecker.com/globalassets/product-images/kibo_21_robotic_kit_beckers_school_supplies_kibo21_1_.jpg?format=webp&quality=50&ver=2220460&width=750",
       "https://www.shopbecker.com/globalassets/product-images/kibo_21_robotic_kit_beckers_school_supplies_kibo21_2_.jpg?format=webp&quality=50&ver=2182394&width=750",
       "https://www.shopbecker.com/globalassets/product-images/kibo_21_robotic_kit_beckers_school_supplies_kibo21_4_.jpg?format=webp&quality=50&ver=2220584&width=750"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "kinderlab-robotics-kibo-18",
@@ -76065,7 +76160,8 @@
       "https://www.shopbecker.com/globalassets/product-images/kibo18kit_0_.jpg?ver=2033152",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "kinderlab-robotics-kibo-15",
@@ -76160,7 +76256,8 @@
       "https://www.shopbecker.com/globalassets/product-images/kibo_15_robotic_kit_beckers_school_supplies_kibo15kit_2_.jpg?format=webp&quality=50&ver=2220593&width=750",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "kinderlab-robotics-kibo-10",
@@ -76255,7 +76352,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "kinderlab-robotics-kibo-storybot",
@@ -76344,7 +76442,8 @@
       "Literacy development",
       "Creative expression"
     ],
-    "perf": "Audio recording and playback capabilities for narrative programming experiences"
+    "perf": "Audio recording and playback capabilities for narrative programming experiences",
+    "origin": "USA"
   },
   {
     "id": "kinderlab-robotics-kibo-artbot",
@@ -76433,7 +76532,8 @@
       "Pattern programming",
       "Creative expression"
     ],
-    "perf": "Precise motor control for drawing and artistic movements with creative programming focus"
+    "perf": "Precise motor control for drawing and artistic movements with creative programming focus",
+    "origin": "USA"
   },
   {
     "id": "kinderlab-robotics-kibo-musicbot",
@@ -76522,7 +76622,8 @@
       "Rhythm programming",
       "Audio sequencing"
     ],
-    "perf": "Enhanced audio processing for music creation and rhythm-based programming activities"
+    "perf": "Enhanced audio processing for music creation and rhythm-based programming activities",
+    "origin": "USA"
   },
   {
     "id": "botley-2-0",
@@ -76617,7 +76718,8 @@
       "https://www.learningresources.com/media/catalog/product/c/7/c73f87303ca8a2a0ea4e1ce49d9b2bf1b277abed.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/6/a/6a7813e8f93feb6b727a2c2c3ccb254c18e3389d.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/8/c/8c64257c6757170fa6c83b0ceabff852d89daeb9.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "botley-activity-set",
@@ -76711,7 +76813,8 @@
       "https://www.learningresources.com/media/catalog/product/e/0/e0fa8b55897e2062cd172d995d1dc7d3c31f662e.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/6/f/6f8ee0f4c779e4f67f9e050730838197ba727726.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/0/4/04ee7fb63e26774e84b0b95bb980a210135ebfe3.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "code-go-robot-mouse",
@@ -76807,7 +76910,8 @@
       "https://www.learningresources.com/media/catalog/product/6/5/65eb15b3d958c461100e9ea0accca99d4fcd204f.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/d/b/dbbd8c04406886afbce8865b4b0635dce504b731.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/7/e/7e1fe9910e9215c4846e54750e9b5055b1f679ee.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "mathlink-cubes-robot",
@@ -76901,7 +77005,8 @@
       "https://www.primaryict.co.uk/p/pr8774-3-large.jpg",
       "https://www.primaryict.co.uk/p/pr8774-4-large.jpg",
       "https://www.primaryict.co.uk/p/pr8774-5-large.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "stem-robot-mouse-coding-set",
@@ -76995,7 +77100,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "coding-critters-bopper",
@@ -77090,7 +77196,8 @@
       "https://www.learningresources.com/media/catalog/product/2/5/2535f91d084963eca02616a36246cadf71b271b1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/1/0/1067e100abb00229970c77772d670399295add2c.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/0/1/013b127807304a8d1eeacbc830393b90f1199471.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "artie-3000-coding-robot",
@@ -77191,7 +77298,8 @@
       "https://www.learningresources.co.uk/media/catalog/product/a/r/artie_3000_the_coding_robot_2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.co.uk/media/catalog/product/a/r/artie_3000_the_coding_robot_1_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.co.uk/media/catalog/product/a/r/artie_3000_the_coding_robot_6_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "beebots-classroom-set",
@@ -77287,7 +77395,8 @@
       "https://www.edresources.com.au/assets/full/EL00396.jpg?20210309030731",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "learning-resources-botley-2-0-the-coding-robot-activity-set",
@@ -77385,7 +77494,8 @@
       "https://www.learningresources.com/media/catalog/product/d/2/d2ca53edcf95cb5b43510f743cd872a94f0d26e9.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/f/b/fb779e69bc223c999292fa7ed6688ca29d1abfe9.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/3/4/342189dae106c9444d6799f217a7d0a0402a897d.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "botley-original",
@@ -77480,7 +77590,8 @@
       "https://www.learningresources.com/media/catalog/product/1/5/15c2228c4f15987d17a9243bff6c8ce7d3126139.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/4/8/48f2a604657b7df4f023fc0ec7a8b110dfe6c64b.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.com/media/catalog/product/4/3/4371d45757b745f5e9d6924c321f0b8cb2761447.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "artie-3000",
@@ -77581,7 +77692,8 @@
       "https://www.learningresources.co.uk/media/catalog/product/a/r/artie_3000_the_coding_robot_2_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.co.uk/media/catalog/product/a/r/artie_3000_the_coding_robot_1_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "https://www.learningresources.co.uk/media/catalog/product/a/r/artie_3000_the_coding_robot_6_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "code-go-robotic-mouse-mazes",
@@ -77676,7 +77788,8 @@
       "https://www.learningresources.com/media/catalog/product/d/d/ddacf647e779d7629b9211057b387ca51a6105a1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "tackle-coding-activities",
@@ -77771,7 +77884,8 @@
       "https://m.media-amazon.com/images/I/81w9UUVnDnL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/814YiUJNiyL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81G2Gn7enzL._AC_SL1500_.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "botley-coding-robot-set",
@@ -77868,7 +77982,8 @@
       "https://www.hand2mind.com/media/catalog/product/7/b/7b113e489a61291622c8201febd7117b141e0114.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=&width=&canvas=:",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "vex-123-brain",
@@ -77966,7 +78081,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "vex-go-kit",
@@ -78062,7 +78178,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "vex-iq-gen2",
@@ -78161,7 +78278,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "vex-v5-brain",
@@ -78259,7 +78377,8 @@
       "https://www.vexrobotics.com/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/2/7/276-4810_v5brain_bottom_rev1_1.jpg",
       "https://www.vexrobotics.com/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/2/7/276-4810-009.jpg",
       "https://www.vexrobotics.com/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/2/7/276-4810-010.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "vex-v5-classroom",
@@ -78358,7 +78477,8 @@
       "https://mangologic.org/images/products/a32999_ddd6933c257546318dd0dade9f19c77c~mv2.jpg",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "vex-exp-kit",
@@ -78458,7 +78578,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "vex-workcell",
@@ -78556,7 +78677,8 @@
       "https://www.vexrobotics.com/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/2/3/234-8952_cteworkcell_2.0_kit_arm_tile_rev01_1_1.jpg",
       "https://www.vexrobotics.com/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/2/3/234-8952_workforceready_rev1_1.jpg",
       "https://www.vexrobotics.com/media/catalog/product/cache/74c1057f7991b4edb2bc7bdaa94de933/2/7/276-8952_ctekit_grp_rev1_1.jpg"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "mattel-code-a-pillar-001",
@@ -78654,7 +78776,8 @@
       "https://i5.walmartimages.com/asr/f868ef15-2b18-4cab-9047-c2bdbf384a39_1.b71e4185e89bfbbfd28bfcd30cda8ecd.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
       "https://i5.walmartimages.com/asr/9cff4863-72c1-4152-b43c-e8607f013274_1.20c2f4a5b609b405cfdeb66bb9fdb47b.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
       "https://i5.walmartimages.com/asr/2b5b772b-793a-4c5f-8b17-399221510769_1.9d3d161c8edaa508f3767a405b43b47a.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "mattel-code-a-pillar-twist-002",
@@ -78752,7 +78875,8 @@
       "https://i5.walmartimages.com/asr/48ec5460-3299-4ce4-81b7-2703364551a8_1.2f40e6ba28e5a6f1032ac9eddf2b649b.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
       "https://i5.walmartimages.com/asr/42c35ca0-01b7-41dc-9512-f9aa6f613ded_1.48dfc84a22780152d4a604c4e2ce018d.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF",
       "https://i5.walmartimages.com/asr/e0ddc136-608e-4af8-ba0e-0457005a45ce_1.1816a842f86fb57df244916332689ece.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "mattel-think-learn-code-a-pillar-003",
@@ -78850,7 +78974,8 @@
       "https://m.media-amazon.com/images/I/61pdMP+UIsL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61N6W4NMoNL._AC_SL1000_.jpg",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "mattel-code-a-pillar-expansion-004",
@@ -78948,7 +79073,8 @@
       "https://www.maqio.com/cdn/shop/products/4ZJ-05Y-M4U_d6856383-d319-462a-910f-a19ca771e650.jpg?v=1605824803",
       "",
       ""
-    ]
+    ],
+    "origin": "USA"
   },
   {
     "id": "mattel-code-a-pillar-deluxe-005",
@@ -79036,7 +79162,8 @@
       "speed_ms": 40,
       "accuracy": 98,
       "response_time_ms": 75
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "mattel-code-a-pillar-classroom-006",
@@ -79124,7 +79251,8 @@
       "speed_ms": 50,
       "accuracy": 95,
       "response_time_ms": 100
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "mattel-code-a-pillar-junior-007",
@@ -79214,7 +79342,8 @@
       "speed_ms": 60,
       "accuracy": 92,
       "response_time_ms": 120
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "mattel-code-a-pillar-glow-008",
@@ -79304,7 +79433,8 @@
       "speed_ms": 45,
       "accuracy": 96,
       "response_time_ms": 85
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "elegoo-penguin-bot-v2",
@@ -79405,7 +79535,8 @@
       "https://us.elegoo.com/cdn/shop/products/elegoo-penguin-bot-biped-robot-kit-v20-for-arduino-project-arduino-stem-kits-elegoo-shop-404308.jpg?crop=center&v=1710301449&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-penguin-bot-biped-robot-kit-v20-for-arduino-project-arduino-stem-kits-elegoo-shop-966061.jpg?crop=center&v=1710301449&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-penguin-bot-biped-robot-kit-v20-for-arduino-project-arduino-stem-kits-elegoo-shop-891823.jpg?crop=center&v=1710301449&width=1220"
-    ]
+    ],
+    "origin": "China"
   },
   {
     "id": "elegoo-smart-robot-car-v4",
@@ -79509,7 +79640,8 @@
       "https://us.elegoo.com/cdn/shop/products/elegoo-uno-r3-project-smart-robot-car-kit-v-40-with-camera-arduino-stem-kits-elegoo-shop-715337.jpg?crop=center&v=1710301607&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-uno-r3-project-smart-robot-car-kit-v-40-with-camera-arduino-stem-kits-elegoo-shop-451334.jpg?crop=center&v=1710301607&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-uno-r3-project-smart-robot-car-kit-v-40-with-camera-arduino-stem-kits-elegoo-shop-839538.jpg?crop=center&v=1710301607&width=1220"
-    ]
+    ],
+    "origin": "China"
   },
   {
     "id": "elegoo-owl-smart-robot-car",
@@ -79613,7 +79745,8 @@
       "https://us.elegoo.com/cdn/shop/products/elegoo-owlbot-smart-robot-car-kit-compatible-with-arduino-ide-arduino-stem-kits-elegoo-shop-406831.jpg?crop=center&v=1710301460&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-owlbot-smart-robot-car-kit-compatible-with-arduino-ide-arduino-stem-kits-elegoo-shop-630364.jpg?crop=center&v=1710301460&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-owlbot-smart-robot-car-kit-compatible-with-arduino-ide-arduino-stem-kits-elegoo-shop-618142.jpg?crop=center&v=1710301460&width=1220"
-    ]
+    ],
+    "origin": "China"
   },
   {
     "id": "elegoo-tank-robot-v2",
@@ -79715,7 +79848,8 @@
       "https://us.elegoo.com/cdn/shop/products/elegoo-conqueror-robot-tank-kit-compatible-with-arduino-ide-arduino-stem-kits-elegoo-shop-220299.jpg?crop=center&v=1710301721&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-conqueror-robot-tank-kit-compatible-with-arduino-ide-arduino-stem-kits-elegoo-shop-129827.jpg?crop=center&v=1710301721&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-conqueror-robot-tank-kit-compatible-with-arduino-ide-arduino-stem-kits-elegoo-shop-764095.jpg?crop=center&v=1710301722&width=1220"
-    ]
+    ],
+    "origin": "China"
   },
   {
     "id": "elegoo-uno-project-car",
@@ -79818,7 +79952,8 @@
       "https://us.elegoo.com/cdn/shop/products/elegoo-uno-r3-super-starter-kit-compatible-with-arduino-ide-arduino-stem-kits-elegoo-shop-882855.jpg?crop=center&v=1710301400&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-uno-r3-super-starter-kit-compatible-with-arduino-ide-arduino-stem-kits-elegoo-shop-807220.jpg?crop=center&v=1710301400&width=1220",
       "https://us.elegoo.com/cdn/shop/products/elegoo-uno-r3-super-starter-kit-compatible-with-arduino-ide-arduino-stem-kits-elegoo-shop-565675.jpg?crop=center&v=1710301401&width=1220"
-    ]
+    ],
+    "origin": "China"
   },
   {
     "id": "elegoo-mars-rover-kit",
@@ -79915,7 +80050,8 @@
       "climb_angle": "45°",
       "wheel_speed": "0.5 m/s",
       "camera_res": "1080p"
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "elegoo-spider-robot-v3",
@@ -80018,7 +80154,8 @@
       "https://m.media-amazon.com/images/I/61B0ohDOMML._AC_SL1140_.jpg",
       "https://m.media-amazon.com/images/I/714WfqyNW0L._AC_SL1200_.jpg",
       "https://m.media-amazon.com/images/I/71wShqIS6lL._AC_SL1196_.jpg"
-    ]
+    ],
+    "origin": "China"
   },
   {
     "id": "elegoo-humanoid-mini",
@@ -80114,7 +80251,8 @@
       "servo_count": "17",
       "walking_speed": "0.1 m/s",
       "dance_routines": "10"
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "lego-spike-prime",
@@ -80212,7 +80350,8 @@
       "https://cdn11.bigcommerce.com/s-73a20/images/stencil/1280w/products/4408/11094/45678_alt2__13178.1728908728.jpg?c=2",
       "https://cdn11.bigcommerce.com/s-73a20/images/stencil/1280x1280/products/4408/11096/45678_alt4__17264.1728908728.jpg?c=2",
       "https://cdn11.bigcommerce.com/s-73a20/images/stencil/1280w/products/4408/11100/45678_alt6__90124.1728908728.jpg?c=2"
-    ]
+    ],
+    "origin": "Denmark"
   },
   {
     "id": "lego-mindstorms-ev3",
@@ -80309,7 +80448,8 @@
       "https://www.lego.com/cdn/cs/set/assets/blt5c4fdd984c399fb7/31313_alt3.jpg?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
       "https://www.lego.com/cdn/cs/set/assets/blt3cbdb540c73a50a7/31313_alt4.jpg?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5",
       "https://www.lego.com/cdn/cs/set/assets/blt43ae2b979795e4ee/31313_alt5.jpg?format=webply&fit=bounds&quality=70&width=800&height=800&dpr=1.5"
-    ]
+    ],
+    "origin": "Denmark"
   },
   {
     "id": "lego-spike-essential",
@@ -80405,7 +80545,8 @@
       "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blta715dbb5951d433d/602d0bb8ef8bb07005123796/45345_Model_U2L6_01.png?locale=en-us&auto=webp&format=jpeg&width=2400&quality=90&fit=bounds",
       "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt887445072e19d6b5/60d42b3aae0d50495b4f98bb/LE_SPIKE_Essential_Lifestyle_2HY21_45345_34.jpg?locale=en-us&auto=webp&format=jpeg&width=2400&quality=90&fit=bounds",
       ""
-    ]
+    ],
+    "origin": "Denmark"
   },
   {
     "id": "lego-education-wedo-2-0-core-set",
@@ -80499,7 +80640,8 @@
       "https://assets.education.lego.com/v3/assets/blt293eea581807678a/blt434e7b0871c3ca44/5f6b41ac6f40ab4648b5e8b7/45300_Mod_PullRobot_03.png?locale=en-us&auto=webp&format=jpeg&width=2400&quality=90&fit=bounds",
       "https://assets.education.lego.com/v3/assets/blt293eea581807678a/bltab608a7d2278306b/5f50d68c097085489abd2079/45300_mod_helicopter_02.jpg?locale=en-us&auto=webp&format=jpeg&width=2400&quality=90&fit=bounds",
       "https://robostan.pk/wp-content/uploads/2025/10/milo-scaled.jpg"
-    ]
+    ],
+    "origin": "Denmark"
   },
   {
     "id": "lego-boost",
@@ -80594,7 +80736,8 @@
       "https://www.lego.com/cdn/cs/set/assets/blt61dc2028569223d5/17101_alt4.jpg?format=webply&fit=bounds&quality=70&width=1200&height=1200&dpr=1.5",
       "https://www.lego.com/cdn/cs/set/assets/blt808477df31a74e92/17101_alt5.jpg?format=webply&fit=bounds&quality=70&width=1200&height=1200&dpr=1.5",
       "https://www.lego.com/cdn/cs/set/assets/blt470d8516cf1fb914/17101_alt6.jpg?format=webply&fit=bounds&quality=70&width=1200&height=1200&dpr=1.5"
-    ]
+    ],
+    "origin": "Denmark"
   },
   {
     "id": "lego-mindstorms-robot-inventor",
@@ -80690,7 +80833,8 @@
       "https://www.lego.com/cdn/cs/set/assets/blt5d1ae4dad817afb3/51515_alt5.png?format=webply&fit=bounds&quality=70&width=1200&height=1200&dpr=1.5",
       "https://www.lego.com/cdn/cs/set/assets/blt6849e1dcec74722c/51515_alt6.png?format=webply&fit=bounds&quality=70&width=1200&height=1200&dpr=1.5",
       "https://www.lego.com/cdn/cs/set/assets/blt3ba8054b06d6d849/51515_alt3.png?format=webply&fit=bounds&quality=70&width=1200&height=1200&dpr=1.5"
-    ]
+    ],
+    "origin": "Denmark"
   },
   {
     "id": "lego-technic-hub",
@@ -80785,7 +80929,8 @@
       "",
       "",
       ""
-    ]
+    ],
+    "origin": "Denmark"
   },
   {
     "id": "realbotix-aria-1",
@@ -80883,7 +81028,8 @@
       "speech_latency_ms": 200,
       "face_recognition_accuracy": 95,
       "emotion_detection_accuracy": 88
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "realbotix-harmony-ai-2",
@@ -80979,7 +81125,8 @@
       "expression_count": 18,
       "speech_latency_ms": 350,
       "conversation_topics": 5000
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "realbotix-henry-3",
@@ -81075,7 +81222,8 @@
       "expression_count": 18,
       "speech_latency_ms": 350,
       "conversation_topics": 5000
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "realbotix-solana-4",
@@ -81177,7 +81325,8 @@
       "face_recognition_accuracy": 97,
       "emotion_detection_accuracy": 92,
       "walking_speed_ms": 0.8
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "realbotix-aria-enterprise-5",
@@ -81279,7 +81428,8 @@
       "face_recognition_accuracy": 98,
       "concurrent_users": 5,
       "uptime_percent": 99
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "realbotix-harmony-x-6",
@@ -81377,7 +81527,8 @@
       "expression_count": 22,
       "speech_latency_ms": 250,
       "eye_tracking_accuracy_deg": 1.5
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "humanoid-002",
@@ -81477,7 +81628,8 @@
       "payload_kg": 20,
       "dof": 40,
       "hand_dof": 11
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "humanoid-004",
@@ -81578,7 +81730,8 @@
       "payload_kg": 30,
       "dof": 19,
       "jump_capable": true
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "humanoid-005",
@@ -81681,7 +81834,8 @@
       "payload_kg": 25,
       "dof": 32,
       "continuous_operation": true
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "humanoid-006",
@@ -81779,7 +81933,8 @@
       "payload_kg": 15,
       "dof": 30,
       "safe_for_home": true
-    }
+    },
+    "origin": "Norway"
   },
   {
     "id": "humanoid-007",
@@ -81883,7 +82038,8 @@
       "payload_kg": 20,
       "dof": 30,
       "fleet_capable": true
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "wr-bruce",
@@ -81982,7 +82138,8 @@
       "max_speed_mps": 1.2,
       "jump_height_mm": null,
       "payload_kg": 0.5
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "wr-bear-actuator-humanoid",
@@ -82081,7 +82238,8 @@
       "max_speed_mps": 1,
       "jump_height_mm": null,
       "payload_kg": 2
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "wr-bruce-x",
@@ -82182,7 +82340,8 @@
       "max_speed_mps": 1.5,
       "jump_height_mm": 150,
       "payload_kg": 0.8
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "wr-bear-mini-humanoid",
@@ -82280,7 +82439,8 @@
       "max_speed_mps": 0.6,
       "jump_height_mm": null,
       "payload_kg": 0.3
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "wr-panda-humanoid",
@@ -82381,7 +82541,8 @@
       "max_speed_mps": 1.2,
       "jump_height_mm": null,
       "payload_kg": 5
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "wr-bruce-arms",
@@ -82480,7 +82641,8 @@
       "max_speed_mps": 1.2,
       "jump_height_mm": 100,
       "payload_kg": 1
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "wr-bear-upper-body",
@@ -82580,201 +82742,8 @@
       "max_speed_mps": null,
       "jump_height_mm": null,
       "payload_kg": 3
-    }
-  },
-  {
-    "id": "hr-001",
-    "name": "Atlas",
-    "brand": "Boston Dynamics",
-    "year": 2023,
-    "status": "Research",
-    "cat": "Humanoid",
-    "sub": "Research Humanoid Robot",
-    "tags": [
-      "bipedal",
-      "agile",
-      "research",
-      "dynamic",
-      "hydraulic"
-    ],
-    "fig": "🤖",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Atlas_from_boston_dynamics.jpg/800px-Atlas_from_boston_dynamics.jpg",
-    "score": 95,
-    "rating": 4.8,
-    "price": null,
-    "desc": "Highly agile hydraulic humanoid robot capable of parkour, backflips, and complex manipulation tasks.",
-    "highlights": [
-      "Hydraulic actuation",
-      "Dynamic locomotion",
-      "Whole-body control",
-      "Tool use"
-    ],
-    "height_mm": 1500,
-    "width_mm": 500,
-    "depth_mm": 500,
-    "weight_kg": 89,
-    "frame_material": "Titanium alloy",
-    "shell_material": "Composite plastic",
-    "ip_rating": null,
-    "operating_temp_min": 0,
-    "operating_temp_max": 40,
-    "colors": [
-      "Black",
-      "Yellow"
-    ],
-    "os": "Custom Linux-based",
-    "chipset": "Custom",
-    "cpu": "Intel Core i7",
-    "ram_gb": 16,
-    "ram_type": "DDR4",
-    "storage_gb": 256,
-    "storage_type": "SSD",
-    "npu_tops": null,
-    "battery_type": "Li-Ion",
-    "battery_wh": 1500,
-    "battery_life": 60,
-    "charge_time": 180,
-    "charge_power_w": 500,
-    "charge_type": "Wired",
-    "wireless_charging": false,
-    "auto_charge": false,
-    "hot_swap": false,
-    "quick_release": false,
-    "cycle_life": null,
-    "ai_model": "Custom motion planning",
-    "ai_model_type": "Proprietary",
-    "learning_methods": [
-      "Reinforcement Learning",
-      "Imitation Learning"
-    ],
-    "ai_cloud_required": false,
-    "ota": true,
-    "cameras": [
-      "Stereo RGB",
-      "LIDAR"
-    ],
-    "lidar": true,
-    "depth_sensing": true,
-    "imu": true,
-    "touch_sensing": false,
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "sdk": true,
-    "sdk_langs": [
-      "C++",
-      "Python"
-    ],
-    "api": true,
-    "ce": false,
-    "fcc": false,
-    "rohs": false,
-    "warranty_months": null,
-    "use_cases": [
-      "Research",
-      "Disaster Response",
-      "Industrial"
-    ],
-    "perf": {
-      "max_speed_ms": 2.5,
-      "payload_kg": 11,
-      "dof": 28
-    }
-  },
-  {
-    "id": "hr-003",
-    "name": "Figure 02",
-    "brand": "Figure AI",
-    "year": 2024,
-    "status": "Commercial",
-    "cat": "Humanoid",
-    "sub": "Commercial Humanoid Robot",
-    "tags": [
-      "bipedal",
-      "commercial",
-      "OpenAI",
-      "manipulation",
-      "dexterous"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 87,
-    "rating": 4.4,
-    "price": null,
-    "desc": "Figure's commercial humanoid robot with OpenAI-powered speech and reasoning for automotive manufacturing.",
-    "highlights": [
-      "OpenAI integration",
-      "Natural language control",
-      "16 DOF hands",
-      "BMW deployment"
-    ],
-    "height_mm": 1680,
-    "width_mm": 510,
-    "depth_mm": 380,
-    "weight_kg": 60,
-    "frame_material": "Aluminum alloy",
-    "shell_material": "Polymer",
-    "ip_rating": null,
-    "operating_temp_min": 5,
-    "operating_temp_max": 40,
-    "colors": [
-      "White"
-    ],
-    "os": "Custom Linux",
-    "chipset": "NVIDIA Orin",
-    "cpu": "ARM Cortex-A78",
-    "ram_gb": 32,
-    "ram_type": "LPDDR5",
-    "storage_gb": 512,
-    "storage_type": "NVMe SSD",
-    "npu_tops": 275,
-    "battery_type": "Li-Ion",
-    "battery_wh": 2000,
-    "battery_life": 300,
-    "charge_time": 90,
-    "charge_power_w": 1500,
-    "charge_type": "Wired",
-    "wireless_charging": false,
-    "auto_charge": true,
-    "hot_swap": false,
-    "quick_release": false,
-    "cycle_life": null,
-    "ai_model": "Figure Neural Net + GPT-4o",
-    "ai_model_type": "Hybrid",
-    "learning_methods": [
-      "Imitation Learning",
-      "LLM-based Reasoning"
-    ],
-    "ai_cloud_required": true,
-    "ota": true,
-    "cameras": [
-      "RGB x3",
-      "Depth Camera"
-    ],
-    "lidar": false,
-    "depth_sensing": true,
-    "imu": true,
-    "touch_sensing": true,
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "sdk": false,
-    "sdk_langs": null,
-    "api": true,
-    "ce": false,
-    "fcc": false,
-    "rohs": false,
-    "warranty_months": 12,
-    "use_cases": [
-      "Automotive Manufacturing",
-      "Warehouse Logistics",
-      "Industrial"
-    ],
-    "perf": {
-      "max_speed_ms": 1.2,
-      "payload_kg": 20,
-      "dof": 35
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "hr-005",
@@ -82870,7 +82839,8 @@
       "max_speed_ms": 1.5,
       "payload_kg": 16,
       "dof": 30
-    }
+    },
+    "origin": "USA"
   },
   {
     "id": "hr-006",
@@ -82971,7 +82941,8 @@
       "max_speed_ms": 1,
       "payload_kg": 50,
       "dof": 44
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "husqvarna-automower-430x",
@@ -83071,7 +83042,8 @@
       "https://m.media-amazon.com/images/I/71A-ZEWF5XL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/A1yesjG0hkL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81sLrrGngbL._AC_SL1500_.jpg"
-    ]
+    ],
+    "origin": "Sweden"
   },
   {
     "id": "husqvarna-automower-450x",
@@ -83172,7 +83144,8 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/action/h/h350/04/h350-0439.webp?v=57996f018427f33c&format=WEBP_LANDSCAPE_COVER_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/action/h/h370/03/h370-0326.webp?v=a8f423438427f33c&format=WEBP_LANDSCAPE_COVER_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/11/h310-1183.webp?v=20a46d29148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "origin": "Sweden"
   },
   {
     "id": "husqvarna-automower-315x",
@@ -83275,7 +83248,8 @@
       "https://m.media-amazon.com/images/I/81MR+ODprvL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91iYbBVFVzL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71OS-H+CtxL._AC_SL1000_.jpg"
-    ]
+    ],
+    "origin": "Sweden"
   },
   {
     "id": "husqvarna-automower-305",
@@ -83481,7 +83455,8 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/f/fu/fu-426681.webp?v=413eb4c6148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/f/fz/fz-436358.webp?v=8b4475c8148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/g/gm/gm-783742.webp?v=5af88828148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "origin": "Sweden"
   },
   {
     "id": "husqvarna-automower-535awdx",
@@ -83582,7 +83557,8 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/19/h310-1902.webp?v=4cb3f37b148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/p/pb/pb-804634.webp?v=cb62479b148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       ""
-    ]
+    ],
+    "origin": "Sweden"
   },
   {
     "id": "husqvarna-automower-520",
@@ -83686,7 +83662,8 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/16/h310-1619.webp?v=c6086c26148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/16/h310-1659b.webp?v=dbd3cb7e148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/16/h310-1660.webp?v=d7b39e55148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "origin": "Sweden"
   },
   {
     "id": "husqvarna-automower-105",
@@ -83890,7 +83867,8 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/d/du/du-849284.webp?v=e39d39db148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/k/kz/kz-930298.webp?v=c7fd9c4148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/l/lf/lf-206466.webp?v=bc0726a9148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "origin": "Sweden"
   },
   {
     "id": "mammotion-luba-awdx9000",
@@ -83986,7 +83964,8 @@
       "max_slope_pct": 75,
       "cut_width_mm": 280,
       "noise_db": 62
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-awdx5000",
@@ -84082,7 +84061,8 @@
       "max_slope_pct": 75,
       "cut_width_mm": 280,
       "noise_db": 62
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-awdx3000",
@@ -84178,7 +84158,8 @@
       "max_slope_pct": 75,
       "cut_width_mm": 280,
       "noise_db": 62
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-awdx1000",
@@ -84272,7 +84253,8 @@
       "max_slope_pct": 75,
       "cut_width_mm": 260,
       "noise_db": 60
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-yuka-2in1",
@@ -84368,7 +84350,8 @@
       "max_slope_pct": 50,
       "cut_width_mm": 260,
       "noise_db": 65
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-2-awdx10000h",
@@ -84464,7 +84447,8 @@
       "max_slope_pct": 75,
       "cut_width_mm": 280,
       "noise_db": 62
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-2-awdx5000",
@@ -84560,7 +84544,8 @@
       "max_slope_pct": 75,
       "cut_width_mm": 280,
       "noise_db": 62
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-awdv-5000",
@@ -84653,7 +84638,8 @@
       "max_slope_deg": 35,
       "mowing_width_mm": 260,
       "cutting_height_mm": "20-60"
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-awdv-3000",
@@ -84746,7 +84732,8 @@
       "max_slope_deg": 35,
       "mowing_width_mm": 260,
       "cutting_height_mm": "20-60"
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-2-awdv-5000",
@@ -84842,7 +84829,8 @@
       "max_slope_deg": 38,
       "mowing_width_mm": 260,
       "cutting_height_mm": "20-60"
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-2-awdv-3000",
@@ -84937,7 +84925,8 @@
       "max_slope_deg": 38,
       "mowing_width_mm": 260,
       "cutting_height_mm": "20-60"
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-awdv-1000",
@@ -85029,7 +85018,8 @@
       "max_slope_deg": 35,
       "mowing_width_mm": 220,
       "cutting_height_mm": "20-60"
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-yuka-600",
@@ -85121,7 +85111,8 @@
       "max_slope_deg": 20,
       "mowing_width_mm": 180,
       "cutting_height_mm": "20-55"
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "mammotion-luba-2-awdv-10000",
@@ -85217,7 +85208,8 @@
       "max_slope_deg": 38,
       "mowing_width_mm": 280,
       "cutting_height_mm": "20-65"
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "husqvarna-automower-310",
@@ -85317,7 +85309,8 @@
       "https://m.media-amazon.com/images/I/71Enve3rpfL._AC_SX679_.jpg",
       "https://m.media-amazon.com/images/I/91MEKffQgrL._AC_SX679_.jpg",
       ""
-    ]
+    ],
+    "origin": "Sweden"
   },
   {
     "id": "husqvarna-automower-435x-awd",
@@ -85526,7 +85519,8 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/b/bt/bt-106561.webp?v=da420f62148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/q/qu/qu-100019.webp?v=66c84047148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/18/h310-1895.webp?v=3c3698f4148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "origin": "Sweden"
   },
   {
     "id": "segway-navimow-h500e",
@@ -85622,7 +85616,8 @@
       "cutting_height_range_mm": "20-60",
       "noise_db": 58,
       "coverage_sqm": 5000
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "segway-navimow-h800e",
@@ -85719,7 +85714,8 @@
       "cutting_height_range_mm": "20-60",
       "noise_db": 58,
       "coverage_sqm": 8000
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "segway-navimow-i105",
@@ -85814,7 +85810,8 @@
       "cutting_height_range_mm": "20-60",
       "noise_db": 56,
       "coverage_sqm": 500
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "segway-navimow-i108e",
@@ -85908,7 +85905,8 @@
       "cutting_height_range_mm": "20-60",
       "noise_db": 57,
       "coverage_sqm": 800
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "segway-navimow-i115e",
@@ -86004,7 +86002,8 @@
       "cutting_height_range_mm": "20-60",
       "noise_db": 57,
       "coverage_sqm": 1500
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "segway-navimow-h3000e",
@@ -86101,7 +86100,8 @@
       "cutting_height_range_mm": "20-60",
       "noise_db": 58,
       "coverage_sqm": 3000
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "segway-navimow-h1500e",
@@ -86197,7 +86197,8 @@
       "cutting_height_range_mm": "20-60",
       "noise_db": 57,
       "coverage_sqm": 1500
-    }
+    },
+    "origin": "China"
   },
   {
     "id": "husqvarna-automower-308v-2026",
@@ -89117,44 +89118,6 @@
     "bluetooth": true
   },
   {
-    "id": "1x-eve-2023",
-    "name": "EVE",
-    "brand": "1X Technologies",
-    "cat": "Humanoid",
-    "sub": "Mobile Humanoid",
-    "tags": [
-      "wheeled",
-      "security",
-      "commercial",
-      "norway"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 83,
-    "rating": 4.3,
-    "price": 0,
-    "desc": "Wheeled humanoid by 1X (formerly Halodi Robotics). Used for security patrol applications. Predecessor to NEO.",
-    "highlights": [
-      "Wheeled mobility",
-      "Security focus",
-      "OpenAI investor",
-      "Commercial deployments"
-    ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 15
-    },
-    "year": 2023,
-    "status": "Active",
-    "height_mm": 1860,
-    "weight_kg": 86,
-    "battery_life": 360,
-    "origin": "Norway",
-    "cameras": 4,
-    "wifi": true,
-    "bluetooth": true
-  },
-  {
     "id": "1x-neo-2025",
     "name": "NEO",
     "brand": "1X Technologies",
@@ -89197,169 +89160,9 @@
     "bluetooth": true
   },
   {
-    "id": "unitree-h1-2023",
-    "name": "H1",
-    "brand": "Unitree",
-    "cat": "Humanoid",
-    "sub": "General Purpose Humanoid",
-    "tags": [
-      "bipedal",
-      "affordable",
-      "backflip",
-      "research"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 86,
-    "rating": 4.5,
-    "price": 90000,
-    "desc": "Unitree H1 — viral backflip humanoid. Pioneer of affordable full-size humanoids for research. Carbon-fiber-strong.",
-    "highlights": [
-      "Backflip capable",
-      "Affordable for research",
-      "Carbon fiber",
-      "Open SDK"
-    ],
-    "perf": {
-      "speed_ms": 3.3,
-      "payload_kg": 30
-    },
-    "year": 2023,
-    "status": "Active",
-    "height_mm": 1800,
-    "weight_kg": 47,
-    "battery_life": 120,
-    "origin": "China",
-    "cameras": 2,
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "sdk": true
-  },
-  {
-    "id": "unitree-g1-2024",
-    "name": "G1",
-    "brand": "Unitree",
-    "cat": "Humanoid",
-    "sub": "Compact Humanoid",
-    "tags": [
-      "bipedal",
-      "affordable",
-      "amazon",
-      "compact",
-      "research",
-      "sub-20k"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 91,
-    "rating": 4.7,
-    "price": 17990,
-    "desc": "Unitree G1 — under $18K on Amazon. Mass-market entry-level humanoid for research and developers. Most accessible humanoid in 2026.",
-    "highlights": [
-      "$17,990 Amazon",
-      "Compact size",
-      "Open SDK",
-      "Best research value",
-      "5,500 units shipped 2025"
-    ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 3
-    },
-    "year": 2024,
-    "status": "Active",
-    "height_mm": 1320,
-    "weight_kg": 35,
-    "battery_life": 120,
-    "origin": "China",
-    "cameras": 2,
-    "ai_model": "Intel RealSense",
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "sdk": true
-  },
-  {
-    "id": "unitree-h2-2025",
-    "name": "H2",
-    "brand": "Unitree",
-    "cat": "Humanoid",
-    "sub": "General Purpose Humanoid",
-    "tags": [
-      "bipedal",
-      "commercial",
-      "2025-launch"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 89,
-    "rating": 4.6,
-    "price": 0,
-    "desc": "Second-gen H-series humanoid. Improved on H1's capabilities for commercial applications.",
-    "highlights": [
-      "H1 successor",
-      "Commercial-grade",
-      "Open SDK"
-    ],
-    "perf": {
-      "speed_ms": 3.5,
-      "payload_kg": 30
-    },
-    "year": 2025,
-    "status": "Active",
-    "height_mm": 1800,
-    "weight_kg": 50,
-    "battery_life": 150,
-    "origin": "China",
-    "cameras": 3,
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "sdk": true
-  },
-  {
-    "id": "unitree-r1-2024",
-    "name": "R1",
-    "brand": "Unitree",
-    "cat": "Humanoid",
-    "sub": "Compact Humanoid",
-    "tags": [
-      "bipedal",
-      "compact",
-      "education",
-      "affordable"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 82,
-    "rating": 4.3,
-    "price": 5900,
-    "desc": "Cheapest humanoid robot in 2026 — Unitree R1 at $5,900. Education and entry research applications.",
-    "highlights": [
-      "$5,900 cheapest",
-      "Compact",
-      "Education",
-      "Entry research"
-    ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 2
-    },
-    "year": 2024,
-    "status": "Active",
-    "height_mm": 1210,
-    "weight_kg": 25,
-    "battery_life": 100,
-    "origin": "China",
-    "wifi": true,
-    "bluetooth": true,
-    "sdk": true
-  },
-  {
     "id": "agibot-a1-2023",
     "name": "A1",
-    "brand": "AgiBot",
+    "brand": "AGIBOT",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -89395,7 +89198,7 @@
   {
     "id": "agibot-a2-2025",
     "name": "A2",
-    "brand": "AgiBot",
+    "brand": "AGIBOT",
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "tags": [
@@ -89434,7 +89237,7 @@
   {
     "id": "agibot-a3-2025",
     "name": "A3",
-    "brand": "AgiBot",
+    "brand": "AGIBOT",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -89468,49 +89271,9 @@
     "bluetooth": true
   },
   {
-    "id": "agibot-g2-2026",
-    "name": "G2",
-    "brand": "AgiBot",
-    "cat": "Humanoid",
-    "sub": "Wheeled Humanoid",
-    "tags": [
-      "wheeled",
-      "industrial",
-      "GR00T",
-      "precision",
-      "2026-launch"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 90,
-    "rating": 4.6,
-    "price": 0,
-    "desc": "Wheeled industrial humanoid. Sub-millimeter precision. NVIDIA GR00T ecosystem partner. Factory floors.",
-    "highlights": [
-      "Sub-mm precision",
-      "Wheeled",
-      "NVIDIA GR00T partner",
-      "Industrial focus"
-    ],
-    "perf": {
-      "speed_ms": 2.5,
-      "payload_kg": 30
-    },
-    "year": 2026,
-    "status": "Active",
-    "height_mm": 1700,
-    "weight_kg": 80,
-    "battery_life": 480,
-    "origin": "China",
-    "cameras": 4,
-    "ai_model": "NVIDIA GR00T",
-    "wifi": true,
-    "bluetooth": true
-  },
-  {
     "id": "agibot-h2-2025",
     "name": "H2",
-    "brand": "AgiBot",
+    "brand": "AGIBOT",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -89546,7 +89309,7 @@
   {
     "id": "agibot-x2-nezha-2026",
     "name": "X2-N Nezha",
-    "brand": "AgiBot",
+    "brand": "AGIBOT",
     "cat": "Humanoid",
     "sub": "Hybrid Humanoid",
     "tags": [
@@ -89659,119 +89422,6 @@
     "sdk": true
   },
   {
-    "id": "fourier-gr1-2023",
-    "name": "GR-1",
-    "brand": "Fourier Intelligence",
-    "cat": "Humanoid",
-    "sub": "Medical/Rehab Humanoid",
-    "tags": [
-      "bipedal",
-      "rehab",
-      "medical",
-      "first-gen"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 85,
-    "rating": 4.4,
-    "price": 0,
-    "desc": "Fourier's first humanoid pivot from rehab robotics. Medical and rehabilitation focus.",
-    "highlights": [
-      "Rehab heritage",
-      "Medical use",
-      "First-gen",
-      "Hospital pilots"
-    ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 50
-    },
-    "year": 2023,
-    "status": "Active",
-    "height_mm": 1650,
-    "weight_kg": 55,
-    "battery_life": 120,
-    "origin": "China",
-    "cameras": 2,
-    "wifi": true,
-    "bluetooth": true
-  },
-  {
-    "id": "fourier-gr2-2024",
-    "name": "GR-2",
-    "brand": "Fourier Intelligence",
-    "cat": "Humanoid",
-    "sub": "Medical/Rehab Humanoid",
-    "tags": [
-      "bipedal",
-      "rehab",
-      "improved",
-      "2024-launch"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 87,
-    "rating": 4.5,
-    "price": 0,
-    "desc": "GR-2 — improved version. Larger working area for rehab and care applications.",
-    "highlights": [
-      "Rehab focus",
-      "Patient mobility",
-      "Improved on GR-1"
-    ],
-    "perf": {
-      "speed_ms": 1.3,
-      "payload_kg": 50
-    },
-    "year": 2024,
-    "status": "Active",
-    "height_mm": 1750,
-    "weight_kg": 63,
-    "battery_life": 150,
-    "origin": "China",
-    "cameras": 3,
-    "wifi": true,
-    "bluetooth": true
-  },
-  {
-    "id": "fourier-gr3-2025",
-    "name": "GR-3",
-    "brand": "Fourier Intelligence",
-    "cat": "Humanoid",
-    "sub": "Companion Humanoid",
-    "tags": [
-      "bipedal",
-      "companion",
-      "care",
-      "2025-launch"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 89,
-    "rating": 4.6,
-    "price": 0,
-    "desc": "GR-3 — positioned as caring/capable companion. Bridges medical rehab to consumer companion product.",
-    "highlights": [
-      "Caring companion",
-      "Improved arms",
-      "Patient interaction",
-      "Modern AI"
-    ],
-    "perf": {
-      "speed_ms": 1.3,
-      "payload_kg": 40
-    },
-    "year": 2025,
-    "status": "Active",
-    "height_mm": 1700,
-    "weight_kg": 60,
-    "battery_life": 240,
-    "origin": "China",
-    "cameras": 4,
-    "wifi": true,
-    "bluetooth": true
-  },
-  {
     "id": "xpeng-iron-2025",
     "name": "IRON",
     "brand": "XPENG",
@@ -89819,7 +89469,7 @@
   {
     "id": "kepler-k2-2024",
     "name": "K2",
-    "brand": "Kepler",
+    "brand": "Kepler Robotics",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -92275,46 +91925,6 @@
     "bluetooth": true
   },
   {
-    "id": "aethon-tug-t3-2018",
-    "name": "TUG T3",
-    "brand": "Aethon",
-    "cat": "Delivery",
-    "sub": "Indoor Hospital Delivery Robot",
-    "tags": [
-      "indoor",
-      "hospital",
-      "medication",
-      "laundry",
-      "food",
-      "250-hospitals"
-    ],
-    "fig": "📦",
-    "img": "",
-    "score": 87,
-    "rating": 4.5,
-    "price": 85000,
-    "desc": "Hospital delivery robot widely deployed. Medication, food, laundry transport in 250+ hospitals.",
-    "highlights": [
-      "250+ hospitals",
-      "Medication transport",
-      "Food/laundry",
-      "Hospital integration"
-    ],
-    "perf": {
-      "speed_ms": 1.1,
-      "payload_kg": 450
-    },
-    "year": 2018,
-    "status": "Active",
-    "weight_kg": 200,
-    "battery_life": 480,
-    "origin": "USA",
-    "cameras": 2,
-    "lidar": true,
-    "wifi": true,
-    "bluetooth": true
-  },
-  {
     "id": "diligent-moxi-2020",
     "name": "Moxi",
     "brand": "Diligent Robotics",
@@ -92395,7 +92005,7 @@
   {
     "id": "6river-chuck-2018",
     "name": "Chuck",
-    "brand": "6 River Systems",
+    "brand": "6 River Systems (Ocado Group)",
     "cat": "Delivery",
     "sub": "Warehouse Delivery Robot",
     "tags": [
@@ -92655,42 +92265,6 @@
     "battery_life": 36,
     "origin": "China",
     "cameras": 1,
-    "wifi": true,
-    "bluetooth": true
-  },
-  {
-    "id": "dji-air-3-2023",
-    "name": "Air 3",
-    "brand": "DJI",
-    "cat": "Drones",
-    "sub": "Consumer Drone",
-    "tags": [
-      "dual-camera",
-      "wide-tele",
-      "mid-range"
-    ],
-    "fig": "🚁",
-    "img": "",
-    "score": 86,
-    "rating": 4.6,
-    "price": 1099,
-    "desc": "Dual-camera (wide + 3x tele). 46-min flight. Omnidirectional obstacle sensing.",
-    "highlights": [
-      "Dual cameras (wide + 3x)",
-      "46-min battery",
-      "Omnidirectional",
-      "O4 transmission"
-    ],
-    "perf": {
-      "speed_ms": 21,
-      "payload_kg": 0
-    },
-    "year": 2023,
-    "status": "Active",
-    "weight_kg": 0.72,
-    "battery_life": 46,
-    "origin": "China",
-    "cameras": 2,
     "wifi": true,
     "bluetooth": true
   },
@@ -96357,7 +95931,7 @@
     "cellular": "5G"
   },
   {
-    "id": "applied-intuition-EpicSim-2023",
+    "id": "applied-intuition-epicsim",
     "name": "EpicSim",
     "brand": "Applied Intuition",
     "cat": "Autonomous Vehicles",
@@ -97307,7 +96881,7 @@
   {
     "id": "kongsberg-hugin-superior-2019",
     "name": "HUGIN Superior",
-    "brand": "Kongsberg",
+    "brand": "Kongsberg (HII)",
     "cat": "Aquatic",
     "sub": "AUV",
     "tags": [
