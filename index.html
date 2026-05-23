@@ -375,7 +375,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .finder-band h1{font-family:'Space Mono','Courier New',monospace;font-size:24px;font-weight:800;color:var(--txt);margin-bottom:4px;text-align:center}
 .finder-band p{font-size:12px;color:var(--mut);text-align:center;margin-bottom:18px}
 .cat-wrap{margin:0 -20px;padding:0 20px;border-bottom:1px solid var(--bdr)}
-.ftabs{display:flex;flex-wrap:wrap;gap:2px}
+.ftabs{display:flex;flex-wrap:wrap;gap:2px;justify-content:center}
 .ftab{padding:9px 13px;font-size:12px;font-weight:600;color:var(--mut);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;display:flex;align-items:center;gap:6px;white-space:nowrap;background:transparent}
 .ftab:hover{color:var(--txt);background:var(--bg2)}
 .ftab.active{color:var(--acc);border-bottom-color:var(--acc)}
@@ -3414,27 +3414,39 @@ async function renderVideos(){
   const error = document.getElementById('videos-error');
   const grid = document.getElementById('videos-grid');
   if (!loading || !error || !grid) return;
-  // Try cache first
+  const MAX_VIDEOS = 12;
+  // Try cache first — accept stale cache if fetch fails (better than empty page)
   let videos = null;
+  let cachedFallback = null;
   try {
     const cached = JSON.parse(localStorage.getItem(YT_CACHE_KEY) || 'null');
-    if (cached && cached.t && Date.now() - cached.t < YT_CACHE_TTL && Array.isArray(cached.v) && cached.v.length){
-      videos = cached.v;
+    if (cached && Array.isArray(cached.v) && cached.v.length){
+      cachedFallback = cached.v;
+      if (cached.t && Date.now() - cached.t < YT_CACHE_TTL){
+        videos = cached.v;
+      }
     }
   } catch(e) {}
-  // If no cache, fetch
+  // If no fresh cache, fetch (falls back to stale cache on error)
   if (!videos){
     try {
       videos = await fetchYouTubeVideos();
       localStorage.setItem(YT_CACHE_KEY, JSON.stringify({t: Date.now(), v: videos}));
     } catch (e) {
       console.error('YouTube fetch failed:', e);
-      loading.style.display = 'none';
-      error.style.display = 'block';
-      grid.style.display = 'none';
-      return;
+      if (cachedFallback){
+        // Use stale cache rather than show error — videos are still useful
+        videos = cachedFallback;
+      } else {
+        loading.style.display = 'none';
+        error.style.display = 'block';
+        grid.style.display = 'none';
+        return;
+      }
     }
   }
+  // Cap at MAX_VIDEOS for a clean, performant grid
+  videos = videos.slice(0, MAX_VIDEOS);
   // Store globally so click handlers can look up titles
   window._VIDEOS_BY_ID = {};
   videos.forEach(v => { window._VIDEOS_BY_ID[v.id] = v; });
