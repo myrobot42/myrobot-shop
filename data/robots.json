@@ -40958,17 +40958,23 @@
   },
   {
     "id": "milrem-themis-adder",
-    "name": "THeMIS ADDER",
+    "name": "THeMIS Firefighter",
     "brand": "Milrem Robotics",
     "year": 2019,
     "status": "Production",
-    "cat": "Military",
-    "sub": "Combat UGV",
+    "cat": "Disaster Response",
+    "sub": "Firefighting Robot",
     "tags": [
       "anti-tank",
       "missile system",
       "autonomous",
-      "reconnaissance"
+      "reconnaissance",
+      "firefighting",
+      "UGV",
+      "estonian",
+      "tracked",
+      "modular",
+      "industrial"
     ],
     "fig": "https://milremrobotics.com/wp-content/uploads/2019/11/themis-adder.jpg",
     "img": "https://milremrobotics.com/wp-content/uploads/2019/11/themis-adder-main.jpg",
@@ -40980,7 +40986,11 @@
       "Spike LR missiles",
       "4km range",
       "Day/night optics",
-      "Remote operation"
+      "Remote operation",
+      "Tracked UGV",
+      "Modular payload",
+      "Estonian-made",
+      "Industrial fires"
     ],
     "height_mm": 1200,
     "width_mm": 2000,
@@ -41049,7 +41059,8 @@
       "Reconnaissance"
     ],
     "perf": 9.2,
-    "origin": "Estonia"
+    "origin": "Estonia",
+    "cellular": "4G"
   },
   {
     "id": "milrem-themis-observe",
@@ -62983,16 +62994,45 @@
     "id": "qinetiq-talon-v",
     "name": "TALON V",
     "brand": "QinetiQ",
-    "cat": "Military",
-    "sub": "Other Military",
-    "tags": [],
+    "cat": "Disaster Response",
+    "sub": "EOD/Bomb Disposal Robot",
+    "tags": [
+      "EOD",
+      "CBRN",
+      "HAZMAT",
+      "4000-units",
+      "police",
+      "military",
+      "IOP-first",
+      "modular",
+      "heavy-lift",
+      "cbrn",
+      "2024-launch",
+      "6th-gen",
+      "modernized",
+      "16-IO"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 160000,
     "desc": "First IOP fielded robotic system to pass Army Test and Evaluation Command testing. Used for EOD, reconnaissance, communications, CBRN, security missions.",
-    "highlights": [],
+    "highlights": [
+      "4,000+ delivered",
+      "World-renowned EOD",
+      "CBRN/HAZMAT",
+      "Multi-mission",
+      "IOP-first",
+      "Modular CBRN kit",
+      "Army TEC cleared",
+      "Heavy-lift",
+      "6th-gen",
+      "16 I/O ports",
+      "HD + thermal",
+      "JAUS AS4",
+      "Modernized"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -63016,7 +63056,9 @@
       "Security",
       "CBRN detection",
       "Communications relay"
-    ]
+    ],
+    "wifi": true,
+    "bluetooth": true
   },
   {
     "id": "roboteam-rt-7-rocu-",
@@ -97640,5 +97682,1007 @@
     "cameras": 1,
     "wifi": true,
     "bluetooth": false
+  },
+  {
+    "id": "irobot-510-packbot-2002",
+    "name": "510 PackBot",
+    "brand": "iRobot (Endeavor)",
+    "cat": "Disaster Response",
+    "sub": "EOD/Bomb Disposal Robot",
+    "tags": [
+      "EOD",
+      "HAZMAT",
+      "CBRN",
+      "fukushima",
+      "911",
+      "famous",
+      "4500-units"
+    ],
+    "fig": "💥",
+    "img": "",
+    "score": 92,
+    "rating": 4.7,
+    "price": 150000,
+    "desc": "Most-deployed EOD robot worldwide. 4,500+ in service. Used at 9/11, Iraq, Afghanistan, Fukushima nuclear cleanup, Boston Marathon bombing.",
+    "highlights": [
+      "4,500+ deployed",
+      "9/11/Iraq/Afghanistan",
+      "Fukushima nuclear",
+      "Man-portable",
+      "13.6kg payload"
+    ],
+    "perf": {
+      "speed_ms": 2.6,
+      "payload_kg": 13.6
+    },
+    "year": 2002,
+    "status": "Active",
+    "weight_kg": 24,
+    "battery_life": 300,
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "remotec-andros-f6b-2018",
+    "name": "Andros F6B",
+    "brand": "Remotec (Northrop Grumman)",
+    "cat": "Disaster Response",
+    "sub": "EOD/Bomb Disposal Robot",
+    "tags": [
+      "EOD",
+      "police",
+      "90-percent-us",
+      "stair-climbing",
+      "famous"
+    ],
+    "fig": "💥",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 150000,
+    "desc": "Used by 90% of US bomb squads. Stair-climbing, multi-tool. Industry standard for police EOD.",
+    "highlights": [
+      "90% of US bomb squads",
+      "Stair-climbing",
+      "Multi-tool",
+      "Police standard"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 30
+    },
+    "year": 2018,
+    "status": "Active",
+    "weight_kg": 220,
+    "battery_life": 300,
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "remotec-titus-2022",
+    "name": "Titus",
+    "brand": "Remotec (Northrop Grumman)",
+    "cat": "Disaster Response",
+    "sub": "EOD/Bomb Disposal Robot",
+    "tags": [
+      "EOD",
+      "backpackable",
+      "compact",
+      "police",
+      "tactical"
+    ],
+    "fig": "💥",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 80000,
+    "desc": "Backpackable compact EOD robot. Tactical police use. Faster deployment than Andros.",
+    "highlights": [
+      "Backpackable",
+      "Compact",
+      "Fast deployment",
+      "Tactical police"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 10
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 25,
+    "battery_life": 240,
+    "origin": "USA",
+    "cameras": 3,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "icor-cobra-mk3-2018",
+    "name": "CALIBER MK3",
+    "brand": "ICOR Technology",
+    "cat": "Disaster Response",
+    "sub": "EOD/Bomb Disposal Robot",
+    "tags": [
+      "EOD",
+      "canada",
+      "modular",
+      "police",
+      "commercial"
+    ],
+    "fig": "💥",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 120000,
+    "desc": "Canadian-made EOD robot. Modular design. Used by police agencies worldwide.",
+    "highlights": [
+      "Canadian-made",
+      "Modular",
+      "Police use",
+      "Worldwide deployment"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 15
+    },
+    "year": 2018,
+    "status": "Active",
+    "weight_kg": 85,
+    "battery_life": 300,
+    "origin": "Canada",
+    "cameras": 3,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "thales-bobcat-2020",
+    "name": "Bobcat",
+    "brand": "Thales",
+    "cat": "Disaster Response",
+    "sub": "EOD/Bomb Disposal Robot",
+    "tags": [
+      "EOD",
+      "france",
+      "european",
+      "military",
+      "police"
+    ],
+    "fig": "💥",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 110000,
+    "desc": "French-made EOD robot. European military + police use. Versatile modular platform.",
+    "highlights": [
+      "French-made",
+      "Military + police",
+      "Modular",
+      "European use"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 15
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 80,
+    "battery_life": 300,
+    "origin": "France",
+    "cameras": 3,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "chiba-tech-quince-2011",
+    "name": "Quince",
+    "brand": "Chiba Institute of Technology",
+    "cat": "Disaster Response",
+    "sub": "USAR/Search & Rescue Robot",
+    "tags": [
+      "nuclear",
+      "fukushima",
+      "famous",
+      "search-rescue",
+      "radiation-mapping"
+    ],
+    "fig": "🚨",
+    "img": "",
+    "score": 87,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Famous Fukushima robot. Mapped radiation distribution across multiple floors after PackBot. Japanese USAR pioneer.",
+    "highlights": [
+      "Fukushima famous",
+      "Multi-floor radiation",
+      "Japanese USAR",
+      "Tracked design"
+    ],
+    "perf": {
+      "speed_ms": 1.2,
+      "payload_kg": 20
+    },
+    "year": 2011,
+    "status": "Active",
+    "weight_kg": 26,
+    "battery_life": 300,
+    "origin": "Japan",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "honeybee-spirit-2018",
+    "name": "Spirit",
+    "brand": "Honeybee Robotics",
+    "cat": "Disaster Response",
+    "sub": "USAR/Search & Rescue Robot",
+    "tags": [
+      "USAR",
+      "compact",
+      "portable",
+      "research",
+      "DARPA"
+    ],
+    "fig": "🚨",
+    "img": "",
+    "score": 83,
+    "rating": 4.4,
+    "price": 0,
+    "desc": "Compact urban search & rescue robot. DARPA research lineage. Now part of Blue Origin.",
+    "highlights": [
+      "DARPA lineage",
+      "Compact USAR",
+      "Portable",
+      "Now Blue Origin"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 5
+    },
+    "year": 2018,
+    "status": "Active",
+    "weight_kg": 15,
+    "battery_life": 240,
+    "origin": "USA",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "iit-walkman-2017",
+    "name": "WALK-MAN",
+    "brand": "IIT (Italian Institute of Technology)",
+    "cat": "Disaster Response",
+    "sub": "Disaster Response Humanoid",
+    "tags": [
+      "bipedal",
+      "disaster-humanoid",
+      "european",
+      "research",
+      "DARPA-DRC-derived"
+    ],
+    "fig": "🤖",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Italian disaster response humanoid. 1.85m, 102kg, 33 DoF. DARPA Robotics Challenge derived research.",
+    "highlights": [
+      "33 DoF",
+      "Disaster humanoid",
+      "European research",
+      "DRC derived"
+    ],
+    "perf": {
+      "speed_ms": 1,
+      "payload_kg": 15
+    },
+    "year": 2017,
+    "status": "Active",
+    "weight_kg": 102,
+    "battery_life": 60,
+    "origin": "Italy",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true
+  },
+  {
+    "id": "iit-centauro-2018",
+    "name": "Centauro",
+    "brand": "IIT (Italian Institute of Technology)",
+    "cat": "Disaster Response",
+    "sub": "Disaster Response Robot",
+    "tags": [
+      "wheel-legged",
+      "hybrid",
+      "centaur",
+      "european",
+      "disaster"
+    ],
+    "fig": "🤖",
+    "img": "",
+    "score": 87,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Hybrid wheel-legged centaur design. 1.5m, 93kg. 4 legs with wheels for tough terrain disaster response.",
+    "highlights": [
+      "Wheel-legged hybrid",
+      "Centaur design",
+      "Tough terrain",
+      "European research"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 25
+    },
+    "year": 2018,
+    "status": "Active",
+    "weight_kg": 93,
+    "battery_life": 120,
+    "origin": "Italy",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true
+  },
+  {
+    "id": "howe-thermite-rs1-2014",
+    "name": "Thermite RS1",
+    "brand": "Howe & Howe Technologies",
+    "cat": "Disaster Response",
+    "sub": "Firefighting Robot",
+    "tags": [
+      "firefighting",
+      "tracked",
+      "heavy-duty",
+      "water-cannon",
+      "crew-protect"
+    ],
+    "fig": "🚒",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 273000,
+    "desc": "Heavy-duty firefighting robot with water cannon (1,250 GPM). Used at LA, NY, structural firefighting. Crew protection.",
+    "highlights": [
+      "1,250 GPM cannon",
+      "Heavy-duty",
+      "LA/NY use",
+      "Structural fires"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 1000
+    },
+    "year": 2014,
+    "status": "Active",
+    "weight_kg": 1500,
+    "battery_life": 480,
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "howe-thermite-rs3-2020",
+    "name": "Thermite RS3",
+    "brand": "Howe & Howe Technologies",
+    "cat": "Disaster Response",
+    "sub": "Firefighting Robot",
+    "tags": [
+      "firefighting",
+      "tracked",
+      "upgraded",
+      "2-axis-cannon",
+      "FDNY"
+    ],
+    "fig": "🚒",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 350000,
+    "desc": "Larger Thermite RS3. 2-axis water/foam cannon. FDNY purchase. Industrial + structural firefighting.",
+    "highlights": [
+      "FDNY in use",
+      "2-axis cannon",
+      "Industrial fires",
+      "Structural fires"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 2000
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 1800,
+    "battery_life": 480,
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "colossus-shark-robotics-2017",
+    "name": "Colossus",
+    "brand": "Shark Robotics",
+    "cat": "Disaster Response",
+    "sub": "Firefighting Robot",
+    "tags": [
+      "firefighting",
+      "french",
+      "notre-dame",
+      "famous",
+      "tracked"
+    ],
+    "fig": "🚒",
+    "img": "",
+    "score": 91,
+    "rating": 4.7,
+    "price": 250000,
+    "desc": "FAMOUS — saved Notre-Dame Cathedral during 2019 fire. French-made firefighting robot. Heavy-water-cannon delivery.",
+    "highlights": [
+      "Saved Notre-Dame",
+      "French-made",
+      "Heavy water cannon",
+      "Heat-resistant"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 500
+    },
+    "year": 2017,
+    "status": "Active",
+    "weight_kg": 510,
+    "battery_life": 480,
+    "origin": "France",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "luf-60-2018",
+    "name": "LUF 60",
+    "brand": "LUF GmbH",
+    "cat": "Disaster Response",
+    "sub": "Firefighting Robot",
+    "tags": [
+      "firefighting",
+      "austrian",
+      "tunnel-fires",
+      "heavy-tracked",
+      "fan-attack"
+    ],
+    "fig": "🚒",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 280000,
+    "desc": "Austrian firefighting robot. Specialized for tunnel/underground fires. High-pressure water-fog attack.",
+    "highlights": [
+      "Tunnel fires",
+      "Underground fires",
+      "Water-fog attack",
+      "Austrian-engineered"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 1000
+    },
+    "year": 2018,
+    "status": "Active",
+    "weight_kg": 1700,
+    "battery_life": 360,
+    "origin": "Austria",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "endeavor-110-firstlook-2014",
+    "name": "110 FirstLook",
+    "brand": "iRobot (Endeavor)",
+    "cat": "Disaster Response",
+    "sub": "Throwable Reconnaissance Robot",
+    "tags": [
+      "throwable",
+      "reconnaissance",
+      "tactical",
+      "compact",
+      "police",
+      "military",
+      "famous"
+    ],
+    "fig": "🚨",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 15000,
+    "desc": "Throwable tactical reconnaissance robot. Survives 15-ft drops. Police SWAT + military. Real-time video.",
+    "highlights": [
+      "Throwable",
+      "15-ft drop survival",
+      "SWAT use",
+      "Real-time video"
+    ],
+    "perf": {
+      "speed_ms": 1,
+      "payload_kg": 1
+    },
+    "year": 2014,
+    "status": "Active",
+    "weight_kg": 2.4,
+    "battery_life": 300,
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "recon-robotics-throwbot-2018",
+    "name": "Throwbot 2",
+    "brand": "ReconRobotics",
+    "cat": "Disaster Response",
+    "sub": "Throwable Reconnaissance Robot",
+    "tags": [
+      "throwable",
+      "compact",
+      "sub-2lb",
+      "police",
+      "military",
+      "ir-camera"
+    ],
+    "fig": "🚨",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 12000,
+    "desc": "Ultra-compact throwable robot. <2 lb. IR + visual camera. Police/military reconnaissance.",
+    "highlights": [
+      "Sub-2 lb",
+      "Throwable",
+      "IR + visual",
+      "Police/military"
+    ],
+    "perf": {
+      "speed_ms": 0.7,
+      "payload_kg": 0.5
+    },
+    "year": 2018,
+    "status": "Active",
+    "weight_kg": 0.7,
+    "battery_life": 120,
+    "origin": "USA",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "telerob-tegros-2023",
+    "name": "teleMAX EVO",
+    "brand": "Telerob (Cobham)",
+    "cat": "Disaster Response",
+    "sub": "EOD/Bomb Disposal Robot",
+    "tags": [
+      "EOD",
+      "german",
+      "modular",
+      "european-standard",
+      "arm-7-DOF"
+    ],
+    "fig": "💥",
+    "img": "",
+    "score": 87,
+    "rating": 4.5,
+    "price": 140000,
+    "desc": "German EOD robot. Modular design. 7-DOF arm. European police/military standard.",
+    "highlights": [
+      "German-engineered",
+      "7-DOF arm",
+      "Modular",
+      "European standard"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 30
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 75,
+    "battery_life": 360,
+    "origin": "Germany",
+    "cameras": 3,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "toyota-trtwhill-2022",
+    "name": "T-TR1",
+    "brand": "Toyota",
+    "cat": "Disaster Response",
+    "sub": "USAR/Search & Rescue Robot",
+    "tags": [
+      "telepresence",
+      "disaster",
+      "japanese",
+      "mobile-platform"
+    ],
+    "fig": "🚨",
+    "img": "",
+    "score": 82,
+    "rating": 4.3,
+    "price": 0,
+    "desc": "Toyota's telepresence disaster response platform. Japanese rescue tech.",
+    "highlights": [
+      "Telepresence",
+      "Toyota research",
+      "Japanese rescue",
+      "Mobile platform"
+    ],
+    "perf": {
+      "speed_ms": 1,
+      "payload_kg": 10
+    },
+    "year": 2022,
+    "status": "Active",
+    "weight_kg": 85,
+    "battery_life": 480,
+    "origin": "Japan",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "raptor-aerial-fire-rescue-2024",
+    "name": "Aerial Fire Rescue",
+    "brand": "Raptor Maps",
+    "cat": "Disaster Response",
+    "sub": "Aerial Fire Inspection Drone",
+    "tags": [
+      "drone",
+      "thermal",
+      "wildfire",
+      "mapping",
+      "2024-launch"
+    ],
+    "fig": "🚒",
+    "img": "",
+    "score": 85,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Aerial wildfire inspection drone. Thermal mapping for active fire perimeters.",
+    "highlights": [
+      "Wildfire thermal",
+      "Active perimeters",
+      "Mapping",
+      "2024 launch"
+    ],
+    "perf": {
+      "speed_ms": 15,
+      "payload_kg": 2
+    },
+    "year": 2024,
+    "status": "Active",
+    "weight_kg": 3,
+    "battery_life": 40,
+    "origin": "USA",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "erickson-aerial-firefighting-2020",
+    "name": "Aerial Firefighter Drone",
+    "brand": "Erickson Aerial",
+    "cat": "Disaster Response",
+    "sub": "Aerial Fire Inspection Drone",
+    "tags": [
+      "drone",
+      "wildfire",
+      "firefighting",
+      "tanker",
+      "mapping"
+    ],
+    "fig": "🚒",
+    "img": "",
+    "score": 83,
+    "rating": 4.4,
+    "price": 0,
+    "desc": "Aerial fire intelligence + tanker coordination drones. Wildfire management.",
+    "highlights": [
+      "Tanker coordination",
+      "Wildfire intel",
+      "Fire mapping",
+      "Aerial firefighting"
+    ],
+    "perf": {
+      "speed_ms": 18,
+      "payload_kg": 3
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 4,
+    "battery_life": 35,
+    "origin": "USA",
+    "cameras": 2,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
+  },
+  {
+    "id": "general-dynamics-mtrs-ii-2018",
+    "name": "MTRS Mk II",
+    "brand": "General Dynamics",
+    "cat": "Disaster Response",
+    "sub": "EOD/Bomb Disposal Robot",
+    "tags": [
+      "EOD",
+      "army",
+      "tactical",
+      "medium-tactical",
+      "fielded"
+    ],
+    "fig": "💥",
+    "img": "",
+    "score": 87,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "Medium-sized tactical robot (MTRS). US Army field deployment. Multi-mission EOD.",
+    "highlights": [
+      "MTRS Army",
+      "Medium-tactical",
+      "Multi-mission",
+      "Army-fielded"
+    ],
+    "perf": {
+      "speed_ms": 2.5,
+      "payload_kg": 25
+    },
+    "year": 2018,
+    "status": "Active",
+    "weight_kg": 75,
+    "battery_life": 480,
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "endeavor-310-sugv-2019",
+    "name": "310 SUGV",
+    "brand": "Endeavor Robotics",
+    "cat": "Disaster Response",
+    "sub": "Small Unmanned Ground Vehicle",
+    "tags": [
+      "SUGV",
+      "army",
+      "tactical",
+      "backpack",
+      "compact",
+      "famous"
+    ],
+    "fig": "🚨",
+    "img": "",
+    "score": 86,
+    "rating": 4.5,
+    "price": 50000,
+    "desc": "Small UGV. Army standard for tactical recon/EOD. Backpackable.",
+    "highlights": [
+      "Backpackable",
+      "Army standard",
+      "Tactical recon",
+      "Compact"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 5
+    },
+    "year": 2019,
+    "status": "Active",
+    "weight_kg": 13,
+    "battery_life": 300,
+    "origin": "USA",
+    "cameras": 3,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "boston-dynamics-spot-firefighter-2023",
+    "name": "Spot (Firefighter Configuration)",
+    "brand": "Boston Dynamics",
+    "cat": "Disaster Response",
+    "sub": "Quadruped Inspection Robot",
+    "tags": [
+      "quadruped",
+      "firefighting",
+      "singapore-civil-defense",
+      "inspection",
+      "industrial-fires"
+    ],
+    "fig": "🤖",
+    "img": "",
+    "score": 89,
+    "rating": 4.6,
+    "price": 75000,
+    "desc": "Spot configured for firefighter use. Singapore Civil Defense deployment. Industrial fire inspection.",
+    "highlights": [
+      "Singapore CDF deployed",
+      "Industrial fires",
+      "Quadruped agility",
+      "Hazard inspection"
+    ],
+    "perf": {
+      "speed_ms": 1.6,
+      "payload_kg": 14
+    },
+    "year": 2023,
+    "status": "Active",
+    "weight_kg": 32,
+    "battery_life": 90,
+    "ip_rating": "IP54",
+    "origin": "USA",
+    "cameras": 5,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "smp-robotics-s5-2020",
+    "name": "S5 Patrol",
+    "brand": "SMP Robotics",
+    "cat": "Disaster Response",
+    "sub": "Security Patrol Robot",
+    "tags": [
+      "patrol",
+      "outdoor",
+      "autonomous",
+      "surveillance",
+      "alarm-response"
+    ],
+    "fig": "🚨",
+    "img": "",
+    "score": 81,
+    "rating": 4.3,
+    "price": 50000,
+    "desc": "Autonomous outdoor security patrol robot. Alarm response. 24/7 perimeter security.",
+    "highlights": [
+      "24/7 patrol",
+      "Alarm response",
+      "Perimeter security",
+      "Autonomous"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 10
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 80,
+    "battery_life": 600,
+    "ip_rating": "IPX5",
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "4G"
+  },
+  {
+    "id": "icor-mini-caliber-2020",
+    "name": "Mini-CALIBER",
+    "brand": "ICOR Technology",
+    "cat": "Disaster Response",
+    "sub": "EOD/Bomb Disposal Robot",
+    "tags": [
+      "EOD",
+      "compact",
+      "portable",
+      "sub-50lb",
+      "police"
+    ],
+    "fig": "💥",
+    "img": "",
+    "score": 83,
+    "rating": 4.4,
+    "price": 60000,
+    "desc": "Compact CALIBER variant. Sub-50lb. Police rapid-response EOD.",
+    "highlights": [
+      "Sub-50lb",
+      "Compact EOD",
+      "Police rapid response",
+      "Portable"
+    ],
+    "perf": {
+      "speed_ms": 1.5,
+      "payload_kg": 7
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 22,
+    "battery_life": 240,
+    "origin": "Canada",
+    "cameras": 3,
+    "wifi": true,
+    "bluetooth": true
+  },
+  {
+    "id": "shark-rhyno-2020",
+    "name": "Rhyno Protect",
+    "brand": "Shark Robotics",
+    "cat": "Disaster Response",
+    "sub": "Civil Protection Robot",
+    "tags": [
+      "riot-control",
+      "crowd-management",
+      "french",
+      "police",
+      "civil-protection"
+    ],
+    "fig": "🚨",
+    "img": "",
+    "score": 83,
+    "rating": 4.4,
+    "price": 0,
+    "desc": "French crowd management / civil protection robot. Police deployment. Civil disturbance response.",
+    "highlights": [
+      "Crowd management",
+      "French police",
+      "Civil protection",
+      "Riot response"
+    ],
+    "perf": {
+      "speed_ms": 3,
+      "payload_kg": 300
+    },
+    "year": 2020,
+    "status": "Active",
+    "weight_kg": 600,
+    "battery_life": 480,
+    "origin": "France",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "4G"
+  },
+  {
+    "id": "darpa-rapidbridge-2026",
+    "name": "RapidBridge",
+    "brand": "DARPA",
+    "cat": "Disaster Response",
+    "sub": "Engineering/Construction Robot",
+    "tags": [
+      "bridge-building",
+      "DARPA",
+      "2026-launch",
+      "disaster-recovery",
+      "engineering"
+    ],
+    "fig": "🚧",
+    "img": "",
+    "score": 87,
+    "rating": 4.5,
+    "price": 0,
+    "desc": "DARPA project — rapid bridge deployment for disaster recovery. Engineering robot for cut-off areas.",
+    "highlights": [
+      "DARPA project",
+      "Bridge deployment",
+      "Disaster recovery",
+      "Cut-off area access"
+    ],
+    "perf": {
+      "speed_ms": 2,
+      "payload_kg": 5000
+    },
+    "year": 2026,
+    "status": "Active",
+    "weight_kg": 15000,
+    "origin": "USA",
+    "cameras": 4,
+    "wifi": true,
+    "bluetooth": true,
+    "cellular": "5G"
   }
 ]
