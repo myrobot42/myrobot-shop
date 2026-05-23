@@ -41,7 +41,8 @@
     "lidar": true,
     "warranty_months": 12,
     "cellular": "Optional",
-    "released": "2025"
+    "released": "2025",
+    "os": "Linux"
   },
   {
     "id": "ubtech-walker-s2",
@@ -50955,7 +50956,11 @@
     "product_url": "https://wandelbots.com/nova",
     "wifi": true,
     "cellular": "Optional",
-    "os": "Linux"
+    "os": "Linux",
+    "bluetooth": false,
+    "lidar": false,
+    "imu": false,
+    "depth_sensing": false
   },
   {
     "id": "realman-rmc-da-dual-arm-compound-robot",
@@ -52824,7 +52829,8 @@
     "warranty_months": 12,
     "product_url": "https://www.wandelbots.com/tracepen",
     "os": "Wandelbots NOVA",
-    "cellular": "None"
+    "cellular": "None",
+    "weight_kg": 0.15
   },
   {
     "id": "wandelbots-wandelbots-nova-cloud",
@@ -52864,7 +52870,11 @@
     "bluetooth": true,
     "os": "Cloud-based platform",
     "cameras": "Supports integration with various camera systems for visual monitoring",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "cellular": "Supported via cloud infrastructure",
+    "lidar": false,
+    "imu": false,
+    "depth_sensing": false
   },
   {
     "id": "wandelbots-wandelbots-nova-os",
@@ -55329,7 +55339,8 @@
     "lidar": false,
     "imu": false,
     "wifi": true,
-    "bluetooth": false
+    "bluetooth": false,
+    "os": "Linux"
   },
   {
     "id": "hanwha-robotics-amr-series",
@@ -64349,7 +64360,8 @@
     "lidar": false,
     "imu": true,
     "depth_sensing": true,
-    "ros": false
+    "ros": false,
+    "cameras": "Multiple intraoperative cameras for real-time surgical field visualization and bone tracking"
   },
   {
     "id": "johnson-johnson-medtech-ethicon-ottava-robotic-surgical-system",
@@ -64845,7 +64857,12 @@
     "operating_temp_c": "-10 to 50",
     "certification": "CE, FCC",
     "warranty_months": 12,
-    "product_url": "https://www.flexiv.com/products/grav"
+    "product_url": "https://www.flexiv.com/products/grav",
+    "lidar": false,
+    "imu": true,
+    "depth_sensing": false,
+    "bluetooth": false,
+    "wifi": false
   },
   {
     "id": "flexiv-grav-gripper",
@@ -65981,7 +65998,10 @@
     "imu": true,
     "dof": 7,
     "warranty_months": 12,
-    "product_url": "https://physicalintelligence.company/blog/pi0"
+    "product_url": "https://physicalintelligence.company/blog/pi0",
+    "lidar": false,
+    "wifi": true,
+    "bluetooth": false
   },
   {
     "id": "physical-intelligence-0-5-pi-0-5-",
@@ -66025,7 +66045,8 @@
     "bluetooth": true,
     "warranty_months": 12,
     "product_url": "https://physicalintelligence.company/blog/pi0",
-    "lidar": false
+    "lidar": false,
+    "dof": 7
   },
   {
     "id": "physical-intelligence-0-pi-zero-",
@@ -66540,7 +66561,9 @@
     "cameras": "External camera support via toolbox",
     "imu": true,
     "depth_sensing": false,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "lidar": false,
+    "cellular": "None"
   },
   {
     "id": "franka-robotics-franka-ai-companion",
@@ -70544,7 +70567,7 @@
     "img": "https://m.media-amazon.com/images/I/61w6Vo3QPbL._AC_SL1500_.jpg",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 599,
     "desc": "11,000Pa suction power, ZeroTangle hair-free brush system, dual spinning mop pads with electronic water control, auto mop washing and drying, smart obstacle avoidance, self-emptying dock with 3.4-liter water tanks",
     "highlights": [],
     "perf": {
@@ -70575,7 +70598,17 @@
       "https://m.media-amazon.com/images/I/71iB6tAIcCL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71DaVhKjw5L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71YPevhEp6L._AC_SL1500_.jpg"
-    ]
+    ],
+    "height_mm": 96,
+    "width_mm": 350,
+    "depth_mm": 350,
+    "weight_kg": 4.2,
+    "battery_life": "3 hours",
+    "charge_time": "4 hours",
+    "imu": true,
+    "depth_sensing": true,
+    "cameras": "Front-facing obstacle avoidance camera",
+    "warranty_months": 12
   },
   {
     "id": "yeedi-yeedi-c12-combo",
@@ -95962,7 +95995,22 @@
     "status": "Active",
     "origin": "USA",
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "released": "2019",
+    "os": "Linux",
+    "ros": true,
+    "use_cases": [
+      "Autonomous vehicle simulation",
+      "Scenario-based testing",
+      "Sensor simulation",
+      "Software-in-the-loop testing",
+      "Hardware-in-the-loop testing",
+      "Regression testing",
+      "Safety validation",
+      "OEM vehicle development"
+    ],
+    "manufacturer_url": "https://www.appliedintuition.com",
+    "product_url": "https://www.appliedintuition.com/products/simulation"
   },
   {
     "id": "hesai-at128-2022",
@@ -96068,7 +96116,25 @@
     "status": "Active",
     "origin": "Israel",
     "wifi": false,
-    "bluetooth": false
+    "bluetooth": false,
+    "released": "2024",
+    "os": "Mobileye proprietary RTOS",
+    "chipset": "EyeQ6",
+    "lidar": false,
+    "imu": false,
+    "depth_sensing": true,
+    "use_cases": [
+      "Advanced driver assistance systems",
+      "Autonomous driving",
+      "Lane keeping assist",
+      "Automatic emergency braking",
+      "Adaptive cruise control",
+      "Traffic sign recognition",
+      "Pedestrian detection",
+      "OEM vehicle integration"
+    ],
+    "manufacturer_url": "https://www.mobileye.com",
+    "product_url": "https://www.mobileye.com/eyeq-chip/"
   },
   {
     "id": "sea-machines-stormrunner-2024",
