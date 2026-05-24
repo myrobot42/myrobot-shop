@@ -42,7 +42,8 @@
     "warranty_months": 12,
     "cellular": "Optional",
     "released": "2025",
-    "os": "Linux"
+    "os": "Linux",
+    "dof": 7
   },
   {
     "id": "ubtech-walker-s2",
@@ -201,7 +202,7 @@
     "name": "Roadrunner",
     "brand": "RAI",
     "cat": "Humanoid",
-    "sub": "",
+    "sub": "Bipedal Wheeled Hybrid Robot",
     "tags": [],
     "fig": "🤖",
     "img": "",
@@ -218,7 +219,7 @@
     },
     "year": 2023,
     "origin": "Unknown",
-    "status": "",
+    "status": "Research Prototype",
     "height_mm": 1650,
     "weight_kg": 85,
     "speed_ms": 3.6,
@@ -230,7 +231,9 @@
       "Research",
       "Locomotion studies",
       "Multimodal mobility research"
-    ]
+    ],
+    "ros": true,
+    "manufacturer_url": "https://www.rai.ai"
   },
   {
     "id": "boston-dynamics-atlas",
@@ -51000,7 +51003,9 @@
     "bluetooth": false,
     "lidar": false,
     "imu": false,
-    "depth_sensing": false
+    "depth_sensing": false,
+    "api_support": true,
+    "cloud_enabled": true
   },
   {
     "id": "realman-rmc-da-dual-arm-compound-robot",
@@ -52954,7 +52959,11 @@
     "os": "NOVA OS",
     "wifi": true,
     "bluetooth": true,
-    "ai_model": "Machine learning for trajectory optimization"
+    "ai_model": "Machine learning for trajectory optimization",
+    "cellular": "Ethernet",
+    "depth_sensing": true,
+    "imu": false,
+    "lidar": false
   },
   {
     "id": "flexiv-grav-enhanced-gripper",
@@ -64211,7 +64220,9 @@
     "bluetooth": false,
     "lidar": false,
     "imu": true,
-    "product_url": "https://www.righthandrobotics.com/rightpick"
+    "product_url": "https://www.righthandrobotics.com/rightpick",
+    "os": "Linux",
+    "cellular": "None"
   },
   {
     "id": "coco-robotics-coco-delivery-robot-v3",
@@ -64443,7 +64454,8 @@
     "imu": true,
     "depth_sensing": true,
     "ros": false,
-    "cameras": "Multiple intraoperative cameras for real-time surgical field visualization and bone tracking"
+    "cameras": "Multiple intraoperative cameras for real-time surgical field visualization and bone tracking",
+    "cellular": "Not supported"
   },
   {
     "id": "johnson-johnson-medtech-ethicon-ottava-robotic-surgical-system",
@@ -66083,7 +66095,8 @@
     "product_url": "https://physicalintelligence.company/blog/pi0",
     "lidar": false,
     "wifi": true,
-    "bluetooth": false
+    "bluetooth": false,
+    "cellular": "None"
   },
   {
     "id": "physical-intelligence-0-5-pi-0-5-",
@@ -66170,7 +66183,10 @@
     "ros": true,
     "product_url": "https://physicalintelligence.company/blog/pi0",
     "lidar": false,
-    "bluetooth": false
+    "bluetooth": false,
+    "os": "Custom Linux-based",
+    "chipset": "NVIDIA GPU cluster (training infrastructure)",
+    "dof": 7
   },
   {
     "id": "clone-robotics-neo",
@@ -70477,7 +70493,9 @@
     "storage_gb": 256,
     "cameras": "External tracking cameras for motion capture",
     "depth_sensing": true,
-    "imu": true
+    "imu": true,
+    "lidar": false,
+    "cellular": "None"
   },
   {
     "id": "realman-robotics-rm65-6f",
@@ -72058,7 +72076,10 @@
     "product_url": "https://www.righthandrobotics.com/rightpick-fleet-management",
     "bluetooth": false,
     "lidar": false,
-    "depth_sensing": false
+    "depth_sensing": false,
+    "os": "Linux",
+    "cellular": "optional",
+    "imu": false
   },
   {
     "id": "righthand-robotics-rightcare",
