@@ -967,12 +967,16 @@ function isWorker(){ return getRole() === 'worker'; }
 function isAdmin(){ return getRole() === 'admin'; }
 
 // ════ PHASE B — MULTI-WORKER ACCOUNTS ════
-// Workers are stored on the ADMIN's browser as mrsh_workers (a JSON array).
+// Workers are stored in the GitHub repo at data/workers.json so EVERY worker's
+// browser can read the list (not just admin's). Admin writes to GitHub on
+// add/edit/delete. Workers fetch on login.
+//
 // Each worker has: { id, username, name, password_hash, active, created, last_login }
 // Migration: legacy shared password (worker2026 / mrsh_worker_pw) still works
 // until mrsh_legacy_disabled_at exists OR 7 days after first Phase B login.
-const PHASE_B_VERSION = 1;
+const PHASE_B_VERSION = 2;
 const LEGACY_GRACE_DAYS = 7;
+const WORKERS_PATH = 'data/workers.json';
 
 async function sha256Hash(text){
   const buf = new TextEncoder().encode(text);
@@ -980,19 +984,120 @@ async function sha256Hash(text){
   return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2,'0')).join('');
 }
 
-function getWorkers(){
-  try { return JSON.parse(localStorage.getItem('mrsh_workers') || '[]'); }
-  catch(e){ return []; }
-}
-function saveWorkers(arr){ localStorage.setItem('mrsh_workers', JSON.stringify(arr)); }
+// ── GitHub-synced worker storage ──
+// In-memory cache of workers list (avoids hammering GitHub on every render).
+// Re-fetched on first need each session + after every write.
+let _workersCache = null;
+let _workersSha = null;
 
-function findWorkerByUsername(username){
+function getGhToken(){
+  return localStorage.getItem('mrsh_gh_token') || localStorage.getItem('mrsh_github_token') || '';
+}
+function getGhRepo(){
+  return localStorage.getItem('mrsh_gh_repo') || localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop';
+}
+
+async function fetchWorkersFromGitHub({silent = false} = {}){
+  const token = getGhToken();
+  const repo = getGhRepo();
+  if (!token){
+    if (!silent) console.warn('[workers] no token — cannot fetch workers.json');
+    return null;
+  }
+  const url = 'https://api.github.com/repos/' + repo + '/contents/' + WORKERS_PATH + '?ref=main&t=' + Date.now();
+  try {
+    const resp = await fetch(url, {
+      headers: {'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json'},
+      cache: 'no-store'
+    });
+    if (resp.status === 404){
+      // File doesn't exist yet — that's fine, treat as empty list
+      _workersCache = [];
+      _workersSha = null;
+      return [];
+    }
+    if (!resp.ok){
+      if (!silent) console.warn('[workers] GitHub fetch failed:', resp.status);
+      return null;
+    }
+    const fileData = await resp.json();
+    _workersSha = fileData.sha;
+    const b64 = (fileData.content || '').replace(/\n/g, '');
+    const bin = atob(b64);
+    const bytes = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    const text = new TextDecoder().decode(bytes);
+    const parsed = JSON.parse(text);
+    const list = Array.isArray(parsed) ? parsed : (parsed.workers || []);
+    _workersCache = list;
+    return list;
+  } catch(e){
+    if (!silent) console.warn('[workers] fetch error:', e.message);
+    return null;
+  }
+}
+
+async function saveWorkersToGitHub(workersList, commitMessage){
+  const token = getGhToken();
+  const repo = getGhRepo();
+  if (!token) throw new Error('GitHub token not set — cannot sync workers.json. Go to Settings.');
+
+  // Refresh SHA before write to avoid 409 conflict on quick successive edits
+  if (_workersSha === null){
+    await fetchWorkersFromGitHub({silent: true});
+  }
+
+  const url = 'https://api.github.com/repos/' + repo + '/contents/' + WORKERS_PATH;
+  const json = JSON.stringify({workers: workersList, version: PHASE_B_VERSION, updated: new Date().toISOString()}, null, 2);
+
+  // UTF-8 → base64
+  const enc = new TextEncoder();
+  const bytes = enc.encode(json);
+  let binary = '';
+  bytes.forEach(b => binary += String.fromCharCode(b));
+  const content = btoa(binary);
+
+  const body = {
+    message: commitMessage || 'Update workers.json',
+    content: content
+  };
+  if (_workersSha) body.sha = _workersSha;
+
+  const resp = await fetch(url, {
+    method: 'PUT',
+    headers: {'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json', 'Content-Type': 'application/json'},
+    body: JSON.stringify(body)
+  });
+  if (!resp.ok){
+    const err = await resp.json().catch(() => ({}));
+    throw new Error('Failed to save workers.json (' + resp.status + '): ' + (err.message || 'check token has Contents:write'));
+  }
+  const result = await resp.json();
+  _workersSha = result.content.sha;
+  _workersCache = workersList;
+  return result;
+}
+
+// Synchronous accessor — returns cached list (may be null if not yet fetched).
+function getWorkers(){
+  return Array.isArray(_workersCache) ? _workersCache : [];
+}
+
+// Async accessor — guarantees a fresh-or-cached list.
+async function getWorkersAsync(){
+  if (_workersCache === null){
+    await fetchWorkersFromGitHub({silent: true});
+  }
+  return getWorkers();
+}
+
+async function findWorkerByUsername(username){
   const u = (username || '').trim().toLowerCase();
-  return getWorkers().find(w => w.username.toLowerCase() === u && w.active);
+  const list = await getWorkersAsync();
+  return list.find(w => w.username.toLowerCase() === u && w.active);
 }
 
 function getCurrentWorkerName(){
-  // On a worker's browser, store their identity locally on login
   return localStorage.getItem('mrsh_worker_name') || 'Worker';
 }
 function getCurrentWorkerUsername(){
@@ -1004,9 +1109,7 @@ function getCurrentWorkerId(){
 
 // Legacy migration helpers
 function legacyEnabled(){
-  // If admin has explicitly disabled legacy, it's off
   if (localStorage.getItem('mrsh_legacy_disabled_at')) return false;
-  // If admin has set a grace-start timestamp and it's older than LEGACY_GRACE_DAYS, expire it
   const start = localStorage.getItem('mrsh_legacy_grace_started_at');
   if (start){
     const days = (Date.now() - parseInt(start,10)) / (1000*60*60*24);
@@ -1021,6 +1124,10 @@ function startLegacyGrace(){
 }
 function disableLegacy(){
   localStorage.setItem('mrsh_legacy_disabled_at', String(Date.now()));
+}
+function enableLegacyAgain(){
+  localStorage.removeItem('mrsh_legacy_disabled_at');
+  localStorage.removeItem('mrsh_legacy_grace_started_at');
 }
 function legacyDaysRemaining(){
   if (localStorage.getItem('mrsh_legacy_disabled_at')) return 0;
@@ -1136,6 +1243,37 @@ function enterApp(role){
   applyRole();
   const who = role === 'worker' ? getCurrentWorkerName() : 'Admin';
   addLog('info', who + ' logged in — loading database from live site...');
+
+  // ADMIN-ONLY: Phase B migration. If admin's browser has legacy mrsh_workers
+  // (from the pre-GitHub-sync version of Phase B), migrate to GitHub once.
+  if (role === 'admin'){
+    try {
+      const legacyLocal = JSON.parse(localStorage.getItem('mrsh_workers') || 'null');
+      if (Array.isArray(legacyLocal) && legacyLocal.length > 0){
+        // Migrate in background — fetch current GitHub list, merge, push
+        (async () => {
+          try {
+            const remote = await fetchWorkersFromGitHub({silent: true});
+            const remoteList = Array.isArray(remote) ? remote : [];
+            const remoteUsernames = new Set(remoteList.map(w => w.username.toLowerCase()));
+            const toAdd = legacyLocal.filter(w => !remoteUsernames.has(w.username.toLowerCase()));
+            if (toAdd.length > 0){
+              const merged = remoteList.concat(toAdd);
+              await saveWorkersToGitHub(merged, 'workers.json: migrate ' + toAdd.length + ' local worker(s) to GitHub sync');
+              addLog('success', 'Migrated ' + toAdd.length + ' local worker(s) to GitHub sync.');
+              renderWorkersTable();
+            }
+            // Clear local copy now that GitHub has the data
+            localStorage.removeItem('mrsh_workers');
+          } catch(e){
+            console.warn('[workers migration] failed:', e.message);
+            addLog('warn', 'Worker migration to GitHub failed — local copy kept. Will retry next login.');
+          }
+        })();
+      }
+    } catch(e){ /* ignore parse errors */ }
+  }
+
   initDB().then(() => {
     addLog('success', 'Database loaded: ' + ROBOTS.length + ' robots');
     const greeting = role === 'worker'
@@ -1185,25 +1323,86 @@ function tryLogin() {
 }
 
 async function tryWorkerLogin(username, pw){
-  const w = findWorkerByUsername(username);
+  // For workers, we need to fetch the workers list from GitHub first.
+  // (Admin's browser may already have it cached, worker's browser will not.)
+  loginError(''); // clear prior
+  const loginErr = document.getElementById('login-err');
+  if (loginErr) loginErr.textContent = 'Checking credentials…';
+
+  // Need the GitHub token to fetch workers.json. Worker should have one from setup.
+  // If they don't, prompt them to do setup first.
+  if (!getGhToken()){
+    // No token = first-time worker. They need to do setup, but we can't verify them yet.
+    // We'll let them through to the setup screen IF the legacy password matches
+    // (so they can still get in during migration). Otherwise tell them they need a token.
+    if (legacyEnabled() && pw === getWorkerPassword()){
+      // Treat as legacy login — let them set up their environment first
+      startLegacyGrace();
+      localStorage.setItem('mrsh_role', 'worker');
+      localStorage.setItem('mrsh_worker_id', 'pending-' + username);
+      localStorage.setItem('mrsh_worker_username', username);
+      localStorage.setItem('mrsh_worker_name', username);
+      showWorkerSetupScreen();
+      return;
+    }
+    loginError('First-time setup needed. Use the temporary password to set up your token, then log in with your username.');
+    return;
+  }
+
+  // Fetch fresh workers list from GitHub
+  const list = await fetchWorkersFromGitHub({silent: true});
+  if (list === null){
+    // Network/token failure. Try legacy fallback so workers aren't locked out by GitHub being slow.
+    if (legacyEnabled() && pw === getWorkerPassword()){
+      startLegacyGrace();
+      localStorage.setItem('mrsh_role', 'worker');
+      localStorage.setItem('mrsh_worker_id', 'legacy-' + username);
+      localStorage.setItem('mrsh_worker_username', username);
+      localStorage.setItem('mrsh_worker_name', username);
+      if (needsWorkerSetup()){ showWorkerSetupScreen(); return; }
+      enterApp('worker');
+      return;
+    }
+    loginError('Could not reach GitHub to verify your account. Check your internet connection.');
+    return;
+  }
+
+  const u = (username || '').trim().toLowerCase();
+  const w = list.find(x => x.username.toLowerCase() === u && x.active);
   if (!w){
+    // Username not found in GitHub workers.json. Try legacy fallback.
+    if (legacyEnabled() && pw === getWorkerPassword()){
+      startLegacyGrace();
+      localStorage.setItem('mrsh_role', 'worker');
+      localStorage.setItem('mrsh_worker_id', 'legacy-' + username);
+      localStorage.setItem('mrsh_worker_username', username);
+      localStorage.setItem('mrsh_worker_name', username);
+      if (needsWorkerSetup()){ showWorkerSetupScreen(); return; }
+      enterApp('worker');
+      return;
+    }
     loginError('Unknown username or account inactive.');
     return;
   }
+
   const hash = await sha256Hash(pw);
   if (hash !== w.password_hash){
     loginError('Incorrect password for ' + username + '.');
     return;
   }
-  // Update last_login on admin's browser (note: only persists when admin next syncs;
-  // for now we just write it locally on the admin browser if this IS the admin browser)
-  const workers = getWorkers();
-  const idx = workers.findIndex(x => x.id === w.id);
-  if (idx >= 0){
-    workers[idx].last_login = new Date().toISOString();
-    saveWorkers(workers);
-  }
-  // Set role + identity on this browser (the worker's browser)
+
+  // Successful login — record last_login. (Workers can write workers.json too — they
+  // have the same fine-grained token scoped to the repo.)
+  try {
+    const idx = list.findIndex(x => x.id === w.id);
+    if (idx >= 0){
+      list[idx].last_login = new Date().toISOString();
+      // Write quietly — don't block login on this
+      saveWorkersToGitHub(list, 'workers.json: ' + w.username + ' login').catch(e => console.warn('[workers] last_login update failed:', e.message));
+    }
+  } catch(e){ /* non-blocking */ }
+
+  // Set role + identity on this browser
   localStorage.setItem('mrsh_role', 'worker');
   localStorage.setItem('mrsh_worker_id', w.id);
   localStorage.setItem('mrsh_worker_username', w.username);
@@ -3196,9 +3395,20 @@ function saveWorkerPassword(){
 }
 
 // ════ PHASE B — WORKER MANAGEMENT UI ════
-function renderWorkersTable(){
+async function renderWorkersTable(){
   const el = document.getElementById('workers-table');
   if (!el) return;
+
+  // Show loading state if cache empty
+  if (_workersCache === null){
+    el.innerHTML = '<div style="padding:18px;text-align:center;background:var(--bg3);border:1px dashed var(--bdr);border-radius:9px;font-size:12px;color:var(--mut)">⏳ Loading workers from GitHub...</div>';
+    const fetched = await fetchWorkersFromGitHub({silent: false});
+    if (fetched === null){
+      el.innerHTML = '<div style="padding:18px;text-align:center;background:rgba(239,68,68,0.1);border:1px solid #ef4444;border-radius:9px;font-size:12px;color:#ef4444">❌ Could not load workers from GitHub. Check your token in Settings.</div>';
+      return;
+    }
+  }
+
   const workers = getWorkers();
   if (workers.length === 0){
     el.innerHTML = '<div style="padding:18px;text-align:center;background:var(--bg3);border:1px dashed var(--bdr);border-radius:9px;font-size:12px;color:var(--mut)">No workers yet. Click <strong>＋ Add Worker</strong> to create the first account.</div>';
@@ -3305,32 +3515,42 @@ function generateWorkerPassword(){
 async function submitWorkerModal(){
   const err = document.getElementById('wm-err');
   err.textContent = '';
+  const saveBtn = document.querySelector('#worker-modal .save-btn:last-child');
+  if (saveBtn){ saveBtn.disabled = true; saveBtn.textContent = '⏳ Saving…'; }
+
   const id = document.getElementById('wm-id').value.trim();
   const username = document.getElementById('wm-username').value.trim().toLowerCase();
   const name = document.getElementById('wm-name').value.trim();
   const password = document.getElementById('wm-password').value;
 
+  const restore = () => { if (saveBtn){ saveBtn.disabled = false; saveBtn.textContent = '💾 Save Worker'; } };
+
   if (!username || !/^[a-z0-9_-]+$/.test(username)){
     err.textContent = 'Username must be lowercase letters, numbers, hyphen or underscore only.';
-    return;
+    restore(); return;
   }
   if (!name || name.length < 2){
     err.textContent = 'Display name required.';
-    return;
+    restore(); return;
   }
 
-  const workers = getWorkers();
+  // Always fetch fresh before write to avoid stomping concurrent edits
+  let list = await fetchWorkersFromGitHub({silent: false});
+  if (list === null){
+    err.textContent = 'Could not reach GitHub. Check your token and network, then try again.';
+    restore(); return;
+  }
+
   const isEdit = !!id;
 
   if (!isEdit){
-    // Adding new worker
-    if (workers.some(w => w.username.toLowerCase() === username)){
+    if (list.some(w => w.username.toLowerCase() === username)){
       err.textContent = 'Username already exists.';
-      return;
+      restore(); return;
     }
     if (!password || password.length < 6){
       err.textContent = 'Password must be at least 6 characters.';
-      return;
+      restore(); return;
     }
     const hash = await sha256Hash(password);
     const newWorker = {
@@ -3342,30 +3562,41 @@ async function submitWorkerModal(){
       created: new Date().toISOString(),
       last_login: null
     };
-    workers.push(newWorker);
-    saveWorkers(workers);
+    list.push(newWorker);
+    try {
+      await saveWorkersToGitHub(list, 'workers.json: add ' + username);
+    } catch(e){
+      err.textContent = e.message;
+      restore(); return;
+    }
     renderWorkersTable();
     closeWorkerModal();
     showCredentialsModal(newWorker, password);
     addLog('info', 'Worker added: ' + username + ' (' + name + ')');
+    restore();
   } else {
-    // Editing existing worker
-    const idx = workers.findIndex(w => w.id === id);
-    if (idx < 0){ err.textContent = 'Worker not found.'; return; }
-    workers[idx].name = name;
+    const idx = list.findIndex(w => w.id === id);
+    if (idx < 0){ err.textContent = 'Worker not found.'; restore(); return; }
+    list[idx].name = name;
     if (password){
-      if (password.length < 6){ err.textContent = 'Password must be at least 6 characters.'; return; }
-      workers[idx].password_hash = await sha256Hash(password);
+      if (password.length < 6){ err.textContent = 'Password must be at least 6 characters.'; restore(); return; }
+      list[idx].password_hash = await sha256Hash(password);
     }
-    saveWorkers(workers);
+    try {
+      await saveWorkersToGitHub(list, 'workers.json: update ' + list[idx].username);
+    } catch(e){
+      err.textContent = e.message;
+      restore(); return;
+    }
     renderWorkersTable();
     closeWorkerModal();
-    addLog('info', 'Worker updated: ' + workers[idx].username);
+    addLog('info', 'Worker updated: ' + list[idx].username);
     if (password){
-      showCredentialsModal(workers[idx], password);
+      showCredentialsModal(list[idx], password);
     } else {
       alert('✅ Worker updated.');
     }
+    restore();
   }
 }
 
@@ -3403,22 +3634,29 @@ function closeCredsModal(){
   document.getElementById('creds-modal').style.display = 'none';
 }
 
-function toggleWorkerActive(id){
-  const workers = getWorkers();
-  const idx = workers.findIndex(w => w.id === id);
+async function toggleWorkerActive(id){
+  let list = await fetchWorkersFromGitHub({silent: false});
+  if (list === null){ alert('Could not reach GitHub. Try again.'); return; }
+  const idx = list.findIndex(w => w.id === id);
   if (idx < 0) return;
-  workers[idx].active = !workers[idx].active;
-  saveWorkers(workers);
+  list[idx].active = !list[idx].active;
+  try {
+    await saveWorkersToGitHub(list, 'workers.json: ' + (list[idx].active ? 'enable' : 'disable') + ' ' + list[idx].username);
+  } catch(e){ alert('Failed: ' + e.message); return; }
   renderWorkersTable();
-  addLog('info', 'Worker ' + workers[idx].username + ' ' + (workers[idx].active ? 'enabled' : 'disabled'));
+  addLog('info', 'Worker ' + list[idx].username + ' ' + (list[idx].active ? 'enabled' : 'disabled'));
 }
 
-function deleteWorker(id){
-  const workers = getWorkers();
-  const w = workers.find(x => x.id === id);
+async function deleteWorker(id){
+  let list = await fetchWorkersFromGitHub({silent: false});
+  if (list === null){ alert('Could not reach GitHub. Try again.'); return; }
+  const w = list.find(x => x.id === id);
   if (!w) return;
   if (!confirm('Permanently delete worker "' + w.username + '" (' + w.name + ')?\n\nThis cannot be undone. They will be locked out immediately. Their past commits in GitHub remain attributed to them.')) return;
-  saveWorkers(workers.filter(x => x.id !== id));
+  const newList = list.filter(x => x.id !== id);
+  try {
+    await saveWorkersToGitHub(newList, 'workers.json: delete ' + w.username);
+  } catch(e){ alert('Failed: ' + e.message); return; }
   renderWorkersTable();
   addLog('info', 'Worker deleted: ' + w.username);
 }
