@@ -341,9 +341,10 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
 <div id="login-screen">
   <div class="login-card">
     <div class="login-logo"><span class="br">[</span>myrobot<span class="bl">.shop</span><span class="br">]</span></div>
-    <div class="login-title">Admin Access</div>
-    <div class="login-sub">Enter your admin password to continue</div>
-    <input class="login-input" type="password" id="pw-input" placeholder="••••••••" onkeydown="if(event.key==='Enter')tryLogin()">
+    <div class="login-title">Sign in</div>
+    <div class="login-sub">Workers — enter your username and password.<br>Admin — leave username blank.</div>
+    <input class="login-input" type="text" id="user-input" placeholder="Username (workers only)" autocomplete="username" style="margin-bottom:10px" onkeydown="if(event.key==='Enter')document.getElementById('pw-input').focus()">
+    <input class="login-input" type="password" id="pw-input" placeholder="Password" autocomplete="current-password" onkeydown="if(event.key==='Enter')tryLogin()">
     <button class="login-btn" onclick="tryLogin()">Sign in →</button>
     <div class="login-err" id="login-err"></div>
   </div>
@@ -492,20 +493,68 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="page" id="page-settings">
         <div class="settings-page">
           <div class="settings-section">
-            <div class="settings-title">👷 Worker Permissions <span style="font-size:10px;color:var(--mut);font-weight:400;margin-left:8px">Admin-only · Phase A</span></div>
-            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">Toggle which pages your worker can access. Worker logs in with the worker password (see below). Default access: Image Manager + Robot Database (read-only).</div>
-            <div class="settings-row">
-              <div><div class="sr-label">Worker Password</div><div class="sr-sub">Workers use this to log in. Default: <code>worker2026</code></div></div>
-              <div style="display:flex;gap:8px;align-items:center">
-                <input class="settings-input" type="text" id="worker-pw-input" placeholder="worker2026" value="">
-                <button class="save-btn" onclick="saveWorkerPassword()">Save</button>
-              </div>
+            <div class="settings-title">👷 Workers <span style="font-size:10px;color:var(--mut);font-weight:400;margin-left:8px">Admin-only · Phase B · per-worker accounts</span></div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">Each worker has their own username + password. Their name attaches to all commits and activity log entries. Independent revoke — disable one without affecting others.</div>
+
+            <div id="workers-table" style="margin-bottom:14px"></div>
+
+            <div style="margin-bottom:18px">
+              <button class="save-btn" onclick="openAddWorkerModal()">＋ Add Worker</button>
             </div>
-            <div id="worker-perms-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px;padding:12px;background:var(--bg3);border-radius:9px;border:1px solid var(--bdr)"></div>
+
+            <div id="legacy-status" style="padding:11px 14px;background:var(--bg3);border:1px solid var(--bdr);border-radius:9px;font-size:12px;margin-bottom:14px"></div>
+
+            <div class="settings-title" style="font-size:13px;margin-top:18px">🔐 Default Page Permissions</div>
+            <div style="font-size:11px;color:var(--mut);margin-bottom:10px">These apply to ALL workers. Per-worker overrides not yet supported.</div>
+            <div id="worker-perms-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:12px;background:var(--bg3);border-radius:9px;border:1px solid var(--bdr)"></div>
             <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap">
               <button class="save-btn" onclick="saveWorkerPerms()">💾 Save Permissions</button>
               <button class="save-btn" style="background:var(--bg3);color:var(--txt)" onclick="resetWorkerPerms()">↺ Reset to defaults</button>
               <button class="save-btn" style="background:#ef4444" onclick="logout()">🚪 Logout (re-test as worker)</button>
+            </div>
+          </div>
+
+          <!-- Add/Edit Worker Modal -->
+          <div id="worker-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:2000;align-items:center;justify-content:center;padding:20px">
+            <div style="background:var(--bg2);border:1px solid var(--bdr2);border-radius:12px;padding:28px;width:440px;max-width:100%">
+              <div style="font-size:18px;font-weight:600;margin-bottom:18px" id="worker-modal-title">Add Worker</div>
+              <input type="hidden" id="wm-id">
+              <div style="margin-bottom:12px">
+                <div style="font-size:11px;color:var(--mut);margin-bottom:5px;font-weight:600">USERNAME</div>
+                <input id="wm-username" type="text" class="settings-input" style="width:100%" placeholder="mubashir" autocomplete="off">
+                <div style="font-size:10px;color:var(--mut);margin-top:4px">Lowercase, no spaces. Worker types this to log in.</div>
+              </div>
+              <div style="margin-bottom:12px">
+                <div style="font-size:11px;color:var(--mut);margin-bottom:5px;font-weight:600">DISPLAY NAME</div>
+                <input id="wm-name" type="text" class="settings-input" style="width:100%" placeholder="Mubashir Ali" autocomplete="off">
+                <div style="font-size:10px;color:var(--mut);margin-top:4px">Shown in sidebar, activity log, commit messages.</div>
+              </div>
+              <div style="margin-bottom:18px">
+                <div style="font-size:11px;color:var(--mut);margin-bottom:5px;font-weight:600">PASSWORD</div>
+                <div style="display:flex;gap:8px">
+                  <input id="wm-password" type="text" class="settings-input" style="flex:1" placeholder="Set a password" autocomplete="off">
+                  <button class="save-btn" onclick="generateWorkerPassword()" style="background:var(--bg3);color:var(--txt)">🎲 Generate</button>
+                </div>
+                <div style="font-size:10px;color:var(--mut);margin-top:4px">Min 6 chars. Stored hashed (SHA-256). You won't be able to view it after saving.</div>
+              </div>
+              <div id="wm-err" style="color:#ef4444;font-size:12px;margin-bottom:10px;min-height:14px"></div>
+              <div style="display:flex;gap:8px;justify-content:flex-end">
+                <button class="save-btn" style="background:var(--bg3);color:var(--txt)" onclick="closeWorkerModal()">Cancel</button>
+                <button class="save-btn" onclick="submitWorkerModal()">💾 Save Worker</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Credentials Display Modal (shown after Add) -->
+          <div id="creds-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:2000;align-items:center;justify-content:center;padding:20px">
+            <div style="background:var(--bg2);border:1px solid var(--bdr2);border-radius:12px;padding:28px;width:520px;max-width:100%">
+              <div style="font-size:18px;font-weight:600;margin-bottom:8px">✅ Worker added</div>
+              <div style="font-size:12px;color:var(--mut);margin-bottom:18px">Copy this block and send it to the worker via WhatsApp. <strong>You won't see the password again after this screen closes.</strong></div>
+              <textarea id="creds-text" readonly style="width:100%;height:200px;padding:12px;background:var(--bg3);border:1px solid var(--bdr);border-radius:8px;font-family:'Space Mono',monospace;font-size:12px;color:var(--txt);resize:vertical"></textarea>
+              <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:14px">
+                <button class="save-btn" onclick="copyCredsToClipboard()">📋 Copy to clipboard</button>
+                <button class="save-btn" onclick="closeCredsModal()">Done</button>
+              </div>
             </div>
           </div>
           <div class="settings-section">
@@ -916,6 +965,70 @@ function getWorkerPassword(){ return localStorage.getItem('mrsh_worker_pw') || W
 function getRole(){ return localStorage.getItem('mrsh_role') || 'admin'; }
 function isWorker(){ return getRole() === 'worker'; }
 function isAdmin(){ return getRole() === 'admin'; }
+
+// ════ PHASE B — MULTI-WORKER ACCOUNTS ════
+// Workers are stored on the ADMIN's browser as mrsh_workers (a JSON array).
+// Each worker has: { id, username, name, password_hash, active, created, last_login }
+// Migration: legacy shared password (worker2026 / mrsh_worker_pw) still works
+// until mrsh_legacy_disabled_at exists OR 7 days after first Phase B login.
+const PHASE_B_VERSION = 1;
+const LEGACY_GRACE_DAYS = 7;
+
+async function sha256Hash(text){
+  const buf = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest('SHA-256', buf);
+  return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+function getWorkers(){
+  try { return JSON.parse(localStorage.getItem('mrsh_workers') || '[]'); }
+  catch(e){ return []; }
+}
+function saveWorkers(arr){ localStorage.setItem('mrsh_workers', JSON.stringify(arr)); }
+
+function findWorkerByUsername(username){
+  const u = (username || '').trim().toLowerCase();
+  return getWorkers().find(w => w.username.toLowerCase() === u && w.active);
+}
+
+function getCurrentWorkerName(){
+  // On a worker's browser, store their identity locally on login
+  return localStorage.getItem('mrsh_worker_name') || 'Worker';
+}
+function getCurrentWorkerUsername(){
+  return localStorage.getItem('mrsh_worker_username') || '';
+}
+function getCurrentWorkerId(){
+  return localStorage.getItem('mrsh_worker_id') || '';
+}
+
+// Legacy migration helpers
+function legacyEnabled(){
+  // If admin has explicitly disabled legacy, it's off
+  if (localStorage.getItem('mrsh_legacy_disabled_at')) return false;
+  // If admin has set a grace-start timestamp and it's older than LEGACY_GRACE_DAYS, expire it
+  const start = localStorage.getItem('mrsh_legacy_grace_started_at');
+  if (start){
+    const days = (Date.now() - parseInt(start,10)) / (1000*60*60*24);
+    if (days >= LEGACY_GRACE_DAYS) return false;
+  }
+  return true;
+}
+function startLegacyGrace(){
+  if (!localStorage.getItem('mrsh_legacy_grace_started_at')){
+    localStorage.setItem('mrsh_legacy_grace_started_at', String(Date.now()));
+  }
+}
+function disableLegacy(){
+  localStorage.setItem('mrsh_legacy_disabled_at', String(Date.now()));
+}
+function legacyDaysRemaining(){
+  if (localStorage.getItem('mrsh_legacy_disabled_at')) return 0;
+  const start = localStorage.getItem('mrsh_legacy_grace_started_at');
+  if (!start) return LEGACY_GRACE_DAYS;
+  const days = (Date.now() - parseInt(start,10)) / (1000*60*60*24);
+  return Math.max(0, Math.ceil(LEGACY_GRACE_DAYS - days));
+}
 let API_KEY = localStorage.getItem('mrsh_api_key') || '';
 let GH_TOKEN = localStorage.getItem('mrsh_gh_token') || localStorage.getItem('mrsh_github_token') || '';
 let GH_REPO = localStorage.getItem('mrsh_gh_repo') || localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop'; if(!localStorage.getItem('mrsh_gh_repo')){localStorage.setItem('mrsh_gh_repo','myrobot42/myrobot-shop');}
@@ -1021,44 +1134,102 @@ function enterApp(role){
   loadSettings();
   loadCloudinarySettings();
   applyRole();
-  addLog('info', role + ' logged in — loading database from live site...');
+  const who = role === 'worker' ? getCurrentWorkerName() : 'Admin';
+  addLog('info', who + ' logged in — loading database from live site...');
   initDB().then(() => {
     addLog('success', 'Database loaded: ' + ROBOTS.length + ' robots');
     const greeting = role === 'worker'
-      ? '👷 Welcome — <strong>' + ROBOTS.length + ' robots</strong> in the database. Use Image Manager to add photos.'
+      ? '👷 Welcome <strong>' + getCurrentWorkerName() + '</strong> — <strong>' + ROBOTS.length + ' robots</strong> in the database. Use Image Manager to add photos.'
       : '✅ Database synced from live site — <strong>' + ROBOTS.length + ' robots</strong> ready to edit.';
     addMsg(greeting, 'bot', true);
   });
 }
 
 function tryLogin() {
+  const userEl = document.getElementById('user-input');
+  const username = userEl ? userEl.value.trim() : '';
   const pw = document.getElementById('pw-input').value;
   const adminStored = localStorage.getItem('mrsh_pw') || ADMIN_PASSWORD;
-  const workerStored = getWorkerPassword();
-  let role = null;
-  if (pw === adminStored) role = 'admin';
-  else if (pw === workerStored) role = 'worker';
-  if (role) {
-    localStorage.setItem('mrsh_role', role);
-    // For workers — check if first-time setup is needed
-    if (role === 'worker' && needsWorkerSetup()){
-      document.getElementById('login-screen').style.display = 'none';
-      document.getElementById('worker-setup-screen').style.display = 'flex';
-      // Pre-fill any values that DO exist
-      const tEl = document.getElementById('ws-gh-token');
-      const nEl = document.getElementById('ws-cl-name');
-      const pEl = document.getElementById('ws-cl-preset');
-      if (tEl) tEl.value = localStorage.getItem('mrsh_gh_token') || '';
-      if (nEl) nEl.value = localStorage.getItem('mrsh_cloudinary_name') || '';
-      if (pEl) pEl.value = localStorage.getItem('mrsh_cloudinary_preset') || 'myrobot';
+
+  // No username = admin attempt (legacy behaviour preserved)
+  if (!username) {
+    if (pw === adminStored) {
+      localStorage.setItem('mrsh_role', 'admin');
+      // Clear any stale worker identity from this browser
+      localStorage.removeItem('mrsh_worker_id');
+      localStorage.removeItem('mrsh_worker_username');
+      localStorage.removeItem('mrsh_worker_name');
+      enterApp('admin');
       return;
     }
-    enterApp(role);
-  } else {
-    document.getElementById('login-err').textContent = 'Incorrect password. Try again.';
-    document.getElementById('pw-input').value = '';
-    setTimeout(() => document.getElementById('login-err').textContent = '', 2500);
+    // Legacy: empty username + worker password (during grace period)
+    if (legacyEnabled() && pw === getWorkerPassword()) {
+      startLegacyGrace();
+      localStorage.setItem('mrsh_role', 'worker');
+      localStorage.setItem('mrsh_worker_id', 'legacy');
+      localStorage.setItem('mrsh_worker_username', 'legacy');
+      localStorage.setItem('mrsh_worker_name', 'Worker (legacy)');
+      if (needsWorkerSetup()){
+        showWorkerSetupScreen();
+        return;
+      }
+      enterApp('worker');
+      return;
+    }
+    loginError('Incorrect password. (Workers: include your username.)');
+    return;
   }
+
+  // Username provided — Phase B worker login
+  tryWorkerLogin(username, pw);
+}
+
+async function tryWorkerLogin(username, pw){
+  const w = findWorkerByUsername(username);
+  if (!w){
+    loginError('Unknown username or account inactive.');
+    return;
+  }
+  const hash = await sha256Hash(pw);
+  if (hash !== w.password_hash){
+    loginError('Incorrect password for ' + username + '.');
+    return;
+  }
+  // Update last_login on admin's browser (note: only persists when admin next syncs;
+  // for now we just write it locally on the admin browser if this IS the admin browser)
+  const workers = getWorkers();
+  const idx = workers.findIndex(x => x.id === w.id);
+  if (idx >= 0){
+    workers[idx].last_login = new Date().toISOString();
+    saveWorkers(workers);
+  }
+  // Set role + identity on this browser (the worker's browser)
+  localStorage.setItem('mrsh_role', 'worker');
+  localStorage.setItem('mrsh_worker_id', w.id);
+  localStorage.setItem('mrsh_worker_username', w.username);
+  localStorage.setItem('mrsh_worker_name', w.name);
+  if (needsWorkerSetup()){
+    showWorkerSetupScreen();
+    return;
+  }
+  enterApp('worker');
+}
+
+function showWorkerSetupScreen(){
+  document.getElementById('login-screen').style.display = 'none';
+  document.getElementById('worker-setup-screen').style.display = 'flex';
+  const tEl = document.getElementById('ws-gh-token');
+  const nEl = document.getElementById('ws-cl-name');
+  const pEl = document.getElementById('ws-cl-preset');
+  if (tEl) tEl.value = localStorage.getItem('mrsh_gh_token') || '';
+  if (nEl) nEl.value = localStorage.getItem('mrsh_cloudinary_name') || '';
+  if (pEl) pEl.value = localStorage.getItem('mrsh_cloudinary_preset') || 'myrobot';
+}
+
+function loginError(msg){
+  document.getElementById('login-err').textContent = msg;
+  document.getElementById('pw-input').value = '';
+  setTimeout(() => document.getElementById('login-err').textContent = '', 3500);
 }
 
 function saveWorkerSetup(){
@@ -1140,9 +1311,14 @@ function applyRole(){
   const sidebarAvatar = document.getElementById('sidebar-user-avatar');
   if (sidebarName && sidebarRole){
     if (worker){
-      sidebarName.textContent = 'Worker';
+      const wn = getCurrentWorkerName();
+      sidebarName.textContent = wn;
       sidebarRole.textContent = 'Image Research';
-      if (sidebarAvatar){ sidebarAvatar.textContent = 'W'; sidebarAvatar.style.background = '#fbbf24'; sidebarAvatar.style.color = '#78350f'; }
+      if (sidebarAvatar){
+        sidebarAvatar.textContent = (wn.charAt(0) || 'W').toUpperCase();
+        sidebarAvatar.style.background = '#fbbf24';
+        sidebarAvatar.style.color = '#78350f';
+      }
     } else {
       sidebarName.textContent = 'Shane';
       sidebarRole.textContent = 'Administrator';
@@ -1179,11 +1355,8 @@ function applyRole(){
   }
 }
 
-// Logout (clears role + reshows login screen)
-function logout(){
-  localStorage.removeItem('mrsh_role');
-  location.reload();
-}
+// Logout helper (the canonical version is below in the navigation section)
+// — kept here only as a forward reference. Both definitions are merged.
 
 function ingestBrand() {
   const brand = prompt('Brand name to ingest (e.g. Husqvarna, Mammotion, Segway Navimow):');
@@ -1376,9 +1549,13 @@ Use real accurate data for ${brand}. Fill in as many fields as possible.`;
 }
 
 function logout() {
-  document.getElementById('login-screen').style.display = 'flex';
-  document.getElementById('app').style.display = 'none';
-  document.getElementById('pw-input').value = '';
+  // Clear role + worker identity (Phase B)
+  localStorage.removeItem('mrsh_role');
+  localStorage.removeItem('mrsh_worker_id');
+  localStorage.removeItem('mrsh_worker_username');
+  localStorage.removeItem('mrsh_worker_name');
+  // Full reload ensures applyRole, sidebars, badges all reset cleanly
+  location.reload();
 }
 
 // ════ NAVIGATION ════
@@ -2951,6 +3128,9 @@ function loadSettings() {
   const wpwIn = document.getElementById('worker-pw-input');
   if (wpwIn) wpwIn.value = getWorkerPassword();
   renderWorkerPermsGrid();
+  // Phase B
+  renderWorkersTable();
+  renderLegacyStatus();
 }
 
 // ════ WORKER PERMISSIONS (admin-only) ════
@@ -3005,11 +3185,242 @@ function resetWorkerPerms(){
   alert('✅ Reset to defaults.');
 }
 function saveWorkerPassword(){
-  const v = document.getElementById('worker-pw-input').value.trim();
-  if (!v || v.length < 4){ alert('Worker password must be at least 4 characters.'); return; }
-  localStorage.setItem('mrsh_worker_pw', v);
-  alert('✅ Worker password saved: ' + v);
-  addLog('info', 'Worker password updated.');
+  // Legacy function preserved for backward compat — no longer wired to UI in Phase B.
+  // Kept in case any external script still calls it.
+  const v = document.getElementById('worker-pw-input');
+  if (!v) return;
+  const val = v.value.trim();
+  if (!val || val.length < 4){ alert('Worker password must be at least 4 characters.'); return; }
+  localStorage.setItem('mrsh_worker_pw', val);
+  alert('✅ Legacy worker password saved: ' + val);
+}
+
+// ════ PHASE B — WORKER MANAGEMENT UI ════
+function renderWorkersTable(){
+  const el = document.getElementById('workers-table');
+  if (!el) return;
+  const workers = getWorkers();
+  if (workers.length === 0){
+    el.innerHTML = '<div style="padding:18px;text-align:center;background:var(--bg3);border:1px dashed var(--bdr);border-radius:9px;font-size:12px;color:var(--mut)">No workers yet. Click <strong>＋ Add Worker</strong> to create the first account.</div>';
+    return;
+  }
+  el.innerHTML = '<table style="width:100%;border-collapse:collapse;font-size:12px">'
+    + '<thead><tr style="text-align:left;color:var(--mut);font-size:10px;text-transform:uppercase;letter-spacing:1px">'
+    + '<th style="padding:8px 10px;border-bottom:1px solid var(--bdr)">Username</th>'
+    + '<th style="padding:8px 10px;border-bottom:1px solid var(--bdr)">Display Name</th>'
+    + '<th style="padding:8px 10px;border-bottom:1px solid var(--bdr)">Status</th>'
+    + '<th style="padding:8px 10px;border-bottom:1px solid var(--bdr)">Last Login</th>'
+    + '<th style="padding:8px 10px;border-bottom:1px solid var(--bdr);text-align:right">Actions</th>'
+    + '</tr></thead><tbody>'
+    + workers.map(w => {
+        const last = w.last_login ? new Date(w.last_login).toLocaleString() : 'Never';
+        const statusColor = w.active ? '#16a34a' : '#ef4444';
+        const statusText = w.active ? 'Active' : 'Disabled';
+        return '<tr style="border-bottom:1px solid var(--bdr)">'
+          + '<td style="padding:10px"><code style="font-family:\'Space Mono\',monospace;font-size:11px">' + escapeHtml(w.username) + '</code></td>'
+          + '<td style="padding:10px">' + escapeHtml(w.name) + '</td>'
+          + '<td style="padding:10px"><span style="color:' + statusColor + ';font-weight:600">' + statusText + '</span></td>'
+          + '<td style="padding:10px;color:var(--mut)">' + escapeHtml(last) + '</td>'
+          + '<td style="padding:10px;text-align:right">'
+            + '<button class="tbl-action" onclick="openEditWorkerModal(\'' + w.id + '\')">Edit</button> '
+            + '<button class="tbl-action" onclick="toggleWorkerActive(\'' + w.id + '\')">' + (w.active ? 'Disable' : 'Enable') + '</button> '
+            + '<button class="tbl-action" style="color:#ef4444" onclick="deleteWorker(\'' + w.id + '\')">🗑</button>'
+          + '</td>'
+        + '</tr>';
+      }).join('')
+    + '</tbody></table>';
+}
+
+function escapeHtml(s){
+  // Forward declaration — used by renderWorkersTable above. The canonical
+  // implementations live further down in the file (they're identical).
+  if (s == null) return '';
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+function renderLegacyStatus(){
+  const el = document.getElementById('legacy-status');
+  if (!el) return;
+  if (!legacyEnabled()){
+    el.innerHTML = '<strong style="color:#16a34a">✅ Legacy password disabled.</strong> Only workers with usernames can log in.';
+    return;
+  }
+  const days = legacyDaysRemaining();
+  const started = !!localStorage.getItem('mrsh_legacy_grace_started_at');
+  el.innerHTML = '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">'
+    + '<div><strong style="color:#f59e0b">⚠️ Legacy password still active.</strong> Workers can still use the old shared password <code>worker2026</code>. '
+    + (started ? 'Auto-disables in <strong>' + days + ' day' + (days===1?'':'s') + '</strong>.' : 'Will auto-disable 7 days after first legacy use.')
+    + '</div>'
+    + '<button class="save-btn" style="background:#ef4444" onclick="disableLegacyNow()">Disable now</button>'
+  + '</div>';
+}
+
+function disableLegacyNow(){
+  if (!confirm('Disable legacy worker password right now?\n\nAfter this, anyone using the old shared password will be locked out. Make sure all workers have new accounts first.')) return;
+  disableLegacy();
+  renderLegacyStatus();
+  addLog('info', 'Legacy worker password disabled by admin.');
+  alert('✅ Legacy password disabled.');
+}
+
+function openAddWorkerModal(){
+  document.getElementById('worker-modal-title').textContent = 'Add Worker';
+  document.getElementById('wm-id').value = '';
+  document.getElementById('wm-username').value = '';
+  document.getElementById('wm-name').value = '';
+  document.getElementById('wm-password').value = '';
+  document.getElementById('wm-err').textContent = '';
+  document.getElementById('wm-username').disabled = false;
+  document.getElementById('worker-modal').style.display = 'flex';
+}
+
+function openEditWorkerModal(id){
+  const w = getWorkers().find(x => x.id === id);
+  if (!w) return;
+  document.getElementById('worker-modal-title').textContent = 'Edit Worker: ' + w.username;
+  document.getElementById('wm-id').value = w.id;
+  document.getElementById('wm-username').value = w.username;
+  document.getElementById('wm-username').disabled = true; // username is immutable
+  document.getElementById('wm-name').value = w.name;
+  document.getElementById('wm-password').value = '';
+  document.getElementById('wm-password').placeholder = 'Leave blank to keep current password';
+  document.getElementById('wm-err').textContent = '';
+  document.getElementById('worker-modal').style.display = 'flex';
+}
+
+function closeWorkerModal(){
+  document.getElementById('worker-modal').style.display = 'none';
+  document.getElementById('wm-password').placeholder = 'Set a password';
+}
+
+function generateWorkerPassword(){
+  // Memorable but secure: 3 words + 2 digits. Easy to type, hard to guess.
+  const words = ['robot','tiger','river','cloud','steel','swift','quartz','maple','copper','orbit','laser','flint'];
+  const w1 = words[Math.floor(Math.random()*words.length)];
+  const w2 = words[Math.floor(Math.random()*words.length)];
+  const num = Math.floor(Math.random()*90 + 10);
+  document.getElementById('wm-password').value = w1 + '-' + w2 + '-' + num;
+}
+
+async function submitWorkerModal(){
+  const err = document.getElementById('wm-err');
+  err.textContent = '';
+  const id = document.getElementById('wm-id').value.trim();
+  const username = document.getElementById('wm-username').value.trim().toLowerCase();
+  const name = document.getElementById('wm-name').value.trim();
+  const password = document.getElementById('wm-password').value;
+
+  if (!username || !/^[a-z0-9_-]+$/.test(username)){
+    err.textContent = 'Username must be lowercase letters, numbers, hyphen or underscore only.';
+    return;
+  }
+  if (!name || name.length < 2){
+    err.textContent = 'Display name required.';
+    return;
+  }
+
+  const workers = getWorkers();
+  const isEdit = !!id;
+
+  if (!isEdit){
+    // Adding new worker
+    if (workers.some(w => w.username.toLowerCase() === username)){
+      err.textContent = 'Username already exists.';
+      return;
+    }
+    if (!password || password.length < 6){
+      err.textContent = 'Password must be at least 6 characters.';
+      return;
+    }
+    const hash = await sha256Hash(password);
+    const newWorker = {
+      id: 'wkr_' + Date.now() + '_' + Math.random().toString(36).slice(2,7),
+      username: username,
+      name: name,
+      password_hash: hash,
+      active: true,
+      created: new Date().toISOString(),
+      last_login: null
+    };
+    workers.push(newWorker);
+    saveWorkers(workers);
+    renderWorkersTable();
+    closeWorkerModal();
+    showCredentialsModal(newWorker, password);
+    addLog('info', 'Worker added: ' + username + ' (' + name + ')');
+  } else {
+    // Editing existing worker
+    const idx = workers.findIndex(w => w.id === id);
+    if (idx < 0){ err.textContent = 'Worker not found.'; return; }
+    workers[idx].name = name;
+    if (password){
+      if (password.length < 6){ err.textContent = 'Password must be at least 6 characters.'; return; }
+      workers[idx].password_hash = await sha256Hash(password);
+    }
+    saveWorkers(workers);
+    renderWorkersTable();
+    closeWorkerModal();
+    addLog('info', 'Worker updated: ' + workers[idx].username);
+    if (password){
+      showCredentialsModal(workers[idx], password);
+    } else {
+      alert('✅ Worker updated.');
+    }
+  }
+}
+
+function showCredentialsModal(worker, plaintextPassword){
+  const repo = localStorage.getItem('mrsh_gh_repo') || 'myrobot42/myrobot-shop';
+  const text = 'Hi ' + worker.name + ',\n\n'
+    + 'Your myrobot.shop admin login:\n\n'
+    + 'URL:       https://myrobot.shop/admin.html\n'
+    + 'Username:  ' + worker.username + '\n'
+    + 'Password:  ' + plaintextPassword + '\n\n'
+    + 'On first login you will be asked to paste:\n'
+    + '- GitHub token (I will send separately)\n'
+    + '- Cloudinary cloud name: djrojgec1\n'
+    + '- Cloudinary upload preset: myrobot\n\n'
+    + 'Let me know once you are in.';
+  document.getElementById('creds-text').value = text;
+  document.getElementById('creds-modal').style.display = 'flex';
+}
+
+function copyCredsToClipboard(){
+  const ta = document.getElementById('creds-text');
+  ta.select();
+  try {
+    navigator.clipboard.writeText(ta.value).then(
+      () => { alert('✅ Copied to clipboard.'); },
+      () => { document.execCommand('copy'); alert('✅ Copied.'); }
+    );
+  } catch(e){
+    document.execCommand('copy');
+    alert('✅ Copied.');
+  }
+}
+
+function closeCredsModal(){
+  document.getElementById('creds-modal').style.display = 'none';
+}
+
+function toggleWorkerActive(id){
+  const workers = getWorkers();
+  const idx = workers.findIndex(w => w.id === id);
+  if (idx < 0) return;
+  workers[idx].active = !workers[idx].active;
+  saveWorkers(workers);
+  renderWorkersTable();
+  addLog('info', 'Worker ' + workers[idx].username + ' ' + (workers[idx].active ? 'enabled' : 'disabled'));
+}
+
+function deleteWorker(id){
+  const workers = getWorkers();
+  const w = workers.find(x => x.id === id);
+  if (!w) return;
+  if (!confirm('Permanently delete worker "' + w.username + '" (' + w.name + ')?\n\nThis cannot be undone. They will be locked out immediately. Their past commits in GitHub remain attributed to them.')) return;
+  saveWorkers(workers.filter(x => x.id !== id));
+  renderWorkersTable();
+  addLog('info', 'Worker deleted: ' + w.username);
 }
 
 function saveApiKey() {
@@ -3063,6 +3474,8 @@ function changePassword() {
 }
 
 document.getElementById('pw-input').addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
+const userInputEl = document.getElementById('user-input');
+if (userInputEl) userInputEl.addEventListener('keydown', e => { if (e.key === 'Enter') document.getElementById('pw-input').focus(); });
 loadSettings();
     loadCloudinarySettings();
 updateBadges();
