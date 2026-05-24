@@ -1698,6 +1698,18 @@ function buildSpecTable(r) {
   const isQuadruped = sub.includes('quadruped') || sub.includes('dog') || sub.includes('legged');
   const isEducational = cat.includes('edu') || sub.includes('edu') || sub.includes('stem');
 
+  // ── NEW CATEGORY DETECTION (added via Phase B-display extension) ──
+  const isAerospace = cat.includes('aerospace') || cat.includes('space') || sub.includes('rover') || sub.includes('lander') || sub.includes('orbiter') || sub.includes('satellite') || sub.includes('station arm') || sub.includes('free-flyer');
+  const isAquatic = cat.includes('aquatic') || cat.includes('marine') || sub.includes('rov') || sub.includes('auv') || sub.includes('usv') || sub.includes('asv') || sub.includes('underwater') || sub.includes('subsea');
+  const isLawnMower = cat.includes('lawn') || sub.includes('lawn') || sub.includes('mower') || sub.includes('lawnmower');
+  const isTelepresence = cat.includes('telepresence') || sub.includes('telepresence') || sub.includes('telepresent');
+  const isSocial = cat.includes('social') || sub.includes('social') || sub.includes('companion') || sub.includes('eldercare');
+  const isEntertainment = cat.includes('entertainment') || sub.includes('animatronic') || sub.includes('bartender') || sub.includes('performance') || sub.includes('theme park');
+  const isAV = cat.includes('autonomous vehicle') || cat.includes('autonomous-vehicle') || sub.includes('robotaxi') || sub.includes('robot truck') || sub.includes('robot bus') || sub.includes('autonomous car');
+  const isAGV = cat.includes('agv') || cat.includes('amr') || sub.includes('agv') || sub.includes('amr') || sub.includes('autonomous mobile robot');
+  const isConstruction = cat.includes('construction') || sub.includes('bricklay') || sub.includes('3d printing') || sub.includes('concrete') || sub.includes('demolition');
+  const isDisaster = cat.includes('disaster') || cat.includes('rescue') || sub.includes('usar') || sub.includes('rescue') || sub.includes('throwable');
+
   let html = '';
 
   // ── LAUNCH ──
@@ -2044,6 +2056,286 @@ function buildSpecTable(r) {
     if (r.competition_legal && r.competition_legal.length) html += row('Competition legal', r.competition_legal.join(', '));
     if (r.lesson_library) html += row('Lesson library', r.lesson_library + ' lessons');
     if (r.lms_integration) html += row('LMS integration', r.lms_integration);
+  }
+
+  // ══════════════════════════════════════════════════════════════════
+  // ── PHASE B DISPLAY EXTENSION — 9 NEW CATEGORY SECTIONS ──
+  // ══════════════════════════════════════════════════════════════════
+
+  // ── AEROSPACE ──
+  if (isAerospace) {
+    html += grp('SPACE MISSION');
+    if (r.target_body) html += row('Target body', r.target_body);
+    if (r.mission_type) html += row('Mission type', r.mission_type);
+    if (r.mission_status) html += row('Mission status', r.mission_status);
+    if (r.operating_agency) html += row('Operating agency', r.operating_agency);
+    if (r.launch_date) html += row('Launch date', r.launch_date);
+    if (r.arrival_date) html += row('Arrival date', r.arrival_date);
+    if (r.mission_end_date) html += row('Mission end date', r.mission_end_date);
+    if (r.launch_vehicle) html += row('Launch vehicle', r.launch_vehicle);
+    if (r.mission_cost_usd) html += row('Mission cost', '$' + r.mission_cost_usd.toLocaleString());
+    if (r.mission_duration_planned_days) html += row('Planned duration', r.mission_duration_planned_days, 'days');
+    if (r.mission_duration_actual_days) html += row('Actual duration', r.mission_duration_actual_days, 'days');
+    if (r.traverse_distance_km) html += row('Traverse distance', r.traverse_distance_km, 'km');
+    if (r.communications_band) html += row('Communications band', r.communications_band);
+    if (r.data_returned_gb) html += row('Data returned', r.data_returned_gb, 'GB');
+    if (r.payload_instruments && r.payload_instruments.length) html += row('Payload instruments', r.payload_instruments.join(', '));
+  }
+
+  // ── AQUATIC ──
+  if (isAquatic) {
+    html += grp('SUBSEA / MARINE');
+    if (r.vehicle_type) html += row('Vehicle type', r.vehicle_type);
+    if (r.propulsion_type) html += row('Propulsion', r.propulsion_type);
+    if (r.thruster_count) html += row('Thrusters', r.thruster_count);
+    if (r.max_depth_m) html += row('Max depth', r.max_depth_m.toLocaleString(), 'm');
+    if (r.crush_depth_m) html += row('Crush depth', r.crush_depth_m.toLocaleString(), 'm');
+    if (r.max_speed_kn) html += row('Max speed', r.max_speed_kn, 'knots');
+    if (r.endurance_hours && !isMilitary) html += row('Endurance', r.endurance_hours, 'hours');
+    if (r.endurance_km) html += row('Range', r.endurance_km, 'km');
+    if (r.tether_length_m) html += row('Tether length', r.tether_length_m, 'm');
+    if (r.tether_diameter_mm) html += row('Tether diameter', r.tether_diameter_mm, 'mm');
+    if (r.tether_type) html += row('Tether type', r.tether_type);
+    if (r.autonomous !== undefined && !isDrone) html += row('Autonomous', r.autonomous);
+    if (r.manipulator_arms) html += row('Manipulator arms', r.manipulator_arms);
+    if (r.arm_payload_kg) html += row('Arm payload', r.arm_payload_kg, 'kg');
+    if (r.acoustic_modem !== undefined) html += row('Acoustic modem', r.acoustic_modem);
+    if (r.inertial_navigation !== undefined) html += row('Inertial navigation', r.inertial_navigation);
+    if (r.dvl_integrated !== undefined) html += row('DVL (Doppler Velocity Log)', r.dvl_integrated);
+    if (r.usbl_integrated !== undefined) html += row('USBL acoustic positioning', r.usbl_integrated);
+    if (r.gps_when_surfaced !== undefined) html += row('GPS when surfaced', r.gps_when_surfaced);
+    if (r.iridium_satcom !== undefined) html += row('Iridium satcom', r.iridium_satcom);
+    if (r.launch_method) html += row('Launch method', r.launch_method);
+    if (r.deployment_weight_class) html += row('Deployment class', r.deployment_weight_class);
+    if (r.water_type && r.water_type.length) html += row('Water type', Array.isArray(r.water_type) ? r.water_type.join(', ') : r.water_type);
+  }
+
+  // ── LAWN MOWERS ──
+  if (isLawnMower) {
+    html += grp('CUTTING & COVERAGE');
+    if (r.cutting_width_mm) html += row('Cutting width', r.cutting_width_mm, 'mm');
+    if (r.cutting_height_min_mm && r.cutting_height_max_mm) html += row('Cutting height', `${r.cutting_height_min_mm}-${r.cutting_height_max_mm}`, 'mm');
+    if (r.cutting_height_adjustable) html += row('Height adjustment', r.cutting_height_adjustable);
+    if (r.blade_count) html += row('Blades', r.blade_count);
+    if (r.blade_type) html += row('Blade type', r.blade_type);
+    if (r.max_lawn_area_sqm) html += row('Max lawn area', r.max_lawn_area_sqm.toLocaleString(), 'm²');
+    if (r.max_slope_percent) html += row('Max slope', r.max_slope_percent, '%');
+    if (r.max_slope_degrees) html += row('Max slope (deg)', r.max_slope_degrees, '°');
+    if (r.mowing_pattern) html += row('Mowing pattern', r.mowing_pattern);
+    if (r.edge_cutting !== undefined) html += row('Edge cutting', r.edge_cutting);
+    if (r.mulching !== undefined) html += row('Mulching', r.mulching);
+    html += grp('NAVIGATION & SAFETY');
+    if (r.navigation_type) html += row('Navigation type', r.navigation_type);
+    if (r.requires_perimeter_wire !== undefined) html += row('Requires boundary wire', r.requires_perimeter_wire);
+    if (r.gps_rtk !== undefined) html += row('GPS RTK', r.gps_rtk);
+    if (r.vision_navigation !== undefined) html += row('Vision navigation', r.vision_navigation);
+    if (r.mapping !== undefined && !isVacuum) html += row('Mapping', r.mapping);
+    if (r.multi_zone_support !== undefined) html += row('Multi-zone support', r.multi_zone_support);
+    if (r.zones_max) html += row('Max zones', r.zones_max);
+    if (r.rain_sensor !== undefined && !isDrone) html += row('Rain sensor', r.rain_sensor);
+    if (r.frost_sensor !== undefined) html += row('Frost sensor', r.frost_sensor);
+    if (r.theft_protection) html += row('Theft protection', r.theft_protection);
+    if (r.anti_theft_alarm !== undefined) html += row('Anti-theft alarm', r.anti_theft_alarm);
+    if (r.lift_sensor !== undefined) html += row('Lift sensor (safety)', r.lift_sensor);
+    if (r.pet_safety !== undefined) html += row('Pet safety detection', r.pet_safety);
+    if (r.cellular_connectivity) html += row('Cellular connectivity', r.cellular_connectivity);
+  }
+
+  // ── TELEPRESENCE ──
+  if (isTelepresence) {
+    html += grp('TELEPRESENCE DISPLAY & CAMERA');
+    if (r.height_adjustable !== undefined) html += row('Height adjustable', r.height_adjustable);
+    if (r.height_range_mm) html += row('Height range', r.height_range_mm, 'mm');
+    if (r.screen_size_inch) html += row('Screen size', r.screen_size_inch, 'inches');
+    if (r.screen_resolution) html += row('Screen resolution', r.screen_resolution);
+    if (r.screen_brightness_nits) html += row('Screen brightness', r.screen_brightness_nits, 'nits');
+    if (r.front_camera_resolution) html += row('Front camera', r.front_camera_resolution);
+    if (r.front_camera_fov_deg) html += row('Camera FOV', r.front_camera_fov_deg, '°');
+    if (r.pan_tilt_camera !== undefined) html += row('Pan/tilt camera', r.pan_tilt_camera);
+    if (r.secondary_camera) html += row('Secondary camera', r.secondary_camera);
+    if (r.microphone_array) html += row('Microphone array', r.microphone_array);
+    if (r.speaker_output_w) html += row('Speaker output', r.speaker_output_w, 'W');
+    html += grp('PILOTING & CALL');
+    if (r.video_codec && r.video_codec.length) html += row('Video codecs', r.video_codec.join(', '));
+    if (r.audio_codec && r.audio_codec.length) html += row('Audio codecs', r.audio_codec.join(', '));
+    if (r.call_platforms && r.call_platforms.length) html += row('Call platforms', r.call_platforms.join(', '));
+    if (r.pilot_devices && r.pilot_devices.length) html += row('Pilot devices', r.pilot_devices.join(', '));
+    if (r.simultaneous_pilots) html += row('Simultaneous pilots', r.simultaneous_pilots);
+    if (r.pilot_handoff !== undefined) html += row('Pilot handoff', r.pilot_handoff);
+    if (r.latency_ms_typical) html += row('Typical latency', r.latency_ms_typical, 'ms');
+    if (r.multi_robot_management !== undefined) html += row('Fleet management', r.multi_robot_management);
+    if (r.business_seat_pricing_usd_month) html += row('Business seat', '$' + r.business_seat_pricing_usd_month + '/month');
+  }
+
+  // ── SOCIAL ──
+  if (isSocial) {
+    html += grp('SOCIAL & COMPANIONSHIP');
+    if (r.social_role) html += row('Social role', r.social_role);
+    if (r.target_user && r.target_user.length) html += row('Target user', r.target_user.join(', '));
+    if (r.form_factor) html += row('Form factor', r.form_factor);
+    if (r.face_display) html += row('Face display', r.face_display);
+    if (r.eye_contact_tracking !== undefined) html += row('Eye contact tracking', r.eye_contact_tracking);
+    if (r.facial_recognition !== undefined && !html.includes('Facial recognition')) html += row('Facial recognition', r.facial_recognition);
+    if (r.conversational_ai) html += row('Conversational AI', r.conversational_ai);
+    if (r.llm_used) html += row('LLM used', r.llm_used);
+    if (r.emotional_recognition !== undefined) html += row('Emotional recognition', r.emotional_recognition);
+    if (r.emotional_expression !== undefined) html += row('Emotional expression', r.emotional_expression);
+    if (r.touch_responsive !== undefined) html += row('Touch responsive', r.touch_responsive);
+    if (r.tactile_sensors_count) html += row('Tactile sensors', r.tactile_sensors_count);
+    if (r.mobility) html += row('Mobility', r.mobility);
+    if (r.learning_personalization !== undefined) html += row('Personalization', r.learning_personalization);
+    if (r.memory_persistent !== undefined) html += row('Persistent memory', r.memory_persistent);
+    if (r.family_account_support !== undefined) html += row('Family accounts', r.family_account_support);
+    html += grp('CARE FEATURES');
+    if (r.medication_reminders !== undefined) html += row('Medication reminders', r.medication_reminders);
+    if (r.fall_detection !== undefined) html += row('Fall detection', r.fall_detection);
+    if (r.emergency_contact_alert !== undefined) html += row('Emergency alerts', r.emergency_contact_alert);
+    if (r.video_calling !== undefined) html += row('Video calling', r.video_calling);
+    if (r.parental_controls !== undefined) html += row('Parental controls', r.parental_controls);
+    if (r.subscription_required !== undefined) html += row('Subscription required', r.subscription_required);
+    if (r.subscription_price_usd_month) html += row('Subscription', '$' + r.subscription_price_usd_month + '/month');
+    if (r.data_privacy_certification && r.data_privacy_certification.length) html += row('Privacy certifications', r.data_privacy_certification.join(', '));
+    if (r.intended_setting && r.intended_setting.length) html += row('Intended setting', r.intended_setting.join(', '));
+  }
+
+  // ── ENTERTAINMENT ──
+  if (isEntertainment) {
+    html += grp('ENTERTAINMENT & PERFORMANCE');
+    if (r.entertainment_type) html += row('Entertainment type', r.entertainment_type);
+    if (r.venue_type && r.venue_type.length) html += row('Venue type', r.venue_type.join(', '));
+    if (r.performance_modes && r.performance_modes.length) html += row('Performance modes', r.performance_modes.join(', '));
+    if (r.audience_interaction !== undefined) html += row('Audience interaction', r.audience_interaction);
+    if (r.motion_capture_driven !== undefined) html += row('Motion capture driven', r.motion_capture_driven);
+    if (r.synced_to_music !== undefined) html += row('Synced to music', r.synced_to_music);
+    if (r.instrument_played) html += row('Instrument played', r.instrument_played);
+    if (r.drinks_per_hour) html += row('Drinks per hour', r.drinks_per_hour);
+    if (r.drink_menu_size) html += row('Drink menu size', r.drink_menu_size);
+    if (r.payment_integration !== undefined) html += row('Payment integration', r.payment_integration);
+    if (r.expressive_capabilities && r.expressive_capabilities.length) html += row('Expressive capabilities', r.expressive_capabilities.join(', '));
+    if (r.stage_lighting_sync !== undefined) html += row('Stage lighting sync', r.stage_lighting_sync);
+    if (r.dmx_compatible !== undefined) html += row('DMX compatible', r.dmx_compatible);
+    if (r.permanent_installation !== undefined) html += row('Permanent installation', r.permanent_installation);
+    if (r.touring_capable !== undefined) html += row('Touring capable', r.touring_capable);
+    if (r.setup_time_min && !isMedical) html += row('Setup time', r.setup_time_min, 'min per venue');
+    if (r.crew_required) html += row('Crew required', r.crew_required, 'operator(s) on site');
+    if (r.intended_audience && r.intended_audience.length) html += row('Intended audience', r.intended_audience.join(', '));
+  }
+
+  // ── AUTONOMOUS VEHICLES ──
+  if (isAV) {
+    html += grp('AUTONOMOUS VEHICLE');
+    if (r.vehicle_class) html += row('Vehicle class', r.vehicle_class);
+    if (r.autonomy_level && !isMilitary) html += row('Autonomy level', r.autonomy_level + ' (SAE)');
+    if (r.operational_design_domain) html += row('Operational design domain', r.operational_design_domain);
+    if (r.passenger_capacity) html += row('Passenger capacity', r.passenger_capacity);
+    if (r.cargo_capacity_kg) html += row('Cargo capacity', r.cargo_capacity_kg, 'kg');
+    if (r.cargo_volume_m3) html += row('Cargo volume', r.cargo_volume_m3, 'm³');
+    if (r.range_km) html += row('Range', r.range_km, 'km');
+    if (r.top_speed_kmh) html += row('Top speed', r.top_speed_kmh, 'km/h');
+    if (r.powertrain) html += row('Powertrain', r.powertrain);
+    if (r.battery_capacity_kwh) html += row('Battery capacity', r.battery_capacity_kwh, 'kWh');
+    if (r.charging_time_min_dc) html += row('DC fast charging', r.charging_time_min_dc, 'min');
+    if (r.charging_time_h_ac) html += row('AC charging', r.charging_time_h_ac, 'hours');
+    if (r.wheelbase_mm) html += row('Wheelbase', r.wheelbase_mm, 'mm');
+    html += grp('AV SENSORS & COMPUTE');
+    if (r.lidar_count) html += row('LiDAR units', r.lidar_count);
+    if (r.lidar_brand) html += row('LiDAR brand', r.lidar_brand);
+    if (r.camera_count) html += row('Cameras', r.camera_count);
+    if (r.radar_count) html += row('Radars', r.radar_count);
+    if (r.imaging_radar !== undefined) html += row('Imaging radar', r.imaging_radar);
+    if (r.compute_platform) html += row('Compute platform', r.compute_platform);
+    if (r.redundant_systems && r.redundant_systems.length) html += row('Redundant systems', r.redundant_systems.join(', '));
+    if (r.safety_certifications && r.safety_certifications.length) html += row('Safety certifications', r.safety_certifications.join(', '));
+    html += grp('AV OPERATIONS');
+    if (r.operating_cities && r.operating_cities.length) html += row('Operating cities', r.operating_cities.join(', '));
+    if (r.commercial_service_year) html += row('Commercial service since', r.commercial_service_year);
+    if (r.safety_driver) html += row('Safety driver', r.safety_driver);
+    if (r.remote_operations !== undefined) html += row('Remote operations', r.remote_operations);
+    if (r.v2x_enabled !== undefined) html += row('V2X enabled', r.v2x_enabled);
+  }
+
+  // ── AGV / AMR ──
+  if (isAGV) {
+    html += grp('AGV / AMR');
+    if (r.robot_type) html += row('Robot type', r.robot_type);
+    if (r.navigation_type) html += row('Navigation type', r.navigation_type);
+    if (r.payload_kg && !html.includes('Payload')) html += row('Payload', r.payload_kg, 'kg');
+    if (r.max_payload_dimensions_mm) html += row('Max payload dimensions', r.max_payload_dimensions_mm);
+    if (r.lifting_height_mm) html += row('Lifting height', r.lifting_height_mm, 'mm');
+    if (r.lifting_capacity_kg) html += row('Lifting capacity', r.lifting_capacity_kg, 'kg');
+    if (r.max_speed_ms && !html.includes('Max speed')) html += row('Max speed', r.max_speed_ms, 'm/s');
+    if (r.turning_radius_mm !== undefined && !isService) html += row('Turning radius', r.turning_radius_mm === 0 ? 'Zero-radius' : r.turning_radius_mm + 'mm');
+    if (r.wheel_type) html += row('Wheel type', r.wheel_type);
+    if (r.safety_lidar !== undefined) html += row('Safety LiDAR', r.safety_lidar);
+    if (r.bumper_safety !== undefined) html += row('Bumper safety', r.bumper_safety);
+    if (r.safety_certifications && r.safety_certifications.length && !isAV) html += row('Safety certifications', r.safety_certifications.join(', '));
+    html += grp('FLEET & INTEGRATION');
+    if (r.dock_charging !== undefined) html += row('Dock charging', r.dock_charging);
+    if (r.opportunity_charging !== undefined) html += row('Opportunity charging', r.opportunity_charging);
+    if (r.fleet_software) html += row('Fleet software', r.fleet_software);
+    if (r.fleet_size_max) html += row('Max fleet size', r.fleet_size_max);
+    if (r.wms_integration && r.wms_integration.length) html += row('WMS integration', r.wms_integration.join(', '));
+    if (r.wcs_integration !== undefined) html += row('WCS integration', r.wcs_integration);
+    if (r.elevator_integration !== undefined && !isService) html += row('Elevator integration', r.elevator_integration);
+    if (r.door_integration !== undefined) html += row('Door integration', r.door_integration);
+    if (r.multi_floor !== undefined && !isService) html += row('Multi-floor', r.multi_floor);
+    if (r.pick_to_light !== undefined) html += row('Pick to light', r.pick_to_light);
+    if (r.cart_attachment_type) html += row('Cart attachment', r.cart_attachment_type);
+    if (r.coverage_area_sqm) html += row('Coverage area', r.coverage_area_sqm.toLocaleString(), 'm²');
+  }
+
+  // ── CONSTRUCTION ──
+  if (isConstruction) {
+    html += grp('CONSTRUCTION');
+    if (r.construction_role) html += row('Construction role', r.construction_role);
+    if (r.operating_environment && r.operating_environment.length) html += row('Operating environment', r.operating_environment.join(', '));
+    if (r.lift_capacity_kg) html += row('Lift capacity', r.lift_capacity_kg.toLocaleString(), 'kg');
+    if (r.reach_m) html += row('Reach', r.reach_m, 'm');
+    if (r.working_height_max_m) html += row('Max working height', r.working_height_max_m, 'm');
+    if (r.placement_accuracy_mm) html += row('Placement accuracy', r.placement_accuracy_mm, 'mm');
+    if (r.materials_compatible && r.materials_compatible.length) html += row('Materials', r.materials_compatible.join(', '));
+    if (r.mortar_type) html += row('Mortar type', r.mortar_type);
+    if (r.print_layer_mm) html += row('Print layer thickness', r.print_layer_mm, 'mm');
+    if (r.print_speed_mm_s) html += row('Print speed', r.print_speed_mm_s, 'mm/s');
+    if (r.print_volume_m3) html += row('Print volume', r.print_volume_m3, 'm³');
+    if (r.surveying_accuracy_mm) html += row('Surveying accuracy', r.surveying_accuracy_mm, 'mm');
+    if (r.bim_integration !== undefined) html += row('BIM integration', r.bim_integration);
+    if (r.bim_formats && r.bim_formats.length) html += row('BIM formats', r.bim_formats.join(', '));
+    if (r.tracked_or_wheeled) html += row('Tracks or wheels', r.tracked_or_wheeled);
+    if (r.slope_capability_degrees) html += row('Slope capability', r.slope_capability_degrees, '°');
+    if (r.weather_operation) html += row('Weather operation', r.weather_operation);
+    if (r.osha_compliant !== undefined) html += row('OSHA compliant', r.osha_compliant);
+    if (r.setup_time_min && !isMedical && !isEntertainment) html += row('Setup time', r.setup_time_min, 'min per site');
+    if (r.intended_users && r.intended_users.length) html += row('Intended users', r.intended_users.join(', '));
+  }
+
+  // ── DISASTER RESPONSE (USAR / EOD / HazMat) ──
+  if (isDisaster && !isMilitary) {
+    html += grp('DISASTER RESPONSE');
+    if (r.robot_form) html += row('Robot form', r.robot_form);
+    if (r.mission_types && r.mission_types.length) html += row('Mission types', r.mission_types.join(', '));
+    if (r.intended_users && r.intended_users.length && !isConstruction) html += row('Intended users', r.intended_users.join(', '));
+    if (r.throwable !== undefined) html += row('Throwable', r.throwable);
+    if (r.throw_distance_m) html += row('Throw distance', r.throw_distance_m, 'm');
+    if (r.survives_fall_m) html += row('Survives fall', r.survives_fall_m, 'm');
+    if (r.runtime_standby_hours) html += row('Standby runtime', r.runtime_standby_hours, 'hours');
+    if (r.manipulator_arms && !isAquatic) html += row('Manipulator arms', r.manipulator_arms);
+    if (r.disrupter_compatible !== undefined) html += row('Disrupter compatible (EOD)', r.disrupter_compatible);
+    if (r.tool_changer !== undefined && !isHumanoid) html += row('Tool changer', r.tool_changer);
+    if (r.cbrn_sensors && r.cbrn_sensors.length) html += row('CBRN sensors', r.cbrn_sensors.join(', '));
+    if (r.thermal_camera !== undefined && !isDrone && !html.includes('Thermal camera')) html += row('Thermal camera', r.thermal_camera);
+    if (r.low_light_camera !== undefined) html += row('Low-light camera', r.low_light_camera);
+    if (r.two_way_audio !== undefined) html += row('Two-way audio (victim comms)', r.two_way_audio);
+    if (r.victim_detection_ai !== undefined) html += row('Victim detection AI', r.victim_detection_ai);
+    if (r.gas_sensors && r.gas_sensors.length) html += row('Gas sensors', r.gas_sensors.join(', '));
+    if (r.fire_temperature_rating_c) html += row('Fire temperature rating', r.fire_temperature_rating_c, '°C');
+    if (r.radiation_hardened !== undefined) html += row('Radiation hardened', r.radiation_hardened);
+    if (r.comms && r.comms.length) html += row('Comms types', r.comms.join(', '));
+    if (r.comms_range_m) html += row('Comms range', r.comms_range_m, 'm');
+    if (r.night_operation !== undefined && !isAgri) html += row('Night operation', r.night_operation);
+    if (r.stair_climbing !== undefined && !html.includes('Stair climbing')) html += row('Stair climbing', r.stair_climbing);
+    if (r.tracks_or_wheels && !isConstruction) html += row('Tracks or wheels', r.tracks_or_wheels);
+    if (r.weight_class) html += row('Weight class', r.weight_class);
   }
 
 
