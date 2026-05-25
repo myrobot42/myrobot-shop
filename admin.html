@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>myrobot.shop — Admin</title>
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>myrobot.shop — Admin v2026-05-25-FIX2</title>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -451,6 +454,8 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
             <button class="qcmd" onclick="quickCmd('Research and add the top 5 new humanoid robots released in 2026')">🔍 Bulk research</button>
             <button class="qcmd" onclick="quickCmd('What robots are currently in the database?')">📊 Show database</button>
             <button class="qcmd" onclick="quickCmd('Update the news page with the latest robotics headlines')">📰 Update news</button>
+            <button class="qcmd" onclick="downloadGalleryBackup()" style="background:#16a34a;color:white" title="Download a JSON file of all current galleries — keep as a safety backup">📸 Backup galleries</button>
+            <button class="qcmd" onclick="restoreLastGallerySnapshot()" style="background:#f59e0b;color:white" title="Restore galleries from the most recent localStorage snapshot — useful if a save just nuked them">↩️ Restore snapshot</button>
           </div>
           <div class="input-wrap">
             <textarea class="cmd-input" id="cmd-input" placeholder="Type a command... e.g. 'Add the Unitree G1 robot'" rows="1" onkeydown="handleKey(event)" oninput="autoResize(this)"></textarea>
@@ -2233,7 +2238,9 @@ async function bulkImportRun(){
     return false;
   }
   // Fields we never overwrite — these are user/worker-curated even when "empty" looks set
-  const NEVER_OVERWRITE = new Set(['img', 'id']);
+  // Added 'gallery' (v2026-05-25 FIX2) to prevent bulk imports without gallery field from
+  // nuking existing galleries via Object.assign in Path 1.
+  const NEVER_OVERWRITE = new Set(['img', 'id', 'gallery']);
 
   const confirmMsg =
     'Import ' + robots.length + ' robots and push to GitHub?\n\n' +
@@ -2244,6 +2251,11 @@ async function bulkImportRun(){
     ) +
     '\n\nThis will deploy live.';
   if (!confirm(confirmMsg)) return;
+
+  // ─── SAFETY NET: snapshot galleries BEFORE bulk import ───
+  // Even if smart-merge has a bug, snapshot is in localStorage and recoverable
+  // via restoreLastGallerySnapshot()
+  if (typeof snapshotGalleries === 'function') snapshotGalleries('before-bulkImport');
 
   const runBtn = document.getElementById('bulk-import-run-btn');
   if (runBtn) { runBtn.disabled = true; runBtn.textContent = '⏳ Importing...'; }
@@ -2267,8 +2279,15 @@ async function bulkImportRun(){
       const target = byId[r.id];
       // Preserve image if existing has one and new is empty
       const preservedImg = target.img && !r.img ? target.img : (r.img || target.img || '');
+      // Preserve gallery: NEVER let bulk import wipe gallery. If new entry has no
+      // gallery field, keep existing. If it has one, only use it (don't merge).
+      const preservedGallery = (r.gallery && Array.isArray(r.gallery) && r.gallery.length > 0) 
+        ? r.gallery 
+        : target.gallery;
       Object.assign(target, r);
       target.img = preservedImg;
+      if (preservedGallery) target.gallery = preservedGallery;
+      else if (target.gallery && !preservedGallery) delete target.gallery;
       updated++;
       return;
     }
@@ -3826,7 +3845,112 @@ function clearGallerySlot(id, idx) {
   if (input) { input.value = ''; updateGalleryPreview(id, idx, ''); }
 }
 
+// ─── GALLERY SAFETY NET (v2026-05-25) ───
+// Before any image save, snapshot current galleries to localStorage with timestamp.
+// Keeps last 10 snapshots — provides instant rollback if a save goes wrong.
+// Also exposes downloadGalleryBackup() as a manual safety net users can trigger.
+function snapshotGalleries(reason){
+  try {
+    const snapshot = {
+      ts: new Date().toISOString(),
+      reason: reason || 'manual',
+      count: 0,
+      galleries: {}
+    };
+    ROBOTS.forEach(r => {
+      if (r.gallery && Array.isArray(r.gallery) && r.gallery.length > 0) {
+        snapshot.galleries[r.id] = r.gallery.slice();
+        snapshot.count++;
+      }
+      if (r.img) {
+        if (!snapshot.imgs) snapshot.imgs = {};
+        snapshot.imgs[r.id] = r.img;
+      }
+    });
+    // Rotate snapshots: keep last 10
+    let snaps = [];
+    try { snaps = JSON.parse(localStorage.getItem('mrsh_gallery_snapshots') || '[]'); } catch(e){}
+    snaps.push(snapshot);
+    if (snaps.length > 10) snaps = snaps.slice(-10);
+    localStorage.setItem('mrsh_gallery_snapshots', JSON.stringify(snaps));
+    return snapshot;
+  } catch(e) {
+    console.error('Snapshot failed:', e);
+    return null;
+  }
+}
+
+// Download a JSON file of current galleries — works as manual backup anytime.
+function downloadGalleryBackup(){
+  const snapshot = snapshotGalleries('manual-download');
+  if (!snapshot) {
+    alert('Failed to create snapshot — check console.');
+    return;
+  }
+  // Build bulk-import-ready file
+  const robots = [];
+  ROBOTS.forEach(r => {
+    if (r.gallery && Array.isArray(r.gallery) && r.gallery.length > 0) {
+      robots.push({
+        id: r.id,
+        name: r.name || '',
+        brand: r.brand || '',
+        cat: r.cat || '',
+        sub: r.sub || '',
+        gallery: r.gallery.slice()
+      });
+    }
+  });
+  const out = { robots, _meta: { ts: snapshot.ts, count: robots.length, total_urls: robots.reduce((s,r)=>s+r.gallery.length,0) } };
+  const blob = new Blob([JSON.stringify(out, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `gallery-backup-${snapshot.ts.replace(/[:.]/g,'-')}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  addLog('success', `Downloaded gallery backup: ${robots.length} robots, ${out._meta.total_urls} URLs`);
+  addMsg(`✅ Gallery backup downloaded: ${robots.length} robots with ${out._meta.total_urls} image URLs.`, 'system');
+}
+
+// Restore galleries from the most recent localStorage snapshot.
+// Useful if a save just nuked galleries — restores from before the save.
+function restoreLastGallerySnapshot(){
+  try {
+    const snaps = JSON.parse(localStorage.getItem('mrsh_gallery_snapshots') || '[]');
+    if (snaps.length === 0) {
+      alert('No snapshots available.');
+      return;
+    }
+    const snap = snaps[snaps.length - 1];
+    if (!confirm(`Restore from snapshot taken ${snap.ts}?\n\nReason: ${snap.reason}\nContains: ${snap.count} galleries\n\nThis will overwrite current galleries.`)) return;
+    let restored = 0;
+    ROBOTS.forEach(r => {
+      if (snap.galleries[r.id]) {
+        r.gallery = snap.galleries[r.id].slice();
+        restored++;
+      }
+      if (snap.imgs && snap.imgs[r.id] && !r.img) {
+        r.img = snap.imgs[r.id];
+      }
+    });
+    saveDB();
+    addLog('success', `Restored ${restored} galleries from snapshot ${snap.ts}`);
+    addMsg(`✅ Restored ${restored} galleries from ${snap.ts}. Click Deploy to push to live.`, 'system');
+  } catch(e) {
+    alert('Restore failed: ' + e.message);
+    console.error(e);
+  }
+}
+
 function saveAllImages() {
+  // ─── SAFETY NET: snapshot galleries BEFORE we touch anything ───
+  // Even if saveAllImages has a bug, the snapshot is in localStorage and
+  // restoreLastGallerySnapshot() can recover.
+  snapshotGalleries('before-saveAllImages');
+  
   let changed = 0;
   ROBOTS.forEach(r => {
     const mainInput = document.getElementById('mainimg-'+r.id);
