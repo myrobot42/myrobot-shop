@@ -383,15 +383,23 @@
     "id": "rivr-formerly-swiss-mile-rivr-quadruped",
     "name": "RIVR Quadruped",
     "brand": "RIVR (formerly Swiss-Mile)",
-    "cat": "Service",
-    "sub": "",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Hybrid Wheel-Leg Quadruped",
+    "tags": [
+      "quadruped",
+      "wheeled-quadruped",
+      "hybrid",
+      "switzerland",
+      "active",
+      "logistics",
+      "last-mile"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Quadruped wheeled robots for doorstep delivery acquired by Amazon",
+    "desc": "Hybrid wheel-leg quadruped from RIVR (formerly Swiss-Mile, ETH Zurich spin-off). Switches between rolling on wheels (high speed, flat ground) and walking on legs (stairs, obstacles). Targets last-mile delivery and logistics. Raised $20M+ in 2024 to expand operations.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -399,9 +407,9 @@
       "Autonomy": 70,
       "Durability": 75
     },
-    "year": 2019,
-    "origin": "Unknown",
-    "status": "Acquired by Amazon",
+    "year": 2022,
+    "origin": "Switzerland",
+    "status": "Active",
     "released": "2019",
     "speed_ms": 4,
     "wifi": true,
@@ -412,10 +420,16 @@
     "ros": true,
     "use_cases": [
       "Last-mile delivery",
-      "Package delivery",
-      "Autonomous logistics"
+      "Logistics",
+      "Inspection",
+      "Research"
     ],
-    "manufacturer_url": "https://www.rivr.ai"
+    "manufacturer_url": "https://rivr.ai",
+    "made_in": "Switzerland",
+    "form_factor": "Hybrid wheel-leg quadruped",
+    "mobility": "Wheeled + bipedal/quadrupedal walking",
+    "max_speed_kmh": 22,
+    "website": "https://rivr.ai"
   },
   {
     "id": "hexagon-robotics-hexagon-robotics-humanoids",
@@ -8490,7 +8504,7 @@
       "AI-day"
     ],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/flwdKJ0RzarbtWaXCyvq/image.jpg",
+    "img": "",
     "score": 8.5,
     "rating": 4.2,
     "price": 20000,
@@ -8575,14 +8589,7 @@
       "precision_mm": 1,
       "response_time_ms": 50
     },
-    "origin": "USA",
-    "gallery": [
-      "https://img-new.cgtrader.com/items/3997929/ac51f38cf3/tesla-optimus-gen-1-3d-model-ac51f38cf3.jpg",
-      "https://img-new.cgtrader.com/items/3997929/2708279ba5/tesla-optimus-gen-1-3d-model-2708279ba5.jpg",
-      "https://img-new.cgtrader.com/items/3997929/552e0e5b13/tesla-optimus-gen-1-3d-model-552e0e5b13.jpg",
-      "https://img-new.cgtrader.com/items/3997929/18ef82ba6f/tesla-optimus-gen-1-3d-model-18ef82ba6f.jpg",
-      "https://img-new.cgtrader.com/items/3997929/b5ab9e76df/tesla-optimus-gen-1-3d-model-b5ab9e76df.jpg"
-    ]
+    "origin": "USA"
   },
   {
     "id": "tesla-optimus-gen2",
@@ -8602,7 +8609,7 @@
       "factory-deployment"
     ],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/C4DGaOF0tRoaSPRGMsec/image.jpg",
+    "img": "",
     "score": 9.2,
     "rating": 4.6,
     "price": 18000,
@@ -8691,14 +8698,7 @@
       "precision_mm": 0.5,
       "response_time_ms": 30
     },
-    "origin": "USA",
-    "gallery": [
-      "https://img-new.cgtrader.com/items/7102290/938e25eccd/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-938e25eccd.webp",
-      "https://img-new.cgtrader.com/items/7102290/5c4060832a/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-5c4060832a.webp",
-      "https://img-new.cgtrader.com/items/7102290/2cd97f0a24/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-2cd97f0a24.webp",
-      "https://img-new.cgtrader.com/items/7102290/cbfeb36f60/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-cbfeb36f60.webp",
-      "https://img-new.cgtrader.com/items/7102290/9bcaadce32/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-9bcaadce32.webp"
-    ]
+    "origin": "USA"
   },
   {
     "id": "tesla-optimus-workplace",
@@ -32911,21 +32911,26 @@
     "name": "Vision 60",
     "brand": "Ghost Robotics",
     "year": 2020,
-    "status": "active",
-    "cat": "Military",
-    "sub": "Quadruped UGV",
+    "status": "Active",
+    "cat": "Quadruped",
+    "sub": "Military Quadruped",
     "tags": [
-      "reconnaissance",
-      "patrol",
-      "surveillance",
-      "tactical"
+      "quadruped",
+      "military",
+      "ugv",
+      "ip67",
+      "all-weather",
+      "tactical",
+      "active",
+      "blind-mode",
+      "category-defining"
     ],
     "fig": "🤖",
     "img": "",
-    "score": 8.9,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 100000,
-    "desc": "All-terrain quadruped robot designed for military reconnaissance and surveillance missions with advanced mobility capabilities.",
+    "desc": "Mid-sized high-endurance Q-UGV (Quadrupedal Unmanned Ground Vehicle) from Ghost Robotics (GRASP Lab spin-out). The only commercially-available quadruped with IP67 protection for all-weather operations. Patented 'blind mode' navigates terrain by proprioceptive sensing alone. Deployed by US Air Force, US Marine Corps, US DHS, UK Army DE&S, and ROK military. Optional arm payload (3.75kg lift) and CBRN sensors.",
     "highlights": [
       "30km range",
       "Weather resistant",
@@ -32935,18 +32940,18 @@
     "height_mm": 700,
     "width_mm": 500,
     "depth_mm": 900,
-    "weight_kg": 31,
+    "weight_kg": 51,
     "frame_material": "Carbon fiber",
     "shell_material": "Military-grade polymer",
-    "ip_rating": "IP54",
-    "operating_temp_min": -20,
-    "operating_temp_max": 50,
+    "ip_rating": "IP67",
+    "operating_temp_min": -40,
+    "operating_temp_max": 55,
     "colors": [
       "Military green",
       "Desert tan"
     ],
     "os": "Ghost OS",
-    "chipset": "NVIDIA Jetson Xavier NX",
+    "chipset": "NVIDIA Jetson Xavier (32GB)",
     "cpu": "ARM Cortex-A78AE",
     "ram_gb": 32,
     "ram_type": "LPDDR4X",
@@ -32954,12 +32959,12 @@
     "storage_type": "NVMe SSD",
     "npu_tops": 21,
     "battery_type": "Li-ion",
-    "battery_wh": 2800,
+    "battery_wh": 1250,
     "battery_life": "3 hours",
     "charge_time": "4 hours",
     "charge_power_w": 800,
     "charge_type": "DC barrel",
-    "wireless_charging": false,
+    "wireless_charging": true,
     "auto_charge": true,
     "hot_swap": true,
     "quick_release": true,
@@ -32972,20 +32977,21 @@
     ],
     "ai_cloud_required": false,
     "ota": true,
-    "cameras": 6,
-    "lidar": true,
+    "cameras": "5x stereo RGB cameras + multiple ToF depth sensors",
+    "lidar": false,
     "depth_sensing": true,
     "imu": true,
     "touch_sensing": false,
-    "wifi": "Wi-Fi 6",
+    "wifi": "Wi-Fi (2.4/5.8 GHz)",
     "bluetooth": "5.2",
-    "ros": "ROS 2",
+    "ros": true,
     "sdk": true,
     "sdk_langs": [
       "Python",
-      "C++"
+      "C++",
+      "MAVLink"
     ],
-    "api": "REST",
+    "api": "High-level API with ROS/ROS2/MAVLink support; low-level C/C++ API",
     "ce": true,
     "fcc": true,
     "rohs": true,
@@ -32994,7 +33000,10 @@
       "Border patrol",
       "Base security",
       "Reconnaissance",
-      "Search and rescue"
+      "EOD support",
+      "CBRN detection",
+      "Search and rescue",
+      "Tactical operations"
     ],
     "perf": {
       "max_speed_kmh": 14.5,
@@ -33002,28 +33011,55 @@
       "step_height_mm": 200,
       "noise_db": 45
     },
-    "origin": "USA"
+    "origin": "USA",
+    "payload_kg": 10,
+    "max_payload_kg": 14,
+    "speed_ms": 3,
+    "max_speed_kmh": 10.8,
+    "fast_walk_ms": 1.6,
+    "battery_life_typical": 210,
+    "standby_time_hours": 21,
+    "range_km": 10,
+    "wireless_charging_type": "AgiliCharge (IP67 portable wireless)",
+    "thermal_camera": true,
+    "cellular": "4G/LTE",
+    "ethernet": "Gigabit",
+    "ros_version": "ROS / ROS 2",
+    "sim_platform": "Gazebo (1:1 simulation support)",
+    "local_processing_capable": true,
+    "pilot_customers": [
+      "US Air Force",
+      "US Marine Corps",
+      "US DHS",
+      "UK Army (DE&S)",
+      "Republic of Korea military"
+    ],
+    "manufacturer_url": "https://www.ghostrobotics.io/vision-60",
+    "website": "https://www.ghostrobotics.io"
   },
   {
     "id": "ghost-spirit-40",
     "name": "Spirit 40",
     "brand": "Ghost Robotics",
     "year": 2021,
-    "status": "active",
-    "cat": "Military",
-    "sub": "Quadruped UGV",
+    "status": "Active",
+    "cat": "Quadruped",
+    "sub": "Military Quadruped",
     "tags": [
+      "quadruped",
       "compact",
-      "stealth",
+      "tactical",
       "urban",
-      "tactical"
+      "ghost-robotics",
+      "active",
+      "research"
     ],
     "fig": "🤖",
     "img": "",
-    "score": 8.6,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 75000,
-    "desc": "Compact quadruped robot optimized for urban military operations and close-quarters surveillance missions.",
+    "desc": "Compact quadruped platform from Ghost Robotics, smaller and lighter than Vision 60. Optimized for urban tactical operations, close-quarter inspection, building entry, and academic research. Ultra-quiet at 35 dB making it suitable for stealth operations.",
     "highlights": [
       "Compact design",
       "Ultra-quiet",
@@ -33093,6 +33129,7 @@
       "Urban patrol",
       "Building inspection",
       "Perimeter security",
+      "Academic research",
       "Training"
     ],
     "perf": {
@@ -33101,28 +33138,31 @@
       "step_height_mm": 150,
       "noise_db": 35
     },
-    "origin": "USA"
+    "origin": "USA",
+    "manufacturer_url": "https://www.ghostrobotics.io"
   },
   {
     "id": "ghost-minitaur-tactical",
     "name": "Minitaur Tactical",
     "brand": "Ghost Robotics",
-    "year": 2019,
-    "status": "active",
-    "cat": "Military",
-    "sub": "Quadruped UGV",
+    "year": 2016,
+    "status": "Discontinued",
+    "cat": "Quadruped",
+    "sub": "Military Quadruped",
     "tags": [
-      "agile",
-      "jumping",
-      "tactical",
-      "research"
+      "quadruped",
+      "minitaur",
+      "research",
+      "discontinued",
+      "historic",
+      "direct-drive"
     ],
     "fig": "🤖",
     "img": "",
-    "score": 8.3,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 50000,
-    "desc": "Highly agile quadruped robot with exceptional jumping capabilities designed for tactical military applications.",
+    "desc": "Original Ghost Robotics direct-drive quadruped platform spun out from the GRASP Lab at the University of Pennsylvania. Famous for the 2016 'open-loop direct-drive' research that influenced almost every modern quadruped. Superseded by Spirit and Vision lines.",
     "highlights": [
       "1.2m vertical jump",
       "Rapid deployment",
@@ -33188,10 +33228,9 @@
     "rohs": false,
     "warranty_months": 12,
     "use_cases": [
-      "Tactical insertion",
-      "Obstacle navigation",
       "Research",
-      "Training"
+      "Academic",
+      "Tactical prototype"
     ],
     "perf": {
       "max_speed_kmh": 8,
@@ -33199,28 +33238,30 @@
       "step_height_mm": 300,
       "noise_db": 50
     },
-    "origin": "USA"
+    "origin": "USA",
+    "manufacturer_url": "https://www.ghostrobotics.io"
   },
   {
     "id": "ghost-wraith",
     "name": "Wraith",
     "brand": "Ghost Robotics",
-    "year": 2022,
-    "status": "active",
-    "cat": "Military",
-    "sub": "Quadruped UGV",
+    "year": 2023,
+    "status": "Active",
+    "cat": "Quadruped",
+    "sub": "Military Quadruped",
     "tags": [
+      "quadruped",
+      "military",
       "stealth",
-      "night-ops",
-      "silent",
-      "advanced"
+      "ghost-robotics",
+      "active"
     ],
     "fig": "🤖",
     "img": "",
-    "score": 9.1,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 150000,
-    "desc": "Advanced stealth quadruped robot engineered for covert military operations with ultra-silent locomotion systems.",
+    "desc": "Stealth-focused tactical quadruped from Ghost Robotics. Specialized configuration optimized for low-noise covert operations.",
     "highlights": [
       "Ultra-silent operation",
       "Thermal masking",
@@ -33288,10 +33329,8 @@
     "rohs": true,
     "warranty_months": 36,
     "use_cases": [
-      "Covert ops",
-      "Intelligence gathering",
-      "Special forces",
-      "Counter-terrorism"
+      "Stealth reconnaissance",
+      "Special operations"
     ],
     "perf": {
       "max_speed_kmh": 16,
@@ -33299,28 +33338,30 @@
       "step_height_mm": 250,
       "noise_db": 25
     },
-    "origin": "USA"
+    "origin": "USA",
+    "manufacturer_url": "https://www.ghostrobotics.io"
   },
   {
     "id": "ghost-guardian",
     "name": "Guardian",
     "brand": "Ghost Robotics",
-    "year": 2021,
-    "status": "active",
-    "cat": "Military",
-    "sub": "Quadruped UGV",
+    "year": 2023,
+    "status": "Active",
+    "cat": "Quadruped",
+    "sub": "Military Quadruped",
     "tags": [
+      "quadruped",
+      "military",
       "perimeter",
-      "security",
-      "patrol",
-      "autonomous"
+      "ghost-robotics",
+      "active"
     ],
     "fig": "🤖",
     "img": "",
-    "score": 8.7,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 120000,
-    "desc": "Autonomous perimeter security quadruped robot designed for 24/7 base protection and patrol operations.",
+    "desc": "Perimeter-security focused Ghost Robotics quadruped variant designed for base patrol and critical infrastructure protection. Mid-sized platform between Spirit 40 and Vision 60.",
     "highlights": [
       "24/7 operation",
       "Autonomous patrol",
@@ -33386,10 +33427,8 @@
     "rohs": true,
     "warranty_months": 24,
     "use_cases": [
-      "Base security",
-      "Perimeter patrol",
-      "Checkpoint monitoring",
-      "Asset protection"
+      "Base perimeter",
+      "Critical infrastructure security"
     ],
     "perf": {
       "max_speed_kmh": 10,
@@ -33397,28 +33436,30 @@
       "step_height_mm": 180,
       "noise_db": 40
     },
-    "origin": "USA"
+    "origin": "USA",
+    "manufacturer_url": "https://www.ghostrobotics.io"
   },
   {
     "id": "ghost-recon-x",
     "name": "Recon-X",
     "brand": "Ghost Robotics",
-    "year": 2023,
-    "status": "active",
-    "cat": "Military",
-    "sub": "Quadruped UGV",
+    "year": 2024,
+    "status": "Active",
+    "cat": "Quadruped",
+    "sub": "Military Quadruped",
     "tags": [
+      "quadruped",
+      "military",
       "reconnaissance",
-      "long-range",
-      "AI",
-      "autonomous"
+      "ghost-robotics",
+      "active"
     ],
     "fig": "🤖",
     "img": "",
-    "score": 9.3,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 180000,
-    "desc": "Next-generation reconnaissance quadruped with advanced AI capabilities for extended autonomous military missions.",
+    "desc": "Recon-focused Ghost Robotics quadruped configuration with extended-range sensor payload for forward reconnaissance operations.",
     "highlights": [
       "50km range",
       "Advanced AI",
@@ -33487,10 +33528,9 @@
     "rohs": true,
     "warranty_months": 48,
     "use_cases": [
-      "Long-range recon",
-      "Intelligence ops",
-      "Border surveillance",
-      "Forward observation"
+      "Forward reconnaissance",
+      "ISR",
+      "Border patrol"
     ],
     "perf": {
       "max_speed_kmh": 18,
@@ -33498,7 +33538,8 @@
       "step_height_mm": 300,
       "noise_db": 30
     },
-    "origin": "USA"
+    "origin": "USA",
+    "manufacturer_url": "https://www.ghostrobotics.io"
   },
   {
     "id": "k5-mil-001",
@@ -46134,17 +46175,26 @@
   },
   {
     "id": "boston-dynamics-percepto-boston-dynamics-spot-integrated-",
-    "name": "Boston Dynamics Spot (Integrated)",
-    "brand": "Boston Dynamics/Percepto",
-    "cat": "Industrial",
-    "sub": "Mobile Robot / AMR",
-    "tags": [],
+    "name": "Spot (Percepto Integrated)",
+    "brand": "Boston Dynamics / Percepto",
+    "cat": "Quadruped",
+    "sub": "Industrial Inspection Quadruped",
+    "tags": [
+      "quadruped",
+      "boston-dynamics",
+      "spot",
+      "percepto",
+      "industrial",
+      "inspection",
+      "autonomous",
+      "active"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Agile mobile ground robot integrated with Percepto AIM platform for autonomous inspection missions. Length: 559mm, Width: 432mm, Height: 464mm, Weight: 22.7kg. Can climb stairs, traverse rough terrain, and operate in harsh environments.",
+    "desc": "Spot integrated with Percepto's autonomous inspection platform — combines Spot's mobility with Percepto's AIM software for unmanned site monitoring. Deployed at oil & gas refineries, power plants and large industrial sites for automated routine inspections.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -46152,9 +46202,9 @@
       "Autonomy": 70,
       "Durability": 75
     },
-    "year": 2019,
+    "year": 2022,
     "origin": "USA",
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "height_mm": 464,
     "width_mm": 432,
@@ -46174,13 +46224,11 @@
     "ros": true,
     "use_cases": [
       "Industrial inspection",
-      "Security patrol",
-      "Construction monitoring",
-      "Oil and gas inspection",
-      "Mining operations",
-      "Remote monitoring"
+      "Refinery monitoring",
+      "Power plant patrol",
+      "Mining sites"
     ],
-    "manufacturer_url": "https://www.bostondynamics.com",
+    "manufacturer_url": "https://bostondynamics.com",
     "product_url": "https://www.bostondynamics.com/spot"
   },
   {
@@ -56550,15 +56598,21 @@
     "id": "rainbow-robotics-rbq-series",
     "name": "RBQ Series",
     "brand": "Rainbow Robotics",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "tags": [
+      "quadruped",
+      "industrial",
+      "rainbow-robotics",
+      "south-korea",
+      "active"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Versatile quadruped platform designed for research, patrol, and search missions",
+    "desc": "Industrial quadruped series from South Korean robotics company Rainbow Robotics. Multiple configurations for inspection and patrol.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -56567,8 +56621,8 @@
       "Durability": 75
     },
     "origin": "South Korea",
-    "year": 2021,
-    "status": "Released",
+    "year": 2022,
+    "status": "Active",
     "released": "2021",
     "height_mm": 600,
     "weight_kg": 50,
@@ -56589,7 +56643,8 @@
       "Industrial inspection",
       "Surveillance"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "made_in": "South Korea"
   },
   {
     "id": "rainbow-robotics-drc-hubo",
@@ -57467,7 +57522,7 @@
     "sub": "General Purpose Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1sjof5a5qsdkj16e0f.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -57504,14 +57559,7 @@
     "reach_mm": 650,
     "battery_life": "8 hours",
     "wifi": true,
-    "bluetooth": true,
-    "gallery": [
-      "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1vh91htla661k4v1vatg.png",
-      "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdfkl8apl1vibe0nb16h.png",
-      "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1b69o4c13sbtmlc7bi.png",
-      "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1kebdcnmra8ppodfl.png",
-      ""
-    ]
+    "bluetooth": true
   },
   {
     "id": "agibot-agibot-c5-juechen-",
@@ -57566,7 +57614,7 @@
     "sub": "Compact Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-x2-main.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -57597,14 +57645,7 @@
     ],
     "manufacturer_url": "https://www.agibot.com",
     "depth_sensing": true,
-    "ai_model": "ActionGPT",
-    "gallery": [
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/2/-/2-2.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/6/-/6-2.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/1/-/1-2.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/5/-/5-2.jpg",
-      ""
-    ]
+    "ai_model": "ActionGPT"
   },
   {
     "id": "agibot-agibot-a2-max",
@@ -57729,15 +57770,22 @@
     "id": "agibot-agibot-d1-edu",
     "name": "AGIBOT D1 Edu",
     "brand": "AGIBOT",
-    "cat": "Educational",
+    "cat": "Quadruped",
     "sub": "Educational Quadruped",
-    "tags": [],
+    "tags": [
+      "quadruped",
+      "educational",
+      "agibot",
+      "china",
+      "active",
+      "stem"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Educational version of the D1 quadruped robot designed for learning and development purposes in academic and research environments.",
+    "desc": "Education-focused variant of AGIBOT's D1 quadruped series. Compact platform with open SDK for university and high school robotics curricula.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -57746,8 +57794,8 @@
       "Durability": 75
     },
     "origin": "China",
-    "year": 2024,
-    "status": "Released",
+    "year": 2023,
+    "status": "Active",
     "released": "2024",
     "weight_kg": 15,
     "battery_life": "2-4 hours",
@@ -57765,21 +57813,28 @@
       "Academic training"
     ],
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-agibot-d1-pro",
     "name": "AGIBOT D1 Pro",
     "brand": "AGIBOT",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "tags": [
+      "quadruped",
+      "industrial",
+      "agibot",
+      "china",
+      "active"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Professional-grade quadruped robot offering advanced mobility and sensing for various applications including patrol and inspection tasks.",
+    "desc": "Mid-tier industrial variant of AGIBOT's D1 quadruped series.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -57789,7 +57844,7 @@
     },
     "origin": "China",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "height_mm": 600,
     "weight_kg": 45,
@@ -57808,21 +57863,29 @@
       "Research and development",
       "Emergency response",
       "Surveillance"
-    ]
+    ],
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-agibot-d1-ultra",
     "name": "AGIBOT D1 Ultra",
     "brand": "AGIBOT",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "tags": [
+      "quadruped",
+      "industrial",
+      "agibot",
+      "china",
+      "active",
+      "high-end"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Industry-leading compact quadruped robot for patrol, inspection, and all-terrain applications. All-round quadruped intelligence pioneer with advanced mobility and sensing capabilities.",
+    "desc": "High-end variant of AGIBOT's D1 quadruped series with enhanced compute and sensor stack.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -57831,8 +57894,8 @@
       "Durability": 75
     },
     "origin": "China",
-    "year": 2023,
-    "status": "Released",
+    "year": 2024,
+    "status": "Active",
     "released": "2023",
     "height_mm": 600,
     "weight_kg": 15,
@@ -57863,7 +57926,7 @@
     "sub": "Wheeled / Mobile Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-main.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -57896,14 +57959,7 @@
       "Quality inspection",
       "Material handling"
     ],
-    "manufacturer_url": "https://www.agibot.com",
-    "gallery": [
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-2.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-3.jpg",
-      "",
-      "",
-      ""
-    ]
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-agibot-x2-n",
@@ -57913,7 +57969,7 @@
     "sub": "Wheeled / Mobile Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/Y6KxxD0Ryy5lVaqD5h5e/image.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -57946,14 +58002,7 @@
       "industrial inspection",
       "delivery services"
     ],
-    "manufacturer_url": "https://www.agibot.com",
-    "gallery": [
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258691/robots/agibot-x2-n-by-agibot/agb8cirlraw742oaehln.webp?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258692/robots/agibot-x2-n-by-agibot/l9kzkm0r0neg9jstj6tx.webp?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258692/robots/agibot-x2-n-by-agibot/v4eczriflsmhyfseamb4.webp?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258690/robots/agibot-x2-n-by-agibot/mxxrvt5xstlqbqcdxgai.webp?cache=604800",
-      ""
-    ]
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-agibot-a2-w",
@@ -58009,7 +58058,7 @@
     "sub": "General Purpose Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/OYsvkAjvvJfJLXV8NwfQ/image.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -58042,14 +58091,7 @@
     "wifi": true,
     "bluetooth": true,
     "ros": true,
-    "manufacturer_url": "https://www.agibot.com",
-    "gallery": [
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329135/robots/agibot-a2-lite-by-agibot/ujmqx5jqx1sqwfpc7rym.jpg?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329158/robots/agibot-a2-lite-by-agibot/n4tzcpdaak7amrwikxuf.jpg?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329162/robots/agibot-a2-lite-by-agibot/u8iuvs2ysprl7bcmltnn.jpg?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329184/robots/agibot-a2-lite-by-agibot/adivu5l1bdfqiqzqm8xv.jpg?cache=604800",
-      ""
-    ]
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-agibot-a2-ultra",
@@ -58059,7 +58101,7 @@
     "sub": "General Purpose Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a2-ultra-2.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -58093,13 +58135,6 @@
       "Hotel services",
       "Mall assistance",
       "Corporate campus operations"
-    ],
-    "gallery": [
-      "https://www.agibot.com/public/static/index/en/images/A2_Ultra/20260113-110338.png",
-      "https://www.agibot.com/public/static/index/en/images/A2_Ultra/20260113-110324.png",
-      "https://www.agibot.com/public/static/index/en/images/A2_Ultra/A2Ultra_Five-img3.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a2-ultra-1.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a2-ultra-4.jpg"
     ]
   },
   {
@@ -58110,7 +58145,7 @@
     "sub": "General Purpose Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/7HDuV0jhLGH3Tjb9K8ik/image.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -58149,7 +58184,7 @@
     "sub": "General Purpose Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/Y6KxxD0Ryy5lVaqD5h5e/image.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -58180,14 +58215,7 @@
       "Industrial automation",
       "Entertainment"
     ],
-    "manufacturer_url": "https://www.agibot.com",
-    "gallery": [
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258691/robots/agibot-x2-n-by-agibot/agb8cirlraw742oaehln.webp?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258692/robots/agibot-x2-n-by-agibot/l9kzkm0r0neg9jstj6tx.webp?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258692/robots/agibot-x2-n-by-agibot/v4eczriflsmhyfseamb4.webp?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258690/robots/agibot-x2-n-by-agibot/mxxrvt5xstlqbqcdxgai.webp?cache=604800",
-      ""
-    ]
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-omnihand-pro-2025",
@@ -58322,15 +58350,21 @@
     "id": "agibot-d1-pro",
     "name": "D1 Pro",
     "brand": "AGIBOT",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "tags": [
+      "quadruped",
+      "industrial",
+      "agibot",
+      "china",
+      "active"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Professional version quadruped robot",
+    "desc": "Mid-tier industrial variant of AGIBOT's D1 quadruped series. Designed for industrial inspection, security patrol, and research applications.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -58340,7 +58374,7 @@
     },
     "year": 2023,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "weight_kg": 15,
     "speed_ms": 1.5,
     "dof": 12,
@@ -58352,11 +58386,8 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Research",
-      "Education",
-      "Inspection",
-      "Security patrol",
-      "Entertainment"
+      "Industrial inspection",
+      "Security patrol"
     ],
     "manufacturer_url": "https://www.agibot.com"
   },
@@ -58364,15 +58395,22 @@
     "id": "agibot-d1-ultra",
     "name": "D1 Ultra",
     "brand": "AGIBOT",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "tags": [
+      "quadruped",
+      "industrial",
+      "agibot",
+      "china",
+      "active",
+      "high-end"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Quadruped intelligent robot for various applications",
+    "desc": "High-end variant of AGIBOT's D1 quadruped series with enhanced compute, sensor stack, and payload capacity.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -58380,9 +58418,9 @@
       "Autonomy": 70,
       "Durability": 75
     },
-    "year": 2023,
+    "year": 2024,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "height_mm": 600,
     "weight_kg": 45,
     "speed_ms": 3.5,
@@ -58396,10 +58434,8 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Security patrol",
-      "Industrial inspection",
-      "Research and education",
-      "Entertainment"
+      "Heavy industrial inspection",
+      "Advanced research"
     ],
     "manufacturer_url": "https://www.agibot.com"
   },
@@ -58417,7 +58453,7 @@
       "2026-launch"
     ],
     "fig": "🤖",
-    "img": "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-main.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -58457,14 +58493,7 @@
       "Industrial automation"
     ],
     "manufacturer_url": "https://www.agibot.com",
-    "ai_model": "NVIDIA GR00T",
-    "gallery": [
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-2.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-3.jpg",
-      "",
-      "",
-      ""
-    ]
+    "ai_model": "NVIDIA GR00T"
   },
   {
     "id": "agibot-g1",
@@ -58518,7 +58547,7 @@
     "sub": "Compact Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://store.agibot.com/cdn/shop/files/1_7c679db6-e815-4610-8485-cb54af080c4b.png?v=1765524333&width=800",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -58550,14 +58579,7 @@
       "Human-robot interaction"
     ],
     "manufacturer_url": "https://www.agibot.com",
-    "ai_model": "200 TOPS AI computing",
-    "gallery": [
-      "https://store.agibot.com/cdn/shop/files/2_11e1912e-424b-48c6-9f21-84c2bf742b19.png?v=1765524333&width=800",
-      "https://store.agibot.com/cdn/shop/files/3_1106b757-4704-472f-9f6d-4dbae574df89.png?v=1765524332&width=800",
-      "https://store.agibot.com/cdn/shop/files/4_3ccddb30-9d58-45e6-94da-a37a0bc74153.png?v=1765524332&width=800",
-      "https://store.agibot.com/cdn/shop/files/75f297965427c6c6c31b317dc7853cc0_ccdc52d3-b9c1-4f21-8635-c6fb2d5021e0.png?v=1765524332&width=800",
-      ""
-    ]
+    "ai_model": "200 TOPS AI computing"
   },
   {
     "id": "agibot-x2",
@@ -58567,7 +58589,7 @@
     "sub": "General Purpose Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-x2-main.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -58595,14 +58617,7 @@
       "Research",
       "Companion robot"
     ],
-    "manufacturer_url": "https://www.agibot.com",
-    "gallery": [
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/2/-/2-2.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/6/-/6-2.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/1/-/1-2.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/5/-/5-2.jpg",
-      ""
-    ]
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-x1",
@@ -58697,7 +58712,7 @@
     "sub": "General Purpose Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/OYsvkAjvvJfJLXV8NwfQ/image.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -58721,14 +58736,7 @@
       "Research",
       "Educational presentations"
     ],
-    "manufacturer_url": "https://www.agibot.com",
-    "gallery": [
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329135/robots/agibot-a2-lite-by-agibot/ujmqx5jqx1sqwfpc7rym.jpg?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329158/robots/agibot-a2-lite-by-agibot/n4tzcpdaak7amrwikxuf.jpg?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329162/robots/agibot-a2-lite-by-agibot/u8iuvs2ysprl7bcmltnn.jpg?cache=604800",
-      "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329184/robots/agibot-a2-lite-by-agibot/adivu5l1bdfqiqzqm8xv.jpg?cache=604800",
-      ""
-    ]
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
@@ -61769,17 +61777,24 @@
   },
   {
     "id": "neura-robotics-neura-quadruped-robot",
-    "name": "NEURA Quadruped Robot",
+    "name": "NEURA Quadruped",
     "brand": "NEURA Robotics",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "tags": [
+      "quadruped",
+      "industrial",
+      "neura",
+      "germany",
+      "development",
+      "ai-native"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Four-legged explorer built for challenging terrain and complex environments. Less than a meter in height, engineered for multimodal cognitive interaction, fully autonomous operation, with advanced multi-sensor fusion and 360° environment vision.",
+    "desc": "Quadruped platform from German cognitive robotics company NEURA Robotics. AI-native design integrating with NEURA's cognitive operating system Neuraverse, alongside their humanoid 4NE-1 and industrial cobot lines.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -61788,8 +61803,8 @@
       "Durability": 75
     },
     "origin": "Germany",
-    "year": 2023,
-    "status": "In development",
+    "year": 2024,
+    "status": "Development",
     "height_mm": 900,
     "wifi": true,
     "bluetooth": true,
@@ -61800,11 +61815,10 @@
     "depth_sensing": true,
     "use_cases": [
       "Industrial inspection",
-      "Search and rescue",
-      "Security patrol",
-      "Research and development"
+      "Research"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com"
+    "manufacturer_url": "https://neura-robotics.com",
+    "made_in": "Germany"
   },
   {
     "id": "agile-robots-franka-robotics-diana-7-by-agile-robots-",
@@ -63353,15 +63367,21 @@
     "id": "kiwibot-kiwibot-surveillance-dog",
     "name": "Kiwibot Surveillance Dog",
     "brand": "Kiwibot",
-    "cat": "Military",
-    "sub": "Reconnaissance / ISR",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Surveillance Quadruped",
+    "tags": [
+      "quadruped",
+      "surveillance",
+      "kiwibot",
+      "delivery-pivot",
+      "development"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "All-terrain robotic dog with cargo capacity for surveillance and promotion. Built for indoor and outdoor work, runs digital ads in high-traffic areas and performs inspections across sidewalks.",
+    "desc": "Surveillance quadruped variant from Kiwibot, the Colombian-American delivery robot startup. Adapts mobile-robot expertise from sidewalk delivery into a four-legged security and surveillance platform.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -63369,9 +63389,9 @@
       "Autonomy": 70,
       "Durability": 75
     },
-    "origin": "USA",
+    "origin": "Colombia/USA",
     "year": 2023,
-    "status": "Released",
+    "status": "Development",
     "released": "2023",
     "height_mm": 400,
     "weight_kg": 15,
@@ -63386,11 +63406,9 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Security patrol",
       "Surveillance",
-      "Digital advertising",
-      "Inspection",
-      "Monitoring"
+      "Security patrol",
+      "Inspection"
     ],
     "manufacturer_url": "https://www.kiwibot.com"
   },
@@ -65275,15 +65293,21 @@
     "id": "rainbow-robotics-rbq",
     "name": "RBQ",
     "brand": "Rainbow Robotics",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "tags": [
+      "quadruped",
+      "industrial",
+      "rainbow-robotics",
+      "south-korea",
+      "active"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Versatile quadruped platform designed for research, patrol, and search missions. Features dynamic locomotion capabilities suitable for various terrain conditions.",
+    "desc": "Industrial quadruped from South Korean robotics company Rainbow Robotics. Designed for inspection and patrol applications.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -65292,8 +65316,8 @@
       "Durability": 75
     },
     "origin": "South Korea",
-    "year": 2021,
-    "status": "Released",
+    "year": 2022,
+    "status": "Active",
     "height_mm": 580,
     "weight_kg": 50,
     "speed_ms": 1.2,
@@ -65305,12 +65329,11 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Research",
-      "Security patrol",
-      "Search and rescue",
-      "Industrial inspection"
+      "Industrial inspection",
+      "Security patrol"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "made_in": "South Korea"
   },
   {
     "id": "agibot-g2-genie",
@@ -65320,7 +65343,7 @@
     "sub": "Wheeled / Mobile Humanoid",
     "tags": [],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/3xwqeZScOPOtBeIluaBt/image.jpg",
+    "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -65364,15 +65387,22 @@
     "id": "agibot-d1-maxpro",
     "name": "D1 MaxPro",
     "brand": "AGIBOT",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "tags": [
+      "quadruped",
+      "industrial",
+      "agibot",
+      "china",
+      "active",
+      "flagship"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty quadruped robot optimized for higher payloads, longer missions, rugged outdoor/industrial tasks with RL-based locomotion, autonomous patrol and environmental perception modules.",
+    "desc": "Flagship industrial quadruped from AGIBOT, maxed-out spec configuration with high payload, IP-rated sealing, and full AI compute stack.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -65382,7 +65412,7 @@
     },
     "year": 2024,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2024",
     "payload_kg": 15,
     "speed_ms": 1.5,
@@ -65394,10 +65424,8 @@
     "ros": true,
     "use_cases": [
       "Industrial inspection",
-      "Security patrol",
-      "Search and rescue",
-      "Outdoor surveillance",
-      "Heavy payload transport"
+      "Heavy payload transport",
+      "Outdoor patrol"
     ],
     "height_mm": 400,
     "width_mm": 800,
@@ -65407,21 +65435,29 @@
     "wifi": true,
     "bluetooth": true,
     "os": "Linux",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-d1-edu",
     "name": "D1 Edu",
     "brand": "AGIBOT",
-    "cat": "Educational",
+    "cat": "Quadruped",
     "sub": "Educational Quadruped",
-    "tags": [],
+    "tags": [
+      "quadruped",
+      "educational",
+      "agibot",
+      "china",
+      "active",
+      "stem"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Educational quadruped robot with development interfaces, real-time image transmission, SDK support, and enhanced capabilities for research and education applications.",
+    "desc": "Education-focused variant of AGIBOT's D1 quadruped series. Compact platform with open SDK for university and high school robotics curricula.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -65429,9 +65465,9 @@
       "Autonomy": 70,
       "Durability": 75
     },
-    "year": 2024,
+    "year": 2023,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2024",
     "height_mm": 350,
     "weight_kg": 12,
@@ -65444,11 +65480,9 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Education",
+      "STEM education",
       "Research",
-      "STEM learning",
-      "Robotics development",
-      "Algorithm testing"
+      "Hobbyist"
     ],
     "manufacturer_url": "https://www.agibot.com"
   },
@@ -66443,15 +66477,23 @@
     "id": "unitree-a1",
     "name": "A1",
     "brand": "Unitree",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Educational Quadruped",
+    "tags": [
+      "quadruped",
+      "educational",
+      "research",
+      "first-gen",
+      "china",
+      "discontinued",
+      "historic"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 10000,
-    "desc": "Weighs 12 kg, measures 500x300x400mm when standing. Equipped with front cameras and flexible limbs with powerful motors. Features sensors on each paw for efficient movement. Designed for education market with affordable pricing.",
+    "desc": "Unitree's first commercial quadruped, predecessor to Go1/Go2. Compact research and education platform — 12kg, 3.3 m/s top speed. Featured front cameras and per-paw foot sensors. Predates the broader Unitree ecosystem. Largely superseded by Go1/Go2 lineup.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -66461,7 +66503,7 @@
     },
     "year": 2020,
     "origin": "China",
-    "status": "Released",
+    "status": "Discontinued",
     "released": "2020",
     "height_mm": 400,
     "width_mm": 300,
@@ -66479,21 +66521,46 @@
       "Entertainment",
       "Security patrol"
     ],
-    "manufacturer_url": "https://www.unitree.com"
+    "manufacturer_url": "https://www.unitree.com",
+    "made_in": "China",
+    "frame_material": "Aluminum alloy",
+    "max_climb_angle_deg": 30,
+    "battery_type": "Li-ion",
+    "battery_life_typical": 150,
+    "sensors": [
+      "Front cameras",
+      "Per-paw foot sensors",
+      "IMU"
+    ],
+    "cameras": "Front-mounted cameras",
+    "lidar": false,
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ]
   },
   {
     "id": "unitree-b2",
     "name": "B2",
     "brand": "Unitree",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "tags": [
+      "quadruped",
+      "industrial",
+      "ip67",
+      "heavy-payload",
+      "china",
+      "active",
+      "inspection"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
-    "desc": "Industrial-grade quadruped robot. 170% increase in joint performance with 360 N.m torque. Excellent terrain adaptability and sustained stair climbing. Can switch between legged and wheeled forms (optional). Built for extreme conditions and larger payloads.",
+    "price": 110000,
+    "desc": "Industrial-grade flagship quadruped from Unitree's B-series. Among the fastest industrial quadrupeds at over 6 m/s peak speed. 360 N·m peak joint torque (~170% increase over predecessors), IP67 protection, up to 120kg standing payload, over 5 hours runtime unloaded. Used for power-grid inspection, petrochemical patrols and factory operations.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -66503,45 +66570,105 @@
     },
     "year": 2023,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
-    "height_mm": 900,
-    "width_mm": 680,
-    "depth_mm": 1000,
-    "weight_kg": 45,
+    "height_mm": 645,
+    "width_mm": 450,
+    "depth_mm": 1098,
+    "weight_kg": 60,
     "battery_life": "4-6 hours",
-    "speed_ms": 2,
+    "speed_ms": 6,
     "payload_kg": 40,
     "dof": 12,
-    "wifi": true,
-    "bluetooth": true,
+    "wifi": "Wi-Fi 6",
+    "bluetooth": "5.2",
     "ros": true,
-    "cameras": "Multiple stereo cameras for navigation and perception",
+    "cameras": "Multiple stereo cameras for 360° navigation",
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
       "Industrial inspection",
+      "Power grid patrol",
+      "Petrochemical sites",
+      "Emergency response",
+      "Heavy-payload transport",
       "Security patrol",
-      "Warehouse automation",
-      "Search and rescue",
-      "Construction site monitoring"
+      "Warehouse automation"
     ],
-    "manufacturer_url": "https://www.unitree.com"
+    "manufacturer_url": "https://www.unitree.com/B2",
+    "made_in": "China",
+    "regions": [
+      "Global"
+    ],
+    "frame_material": "Aluminum alloy + composites",
+    "ip_rating": "IP67",
+    "operating_temp_min": -20,
+    "operating_temp_max": 55,
+    "max_speed_kmh": 21.6,
+    "max_payload_kg": 120,
+    "max_torque_nm": 360,
+    "max_climb_angle_deg": 45,
+    "max_step_height_mm": 400,
+    "stair_climb_mm": 250,
+    "max_jump_distance_mm": 1600,
+    "voltage_range_v": "58",
+    "battery_type": "Li-ion",
+    "battery_mah": 45000,
+    "battery_wh": 2250,
+    "battery_voltage_v": 58,
+    "battery_life_typical": 300,
+    "hot_swap": true,
+    "auto_charge": true,
+    "range_km": 20,
+    "sensors": [
+      "3D LiDAR",
+      "Depth cameras",
+      "RGB cameras",
+      "IMU",
+      "Joint encoders",
+      "Force sensors"
+    ],
+    "lidar_type": "3D LiDAR (32-channel option)",
+    "chipset": "Intel Core i5 (standard) / Core i7 (optional)",
+    "ai_chipset_optional": "Up to 3x NVIDIA Jetson Orin NX",
+    "ethernet": "Gigabit",
+    "ros_version": "ROS / ROS 2",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "api": "Proprietary + ROS",
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "ce": true,
+    "fcc": true,
+    "warranty_months": 12,
+    "ota": true,
+    "website": "https://www.unitree.com"
   },
   {
     "id": "unitree-go2-edu-plus",
     "name": "Go2 Edu Plus",
     "brand": "Unitree",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Educational Quadruped",
+    "tags": [
+      "quadruped",
+      "educational",
+      "research",
+      "edu",
+      "open-development",
+      "china",
+      "active"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 0,
-    "desc": "Intended for research and higher education. 100Tops computing power with 3D LIDAR options (Mid-360 or XT16). Maximum joint torque increased to 45 Nm. ISS2.0 Intelligent Side-follow System with 30m remote control range.",
+    "price": 13205,
+    "desc": "Education and research variant of Unitree Go2 with full development freedom — force sensors, higher payload (up to 12kg), max speed 5 m/s, and complete SDK access. Typically bundled with Livox MID-360 LiDAR. Pricing around $13,205 for the EDU PLUS bundle with MID-360 LiDAR.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -66551,45 +66678,95 @@
     },
     "year": 2023,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "height_mm": 400,
-    "width_mm": 645,
-    "depth_mm": 280,
+    "width_mm": 310,
+    "depth_mm": 700,
     "weight_kg": 15,
     "battery_life": "1-4 hours",
-    "speed_ms": 3.5,
-    "payload_kg": 8,
+    "speed_ms": 5,
+    "payload_kg": 12,
     "dof": 12,
-    "wifi": true,
-    "bluetooth": true,
+    "wifi": "Wi-Fi 6",
+    "bluetooth": "5.2",
     "ros": true,
-    "cameras": "Multiple RGB cameras with depth sensing capabilities",
+    "cameras": "Front HD camera + depth camera",
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Research",
-      "Education",
-      "AI Development",
-      "Robotics Learning",
-      "Algorithm Testing"
+      "University research",
+      "SLAM development",
+      "Embodied AI",
+      "Locomotion research",
+      "Robotics curriculum"
     ],
-    "manufacturer_url": "https://www.unitree.com"
+    "manufacturer_url": "https://shop.unitree.com/products/unitree-go2",
+    "made_in": "China",
+    "regions": [
+      "Global"
+    ],
+    "frame_material": "Aluminum alloy + high-strength engineering plastics",
+    "shell_material": "Aluminum alloy + engineering plastic",
+    "max_torque_nm": 45,
+    "max_climb_angle_deg": 40,
+    "max_step_height_mm": 160,
+    "operating_temp_min": -10,
+    "operating_temp_max": 40,
+    "voltage_range_v": "28-33.6",
+    "battery_type": "Li-ion",
+    "battery_mah": 8000,
+    "battery_wh": 230,
+    "battery_voltage_v": 28.8,
+    "hot_swap": true,
+    "sensors": [
+      "Livox MID-360 LiDAR",
+      "Depth camera",
+      "Force sensors (per leg)",
+      "IMU",
+      "Joint encoders"
+    ],
+    "lidar_type": "Livox MID-360 (3D)",
+    "voice_interaction": true,
+    "conversational_ai": "GPT-powered embodied AI",
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "cellular": "4G eSIM",
+    "ros_version": "ROS / ROS 2",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "api": "Proprietary + ROS (full open access)",
+    "ce": true,
+    "fcc": true,
+    "warranty_months": 12,
+    "ota": true,
+    "website": "https://www.unitree.com"
   },
   {
     "id": "unitree-go2-air",
     "name": "Go2 Air",
     "brand": "Unitree",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Consumer Quadruped",
+    "tags": [
+      "quadruped",
+      "consumer",
+      "education",
+      "ai-companion",
+      "robot-dog",
+      "china",
+      "active"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 1600,
-    "desc": "Designed for daily life as intelligent companion. Same dimensions as Pro version but slightly lower performance specs. Can climb 30° slopes and overcome 5.9\" obstacles. Features HD camera streaming 1280x720 video.",
+    "desc": "Entry-level variant of Unitree's second-generation Go2 quadruped platform. Designed for daily life and intelligent companion use. Shares the same chassis as Pro/EDU variants but with lower top speed (2.5 m/s) and reduced sensor stack. Self-developed 4D LiDAR L1 sold separately.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -66599,44 +66776,94 @@
     },
     "year": 2023,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "height_mm": 400,
-    "width_mm": 645,
-    "depth_mm": 280,
+    "width_mm": 310,
+    "depth_mm": 700,
     "weight_kg": 15,
     "battery_life": "2-4 hours",
-    "speed_ms": 3.7,
-    "payload_kg": 5,
+    "speed_ms": 2.5,
+    "payload_kg": 7,
     "dof": 12,
-    "wifi": true,
-    "bluetooth": true,
+    "wifi": "Wi-Fi 6",
+    "bluetooth": "5.2",
     "ros": true,
-    "cameras": "HD camera with 1280x720 video streaming",
+    "cameras": "Front HD camera (1280x720)",
     "imu": true,
-    "depth_sensing": true,
+    "depth_sensing": false,
     "use_cases": [
       "Companion robot",
       "Education",
       "Research",
-      "Entertainment"
+      "Entertainment",
+      "Hobbyist"
     ],
     "warranty_months": 12,
-    "manufacturer_url": "https://www.unitree.com"
+    "manufacturer_url": "https://shop.unitree.com/products/unitree-go2",
+    "made_in": "China",
+    "regions": [
+      "Global"
+    ],
+    "frame_material": "Aluminum alloy + high-strength engineering plastics",
+    "shell_material": "Aluminum alloy + engineering plastic",
+    "max_torque_nm": 45,
+    "max_climb_angle_deg": 30,
+    "max_step_height_mm": 150,
+    "operating_temp_min": -10,
+    "operating_temp_max": 40,
+    "voltage_range_v": "28-33.6",
+    "battery_type": "Li-ion",
+    "battery_mah": 8000,
+    "battery_wh": 230,
+    "battery_life_typical": 120,
+    "battery_voltage_v": 28.8,
+    "hot_swap": true,
+    "auto_charge": false,
+    "sensors": [
+      "Front HD camera",
+      "IMU",
+      "Joint encoders"
+    ],
+    "lidar": false,
+    "voice_interaction": false,
+    "speaker_count": 1,
+    "ros_version": "ROS / ROS 2",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "api": "Proprietary + ROS",
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "ce": true,
+    "fcc": true,
+    "ota": true,
+    "website": "https://www.unitree.com"
   },
   {
     "id": "unitree-go2-pro",
     "name": "Go2 Pro",
     "brand": "Unitree",
-    "cat": "Industrial",
-    "sub": "Quadruped Robot",
-    "tags": [],
+    "cat": "Quadruped",
+    "sub": "Professional Quadruped",
+    "tags": [
+      "quadruped",
+      "professional",
+      "research",
+      "4d-lidar",
+      "ai",
+      "china",
+      "active",
+      "side-follow"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 2700,
-    "desc": "With standard 4D Ultra-wide LIDAR (360°x96°) and GPT empowerment, embodied AI creature. Measures 27.6\"x12.2\"x15.7\", weighs 33 lbs. Can climb 40° slopes and overcome 6.3\" obstacles. Features intelligent side-follow system and voice command function.",
+    "desc": "Mid-tier configuration of Unitree's Go2 second-generation quadruped. Combines compact chassis with 4D LiDAR L1 (360°×90° hemispherical) for SLAM and multi-sensor perception. Adds 4G eSIM connectivity and voice interaction (GPT-empowered embodied AI) versus the Go2 Air. Used in research labs, universities and demonstration teams.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -66646,31 +66873,77 @@
     },
     "year": 2023,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
-    "height_mm": 399,
+    "height_mm": 400,
     "width_mm": 310,
-    "depth_mm": 701,
+    "depth_mm": 700,
     "weight_kg": 15,
     "battery_life": "2-4 hours",
-    "speed_ms": 3.7,
-    "payload_kg": 3,
+    "speed_ms": 3.5,
+    "payload_kg": 8,
     "dof": 12,
-    "wifi": true,
-    "bluetooth": true,
+    "wifi": "Wi-Fi 6",
+    "bluetooth": "5.2",
     "ros": true,
-    "cameras": "Multiple cameras including stereo vision",
+    "cameras": "Front HD camera + depth camera",
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
       "Research",
       "Education",
-      "Entertainment",
+      "SLAM development",
+      "Embodied AI",
       "Security patrol",
       "Mapping"
     ],
-    "manufacturer_url": "https://www.unitree.com/"
+    "manufacturer_url": "https://shop.unitree.com/products/unitree-go2",
+    "made_in": "China",
+    "regions": [
+      "Global"
+    ],
+    "frame_material": "Aluminum alloy + high-strength engineering plastics",
+    "shell_material": "Aluminum alloy + engineering plastic",
+    "max_torque_nm": 45,
+    "max_climb_angle_deg": 40,
+    "max_step_height_mm": 160,
+    "operating_temp_min": -10,
+    "operating_temp_max": 40,
+    "voltage_range_v": "28-33.6",
+    "battery_type": "Li-ion",
+    "battery_mah": 8000,
+    "battery_wh": 230,
+    "battery_life_typical": 150,
+    "battery_voltage_v": 28.8,
+    "hot_swap": true,
+    "sensors": [
+      "4D LiDAR L1 (360°×90°)",
+      "Depth camera",
+      "IMU",
+      "Joint encoders"
+    ],
+    "lidar_type": "Unitree 4D LiDAR L1 (hemispherical)",
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "conversational_ai": "GPT-powered embodied AI",
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "ai_model": "Unitree Embodied AI",
+    "cellular": "4G eSIM",
+    "ros_version": "ROS / ROS 2",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "api": "Proprietary + ROS",
+    "ce": true,
+    "fcc": true,
+    "warranty_months": 12,
+    "ota": true,
+    "website": "https://www.unitree.com"
   },
   {
     "id": "unitree-h2",
@@ -78553,25 +78826,27 @@
   },
   {
     "id": "elegoo-spider-robot-v3",
-    "name": "Spider Robot Quadruped V3",
+    "name": "Spider Robot V3",
     "brand": "ELEGOO",
-    "year": 2023,
-    "status": "available",
-    "cat": "Educational",
-    "sub": "Educational Quadruped",
+    "year": 2020,
+    "status": "Active",
+    "cat": "Quadruped",
+    "sub": "Educational Hexapod",
     "tags": [
-      "quadruped",
-      "spider",
-      "servo",
-      "gait",
-      "walking"
+      "hexapod",
+      "educational",
+      "elegoo",
+      "arduino",
+      "stem",
+      "diy",
+      "active"
     ],
-    "fig": 4.2,
+    "fig": "🤖",
     "img": "https://m.media-amazon.com/images/I/61sQmMakD6L._AC_SL1321_.jpg",
-    "score": 86,
-    "rating": 4.3,
-    "price": 129.99,
-    "desc": "8-servo quadruped spider robot with multiple walking gaits and programmable movements",
+    "score": 75,
+    "rating": 4,
+    "price": 89,
+    "desc": "DIY educational hexapod (six-legged) robot kit from ELEGOO. Arduino-based platform widely used in STEM education and hobbyist projects. Lower-cost entry point into legged robotics.",
     "highlights": [
       "8 servo motors",
       "Multiple gaits",
@@ -78637,16 +78912,17 @@
     "rohs": true,
     "warranty_months": 12,
     "use_cases": [
-      "Education",
-      "Robotics",
-      "Biomimetics"
+      "STEM education",
+      "Hobbyist",
+      "Arduino learning"
     ],
     "perf": {
       "walking_speed": "0.15 m/s",
       "servo_count": "8",
       "gait_types": "4"
     },
-    "origin": "China"
+    "origin": "China",
+    "manufacturer_url": "https://www.elegoo.com"
   },
   {
     "id": "elegoo-humanoid-mini",
@@ -79988,7 +80264,7 @@
       "general purpose"
     ],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/C4DGaOF0tRoaSPRGMsec/image.jpg",
+    "img": "https://electrek.co/wp-content/uploads/sites/3/2024/01/Tesla-Optimus-Gen-2.jpg",
     "score": 88,
     "rating": 4.5,
     "price": 20000,
@@ -80071,14 +80347,7 @@
       "dof": 40,
       "hand_dof": 11
     },
-    "origin": "USA",
-    "gallery": [
-      "https://img-new.cgtrader.com/items/7102290/938e25eccd/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-938e25eccd.webp",
-      "https://img-new.cgtrader.com/items/7102290/5c4060832a/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-5c4060832a.webp",
-      "https://img-new.cgtrader.com/items/7102290/2cd97f0a24/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-2cd97f0a24.webp",
-      "https://img-new.cgtrader.com/items/7102290/cbfeb36f60/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-cbfeb36f60.webp",
-      "https://img-new.cgtrader.com/items/7102290/9bcaadce32/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-9bcaadce32.webp"
-    ]
+    "origin": "USA"
   },
   {
     "id": "humanoid-004",
@@ -87283,7 +87552,7 @@
       "2025-launch"
     ],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/iwoH3SnIhSpHq4JlkOXE/image.jpg",
+    "img": "https://i.3dmodels.org/uploads/Characters/574_Figure_03/Figure_03_1000_0001.jpg",
     "score": 96,
     "rating": 4.9,
     "price": 0,
@@ -87311,11 +87580,11 @@
     "bluetooth": true,
     "cellular": "5G",
     "gallery": [
-      "https://plain-eeur-prod-public.komododecks.com/202605/25/Bgb0fZoTsUyapxQJ9nz6/image.jpg",
-      "https://plain-eeur-prod-public.komododecks.com/202605/25/jHlIfUc1AmiwtQ5tGukG/image.jpg",
-      "https://plain-eeur-prod-public.komododecks.com/202605/25/rDPq1YMVeHSSy1PUidwc/image.jpg",
-      "https://plain-eeur-prod-public.komododecks.com/202605/25/kE4pFJmjgRvXLU7Msvzw/image.jpg",
-      "https://plain-eeur-prod-public.komododecks.com/202605/25/APwpTQlvCEEHAX6brHkm/image.jpg"
+      "https://i.3dmodels.org/uploads/Characters/574_Figure_03/Figure_03_1000_0002.jpg",
+      "https://i.3dmodels.org/uploads/Characters/574_Figure_03/Figure_03_1000_0003.jpg",
+      "https://i.3dmodels.org/uploads/Characters/574_Figure_03/Figure_03_1000_0005.jpg",
+      "https://i.3dmodels.org/uploads/Characters/574_Figure_03/Figure_03_1000_0006.jpg",
+      "https://i.3dmodels.org/uploads/Characters/574_Figure_03/Figure_03_1000_0009.jpg"
     ]
   },
   {
@@ -87333,7 +87602,7 @@
       "2026-launch"
     ],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/RuCIa3poLMhmrxg2Rnyb/image.jpg",
+    "img": "",
     "score": 93,
     "rating": 4.7,
     "price": 25000,
@@ -87501,7 +87770,7 @@
       "first-gen"
     ],
     "fig": "🤖",
-    "img": "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1sjof5a5qsdkj16e0f.jpg",
+    "img": "",
     "score": 83,
     "rating": 4.4,
     "price": 0,
@@ -87523,14 +87792,7 @@
     "origin": "China",
     "cameras": 3,
     "wifi": true,
-    "bluetooth": true,
-    "gallery": [
-      "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1vh91htla661k4v1vatg.png",
-      "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdfkl8apl1vibe0nb16h.png",
-      "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1b69o4c13sbtmlc7bi.png",
-      "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1kebdcnmra8ppodfl.png",
-      ""
-    ]
+    "bluetooth": true
   },
   {
     "id": "agibot-a2-2025",
@@ -87546,7 +87808,7 @@
       "2025-launch"
     ],
     "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/MRfGBAvSM2f3SwmT3MLY/image.jpg",
+    "img": "",
     "score": 91,
     "rating": 4.7,
     "price": 100000,
@@ -87569,14 +87831,7 @@
     "origin": "China",
     "cameras": 4,
     "wifi": true,
-    "bluetooth": true,
-    "gallery": [
-      "https://www.agibot.com/public/static/index/en/images/proA2Two-img.png",
-      "https://cdn.prod.website-files.com/67ea6793adf74f7d3087e4e4/697aea3eaf3367bb0bc84299_67ebc01e5ad9e2e719f145d3_agibot-a2.webp",
-      "https://cdn.prod.website-files.com/67ea6793adf74f7d3087e4e4/697aea3df628327ae7961938_67ebc41ff5788ef19080bfe5_agibot-a2-review-1024x576.webp",
-      "",
-      ""
-    ]
+    "bluetooth": true
   },
   {
     "id": "agibot-a3-2025",
@@ -87590,7 +87845,7 @@
       "10-hour"
     ],
     "fig": "🤖",
-    "img": "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a3-1.jpg",
+    "img": "",
     "score": 89,
     "rating": 4.6,
     "price": 0,
@@ -87612,14 +87867,7 @@
     "origin": "China",
     "cameras": 4,
     "wifi": true,
-    "bluetooth": true,
-    "gallery": [
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a3-2.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a3-3.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a3-4.jpg",
-      "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a3-5.jpg",
-      ""
-    ]
+    "bluetooth": true
   },
   {
     "id": "agibot-h2-2025",
@@ -88242,19 +88490,21 @@
     "id": "deep-robotics-dr01-2024",
     "name": "DR01",
     "brand": "DEEP Robotics",
-    "cat": "Humanoid",
-    "sub": "General Purpose Humanoid",
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
     "tags": [
-      "bipedal",
-      "chinese",
-      "quadruped-spinoff"
+      "quadruped",
+      "industrial",
+      "deep-robotics",
+      "china",
+      "active"
     ],
     "fig": "🤖",
     "img": "",
-    "score": 82,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "DEEP Robotics DR01 — humanoid from established Chinese quadruped maker. Industrial focus.",
+    "desc": "Industrial quadruped from DEEP Robotics, the Chinese quadruped specialist (also makers of Jueying X20/X30 series). Targets industrial inspection and outdoor patrol use cases.",
     "highlights": [
       "Quadruped heritage",
       "Industrial focus",
@@ -88273,7 +88523,13 @@
     "origin": "China",
     "cameras": 2,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "made_in": "China",
+    "use_cases": [
+      "Industrial inspection",
+      "Outdoor patrol"
+    ],
+    "manufacturer_url": "https://www.deeprobotics.cn"
   },
   {
     "id": "noetix-n1-2024",
@@ -96453,21 +96709,24 @@
     "id": "boston-dynamics-spot-firefighter-2023",
     "name": "Spot (Firefighter Configuration)",
     "brand": "Boston Dynamics",
-    "cat": "Disaster Response",
-    "sub": "Quadruped Inspection Robot",
+    "cat": "Quadruped",
+    "sub": "Emergency Response Quadruped",
     "tags": [
       "quadruped",
-      "firefighting",
-      "singapore-civil-defense",
-      "inspection",
-      "industrial-fires"
+      "boston-dynamics",
+      "spot",
+      "firefighter",
+      "emergency",
+      "thermal",
+      "active",
+      "configured"
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 75000,
-    "desc": "Spot configured for firefighter use. Singapore Civil Defense deployment. Industrial fire inspection.",
+    "desc": "Specialized Spot configuration for fire department deployments. Adds thermal imaging payload, hazmat-resistant pads, and emergency response software. Used by NYPD, LAFD, Tokyo FD and other emergency services for hazardous-area reconnaissance and victim search in unsafe structures.",
     "highlights": [
       "Singapore CDF deployed",
       "Industrial fires",
@@ -96486,7 +96745,15 @@
     "origin": "USA",
     "cameras": 5,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "thermal_camera": true,
+    "use_cases": [
+      "Fire reconnaissance",
+      "Hazardous structure entry",
+      "Victim search",
+      "Emergency response"
+    ],
+    "manufacturer_url": "https://bostondynamics.com"
   },
   {
     "id": "smp-robotics-s5-2020",
@@ -99426,6 +99693,2970 @@
       "Hospital patient visits",
       "Sports philanthropy"
     ],
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "paro",
+    "name": "PARO",
+    "brand": "AIST",
+    "cat": "Social",
+    "sub": "Eldercare Companion",
+    "year": 2004,
+    "origin": "Japan",
+    "made_in": "Japan",
+    "status": "Active",
+    "score": 94,
+    "desc": "The original therapeutic social robot. Modeled on a baby harp seal, PARO is the longest-deployed eldercare robot worldwide with documented clinical benefits for dementia patients — reducing agitation and improving mood. FDA-cleared as a Class 2 medical device since 2009.",
+    "price": 6000,
+    "img": "",
+    "tags": [
+      "social",
+      "eldercare",
+      "therapeutic",
+      "fda-cleared",
+      "dementia-care",
+      "category-defining",
+      "seal"
+    ],
+    "announced": "2004",
+    "released": "2004",
+    "height_mm": 270,
+    "width_mm": 570,
+    "depth_mm": 320,
+    "weight_kg": 2.7,
+    "shell_material": "Antibacterial faux fur",
+    "frame_material": "ABS plastic skeleton",
+    "colors": [
+      "White",
+      "Gold",
+      "Pink",
+      "Brown"
+    ],
+    "social_role": "Eldercare therapeutic companion",
+    "target_user": [
+      "Elderly",
+      "Dementia patients",
+      "Special needs"
+    ],
+    "form_factor": "Pet-like",
+    "face_display": "Mechanical (eyes blink, head/body move)",
+    "voice_interaction": false,
+    "emotional_recognition": false,
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "tactile_sensors_count": 12,
+    "mobility": "Static (head/flipper/eye movement)",
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "subscription_required": false,
+    "data_privacy_certification": [
+      "HIPAA"
+    ],
+    "intended_setting": [
+      "Care facility",
+      "Hospital",
+      "Therapy",
+      "Home"
+    ],
+    "sensors": [
+      "Tactile",
+      "Light",
+      "Audio",
+      "Temperature",
+      "Posture"
+    ],
+    "microphones": "Stereo (voice and pitch recognition)",
+    "speaker_count": 1,
+    "speaker_w": 1,
+    "battery_type": "Ni-MH",
+    "battery_life_typical": 480,
+    "charge_time_min": 90,
+    "auto_charge": true,
+    "ce": true,
+    "fcc": true,
+    "fda_cleared": true,
+    "fda_class": "Class 2",
+    "iso_certs": [
+      "ISO 13485"
+    ],
+    "use_cases": [
+      "Dementia care",
+      "Eldercare therapy",
+      "Anxiety reduction",
+      "Hospital therapy"
+    ],
+    "warranty_months": 12,
+    "manufacturer_url": "http://www.parorobots.com",
+    "website": "http://www.parorobots.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "elliq-3",
+    "name": "ElliQ 3",
+    "brand": "Intuition Robotics",
+    "cat": "Social",
+    "sub": "Eldercare Companion",
+    "year": 2023,
+    "origin": "Israel",
+    "made_in": "China",
+    "status": "Active",
+    "score": 92,
+    "desc": "Tabletop AI companion designed as a proactive engagement partner for older adults living alone. Deployed by New York State Office for the Aging and other US agency programs. Initiates conversations, sets medication reminders, leads cognitive exercises, and connects family via video call.",
+    "price": 249,
+    "img": "",
+    "tags": [
+      "social",
+      "eldercare",
+      "ai-companion",
+      "tabletop",
+      "active",
+      "proactive",
+      "ny-state"
+    ],
+    "announced": "2023",
+    "released": "2023",
+    "height_mm": 460,
+    "width_mm": 230,
+    "depth_mm": 200,
+    "weight_kg": 4.2,
+    "shell_material": "Polymer composite",
+    "colors": [
+      "White"
+    ],
+    "social_role": "Proactive eldercare AI companion",
+    "target_user": [
+      "Elderly"
+    ],
+    "form_factor": "Tabletop",
+    "face_display": "Animated screen (separate head + tablet)",
+    "display_type": "OLED touchscreen tablet (companion)",
+    "display_size_inch": 8,
+    "eye_contact_tracking": true,
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English, Spanish",
+    "conversational_ai": "LLM-powered (hybrid)",
+    "llm_model": "GPT-4 + proprietary Intuition models",
+    "ai_cloud_required": true,
+    "emotional_recognition": true,
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "mobility": "Tabletop (head rotation/tilt)",
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "family_account_support": true,
+    "medication_reminders": true,
+    "emergency_contact_alert": true,
+    "video_calling": true,
+    "subscription_required": true,
+    "subscription_price_usd_month": 30,
+    "data_privacy_certification": [
+      "HIPAA"
+    ],
+    "intended_setting": [
+      "Home",
+      "Care facility"
+    ],
+    "sensors": [
+      "Camera",
+      "Microphone array",
+      "Touch",
+      "Proximity"
+    ],
+    "cameras": "1080p front-facing wide-angle",
+    "microphones": "Far-field beamforming array",
+    "speaker_count": 2,
+    "speaker_w": 8,
+    "wifi": "Wi-Fi 5",
+    "wifi_bands": "2.4/5 GHz",
+    "bluetooth": "5.0",
+    "ai_model": "ElliQ AI 3.0",
+    "ce": true,
+    "fcc": true,
+    "use_cases": [
+      "Eldercare companionship",
+      "Cognitive engagement",
+      "Family connection",
+      "Medication adherence"
+    ],
+    "warranty_months": 12,
+    "ota": true,
+    "pilot_customers": [
+      "NY State Office for the Aging",
+      "Florida Area Agencies on Aging"
+    ],
+    "manufacturer_url": "https://elliq.com",
+    "website": "https://elliq.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "moxie",
+    "name": "Moxie",
+    "brand": "Embodied",
+    "cat": "Social",
+    "sub": "Children Companion",
+    "year": 2020,
+    "origin": "USA",
+    "made_in": "China",
+    "status": "Discontinued",
+    "score": 87,
+    "desc": "Companion robot for children ages 5-10 developed by Embodied (founded by former iRobot CTO Paolo Pirjanian). Used conversational AI and expressive animations to help kids develop emotional and social skills. Embodied wound down operations in late 2024 but units remain in active use.",
+    "price": 799,
+    "img": "",
+    "tags": [
+      "social",
+      "children",
+      "education",
+      "emotional-learning",
+      "discontinued",
+      "iRobot-heritage"
+    ],
+    "announced": "2020",
+    "released": "2020",
+    "height_mm": 380,
+    "weight_kg": 4.5,
+    "shell_material": "ABS plastic",
+    "colors": [
+      "Teal",
+      "Blue"
+    ],
+    "social_role": "Children emotional-social development companion",
+    "target_user": [
+      "Children"
+    ],
+    "form_factor": "Tabletop (humanoid bust)",
+    "face_display": "Animated screen (head)",
+    "display_type": "Animated face screen",
+    "display_size_inch": 5,
+    "eye_contact_tracking": true,
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English",
+    "conversational_ai": "Hybrid (rule-based + ML)",
+    "ai_cloud_required": true,
+    "emotional_recognition": true,
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "mobility": "Tabletop (head/torso rotation, flipper arms)",
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "parental_controls": true,
+    "screen_time_management": true,
+    "subscription_required": true,
+    "subscription_price_usd_month": 60,
+    "data_privacy_certification": [
+      "COPPA"
+    ],
+    "intended_setting": [
+      "Home",
+      "Therapy",
+      "School"
+    ],
+    "sensors": [
+      "Camera",
+      "Microphone array",
+      "Touch",
+      "Proximity"
+    ],
+    "cameras": "Front-facing HD camera",
+    "microphones": "Far-field array",
+    "speaker_count": 2,
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "4.2",
+    "ai_model": "SocialX",
+    "ce": true,
+    "fcc": true,
+    "use_cases": [
+      "Social-emotional learning",
+      "Speech development",
+      "Anxiety support",
+      "Autism therapy"
+    ],
+    "warranty_months": 12,
+    "manufacturer_url": "https://moxierobot.com",
+    "website": "https://moxierobot.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "miko-3",
+    "name": "Miko 3",
+    "brand": "Miko",
+    "cat": "Social",
+    "sub": "Children Companion",
+    "year": 2021,
+    "origin": "India",
+    "made_in": "India",
+    "status": "Active",
+    "score": 89,
+    "desc": "AI-powered conversational companion for children ages 5-10 combining play and STEM education. Indian unicorn valued at $550M with strong global sales. Includes built-in tablet face, voice interaction, and content library covering math, science, reading.",
+    "price": 199,
+    "img": "",
+    "tags": [
+      "social",
+      "children",
+      "education",
+      "ai",
+      "active",
+      "india",
+      "stem"
+    ],
+    "announced": "2021",
+    "released": "2021",
+    "height_mm": 270,
+    "weight_kg": 1.3,
+    "shell_material": "ABS plastic",
+    "colors": [
+      "Mystic Blue",
+      "Hipster Grey",
+      "Martian Red"
+    ],
+    "social_role": "Children education and emotional companion",
+    "target_user": [
+      "Children"
+    ],
+    "form_factor": "Tabletop wheeled",
+    "face_display": "Animated screen",
+    "display_type": "Color LCD touchscreen",
+    "display_size_inch": 4.3,
+    "display_resolution": "480×272",
+    "eye_contact_tracking": true,
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English",
+    "conversational_ai": "LLM-powered",
+    "ai_cloud_required": true,
+    "emotional_recognition": true,
+    "emotional_expression": true,
+    "touch_responsive": false,
+    "mobility": "Wheeled (autonomous)",
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "family_account_support": true,
+    "parental_controls": true,
+    "screen_time_management": true,
+    "subscription_required": false,
+    "data_privacy_certification": [
+      "COPPA"
+    ],
+    "intended_setting": [
+      "Home",
+      "School"
+    ],
+    "sensors": [
+      "Camera",
+      "Microphone array",
+      "IR cliff",
+      "Edge detection"
+    ],
+    "cameras": "Front-facing camera with face detection",
+    "microphones": "Stereo array",
+    "speaker_count": 2,
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "5.0",
+    "battery_type": "Li-ion",
+    "battery_life_typical": 360,
+    "charge_time_min": 180,
+    "auto_charge": false,
+    "ai_model": "Miko AI",
+    "ce": true,
+    "fcc": true,
+    "use_cases": [
+      "Children education",
+      "STEM learning",
+      "Reading practice",
+      "Companionship"
+    ],
+    "warranty_months": 12,
+    "ota": true,
+    "manufacturer_url": "https://miko.ai",
+    "website": "https://miko.ai",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "miko-mini",
+    "name": "Miko Mini",
+    "brand": "Miko",
+    "cat": "Social",
+    "sub": "Children Companion",
+    "year": 2023,
+    "origin": "India",
+    "made_in": "India",
+    "status": "Active",
+    "score": 84,
+    "desc": "Compact, lower-cost sibling to Miko 3. Same conversational AI but in a static tabletop form. Targets gift-buyer parents at the sub-$150 price point and has been a strong holiday seller in US/UK markets.",
+    "price": 129,
+    "img": "",
+    "tags": [
+      "social",
+      "children",
+      "education",
+      "budget",
+      "active",
+      "gift"
+    ],
+    "announced": "2023",
+    "released": "2023",
+    "height_mm": 200,
+    "width_mm": 130,
+    "depth_mm": 130,
+    "weight_kg": 0.8,
+    "shell_material": "ABS plastic",
+    "colors": [
+      "White",
+      "Pink",
+      "Blue"
+    ],
+    "social_role": "Children education companion",
+    "target_user": [
+      "Children"
+    ],
+    "form_factor": "Tabletop (static)",
+    "face_display": "Animated screen",
+    "display_type": "Color LCD",
+    "display_size_inch": 3.5,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English",
+    "conversational_ai": "LLM-powered",
+    "ai_cloud_required": true,
+    "emotional_expression": true,
+    "touch_responsive": false,
+    "mobility": "Static",
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "parental_controls": true,
+    "subscription_required": false,
+    "data_privacy_certification": [
+      "COPPA"
+    ],
+    "intended_setting": [
+      "Home"
+    ],
+    "sensors": [
+      "Microphone",
+      "Touch buttons"
+    ],
+    "microphones": "Stereo",
+    "speaker_count": 1,
+    "wifi": "Wi-Fi 5",
+    "battery_type": "Li-ion",
+    "battery_life_typical": 240,
+    "ce": true,
+    "fcc": true,
+    "warranty_months": 12,
+    "ai_model": "Miko AI",
+    "manufacturer_url": "https://miko.ai",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "lovot",
+    "name": "Lovot",
+    "brand": "Groove X",
+    "cat": "Social",
+    "sub": "Emotional Companion",
+    "year": 2019,
+    "origin": "Japan",
+    "made_in": "Japan",
+    "status": "Active",
+    "score": 90,
+    "desc": "Non-verbal emotional companion robot designed by ex-Pepper engineer Kaname Hayashi. Recognizes family members, responds to touch and voice, exhibits learned attachment behaviors. Wildly popular in Japan — sold tens of thousands of units despite the high price point.",
+    "price": 5000,
+    "img": "",
+    "tags": [
+      "social",
+      "emotional",
+      "companion",
+      "japan",
+      "active",
+      "non-verbal",
+      "cult-favorite"
+    ],
+    "announced": "2018",
+    "released": "2019",
+    "height_mm": 430,
+    "width_mm": 260,
+    "weight_kg": 4.3,
+    "shell_material": "Soft fabric outer body, ABS frame",
+    "colors": [
+      "Standard",
+      "100+ custom outfits available"
+    ],
+    "social_role": "Emotional attachment companion",
+    "target_user": [
+      "General consumer",
+      "Elderly",
+      "Children"
+    ],
+    "form_factor": "Pet-like (wheeled, round body, arms, head)",
+    "face_display": "Animated screen (eyes only)",
+    "display_type": "Dual circular eye displays",
+    "eye_contact_tracking": true,
+    "facial_recognition": true,
+    "voice_interaction": false,
+    "languages_spoken": "Non-verbal (cooing/chirping)",
+    "conversational_ai": "None (emotional simulation only)",
+    "emotional_recognition": true,
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "tactile_sensors_count": 50,
+    "mobility": "Wheeled (omnidirectional, autonomous)",
+    "auto_charge": true,
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "family_account_support": true,
+    "subscription_required": true,
+    "subscription_price_usd_month": 80,
+    "intended_setting": [
+      "Home",
+      "Care facility"
+    ],
+    "sensors": [
+      "Tactile (50+)",
+      "Camera",
+      "Microphone",
+      "ToF depth",
+      "Temperature",
+      "Proximity"
+    ],
+    "cameras": "Front and rear cameras + depth",
+    "microphones": "6-mic array",
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "5.0",
+    "battery_type": "Li-ion",
+    "battery_life_typical": 45,
+    "charge_time_min": 15,
+    "ai_model": "Emotional behavior model (proprietary)",
+    "ce": false,
+    "use_cases": [
+      "Emotional companionship",
+      "Pet replacement",
+      "Stress reduction"
+    ],
+    "warranty_months": 12,
+    "ota": true,
+    "manufacturer_url": "https://lovot.life",
+    "website": "https://lovot.life",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "jibo",
+    "name": "Jibo",
+    "brand": "Jibo Inc",
+    "cat": "Social",
+    "sub": "General Companion",
+    "year": 2017,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Discontinued",
+    "score": 86,
+    "desc": "The world's first commercial social robot for the home. Developed by MIT Media Lab's Cynthia Breazeal. Sold from 2017-2018, NTT Disruption acquired remnants in 2020. Cult following — its 'final goodbye' update in 2019 became a viral cultural moment about emotional bonds with robots.",
+    "price": 899,
+    "img": "",
+    "tags": [
+      "social",
+      "general",
+      "discontinued",
+      "mit",
+      "category-defining",
+      "historic"
+    ],
+    "announced": "2014",
+    "released": "2017",
+    "height_mm": 280,
+    "width_mm": 150,
+    "weight_kg": 2.7,
+    "shell_material": "Polycarbonate + aluminum base",
+    "colors": [
+      "Black"
+    ],
+    "social_role": "Home companion",
+    "target_user": [
+      "General consumer",
+      "Children"
+    ],
+    "form_factor": "Tabletop (3-axis articulated)",
+    "face_display": "Animated screen (single eye)",
+    "display_type": "Touchscreen face",
+    "display_size_inch": 5.7,
+    "eye_contact_tracking": true,
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English",
+    "conversational_ai": "Rule-based + cloud",
+    "ai_cloud_required": true,
+    "emotional_expression": true,
+    "mobility": "Tabletop (3-axis dance)",
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "subscription_required": false,
+    "intended_setting": [
+      "Home"
+    ],
+    "sensors": [
+      "Camera",
+      "Microphone array",
+      "Touch"
+    ],
+    "cameras": "Front-facing HD camera",
+    "microphones": "360° far-field array",
+    "speaker_count": 2,
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "4.0",
+    "chipset": "NVIDIA Tegra K1",
+    "ram_gb": 1,
+    "storage_gb": 16,
+    "use_cases": [
+      "Companionship",
+      "Home assistant",
+      "Photography"
+    ],
+    "manufacturer_url": "https://www.jibo.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "pepper",
+    "name": "Pepper",
+    "brand": "Aldebaran (SoftBank Robotics)",
+    "cat": "Social",
+    "sub": "General Companion",
+    "year": 2014,
+    "origin": "Japan",
+    "made_in": "Japan",
+    "status": "Discontinued",
+    "score": 89,
+    "desc": "Iconic humanoid social robot deployed in retail, hospitality and research worldwide. Sold over 20,000 units. SoftBank Robotics halted production in 2021. Aldebaran filed for bankruptcy in 2025, leaving thousands of deployed units without official support.",
+    "price": 25000,
+    "img": "",
+    "tags": [
+      "social",
+      "humanoid",
+      "retail",
+      "discontinued",
+      "category-defining",
+      "historic",
+      "softbank"
+    ],
+    "announced": "2014",
+    "released": "2014",
+    "height_mm": 1200,
+    "width_mm": 425,
+    "weight_kg": 28,
+    "shell_material": "Polycarbonate",
+    "frame_material": "Aluminum",
+    "colors": [
+      "White"
+    ],
+    "social_role": "Retail, hospitality, reception",
+    "target_user": [
+      "General consumer",
+      "Commercial"
+    ],
+    "form_factor": "Humanoid (wheeled base)",
+    "face_display": "Mechanical face + chest tablet",
+    "display_type": "Chest-mounted Android tablet",
+    "display_size_inch": 10.1,
+    "eye_contact_tracking": true,
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "15+ including English, French, Japanese, Mandarin, Spanish",
+    "conversational_ai": "Rule-based + cloud (NAOqi)",
+    "ai_cloud_required": true,
+    "emotional_recognition": true,
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "mobility": "Wheeled (omnidirectional 3-wheel)",
+    "auto_charge": false,
+    "dof": 20,
+    "speed_ms": 0.83,
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "intended_setting": [
+      "Retail",
+      "Hospitality",
+      "Care facility",
+      "Research"
+    ],
+    "sensors": [
+      "Tactile (head/hands)",
+      "Touch screen",
+      "Sonar",
+      "Infrared",
+      "Laser",
+      "Gyroscope",
+      "Accelerometer",
+      "Bumpers"
+    ],
+    "cameras": "2x 2D HD + 1x 3D depth camera",
+    "microphones": "4-mic array",
+    "speaker_count": 2,
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "4.0",
+    "ethernet": "1 Gigabit",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++",
+      "Java",
+      "JavaScript",
+      "NAOqi"
+    ],
+    "battery_type": "Li-ion",
+    "battery_life_typical": 720,
+    "charge_time_min": 480,
+    "ce": true,
+    "fcc": true,
+    "use_cases": [
+      "Retail greeting",
+      "Hospitality",
+      "Research",
+      "Education",
+      "Eldercare"
+    ],
+    "manufacturer_url": "https://www.aldebaran.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "nao",
+    "name": "NAO",
+    "brand": "Aldebaran (SoftBank Robotics)",
+    "cat": "Social",
+    "sub": "Research Humanoid Social",
+    "year": 2008,
+    "origin": "France",
+    "made_in": "France",
+    "status": "Discontinued",
+    "score": 91,
+    "desc": "Iconic small humanoid robot used in education, autism therapy, and research worldwide. Over 13,000 units deployed across 70+ countries. Aldebaran's bankruptcy in 2025 halted production though many units remain in active research and educational use.",
+    "price": 9000,
+    "img": "",
+    "tags": [
+      "social",
+      "humanoid",
+      "research",
+      "autism-therapy",
+      "discontinued",
+      "historic",
+      "education"
+    ],
+    "announced": "2006",
+    "released": "2008",
+    "height_mm": 580,
+    "weight_kg": 5.4,
+    "shell_material": "ABS polymer",
+    "colors": [
+      "White",
+      "Red",
+      "Blue",
+      "Black"
+    ],
+    "dof": 25,
+    "speed_ms": 0.4,
+    "social_role": "Research, education, autism therapy",
+    "target_user": [
+      "Children",
+      "Special needs",
+      "Research"
+    ],
+    "form_factor": "Humanoid (bipedal)",
+    "face_display": "LED face (eyes, ears)",
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "20+ languages including English, French, German, Japanese, Mandarin, Spanish, Arabic",
+    "conversational_ai": "Rule-based (NAOqi)",
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "emotional_recognition": true,
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "mobility": "Bipedal walking",
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "intended_setting": [
+      "School",
+      "Therapy",
+      "Research",
+      "Care facility"
+    ],
+    "sensors": [
+      "Tactile (head/hands/feet)",
+      "Sonar",
+      "IR",
+      "Gyroscope",
+      "Accelerometer",
+      "Force-sensitive resistors"
+    ],
+    "cameras": "2x HD cameras (forehead + mouth)",
+    "microphones": "4-mic array",
+    "speaker_count": 2,
+    "wifi": "Wi-Fi 5",
+    "ethernet": "Yes",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++",
+      "Java",
+      "NAOqi",
+      "Choregraphe"
+    ],
+    "chipset": "Intel Atom",
+    "ram_gb": 1,
+    "battery_type": "Li-ion",
+    "battery_life_typical": 90,
+    "charge_time_min": 360,
+    "ce": true,
+    "fcc": true,
+    "use_cases": [
+      "Autism therapy",
+      "STEM education",
+      "Research",
+      "Hospitality"
+    ],
+    "manufacturer_url": "https://www.aldebaran.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "vector-2",
+    "name": "Vector 2.0",
+    "brand": "Digital Dream Labs",
+    "cat": "Social",
+    "sub": "Desktop Companion",
+    "year": 2023,
+    "origin": "USA",
+    "made_in": "China",
+    "status": "Active",
+    "score": 84,
+    "desc": "Revived version of the original Anki Vector after Digital Dream Labs acquired the IP in 2020. Compact desktop companion with personality, voice interaction, Alexa integration, and local processing for privacy.",
+    "price": 399,
+    "img": "",
+    "tags": [
+      "social",
+      "desktop",
+      "anki-heritage",
+      "personality",
+      "active",
+      "alexa"
+    ],
+    "announced": "2023",
+    "released": "2023",
+    "height_mm": 70,
+    "width_mm": 56,
+    "depth_mm": 100,
+    "weight_kg": 0.16,
+    "shell_material": "Plastic + treads",
+    "colors": [
+      "Black"
+    ],
+    "social_role": "Desktop personality companion + smart assistant",
+    "target_user": [
+      "General consumer"
+    ],
+    "form_factor": "Tabletop wheeled (treaded)",
+    "face_display": "Animated screen (face)",
+    "display_type": "Color IPS screen",
+    "display_size_inch": 1.7,
+    "eye_contact_tracking": true,
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English",
+    "conversational_ai": "Hybrid (local + cloud)",
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "mobility": "Treaded (autonomous)",
+    "auto_charge": true,
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "subscription_required": false,
+    "intended_setting": [
+      "Home",
+      "Office desktop"
+    ],
+    "sensors": [
+      "Camera",
+      "ToF laser",
+      "4-mic array",
+      "Drop sensor",
+      "Capacitive touch"
+    ],
+    "cameras": "120° HD camera",
+    "microphones": "4-mic beamforming array",
+    "speaker_count": 1,
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "4.2",
+    "sdk": true,
+    "sdk_langs": [
+      "Python"
+    ],
+    "chipset": "Qualcomm Snapdragon 200 series",
+    "ram_gb": 1,
+    "storage_gb": 4,
+    "battery_type": "Li-ion",
+    "battery_life_typical": 60,
+    "charge_time_min": 30,
+    "use_cases": [
+      "Desktop companion",
+      "Smart home control",
+      "Alexa integration",
+      "Coding education"
+    ],
+    "warranty_months": 12,
+    "ce": true,
+    "fcc": true,
+    "manufacturer_url": "https://digitaldreamlabs.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "cozmo",
+    "name": "Cozmo",
+    "brand": "Anki",
+    "cat": "Social",
+    "sub": "Desktop Companion",
+    "year": 2016,
+    "origin": "USA",
+    "made_in": "China",
+    "status": "Discontinued",
+    "score": 88,
+    "desc": "Tabletop personality robot from Anki with expressive facial animations and code-with-Cozmo programming feature. Anki shut down in 2019. Massively influential in the AI-personality category — many of today's social bots draw lineage from Cozmo's design language.",
+    "price": 179,
+    "img": "",
+    "tags": [
+      "social",
+      "desktop",
+      "anki",
+      "discontinued",
+      "historic",
+      "personality",
+      "coding"
+    ],
+    "announced": "2016",
+    "released": "2016",
+    "height_mm": 72,
+    "width_mm": 56,
+    "depth_mm": 100,
+    "weight_kg": 0.15,
+    "shell_material": "Plastic + treads",
+    "colors": [
+      "Red/Grey"
+    ],
+    "social_role": "Personality companion + coding education",
+    "target_user": [
+      "Children",
+      "General consumer"
+    ],
+    "form_factor": "Tabletop wheeled (treaded)",
+    "face_display": "Animated screen",
+    "display_type": "Color screen face",
+    "display_size_inch": 1,
+    "eye_contact_tracking": true,
+    "facial_recognition": true,
+    "voice_interaction": false,
+    "conversational_ai": "Rule-based",
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "mobility": "Treaded (autonomous)",
+    "auto_charge": true,
+    "intended_setting": [
+      "Home",
+      "School"
+    ],
+    "sensors": [
+      "Camera",
+      "Cliff",
+      "Accelerometer",
+      "Gyroscope"
+    ],
+    "cameras": "Front-facing 720p camera",
+    "speaker_count": 1,
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "4.0",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "Block-based"
+    ],
+    "battery_life_typical": 60,
+    "use_cases": [
+      "Children",
+      "Coding education",
+      "Entertainment"
+    ],
+    "manufacturer_url": "https://anki.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "loona",
+    "name": "Loona",
+    "brand": "KEYi Tech",
+    "cat": "Social",
+    "sub": "Emotional Companion",
+    "year": 2022,
+    "origin": "China",
+    "made_in": "China",
+    "status": "Active",
+    "score": 86,
+    "desc": "Expressive smart pet robot from Shenzhen-based KEYi Tech. Combines lifelike animations, voice recognition, and emotion-detection AI. Successfully Kickstarted in 2022 raising over $4M, has shipped to 60+ countries.",
+    "price": 449,
+    "img": "",
+    "tags": [
+      "social",
+      "emotional",
+      "pet-like",
+      "china",
+      "active",
+      "kickstarter"
+    ],
+    "announced": "2021",
+    "released": "2022",
+    "height_mm": 180,
+    "width_mm": 220,
+    "weight_kg": 0.65,
+    "shell_material": "ABS plastic",
+    "colors": [
+      "White"
+    ],
+    "social_role": "Digital pet companion",
+    "target_user": [
+      "General consumer",
+      "Children"
+    ],
+    "form_factor": "Pet-like (wheeled with articulated head/legs)",
+    "face_display": "Animated screen (face)",
+    "display_type": "Color screen face",
+    "display_size_inch": 3.5,
+    "eye_contact_tracking": true,
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "languages_spoken": "English, Mandarin",
+    "conversational_ai": "Hybrid",
+    "ai_cloud_required": true,
+    "emotional_recognition": true,
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "mobility": "Wheeled (omnidirectional + tiltable head)",
+    "auto_charge": true,
+    "learning_personalization": true,
+    "memory_persistent": true,
+    "intended_setting": [
+      "Home"
+    ],
+    "sensors": [
+      "Camera (3D ToF)",
+      "Microphone array",
+      "IMU",
+      "Edge detection",
+      "Capacitive touch"
+    ],
+    "cameras": "3D ToF camera",
+    "microphones": "Array",
+    "speaker_count": 1,
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "5.0",
+    "battery_type": "Li-ion",
+    "battery_life_typical": 90,
+    "charge_time_min": 60,
+    "ce": true,
+    "fcc": true,
+    "use_cases": [
+      "Digital pet",
+      "Companionship",
+      "Entertainment"
+    ],
+    "warranty_months": 12,
+    "manufacturer_url": "https://keyirobot.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "eilik",
+    "name": "Eilik",
+    "brand": "Energize Lab",
+    "cat": "Social",
+    "sub": "Desktop Companion",
+    "year": 2022,
+    "origin": "China",
+    "made_in": "China",
+    "status": "Active",
+    "score": 80,
+    "desc": "Affordable desktop personality robot that went viral via TikTok. Two units can interact and chat with each other. No app, no subscription, no internet required — runs offline with built-in personality scripts.",
+    "price": 129,
+    "img": "",
+    "tags": [
+      "social",
+      "desktop",
+      "tiktok-viral",
+      "offline",
+      "active",
+      "affordable",
+      "no-subscription"
+    ],
+    "announced": "2022",
+    "released": "2022",
+    "height_mm": 130,
+    "width_mm": 90,
+    "weight_kg": 0.27,
+    "shell_material": "ABS plastic",
+    "colors": [
+      "White",
+      "Black",
+      "Pink",
+      "Blue",
+      "Green"
+    ],
+    "social_role": "Desktop personality companion",
+    "target_user": [
+      "General consumer"
+    ],
+    "form_factor": "Tabletop (animated head + arms, static base)",
+    "face_display": "Animated screen (face)",
+    "display_type": "Color screen face",
+    "display_size_inch": 2,
+    "voice_interaction": false,
+    "conversational_ai": "Pre-scripted animations",
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "emotional_expression": true,
+    "touch_responsive": true,
+    "mobility": "Static base (head/arm motion)",
+    "subscription_required": false,
+    "intended_setting": [
+      "Home",
+      "Office desktop"
+    ],
+    "sensors": [
+      "Capacitive touch",
+      "Microphone",
+      "Accelerometer"
+    ],
+    "speaker_count": 1,
+    "battery_type": "Li-ion",
+    "battery_life_typical": 240,
+    "charge_time_min": 90,
+    "ce": true,
+    "fcc": true,
+    "use_cases": [
+      "Desktop companion",
+      "Gift",
+      "Office desk"
+    ],
+    "warranty_months": 12,
+    "manufacturer_url": "https://energizelab.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "qoobo",
+    "name": "Qoobo",
+    "brand": "Yukai Engineering",
+    "cat": "Social",
+    "sub": "Emotional Companion",
+    "year": 2018,
+    "origin": "Japan",
+    "made_in": "Japan",
+    "status": "Active",
+    "score": 78,
+    "desc": "Therapeutic robotic cushion with a moving tail. No face, no voice — just a tail that responds to touch like a cat. Designed for people who can't keep pets (apartments, allergies, eldercare). Won multiple design awards including Red Dot.",
+    "price": 149,
+    "img": "",
+    "tags": [
+      "social",
+      "therapeutic",
+      "pet-replacement",
+      "japan",
+      "active",
+      "non-verbal",
+      "award-winning"
+    ],
+    "announced": "2017",
+    "released": "2018",
+    "width_mm": 320,
+    "depth_mm": 320,
+    "weight_kg": 1,
+    "shell_material": "Washable fabric cover, fleece/short-hair variants",
+    "colors": [
+      "Husky Grey",
+      "French Brown"
+    ],
+    "social_role": "Therapeutic pet replacement",
+    "target_user": [
+      "Elderly",
+      "Apartment dwellers",
+      "Allergies",
+      "Hospitalized patients"
+    ],
+    "form_factor": "Pillow (tail only)",
+    "voice_interaction": false,
+    "conversational_ai": "None",
+    "touch_responsive": true,
+    "mobility": "Static (tail motion only)",
+    "subscription_required": false,
+    "intended_setting": [
+      "Home",
+      "Care facility",
+      "Hospital"
+    ],
+    "sensors": [
+      "Touch (full body)"
+    ],
+    "battery_type": "Li-ion (USB rechargeable)",
+    "battery_life_typical": 480,
+    "charge_time_min": 60,
+    "use_cases": [
+      "Pet replacement",
+      "Stress reduction",
+      "Eldercare therapy",
+      "Anxiety support"
+    ],
+    "warranty_months": 12,
+    "ce": true,
+    "manufacturer_url": "https://qoobo.info",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "hyodol",
+    "name": "Hyodol",
+    "brand": "Hyodol",
+    "cat": "Social",
+    "sub": "Eldercare Companion",
+    "year": 2021,
+    "origin": "South Korea",
+    "made_in": "South Korea",
+    "status": "Active",
+    "score": 87,
+    "desc": "ChatGPT-powered companion doll deployed at scale in South Korea. Over 12,000 units distributed by Korean municipal governments to elderly living alone. Tracks medication, provides conversation, alerts emergency contacts when issues arise.",
+    "price": 600,
+    "img": "",
+    "tags": [
+      "social",
+      "eldercare",
+      "doll",
+      "south-korea",
+      "active",
+      "chatgpt",
+      "government-deployed"
+    ],
+    "announced": "2021",
+    "released": "2021",
+    "height_mm": 420,
+    "weight_kg": 0.7,
+    "shell_material": "Plush fabric (soft body)",
+    "colors": [
+      "Boy (blue clothes)",
+      "Girl (pink clothes)"
+    ],
+    "social_role": "Eldercare companion + alert system",
+    "target_user": [
+      "Elderly"
+    ],
+    "form_factor": "Plushie (doll)",
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "Korean, English (limited)",
+    "conversational_ai": "LLM-powered (GPT-4)",
+    "llm_model": "GPT-4",
+    "ai_cloud_required": true,
+    "touch_responsive": true,
+    "mobility": "Static",
+    "memory_persistent": true,
+    "medication_reminders": true,
+    "emergency_contact_alert": true,
+    "subscription_required": true,
+    "subscription_price_usd_month": 15,
+    "intended_setting": [
+      "Home",
+      "Care facility"
+    ],
+    "sensors": [
+      "Touch",
+      "Microphone",
+      "Motion"
+    ],
+    "speaker_count": 1,
+    "wifi": "Wi-Fi 5",
+    "cellular": "4G LTE (optional)",
+    "battery_life_typical": 600,
+    "use_cases": [
+      "Eldercare companionship",
+      "Medication management",
+      "Loneliness reduction",
+      "Emergency alerting"
+    ],
+    "warranty_months": 12,
+    "pilot_customers": [
+      "Korean municipal governments (Seoul, Busan, regional)"
+    ],
+    "manufacturer_url": "https://hyodol.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "abi-andromeda",
+    "name": "Abi",
+    "brand": "Andromeda Robotics",
+    "cat": "Social",
+    "sub": "Eldercare Companion",
+    "year": 2025,
+    "origin": "Australia",
+    "made_in": "Australia",
+    "status": "Active",
+    "score": 85,
+    "desc": "AI-powered eldercare companion robot from Melbourne-based Andromeda Robotics. Raised $17M in March 2026 to expand into the US senior care market. Deployed across Australian aged-care homes with focus on cognitive engagement and dignified assistance.",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "social",
+      "eldercare",
+      "australia",
+      "active",
+      "ai-companion",
+      "new-2025"
+    ],
+    "announced": "2025",
+    "released": "2025",
+    "height_mm": 1100,
+    "weight_kg": 30,
+    "shell_material": "Polymer composite",
+    "colors": [
+      "White"
+    ],
+    "social_role": "Aged-care companion",
+    "target_user": [
+      "Elderly",
+      "Care facility residents"
+    ],
+    "form_factor": "Wheeled humanoid bust",
+    "face_display": "Animated screen",
+    "display_type": "Touchscreen face",
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English",
+    "conversational_ai": "LLM-powered",
+    "ai_cloud_required": true,
+    "emotional_recognition": true,
+    "emotional_expression": true,
+    "mobility": "Wheeled (autonomous)",
+    "memory_persistent": true,
+    "medication_reminders": true,
+    "emergency_contact_alert": true,
+    "video_calling": true,
+    "subscription_required": true,
+    "intended_setting": [
+      "Care facility",
+      "Home"
+    ],
+    "sensors": [
+      "Camera",
+      "Microphone array",
+      "LiDAR",
+      "Touch"
+    ],
+    "lidar": true,
+    "cameras": "Front + 360° peripheral",
+    "wifi": "Wi-Fi 6",
+    "use_cases": [
+      "Eldercare",
+      "Cognitive engagement",
+      "Family connection",
+      "Aged-care augmentation"
+    ],
+    "pilot_customers": [
+      "Australian aged-care providers"
+    ],
+    "manufacturer_url": "https://andromedarobotics.com.au",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "1x-neo",
+    "name": "NEO",
+    "brand": "1X Technologies",
+    "cat": "Social",
+    "sub": "Home Humanoid Companion",
+    "year": 2025,
+    "origin": "Norway",
+    "made_in": "Norway",
+    "status": "Pre-order",
+    "score": 90,
+    "desc": "Backed by OpenAI, 1X's NEO is a full-size humanoid designed for home use including companionship and light household assistance. Started shipping to homes in early 2026 at $20,000. Tendon-driven actuation prioritizes safe human-proximate interaction.",
+    "price": 20000,
+    "img": "",
+    "tags": [
+      "social",
+      "humanoid",
+      "home",
+      "openai",
+      "pre-order",
+      "high-end",
+      "new-2026"
+    ],
+    "announced": "2024",
+    "released": "2026",
+    "height_mm": 1670,
+    "weight_kg": 30,
+    "shell_material": "Knit fabric outer covering",
+    "frame_material": "Aluminum + composite",
+    "social_role": "Home humanoid assistant + companion",
+    "target_user": [
+      "General consumer",
+      "Elderly"
+    ],
+    "form_factor": "Humanoid (bipedal)",
+    "face_display": "None (covered face panel)",
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English",
+    "conversational_ai": "LLM-powered",
+    "llm_model": "Custom (OpenAI-backed)",
+    "ai_cloud_required": true,
+    "memory_persistent": true,
+    "learning_personalization": true,
+    "mobility": "Bipedal",
+    "dof": 20,
+    "actuator_type": "Tendon-driven (compliant)",
+    "payload_kg": 20,
+    "intended_setting": [
+      "Home"
+    ],
+    "sensors": [
+      "Stereo cameras",
+      "Microphone array",
+      "IMU",
+      "Tactile"
+    ],
+    "cameras": "Stereo head cameras",
+    "microphones": "Far-field array",
+    "wifi": "Wi-Fi 6E",
+    "bluetooth": "5.2",
+    "battery_type": "Li-ion",
+    "battery_life_typical": 240,
+    "ai_model": "1X-OpenAI custom",
+    "use_cases": [
+      "Home assistance",
+      "Companionship",
+      "Light housekeeping",
+      "Caregiver augmentation"
+    ],
+    "manufacturer_url": "https://www.1x.tech",
+    "website": "https://www.1x.tech",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "ryan-companion",
+    "name": "Ryan",
+    "brand": "DreamFace Technologies",
+    "cat": "Social",
+    "sub": "Eldercare Companion",
+    "year": 2019,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Active",
+    "score": 78,
+    "desc": "Tabletop social robot from DreamFace Technologies (University of Denver spin-off) featuring an animated face projected onto a translucent 3D head. Used in dementia care research and clinical settings — focused on engaging conversations with cognitively impaired adults.",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "social",
+      "eldercare",
+      "dementia",
+      "research",
+      "active",
+      "projected-face"
+    ],
+    "announced": "2019",
+    "released": "2019",
+    "height_mm": 600,
+    "weight_kg": 5,
+    "shell_material": "Polymer + translucent head shell",
+    "colors": [
+      "White"
+    ],
+    "social_role": "Dementia care companion",
+    "target_user": [
+      "Elderly",
+      "Dementia patients"
+    ],
+    "form_factor": "Tabletop (humanoid head + torso)",
+    "face_display": "3D projected animated face (rear-projection)",
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English",
+    "conversational_ai": "Hybrid",
+    "ai_cloud_required": true,
+    "emotional_recognition": true,
+    "emotional_expression": true,
+    "memory_persistent": true,
+    "mobility": "Tabletop (head/torso movement)",
+    "intended_setting": [
+      "Care facility",
+      "Hospital",
+      "Therapy",
+      "Research"
+    ],
+    "sensors": [
+      "Camera",
+      "Microphone array",
+      "Touch"
+    ],
+    "cameras": "Front-facing HD",
+    "microphones": "Array",
+    "wifi": "Wi-Fi 5",
+    "use_cases": [
+      "Dementia care",
+      "Cognitive therapy",
+      "Research"
+    ],
+    "manufacturer_url": "https://dreamfacetech.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "buddy-robot",
+    "name": "Buddy",
+    "brand": "Blue Frog Robotics",
+    "cat": "Social",
+    "sub": "Family Companion",
+    "year": 2018,
+    "origin": "France",
+    "made_in": "France",
+    "status": "Discontinued",
+    "score": 73,
+    "desc": "Family-oriented social robot from French startup Blue Frog Robotics. Funded via Indiegogo, shipped 2018. Designed to be a household assistant, security monitor, and child companion. Company restructured in 2024 ending consumer sales.",
+    "price": 1700,
+    "img": "",
+    "tags": [
+      "social",
+      "family",
+      "france",
+      "indiegogo",
+      "discontinued"
+    ],
+    "announced": "2015",
+    "released": "2018",
+    "height_mm": 560,
+    "weight_kg": 5,
+    "shell_material": "Polycarbonate",
+    "colors": [
+      "White"
+    ],
+    "social_role": "Family home companion",
+    "target_user": [
+      "General consumer",
+      "Children",
+      "Elderly"
+    ],
+    "form_factor": "Tabletop wheeled",
+    "face_display": "Animated screen",
+    "display_type": "Tablet face",
+    "display_size_inch": 8,
+    "facial_recognition": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English, French",
+    "conversational_ai": "Hybrid",
+    "ai_cloud_required": true,
+    "mobility": "Wheeled (autonomous)",
+    "intended_setting": [
+      "Home"
+    ],
+    "sensors": [
+      "Camera",
+      "ToF depth",
+      "Ultrasonic",
+      "Microphone"
+    ],
+    "cameras": "Front + depth camera",
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "4.0",
+    "ce": true,
+    "manufacturer_url": "https://buddytherobot.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "kuri",
+    "name": "Kuri",
+    "brand": "Mayfield Robotics",
+    "cat": "Social",
+    "sub": "Family Companion",
+    "year": 2017,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Discontinued",
+    "score": 76,
+    "desc": "Family home companion from Mayfield Robotics (a Bosch subsidiary). Cute design with autonomous navigation, no face screen — communicated entirely through eye animations and chirps. Bosch shut down Mayfield in 2018 before mass shipping. All customer deposits were refunded.",
+    "price": 700,
+    "img": "",
+    "tags": [
+      "social",
+      "family",
+      "bosch",
+      "discontinued",
+      "non-verbal",
+      "historic"
+    ],
+    "announced": "2017",
+    "released": "2017",
+    "height_mm": 510,
+    "weight_kg": 6,
+    "shell_material": "Polycarbonate",
+    "colors": [
+      "White"
+    ],
+    "social_role": "Family home companion",
+    "target_user": [
+      "General consumer",
+      "Children"
+    ],
+    "form_factor": "Pet-like (wheeled)",
+    "face_display": "Animated LED eyes only",
+    "facial_recognition": true,
+    "voice_interaction": false,
+    "languages_spoken": "Non-verbal (chirps + sounds)",
+    "conversational_ai": "Pre-scripted",
+    "emotional_expression": true,
+    "mobility": "Wheeled (autonomous, mapping)",
+    "auto_charge": true,
+    "intended_setting": [
+      "Home"
+    ],
+    "sensors": [
+      "Camera",
+      "Microphone array",
+      "Cliff",
+      "ToF"
+    ],
+    "cameras": "1080p HD camera in head",
+    "microphones": "4-mic array",
+    "wifi": "Wi-Fi 5",
+    "bluetooth": "4.0",
+    "battery_life_typical": 360,
+    "manufacturer_url": "https://www.heykuri.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "bdx-droid",
+    "name": "BDX Droid",
+    "brand": "Walt Disney Imagineering",
+    "cat": "Entertainment",
+    "sub": "Theme Park Animatronic",
+    "year": 2023,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Active",
+    "score": 96,
+    "desc": "Disney's autonomous interactive Star Wars droid character — short for 'Bipedal Dynamic Experiment.' Variants include OSKAR-7 (orange), BESH-27 (blue), GREK-17 (green), Red. Won the 2025 Thea Award for Technical Innovation. Roams Galaxy's Edge at Disneyland, Disney World, Tokyo Disneyland, Disneyland Paris and Shanghai Disneyland. Debuts on screen in The Mandalorian and Grogu (May 2026). Patent filed October 2023 as 'walking robots.'",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "entertainment",
+      "animatronic",
+      "theme-park",
+      "disney",
+      "star-wars",
+      "active",
+      "award-winning",
+      "category-defining",
+      "thea-award"
+    ],
+    "also_known_as": "BD-X, Duckling Droid",
+    "announced": "2023",
+    "released": "2024",
+    "regions": [
+      "USA",
+      "Japan",
+      "France",
+      "China"
+    ],
+    "height_mm": 600,
+    "width_mm": 350,
+    "weight_kg": 12,
+    "shell_material": "Milled aluminum (Florida) / Composite shells",
+    "frame_material": "Aluminum + composite",
+    "colors": [
+      "Orange (Oskar)",
+      "Blue (Besh)",
+      "Green (Grek)",
+      "Red"
+    ],
+    "entertainment_type": "Animatronic",
+    "venue_type": [
+      "Theme park",
+      "Disney cruise",
+      "Public installation"
+    ],
+    "performance_modes": [
+      "Scripted",
+      "Interactive",
+      "Audience-driven",
+      "Tele-operated (training)"
+    ],
+    "audience_interaction": true,
+    "voice_interaction": false,
+    "languages_spoken": "Non-verbal (chirps + droid noises)",
+    "expressive_capabilities": [
+      "Eye contact",
+      "Head tilt",
+      "Body posture",
+      "Animated chirps",
+      "Antenna animation"
+    ],
+    "permanent_installation": false,
+    "touring_capable": true,
+    "setup_time_min": 30,
+    "crew_required": 2,
+    "intended_audience": [
+      "All ages"
+    ],
+    "social_role": "Theme park character interaction",
+    "target_user": [
+      "Theme park guests"
+    ],
+    "form_factor": "Bipedal (BD-1 / avian-style)",
+    "face_display": false,
+    "facial_recognition": true,
+    "voice_recognition": false,
+    "speech_synthesis": false,
+    "emotional_expression": true,
+    "mobility": "Bipedal walking",
+    "dof": 12,
+    "actuator_type": "Custom servo-driven (~$7,500 actuator package)",
+    "sensors": [
+      "Camera",
+      "IMU",
+      "Joint encoders",
+      "Touch",
+      "Microphone array"
+    ],
+    "imu": true,
+    "cameras": "Eye-mounted vision system",
+    "microphones": "Array (human tracking)",
+    "chipset": "NVIDIA Jetson Orin Nano",
+    "ai_model": "Disney Research autonomous behavior model (RL + Imitation)",
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "learning_methods": [
+      "Imitation Learning",
+      "Reinforcement Learning"
+    ],
+    "sim_platform": "NVIDIA Newton physics engine",
+    "battery_type": "Li-ion",
+    "battery_life_typical": 90,
+    "wifi": "Wi-Fi 6 (mesh)",
+    "use_cases": [
+      "Theme park entertainment",
+      "Brand activations",
+      "Live shows",
+      "Film production"
+    ],
+    "pilot_customers": [
+      "Disneyland California",
+      "Walt Disney World",
+      "Tokyo Disneyland",
+      "Disneyland Paris",
+      "Shanghai Disneyland",
+      "Disney Cruise Line - Disney Wish"
+    ],
+    "iso_certs": [
+      "IEEE/RSJ IROS 2023 unveiled prototype"
+    ],
+    "manufacturer_url": "https://sites.disney.com/waltdisneyimagineering",
+    "website": "https://sites.disney.com/waltdisneyimagineering",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "project-kiwi-groot",
+    "name": "Project Kiwi (Baby Groot)",
+    "brand": "Walt Disney Imagineering",
+    "cat": "Entertainment",
+    "sub": "Theme Park Animatronic",
+    "year": 2021,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Active",
+    "score": 92,
+    "desc": "Free-walking autonomous Baby Groot character developed by Disney Imagineering as a milestone in expressive character robotics. Pint-sized humanoid with accurately rendered face/hands/feet, distressed red flight suit, expressive eye contact. The Project Kiwi platform later evolved into the BDX droid program. Stages controlled meet-and-greet appearances.",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "entertainment",
+      "animatronic",
+      "theme-park",
+      "disney",
+      "marvel",
+      "groot",
+      "active",
+      "free-walking",
+      "milestone"
+    ],
+    "also_known_as": "Project Kiwi",
+    "announced": "2021",
+    "released": "2021",
+    "height_mm": 660,
+    "weight_kg": 18,
+    "shell_material": "Painted silicone + textile flight suit",
+    "frame_material": "Custom alloy skeleton",
+    "colors": [
+      "Red flight suit (Groot character)"
+    ],
+    "entertainment_type": "Animatronic",
+    "venue_type": [
+      "Theme park",
+      "Trade show",
+      "Disney internal demo"
+    ],
+    "performance_modes": [
+      "Scripted",
+      "Interactive",
+      "Tele-operated"
+    ],
+    "audience_interaction": true,
+    "voice_interaction": false,
+    "languages_spoken": "I am Groot (non-verbal)",
+    "expressive_capabilities": [
+      "Facial expressions",
+      "Eye contact",
+      "Gesture",
+      "Waving"
+    ],
+    "permanent_installation": false,
+    "touring_capable": true,
+    "setup_time_min": 60,
+    "crew_required": 2,
+    "intended_audience": [
+      "All ages"
+    ],
+    "social_role": "Theme park character interaction",
+    "target_user": [
+      "Theme park guests"
+    ],
+    "form_factor": "Humanoid (child-sized)",
+    "facial_recognition": true,
+    "voice_recognition": false,
+    "emotional_expression": true,
+    "mobility": "Bipedal walking (free-walking)",
+    "actuator_type": "Custom servo-driven",
+    "sensors": [
+      "Camera",
+      "IMU",
+      "Touch"
+    ],
+    "imu": true,
+    "ai_model": "Disney Research expressive character model",
+    "ai_cloud_required": false,
+    "battery_type": "Li-ion",
+    "use_cases": [
+      "Theme park meet & greets",
+      "Disney brand events",
+      "Imagineering R&D platform"
+    ],
+    "pilot_customers": [
+      "Disney Imagineering R&D demos",
+      "D23 Expo"
+    ],
+    "manufacturer_url": "https://sites.disney.com/waltdisneyimagineering",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "walt-disney-animatronic",
+    "name": "Walt Disney – A Magical Life",
+    "brand": "Walt Disney Imagineering",
+    "cat": "Entertainment",
+    "sub": "Audio-Animatronic",
+    "year": 2025,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Active",
+    "score": 88,
+    "desc": "Audio-Animatronic figure of Walt Disney himself, opened July 17 2025 at Disneyland California for the park's 70th anniversary. Plays in rotation with Great Moments with Mr. Lincoln (1964). 17-minute stage show in the Main Street, USA section. Controversial — Walt's granddaughter Joanna Miller publicly opposed the robot likeness, calling it 'dehumanizing.'",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "entertainment",
+      "animatronic",
+      "audio-animatronic",
+      "disney",
+      "controversial",
+      "historic-figure",
+      "active",
+      "anniversary"
+    ],
+    "also_known_as": "A Magical Life",
+    "announced": "2024",
+    "released": "2025-07-17",
+    "height_mm": 1730,
+    "weight_kg": 90,
+    "shell_material": "Silicone skin over mechanical skeleton",
+    "frame_material": "Composite + steel",
+    "entertainment_type": "Animatronic",
+    "venue_type": [
+      "Theme park"
+    ],
+    "performance_modes": [
+      "Scripted"
+    ],
+    "audience_interaction": false,
+    "voice_interaction": false,
+    "languages_spoken": "English (recorded Walt Disney voice)",
+    "expressive_capabilities": [
+      "Facial expressions",
+      "Eye contact",
+      "Gesture",
+      "Posture",
+      "Hand movement",
+      "Stand from seated"
+    ],
+    "synced_to_music": false,
+    "permanent_installation": true,
+    "touring_capable": false,
+    "intended_audience": [
+      "All ages"
+    ],
+    "social_role": "Historical figure recreation",
+    "target_user": [
+      "Theme park guests"
+    ],
+    "form_factor": "Seated humanoid figure (stands during show)",
+    "face_display": "Mechanical silicone face with micro-actuators",
+    "emotional_expression": true,
+    "mobility": "Static (head/torso/arm articulation, stands from chair)",
+    "actuator_type": "Pneumatic + servo",
+    "use_cases": [
+      "Stage show attraction",
+      "Brand storytelling",
+      "Park anniversary tribute"
+    ],
+    "pilot_customers": [
+      "Disneyland Park, Main Street USA (Disneyland Opera House)"
+    ],
+    "manufacturer_url": "https://sites.disney.com/waltdisneyimagineering",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "richtech-adam",
+    "name": "ADAM",
+    "brand": "Richtech Robotics",
+    "cat": "Entertainment",
+    "sub": "Robot Bartender",
+    "year": 2024,
+    "origin": "USA",
+    "made_in": "China",
+    "status": "Active",
+    "score": 87,
+    "desc": "Dual-armed AI-powered bartender (Automated Dual Arm Mixologist) from NASDAQ-listed Richtech Robotics. Debuted at CES 2024. First robot bartender permanently stationed at a major league sports venue (Texas Rangers Globe Life Field, 2024). Now serving at T-Mobile Arena NHL games. 23-drink menu, NSF certified for food service.",
+    "price": 75000,
+    "img": "",
+    "tags": [
+      "entertainment",
+      "bartender",
+      "robot-arm",
+      "ces",
+      "active",
+      "commercial",
+      "nasdaq",
+      "nvidia-powered"
+    ],
+    "also_known_as": "Automated Dual Arm Mixologist",
+    "announced": "2023",
+    "released": "2024",
+    "regions": [
+      "USA"
+    ],
+    "height_mm": 1700,
+    "width_mm": 1200,
+    "weight_kg": 180,
+    "shell_material": "White polymer (Baymax-inspired)",
+    "frame_material": "Steel base + aluminum",
+    "colors": [
+      "White"
+    ],
+    "entertainment_type": "Bartender",
+    "venue_type": [
+      "Bar/restaurant",
+      "Public installation",
+      "Trade show",
+      "Casino",
+      "Sports stadium",
+      "Coffee shop"
+    ],
+    "performance_modes": [
+      "Interactive",
+      "Audience-driven"
+    ],
+    "audience_interaction": true,
+    "voice_interaction": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages_spoken": "English",
+    "drinks_per_hour": 100,
+    "drink_menu_size": 50,
+    "payment_integration": true,
+    "expressive_capabilities": [
+      "Gesture",
+      "Posture",
+      "LED eye expressions"
+    ],
+    "permanent_installation": true,
+    "touring_capable": true,
+    "setup_time_min": 240,
+    "crew_required": 1,
+    "intended_audience": [
+      "Adult"
+    ],
+    "social_role": "Hospitality bartender + barista + boba maker",
+    "target_user": [
+      "Adult",
+      "Commercial venues"
+    ],
+    "form_factor": "Dual-arm robotic torso on counter base",
+    "face_display": "LED eye strip (blue)",
+    "facial_recognition": true,
+    "emotional_expression": true,
+    "mobility": "Static (24/7 operation)",
+    "dof": 14,
+    "actuator_type": "Electric (2x Richtech ARM modules)",
+    "payload_kg": 2,
+    "reach_mm": 800,
+    "sensors": [
+      "Intel RealSense depth camera",
+      "Force sensors",
+      "Microphone array",
+      "Cup detection vision"
+    ],
+    "cameras": "Intel RealSense AI depth sensor",
+    "microphones": "Array",
+    "speaker_count": 1,
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "conversational_ai": "LLM-powered (Edge AI)",
+    "ai_model": "NVIDIA Isaac libraries",
+    "chipset": "NVIDIA edge AI",
+    "wifi": "Wi-Fi 6",
+    "ce": true,
+    "fcc": true,
+    "other_certs": [
+      "NSF certified"
+    ],
+    "use_cases": [
+      "Bar service",
+      "Coffee shop",
+      "Boba tea",
+      "Hospitality entertainment",
+      "Casino lounges",
+      "Sports stadiums"
+    ],
+    "pilot_customers": [
+      "Texas Rangers Globe Life Field",
+      "T-Mobile Arena Las Vegas (NHL Golden Knights)",
+      "Brooklyn coffee shops",
+      "Las Vegas boba shops",
+      "MLB All-Star Game 2024"
+    ],
+    "warranty_months": 24,
+    "manufacturer_url": "https://richtechrobotics.com/solutions/adam",
+    "website": "https://richtechrobotics.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "makr-shakr",
+    "name": "Makr Shakr (Toni)",
+    "brand": "Makr Shakr",
+    "cat": "Entertainment",
+    "sub": "Robot Bartender",
+    "year": 2014,
+    "origin": "Italy",
+    "made_in": "Italy",
+    "status": "Active",
+    "score": 86,
+    "desc": "Two-armed robotic bartender installation co-designed with MIT and Pentagram design studio. Permanently installed on Royal Caribbean's Quantum-class cruise ships, airports, hotels and event spaces worldwide. Compatto model adds coffee; Veloce model can make up to 250 drinks per hour. Pioneered the robotic bartender category.",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "entertainment",
+      "bartender",
+      "cruise-ship",
+      "italy",
+      "active",
+      "category-defining",
+      "mit-collab"
+    ],
+    "also_known_as": "Toni",
+    "announced": "2013",
+    "released": "2014",
+    "regions": [
+      "Global"
+    ],
+    "variants": [
+      "Classic",
+      "Compatto",
+      "Veloce"
+    ],
+    "entertainment_type": "Bartender",
+    "venue_type": [
+      "Bar/restaurant",
+      "Public installation",
+      "Cruise ship",
+      "Casino",
+      "Airport"
+    ],
+    "performance_modes": [
+      "Interactive"
+    ],
+    "audience_interaction": true,
+    "voice_interaction": false,
+    "drinks_per_hour": 120,
+    "drink_menu_size": 158,
+    "payment_integration": true,
+    "expressive_capabilities": [
+      "Gesture",
+      "Pose",
+      "Synchronized arm choreography"
+    ],
+    "permanent_installation": true,
+    "touring_capable": false,
+    "intended_audience": [
+      "Adult"
+    ],
+    "social_role": "Hospitality bartender",
+    "target_user": [
+      "Adult"
+    ],
+    "form_factor": "Twin industrial robotic arms (overhead-mounted)",
+    "mobility": "Static",
+    "dof": 12,
+    "actuator_type": "Electric (Kuka industrial arms)",
+    "sensors": [
+      "Position encoders",
+      "Force feedback"
+    ],
+    "wifi": "Wi-Fi 5",
+    "ce": true,
+    "use_cases": [
+      "Cruise ship bars",
+      "Airport lounges",
+      "Hotel bars",
+      "Events",
+      "Casino lounges"
+    ],
+    "pilot_customers": [
+      "Royal Caribbean (Quantum-class fleet)",
+      "Celebrity Cruises",
+      "Tipsy Robot (Las Vegas)",
+      "Hard Rock Hotel & Casino Biloxi"
+    ],
+    "manufacturer_url": "https://www.makrshakr.com",
+    "website": "https://www.makrshakr.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "kuratas",
+    "name": "Kuratas",
+    "brand": "Suidobashi Heavy Industry",
+    "cat": "Entertainment",
+    "sub": "Piloted Mecha",
+    "year": 2012,
+    "origin": "Japan",
+    "made_in": "Japan",
+    "status": "Active",
+    "score": 89,
+    "desc": "Pilot-operated 4-meter mecha from Japanese artist Kogoro Kurata. Famous for the 2017 international mecha duel against MegaBots Inc.'s Eagle Prime (USA). Available for purchase or rental for events. Combines theatrical scale with a working piloted cockpit. Controlled via Kinect-style motion or smartphone.",
+    "price": 1350000,
+    "img": "",
+    "tags": [
+      "entertainment",
+      "mecha",
+      "piloted",
+      "japan",
+      "active",
+      "famous",
+      "duel",
+      "diesel-electric"
+    ],
+    "announced": "2012",
+    "released": "2012",
+    "height_mm": 4000,
+    "width_mm": 3000,
+    "weight_kg": 4500,
+    "shell_material": "Steel + composite armor panels",
+    "frame_material": "Steel space frame",
+    "colors": [
+      "Custom (any color)"
+    ],
+    "entertainment_type": "Piloted mecha performance",
+    "venue_type": [
+      "Public installation",
+      "Stage",
+      "Trade show",
+      "Outdoor exhibition"
+    ],
+    "performance_modes": [
+      "Pilot-driven"
+    ],
+    "audience_interaction": true,
+    "voice_interaction": false,
+    "expressive_capabilities": [
+      "Gesture",
+      "Posture",
+      "Arm articulation",
+      "Gatling gun arm (BB pellet)"
+    ],
+    "permanent_installation": false,
+    "touring_capable": true,
+    "intended_audience": [
+      "All ages"
+    ],
+    "social_role": "Entertainment mecha pilot exhibition",
+    "form_factor": "Humanoid mecha (single-pilot cockpit)",
+    "mobility": "Wheeled (4-wheel diamond layout)",
+    "max_speed_kmh": 10,
+    "dof": 30,
+    "actuator_type": "Hydraulic + electric",
+    "payload_kg": 100,
+    "power_source": "Diesel-electric hybrid",
+    "use_cases": [
+      "Public events",
+      "Brand activations",
+      "Spectacle",
+      "Famous mecha duel 2017"
+    ],
+    "manufacturer_url": "https://suidobashijuko.jp",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "compressorhead-drums",
+    "name": "Stickboy (Compressorhead drummer)",
+    "brand": "Compressorhead",
+    "cat": "Entertainment",
+    "sub": "Performance Robot",
+    "year": 2007,
+    "origin": "Germany",
+    "made_in": "Germany",
+    "status": "Active",
+    "score": 86,
+    "desc": "Four-armed pneumatic drummer in the world's first robotic heavy metal band Compressorhead. Built by German engineers from steel auto parts. Has played live across Europe and Australia, opened for Black Sabbath at Wacken Open Air 2016. The full band includes Bones (bass), Fingers (guitar), and Hellga (vocals).",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "entertainment",
+      "music",
+      "drummer",
+      "performance",
+      "germany",
+      "active",
+      "viral",
+      "metal",
+      "live-music"
+    ],
+    "announced": "2007",
+    "released": "2007",
+    "height_mm": 2400,
+    "width_mm": 2000,
+    "weight_kg": 800,
+    "shell_material": "Welded steel + auto parts (recycled)",
+    "frame_material": "Steel",
+    "colors": [
+      "Industrial grey",
+      "Rust patina"
+    ],
+    "entertainment_type": "Musical instrument player",
+    "venue_type": [
+      "Stage",
+      "Trade show",
+      "Public installation",
+      "Music festival"
+    ],
+    "performance_modes": [
+      "Music-reactive",
+      "Scripted"
+    ],
+    "audience_interaction": false,
+    "voice_interaction": false,
+    "synced_to_music": true,
+    "instrument_played": "Drums (4 arms + 2 feet, full kit)",
+    "expressive_capabilities": [
+      "Gesture",
+      "Posture",
+      "Synchronized headbanging"
+    ],
+    "permanent_installation": false,
+    "touring_capable": true,
+    "setup_time_min": 180,
+    "crew_required": 2,
+    "intended_audience": [
+      "Adult"
+    ],
+    "form_factor": "Seated drummer (4-arm)",
+    "mobility": "Static",
+    "actuator_type": "Pneumatic",
+    "power_source": "Compressed air + electric",
+    "use_cases": [
+      "Live music performance",
+      "Festival shows",
+      "Brand events"
+    ],
+    "pilot_customers": [
+      "Wacken Open Air 2016 (Black Sabbath support)",
+      "Touring music festivals (Europe, Australia)"
+    ],
+    "manufacturer_url": "https://compressorhead.rocks",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "z-machines",
+    "name": "Z-Machines",
+    "brand": "Z-Machines",
+    "cat": "Entertainment",
+    "sub": "Performance Robot Band",
+    "year": 2013,
+    "origin": "Japan",
+    "made_in": "Japan",
+    "status": "Decommissioned",
+    "score": 78,
+    "desc": "Japanese all-robot band consisting of MACH (78-finger guitarist), ASHURA (22-arm drummer), and COSMO (laser keyboardist). Created by Naofumi Yonetsuka (Tokyo University), performed at SXSW 2013 and Tokyo. Squarepusher composed 'Music for Robots' EP specifically for them in 2014. Project paused after 2015.",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "entertainment",
+      "music",
+      "japan",
+      "decommissioned",
+      "experimental",
+      "tokyo-uni",
+      "squarepusher"
+    ],
+    "announced": "2013",
+    "released": "2013",
+    "entertainment_type": "Musical instrument player",
+    "venue_type": [
+      "Stage",
+      "Recording studio",
+      "SXSW"
+    ],
+    "performance_modes": [
+      "Scripted",
+      "Music-reactive"
+    ],
+    "audience_interaction": false,
+    "voice_interaction": false,
+    "synced_to_music": true,
+    "instrument_played": "Guitar (78-finger MACH), Drums (22-arm ASHURA), Keyboard/laser (COSMO)",
+    "expressive_capabilities": [
+      "Mechanical posture"
+    ],
+    "permanent_installation": false,
+    "touring_capable": true,
+    "intended_audience": [
+      "All ages"
+    ],
+    "form_factor": "Multi-arm static instruments (3-robot band)",
+    "mobility": "Static",
+    "actuator_type": "Electric servo",
+    "use_cases": [
+      "Music performance",
+      "Album recording (Squarepusher 'Music for Robots' EP)",
+      "SXSW 2013"
+    ],
+    "manufacturer_url": "https://z-machines.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "nvidia-blue-droid",
+    "name": "Blue (Newton-trained BDX)",
+    "brand": "NVIDIA + Disney Research + Google DeepMind",
+    "cat": "Entertainment",
+    "sub": "Theme Park Animatronic",
+    "year": 2025,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Development",
+    "score": 91,
+    "desc": "Fully autonomous BDX-style droid unveiled by Jensen Huang at NVIDIA GTC 2025. Collaboration between NVIDIA, Google DeepMind, and Disney Research. Trained in NVIDIA's Newton physics engine (jointly developed by all three companies) using Isaac GROOT N1 Humanoid Foundation Model. No remote control — fully AI-driven walked on stage with Huang.",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "entertainment",
+      "animatronic",
+      "nvidia",
+      "ai",
+      "research",
+      "gtc-2025",
+      "development",
+      "deepmind",
+      "newton"
+    ],
+    "announced": "2025-03-18",
+    "released": "2025",
+    "height_mm": 600,
+    "width_mm": 350,
+    "weight_kg": 14,
+    "shell_material": "Composite shells",
+    "frame_material": "Aluminum",
+    "colors": [
+      "Blue"
+    ],
+    "entertainment_type": "Animatronic",
+    "venue_type": [
+      "Theme park",
+      "Trade show",
+      "Research demo"
+    ],
+    "performance_modes": [
+      "Audience-driven",
+      "Autonomous"
+    ],
+    "audience_interaction": true,
+    "voice_interaction": false,
+    "expressive_capabilities": [
+      "Eye contact",
+      "Gesture",
+      "Posture",
+      "Walking"
+    ],
+    "permanent_installation": false,
+    "touring_capable": true,
+    "intended_audience": [
+      "All ages"
+    ],
+    "form_factor": "Bipedal (BDX-style)",
+    "facial_recognition": true,
+    "emotional_expression": true,
+    "mobility": "Bipedal walking",
+    "dof": 12,
+    "actuator_type": "Custom servo-driven",
+    "ai_model": "NVIDIA Isaac GROOT N1 Humanoid Foundation Model",
+    "ai_cloud_required": false,
+    "local_processing_capable": true,
+    "learning_methods": [
+      "Reinforcement Learning",
+      "Imitation Learning",
+      "Foundation Model"
+    ],
+    "sim_platform": "NVIDIA Newton physics engine",
+    "chipset": "NVIDIA Jetson",
+    "sensors": [
+      "Camera",
+      "IMU",
+      "Joint encoders"
+    ],
+    "imu": true,
+    "use_cases": [
+      "Theme park entertainment",
+      "Robotics research demonstrator",
+      "NVIDIA GTC keynote"
+    ],
+    "manufacturer_url": "https://www.nvidia.com/en-us/research",
+    "website": "https://www.nvidia.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "abe-lincoln-disney",
+    "name": "Great Moments with Mr. Lincoln",
+    "brand": "Walt Disney Imagineering",
+    "cat": "Entertainment",
+    "sub": "Audio-Animatronic",
+    "year": 1964,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Active",
+    "score": 90,
+    "desc": "The original full-body Audio-Animatronic figure, debuted at the 1964 New York World's Fair (Illinois Pavilion) and moved to Disneyland in 1965. Has been periodically updated — most recent overhaul 2009 includes more lifelike skin texturing and facial expressions. Foundational milestone of the entire animatronic category, predating Disney's other animatronic shows by decades.",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "entertainment",
+      "animatronic",
+      "disney",
+      "historic",
+      "category-defining",
+      "active",
+      "audio-animatronic",
+      "1964-worlds-fair"
+    ],
+    "announced": "1964",
+    "released": "1964",
+    "height_mm": 1930,
+    "weight_kg": 120,
+    "shell_material": "Silicone skin over mechanical skeleton",
+    "frame_material": "Steel + actuator assembly",
+    "entertainment_type": "Animatronic",
+    "venue_type": [
+      "Theme park",
+      "World's Fair (original)"
+    ],
+    "performance_modes": [
+      "Scripted"
+    ],
+    "audience_interaction": false,
+    "voice_interaction": false,
+    "languages_spoken": "English (recorded narration of Lincoln speeches)",
+    "expressive_capabilities": [
+      "Facial expressions",
+      "Gesture",
+      "Posture",
+      "Stand from chair",
+      "Hand articulation"
+    ],
+    "permanent_installation": true,
+    "touring_capable": false,
+    "intended_audience": [
+      "All ages"
+    ],
+    "form_factor": "Standing/seated humanoid (transitions between states)",
+    "emotional_expression": true,
+    "mobility": "Static (stands from chair, gestures, hand movements)",
+    "actuator_type": "Pneumatic + servo (originally compressed air only)",
+    "use_cases": [
+      "Stage show attraction",
+      "Historical figure recreation"
+    ],
+    "pilot_customers": [
+      "Disneyland Park (Opera House)",
+      "1964 World's Fair (original)"
+    ],
+    "manufacturer_url": "https://sites.disney.com/waltdisneyimagineering",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "bobo-olive-cosmic-rewind",
+    "name": "Bobo and Olive (Sky Force Snack Bar)",
+    "brand": "Walt Disney Imagineering",
+    "cat": "Entertainment",
+    "sub": "Themed Service Animatronic",
+    "year": 2025,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Active",
+    "score": 80,
+    "desc": "Pair of robotic characters serving snacks at the Cosmic Rewind area in Walt Disney World EPCOT. Interact with guests via scripted humorous banter while assisting human cast members. Example of Disney's expansion of robotics from passive animatronics to active service roles.",
+    "price": "POA",
+    "img": "",
+    "tags": [
+      "entertainment",
+      "animatronic",
+      "disney",
+      "service",
+      "active",
+      "cosmic-rewind",
+      "epcot"
+    ],
+    "announced": "2025",
+    "released": "2025",
+    "shell_material": "Silicone + textile costumes",
+    "entertainment_type": "Animatronic",
+    "venue_type": [
+      "Theme park"
+    ],
+    "performance_modes": [
+      "Scripted"
+    ],
+    "audience_interaction": true,
+    "voice_interaction": false,
+    "languages_spoken": "English (pre-recorded scripts)",
+    "expressive_capabilities": [
+      "Facial expressions",
+      "Gesture",
+      "Eye contact",
+      "Banter exchange"
+    ],
+    "permanent_installation": true,
+    "touring_capable": false,
+    "intended_audience": [
+      "All ages"
+    ],
+    "form_factor": "Humanoid bust-style characters",
+    "facial_recognition": false,
+    "emotional_expression": true,
+    "mobility": "Static (bust articulation)",
+    "actuator_type": "Servo",
+    "use_cases": [
+      "Themed snack service",
+      "Theme park entertainment",
+      "Cast member augmentation"
+    ],
+    "pilot_customers": [
+      "Walt Disney World - EPCOT - Guardians of the Galaxy: Cosmic Rewind"
+    ],
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "shadow-dexterous-hand",
+    "name": "Shadow Dexterous Hand",
+    "brand": "Shadow Robot Company",
+    "cat": "Entertainment",
+    "sub": "Performance Tool",
+    "year": 2005,
+    "origin": "UK",
+    "made_in": "UK",
+    "status": "Active",
+    "score": 79,
+    "desc": "Anthropomorphic robotic hand widely used in research, prosthetics development, and entertainment installations. Most human-like robotic hand on the market. Has appeared in art installations including 'In Event of Moon Disaster' at the Imperial War Museum. Used by OpenAI for dexterous manipulation research.",
+    "price": 110000,
+    "img": "",
+    "tags": [
+      "entertainment",
+      "art-installation",
+      "hand",
+      "uk",
+      "active",
+      "dexterous",
+      "research-grade",
+      "openai"
+    ],
+    "announced": "2005",
+    "released": "2005",
+    "height_mm": 240,
+    "weight_kg": 4.2,
+    "dof": 24,
+    "shell_material": "Anodized aluminum + ABS",
+    "entertainment_type": "Interactive art",
+    "venue_type": [
+      "Museum",
+      "Public installation",
+      "Stage",
+      "Research lab"
+    ],
+    "performance_modes": [
+      "Scripted",
+      "Interactive",
+      "Tele-operated"
+    ],
+    "audience_interaction": true,
+    "expressive_capabilities": [
+      "Gesture",
+      "Object manipulation",
+      "Sign language"
+    ],
+    "permanent_installation": false,
+    "touring_capable": true,
+    "intended_audience": [
+      "All ages"
+    ],
+    "form_factor": "Robotic hand + forearm",
+    "mobility": "Static (when used alone) / Arm-mounted",
+    "actuator_type": "Pneumatic tendon-driven (artificial muscles)",
+    "sensors": [
+      "129 tactile sensors",
+      "Position",
+      "Force",
+      "Hall effect joints"
+    ],
+    "ros": true,
+    "ros_version": "ROS / ROS 2",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++",
+      "ROS"
+    ],
+    "use_cases": [
+      "Art installation",
+      "Research",
+      "Live demonstration",
+      "Prosthetics development"
+    ],
+    "pilot_customers": [
+      "OpenAI (Rubik's Cube manipulation)",
+      "Imperial War Museum",
+      "UCL",
+      "NASA JPL"
+    ],
+    "manufacturer_url": "https://www.shadowrobot.com",
+    "website": "https://www.shadowrobot.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "rovio-wowwee",
+    "name": "Rovio",
+    "brand": "WowWee",
+    "cat": "Entertainment",
+    "sub": "Stage Performance Robot",
+    "year": 2008,
+    "origin": "Hong Kong",
+    "made_in": "China",
+    "status": "Discontinued",
+    "score": 70,
+    "desc": "WiFi-controlled mobile webcam robot from WowWee, designed for home telepresence and remote monitoring. Found a niche in event entertainment as a remotely-operated 'roving reporter' character at conferences and live shows. Discontinued in consumer market.",
+    "price": 350,
+    "img": "",
+    "tags": [
+      "entertainment",
+      "telepresence-stage",
+      "wowwee",
+      "discontinued",
+      "wifi-controlled"
+    ],
+    "announced": "2008",
+    "released": "2008",
+    "width_mm": 230,
+    "height_mm": 280,
+    "weight_kg": 1.4,
+    "shell_material": "ABS plastic",
+    "colors": [
+      "Black"
+    ],
+    "entertainment_type": "Interactive art",
+    "venue_type": [
+      "Trade show",
+      "Stage",
+      "Home"
+    ],
+    "performance_modes": [
+      "Pilot-driven"
+    ],
+    "audience_interaction": true,
+    "voice_interaction": true,
+    "speech_synthesis": false,
+    "permanent_installation": false,
+    "touring_capable": true,
+    "intended_audience": [
+      "All ages"
+    ],
+    "form_factor": "3-wheel webcam robot (omnidirectional)",
+    "mobility": "Wheeled (omnidirectional 3-wheel)",
+    "cameras": "VGA webcam (640×480, manual tilt)",
+    "wifi": "Wi-Fi 4 (802.11g)",
+    "battery_life_typical": 120,
+    "auto_charge": true,
+    "use_cases": [
+      "Event roaming reporter",
+      "Promotional appearances",
+      "Home telepresence"
+    ],
+    "manufacturer_url": "https://wowwee.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "robosapien",
+    "name": "RoboSapien",
+    "brand": "WowWee",
+    "cat": "Entertainment",
+    "sub": "Performance Toy",
+    "year": 2004,
+    "origin": "Hong Kong",
+    "made_in": "China",
+    "status": "Discontinued",
+    "score": 82,
+    "desc": "Mass-market biomorphic robot designed by NASA roboticist Mark Tilden. Sold over 7 million units worldwide making it one of the best-selling robot toys in history. Used in countless trade shows, music videos and entertainment events. Defined the home humanoid toy category and predates almost every modern consumer social robot.",
+    "price": 99,
+    "img": "",
+    "tags": [
+      "entertainment",
+      "toy",
+      "wowwee",
+      "discontinued",
+      "category-defining",
+      "historic",
+      "mass-market",
+      "nasa-design"
+    ],
+    "announced": "2004",
+    "released": "2004",
+    "height_mm": 380,
+    "width_mm": 230,
+    "weight_kg": 2,
+    "shell_material": "ABS plastic",
+    "frame_material": "ABS",
+    "colors": [
+      "White/Grey",
+      "Black (later editions)"
+    ],
+    "entertainment_type": "Performance robot toy",
+    "venue_type": [
+      "Trade show",
+      "Public installation",
+      "Home"
+    ],
+    "performance_modes": [
+      "Pilot-driven (IR remote)",
+      "Pre-scripted"
+    ],
+    "audience_interaction": true,
+    "voice_interaction": false,
+    "expressive_capabilities": [
+      "Gesture",
+      "Walking",
+      "Object pickup",
+      "Pre-programmed dance routines",
+      "67 pre-programmed functions"
+    ],
+    "synced_to_music": true,
+    "permanent_installation": false,
+    "touring_capable": true,
+    "intended_audience": [
+      "All ages"
+    ],
+    "form_factor": "Bipedal humanoid (toy)",
+    "mobility": "Bipedal walking",
+    "dof": 14,
+    "actuator_type": "Electric servo",
+    "sensors": [
+      "IR (remote + obstacle)",
+      "Touch",
+      "Sound"
+    ],
+    "use_cases": [
+      "Toy",
+      "Live demonstrations",
+      "Trade shows",
+      "Music videos"
+    ],
+    "power_source": "4x D batteries",
+    "manufacturer_url": "https://wowwee.com",
+    "fig": "🤖",
+    "rating": 4
+  },
+  {
+    "id": "boston-dynamics-spot-dancing",
+    "name": "Spot (Dancing variant)",
+    "brand": "Boston Dynamics",
+    "cat": "Entertainment",
+    "sub": "Performance Robot",
+    "year": 2020,
+    "origin": "USA",
+    "made_in": "USA",
+    "status": "Active",
+    "score": 88,
+    "desc": "Choreographed performance variant of Spot. The viral 'Do You Love Me' video (Dec 2020) reached 30M+ views in a week. Spot units regularly perform at corporate events, sports halftime shows (BTS Korean concert tours), and music videos. Same hardware as standard Spot but with custom Choreographer dance software.",
+    "price": 75000,
+    "img": "",
+    "tags": [
+      "entertainment",
+      "performance",
+      "boston-dynamics",
+      "viral",
+      "active",
+      "quadruped",
+      "dance",
+      "choreographer"
+    ],
+    "announced": "2020",
+    "released": "2020",
+    "height_mm": 840,
+    "width_mm": 500,
+    "weight_kg": 32,
+    "shell_material": "Composite + aluminum",
+    "frame_material": "Aluminum",
+    "ip_rating": "IP54",
+    "operating_temp_min": -20,
+    "operating_temp_max": 45,
+    "entertainment_type": "Performance robot",
+    "venue_type": [
+      "Stage",
+      "Trade show",
+      "Public installation",
+      "Sports stadium",
+      "Music video"
+    ],
+    "performance_modes": [
+      "Scripted",
+      "Music-reactive",
+      "Tele-operated"
+    ],
+    "audience_interaction": false,
+    "voice_interaction": false,
+    "synced_to_music": true,
+    "expressive_capabilities": [
+      "Gesture",
+      "Posture",
+      "Dance choreography",
+      "Synchronized group choreography"
+    ],
+    "permanent_installation": false,
+    "touring_capable": true,
+    "setup_time_min": 30,
+    "crew_required": 1,
+    "intended_audience": [
+      "All ages"
+    ],
+    "form_factor": "Quadruped (legged)",
+    "mobility": "Quadruped walking (Walk, Trot, Crawl)",
+    "max_speed_ms": 1.6,
+    "dof": 12,
+    "actuator_type": "Electric (Boston Dynamics actuators)",
+    "payload_kg": 14,
+    "sensors": [
+      "Stereo cameras (5x)",
+      "IMU",
+      "Joint encoders",
+      "Position"
+    ],
+    "imu": true,
+    "cameras": "5x stereo + IR depth",
+    "wifi": "Wi-Fi 5",
+    "ethernet": "Yes",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "api": "REST",
+    "battery_type": "Li-ion",
+    "battery_life_typical": 90,
+    "hot_swap": true,
+    "ros": true,
+    "use_cases": [
+      "Music video",
+      "Halftime shows",
+      "Brand activations",
+      "Trade shows",
+      "Corporate events"
+    ],
+    "pilot_customers": [
+      "Hyundai BTS concerts",
+      "Various NFL halftime",
+      "Trade shows worldwide"
+    ],
+    "manufacturer_url": "https://bostondynamics.com",
+    "website": "https://bostondynamics.com",
     "fig": "🤖",
     "rating": 4
   }
