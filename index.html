@@ -2581,24 +2581,90 @@ function buildSpecTable(r) {
 // ════════════ END spec table ════════════
 
 
-function openLightbox(src, alt){
+// ════════════ CLOUDINARY IMAGE OPTIMIZATION ════════════
+// Auto-transforms Cloudinary URLs to produce uniform, optimized thumbnails.
+// For thumbnails: crop to fill a 200x200 square using AI auto-gravity, deliver as auto-format (webp/avif), auto-quality.
+// For lightbox: limit max dimensions, auto-format, auto-quality. Aspect preserved (no crop).
+// Non-Cloudinary URLs are returned unchanged.
+function cldTransform(url, mode){
+  if (!url || typeof url !== 'string') return url;
+  if (url.indexOf('res.cloudinary.com') === -1) return url;
+  // Find /upload/ position — transforms go right after it.
+  const i = url.indexOf('/upload/');
+  if (i === -1) return url;
+  // If already has transforms, leave alone (assume manually set).
+  const after = url.slice(i + 8);
+  if (/^[a-z]_/i.test(after)) return url;
+  let t;
+  if (mode === 'thumb')  t = 'c_fill,g_auto,w_200,h_200,f_auto,q_auto';
+  else if (mode === 'main') t = 'c_limit,w_800,h_800,f_auto,q_auto';
+  else t = 'f_auto,q_auto';
+  return url.slice(0, i + 8) + t + '/' + after;
+}
+
+// ════════════ LIGHTBOX (gallery-aware) ════════════
+// State: holds the current gallery for prev/next navigation.
+let _lbImgs = [];
+let _lbIdx = 0;
+
+function openLightbox(src, alt, imgs){
+  // Accepts a single src, OR a list of imgs + index inferred from src position.
+  if (Array.isArray(imgs) && imgs.length){
+    _lbImgs = imgs.slice();
+    _lbIdx = Math.max(0, _lbImgs.indexOf(src));
+    if (_lbIdx === -1) _lbIdx = 0;
+  } else {
+    _lbImgs = [src];
+    _lbIdx = 0;
+  }
+  _lbRender(alt);
   const lb = document.getElementById('lightbox');
-  const img = document.getElementById('lightbox-img');
-  img.src = src;
-  img.alt = alt || '';
   lb.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
+
+function _lbRender(alt){
+  const img = document.getElementById('lightbox-img');
+  const counter = document.getElementById('lightbox-counter');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  if (!img) return;
+  img.src = cldTransform(_lbImgs[_lbIdx], 'main');
+  img.alt = alt || '';
+  // Multi-image controls
+  const show = _lbImgs.length > 1;
+  if (counter){ counter.style.display = show ? '' : 'none'; counter.textContent = (_lbIdx + 1) + ' / ' + _lbImgs.length; }
+  if (prevBtn) prevBtn.style.display = show ? '' : 'none';
+  if (nextBtn) nextBtn.style.display = show ? '' : 'none';
+}
+
+function lbPrev(e){
+  if (e) e.stopPropagation();
+  if (!_lbImgs.length) return;
+  _lbIdx = (_lbIdx - 1 + _lbImgs.length) % _lbImgs.length;
+  _lbRender();
+}
+
+function lbNext(e){
+  if (e) e.stopPropagation();
+  if (!_lbImgs.length) return;
+  _lbIdx = (_lbIdx + 1) % _lbImgs.length;
+  _lbRender();
+}
+
 function closeLightbox(){
   document.getElementById('lightbox').style.display = 'none';
   document.body.style.overflow = '';
+  _lbImgs = []; _lbIdx = 0;
 }
-// Esc key to close
+
+// Keyboard: Esc=close, ←/→=prev/next
 document.addEventListener('keydown', e => {
-  if(e.key === 'Escape'){
-    const lb = document.getElementById('lightbox');
-    if(lb && lb.style.display === 'flex') closeLightbox();
-  }
+  const lb = document.getElementById('lightbox');
+  if (!lb || lb.style.display !== 'flex') return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowLeft') lbPrev();
+  else if (e.key === 'ArrowRight') lbNext();
 });
 
 // Public entry — called from every onclick. Routes through hash so Back works
@@ -2629,9 +2695,10 @@ function _renderProfile(id){
   // Helper: render main image at given URL
   function setMainImg(src){
     figEl.style.cursor = 'zoom-in';
-    figEl.onclick = () => openLightbox(src, r.name||'');
+    figEl.onclick = () => openLightbox(src, r.name||'', allImgs);
     const isMascot = src === MASCOT_URL;
-    figEl.innerHTML = `<img src="${src}" alt="${r.name||''}" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain'">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
+    const display = cldTransform(src, 'main');
+    figEl.innerHTML = `<img src="${display}" alt="${r.name||''}" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain'">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
   }
 
   setMainImg(allImgs[0]);
@@ -2641,7 +2708,7 @@ function _renderProfile(id){
     thumbsEl.style.display = '';
     thumbsEl.innerHTML = allImgs.map((url, i) => `
       <div class="thumb ${i === 0 ? 'active' : ''}" data-img="${url.replace(/"/g, '&quot;')}">
-        <img src="${url}" alt="" onerror="this.parentElement.style.display='none'">
+        <img src="${cldTransform(url, 'thumb')}" alt="" onerror="this.parentElement.style.display='none'">
       </div>
     `).join('');
     // Wire click handlers
@@ -4019,13 +4086,6 @@ function isVideoUrl(url){
   if(!url)return false;
   return url.indexOf('youtube.com')>=0||url.indexOf('youtu.be')>=0||url.indexOf('vimeo.com')>=0||url.slice(-4)==='.mp4'||url.slice(-5)==='.webm';
 }
-function openLightbox(url){
-  var lb=document.createElement('div');
-  lb.style.cssText='position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;display:flex;align-items:center;justify-content:center;cursor:pointer';
-  lb.onclick=function(){lb.remove();};
-  lb.innerHTML='<img src="'+url+'" style="max-width:90vw;max-height:90vh;border-radius:10px">';
-  document.body.appendChild(lb);
-}
 function setAd(slot,url,text,sub){
   var el=document.getElementById('ad-slot-'+slot);
   if(!el)return;
@@ -4063,9 +4123,12 @@ function runFinderSearch(){
 }
 </script>
 
-<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;padding:32px;cursor:zoom-out">
-  <img id="lightbox-img" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:0 12px 60px rgba(0,0,0,.6)">
-  <div style="position:absolute;top:18px;right:24px;color:#fff;font-size:26px;font-weight:300;cursor:pointer;line-height:1;width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:rgba(255,255,255,.1)">×</div>
+<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;background:#fff;z-index:9999;align-items:center;justify-content:center;padding:48px;cursor:zoom-out">
+  <img id="lightbox-img" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px">
+  <button id="lightbox-prev" onclick="lbPrev(event)" aria-label="Previous image" style="display:none;position:absolute;left:24px;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:1px solid #e5e7eb;background:#fff;color:#111;font-size:28px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center">‹</button>
+  <button id="lightbox-next" onclick="lbNext(event)" aria-label="Next image" style="display:none;position:absolute;right:24px;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:1px solid #e5e7eb;background:#fff;color:#111;font-size:28px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center">›</button>
+  <div id="lightbox-counter" style="display:none;position:absolute;bottom:24px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.7);color:#fff;padding:6px 14px;border-radius:16px;font-size:13px;font-family:system-ui,sans-serif">1 / 1</div>
+  <div onclick="event.stopPropagation();closeLightbox()" aria-label="Close" style="position:absolute;top:18px;right:24px;color:#111;font-size:26px;font-weight:300;cursor:pointer;line-height:1;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#f3f4f6;border:1px solid #e5e7eb">×</div>
 </div>
 </body>
 </html>
