@@ -3834,14 +3834,20 @@ function saveAllImages() {
       const newImg = mainInput.value.trim();
       if (newImg !== (r.img||'')) { r.img = newImg; changed++; }
     }
-    const gallery = [];
-    for (let i = 0; i < 5; i++) {
-      const gInput = document.getElementById(`gallery-${r.id}-${i}`);
-      if (gInput) gallery.push(gInput.value.trim());
+    // ── GALLERY: only touch robots whose gallery inputs are actually in the DOM. ──
+    // Earlier version iterated ALL robots and DELETED gallery if DOM had no inputs,
+    // which wiped galleries from off-screen robots on every save. Now scoped properly.
+    const firstGInput = document.getElementById(`gallery-${r.id}-0`);
+    if (firstGInput) {
+      const gallery = [];
+      for (let i = 0; i < 5; i++) {
+        const gInput = document.getElementById(`gallery-${r.id}-${i}`);
+        if (gInput) gallery.push(gInput.value.trim());
+      }
+      const hasGallery = gallery.some(u => u);
+      if (hasGallery) r.gallery = gallery;
+      else if (r.gallery) delete r.gallery;
     }
-    const hasGallery = gallery.some(u => u);
-    if (hasGallery) r.gallery = gallery;
-    else if (r.gallery) delete r.gallery;
   });
   saveDB();
   addLog('success', `Image Manager: saved ${changed} main images`);
