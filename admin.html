@@ -3945,38 +3945,126 @@ function restoreLastGallerySnapshot(){
   }
 }
 
-function saveAllImages() {
-  // ─── SAFETY NET: snapshot galleries BEFORE we touch anything ───
-  // Even if saveAllImages has a bug, the snapshot is in localStorage and
-  // restoreLastGallerySnapshot() can recover.
-  snapshotGalleries('before-saveAllImages');
-  
-  let changed = 0;
-  ROBOTS.forEach(r => {
-    const mainInput = document.getElementById('mainimg-'+r.id);
-    if (mainInput) {
-      const newImg = mainInput.value.trim();
-      if (newImg !== (r.img||'')) { r.img = newImg; changed++; }
+// ════════════════════════════════════════════════════════════
+// PER-ROBOT SAVE — concurrent-safe, no stale-tab overwrites
+// ════════════════════════════════════════════════════════════
+// Replaces the old "push entire ROBOTS array" pattern. Each call updates
+// ONE robot via a Netlify function that fetches latest robots.json server-side,
+// merges in the changes, and pushes back. Two workers editing different
+// robots simultaneously can both save safely.
+
+const SAVE_ROBOT_ENDPOINT = '/.netlify/functions/save-robot';
+
+async function _callSaveRobot(robotId, changes){
+  // Caller is responsible for checking that the DOM inputs exist before calling
+  // — this function does NOT validate that, it just POSTs whatever it's given.
+  const workerName = (window.CURRENT_WORKER && window.CURRENT_WORKER.name)
+    || localStorage.getItem('mrsh_worker_name')
+    || '';
+  const res = await fetch(SAVE_ROBOT_ENDPOINT, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({robotId, changes, workerName}),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok || !data.ok){
+    throw new Error(data.error || `HTTP ${res.status}`);
+  }
+  return data;
+}
+
+// Save the gallery + main image for ONE specific robot, by reading its DOM inputs.
+// Returns a Promise that resolves on success, rejects on error.
+// Call this for the per-row "Save" button in the Image Manager.
+async function saveSingleRobotImages(robotId){
+  const r = ROBOTS.find(x => x.id === robotId);
+  if (!r){ throw new Error('Robot not found in local DB: ' + robotId); }
+
+  // Build the change set from the DOM
+  const changes = {};
+
+  const mainInput = document.getElementById('mainimg-' + robotId);
+  if (mainInput){
+    const newImg = mainInput.value.trim();
+    if (newImg !== (r.img || '')) changes.img = newImg;
+  }
+
+  const firstG = document.getElementById(`gallery-${robotId}-0`);
+  if (firstG){
+    const gallery = [];
+    for (let i = 0; i < 5; i++){
+      const g = document.getElementById(`gallery-${robotId}-${i}`);
+      if (g) gallery.push(g.value.trim());
     }
-    // ── GALLERY: only touch robots whose gallery inputs are actually in the DOM. ──
-    // Earlier version iterated ALL robots and DELETED gallery if DOM had no inputs,
-    // which wiped galleries from off-screen robots on every save. Now scoped properly.
-    const firstGInput = document.getElementById(`gallery-${r.id}-0`);
-    if (firstGInput) {
-      const gallery = [];
-      for (let i = 0; i < 5; i++) {
-        const gInput = document.getElementById(`gallery-${r.id}-${i}`);
-        if (gInput) gallery.push(gInput.value.trim());
-      }
-      const hasGallery = gallery.some(u => u);
-      if (hasGallery) r.gallery = gallery;
-      else if (r.gallery) delete r.gallery;
+    // Always include gallery in the payload — server decides whether to set or unset.
+    // (Worker may have intentionally cleared all 5 inputs to remove the gallery.)
+    changes.gallery = gallery.filter(u => u);
+  }
+
+  if (Object.keys(changes).length === 0){
+    return {ok: true, robotId, updated: [], noop: true};
+  }
+
+  // Update local copy + UI optimistically so workers see immediate feedback.
+  // If the server call fails we don't roll back — they'll see the error and can retry.
+  if ('img' in changes) r.img = changes.img;
+  if ('gallery' in changes){
+    if (changes.gallery.length) r.gallery = changes.gallery;
+    else delete r.gallery;
+  }
+  saveDB();
+
+  // Push to server
+  const result = await _callSaveRobot(robotId, changes);
+  addLog('success', `Saved ${robotId} (${result.updated.join(', ')})`);
+  return result;
+}
+
+// Rebuilt "Save All" — instead of one big push, loops through robots with
+// DOM inputs present and saves each individually via the safe endpoint.
+// Shows progress; one failure doesn't kill the whole batch.
+async function saveAllImages(){
+  // Safety net first (in case of unforeseen UI bug)
+  snapshotGalleries('before-saveAllImages');
+
+  // Find every robot that has gallery inputs OR main image input currently rendered
+  const targets = [];
+  ROBOTS.forEach(r => {
+    if (document.getElementById('mainimg-' + r.id) || document.getElementById(`gallery-${r.id}-0`)){
+      targets.push(r.id);
     }
   });
-  saveDB();
-  addLog('success', `Image Manager: saved ${changed} main images`);
-  deployNow();
-  addMsg(`Saved images for ${changed} robots and deploying to live site...`, 'system');
+
+  if (targets.length === 0){
+    addMsg('No robot inputs currently rendered. Open a robot row first.', 'system');
+    return;
+  }
+
+  addMsg(`Saving ${targets.length} robot${targets.length === 1 ? '' : 's'} (concurrent-safe, one at a time)...`, 'system');
+  let ok = 0, fail = 0, noop = 0;
+  const errors = [];
+
+  for (const id of targets){
+    try {
+      const res = await saveSingleRobotImages(id);
+      if (res.noop) noop++;
+      else ok++;
+    } catch(e){
+      fail++;
+      errors.push(`${id}: ${e.message}`);
+      addLog('error', `Save failed for ${id}: ${e.message}`);
+    }
+  }
+
+  const parts = [];
+  if (ok)   parts.push(`✅ ${ok} saved`);
+  if (noop) parts.push(`⊙ ${noop} unchanged`);
+  if (fail) parts.push(`❌ ${fail} failed`);
+  addMsg(parts.join(' · '), fail ? 'error' : 'success');
+  if (errors.length){
+    addMsg('Errors:\n' + errors.slice(0, 5).join('\n') + (errors.length > 5 ? `\n…and ${errors.length - 5} more` : ''), 'error');
+  }
+  // No saveDB+deployNow — per-robot saves already deployed via the function.
 }
 
 
