@@ -424,7 +424,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       </div>
       <div style="display:flex;gap:8px">
         <button class="tbl-action" onclick="clearChat()">Clear chat</button>
-        <button class="save-btn" onclick="deployNow()" id="deploy-btn">🚀 Deploy site</button>
+        <button class="save-btn" onclick="deployNow()" id="deploy-btn" style="background:#dc2626" title="LEGACY emergency deploy — only use if a tool fails. All tools now auto-save via safe server-side merge.">⚠️ Legacy Deploy</button>
       </div>
     </div>
 
@@ -900,7 +900,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
                 <button class="save-btn" onclick="bulkFillPhase1()" id="phase1-btn">🔬 Phase 1: Fill year + origin</button>
                 <button class="save-btn" onclick="bulkFillPhase2()" id="phase2-btn" style="background:#7c3aed">🔬 Phase 2: Re-ingest thin records</button>
                 <button class="save-btn" onclick="pauseBulkFill()" id="bulk-pause-btn" style="background:var(--bg3);color:var(--txt);display:none">⏸ Pause</button>
-                <button class="save-btn" onclick="saveDB();deployNow();" style="background:#16a34a">💾 Save + Deploy</button>
+                <button class="save-btn" onclick="savePhaseChanges()" style="background:#16a34a">💾 Save + Deploy (Safe)</button>
               </div>
               <div id="bulk-progress" style="margin-top:10px;font-size:11px;color:#713f12"></div>
             </div>
@@ -2216,7 +2216,6 @@ async function bulkImportRun(){
   const dupeMode = modeEl ? modeEl.value : 'skip'; // 'skip' | 'merge' | 'add'
 
   // Build a map of new-robot-id → existing-robot for the potential dupes
-  // (so during the merge loop we can find the existing entry by my new id)
   const dupeMap = {};
   _bulkPotentialDupes.forEach(d => { dupeMap[d.newRobot.id] = d.existingRobot; });
 
@@ -2228,125 +2227,173 @@ async function bulkImportRun(){
     skippedDupes = before - robots.length;
   }
 
-  // Sensible defaults: treat 0 / "" / null / [] as "empty" for the smart-merge
   function _isEmpty(v){
     if (v === undefined || v === null) return true;
     if (typeof v === 'string' && v.trim() === '') return true;
-    if (typeof v === 'number' && v === 0) return true; // 0 weight/price/etc. treated as missing
+    if (typeof v === 'number' && v === 0) return true;
     if (Array.isArray(v) && v.length === 0) return true;
     if (typeof v === 'object' && Object.keys(v).length === 0) return true;
     return false;
   }
-  // Fields we never overwrite — these are user/worker-curated even when "empty" looks set
-  // Added 'gallery' (v2026-05-25 FIX2) to prevent bulk imports without gallery field from
-  // nuking existing galleries via Object.assign in Path 1.
   const NEVER_OVERWRITE = new Set(['img', 'id', 'gallery']);
 
   const confirmMsg =
-    'Import ' + robots.length + ' robots and push to GitHub?\n\n' +
+    'Import ' + robots.length + ' robots via SAFE server-side merge?\n\n' +
     'Mode: ' + (
       dupeMode === 'skip' ? 'Skip ' + skippedDupes + ' potential duplicates' :
       dupeMode === 'merge' ? 'Smart-merge ' + _bulkPotentialDupes.length + ' potential duplicates (preserve images & existing data)' :
       'Add all entries (may create duplicate pairs)'
     ) +
-    '\n\nThis will deploy live.';
+    '\n\nServer fetches latest GitHub state and merges your changes — stale-tab safe.';
   if (!confirm(confirmMsg)) return;
 
-  // ─── SAFETY NET: snapshot galleries BEFORE bulk import ───
-  // Even if smart-merge has a bug, snapshot is in localStorage and recoverable
-  // via restoreLastGallerySnapshot()
   if (typeof snapshotGalleries === 'function') snapshotGalleries('before-bulkImport');
 
   const runBtn = document.getElementById('bulk-import-run-btn');
   if (runBtn) { runBtn.disabled = true; runBtn.textContent = '⏳ Importing...'; }
-  _bulkStatus('⏳ Merging ' + robots.length + ' robots into database...', 'var(--acc)');
+  _bulkStatus('⏳ Server fetching latest state and merging ' + robots.length + ' robots...', 'var(--acc)');
 
-  let added = 0, updated = 0, smartMerged = 0;
+  // Build the upsert payload. The server preserves gallery/img if they're omitted.
+  // For dupeMode='merge', we still apply smart-merge logic locally so the server
+  // receives the merged record; server's gallery/img preservation acts as defense-in-depth.
+  const upserts = [];
+  let smartMergeCount = 0;
+
+  // Local ROBOTS index just for smart-merge decisions (not for the actual write).
   const byId = {};
   ROBOTS.forEach(r => { byId[r.id] = r; });
 
-  robots.forEach(r => {
-    // Sanitize: ensure required fields have safe defaults
+  for (const r of robots){
+    // Sanitize defaults on new entries
     if (!r.fig) r.fig = '🤖';
     if (!r.tags) r.tags = [];
-    if (!r.img) r.img = '';
     if (r.score == null) r.score = 75;
     if (r.rating == null) r.rating = 4.0;
     if (r.status == null) r.status = 'Active';
 
-    // Path 1: Exact id match → straight update (existing behavior, unchanged)
+    // Path 1: exact ID match → server will UPDATE (omitted gallery/img preserved)
     if (byId[r.id]){
-      const target = byId[r.id];
-      // Preserve image if existing has one and new is empty
-      const preservedImg = target.img && !r.img ? target.img : (r.img || target.img || '');
-      // Preserve gallery: NEVER let bulk import wipe gallery. If new entry has no
-      // gallery field, keep existing. If it has one, only use it (don't merge).
-      const preservedGallery = (r.gallery && Array.isArray(r.gallery) && r.gallery.length > 0) 
-        ? r.gallery 
-        : target.gallery;
-      Object.assign(target, r);
-      target.img = preservedImg;
-      if (preservedGallery) target.gallery = preservedGallery;
-      else if (target.gallery && !preservedGallery) delete target.gallery;
-      updated++;
-      return;
+      // Strip empty/zero fields so server preserves existing values for those
+      const cleaned = {};
+      for (const [k, v] of Object.entries(r)){
+        if (!_isEmpty(v)) cleaned[k] = v;
+      }
+      cleaned.id = r.id; // always include id
+      upserts.push(cleaned);
+      continue;
     }
 
-    // Path 2: Potential dupe AND mode is 'merge' → smart-merge into existing entry
+    // Path 2: smart-merge mode → build the merged record locally, then UPSERT it
     if (dupeMode === 'merge' && dupeMap[r.id]){
-      const target = dupeMap[r.id];
-      let fieldsChanged = 0;
+      const existing = dupeMap[r.id];
+      const merged = { ...existing }; // start from existing
       for (const key of Object.keys(r)){
         if (NEVER_OVERWRITE.has(key)) continue;
-        // Only overwrite if new has data AND (existing is empty OR new is more verbose for strings)
         if (_isEmpty(r[key])) continue;
-        if (_isEmpty(target[key])){
-          target[key] = r[key];
-          fieldsChanged++;
-        } else if (typeof r[key] === 'string' && typeof target[key] === 'string' && r[key].length > target[key].length * 1.3){
-          // Significantly longer string → likely better description
-          target[key] = r[key];
-          fieldsChanged++;
-        } else if (Array.isArray(r[key]) && Array.isArray(target[key])){
-          // Merge tags/highlights — union, no duplicates
-          const merged = Array.from(new Set([...target[key], ...r[key]]));
-          if (merged.length > target[key].length){
-            target[key] = merged;
-            fieldsChanged++;
-          }
+        if (_isEmpty(merged[key])){
+          merged[key] = r[key];
+        } else if (typeof r[key] === 'string' && typeof merged[key] === 'string' && r[key].length > merged[key].length * 1.3){
+          merged[key] = r[key];
+        } else if (Array.isArray(r[key]) && Array.isArray(merged[key])){
+          const u = Array.from(new Set([...merged[key], ...r[key]]));
+          if (u.length > merged[key].length) merged[key] = u;
         }
       }
-      smartMerged++;
-      return;
+      // Use the existing entry's ID (keeps the canonical URL)
+      merged.id = existing.id;
+      upserts.push(merged);
+      smartMergeCount++;
+      continue;
     }
 
-    // Path 3: New entry (or mode is 'add' for a dupe) → append
-    ROBOTS.push(r);
-    added++;
-  });
-  // Persist to localStorage immediately
-  try {
-    localStorage.setItem('mrsh_robots', JSON.stringify(ROBOTS));
-  } catch (e) {
-    console.warn('localStorage write failed:', e);
+    // Path 3: brand new → UPSERT as-is
+    upserts.push(r);
   }
-  const summary = added + ' added, ' + updated + ' updated' + (smartMerged > 0 ? ', ' + smartMerged + ' smart-merged' : '') + (skippedDupes > 0 ? ', ' + skippedDupes + ' skipped' : '');
-  addMsg('📦 Bulk import: ' + summary + '. Now deploying to GitHub...', 'system');
-  addLog('info', 'Bulk import: ' + summary);
 
-  // Deploy to GitHub
+  // Send via safe server-side merge (chunked if > 500)
   try {
-    await deployNow();
-    _bulkStatus('✅ Imported and deployed! <strong>' + added + '</strong> added, <strong>' + updated + '</strong> updated' + (smartMerged > 0 ? ', <strong>' + smartMerged + '</strong> smart-merged (existing entries enriched, images preserved)' : '') + (skippedDupes > 0 ? ', <strong>' + skippedDupes + '</strong> skipped (potential dupes)' : '') + '. Live in ~30s.', '#16a34a');
-    // Clear textarea after success
+    const result = await callBulkMergeChunked(
+      { upsert: upserts },
+      'Bulk Import' + (dupeMode !== 'skip' ? ' (' + dupeMode + ')' : '')
+    );
+    _bulkStatus(
+      '✅ Imported and deployed! <strong>' + result.added + '</strong> added, <strong>' + result.updated + '</strong> updated' +
+      (smartMergeCount > 0 ? ', <strong>' + smartMergeCount + '</strong> smart-merged (galleries & images preserved server-side)' : '') +
+      (skippedDupes > 0 ? ', <strong>' + skippedDupes + '</strong> skipped (potential dupes)' : '') +
+      '. Live in ~30s.',
+      '#16a34a'
+    );
+    addLog('success', 'Bulk import (safe merge): +' + result.added + ' ~' + result.updated + (smartMergeCount ? ' smart-merge:' + smartMergeCount : ''));
     document.getElementById('bulk-import-json').value = '';
     _bulkParsed = null;
     _bulkPotentialDupes = [];
+    // Reload local ROBOTS from server so subsequent operations see fresh state
+    if (typeof reloadRobotsFromServer === 'function') await reloadRobotsFromServer();
     renderIngestStats();
   } catch (e){
-    _bulkStatus('⚠️ Imported locally but deploy failed: ' + e.message + '<br>Click "Deploy site" in the top bar to retry.', '#dc2626');
+    _bulkStatus('❌ Server merge failed: ' + e.message + '<br>Your data was NOT pushed to GitHub. Try again.', '#dc2626');
+    addLog('error', 'Bulk import failed: ' + e.message);
   } finally {
     if (runBtn) { runBtn.disabled = false; runBtn.textContent = '✅ Import & Deploy'; }
+  }
+}
+
+// Reload ROBOTS from the live data/robots.json on GitHub Pages / Netlify static site.
+// Called after a safe server-side merge so local state stays in sync.
+async function reloadRobotsFromServer(){
+  try {
+    const cacheBuster = '?t=' + Date.now();
+    const res = await fetch('/data/robots.json' + cacheBuster);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const arr = Array.isArray(data) ? data : (data && Array.isArray(data.robots) ? data.robots : null);
+    if (!arr) throw new Error('robots.json malformed');
+    ROBOTS.length = 0;
+    arr.forEach(r => ROBOTS.push(r));
+    saveDB(); // persist to localStorage
+    addLog('info', 'Reloaded ' + ROBOTS.length + ' robots from server');
+  } catch (e){
+    console.warn('Failed to reload robots.json from server:', e);
+    addLog('warn', 'Could not refresh local state after merge: ' + e.message);
+  }
+}
+
+// Called by the "💾 Save + Deploy" button in Spec Audit (Phase 1/2 finished).
+// Pushes only the robots that were filled during the phase via safe server-side merge.
+async function savePhaseChanges(){
+  const filled = (BULK_FILL_STATE && Array.isArray(BULK_FILL_STATE.filled)) ? BULK_FILL_STATE.filled : [];
+  if (!filled.length){
+    alert('No phase changes to save. Run Phase 1 or Phase 2 first.');
+    return;
+  }
+  if (!confirm('Push ' + filled.length + ' phase-filled robots via safe server-side merge?\n\nOnly the touched robots are sent. Other entries are NOT modified. Galleries/images preserved.')) return;
+
+  const upserts = [];
+  for (const f of filled){
+    const r = ROBOTS.find(x => x.id === f.id);
+    if (!r) continue;
+    const cleaned = {};
+    for (const [k, v] of Object.entries(r)){
+      if (v !== undefined && v !== null && v !== '' && !(Array.isArray(v) && v.length === 0)){
+        cleaned[k] = v;
+      }
+    }
+    cleaned.id = r.id;
+    upserts.push(cleaned);
+  }
+
+  try {
+    const result = await callBulkMergeChunked(
+      { upsert: upserts },
+      'Spec Audit ' + (BULK_FILL_STATE.phase || '')
+    );
+    addLog('success', 'Spec Audit saved via safe merge: ' + result.updated + ' updated, ' + result.added + ' added. Live in ~30s.');
+    addMsg('✅ Saved ' + result.updated + ' updated, ' + result.added + ' added. Live in ~30s.', 'success');
+    BULK_FILL_STATE.filled = []; // clear after save
+    if (typeof reloadRobotsFromServer === 'function') await reloadRobotsFromServer();
+  } catch (e){
+    addMsg('❌ Save failed: ' + e.message, 'error');
+    addLog('error', 'Spec Audit save failed: ' + e.message);
   }
 }
 
@@ -3225,10 +3272,97 @@ function saveEditModal() {
   addMsg('✅ Saved <strong>' + r.brand + ' ' + r.name + '</strong> — click Deploy when ready.', 'system');
 }
 
+// ════════════════════════════════════════════════════════════
+// SAFE BULK MERGE — server-side fetch-merge-commit
+// ════════════════════════════════════════════════════════════
+// All tools that mutate the DB call this. The server fetches the latest
+// robots.json from GitHub, applies the changes, and commits back. This means
+// a stale browser tab can NEVER overwrite recent work — server is source of truth.
+//
+// Safety constraints enforced server-side:
+//   - Max 100 deletes per call, max 500 upserts per call
+//   - If upsert omits 'gallery' or 'img', existing value is preserved
+//   - New entries require id, name, brand, cat
+//
+// Usage:
+//   const result = await callBulkMerge({
+//     upsert: [{id, name, brand, cat, ...other}, ...],
+//     delete: [id1, id2, ...]
+//   }, 'Duplicate Hunter auto-merge');
+
+const BULK_MERGE_ENDPOINT = '/.netlify/functions/bulk-merge';
+
+async function callBulkMerge(changes, reason){
+  if (!changes || (!Array.isArray(changes.upsert) && !Array.isArray(changes.delete))){
+    throw new Error('callBulkMerge: changes must contain upsert and/or delete arrays');
+  }
+  const workerName = (window.CURRENT_WORKER && window.CURRENT_WORKER.name)
+    || localStorage.getItem('mrsh_worker_name')
+    || '';
+  const res = await fetch(BULK_MERGE_ENDPOINT, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      operation: 'bulk_merge',
+      changes,
+      reason: reason || '',
+      workerName,
+    }),
+  });
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok || !data.ok){
+    throw new Error(data.error || `HTTP ${res.status}`);
+  }
+  return data;
+}
+
+// Split a large changes payload into batches within the server's caps.
+async function callBulkMergeChunked(changes, reason, chunkSize){
+  const MAX_DELETES = 100;
+  const MAX_UPSERTS = 500;
+  const chunk = chunkSize || Math.min(MAX_DELETES, MAX_UPSERTS);
+  const upserts = Array.isArray(changes.upsert) ? changes.upsert : [];
+  const deletes = Array.isArray(changes.delete) ? changes.delete : [];
+
+  let totals = { added: 0, updated: 0, deleted: 0, total: 0, batches: 0 };
+
+  // Process deletes first, then upserts (so re-adds with same ID don't clash with stale rows)
+  for (let i = 0; i < deletes.length; i += Math.min(chunk, MAX_DELETES)){
+    const batch = deletes.slice(i, i + Math.min(chunk, MAX_DELETES));
+    const r = await callBulkMerge({ delete: batch }, reason);
+    totals.deleted += r.deleted || 0;
+    totals.total = r.total;
+    totals.batches++;
+  }
+  for (let i = 0; i < upserts.length; i += Math.min(chunk, MAX_UPSERTS)){
+    const batch = upserts.slice(i, i + Math.min(chunk, MAX_UPSERTS));
+    const r = await callBulkMerge({ upsert: batch }, reason);
+    totals.added += r.added || 0;
+    totals.updated += r.updated || 0;
+    totals.total = r.total;
+    totals.batches++;
+  }
+  return totals;
+}
+
 // ════ DEPLOY ════
+// LEGACY: pushes the entire browser ROBOTS array to GitHub via the user's PAT.
+// DANGEROUS — a stale browser tab can wipe recent work. Kept as an emergency
+// last-resort only; all admin tools now use callBulkMerge() instead.
 async function deployNow() {
-  // Workers CAN deploy — the fine-grained GitHub token is scoped to data/ only,
-  // which IS the safety mechanism. They can't change code or settings.
+  // Safety prompt — make the user explicitly acknowledge the risk
+  const confirmed = confirm(
+    '⚠️  WARNING — LEGACY DEPLOY\n\n' +
+    'This pushes your browser\'s entire ROBOTS array to GitHub, OVERWRITING the live data.\n\n' +
+    'If your browser memory is stale (e.g. you logged in hours ago and other workers have edited since), ' +
+    'this WILL roll back their changes and may wipe galleries.\n\n' +
+    'All admin tools now use safe server-side merges and do NOT need this button.\n\n' +
+    'Only proceed if you have a SPECIFIC reason. Continue?'
+  );
+  if (!confirmed) {
+    addMsg('Deploy cancelled.', 'system');
+    return;
+  }
   const btn = document.getElementById('deploy-btn');
   if (btn) { btn.textContent = '⏳ Deploying...'; btn.disabled = true; }
   addMsg('🚀 Deploying ' + ROBOTS.length + ' robots to data/robots.json...', 'system');
@@ -4532,14 +4666,50 @@ function undoLastCleanup(){
 // ── Save & deploy ──────────────────────────────────────────
 async function saveCleanupChanges(){
   if (!CLEANUP_PENDING){ alert('No pending cleanup changes to save.'); return; }
-  if (!confirm(`Push ${ROBOTS.length} robots (with cleanup fixes applied) to data/robots.json?`)) return;
-  // Reuse the existing deployNow function
-  if (typeof deployNow === 'function'){
-    await deployNow();
+  // Build upserts from the changes that were applied locally during cleanup.
+  // We re-send every robot that's been touched. Cleanup fixes mostly modify name/id/cat/desc,
+  // so server's gallery/img preservation guards still apply.
+  if (!Array.isArray(CLEANUP_UNDO) || CLEANUP_UNDO.length === 0){
+    alert('No changes recorded — nothing to save.');
+    return;
+  }
+  // Collect unique IDs touched
+  const touchedIds = new Set();
+  const deletedIds = new Set();
+  for (const u of CLEANUP_UNDO){
+    if (u.deletedId) deletedIds.add(u.deletedId);
+    else if (u.id) touchedIds.add(u.id);
+    else if (u.robot && u.robot.id) touchedIds.add(u.robot.id);
+  }
+  if (!confirm(`Apply ${touchedIds.size + deletedIds.size} cleanup fix(es) via safe server-side merge?\n\nOther robots are NOT touched. Galleries preserved.`)) return;
+
+  const upserts = [];
+  for (const id of touchedIds){
+    const r = ROBOTS.find(x => x.id === id);
+    if (!r) continue;
+    const cleaned = {};
+    for (const [k, v] of Object.entries(r)){
+      if (v !== undefined && v !== null && v !== '' && !(Array.isArray(v) && v.length === 0)){
+        cleaned[k] = v;
+      }
+    }
+    cleaned.id = r.id;
+    upserts.push(cleaned);
+  }
+
+  try {
+    const result = await callBulkMergeChunked(
+      { upsert: upserts, delete: Array.from(deletedIds) },
+      'Data Cleanup'
+    );
     CLEANUP_PENDING = false;
+    addLog('success', `Cleanup saved via safe merge: ${result.updated} updated, ${result.deleted} deleted. Live in ~30s.`);
+    addMsg(`✅ Cleanup applied: ${result.updated} updated, ${result.deleted} deleted. Live in ~30s.`, 'success');
+    if (typeof reloadRobotsFromServer === 'function') await reloadRobotsFromServer();
     runCleanupScan();
-  } else {
-    alert('Deploy function not available — use the main 🚀 Deploy site button.');
+  } catch (e){
+    addMsg('❌ Save failed: ' + e.message, 'error');
+    addLog('error', 'Cleanup save failed: ' + e.message);
   }
 }
 
@@ -5069,15 +5239,42 @@ function undoLastMerge(){
 async function saveDupHunterChanges(){
   if (!DUP_HUNTER_STATE.pendingSave){ alert('No pending merges to save.'); return; }
   const merged = DUP_HUNTER_STATE.autoMerged.length;
-  if (!confirm(`Push ${ROBOTS.length} robots (with ${merged} merge(s) applied) to data/robots.json?`)) return;
-  if (typeof deployNow === 'function'){
-    await deployNow();
+  if (!merged){ alert('No merges to save.'); return; }
+  if (!confirm(`Apply ${merged} duplicate-merge(s) via safe server-side merge?\n\nThis updates the keeper records and deletes the dropped duplicates. Other robots are NOT touched.`)) return;
+
+  // Build the change set: for each merge, upsert the keeper (with merged fields)
+  // and delete the dropped duplicate's ID.
+  const upserts = [];
+  const deletes = [];
+  for (const m of DUP_HUNTER_STATE.autoMerged){
+    const keeper = ROBOTS.find(r => r.id === m.keptId);
+    if (!keeper) continue;
+    // Strip empty fields so server preserves existing values for those
+    const cleaned = {};
+    for (const [k, v] of Object.entries(keeper)){
+      if (v !== undefined && v !== null && v !== '' && !(Array.isArray(v) && v.length === 0)){
+        cleaned[k] = v;
+      }
+    }
+    cleaned.id = keeper.id;
+    upserts.push(cleaned);
+    deletes.push(m.droppedId);
+  }
+
+  try {
+    const result = await callBulkMergeChunked(
+      { upsert: upserts, delete: deletes },
+      `Duplicate Hunter: ${merged} merge(s)`
+    );
     DUP_HUNTER_STATE.pendingSave = false;
-    // Clear undo stack on save — past this point you'd need to re-import to undo
     DUP_HUNTER_STATE.undoStack = [];
+    addLog('success', `Duplicate Hunter saved via safe merge: ${result.deleted} dropped, ${result.updated} keepers updated. Live in ~30s.`);
+    addMsg(`✅ ${result.deleted} duplicates removed, ${result.updated} keepers updated. Live in ~30s.`, 'success');
+    if (typeof reloadRobotsFromServer === 'function') await reloadRobotsFromServer();
     renderDupHunter();
-  } else {
-    alert('Deploy function not available — use the main 🚀 Deploy site button.');
+  } catch (e){
+    addMsg('❌ Save failed: ' + e.message + '<br>Your merges were NOT applied. Try again.', 'error');
+    addLog('error', 'Duplicate Hunter save failed: ' + e.message);
   }
 }
 
@@ -5812,22 +6009,36 @@ async function applyCatNorm(){
   if (!CAT_NORM_PREVIEW){ alert('Run preview first.'); return; }
   const {changes} = CAT_NORM_PREVIEW;
   if (changes.length === 0){ alert('No changes to apply.'); return; }
-  if (!confirm(`Apply ${changes.length} category remappings? Each robot's original category becomes its 'sub' field. Push to GitHub when done?`)) return;
+  if (!confirm(`Apply ${changes.length} category remappings via safe server-side merge?\n\nOnly touched robots are pushed. Galleries preserved.`)) return;
 
+  // Apply locally first
+  const upserts = [];
   for (const c of changes){
     const robot = ROBOTS.find(r => r.id === c.id);
     if (!robot) continue;
     robot.cat = c.newCat;
     if (!robot.sub || robot.sub === '') robot.sub = c.newSub;
+    // Build a minimal payload — server only needs id + the changed fields
+    upserts.push({ id: robot.id, cat: robot.cat, sub: robot.sub });
   }
-  saveDB();
-  addLog('success', `Category normalizer: remapped ${changes.length} robots to canonical categories`);
-  if (typeof deployNow === 'function'){
-    await deployNow();
+
+  saveDB(); // local cache
+  try {
+    const result = await callBulkMergeChunked(
+      { upsert: upserts },
+      'Category Normalizer: ' + changes.length + ' remaps'
+    );
+    addLog('success', `Category Normalizer saved via safe merge: ${result.updated} updated. Live in ~30s.`);
+    addMsg(`✅ Category Normalizer: ${result.updated} robots remapped. Live in ~30s.`, 'success');
+    CAT_NORM_PREVIEW = null;
+    const btn = document.getElementById('cat-norm-apply-btn');
+    if (btn) btn.style.display = 'none';
+    if (typeof reloadRobotsFromServer === 'function') await reloadRobotsFromServer();
+    previewCatNorm();
+  } catch (e){
+    addMsg('❌ Category Normalizer save failed: ' + e.message, 'error');
+    addLog('error', 'Category Normalizer save failed: ' + e.message);
   }
-  CAT_NORM_PREVIEW = null;
-  document.getElementById('cat-norm-apply-btn').style.display = 'none';
-  previewCatNorm();  // re-run preview to show new state
 }
 
 // ════════════════════════════════════════════════════════════════════
@@ -6125,21 +6336,32 @@ async function applySubNorm(){
   if (!SUB_NORM_PREVIEW){ alert('Run preview first.'); return; }
   const {changes} = SUB_NORM_PREVIEW;
   if (changes.length === 0){ alert('No changes to apply.'); return; }
-  if (!confirm(`Apply ${changes.length} sub-category remappings? This does NOT touch last_verified — renaming isn't verifying. Push to GitHub when done?`)) return;
+  if (!confirm(`Apply ${changes.length} sub-category remappings via safe server-side merge?\n\nOnly touched robots are pushed. Galleries preserved. last_verified NOT touched.`)) return;
 
+  const upserts = [];
   for (const c of changes){
     const robot = ROBOTS.find(r => r.id === c.id);
     if (!robot) continue;
     robot.sub = c.newSub;
+    upserts.push({ id: robot.id, sub: c.newSub });
   }
   saveDB();
-  addLog('success', `Sub-category normalizer: remapped ${changes.length} sub-types`);
-  if (typeof deployNow === 'function'){
-    await deployNow();
+  try {
+    const result = await callBulkMergeChunked(
+      { upsert: upserts },
+      'Sub-Category Normalizer: ' + changes.length + ' remaps'
+    );
+    addLog('success', `Sub-Category Normalizer saved via safe merge: ${result.updated} updated. Live in ~30s.`);
+    addMsg(`✅ Sub-Category Normalizer: ${result.updated} robots remapped. Live in ~30s.`, 'success');
+    SUB_NORM_PREVIEW = null;
+    const btn = document.getElementById('sub-norm-apply-btn');
+    if (btn) btn.style.display = 'none';
+    if (typeof reloadRobotsFromServer === 'function') await reloadRobotsFromServer();
+    previewSubNorm();
+  } catch (e){
+    addMsg('❌ Sub-Category Normalizer save failed: ' + e.message, 'error');
+    addLog('error', 'Sub-Category Normalizer save failed: ' + e.message);
   }
-  SUB_NORM_PREVIEW = null;
-  document.getElementById('sub-norm-apply-btn').style.display = 'none';
-  previewSubNorm();  // re-run preview to show new state
 }
 
 // ── Init: scan once on page load so the badge is populated ──
