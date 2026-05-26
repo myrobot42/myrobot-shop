@@ -478,7 +478,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
           <table class="robot-table" id="robot-table">
             <thead><tr>
               <th>ROBOT</th><th>BRAND</th><th>CATEGORY</th>
-              <th>SCORE</th><th>PRICE</th><th>STATUS</th><th>IMG</th><th>ACTIONS</th>
+              <th>SCORE</th><th>PRICE</th><th>STATUS</th><th>IMG</th><th>ID</th><th>ACTIONS</th>
             </tr></thead>
             <tbody id="robot-tbody"></tbody>
           </table>
@@ -3138,7 +3138,7 @@ async function handleGeneral(cmd) {
 // ════ DATABASE ════
 function renderDB() {
   const q = (document.getElementById('db-search-input')?.value || '').toLowerCase();
-  const filtered = ROBOTS.filter(r => !q || (r.name||'').toLowerCase().includes(q) || (r.brand||'').toLowerCase().includes(q) || (r.cat||'').toLowerCase().includes(q));
+  const filtered = ROBOTS.filter(r => !q || (r.name||'').toLowerCase().includes(q) || (r.brand||'').toLowerCase().includes(q) || (r.cat||'').toLowerCase().includes(q) || (r.id||'').toLowerCase().includes(q));
   document.getElementById('db-count').textContent = `(${filtered.length} of ${ROBOTS.length})`;
   const tbody = document.getElementById('robot-tbody');
   tbody.innerHTML = filtered.map(r => {
@@ -3158,6 +3158,7 @@ function renderDB() {
       <td style="font-family:'Space Mono',monospace;font-size:11px">${r.price>0?'$'+r.price.toLocaleString():'POA'}</td>
       <td><span class="status-badge ${(r.status||'unknown').toLowerCase()}">${r.status||'Unknown'}</span></td>
       <td style="font-size:11px;text-align:center">${imgInd}</td>
+      <td style="font-family:'Space Mono',monospace;font-size:10px;color:var(--mut);white-space:nowrap">${r.id||''}</td>
       <td><button class="tbl-action" onclick="editRobotPrompt('${r.id}')">Edit</button> ${isAdmin()?`<button class="tbl-action del" onclick="deleteRobot('${r.id}')">Del</button>`:''}</td>
     </tr>`;}).join('');
 }
