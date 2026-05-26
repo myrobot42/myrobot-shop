@@ -978,9 +978,9 @@ function isAdmin(){ return getRole() === 'admin'; }
 //
 // Each worker has: { id, username, name, password_hash, active, created, last_login }
 // Migration: legacy shared password (worker2026 / mrsh_worker_pw) still works
-// until mrsh_legacy_disabled_at exists OR 7 days after first Phase B login.
+// until mrsh_legacy_disabled_at exists OR 12 hours after first Phase B login.
 const PHASE_B_VERSION = 2;
-const LEGACY_GRACE_DAYS = 7;
+const LEGACY_GRACE_HOURS = 12;
 const WORKERS_PATH = 'data/workers.json';
 
 async function sha256Hash(text){
@@ -1117,8 +1117,8 @@ function legacyEnabled(){
   if (localStorage.getItem('mrsh_legacy_disabled_at')) return false;
   const start = localStorage.getItem('mrsh_legacy_grace_started_at');
   if (start){
-    const days = (Date.now() - parseInt(start,10)) / (1000*60*60*24);
-    if (days >= LEGACY_GRACE_DAYS) return false;
+    const hours = (Date.now() - parseInt(start,10)) / (1000*60*60);
+    if (hours >= LEGACY_GRACE_HOURS) return false;
   }
   return true;
 }
@@ -1134,12 +1134,16 @@ function enableLegacyAgain(){
   localStorage.removeItem('mrsh_legacy_disabled_at');
   localStorage.removeItem('mrsh_legacy_grace_started_at');
 }
-function legacyDaysRemaining(){
+function legacyHoursRemaining(){
   if (localStorage.getItem('mrsh_legacy_disabled_at')) return 0;
   const start = localStorage.getItem('mrsh_legacy_grace_started_at');
-  if (!start) return LEGACY_GRACE_DAYS;
-  const days = (Date.now() - parseInt(start,10)) / (1000*60*60*24);
-  return Math.max(0, Math.ceil(LEGACY_GRACE_DAYS - days));
+  if (!start) return LEGACY_GRACE_HOURS;
+  const hours = (Date.now() - parseInt(start,10)) / (1000*60*60);
+  return Math.max(0, Math.ceil(LEGACY_GRACE_HOURS - hours));
+}
+// Kept for backwards compatibility — anything that still references days
+function legacyDaysRemaining(){
+  return Math.ceil(legacyHoursRemaining() / 24);
 }
 let API_KEY = localStorage.getItem('mrsh_api_key') || '';
 let GH_TOKEN = localStorage.getItem('mrsh_gh_token') || localStorage.getItem('mrsh_github_token') || '';
@@ -3609,11 +3613,11 @@ function renderLegacyStatus(){
     el.innerHTML = '<strong style="color:#16a34a">✅ Legacy password disabled.</strong> Only workers with usernames can log in.';
     return;
   }
-  const days = legacyDaysRemaining();
+  const hours = legacyHoursRemaining();
   const started = !!localStorage.getItem('mrsh_legacy_grace_started_at');
   el.innerHTML = '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">'
     + '<div><strong style="color:#f59e0b">⚠️ Legacy password still active.</strong> Workers can still use the old shared password <code>worker2026</code>. '
-    + (started ? 'Auto-disables in <strong>' + days + ' day' + (days===1?'':'s') + '</strong>.' : 'Will auto-disable 7 days after first legacy use.')
+    + (started ? 'Auto-disables in <strong>' + hours + ' hour' + (hours===1?'':'s') + '</strong>.' : 'Will auto-disable 12 hours after first legacy use.')
     + '</div>'
     + '<button class="save-btn" style="background:#ef4444" onclick="disableLegacyNow()">Disable now</button>'
   + '</div>';
@@ -3873,6 +3877,8 @@ loadSettings();
 updateBadges();
 
 // ════ IMAGE MANAGER ════
+let IMG_MGR_PAGE_SIZE = 30; // Render only 30 cards at a time to keep browser snappy
+let IMG_MGR_PAGE = 0;
 function renderImgManager() {
   const search = (document.getElementById('img-search').value || '').toLowerCase();
   const catFilter = document.getElementById('img-cat-filter').value;
@@ -3905,7 +3911,28 @@ function renderImgManager() {
     return;
   }
 
-  list.innerHTML = filtered.map(r => {
+  // PAGINATION: only render up to IMG_MGR_PAGE_SIZE cards at a time.
+  // Without this, 1655 robot cards in the DOM make the browser unresponsive.
+  const totalFiltered = filtered.length;
+  const totalPages = Math.ceil(totalFiltered / IMG_MGR_PAGE_SIZE);
+  if (IMG_MGR_PAGE >= totalPages) IMG_MGR_PAGE = 0;
+  const start = IMG_MGR_PAGE * IMG_MGR_PAGE_SIZE;
+  const end = Math.min(start + IMG_MGR_PAGE_SIZE, totalFiltered);
+  const pageItems = filtered.slice(start, end);
+
+  // Pagination controls
+  let pager = '';
+  if (totalFiltered > IMG_MGR_PAGE_SIZE){
+    pager = `<div style="background:#1e293b;color:#fff;padding:10px 14px;border-radius:6px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px">
+      <div>📄 Showing <strong>${start + 1}–${end}</strong> of <strong>${totalFiltered}</strong> robots (page ${IMG_MGR_PAGE + 1} of ${totalPages})</div>
+      <div style="display:flex;gap:6px">
+        <button onclick="imgMgrPrev()" ${IMG_MGR_PAGE === 0 ? 'disabled' : ''} style="background:#3b82f6;color:#fff;border:0;padding:6px 12px;border-radius:4px;cursor:pointer;font-size:12px;${IMG_MGR_PAGE === 0 ? 'opacity:0.5;cursor:not-allowed' : ''}">◀ Prev</button>
+        <button onclick="imgMgrNext()" ${IMG_MGR_PAGE >= totalPages - 1 ? 'disabled' : ''} style="background:#3b82f6;color:#fff;border:0;padding:6px 12px;border-radius:4px;cursor:pointer;font-size:12px;${IMG_MGR_PAGE >= totalPages - 1 ? 'opacity:0.5;cursor:not-allowed' : ''}">Next ▶</button>
+      </div>
+    </div>`;
+  }
+
+  list.innerHTML = pager + pageItems.map(r => {
     const gallery = r.gallery || ['','','','',''];
     while (gallery.length < 5) gallery.push('');
     const mainImg = r.img || '';
@@ -3944,10 +3971,13 @@ function renderImgManager() {
       <div class="img-field-label">Gallery Images (up to 5) — shown when user clicks View</div>
       <div class="img-gallery-grid">${gallerySlots}</div>
     </div>`;
-  }).join('');
+  }).join('') + (totalFiltered > IMG_MGR_PAGE_SIZE ? pager : '');
 }
 
-function filterImgManager() { renderImgManager(); }
+function imgMgrPrev(){ if (IMG_MGR_PAGE > 0){ IMG_MGR_PAGE--; renderImgManager(); window.scrollTo(0, 0); } }
+function imgMgrNext(){ IMG_MGR_PAGE++; renderImgManager(); window.scrollTo(0, 0); }
+
+function filterImgManager() { IMG_MGR_PAGE = 0; renderImgManager(); }
 
 function updateMainPreview(id, url) {
   const thumb = document.getElementById('main-thumb-'+id);
@@ -4155,31 +4185,108 @@ async function saveSingleRobotImages(robotId){
   return result;
 }
 
-// Rebuilt "Save All" — instead of one big push, loops through robots with
-// DOM inputs present and saves each individually via the safe endpoint.
-// Shows progress; one failure doesn't kill the whole batch.
+// ════════════════════════════════════════════════════════════
+// SAVE ALL — rewritten v2 with:
+//   - Change detection (only saves robots whose inputs differ from current data)
+//   - Hard cap at 50 saves per click (prevents browser freeze on huge lists)
+//   - Progress bar with cancellation
+//   - Button disabled during save so user can't double-click
+// ════════════════════════════════════════════════════════════
+
+const MAX_SAVES_PER_CLICK = 50;
+let SAVE_ALL_CANCEL = false;
+
+function setSaveAllProgress(html){
+  let bar = document.getElementById('save-all-progress');
+  if (!bar){
+    bar = document.createElement('div');
+    bar.id = 'save-all-progress';
+    bar.style.cssText = 'background:#1e293b;color:#fff;padding:12px;border-radius:6px;margin:10px 0;font-size:13px;font-family:system-ui;border-left:4px solid #3b82f6';
+    const list = document.getElementById('img-manager-list');
+    if (list) list.parentNode.insertBefore(bar, list);
+  }
+  bar.innerHTML = html;
+}
+function clearSaveAllProgress(){
+  const bar = document.getElementById('save-all-progress');
+  if (bar) bar.remove();
+}
+
+// Compute which robots have unsaved changes (DOM input differs from ROBOTS[id]).
+// Returns array of robotId. Empty/missing inputs are correctly handled.
+function detectChangedRobots(){
+  const changed = [];
+  ROBOTS.forEach(r => {
+    const mainInput = document.getElementById('mainimg-' + r.id);
+    const firstG = document.getElementById(`gallery-${r.id}-0`);
+    if (!mainInput && !firstG) return; // not rendered
+
+    let hasChange = false;
+    if (mainInput){
+      const newImg = mainInput.value.trim();
+      if (newImg !== (r.img || '')) hasChange = true;
+    }
+    if (!hasChange && firstG){
+      const existing = Array.isArray(r.gallery) ? r.gallery : [];
+      for (let i = 0; i < 5; i++){
+        const g = document.getElementById(`gallery-${r.id}-${i}`);
+        if (!g) continue;
+        const newVal = g.value.trim();
+        const oldVal = (existing[i] || '').trim();
+        if (newVal !== oldVal){ hasChange = true; break; }
+      }
+    }
+    if (hasChange) changed.push(r.id);
+  });
+  return changed;
+}
+
 async function saveAllImages(){
-  // Safety net first (in case of unforeseen UI bug)
   snapshotGalleries('before-saveAllImages');
 
-  // Find every robot that has gallery inputs OR main image input currently rendered
-  const targets = [];
-  ROBOTS.forEach(r => {
-    if (document.getElementById('mainimg-' + r.id) || document.getElementById(`gallery-${r.id}-0`)){
-      targets.push(r.id);
-    }
-  });
+  const targets = detectChangedRobots();
 
   if (targets.length === 0){
-    addMsg('No robot inputs currently rendered. Open a robot row first.', 'system');
+    addMsg('No changes detected. Edit some image URLs first, then click Save.', 'system');
     return;
   }
 
-  addMsg(`Saving ${targets.length} robot${targets.length === 1 ? '' : 's'} (concurrent-safe, one at a time)...`, 'system');
+  if (targets.length > MAX_SAVES_PER_CLICK){
+    alert(
+      `You have ${targets.length} robots with unsaved changes — too many to save at once.\n\n` +
+      `Browser can freeze with this many. Maximum: ${MAX_SAVES_PER_CLICK} per click.\n\n` +
+      `Use the search box to filter to fewer robots first, then save in batches.`
+    );
+    return;
+  }
+
+  if (!confirm(`Save ${targets.length} robot${targets.length === 1 ? '' : 's'} with unsaved changes?`)) return;
+
+  // Disable button + set state
+  const btn = document.getElementById('save-all-images-btn');
+  const originalLabel = btn ? btn.textContent : '';
+  if (btn){ btn.disabled = true; btn.style.opacity = '0.6'; btn.textContent = '⏳ Saving...'; }
+
+  SAVE_ALL_CANCEL = false;
   let ok = 0, fail = 0, noop = 0;
   const errors = [];
 
-  for (const id of targets){
+  setSaveAllProgress(
+    `<div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+       <div>⏳ Saving 0 of ${targets.length}...</div>
+       <button onclick="SAVE_ALL_CANCEL = true" style="background:#dc2626;color:#fff;border:0;padding:6px 14px;border-radius:4px;cursor:pointer;font-size:12px">Cancel</button>
+     </div>
+     <div style="background:#0f172a;height:8px;border-radius:4px;margin-top:8px;overflow:hidden">
+       <div id="save-all-bar" style="background:#3b82f6;height:100%;width:0%;transition:width 0.2s"></div>
+     </div>`
+  );
+
+  for (let i = 0; i < targets.length; i++){
+    if (SAVE_ALL_CANCEL){
+      addMsg(`⏹ Cancelled at ${i}/${targets.length}. ${ok} saved, ${fail} failed.`, 'system');
+      break;
+    }
+    const id = targets[i];
     try {
       const res = await saveSingleRobotImages(id);
       if (res.noop) noop++;
@@ -4189,17 +4296,34 @@ async function saveAllImages(){
       errors.push(`${id}: ${e.message}`);
       addLog('error', `Save failed for ${id}: ${e.message}`);
     }
+    // Update progress
+    const pct = Math.round(((i + 1) / targets.length) * 100);
+    setSaveAllProgress(
+      `<div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+         <div>⏳ Saved ${i + 1} of ${targets.length} (${ok} ok, ${fail} failed)</div>
+         <button onclick="SAVE_ALL_CANCEL = true" style="background:#dc2626;color:#fff;border:0;padding:6px 14px;border-radius:4px;cursor:pointer;font-size:12px">Cancel</button>
+       </div>
+       <div style="background:#0f172a;height:8px;border-radius:4px;margin-top:8px;overflow:hidden">
+         <div style="background:${fail > 0 ? '#f59e0b' : '#16a34a'};height:100%;width:${pct}%;transition:width 0.2s"></div>
+       </div>`
+    );
   }
 
+  // Restore button
+  if (btn){ btn.disabled = false; btn.style.opacity = ''; btn.textContent = originalLabel; }
+
+  // Final summary
   const parts = [];
   if (ok)   parts.push(`✅ ${ok} saved`);
   if (noop) parts.push(`⊙ ${noop} unchanged`);
   if (fail) parts.push(`❌ ${fail} failed`);
+  setSaveAllProgress(
+    `<div><strong>${SAVE_ALL_CANCEL ? '⏹ Cancelled' : '✅ Done'}</strong> — ${parts.join(' · ')}</div>` +
+    (errors.length ? `<div style="margin-top:6px;color:#fbbf24;font-size:11px">Errors: ${errors.slice(0,3).join(' | ')}${errors.length > 3 ? ` …+${errors.length - 3} more` : ''}</div>` : '') +
+    `<div style="margin-top:6px"><button onclick="clearSaveAllProgress()" style="background:#475569;color:#fff;border:0;padding:4px 10px;border-radius:4px;cursor:pointer;font-size:11px">Dismiss</button></div>`
+  );
+
   addMsg(parts.join(' · '), fail ? 'error' : 'success');
-  if (errors.length){
-    addMsg('Errors:\n' + errors.slice(0, 5).join('\n') + (errors.length > 5 ? `\n…and ${errors.length - 5} more` : ''), 'error');
-  }
-  // No saveDB+deployNow — per-robot saves already deployed via the function.
 }
 
 
