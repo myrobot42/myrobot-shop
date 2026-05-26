@@ -4557,15 +4557,29 @@ let DUP_HUNTER_STATE = {
 // Lowercase, strip accents, drop trailing year-in-parens, collapse punctuation/whitespace.
 // v2: don't strip parentheticals — they often contain distinguishing variant info
 // e.g. "Atlas (DARPA)" vs "Atlas (Commercial)" should NOT normalise to identical
-function normModelName(name){
+function normModelName(name, brand){
   if (!name) return '';
-  return String(name)
+  let s = String(name)
     .toLowerCase()
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .replace(/\s*\(\s*\d{4}\s*\)\s*$/, '')          // ONLY strip trailing year-in-parens like "(2024)"
     .replace(/[^a-z0-9 ]+/g, ' ')                    // normalise punctuation to space (incl. parens content kept as words)
     .replace(/\s+/g, ' ')
     .trim();
+  // v3: strip the brand name from the front (or anywhere) of the model name.
+  // Catches "AGIBOT X2" + brand "AGIBOT" vs name "X2" → both normalise to "x2".
+  // Same for "Tesla Optimus Gen 2" vs "Optimus Gen 2", "Unitree H1" vs "H1", etc.
+  if (brand){
+    const b = String(brand).toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
+    if (b){
+      // Strip brand as a whole word from anywhere in the model name
+      s = s.replace(new RegExp('\\b' + b.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'g'), ' ')
+           .replace(/\s+/g, ' ').trim();
+    }
+  }
+  return s;
 }
 
 // Levenshtein distance (iterative, two-row).
@@ -4762,21 +4776,33 @@ function runDupHunter(){
   DUP_HUNTER_STATE.flagged = [];
   // Don't clear undoStack — undo persists across scans
 
-  // Group by brand (after brand-cleanup, brands should be canonical)
+  // Group by brand (after brand-cleanup, brands should be canonical).
+  // v3: also normalise brand string for grouping — strips common corporate suffixes
+  // and case differences so "Fourier" + "Fourier Intelligence" share a bucket.
+  // The robot itself keeps its original brand string; this is grouping only.
+  const normaliseBrandForGrouping = (b) => {
+    return String(b || '').toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/\b(inc|incorporated|ltd|limited|corp|corporation|llc|gmbh|co|company|robotics|robot|technologies|technology|tech|intelligence|systems|labs|laboratories|sa|ag|kk|kg|spa|srl|bv|nv|oy)\b\.?/g, ' ')
+      .replace(/[^a-z0-9 ]+/g, ' ')
+      .replace(/\s+/g, ' ').trim();
+  };
   const byBrand = {};
   for (const r of ROBOTS){
     const b = (r.brand || '').trim();
     if (!b) continue;
-    if (!byBrand[b]) byBrand[b] = [];
-    byBrand[b].push(r);
+    const key = normaliseBrandForGrouping(b);
+    if (!key) continue;
+    if (!byBrand[key]) byBrand[key] = [];
+    byBrand[key].push(r);
   }
 
   // Compare pairs within each brand
   for (const brand of Object.keys(byBrand)){
     const list = byBrand[brand];
     if (list.length < 2) continue;
-    // Precompute normalized names
-    const norms = list.map(r => normModelName(r.name));
+    // Precompute normalized names (passing brand so brand-prefixed names like "AGIBOT X2" normalize to "x2")
+    const norms = list.map(r => normModelName(r.name, r.brand));
     // Track which ids have been dropped this run so we don't merge them twice
     const dropped = new Set();
     for (let i = 0; i < list.length; i++){
