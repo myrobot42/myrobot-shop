@@ -1858,38 +1858,82 @@ function buildSpecTable(r) {
     if (r.water_tank_ml) html += row('Water tank', r.water_tank_ml, 'ml');
     if (r.mop !== undefined) html += row('Mopping', r.mop);
     if (r.mop_type) html += row('Mop type', r.mop_type);
+    // Mop pressure — support both _g (legacy) and _n (newtons, what manufacturers actually publish)
     if (r.mop_pressure_g) html += row('Mop pressure', r.mop_pressure_g, 'g');
+    if (r.mop_pressure_n) html += row('Mop pressure', r.mop_pressure_n, 'N');
+    if (r.mop_vibration_hz) html += row('Mop vibration', r.mop_vibration_hz.toLocaleString(), 'Hz');
+    if (r.mop_rpm) html += row('Mop rotation', r.mop_rpm, 'RPM');
     if (r.hot_water_mop !== undefined) html += row('Heated water mopping', r.hot_water_mop);
+    if (r.mop_wash_temp_c) html += row('Mop wash temperature', r.mop_wash_temp_c, '°C');
+    if (r.mop_dry_temp_c) html += row('Mop dry temperature', r.mop_dry_temp_c, '°C');
+    // Carpet mop-lift — support both old single field and new measured-mm variant
     if (r.mop_lift_height_mm) html += row('Mop lift (on carpet)', r.mop_lift_height_mm, 'mm');
+    if (r.carpet_mop_lift_mm) html += row('Mop lift (on carpet)', r.carpet_mop_lift_mm, 'mm');
+    if (r.carpet_mop_lift !== undefined && !r.mop_lift_height_mm && !r.carpet_mop_lift_mm) html += row('Carpet mop lift', r.carpet_mop_lift);
     if (r.filter) html += row('Filter type', r.filter);
     if (r.brush_type) html += row('Main brush', r.brush_type);
     if (r.side_brushes) html += row('Side brushes', r.side_brushes);
+    if (r.edge_cleaning) html += row('Edge cleaning', r.edge_cleaning);
+    if (r.anti_tangle) html += row('Anti-tangle', r.anti_tangle);
     if (r.carpet_boost !== undefined) html += row('Carpet boost', r.carpet_boost);
+    if (r.carpet_detection !== undefined) html += row('Carpet detection', r.carpet_detection);
+    if (r.carpet_first_mode !== undefined) html += row('Carpet-first mode', r.carpet_first_mode);
+    if (r.max_threshold_height_mm) html += row('Max threshold crossing', r.max_threshold_height_mm, 'mm');
     if (r.arm !== undefined && r.arm) html += row('Robotic arm', '✓ Yes' + (r.arm_dof ? ` (${r.arm_dof} DOF)` : ''));
+    if (r.robotic_arm !== undefined && r.robotic_arm) html += row('Robotic arm', '✓ Yes' + (r.arm_dof ? ` (${r.arm_dof} DOF)` : ''));
+    if (r.arm_payload_g) html += row('Arm payload', r.arm_payload_g, 'g');
+    if (Array.isArray(r.arm_features) && r.arm_features.length) html += row('Arm features', r.arm_features.join(', '));
+    if (Array.isArray(r.object_recognition_categories) && r.object_recognition_categories.length) html += row('Object recognition', r.object_recognition_categories.join(', '));
     if (r.object_pick_up !== undefined) html += row('Object pick-up', r.object_pick_up);
+    // Pool-cleaner extras
+    if (r.wall_climbing !== undefined) html += row('Wall climbing', r.wall_climbing);
+    if (r.waterline_cleaning !== undefined) html += row('Waterline cleaning', r.waterline_cleaning);
+    if (r.max_depth_m) html += row('Max depth', r.max_depth_m, 'm');
+    if (r.uv_sterilization !== undefined) html += row('UV sterilization', r.uv_sterilization);
+    if (r.ozone_sanitization !== undefined) html += row('Ozone sanitization', r.ozone_sanitization);
+    if (r.stair_climbing !== undefined && (r.sub||'').toLowerCase().includes('wheel-leg')) html += row('Stair climbing', r.stair_climbing);
+
     html += grp('DOCK STATION');
     if (r.auto_empty !== undefined) html += row('Auto-empty', r.auto_empty);
     if (r.auto_empty_capacity_L) html += row('Auto-empty capacity', r.auto_empty_capacity_L, 'L');
+    if (r.auto_empty_capacity_days) html += row('Auto-empty cycle', r.auto_empty_capacity_days, 'days');
     if (r.auto_refill !== undefined) html += row('Auto water refill', r.auto_refill);
+    if (r.self_refill_water !== undefined) html += row('Auto water refill', r.self_refill_water);
+    if (r.auto_refill_capacity_loads) html += row('Refill capacity', r.auto_refill_capacity_loads, 'loads');
     if (r.self_cleaning !== undefined) html += row('Self-cleaning dock', r.self_cleaning);
+    if (r.auto_mop_wash !== undefined) html += row('Auto mop wash', r.auto_mop_wash);
+    if (r.auto_mop_dry !== undefined) html += row('Auto mop dry', r.auto_mop_dry);
+    if (r.auto_cleaning_solution !== undefined) html += row('Auto detergent dosing', r.auto_cleaning_solution);
     if (r.dock_auto_wash_temp) html += row('Wash temperature', r.dock_auto_wash_temp, '°C');
     if (r.dock_dry_type) html += row('Drying method', r.dock_dry_type);
     if (r.dock_dry_time_min) html += row('Dry time', r.dock_dry_time_min, 'min');
     if (r.dock_w && r.dock_h) html += row('Dock dimensions', `${r.dock_w} × ${r.dock_h}${r.dock_d ? ' × '+r.dock_d : ''} mm`);
+    if (r.dock_weight_kg) html += row('Dock weight', r.dock_weight_kg, 'kg');
+    if (r.water_plumbing_connection !== undefined) html += row('Direct plumbing', r.water_plumbing_connection);
+
     html += grp('NAVIGATION & MAPPING');
     if (r.navigation) html += row('Navigation', r.navigation);
     if (r.lidar !== undefined || r.lidar_type) html += row('LiDAR', r.lidar_type || (r.lidar ? 'Yes' : 'No'));
     if (r.obstacle_avoidance) html += row('Obstacle avoidance', r.obstacle_avoidance);
+    if (r.ai_obstacle_avoidance !== undefined && !r.obstacle_avoidance) html += row('AI obstacle avoidance', r.ai_obstacle_avoidance);
+    if (r.obstacle_detection_min_mm) html += row('Min obstacle size detected', r.obstacle_detection_min_mm, 'mm');
     if (r.obstacle_types_recognised) html += row('Object types recognised', r.obstacle_types_recognised);
     if (r.mapping !== undefined) html += row('Smart mapping', r.mapping);
     if (r.multi_floor_maps) html += row('Multi-floor maps', r.multi_floor_maps);
+    if (r.multi_floor_mapping !== undefined && !r.multi_floor_maps) html += row('Multi-floor mapping', r.multi_floor_mapping);
     if (r.zone_cleaning !== undefined) html += row('Zone cleaning', r.zone_cleaning);
     if (r.virtual_walls !== undefined) html += row('Virtual walls', r.virtual_walls);
+    if (r.no_go_zones !== undefined && r.virtual_walls === undefined) html += row('No-go zones', r.no_go_zones);
     if (r.cliff_sensors) html += row('Cliff sensors', r.cliff_sensors);
+    if (r.patrol_mode !== undefined) html += row('Patrol/security mode', r.patrol_mode);
+
     html += grp('SMART FEATURES');
     if (r.app) html += row('App', r.app);
+    if (r.app_companion && !r.app) html += row('App', r.app_companion);
     if (r.voice_control) html += row('Voice control', r.voice_control);
+    if (Array.isArray(r.voice_assistant) && r.voice_assistant.length) html += row('Voice assistants', r.voice_assistant.join(', '));
     if (r.ai_room_recognition !== undefined) html += row('AI room recognition', r.ai_room_recognition);
+    if (r.ai_model) html += row('AI model', r.ai_model);
     if (r.camera_live_view !== undefined) html += row('Live camera view', r.camera_live_view);
     if (r.matter_support !== undefined) html += row('Matter/Thread support', r.matter_support);
     if (r.local_processing !== undefined) html += row('Local processing', r.local_processing);
@@ -2116,29 +2160,80 @@ function buildSpecTable(r) {
     if (r.cutting_width_mm) html += row('Cutting width', r.cutting_width_mm, 'mm');
     if (r.cutting_height_min_mm && r.cutting_height_max_mm) html += row('Cutting height', `${r.cutting_height_min_mm}-${r.cutting_height_max_mm}`, 'mm');
     if (r.cutting_height_adjustable) html += row('Height adjustment', r.cutting_height_adjustable);
+    if (r.cutting_height_electric) html += row('Electric height adjust', r.cutting_height_electric);
+    if (r.cutting_height_positions) html += row('Height positions', r.cutting_height_positions);
     if (r.blade_count) html += row('Blades', r.blade_count);
     if (r.blade_type) html += row('Blade type', r.blade_type);
-    if (r.max_lawn_area_sqm) html += row('Max lawn area', r.max_lawn_area_sqm.toLocaleString(), 'm²');
-    if (r.max_slope_percent) html += row('Max slope', r.max_slope_percent, '%');
-    if (r.max_slope_degrees) html += row('Max slope (deg)', r.max_slope_degrees, '°');
-    if (r.mowing_pattern) html += row('Mowing pattern', r.mowing_pattern);
+    // Lawn-area: support both new field name (lawn_size_m2) and legacy (max_lawn_area_sqm)
+    const lawnArea = r.lawn_size_m2 || r.max_lawn_area_sqm;
+    if (lawnArea) html += row('Max lawn area', lawnArea.toLocaleString(), 'm²');
+    if (r.lawn_size_acres) html += row('Max lawn area', r.lawn_size_acres, 'acres');
+    if (r.max_daily_coverage_acres) html += row('Daily coverage', r.max_daily_coverage_acres, 'acres');
+    // Slope: support both naming conventions
+    const slopePct = r.slope_max_percent || r.max_slope_percent;
+    if (slopePct) html += row('Max slope', slopePct, '%');
+    const slopeDeg = r.slope_max_deg || r.max_slope_degrees;
+    if (slopeDeg) html += row('Max slope (deg)', slopeDeg, '°');
+    // Mowing pattern(s) — array or single string
+    if (Array.isArray(r.mowing_patterns) && r.mowing_patterns.length) html += row('Mowing patterns', r.mowing_patterns.join(', '));
+    else if (r.mowing_pattern) html += row('Mowing pattern', r.mowing_pattern);
     if (r.edge_cutting !== undefined) html += row('Edge cutting', r.edge_cutting);
     if (r.mulching !== undefined) html += row('Mulching', r.mulching);
+    if (r.anti_tangle) html += row('Anti-tangle', r.anti_tangle);
+
     html += grp('NAVIGATION & SAFETY');
-    if (r.navigation_type) html += row('Navigation type', r.navigation_type);
+    // Navigation: support both names
+    const navType = r.navigation_type || r.navigation;
+    if (navType) html += row('Navigation type', navType);
     if (r.requires_perimeter_wire !== undefined) html += row('Requires boundary wire', r.requires_perimeter_wire);
+    if (r.perimeter_wire_length_m) html += row('Boundary wire length', r.perimeter_wire_length_m, 'm');
+    if (r.requires_reference_station !== undefined) html += row('Reference station required', r.requires_reference_station);
+    if (r.requires_wifi_coverage !== undefined) html += row('Wi-Fi coverage required', r.requires_wifi_coverage);
     if (r.gps_rtk !== undefined) html += row('GPS RTK', r.gps_rtk);
+    if (r.rtk_type) html += row('RTK type', r.rtk_type);
+    if (r.rtk_accuracy_cm) html += row('RTK accuracy', r.rtk_accuracy_cm, 'cm');
+    if (r.rtk_accuracy_cm_with_rs1) html += row('RTK accuracy (with RS1)', r.rtk_accuracy_cm_with_rs1, 'cm');
     if (r.vision_navigation !== undefined) html += row('Vision navigation', r.vision_navigation);
+    if (r.cameras) html += row('Cameras', r.cameras);
+    if (r.lidar !== undefined) html += row('LiDAR', r.lidar);
+    if (r.lidar_type) html += row('LiDAR type', r.lidar_type);
+    if (r.ai_obstacle_avoidance !== undefined) html += row('AI obstacle avoidance', r.ai_obstacle_avoidance);
+    if (r.obstacle_categories) html += row('Obstacle categories', r.obstacle_categories);
+    if (r.obstacle_detection_min_mm) html += row('Min obstacle size', r.obstacle_detection_min_mm, 'mm');
+    if (r.animal_detection !== undefined) html += row('Animal detection', r.animal_detection);
+    if (r.animal_categories) html += row('Animal categories', r.animal_categories);
     if (r.mapping !== undefined && !isVacuum) html += row('Mapping', r.mapping);
-    if (r.multi_zone_support !== undefined) html += row('Multi-zone support', r.multi_zone_support);
-    if (r.zones_max) html += row('Max zones', r.zones_max);
+    // Multi-zone — support both names
+    const multiZone = (r.multi_zone !== undefined) ? r.multi_zone : r.multi_zone_support;
+    if (multiZone !== undefined) html += row('Multi-zone support', multiZone);
+    if (r.max_zones || r.zones_max) html += row('Max zones', r.max_zones || r.zones_max);
+    if (r.secondary_area_supported !== undefined) html += row('Secondary areas', r.secondary_area_supported);
     if (r.rain_sensor !== undefined && !isDrone) html += row('Rain sensor', r.rain_sensor);
     if (r.frost_sensor !== undefined) html += row('Frost sensor', r.frost_sensor);
+    if (r.weather_timer !== undefined) html += row('Weather-adaptive timer', r.weather_timer);
+    // Theft protection — support both naming conventions and array of features
+    if (r.anti_theft !== undefined) html += row('Anti-theft', r.anti_theft);
     if (r.theft_protection) html += row('Theft protection', r.theft_protection);
+    if (Array.isArray(r.theft_protection_features) && r.theft_protection_features.length) html += row('Theft protection features', r.theft_protection_features.join(', '));
     if (r.anti_theft_alarm !== undefined) html += row('Anti-theft alarm', r.anti_theft_alarm);
     if (r.lift_sensor !== undefined) html += row('Lift sensor (safety)', r.lift_sensor);
     if (r.pet_safety !== undefined) html += row('Pet safety detection', r.pet_safety);
-    if (r.cellular_connectivity) html += row('Cellular connectivity', r.cellular_connectivity);
+    // Cellular — support both names
+    const cell = r.cellular_connectivity || r.cellular;
+    if (cell) html += row('Cellular', cell);
+    if (r.drive_type) html += row('Drive type', r.drive_type);
+    if (r.wheels) html += row('Wheels', r.wheels);
+
+    // App & smart home
+    if (r.app_companion || (Array.isArray(r.voice_assistant) && r.voice_assistant.length) || (Array.isArray(r.smart_home) && r.smart_home.length) || r.ota !== undefined){
+      html += grp('SMART FEATURES');
+      if (r.app_companion) html += row('App', r.app_companion);
+      if (Array.isArray(r.voice_assistant) && r.voice_assistant.length) html += row('Voice assistants', r.voice_assistant.join(', '));
+      if (Array.isArray(r.smart_home) && r.smart_home.length) html += row('Smart home', r.smart_home.join(', '));
+      if (r.ota !== undefined) html += row('OTA updates', r.ota);
+      if (r.fleet_management !== undefined) html += row('Fleet management', r.fleet_management);
+      if (r.auto_schedule !== undefined) html += row('Auto schedule', r.auto_schedule);
+    }
   }
 
   // ── TELEPRESENCE ──
