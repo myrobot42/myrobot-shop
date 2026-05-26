@@ -982,7 +982,10 @@
     "bluetooth": "5.0",
     "ros": false,
     "sdk": false,
-    "sdk_langs": null,
+    "sdk_langs": [
+      "Python",
+      "JavaScript"
+    ],
     "api": "Roborock Cloud API",
     "ce": true,
     "fcc": true,
@@ -1313,108 +1316,6 @@
       "https://m.media-amazon.com/images/I/71ObxposydL._AC_SX679_.jpg",
       "https://m.media-amazon.com/images/I/81bPZgF1wRL._AC_SX679_.jpg",
       ""
-    ]
-  },
-  {
-    "id": "roborock-q7-max",
-    "name": "Q7 Max",
-    "brand": "Roborock",
-    "year": 2022,
-    "status": "active",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop with Self-Empty",
-    "tags": [
-      "vacuum",
-      "mopping",
-      "lidar",
-      "auto-empty"
-    ],
-    "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/21/kwwWLIGC8lxIDNnwq5QB/image.jpg",
-    "score": 8.5,
-    "rating": 4.4,
-    "price": 549,
-    "desc": "Mid-range robot vacuum with powerful suction, precision LiDAR navigation, and simultaneous vacuum and mop.",
-    "highlights": [
-      "4200Pa suction",
-      "LiDAR navigation",
-      "Combined cleaning",
-      "Auto-empty compatible"
-    ],
-    "height_mm": 96.5,
-    "width_mm": 353,
-    "depth_mm": 350,
-    "weight_kg": 3.7,
-    "frame_material": "ABS plastic",
-    "shell_material": "ABS plastic",
-    "ip_rating": "IPX4",
-    "operating_temp_min": 0,
-    "operating_temp_max": 45,
-    "colors": [
-      "White",
-      "Black"
-    ],
-    "os": "RoboOS",
-    "chipset": "Custom ARM",
-    "cpu": "Quad-core ARM",
-    "ram_gb": 1,
-    "ram_type": "DDR3",
-    "storage_gb": 8,
-    "storage_type": "eMMC",
-    "npu_tops": null,
-    "battery_type": "Li-ion",
-    "battery_wh": 87,
-    "battery_life": "180 min",
-    "charge_time": "4 hours",
-    "charge_power_w": 58,
-    "charge_type": "dock",
-    "wireless_charging": false,
-    "auto_charge": true,
-    "hot_swap": false,
-    "quick_release": true,
-    "cycle_life": 800,
-    "ai_model": null,
-    "ai_model_type": null,
-    "learning_methods": [
-      "lidar"
-    ],
-    "ai_cloud_required": false,
-    "ota": true,
-    "cameras": null,
-    "lidar": "360° LiDAR",
-    "depth_sensing": null,
-    "imu": "6-axis",
-    "touch_sensing": "bump sensors",
-    "wifi": "802.11n",
-    "bluetooth": "4.0",
-    "ros": false,
-    "sdk": "Roborock API",
-    "sdk_langs": [
-      "Python",
-      "JavaScript"
-    ],
-    "api": "REST API",
-    "ce": true,
-    "fcc": true,
-    "rohs": true,
-    "warranty_months": 12,
-    "use_cases": [
-      "home cleaning",
-      "pet hair removal",
-      "scheduled cleaning"
-    ],
-    "perf": {
-      "suction_pa": 4200,
-      "water_capacity_ml": 180,
-      "dust_capacity_l": 0.47
-    },
-    "origin": "China",
-    "gallery": [
-      "https://www.pbtech.co.nz/imgprod/H/O/HOMRBK0019__1.jpg?h=2264352986",
-      "https://www.pbtech.co.nz/imgprod/H/O/HOMRBK0019__2.jpg?h=412343673",
-      "https://www.pbtech.co.nz/imgprod/H/O/HOMRBK0019__3.jpg?h=1872031215",
-      "https://www.pbtech.co.nz/imgprod/H/O/HOMRBK0019__4.jpg?h=4137532501",
-      "https://www.pbtech.co.nz/imgprod/H/O/HOMRBK0019__5.jpg?h=287674706"
     ]
   },
   {
@@ -3324,7 +3225,9 @@
       "https://roborockstore.com.au/cdn/shop/files/2-2_600x600_2x_35c9aea6-9c3c-48c8-a983-a153973179fa_1200x.jpg?v=1724746031",
       "https://roborockstore.com.au/cdn/shop/files/img_v2_2c6c26ad-bb7e-4001-826d-5ed0e2ef00cg_600x600_2x_5b06222c-c68e-44ad-b0fa-2ed862f87a8a_1200x.webp?v=1724748374",
       "https://roborockstore.com.au/cdn/shop/files/7_600x600_2x_b21ba9df-bbda-4dbc-8986-ff3efb720398_1200x.webp?v=1724748374"
-    ]
+    ],
+    "released": "2022",
+    "manufacturer_url": "https://roborock.com"
   },
   {
     "id": "unitree-h1",
@@ -8919,7 +8822,7 @@
       "factory-deployment"
     ],
     "fig": "🤖",
-    "img": "",
+    "img": "https://electrek.co/wp-content/uploads/sites/3/2024/01/Tesla-Optimus-Gen-2.jpg",
     "score": 9.2,
     "rating": 4.6,
     "price": 18000,
@@ -15286,7 +15189,20 @@
       "runtime_min": 90,
       "coverage_sqm": 200
     },
-    "origin": "South Korea"
+    "origin": "South Korea",
+    "made_in": "South Korea",
+    "announced": "2021",
+    "released": "2021",
+    "auto_empty": true,
+    "navigation": "LiDAR + AI camera",
+    "ai_obstacle_avoidance": true,
+    "voice_assistant": [
+      "Bixby",
+      "Alexa",
+      "Google Assistant"
+    ],
+    "app_companion": "SmartThings",
+    "manufacturer_url": "https://www.samsung.com"
   },
   {
     "id": "samsung-jetbot-vr30t80313w",
@@ -21479,7 +21395,8 @@
       "max_altitude_m": 6000,
       "range_m": 10000
     },
-    "origin": "USA"
+    "origin": "USA",
+    "cellular": "4G"
   },
   {
     "id": "skydio-dock",
@@ -25734,7 +25651,8 @@
       "Restaurant delivery"
     ],
     "perf": "Max speed 25 mph, 60-mile range",
-    "origin": "USA"
+    "origin": "USA",
+    "cellular": "5G"
   },
   {
     "id": "nuro-r1",
@@ -25754,7 +25672,7 @@
     "img": "",
     "score": 7.2,
     "rating": 3.8,
-    "price": null,
+    "price": 0,
     "desc": "First generation autonomous delivery vehicle prototype used for initial pilot programs and testing.",
     "highlights": [
       "Original Nuro prototype",
@@ -25820,7 +25738,8 @@
       "Research"
     ],
     "perf": "Max speed 15 mph, 40-mile range",
-    "origin": "USA"
+    "origin": "USA",
+    "cellular": "4G"
   },
   {
     "id": "nuro-r3",
@@ -25913,7 +25832,8 @@
       "Medical supplies"
     ],
     "perf": "Max speed 30 mph, 80-mile range",
-    "origin": "USA"
+    "origin": "USA",
+    "cellular": "5G"
   },
   {
     "id": "nuro-pony",
@@ -39053,7 +38973,10 @@
       "https://m.media-amazon.com/images/I/61gRKhyoL9L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71TNf1w3V9L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/515v5umBQ1L._AC_SL1500_.jpg"
-    ]
+    ],
+    "released": "2023",
+    "manufacturer_url": "https://www.dyson.com",
+    "product_url": "https://www.dyson.com/vacuum-cleaners/robot/dyson-360-vis-nav"
   },
   {
     "id": "dyson-robot-prototype-a",
@@ -39881,7 +39804,17 @@
     "origin": "China",
     "released": "2023",
     "dof": 40,
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "speed_ms": 1.4,
+    "made_in": "China",
+    "announced": "2023-07",
+    "payload_kg": 50,
+    "arm_dof": 7,
+    "torque_nm": 230,
+    "actuator_type": "Fourier FSA",
+    "fingers": 5,
+    "bimanual": true,
+    "website": "https://www.fftai.com"
   },
   {
     "id": "fourier-alex",
@@ -45413,7 +45346,8 @@
       "Commercial passenger transport",
       "Emergency medical services"
     ],
-    "manufacturer_url": "https://www.jobyaviation.com"
+    "manufacturer_url": "https://www.jobyaviation.com",
+    "depth_mm": 6100
   },
   {
     "id": "volocopter-volocopter-2x",
@@ -47853,7 +47787,8 @@
       "https://m.media-amazon.com/images/I/714ZPsbTpTL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81eaP8rNntL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/712BadWMfkL._AC_SL1500_.jpg"
-    ]
+    ],
+    "cameras": "Front-facing camera for navigation"
   },
   {
     "id": "proscenic-proscenic-850t",
@@ -47988,7 +47923,8 @@
       "Automated home maintenance",
       "Pet hair removal"
     ],
-    "warranty_months": 12
+    "warranty_months": 12,
+    "imu": true
   },
   {
     "id": "roidmi-roidmi-eve-plus",
@@ -48427,7 +48363,8 @@
       "https://de.lefant.com/cdn/shop/files/8_20563b8b-4df9-4247-97e2-a09b5ac6a576.jpg?v=1773106641&width=1600",
       "https://de.lefant.com/cdn/shop/files/9_69f1a73f-c4f0-42f1-84e4-5bc99844bce9.jpg?v=1773106641&width=1600",
       "https://de.lefant.com/cdn/shop/files/5_15f143eb-280d-4374-b63e-3117d0942aa3.jpg?v=1773106641&width=1600"
-    ]
+    ],
+    "depth_sensing": false
   },
   {
     "id": "lefant-lefant-m210p",
@@ -48580,7 +48517,8 @@
       "https://m.media-amazon.com/images/I/71qNqe+vhXL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71ViNAazqcL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81UpUh0PqwL._AC_SL1500_.jpg"
-    ]
+    ],
+    "manufacturer_url": "https://www.lefant.com"
   },
   {
     "id": "lefant-lefant-m310-ultra",
@@ -48629,7 +48567,8 @@
       "https://m.media-amazon.com/images/I/71JQBK1Qw3L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71Pf7QxYyML._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71JQHknnJnL._AC_SL1500_.jpg"
-    ]
+    ],
+    "depth_sensing": true
   },
   {
     "id": "lefant-lefant-m330pro",
@@ -49244,141 +49183,6 @@
     ]
   },
   {
-    "id": "roidmi-eva",
-    "name": "EVA",
-    "brand": "ROIDMI",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "World's first self-emptying robot vacuum with automatic mop cleaning and drying, 3200Pa suction, 12N pressurized mopping, dual-tank system for clean/dirty water separation, antibacterial dust bags, and smart home integration",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2021,
-    "origin": "China",
-    "status": "Released",
-    "released": "2021",
-    "height_mm": 96,
-    "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 3.8,
-    "battery_life": "3 hours",
-    "charge_time": "6 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "cameras": "Front-facing camera for navigation",
-    "lidar": true,
-    "imu": true,
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Automated cleaning",
-      "Smart home automation"
-    ],
-    "warranty_months": 12
-  },
-  {
-    "id": "roidmi-eve-plus",
-    "name": "EVE Plus",
-    "brand": "ROIDMI",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Self-sterilizing and self-emptying robot vacuum with 2700Pa suction, LDS laser navigation, 220ml water tank for mopping, smart app control, Alexa compatibility, and ozone sterilization feature in dust collection station",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2020,
-    "origin": "China",
-    "status": "Released",
-    "released": "2020",
-    "height_mm": 96,
-    "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 3.8,
-    "battery_life": "2.5 hours",
-    "charge_time": "4 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "lidar": true,
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Automated cleaning"
-    ],
-    "warranty_months": 12
-  },
-  {
-    "id": "lefant-n3",
-    "name": "N3",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/22/UqU0E8PQ2ulhA3P6qfCF/image.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 159,
-    "desc": "Intelligent total cleaning with sonic vibration mop technology for comprehensive home maintenance",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2022,
-    "status": "Released",
-    "released": "2022",
-    "height_mm": 78,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 2.8,
-    "battery_life": "120 minutes",
-    "charge_time": "4-6 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "cameras": "Single front-facing camera",
-    "lidar": false,
-    "imu": true,
-    "depth_sensing": false,
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Daily cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://m.media-amazon.com/images/I/71kJV++7wPL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71dH893RR5L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/91lE3loJkwL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71NJ3eQo0qL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/815K2gcPO-L._AC_SL1500_.jpg"
-    ]
-  },
-  {
     "id": "lefant-m210-pro",
     "name": "M210 Pro",
     "brand": "Lefant",
@@ -49636,150 +49440,6 @@
     ]
   },
   {
-    "id": "lefant-v1",
-    "name": "V1",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://www.lefant.com/cdn/shop/files/1_b0414fb2-f4c4-4937-bcaf-09dfe3bd6c2e.jpg?v=1770904016&width=2000",
-    "score": 75,
-    "rating": 4,
-    "price": 150,
-    "desc": "Hurricane Strength Suction Power",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2021,
-    "status": "Released",
-    "released": "2021",
-    "height_mm": 73,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 2.3,
-    "battery_life": "120 minutes",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "cameras": "Bottom-facing navigation camera",
-    "lidar": false,
-    "imu": true,
-    "depth_sensing": false,
-    "use_cases": [
-      "Floor cleaning",
-      "Pet hair removal",
-      "Daily maintenance cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://www.lefant.com/cdn/shop/files/11_c2cc0407-6a14-4664-8d53-227a79bfecae.jpg?v=1772436705&width=2000",
-      "https://www.lefant.com/cdn/shop/files/12_bc923c0b-a15f-4a65-af85-8a8e5f17cf07.jpg?v=1772436705&width=2000",
-      "https://www.lefant.com/cdn/shop/files/3_2d41e231-acfd-4c8a-8dd4-e837fd3e9e4a.jpg?v=1772436705&width=2000",
-      "https://www.lefant.com/cdn/shop/files/5_6d89270a-997a-42de-a64e-ea4b2a594aaa.jpg?v=1772436705&width=2000",
-      "https://www.lefant.com/cdn/shop/files/6_63452d7d-6e65-4035-9a87-0ee9055fb49c.jpg?v=1772436705&width=2000"
-    ]
-  },
-  {
-    "id": "lefant-ls200",
-    "name": "LS200",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/61w9bteapPL._AC_SL1500_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Fresh Water Mop, Residue-Free Clean",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 90,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 3.2,
-    "battery_life": "150 minutes",
-    "charge_time": "4-6 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "lidar": false,
-    "imu": true,
-    "cameras": "Bottom-facing optical sensor",
-    "use_cases": [
-      "Floor mopping",
-      "Wet cleaning",
-      "Residential cleaning",
-      "Hard floor maintenance"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://m.media-amazon.com/images/I/81phtCnRa3L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/81uXUSLALAL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71GYZIxTzzL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71LknFnuH6L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71DVf1wSWsL._AC_SL1500_.jpg"
-    ]
-  },
-  {
-    "id": "lefant-ls100",
-    "name": "LS100",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://www.lefant.com/cdn/shop/files/1.1.jpg?v=1741082933&width=2000",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Ultra-light & efficient slimmer when flat",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 75,
-    "battery_life": "35 minutes",
-    "charge_time": "3-4 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "use_cases": [
-      "Floor cleaning",
-      "Carpet cleaning",
-      "Pet hair removal",
-      "Household maintenance"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://www.lefant.com/cdn/shop/files/4_c8d08f83-de85-40ed-84da-217ea8d1c960.jpg?v=1741082934&width=2000",
-      "https://www.lefant.com/cdn/shop/files/7_1f8d87f6-efd9-4838-897d-8bbbeb9bb929.jpg?v=1741082934&width=1600",
-      "https://www.lefant.com/cdn/shop/files/3_8f5f5036-84e6-4e5b-833c-c0efd7b03ec7.jpg?v=1741082935&width=1600",
-      "https://www.lefant.com/cdn/shop/files/5_bb5ba0b4-cf10-4a60-b773-03101ec7f298.jpg?v=1741082935&width=1600",
-      "https://www.lefant.com/cdn/shop/files/8_9ba96684-9e4a-42c0-8d1d-400ce977c631.jpg?v=1741082936&width=1600"
-    ]
-  },
-  {
     "id": "lefant-m1",
     "name": "M1",
     "brand": "Lefant",
@@ -49821,107 +49481,6 @@
       "Daily cleaning"
     ],
     "warranty_months": 12
-  },
-  {
-    "id": "lefant-m2",
-    "name": "M2",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/23/Jpc8njzoKHzbCs9jzsJU/image.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Free your hands for easy cleaning",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2020,
-    "origin": "China",
-    "status": "Released",
-    "released": "2020",
-    "height_mm": 76,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 2.5,
-    "battery_life": "120 minutes",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "cameras": "None",
-    "lidar": false,
-    "imu": true,
-    "depth_sensing": false,
-    "use_cases": [
-      "Floor cleaning",
-      "Pet hair removal",
-      "Daily maintenance cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://www.lefant.com/cdn/shop/files/8_a27bfc45-e4dd-4fe2-b2a0-863862f558ee.jpg?v=1755655426",
-      "https://www.lefant.com/cdn/shop/files/freemove3.jpg?v=1755655426",
-      "https://www.lefant.com/cdn/shop/files/2in1.jpg?v=1755655426",
-      "https://www.lefant.com/cdn/shop/files/5_192d76c8-dbbb-4ef7-809b-ec6735d41b0d.jpg?v=1755655426",
-      "https://www.lefant.com/cdn/shop/files/1_130487ff-1534-441e-b8ef-fa4f3a23958f.jpg?v=1755655426"
-    ]
-  },
-  {
-    "id": "lefant-m2-pro",
-    "name": "M2 Pro",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/61YHODa1cBL._AC_SL1500_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 299,
-    "desc": "SmartSweep With Mini Dust Collector Base Station",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 78,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 2.8,
-    "battery_life": "150 minutes",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "cameras": "Front-facing camera for navigation",
-    "lidar": false,
-    "imu": true,
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Daily cleaning maintenance"
-    ],
-    "warranty_months": 12,
-    "depth_sensing": false,
-    "gallery": [
-      "https://m.media-amazon.com/images/I/71aJ5J+q+DL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71VLM+ogj2L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/61gN3aws7AL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71cdDJUkpVL._AC_SL1500_.jpg",
-      ""
-    ]
   },
   {
     "id": "lefant-m3",
@@ -49972,350 +49531,6 @@
       "https://m.media-amazon.com/images/I/71lOAmZSQTL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71Ro5wAxZcL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81mLpljpTuL._AC_SL1500_.jpg"
-    ]
-  },
-  {
-    "id": "lefant-m350",
-    "name": "M350",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/61dqQ0YK82L._AC_SX679_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 159,
-    "desc": "Ultra-Slim Body, 3-in-1 Sweep, Vacuum, Mop",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2022,
-    "status": "Released",
-    "height_mm": 72,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 2.6,
-    "battery_life": "120 minutes",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "lidar": false,
-    "cameras": "Anti-collision infrared sensors",
-    "use_cases": [
-      "Floor cleaning",
-      "Pet hair removal",
-      "Daily maintenance cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://m.media-amazon.com/images/I/71JXeMdGhzL._AC_SX679_.jpg",
-      "https://m.media-amazon.com/images/I/81grBv1IXeL._AC_SX679_.jpg",
-      "https://m.media-amazon.com/images/I/81CLVjxfdyL._AC_SX679_.jpg",
-      "https://m.media-amazon.com/images/I/815dp8hUKVL._AC_SX679_.jpg",
-      "https://m.media-amazon.com/images/I/81O449hVqbL._AC_SL1500_.jpg"
-    ]
-  },
-  {
-    "id": "lefant-m5",
-    "name": "M5",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://de.lefant.com/cdn/shop/files/5G__02_7973700f-dab8-449c-bab5-e08cdce6a771.jpg?v=1777544610&width=2000",
-    "score": 75,
-    "rating": 4,
-    "price": 299,
-    "desc": "Freshwater Mopping, Fully Automatic Base Station",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 78,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 2.8,
-    "battery_life": "2.5 hours",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "cameras": "Single front-facing camera for navigation",
-    "lidar": false,
-    "imu": true,
-    "depth_sensing": false,
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Daily cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://de.lefant.com/cdn/shop/files/1_3ba81b17-f9e3-4fa7-9b2d-2e1a39d8344b.jpg?v=1773106641&width=2000",
-      "https://de.lefant.com/cdn/shop/files/10_caedbd97-3699-421b-800f-a031a4a38d2e.jpg?v=1773106642&width=2000",
-      "https://de.lefant.com/cdn/shop/files/11_41113e96-95be-4c92-b692-08dc22185091.jpg?v=1773106642&width=2000",
-      "https://de.lefant.com/cdn/shop/files/2_99227b7e-791e-48f3-9ee7-cad6c43db27d.jpg?v=1773106641&width=2000",
-      "https://de.lefant.com/cdn/shop/files/12_29b76ff8-b5b3-4b67-b138-b7b5737e4d3a.jpg?v=1773106641&width=2000"
-    ]
-  },
-  {
-    "id": "lefant-m210p",
-    "name": "M210P",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/61dP0tGe9fL._AC_SL1500_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 150,
-    "desc": "Smart Home Cleaning Helper",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2021,
-    "status": "Released",
-    "released": "2021",
-    "height_mm": 72,
-    "width_mm": 280,
-    "depth_mm": 280,
-    "weight_kg": 2.5,
-    "battery_life": "100 minutes",
-    "charge_time": "4-6 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "cameras": "Single camera for navigation",
-    "lidar": false,
-    "imu": true,
-    "depth_sensing": false,
-    "use_cases": [
-      "Floor cleaning",
-      "Pet hair removal",
-      "Daily maintenance cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://m.media-amazon.com/images/I/71p3nZzSMtL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/81XMf-UHUJL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71dlBdYhUVL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71dncvJ-r+L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71xeygbf-FL._AC_SL1500_.jpg"
-    ]
-  },
-  {
-    "id": "lefant-m210-pro-omni",
-    "name": "M210 Pro OMNI",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://de.lefant.com/cdn/shop/files/M265_699c5f75-3a79-438c-bebd-97f243da4849.png?v=1775201908&width=1024",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Ultra-compact Roller Wet Cleaning Robot, self-cleaning roller, zero hair tangling",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 76,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 2.8,
-    "battery_life": "150 minutes",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "lidar": false,
-    "cameras": "Single front-facing camera for navigation",
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair cleaning",
-      "Daily maintenance cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://de.lefant.com/cdn/shop/files/1_63117b4a-25ce-4c1a-ac21-0e428cb94a78.png?v=1775201976&width=2000",
-      "https://de.lefant.com/cdn/shop/files/10_c69f4cd1-cbb9-4b5d-a875-f1055fb8230b.png?v=1775201977&width=2000",
-      "https://de.lefant.com/cdn/shop/files/11_8f4edfcd-897d-4a38-8afe-fc1fcdcd6207.png?v=1775201977&width=2000",
-      "https://de.lefant.com/cdn/shop/files/12_7588af0a-0cdc-482b-9644-b27c089383c3.png?v=1775201976&width=2000",
-      ""
-    ]
-  },
-  {
-    "id": "lefant-m320",
-    "name": "M320",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://www.lefant.com/cdn/shop/files/01_a4c40942-dedf-419e-ac28-68dac41339c4.png?v=1755239614",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Powerful intelligent robot vacuum",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2020,
-    "status": "Released",
-    "height_mm": 73,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 2.8,
-    "battery_life": "100 minutes",
-    "charge_time": "4-6 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "lidar": false,
-    "use_cases": [
-      "Floor cleaning",
-      "Pet hair removal",
-      "Daily maintenance cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://www.lefant.com/cdn/shop/files/2_a638e534-9391-4fb4-b05b-b1bd07fb376d.png?v=1755239614",
-      "https://www.lefant.com/cdn/shop/files/4_78f6d1df-4d48-4c63-b5e8-52dd38b55772.png?v=1755239614",
-      "https://www.lefant.com/cdn/shop/files/5_00a24d15-0cbf-4ad3-94e3-ec22dc9ce679.png?v=1755239614",
-      "https://www.lefant.com/cdn/shop/files/9_2960062a-3c3f-4b17-87a2-b6b45c40f3b2.png?v=1755239614",
-      "https://www.lefant.com/cdn/shop/files/6_4523cd13-7ee4-4cd4-a37b-553a0aef5d91.png?v=1755239614"
-    ]
-  },
-  {
-    "id": "lefant-m310",
-    "name": "M310",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://www.lefant.com/cdn/shop/files/86d6b6668dd249b94188acb64812e4bf.jpg?v=1772264388&width=2000",
-    "score": 75,
-    "rating": 4,
-    "price": 150,
-    "desc": "Compact Cleaning Assistant, 4500Pa suction, PreciSense obstacle avoidance, ultra-slim design, HEPA filtration",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2021,
-    "status": "Released",
-    "released": "2021",
-    "height_mm": 72,
-    "width_mm": 280,
-    "depth_mm": 280,
-    "weight_kg": 2.3,
-    "battery_life": "100 minutes",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "cameras": "Bottom-facing sensors for navigation",
-    "lidar": false,
-    "imu": true,
-    "depth_sensing": false,
-    "use_cases": [
-      "Floor cleaning",
-      "Pet hair removal",
-      "Daily maintenance cleaning",
-      "Under furniture cleaning"
-    ],
-    "warranty_months": 12,
-    "manufacturer_url": "https://www.lefant.com",
-    "gallery": [
-      "https://www.lefant.com/cdn/shop/files/9_f7afe6fd-554c-416f-93e8-08e144e4893a.png?v=1772264680&width=2000",
-      "https://www.lefant.com/cdn/shop/files/5_f63cb7f4-8bf4-4cb5-afe4-e19035ad1f2f.png?v=1772264681&width=2000",
-      "https://www.lefant.com/cdn/shop/files/1_4a36b08b-036c-4bf1-a173-7e2291c3028b.png?v=1772264681&width=2000",
-      "https://www.lefant.com/cdn/shop/files/7_f833bbbb-567d-4de4-86be-43fc9d2ed304.jpg?v=1772264745&width=2000",
-      ""
-    ]
-  },
-  {
-    "id": "lefant-m310-ultra",
-    "name": "M310 Ultra",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://www.lefant.com/cdn/shop/files/339ddbe35c0616333a3603e7c8970483.jpg?v=1769766414&width=2000",
-    "score": 75,
-    "rating": 4,
-    "price": 299,
-    "desc": "Smaller and thinner with laser navigation, 6000Pa suction, ToF LiDAR navigation, obstacle avoidance, WiFi/App/Alexa control",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 78,
-    "width_mm": 325,
-    "depth_mm": 325,
-    "weight_kg": 2.8,
-    "battery_life": "150 minutes",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "lidar": true,
-    "depth_sensing": true,
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Daily cleaning automation"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://www.lefant.com/cdn/shop/files/1_4649f2d9-d8fd-4bb2-9abd-c73363481d4e.jpg?v=1769766414&width=2000",
-      "https://www.lefant.com/cdn/shop/files/2_a1f75530-a0e6-48c7-8659-eca374b1d576.jpg?v=1769766414&width=2000",
-      "https://www.lefant.com/cdn/shop/files/3_b72f0f28-02c5-4076-be06-6cf4165d36b5.jpg?v=1769766414&width=2000",
-      "https://www.lefant.com/cdn/shop/files/4_69c9371b-5205-47f9-b1fc-95656cdf0598.jpg?v=1769766414&width=2000",
-      ""
     ]
   },
   {
@@ -50508,7 +49723,15 @@
     "speed_ms": 1,
     "os": "Linux",
     "warranty_months": 12,
-    "product_url": "https://www.realman-robotics.com/en/product-details/rmc-da"
+    "product_url": "https://www.realman-robotics.com/en/product-details/rmc-da",
+    "width_mm": 800,
+    "depth_mm": 600,
+    "battery_life": "8 hours",
+    "charge_time": "4 hours",
+    "cpu": "ARM Cortex-A72",
+    "ram_gb": 8,
+    "storage_gb": 64,
+    "cellular": "4G LTE"
   },
   {
     "id": "realman-robotics-realman-eco65-aa-",
@@ -50574,7 +49797,21 @@
       "C++",
       "ROS"
     ],
-    "product_url": "https://www.realman-robotics.com/products/eco65-aa"
+    "product_url": "https://www.realman-robotics.com/products/eco65-aa",
+    "communication_interfaces": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Emergency stop",
+      "Safe torque off"
+    ],
+    "force_sensor": "6-axis force/torque sensor",
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true
   },
   {
     "id": "realman-robotics-realman-rm75-b",
@@ -50637,7 +49874,31 @@
       "Python",
       "C++"
     ],
-    "website": "https://www.realman-robotics.com"
+    "website": "https://www.realman-robotics.com",
+    "repeatability_mm": 0.02,
+    "max_speed_ms": 2.5,
+    "joint_ranges": "±170° to ±360°",
+    "communication": "Ethernet, RS485",
+    "protection_rating": "IP54",
+    "operating_temp": "-10°C to +50°C",
+    "power_consumption": "300W",
+    "control_system": "Real-time control system",
+    "programming": "Python, C++, ROS",
+    "safety_features": "Collision detection, emergency stop",
+    "operating_temp_max": 45,
+    "ip_rating": "IP54",
+    "voltage": "24V DC",
+    "programming_language": [
+      "Python",
+      "C++"
+    ],
+    "joint_range_deg": [
+      -360,
+      360
+    ],
+    "base_diameter_mm": 118,
+    "warranty_months": 12,
+    "bluetooth": false
   },
   {
     "id": "realman-robotics-realman-rm65-series",
@@ -51190,127 +50451,6 @@
     "depth_sensing": false
   },
   {
-    "id": "realman-rmc-da-dual-arm-compound-robot",
-    "name": "RMC-DA Dual-Arm Compound Robot",
-    "brand": "RealMan",
-    "cat": "Industrial",
-    "sub": "Mobile Manipulator",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Intelligent mobile platform with two 7-axis robotic arms, compact and flexible design, includes navigation system with laser radar and depth camera",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2022,
-    "origin": "China",
-    "status": "Released",
-    "released": "2022",
-    "dof": 14,
-    "ros": true,
-    "cameras": "Multiple vision sensors for navigation and manipulation",
-    "lidar": true,
-    "imu": true,
-    "depth_sensing": true,
-    "use_cases": [
-      "Industrial automation",
-      "Research and development",
-      "Warehouse operations",
-      "Collaborative manufacturing",
-      "Educational robotics"
-    ],
-    "manufacturer_url": "https://www.realman-robotics.com",
-    "height_mm": 1650,
-    "weight_kg": 180,
-    "payload_kg": 3,
-    "reach_mm": 900,
-    "speed_ms": 1.5,
-    "os": "Linux",
-    "wifi": true,
-    "bluetooth": true,
-    "warranty_months": 12,
-    "product_url": "https://www.realman-robotics.com/en/products/mobile-robot/rmc-da",
-    "width_mm": 800,
-    "depth_mm": 600,
-    "battery_life": "8 hours",
-    "charge_time": "4 hours",
-    "cpu": "ARM Cortex-A72",
-    "ram_gb": 8,
-    "storage_gb": 64,
-    "cellular": "4G LTE"
-  },
-  {
-    "id": "realman-eco65-aa-",
-    "name": "ECO65-AA+",
-    "brand": "RealMan",
-    "cat": "Industrial",
-    "sub": "6-Axis Articulated Arm",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Enhanced model with six-axis force detector, larger working radius, weight 7.9kg, suitable for delicate handling and precise force control",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2021,
-    "origin": "China",
-    "status": "Released",
-    "released": "2021",
-    "weight_kg": 7.9,
-    "payload_kg": 3,
-    "dof": 6,
-    "reach_mm": 650,
-    "ros": true,
-    "use_cases": [
-      "Assembly",
-      "Pick and place",
-      "Machine tending",
-      "Quality inspection",
-      "Force-sensitive operations"
-    ],
-    "manufacturer_url": "https://www.realman-robotics.com",
-    "repeatability_mm": 0.03,
-    "protection_rating": "IP54",
-    "operating_temp_range": "-10°C to +50°C",
-    "communication_interfaces": [
-      "Ethernet",
-      "Modbus",
-      "TCP/IP"
-    ],
-    "programming_languages": [
-      "Python",
-      "C++",
-      "Blockly"
-    ],
-    "safety_features": [
-      "Collision detection",
-      "Emergency stop",
-      "Safe torque off"
-    ],
-    "max_joint_speed_deg_s": 180,
-    "force_sensor": "6-axis force/torque sensor",
-    "warranty_months": 24,
-    "speed_ms": 1.5,
-    "wifi": true,
-    "bluetooth": false,
-    "imu": true,
-    "product_url": "https://www.realman-robotics.com/products/eco65-aa"
-  },
-  {
     "id": "realman-rml-63",
     "name": "RML-63",
     "brand": "RealMan",
@@ -51754,72 +50894,6 @@
     "force_sensor": "Built-in 6-axis force/torque sensor",
     "programming": "RealMan Studio, Python SDK, C++ SDK",
     "warranty_months": 12
-  },
-  {
-    "id": "realman-rm75-b",
-    "name": "RM75-B",
-    "brand": "RealMan",
-    "cat": "Industrial",
-    "sub": "6-Axis Articulated Arm",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "7-degree-of-freedom ultra-lightweight robotic arm, weighs 7.8kg total, enhanced flexibility with extra joint",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2020,
-    "status": "Released",
-    "weight_kg": 7.8,
-    "payload_kg": 3,
-    "dof": 7,
-    "reach_mm": 750,
-    "ros": true,
-    "use_cases": [
-      "Industrial automation",
-      "Pick and place",
-      "Assembly",
-      "Research",
-      "Education"
-    ],
-    "manufacturer_url": "https://www.realman-robotics.com",
-    "repeatability_mm": 0.02,
-    "max_speed_ms": 2.5,
-    "joint_ranges": "±170° to ±360°",
-    "communication": "Ethernet, RS485",
-    "protection_rating": "IP54",
-    "operating_temp": "-10°C to +50°C",
-    "power_consumption": "300W",
-    "control_system": "Real-time control system",
-    "programming": "Python, C++, ROS",
-    "safety_features": "Collision detection, emergency stop",
-    "released": "2023",
-    "operating_temp_max": 45,
-    "ip_rating": "IP54",
-    "voltage": "24V DC",
-    "programming_language": [
-      "Python",
-      "C++"
-    ],
-    "joint_range_deg": [
-      -360,
-      360
-    ],
-    "base_diameter_mm": 118,
-    "warranty_months": 12,
-    "imu": true,
-    "depth_sensing": false,
-    "lidar": false,
-    "bluetooth": false,
-    "wifi": false
   },
   {
     "id": "realman-rm65-b",
@@ -52870,7 +51944,28 @@
       "Packaging"
     ],
     "warranty_months": 24,
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "height_mm": 924,
+    "bluetooth": true,
+    "repeatability_mm": 0.03,
+    "operating_temp_c": "0 to 45",
+    "ip_rating": "IP54",
+    "power_consumption_w": 200,
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "safety_features": [
+      "Collision detection",
+      "Emergency stop",
+      "Safety-rated monitored stop"
+    ],
+    "communication_protocols": [
+      "Ethernet",
+      "Modbus TCP",
+      "TCP/IP"
+    ]
   },
   {
     "id": "jaka-jaka-ai-3",
@@ -53011,7 +52106,24 @@
     "released": "2020",
     "speed_ms": 3.2,
     "force_sensor": true,
-    "force_range_n": 300
+    "force_range_n": 300,
+    "protection_rating": "IP54",
+    "operating_temp_max": 45,
+    "communication_protocols": [
+      "Ethernet",
+      "Modbus",
+      "TCP/IP"
+    ],
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "wifi": true,
+    "bluetooth": false,
+    "imu": true,
+    "depth_sensing": false,
+    "lidar": false
   },
   {
     "id": "wandelbots-tracepen",
@@ -53485,7 +52597,20 @@
     "wifi": true,
     "bluetooth": true,
     "speed_ms": 2,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "operating_temp_max": 50,
+    "power_consumption": 300,
+    "safety_certification": "ISO 10218, ISO 13849",
+    "programming_methods": [
+      "Drag teaching",
+      "Graphical programming",
+      "Script programming"
+    ],
+    "collision_detection": true,
+    "force_feedback": true,
+    "ethernet": true
   },
   {
     "id": "jaka-jaka-minicobo",
@@ -53527,7 +52652,13 @@
       "Service applications",
       "Research"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "speed_ms": 1.5,
+    "cellular": "Optional",
+    "cameras": "Built-in vision system",
+    "imu": true,
+    "warranty_months": 12,
+    "product_url": "https://www.jaka.com/product/minicobo"
   },
   {
     "id": "aubo-aubo-iv-vision-series",
@@ -58854,7 +57985,12 @@
     "imu": true,
     "product_url": "https://www.agibot.com/products/omnihand-o10",
     "payload_kg": 1.5,
-    "depth_sensing": true
+    "depth_sensing": true,
+    "released": "2024",
+    "warranty_months": 12,
+    "lidar": false,
+    "bluetooth": false,
+    "wifi": false
   },
   {
     "id": "agibot-agibot-a1-raise-a1-",
@@ -58995,7 +58131,15 @@
     "brand": "AGIBOT",
     "cat": "Industrial",
     "sub": "Heavy Payload Arm",
-    "tags": [],
+    "tags": [
+      "humanoid",
+      "agibot",
+      "max",
+      "industrial",
+      "pre-order",
+      "heavy-duty",
+      "palletizing"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
@@ -59023,7 +58167,20 @@
       "Warehouse operations",
       "Manufacturing assembly"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "made_in": "China",
+    "announced": "2024-08",
+    "torque_nm": 450,
+    "arm_dof": 7,
+    "fingers": 5,
+    "bimanual": true,
+    "can_use_tools": true,
+    "cameras": "RGB-D + RGB",
+    "lidar": true,
+    "depth_sensing": true,
+    "imu": true,
+    "ai_model": "GO-1",
+    "website": "https://www.agibot.com/products/A2_Max"
   },
   {
     "id": "agibot-agibot-omnihand-pro-2025",
@@ -59065,7 +58222,10 @@
     "depth_sensing": true,
     "imu": true,
     "warranty_months": 12,
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "wifi": true,
+    "bluetooth": true,
+    "payload_kg": 2
   },
   {
     "id": "agibot-agibot-omnihand-2025",
@@ -59106,7 +58266,10 @@
     "warranty_months": 12,
     "fingers": 5,
     "payload_kg": 3,
-    "product_url": "https://www.agibot.com/product/omnihand"
+    "product_url": "https://www.agibot.com/product/omnihand",
+    "bluetooth": true,
+    "wifi": true,
+    "reach_mm": 200
   },
   {
     "id": "agibot-agibot-d1-edu",
@@ -59156,7 +58319,9 @@
     ],
     "wifi": true,
     "bluetooth": true,
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "height_mm": 350,
+    "payload_kg": 3
   },
   {
     "id": "agibot-agibot-d1-pro",
@@ -59206,7 +58371,8 @@
       "Emergency response",
       "Surveillance"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "dof": 12
   },
   {
     "id": "agibot-agibot-d1-ultra",
@@ -59258,7 +58424,8 @@
       "All-terrain surveillance"
     ],
     "dof": 40,
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "battery_life": "2-4 hours"
   },
   {
     "id": "agibot-agibot-g2",
@@ -59266,14 +58433,25 @@
     "brand": "AGIBOT",
     "cat": "Humanoid",
     "sub": "Wheeled / Mobile Humanoid",
-    "tags": [],
+    "tags": [
+      "wheeled",
+      "industrial",
+      "GR00T",
+      "precision",
+      "2026-launch"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
     "desc": "Industrial-grade wheeled humanoid with 7-DoF force-controlled arms, IP42 protection, and multimodal perception. Designed for precision assembly, factory automation, and interactive tasks. Features 26 total degrees of freedom and sub-millimeter assembly capabilities.",
-    "highlights": [],
+    "highlights": [
+      "Sub-mm precision",
+      "Wheeled",
+      "NVIDIA GR00T partner",
+      "Industrial focus"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -59301,7 +58479,11 @@
       "Quality inspection",
       "Material handling"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "released": "2024",
+    "battery_life": "8 hours",
+    "chipset": "NVIDIA Jetson Thor",
+    "ai_model": "NVIDIA GR00T"
   },
   {
     "id": "agibot-agibot-x2-n",
@@ -59390,7 +58572,8 @@
     "bluetooth": true,
     "lidar": false,
     "warranty_months": 12,
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "speed_ms": 1.2
   },
   {
     "id": "agibot-agibot-a2-lite",
@@ -59398,7 +58581,14 @@
     "brand": "AGIBOT",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
-    "tags": [],
+    "tags": [
+      "humanoid",
+      "agibot",
+      "service",
+      "active",
+      "china",
+      "cost-reduced"
+    ],
     "fig": "🤖",
     "img": "",
     "score": 75,
@@ -59433,7 +58623,18 @@
     "wifi": true,
     "bluetooth": true,
     "ros": true,
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "made_in": "China",
+    "released": "2025",
+    "fingers": 5,
+    "bimanual": true,
+    "depth_sensing": false,
+    "lidar": false,
+    "ai_model": "GO-1 (simplified)",
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "battery_life_typical": 120,
+    "website": "https://www.agibot.com"
   },
   {
     "id": "agibot-agibot-a2-ultra",
@@ -59549,130 +58750,6 @@
     "manufacturer_url": "https://www.agibot.com"
   },
   {
-    "id": "agibot-x2-n",
-    "name": "X2-N",
-    "brand": "AGIBOT",
-    "cat": "Humanoid",
-    "sub": "General Purpose Humanoid",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Cutting-edge humanoid with unique hybrid locomotion system, seamlessly transitioning between bipedal walking and wheeled movement using integrated foot wheels. Uses proprioceptive feedback for terrain adaptation without external cameras.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2024,
-    "status": "In development",
-    "height_mm": 1700,
-    "weight_kg": 85,
-    "speed_ms": 2,
-    "dof": 43,
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "cameras": "Multiple RGB cameras for navigation and object recognition",
-    "imu": true,
-    "depth_sensing": true,
-    "use_cases": [
-      "Research and development",
-      "Service robotics",
-      "Industrial automation",
-      "Entertainment"
-    ],
-    "manufacturer_url": "https://www.agibot.com"
-  },
-  {
-    "id": "agibot-omnihand-pro-2025",
-    "name": "OmniHand Pro 2025",
-    "brand": "AGIBOT",
-    "cat": "Industrial",
-    "sub": "Robotic Hand / Gripper",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Professional version dexterous hand with enhanced capabilities",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2025,
-    "origin": "China",
-    "status": "In development",
-    "dof": 5,
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "use_cases": [
-      "Industrial automation",
-      "Research and development",
-      "Prosthetics",
-      "Laboratory tasks"
-    ],
-    "height_mm": 280,
-    "width_mm": 120,
-    "depth_mm": 85,
-    "weight_kg": 1.2,
-    "payload_kg": 2,
-    "reach_mm": 200,
-    "warranty_months": 12
-  },
-  {
-    "id": "agibot-omnihand-2025",
-    "name": "OmniHand 2025",
-    "brand": "AGIBOT",
-    "cat": "Industrial",
-    "sub": "Robotic Hand / Gripper",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "High-DOF interactive dexterous hand accessory compatible with AGIBOT A2",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2025,
-    "origin": "China",
-    "status": "In development",
-    "dof": 12,
-    "weight_kg": 1.2,
-    "ros": true,
-    "use_cases": [
-      "Research and development",
-      "Industrial automation",
-      "Prosthetics research",
-      "Educational robotics"
-    ],
-    "manufacturer_url": "https://www.agibot.com",
-    "warranty_months": 12,
-    "bluetooth": true,
-    "wifi": true,
-    "imu": true,
-    "reach_mm": 200,
-    "payload_kg": 2,
-    "depth_sensing": true,
-    "cameras": "Integrated tactile sensing array with force and pressure sensors"
-  },
-  {
     "id": "agibot-c5",
     "name": "C5",
     "brand": "AGIBOT",
@@ -59717,155 +58794,6 @@
     "depth_sensing": true,
     "ros": true,
     "warranty_months": 12
-  },
-  {
-    "id": "agibot-d1-pro",
-    "name": "D1 Pro",
-    "brand": "AGIBOT",
-    "cat": "Quadruped",
-    "sub": "Industrial Quadruped",
-    "tags": [
-      "quadruped",
-      "industrial",
-      "agibot",
-      "china",
-      "active"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Mid-tier industrial variant of AGIBOT's D1 quadruped series. Designed for industrial inspection, security patrol, and research applications.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2023,
-    "origin": "China",
-    "status": "Active",
-    "weight_kg": 15,
-    "speed_ms": 1.5,
-    "dof": 12,
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "cameras": "Multiple RGB cameras for navigation and perception",
-    "lidar": true,
-    "imu": true,
-    "depth_sensing": true,
-    "use_cases": [
-      "Industrial inspection",
-      "Security patrol"
-    ],
-    "manufacturer_url": "https://www.agibot.com"
-  },
-  {
-    "id": "agibot-d1-ultra",
-    "name": "D1 Ultra",
-    "brand": "AGIBOT",
-    "cat": "Quadruped",
-    "sub": "Industrial Quadruped",
-    "tags": [
-      "quadruped",
-      "industrial",
-      "agibot",
-      "china",
-      "active",
-      "high-end"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "High-end variant of AGIBOT's D1 quadruped series with enhanced compute, sensor stack, and payload capacity.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2024,
-    "origin": "China",
-    "status": "Active",
-    "height_mm": 600,
-    "weight_kg": 45,
-    "speed_ms": 3.5,
-    "payload_kg": 10,
-    "battery_life": "2-4 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "cameras": "Multiple RGB cameras for navigation and perception",
-    "lidar": true,
-    "imu": true,
-    "depth_sensing": true,
-    "use_cases": [
-      "Heavy industrial inspection",
-      "Advanced research"
-    ],
-    "manufacturer_url": "https://www.agibot.com"
-  },
-  {
-    "id": "agibot-g2",
-    "name": "G2",
-    "brand": "AGIBOT",
-    "cat": "Humanoid",
-    "sub": "General Purpose Humanoid",
-    "tags": [
-      "wheeled",
-      "industrial",
-      "GR00T",
-      "precision",
-      "2026-launch"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Industrial-grade wheeled humanoid with IP42 protection, 7-DoF force-controlled arms, sub-mm assembly precision, and NVIDIA Jetson Thor integration",
-    "highlights": [
-      "Sub-mm precision",
-      "Wheeled",
-      "NVIDIA GR00T partner",
-      "Industrial focus"
-    ],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2024,
-    "origin": "China",
-    "status": "Released",
-    "released": "2024",
-    "height_mm": 1650,
-    "weight_kg": 60,
-    "battery_life": "8 hours",
-    "dof": 14,
-    "chipset": "NVIDIA Jetson Thor",
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "cameras": "Multiple RGB cameras for vision and navigation",
-    "lidar": true,
-    "imu": true,
-    "depth_sensing": true,
-    "use_cases": [
-      "Manufacturing assembly",
-      "Quality inspection",
-      "Material handling",
-      "Industrial automation"
-    ],
-    "manufacturer_url": "https://www.agibot.com",
-    "ai_model": "NVIDIA GR00T"
   },
   {
     "id": "agibot-g1",
@@ -59954,44 +58882,6 @@
     "ai_model": "200 TOPS AI computing"
   },
   {
-    "id": "agibot-x2",
-    "name": "X2",
-    "brand": "AGIBOT",
-    "cat": "Humanoid",
-    "sub": "General Purpose Humanoid",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "25-30 DoF compact humanoid with multimodal interaction, dance capabilities, and coordinated head movements",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2024,
-    "origin": "China",
-    "status": "Released",
-    "height_mm": 650,
-    "weight_kg": 8,
-    "dof": 30,
-    "wifi": true,
-    "bluetooth": true,
-    "cameras": "RGB camera with computer vision capabilities",
-    "imu": true,
-    "use_cases": [
-      "Entertainment",
-      "Education",
-      "Research",
-      "Companion robot"
-    ],
-    "manufacturer_url": "https://www.agibot.com"
-  },
-  {
     "id": "agibot-x1",
     "name": "X1",
     "brand": "AGIBOT",
@@ -60031,105 +58921,6 @@
     "lidar": true,
     "imu": true,
     "depth_sensing": true
-  },
-  {
-    "id": "agibot-a2-w",
-    "name": "A2-W",
-    "brand": "AGIBOT",
-    "cat": "Industrial",
-    "sub": "Heavy Payload Arm",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Wheeled robot for flexible manufacturing with grasping, placing, transporting, and insertion capabilities using embodied intelligence algorithms",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2024,
-    "origin": "China",
-    "status": "Released",
-    "dof": 7,
-    "ros": true,
-    "cameras": "RGB cameras for vision processing",
-    "depth_sensing": true,
-    "imu": true,
-    "use_cases": [
-      "Manufacturing automation",
-      "Pick and place operations",
-      "Material handling",
-      "Assembly line tasks",
-      "Quality inspection"
-    ],
-    "manufacturer_url": "https://www.agibot.com",
-    "height_mm": 1600,
-    "payload_kg": 5,
-    "reach_mm": 900,
-    "speed_ms": 1.2,
-    "wifi": true,
-    "bluetooth": true,
-    "lidar": true
-  },
-  {
-    "id": "agibot-a2-lite",
-    "name": "A2 Lite",
-    "brand": "AGIBOT",
-    "cat": "Humanoid",
-    "sub": "Service Humanoid",
-    "tags": [
-      "humanoid",
-      "agibot",
-      "service",
-      "active",
-      "china",
-      "cost-reduced"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 84,
-    "rating": 4,
-    "price": 35000,
-    "desc": "Cost-reduced version of A2 for service/HRI roles. 23 DOF with simplified hands, no LiDAR or RGB-D. Targets reception, guidance, brand activation roles where the Ultra's dexterity isn't needed.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2025,
-    "origin": "China",
-    "status": "Active",
-    "height_mm": 1690,
-    "weight_kg": 65,
-    "dof": 23,
-    "use_cases": [
-      "Reception",
-      "Brand activation",
-      "Exhibition guides"
-    ],
-    "manufacturer_url": "https://www.agibot.com",
-    "made_in": "China",
-    "released": "2025",
-    "fingers": 5,
-    "bimanual": true,
-    "cameras": "RGB",
-    "depth_sensing": false,
-    "lidar": false,
-    "imu": true,
-    "ai_model": "GO-1 (simplified)",
-    "voice_recognition": true,
-    "speech_synthesis": true,
-    "battery_life_typical": 120,
-    "wifi": true,
-    "bluetooth": true,
-    "website": "https://www.agibot.com"
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
@@ -62200,58 +60991,31 @@
     "manufacturer_url": "https://www.fftai.com"
   },
   {
-    "id": "fourier-gr-3-care-bot",
-    "name": "GR-3 Care-Bot",
-    "brand": "Fourier",
-    "cat": "Humanoid",
-    "sub": "Companion Robot",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Care-focused humanoid with 55 degrees of freedom, 165cm height, 71kg weight, multimodal interaction system with emotional intelligence",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2024,
-    "origin": "China",
-    "status": "In development",
-    "height_mm": 1650,
-    "weight_kg": 71,
-    "dof": 55,
-    "cameras": "Multiple RGB cameras for vision and facial recognition",
-    "depth_sensing": true,
-    "imu": true,
-    "wifi": true,
-    "bluetooth": true,
-    "use_cases": [
-      "elderly care",
-      "companion robotics",
-      "healthcare assistance",
-      "emotional support"
-    ],
-    "manufacturer_url": "https://www.fftai.com"
-  },
-  {
     "id": "fourier-gr-2",
     "name": "GR-2",
     "brand": "Fourier",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
-    "tags": [],
+    "tags": [
+      "humanoid",
+      "fourier",
+      "gr-2",
+      "industrial",
+      "active",
+      "china",
+      "research"
+    ],
     "fig": "🤖",
-    "img": "",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202605/24/AOx9q8msQCE1quiebwkJ/image.jpg",
     "score": 75,
     "rating": 4,
     "price": 0,
     "desc": "Second generation humanoid with 1.75m height, 63kg weight, 53 independently controllable joints, improved maintainability and modularity",
-    "highlights": [],
+    "highlights": [
+      "Rehab focus",
+      "Patient mobility",
+      "Improved on GR-1"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -62280,109 +61044,25 @@
       "Service robotics",
       "Industrial automation"
     ],
-    "manufacturer_url": "https://www.fftai.com"
-  },
-  {
-    "id": "fourier-gr-1",
-    "name": "GR-1",
-    "brand": "Fourier Intelligence",
-    "cat": "Humanoid",
-    "sub": "Research Humanoid",
-    "tags": [
-      "humanoid",
-      "fourier",
-      "gr-1",
-      "research",
-      "active",
-      "china",
-      "first-gen",
-      "rehab"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 83,
-    "rating": 4,
-    "price": 0,
-    "desc": "Fourier's first-generation general-purpose humanoid. 40 DOF, 230 N·m peak joint torque (legs), 50kg payload at hip. First major Chinese humanoid focused on rehabilitation use cases. Predecessor to GR-2 line.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2023,
-    "origin": "China",
-    "status": "Active",
-    "height_mm": 1650,
-    "weight_kg": 55,
-    "dof": 40,
-    "speed_ms": 1.4,
-    "cameras": "RGB-D",
-    "imu": true,
-    "depth_sensing": true,
-    "use_cases": [
-      "Rehabilitation research",
-      "R&D",
-      "Education"
-    ],
     "manufacturer_url": "https://www.fftai.com",
     "made_in": "China",
-    "announced": "2023-07",
-    "released": "2023",
-    "payload_kg": 50,
+    "announced": "2024",
+    "payload_kg": 5,
     "arm_dof": 7,
-    "torque_nm": 230,
-    "actuator_type": "Fourier FSA",
+    "hand_dof": 12,
+    "actuator_type": "Fourier FSA series",
     "fingers": 5,
+    "opposable_thumb": true,
     "bimanual": true,
-    "ros": true,
-    "website": "https://www.fftai.com"
-  },
-  {
-    "id": "dyson-dyson-360-vis-nav",
-    "name": "Dyson 360 Vis Nav",
-    "brand": "Dyson",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Most powerful robot vacuum with 360° vision system, 26 sensors, triple-action brush bar, D-shaped body for corner cleaning, HEPA filtration, and intelligent navigation with MyDyson app control.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2023,
-    "origin": "UK",
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 99,
-    "width_mm": 330,
-    "depth_mm": 230,
-    "weight_kg": 2.51,
-    "battery_life": "50 minutes",
-    "charge_time": "2.5 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "cameras": "360-degree camera system with fish-eye lens",
-    "lidar": false,
-    "imu": true,
-    "use_cases": [
-      "Home floor cleaning",
-      "Pet hair removal",
-      "Allergen reduction",
-      "Automated daily cleaning"
+    "can_use_tools": true,
+    "dexterous_hand": true,
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
     ],
-    "warranty_months": 24,
-    "manufacturer_url": "https://www.dyson.com",
-    "product_url": "https://www.dyson.com/vacuum-cleaners/robot/dyson-360-vis-nav"
+    "battery_life_typical": 120,
+    "website": "https://www.fftai.com"
   },
   {
     "id": "dyson-dyson-spot-scrub-ai",
@@ -62933,78 +61613,6 @@
     "speech_synthesis": true,
     "natural_language_commands": true,
     "battery_life_typical": 180,
-    "website": "https://www.fftai.com"
-  },
-  {
-    "id": "fourier-intelligence-gr-2",
-    "name": "GR-2",
-    "brand": "Fourier Intelligence",
-    "cat": "Humanoid",
-    "sub": "Industrial Humanoid",
-    "tags": [
-      "humanoid",
-      "fourier",
-      "gr-2",
-      "industrial",
-      "active",
-      "china",
-      "research"
-    ],
-    "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/24/AOx9q8msQCE1quiebwkJ/image.jpg",
-    "score": 87,
-    "rating": 4,
-    "price": 50000,
-    "desc": "Fourier's second-gen general-purpose humanoid. 53 DOF, FSA series actuators, 12-DOF dexterous hand. Targeted at research, education, rehabilitation, healthcare adjacent industrial work.",
-    "highlights": [
-      "Rehab focus",
-      "Patient mobility",
-      "Improved on GR-1"
-    ],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2024,
-    "origin": "China",
-    "status": "Active",
-    "released": "2024",
-    "height_mm": 1750,
-    "weight_kg": 63,
-    "dof": 53,
-    "ros": true,
-    "use_cases": [
-      "Research",
-      "Rehabilitation",
-      "Education",
-      "Service tasks"
-    ],
-    "manufacturer_url": "https://www.fftai.com",
-    "battery_life": 150,
-    "cameras": "RGB-D",
-    "wifi": true,
-    "bluetooth": true,
-    "made_in": "China",
-    "announced": "2024",
-    "payload_kg": 5,
-    "arm_dof": 7,
-    "hand_dof": 12,
-    "actuator_type": "Fourier FSA series",
-    "fingers": 5,
-    "opposable_thumb": true,
-    "bimanual": true,
-    "can_use_tools": true,
-    "dexterous_hand": true,
-    "depth_sensing": true,
-    "imu": true,
-    "sdk": true,
-    "sdk_langs": [
-      "Python",
-      "C++"
-    ],
-    "battery_life_typical": 120,
     "website": "https://www.fftai.com"
   },
   {
@@ -64351,7 +62959,10 @@
       "Law enforcement",
       "Search and rescue"
     ],
-    "manufacturer_url": "https://www.teledyneflir.com/products/packbot-525/"
+    "manufacturer_url": "https://www.teledyneflir.com/products/packbot-525/",
+    "bluetooth": true,
+    "depth_sensing": true,
+    "product_url": "https://www.flir.com/products/packbot-525/"
   },
   {
     "id": "flir-teledyne-flir-defense-packbot-510",
@@ -64727,7 +63338,12 @@
     "rating": 4,
     "price": 0,
     "desc": "Wider version of Chuck robot with shelf width extender and wider shelves to carry wider loads. Same base as regular Chuck but configured for handling larger items, shoes, garments on hangers, aircraft and computer parts.",
-    "highlights": [],
+    "highlights": [
+      "Shopify acquired",
+      "Ocado now",
+      "Picking assist",
+      "Fulfillment workhorse"
+    ],
     "perf": {
       "Mobility": 75,
       "Dexterity": 70,
@@ -65250,47 +63866,6 @@
     "product_url": "https://www.jobyaviation.com/news/joby-aviation-and-l3harris-technologies-demonstrate-autonomous-flight-of-hydrogen-electric/"
   },
   {
-    "id": "joby-aviation-s4-evtol-air-taxi",
-    "name": "S4 eVTOL Air Taxi",
-    "brand": "Joby Aviation",
-    "cat": "Drones",
-    "sub": "Hybrid VTOL",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "All-electric vertical takeoff and landing aircraft with six tilting propellers, designed for urban air mobility as an air taxi service. Features fly-by-wire controls, triple-redundant flight computer, and titanium-aluminum-carbon fiber airframe.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2020,
-    "origin": "USA",
-    "status": "In development",
-    "height_mm": 3050,
-    "width_mm": 12200,
-    "depth_mm": 6100,
-    "weight_kg": 2180,
-    "battery_life": "1 hour",
-    "speed_ms": 89,
-    "payload_kg": 454,
-    "cameras": "Multiple cameras for navigation and obstacle avoidance",
-    "lidar": true,
-    "imu": true,
-    "use_cases": [
-      "Urban air taxi",
-      "Passenger transport",
-      "Emergency medical transport",
-      "Airport shuttle"
-    ],
-    "manufacturer_url": "https://www.jobyaviation.com"
-  },
-  {
     "id": "sensefly-ageagle-ebee-tac-government",
     "name": "eBee TAC Government",
     "brand": "senseFly",
@@ -65330,90 +63905,6 @@
       "Search and rescue operations"
     ],
     "manufacturer_url": "https://www.sensefly.com"
-  },
-  {
-    "id": "lefant-m3-max",
-    "name": "M3 Max",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop with Self-Empty",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/71g+Cpb5fqL._AC_SL1500_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "All-in-one self-cleaning station, 20,000Pa suction, dToF laser navigation, dual-spin pressurized mopping, maximum automation",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 96,
-    "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 3.5,
-    "battery_life": "3 hours",
-    "charge_time": "4-6 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "lidar": true,
-    "cameras": "Front-facing camera for navigation",
-    "use_cases": [
-      "Floor cleaning",
-      "Mopping",
-      "Pet hair removal",
-      "Daily maintenance cleaning"
-    ],
-    "warranty_months": 12
-  },
-  {
-    "id": "lefant-m330",
-    "name": "M330",
-    "brand": "Lefant",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 299,
-    "desc": "DToF laser navigation with 190° full-angle obstacle avoidance, high-precision mapping, real-time environment scanning",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 80,
-    "width_mm": 330,
-    "depth_mm": 330,
-    "weight_kg": 3.2,
-    "battery_life": "150 minutes",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "lidar": true,
-    "cameras": "Visual navigation camera",
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Daily cleaning maintenance"
-    ],
-    "warranty_months": 12
   },
   {
     "id": "yeedi-yeedi-vac-2-pro",
@@ -65756,53 +64247,6 @@
     ]
   },
   {
-    "id": "jaka-minicobo",
-    "name": "MiniCobo",
-    "brand": "JAKA",
-    "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 15000,
-    "desc": "Smallest collaborative robot designed for catering, service sectors, and education. Compact size with modest energy consumption for versatile placement.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2019,
-    "status": "Released",
-    "released": "2019",
-    "dof": 6,
-    "reach_mm": 350,
-    "payload_kg": 0.5,
-    "weight_kg": 12,
-    "use_cases": [
-      "Food service",
-      "Light assembly",
-      "Educational robotics",
-      "Research",
-      "Pick and place"
-    ],
-    "ros": true,
-    "manufacturer_url": "https://www.jaka.com",
-    "height_mm": 381,
-    "speed_ms": 1.5,
-    "wifi": true,
-    "bluetooth": true,
-    "cellular": "Optional",
-    "cameras": "Built-in vision system",
-    "imu": true,
-    "warranty_months": 12,
-    "product_url": "https://www.jaka.com/product/minicobo"
-  },
-  {
     "id": "jaka-pro-16",
     "name": "Pro 16",
     "brand": "JAKA",
@@ -65969,165 +64413,6 @@
     "safety_features": "Integrated safety monitoring, collision detection, emergency stop",
     "connectivity": "Ethernet, USB",
     "warranty_months": 12
-  },
-  {
-    "id": "jaka-ai-7",
-    "name": "Ai 7",
-    "brand": "JAKA",
-    "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Integrated vision system cobot with wireless training capabilities and natural human-robot interaction features.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2021,
-    "status": "Released",
-    "released": "2021",
-    "weight_kg": 26,
-    "payload_kg": 7,
-    "dof": 6,
-    "reach_mm": 819,
-    "ros": true,
-    "cameras": "Integrated vision system",
-    "use_cases": [
-      "Assembly",
-      "Pick and place",
-      "Machine tending",
-      "Quality inspection",
-      "Packaging"
-    ],
-    "manufacturer_url": "https://www.jaka.com",
-    "height_mm": 400,
-    "repeatability_mm": 0.03,
-    "speed_ms": 2,
-    "ip_rating": "IP54",
-    "operating_temp_max": 50,
-    "power_consumption": 300,
-    "safety_certification": "ISO 10218, ISO 13849",
-    "programming_methods": [
-      "Drag teaching",
-      "Graphical programming",
-      "Script programming"
-    ],
-    "collision_detection": true,
-    "force_feedback": true,
-    "wifi": true,
-    "ethernet": true,
-    "warranty_months": 24
-  },
-  {
-    "id": "jaka-ai-5",
-    "name": "Ai 5",
-    "brand": "JAKA",
-    "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "All-in-one cobot with built-in machine vision system and mini-cabinet control unit option for confined spaces or mobile platforms.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "payload_kg": 5,
-    "dof": 6,
-    "reach_mm": 924,
-    "weight_kg": 25,
-    "cameras": "Built-in machine vision system with integrated camera",
-    "depth_sensing": true,
-    "use_cases": [
-      "Assembly",
-      "Pick and place",
-      "Quality inspection",
-      "Machine tending",
-      "Packaging",
-      "Welding"
-    ],
-    "manufacturer_url": "https://www.jaka.com",
-    "height_mm": 924,
-    "ros": true,
-    "wifi": true,
-    "bluetooth": true,
-    "repeatability_mm": 0.03,
-    "operating_temp_c": "0 to 45",
-    "ip_rating": "IP54",
-    "power_consumption_w": 200,
-    "programming_methods": [
-      "Drag teaching",
-      "Graphical programming",
-      "Script programming"
-    ],
-    "safety_features": [
-      "Collision detection",
-      "Emergency stop",
-      "Safety-rated monitored stop"
-    ],
-    "communication_protocols": [
-      "Ethernet",
-      "Modbus TCP",
-      "TCP/IP"
-    ]
-  },
-  {
-    "id": "jaka-ai-3",
-    "name": "Ai 3",
-    "brand": "JAKA",
-    "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Smart, Simple, Small (S3) design with integrated machine vision cameras, wireless training, and visual programming capabilities.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2020,
-    "status": "Released",
-    "released": "2020",
-    "weight_kg": 18,
-    "payload_kg": 3,
-    "dof": 6,
-    "reach_mm": 625,
-    "cameras": "Integrated machine vision cameras",
-    "wifi": true,
-    "use_cases": [
-      "Assembly",
-      "Pick and place",
-      "Machine tending",
-      "Packaging",
-      "Quality inspection",
-      "Education"
-    ],
-    "manufacturer_url": "https://www.jaka.com/"
   },
   {
     "id": "jaka-zu-20",
@@ -66349,72 +64634,6 @@
     "ip_rating": "IP54",
     "repeatability_mm": 0.02,
     "power_consumption_w": 300
-  },
-  {
-    "id": "jaka-zu-5s",
-    "name": "Zu 5s",
-    "brand": "JAKA",
-    "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Force control version with industrial force sensor. Features tri-co interactions (coexisting, cooperative, cognitive) with 954mm working radius.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2020,
-    "status": "Released",
-    "released": "2020",
-    "weight_kg": 23,
-    "payload_kg": 5,
-    "dof": 6,
-    "reach_mm": 954,
-    "use_cases": [
-      "Assembly",
-      "Pick and place",
-      "Machine tending",
-      "Quality inspection",
-      "Packaging"
-    ],
-    "manufacturer_url": "https://www.jaka.com",
-    "repeatability_mm": 0.03,
-    "max_speed_ms": 3,
-    "protection_rating": "IP54",
-    "operating_temp_max": 45,
-    "power_consumption_w": 200,
-    "voltage_v": 100,
-    "communication_protocols": [
-      "Ethernet",
-      "Modbus",
-      "TCP/IP"
-    ],
-    "safety_features": [
-      "Collision detection",
-      "Force limiting",
-      "Emergency stop"
-    ],
-    "programming_methods": [
-      "Drag teaching",
-      "Graphical programming",
-      "Script programming"
-    ],
-    "warranty_months": 12,
-    "ros": true,
-    "wifi": true,
-    "bluetooth": false,
-    "imu": true,
-    "depth_sensing": false,
-    "lidar": false,
-    "product_url": "https://www.jaka.com/products/zu5s"
   },
   {
     "id": "jaka-zu-5",
@@ -67036,54 +65255,6 @@
     "bluetooth": true,
     "os": "Linux",
     "warranty_months": 12,
-    "manufacturer_url": "https://www.agibot.com"
-  },
-  {
-    "id": "agibot-d1-edu",
-    "name": "D1 Edu",
-    "brand": "AGIBOT",
-    "cat": "Quadruped",
-    "sub": "Educational Quadruped",
-    "tags": [
-      "quadruped",
-      "educational",
-      "agibot",
-      "china",
-      "active",
-      "stem"
-    ],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Education-focused variant of AGIBOT's D1 quadruped series. Compact platform with open SDK for university and high school robotics curricula.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2023,
-    "origin": "China",
-    "status": "Active",
-    "released": "2024",
-    "height_mm": 350,
-    "weight_kg": 12,
-    "battery_life": "2-3 hours",
-    "speed_ms": 1.5,
-    "payload_kg": 3,
-    "dof": 12,
-    "ros": true,
-    "cameras": "HD camera with real-time transmission",
-    "imu": true,
-    "depth_sensing": true,
-    "use_cases": [
-      "STEM education",
-      "Research",
-      "Hobbyist"
-    ],
     "manufacturer_url": "https://www.agibot.com"
   },
   {
@@ -70453,56 +68624,6 @@
     "origin": "Japan"
   },
   {
-    "id": "roborock-q5-pro-",
-    "name": "Q5 Pro+",
-    "brand": "Roborock",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://roborockstore.com.au/cdn/shop/files/q5_pro_3_1200x.png?v=1777947657",
-    "score": 75,
-    "rating": 4,
-    "price": 599,
-    "desc": "Entry-level robot vacuum with laser-based navigation, reliable suction, basic mopping attachments, and auto-empty dustbin dock",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2022,
-    "origin": "China",
-    "status": "Released",
-    "released": "2022",
-    "height_mm": 96.5,
-    "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 3.6,
-    "battery_life": "3 hours",
-    "charge_time": "6 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "lidar": true,
-    "imu": true,
-    "use_cases": [
-      "floor vacuuming",
-      "mopping",
-      "pet hair removal",
-      "scheduled cleaning"
-    ],
-    "warranty_months": 12,
-    "manufacturer_url": "https://roborock.com",
-    "gallery": [
-      "https://roborockstore.com.au/cdn/shop/files/6_600x600_2x_75c6e5c3-73e7-4951-a764-5f510b76f288_1200x.webp?v=1724748374",
-      "https://roborockstore.com.au/cdn/shop/files/4_600x600_2x_a1b506e5-987f-47c3-a496-f5cd9ab2e10f_1200x.jpg?v=1724746031",
-      "https://roborockstore.com.au/cdn/shop/files/2-2_600x600_2x_35c9aea6-9c3c-48c8-a983-a153973179fa_1200x.jpg?v=1724746031",
-      "https://roborockstore.com.au/cdn/shop/files/img_v2_2c6c26ad-bb7e-4001-826d-5ed0e2ef00cg_600x600_2x_5b06222c-c68e-44ad-b0fa-2ed862f87a8a_1200x.webp?v=1724748374",
-      "https://roborockstore.com.au/cdn/shop/files/img_v2_a67c24b4-54e8-46e8-8cde-5fb3ac0090bg_600x600_2x_5bf3b3b0-efe6-47b3-909d-69ea4d271b96_1200x.webp?v=1724748374"
-    ]
-  },
-  {
     "id": "irobot-roomba-205-dustcompactor",
     "name": "Roomba 205 DustCompactor",
     "brand": "iRobot",
@@ -71132,49 +69253,6 @@
       "Waste collection"
     ],
     "manufacturer_url": "https://milremrobotics.com"
-  },
-  {
-    "id": "agibot-omnihand-o10",
-    "name": "OmniHand O10",
-    "brand": "AGIBOT",
-    "cat": "Industrial",
-    "sub": "Robotic Hand / Gripper",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Compact high-degree-of-freedom interactive dexterous hand with small body design adaptable to various environments. Compatible with AGIBOT humanoid robots for enhanced manipulation capabilities.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "year": 2024,
-    "origin": "China",
-    "status": "Released",
-    "released": "2024",
-    "dof": 12,
-    "ros": true,
-    "use_cases": [
-      "Humanoid robot manipulation",
-      "Research and development",
-      "Industrial automation",
-      "Service robotics"
-    ],
-    "weight_kg": 1.2,
-    "manufacturer_url": "https://www.agibot.com",
-    "warranty_months": 12,
-    "product_url": "https://www.agibot.com/product/omnihand",
-    "payload_kg": 1.5,
-    "depth_sensing": false,
-    "imu": false,
-    "lidar": false,
-    "bluetooth": false,
-    "wifi": false
   },
   {
     "id": "leju-robotics-kuavo",
@@ -71857,155 +69935,6 @@
     ]
   },
   {
-    "id": "proscenic-q20-plus",
-    "name": "Q20 Plus",
-    "brand": "Proscenic",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/71f8uH7Lb3L._AC_SL1500_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Features ultra-powerful 10,000 Pa suction and a bagless self-empty station, making it more eco-friendly and cost-saving with no dust bags required. Uses high-precision dToF sensors for navigation.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 96,
-    "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 3.5,
-    "battery_life": "3 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "lidar": true,
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Automated cleaning"
-    ],
-    "manufacturer_url": "https://www.proscenic.com/",
-    "gallery": [
-      "https://m.media-amazon.com/images/I/71lRvPaRm1L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/719vlcW+oAL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/710--KOmntL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71W3n+2xPcL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71IsThKaYYL._AC_SL1500_.jpg"
-    ]
-  },
-  {
-    "id": "proscenic-q8-max-",
-    "name": "Q8 Max+",
-    "brand": "Proscenic",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop with Self-Empty",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/71sYrcJBgNL._AC_SL1500_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 399,
-    "desc": "Offers the best value for money with a self-empty station and strong overall performance. Features 8000Pa suction power and dual laser systems for precise navigation. Currently available at clearance price while supplies last.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 96,
-    "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 3.6,
-    "battery_life": "3 hours",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "cameras": "Front-facing camera for visual navigation",
-    "lidar": true,
-    "imu": true,
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Automated cleaning"
-    ],
-    "warranty_months": 12,
-    "depth_sensing": false,
-    "manufacturer_url": "https://www.proscenic.com/",
-    "gallery": [
-      "https://m.media-amazon.com/images/I/71V-QkcqC8L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71RRjNVgIPL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71FzxtV+xiL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71+HuDQuXnL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/81ulf+kpEWL._AC_SL1500_.jpg"
-    ]
-  },
-  {
-    "id": "proscenic-q10",
-    "name": "Q10",
-    "brand": "Proscenic",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/810rWkbc3xL._AC_SL1500_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 299,
-    "desc": "A budget-friendly option without a self-empty station, ideal for users who don't mind manually emptying the dustbin after cleaning. Features 8000Pa suction and dToF navigation for efficient cleaning.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2023,
-    "status": "Released",
-    "released": "2023",
-    "height_mm": 96,
-    "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 3.5,
-    "battery_life": "3 hours",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "lidar": true,
-    "cameras": "Front-facing camera for navigation",
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Daily maintenance cleaning"
-    ],
-    "warranty_months": 12,
-    "manufacturer_url": "https://www.proscenic.com",
-    "gallery": [
-      "https://m.media-amazon.com/images/I/81uHGZTdRGL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71UP4s2CYKL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/81Uaxjd4P1L._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/71K5+1y6CmL._AC_SL1500_.jpg",
-      "https://m.media-amazon.com/images/I/716ZLYZT54L._AC_SL1500_.jpg"
-    ]
-  },
-  {
     "id": "proscenic-q8",
     "name": "Q8",
     "brand": "Proscenic",
@@ -72056,55 +69985,6 @@
     ]
   },
   {
-    "id": "proscenic-850t",
-    "name": "850T",
-    "brand": "Proscenic",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/61CAAO6pe9L._AC_SL1000_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "No-fuss budget-priced robot vacuum and mop with gyroscope-based navigation. Features 3000Pa max suction, carpet boost technology, and both vacuuming and mopping capabilities. Includes remote control and app connectivity.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2019,
-    "status": "Released",
-    "released": "2019",
-    "height_mm": 76,
-    "width_mm": 320,
-    "depth_mm": 320,
-    "weight_kg": 2.9,
-    "battery_life": "100 minutes",
-    "charge_time": "4-6 hours",
-    "wifi": true,
-    "bluetooth": false,
-    "imu": true,
-    "lidar": false,
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Automated cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://m.media-amazon.com/images/I/61mZjYSNMgL._AC_SL1000_.jpg",
-      "https://m.media-amazon.com/images/I/71NzGovVwAL._AC_SL1000_.jpg",
-      "https://m.media-amazon.com/images/I/611G8aqHprL._AC_SL1000_.jpg",
-      "https://m.media-amazon.com/images/I/61htTNFoAjL._AC_SL1000_.jpg",
-      "https://m.media-amazon.com/images/I/71ngU7KL5UL._AC_SL1000_.jpg"
-    ]
-  },
-  {
     "id": "proscenic-floobot-x1",
     "name": "Floobot X1",
     "brand": "Proscenic",
@@ -72152,55 +70032,6 @@
       "https://m.media-amazon.com/images/I/61DS-zckh-L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/616VfntPzpL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71UhjevCvsL._AC_SL1500_.jpg"
-    ]
-  },
-  {
-    "id": "proscenic-m8-pro",
-    "name": "M8 Pro",
-    "brand": "Proscenic",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
-    "tags": [],
-    "fig": "🤖",
-    "img": "https://m.media-amazon.com/images/I/51cx7slKByL._AC_SL1000_.jpg",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Advanced 2-in-1 robot vacuum and mop with laser ranging sensor and anti-collision technology. Features 350ml water tank, customizable cleaning modes, and smart home mapping capabilities. Upgraded from M7 with higher suction power.",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "China",
-    "year": 2021,
-    "status": "Released",
-    "released": "2021",
-    "height_mm": 90,
-    "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 3.6,
-    "battery_life": "2.5 hours",
-    "charge_time": "4-5 hours",
-    "wifi": true,
-    "bluetooth": true,
-    "lidar": true,
-    "cameras": "Visual navigation camera",
-    "use_cases": [
-      "Floor vacuuming",
-      "Floor mopping",
-      "Pet hair removal",
-      "Smart home cleaning"
-    ],
-    "warranty_months": 12,
-    "gallery": [
-      "https://m.media-amazon.com/images/I/51BOMDnRYnL._AC_SL1000_.jpg",
-      "https://m.media-amazon.com/images/I/71YMoZIU7fL._AC_SL1000_.jpg",
-      "https://m.media-amazon.com/images/I/61HNxpVTUUL._AC_SL1000_.jpg",
-      "https://m.media-amazon.com/images/I/71aPJm0xbdL._AC_SL1000_.jpg",
-      "https://m.media-amazon.com/images/I/61GtOqijdeL._AC_SL1000_.jpg"
     ]
   },
   {
@@ -73535,50 +71366,6 @@
     "ros": true,
     "warranty_months": 12,
     "product_url": "https://www.sarcos.com/products/guardian-sea-class/"
-  },
-  {
-    "id": "teledyne-flir-packbot-525",
-    "name": "PackBot 525",
-    "brand": "Teledyne FLIR Defense",
-    "cat": "Military",
-    "sub": "EOD/Tactical UGV",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Advanced HD cameras, laser range finder, climbs stairs, bomb disposal, surveillance, CBRN detection, HazMat operations",
-    "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
-    "origin": "USA",
-    "year": 2020,
-    "status": "Active",
-    "released": "2020",
-    "weight_kg": 24.5,
-    "battery_life": "4-8 hours",
-    "speed_ms": 1.6,
-    "payload_kg": 18,
-    "wifi": true,
-    "bluetooth": true,
-    "cameras": "Multiple HD cameras with pan/tilt/zoom, thermal imaging, night vision",
-    "imu": true,
-    "depth_sensing": true,
-    "use_cases": [
-      "Bomb disposal",
-      "CBRN detection",
-      "Surveillance",
-      "Search and rescue",
-      "HazMat operations",
-      "Military reconnaissance"
-    ],
-    "manufacturer_url": "https://www.flir.com",
-    "product_url": "https://www.flir.com/products/packbot-525/"
   },
   {
     "id": "teledyne-flir-packbot-510",
@@ -82713,216 +80500,6 @@
       "eye_tracking_accuracy_deg": 1.5
     },
     "origin": "USA"
-  },
-  {
-    "id": "humanoid-002",
-    "name": "Optimus Gen 2",
-    "brand": "Tesla",
-    "year": 2024,
-    "status": "Pre-Production",
-    "cat": "Humanoid",
-    "sub": "Industrial Humanoid Robot",
-    "tags": [
-      "bipedal",
-      "electric",
-      "AI",
-      "manufacturing",
-      "general purpose"
-    ],
-    "fig": "🤖",
-    "img": "https://electrek.co/wp-content/uploads/sites/3/2024/01/Tesla-Optimus-Gen-2.jpg",
-    "score": 88,
-    "rating": 4.5,
-    "price": 20000,
-    "desc": "Tesla's second-gen humanoid with improved dexterity, faster walking speed and advanced AI from FSD stack.",
-    "highlights": [
-      "11 DOF hands",
-      "30% faster walking",
-      "22kg lighter than Gen1",
-      "Tactile sensing",
-      "FSD-derived AI"
-    ],
-    "height_mm": 1730,
-    "width_mm": 480,
-    "depth_mm": 300,
-    "weight_kg": 57,
-    "frame_material": "Aluminum alloy",
-    "shell_material": "Polymer composite",
-    "ip_rating": null,
-    "operating_temp_min": -10,
-    "operating_temp_max": 45,
-    "colors": [
-      "Silver",
-      "White"
-    ],
-    "os": "Tesla Bot OS",
-    "chipset": "Tesla FSD Chip",
-    "cpu": "Custom ARM",
-    "ram_gb": 16,
-    "ram_type": "LPDDR5",
-    "storage_gb": 512,
-    "storage_type": "eMMC",
-    "npu_tops": 144,
-    "battery_type": "Li-Ion",
-    "battery_wh": 2300,
-    "battery_life": "480 min",
-    "charge_time": "180 min",
-    "charge_power_w": 800,
-    "charge_type": "Wired",
-    "wireless_charging": false,
-    "auto_charge": true,
-    "hot_swap": false,
-    "quick_release": false,
-    "cycle_life": 1000,
-    "ai_model": "Tesla FSD Neural Network",
-    "ai_model_type": "Deep Learning",
-    "learning_methods": [
-      "Imitation Learning",
-      "Reinforcement Learning",
-      "Teleoperation"
-    ],
-    "ai_cloud_required": false,
-    "ota": true,
-    "cameras": [
-      "Front RGB",
-      "Hand cameras x2",
-      "Side fisheye x2"
-    ],
-    "lidar": false,
-    "depth_sensing": true,
-    "imu": true,
-    "touch_sensing": true,
-    "wifi": true,
-    "bluetooth": true,
-    "ros": false,
-    "sdk": false,
-    "sdk_langs": [],
-    "api": false,
-    "ce": false,
-    "fcc": false,
-    "rohs": true,
-    "warranty_months": 12,
-    "use_cases": [
-      "Manufacturing",
-      "Warehouse",
-      "General Labor"
-    ],
-    "perf": {
-      "max_speed_ms": 0.83,
-      "payload_kg": 20,
-      "dof": 40,
-      "hand_dof": 11
-    },
-    "origin": "USA"
-  },
-  {
-    "id": "humanoid-004",
-    "name": "Unitree H1",
-    "brand": "Unitree",
-    "year": 2023,
-    "status": "Available",
-    "cat": "Humanoid",
-    "sub": "Research Humanoid Robot",
-    "tags": [
-      "bipedal",
-      "affordable",
-      "research",
-      "open-platform",
-      "agile"
-    ],
-    "fig": "🤖",
-    "img": "https://plain-eeur-prod-public.komododecks.com/202605/24/RhsreqvN00wH0ceQFdym/image.jpg",
-    "score": 83,
-    "rating": 4.3,
-    "price": 90000,
-    "desc": "World's first full-size humanoid to run at 3.3 m/s. Affordable research platform with open SDK.",
-    "highlights": [
-      "3.3 m/s running speed",
-      "4 DOF torso",
-      "Open SDK",
-      "Force control joints",
-      "Quick deployment"
-    ],
-    "height_mm": 1800,
-    "width_mm": 460,
-    "depth_mm": 300,
-    "weight_kg": 47,
-    "frame_material": "Aluminum alloy",
-    "shell_material": "ABS plastic",
-    "ip_rating": "IP44",
-    "operating_temp_min": -10,
-    "operating_temp_max": 45,
-    "colors": [
-      "Black",
-      "White"
-    ],
-    "os": "Ubuntu 20.04",
-    "chipset": "NVIDIA Orin NX",
-    "cpu": "ARM Cortex-A78AE",
-    "ram_gb": 8,
-    "ram_type": "LPDDR5",
-    "storage_gb": 64,
-    "storage_type": "eMMC",
-    "npu_tops": 100,
-    "battery_type": "Li-Ion",
-    "battery_wh": 864,
-    "battery_life": "90 min",
-    "charge_time": "60 min",
-    "charge_power_w": 576,
-    "charge_type": "Wired",
-    "wireless_charging": false,
-    "auto_charge": false,
-    "hot_swap": true,
-    "quick_release": true,
-    "cycle_life": null,
-    "ai_model": "Custom locomotion controller",
-    "ai_model_type": "Reinforcement Learning",
-    "learning_methods": [
-      "Reinforcement Learning",
-      "Sim-to-Real"
-    ],
-    "ai_cloud_required": false,
-    "ota": true,
-    "cameras": [
-      "Depth camera",
-      "RGB front"
-    ],
-    "lidar": false,
-    "depth_sensing": true,
-    "imu": true,
-    "touch_sensing": false,
-    "wifi": true,
-    "bluetooth": true,
-    "ros": true,
-    "sdk": true,
-    "sdk_langs": [
-      "C++",
-      "Python"
-    ],
-    "api": true,
-    "ce": true,
-    "fcc": true,
-    "rohs": true,
-    "warranty_months": 12,
-    "use_cases": [
-      "Research",
-      "Education",
-      "Motion Study"
-    ],
-    "perf": {
-      "max_speed_ms": 3.3,
-      "payload_kg": 30,
-      "dof": 19,
-      "jump_capable": true
-    },
-    "origin": "China",
-    "gallery": [
-      "https://plain-eeur-prod-public.komododecks.com/202605/24/h9LkIig8iBSUrFTk1M0v/image.jpg",
-      "https://plain-eeur-prod-public.komododecks.com/202605/24/NjdhXZJcWg2RQZZGVnhz/image.jpg",
-      "https://plain-eeur-prod-public.komododecks.com/202605/24/SOdAucYrFZwApinfI4Ad/image.jpg",
-      "",
-      ""
-    ]
   },
   {
     "id": "humanoid-005",
@@ -92184,7 +89761,32 @@
       "Elderly care"
     ],
     "warranty_months": 12,
-    "website": "https://www.1x.tech"
+    "website": "https://www.1x.tech",
+    "social_role": "Home humanoid assistant + companion",
+    "target_user": [
+      "General consumer",
+      "Elderly"
+    ],
+    "form_factor": "Humanoid (bipedal)",
+    "face_display": "None (covered face panel)",
+    "voice_interaction": true,
+    "languages_spoken": "English",
+    "conversational_ai": "LLM-powered",
+    "ai_cloud_required": true,
+    "memory_persistent": true,
+    "learning_personalization": true,
+    "mobility": "Bipedal",
+    "intended_setting": [
+      "Home"
+    ],
+    "sensors": [
+      "Stereo cameras",
+      "Microphone array",
+      "IMU",
+      "Tactile"
+    ],
+    "microphones": "Far-field array",
+    "manufacturer_url": "https://www.1x.tech"
   },
   {
     "id": "agibot-a1-2023",
@@ -93933,123 +91535,6 @@
     "cellular": "4G"
   },
   {
-    "id": "nuro-r1-2018",
-    "name": "R1",
-    "brand": "Nuro",
-    "cat": "Delivery",
-    "sub": "Road Delivery Robot",
-    "tags": [
-      "road",
-      "autonomous-vehicle",
-      "grocery",
-      "kroger-pilot"
-    ],
-    "fig": "📦",
-    "img": "",
-    "score": 85,
-    "rating": 4.4,
-    "price": 0,
-    "desc": "Nuro's first road-going autonomous delivery vehicle. Pioneered driverless grocery delivery. Kroger pilot.",
-    "highlights": [
-      "Road-going",
-      "No passengers",
-      "Kroger pilot",
-      "Driverless grocery"
-    ],
-    "perf": {
-      "speed_ms": 11,
-      "payload_kg": 113
-    },
-    "year": 2018,
-    "status": "Discontinued",
-    "weight_kg": 680,
-    "battery_life": 480,
-    "origin": "USA",
-    "cameras": 4,
-    "lidar": true,
-    "wifi": true,
-    "bluetooth": true,
-    "cellular": "4G"
-  },
-  {
-    "id": "nuro-r2-2020",
-    "name": "R2",
-    "brand": "Nuro",
-    "cat": "Delivery",
-    "sub": "Road Delivery Robot",
-    "tags": [
-      "road",
-      "autonomous-vehicle",
-      "domino's",
-      "walmart"
-    ],
-    "fig": "📦",
-    "img": "",
-    "score": 88,
-    "rating": 4.5,
-    "price": 0,
-    "desc": "Production Nuro R2 — first NHTSA-exempted autonomous delivery vehicle. Domino's pizza, Walmart, FedEx pilots.",
-    "highlights": [
-      "NHTSA exemption",
-      "Domino's pilot",
-      "Walmart partner",
-      "No driver pod"
-    ],
-    "perf": {
-      "speed_ms": 11,
-      "payload_kg": 190
-    },
-    "year": 2020,
-    "status": "Active",
-    "weight_kg": 680,
-    "battery_life": 480,
-    "origin": "USA",
-    "cameras": 8,
-    "lidar": true,
-    "wifi": true,
-    "bluetooth": true,
-    "cellular": "5G"
-  },
-  {
-    "id": "nuro-r3-2022",
-    "name": "R3",
-    "brand": "Nuro",
-    "cat": "Delivery",
-    "sub": "Road Delivery Robot",
-    "tags": [
-      "road",
-      "autonomous-vehicle",
-      "third-gen",
-      "uber-eats"
-    ],
-    "fig": "📦",
-    "img": "",
-    "score": 90,
-    "rating": 4.6,
-    "price": 0,
-    "desc": "3rd-gen Nuro with BYD partnership for manufacturing. 10-year Uber Eats deal. Built for commercial scale.",
-    "highlights": [
-      "BYD manufacturing",
-      "10-yr Uber Eats deal",
-      "Built for scale",
-      "Third-gen autonomy"
-    ],
-    "perf": {
-      "speed_ms": 11,
-      "payload_kg": 225
-    },
-    "year": 2022,
-    "status": "Active",
-    "weight_kg": 850,
-    "battery_life": 600,
-    "origin": "USA",
-    "cameras": 12,
-    "lidar": true,
-    "wifi": true,
-    "bluetooth": true,
-    "cellular": "5G"
-  },
-  {
     "id": "serve-robotics-gen1-2021",
     "name": "Serve Gen 1",
     "brand": "Serve Robotics",
@@ -95659,39 +93144,6 @@
     "bluetooth": true
   },
   {
-    "id": "6river-chuck-2018",
-    "name": "Chuck",
-    "brand": "6 River Systems (Ocado Group)",
-    "cat": "AGV/AMR",
-    "sub": "Goods-to-Person AMR",
-    "tags": [],
-    "fig": "🤖",
-    "img": "",
-    "score": 75,
-    "rating": 4,
-    "price": 0,
-    "desc": "Warehouse picking robot. Shopify-acquired (now sold to Ocado). Workhorse for fulfillment.",
-    "highlights": [
-      "Shopify acquired",
-      "Ocado now",
-      "Picking assist",
-      "Fulfillment workhorse"
-    ],
-    "perf": {
-      "speed_ms": 1.8,
-      "payload_kg": 80
-    },
-    "year": 2018,
-    "status": "Active",
-    "weight_kg": 120,
-    "battery_life": 600,
-    "origin": "USA",
-    "cameras": 3,
-    "lidar": true,
-    "wifi": true,
-    "bluetooth": true
-  },
-  {
     "id": "fetch-freight500-2018",
     "name": "Freight500",
     "brand": "Fetch Robotics",
@@ -96744,46 +94196,6 @@
     "battery_life": 45,
     "origin": "USA",
     "cameras": 1,
-    "wifi": true,
-    "bluetooth": true,
-    "cellular": "4G"
-  },
-  {
-    "id": "skydio-x10-2023",
-    "name": "X10",
-    "brand": "Skydio",
-    "cat": "Drones",
-    "sub": "Enterprise Drone",
-    "tags": [
-      "NDAA",
-      "public-safety",
-      "autonomous",
-      "ai-pilot",
-      "2023-launch"
-    ],
-    "fig": "🚁",
-    "img": "",
-    "score": 91,
-    "rating": 4.7,
-    "price": 11800,
-    "desc": "Enterprise AI-pilot drone for public safety, defense. NDAA-compliant. Best-in-class autonomy.",
-    "highlights": [
-      "AI pilot",
-      "NDAA-compliant",
-      "Public safety",
-      "Autonomous patrol"
-    ],
-    "perf": {
-      "speed_ms": 20,
-      "payload_kg": 0
-    },
-    "year": 2023,
-    "status": "Active",
-    "weight_kg": 1.4,
-    "battery_life": 40,
-    "ip_rating": "IP54",
-    "origin": "USA",
-    "cameras": 7,
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G"
@@ -106137,82 +103549,6 @@
     "rating": 4
   },
   {
-    "id": "1x-neo",
-    "name": "NEO",
-    "brand": "1X Technologies",
-    "cat": "Social",
-    "sub": "Home Humanoid Companion",
-    "year": 2025,
-    "origin": "Norway",
-    "made_in": "Norway",
-    "status": "Pre-order",
-    "score": 90,
-    "desc": "Backed by OpenAI, 1X's NEO is a full-size humanoid designed for home use including companionship and light household assistance. Started shipping to homes in early 2026 at $20,000. Tendon-driven actuation prioritizes safe human-proximate interaction.",
-    "price": 20000,
-    "img": "",
-    "tags": [
-      "social",
-      "humanoid",
-      "home",
-      "openai",
-      "pre-order",
-      "high-end",
-      "new-2026"
-    ],
-    "announced": "2024",
-    "released": "2026",
-    "height_mm": 1670,
-    "weight_kg": 30,
-    "shell_material": "Knit fabric outer covering",
-    "frame_material": "Aluminum + composite",
-    "social_role": "Home humanoid assistant + companion",
-    "target_user": [
-      "General consumer",
-      "Elderly"
-    ],
-    "form_factor": "Humanoid (bipedal)",
-    "face_display": "None (covered face panel)",
-    "voice_interaction": true,
-    "voice_recognition": true,
-    "speech_synthesis": true,
-    "languages_spoken": "English",
-    "conversational_ai": "LLM-powered",
-    "llm_model": "Custom (OpenAI-backed)",
-    "ai_cloud_required": true,
-    "memory_persistent": true,
-    "learning_personalization": true,
-    "mobility": "Bipedal",
-    "dof": 20,
-    "actuator_type": "Tendon-driven (compliant)",
-    "payload_kg": 20,
-    "intended_setting": [
-      "Home"
-    ],
-    "sensors": [
-      "Stereo cameras",
-      "Microphone array",
-      "IMU",
-      "Tactile"
-    ],
-    "cameras": "Stereo head cameras",
-    "microphones": "Far-field array",
-    "wifi": "Wi-Fi 6E",
-    "bluetooth": "5.2",
-    "battery_type": "Li-ion",
-    "battery_life_typical": 240,
-    "ai_model": "1X-OpenAI custom",
-    "use_cases": [
-      "Home assistance",
-      "Companionship",
-      "Light housekeeping",
-      "Caregiver augmentation"
-    ],
-    "manufacturer_url": "https://www.1x.tech",
-    "website": "https://www.1x.tech",
-    "fig": "🤖",
-    "rating": 4
-  },
-  {
     "id": "ryan-companion",
     "name": "Ryan",
     "brand": "DreamFace Technologies",
@@ -108706,44 +106042,6 @@
     "rating": 4
   },
   {
-    "id": "samsung-jet-bot-ai-plus",
-    "name": "Jet Bot AI+",
-    "brand": "Samsung",
-    "cat": "Consumer",
-    "sub": "Robot Vacuum with Self-Empty",
-    "year": 2021,
-    "origin": "South Korea",
-    "made_in": "South Korea",
-    "status": "Active",
-    "score": 85,
-    "desc": "Samsung's premium vacuum-only flagship. Object recognition AI co-developed with Intel. Clean Station auto-empty dock. SmartThings integration including remote camera viewing through robot.",
-    "price": 1099,
-    "img": "",
-    "tags": [
-      "vacuum",
-      "self-empty",
-      "samsung",
-      "active",
-      "smartthings",
-      "object-recognition"
-    ],
-    "announced": "2021",
-    "released": "2021",
-    "auto_empty": true,
-    "navigation": "LiDAR + AI camera",
-    "lidar": true,
-    "ai_obstacle_avoidance": true,
-    "voice_assistant": [
-      "Bixby",
-      "Alexa",
-      "Google Assistant"
-    ],
-    "app_companion": "SmartThings",
-    "manufacturer_url": "https://www.samsung.com",
-    "fig": "🤖",
-    "rating": 4
-  },
-  {
     "id": "samsung-bespoke-jet-bot-combo",
     "name": "Bespoke Jet Bot Combo",
     "brand": "Samsung",
@@ -109642,52 +106940,5 @@
     ],
     "manufacturer_url": "https://us.roborock.com",
     "website": "https://www.roborock.com"
-  },
-  {
-    "id": "agibot-a2-max-2025",
-    "name": "A2 Max",
-    "brand": "AGIBOT",
-    "cat": "Humanoid",
-    "sub": "Industrial Humanoid",
-    "year": 2025,
-    "origin": "China",
-    "made_in": "China",
-    "status": "Pre-order",
-    "score": 89,
-    "desc": "Heavy-duty industrial variant of A2. 175cm, 85kg with 67 DOF, 40kg dual-arm payload, 450 N·m torque, 8800N leg thrust. Demoed lifting 40kg aviation box. Designed for material handling and palletizing in industrial/warehousing.",
-    "price": 0,
-    "img": "",
-    "tags": [
-      "humanoid",
-      "agibot",
-      "max",
-      "industrial",
-      "pre-order",
-      "heavy-duty",
-      "palletizing"
-    ],
-    "announced": "2024-08",
-    "height_mm": 1750,
-    "weight_kg": 85,
-    "dof": 67,
-    "payload_kg": 40,
-    "torque_nm": 450,
-    "arm_dof": 7,
-    "fingers": 5,
-    "bimanual": true,
-    "can_use_tools": true,
-    "cameras": "RGB-D + RGB",
-    "lidar": true,
-    "depth_sensing": true,
-    "imu": true,
-    "ai_model": "GO-1",
-    "use_cases": [
-      "Material handling",
-      "Palletizing",
-      "Industrial logistics"
-    ],
-    "website": "https://www.agibot.com/products/A2_Max",
-    "fig": "🤖",
-    "rating": 4
   }
 ]
