@@ -120,10 +120,17 @@ exports.handler = async (event) => {
   };
 
   // --- Optimistic concurrency loop ---
-  const MAX_ATTEMPTS = 3;
+  // Handles both 409/422 SHA conflicts AND transient GitHub errors (truncated JSON, 5xx).
+  // Exponential backoff: 100ms, 300ms, 900ms between attempts.
+  const MAX_ATTEMPTS = 4;
   let attempt = 0;
+  let lastTransientError = null;
   while (attempt < MAX_ATTEMPTS) {
     attempt++;
+    if (attempt > 1){
+      const delay = 100 * Math.pow(3, attempt - 2);
+      await new Promise(r => setTimeout(r, delay));
+    }
 
     // 1. Fetch latest robots.json from GitHub
     let currentSha = null;
@@ -132,13 +139,36 @@ exports.handler = async (event) => {
     try {
       const r = await fetch(`${apiBase}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, { headers: ghHeaders });
       if (!r.ok) {
+        if (r.status >= 500 && attempt < MAX_ATTEMPTS) {
+          lastTransientError = `GitHub ${r.status}`;
+          continue;
+        }
         const errText = await r.text();
         return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `Could not fetch robots.json: ${r.status} ${errText.slice(0, 200)}` }) };
       }
-      const fileData = await r.json();
+      // Read body as text first so we can retry on truncated responses
+      const rawResponse = await r.text();
+      let fileData;
+      try {
+        fileData = JSON.parse(rawResponse);
+      } catch (parseErr) {
+        lastTransientError = `GitHub response parse failed: ${parseErr.message}`;
+        if (attempt < MAX_ATTEMPTS) continue;
+        return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `GitHub returned malformed JSON after ${attempt} attempts: ${parseErr.message}` }) };
+      }
       currentSha = fileData.sha;
+      if (!fileData.content) {
+        return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: 'GitHub response missing content field' }) };
+      }
       const raw = Buffer.from(fileData.content, 'base64').toString('utf8');
-      const parsed = JSON.parse(raw);
+      let parsed;
+      try {
+        parsed = JSON.parse(raw);
+      } catch (parseErr) {
+        lastTransientError = `robots.json parse failed: ${parseErr.message}`;
+        if (attempt < MAX_ATTEMPTS) continue;
+        return { statusCode: 500, headers: cors, body: JSON.stringify({ ok: false, error: `robots.json corrupted after ${attempt} attempts: ${parseErr.message}` }) };
+      }
       if (Array.isArray(parsed)) {
         robots = parsed;
         dataIsArray = true;
@@ -149,7 +179,9 @@ exports.handler = async (event) => {
         return { statusCode: 500, headers: cors, body: JSON.stringify({ ok: false, error: 'robots.json is malformed — expected array or {robots:[...]}' }) };
       }
     } catch (e) {
-      return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `GitHub fetch failed: ${e.message}` }) };
+      lastTransientError = `GitHub fetch network error: ${e.message}`;
+      if (attempt < MAX_ATTEMPTS) continue;
+      return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `GitHub fetch failed after ${attempt} attempts: ${e.message}` }) };
     }
 
     // 2. Build index by ID for fast lookups
