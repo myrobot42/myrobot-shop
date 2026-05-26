@@ -88,12 +88,20 @@ exports.handler = async (event) => {
     'User-Agent': 'myrobot-shop-save-robot',
   };
 
-  // Optimistic concurrency loop — if two workers save the same robot simultaneously,
-  // one will get a 409 from GitHub (SHA mismatch). Retry up to 3 times with the latest SHA.
+  // Retry loop handles:
+  //   - 409/422 SHA conflicts (concurrent edits)
+  //   - Transient network/parse errors (truncated JSON, GitHub blips)
+  // Exponential backoff: 0ms, 300ms, 900ms between attempts.
   let attempt = 0;
-  const MAX_ATTEMPTS = 3;
+  const MAX_ATTEMPTS = 4;
+  let lastTransientError = null;
   while (attempt < MAX_ATTEMPTS) {
     attempt++;
+    if (attempt > 1){
+      // Exponential backoff before retry
+      const delay = 100 * Math.pow(3, attempt - 2); // 100, 300, 900ms
+      await new Promise(r => setTimeout(r, delay));
+    }
 
     // 1. Fetch latest robots.json + its SHA from GitHub
     let currentSha = null;
@@ -101,21 +109,51 @@ exports.handler = async (event) => {
     try {
       const r = await fetch(`${apiBase}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, { headers: ghHeaders });
       if (!r.ok) {
+        // 5xx from GitHub = transient, retry. 4xx = our problem, fail fast.
+        if (r.status >= 500 && attempt < MAX_ATTEMPTS) {
+          lastTransientError = `GitHub ${r.status}`;
+          continue;
+        }
         const errText = await r.text();
-        return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `Could not fetch robots.json: ${r.status} ${errText}` }) };
+        return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `Could not fetch robots.json: ${r.status} ${errText.slice(0, 200)}` }) };
       }
-      const fileData = await r.json();
+      // Read body as text first so we can retry on truncated responses
+      const rawResponse = await r.text();
+      let fileData;
+      try {
+        fileData = JSON.parse(rawResponse);
+      } catch (parseErr) {
+        // Truncated or malformed GitHub response — retry
+        lastTransientError = `GitHub response parse failed: ${parseErr.message}`;
+        if (attempt < MAX_ATTEMPTS) continue;
+        return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `GitHub returned malformed JSON after ${attempt} attempts: ${parseErr.message}` }) };
+      }
       currentSha = fileData.sha;
+      if (!fileData.content) {
+        return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: 'GitHub response missing content field' }) };
+      }
       // GitHub returns base64-encoded content. Decode.
       const raw = Buffer.from(fileData.content, 'base64').toString('utf8');
-      const parsed = JSON.parse(raw);
+      let parsed;
+      try {
+        parsed = JSON.parse(raw);
+      } catch (parseErr) {
+        // robots.json itself is malformed — this is bad. Retry once in case the
+        // base64 was corrupted in transit, but most likely a real data problem.
+        lastTransientError = `robots.json parse failed: ${parseErr.message}`;
+        if (attempt < MAX_ATTEMPTS) continue;
+        return { statusCode: 500, headers: cors, body: JSON.stringify({ ok: false, error: `robots.json corrupted after ${attempt} attempts: ${parseErr.message}` }) };
+      }
       // File may be a plain array or {robots: [...]} — handle both
       robots = Array.isArray(parsed) ? parsed : (Array.isArray(parsed.robots) ? parsed.robots : null);
       if (!robots) {
         return { statusCode: 500, headers: cors, body: JSON.stringify({ ok: false, error: 'robots.json malformed — neither array nor {robots: [...]}' }) };
       }
     } catch (e) {
-      return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `GitHub fetch failed: ${e.message}` }) };
+      // Network error — retry
+      lastTransientError = `GitHub fetch network error: ${e.message}`;
+      if (attempt < MAX_ATTEMPTS) continue;
+      return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `GitHub fetch failed after ${attempt} attempts: ${e.message}` }) };
     }
 
     // 2. Find target robot + apply changes
