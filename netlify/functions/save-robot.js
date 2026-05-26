@@ -82,15 +82,72 @@ exports.handler = async (event) => {
   }
 
   const apiBase = `https://api.github.com/repos/${GITHUB_REPO}/contents/${GITHUB_FILE_PATH}`;
+  const blobApiBase = `https://api.github.com/repos/${GITHUB_REPO}/git/blobs`;
   const ghHeaders = {
     'Authorization': `token ${GITHUB_TOKEN}`,
     'Accept': 'application/vnd.github.v3+json',
     'User-Agent': 'myrobot-shop-save-robot',
   };
 
+  // Helper: fetch the file content with automatic fallback to Git Data API for files >1MB.
+  // Returns {sha, content} or throws.
+  // The /contents endpoint truncates files >1MB and returns no `content` field, but it
+  // still returns the SHA — we then fetch the blob directly which has no size limit.
+  async function fetchFileContent() {
+    const metaRes = await fetch(`${apiBase}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, { headers: ghHeaders });
+    if (!metaRes.ok) {
+      const errText = await metaRes.text();
+      const err = new Error(`Could not fetch robots.json metadata: ${metaRes.status} ${errText.slice(0, 200)}`);
+      err.status = metaRes.status;
+      err.transient = metaRes.status >= 500;
+      throw err;
+    }
+    const rawMeta = await metaRes.text();
+    let fileData;
+    try { fileData = JSON.parse(rawMeta); }
+    catch (e) {
+      const err = new Error(`GitHub metadata parse failed: ${e.message}`);
+      err.transient = true;
+      throw err;
+    }
+    if (!fileData.sha) {
+      const err = new Error(`GitHub returned no SHA. Message: "${(fileData.message||'').slice(0,150)}"`);
+      err.transient = /rate limit|abuse/i.test(fileData.message || '');
+      throw err;
+    }
+
+    // If contents API returned the content inline (file ≤1MB), use it
+    if (fileData.content) {
+      return { sha: fileData.sha, contentBase64: fileData.content };
+    }
+
+    // Otherwise fetch the blob directly — no size limit
+    const blobRes = await fetch(`${blobApiBase}/${fileData.sha}`, { headers: ghHeaders });
+    if (!blobRes.ok) {
+      const errText = await blobRes.text();
+      const err = new Error(`Blob fetch failed: ${blobRes.status} ${errText.slice(0, 200)}`);
+      err.status = blobRes.status;
+      err.transient = blobRes.status >= 500;
+      throw err;
+    }
+    const blobRaw = await blobRes.text();
+    let blobData;
+    try { blobData = JSON.parse(blobRaw); }
+    catch (e) {
+      const err = new Error(`Blob response parse failed: ${e.message}`);
+      err.transient = true;
+      throw err;
+    }
+    if (!blobData.content) {
+      throw new Error('Blob response missing content field');
+    }
+    return { sha: fileData.sha, contentBase64: blobData.content };
+  }
+
   // Retry loop handles:
   //   - 409/422 SHA conflicts (concurrent edits)
-  //   - Transient network/parse errors (truncated JSON, GitHub blips)
+  //   - Transient network/parse errors (truncated JSON, GitHub blips, 5xx)
+  //   - Rate limit responses
   // Exponential backoff: 0ms, 300ms, 900ms between attempts.
   let attempt = 0;
   const MAX_ATTEMPTS = 4;
@@ -103,43 +160,19 @@ exports.handler = async (event) => {
       await new Promise(r => setTimeout(r, delay));
     }
 
-    // 1. Fetch latest robots.json + its SHA from GitHub
+    // 1. Fetch latest robots.json + its SHA from GitHub (handles >1MB via blob API)
     let currentSha = null;
     let robots;
     try {
-      const r = await fetch(`${apiBase}?ref=${encodeURIComponent(GITHUB_BRANCH)}`, { headers: ghHeaders });
-      if (!r.ok) {
-        // 5xx from GitHub = transient, retry. 4xx = our problem, fail fast.
-        if (r.status >= 500 && attempt < MAX_ATTEMPTS) {
-          lastTransientError = `GitHub ${r.status}`;
-          continue;
-        }
-        const errText = await r.text();
-        return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `Could not fetch robots.json: ${r.status} ${errText.slice(0, 200)}` }) };
-      }
-      // Read body as text first so we can retry on truncated responses
-      const rawResponse = await r.text();
-      let fileData;
-      try {
-        fileData = JSON.parse(rawResponse);
-      } catch (parseErr) {
-        // Truncated or malformed GitHub response — retry
-        lastTransientError = `GitHub response parse failed: ${parseErr.message}`;
-        if (attempt < MAX_ATTEMPTS) continue;
-        return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `GitHub returned malformed JSON after ${attempt} attempts: ${parseErr.message}` }) };
-      }
-      currentSha = fileData.sha;
-      if (!fileData.content) {
-        return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: 'GitHub response missing content field' }) };
-      }
+      const { sha, contentBase64 } = await fetchFileContent();
+      currentSha = sha;
       // GitHub returns base64-encoded content. Decode.
-      const raw = Buffer.from(fileData.content, 'base64').toString('utf8');
+      // Blob API base64 has newlines every 60 chars — Node's Buffer handles this fine.
+      const raw = Buffer.from(contentBase64, 'base64').toString('utf8');
       let parsed;
       try {
         parsed = JSON.parse(raw);
       } catch (parseErr) {
-        // robots.json itself is malformed — this is bad. Retry once in case the
-        // base64 was corrupted in transit, but most likely a real data problem.
         lastTransientError = `robots.json parse failed: ${parseErr.message}`;
         if (attempt < MAX_ATTEMPTS) continue;
         return { statusCode: 500, headers: cors, body: JSON.stringify({ ok: false, error: `robots.json corrupted after ${attempt} attempts: ${parseErr.message}` }) };
@@ -150,9 +183,8 @@ exports.handler = async (event) => {
         return { statusCode: 500, headers: cors, body: JSON.stringify({ ok: false, error: 'robots.json malformed — neither array nor {robots: [...]}' }) };
       }
     } catch (e) {
-      // Network error — retry
-      lastTransientError = `GitHub fetch network error: ${e.message}`;
-      if (attempt < MAX_ATTEMPTS) continue;
+      lastTransientError = e.message;
+      if (e.transient && attempt < MAX_ATTEMPTS) continue;
       return { statusCode: 502, headers: cors, body: JSON.stringify({ ok: false, error: `GitHub fetch failed after ${attempt} attempts: ${e.message}` }) };
     }
 
