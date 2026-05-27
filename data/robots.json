@@ -103139,7 +103139,7 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
+    "score": 75,
     "rating": 4,
     "price": "POA",
     "desc": "Smart Lander for Investigating Moon. Demonstrated high-precision (100m) lunar landing on 19 January 2024, making Japan the fifth nation to soft-land on the Moon. Landed on its side after one of two main engines lost thrust, but achieved its primary precision-landing technology demonstration goal. Deployed two micro-rovers LEV-1 and LEV-2 (SORA-Q) before touchdown.",
@@ -103156,7 +103156,7 @@
       "payload_kg": 2.5
     },
     "year": 2024,
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 200,
     "height_mm": 2400,
     "width_mm": 2700,
@@ -103192,7 +103192,10 @@
       "Two micro-rovers: LEV-1 and LEV-2 (SORA-Q)"
     ],
     "power_source": "Solar array + battery",
-    "website": "https://www.isas.jaxa.jp/en/missions/spacecraft/current/slim.html"
+    "website": "https://www.isas.jaxa.jp/en/missions/spacecraft/current/slim.html",
+    "chipset": "HR5000 (Mitsubishi rad-hardened SPARC V8)",
+    "cpu_arch": "SPARC V8 (32-bit)",
+    "rtos": "Custom JAXA flight software"
   },
   {
     "id": "jaxa-lev-1-2024",
@@ -103293,10 +103296,10 @@
     "year": 1976,
     "origin": "USA",
     "img": "",
-    "score": 94,
+    "score": 75,
     "desc": "First spacecraft to successfully soft-land on Mars and complete its mission. Equipped with a 3-meter robotic surface sampler arm that scooped Martian soil into onboard biology, chemistry, and meteorology instruments. Operated for over 6 years on the surface, returning more than 4,500 images and groundbreaking data that defined Mars science for decades.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 572,
     "reach_mm": 3000,
     "tags": [
@@ -103366,7 +103369,15 @@
       "Meteorology boom"
     ],
     "website": "https://nssdc.gsfc.nasa.gov/planetary/viking.html",
-    "datasheet": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-075C"
+    "datasheet": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-075C",
+    "chipset": "Honeywell GCSC (General-purpose Computer for Spacecraft Control)",
+    "cpu": "24-bit custom processor",
+    "cpu_arch": "Custom 24-bit, 47-instruction set",
+    "rtos": "Custom Viking Lander Flight Program (FORTRAN compiled to GCSC machine code)",
+    "ram_type": "Plated wire memory",
+    "storage_type": "Tape recorder (40 MB total per lander)",
+    "payload_kg": 0.13,
+    "repeatability": 25
   },
   {
     "id": "viking-2-lander",
@@ -103377,10 +103388,10 @@
     "year": 1976,
     "origin": "USA",
     "img": "",
-    "score": 92,
+    "score": 75,
     "desc": "Second Viking lander, touched down at Utopia Planitia in September 1976. Identical hardware to Viking 1 with a 3-meter robotic surface sampler arm. Operated for nearly 4 years before battery failure. Landed at an 8.2° tilt with one leg on a rock after radar misidentification caused thrusters to fire briefly extra at touchdown.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 572,
     "reach_mm": 3000,
     "tags": [
@@ -103448,7 +103459,15 @@
       "Meteorology boom"
     ],
     "website": "https://nssdc.gsfc.nasa.gov/planetary/viking.html",
-    "datasheet": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-083C"
+    "datasheet": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1975-083C",
+    "chipset": "Honeywell GCSC (General-purpose Computer for Spacecraft Control)",
+    "cpu": "24-bit custom processor",
+    "cpu_arch": "Custom 24-bit, 47-instruction set",
+    "rtos": "Custom Viking Lander Flight Program",
+    "ram_type": "Plated wire memory",
+    "storage_type": "Tape recorder (40 MB total per lander)",
+    "payload_kg": 0.13,
+    "repeatability": 25
   },
   {
     "id": "phoenix-lander",
@@ -103459,10 +103478,10 @@
     "year": 2008,
     "origin": "USA",
     "img": "",
-    "score": 91,
+    "score": 75,
     "desc": "Polar Mars lander equipped with a 2.35 m robotic arm capable of digging trenches to access subsurface water ice. Confirmed the presence of water ice on Mars and detected perchlorates in the soil. Built on Mars Surveyor 2001 spare hardware. Operated for 157 sols (5 months) at 68°N latitude before the Martian winter ended its mission.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 350,
     "reach_mm": 2350,
     "tags": [
@@ -103492,7 +103511,7 @@
     "depth_mm": 1500,
     "frame_material": "Aluminum, titanium",
     "dof": 4,
-    "actuator_type": "Electric motors with brushes",
+    "actuator_type": "Brushed DC motors with planetary gearheads",
     "operating_temp_min": -100,
     "operating_temp_max": 25,
     "target_body": "Mars",
@@ -103531,7 +103550,16 @@
       "Temperature sensors"
     ],
     "website": "https://mars.nasa.gov/mars-exploration/missions/phoenix/",
-    "datasheet": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-034A"
+    "datasheet": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2007-034A",
+    "chipset": "BAE Systems RAD6000 (rad-hardened PowerPC)",
+    "cpu": "RAD6000 single-board computer",
+    "cpu_arch": "PowerPC, 20 MHz",
+    "rtos": "VxWorks",
+    "ram_gb": 0.128,
+    "ram_type": "Rad-hardened SRAM",
+    "storage_gb": 0.256,
+    "storage_type": "Flash memory",
+    "payload_kg": 0.5
   },
   {
     "id": "insight",
@@ -103542,10 +103570,10 @@
     "year": 2018,
     "origin": "USA",
     "img": "",
-    "score": 93,
+    "score": 75,
     "desc": "Interior Exploration using Seismic Investigations, Geodesy and Heat Transport. Stationary Mars lander built on the Phoenix design with larger solar panels. Equipped with a robotic instrument deployment arm that placed a French-built seismometer (SEIS) and a German-built self-hammering heat probe (HP3 'mole') on the surface. Detected over 1,300 marsquakes and revealed Mars's interior structure before being decommissioned due to dust buildup on solar panels.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 358,
     "reach_mm": 1800,
     "tags": [
@@ -103575,7 +103603,7 @@
     "depth_mm": 1560,
     "frame_material": "Aluminum, composites",
     "dof": 4,
-    "actuator_type": "Electric motors",
+    "actuator_type": "Brushed DC motors with harmonic drives",
     "operating_temp_min": -100,
     "operating_temp_max": 25,
     "target_body": "Mars",
@@ -103614,7 +103642,16 @@
       "Robotic arm"
     ],
     "website": "https://mars.nasa.gov/insight/",
-    "datasheet": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-042A"
+    "datasheet": "https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=2018-042A",
+    "chipset": "BAE Systems RAD750 (rad-hardened PowerPC)",
+    "cpu": "RAD750 single-board computer",
+    "cpu_arch": "PowerPC 750, 200 MHz",
+    "rtos": "VxWorks",
+    "ram_gb": 0.256,
+    "ram_type": "Rad-hardened SDRAM",
+    "storage_gb": 2,
+    "storage_type": "Flash memory",
+    "payload_kg": 9
   },
   {
     "id": "vikram-chandrayaan-3",
@@ -103625,10 +103662,10 @@
     "year": 2023,
     "origin": "India",
     "img": "",
-    "score": 93,
+    "score": 75,
     "desc": "Chandrayaan-3 lunar lander, named after Vikram Sarabhai. Soft-landed near the lunar south pole at Statio Shiv Shakti on 23 August 2023, making India the fourth nation to achieve a soft Moon landing and the first to land in the south polar region. Deployed the Pragyan rover. Improved design from failed Chandrayaan-2 Vikram with stronger legs and four (not five) throttlable engines.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 1726,
     "tags": [
       "moon",
@@ -103676,7 +103713,12 @@
     ],
     "power_source": "Solar array + battery",
     "charge_power_w": 738,
-    "website": "https://www.isro.gov.in/Chandrayaan3.html"
+    "website": "https://www.isro.gov.in/Chandrayaan3.html",
+    "chipset": "ISRO Vikram-1601 PROM SoC (rad-hardened, indigenously developed)",
+    "cpu": "Vikram-1601",
+    "cpu_arch": "RISC, custom ISRO design",
+    "rtos": "Custom embedded RTOS",
+    "storage_type": "Rad-hardened flash"
   },
   {
     "id": "tianwen-1-lander",
@@ -103687,10 +103729,10 @@
     "year": 2021,
     "origin": "China",
     "img": "",
-    "score": 92,
+    "score": 75,
     "desc": "China's first Mars lander, part of the Tianwen-1 mission combining orbiter, lander, and rover. Soft-landed at Utopia Planitia on 15 May 2021 and deployed the Zhurong rover, making China the third nation (after the USA and USSR) to soft-land on Mars and the first to attempt orbiter, lander, and rover in a single mission.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 1300,
     "tags": [
       "mars",
@@ -103728,7 +103770,10 @@
       "Multispectral camera"
     ],
     "power_source": "Battery (transferred power to rover then dormant)",
-    "website": "http://www.cnsa.gov.cn/"
+    "website": "http://www.cnsa.gov.cn/",
+    "chipset": "Chinese SPARC V8 rad-hardened processor (classified specifics)",
+    "cpu_arch": "SPARC V8",
+    "rtos": "Custom CASC flight software"
   },
   {
     "id": "huygens-probe",
@@ -103739,10 +103784,10 @@
     "year": 2005,
     "origin": "Europe",
     "img": "",
-    "score": 95,
+    "score": 75,
     "desc": "First and only spacecraft to land on a moon in the outer solar system. Released from the Cassini orbiter and parachuted to the surface of Saturn's moon Titan on 14 January 2005, returning unprecedented surface images and atmospheric data for 90 minutes after touchdown. Holds the record for furthest landing ever (1.4 billion km from Earth) and only landing on a moon other than Earth's.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 318,
     "tags": [
       "titan",
@@ -103794,7 +103839,12 @@
     "battery_count": 5,
     "battery_wh": 1800,
     "data_returned_gb": 0.000474,
-    "website": "https://www.esa.int/Science_Exploration/Space_Science/Cassini-Huygens"
+    "website": "https://www.esa.int/Science_Exploration/Space_Science/Cassini-Huygens",
+    "chipset": "MIL-STD-1750A processor (16-bit, rad-hard)",
+    "cpu": "Two redundant CDMU computers",
+    "cpu_arch": "1750A military spec",
+    "rtos": "Custom flight software",
+    "ram_type": "Rad-hardened SRAM"
   },
   {
     "id": "philae-lander",
@@ -103805,10 +103855,10 @@
     "year": 2014,
     "origin": "Europe",
     "img": "",
-    "score": 91,
+    "score": 75,
     "desc": "First spacecraft to soft-land on a comet. Released by the Rosetta orbiter onto Comet 67P/Churyumov-Gerasimenko on 12 November 2014. Harpoons failed to fire on landing, causing Philae to bounce twice and come to rest in a shadowed location ~1 km from intended site. Operated intermittently on battery power for ~60 hours before going silent; briefly re-established contact in mid-2015.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 100,
     "tags": [
       "comet",
@@ -103860,7 +103910,11 @@
     ],
     "power_source": "Solar array + primary/secondary batteries",
     "battery_count": 2,
-    "website": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta"
+    "website": "https://www.esa.int/Science_Exploration/Space_Science/Rosetta",
+    "chipset": "TEMIC TSC21020 (Analog Devices ADSP-21020 derivative)",
+    "cpu": "21020 with redundant cold spare",
+    "cpu_arch": "32-bit floating-point DSP",
+    "rtos": "Custom Philae flight software"
   },
   {
     "id": "hayabusa",
@@ -111746,10 +111800,10 @@
     "sub": "Planetary Lander",
     "year": 2013,
     "origin": "China",
-    "score": 90,
+    "score": 75,
     "desc": "First Chinese spacecraft to soft-land on the Moon and first soft landing on the Moon since the Soviet Luna 24 in 1976. Landed in Mare Imbrium on 14 December 2013, deploying the Yutu rover. The lander remained operational for over 7 years, far beyond its 1-year design life, conducting astronomy from the lunar surface with an ultraviolet telescope.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "announced": "2008",
     "released": "2013-12-14",
     "also_known_as": "嫦娥三号, Chang'e-3",
@@ -111777,20 +111831,13 @@
       "Descent Camera"
     ],
     "power_source": "Solar array + RHU (radioisotope heater)",
-    "tags": [
-      "moon",
-      "lander",
-      "cnsa",
-      "china",
-      "change-3",
-      "mare-imbrium",
-      "yutu-deployer",
-      "historic",
-      "first-of-its-kind"
-    ],
+    "tags": [],
     "website": "http://www.cnsa.gov.cn/",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "chipset": "SPARC V8 rad-hardened (Chinese-developed)",
+    "cpu_arch": "SPARC V8",
+    "rtos": "Custom CASC flight software"
   },
   {
     "id": "change-4-lander",
@@ -111800,7 +111847,7 @@
     "sub": "Planetary Lander",
     "year": 2019,
     "origin": "China",
-    "score": 94,
+    "score": 75,
     "desc": "First spacecraft to soft-land on the far side of the Moon. Touched down in Von Kármán crater within the South Pole-Aitken Basin on 3 January 2019. Deployed the Yutu-2 rover. Communicates with Earth via the Queqiao relay satellite at the Earth-Moon L2 Lagrange point — a first-of-its-kind communication architecture for lunar far-side operations.",
     "price": "POA",
     "status": "Active",
@@ -111829,22 +111876,13 @@
       "Biological Experiment Payload (carried cotton seeds — first plant grown on Moon)"
     ],
     "power_source": "Solar array + RTG (for night survival)",
-    "tags": [
-      "moon",
-      "lander",
-      "cnsa",
-      "china",
-      "change-4",
-      "far-side",
-      "von-karman-crater",
-      "queqiao-relay",
-      "historic",
-      "first-of-its-kind",
-      "active"
-    ],
+    "tags": [],
     "website": "http://www.cnsa.gov.cn/",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "chipset": "SPARC V8 rad-hardened (Chinese-developed)",
+    "cpu_arch": "SPARC V8",
+    "rtos": "Custom CASC flight software"
   },
   {
     "id": "change-5-lander",
@@ -111854,10 +111892,10 @@
     "sub": "Planetary Lander",
     "year": 2020,
     "origin": "China",
-    "score": 95,
+    "score": 75,
     "desc": "First lunar sample return mission since the Soviet Luna 24 in 1976. Landed in Mons Rümker region of Oceanus Procellarum on 1 December 2020, used a robotic arm and drill to collect 1.731 kg of lunar regolith, and launched it back to Earth via the ascent stage on 3 December. Samples were the youngest ever collected from the Moon (~2 billion years old), reshaping understanding of lunar volcanism.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "announced": "2011",
     "released": "2020-12-01",
     "also_known_as": "嫦娥五号, Chang'e-5",
@@ -111890,19 +111928,15 @@
       "Lunar Regolith Penetrating Radar"
     ],
     "power_source": "Solar array + battery",
-    "tags": [
-      "moon",
-      "lander",
-      "sample-return",
-      "cnsa",
-      "china",
-      "change-5",
-      "mons-rumker",
-      "historic",
-      "first-of-its-kind"
-    ],
+    "tags": [],
     "website": "http://www.cnsa.gov.cn/",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "chipset": "SPARC V8 rad-hardened (Chinese-developed)",
+    "cpu_arch": "SPARC V8",
+    "rtos": "Custom CASC flight software",
+    "payload_kg": 2,
+    "dof": 5,
+    "actuator_type": "Brushless DC motors"
   }
 ]
