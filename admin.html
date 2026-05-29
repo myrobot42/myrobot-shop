@@ -1220,7 +1220,11 @@ async function initDB() {
     }
   } catch(e) { console.warn('Could not fetch live site:', e); }
 
-  // Merge any locally added robots (from this session's localStorage)
+  // Capture the live-GitHub baseline BEFORE merging any local edits.
+  // This way saveDB() can correctly identify what the worker has changed locally.
+  captureBaseline();
+
+  // Merge any locally added/edited robots (from this session's localStorage)
   const localRobots = JSON.parse(localStorage.getItem('mrsh_added_robots') || '[]');
   for (const r of localRobots) {
     const exists = ROBOTS.findIndex(x => x.id === r.id);
@@ -3427,6 +3431,9 @@ async function deployNow() {
 
     addMsg('✅ ' + ROBOTS.length + ' robots pushed to data/robots.json!\n\nNetlify is now auto-deploying — your live site will update in ~30 seconds. 🚀', 'success');
     addLog('success', 'GitHub deploy — ' + ROBOTS.length + ' robots pushed to data/robots.json');
+    // After full deploy, everything matches GitHub — reset baseline + clear local deltas.
+    // (Prevents mrsh_added_robots from carrying stale state forever and hitting 5MB quota.)
+    resetBaseline();
 
   } catch(err) {
     addMsg('❌ Deploy failed: ' + err.message, 'error');
@@ -3437,13 +3444,78 @@ async function deployNow() {
 }
 
 // ════ UTILS ════
+// Baseline snapshot of robots as fetched from GitHub (the "clean" copy).
+// saveDB() diffs ROBOTS against this to find what the local user changed,
+// and only persists the deltas to localStorage. Set by initDB after the live fetch.
+let BASELINE_BY_ID = {};
+
+function captureBaseline() {
+  BASELINE_BY_ID = {};
+  for (const r of ROBOTS) BASELINE_BY_ID[r.id] = JSON.stringify(r);
+}
+
 function saveDB() {
-  // Save full DB for this session
-  localStorage.setItem('mrsh_robots', JSON.stringify(ROBOTS));
-  // Also track newly added robots separately so they merge on next load
-  localStorage.setItem('mrsh_added_robots', JSON.stringify(ROBOTS));
+  // We do NOT cache the full DB to localStorage (it exceeds the 5MB quota at ~1500+ robots).
+  // The live site fetch from data/robots.json in initDB() is the source of truth.
+  // We persist only robots whose JSON differs from the GitHub baseline — typically a handful
+  // of worker image edits that haven't been pushed yet.
+  try {
+    const changed = [];
+    for (const r of ROBOTS) {
+      const baseline = BASELINE_BY_ID[r.id];
+      if (baseline === undefined) {
+        // Added locally (not in baseline) — persist it.
+        changed.push(r);
+      } else if (JSON.stringify(r) !== baseline) {
+        // Edited locally — persist the new version.
+        changed.push(r);
+      }
+    }
+    if (changed.length > 0) {
+      // Cap: if too many unsaved deltas accumulate (e.g. due to a bug or missed
+      // baseline updates), persist only the most recent 50 to stay under quota.
+      const toPersist = changed.length > 50 ? changed.slice(-50) : changed;
+      if (changed.length > 50) {
+        console.warn(`saveDB: ${changed.length} unsaved deltas exceeds cap of 50 — persisting last 50 only.`);
+      }
+      try {
+        localStorage.setItem('mrsh_added_robots', JSON.stringify(toPersist));
+      } catch(quotaErr) {
+        // Hit quota even with cap — drop to last 10, then last 1, then give up.
+        try { localStorage.setItem('mrsh_added_robots', JSON.stringify(changed.slice(-10))); }
+        catch(_) {
+          try { localStorage.setItem('mrsh_added_robots', JSON.stringify(changed.slice(-1))); }
+          catch(_) { localStorage.removeItem('mrsh_added_robots'); }
+        }
+        console.warn('saveDB: quota fallback engaged — local-only edits may be lost on reload until you Deploy.');
+      }
+    } else {
+      localStorage.removeItem('mrsh_added_robots');
+    }
+    // Clean up the legacy huge cache key (the original quota offender)
+    localStorage.removeItem('mrsh_robots');
+  } catch(e) {
+    console.warn('saveDB: localStorage write failed.', e);
+    // Last-ditch cleanup so subsequent saves don't keep failing
+    try { localStorage.removeItem('mrsh_robots'); localStorage.removeItem('mrsh_added_robots'); } catch(_){}
+  }
   document.getElementById('stat-total').textContent = ROBOTS.length;
   if (document.getElementById('s-total')) document.getElementById('s-total').textContent = ROBOTS.length;
+}
+
+// Update baseline for a single robot (call after a successful GitHub push for that robot).
+function markBaselineForRobot(id) {
+  const r = ROBOTS.find(x => x.id === id);
+  if (r) BASELINE_BY_ID[id] = JSON.stringify(r);
+}
+
+// Reset baseline for everything (call after a bulk push or full re-fetch from GitHub).
+function resetBaseline() {
+  captureBaseline();
+  try {
+    localStorage.removeItem('mrsh_added_robots');
+    localStorage.removeItem('mrsh_robots');
+  } catch(e) {}
 }
 
 function exportDB() {
@@ -4182,6 +4254,10 @@ async function saveSingleRobotImages(robotId){
   // Push to server
   const result = await _callSaveRobot(robotId, changes);
   addLog('success', `Saved ${robotId} (${result.updated.join(', ')})`);
+  // Mark this robot as baseline-clean so it stops counting as "unsaved"
+  // (prevents mrsh_added_robots from growing forever and hitting 5MB quota).
+  markBaselineForRobot(robotId);
+  saveDB();
   return result;
 }
 
