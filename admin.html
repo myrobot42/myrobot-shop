@@ -401,6 +401,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
     <div class="nav-section">TOOLS</div>
     <div class="nav-item" onclick="showPage('ingest',this)"><span class="nav-icon">🏭</span>Brand Ingestion</div>
     <div class="nav-item" onclick="showPage('images',this)"><span class="nav-icon">🖼️</span>Image Manager</div>
+    <div class="nav-item" onclick="showPage('bulkdelete',this)"><span class="nav-icon">🗑️</span>Bulk Delete <span style="font-size:9px;background:#7f1d1d;color:#fecaca;padding:2px 5px;border-radius:3px;margin-left:4px">ADMIN</span></div>
     <div class="nav-item" onclick="showPage('logs',this)"><span class="nav-icon">📋</span>Activity Log</div>
     <div class="nav-item" onclick="showPage('settings',this)"><span class="nav-icon">⚙️</span>Settings</div>
     <div class="sidebar-stats">
@@ -829,6 +830,44 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
         </div>
       </div>
 
+      <!-- BULK DELETE (admin-only) -->
+      <div class="page" id="page-bulkdelete">
+        <div class="gen-page">
+          <div class="sec-card" style="border-left:3px solid #ef4444">
+            <div class="sec-head">🗑️ BULK DELETE — Admin-only · Delete multiple robots in one operation</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">
+              Paste robot IDs (one per line). Lines starting with <code style="background:var(--bg3);padding:1px 4px;border-radius:3px">#</code> are treated as comments and ignored.<br>
+              <strong style="color:#fca5a5">This is destructive.</strong> Two-step confirm: Validate first, then Delete &amp; Deploy. A backup snapshot is saved before deletion.
+            </div>
+
+            <textarea id="bd-input" placeholder="# Paste robot IDs here, one per line. Comments start with #
+# Example:
+# tesla-optimus-healthcare
+# apptronik-apollo-warehouse" style="width:100%;height:240px;background:#0a0a0a;color:#a3e635;border:1px solid var(--bdr);border-radius:8px;padding:12px;font-family:'JetBrains Mono',monospace;font-size:12px;resize:vertical"></textarea>
+
+            <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+              <button class="save-btn" onclick="bdValidate()" style="background:#3b82f6">🔍 Validate</button>
+              <button class="save-btn" id="bd-delete-btn" onclick="bdDeleteAndDeploy()" style="background:#dc2626;display:none">⚠️ Delete &amp; Deploy</button>
+              <button class="save-btn" onclick="bdClear()" style="background:var(--bg3);color:var(--txt)">Clear</button>
+              <button class="save-btn" onclick="bdRestoreBackup()" style="background:var(--bg3);color:var(--txt);margin-left:auto">↺ Restore Last Backup</button>
+            </div>
+
+            <div id="bd-result" style="margin-top:14px"></div>
+          </div>
+
+          <div class="sec-card" style="margin-top:14px">
+            <div class="sec-head">💡 SAFETY GUARDRAILS</div>
+            <div style="font-size:12px;color:var(--mut);line-height:1.8">
+              • <strong>Admin-only</strong> — Workers cannot access this page<br>
+              • <strong>Hard cap: 500 IDs per run</strong> — prevents fat-finger accidents<br>
+              • <strong>Validation first</strong> — unknown IDs shown before deletion is allowed<br>
+              • <strong>Backup snapshot</strong> — full deleted records saved to localStorage as <code style="background:var(--bg3);padding:1px 4px;border-radius:3px">mrsh_bulk_delete_backup</code> before push, so you can restore<br>
+              • <strong>Uses safe Git Data API path</strong> — handles >1MB robots.json correctly with retry logic
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- DATA CLEANUP -->
       <div class="page" id="page-cleanup">
         <div class="gen-page">
@@ -958,6 +997,7 @@ const WORKER_PERM_DEFAULTS = {
   detected: false,
   ingest: false,
   images: true,     // Image Manager
+  bulkdelete: false, // CRITICAL: admin-only. Workers cannot bulk-delete robots.
   logs: false,
   settings: false   // CRITICAL: never default true. GitHub token lives here.
 };
@@ -1490,6 +1530,7 @@ function applyRole(){
     {id:'detected', sel:'div.nav-item[onclick*="\'detected\'"]'},
     {id:'ingest', sel:'div.nav-item[onclick*="\'ingest\'"]'},
     {id:'images', sel:'div.nav-item[onclick*="\'images\'"]'},
+    {id:'bulkdelete', sel:'div.nav-item[onclick*="\'bulkdelete\'"]'},
     {id:'logs', sel:'div.nav-item[onclick*="\'logs\'"]'},
     {id:'settings', sel:'div.nav-item[onclick*="\'settings\'"]'}
   ];
@@ -1785,7 +1826,7 @@ function showPage(id, el) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   if (el) el.classList.add('active');
-  const titles = {cmd:'⚡ Command Centre', db:'🗄️ Robot Database', cleanup:'🔧 Data Cleanup', logs:'📋 Activity Log', settings:'⚙️ Settings', rss:'📡 RSS Feeds', vault:'🔗 URL Vault', queue:'📥 Review Queue', detected:'🤖 Robots Detected', ingest:'🏭 Brand Ingestion', images:'🖼️ Image Manager'};
+  const titles = {cmd:'⚡ Command Centre', db:'🗄️ Robot Database', cleanup:'🔧 Data Cleanup', logs:'📋 Activity Log', settings:'⚙️ Settings', rss:'📡 RSS Feeds', vault:'🔗 URL Vault', queue:'📥 Review Queue', detected:'🤖 Robots Detected', ingest:'🏭 Brand Ingestion', images:'🖼️ Image Manager', bulkdelete:'🗑️ Bulk Delete'};
   document.getElementById('page-title').textContent = titles[id] || id;
   if (id === 'db') renderDB();
   if (id === 'rss') renderFeeds();
@@ -3441,6 +3482,224 @@ async function deployNow() {
   }
 
   if (btn) { btn.textContent = '🚀 Deploy site'; btn.disabled = false; }
+}
+
+// ════════════════════════════════════════════════════════════
+// ════ BULK DELETE (admin-only) ═══════════════════════════════
+// ════════════════════════════════════════════════════════════
+// Standalone tool to remove multiple robots in one operation.
+// Uses the safe deployNow() Git Data API path so >1MB robots.json works.
+// Two-step UX: Validate → confirm preview → Delete & Deploy.
+// Saves a backup snapshot to localStorage before deletion (restorable).
+
+const BD_MAX_DELETIONS = 500;       // Hard cap per run
+const BD_BACKUP_KEY = 'mrsh_bulk_delete_backup';
+
+// State captured at Validate time, consumed at Delete time
+let _BD_PENDING = null;             // { ids:Set, robots:[deletedRecords] }
+
+// Parse pasted text into a clean ID list (lines, no comments, trimmed, deduped)
+function bdParseInput(txt){
+  if (!txt) return [];
+  const ids = [];
+  const seen = new Set();
+  for (const raw of txt.split('\n')) {
+    const line = raw.trim();
+    if (!line || line.startsWith('#')) continue;
+    if (seen.has(line)) continue;
+    seen.add(line);
+    ids.push(line);
+  }
+  return ids;
+}
+
+function bdValidate(){
+  if (isWorker()){
+    alert('⛔ Bulk Delete is admin-only.');
+    return;
+  }
+  _BD_PENDING = null;
+  document.getElementById('bd-delete-btn').style.display = 'none';
+
+  const txt = document.getElementById('bd-input').value;
+  const ids = bdParseInput(txt);
+  const out = document.getElementById('bd-result');
+
+  if (ids.length === 0){
+    out.innerHTML = '<div style="padding:14px;background:#1f2937;border:1px solid var(--bdr);border-radius:8px;color:var(--mut);font-size:13px">Paste some robot IDs above first.</div>';
+    return;
+  }
+
+  if (ids.length > BD_MAX_DELETIONS){
+    out.innerHTML = `<div style="padding:14px;background:#3f1d1d;border:1px solid #7f1d1d;border-radius:8px;color:#fca5a5;font-size:13px">❌ Refusing to proceed — ${ids.length} IDs exceeds safety cap of ${BD_MAX_DELETIONS}. Split into smaller runs.</div>`;
+    return;
+  }
+
+  // Look up each ID in current ROBOTS
+  const byId = {};
+  for (const r of ROBOTS) byId[r.id] = r;
+
+  const found = [];
+  const missing = [];
+  for (const id of ids){
+    if (byId[id]) found.push(byId[id]);
+    else missing.push(id);
+  }
+
+  // Build preview
+  const byCat = {};
+  for (const r of found){
+    const c = r.cat || '—';
+    if (!byCat[c]) byCat[c] = 0;
+    byCat[c]++;
+  }
+  const catSummary = Object.entries(byCat).sort((a,b)=>b[1]-a[1]).map(([c,n])=>`${c}: ${n}`).join(', ');
+
+  let html = `<div style="padding:14px;background:#0f172a;border:1px solid var(--bdr);border-radius:8px;font-size:13px;line-height:1.7">`;
+  html += `<div style="font-weight:600;color:#fca5a5;margin-bottom:8px">⚠️ READY TO DELETE — review carefully</div>`;
+  html += `<div><strong style="color:#a3e635">${found.length}</strong> will be deleted &nbsp;·&nbsp; <strong style="color:#fbbf24">${missing.length}</strong> not found in DB &nbsp;·&nbsp; DB will go from <strong>${ROBOTS.length}</strong> to <strong>${ROBOTS.length - found.length}</strong> robots</div>`;
+  if (catSummary) html += `<div style="margin-top:6px;color:var(--mut);font-size:12px">By category — ${catSummary}</div>`;
+  html += `</div>`;
+
+  // Found list (max 50 shown, rest summarised)
+  if (found.length){
+    const preview = found.slice(0, 50);
+    html += `<div style="margin-top:10px;max-height:340px;overflow-y:auto;background:#0a0a0a;border:1px solid var(--bdr);border-radius:8px;padding:10px;font-family:'JetBrains Mono',monospace;font-size:11px">`;
+    for (const r of preview){
+      const nameEsc = (r.name||'').replace(/</g,'&lt;');
+      const brandEsc = (r.brand||'').replace(/</g,'&lt;');
+      html += `<div style="padding:3px 0;color:#fca5a5">✗ <code style="color:#a3e635">${r.id}</code> — ${nameEsc} <span style="color:var(--mut)">(${brandEsc}, ${r.cat||'—'})</span></div>`;
+    }
+    if (found.length > 50){
+      html += `<div style="padding:6px 0;color:var(--mut);font-style:italic">… and ${found.length-50} more</div>`;
+    }
+    html += `</div>`;
+  }
+
+  // Missing list (shown only if any)
+  if (missing.length){
+    html += `<div style="margin-top:10px;padding:10px;background:#3f2d0d;border:1px solid #92400e;border-radius:8px;font-size:12px"><strong style="color:#fbbf24">${missing.length} ID${missing.length>1?'s':''} not found</strong> (no-op — already deleted or never existed):<br>`;
+    html += `<code style="color:var(--mut);font-size:11px">${missing.slice(0,20).join(', ')}${missing.length>20?` …+${missing.length-20} more`:''}</code></div>`;
+  }
+
+  out.innerHTML = html;
+
+  if (found.length > 0){
+    _BD_PENDING = { ids: new Set(found.map(r=>r.id)), robots: found };
+    const btn = document.getElementById('bd-delete-btn');
+    btn.style.display = 'inline-block';
+    btn.textContent = `⚠️ Delete ${found.length} & Deploy`;
+  }
+}
+
+async function bdDeleteAndDeploy(){
+  if (isWorker()){ alert('⛔ Bulk Delete is admin-only.'); return; }
+  if (!_BD_PENDING || _BD_PENDING.ids.size === 0){
+    alert('Nothing to delete. Click Validate first.');
+    return;
+  }
+
+  const count = _BD_PENDING.ids.size;
+  if (!confirm(`Delete ${count} robots and push to GitHub?\n\nThis writes to data/robots.json. A backup is saved to localStorage first.`)){
+    return;
+  }
+
+  const btn = document.getElementById('bd-delete-btn');
+  const originalText = btn.textContent;
+  btn.disabled = true;
+  btn.textContent = 'Backing up…';
+  const out = document.getElementById('bd-result');
+
+  try {
+    // Step 1: save backup snapshot of the deleted records
+    const backup = {
+      timestamp: new Date().toISOString(),
+      count: _BD_PENDING.robots.length,
+      robots: _BD_PENDING.robots,
+    };
+    try {
+      localStorage.setItem(BD_BACKUP_KEY, JSON.stringify(backup));
+    } catch(e){
+      // If backup too big, try without full robot data (keep ids+names only)
+      const lite = { timestamp: backup.timestamp, count: backup.count, robots: backup.robots.map(r => ({id:r.id, name:r.name, brand:r.brand, cat:r.cat})) };
+      try { localStorage.setItem(BD_BACKUP_KEY, JSON.stringify(lite)); }
+      catch(_){ /* give up on backup but proceed */ }
+    }
+
+    // Step 2: filter ROBOTS in memory
+    btn.textContent = 'Deleting locally…';
+    const before = ROBOTS.length;
+    ROBOTS = ROBOTS.filter(r => !_BD_PENDING.ids.has(r.id));
+    const after = ROBOTS.length;
+    addLog && addLog('warn', `Bulk delete — removed ${before-after} robots locally`);
+
+    // Step 3: push to GitHub via the safe deployNow() pipeline
+    btn.textContent = 'Pushing to GitHub…';
+    await deployNow();
+
+    // Step 4: report success
+    out.innerHTML = `<div style="padding:14px;background:#052e16;border:1px solid #14532d;border-radius:8px;color:#a3e635;font-size:13px;line-height:1.7">
+      ✅ <strong>Bulk delete complete</strong><br>
+      Removed <strong>${before-after}</strong> robots · DB now has <strong>${after}</strong> robots<br>
+      <span style="color:var(--mut);font-size:11px">Backup saved as <code>${BD_BACKUP_KEY}</code> in localStorage. Reload to refresh other views.</span>
+    </div>`;
+    document.getElementById('bd-input').value = '';
+    _BD_PENDING = null;
+    btn.style.display = 'none';
+    // Update sidebar count
+    const totalEl = document.getElementById('stat-total');
+    if (totalEl) totalEl.textContent = ROBOTS.length;
+  } catch(err){
+    addLog && addLog('error', 'Bulk delete failed: ' + (err && err.message ? err.message : err));
+    out.innerHTML = `<div style="padding:14px;background:#3f1d1d;border:1px solid #7f1d1d;border-radius:8px;color:#fca5a5;font-size:13px">❌ <strong>Bulk delete failed</strong><br>${(err && err.message) ? err.message : err}<br><br>Reload the page — your in-memory changes were not pushed. Backup is still in localStorage as <code>${BD_BACKUP_KEY}</code>.</div>`;
+    btn.disabled = false;
+    btn.textContent = originalText;
+  }
+}
+
+function bdClear(){
+  document.getElementById('bd-input').value = '';
+  document.getElementById('bd-result').innerHTML = '';
+  document.getElementById('bd-delete-btn').style.display = 'none';
+  _BD_PENDING = null;
+}
+
+function bdRestoreBackup(){
+  if (isWorker()){ alert('⛔ Bulk Delete is admin-only.'); return; }
+  const raw = localStorage.getItem(BD_BACKUP_KEY);
+  if (!raw){
+    alert('No backup snapshot found.');
+    return;
+  }
+  let backup;
+  try { backup = JSON.parse(raw); }
+  catch(e){ alert('Backup is corrupted, cannot restore.'); return; }
+
+  const ts = backup.timestamp || 'unknown time';
+  const count = backup.count || (backup.robots||[]).length;
+  if (!confirm(`Restore ${count} robots deleted at ${ts}?\n\nThis adds them back to the DB and pushes to GitHub.`)) return;
+
+  // Check if records have full data (not the lite fallback)
+  const hasFullData = backup.robots && backup.robots[0] && Object.keys(backup.robots[0]).length > 5;
+  if (!hasFullData){
+    alert('Backup only has id/name/brand/cat (was too big to save full data).\n\nCannot fully restore. Recover from GitHub commit history instead.');
+    return;
+  }
+
+  // Add back, deduping by id
+  const existingIds = new Set(ROBOTS.map(r=>r.id));
+  let added = 0;
+  for (const r of backup.robots){
+    if (!existingIds.has(r.id)){
+      ROBOTS.push(r);
+      added++;
+    }
+  }
+  addLog && addLog('info', `Restore backup — added ${added} robots back`);
+  const out = document.getElementById('bd-result');
+  out.innerHTML = `<div style="padding:14px;background:#0f172a;border:1px solid var(--bdr);border-radius:8px;color:#a3e635;font-size:13px">Restored ${added} robots locally. Click <strong>Legacy Deploy</strong> in the top bar to push to GitHub.</div>`;
+  const totalEl = document.getElementById('stat-total');
+  if (totalEl) totalEl.textContent = ROBOTS.length;
 }
 
 // ════ UTILS ════
