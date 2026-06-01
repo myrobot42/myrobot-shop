@@ -61732,10 +61732,13 @@
     "desc": "Teleoperated, dual-armed underwater manipulation system with six-function dexterity per arm. Operates in depths up to 1 kilometer (1,000 meters). Electronically driven system eliminating hydraulic power units. Typically integrated with VideoRay's Defender ROV for enhanced power and maneuverability.",
     "highlights": [],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "depth_rating_m": 1000,
+      "arms": 2,
+      "functions_per_arm": 6,
+      "dof": 12,
+      "reach_mm": 1500,
+      "payload_kg": 23,
+      "host_platform": "VideoRay Defender ROV"
     },
     "origin": "USA",
     "year": 2019,
@@ -61760,7 +61763,8 @@
     "battery_life": "8-12 hours",
     "ros": true,
     "warranty_months": 12,
-    "product_url": "https://www.sarcos.com/products/guardian-sea-class/"
+    "product_url": "https://www.sarcos.com/products/guardian-sea-class/",
+    "depth_rating_m": 1000
   },
   {
     "id": "teledyne-flir-packbot-525",
@@ -88550,7 +88554,7 @@
     "score": 87,
     "rating": 4.5,
     "price": 0,
-    "desc": "Portable research AUV. Deployed under 2m Arctic sea ice for high-res mapping. MBARI CoMPAS Lab.",
+    "desc": "Multimodality, Observing, Low-cost, Agile (MOLA) AUV - a portable research robot from MBARI's CoMPAS Lab for high-resolution data gathering in deep, complex terrain like reefs, canyon walls and hydrothermal vents. 72 x 45 cm, 30 kg, deployable by a small crew from a small boat or shore. Built on a commercially available Boxfish submersible (rated to 1,000 m) modified with MBARI custom instruments, with vectored thrusters giving full six degrees of freedom. Carries a 4K camera plus stereo cameras and sonar that sees ~30 m ahead, using deep-learning perception and advanced localisation. Its design specifications and software algorithms are open-source to broaden access to ocean science.",
     "highlights": [
       "Arctic-capable",
       "Portable",
@@ -88558,17 +88562,35 @@
       "Research-grade"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 20
+      "depth_rating_m": 1000,
+      "length_mm": 720,
+      "width_mm": 450,
+      "weight_kg": 30,
+      "dof": 6,
+      "camera": "4K + stereo cameras",
+      "sonar_range_m": 30,
+      "platform": "Boxfish submersible (MBARI-modified)"
     },
     "year": 2024,
     "status": "Active",
-    "weight_kg": 120,
+    "weight_kg": 30,
     "ip_rating": "IPX8",
     "origin": "USA",
     "cameras": 2,
     "wifi": true,
-    "bluetooth": false
+    "bluetooth": false,
+    "depth_rating_m": 1000,
+    "depth_mm": 720,
+    "width_mm": 450,
+    "frame_material": "Hard-anodised aluminium alloy",
+    "imu": true,
+    "api": true,
+    "use_cases": [
+      "Seafloor habitat survey",
+      "Marine ecosystem monitoring",
+      "Deep-sea research",
+      "Reef and vent mapping"
+    ]
   },
   {
     "id": "oceanserver-iver4-2020",
@@ -88697,7 +88719,7 @@
     "name": "Slocum Glider",
     "brand": "Teledyne Marine",
     "cat": "Aquatic",
-    "sub": "Underwater Glider",
+    "sub": "Underwater glider (AUV)",
     "tags": [
       "glider",
       "long-endurance",
@@ -88710,7 +88732,7 @@
     "score": 88,
     "rating": 4.6,
     "price": 0,
-    "desc": "Underwater glider. Buoyancy-driven (no propeller). Up to 12-month endurance. Ocean climate research.",
+    "desc": "Long-range, long-duration autonomous underwater glider that moves by changing its buoyancy and pitching its wings, sipping power to patrol for weeks to months at a time. Rated to 1,000 m (200 m version available), it cruises slowly (~0.35 m/s) but covers vast distances, with a dry modular center payload bay plus wetted bow and stern bays accepting 40-plus sensor options. Networkable for fleet operations - fleets perform sampling and dynamic mapping across large regions for research, commercial and defense applications, surfacing periodically to relay data via satellite.",
     "highlights": [
       "Buoyancy-driven",
       "12-month endurance",
@@ -88718,8 +88740,13 @@
       "Industry-standard glider"
     ],
     "perf": {
-      "speed_ms": 0.25,
-      "payload_kg": 5
+      "depth_rating_m": 1000,
+      "depth_option_m": 200,
+      "propulsion": "variable-buoyancy (thermal/electric)",
+      "endurance": "weeks to months",
+      "horizontal_speed_ms": 0.35,
+      "sensors": "40+ modular options",
+      "networkable": true
     },
     "year": 2010,
     "status": "Active",
@@ -88730,6 +88757,14 @@
     "bluetooth": false,
     "gallery": [
       "https://www.teledynemarine.com/en-us/products/PublishingImages/Webb%20Research/732x732/Slocum%20Glider.jpg"
+    ],
+    "depth_rating_m": 1000,
+    "imu": true,
+    "use_cases": [
+      "Ocean observation",
+      "Water-column sampling",
+      "Dynamic mapping",
+      "Defense / research surveys"
     ]
   },
   {
@@ -88750,7 +88785,7 @@
     "score": 89,
     "rating": 4.6,
     "price": 0,
-    "desc": "Wave-powered surface glider. Boeing subsidiary. Persistent ocean monitoring. Months at sea.",
+    "desc": "Wave- and solar-powered unmanned surface vehicle (USV) - the most field-proven USV in the world. A surface float is tethered to a submerged 'sub' whose articulated wings convert vertical wave motion into forward thrust, eliminating fuel; solar arrays (225 W nominal) recharge batteries that run sensors, comms and a low-power auxiliary thruster. Holds station within a 50 m radius and runs persistently for up to a year, moving 0.8-2.0 knots depending on sea state, in water deeper than 15 m. SATCOM, cellular, Wi-Fi and line-of-sight links provide real-time tasking and data exfiltration; an optional 150 m winch enables profiling casts. A Boeing subsidiary platform widely used for ASW/ISR and ocean science.",
     "highlights": [
       "Wave-powered",
       "Boeing subsidiary",
@@ -88758,8 +88793,13 @@
       "Persistent monitoring"
     ],
     "perf": {
-      "speed_ms": 0.7,
-      "payload_kg": 45
+      "max_speed_knots": "0.8 (SS2) / 1.4 (SS3) / 2.0 (SS4+)",
+      "endurance": "up to 1 year",
+      "solar_w": 225,
+      "station_keeping_radius_m": 50,
+      "min_water_depth_m": 15,
+      "propulsion": "wave-converted thrust + solar",
+      "comms": "SATCOM / cellular / Wi-Fi / line-of-sight"
     },
     "year": 2009,
     "status": "Active",
@@ -88768,7 +88808,14 @@
     "cameras": 2,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "imu": true,
+    "use_cases": [
+      "Persistent ocean monitoring",
+      "ASW / ISR",
+      "Met-ocean data collection",
+      "Communications relay"
+    ]
   },
   {
     "id": "kongsberg-hugin-superior-2019",
@@ -89293,7 +89340,7 @@
     "name": "SwarmDiver",
     "brand": "Aquabotix (UUV Aquabotix)",
     "cat": "Aquatic",
-    "sub": "AUV",
+    "sub": "Micro USV / UUV (swarming)",
     "tags": [
       "swarm",
       "multi-vehicle",
@@ -89306,7 +89353,7 @@
     "score": 85,
     "rating": 4.5,
     "price": 0,
-    "desc": "Swarming AUV — multiple units coordinate. Navy ISR, surveillance. Multi-vehicle autonomy.",
+    "desc": "The first commercially available swarming micro USV/UUV - a hybrid surface-and-subsurface vehicle just 75 cm long and 1.7 kg that operates on the surface and dives to 50 m. A single operator commands an entire fleet (around 30 units) as one coordinated entity, issuing swarm-formation and synchronized-dive commands so multiple points of data are captured simultaneously and transmitted wirelessly on surfacing. Rugged enough to work in the surf zone for near-shore, shallow data collection. Carries high-accuracy temperature and depth sensors plus multi-constellation GNSS, for oceanography, environmental monitoring, autonomous depth sounding and ISR.",
     "highlights": [
       "Swarming AUV",
       "Multi-vehicle",
@@ -89314,12 +89361,16 @@
       "Surveillance"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 2
+      "depth_rating_m": 50,
+      "length_mm": 750,
+      "weight_kg": 1.7,
+      "swarm": "single operator controls a fleet (~30 units)",
+      "capability": "synchronized vertical dive + simultaneous multi-point capture",
+      "sensors": "high-accuracy temperature + depth, multi-constellation GNSS"
     },
-    "year": 2022,
+    "year": 2018,
     "status": "Active",
-    "weight_kg": 10,
+    "weight_kg": 1.7,
     "ip_rating": "IPX8",
     "origin": "USA",
     "cameras": 1,
@@ -89327,6 +89378,16 @@
     "bluetooth": false,
     "gallery": [
       "https://www.hisutton.com/images/US_SwarmDiver.jpg"
+    ],
+    "depth_rating_m": 50,
+    "depth_mm": 750,
+    "imu": true,
+    "use_cases": [
+      "Oceanography",
+      "Environmental monitoring",
+      "Plume analysis",
+      "Autonomous depth sounding",
+      "ISR"
     ]
   },
   {
