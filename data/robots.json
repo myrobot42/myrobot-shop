@@ -88220,7 +88220,7 @@
     "score": 91,
     "rating": 4.7,
     "price": 0,
-    "desc": "Large-displacement AUV for military undersea ISR. Long endurance. US Navy programs.",
+    "desc": "Large-displacement AUV (LDUUV) for long-endurance military undersea ISR, survey and inspection. 5.8 m long, 1.2 m diameter, 2,720 kg (6,000 lb) dry weight, with a 3D-printed composite exterior. All-electric, rated to 6,000 m, cruising 1.0-3.6 m/s (2-7 knots) with up to 10-day autonomous missions and a 580 line-km survey range. Modular payload bays and Anduril's Lattice AI autonomy stack; originally designed by Dive Technologies (acquired by Anduril in 2022) and used as the testbed for the Ghost Shark XL-AUV program.",
     "highlights": [
       "Large-displacement",
       "Military ISR",
@@ -88228,12 +88228,19 @@
       "Navy programs"
     ],
     "perf": {
-      "speed_ms": 3,
-      "payload_kg": 500
+      "depth_rating_m": 6000,
+      "length_m": 5.8,
+      "diameter_m": 1.2,
+      "dry_weight_kg": 2720,
+      "speed_range_ms": "1.0-3.6",
+      "max_speed_knots": 7,
+      "endurance_days": 10,
+      "survey_range_km": 580,
+      "propulsion": "all-electric"
     },
     "year": 2022,
     "status": "Active",
-    "weight_kg": 5000,
+    "weight_kg": 2720,
     "origin": "USA",
     "cameras": 2,
     "wifi": false,
@@ -88242,6 +88249,18 @@
       "https://cdn.sanity.io/images/61nocsj5/production/4ed92e43d440533df466e95897802ef7c288899d-2000x1501.jpg?rect=0,189,2000,1125&w=640&h=360&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/6043d2f4236aeff07461232ae87ad00f58aabad0-2000x1501.jpg?rect=0,189,2000,1125&w=2000&h=1125&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/0126fc76978b2fedd63aeeacd2e3b1f55f5c617f-952x952.png?rect=0,208,952,536&w=952&h=536&fit=min&auto=format"
+    ],
+    "depth_rating_m": 6000,
+    "depth_mm": 5800,
+    "width_mm": 1200,
+    "imu": true,
+    "api": true,
+    "use_cases": [
+      "Undersea ISR",
+      "Hydrographic survey",
+      "Inspection",
+      "Mine countermeasures",
+      "Payload delivery"
     ]
   },
   {
@@ -88249,7 +88268,7 @@
     "name": "Dive-XL",
     "brand": "Anduril",
     "cat": "Aquatic",
-    "sub": "AUV",
+    "sub": "XL-AUV",
     "tags": [
       "military",
       "extra-large",
@@ -88263,7 +88282,7 @@
     "score": 94,
     "rating": 4.8,
     "price": 0,
-    "desc": "Extra-large AUV — underwater mothership. Launches Copperhead AUVs + Seabed Sentry. US Navy CAMP project.",
+    "desc": "Extra-large autonomous undersea vehicle (XL-AUV) - the basis of the Royal Australian Navy's Ghost Shark and selected by the US Navy for its CAMP underwater-mothership program. All-electric, ~11 m long with a 2 m beam, rated to ~6,000 m, with a 2,000 nm (3,704 km) range and a demonstrated 100-hour single voyage over a 10-day period - the longest for its class. Modular design carries three standard payload modules or one extra-large module and can act as a mothership for Copperhead effectors and Seabed Sentry sensors. Fits inside a standard 4-ft shipping container, is C-17 air-transportable, and is controlled by Anduril's Lattice AI autonomy software.",
     "highlights": [
       "Underwater mothership",
       "Launches smaller AUVs",
@@ -88271,8 +88290,16 @@
       "Modular payloads"
     ],
     "perf": {
-      "speed_ms": 3,
-      "payload_kg": 1500
+      "depth_rating_m": 6000,
+      "length_m": 11,
+      "beam_m": 2,
+      "range_nm": 2000,
+      "range_km": 3704,
+      "endurance_hours": 100,
+      "endurance_days": 10,
+      "cruise_speed_knots": "3-4",
+      "payload": "3 standard modules or 1 XL module",
+      "propulsion": "all-electric"
     },
     "year": 2024,
     "status": "Active",
@@ -88284,6 +88311,18 @@
     "gallery": [
       "https://cdn.sanity.io/images/61nocsj5/production/346164d2c39499d2b98dde5a2249caa29b6e7cd5-1920x1280.jpg?rect=0,100,1920,1080&w=1920&h=1080&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/5ed9c2d7cd0b76640849737f9e6167d854b3b8e2-1920x1280.jpg?rect=0,100,1920,1080&w=1920&h=1080&fit=min&auto=format"
+    ],
+    "depth_rating_m": 6000,
+    "depth_mm": 11000,
+    "width_mm": 2000,
+    "imu": true,
+    "api": true,
+    "use_cases": [
+      "Undersea mothership",
+      "ISR",
+      "Anti-submarine warfare",
+      "Mine countermeasures",
+      "Payload/effector delivery"
     ]
   },
   {
@@ -88291,7 +88330,7 @@
     "name": "Copperhead",
     "brand": "Anduril",
     "cat": "Aquatic",
-    "sub": "AUV",
+    "sub": "UUV (effector family)",
     "tags": [
       "military",
       "small-AUV",
@@ -88304,7 +88343,7 @@
     "score": 89,
     "rating": 4.6,
     "price": 0,
-    "desc": "Small launched-from-Dive-XL AUV. Torpedo-style. Multi-mission.",
+    "desc": "Family of reusable, torpedo-inspired underwater effectors loaded into and launched by larger host UUVs such as the Dive-XL / Ghost Shark. Two size classes: Copperhead-100 (106 in long, 12.75 in diameter, 100 lb-class payload) and Copperhead-500 (163 in long, 21 in diameter, 500 lb-class payload). Electric propulsion with speeds in excess of 30 knots. Payload options span active/passive sensing, acoustic communications relay, magnetometer and side-scan sonar, with warhead-equipped 'M' variants for anti-submarine and anti-surface strike.",
     "highlights": [
       "Launched from Dive-XL",
       "Compact form",
@@ -88312,8 +88351,12 @@
       "Multi-mission"
     ],
     "perf": {
-      "speed_ms": 5,
-      "payload_kg": 20
+      "variant_100": "106 in long, 12.75 in dia, 100 lb-class payload",
+      "variant_500": "163 in long, 21 in dia, 500 lb-class payload",
+      "max_speed_knots": "30+",
+      "propulsion": "electric",
+      "launched_from": "Dive-XL / Ghost Shark and other host vehicles",
+      "reusable": true
     },
     "year": 2024,
     "status": "Active",
@@ -88326,6 +88369,15 @@
       "https://cdn.sanity.io/images/61nocsj5/production/abe7f1e0bf991b27d876772dfc19c7705953200e-3000x2251.jpg?rect=0,282,3000,1688&w=640&h=360&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/4b76e0bc12364436646df54db6115257a2a70537-1920x1280.png?rect=0,100,1920,1080&w=1920&h=1080&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/bffe9976ea7723b47f987fb4fe84374ffc4c58ae-2000x1333.jpg?rect=0,105,2000,1125&w=2000&h=1125&fit=min&auto=format"
+    ],
+    "depth_mm": 2692,
+    "width_mm": 324,
+    "imu": true,
+    "use_cases": [
+      "Sensing/ISR payload",
+      "Acoustic comms relay",
+      "Magnetometer/side-scan survey",
+      "Anti-submarine strike (M variants)"
     ]
   },
   {
@@ -88333,7 +88385,7 @@
     "name": "Seabed Sentry",
     "brand": "Anduril",
     "cat": "Aquatic",
-    "sub": "AUV",
+    "sub": "Subsea resident sensor network",
     "tags": [
       "military",
       "monitoring",
@@ -88346,7 +88398,7 @@
     "score": 87,
     "rating": 4.5,
     "price": 0,
-    "desc": "Seabed-residency monitoring AUV. Persistent undersea surveillance. Launches from Dive-XL.",
+    "desc": "AI-powered, battery-powered subsea-resident sensing system that forms a persistent undersea surveillance network. Deployed, repositioned and recharged by the Dive-XL / Ghost Shark, Seabed Sentry nodes remain on station to provide long-dwell maritime domain awareness and anti-submarine detection, feeding Anduril's Lattice command-and-control. (Exact dimensions not publicly disclosed.)",
     "highlights": [
       "Seabed residency",
       "Persistent monitoring",
@@ -88354,8 +88406,10 @@
       "Naval surveillance"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 50
+      "type": "AI-powered subsea-resident sensor network",
+      "deployment": "launched and recharged by Dive-XL",
+      "function": "persistent maritime surveillance and undersea ISR",
+      "power": "rechargeable battery (host-serviced)"
     },
     "year": 2024,
     "status": "Active",
@@ -88367,6 +88421,13 @@
       "https://cdn.sanity.io/images/61nocsj5/production/7135faff334a2d1db1caab403b0347913130f9d2-2000x1501.jpg?rect=0,189,2000,1125&w=640&h=360&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/aa89db9bcb15196b19de919c0beb0acda990094b-3000x2000.jpg?rect=0,156,3000,1688&w=1920&h=1080&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/fa6b1d454a79f2260a356ff81cdf0faa8659673d-3000x2251.jpg?rect=0,415,3000,1688&w=1920&h=1080&fit=min&auto=format"
+    ],
+    "imu": true,
+    "api": true,
+    "use_cases": [
+      "Persistent undersea surveillance",
+      "Anti-submarine detection",
+      "Maritime domain awareness"
     ]
   },
   {
@@ -88512,7 +88573,7 @@
     "score": 86,
     "rating": 4.5,
     "price": 0,
-    "desc": "Compact portable AUV. US Navy hydrographic surveys. Commercial bathymetric mapping.",
+    "desc": "Small-diameter, man-portable workhorse AUV (Iver4 900) for long-range survey, multi-domain ISR and mine warfare. 2.5 m long, 9-inch (229 mm) diameter, under 100 kg, with titanium and carbon-fiber construction rated to 300 m. Standard rechargeable NiMH packs (lithium-free and air-transportable) give ~20-hour / 40 nm missions; an optional Li-Ion pack extends this to ~40 hours / 80 nm. Modular wet-mate sections with bi-directional GigE communications allow field sensor changes; deployable from surface ships, piers, or clandestinely through submarine torpedo tubes. Integrates side-scan, micro-SAS (Northrop), magnetometer and forward-looking obstacle-avoidance sonar.",
     "highlights": [
       "Compact portable",
       "Navy hydrographic",
@@ -88520,12 +88581,20 @@
       "Multiple sensors"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 15
+      "depth_rating_m": 300,
+      "length_m": 2.5,
+      "diameter_mm": 229,
+      "weight_kg": "<100",
+      "endurance_hours_nimh": 20,
+      "range_nm_nimh": 40,
+      "endurance_hours_liion": 40,
+      "range_nm_liion": 80,
+      "navigation": "INS",
+      "launch": "ship, pier or submarine torpedo tube"
     },
     "year": 2020,
     "status": "Active",
-    "weight_kg": 50,
+    "weight_kg": 100,
     "ip_rating": "IPX8",
     "origin": "USA",
     "cameras": 1,
@@ -88533,6 +88602,18 @@
     "bluetooth": false,
     "gallery": [
       "https://www.l3harris.com/sites/default/files/styles/625_x_570_2x/public/2026-04/ims-maritime-product-hero-oceanserver-iver4-900-1205x-1250x1140.jpg?h=10bd7e82&itok=GnRDwhej"
+    ],
+    "depth_rating_m": 300,
+    "depth_mm": 2500,
+    "width_mm": 229,
+    "frame_material": "Titanium & carbon fiber",
+    "battery_type": "NiMH (Li-Ion option)",
+    "imu": true,
+    "use_cases": [
+      "Long-range survey",
+      "Multi-domain ISR",
+      "Mine countermeasures",
+      "Explosive ordnance disposal"
     ]
   },
   {
@@ -88552,7 +88633,7 @@
     "score": 85,
     "rating": 4.5,
     "price": 0,
-    "desc": "Modular AUV for oceanographic surveys. Customizable sensor payload. Sub-100kg.",
+    "desc": "Fully modular, low-logistics survey AUV with field-swappable plug-and-play modules, rated to 500 or 1,000 m. Configurable from 1.8 to 4.5 m and 50-130 kg depending on payload, 20 cm diameter, reaching over 5.5 knots. Swappable lithium-ion battery modules give 7-8 h at 3 knots each, with up to three batteries for extended endurance. Base configuration adds nose, battery, control and propulsion modules; options include side-scan, multibeam and sub-bottom sonar, cameras, INS and environmental sensors. Single-person-portable, deployable by a two-person team from shore or vessels of opportunity. In service since the program's 1997 origins for commercial survey, MCM, search-and-rescue and research.",
     "highlights": [
       "Modular sensors",
       "Oceanographic",
@@ -88560,8 +88641,15 @@
       "Customizable"
     ],
     "perf": {
-      "speed_ms": 2.5,
-      "payload_kg": 20
+      "depth_rating_m": 1000,
+      "depth_option_m": 500,
+      "length_m_range": "1.8-4.5",
+      "weight_kg_range": "50-130",
+      "diameter_mm": 200,
+      "max_speed_knots": 5.5,
+      "endurance_hours_per_battery": "7-8 at 3 kt",
+      "batteries_max": 3,
+      "navigation": "INS + DVL + sound velocity"
     },
     "year": 2018,
     "status": "Active",
@@ -88577,6 +88665,16 @@
       "https://www.teledynemarine.com/en-us/products/PublishingImages/gavia-auv-water-glacier.jpg",
       "https://www.teledynemarine.com/en-us/products/PublishingImages/gavia-auv-ice.jpg",
       "https://www.teledynemarine.com/en-us/products/PublishingImages/Gavia-AUV-in-carrier-harbor.jpg"
+    ],
+    "depth_rating_m": 1000,
+    "width_mm": 200,
+    "imu": true,
+    "battery_type": "Lithium-ion (swappable)",
+    "use_cases": [
+      "Commercial survey",
+      "Mine countermeasures",
+      "Search and rescue",
+      "Scientific research"
     ]
   },
   {
@@ -88675,7 +88773,7 @@
     "score": 92,
     "rating": 4.7,
     "price": 0,
-    "desc": "Premier commercial AUV for oil/gas, hydrography. Up to 6,000m depth. Norwegian-engineered.",
+    "desc": "The most capable commercially available AUV when introduced (December 2018). 6.6 m long, 2,200 kg, rated to 6,000 m, operating at 3-4 knots (2-5.2 knot range) with up to 72 h endurance at 3 knots. Carries a fixed high-end sensor suite: HISAS 1032 dual-receiver synthetic aperture sonar, EM2040 Mk2 multibeam, camera, laser profiler, sub-bottom profiler, magnetometer and methane/CO2/O2 sensors. Navigates with Kongsberg Sunstone aided INS, DVL, nav-grade IMU and DPCA micro-navigated SAS; communicates via UHF radio, Iridium satellite, Wi-Fi and cNode acoustic links, with under-ice forward-looking sonar.",
     "highlights": [
       "Up to 6,000m",
       "Oil/gas standard",
@@ -88683,12 +88781,18 @@
       "Premier commercial AUV"
     ],
     "perf": {
-      "speed_ms": 2.5,
-      "payload_kg": 200
+      "depth_rating_m": 6000,
+      "length_m": 6.6,
+      "weight_kg": 2200,
+      "operating_speed_knots": "3-4",
+      "speed_range_knots": "2-5.2",
+      "endurance_hours_at_3kt": 72,
+      "endurance_hours_at_4kt": 52,
+      "navigation": "Sunstone AINS + DVL + nav-grade IMU"
     },
     "year": 2019,
     "status": "Active",
-    "weight_kg": 2000,
+    "weight_kg": 2200,
     "ip_rating": "IPX8",
     "origin": "Norway",
     "cameras": 2,
@@ -88697,6 +88801,15 @@
     "gallery": [
       "https://www.naval-technology.com/wp-content/uploads/sites/15/2019/01/Image-2-HUGIN-Superior-AUV.jpg",
       "https://www.naval-technology.com/wp-content/uploads/sites/15/2019/01/Image-3-HUGIN-Superior-AUV.jpg"
+    ],
+    "depth_rating_m": 6000,
+    "depth_mm": 6600,
+    "imu": true,
+    "use_cases": [
+      "Hydrographic survey",
+      "Rapid environmental assessment",
+      "Mine countermeasures",
+      "Deep-sea mapping"
     ]
   },
   {
@@ -88717,7 +88830,7 @@
     "score": 89,
     "rating": 4.6,
     "price": 0,
-    "desc": "Navy standard AUV. Mine countermeasures, hydrographic surveys. 100m depth. Man-portable.",
+    "desc": "The world's most proven compact AUV - designed by Woods Hole Oceanographic Institution and the US Navy's tool of choice for shallow-water mine countermeasures. Man-portable at just 37 kg (<80 lb), 1.6 m long and 19 cm diameter, rated to 100 m, reaching ~5 knots (2.6 m/s) with 8-10 h endurance. Configurable with side-scan sonar and a wide range of survey sensors; deployable and recoverable by two people with no special equipment. Tens of thousands of mission hours across coastal survey, MCM and rapid environmental assessment.",
     "highlights": [
       "Navy standard",
       "Mine countermeasures",
@@ -88725,16 +88838,32 @@
       "100m depth"
     ],
     "perf": {
-      "speed_ms": 2.5,
-      "payload_kg": 15
+      "depth_rating_m": 100,
+      "length_mm": 1600,
+      "diameter_mm": 190,
+      "weight_kg": 37,
+      "max_speed_knots": 5,
+      "max_speed_ms": 2.6,
+      "endurance_hours": "8-10",
+      "man_portable": true
     },
     "year": 2010,
     "status": "Active",
-    "weight_kg": 80,
+    "weight_kg": 37,
     "ip_rating": "IPX8",
     "origin": "USA",
     "wifi": true,
-    "bluetooth": false
+    "bluetooth": false,
+    "depth_rating_m": 100,
+    "depth_mm": 1600,
+    "width_mm": 190,
+    "imu": true,
+    "use_cases": [
+      "Mine countermeasures",
+      "Hydrographic survey",
+      "Rapid environmental assessment",
+      "Harbor security"
+    ]
   },
   {
     "id": "kongsberg-remus-6000-2014",
@@ -88754,7 +88883,7 @@
     "score": 92,
     "rating": 4.7,
     "price": 0,
-    "desc": "Famous deep AUV — found Air France 447 wreckage, surveyed Titanic. 6,000m depth.",
+    "desc": "Deep-rated survey AUV for abyssal-plain operations - 4.0 m long, 0.66 m diameter, 880 kg in air, rated to 6,000 m. Cruises 2.5-4 knots with up to 22 h mission time and a 120 km range on twin lithium-ion battery packs. Used for deep-ocean mapping, scientific research and high-profile search operations (including the recovery of Air France 447). Carries side-scan/multibeam and sub-bottom sonar payloads for high-resolution seafloor survey.",
     "highlights": [
       "Found AF 447 wreckage",
       "Surveyed Titanic",
@@ -88762,17 +88891,32 @@
       "Famous deep AUV"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 50
+      "depth_rating_m": 6000,
+      "length_m": 4,
+      "diameter_m": 0.66,
+      "weight_air_kg": 880,
+      "speed_range_knots": "2.5-4",
+      "endurance_hours": 22,
+      "range_km": 120
     },
     "year": 2014,
     "status": "Active",
-    "weight_kg": 850,
+    "weight_kg": 880,
     "ip_rating": "IPX8",
     "origin": "USA",
     "cameras": 2,
     "wifi": true,
-    "bluetooth": false
+    "bluetooth": false,
+    "depth_rating_m": 6000,
+    "depth_mm": 4000,
+    "width_mm": 660,
+    "imu": true,
+    "use_cases": [
+      "Deep-sea survey",
+      "Search and recovery",
+      "Scientific research",
+      "Seafloor mapping"
+    ]
   },
   {
     "id": "deeptrekker-revolution-2023",
