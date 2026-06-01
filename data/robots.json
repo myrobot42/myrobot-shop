@@ -87892,7 +87892,7 @@
     "score": 89,
     "rating": 4.7,
     "price": 4500,
-    "desc": "Most popular sub-$10K ROV. Open-source. 6 or 8 thrusters. Raspberry Pi-based. 100m depth (300m extended).",
+    "desc": "The world's most popular sub-$10K ROV - an open-source, highly modular inspection and research vehicle with thousands of units deployed. 457 x 338 x 254 mm, 12 kg, rated to 100 m (acrylic) or 300 m (aluminum enclosure). Six vectored T200 thrusters (expandable to eight in Heavy configuration) give full six-DOF control and best-in-class thrust-to-weight. Live 1080p HD tilt camera, up to 6,000 lumens of lighting, quick-swap lithium-ion battery, and open-source ArduSub software on a Pixhawk autopilot for hackable autonomy. Built around a modular frame supporting cameras, sonar, grippers and scientific instruments.",
     "highlights": [
       "Open-source",
       "Sub-$10K",
@@ -87901,8 +87901,15 @@
       "Thousands deployed"
     ],
     "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 2
+      "depth_rating_m": 100,
+      "depth_rating_aluminum_m": 300,
+      "max_speed_ms": 1.5,
+      "dof": 6,
+      "thrusters": "6 vectored T200 (8 in Heavy config)",
+      "payload_kg": 2,
+      "camera": "1080p30 HD tilt",
+      "lights_lumens": 6000,
+      "software": "open-source ArduSub + Pixhawk"
     },
     "year": 2016,
     "status": "Active",
@@ -87914,7 +87921,20 @@
     "wifi": true,
     "bluetooth": false,
     "sdk": true,
-    "ros": true
+    "ros": true,
+    "depth_rating_m": 100,
+    "depth_mm": 457,
+    "width_mm": 338,
+    "height_mm": 254,
+    "battery_type": "Lithium-ion (swappable)",
+    "imu": true,
+    "use_cases": [
+      "Inspection",
+      "Marine research",
+      "Education",
+      "Search and recovery",
+      "Aquaculture"
+    ]
   },
   {
     "id": "saab-seaeye-falcon-2010",
@@ -88394,7 +88414,7 @@
     "name": "Boxfish AUV",
     "brand": "Boxfish Robotics",
     "cat": "Aquatic",
-    "sub": "AUV",
+    "sub": "AUV / Resident vehicle",
     "tags": [
       "hovering",
       "tetherless",
@@ -88407,7 +88427,7 @@
     "score": 86,
     "rating": 4.5,
     "price": 0,
-    "desc": "Tetherless hovering AUV. 6 degrees of freedom. NZ-engineered. Marine science + environmental monitoring.",
+    "desc": "Autonomous / subsea-resident underwater vehicle built on Boxfish Robotics' proven 1000 m ROV platform. Eight 3D-vectored thrusters provide true six degrees of freedom with a fault-tolerant design that keeps operating even with a failed thruster, all in a hard-anodised aluminium-alloy pressure vessel rated to 1,000 m (-10 to +45 C). Carries an uncompressed 4K main camera plus ultra-wide-angle navigation cameras for surround visibility; supports profiling sonar for 3D modelling and autonomous inspection/monitoring of subsea assets with minimal surface-vessel support.",
     "highlights": [
       "Tetherless",
       "6-DOF hovering",
@@ -88415,12 +88435,16 @@
       "NZ-engineered"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 15
+      "depth_rating_m": 1000,
+      "thrusters": "8 (3D vectored)",
+      "dof": 6,
+      "fault_tolerant": true,
+      "operation": "autonomous / subsea-resident",
+      "camera": "4K + ultra-wide nav cameras"
     },
     "year": 2020,
     "status": "Active",
-    "weight_kg": 75,
+    "weight_kg": 23,
     "ip_rating": "IPX8",
     "origin": "New Zealand",
     "cameras": 2,
@@ -88431,6 +88455,18 @@
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/04/auv-deployed.jpeg",
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/04/boxfish-auv-2.jpeg",
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/04/boxfish-oem_auv.jpeg"
+    ],
+    "depth_rating_m": 1000,
+    "frame_material": "Hard-anodised aluminium alloy",
+    "imu": true,
+    "api": true,
+    "operating_temp_min": -10,
+    "operating_temp_max": 45,
+    "use_cases": [
+      "Autonomous inspection",
+      "Resident monitoring",
+      "Marine science",
+      "Offshore survey"
     ]
   },
   {
@@ -88450,7 +88486,7 @@
     "score": 85,
     "rating": 4.5,
     "price": 0,
-    "desc": "Live underwater exploration ROV. Real-time observation. Designed for live-streamed scientific exploration.",
+    "desc": "Professional 8K underwater cinematography ROV - 714 x 435 x 351 mm, 24 kg, rated to 1,000 m. Houses a full-frame Sony A1 (8K 10-bit) or A7S III behind a 200 mm precision optical dome with a Zeiss 16-35 mm f/4 lens, capturing 50MP stills and 4K ProRes RAW with full remote control of focus, exposure and white balance. Eight 3D-vectored thrusters give six-DOF, with active stabilisation for steady shots; two 8,500-lumen dimmable high-CRI lights, dual 180-degree navigation cameras, dual IMU and compass. Multiple 100 Wh batteries deliver up to 15 hours; a fibre-optic tether runs 200 m (up to 3,000 m). Monitored on a 17-inch 4K UHD console. Hard-anodised aluminium body, neutrally buoyant in salt water.",
     "highlights": [
       "Live streaming",
       "Real-time observation",
@@ -88458,12 +88494,17 @@
       "Freshwater capable"
     ],
     "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 5
+      "depth_rating_m": 1000,
+      "thrusters": "8 (3D vectored)",
+      "dof": 6,
+      "camera": "Sony A1 (8K 10-bit) or A7SIII, 50MP",
+      "battery_runtime_hours": 15,
+      "lights_lumens": "2 x 8500",
+      "tether_max_m": 3000
     },
     "year": 2023,
     "status": "Active",
-    "weight_kg": 40,
+    "weight_kg": 24,
     "ip_rating": "IPX8",
     "origin": "New Zealand",
     "cameras": 3,
@@ -88473,6 +88514,21 @@
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/04/Boxfish-Luna.jpeg",
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/05/Boxfish-LUNA-underwater-cinematography-ROV.jpg",
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/04/Cinematography-ROV.jpeg"
+    ],
+    "depth_rating_m": 1000,
+    "depth_mm": 714,
+    "width_mm": 435,
+    "height_mm": 351,
+    "frame_material": "Hard-anodised aluminium alloy",
+    "shell_material": "Acrylic dome",
+    "imu": true,
+    "operating_temp_min": -10,
+    "operating_temp_max": 55,
+    "use_cases": [
+      "Underwater cinematography",
+      "Marine science",
+      "Inspection",
+      "Documentary filming"
     ]
   },
   {
@@ -88895,7 +88951,7 @@
     "score": 86,
     "rating": 4.5,
     "price": 18000,
-    "desc": "Compact battery-internal ROV. 305m depth. Inspection-grade. No surface tether needed for power.",
+    "desc": "Deep Trekker's most powerful and stable ROV, rated to 305 m with six vectored thrusters and a copper tether (300 lb working strength) extendable to 700 m. Its defining feature is a 260-degree rotating head carrying a 4K camera and grabber arm, plus a 180-degree rotating outer shell/thruster assembly for lateral movement while a weighted internal frame keeps it stable. BRIDGE software gives near-zero-latency control and waypoint mission planning, integrating imaging sonar, DVL, USBL and GPS. Built from machined aluminium, stainless steel and carbon fiber for harsh-environment durability; widely used for EOD, public safety and offshore inspection.",
     "highlights": [
       "Internal battery",
       "305m depth",
@@ -88903,8 +88959,12 @@
       "No power tether"
     ],
     "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 5
+      "depth_rating_m": 305,
+      "thrusters": "6 vectored",
+      "camera": "4K on 260 deg rotating head",
+      "tether_max_m": 700,
+      "navigation": "BRIDGE waypoint autonomy; DVL/USBL/GPS options",
+      "shell_rotation_deg": 180
     },
     "year": 2023,
     "status": "Active",
@@ -88920,6 +88980,16 @@
       "https://www.deeptrekker.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fkzewhs8e6cvu%2F5UNxLKmfRGR5gW7LfutGDB%2Fd68f7c56aebe9aa57bf111f2d728483e%2F71181580_2782033621841857_3640800045462192128_o.jpg&w=1920&q=75",
       "https://www.deeptrekker.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fkzewhs8e6cvu%2F2Oy6ybwRKw9tQ9RwF3yZ8N%2Fca5bdf3f22d8ffcd6057ed1de42aee7d%2FIMG_7833.jpg&w=1920&q=75",
       "https://www.deeptrekker.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fkzewhs8e6cvu%2F2yUoXGLNG5HrZcDjCXujZ3%2F6bec2c00575f1d023dc33185580f07b2%2F90345293_3185784238133458_7800688433864638464_o.jpg&w=1920&q=75"
+    ],
+    "depth_rating_m": 305,
+    "frame_material": "Machined aluminum, stainless steel & carbon fiber",
+    "imu": true,
+    "api": true,
+    "use_cases": [
+      "Offshore energy inspection",
+      "Infrastructure inspection",
+      "Military / EOD",
+      "Search and recovery"
     ]
   },
   {
@@ -88940,7 +89010,7 @@
     "score": 86,
     "rating": 4.5,
     "price": 3500,
-    "desc": "Consumer/prosumer ROV. 4K/100p camera. 100m depth. Most popular underwater drone for filmmakers.",
+    "desc": "Professional-class omni-directional 4K underwater drone. Six vectored thrusters deliver full 360-degree, six-DOF motion with posture lock to +/-0.1 degrees, rated to 100 m at up to 3 knots. UHD 4K30 (1080p120 / 720p240) camera with 12MP RAW DNG, a 1-inch CMOS sensor and an ultra-wide 166-degree field of view, plus 6,000-lumen lighting. 14,400 mAh battery gives up to 6 hours per charge (90% quick-charge in an hour). AI Vision Lock keeps subjects centred; an optional robotic arm provides 100 N grip for salvage. Controlled via VR goggles or the FIFISH app, with a Q-interface for professional tooling.",
     "highlights": [
       "Consumer ROV",
       "4K/100p",
@@ -88948,8 +89018,15 @@
       "Underwater filming"
     ],
     "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 2
+      "depth_rating_m": 100,
+      "max_speed_knots": 3,
+      "dof": 6,
+      "posture_lock_deg": 0.1,
+      "camera": "4K30 / 12MP RAW / 166 deg FOV / 1in CMOS",
+      "lights_lumens": 6000,
+      "dive_time_hours": 6,
+      "arm_grip_n": 100,
+      "thrusters": "6 vectored"
     },
     "year": 2024,
     "status": "Active",
@@ -88964,6 +89041,15 @@
       "https://plain-eeur-prod-public.komododecks.com/202605/27/D4H8LPwRZyhFbkSyniA9/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202605/27/O44sxt3PqlVs4iayOTmC/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202605/27/rkbQ2WAJr6rwf0qmPZH6/image.jpg"
+    ],
+    "depth_rating_m": 100,
+    "imu": true,
+    "use_cases": [
+      "Underwater filming",
+      "Inspection",
+      "Salvage",
+      "Aquaculture",
+      "Marine research"
     ]
   },
   {
@@ -88984,7 +89070,7 @@
     "score": 89,
     "rating": 4.6,
     "price": 15000,
-    "desc": "Industrial work-class with robotic arm. 350m depth. Inspection, light intervention.",
+    "desc": "Industrial-grade underwater ROV platform rated to 350 m, built on a patented six Q-Motor vectored propulsion system for strong current-fighting performance at up to 4 knots. Dual 4K UHD camera system with 12,000-lumen lighting; a 388 Wh removable battery runs up to 6-8 hours and quick-charges to 70% in one hour. Five Q-interface payload ports allow simultaneous tools - 2D/3D imaging sonar, claws, dozers and water samplers. A sonar array provides distance lock, altitude lock, collision avoidance and contour scanning, while U-QPS positioning and Station Lock give 3D path recording and drift-free station keeping. VR goggle control with head tracking.",
     "highlights": [
       "Robotic arm",
       "350m depth",
@@ -88992,8 +89078,15 @@
       "Light intervention"
     ],
     "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 5
+      "depth_rating_m": 350,
+      "max_speed_knots": 4,
+      "cameras": "dual 4K UHD",
+      "lights_lumens": 12000,
+      "battery_wh": 388,
+      "dive_time_hours": 8,
+      "payload_ports": 5,
+      "motors": "6 Q-Motor vectored",
+      "sonar": "distance/altitude lock + collision avoidance"
     },
     "year": 2024,
     "status": "Active",
@@ -89009,6 +89102,16 @@
       "https://imgs.qysea.com/qiyuan/2025/03/07/BDlx3HMNRAz9x.png",
       "https://imgs.qysea.com/qiyuan/2025/03/07/h70bNsOR7DsWL.jpg",
       "https://imgs.qysea.com/qiyuan/2025/03/07/J7rnbZgsmnebu.jpg"
+    ],
+    "depth_rating_m": 350,
+    "battery_wh": 388,
+    "imu": true,
+    "use_cases": [
+      "Industrial inspection",
+      "Ship-hull survey",
+      "Aquaculture",
+      "Infrastructure inspection",
+      "Search and survey"
     ]
   },
   {
@@ -89029,7 +89132,7 @@
     "score": 83,
     "rating": 4.4,
     "price": 2000,
-    "desc": "Consumer ROV. 150m depth. 4K camera. Affordable underwater drone.",
+    "desc": "Light-industrial underwater ROV with eight vectored thrusters for full 360-degree omni-directional motion and one-key depth-lock hovering, rated to 150 m with a 400 m horizontal radius and up to 4 knots. 4K / 12MP camera on a 1/2.3-inch Sony CMOS with f/1.8 optics, EIS and a 152-degree wide field of view, plus 4,000-lumen lighting. A 300 Wh swappable battery gives up to 5 hours (700 Wh option), with an AC power module for unlimited runtime. Compatible with grabber claw, laser scaler, imaging/multibeam sonar, USBL positioning, docking station and high-brightness control console; motor output upgraded 50% over the base M2.",
     "highlights": [
       "Sub-$2K",
       "150m depth",
@@ -89037,8 +89140,15 @@
       "Consumer-friendly"
     ],
     "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 1
+      "depth_rating_m": 150,
+      "max_speed_knots": 4,
+      "dof": 6,
+      "camera": "4K / 12MP / 1/2.3in Sony CMOS / 152 deg FOV",
+      "lights_lumens": 4000,
+      "battery_wh": 300,
+      "dive_time_hours": 5,
+      "thrusters": 8,
+      "horizontal_radius_m": 400
     },
     "year": 2022,
     "status": "Active",
@@ -89054,6 +89164,15 @@
       "https://na-file.chasing.com/lnnJ44_H-15tStXwtFKMV28vlhF-",
       "https://na-file.chasing.com/Fi3TqqOl7ElYwOhBY_EVjodEfLw4",
       "https://na-file.chasing.com/FmjBnt4s4cZfH5qrivIidXy84Pqk"
+    ],
+    "depth_rating_m": 150,
+    "battery_wh": 300,
+    "imu": true,
+    "use_cases": [
+      "Professional inspection",
+      "Survey",
+      "Search and rescue",
+      "Aquaculture"
     ]
   },
   {
@@ -89073,7 +89192,7 @@
     "score": 84,
     "rating": 4.4,
     "price": 2500,
-    "desc": "Upgraded M2 with optional robotic arm. 100m depth. Hobbyist-prosumer bridge.",
+    "desc": "Compact, industrial-grade open-body inspection ROV - 380 x 267 x 165 mm, 4.5 kg, rated to 100 m with a 200 m operating radius. Eight symmetric vectored thrusters with third-generation anti-stuck C-Motor 3.0 give full 360-degree omni-directional motion and independent translation/rotation; a Kalman inertial-navigation depth-fusion system holds position against vertical currents. 4K / 12MP camera on a 1/2.3-inch CMOS with EIS, dual 2,000-lumen lights, and a 97.68 Wh swappable battery (200 Wh option). Forward load capacity 3.2 kg; optional aluminium grabber arm. VR and multi-viewer support via the CHASING app.",
     "highlights": [
       "Robotic arm option",
       "100m depth",
@@ -89081,12 +89200,19 @@
       "Hobbyist-prosumer"
     ],
     "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 2
+      "depth_rating_m": 100,
+      "dof": 6,
+      "camera": "4K / 12MP / 1/2.3in CMOS",
+      "lights_lumens": "2 x 2000",
+      "battery_wh": 97.68,
+      "thrusters": "8 symmetric vectored",
+      "horizontal_radius_m": 200,
+      "payload_kg": 3.2,
+      "motor": "anti-stuck C-Motor 3.0"
     },
     "year": 2023,
     "status": "Active",
-    "weight_kg": 5,
+    "weight_kg": 4.5,
     "ip_rating": "IPX8",
     "origin": "China",
     "cameras": 1,
@@ -89098,6 +89224,18 @@
       "https://na-file.chasing.com/FowDFoywOlG7FqUlEwKIvjLBYmtk",
       "https://na-file.chasing.com/FtLhNY9-SzlkTfWAV1Ds_HMSIgHN",
       "https://na-file.chasing.com/FhAw8SmiO0ux6mfNbkR7S8U3TYEz"
+    ],
+    "depth_rating_m": 100,
+    "depth_mm": 380,
+    "width_mm": 267,
+    "height_mm": 165,
+    "battery_wh": 97.68,
+    "imu": true,
+    "use_cases": [
+      "Inspection",
+      "Hull and infrastructure survey",
+      "Content creation",
+      "Aquaculture"
     ]
   },
   {
@@ -89118,7 +89256,7 @@
     "score": 80,
     "rating": 4.3,
     "price": 1500,
-    "desc": "Open-source underwater drone. WiFi-tethered. Education + citizen science. Sofar Ocean acquisition.",
+    "desc": "Pioneering low-cost consumer/prosumer underwater drone - a four-thruster, ~2.9 kg ROV rated to 100 m reaching up to 5.6 km/h, with a stabilisation system and a buoyant Wi-Fi surface module on a 25 m tether (extensible). Streamed 1080p HD video to a phone or tablet and was designed to be extensible with custom sensors and cameras, pricing from $1,699. Helped popularise affordable underwater robotics alongside the BlueROV2. Discontinued after OpenROV pivoted to become Sofar Ocean.",
     "highlights": [
       "Open-source",
       "WiFi tether",
@@ -89126,18 +89264,29 @@
       "Citizen science"
     ],
     "perf": {
-      "speed_ms": 1,
-      "payload_kg": 1
+      "depth_rating_m": 100,
+      "max_speed_kmh": 5.6,
+      "thrusters": 4,
+      "camera": "1080p HD",
+      "tether_base_m": 25
     },
     "year": 2017,
     "status": "Discontinued",
-    "weight_kg": 3,
+    "weight_kg": 2.9,
     "ip_rating": "IPX8",
     "origin": "USA",
     "cameras": 1,
     "wifi": true,
     "bluetooth": false,
-    "sdk": true
+    "sdk": true,
+    "depth_rating_m": 100,
+    "imu": true,
+    "use_cases": [
+      "Exploration",
+      "Education",
+      "Hobbyist survey",
+      "Citizen science"
+    ]
   },
   {
     "id": "aquabotix-swarmdiver-2022",
