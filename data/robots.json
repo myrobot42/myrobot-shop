@@ -87975,7 +87975,7 @@
     "score": 90,
     "rating": 4.7,
     "price": 150000,
-    "desc": "World's most popular professional portable electric ROV. UCO has 33-unit fleet. Offshore wind, defense, oil/gas.",
+    "desc": "The world's most successful observation-class electric ROV — lightweight, portable and proven across thousands of demanding missions. Five S1-MCT01 thrusters (four horizontal, one vertical) deliver 50 kgf forward, 23 kgf lateral and 13 kgf vertical thrust at >3 knots. Rated to 300 m (1,000 m in the Falcon DR version), 1000 x 600 x 500 mm, 60 kg in air, 14 kg payload. Saab Seaeye iCON intelligent control provides auto-depth and auto-heading; single-phase 110/230 V operation makes it deployable almost anywhere. Widely used in offshore wind, survey, search-and-recovery and aquaculture, with 1- or 5-function manipulator and tilt-platform options.",
     "highlights": [
       "Industry-standard",
       "Portable professional",
@@ -87984,8 +87984,14 @@
       "Japan/UK fleets"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 10
+      "depth_rating_m": 300,
+      "max_speed_knots": 3,
+      "thrust_forward_kgf": 50,
+      "thrust_lateral_kgf": 23,
+      "thrust_vertical_kgf": 13,
+      "payload_kg": 14,
+      "thrusters": "5 (4H + 1V)",
+      "power": "single-phase 110/230 VAC"
     },
     "year": 2010,
     "status": "Active",
@@ -87998,6 +88004,19 @@
     "gallery": [
       "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/falcon---front.jpg",
       "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/falcon1_(1).jpg"
+    ],
+    "depth_mm": 1000,
+    "width_mm": 600,
+    "height_mm": 500,
+    "depth_rating_m": 300,
+    "frame_material": "Polypropylene",
+    "imu": true,
+    "use_cases": [
+      "Offshore wind inspection",
+      "Subsea survey",
+      "Search and recovery",
+      "Aquaculture",
+      "Light intervention"
     ]
   },
   {
@@ -88017,7 +88036,7 @@
     "score": 89,
     "rating": 4.6,
     "price": 0,
-    "desc": "Deep-water electric ROV (1500m). Used to survey 18th-century galleon San José.",
+    "desc": "Leading inspection-class ROV for the oil and gas industry, rated to 1,500 m. Six brushless-DC thrusters (four horizontal, two vertical) at 250 VDC deliver 66/47/43 kgf forward/lateral/vertical thrust and 3 knots, with a 360 kg safe working load and 160 kg through-frame lift at Sea State 6. 1230 x 815 x 605 mm, ~200 kg launch weight, ~34 kg bare payload. Rugged modular polypropylene chassis, single-mode fibre data link with up to four video channels (HD option), depth sensor (300 bar, +/-0.01% FS) and magneto-resistive AHRS. Free-swimming or with a Type 8 TMS (200 m excursion); interchangeable tooling skids and 4-function manipulator options.",
     "highlights": [
       "1500m depth",
       "Heritage surveys",
@@ -88025,20 +88044,39 @@
       "Famous San José survey"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 12
+      "depth_rating_m": 1500,
+      "max_speed_knots": 3,
+      "thrust_forward_kgf": 66,
+      "thrust_lateral_kgf": 47,
+      "thrust_vertical_kgf": 43,
+      "payload_kg": 34,
+      "safe_working_load_kg": 360,
+      "through_frame_lift_kg": 160,
+      "thrusters": "6 (4H + 2V) brushless DC, 250 VDC"
     },
     "year": 2014,
     "status": "Active",
-    "weight_kg": 150,
+    "weight_kg": 200,
     "ip_rating": "IPX8",
     "origin": "UK/Sweden",
-    "cameras": 4,
+    "cameras": 3,
     "wifi": true,
     "bluetooth": false,
     "gallery": [
       "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/lynx1.jpg",
       "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/lynx2.jpg"
+    ],
+    "depth_mm": 1230,
+    "width_mm": 815,
+    "height_mm": 605,
+    "depth_rating_m": 1500,
+    "frame_material": "Polypropylene (modular)",
+    "imu": true,
+    "use_cases": [
+      "Oil & gas inspection",
+      "Deepwater platform inspection",
+      "Light IMR",
+      "Subsea survey"
     ]
   },
   {
@@ -88059,7 +88097,7 @@
     "score": 91,
     "rating": 4.7,
     "price": 0,
-    "desc": "Hybrid AUV/ROV. 360° hovering. Single hull (1200m) or double (3000m). Autonomous inspection + maintenance.",
+    "desc": "Hybrid AUV/ROV that works in deep water fully autonomously, operator-assisted, or manually via fibre-optic tether, with 360 degree hovering and six degrees of freedom. Single-hull: 1,200 m, 3.6 x 0.66 x 0.45 m, 650 kg launch weight (max 800), 5 knots, 10 kWh LiPo. Double-hull: 3,000 m, 4 x 1.35 x 0.67 m, 1,300 kg (max 2,000), 4 knots, 30 kWh. Full autonomous navigation with inertial navigation system and Doppler velocity log; advanced autopilots for heading, depth, altitude, pitch/roll and station keeping; obstacle-avoidance sonar; fault-tolerant control with non-invasive self-diagnostics. An open API lets third-party software act as backseat driver. Can reside at a 3,000 m-rated subsea docking station for 6+ months without maintenance, recharging and exchanging data via satellite or cable.",
     "highlights": [
       "Hybrid AUV/ROV",
       "360° hovering",
@@ -88067,12 +88105,18 @@
       "Autonomous inspection"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 50
+      "depth_rating_m_single_hull": 1200,
+      "depth_rating_m_double_hull": 3000,
+      "max_speed_knots": 5,
+      "dof": 6,
+      "battery_kwh": 10,
+      "navigation": "INS + DVL (full autonomous)",
+      "launch_weight_kg": 650,
+      "subsea_residency_months": 6
     },
     "year": 2012,
     "status": "Active",
-    "weight_kg": 1200,
+    "weight_kg": 650,
     "ip_rating": "IPX8",
     "origin": "UK/Sweden",
     "cameras": 4,
@@ -88081,6 +88125,22 @@
     "gallery": [
       "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/sabertooth-image-centre.jpg",
       "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/sabertooth-image-right.jpg"
+    ],
+    "depth_mm": 3600,
+    "width_mm": 660,
+    "height_mm": 450,
+    "depth_rating_m": 1200,
+    "dof": 6,
+    "api": true,
+    "imu": true,
+    "battery_type": "Lithium Polymer (LiPo)",
+    "battery_wh": 10000,
+    "use_cases": [
+      "Autonomous IMR",
+      "Subsea inspection",
+      "Offshore survey",
+      "Tunnel inspection",
+      "Environmental monitoring"
     ]
   },
   {
@@ -88101,7 +88161,7 @@
     "score": 92,
     "rating": 4.7,
     "price": 0,
-    "desc": "Full-size electric work-class ROV equivalent to 250HP hydraulic. Ocean Infinity launch customer. Offshore energy.",
+    "desc": "The world's first full-size all-electric work-class ROV (model SR20) — a Class III B system delivering the capability of a 250 HP hydraulic WROV on just 60% of the energy. Launched 2024 with Ocean Infinity as launch customer; built in Saab Seaeye's Fareham facility after four years of R&D. Electric thrusters generate 560 kgf bollard pull with superior acceleration, braking and reversal; a high-voltage DC power-transmission system (Vicor power modules) shrinks topside and subsea units and allows smaller-diameter umbilicals. Rated to ~3,000 m (300 bar), with dual all-electric 7-function manipulators (eManip) lifting over 400 kg. iCON intelligent architecture enables fully autonomous, resident-ready operation controllable from onshore command centres, using far less oil than hydraulic equivalents. (Exact hull dimensions not yet published by Saab.)",
     "highlights": [
       "First electric work-class",
       "250HP equivalent",
@@ -88109,8 +88169,13 @@
       "Lower lifetime cost"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 250
+      "depth_rating_m": 3000,
+      "bollard_pull_kgf": 560,
+      "manipulators": "dual 7-function electric (eManip)",
+      "manipulator_lift_kg": 400,
+      "power_equiv_hp": 250,
+      "energy_vs_hydraulic_pct": 60,
+      "vehicle_class": "III B work-class"
     },
     "year": 2024,
     "status": "Active",
@@ -88124,6 +88189,17 @@
     "gallery": [
       "https://img.nauticexpo.com/images_ne/photo-g/25353-17125756.webp",
       "https://img.nauticexpo.com/images_ne/photo-g/25353-17125757.webp"
+    ],
+    "depth_rating_m": 3000,
+    "imu": true,
+    "api": true,
+    "use_cases": [
+      "Offshore energy IMR",
+      "Subsea construction",
+      "Deepwater intervention",
+      "Decommissioning",
+      "Ocean science",
+      "Defence"
     ]
   },
   {
