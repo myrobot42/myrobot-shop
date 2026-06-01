@@ -45456,27 +45456,36 @@
   },
   {
     "id": "swisslog-healthcare-hospital-agv-forklift",
-    "name": "Hospital AGV Forklift",
+    "name": "Hospital AGV (Fork)",
     "brand": "Swisslog Healthcare",
     "cat": "AGV/AMR",
-    "sub": "AGV Forklift",
-    "tags": [],
+    "sub": "Hospital Fork-Type AGV",
+    "tags": [
+      "hospital",
+      "AGV",
+      "fork",
+      "trolley handling",
+      "material transport"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 83,
+    "rating": 4.1,
     "price": 0,
-    "desc": "Forklift-type AGV for material handling in hospitals. Can handle wide range of trolleys for food, waste, pharmaceuticals, and non-standard formats.",
-    "highlights": [],
+    "desc": "Fork-type hospital AGV configuration in the TransCar family, able to pick up and handle a wide range of trolleys for food, waste, pharmaceuticals and non-standard loads. Part of the OTSAW–Swisslog Healthcare hospital logistics system with elevator and door integration for autonomous multi-floor delivery.",
+    "highlights": [
+      "Fork handling of hospital trolleys",
+      "Food / waste / pharma loads",
+      "Elevator & door integration",
+      "Part of the TransCar hospital AGV system"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "payload_kg": 500,
+      "type": "Fork"
     },
-    "origin": "Switzerland",
+    "origin": "Singapore/Switzerland",
     "year": 2018,
-    "status": "Active",
+    "status": "Available",
     "released": "2018",
     "height_mm": 1400,
     "width_mm": 800,
@@ -45490,37 +45499,49 @@
     "cameras": "Safety and navigation cameras",
     "imu": true,
     "use_cases": [
-      "Hospital material transport",
-      "Medical supply delivery",
-      "Waste management",
-      "Food service delivery",
-      "Pharmaceutical transport"
+      "Trolley transport",
+      "Food & waste logistics",
+      "Pharmaceutical delivery"
     ],
-    "manufacturer_url": "https://www.swisslog-healthcare.com"
+    "manufacturer_url": "https://www.swisslog-healthcare.com",
+    "auto_charge": true,
+    "ai_cloud_required": false,
+    "ota": true,
+    "depth_sensing": true,
+    "wifi": true
   },
   {
     "id": "swisslog-healthcare-hospital-agv-tower",
-    "name": "Hospital AGV Tower",
+    "name": "Hospital AGV (Tower)",
     "brand": "Swisslog Healthcare",
     "cat": "AGV/AMR",
-    "sub": "AGV Vertical Lift",
-    "tags": [],
+    "sub": "Hospital Tower-Type AGV",
+    "tags": [
+      "hospital",
+      "AGV",
+      "vertical transport",
+      "clinical",
+      "material transport"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 82,
+    "rating": 4.1,
     "price": 0,
-    "desc": "Tower-type AGV for vertical transport tasks in hospitals. Designed for intensive clinical use with advanced embedded technology for natural navigation.",
-    "highlights": [],
+    "desc": "Tower-type hospital AGV configuration in the TransCar family for vertical transport tasks, designed for intensive clinical use with natural-feature navigation. Integrates with elevators and doors for autonomous multi-floor material movement within healthcare facilities.",
+    "highlights": [
+      "Tower form for vertical transport",
+      "Intensive clinical-use design",
+      "Natural-feature navigation",
+      "Part of the TransCar hospital AGV system"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "payload_kg": 150,
+      "type": "Tower"
     },
-    "origin": "Switzerland",
+    "origin": "Singapore/Switzerland",
     "year": 2019,
-    "status": "Active",
+    "status": "Available",
     "height_mm": 1800,
     "payload_kg": 150,
     "speed_ms": 1.5,
@@ -45528,37 +45549,48 @@
     "cameras": "3D vision cameras for navigation and obstacle detection",
     "wifi": true,
     "use_cases": [
-      "Hospital material transport",
-      "Pharmacy delivery",
-      "Laboratory sample transport",
-      "Medical supply distribution",
-      "Linen and waste management"
+      "Vertical material transport",
+      "Clinical logistics",
+      "Multi-floor delivery"
     ],
-    "manufacturer_url": "https://www.swisslog-healthcare.com"
+    "manufacturer_url": "https://www.swisslog-healthcare.com",
+    "auto_charge": true,
+    "ai_cloud_required": false,
+    "ota": true,
+    "depth_sensing": true
   },
   {
     "id": "swisslog-healthcare-hospital-agv-platform",
-    "name": "Hospital AGV Platform",
+    "name": "Hospital AGV (Platform)",
     "brand": "Swisslog Healthcare",
     "cat": "AGV/AMR",
-    "sub": "Healthcare AMR",
-    "tags": [],
+    "sub": "Hospital Platform-Type AGV",
+    "tags": [
+      "hospital",
+      "AGV",
+      "underride platform",
+      "natural navigation",
+      "material transport"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 83,
+    "rating": 4.1,
     "price": 0,
-    "desc": "Platform-type AGV for hospital material transport including patient meals, linens, trash, and medical waste. Uses natural navigation with laser scanning (40m range).",
-    "highlights": [],
+    "desc": "Platform-type hospital AGV configuration in the TransCar family for transporting patient meals, linens, trash and medical waste. Uses natural-feature laser navigation and integrates with the hospital's elevators and doors for autonomous in-house delivery.",
+    "highlights": [
+      "Platform/underride form",
+      "Meals, linens, waste transport",
+      "Natural-feature laser navigation",
+      "Part of the TransCar hospital AGV system"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "payload_kg": 300,
+      "type": "Platform"
     },
-    "origin": "Switzerland",
+    "origin": "Singapore/Switzerland",
     "year": 2018,
-    "status": "Active",
+    "status": "Available",
     "released": "2018",
     "height_mm": 220,
     "width_mm": 600,
@@ -45576,15 +45608,15 @@
     "cameras": "Navigation and safety cameras",
     "depth_sensing": true,
     "use_cases": [
-      "Hospital material transport",
-      "Medical waste collection",
-      "Linen delivery",
-      "Patient meal delivery",
-      "Laboratory sample transport",
-      "Pharmaceutical distribution"
+      "Meal & linen delivery",
+      "Trash & medical waste",
+      "In-house hospital logistics"
     ],
     "manufacturer_url": "https://www.swisslog-healthcare.com",
-    "warranty_months": 24
+    "warranty_months": 24,
+    "auto_charge": true,
+    "ai_cloud_required": false,
+    "ota": true
   },
   {
     "id": "swisslog-healthcare-relay-asr-200",
@@ -47320,27 +47352,36 @@
   },
   {
     "id": "rainbow-robotics-amr-serving-robot",
-    "name": "AMR Serving Robot",
+    "name": "RB Serving Robot",
     "brand": "Rainbow Robotics",
     "cat": "AGV/AMR",
-    "sub": "Service AMR",
-    "tags": [],
+    "sub": "Hospitality Serving AMR",
+    "tags": [
+      "serving",
+      "hospitality",
+      "grid-free SLAM",
+      "markerless",
+      "autonomous"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 82,
+    "rating": 4.1,
     "price": 0,
-    "desc": "Autonomous serving robot with grid-free SLAM technology for location recognition and autonomous navigation",
-    "highlights": [],
+    "desc": "Autonomous serving robot from Rainbow Robotics (a KAIST humanoid-lab spin-out) that uses the company's patented grid-free SLAM to localize and navigate without floor markers, carrying food and items to tables in restaurants and hospitality settings.",
+    "highlights": [
+      "Patented grid-free (markerless) SLAM",
+      "Autonomous table service",
+      "Multi-tray serving",
+      "Restaurant & hospitality use"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "payload_kg": 30,
+      "navigation": "Grid-free SLAM"
     },
     "origin": "South Korea",
     "year": 2022,
-    "status": "Active",
+    "status": "Available",
     "released": "2022",
     "height_mm": 1400,
     "width_mm": 500,
@@ -47350,19 +47391,22 @@
     "speed_ms": 1.5,
     "payload_kg": 30,
     "lidar": true,
-    "cameras": "Multiple RGB cameras for navigation and object detection",
+    "cameras": 1,
     "imu": true,
     "depth_sensing": true,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Restaurant service",
-      "Hotel service",
-      "Healthcare delivery",
-      "Office delivery"
+      "Restaurant serving",
+      "Hospitality delivery",
+      "Buffet/table service"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "auto_charge": true,
+    "ai_model_type": "Grid-free SLAM",
+    "ai_cloud_required": false,
+    "ota": true
   },
   {
     "id": "rainbow-robotics-astro",
@@ -52309,29 +52353,42 @@
     "name": "MAV",
     "brand": "NEURA Robotics",
     "cat": "AGV/AMR",
-    "sub": "Mobile Manipulator AMR",
-    "tags": [],
+    "sub": "Heavy-Payload Autonomous Vehicle",
+    "tags": [
+      "heavy payload",
+      "multi-sensing",
+      "gesture control",
+      "intralogistics",
+      "fleet"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 88,
+    "rating": 4.4,
     "price": 0,
-    "desc": "Autonomous transport robot with 360° laser scanners, ±5mm navigation precision, touchless sensors for obstacle detection, and ability to combine with LARA or MAiRA for mobile manipulation tasks.",
-    "highlights": [],
+    "desc": "Multi-Sensing Autonomous Vehicle for indoor intralogistics, built to move larger, heavier goods than conventional AMRs — up to 1.5 tonnes on four lifting units for pallets. Navigates with 360° laser scanners at ±5 mm accuracy, supports hand-gesture control via 3D vision, shows status on side LEDs, and pairs with NEURA's LARA cobot or MAiRA for mobile manipulation.",
+    "highlights": [
+      "1,500 kg payload, four lifting units",
+      "360° laser scanners, ±5 mm accuracy",
+      "Hand-gesture (3D vision) control",
+      "Combines with LARA/MAiRA for manipulation",
+      "Fleet-managed"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "payload_kg": 1500,
+      "max_speed_ms": 1.5,
+      "positioning_accuracy_mm": 5,
+      "load_current_a": 60,
+      "runtime_h": 10
     },
     "origin": "Germany",
     "year": 2021,
-    "status": "Active",
-    "height_mm": 320,
-    "weight_kg": 85,
+    "status": "Available",
+    "height_mm": 293,
+    "weight_kg": 400,
     "payload_kg": 500,
     "speed_ms": 2,
-    "battery_life": "8 hours",
+    "battery_life": "~10 h",
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
@@ -52339,23 +52396,26 @@
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Industrial logistics",
-      "Warehouse automation",
-      "Material transport",
-      "Intralogistics",
-      "Mobile manipulation when combined with LARA/MAiRA"
+      "Heavy intralogistics",
+      "Automotive manufacturing",
+      "Pallet transport",
+      "Mobile manipulation (with LARA)"
     ],
     "manufacturer_url": "https://www.neura-robotics.com",
-    "width_mm": 600,
-    "depth_mm": 800,
+    "width_mm": 910,
+    "depth_mm": 1530,
     "dof": 3,
     "os": "Linux",
-    "cameras": "Multiple RGB cameras for navigation and environment perception",
+    "cameras": 1,
     "warranty_months": 24,
     "product_url": "https://www.neura-robotics.com/mav",
     "released": "2021",
-    "charge_time": "2 hours",
-    "cellular": "Optional 4G/5G module"
+    "charge_time": "~2 h",
+    "cellular": "Optional 4G/5G module",
+    "frame_material": "Steel",
+    "auto_charge": true,
+    "ai_cloud_required": false,
+    "ota": true
   },
   {
     "id": "neura-robotics-lara-10",
@@ -52704,38 +52764,48 @@
     "name": "Tactile Mobile Robot (TMR)",
     "brand": "Franka Robotics",
     "cat": "AGV/AMR",
-    "sub": "Mobile Manipulator AMR",
-    "tags": [],
+    "sub": "Research Mobile Manipulator Base",
+    "tags": [
+      "research",
+      "mobile manipulation",
+      "teleoperation",
+      "physical AI",
+      "ROS 2"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 84,
+    "rating": 4.2,
     "price": 0,
-    "desc": "Advanced mobile robot platform optimized for teleoperation, mobile manipulation and embodied AI research. Designed for seamless integration with Franka Research 3 systems.",
-    "highlights": [],
+    "desc": "Mobile robot base built for teleoperation, mobile manipulation and physical-AI research, natively compatible with the Franka Research 3 (FR3) arm. Pre-configured mechanical, electrical and software interfaces integrate it with FR3 Duo setups, and standardized mounting points let researchers add sensors and actuators. Supports 1 kHz control via the Franka Control Interface and is fully integrated with ROS 2.",
+    "highlights": [
+      "Native Franka Research 3 (FR3) integration",
+      "1 kHz control via Franka Control Interface",
+      "Full ROS 2 integration",
+      "Omnidirectional mobile base",
+      "Standardized mounting/interface ports"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "control_rate_hz": 1000,
+      "mobility": "Omnidirectional",
+      "companion_arm": "Franka Research 3"
     },
     "origin": "Germany",
     "year": 2023,
-    "status": "Active",
+    "status": "Available",
     "released": "2023",
-    "ros": true,
+    "ros": "ROS 2",
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
-    "cameras": "Multiple RGB and depth cameras for navigation and manipulation",
+    "cameras": 1,
     "wifi": true,
     "bluetooth": true,
     "use_cases": [
-      "Teleoperation research",
-      "Mobile manipulation",
-      "Embodied AI research",
-      "Human-robot interaction",
-      "Service robotics"
+      "Mobile manipulation research",
+      "Teleoperation",
+      "Physical-AI data collection",
+      "Embodied-AI experiments"
     ],
     "manufacturer_url": "https://www.franka.de",
     "height_mm": 1200,
@@ -52745,7 +52815,16 @@
     "payload_kg": 20,
     "os": "Ubuntu Linux",
     "warranty_months": 24,
-    "product_url": "https://www.franka.de/tmr"
+    "product_url": "https://www.franka.de/tmr",
+    "frame_material": "Aluminum",
+    "auto_charge": false,
+    "ai_cloud_required": false,
+    "ota": true,
+    "sdk": "Franka Control Interface (FCI)",
+    "sdk_langs": [
+      "C++",
+      "Python"
+    ]
   },
   {
     "id": "franka-robotics-mobile-fr3-duo",
@@ -53515,24 +53594,32 @@
     "name": "Porter",
     "brand": "6 River Systems (Ocado Group)",
     "cat": "AGV/AMR",
-    "sub": "Goods-to-Person AMR",
-    "tags": [],
+    "sub": "Pallet-Moving AMR",
+    "tags": [
+      "pallet",
+      "heavy-duty",
+      "cross-docking",
+      "autonomous transport",
+      "fulfillment"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 85,
+    "rating": 4.3,
     "price": 0,
-    "desc": "Pallet-moving AMR for heavy-duty tasks including cross-docking, bulk-item picking, putaway, and palletized inventory moves. Features slim counterbalance-free design, operates in pallet lanes as narrow as 51 inches, advanced vision system with Fork Insertion Depth System (FIDS), and can handle various pallet types including CHEP, GMA, and EPAL standards.",
-    "highlights": [],
+    "desc": "Heavy-duty pallet-moving autonomous mobile robot that extends the 6 River / Ocado Mobile Robot System beyond picking, handling cross-docking, bulk-item picking, putaway and palletized inventory moves. Works the floor alongside Chuck under Ocado IQ system-directed orchestration.",
+    "highlights": [
+      "Pallet and palletized-load transport",
+      "Cross-docking & bulk moves",
+      "Pairs with Chuck on the floor",
+      "Ocado IQ system-directed"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "payload_kg": 1361
     },
     "origin": "USA",
     "year": 2021,
-    "status": "Active",
+    "status": "Available",
     "released": "2021",
     "payload_kg": 1361,
     "speed_ms": 2,
@@ -53542,13 +53629,17 @@
     "imu": true,
     "wifi": true,
     "use_cases": [
+      "Pallet movement",
       "Cross-docking",
-      "Bulk item picking",
-      "Putaway operations",
-      "Palletized inventory moves",
-      "Warehouse automation"
+      "Bulk-item picking",
+      "Putaway"
     ],
-    "manufacturer_url": "https://6river.com/"
+    "manufacturer_url": "https://6river.com/",
+    "frame_material": "Steel",
+    "auto_charge": true,
+    "ai_cloud_required": true,
+    "ota": true,
+    "api": "Ocado IQ cloud"
   },
   {
     "id": "6-river-systems-ocado-group-chuck-",
@@ -55224,24 +55315,32 @@
     "name": "CarryPick",
     "brand": "Swisslog",
     "cat": "AGV/AMR",
-    "sub": "Goods-to-Person AMR",
-    "tags": [],
+    "sub": "Goods-to-Person Mobile-Rack Robot",
+    "tags": [
+      "goods-to-person",
+      "mobile rack",
+      "fulfillment",
+      "grid-free",
+      "order picking"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 85,
+    "rating": 4.3,
     "price": 0,
-    "desc": "Mobile robotic storage and picking solution for automated goods-to-person operations. Used in healthcare distribution for efficient order fulfillment and inventory management. Integrates with SynQ software platform for real-time monitoring.",
-    "highlights": [],
+    "desc": "Mobile robotic storage-and-picking system: low-profile robots drive beneath mobile racks ('CarryPick shelves'), lift them and carry them to ergonomic pick stations, bringing goods to the operator. Used for automated goods-to-person order fulfillment in e-commerce and healthcare distribution, coordinated by Swisslog's SynQ software.",
+    "highlights": [
+      "Lifts and moves mobile racks",
+      "Goods-to-person fulfillment",
+      "Ergonomic pick stations",
+      "SynQ fleet/warehouse software"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "function": "Lifts and transports mobile racks to pick stations"
     },
     "origin": "Switzerland",
     "year": 2015,
-    "status": "Active",
+    "status": "Available",
     "released": "2015",
     "height_mm": 300,
     "width_mm": 800,
@@ -55253,38 +55352,54 @@
     "lidar": true,
     "cameras": "Navigation and safety cameras",
     "use_cases": [
+      "Goods-to-person order picking",
+      "E-commerce fulfillment",
       "Healthcare distribution",
-      "Pharmacy automation",
-      "Goods-to-person picking",
-      "Inventory management",
-      "Order fulfillment"
+      "Inventory storage"
     ],
     "manufacturer_url": "https://www.swisslog.com",
-    "product_url": "https://www.swisslog.com/en-us/products-systems-solutions/products/carrypick"
+    "product_url": "https://www.swisslog.com/en-us/products-systems-solutions/products/carrypick",
+    "auto_charge": true,
+    "ai_cloud_required": false,
+    "ota": true,
+    "depth_sensing": true,
+    "imu": true
   },
   {
     "id": "swisslog-healthcare-otsaw-swisslog-transcar-agv",
     "name": "TransCar AGV",
     "brand": "Swisslog Healthcare",
     "cat": "AGV/AMR",
-    "sub": "Healthcare AMR",
-    "tags": [],
+    "sub": "Hospital Material-Transport AGV",
+    "tags": [
+      "hospital",
+      "AGV",
+      "24/7",
+      "elevator integration",
+      "material transport"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 86,
+    "rating": 4.3,
     "price": 0,
-    "desc": "Automated Guided Vehicle designed for healthcare facilities that operates 24/7 for material transport including supplies, medication, linens, meals, and waste. Features tricycle drive system, 3D SLAM navigation, elevator integration, and IP54 protection rating. Over 10-year lifespan design.",
-    "highlights": [],
+    "desc": "Hospital automated guided vehicle from the OTSAW–Swisslog Healthcare joint venture that travels predetermined paths to deliver supplies, medication, linens, meals and waste 24/7, freeing staff for patient care. A tricycle drive system and lift deck with photocell sensors give precise container handling in tight spaces, and it integrates with elevators, auto-doors and hospital information systems via the TransCar Management System (TCMS2). 700+ AGVs deployed across 50+ hospitals.",
+    "highlights": [
+      "700+ AGVs in 50+ hospitals",
+      "24/7 autonomous operation",
+      "Tricycle drive, lift deck",
+      "Elevator / auto-door / HIS integration",
+      "10+ year design lifespan"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "payload_kg": 300,
+      "operation": "24/7",
+      "drive": "Tricycle",
+      "fleet_software": "TCMS2"
     },
-    "origin": "Switzerland",
+    "origin": "Singapore/Switzerland",
     "year": 2018,
-    "status": "Active",
+    "status": "Available",
     "released": "2018",
     "height_mm": 1400,
     "width_mm": 600,
@@ -55299,15 +55414,18 @@
     "imu": true,
     "wifi": true,
     "use_cases": [
-      "Hospital logistics",
-      "Medical supply transport",
-      "Medication delivery",
-      "Linen transport",
-      "Waste collection",
-      "Laboratory sample transport"
+      "Hospital supply delivery",
+      "Medication transport",
+      "Linen & meal delivery",
+      "Medical waste removal"
     ],
     "warranty_months": 24,
-    "manufacturer_url": "https://www.swisslog-healthcare.com"
+    "manufacturer_url": "https://www.swisslog-healthcare.com",
+    "auto_charge": true,
+    "ai_cloud_required": false,
+    "ota": true,
+    "depth_sensing": true,
+    "api": "TransCar Management System 2 (TCMS2); HIS, elevator & door interfaces"
   },
   {
     "id": "clone-robotics-neo",
@@ -60771,31 +60889,42 @@
   },
   {
     "id": "6-river-systems-ocado-chuck-amr",
-    "name": "Chuck AMR",
+    "name": "Chuck",
     "brand": "6 River Systems (Ocado Group)",
     "cat": "AGV/AMR",
-    "sub": "Goods-to-Person AMR",
-    "tags": [],
+    "sub": "Collaborative Picking AMR",
+    "tags": [
+      "collaborative",
+      "picking",
+      "person-to-goods",
+      "touchscreen",
+      "fulfillment"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 89,
+    "rating": 4.5,
     "price": 0,
-    "desc": "Person-to-goods cart AMR designed for collaborative warehouse operations including putaway, picking, sorting, and returns. Features modular design with up to 6 shelves, canopies, and accessories. Offers 2-3x productivity gain over manual picking.",
-    "highlights": [],
+    "desc": "Collaborative mobile picking robot — resembling a pick cart — that leads warehouse associates through picking, putaway, sorting and returns, navigating autonomously and guiding workers via an 11-inch touchscreen for roughly 2–3× the productivity of manual cart picking. Built by ex-Kiva founders; now the core of the Ocado Mobile Robot System after Ocado's 2023 acquisition. Twice a Red Dot Award winner.",
+    "highlights": [
+      "Leads associates through picks",
+      "11-inch guidance touchscreen",
+      "2–3× manual-cart productivity",
+      "Deployed at 100+ facilities",
+      "Two Red Dot Awards"
+    ],
     "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
+      "payload_kg": 113,
+      "productivity": "2-3x manual cart",
+      "touchscreen_in": 11
     },
-    "origin": "UK",
+    "origin": "USA",
     "year": 2017,
-    "status": "Active",
+    "status": "Available",
     "released": "2017",
     "height_mm": 1219,
     "width_mm": 610,
-    "depth_mm": 457,
+    "depth_mm": 914,
     "weight_kg": 68,
     "battery_life": "8-12 hours",
     "speed_ms": 1.5,
@@ -60806,10 +60935,9 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Warehouse picking",
-      "Putaway operations",
-      "Order fulfillment",
-      "Inventory sorting",
+      "Order picking",
+      "Putaway",
+      "Sorting",
       "Returns processing"
     ],
     "manufacturer_url": "https://www.ocadogroup.com/technology/6-river-systems",
@@ -60818,7 +60946,12 @@
     "warranty_months": 12,
     "bluetooth": true,
     "os": "Linux-based",
-    "product_url": "https://www.6river.com/chuck"
+    "product_url": "https://www.6river.com/chuck",
+    "frame_material": "Steel",
+    "auto_charge": true,
+    "ai_cloud_required": true,
+    "ota": true,
+    "api": "Ocado IQ cloud / The Bridge supervisor app"
   },
   {
     "id": "geekplus-m-series-amr",
@@ -82687,33 +82820,58 @@
     "name": "Freight500",
     "brand": "Fetch Robotics",
     "cat": "AGV/AMR",
-    "sub": "Warehouse AMR",
-    "tags": [],
+    "sub": "Heavy AMR Base / Pallet Transport",
+    "tags": [
+      "warehouse",
+      "pallet",
+      "case picking",
+      "Zebra",
+      "cloud fleet"
+    ],
     "fig": "🤖",
     "img": "",
-    "score": 75,
-    "rating": 4,
+    "score": 86,
+    "rating": 4.3,
     "price": 0,
-    "desc": "Warehouse AMR for case/pallet moving. Zebra Technologies acquired. Industrial use.",
+    "desc": "Heavy autonomous mobile robot base for cases and smaller palletized loads — carries up to 500 kg on a 1265×838 mm surface (fits EUR6 pallets) through 40-inch-wide aisles. Maps and plans its own routes with dynamic obstacle avoidance and a certified hardware safety system, configured via the FetchCore cloud platform. Now part of Zebra Technologies.",
     "highlights": [
-      "Zebra acquired",
-      "Pallet moving",
-      "Industrial",
-      "AMR"
+      "500 kg payload, EUR6-pallet surface",
+      "40-inch width for narrow aisles",
+      "~9 h runtime, quick charge",
+      "Dynamic obstacle avoidance + certified safety",
+      "FetchCore cloud fleet software"
     ],
     "perf": {
-      "speed_ms": 2,
-      "payload_kg": 500
+      "payload_kg": 500,
+      "runtime_h": 9,
+      "payload_surface_mm": "1265 x 838",
+      "safety": "ANSI/RIA R15.08 hardware safety"
     },
     "year": 2018,
-    "status": "Active",
+    "status": "Available",
     "weight_kg": 300,
-    "battery_life": 540,
+    "battery_life": "~9 h",
     "origin": "USA",
     "cameras": 2,
     "lidar": true,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "width_mm": 1016,
+    "frame_material": "Steel",
+    "charge_type": "Quick charge",
+    "auto_charge": true,
+    "ai_cloud_required": true,
+    "ota": true,
+    "depth_sensing": true,
+    "imu": true,
+    "api": "FetchCore cloud robotics platform; WMS integration",
+    "use_cases": [
+      "Case picking",
+      "Pallet movement",
+      "Putaway",
+      "Cross-docking",
+      "Pallet recycling"
+    ]
   },
   {
     "id": "unity-drive-uda-2022",
