@@ -91892,25 +91892,22 @@
       "water-cannon",
       "crew-protect"
     ],
-    "fig": "🚒",
+    "fig": "🤖",
     "img": "https://www.meslifesafety.com/ProductImages/thermite-rs1-howe_main!01.jpg?resizeid=8&resizeh=1200&resizew=1200",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 273000,
-    "desc": "Heavy-duty firefighting robot with water cannon (1,250 GPM). Used at LA, NY, structural firefighting. Crew protection.",
+    "desc": "Howe & Howe's Thermite RS1 (now Textron Systems) is a compact tracked firefighting robot for tight and confined spaces - doorways, entries and hallways. Remotely operated via a belly-pack controller with HD video, it flows up to 1,250 gpm through an Elkhart Brass Cobra monitor, letting crews fight fires from a safe standoff.",
     "highlights": [
       "1,250 GPM cannon",
       "Heavy-duty",
       "LA/NY use",
       "Structural fires"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 1000
-    },
+    "perf": false,
     "year": 2014,
     "status": "Active",
-    "weight_kg": 1500,
+    "weight_kg": 680,
     "battery_life": 480,
     "origin": "USA",
     "cameras": 4,
@@ -91921,6 +91918,31 @@
       "https://www.meslifesafety.com/ProductImages/thermite-rs1-howe_main!03.JPG?resizeid=8&resizeh=1200&resizew=1200",
       "https://www.meslifesafety.com/ProductImages/thermite-rs1-howe_main!04.JPG?resizeid=8&resizeh=1200&resizew=1200",
       "https://www.meslifesafety.com/ProductImages/thermite-rs1-howe_main!05.JPG?resizeid=8&resizeh=1200&resizew=1200"
+    ],
+    "height_mm": 1626,
+    "width_mm": 965,
+    "depth_mm": 1956,
+    "speed_ms": 2.6,
+    "made_in": "USA",
+    "robot_form": "Tracked firefighting UGV",
+    "mission_types": [
+      "Confined-space firefighting",
+      "Structural fire suppression",
+      "Situational awareness"
+    ],
+    "intended_users": [
+      "Fire departments",
+      "Industrial fire brigades"
+    ],
+    "thermal_camera": true,
+    "fire_temperature_rating_c": 900,
+    "comms": [
+      "Radio"
+    ],
+    "comms_range_m": 300,
+    "use_cases": [
+      "Firefighting in tight spaces",
+      "Doorways / hallways / entries"
     ]
   },
   {
@@ -91936,32 +91958,53 @@
       "2-axis-cannon",
       "FDNY"
     ],
-    "fig": "🚒",
+    "fig": "🤖",
     "img": "https://www.meslifesafety.com/ProductImages/thermite-rs3-howe_main!01.jpg?resizeid=8&resizeh=1200&resizew=1200",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 350000,
-    "desc": "Larger Thermite RS3. 2-axis water/foam cannon. FDNY purchase. Industrial + structural firefighting.",
+    "desc": "The Thermite RS3 (Howe & Howe / Textron Systems) is a heavy industrial firefighting robot - a low-center-of-gravity, wide-chassis tracked vehicle weighing ~1,600 kg. It flows up to 2,500 gpm (9,500 L/min), withstands surface temperatures to ~900°C with track/vehicle cooling sprayers, runs ~20 hours per fuel load, and can push cars and debris. In 2020 the LAFD became the first US fire department to operationally deploy a firefighting robot with the RS3.",
     "highlights": [
       "FDNY in use",
       "2-axis cannon",
       "Industrial fires",
       "Structural fires"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 2000
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
-    "weight_kg": 1800,
-    "battery_life": 480,
+    "weight_kg": 1600,
+    "battery_life": "20 hours runtime",
     "origin": "USA",
     "cameras": 4,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
       "https://www.meslifesafety.com/ProductImages/thermite-rs3-howe_main!02.JPG?resizeid=8&resizeh=1200&resizew=1200"
+    ],
+    "speed_ms": 3.6,
+    "made_in": "USA",
+    "robot_form": "Tracked firefighting UGV",
+    "mission_types": [
+      "Heavy structural firefighting",
+      "Industrial fire suppression",
+      "Debris clearing",
+      "Ventilation (PPV)"
+    ],
+    "intended_users": [
+      "Fire departments",
+      "Industrial fire brigades"
+    ],
+    "thermal_camera": true,
+    "fire_temperature_rating_c": 900,
+    "comms": [
+      "Radio"
+    ],
+    "comms_range_m": 500,
+    "use_cases": [
+      "Deep-seated commercial fires",
+      "Pushing cars/debris",
+      "High-volume suppression"
     ]
   },
   {
@@ -91977,25 +92020,22 @@
       "famous",
       "tracked"
     ],
-    "fig": "🚒",
+    "fig": "🤖",
     "img": "https://www.shark-robotics.com/wp-content/uploads/2025/08/colossus-full-firefighting-combo.webp",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 250000,
-    "desc": "FAMOUS — saved Notre-Dame Cathedral during 2019 fire. French-made firefighting robot. Heavy-water-cannon delivery.",
+    "desc": "Shark Robotics' Colossus is a versatile ~500 kg tracked firefighting and intervention robot. IP67-rated and heat-shielded, it relays water at ~2,500 L/min, carries a thermal camera, hauls up to ~500 kg of equipment or casualties, and extracts smoke. It became famous helping the Paris Fire Brigade fight the 2019 Notre-Dame cathedral fire and is now in service in dozens of countries.",
     "highlights": [
       "Saved Notre-Dame",
       "French-made",
       "Heavy water cannon",
       "Heat-resistant"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 500
-    },
+    "perf": false,
     "year": 2017,
     "status": "Active",
-    "weight_kg": 510,
+    "weight_kg": 500,
     "battery_life": 480,
     "origin": "France",
     "cameras": 4,
@@ -92007,6 +92047,34 @@
       "https://www.shark-robotics.com/wp-content/uploads/2025/08/colossus-video-turret.webp",
       "https://www.shark-robotics.com/wp-content/uploads/2025/08/colossus-motorized-bull-bar.webp",
       "https://www.shark-robotics.com/wp-content/uploads/2025/08/colossus-transport-basket.webp"
+    ],
+    "payload_kg": 500,
+    "payload": 500,
+    "speed_ms": 1,
+    "made_in": "France",
+    "robot_form": "Tracked multi-mission UGV",
+    "ip_rating": "IP67",
+    "mission_types": [
+      "Structural firefighting",
+      "Casualty evacuation",
+      "Equipment hauling",
+      "Smoke extraction"
+    ],
+    "intended_users": [
+      "Fire brigades",
+      "Civil protection"
+    ],
+    "thermal_camera": true,
+    "comms": [
+      "Radio",
+      "Fibre-optic (optional)"
+    ],
+    "comms_range_m": 300,
+    "use_cases": [
+      "Industrial & structural fires",
+      "Tunnel & port fires",
+      "HazMat zones",
+      "Hauling & evacuation"
     ]
   },
   {
@@ -92022,25 +92090,22 @@
       "heavy-tracked",
       "fan-attack"
     ],
-    "fig": "🚒",
+    "fig": "🤖",
     "img": "https://www.feuerwehr-frankfurt.de/images/images/technik/luf-60-2.jpg",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 280000,
-    "desc": "Austrian firefighting robot. Specialized for tunnel/underground fires. High-pressure water-fog attack.",
+    "desc": "LUF GmbH's LUF 60 is an Austrian tracked firefighting robot built around a powerful turbine fan that throws an atomised water/foam mist tens of metres. Remotely operated, it excels in tunnels, underground car parks and confined industrial spaces where heat, smoke and collapse risk keep crews out, also serving as a high-capacity smoke extractor.",
     "highlights": [
       "Tunnel fires",
       "Underground fires",
       "Water-fog attack",
       "Austrian-engineered"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 1000
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
-    "weight_kg": 1700,
+    "weight_kg": 2300,
     "battery_life": 360,
     "origin": "Austria",
     "cameras": 4,
@@ -92051,6 +92116,28 @@
       "https://www.feuerwehr-frankfurt.de/images/images/technik/luf-60-1.jpg",
       "https://www.feuerwehr-frankfurt.de/images/images/technik/luf-60-3.jpg",
       "https://www.feuerwehr-frankfurt.de/images/images/technik/luf-60-4.jpg"
+    ],
+    "speed_ms": 1.7,
+    "made_in": "Austria",
+    "robot_form": "Tracked firefighting UGV",
+    "mission_types": [
+      "Tunnel firefighting",
+      "Confined-space suppression",
+      "Smoke extraction"
+    ],
+    "intended_users": [
+      "Fire departments",
+      "Tunnel & industrial brigades"
+    ],
+    "thermal_camera": true,
+    "comms": [
+      "Radio"
+    ],
+    "comms_range_m": 300,
+    "use_cases": [
+      "Tunnel & underground fires",
+      "Smoke extraction",
+      "Water-mist suppression"
     ]
   },
   {
@@ -92575,22 +92662,19 @@
       "police",
       "civil-protection"
     ],
-    "fig": "🚨",
+    "fig": "🤖",
     "img": "https://www.shark-robotics.com/wp-content/uploads/2025/08/rhyno-protect-firefighting-setup.webp",
-    "score": 83,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "French crowd management / civil protection robot. Police deployment. Civil disturbance response.",
+    "desc": "Shark Robotics' Rhyno Protect is a tracked civil-protection robot designed for tactical and law-enforcement use. It can carry a ballistic shield to provide mobile cover, extract wounded people from danger zones, and perform reconnaissance in active-threat or hazardous situations, keeping responders out of the line of fire.",
     "highlights": [
       "Crowd management",
       "French police",
       "Civil protection",
       "Riot response"
     ],
-    "perf": {
-      "speed_ms": 3,
-      "payload_kg": 300
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 600,
@@ -92604,6 +92688,30 @@
       "https://www.shark-robotics.com/wp-content/uploads/2025/08/rhyno-protect-video-turret.webp",
       "https://www.shark-robotics.com/wp-content/uploads/2025/08/rhyno-protect-transport-basket.webp",
       "https://www.shark-robotics.com/wp-content/uploads/2025/08/rhyno-protect-stretcher-support.webp"
+    ],
+    "speed_ms": 1,
+    "made_in": "France",
+    "robot_form": "Tracked civil-protection UGV",
+    "mission_types": [
+      "Civil protection",
+      "Casualty extraction under threat",
+      "Mobile ballistic shield",
+      "Reconnaissance"
+    ],
+    "intended_users": [
+      "Law enforcement",
+      "Civil protection",
+      "Tactical units"
+    ],
+    "thermal_camera": true,
+    "comms": [
+      "Radio"
+    ],
+    "comms_range_m": 300,
+    "use_cases": [
+      "Active-threat response",
+      "Wounded extraction",
+      "Mobile cover / shielding"
     ]
   },
   {
