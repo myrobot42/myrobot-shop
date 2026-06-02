@@ -36846,7 +36846,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Hybrid demonstrator developed with L3Harris Technologies integrating gas-turbine generator with electric VTOL platform. First flight completed November 2025 for potential military applications.",
+    "desc": "The Joby S4-T is a tactical/hybrid variant of Joby Aviation's S4 eVTOL - a six-tilt-rotor aircraft carrying four passengers plus pilot at up to ~322 km/h. All-electric with a hydrogen-electric hybrid demonstrator extending range well beyond the baseline ~240 km, it is being evaluated by the US DoD under the Air Force's Agility Prime programme.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -36856,17 +36856,16 @@
     },
     "origin": "USA",
     "year": 2025,
-    "status": "In development",
+    "status": "Active",
     "use_cases": [
-      "Military reconnaissance",
-      "Personnel transport",
-      "Cargo delivery",
-      "Search and rescue"
+      "Urban / regional air mobility",
+      "Military logistics & personnel movement",
+      "Long-range eVTOL demonstration"
     ],
     "manufacturer_url": "https://www.jobyaviation.com",
     "height_mm": 3050,
     "wingspan_mm": 12200,
-    "weight_kg": 2177,
+    "weight_kg": 2400,
     "battery_life": "150+ miles range",
     "speed_ms": 89,
     "payload_kg": 453,
@@ -36874,7 +36873,27 @@
     "imu": true,
     "wifi": true,
     "cellular": "4G/5G capable",
-    "warranty_months": 24
+    "warranty_months": 24,
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "USA",
+    "os": "Joby",
+    "passenger_capacity": 4,
+    "top_speed_kmh": 322,
+    "endurance_hours": 1,
+    "communication_range_km": 240,
+    "powertrain": "Electric (hydrogen-hybrid demonstrator variant)",
+    "role": [
+      "eVTOL air mobility",
+      "Logistics / personnel transport",
+      "Demonstrator"
+    ],
+    "autonomy_level": 2,
+    "export_control": "ITAR (USA)",
+    "customers": [
+      "US DoD (Agility Prime)",
+      "US Air Force"
+    ]
   },
   {
     "id": "joby-aviation-joby-s4-hydrogen-electric",
@@ -37529,7 +37548,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Fixed-wing drone designed for defense applications with tactical capabilities and rugged construction",
+    "desc": "The senseFly-branded eBee TAC (senseFly was acquired by AgEagle in 2021) is the same hand-launched fixed-wing tactical mapping/ISR drone: 90-minute endurance, ~28 km range, AES-256 security and RTK/PPK 1.5 cm accuracy. Designed and assembled in Switzerland and used by defense agencies globally.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -37539,10 +37558,10 @@
     },
     "origin": "Switzerland",
     "year": 2014,
-    "status": "Released",
+    "status": "Active",
     "released": "2014",
     "wingspan_mm": 960,
-    "weight_kg": 0.7,
+    "weight_kg": 1.6,
     "battery_life": "45 minutes",
     "speed_ms": 11,
     "payload_kg": 0.3,
@@ -37550,13 +37569,32 @@
     "cameras": "RGB camera with tactical imaging capabilities",
     "imu": true,
     "use_cases": [
-      "Military surveillance",
-      "Tactical reconnaissance",
-      "Border security",
-      "Search and rescue",
-      "Infrastructure inspection"
+      "Tactical mapping",
+      "Border surveillance",
+      "Intelligence gathering",
+      "Search & rescue"
     ],
-    "manufacturer_url": "https://www.sensefly.com"
+    "manufacturer_url": "https://www.sensefly.com",
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "Switzerland",
+    "os": "eMotion",
+    "customers": [
+      "Defense agencies (global)"
+    ],
+    "endurance_hours": 1.5,
+    "communication_range_km": 27.7,
+    "role": [
+      "Tactical mapping",
+      "ISR",
+      "Reconnaissance"
+    ],
+    "autonomy_level": 3,
+    "encryption": "AES-256 radio + encrypted SD",
+    "export_control": "NDAA / Blue UAS",
+    "deploy_method": [
+      "Hand-launched fixed-wing"
+    ]
   },
   {
     "id": "ageagle-ebee-tac-government",
@@ -37570,7 +37608,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "NDAA-compliant tactical drone for defense applications with secure communications and GPS-denied operation capability",
+    "desc": "The government configuration of the AgEagle eBee TAC, cleared on the DoD Blue UAS list for federal procurement. It pairs the 90-minute fixed-wing mapping platform with cyber-secure features - AES-256 radio, encrypted storage, log suppression and silent mission mode - for tactical mapping and ISR in disconnected or contested environments.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -37580,10 +37618,10 @@
     },
     "origin": "USA",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "wingspan_mm": 960,
-    "weight_kg": 0.69,
+    "weight_kg": 1.6,
     "battery_life": "50 minutes",
     "speed_ms": 11,
     "payload_kg": 0.15,
@@ -37591,13 +37629,33 @@
     "imu": true,
     "wifi": true,
     "use_cases": [
-      "Military surveillance",
-      "Border patrol",
-      "Search and rescue",
-      "Tactical reconnaissance",
-      "Emergency response"
+      "Tactical mapping",
+      "Border surveillance",
+      "Intelligence gathering",
+      "Search & rescue"
     ],
-    "manufacturer_url": "https://ageagle.com"
+    "manufacturer_url": "https://ageagle.com",
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "USA / Switzerland",
+    "os": "eMotion",
+    "customers": [
+      "US DoD",
+      "Federal agencies"
+    ],
+    "endurance_hours": 1.5,
+    "communication_range_km": 27.7,
+    "role": [
+      "Tactical mapping",
+      "ISR",
+      "Reconnaissance"
+    ],
+    "autonomy_level": 3,
+    "encryption": "AES-256 radio + encrypted SD",
+    "export_control": "NDAA / Blue UAS",
+    "deploy_method": [
+      "Hand-launched fixed-wing"
+    ]
   },
   {
     "id": "ageagle-ebee-tac-public-safety",
@@ -37745,7 +37803,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "NDAA-compliant tactical drone for government and military applications, supports GPS-denied and offline missions, BVLOS capable",
+    "desc": "The AgEagle eBee TAC is a hand-launched fixed-wing tactical mapping and ISR drone with 90-minute endurance, ~28 km range and 1.6 kg weight, deployable in three minutes by one operator. NDAA-compliant and Blue UAS-cleared, it adds AES-256 encryption, a silent/covert mode, digital camouflage and RTK/PPK 1.5 cm mapping accuracy; the US Army has procured units.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -37755,10 +37813,10 @@
     },
     "origin": "USA",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "wingspan_mm": 960,
-    "weight_kg": 0.69,
+    "weight_kg": 1.6,
     "battery_life": "50 minutes",
     "speed_ms": 15,
     "payload_kg": 0.15,
@@ -37766,13 +37824,33 @@
     "cameras": "RGB camera with optional thermal imaging",
     "imu": true,
     "use_cases": [
-      "Military reconnaissance",
-      "Border patrol",
-      "Search and rescue",
-      "Infrastructure inspection",
-      "Law enforcement surveillance"
+      "Tactical mapping",
+      "Border surveillance",
+      "Intelligence gathering",
+      "Search & rescue"
     ],
-    "manufacturer_url": "https://ageagle.com"
+    "manufacturer_url": "https://ageagle.com",
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "USA / Switzerland",
+    "os": "eMotion",
+    "customers": [
+      "US Army",
+      "Federal agencies"
+    ],
+    "endurance_hours": 1.5,
+    "communication_range_km": 27.7,
+    "role": [
+      "Tactical mapping",
+      "ISR",
+      "Reconnaissance"
+    ],
+    "autonomy_level": 3,
+    "encryption": "AES-256 radio + encrypted SD",
+    "export_control": "NDAA / Blue UAS",
+    "deploy_method": [
+      "Hand-launched fixed-wing"
+    ]
   },
   {
     "id": "ageagle-ebee-ag",
@@ -37949,7 +38027,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "NDAA-compliant surveillance drone with RGB camera featuring 32x zoom, thermal sensor, live HD video feed up to 12 miles, operates in GNSS-denied conditions",
+    "desc": "The AgEagle eBee VISION is a backpackable fixed-wing ISR drone delivering real-time full-motion video for situational awareness, launchable in under three minutes with a silent stealth mode. Blue UAS-cleared and NDAA-compliant, it fills the gap between short-endurance quadcopters and large military fixed-wing UAS for tactical reconnaissance.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -37959,9 +38037,9 @@
     },
     "origin": "USA",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
-    "weight_kg": 1.1,
+    "weight_kg": 1.6,
     "battery_life": "50 minutes",
     "speed_ms": 16.7,
     "wifi": true,
@@ -37969,14 +38047,33 @@
     "cameras": "RGB camera with 32x zoom, thermal imaging sensor",
     "imu": true,
     "use_cases": [
-      "Military surveillance",
-      "Border security",
-      "Search and rescue",
-      "Critical infrastructure monitoring",
-      "Law enforcement"
+      "Real-time ISR",
+      "Tactical reconnaissance",
+      "Public safety overwatch"
     ],
     "manufacturer_url": "https://ageagle.com",
-    "wingspan_mm": 960
+    "wingspan_mm": 960,
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "USA / Switzerland",
+    "os": "eMotion",
+    "endurance_hours": 1,
+    "communication_range_km": 20,
+    "role": [
+      "Real-time ISR",
+      "Reconnaissance",
+      "Situational awareness"
+    ],
+    "autonomy_level": 3,
+    "encryption": "Secure datalink",
+    "export_control": "NDAA / Blue UAS",
+    "deploy_method": [
+      "Hand-launched fixed-wing"
+    ],
+    "customers": [
+      "US DoD",
+      "European armed forces"
+    ]
   },
   {
     "id": "ageagle-ebee-x",
@@ -54818,7 +54915,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "NDAA-compliant tactical mapping drone designed for government and defense applications. Features AES-256 encryption, encrypted SD card, silent radio mission capabilities, and Military Grid Reference System (MGRS) support. Blue UAS approved for DOD procurement.",
+    "desc": "The senseFly-branded government configuration of the eBee TAC tactical mapping drone (senseFly is now part of AgEagle). Built in Switzerland with cyber-secure encryption and silent operation for government and defense mapping and ISR missions.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -54828,24 +54925,42 @@
     },
     "year": 2018,
     "origin": "Switzerland",
-    "status": "Released",
+    "status": "Active",
     "released": "2018",
     "wingspan_mm": 960,
-    "weight_kg": 0.69,
+    "weight_kg": 1.6,
     "battery_life": "50 minutes",
     "speed_ms": 25,
     "payload_kg": 0.125,
     "cameras": "RGB camera for photogrammetry and mapping",
     "imu": true,
     "use_cases": [
-      "Military mapping",
+      "Tactical mapping",
       "Border surveillance",
-      "Tactical reconnaissance",
-      "Infrastructure inspection",
-      "Emergency response",
-      "Search and rescue operations"
+      "Intelligence gathering",
+      "Search & rescue"
     ],
-    "manufacturer_url": "https://www.sensefly.com"
+    "manufacturer_url": "https://www.sensefly.com",
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "Switzerland",
+    "os": "eMotion",
+    "customers": [
+      "Government / defense agencies"
+    ],
+    "endurance_hours": 1.5,
+    "communication_range_km": 27.7,
+    "role": [
+      "Tactical mapping",
+      "ISR",
+      "Reconnaissance"
+    ],
+    "autonomy_level": 3,
+    "encryption": "AES-256 radio + encrypted SD",
+    "export_control": "NDAA / Blue UAS",
+    "deploy_method": [
+      "Hand-launched fixed-wing"
+    ]
   },
   {
     "id": "lefant-m330",
