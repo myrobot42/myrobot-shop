@@ -86231,31 +86231,58 @@
       "autonomous",
       "ISR"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://cdn.sanity.io/images/61nocsj5/production/2e450d75ba11cf85095f28039381c3e5b44ab59a-4000x2660.png?rect=224,334,3776,1726&w=960&fit=min&auto=format",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Military VTOL ISR drone with Lattice AI for autonomous mission execution. Multi-vehicle teaming.",
+    "desc": "Anduril's Ghost-X is an expeditionary single-rotor VTOL autonomous ISR drone with dual batteries, vision-based navigation for GPS-denied environments and ~80-90 minutes of endurance carrying up to ~11 kg of modular payloads. Soldier-portable and powered by Anduril's Lattice autonomy, it was selected by the US Army's Medium-Range Reconnaissance program and the Replicator initiative.",
     "highlights": [
       "Lattice AI",
       "Autonomous teaming",
       "NDAA",
       "Long endurance"
     ],
-    "perf": {
-      "speed_ms": 35,
-      "payload_kg": 4
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
-    "weight_kg": 25,
-    "battery_life": 120,
+    "weight_kg": 11.3,
+    "battery_life": 85,
     "origin": "USA",
     "cameras": 3,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "gps": true,
+    "made_in": "USA",
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "autonomous": true,
+    "thermal": true,
+    "os": "Anduril Lattice",
+    "payload_kg": 11.3,
+    "max_flight_time": 85,
+    "max_range": 24,
+    "battery_life_typical": 85,
+    "frame_type": "Single-rotor VTOL",
+    "obstacle_sensing": "Vision-based (GPS-denied)",
+    "role": [
+      "ISR",
+      "Targeting",
+      "Force protection"
+    ],
+    "autonomy_level": 4,
+    "endurance_hours": 1.4,
+    "communication_range_km": 24,
+    "customers": [
+      "US Army (MRR / Replicator)",
+      "USSOCOM"
+    ],
+    "use_cases": [
+      "Expeditionary ISR",
+      "Tactical reconnaissance",
+      "Targeting"
+    ]
   },
   {
     "id": "anduril-altius-700m-2024",
@@ -86270,25 +86297,22 @@
       "NDAA",
       "tube-launched"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://cdn.sanity.io/images/61nocsj5/production/cd323a0dad7d4d7a707aa68eaac39fefbc36942c-4000x2660.png?w=960&fit=min&auto=format",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Tube-launched loitering munition for military. ISR + strike capability. 75-min loiter.",
+    "desc": "Anduril's ALTIUS-700M is a tube-launched, fixed-wing loitering munition with ~75 minutes endurance, up to 160 km range and a 15 kg anti-armor warhead. Launchable from air, ground or maritime platforms, it supports autonomous coordinated-strike and collaborative teaming so one operator can control multiple vehicles.",
     "highlights": [
       "Tube-launched",
       "Loitering munition",
       "ISR + strike",
       "75-min loiter"
     ],
-    "perf": {
-      "speed_ms": 56,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
-    "weight_kg": 36,
+    "weight_kg": 56,
     "battery_life": 75,
     "origin": "USA",
     "cameras": 1,
@@ -86296,6 +86320,40 @@
     "bluetooth": true,
     "gallery": [
       "https://cdn.sanity.io/images/61nocsj5/production/df07817a6e526f91fbbce8a6c0ae872218e2ad63-3641x2049.png?rect=0,1,3641,2048&w=1920&h=1080&fit=min&auto=format"
+    ],
+    "gps": true,
+    "made_in": "USA",
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "autonomous": true,
+    "thermal": true,
+    "os": "Anduril Lattice",
+    "payload_kg": 15,
+    "max_flight_time": 75,
+    "max_range": 160,
+    "battery_life_typical": 75,
+    "frame_type": "Tube-launched fixed-wing (flip-out wings)",
+    "role": [
+      "Loitering munition",
+      "Anti-armor precision strike",
+      "SIGINT / EW / decoy (variants)"
+    ],
+    "autonomy_level": 3,
+    "endurance_hours": 1.25,
+    "communication_range_km": 160,
+    "deploy_method": [
+      "Air-launched",
+      "Ground",
+      "Maritime"
+    ],
+    "customers": [
+      "USSOCOM",
+      "US Army"
+    ],
+    "use_cases": [
+      "Long-range loitering strike",
+      "Anti-armor",
+      "Collaborative swarm teaming"
     ]
   },
   {
@@ -86310,32 +86368,55 @@
       "autonomous",
       "2025-launch"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://cdn.sanity.io/images/61nocsj5/production/c9b436c642a7cf63badf4196d15bb6ee33460eec-4000x2660.png?rect=252,130,3748,2039&w=960&fit=min&auto=format",
-    "score": 88,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Backpack-portable autonomous military drone. ISR + light strike capability.",
+    "desc": "Anduril's Bolt is a man-portable VTOL drone with 40+ minutes of endurance and ~20 km range; the Bolt-M variant is a loitering munition able to strike light vehicles, dismounted personnel and trenches. Powered by Lattice AI for autonomous behaviours, it was selected for the US Marine Corps' Organic Precision Fires-Light program.",
     "highlights": [
       "Backpack-portable",
       "Autonomous",
       "Light strike",
       "Military"
     ],
-    "perf": {
-      "speed_ms": 25,
-      "payload_kg": 1.5
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
-    "weight_kg": 4.5,
-    "battery_life": 40,
+    "weight_kg": 5.4,
+    "battery_life": 45,
     "origin": "USA",
     "cameras": 2,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
       "https://cdn.sanity.io/images/61nocsj5/production/d1643dcb779406f088df77887e320ba08f31dea0-640x732.png?rect=0,342,606,341&w=640&h=360&fit=min&auto=format"
+    ],
+    "gps": true,
+    "made_in": "USA",
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "autonomous": true,
+    "thermal": true,
+    "os": "Anduril Lattice",
+    "max_flight_time": 45,
+    "max_range": 20,
+    "battery_life_typical": 45,
+    "frame_type": "VTOL quadcopter",
+    "role": [
+      "Loitering munition (Bolt-M)",
+      "Precision strike",
+      "ISR"
+    ],
+    "autonomy_level": 3,
+    "endurance_hours": 0.7,
+    "communication_range_km": 20,
+    "customers": [
+      "US Marine Corps (OPF-L)"
+    ],
+    "use_cases": [
+      "Man-portable ISR",
+      "Loitering precision strike"
     ]
   },
   {
@@ -86559,25 +86640,22 @@
       "red-cat",
       "thermal"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://cdn.shopify.com/s/files/1/0363/7834/5603/files/Teal-Teal2-34_49d38b5c-9fd3-411e-8c58-dbbfcae7d120_400x400_crop_top.webp?v=1741366350",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 15000,
-    "desc": "Blue sUAS-cleared military/government drone. SRR (Short Range Reconnaissance). Thermal optional.",
+    "desc": "The Teal 2, from Red Cat's Teal Drones, is a small NDAA-compliant ISR quadcopter built to 'dominate the night', integrating a Teledyne FLIR Hadron thermal/EO sensor for low-light reconnaissance. US-made for military and public-safety users needing secure short-range situational awareness.",
     "highlights": [
       "Blue sUAS-cleared",
       "Short range recon",
       "Thermal optional",
       "Made in USA"
     ],
-    "perf": {
-      "speed_ms": 15,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
-    "weight_kg": 1.5,
+    "weight_kg": 1.4,
     "battery_life": 30,
     "origin": "USA",
     "cameras": 2,
@@ -86586,6 +86664,33 @@
     "gallery": [
       "https://cdn.shopify.com/s/files/1/0363/7834/5603/files/Teal-Teal2-Controller_41c2f596-9e0e-42e0-9cb6-ca44d9e2339f_400x400_crop_top.webp?v=1741366350",
       "https://cdn.shopify.com/s/files/1/0363/7834/5603/files/Teal-Teal2-Modular_9f688cc9-1260-4d7e-9500-d8c07e8b6ed4_400x400_crop_top.webp?v=1741366350"
+    ],
+    "gps": true,
+    "made_in": "USA",
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "autonomous": true,
+    "thermal": true,
+    "os": "Teal (Red Cat)",
+    "max_flight_time": 30,
+    "max_range": 10,
+    "battery_life_typical": 30,
+    "frame_type": "Quadcopter",
+    "thermal_resolution": "Teledyne FLIR Hadron",
+    "role": [
+      "ISR",
+      "Night reconnaissance",
+      "Public safety"
+    ],
+    "autonomy_level": 3,
+    "communication_range_km": 10,
+    "customers": [
+      "US military",
+      "Public safety"
+    ],
+    "use_cases": [
+      "Night ISR",
+      "Short-range reconnaissance"
     ]
   },
   {
@@ -86601,26 +86706,23 @@
       "short-range-recon",
       "SRR2"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://tealdrones.com/wp-content/uploads/2025/09/bw-red-tint-sm-1.png",
-    "score": 90,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 18000,
-    "desc": "2025 Black Widow — Army SRR Tranche 2 selection. Improved range, payload, autonomy.",
+    "desc": "The Teal Black Widow (2025), from Red Cat, is a compact, backpackable squad-level reconnaissance drone designed for the US Army's Short-Range Reconnaissance program. NDAA-compliant and US-made, it provides dismounted soldiers with quick, secure ISR including low-light sensing.",
     "highlights": [
       "Army SRR Tranche 2",
       "NDAA-compliant",
       "Improved over Teal 2",
       "Made in USA"
     ],
-    "perf": {
-      "speed_ms": 18,
-      "payload_kg": 0.5
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
-    "weight_kg": 1.8,
-    "battery_life": 35,
+    "weight_kg": 1,
+    "battery_life": 30,
     "origin": "USA",
     "cameras": 2,
     "wifi": true,
@@ -86628,6 +86730,30 @@
     "cellular": "5G",
     "gallery": [
       "https://tealdrones.com/wp-content/uploads/2024/10/blackwidow-gr.png"
+    ],
+    "gps": true,
+    "made_in": "USA",
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "autonomous": true,
+    "thermal": true,
+    "os": "Teal (Red Cat)",
+    "max_flight_time": 30,
+    "max_range": 5,
+    "battery_life_typical": 30,
+    "frame_type": "Compact quadcopter",
+    "role": [
+      "Short-range reconnaissance",
+      "Squad-level ISR"
+    ],
+    "autonomy_level": 3,
+    "communication_range_km": 5,
+    "customers": [
+      "US Army (SRR program)"
+    ],
+    "use_cases": [
+      "Squad-level reconnaissance",
+      "Backpackable ISR"
     ]
   },
   {
@@ -87456,22 +87582,19 @@
       "blue-uas",
       "made-in-usa"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://cdn.prod.website-files.com/64b98cc3f6731123d122e841/687fa8986fa2db9e6ba140cc_edge-130-blue-aircraft-2048x596.png",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 12000,
-    "desc": "NDAA-compliant compact military drone. Red Cat/Teal parent company. Blue UAS approved.",
+    "desc": "Red Cat's Edge 130 is a US-made VTOL reconnaissance drone aimed at military and public-safety ISR. (Detailed specifications for this record are limited and worth verifying against the manufacturer.)",
     "highlights": [
       "NDAA-compliant",
       "Blue UAS",
       "Compact military",
       "Made in USA"
     ],
-    "perf": {
-      "speed_ms": 18,
-      "payload_kg": 0.3
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 1.3,
@@ -87479,7 +87602,24 @@
     "origin": "USA",
     "cameras": 2,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "gps": true,
+    "made_in": "USA",
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "autonomous": true,
+    "thermal": true,
+    "os": "Red Cat",
+    "frame_type": "Tri-mode VTOL",
+    "role": [
+      "ISR",
+      "Reconnaissance"
+    ],
+    "autonomy_level": 3,
+    "use_cases": [
+      "Tactical ISR",
+      "Reconnaissance"
+    ]
   },
   {
     "id": "aerovironment-puma-3-ae-2020",
@@ -87494,25 +87634,22 @@
       "ISR",
       "DoD"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://www.avinc.com/wp-content/uploads/2026/04/Product-Page_SUA_Puma-AE_Product-Render_05.png?resize=1536%2C864&quality=100",
-    "score": 89,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 250000,
-    "desc": "Hand-launched fixed-wing ISR drone. US DoD standard. 2.5-hour endurance.",
+    "desc": "AeroVironment's RQ-20 Puma 3 AE is a hand-launched, all-environment fixed-wing ISR drone with a stabilised EO/IR gimbal, ~2.5 hours endurance (with long-endurance battery) and ~20 km range. Waterproof for land or maritime operations, it provides persistent tactical reconnaissance for ground forces.",
     "highlights": [
       "Hand-launched",
       "2.5-hour endurance",
       "DoD standard",
       "NDAA"
     ],
-    "perf": {
-      "speed_ms": 23,
-      "payload_kg": 0.5
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
-    "weight_kg": 6.4,
+    "weight_kg": 6.3,
     "battery_life": 150,
     "origin": "USA",
     "cameras": 2,
@@ -87524,6 +87661,40 @@
       "https://www.avinc.com/wp-content/uploads/2026/04/Product-Page_SUA_Puma-AE_Product-Render_02.png?quality=100",
       "https://www.avinc.com/wp-content/uploads/2026/04/Product-Page_SUA_Puma-AE_Product-Render_01.png?quality=100",
       "https://www.avinc.com/wp-content/uploads/2026/04/Product-Page_SUA_Puma-AE_Product-Render_03.png?quality=100"
+    ],
+    "gps": true,
+    "made_in": "USA",
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "autonomous": true,
+    "thermal": true,
+    "os": "AeroVironment",
+    "max_flight_time": 150,
+    "max_range": 20,
+    "battery_life_typical": 150,
+    "frame_type": "Hand-launched fixed-wing",
+    "ip_rating": "Waterproof (land/maritime)",
+    "role": [
+      "ISR",
+      "Reconnaissance",
+      "Surveillance"
+    ],
+    "autonomy_level": 2,
+    "endurance_hours": 2.5,
+    "communication_range_km": 20,
+    "deploy_method": [
+      "Hand-launched",
+      "Rail-launched"
+    ],
+    "camera_mp": 12,
+    "gimbal_axes": 3,
+    "customers": [
+      "US military",
+      "Allied forces"
+    ],
+    "use_cases": [
+      "Tactical ISR",
+      "Maritime & land reconnaissance"
     ]
   },
   {
@@ -87539,22 +87710,19 @@
       "kamikaze",
       "DoD"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://www.edrmagazine.eu/wp-content/uploads/2020/10/Switchblade300_02.jpg",
-    "score": 88,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 6000,
-    "desc": "Tube-launched loitering munition. Backpack-portable. Widely deployed in US military operations.",
+    "desc": "AeroVironment's Switchblade 300 is a man-portable, tube-launched loitering munition - a backpackable 'kamikaze' drone with ~15 minutes endurance and ~10 km range that streams video before diving onto a target with a small anti-personnel warhead and a wave-off/abort capability. Widely fielded by the US military and supplied to Ukraine.",
     "highlights": [
       "Tube-launched",
       "Backpack-portable",
       "DoD standard",
       "Combat-proven"
     ],
-    "perf": {
-      "speed_ms": 28,
-      "payload_kg": 0.5
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 2.5,
@@ -87566,6 +87734,37 @@
     "gallery": [
       "https://www.edrmagazine.eu/wp-content/uploads/2020/10/Switchblade300_03.jpg",
       "https://www.edrmagazine.eu/wp-content/uploads/2020/10/Switchblade300_04.jpg"
+    ],
+    "gps": true,
+    "made_in": "USA",
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "autonomous": true,
+    "thermal": true,
+    "os": "AeroVironment",
+    "max_flight_time": 15,
+    "max_range": 10,
+    "battery_life_typical": 15,
+    "frame_type": "Tube-launched fixed-wing (flip-out wings)",
+    "role": [
+      "Loitering munition",
+      "Anti-personnel precision strike",
+      "Reconnaissance"
+    ],
+    "autonomy_level": 2,
+    "endurance_hours": 0.25,
+    "communication_range_km": 10,
+    "deploy_method": [
+      "Man-portable tube launcher"
+    ],
+    "customers": [
+      "US Army",
+      "US Marine Corps",
+      "Ukraine"
+    ],
+    "use_cases": [
+      "Man-portable loitering strike",
+      "Beyond-line-of-sight reconnaissance"
     ]
   },
   {
@@ -87581,31 +87780,59 @@
       "hivemind",
       "DoD"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/01/XCz1j0LLD0TwHux5tfZC/image.jpg",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "VTOL military drone with Hivemind AI for autonomous swarm operations. DoD deployments.",
+    "desc": "Shield AI's V-BAT is a ducted-fan VTOL fixed-wing drone that takes off and lands vertically from a small footprint (including ships) yet flies up to ~10 hours. Powered by the Hivemind AI pilot, it operates autonomously in GPS- and comms-denied environments for ISR and maritime surveillance without external operators.",
     "highlights": [
       "VTOL",
       "Hivemind AI swarm",
       "Autonomous ops",
       "DoD-fielded"
     ],
-    "perf": {
-      "speed_ms": 40,
-      "payload_kg": 11.3
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
-    "weight_kg": 56.7,
-    "battery_life": 480,
+    "weight_kg": 57,
+    "battery_life": 600,
     "origin": "USA",
     "cameras": 3,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "gps": true,
+    "made_in": "USA",
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "autonomous": true,
+    "thermal": true,
+    "os": "Shield AI Hivemind",
+    "payload_kg": 11,
+    "max_flight_time": 600,
+    "max_range": 80,
+    "battery_life_typical": 600,
+    "frame_type": "Ducted-fan VTOL fixed-wing",
+    "powertrain": "Heavy-fuel / EFI",
+    "role": [
+      "ISR",
+      "GPS/comms-denied operations",
+      "Maritime surveillance"
+    ],
+    "autonomy_level": 4,
+    "endurance_hours": 10,
+    "communication_range_km": 80,
+    "customers": [
+      "US Navy",
+      "US Marine Corps",
+      "Allied forces"
+    ],
+    "use_cases": [
+      "Long-endurance ISR",
+      "GPS-denied autonomy",
+      "Expeditionary surveillance"
+    ]
   },
   {
     "id": "flyability-elios-3-2022",
