@@ -82187,22 +82187,19 @@
       "yandex-spinoff",
       "uber-partner"
     ],
-    "fig": "🚗",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/fM0GwuARTsxbt8kpb2eN/image.jpg",
-    "score": 83,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Yandex spinoff. Robotaxi in Dallas via Uber partnership. Ex-Yandex self-driving team.",
+    "desc": "Avride's robotaxi runs the company's Level 4 autonomy stack (spun out of the former Yandex self-driving group) on production EV platforms, partnered with Uber. Avride also operates a large Uber Eats delivery-rover fleet across Dallas, Austin and Jersey City, with robotaxi expansion planned into Munich.",
     "highlights": [
       "Yandex spinoff",
       "Dallas operations",
       "Uber partner",
       "Commercial service"
     ],
-    "perf": {
-      "speed_ms": 28,
-      "payload_kg": 500
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 2000,
@@ -82213,7 +82210,27 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "Robotaxi (autonomy on production EV)",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Urban (geofenced)",
+    "passenger_capacity": 4,
+    "powertrain": "Battery electric (Hyundai IONIQ platform)",
+    "compute_platform": "Avride autonomy",
+    "operating_cities": [
+      "Dallas",
+      "Munich (planned)"
+    ],
+    "commercial_service_year": 2024,
+    "safety_driver": "Varies",
+    "remote_operations": true,
+    "os": "Avride",
+    "made_in": "USA",
+    "use_cases": [
+      "Ride-hailing (Uber)",
+      "Urban mobility"
+    ],
+    "manufacturer_history": "Autonomy team spun out of Yandex self-driving group"
   },
   {
     "id": "clevon-clevon-1-2022",
@@ -87122,22 +87139,19 @@
       "ride-hailing",
       "shanghai"
     ],
-    "fig": "🚗",
+    "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "DiDi's autonomous ride-hailing service. Shanghai operations. Integrated into DiDi app for hybrid human/robot fleet.",
+    "desc": "DiDi Autonomous Driving's robotaxi, co-developed with GAC Aion on the Aion V SUV. The first mass-produced L4 model integrates 33 sensors in a 360° blind-spot-free fusion architecture, including four Hesai AT128 lidars (1.53M points/sec, 200 m range) and 4D imaging radar. Deployed via the DiDi app in Guangzhou with Beijing road-test approval.",
     "highlights": [
       "DiDi ecosystem",
       "Shanghai operations",
       "Hybrid fleet",
       "App-integrated"
     ],
-    "perf": {
-      "speed_ms": 28,
-      "payload_kg": 500
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 2000,
@@ -87147,7 +87161,28 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "Robotaxi (DiDi Autonomous Driving)",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Urban (China)",
+    "passenger_capacity": 4,
+    "powertrain": "Battery electric (GAC Aion V SUV)",
+    "lidar_count": 4,
+    "lidar_brand": "Hesai AT128",
+    "compute_platform": "DiDi full-stack AD (33-sensor fusion)",
+    "operating_cities": [
+      "Guangzhou",
+      "Beijing"
+    ],
+    "commercial_service_year": 2025,
+    "safety_driver": "No",
+    "remote_operations": true,
+    "os": "DiDi AD",
+    "made_in": "China",
+    "use_cases": [
+      "Ride-hailing",
+      "Urban mobility"
+    ]
   },
   {
     "id": "saic-iv5-2024",
@@ -87162,22 +87197,19 @@
       "shanghai",
       "commercial"
     ],
-    "fig": "🚗",
+    "fig": "🤖",
     "img": "",
-    "score": 83,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "SAIC's autonomous taxi platform. Shanghai commercial operations.",
+    "desc": "SAIC Mobility's robotaxi, built on SAIC's IM Motors EV platform and powered by Momenta's MSD Level 4 autonomy stack. Public trials run in Shanghai's Jiading district and Suzhou via the SAIC Mobility app, billed as the world's first pre-installed mass-produced unmanned robotaxi program with IM Motors.",
     "highlights": [
       "SAIC ecosystem",
       "Shanghai commercial",
       "Chinese OEM",
       "Commercial deployment"
     ],
-    "perf": {
-      "speed_ms": 28,
-      "payload_kg": 500
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 2000,
@@ -87187,7 +87219,26 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "Robotaxi (SAIC Mobility + Momenta)",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Urban (China)",
+    "passenger_capacity": 4,
+    "powertrain": "Battery electric (IM Motors platform)",
+    "compute_platform": "Momenta MSD (L4)",
+    "operating_cities": [
+      "Shanghai (Jiading)",
+      "Suzhou"
+    ],
+    "commercial_service_year": 2024,
+    "safety_driver": "Pilot (transitioning)",
+    "remote_operations": true,
+    "os": "Momenta MSD",
+    "made_in": "China",
+    "use_cases": [
+      "Ride-hailing",
+      "Urban mobility"
+    ]
   },
   {
     "id": "motional-ioniq-5-2023",
@@ -87298,7 +87349,7 @@
     "name": "Momenta MSD",
     "brand": "Momenta",
     "cat": "Autonomous Vehicles",
-    "sub": "Self-Driving Platform",
+    "sub": "Autonomy System",
     "tags": [
       "self-driving",
       "china",
@@ -87306,22 +87357,19 @@
       "mercedes",
       "stellantis"
     ],
-    "fig": "🚗",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/6yWG1Gr71G1QKvQM1VoJ/image.jpg",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Chinese AI self-driving platform. Licensed to Mercedes, Stellantis, Toyota, GM. Robotaxi pilots.",
+    "desc": "Momenta's MSD (Momenta Self Driving) is a scalable Level 4 autonomy stack using a data-driven 'flywheel' approach. Deployed on SAIC IM Motors robotaxis in Shanghai and Suzhou (~60-vehicle pilot) and licensed to automakers including Toyota, Mercedes-Benz, GM, BYD, SAIC and GAC; Uber partnership targets European robotaxi launch in 2026.",
     "highlights": [
       "OEM-licensed platform",
       "Mercedes/Stellantis/Toyota",
       "Software-first",
       "Multi-OEM"
     ],
-    "perf": {
-      "speed_ms": 28,
-      "payload_kg": 500
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 2000,
@@ -87331,7 +87379,24 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "L4 autonomous-driving stack (vehicle-agnostic)",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Urban",
+    "compute_platform": "Momenta MSD (data-driven \"flywheel\")",
+    "operating_cities": [
+      "Shanghai",
+      "Suzhou",
+      "Europe (planned 2026)"
+    ],
+    "commercial_service_year": 2024,
+    "remote_operations": true,
+    "os": "Momenta MSD",
+    "made_in": "China",
+    "use_cases": [
+      "Robotaxi autonomy",
+      "Mass-production assisted driving"
+    ]
   },
   {
     "id": "verne-2-seater-2026",
@@ -87348,22 +87413,19 @@
       "2026-launch",
       "purpose-built"
     ],
-    "fig": "🚗",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/e21HrK1KMIV90jvnnthM/image.jpg",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Rimac-backed European robotaxi. Purpose-built 2-seat design. Zagreb launch 2026. Croatia/Europe focus.",
+    "desc": "Verne is a Croatian robotaxi company spun out of hypercar maker Rimac, operating Europe's first commercial robotaxi service in Zagreb. The purpose-built two-seater uses Pony.ai's Level 4 autonomous driving technology and is an Uber platform partner.",
     "highlights": [
       "Rimac-backed",
       "2-seat purpose-built",
       "Zagreb launch 2026",
       "Croatian engineering"
     ],
-    "perf": {
-      "speed_ms": 28,
-      "payload_kg": 200
-    },
+    "perf": false,
     "year": 2026,
     "status": "Active",
     "weight_kg": 1200,
@@ -87380,7 +87442,25 @@
       "https://cdn.motor1.com/images/mgl/P30ROA/s1/verne-robotaxi-das-heck.jpg",
       "https://cdn.motor1.com/images/mgl/1ZKl39/s1/verne-robotaxi-das-interieur.jpg",
       "https://cdn.motor1.com/images/mgl/0eKboj/s1/verne-robotaxi-das-interieur.jpg"
-    ]
+    ],
+    "vehicle_class": "Purpose-built 2-seat robotaxi",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Urban (geofenced)",
+    "passenger_capacity": 2,
+    "powertrain": "Battery electric",
+    "compute_platform": "Pony.ai L4 autonomy",
+    "operating_cities": [
+      "Zagreb (Europe first commercial robotaxi)"
+    ],
+    "commercial_service_year": 2026,
+    "safety_driver": "No",
+    "remote_operations": true,
+    "os": "Pony.ai",
+    "made_in": "Croatia",
+    "use_cases": [
+      "Ride-hailing (Uber)"
+    ],
+    "manufacturer_history": "Spun out of Rimac (electric hypercar maker)"
   },
   {
     "id": "may-mobility-shuttle-2020",
@@ -87395,12 +87475,12 @@
       "detroit",
       "dallas"
     ],
-    "fig": "🚐",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/7cyYSkSwukxQChquoCiJ/image.jpg",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Public transit autonomous shuttle. Level 4. Operating in 7+ US cities for fixed-route transit. Toyota partnership.",
+    "desc": "May Mobility operates Level 4 autonomous microtransit shuttles built on the Toyota Sienna Autono-MaaS minivan, using its Multi-Policy Decision Making (MPDM) AI. Deployed in cities including Arlington (TX), Grand Rapids, Sun City and Detroit, integrated with Lyft and Uber for first/last-mile public transit.",
     "highlights": [
       "Public transit",
       "Level 4",
@@ -87408,10 +87488,7 @@
       "Toyota partner",
       "Fixed-route shuttle"
     ],
-    "perf": {
-      "speed_ms": 11,
-      "payload_kg": 1500
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 2800,
@@ -87424,6 +87501,30 @@
     "cellular": "5G",
     "gallery": [
       "https://www.therobotreport.com/wp-content/uploads/2019/12/may-mobility.jpg"
+    ],
+    "vehicle_class": "Autonomous microtransit shuttle",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Low-speed fixed/flexible urban routes",
+    "passenger_capacity": 5,
+    "powertrain": "Hybrid/electric (Toyota Sienna Autono-MaaS)",
+    "top_speed_kmh": 40,
+    "compute_platform": "May Mobility MPDM (Multi-Policy Decision Making)",
+    "operating_cities": [
+      "Arlington TX",
+      "Grand Rapids MI",
+      "Sun City AZ",
+      "Detroit",
+      "Atlanta"
+    ],
+    "commercial_service_year": 2018,
+    "safety_driver": "Transitioning to driverless",
+    "remote_operations": true,
+    "os": "May Mobility",
+    "made_in": "USA",
+    "use_cases": [
+      "Microtransit",
+      "Public transit",
+      "First/last-mile"
     ]
   },
   {
@@ -87439,22 +87540,19 @@
       "jacksonville",
       "florida"
     ],
-    "fig": "🚐",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/TOXoiRa8PDXKKkhYQuSp/image.jpg",
-    "score": 82,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Autonomous shuttle operator. Operates Yutong/EZ10 shuttles for cities. Jacksonville and other Florida deployments.",
+    "desc": "Beep is a US autonomous mobility operator that designs and manages driverless, low-speed electric shuttle networks on fixed routes, with centralized fleet orchestration and remote supervision. Deployments include Lake Nona (Florida) and other planned-community and campus environments.",
     "highlights": [
       "Shuttle operator",
       "Multi-vehicle platform",
       "City partnerships",
       "Jacksonville"
     ],
-    "perf": {
-      "speed_ms": 8,
-      "payload_kg": 1200
-    },
+    "perf": false,
     "year": 2019,
     "status": "Active",
     "weight_kg": 2500,
@@ -87464,7 +87562,29 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "vehicle_class": "Low-speed autonomous shuttle (operator)",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Fixed-route, geofenced, low-speed",
+    "passenger_capacity": 10,
+    "powertrain": "Battery electric",
+    "top_speed_kmh": 40,
+    "compute_platform": "Multi-vendor (Beep AutonomOS fleet orchestration)",
+    "operating_cities": [
+      "Lake Nona FL",
+      "Orlando",
+      "Jacksonville"
+    ],
+    "commercial_service_year": 2019,
+    "safety_driver": "Attendant on board",
+    "remote_operations": true,
+    "os": "Beep AutonomOS",
+    "made_in": "USA",
+    "use_cases": [
+      "Fixed-route transit",
+      "Community shuttle",
+      "Campus mobility"
+    ]
   },
   {
     "id": "aurora-driver-2022",
@@ -88217,12 +88337,12 @@
       "custom-5nm",
       "50000-fleet"
     ],
-    "fig": "🚗",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/Mz9HBw1q80bLjfcqG3TJ/image.jpg",
-    "score": 88,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Uber's $1.25B commitment for 50,000 R2-based robotaxis across 25 cities. Level 4 in-house. Custom 5nm chip + LiDAR.",
+    "desc": "Rivian's R2-based robotaxi running an in-house Level 4 autonomy stack on Rivian's third-generation platform - a multi-modal suite of 11 cameras, 5 radars and 1 lidar powered by two custom RAP1 inference chips. Part of an Uber partnership targeting up to 50,000 autonomous vehicles across 25 cities in the US, Canada and Europe by 2031.",
     "highlights": [
       "50,000-fleet Uber deal",
       "25 cities",
@@ -88230,10 +88350,7 @@
       "LiDAR",
       "Late 2026 launch"
     ],
-    "perf": {
-      "speed_ms": 33,
-      "payload_kg": 500
-    },
+    "perf": false,
     "year": 2026,
     "status": "Active",
     "weight_kg": 2000,
@@ -88247,6 +88364,27 @@
     "gallery": [
       "https://www.rivianwave.com/img/containers/article_images/r2/rivian-r2-launch-14.webp/accd4a756245faa80fcf5d091168d073/rivian-r2-launch-14.webp",
       "https://www.rivianwave.com/img/containers/article_images/r2/rivian-r2-launch-13.webp/5dddcbc605de3ea576f97d6bd4ff2fbc/rivian-r2-launch-13.webp"
+    ],
+    "vehicle_class": "Robotaxi (R2 platform, in-house L4)",
+    "autonomy_level": "L4 (in development)",
+    "operational_design_domain": "Urban (planned)",
+    "passenger_capacity": 5,
+    "powertrain": "Battery electric (Rivian R2)",
+    "lidar_count": 1,
+    "camera_count": 11,
+    "radar_count": 5,
+    "compute_platform": "2x Rivian RAP1 inference chips (3rd-gen autonomy)",
+    "operating_cities": [
+      "Planned: US, Canada, Europe (25 cities by 2031)"
+    ],
+    "commercial_service_year": 2026,
+    "safety_driver": "TBD",
+    "remote_operations": true,
+    "os": "Rivian Autonomy",
+    "made_in": "USA",
+    "use_cases": [
+      "Ride-hailing (Uber)",
+      "Logistics"
     ]
   },
   {
@@ -88262,12 +88400,12 @@
       "20000-fleet",
       "luxury"
     ],
-    "fig": "🚗",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/uHATNPCuimAdvhI2DvPO/image.jpg",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Uber + Lucid robotaxi partnership. 20,000 units initially, potentially doubling. Luxury robotaxi tier.",
+    "desc": "A premium global robotaxi built on Lucid's software-defined EV platform with the Nuro Driver Level 4 autonomy system, created exclusively for the Uber network. Sensor suite combines high-resolution cameras, solid-state lidar and radar for 360° perception via a low-profile roof halo. Uber plans to deploy 20,000+ vehicles over six years, starting in the San Francisco Bay Area in 2026.",
     "highlights": [
       "Uber partnership",
       "20,000-fleet",
@@ -88275,10 +88413,7 @@
       "Luxury tier",
       "2026 launch"
     ],
-    "perf": {
-      "speed_ms": 33,
-      "payload_kg": 500
-    },
+    "perf": false,
     "year": 2026,
     "status": "Active",
     "weight_kg": 2200,
@@ -88292,6 +88427,25 @@
     "gallery": [
       "https://mma.prnewswire.com/media/2932529/LUCID_LUNAR_Dashboard_Rear_Quarter.jpg",
       "https://mma.prnewswire.com/media/2932530/LUCID_LUNAR_Dashboard.jpg"
+    ],
+    "vehicle_class": "Robotaxi (Lucid platform + Nuro Driver)",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Urban, 360° perception",
+    "passenger_capacity": 5,
+    "powertrain": "Battery electric (Lucid)",
+    "range_km": 724,
+    "lidar_brand": "Solid-state",
+    "compute_platform": "Nuro Driver (L4)",
+    "operating_cities": [
+      "San Francisco Bay Area (2026 launch)"
+    ],
+    "commercial_service_year": 2026,
+    "safety_driver": "No",
+    "remote_operations": true,
+    "os": "Nuro Driver",
+    "made_in": "USA (Arizona)",
+    "use_cases": [
+      "Ride-hailing (Uber)"
     ]
   },
   {
