@@ -91767,25 +91767,22 @@
       "search-rescue",
       "radiation-mapping"
     ],
-    "fig": "🚨",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/02/hlK4o86zNhYH3dfPhHLN/image.jpg",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Famous Fukushima robot. Mapped radiation distribution across multiple floors after PackBot. Japanese USAR pioneer.",
+    "desc": "Quince, developed by the Chiba Institute of Technology (with Tohoku University and others), is a tracked urban search-and-rescue robot with four articulated sub-track flippers for climbing rubble and stairs. It became known for entering the Fukushima Daiichi reactor buildings after the 2011 disaster to capture video and radiation/dosimetry data in areas too dangerous for humans.",
     "highlights": [
       "Fukushima famous",
       "Multi-floor radiation",
       "Japanese USAR",
       "Tracked design"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 20
-    },
+    "perf": false,
     "year": 2011,
     "status": "Active",
-    "weight_kg": 26,
+    "weight_kg": 27,
     "battery_life": 300,
     "origin": "Japan",
     "cameras": 4,
@@ -91793,6 +91790,34 @@
     "bluetooth": true,
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/02/XnZzZtfIOhhXvlP0Aim3/image.jpg"
+    ],
+    "speed_ms": 0.45,
+    "made_in": "Japan",
+    "robot_form": "Tracked USAR robot with four sub-track flippers",
+    "mission_types": [
+      "Urban search & rescue",
+      "Nuclear / radiation survey",
+      "Confined-space reconnaissance"
+    ],
+    "intended_users": [
+      "USAR teams",
+      "Nuclear-disaster responders"
+    ],
+    "cbrn_sensors": [
+      "Radiation dosimeter",
+      "Temperature / humidity",
+      "CO2"
+    ],
+    "thermal_camera": true,
+    "two_way_audio": true,
+    "comms": [
+      "Tethered",
+      "RF"
+    ],
+    "use_cases": [
+      "Disaster-site reconnaissance",
+      "Radiation mapping",
+      "Stair & rubble traversal"
     ]
   },
   {
@@ -92155,26 +92180,23 @@
       "military",
       "famous"
     ],
-    "fig": "🚨",
+    "fig": "🤖",
     "img": "https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Image-1-L.jpg",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 15000,
-    "desc": "Throwable tactical reconnaissance robot. Survives 15-ft drops. Police SWAT + military. Real-time video.",
+    "desc": "iRobot's (Endeavor / Teledyne FLIR) 110 FirstLook is a rugged 2.26 kg throwable tracked micro-UGV with four 8x-zoom cameras and flippers for stairs and obstacles. It survives ~5 m drops onto concrete, runs 6+ hours, forms digital mesh networks to relay comms, and accepts a small manipulator plus thermal, HazMat and CBRN payloads for reconnaissance, building clearing and EOD support.",
     "highlights": [
       "Throwable",
       "15-ft drop survival",
       "SWAT use",
       "Real-time video"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 1
-    },
+    "perf": false,
     "year": 2014,
     "status": "Active",
-    "weight_kg": 2.4,
-    "battery_life": 300,
+    "weight_kg": 2.26,
+    "battery_life": 360,
     "origin": "USA",
     "cameras": 4,
     "wifi": true,
@@ -92182,6 +92204,33 @@
     "gallery": [
       "https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Image-2-L.jpg",
       "https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/Image-3-L.jpg"
+    ],
+    "height_mm": 102,
+    "width_mm": 229,
+    "depth_mm": 254,
+    "speed_ms": 1.5,
+    "made_in": "USA",
+    "robot_form": "Tracked throwable micro-UGV (flippers)",
+    "throwable": true,
+    "survives_fall_m": 4.9,
+    "low_light_camera": true,
+    "mission_types": [
+      "Reconnaissance",
+      "Building & route clearing",
+      "EOD support",
+      "CBRN detection"
+    ],
+    "intended_users": [
+      "Infantry & special operations",
+      "First responders"
+    ],
+    "comms": [
+      "RF mesh"
+    ],
+    "use_cases": [
+      "Throwable reconnaissance",
+      "Confined-space inspection",
+      "Hazard detection"
     ]
   },
   {
@@ -92198,34 +92247,60 @@
       "military",
       "ir-camera"
     ],
-    "fig": "🚨",
+    "fig": "🤖",
     "img": "https://reconrobotics.com/wp-content/uploads/2019/02/Throwbot2_Robot_No_Key.jpg",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 12000,
-    "desc": "Ultra-compact throwable robot. <2 lb. IR + visual camera. Police/military reconnaissance.",
+    "desc": "ReconRobotics' Throwbot 2 is a 0.6 kg throwable two-wheeled micro-robot that operators can hurl up to 36 m into a hazardous space for instant video and audio reconnaissance. It survives repeated 9 m drops onto concrete, has an auto-activating infrared camera for total darkness, is IP67-rated, and transmits up to 45 m through walls. Over 5,500 are deployed with the FBI, ATF, military and police worldwide.",
     "highlights": [
       "Sub-2 lb",
       "Throwable",
       "IR + visual",
       "Police/military"
     ],
-    "perf": {
-      "speed_ms": 0.7,
-      "payload_kg": 0.5
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
-    "weight_kg": 0.7,
-    "battery_life": 120,
+    "weight_kg": 0.6,
+    "battery_life": 160,
     "origin": "USA",
-    "cameras": 2,
+    "cameras": 1,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
       "https://reconrobotics.com/wp-content/uploads/2019/02/Throwbot2_Robot_With_OCU.jpg",
       "https://reconrobotics.com/wp-content/uploads/2019/02/Throwbot2_Robot_With_OCU.jpg",
       "https://reconrobotics.com/wp-content/uploads/2019/02/Throwbot2_Robot_Back_No_Tail.jpg"
+    ],
+    "height_mm": 114,
+    "width_mm": 201,
+    "depth_mm": 211,
+    "made_in": "USA",
+    "robot_form": "Two-wheel throwable micro-robot",
+    "throwable": true,
+    "throw_distance_m": 36,
+    "survives_fall_m": 9,
+    "low_light_camera": true,
+    "two_way_audio": false,
+    "ip_rating": "IP67",
+    "mission_types": [
+      "Tactical reconnaissance",
+      "Hostage / barricade situations",
+      "Room & building clearing"
+    ],
+    "intended_users": [
+      "SWAT / law enforcement",
+      "Military",
+      "Search & rescue"
+    ],
+    "comms": [
+      "RF"
+    ],
+    "comms_range_m": 45,
+    "use_cases": [
+      "Throw-and-look reconnaissance",
+      "Covert situational awareness"
     ]
   },
   {
@@ -92295,22 +92370,19 @@
       "japanese",
       "mobile-platform"
     ],
-    "fig": "🚨",
+    "fig": "🤖",
     "img": "https://www.tri.global/sites/default/files/styles/banner/public/2022-03/Toyota_Introduces_TRI_s_T-TR1__a_Virtual_Mobility_Tele-Presence_Robot.png?itok=DXY8Quzw",
-    "score": 82,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Toyota's telepresence disaster response platform. Japanese rescue tech.",
+    "desc": "Note: this entry is labeled as a search-and-rescue robot, but Toyota's T-TR1 is actually a telepresence robot - a tall mobile display unveiled by Toyota in 2019 to let a remote person have a virtual presence in another location. It is not a disaster-response/USAR platform; the category and specs for this record should be reviewed and likely moved to Telepresence.",
     "highlights": [
       "Telepresence",
       "Toyota research",
       "Japanese rescue",
       "Mobile platform"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 85,
@@ -92318,7 +92390,8 @@
     "origin": "Japan",
     "cameras": 4,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "made_in": "Japan"
   },
   {
     "id": "raptor-aerial-fire-rescue-2024",
@@ -92472,28 +92545,25 @@
       "compact",
       "famous"
     ],
-    "fig": "🚨",
+    "fig": "🤖",
     "img": "https://defense.flir.com/globalassets/defense/images/product-lync-images/sugv%CE%B3%C3%A4%C3%B3-310_thumb.png",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 50000,
-    "desc": "Small UGV. Army standard for tactical recon/EOD. Backpackable.",
+    "desc": "The 310 SUGV (Small Unmanned Ground Vehicle) from iRobot/Endeavor is a man-portable tracked robot with a manipulator arm and multiple cameras. Lightweight enough to carry in a pack, it performs dismounted reconnaissance, building clearing, remote inspection and CBRN detection for military and first-responder teams.",
     "highlights": [
       "Backpackable",
       "Army standard",
       "Tactical recon",
       "Compact"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 5
-    },
+    "perf": false,
     "year": 2019,
     "status": "Active",
     "weight_kg": 13,
     "battery_life": 300,
     "origin": "USA",
-    "cameras": 3,
+    "cameras": 4,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
@@ -92501,6 +92571,29 @@
       "https://esdh.com.au/wp-content/uploads/2025/08/sugv-upoint.jpg",
       "https://esdh.com.au/wp-content/uploads/2025/08/sugv-tunnel.jpg",
       "https://esdh.com.au/wp-content/uploads/2025/08/sugv-desert.jpg"
+    ],
+    "speed_ms": 1.7,
+    "made_in": "USA",
+    "robot_form": "Man-portable tracked UGV",
+    "manipulator_arms": 1,
+    "mission_types": [
+      "Reconnaissance",
+      "EOD support",
+      "CBRN detection",
+      "Building clearing"
+    ],
+    "intended_users": [
+      "Military",
+      "First responders",
+      "Police"
+    ],
+    "comms": [
+      "RF"
+    ],
+    "use_cases": [
+      "Dismounted reconnaissance",
+      "Remote inspection",
+      "Hazard handling"
     ]
   },
   {
