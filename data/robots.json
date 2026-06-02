@@ -61051,44 +61051,52 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Fully customizable and modular autonomous delivery robot with interchangeable cabins, 4WD system with zero-radius turns, contextual AI navigation, multiple safety sensors, 3D LIDAR, cameras, and accessibility features for indoor/outdoor operation",
+    "desc": "Ottonomy's Ottobot 2.0 is a fully autonomous indoor/outdoor delivery robot using the company's Contextual AI navigation. With multiple compartmentalized delivery bays, it operates in airports, malls and retail - including Cincinnati/NKY and Rome Fiumicino airports - handling both indoor and curbside delivery.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "height_mm": 1600,
     "width_mm": 800,
     "depth_mm": 1200,
     "weight_kg": 180,
     "battery_life": "8-10 hours",
-    "speed_ms": 1.5,
-    "payload_kg": 90,
+    "speed_ms": 1.6,
+    "payload_kg": 70,
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G/5G",
+    "cellular": "4G",
     "ros": true,
-    "cameras": "Multiple HD cameras for 360-degree vision and obstacle detection",
+    "cameras": 4,
     "use_cases": [
-      "Last-mile delivery",
-      "Campus delivery",
-      "Food delivery",
-      "Package delivery",
-      "Retail delivery"
+      "Airport delivery",
+      "Retail & curbside delivery",
+      "Indoor/outdoor delivery"
     ],
     "manufacturer_url": "https://www.ottonomy.io",
     "gallery": [
       "https://www.robotics247.com/images/legacy_images/Ott_2_Dual-_Cabin.jpg",
       "https://www.therobotreport.com/wp-content/uploads/2022/08/ottonomy-delivery-featured.jpg"
+    ],
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "payload": 70,
+    "delivery_bays": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "multi_floor": false,
+    "os": "Ottonomy",
+    "compute_platform": "Ottonomy Contextual AI",
+    "made_in": "USA / India",
+    "fleet_management": true,
+    "pilot_customers": [
+      "Cincinnati/NKY Airport (CVG)",
+      "Rome Fiumicino Airport (FCO)"
     ]
   },
   {
@@ -61108,42 +61116,35 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "First fully autonomous unattended delivery robot with automatic package dispenser, sliding delivery hatch, contactless drop-off capability, locker integration, and autonomous return processing. Dimensions: 1110mm x 720mm x 1350mm, weight ~100kg",
+    "desc": "The Ottobot Yeti is Ottonomy's multi-surface autonomous delivery robot, engineered to move seamlessly across indoor floors and outdoor terrain. It uses Contextual AI navigation and modular compartments for airport, retail and curbside delivery.",
     "highlights": [
       "Airport deployments",
       "Multi-surface",
       "Cincinnati airport",
       "Contextual AI"
     ],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "height_mm": 1350,
     "width_mm": 720,
     "depth_mm": 1110,
     "weight_kg": 100,
     "battery_life": "8 hours",
-    "speed_ms": 2,
+    "speed_ms": 1.6,
     "payload_kg": 70,
-    "cameras": "Multiple cameras for 360-degree vision and navigation",
+    "cameras": 4,
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "wifi": true,
-    "cellular": "4G/5G",
+    "cellular": "4G",
     "use_cases": [
-      "Last-mile delivery",
-      "Food delivery",
-      "Package delivery",
-      "Campus delivery",
-      "Contactless delivery"
+      "Multi-surface delivery",
+      "Airport & retail delivery",
+      "Curbside handoff"
     ],
     "manufacturer_url": "https://www.ottonomy.io",
     "ip_rating": "IPX5",
@@ -61151,7 +61152,17 @@
     "gallery": [
       "https://www.therobotreport.com/wp-content/uploads/2023/01/ottonomy-yeti-featured-2.jpg",
       "https://www.therobotreport.com/wp-content/uploads/2023/01/ottonomy-yeti-drop.jpg"
-    ]
+    ],
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "payload": 70,
+    "delivery_bays": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Ottonomy",
+    "compute_platform": "Ottonomy Contextual AI",
+    "made_in": "USA / India",
+    "fleet_management": true
   },
   {
     "id": "kiwibot-kiwibot-leap",
@@ -81716,32 +81727,46 @@
       "grocery",
       "kroger-pilot"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Nuro's first road-going autonomous delivery vehicle. Pioneered driverless grocery delivery. Kroger pilot.",
+    "desc": "Nuro's R1 was the company's first-generation passengerless autonomous delivery vehicle, launched in Scottsdale, Arizona in December 2018 with Kroger - the first-ever unmanned delivery service for the general public. A compact, electric, road-going pod with no driver or passengers, built purely to carry goods.",
     "highlights": [
       "Road-going",
       "No passengers",
       "Kroger pilot",
       "Driverless grocery"
     ],
-    "perf": {
-      "speed_ms": 11,
-      "payload_kg": 113
-    },
+    "perf": false,
     "year": 2018,
-    "status": "Discontinued",
+    "status": "Active",
     "weight_kg": 680,
     "battery_life": 480,
     "origin": "USA",
-    "cameras": 4,
+    "cameras": 12,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "top_speed_kmh": 40,
+    "powertrain": "Battery electric",
+    "imu": true,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Nuro",
+    "made_in": "USA",
+    "fleet_management": true,
+    "use_cases": [
+      "Grocery delivery",
+      "Local goods delivery"
+    ],
+    "pilot_customers": [
+      "Kroger"
+    ]
   },
   {
     "id": "nuro-r2-2020",
@@ -81755,32 +81780,57 @@
       "domino's",
       "walmart"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Production Nuro R2 — first NHTSA-exempted autonomous delivery vehicle. Domino's pizza, Walmart, FedEx pilots.",
+    "desc": "The Nuro R2 was the first vehicle granted a USDOT/NHTSA self-driving exemption (no mirrors, pedals or steering wheel), debuting in Houston in 2020. A narrow, passengerless electric delivery pod (1150 kg, ~190 kg payload), it carries food, groceries and parcels at up to 40 km/h with a 360-degree suite of 12 cameras, top lidar plus 14 side lidars, dual IMUs and ultrasonics, with heating/cooling cargo bays.",
     "highlights": [
       "NHTSA exemption",
       "Domino's pilot",
       "Walmart partner",
       "No driver pod"
     ],
-    "perf": {
-      "speed_ms": 11,
-      "payload_kg": 190
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
-    "weight_kg": 680,
+    "weight_kg": 1150,
     "battery_life": 480,
     "origin": "USA",
-    "cameras": 8,
+    "cameras": 12,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "4G",
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "payload_kg": 190,
+    "payload": 190,
+    "cargo_volume_m3": 0.63,
+    "height_mm": 1860,
+    "width_mm": 1100,
+    "depth_mm": 2740,
+    "top_speed_kmh": 40,
+    "powertrain": "Battery electric",
+    "imu": true,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Nuro",
+    "compute_platform": "Nuro Driver",
+    "made_in": "USA",
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Grocery delivery",
+      "Pharmacy & parcel delivery"
+    ],
+    "pilot_customers": [
+      "Kroger",
+      "Domino’s",
+      "CVS",
+      "FedEx"
+    ]
   },
   {
     "id": "nuro-r3-2022",
@@ -81794,22 +81844,19 @@
       "third-gen",
       "uber-eats"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 90,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "3rd-gen Nuro with BYD partnership for manufacturing. 10-year Uber Eats deal. Built for commercial scale.",
+    "desc": "Nuro's third-generation vehicle (2022) is its production-ready, passengerless delivery pod. About 20% narrower than an average car, it runs up to 72 km/h with double the R2's cargo - dual ~27 cu ft compartments holding ~227 kg / 24 grocery bags with modular heating and cooling. A pedestrian-protecting external front airbag is a world-first safety feature. Built for mass production with BYD.",
     "highlights": [
       "BYD manufacturing",
       "10-yr Uber Eats deal",
       "Built for scale",
       "Third-gen autonomy"
     ],
-    "perf": {
-      "speed_ms": 11,
-      "payload_kg": 225
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 850,
@@ -81819,7 +81866,26 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "payload_kg": 227,
+    "payload": 227,
+    "cargo_volume_m3": 1.53,
+    "top_speed_kmh": 72,
+    "powertrain": "Battery electric",
+    "imu": true,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Nuro",
+    "compute_platform": "Nuro Driver",
+    "made_in": "USA",
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Grocery delivery",
+      "Suburban last-mile"
+    ]
   },
   {
     "id": "serve-robotics-gen1-2021",
@@ -82243,32 +82309,46 @@
       "grocery",
       "ann-arbor"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 82,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Three-wheel delivery robot that uses BIKE LANES, not sidewalks. Weather-tolerant. Originally Ann Arbor / Austin.",
+    "desc": "Refraction AI's REV-1 is a three-wheeled delivery robot designed for bike lanes rather than sidewalks or full roads, giving it a speed-and-flexibility advantage. Running up to ~24 km/h with a camera-and-radar suite (no lidar) and remote supervision, it was piloted for grocery and meal delivery in Ann Arbor and Austin.",
     "highlights": [
       "Bike-lane operation",
       "Three-wheel design",
       "Weather-tolerant",
       "Faster than sidewalk bots"
     ],
-    "perf": {
-      "speed_ms": 6.7,
-      "payload_kg": 45
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 63,
     "battery_life": 480,
     "ip_rating": "IPX5",
     "origin": "USA",
-    "cameras": 6,
+    "cameras": 12,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "autonomy_level": "L4 (teleoperation-supervised)",
+    "autonomous": true,
+    "payload_kg": 45,
+    "payload": 45,
+    "top_speed_kmh": 24,
+    "wheels": 3,
+    "powertrain": "Battery electric",
+    "lidar": false,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Refraction",
+    "made_in": "USA",
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Grocery delivery"
+    ]
   },
   {
     "id": "tinymile-tinymile-2022",
@@ -82436,38 +82516,50 @@
       "estonian",
       "autonomous-vehicle"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://clevon.com/wp-content/uploads/2022/10/CLEVON-1-CargoBox-application-2.webp",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Estonian autonomous road-going delivery vehicle. European focus. Self-driving last-mile.",
+    "desc": "Clevon 1 (from Estonia's Clevon, formerly Cleveron Mobility) is a compact, road-legal autonomous delivery carrier. Electric and passengerless, it carries modular cargo at up to ~50 km/h under L4 autonomy with teleoperation oversight, targeting grocery and retail last-mile.",
     "highlights": [
       "Estonian-made",
       "Road-going",
       "European focus",
       "Driverless"
     ],
-    "perf": {
-      "speed_ms": 6.9,
-      "payload_kg": 200
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 400,
     "battery_life": 480,
     "origin": "Estonia",
-    "cameras": 8,
+    "cameras": 6,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G",
+    "cellular": "4G",
     "gallery": [
       "https://clevon.com/wp-content/uploads/2022/10/CLEVON-1-without-application-2.webp",
       "https://clevon.com/wp-content/uploads/2022/10/CLEVON-1-flat-bed-application-2.webp",
       "https://clevon.com/wp-content/uploads/2022/10/CLEVON-1-Truck-bed-application-2.webp",
       "https://clevon.com/wp-content/uploads/2022/10/CLEVON-1-Recycle-bin-application-2.webp",
       "https://clevon.com/wp-content/uploads/2022/10/CLEVON-1-Speed-camera-application-2.webp"
+    ],
+    "autonomy_level": "L4 (teleoperation-supervised)",
+    "autonomous": true,
+    "payload_kg": 100,
+    "payload": 100,
+    "top_speed_kmh": 50,
+    "powertrain": "Battery electric",
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Clevon",
+    "made_in": "Estonia",
+    "fleet_management": true,
+    "use_cases": [
+      "Grocery delivery",
+      "Retail & parcel delivery"
     ]
   },
   {
@@ -82475,7 +82567,7 @@
     "name": "Meituan RB1",
     "brand": "Meituan",
     "cat": "Delivery",
-    "sub": "Sidewalk Delivery Robot",
+    "sub": "Road Delivery Robot",
     "tags": [
       "sidewalk",
       "china",
@@ -82485,12 +82577,12 @@
       "delivery",
       "food"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Meituan's sidewalk delivery robot. Commercial operations in Shenzhen, Beijing for food delivery.",
+    "desc": "Meituan's RB1 is the autonomous delivery vehicle of China's largest food-delivery platform. An electric, passengerless L4 pod with lidar-and-camera perception, it handles food and community grocery delivery in Chinese cities, integrated directly into Meituan's order network.",
     "highlights": [
       "Shenzhen/Beijing",
       "Food delivery",
@@ -82498,10 +82590,7 @@
       "Commercial operations",
       "Commercial routes"
     ],
-    "perf": {
-      "speed_ms": 1.8,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 40,
@@ -82511,14 +82600,28 @@
     "cameras": 8,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "4G",
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "top_speed_kmh": 20,
+    "powertrain": "Battery electric",
+    "lidar": true,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Meituan",
+    "made_in": "China",
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Grocery & community delivery"
+    ]
   },
   {
     "id": "jdcom-jd-x-2020",
     "name": "JD X",
     "brand": "JD.com",
     "cat": "Delivery",
-    "sub": "Sidewalk Delivery Robot",
+    "sub": "Road Delivery Robot",
     "tags": [
       "sidewalk",
       "china",
@@ -82526,32 +82629,42 @@
       "ecommerce",
       "multi-compartment"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 84,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "JD.com's autonomous delivery vehicle. Multi-compartment for multiple parcels. Operating in Chinese cities.",
+    "desc": "JD.com's autonomous delivery robot (from its X division / JD Logistics) is an electric, passengerless L4 vehicle for last-mile e-commerce parcel delivery. Lidar-and-camera guided, it carries multiple lockered parcels to neighbourhoods and was among the first deployed at scale in China, including during the COVID period in Wuhan.",
     "highlights": [
       "Multi-compartment",
       "Level 4 autonomy",
       "JD.com ecosystem",
       "Chinese cities"
     ],
-    "perf": {
-      "speed_ms": 4.2,
-      "payload_kg": 100
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 200,
     "battery_life": 600,
     "origin": "China",
-    "cameras": 8,
+    "cameras": 6,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "4G",
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "top_speed_kmh": 15,
+    "powertrain": "Battery electric",
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "JD Logistics",
+    "made_in": "China",
+    "fleet_management": true,
+    "use_cases": [
+      "Parcel & e-commerce last-mile",
+      "Community delivery"
+    ]
   },
   {
     "id": "alibaba-cainiao-xiaomanlv-2020",
@@ -82566,35 +82679,46 @@
       "e-commerce",
       "high-volume"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://www.red-dot.org/fileadmin/user_upload/projects_pim/2021/PD/35-04346-2021-10.jpg",
-    "score": 85,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Alibaba Cainiao's sidewalk delivery robot. 'Little Donkey' model. High-volume Chinese e-commerce delivery.",
+    "desc": "Cainiao's Xiaomanlv ('Little Donkey') is Alibaba's L4 autonomous last-mile delivery robot, developed with Alibaba's DAMO Academy. Carrying dozens of parcels per trip (around 100 km of routes per charge), it serves campuses and residential communities across China and has delivered tens of millions of packages.",
     "highlights": [
       "Alibaba ecosystem",
       "High volume",
       "Level 4",
       "Chinese delivery"
     ],
-    "perf": {
-      "speed_ms": 4.2,
-      "payload_kg": 100
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 120,
     "battery_life": 540,
     "origin": "China",
-    "cameras": 8,
+    "cameras": 6,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G",
+    "cellular": "4G",
     "gallery": [
       "https://img.yicaiglobal.com/src/image/2020/09/7977387173609472.jpg",
       "https://www.red-dot.org/index.php?f=187902&token=d9f0ba5f7034eebd46042909c2e80dd92dc4f650&eID=tx_solr_image&size=large&usage=slider"
+    ],
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "top_speed_kmh": 15,
+    "powertrain": "Battery electric",
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Cainiao",
+    "compute_platform": "Alibaba DAMO Academy autonomy",
+    "made_in": "China",
+    "fleet_management": true,
+    "use_cases": [
+      "E-commerce parcel delivery",
+      "Campus & community delivery"
     ]
   },
   {
@@ -83381,33 +83505,46 @@
       "contextual-ai",
       "2024-launch"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Yeti 2.0 — improved Ottonomy delivery bot. Indoor + outdoor. Cincinnati airport ongoing deployment.",
+    "desc": "Yeti 2.0 (2024) is the next generation of Ottonomy's multi-surface delivery robot, upgrading its Contextual AI navigation and sensing for more robust autonomous indoor/outdoor delivery across airports and retail.",
     "highlights": [
       "Indoor + outdoor",
       "Improved sensors",
       "Cincinnati ongoing",
       "Contextual AI"
     ],
-    "perf": {
-      "speed_ms": 1.6,
-      "payload_kg": 45
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 58,
     "battery_life": 540,
     "ip_rating": "IPX5",
     "origin": "USA",
-    "cameras": 8,
+    "cameras": 4,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "speed_ms": 1.6,
+    "payload_kg": 70,
+    "payload": 70,
+    "delivery_bays": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Ottonomy",
+    "compute_platform": "Ottonomy Contextual AI 2.0",
+    "made_in": "USA / India",
+    "fleet_management": true,
+    "use_cases": [
+      "Multi-surface delivery",
+      "Airport & retail delivery"
+    ]
   },
   {
     "id": "orionstar-robocoffee-2021",
@@ -83781,32 +83918,41 @@
       "yiqing",
       "commercial"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 83,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Chinese autonomous road delivery vehicle. Commercial operations in Shenzhen.",
+    "desc": "Unity Drive Innovation's UDA is an L4 autonomous electric delivery/logistics vehicle from the Shenzhen-based developer, built for unmanned urban distribution and parcel delivery with lidar-and-camera perception.",
     "highlights": [
       "Shenzhen operations",
       "Road-going",
       "Chinese",
       "Yiqing-backed"
     ],
-    "perf": {
-      "speed_ms": 4.2,
-      "payload_kg": 200
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 300,
     "battery_life": 600,
     "origin": "China",
-    "cameras": 8,
+    "cameras": 6,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "4G",
+    "autonomy_level": "L4",
+    "autonomous": true,
+    "powertrain": "Battery electric",
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Unity Drive",
+    "made_in": "China",
+    "fleet_management": true,
+    "use_cases": [
+      "Logistics & parcel delivery",
+      "Unmanned urban distribution"
+    ]
   },
   {
     "id": "asylon-dronesentry-2020",
@@ -83820,32 +83966,41 @@
       "industrial-security",
       "docked"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 84,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Docked autonomous patrol + light delivery for industrial/critical infrastructure security.",
+    "desc": "Asylon's DroneSentry is an autonomous robotic perimeter-security system pairing self-charging security drones (DroneCore) with ground robots for automated patrol and monitoring of large sites. Its focus is robotic physical security rather than consumer delivery, though it shares the autonomous-fleet and docking technology of delivery platforms.",
     "highlights": [
       "Docked operation",
       "Industrial security",
       "Perimeter patrol",
       "Multi-function"
     ],
-    "perf": {
-      "speed_ms": 2.5,
-      "payload_kg": 5
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 40,
     "battery_life": 480,
     "origin": "USA",
-    "cameras": 4,
+    "cameras": 6,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "4G",
+    "autonomy_level": "L4 (autonomous patrol)",
+    "autonomous": true,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Asylon",
+    "made_in": "USA",
+    "fleet_management": true,
+    "use_cases": [
+      "Perimeter security",
+      "Automated drone patrol",
+      "Site monitoring"
+    ]
   },
   {
     "id": "dji-mini-2-2020",
