@@ -50704,7 +50704,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "12-ton tracked robotic combat vehicle designed for mechanized unit support. Can mount cannons up to 50mm and is airdroppable. Features AI-enabled autonomous functions.",
+    "desc": "Milrem's Type-X is a 12-tonne tracked robotic combat vehicle (RCV) that can mount up to a 50 mm autocannon plus a 7.62 mm machine gun, with STANAG 4569 Level 4 armour. Hybrid-electric and capable of 80 km/h, it is designed to fight alongside crewed armour as an expendable wingman carrying ~4.1 tonnes of payload.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50714,24 +50714,42 @@
     },
     "year": 2019,
     "origin": "Estonia",
-    "status": "In development",
-    "width_mm": 2800,
+    "status": "Active",
+    "width_mm": 2900,
     "depth_mm": 6000,
     "weight_kg": 12000,
     "speed_ms": 22.2,
-    "payload_kg": 3000,
+    "payload_kg": 4100,
     "lidar": true,
     "imu": true,
     "cameras": "Multiple electro-optical and thermal imaging cameras",
     "depth_sensing": true,
     "use_cases": [
-      "Military reconnaissance",
-      "Combat support",
-      "Border patrol",
+      "Armoured fire support",
       "Force protection",
-      "Autonomous logistics"
+      "Breach & assault support"
     ],
-    "manufacturer_url": "https://milremrobotics.com/"
+    "manufacturer_url": "https://milremrobotics.com/",
+    "made_in": "Estonia",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "payload": 4100,
+    "top_speed_kmh": 80,
+    "height_mm": 2200,
+    "ground_clearance_mm": 500,
+    "role": [
+      "Robotic combat vehicle",
+      "Direct fire support"
+    ],
+    "autonomy_level": 3,
+    "blast_rating": "STANAG 4569 L4 (KE) / L1 (mine)",
+    "communication_range_km": 5,
+    "customers": [
+      "Development / trials (multiple armies)"
+    ]
   },
   {
     "id": "milrem-robotics-themis-support",
@@ -50745,7 +50763,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Support variant for casualty evacuation (CASEVAC) and logistics operations. Features Starlink satellite communication for beyond line of sight control.",
+    "desc": "The THeMIS Support configuration adapts Milrem's tracked UGV for combat-support roles - mounting remote weapon stations, ISR sensors or mission payloads on the modular 1,200 kg platform to extend infantry capability while keeping soldiers at a safer standoff.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50755,14 +50773,14 @@
     },
     "year": 2014,
     "origin": "Estonia",
-    "status": "Released",
+    "status": "Active",
     "released": "2014",
     "height_mm": 800,
     "width_mm": 2300,
     "depth_mm": 1200,
-    "weight_kg": 750,
+    "weight_kg": 1630,
     "speed_ms": 6.1,
-    "payload_kg": 750,
+    "payload_kg": 1200,
     "wifi": true,
     "cellular": "4G/5G",
     "ros": true,
@@ -50770,13 +50788,27 @@
     "lidar": true,
     "imu": true,
     "use_cases": [
-      "casualty evacuation",
-      "logistics support",
-      "supply transport",
-      "military operations",
-      "reconnaissance"
+      "Fire support",
+      "Logistics",
+      "Reconnaissance"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "made_in": "Estonia",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "payload": 1200,
+    "top_speed_kmh": 20,
+    "ground_clearance_mm": 600,
+    "role": [
+      "Combat support",
+      "Logistics",
+      "ISR"
+    ],
+    "autonomy_level": 2,
+    "communication_range_km": 1.5
   },
   {
     "id": "milrem-robotics-themis-cargo",
@@ -50790,7 +50822,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Multi-mission unmanned ground vehicle designed to support dismounted troops by carrying cargo and reducing soldier load. Features modular construction and various tie-down options.",
+    "desc": "The THeMIS Cargo is the logistics/CASEVAC configuration of Milrem's tracked UGV, carrying supplies, ammunition or wounded personnel up to 1,200 kg. A THeMIS in this role was the first UGV in service with the Ukrainian Armed Forces, deployed from August 2022.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50800,14 +50832,14 @@
     },
     "year": 2014,
     "origin": "Estonia",
-    "status": "Released",
+    "status": "Active",
     "released": "2015",
     "height_mm": 700,
     "width_mm": 2000,
     "depth_mm": 1200,
-    "weight_kg": 160,
+    "weight_kg": 1630,
     "speed_ms": 5.6,
-    "payload_kg": 750,
+    "payload_kg": 1200,
     "battery_life": "8 hours",
     "lidar": true,
     "cameras": "Multiple cameras for navigation and situational awareness",
@@ -50815,13 +50847,30 @@
     "ros": true,
     "wifi": true,
     "use_cases": [
-      "Military logistics",
-      "Cargo transport",
-      "Load bearing",
-      "Supply missions",
-      "Combat support"
+      "Logistics resupply",
+      "Casualty evacuation",
+      "Last-mile battlefield transport"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "made_in": "Estonia",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "payload": 1200,
+    "top_speed_kmh": 20,
+    "ground_clearance_mm": 600,
+    "role": [
+      "Cargo / logistics",
+      "CASEVAC"
+    ],
+    "autonomy_level": 2,
+    "communication_range_km": 1.5,
+    "customers": [
+      "Ukraine",
+      "Estonia"
+    ]
   },
   {
     "id": "milrem-robotics-arcos",
@@ -50835,7 +50884,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Modular command-and-coordination layer that integrates with existing C2/BMS systems to manage multiple UGVs and their payloads. Enables multi-UGV control by single operator, supports manned-unmanned teaming (MUM-T), and provides real-time visualization of UGVs throughout the fleet with enhanced situational awareness.",
+    "desc": "ARCOS is part of Milrem's intelligent-functions/autonomy offering, providing autonomous navigation and behaviours for its UGV and RCV platforms. (System-level offering - detailed specifications limited.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50854,17 +50903,25 @@
     "wifi": true,
     "cellular": "4G/5G",
     "use_cases": [
-      "Military operations",
-      "Defense missions",
-      "Multi-vehicle coordination",
-      "Unmanned ground vehicle fleet management",
-      "Battlefield surveillance"
+      "Autonomy enablement",
+      "Off-road autonomous navigation"
     ],
     "manufacturer_url": "https://milremrobotics.com",
     "depth_sensing": true,
     "bluetooth": true,
     "warranty_months": 24,
-    "product_url": "https://milremrobotics.com/arcos/"
+    "product_url": "https://milremrobotics.com/arcos/",
+    "made_in": "Estonia",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "role": [
+      "Autonomous functions",
+      "Intelligent navigation"
+    ],
+    "autonomy_level": 3
   },
   {
     "id": "milrem-robotics-mrcv",
@@ -50878,7 +50935,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Provides superior firepower and engages enemy forces accurately with advanced long-range communication capabilities. Delivers equal firepower and tactical capabilities compared to traditional Infantry Fighting Vehicles while supporting mechanized units.",
+    "desc": "The MRCV (Milrem Robotic Combat Vehicle) is Milrem's robotic combat vehicle developed within the European iMUGS (integrated Modular Unmanned Ground System) programme, advancing standardised, interoperable robotic combat capability across EU armies.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50888,16 +50945,26 @@
     },
     "origin": "Estonia",
     "year": 2023,
-    "status": "In development",
+    "status": "Active",
     "weight_kg": 12000,
     "speed_ms": 22.2,
     "use_cases": [
-      "military operations",
-      "combat support",
-      "reconnaissance",
-      "force protection"
+      "Combat support",
+      "European modular UGV programme"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "made_in": "Estonia",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "top_speed_kmh": 80,
+    "role": [
+      "Robotic combat vehicle",
+      "iMUGS programme"
+    ],
+    "autonomy_level": 3
   },
   {
     "id": "milrem-robotics-vector-rcv",
@@ -50911,7 +50978,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Tracked version of robotic combat vehicle designed to revolutionize battlefield operations. Highly adaptable combat platform with autonomous functions that augments mission effectiveness by reducing risk to troops, increasing firepower mobility and offering superior situational awareness. Supports tanks and infantry fighting vehicles.",
+    "desc": "The Vector is the tracked counterpart to Milrem's HAVOC RCV, in development to share the company's unified autonomy ecosystem and hybrid-electric driveline while offering tracked mobility better suited to soft or northern-European terrain. (Concept/development stage - specifications to be confirmed.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50921,7 +50988,7 @@
     },
     "origin": "Estonia",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "width_mm": 2400,
     "depth_mm": 6000,
@@ -50932,13 +50999,21 @@
     "lidar": true,
     "imu": true,
     "use_cases": [
-      "Military combat support",
-      "Battlefield reconnaissance",
-      "Infantry support",
-      "Remote weapon systems deployment",
-      "Logistics support"
+      "Tracked fire support",
+      "Armoured wingman"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "made_in": "Estonia",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "top_speed_kmh": 80,
+    "role": [
+      "Robotic combat vehicle (tracked)"
+    ],
+    "autonomy_level": 3
   },
   {
     "id": "milrem-robotics-havoc-8x8-rcv",
@@ -50952,7 +51027,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Cutting-edge ground combat platform with AI-driven navigation. Features hybrid electric propulsion for near-silent movement, weighs 15 tons without payload, can negotiate steep gradients and ford streams up to 1m deep. Equipped with advanced autonomy for offensive and defensive operations across diverse terrains.",
+    "desc": "Milrem's HAVOC is an 8x8 wheeled robotic combat vehicle (unveiled 2025) weighing ~15 tonnes with a 5-tonne payload. Its hybrid-electric driveline (near-silent, instant torque) delivers 110 km/h on road and 600 km range, with AI-driven navigation and electronic-warfare resilience, designed to support armoured formations and mount weapons up to 30 mm.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50962,7 +51037,7 @@
     },
     "origin": "Estonia",
     "year": 2023,
-    "status": "In development",
+    "status": "Active",
     "weight_kg": 15000,
     "speed_ms": 22.2,
     "lidar": true,
@@ -50970,13 +51045,34 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Military reconnaissance",
-      "Combat operations",
-      "Border patrol",
-      "Autonomous convoy escort",
-      "Tactical support"
+      "Heavy fire support",
+      "Mechanised-formation wingman",
+      "Reconnaissance-in-force"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "made_in": "Estonia / UAE (EDGE)",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric 8x8 (Timoney)",
+    "payload_kg": 5000,
+    "payload": 5000,
+    "top_speed_kmh": 110,
+    "width_mm": 2700,
+    "depth_mm": 6500,
+    "role": [
+      "Robotic combat vehicle",
+      "Armoured wingman",
+      "Fire support"
+    ],
+    "autonomy_level": 3,
+    "communication_range_km": 10,
+    "jamming_resistant": true,
+    "customers": [
+      "EDGE Group / Middle East",
+      "European trials"
+    ]
   },
   {
     "id": "milrem-robotics-themis",
@@ -50990,7 +51086,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Medium-sized military UGV designed to provide support for dismounted troops by serving as transport platform, remote weapon station, IED detection and disposal unit. Features open architecture for multi-mission capability and can be integrated with various weapon systems including FGM-148 Javelin, PROTECTOR RWS, and Brimstone anti-tank system. Combat-proven in Ukraine and used by 19 countries worldwide.",
+    "desc": "Milrem's THeMIS (Tracked Hybrid Modular Infantry System) is the world's most widely fielded tracked UGV - part of robotic programmes in 19 countries. A 1.63-tonne hybrid-electric platform carrying up to 1,200 kg, it supports infantry across Logistics, Combat, ISR and EOD configurations, climbs 60% slopes and has been combat-proven in Ukraine since 2022.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -51000,31 +51096,53 @@
     },
     "year": 2015,
     "origin": "Estonia",
-    "status": "Released",
+    "status": "Active",
     "released": "2015",
-    "height_mm": 1100,
-    "width_mm": 2300,
-    "depth_mm": 2500,
-    "weight_kg": 1600,
+    "height_mm": 1150,
+    "width_mm": 2000,
+    "depth_mm": 2400,
+    "weight_kg": 1630,
     "speed_ms": 6.5,
-    "payload_kg": 750,
+    "payload_kg": 1200,
     "battery_life": "8-10 hours",
     "cameras": "Day/night cameras, thermal imaging",
     "lidar": true,
     "imu": true,
     "ros": true,
     "use_cases": [
-      "Military support",
-      "Transport platform",
-      "Remote weapon station",
-      "IED detection",
-      "Border patrol",
-      "Reconnaissance"
+      "Infantry support",
+      "Logistics resupply",
+      "Casualty evacuation",
+      "Weaponised overwatch"
     ],
     "manufacturer_url": "https://milremrobotics.com",
     "product_url": "https://milremrobotics.com/products/themis/",
     "depth_sensing": true,
-    "wifi": true
+    "wifi": true,
+    "made_in": "Estonia",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "payload": 1200,
+    "top_speed_kmh": 20,
+    "ground_clearance_mm": 600,
+    "role": [
+      "Logistics",
+      "Combat",
+      "ISR",
+      "EOD",
+      "CASEVAC"
+    ],
+    "autonomy_level": 2,
+    "communication_range_km": 1.5,
+    "customers": [
+      "Estonia",
+      "Netherlands",
+      "Ukraine",
+      "19 countries total"
+    ]
   },
   {
     "id": "milrem-robotics-multiscope",
@@ -51038,7 +51156,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Civilian version of the THeMIS UGV platform designed for non-military applications including firefighting, street cleaning, forest planting, and other civilian use cases.",
+    "desc": "MultiScope is a THeMIS-based multi-mission family from Milrem, configurable for tasks such as route clearance/demining, ISR and logistics by swapping mission modules onto the tracked 1,200 kg platform.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -51048,28 +51166,41 @@
     },
     "origin": "Estonia",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "height_mm": 1200,
     "width_mm": 2000,
     "depth_mm": 2500,
-    "weight_kg": 750,
+    "weight_kg": 1630,
     "speed_ms": 5.6,
-    "payload_kg": 750,
+    "payload_kg": 1200,
     "battery_life": "8 hours",
     "ros": true,
     "cameras": "Multiple camera systems for navigation and surveillance",
     "lidar": true,
     "imu": true,
     "use_cases": [
-      "Firefighting support",
-      "Street cleaning",
-      "Forest planting",
-      "Emergency response",
-      "Utility maintenance",
-      "Agricultural applications"
+      "Demining / counter-IED",
+      "ISR",
+      "Logistics"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "made_in": "Estonia",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "payload": 1200,
+    "top_speed_kmh": 20,
+    "ground_clearance_mm": 600,
+    "role": [
+      "Multi-mission",
+      "ISR",
+      "Logistics",
+      "Mine clearance"
+    ],
+    "autonomy_level": 2
   },
   {
     "id": "carbon-robotics-carbon-atk-autotractor-kit-",
@@ -59798,7 +59929,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Milrem's Intelligent Functions Integration Kit adds autonomous capabilities to manned and unmanned ground vehicles. Features waypoint navigation, follow-me mode, obstacle detection and avoidance.",
+    "desc": "MIFIK is Milrem's Autonomy Functionalities Kit - a modular hardware/software package that adds autonomous capabilities (follow-me, waypoint navigation, obstacle detection) to Milrem platforms and third-party vehicles, forming the unified autonomy layer across THeMIS, HAVOC and Type-X.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -59816,18 +59947,25 @@
     "depth_sensing": true,
     "ros": true,
     "use_cases": [
-      "Military vehicle automation",
-      "Unmanned ground vehicle control",
-      "Autonomous convoy operations",
-      "Remote vehicle operation"
+      "Adding autonomy to vehicles",
+      "Follow-me / waypoint / obstacle avoidance"
     ],
     "manufacturer_url": "https://milremrobotics.com",
-    "os": "ROS-based",
+    "os": "Milrem (MIFIK autonomy)",
     "wifi": true,
     "bluetooth": true,
     "warranty_months": 12,
     "product_url": "https://milremrobotics.com/products/mifik/",
-    "cellular": "4G LTE"
+    "cellular": "4G LTE",
+    "made_in": "Estonia",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "role": [
+      "Autonomy functionalities kit"
+    ],
+    "autonomy_level": 3
   },
   {
     "id": "milrem-robotics-multiscope-rescue",
@@ -59841,7 +59979,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Civilian version of THeMIS designed for firefighting and rescue operations. Features plug-and-play capability for rescue-specific payloads, thermal cameras, and can carry foam/water tanks or firefighting equipment.",
+    "desc": "MultiScope Rescue is the firefighting and rescue configuration of Milrem's THeMIS-based platform, carrying firefighting equipment, thermal sensors and casualty-evacuation gear to operate in hazardous fire and disaster environments without exposing crews.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -59851,14 +59989,14 @@
     },
     "origin": "Estonia",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "height_mm": 700,
     "width_mm": 2300,
     "depth_mm": 1800,
-    "weight_kg": 750,
+    "weight_kg": 1630,
     "speed_ms": 6.1,
-    "payload_kg": 750,
+    "payload_kg": 1200,
     "battery_life": "8-10 hours",
     "ros": true,
     "cameras": "Thermal imaging cameras, day/night vision cameras",
@@ -59866,12 +60004,26 @@
     "imu": true,
     "use_cases": [
       "Firefighting",
-      "Search and rescue",
-      "Hazmat response",
-      "Emergency response",
-      "Disaster relief"
+      "Casualty evacuation",
+      "Hazardous-area rescue"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "made_in": "Estonia",
+    "os": "Milrem (MIFIK autonomy)",
+    "autonomous": true,
+    "mil_spec": true,
+    "export_control": "EU dual-use",
+    "powertrain": "Hybrid-electric (diesel generator)",
+    "payload": 1200,
+    "top_speed_kmh": 20,
+    "ground_clearance_mm": 600,
+    "role": [
+      "Rescue",
+      "Firefighting",
+      "CASEVAC"
+    ],
+    "autonomy_level": 2,
+    "thermal": true
   },
   {
     "id": "milrem-robotics-multiscope-forester",
