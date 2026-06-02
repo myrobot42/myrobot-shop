@@ -62021,7 +62021,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Advanced HD cameras, laser range finder, climbs stairs, bomb disposal, surveillance, CBRN detection, HazMat operations",
+    "desc": "The PackBot 525 is the upgraded generation of FLIR's man-transportable EOD robot, adding HD cameras, a laser rangefinder, optional in-situ charging and advanced accessory ports while keeping the 20 kg-lift manipulator and sub-two-minute deployment. Deliveries include 127 units to the German Army.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -62033,10 +62033,10 @@
     "year": 2020,
     "status": "Active",
     "released": "2020",
-    "weight_kg": 24.5,
+    "weight_kg": 13,
     "battery_life": "4-8 hours",
     "speed_ms": 1.6,
-    "payload_kg": 18,
+    "payload_kg": 20,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Multiple HD cameras with pan/tilt/zoom, thermal imaging, night vision",
@@ -62044,14 +62044,36 @@
     "depth_sensing": true,
     "use_cases": [
       "Bomb disposal",
-      "CBRN detection",
-      "Surveillance",
-      "Search and rescue",
-      "HazMat operations",
-      "Military reconnaissance"
+      "Lift & carry",
+      "Route clearance",
+      "CBRN detection"
     ],
     "manufacturer_url": "https://www.flir.com",
-    "product_url": "https://www.flir.com/products/packbot-525/"
+    "product_url": "https://www.flir.com/products/packbot-525/",
+    "made_in": "USA",
+    "os": "uPoint MRC",
+    "autonomy_level": 1,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "deploy_method": [
+      "Man-transportable"
+    ],
+    "manipulator_arms": 1,
+    "payload": 20,
+    "role": [
+      "EOD / IED disposal",
+      "Reconnaissance",
+      "CBRN / HazMat",
+      "SWAT support"
+    ],
+    "comms": [
+      "MPU5 Wave Relay MANET"
+    ],
+    "customers": [
+      "US military",
+      "German Army (127 units)"
+    ],
+    "thermal": true
   },
   {
     "id": "teledyne-flir-packbot-510",
@@ -62065,7 +62087,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Climbs stairs, navigates narrow passages, real-time video/audio, deployable in under 2 minutes, fits in car trunk",
+    "desc": "The Teledyne FLIR PackBot 510 is the iconic man-transportable tracked EOD robot - deployable by one person in under two minutes, with flippers for stairs and rough terrain and a manipulator that lifts 20 kg. More than 5,000 PackBots have been delivered, with nearly 2,000 of the 510 used in Iraq and Afghanistan for bomb disposal, recon and CBRN work.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -62077,22 +62099,48 @@
     "year": 2010,
     "status": "Active",
     "released": "2010",
-    "weight_kg": 24.5,
-    "battery_life": "4-8 hours",
+    "weight_kg": 13,
+    "battery_life": 240,
     "speed_ms": 1.6,
-    "payload_kg": 9,
+    "payload_kg": 20,
     "cameras": "Multiple visible and thermal cameras with pan/tilt/zoom capabilities",
     "wifi": true,
     "cellular": "Optional",
     "use_cases": [
-      "EOD",
+      "Bomb disposal",
+      "Surveillance & reconnaissance",
       "CBRN detection",
-      "reconnaissance",
-      "surveillance",
-      "search and rescue",
-      "military operations"
+      "Building & route clearance"
     ],
-    "manufacturer_url": "https://www.flir.com"
+    "manufacturer_url": "https://www.flir.com",
+    "made_in": "USA",
+    "os": "uPoint MRC",
+    "autonomy_level": 1,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "deploy_method": [
+      "Man-transportable"
+    ],
+    "manipulator_arms": 1,
+    "payload": 20,
+    "height_mm": 178,
+    "width_mm": 521,
+    "depth_mm": 686,
+    "battery_life_typical": 240,
+    "role": [
+      "EOD / IED disposal",
+      "Reconnaissance",
+      "CBRN / HazMat",
+      "Route clearance"
+    ],
+    "comms": [
+      "MPU5 Wave Relay MANET"
+    ],
+    "customers": [
+      "US Army",
+      "First responders worldwide (5,000+ delivered)"
+    ],
+    "thermal": true
   },
   {
     "id": "teledyne-flir-centaur",
@@ -62106,7 +62154,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Advanced EO/IR camera suite, 6+ foot manipulator arm, climbs stairs, CBRNE detection, explosive ordnance disposal",
+    "desc": "The Teledyne FLIR Centaur is a ~73 kg medium UGV chosen by the US Army as its MTRS Increment II solution, with over 1,800 ordered across the Army, Navy, Air Force and Marines. Its EO/IR camera suite and manipulator arm (reaching over 6 ft) let EOD teams defeat IEDs, UXO and landmines at standoff, and modular payloads add CBRN detection.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -62116,7 +62164,7 @@
     },
     "origin": "USA",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "height_mm": 1219,
     "width_mm": 610,
@@ -62129,15 +62177,33 @@
     "cameras": "Pan-tilt-zoom EO/IR cameras, gripper camera",
     "imu": true,
     "use_cases": [
-      "Explosive ordnance disposal",
-      "CBRNE detection",
-      "Hazardous material handling",
-      "Military operations",
-      "Law enforcement",
-      "Emergency response"
+      "Bomb disposal",
+      "UXO / landmine clearance",
+      "CBRN reconnaissance"
     ],
     "manufacturer_url": "https://www.flir.com/products/centaur/",
-    "product_url": "https://www.flir.com/products/centaur/"
+    "product_url": "https://www.flir.com/products/centaur/",
+    "made_in": "USA",
+    "os": "uPoint MRC",
+    "autonomy_level": 1,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "deploy_method": [
+      "Man-transportable"
+    ],
+    "manipulator_arms": 1,
+    "role": [
+      "EOD / IED disposal",
+      "CBRN detection",
+      "Reconnaissance"
+    ],
+    "customers": [
+      "US Army (MTRS Inc II)",
+      "US Navy",
+      "US Air Force",
+      "US Marine Corps"
+    ],
+    "thermal": true
   },
   {
     "id": "teledyne-flir-firstlook-110",
@@ -62151,7 +62217,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Throwable, rugged, 360° view with 4 cameras, waterproof to 3.3 feet, climbs 7 inch obstacles, self-rights when flipped",
+    "desc": "The Teledyne FLIR FirstLook 110 is a rugged 2.4 kg throwable recon robot that survives being tossed ~4.6 m and through windows. Self-righting with track flippers for stairs, four cameras, two-way audio and waterproofing, it gives troops and SWAT teams immediate eyes inside dangerous rooms and structures.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -62161,26 +62227,44 @@
     },
     "origin": "USA",
     "year": 2011,
-    "status": "Released",
+    "status": "Active",
     "released": "2011",
     "height_mm": 254,
     "width_mm": 254,
     "depth_mm": 102,
-    "weight_kg": 1.2,
+    "weight_kg": 2.4,
     "battery_life": "4-6 hours",
     "speed_ms": 1.8,
     "cameras": "4 color cameras providing 360-degree view with night vision capability",
     "imu": true,
     "wifi": true,
     "use_cases": [
-      "Military reconnaissance",
-      "Law enforcement",
-      "SWAT operations",
-      "Bomb disposal",
-      "Urban warfare",
-      "Hostage situations"
+      "Throw-and-look reconnaissance",
+      "Room & building clearance",
+      "Hazard inspection"
     ],
-    "manufacturer_url": "https://www.flir.com"
+    "manufacturer_url": "https://www.flir.com",
+    "made_in": "USA",
+    "os": "uPoint MRC",
+    "autonomy_level": 1,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "deploy_method": [
+      "Throwable",
+      "Hand-placed"
+    ],
+    "role": [
+      "Throwable reconnaissance",
+      "Inspection",
+      "Building clearance"
+    ],
+    "customers": [
+      "US military",
+      "SWAT / first responders"
+    ],
+    "ip_rating": "Waterproof (~1 m)",
+    "two_way_audio": true,
+    "thermal": true
   },
   {
     "id": "teledyne-flir-sugv-325",
@@ -62194,7 +62278,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Single-person carry, 5-DOF manipulator, HD visible/LWIR cameras, 30x optical zoom, climbs 45° stairs and slopes",
+    "desc": "The Teledyne FLIR SUGV 325 is a ~9 kg single-person-lift robot with a dexterous 5-DOF manipulator and a sensor suite spanning HD visible, LWIR thermal and stitched 360-degree cameras, IR/white lights and two-way audio. Easily carried on the move, it supports EOD, reconnaissance and remote inspection.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -62204,11 +62288,11 @@
     },
     "origin": "USA",
     "year": 2018,
-    "status": "Released",
+    "status": "Active",
     "height_mm": 203,
     "width_mm": 330,
     "depth_mm": 660,
-    "weight_kg": 13.6,
+    "weight_kg": 9.1,
     "battery_life": "4-6 hours",
     "speed_ms": 1.34,
     "payload_kg": 2.3,
@@ -62218,14 +62302,31 @@
     "cameras": "HD visible camera with 30x optical zoom, LWIR thermal camera",
     "imu": true,
     "use_cases": [
-      "EOD operations",
-      "CBRN reconnaissance",
-      "urban warfare",
-      "IED disposal",
-      "perimeter security",
-      "hazmat inspection"
+      "Dismounted EOD",
+      "Surveillance & reconnaissance",
+      "Confined-space inspection"
     ],
-    "manufacturer_url": "https://www.teledyneflir.com"
+    "manufacturer_url": "https://www.teledyneflir.com",
+    "made_in": "USA",
+    "os": "uPoint MRC",
+    "autonomy_level": 1,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "deploy_method": [
+      "Man-transportable"
+    ],
+    "manipulator_arms": 1,
+    "role": [
+      "EOD / IED disposal",
+      "Reconnaissance",
+      "Remote inspection"
+    ],
+    "customers": [
+      "US military",
+      "First responders"
+    ],
+    "thermal": true,
+    "two_way_audio": true
   },
   {
     "id": "teledyne-flir-sugv-310",
@@ -62239,7 +62340,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Backpackable, climbs 8 inch obstacles, automatic self-righting, configurable with thermal cameras and sensors",
+    "desc": "The Teledyne FLIR SUGV 310 is a portable, single-person-lift small UGV with dexterous manipulation for dismounted and mobile operations. It climbs stairs and manipulates objects, giving EOD technicians and responders a highly mobile platform for bomb disposal, reconnaissance and remote inspection.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -62249,24 +62350,41 @@
     },
     "origin": "USA",
     "year": 2010,
-    "status": "Released",
+    "status": "Active",
     "height_mm": 89,
     "width_mm": 330,
     "depth_mm": 381,
-    "weight_kg": 5.4,
+    "weight_kg": 13,
     "battery_life": "4-6 hours",
     "speed_ms": 1.34,
     "payload_kg": 2.3,
     "cameras": "Day/night visible cameras, optional thermal imaging",
     "imu": true,
     "use_cases": [
-      "Military reconnaissance",
-      "EOD operations",
-      "Search and rescue",
-      "CBRN detection",
-      "Security patrol"
+      "Dismounted EOD",
+      "Surveillance & reconnaissance",
+      "Confined-space inspection"
     ],
-    "manufacturer_url": "https://www.teledyneflir.com"
+    "manufacturer_url": "https://www.teledyneflir.com",
+    "made_in": "USA",
+    "os": "uPoint MRC",
+    "autonomy_level": 1,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "deploy_method": [
+      "Man-transportable"
+    ],
+    "manipulator_arms": 1,
+    "role": [
+      "EOD / IED disposal",
+      "Reconnaissance",
+      "Remote inspection"
+    ],
+    "customers": [
+      "US military",
+      "First responders"
+    ],
+    "thermal": true
   },
   {
     "id": "teledyne-flir-kobra-725",
@@ -62280,7 +62398,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty, 138 inch vertical reach, climbs stairs, EOD/CBRN missions, modular payload architecture, stair climbing",
+    "desc": "The Teledyne FLIR Kobra 725 is a heavy-payload UGV with a high-strength manipulator arm for lifting heavy loads, an HD PTZ camera mast and stair-climbing mobility. IOP-compliant and highly modular, it integrates EOD, CBRN, breaching, mine-clearance, X-ray and LIDAR accessories for the most demanding disposal tasks.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -62290,10 +62408,10 @@
     },
     "origin": "USA",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 159,
-    "payload_kg": 34,
+    "payload_kg": 150,
     "reach_mm": 3505,
     "speed_ms": 1.34,
     "battery_life": "4-6 hours",
@@ -62305,15 +62423,34 @@
     "wifi": true,
     "bluetooth": true,
     "use_cases": [
-      "EOD",
-      "CBRN",
-      "Military reconnaissance",
-      "Hazmat response",
-      "Urban warfare",
-      "IED disposal"
+      "Heavy-payload bomb disposal",
+      "Breaching",
+      "Mine clearance",
+      "HazMat handling"
     ],
     "manufacturer_url": "https://www.teledyneflir.com/",
-    "dof": 7
+    "dof": 7,
+    "made_in": "USA",
+    "os": "uPoint MRC",
+    "autonomy_level": 1,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "deploy_method": [
+      "Man-transportable"
+    ],
+    "manipulator_arms": 1,
+    "payload": 150,
+    "role": [
+      "Heavy EOD",
+      "CBRN / HazMat",
+      "Breaching",
+      "Mine clearance"
+    ],
+    "customers": [
+      "US military",
+      "Allied forces"
+    ],
+    "thermal": true
   },
   {
     "id": "teledyne-flir-siras-drone",
