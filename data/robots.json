@@ -87305,7 +87305,7 @@
     "name": "Wayve Driver",
     "brand": "Wayve",
     "cat": "Autonomous Vehicles",
-    "sub": "Self-Driving Platform",
+    "sub": "Embodied-AI Driving System",
     "tags": [
       "AI-first",
       "embodied-AI",
@@ -87313,12 +87313,12 @@
       "uber-partner",
       "software"
     ],
-    "fig": "🚗",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/CCzaNZYdlgr3EVeFtw0R/image.jpg",
-    "score": 88,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "AI-first self-driving platform — end-to-end ML, no HD maps. London testing. Uber partnership. Lyft UK/Germany 2026.",
+    "desc": "Wayve Driver is an embodied-AI, end-to-end driving system (an 'AV2.0' approach) that learns to drive from data rather than relying on HD maps or hand-coded rules. It is camera-first and hardware-agnostic, can run across different vehicle platforms, and is powered by Wayve's GAIA world model. UK-based, testing on London streets, with partnerships including Nissan (production automated driving from 2027) and Uber.",
     "highlights": [
       "End-to-end ML",
       "No HD maps",
@@ -87326,10 +87326,7 @@
       "Uber partner",
       "Lyft UK/Germany"
     ],
-    "perf": {
-      "speed_ms": 28,
-      "payload_kg": 500
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 2000,
@@ -87342,6 +87339,30 @@
     "gallery": [
       "https://wayve.ai/wp-content/uploads/2026/05/wayve_car_interior.jpg",
       "https://wayve.ai/wp-content/uploads/2025/05/WayveRT-3-e1778504859163-1920x1920.jpg"
+    ],
+    "vehicle_class": "Embodied-AI driving system (AV2.0, hardware-agnostic)",
+    "autonomy_level": "L2-L4 (mapless, end-to-end)",
+    "operational_design_domain": "Urban & highway, mapless, camera-first",
+    "powertrain": "Hardware-agnostic (passenger vehicles)",
+    "compute_platform": "Wayve embodied AI (automotive-grade)",
+    "operating_cities": [
+      "London",
+      "United Kingdom",
+      "global testing"
+    ],
+    "safety_driver": "Yes (supervised)",
+    "remote_operations": false,
+    "os": "Wayve",
+    "ai_model": "Wayve AV2.0 + GAIA world model",
+    "ai_model_type": "End-to-end learned driving (no HD maps)",
+    "made_in": "United Kingdom",
+    "use_cases": [
+      "Assisted & automated driving",
+      "Embodied AI for production vehicles"
+    ],
+    "pilot_customers": [
+      "Nissan (planned 2027)",
+      "Uber (partnership)"
     ]
   },
   {
@@ -87591,7 +87612,7 @@
     "name": "Aurora Driver",
     "brand": "Aurora Innovation",
     "cat": "Autonomous Vehicles",
-    "sub": "Autonomous Truck",
+    "sub": "Autonomous Trucking System",
     "tags": [
       "truck",
       "level-4",
@@ -87600,12 +87621,12 @@
       "peterbilt",
       "volvo"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/TYt7u3eIC972gRzLpdKw/image.jpg",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Level 4 autonomous trucking platform. Commercial launch April 2024. Peterbilt + Volvo Trucks integration. Texas highways.",
+    "desc": "The Aurora Driver is a Level 4 autonomous trucking platform that launched driverless commercial freight between Dallas and Houston in April 2024. Its multi-modal suite of 25+ sensors gives a 360 degree view, anchored by proprietary FirstLight FMCW long-range lidar that detects objects beyond 450 m (next-gen kit extends to 1 km), plus custom imaging radar and high-resolution cameras. Powered by Aurora's Verifiable AI and integrated onto Peterbilt 579 and Volvo VNL Class 8 trucks; 4.5M+ on-road miles with Sun Belt route expansion underway.",
     "highlights": [
       "Level 4 trucking",
       "Commercial since 2024",
@@ -87613,16 +87634,13 @@
       "Texas highways",
       "Hub-to-hub freight"
     ],
-    "perf": {
-      "speed_ms": 31,
-      "payload_kg": 36000
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 12000,
-    "battery_life": 720,
+    "battery_life": false,
     "origin": "USA",
-    "cameras": 12,
+    "cameras": "High-resolution automotive-grade (long/mid/short range)",
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
@@ -87630,6 +87648,51 @@
     "gallery": [
       "https://images.ctfassets.net/9i0s3p5vkth9/5ThruK72DImnRTuhFt3o1B/5d1bf513dae12a5b185c6a1f310146ae/Top.jpg?fm=jpg&q=90&w=500&h=500&fit=fill",
       "https://images.ctfassets.net/9i0s3p5vkth9/4Li0wtwv1GQ4FwTbNRwx0j/34e5a65f83bccff2ed169bdd29cc45cb/Middle.jpg?fm=jpg&q=90&w=500&h=500&fit=fill"
+    ],
+    "vehicle_class": "L4 autonomous trucking platform (Driver-as-a-Service)",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Interstate highway middle-mile, Class 8 trucks",
+    "powertrain": "Integrated on Peterbilt 579 (PACCAR) & Volvo VNL Class 8 trucks",
+    "top_speed_kmh": 105,
+    "lidar_brand": "Aurora FirstLight FMCW (>450 m, next-gen 1 km) + conventional AM lidar",
+    "compute_platform": "Aurora purpose-built hardware kit",
+    "imaging_radar": true,
+    "redundant_systems": [
+      "Steering",
+      "Braking",
+      "Power",
+      "Compute",
+      "Sensing",
+      "Comms"
+    ],
+    "safety_certifications": [
+      "Aurora Safety Case Framework"
+    ],
+    "operating_cities": [
+      "Dallas-Houston (I-45)",
+      "Fort Worth-El Paso",
+      "Phoenix (planned)"
+    ],
+    "commercial_service_year": 2024,
+    "safety_driver": "No (driverless since April 2024)",
+    "remote_operations": true,
+    "os": "Aurora Driver",
+    "ai_model": "Aurora Verifiable AI + Generative AI simulation",
+    "ai_model_type": "Modular perception + probabilistic planning",
+    "sim_platform": "Aurora Virtual Testing Suite",
+    "speed": 29,
+    "made_in": "USA",
+    "use_cases": [
+      "Autonomous freight",
+      "Middle-mile trucking",
+      "Long-haul logistics"
+    ],
+    "pilot_customers": [
+      "FedEx",
+      "Uber Freight",
+      "Werner",
+      "Schneider",
+      "Hirschbach"
     ]
   },
   {
@@ -87637,7 +87700,7 @@
     "name": "Kodiak Driver",
     "brand": "Kodiak AI",
     "cat": "Autonomous Vehicles",
-    "sub": "Autonomous Truck",
+    "sub": "Autonomous Trucking System",
     "tags": [
       "truck",
       "level-4",
@@ -87645,12 +87708,12 @@
       "oil-gas",
       "dallas-houston"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/beHfvfxlkfPWYDeCbi4z/image.jpg",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "First US driverless commercial trucks (Dec 2024). 10 driverless trucks. 5,200+ paid hours. 3M+ autonomous miles. Dallas-Houston public road operations.",
+    "desc": "The Kodiak Driver is a Level 4 autonomous trucking system built around modular, serviceable SensorPods (lidar, radar and cameras integrated into the truck's mirror housings) and a redundant compute and actuation stack. Kodiak began driverless commercial operations in 2024, including rugged off-road oilfield hauling in the Permian Basin for Atlas Energy, alongside highway middle-mile freight.",
     "highlights": [
       "First US driverless trucks",
       "10 driverless fleet",
@@ -87658,14 +87721,11 @@
       "Permian Basin",
       "Public on highways 2026"
     ],
-    "perf": {
-      "speed_ms": 29,
-      "payload_kg": 36000
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 12000,
-    "battery_life": 720,
+    "battery_life": false,
     "origin": "USA",
     "cameras": 12,
     "lidar": true,
@@ -87675,14 +87735,50 @@
     "gallery": [
       "https://images.prismic.io/kodiak/c602dc4a-fa1d-43c1-8c24-b23a0c633e6e_Kodiak_12.22_549_R1_v1.jpg?auto=compress,format&rect=0,267,5120,2880&w=1440&h=810&dpr=2",
       "https://images.prismic.io/kodiak/6514c496fbd9a45bcec806dd_technology-page-card-img.jpg?auto=format%2Ccompress&rect=0%2C0%2C5120%2C5120&w=960&h=960&dpr=2"
-    ]
+    ],
+    "vehicle_class": "L4 autonomous trucking platform",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Highway middle-mile + rugged off-road, Class 8 trucks",
+    "powertrain": "Integrated on Class 8 trucks (Kenworth/Peterbilt)",
+    "top_speed_kmh": 105,
+    "lidar_brand": "Modular Kodiak SensorPods (lidar in mirror housings)",
+    "compute_platform": "Kodiak Driver (redundant compute)",
+    "redundant_systems": [
+      "Steering",
+      "Braking",
+      "Power",
+      "Compute",
+      "Sensing"
+    ],
+    "operating_cities": [
+      "Dallas-Houston",
+      "Permian Basin (off-road oilfield)"
+    ],
+    "commercial_service_year": 2024,
+    "safety_driver": "No (driverless commercial since 2024)",
+    "remote_operations": true,
+    "os": "Kodiak Driver",
+    "ai_model": "Kodiak Driver",
+    "speed": 29,
+    "made_in": "USA",
+    "use_cases": [
+      "Autonomous freight",
+      "Off-road/rugged logistics",
+      "Middle-mile trucking"
+    ],
+    "pilot_customers": [
+      "Atlas Energy Solutions",
+      "Martin Brower",
+      "Tyson Foods"
+    ],
+    "manufacturer_history": "Public via Ares Acquisition Corp II (Kodiak AI, 2025)"
   },
   {
     "id": "waabi-driver-2024",
     "name": "Waabi Driver",
     "brand": "Waabi",
     "cat": "Autonomous Vehicles",
-    "sub": "Autonomous Truck",
+    "sub": "Autonomous Trucking System",
     "tags": [
       "truck",
       "AI-first",
@@ -87691,12 +87787,12 @@
       "commercial-2025",
       "texas"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/Aw4uxDHEOrMkhtxqWw6u/image.jpg",
-    "score": 90,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "AI-first autonomous truck. Simulation-heavy training. Texas commercial launch 2025. Uber Freight partnership.",
+    "desc": "Waabi Driver is an AI-first Level 4 autonomous trucking system built on a single end-to-end generative-AI foundation model rather than a large hand-engineered stack. Founded by Raquel Urtasun, Waabi validates the Driver largely inside Waabi World, a generative-AI neural simulator, and is partnered with Volvo Autonomous Solutions on the VNL Autonomous platform; driverless Texas operations planned from 2025.",
     "highlights": [
       "AI-first approach",
       "Simulation-trained",
@@ -87704,20 +87800,45 @@
       "Uber Freight partner",
       "Driverless 2025"
     ],
-    "perf": {
-      "speed_ms": 29,
-      "payload_kg": 36000
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 12000,
-    "battery_life": 720,
+    "battery_life": false,
     "origin": "Canada",
     "cameras": 12,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "L4 AI-first autonomous trucking platform",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Interstate highway, Class 8 trucks",
+    "powertrain": "Volvo VNL Autonomous (Class 8)",
+    "top_speed_kmh": 105,
+    "compute_platform": "Waabi end-to-end foundation model",
+    "redundant_systems": [
+      "Steering",
+      "Braking",
+      "Compute",
+      "Sensing"
+    ],
+    "operating_cities": [
+      "Texas (Dallas-Houston, driverless planned)"
+    ],
+    "commercial_service_year": 2025,
+    "safety_driver": "Transitioning to driverless",
+    "remote_operations": true,
+    "os": "Waabi",
+    "ai_model": "Waabi Driver (end-to-end generative AI)",
+    "ai_model_type": "End-to-end AI foundation model",
+    "sim_platform": "Waabi World (generative AI neural simulator)",
+    "speed": 29,
+    "made_in": "Canada",
+    "use_cases": [
+      "Autonomous freight",
+      "Long-haul trucking"
+    ]
   },
   {
     "id": "plus-pluscore-2023",
@@ -87807,7 +87928,7 @@
     "name": "Torc Daimler Truck",
     "brand": "Torc Robotics",
     "cat": "Autonomous Vehicles",
-    "sub": "Autonomous Truck",
+    "sub": "Autonomous Trucking System",
     "tags": [
       "truck",
       "daimler-owned",
@@ -87815,12 +87936,12 @@
       "cascadia",
       "hub-to-hub"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/KgBFHlTR57jURf1utQGm/image.jpg",
-    "score": 88,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Daimler-owned autonomous trucking subsidiary. Freightliner Cascadia integration. Schneider, CR England partnerships.",
+    "desc": "Torc Robotics, a majority-owned subsidiary of Daimler Truck, is developing the Torc Virtual Driver - a Level 4 autonomous system integrated onto the Freightliner Cascadia Class 8 truck. Targeting driverless hub-to-hub freight on Texas lanes (Laredo-Dallas, Dallas-Houston) with a commercial launch planned for 2027, leveraging Daimler's redundant chassis and partnerships with Google Cloud and NVIDIA.",
     "highlights": [
       "Daimler-owned",
       "Freightliner integration",
@@ -87828,20 +87949,47 @@
       "CR England",
       "Hub-to-hub"
     ],
-    "perf": {
-      "speed_ms": 29,
-      "payload_kg": 36000
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 12000,
-    "battery_life": 720,
+    "battery_life": false,
     "origin": "USA",
     "cameras": 12,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "L4 autonomous trucking platform",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Interstate highway hub-to-hub, Class 8 trucks",
+    "powertrain": "Freightliner Cascadia (Daimler Truck, Class 8)",
+    "top_speed_kmh": 105,
+    "compute_platform": "Torc Virtual Driver",
+    "redundant_systems": [
+      "Steering",
+      "Braking",
+      "Power",
+      "Compute",
+      "Sensing"
+    ],
+    "operating_cities": [
+      "Laredo-Dallas",
+      "Dallas-Houston",
+      "Texas freight hubs"
+    ],
+    "commercial_service_year": 2027,
+    "safety_driver": "Yes (testing; driverless target 2027)",
+    "remote_operations": true,
+    "os": "Torc Virtual Driver",
+    "ai_model": "Torc Virtual Driver",
+    "speed": 29,
+    "made_in": "USA",
+    "use_cases": [
+      "Autonomous freight",
+      "Long-haul hub-to-hub trucking"
+    ],
+    "manufacturer_history": "Majority-owned by Daimler Truck AG"
   },
   {
     "id": "einride-pod-2022",
