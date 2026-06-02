@@ -86061,26 +86061,23 @@
       "glass-breaker",
       "indoor"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://icortechnology.com/wp-content/uploads/2022/06/LEMUR_S_5.jpg",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 10000,
-    "desc": "Tactical indoor drone for police. Glass breaker, two-way audio, self-righting, drop-resistant.",
+    "desc": "The BRINC LEMUR S is the first-generation public-safety drone that introduced indoor flight, two-way communication and a window-breaking glass breaker for tactical entry. Built for law enforcement to survey barricade and active-shooter situations from inside a structure before committing officers.",
     "highlights": [
       "Glass breaker",
       "Two-way audio",
       "Drop from 40ft",
       "Police/SWAT use"
     ],
-    "perf": {
-      "speed_ms": 15,
-      "payload_kg": 0.45
-    },
+    "perf": false,
     "year": 2021,
     "status": "Active",
-    "weight_kg": 2.4,
-    "battery_life": 31,
+    "weight_kg": 1.6,
+    "battery_life": 18,
     "origin": "USA",
     "cameras": 2,
     "wifi": true,
@@ -86090,6 +86087,25 @@
       "https://enterprise.dronenerds.com/wp-content/uploads/2022/08/Extended-Signal-Ranges-Lemur-S-800x800.jpg",
       "https://icortechnology.com/wp-content/uploads/2022/06/V14_BRINC_Drones_LEMUR_Image_1024x320-50Q-400x284.jpg",
       "https://icortechnology.com/wp-content/uploads/2022/04/2-brin-mini-other-side-view-400x284.jpg"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": true,
+    "made_in": "USA",
+    "os": "BRINC",
+    "max_flight_time": 18,
+    "max_range": 2,
+    "battery_life_typical": 18,
+    "frame_type": "Indoor quadcopter (glass breaker)",
+    "motor_count": 4,
+    "camera_mp": 12,
+    "video_res": "1080p",
+    "obstacle_sensing": "Indoor flight assist",
+    "two_way_audio": true,
+    "use_cases": [
+      "Public safety",
+      "Indoor tactical recon",
+      "Barricade response"
     ]
   },
   {
@@ -86104,32 +86120,51 @@
       "2024-launch",
       "mesh-networking"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://i0.wp.com/dronedj.com/wp-content/uploads/sites/2/2023/03/LEMUR-2-3.png?w=1500&quality=82&strip=all&ssl=1",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 12000,
-    "desc": "Upgraded LEMUR 2 — improved sensors, real-time floor plans, mesh networking. Police/tactical use.",
+    "desc": "BRINC's LEMUR 2 is a purpose-built public-safety drone for indoor, GPS-denied tactical missions. It carries a 4K camera, FLIR thermal, IR/white spotlights, two-way audio and a glass-breaker, with a 10-sensor Autonomy Engine and onboard LiDAR generating real-time 3D floor plans and a light/GPS-free 360-degree hover. AES-256-encrypted, mesh-networked and 4G-connected for live streaming via BRINC LiveOps.",
     "highlights": [
       "Real-time floor plans",
       "Mesh networking",
       "Improved sensors",
       "Tactical-grade"
     ],
-    "perf": {
-      "speed_ms": 15,
-      "payload_kg": 0.45
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
-    "weight_kg": 2.5,
-    "battery_life": 31,
+    "weight_kg": 1.6,
+    "battery_life": 15,
     "origin": "USA",
     "cameras": 2,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
       "https://cdn.geekwire.com/wp-content/uploads/2023/11/keynote_HD_blue_021523_2.jpg"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": true,
+    "made_in": "USA",
+    "os": "BRINC",
+    "max_flight_time": 15,
+    "max_range": 2,
+    "battery_life_typical": 15,
+    "frame_type": "Indoor quadcopter (glass breaker)",
+    "motor_count": 4,
+    "camera_mp": 12,
+    "video_res": "4K",
+    "obstacle_sensing": "LiDAR + 10-sensor Autonomy Engine",
+    "autonomous": true,
+    "cellular": "4G LTE",
+    "two_way_audio": true,
+    "use_cases": [
+      "Public safety / tactical entry",
+      "Barricade & active-shooter response",
+      "Indoor search & rescue",
+      "HazMat recon"
     ]
   },
   {
@@ -86144,22 +86179,19 @@
       "docked",
       "cellular"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://brincdrones.com/wp-content/themes/bdrones/assets/images/responder/front-responder.webp",
-    "score": 90,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 75000,
-    "desc": "Drone-as-First-Responder system. Docked at fire/police stations, launched on 911 dispatch.",
+    "desc": "BRINC's Responder is a drone-as-first-responder (DFR) platform designed to launch autonomously in response to 911 calls and arrive on scene ahead of officers, providing live aerial situational awareness. Part of BRINC's integrated public-safety ecosystem with dock and LiveOps software.",
     "highlights": [
       "911 dispatch",
       "Docked at stations",
       "Auto-launch",
       "Public safety"
     ],
-    "perf": {
-      "speed_ms": 22,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 5,
@@ -86169,10 +86201,22 @@
     "cameras": 3,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G",
+    "cellular": "4G LTE",
     "gallery": [
       "https://brincdrones.com/wp-content/uploads/2024/05/Cameras2.jpg",
       "https://brincdrones.com/wp-content/uploads/2024/05/Comm2s-2048x868.jpg"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "USA",
+    "os": "BRINC",
+    "autonomous": true,
+    "obstacle_sensing": "Autonomy Engine",
+    "use_cases": [
+      "Drone as first responder (DFR)",
+      "Rapid 911 response",
+      "Aerial overwatch"
     ]
   },
   {
@@ -86188,22 +86232,19 @@
       "2026-launch",
       "flagship"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://brincdrones.com/wp-content/themes/bdrones/assets/images/product-guardian/triple-redundant/guardian-triple2.webp?v=2.05",
-    "score": 93,
-    "rating": 4.8,
+    "score": 75,
+    "rating": 4,
     "price": 100000,
-    "desc": "2026 flagship — Starlink-connected drone designed to replace police helicopters. 75-inch wingspan, 48.6 lb max takeoff.",
+    "desc": "BRINC's Guardian (2026) is a next-generation public-safety / drone-as-first-responder platform extending the company's autonomous response ecosystem. (Recent release - detailed specifications worth verifying against BRINC.)",
     "highlights": [
       "Starlink-connected",
       "Police helicopter replacement",
       "75-inch wingspan",
       "$4M helicopter alternative"
     ],
-    "perf": {
-      "speed_ms": 30,
-      "payload_kg": 5
-    },
+    "perf": false,
     "year": 2026,
     "status": "Active",
     "weight_kg": 17.5,
@@ -86213,9 +86254,20 @@
     "cameras": 4,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G",
+    "cellular": "4G LTE",
     "gallery": [
       "https://brincdrones.com/wp-content/themes/bdrones/assets/images/product-guardian/features-mob3.webp?v=2.05"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "USA",
+    "os": "BRINC",
+    "autonomous": true,
+    "obstacle_sensing": "Autonomy Engine",
+    "use_cases": [
+      "Drone as first responder",
+      "Autonomous public-safety response"
     ]
   },
   {
@@ -86826,22 +86878,19 @@
       "2022-launch",
       "european"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 40000,
-    "desc": "VTOL fixed-wing surveying drone. 90-min endurance. RTK + PPK. German-made for industrial mapping.",
+    "desc": "Quantum Systems' Trinity Pro is a fixed-wing VTOL mapping drone that takes off and lands vertically, then cruises on wings for ~90 minutes of efficient large-area coverage. With RTK/PPK precision and interchangeable high-resolution and multispectral payloads, it is built for professional surveying, mapping and agriculture.",
     "highlights": [
       "VTOL fixed-wing",
       "90-min endurance",
       "RTK + PPK",
       "Industrial mapping"
     ],
-    "perf": {
-      "speed_ms": 17,
-      "payload_kg": 1.5
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 5.75,
@@ -86850,7 +86899,27 @@
     "cameras": 1,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "Germany",
+    "os": "Quantum Systems",
+    "max_flight_time": 90,
+    "max_speed": 17,
+    "speed_ms": 17,
+    "max_range": 15,
+    "battery_life_typical": 90,
+    "frame_type": "Fixed-wing VTOL (tail-sitter)",
+    "camera_mp": 61,
+    "rtk": true,
+    "autonomous": true,
+    "waypoint": true,
+    "use_cases": [
+      "Surveying & mapping",
+      "Large-area photogrammetry",
+      "Agriculture & GIS"
+    ]
   },
   {
     "id": "quantum-vector-2023",
@@ -86865,22 +86934,19 @@
       "ISR",
       "reconnaissance"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "",
-    "score": 90,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 45000,
-    "desc": "Military VTOL ISR drone — heavily used in Ukraine. Long endurance reconnaissance.",
+    "desc": "Quantum Systems' Vector is a dual-use fixed-wing VTOL drone for ISR, mapping and security, with ~2 hours endurance and modular EO/IR payloads. Vertical takeoff and landing plus long winged endurance make it suited to both commercial survey and defense reconnaissance, including use in Ukraine.",
     "highlights": [
       "VTOL ISR",
       "Ukraine combat-proven",
       "Long endurance",
       "German-made"
     ],
-    "perf": {
-      "speed_ms": 20,
-      "payload_kg": 1.5
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 7.4,
@@ -86889,7 +86955,26 @@
     "cameras": 2,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "gps": true,
+    "return_to_home": true,
+    "thermal": true,
+    "made_in": "Germany",
+    "os": "Quantum Systems",
+    "max_flight_time": 120,
+    "max_speed": 18,
+    "speed_ms": 18,
+    "max_range": 15,
+    "battery_life_typical": 120,
+    "frame_type": "Fixed-wing VTOL",
+    "rtk": true,
+    "autonomous": true,
+    "waypoint": true,
+    "use_cases": [
+      "ISR & reconnaissance",
+      "Mapping & survey",
+      "Security & defense"
+    ]
   },
   {
     "id": "wingtra-one-gen2-2021",
@@ -86905,22 +86990,19 @@
       "ppk",
       "swiss"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://cdn.geo-matching.com/1pPkYznm.png?w=1200&s=72a708a0dd67d173909ccf705610bc53",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 25000,
-    "desc": "VTOL fixed-wing surveying drone. 59-min flight. PPK accurate. Swiss-engineered for surveying.",
+    "desc": "The WingtraOne Gen II is a fixed-wing VTOL mapping drone that takes off and lands vertically yet covers large areas efficiently in winged flight (~59 minutes). With a 42MP full-frame Sony payload and PPK/RTK georeferencing, it delivers survey-grade, centimetre-accurate aerial mapping for surveying, mining and agriculture.",
     "highlights": [
       "VTOL fixed-wing",
       "59-min endurance",
       "PPK accurate",
       "Surveying flagship"
     ],
-    "perf": {
-      "speed_ms": 16,
-      "payload_kg": 0.8
-    },
+    "perf": false,
     "year": 2021,
     "status": "Active",
     "weight_kg": 3.7,
@@ -86933,6 +87015,26 @@
     "gallery": [
       "https://enterprise.dronenerds.com/wp-content/uploads/2025/03/WingtraOne-GEN-II-Drone-2.png",
       "https://www.korecgroup.com/wp-content/uploads/2025/09/KOREC-WingtraOne-Gen-II_WB03.png"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "Switzerland",
+    "os": "WingtraPilot",
+    "max_flight_time": 59,
+    "max_speed": 16,
+    "speed_ms": 16,
+    "max_range": 10,
+    "battery_life_typical": 59,
+    "frame_type": "Fixed-wing VTOL (tail-sitter)",
+    "camera_mp": 42,
+    "rtk": true,
+    "autonomous": true,
+    "waypoint": true,
+    "use_cases": [
+      "Surveying & mapping",
+      "Large-area photogrammetry",
+      "Mining & agriculture"
     ]
   },
   {
@@ -87511,22 +87613,19 @@
       "blue-uas",
       "made-in-japan"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://enterprise.dronenerds.com/wp-content/uploads/2025/03/ACSL-SOTEN.png",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 13000,
-    "desc": "NDAA-compliant Japanese enterprise drone. Blue UAS approved. Made in Japan for govt/inspection.",
+    "desc": "ACSL's SOTEN (Sky-Hawk) is a Japanese-made small drone developed as a security-conscious alternative to foreign drones for government and infrastructure use. With swappable 4K/thermal/multispectral payloads, encrypted data handling and domestic supply-chain assurance, it serves inspection, security and disaster-response roles.",
     "highlights": [
       "NDAA-compliant",
       "Made in Japan",
       "Blue UAS",
       "Inspection-grade"
     ],
-    "perf": {
-      "speed_ms": 15,
-      "payload_kg": 0.5
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 1.7,
@@ -87542,6 +87641,26 @@
       "https://www.adorama.com/images/XLarge/acsl-soten-drone-blue_acsotenbun_7.webp",
       "https://www.adorama.com/images/XLarge/acsl-soten-drone-blue_acsotenbun_5.webp",
       "https://www.adorama.com/images/XLarge/acsl-soten-drone-blue_acsotenbun_9.webp"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": true,
+    "made_in": "Japan",
+    "os": "ACSL",
+    "max_flight_time": 29,
+    "max_speed": 15,
+    "speed_ms": 15,
+    "max_range": 4,
+    "battery_life_typical": 29,
+    "frame_type": "Folding quadcopter",
+    "motor_count": 4,
+    "camera_mp": 20,
+    "video_res": "4K",
+    "obstacle_sensing": "Multi-directional",
+    "use_cases": [
+      "Government & infrastructure inspection",
+      "Security-conscious operations",
+      "Disaster response"
     ]
   },
   {
@@ -87904,26 +88023,23 @@
       "lidar",
       "confined-space"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://mfe-is.com/wp-content/uploads/2024/09/Elios-3-UT-Payload-Hero-2.png",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 40000,
-    "desc": "Caged indoor inspection drone with LiDAR for confined spaces (sewers, tanks, mines). Swiss-engineered.",
+    "desc": "Flyability's Elios 3 is a collision-tolerant drone wrapped in a protective cage for inspecting confined and hazardous industrial spaces - tanks, boilers, tunnels and silos. Its FlyAware LiDAR-SLAM system builds real-time 3D maps in GPS-denied interiors, with a 4K camera and optional thermal payload for safe remote inspection.",
     "highlights": [
       "Collision-tolerant cage",
       "LiDAR mapping",
       "Confined spaces",
       "Industrial inspection"
     ],
-    "perf": {
-      "speed_ms": 6.5,
-      "payload_kg": 0.8
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
-    "weight_kg": 1.5,
-    "battery_life": 12,
+    "weight_kg": 1.4,
+    "battery_life": 9,
     "ip_rating": "IP44",
     "origin": "Switzerland",
     "cameras": 3,
@@ -87936,6 +88052,24 @@
       "https://mfe-is.com/wp-content/uploads/2024/09/Elios-3-1.png",
       "https://mfe-is.com/wp-content/uploads/2024/09/elios-3-RAD-featured.png",
       "https://mfe-is.com/wp-content/uploads/2024/09/elios-3-ut-featured.png"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": true,
+    "made_in": "Switzerland",
+    "os": "Flyability",
+    "max_flight_time": 9,
+    "battery_life_typical": 9,
+    "frame_type": "Collision-tolerant caged quadcopter",
+    "motor_count": 4,
+    "camera_mp": 12,
+    "video_res": "4K",
+    "obstacle_sensing": "LiDAR SLAM (FlyAware)",
+    "autonomous": true,
+    "use_cases": [
+      "Confined-space inspection",
+      "Tanks / boilers / tunnels / silos",
+      "3D mapping in GPS-denied spaces"
     ]
   },
   {
@@ -87951,26 +88085,23 @@
       "lidar",
       "level-4-autonomy"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://www.therobotreport.com/wp-content/uploads/2021/04/exyn-aero-featured-web.jpg",
-    "score": 88,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 80000,
-    "desc": "Level 4 autonomy indoor drone for mining/inspection. Penn-spinout. LiDAR SLAM in GPS-denied environments.",
+    "desc": "Exyn Technologies' Aero is an autonomous LiDAR-mapping drone built for GPS-denied environments like underground mines and complex industrial sites. Powered by ExynAI Level-4-class autonomy, it self-navigates and builds high-fidelity 3D point-cloud maps without a pilot or prior map.",
     "highlights": [
       "Level 4 autonomy",
       "Mining focus",
       "LiDAR SLAM",
       "GPS-denied"
     ],
-    "perf": {
-      "speed_ms": 3,
-      "payload_kg": 1.5
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
-    "weight_kg": 2.5,
-    "battery_life": 15,
+    "weight_kg": 3.5,
+    "battery_life": 18,
     "origin": "USA",
     "cameras": 4,
     "lidar": true,
@@ -87978,6 +88109,23 @@
     "bluetooth": true,
     "gallery": [
       "https://survey.crkennedy.com.au/product_image/ts1681910626/raw/EXYNAERO/exynaero-lidar-system-includes-uav-tablet.png"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "USA",
+    "os": "ExynAI",
+    "max_flight_time": 18,
+    "battery_life_typical": 18,
+    "frame_type": "Autonomous LiDAR quadcopter",
+    "motor_count": 4,
+    "obstacle_sensing": "LiDAR + ExynAI (GPS-denied)",
+    "autonomous": true,
+    "waypoint": true,
+    "use_cases": [
+      "Autonomous underground mapping",
+      "Mining & industrial survey",
+      "GPS-denied 3D mapping"
     ]
   },
   {
