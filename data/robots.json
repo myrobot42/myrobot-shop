@@ -47922,7 +47922,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "2015 DARPA Robotics Challenge winner, transforms between walking biped and wheeled machine for disaster response",
+    "desc": "DRC-HUBO, from KAIST and Rainbow Robotics, is the humanoid that won the DARPA Robotics Challenge Finals in 2015. Its standout trick is transforming between walking on two legs and kneeling onto wheels in its knees to roll quickly and stably, letting it drive a vehicle, open doors, turn valves, cut walls and traverse rubble - the full DRC task list - more reliably than rivals.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -47932,7 +47932,7 @@
     },
     "year": 2015,
     "origin": "South Korea",
-    "status": "Released",
+    "status": "Active",
     "released": "2015",
     "height_mm": 1750,
     "weight_kg": 80,
@@ -47944,11 +47944,19 @@
     "depth_sensing": true,
     "cameras": "Stereo vision cameras and additional sensors for navigation",
     "use_cases": [
+      "Humanoid disaster intervention",
+      "Hybrid walk/roll locomotion"
+    ],
+    "made_in": "South Korea",
+    "robot_form": "Transformable humanoid (walks; kneels onto knee wheels)",
+    "manipulator_arms": 2,
+    "mission_types": [
+      "DARPA Robotics Challenge tasks",
       "Disaster response",
-      "Search and rescue",
-      "Nuclear facility operations",
-      "Emergency response",
-      "Hazardous environment operations"
+      "Driving / door / valve / debris tasks"
+    ],
+    "intended_users": [
+      "Disaster-response researchers"
     ]
   },
   {
@@ -91835,20 +91843,17 @@
     ],
     "fig": "🤖",
     "img": "https://spectrum.ieee.org/media-library/walk-man-not-from-sony.jpg?id=25578160&width=2400&height=3975",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Italian disaster response humanoid. 1.85m, 102kg, 33 DoF. DARPA Robotics Challenge derived research.",
+    "desc": "WALK-MAN is a full-size humanoid disaster-response robot from IIT, standing ~1.85 m and weighing ~102 kg. Designed for DARPA-Robotics-Challenge-style tasks, it walks on two legs and uses two arms to open doors, operate valves and tools, and has been demonstrated performing firefighting tasks (locating and extinguishing a fire) in a smoke-filled mock environment.",
     "highlights": [
       "33 DoF",
       "Disaster humanoid",
       "European research",
       "DRC derived"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2017,
     "status": "Active",
     "weight_kg": 102,
@@ -91860,6 +91865,24 @@
     "ros": true,
     "gallery": [
       "https://spectrum.ieee.org/media-library/img.jpg?id=25578161&width=700&quality=85"
+    ],
+    "height_mm": 1850,
+    "made_in": "Italy",
+    "robot_form": "Full-size humanoid",
+    "manipulator_arms": 2,
+    "dof": 33,
+    "mission_types": [
+      "Disaster response",
+      "Bipedal locomotion in rubble",
+      "Two-handed manipulation",
+      "Tool & valve operation"
+    ],
+    "intended_users": [
+      "Disaster-response researchers"
+    ],
+    "use_cases": [
+      "Humanoid disaster intervention",
+      "Manipulation & locomotion research"
     ]
   },
   {
@@ -91877,20 +91900,17 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/02/ZbOoVhlZRQl8vHorz3lz/image.jpg",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Hybrid wheel-legged centaur design. 1.5m, 93kg. 4 legs with wheels for tough terrain disaster response.",
+    "desc": "Centauro, from the Italian Institute of Technology (IIT), is a centaur-shaped disaster-response robot: a four-legged base with steerable wheels at each foot for hybrid driving/walking, topped by a humanoid torso with two highly dexterous arms. Built largely with lightweight 3D-printed parts (~93 kg), it manipulates debris, turns valves and handles tools in environments too dangerous for people.",
     "highlights": [
       "Wheel-legged hybrid",
       "Centaur design",
       "Tough terrain",
       "European research"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 25
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 93,
@@ -91902,6 +91922,25 @@
     "ros": true,
     "gallery": [
       "https://spectrum.ieee.org/media-library/iit-centauro-robot.jpg?id=25586289&width=2400&height=1600"
+    ],
+    "height_mm": 1500,
+    "made_in": "Italy",
+    "robot_form": "Centaur: four legs-on-wheels base + humanoid torso with two arms",
+    "manipulator_arms": 2,
+    "dof": 42,
+    "mission_types": [
+      "Disaster-site manipulation",
+      "Debris handling",
+      "Valve turning / tool use",
+      "Rough-terrain mobility"
+    ],
+    "intended_users": [
+      "Disaster-response researchers",
+      "Civil protection R&D"
+    ],
+    "use_cases": [
+      "Manipulation in rubble",
+      "Hybrid wheeled/legged locomotion"
     ]
   },
   {
@@ -92406,22 +92445,19 @@
       "mapping",
       "2024-launch"
     ],
-    "fig": "🚒",
+    "fig": "🤖",
     "img": "https://sentineles.b-cdn.net/wp-content/uploads/2022/06/06103628/Raptor-XS-Demo-Truck-750x500-Image-1.jpg",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Aerial wildfire inspection drone. Thermal mapping for active fire perimeters.",
+    "desc": "An aerial fire-inspection drone using thermal and visual imaging to map fires, detect hotspots and support fire-and-rescue situational awareness from the air. (Manufacturer attribution and detailed specifications for this record are limited and worth verifying.)",
     "highlights": [
       "Wildfire thermal",
       "Active perimeters",
       "Mapping",
       "2024 launch"
     ],
-    "perf": {
-      "speed_ms": 15,
-      "payload_kg": 2
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 3,
@@ -92430,7 +92466,14 @@
     "cameras": 2,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "made_in": "USA",
+    "thermal_camera": true,
+    "use_cases": [
+      "Aerial fire inspection",
+      "Thermal mapping",
+      "Hotspot detection"
+    ]
   },
   {
     "id": "erickson-aerial-firefighting-2020",
@@ -92445,22 +92488,19 @@
       "tanker",
       "mapping"
     ],
-    "fig": "🚒",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/02/zYpKWJv7OF2Nl4DrIEte/image.jpg",
-    "score": 83,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Aerial fire intelligence + tanker coordination drones. Wildfire management.",
+    "desc": "An aerial fire-inspection drone associated with Erickson, the aerial-firefighting company best known for its Air-Crane helicopters. Carrying thermal and visual cameras, it provides aerial reconnaissance and fire mapping to give incident commanders real-time situational awareness over wildfire and structure-fire scenes.",
     "highlights": [
       "Tanker coordination",
       "Wildfire intel",
       "Fire mapping",
       "Aerial firefighting"
     ],
-    "perf": {
-      "speed_ms": 18,
-      "payload_kg": 3
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 4,
@@ -92469,7 +92509,14 @@
     "cameras": 2,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "made_in": "USA",
+    "thermal_camera": true,
+    "use_cases": [
+      "Wildfire aerial reconnaissance",
+      "Fire mapping & monitoring",
+      "Situational awareness"
+    ]
   },
   {
     "id": "general-dynamics-mtrs-ii-2018",
@@ -92659,32 +92706,46 @@
       "surveillance",
       "alarm-response"
     ],
-    "fig": "🚨",
+    "fig": "🤖",
     "img": "https://smprobotics.com/wp-content/uploads/2016/08/thermal_security_robot.jpg",
-    "score": 81,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 50000,
-    "desc": "Autonomous outdoor security patrol robot. Alarm response. 24/7 perimeter security.",
+    "desc": "SMP Robotics' S5 is an autonomous outdoor security patrol robot. A four-wheeled UGV with a 360-degree camera mast, it patrols perimeters and large sites autonomously, detecting intruders and streaming video to a control centre, operating around the clock to augment human security teams.",
     "highlights": [
       "24/7 patrol",
       "Alarm response",
       "Perimeter security",
       "Autonomous"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 80,
     "battery_life": 600,
     "ip_rating": "IPX5",
     "origin": "USA",
-    "cameras": 4,
+    "cameras": 8,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "speed_ms": 1.7,
+    "made_in": "USA",
+    "role": [
+      "Autonomous security patrol",
+      "Perimeter surveillance",
+      "Intrusion detection"
+    ],
+    "autonomy_level": 4,
+    "communication_range_km": 1,
+    "customers": [
+      "Commercial & industrial site security"
+    ],
+    "use_cases": [
+      "Autonomous outdoor patrol",
+      "24/7 perimeter monitoring",
+      "Video surveillance"
+    ]
   },
   {
     "id": "icor-mini-caliber-2020",
@@ -92820,22 +92881,19 @@
       "disaster-recovery",
       "engineering"
     ],
-    "fig": "🚧",
+    "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "DARPA project — rapid bridge deployment for disaster recovery. Engineering robot for cut-off areas.",
+    "desc": "A DARPA-associated engineering/construction robotics concept aimed at rapid autonomous bridging - deploying or assembling crossings over gaps and obstacles for disaster-response and military mobility. As an early-stage program, public specifications are limited and should be verified.",
     "highlights": [
       "DARPA project",
       "Bridge deployment",
       "Disaster recovery",
       "Cut-off area access"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 5000
-    },
+    "perf": false,
     "year": 2026,
     "status": "Active",
     "weight_kg": 15000,
@@ -92843,7 +92901,13 @@
     "cameras": 4,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "made_in": "USA",
+    "use_cases": [
+      "Rapid autonomous bridging",
+      "Gap crossing",
+      "Engineering support"
+    ]
   },
   {
     "id": "nasa-sojourner-1997",
