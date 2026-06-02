@@ -53418,31 +53418,25 @@
     "name": "Robotic Applique Kit (RAK-3)",
     "brand": "QinetiQ",
     "cat": "Autonomous Vehicles",
-    "sub": "Vehicle Robotization Kit",
+    "sub": "Military Robotic Appliqué Kit",
     "tags": [],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/VDgIUeikzgfNL3SNz4ft/image.jpg",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Third generation RAK transforms vehicles into robotic platforms. Used in US Army RCIS program with R-HMEE. Provides route clearance and IED defeat capabilities.",
+    "desc": "QinetiQ's Robotic Applique Kit (RAK) is a bolt-on system that converts manned military ground vehicles into optionally-manned/unmanned platforms. RAK-3 adds drive-by-wire actuation, teleoperation and waypoint autonomy so existing vehicles can be operated remotely for dull, dirty and dangerous missions such as route clearance, resupply and ISR.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2008,
-    "status": "Released",
+    "status": "Active",
     "released": "2008",
     "use_cases": [
-      "Route clearance",
-      "IED detection and defeat",
-      "Military vehicle automation",
-      "Explosive ordnance disposal",
-      "Remote vehicle operation"
+      "Vehicle robotization",
+      "EOD / route clearance",
+      "Logistics resupply",
+      "ISR"
     ],
     "manufacturer_url": "https://www.qinetiq.com",
     "weight_kg": 45,
@@ -53451,7 +53445,15 @@
     "lidar": true,
     "imu": true,
     "ros": false,
-    "wifi": true
+    "wifi": true,
+    "autonomy_level": "Teleoperation + waypoint autonomy",
+    "role": "Vehicle robotization (optionally-manned)",
+    "encryption": "Yes",
+    "communication_range_km": 5,
+    "made_in": "United Kingdom",
+    "compute_platform": "QinetiQ robotic control",
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "qinetiq-rcv-l-robotic-command-vehicle-light-",
@@ -88282,22 +88284,19 @@
       "short-haul",
       "RaaS"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/9IJ7HZF7E6KZiTsvTdc3/image.jpg",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Autonomous yard truck for warehouse/distribution centers. Short-haul logistics. RaaS pricing. Schneider partner.",
+    "desc": "Outrider's system automates the distribution yard - an electric autonomous yard truck that moves, spots and hitches trailers, connects brake lines and handles repetitive yard tasks without a driver. Operating at low speed within geofenced private yards, it combines an electric yard tractor with Outrider's L4 autonomy and lidar-based perception.",
     "highlights": [
       "Yard truck automation",
       "Warehouse logistics",
       "Schneider partner",
       "RaaS pricing"
     ],
-    "perf": {
-      "speed_ms": 11,
-      "payload_kg": 30000
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 10000,
@@ -88307,36 +88306,56 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "L4 autonomous electric yard truck",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Private distribution yards",
+    "powertrain": "Battery electric yard tractor",
+    "top_speed_kmh": 40,
+    "payload_kg": 30000,
+    "cargo_capacity_kg": 30000,
+    "compute_platform": "Outrider autonomy",
+    "operating_cities": [
+      "US distribution yards"
+    ],
+    "commercial_service_year": 2022,
+    "safety_driver": "No (geofenced yard)",
+    "remote_operations": true,
+    "os": "Outrider",
+    "made_in": "USA",
+    "use_cases": [
+      "Autonomous yard operations",
+      "Trailer moving & spotting",
+      "Distribution-center logistics"
+    ],
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "forterra-aimd-2023",
     "name": "AIMD",
     "brand": "Forterra",
     "cat": "Autonomous Vehicles",
-    "sub": "Military Autonomous Vehicle",
+    "sub": "Off-Road Defense Autonomy",
     "tags": [
       "military",
       "NDAA",
       "ground-vehicle",
       "commercial-DoD"
     ],
-    "fig": "🚙",
+    "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Military-grade autonomous ground vehicle platform. NDAA-compliant. US DoD pilots.",
+    "desc": "Forterra (formerly Robotic Research) builds off-road autonomy that operates in GPS-denied, unstructured environments for defense and commercial applications. Its AutoDrive system enables autonomous off-road mobility and leader-follower convoy operations, integrated onto a wide range of military and commercial ground vehicles.",
     "highlights": [
       "NDAA-compliant",
       "DoD pilots",
       "Military-grade",
       "Commercial+military"
     ],
-    "perf": {
-      "speed_ms": 15,
-      "payload_kg": 2000
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 3000,
@@ -88346,85 +88365,94 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "Off-road/defense autonomy system",
+    "autonomy_level": "L4 (off-road)",
+    "operational_design_domain": "Off-road, GPS-denied, defense & commercial",
+    "compute_platform": "Forterra AutoDrive",
+    "role": "Off-road autonomous mobility & leader-follower convoy",
+    "encryption": "Yes",
+    "made_in": "USA",
+    "use_cases": [
+      "Military off-road autonomy",
+      "GPS-denied navigation",
+      "Leader-follower convoy"
+    ],
+    "manufacturer_history": "Formerly Robotic Research",
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "applied-intuition-epicsim",
     "name": "EpicSim",
     "brand": "Applied Intuition",
     "cat": "Autonomous Vehicles",
-    "sub": "Self-Driving Software Platform",
+    "sub": "AV Simulation Software",
     "tags": [
       "software",
       "simulation",
       "oem-tools",
       "scenario-testing"
     ],
-    "fig": "💻",
+    "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Simulation + testing software for AV/AD developers. Used by Ford, Toyota, Audi, Porsche. Industry-standard validation tool.",
+    "desc": "Applied Intuition's EpicSim is a high-fidelity simulation and validation environment for developing autonomous-vehicle software. It generates photorealistic sensor data (camera, lidar, radar) and large-scale scenario libraries so developers can test and validate self-driving stacks in software across billions of virtual miles before on-road deployment.",
     "highlights": [
       "Industry-standard sim",
       "Ford/Toyota/Audi/Porsche",
       "Scenario testing",
       "Validation toolkit"
     ],
-    "perf": {
-      "speed_ms": 0,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "origin": "USA",
     "wifi": true,
     "bluetooth": true,
     "released": "2019",
-    "os": "Linux",
+    "os": "EpicSim",
     "ros": true,
     "use_cases": [
-      "Autonomous vehicle simulation",
-      "Scenario-based testing",
-      "Sensor simulation",
-      "Software-in-the-loop testing",
-      "Hardware-in-the-loop testing",
-      "Regression testing",
-      "Safety validation",
-      "OEM vehicle development"
+      "AV simulation & validation",
+      "High-fidelity sensor simulation",
+      "Scenario testing"
     ],
     "manufacturer_url": "https://www.appliedintuition.com",
-    "product_url": "https://www.appliedintuition.com/products/simulation"
+    "product_url": "https://www.appliedintuition.com/products/simulation",
+    "sim_platform": "Applied Intuition EpicSim",
+    "compute_platform": "Cloud / on-prem simulation",
+    "made_in": "USA",
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "hesai-at128-2022",
     "name": "AT128 LiDAR",
     "brand": "Hesai Technology",
     "cat": "Autonomous Vehicles",
-    "sub": "Self-Driving Sensor",
+    "sub": "LiDAR Sensor",
     "tags": [
       "lidar",
       "sensor",
       "chinese-leader",
       "cost-leader"
     ],
-    "fig": "📡",
+    "fig": "🤖",
     "img": "https://www.hesaitech.com/wp-content/uploads/2024/11/AT128-1.png",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 500,
-    "desc": "Hesai's automotive LiDAR — cost-leader for L2+ ADAS and robotaxi. Industry shipment leader.",
+    "desc": "Hesai's AT128 is an automotive-grade long-range hybrid solid-state lidar with genuine 128-channel VCSEL e-scanning. It delivers 1.53 million points/sec, a 120 deg x 25.4 deg field of view, 200 m range at 10% reflectivity and +/-3 cm accuracy, meeting AEC-Q automotive standards. Widely adopted for L3+ ADAS and robotaxi perception (e.g. Li Auto L9 and the DiDi/GAC Aion robotaxi).",
     "highlights": [
       "LiDAR market leader",
       "Cost-effective",
       "ADAS + robotaxi",
       "Multi-OEM"
     ],
-    "perf": {
-      "speed_ms": 0,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 1.5,
@@ -88433,14 +88461,30 @@
     "bluetooth": false,
     "gallery": [
       "https://www.hesaitech.com/wp-content/uploads/2024/11/Hesais-AT128-lidar.jpg"
-    ]
+    ],
+    "lidar": true,
+    "lidar_model": "Hesai AT128 (hybrid solid-state, 128-channel VCSEL)",
+    "lidar_range_m": 200,
+    "lidar_points_per_sec": 1530000,
+    "made_in": "China",
+    "use_cases": [
+      "ADAS L2+/L3 perception",
+      "Robotaxi lidar",
+      "Passenger & commercial vehicle ADAS"
+    ],
+    "pilot_customers": [
+      "Li Auto L9",
+      "DiDi/GAC Aion robotaxi"
+    ],
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "luminar-iris-2022",
     "name": "Iris LiDAR",
     "brand": "Luminar",
     "cat": "Autonomous Vehicles",
-    "sub": "Self-Driving Sensor",
+    "sub": "LiDAR Sensor",
     "tags": [
       "lidar",
       "sensor",
@@ -88448,35 +88492,47 @@
       "mercedes",
       "1550nm"
     ],
-    "fig": "📡",
+    "fig": "🤖",
     "img": "https://autonomoustuff.com/-/media/Images/Hexagon/Hexagon-Core/autonomousstuff/products/luminar-iris-1680x885.ashx?la=en&h=885&w=1680&hash=9B5DD84E988ECCBFD8F6AA7ADAFC5DC4",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 1000,
-    "desc": "Long-range 1550nm LiDAR. Volvo EX90 + Polestar 3 production. Mercedes partnership.",
+    "desc": "Luminar's Iris is a long-range time-of-flight lidar using an eye-safe 1550 nm fiber laser, detecting low-reflectivity objects at ~250 m (and high-reflectivity targets far beyond). Designed for series-production passenger vehicles, it is integrated as the forward lidar on the Volvo EX90 and Polestar 3 to enable highway automated driving.",
     "highlights": [
       "1550nm long-range",
       "Volvo EX90",
       "Polestar 3",
       "Mercedes partner"
     ],
-    "perf": {
-      "speed_ms": 0,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 1,
     "origin": "USA",
     "wifi": false,
-    "bluetooth": false
+    "bluetooth": false,
+    "lidar": true,
+    "lidar_model": "Luminar Iris (1550 nm fiber-laser ToF)",
+    "lidar_range_m": 250,
+    "made_in": "USA",
+    "use_cases": [
+      "Production passenger-vehicle ADAS",
+      "Highway autonomy perception"
+    ],
+    "pilot_customers": [
+      "Volvo EX90",
+      "Polestar 3",
+      "Mercedes-Benz"
+    ],
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "mobileye-eyeq6-2024",
     "name": "EyeQ6",
     "brand": "Mobileye",
     "cat": "Autonomous Vehicles",
-    "sub": "Self-Driving Software Platform",
+    "sub": "AV Compute SoC",
     "tags": [
       "chip",
       "ADAS",
@@ -88484,22 +88540,19 @@
       "mass-market",
       "driver-assist"
     ],
-    "fig": "💻",
+    "fig": "🤖",
     "img": "https://static.mobileye.com/website/corporate/img/homepage2022/eyeq_six_high_2.png",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "6th-gen Mobileye chip for ADAS/AD. Intel-spinout. 800+ vehicle models use Mobileye. Industry leader in driver-assist.",
+    "desc": "The Mobileye EyeQ6 High is a 7 nm automotive system-on-chip delivering roughly 34 TOPS for premium ADAS and L2+/L3 automated driving. It runs full surround-camera perception and sensor fusion in a single power-efficient SoC, succeeding the EyeQ5 in Mobileye's driver-assistance and autonomy platforms.",
     "highlights": [
       "6th-gen platform",
       "800+ vehicle models",
       "Intel spinout",
       "Industry leader"
     ],
-    "perf": {
-      "speed_ms": 0,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "origin": "Israel",
@@ -88507,19 +88560,14 @@
     "bluetooth": false,
     "released": "2024",
     "os": "Mobileye proprietary RTOS",
-    "chipset": "EyeQ6",
+    "chipset": "Mobileye EyeQ6 High (TSMC 7nm)",
     "lidar": false,
     "imu": false,
     "depth_sensing": true,
     "use_cases": [
-      "Advanced driver assistance systems",
-      "Autonomous driving",
-      "Lane keeping assist",
-      "Automatic emergency braking",
-      "Adaptive cruise control",
-      "Traffic sign recognition",
-      "Pedestrian detection",
-      "OEM vehicle integration"
+      "ADAS L2+/L3 compute",
+      "Surround-camera perception",
+      "AV domain controller"
     ],
     "manufacturer_url": "https://www.mobileye.com",
     "product_url": "https://www.mobileye.com/eyeq-chip/",
@@ -88527,7 +88575,13 @@
       "https://static.mobileye.com/website/corporate/img/homepage2022/eyeq_full_support_background_2.png",
       "https://static.mobileye.com/website/corporate/img/homepage2022/eye_q_hero_3.png",
       "https://static.mobileye.com/website/us/corporate/images/3a88e49ba0fc0d78fce7bda449debb97_1652799157545.png"
-    ]
+    ],
+    "ai_chip": "Mobileye EyeQ6 High",
+    "ai_chip_tops": 34,
+    "compute_platform": "Mobileye EyeQ6",
+    "made_in": "Israel (design), TSMC 7nm fab",
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "sea-machines-stormrunner-2024",
