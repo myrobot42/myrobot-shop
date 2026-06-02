@@ -53531,7 +53531,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Built on Pratt Miller EMAV platform with QinetiQ MOSA robotic control systems. Designed for direct infantry functionality, intelligence and reconnaissance.",
+    "desc": "QinetiQ's RCV-L (Robotic Combat Vehicle-Light), developed with Pratt Miller, is a ~3.9-tonne diesel-electric hybrid, rubber-tracked unmanned combat vehicle for the US Army's RCV programme. With a modular payload architecture carrying ~3,175 kg at over 60 km/h, it can be remotely controlled or driven semi-autonomously and is air-transportable to remote locations.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -53541,23 +53541,38 @@
     },
     "origin": "USA",
     "year": 2020,
-    "status": "In development",
-    "weight_kg": 3175,
+    "status": "Active",
+    "weight_kg": 3856,
     "speed_ms": 11.2,
-    "payload_kg": 340,
+    "payload_kg": 3175,
     "cameras": "360-degree situational awareness cameras, thermal imaging, electro-optical sensors",
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "ros": true,
     "use_cases": [
-      "Military reconnaissance",
-      "Intelligence gathering",
-      "Unmanned logistics",
-      "Force protection",
-      "Battlefield support"
+      "Ground-combat support",
+      "Reconnaissance",
+      "Modular weapon / sensor carriage"
     ],
-    "manufacturer_url": "https://www.qinetiq.com/"
+    "manufacturer_url": "https://www.qinetiq.com/",
+    "autonomy_level": 3,
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "USA",
+    "os": "QinetiQ",
+    "payload": 3175,
+    "top_speed_kmh": 64,
+    "powertrain": "Diesel-electric hybrid (rubber tracks)",
+    "role": [
+      "Robotic combat vehicle (light)",
+      "RSTA",
+      "Fire support"
+    ],
+    "export_control": "ITAR (USA)",
+    "customers": [
+      "US Army (RCV programme)"
+    ]
   },
   {
     "id": "qinetiq-maars-modular-advanced-armed-robotic-system-",
@@ -53571,7 +53586,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Armed with M240B machine gun and four M203 grenade launchers. 369 lb fully loaded. 360-degree rotating turret. Can lift 120 lb with manipulator arm option.",
+    "desc": "QinetiQ's MAARS (Modular Advanced Armed Robotic System) is a tracked unmanned ground robot designed for reconnaissance, surveillance and target acquisition, able to mount a remote weapon station (such as an M240B machine gun or 40 mm grenade launcher). It lets forces apply firepower and ISR from forward positions while crews stay protected.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -53581,7 +53596,7 @@
     },
     "year": 2007,
     "origin": "USA",
-    "status": "Released",
+    "status": "Active",
     "released": "2007",
     "height_mm": 1067,
     "width_mm": 660,
@@ -53593,13 +53608,26 @@
     "lidar": true,
     "imu": true,
     "use_cases": [
-      "Military patrol",
-      "Base security",
-      "Explosive ordnance disposal",
-      "Reconnaissance",
-      "Force protection"
+      "Armed reconnaissance & surveillance",
+      "Forward force protection",
+      "Checkpoint security"
     ],
-    "manufacturer_url": "https://www.qinetiq.com"
+    "manufacturer_url": "https://www.qinetiq.com",
+    "autonomy_level": 2,
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "USA",
+    "os": "QinetiQ",
+    "role": [
+      "Armed RSTA",
+      "Force protection",
+      "Direct-fire support"
+    ],
+    "export_control": "ITAR (USA)",
+    "customers": [
+      "US military",
+      "Allied forces"
+    ]
   },
   {
     "id": "qinetiq-talon-v",
@@ -53751,7 +53779,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Compact, lightweight, man-portable UGV with 360° day/night vision, 4 DOF manipulator, stair climbing capability, and IP65 protection for EOD, CBRN, and tactical missions.",
+    "desc": "RoboTeam's MTGR (Micro Tactical Ground Robot, RT-20) is a rugged ~9 kg backpackable tracked robot with high manoeuvrability indoors and out. Widely used by the IDF in urban and tunnel environments, its intuitive ROCU control and modular payloads make it a go-to for military, law-enforcement and SWAT reconnaissance.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -53761,11 +53789,11 @@
     },
     "origin": "Israel",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "height_mm": 165,
     "width_mm": 635,
     "depth_mm": 457,
-    "weight_kg": 12.7,
+    "weight_kg": 9,
     "battery_life": "4-6 hours",
     "speed_ms": 1.8,
     "payload_kg": 4.5,
@@ -53778,11 +53806,9 @@
     "bluetooth": true,
     "cellular": "4G LTE",
     "use_cases": [
-      "EOD operations",
-      "CBRN detection",
-      "tactical reconnaissance",
-      "IED disposal",
-      "hazmat inspection"
+      "Tunnel & urban reconnaissance",
+      "Building clearance",
+      "Hazard inspection"
     ],
     "manufacturer_url": "https://www.roboteam.com",
     "ros": true,
@@ -53790,9 +53816,28 @@
     "charge_time": "2-3 hours",
     "warranty_months": 24,
     "product_url": "https://www.roboteam.com/products/rt-20",
-    "os": "Linux",
+    "os": "ROCU",
     "battery_life_typical": "5 hours",
-    "released": "2019"
+    "released": "2019",
+    "autonomy_level": 1,
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "Israel",
+    "role": [
+      "Reconnaissance",
+      "Urban & tunnel ISR",
+      "EOD support"
+    ],
+    "deploy_method": [
+      "Backpackable"
+    ],
+    "export_control": "Israel export-controlled",
+    "customers": [
+      "IDF",
+      "US military",
+      "SWAT / law enforcement"
+    ],
+    "thermal": true
   },
   {
     "id": "roboteam-rt-200-tigr-",
@@ -53806,7 +53851,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Fast, highly maneuverable tactical UGV with 360° cameras, 6 DOF manipulator, enhanced visual capabilities, and compatibility with IOP modules for reconnaissance and tactical operations.",
+    "desc": "RoboTeam's TIGR (Transportable Interoperable Ground Robot, RT-200) is a medium two-man-carried UGV with best-in-class day/night vision and a 5-DOF manipulator with 2 m reach for EOD render-safe operations, IED search and CBRN survey. Its modular design accepts advanced manipulators and EOD/CBRN payloads.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -53816,7 +53861,7 @@
     },
     "origin": "Israel",
     "year": 2018,
-    "status": "Released",
+    "status": "Active",
     "height_mm": 300,
     "width_mm": 600,
     "depth_mm": 900,
@@ -53832,11 +53877,9 @@
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Military reconnaissance",
-      "EOD operations",
-      "Perimeter security",
-      "Search and rescue",
-      "Surveillance"
+      "EOD render-safe operations",
+      "IED search",
+      "CBRN survey"
     ],
     "manufacturer_url": "https://www.roboteam.com",
     "battery_life": "2-4 hours",
@@ -53845,9 +53888,29 @@
     "cellular": "Optional 4G/LTE",
     "warranty_months": 24,
     "product_url": "https://www.roboteam.com/products/tigr",
-    "os": "Linux-based",
+    "os": "ROCU",
     "battery_life_typical": "3 hours",
-    "released": "2018"
+    "released": "2018",
+    "autonomy_level": 1,
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "Israel",
+    "manipulator_arms": 1,
+    "role": [
+      "EOD / render-safe",
+      "IED search",
+      "CBRN survey"
+    ],
+    "deploy_method": [
+      "Two-man carry"
+    ],
+    "export_control": "Israel export-controlled",
+    "customers": [
+      "US military",
+      "EOD units",
+      "First responders"
+    ],
+    "thermal": true
   },
   {
     "id": "roboteam-rt-1000-probot-",
@@ -53861,7 +53924,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "All-terrain tactical logistics platform with autonomous navigation, AI-driven control, and high payload capacity for carrying supplies, equipment, and casualty evacuation.",
+    "desc": "RoboTeam's PROBOT (RT-1000) is a lightweight heavy-payload UGV that carries up to about three times its own weight (~750 kg) across sand, water and rubble on wheels or optional tracks. Operated via the ROCU controller, it supports logistics carry, casualty evacuation, CBRN and ISR missions while keeping soldiers at standoff.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -53871,12 +53934,12 @@
     },
     "origin": "Israel",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "height_mm": 600,
     "width_mm": 800,
     "depth_mm": 1200,
-    "weight_kg": 85,
-    "payload_kg": 150,
+    "weight_kg": 120,
+    "payload_kg": 750,
     "speed_ms": 2.8,
     "battery_life": "8 hours",
     "lidar": true,
@@ -53887,14 +53950,35 @@
     "cellular": "4G/LTE",
     "ros": true,
     "use_cases": [
-      "Military logistics",
-      "Supply transport",
+      "Logistics resupply",
       "Casualty evacuation",
-      "Equipment delivery",
-      "Border patrol",
-      "Base security"
+      "ISR",
+      "CBRN survey"
     ],
-    "manufacturer_url": "https://www.roboteam.com"
+    "manufacturer_url": "https://www.roboteam.com",
+    "autonomy_level": 2,
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "Israel",
+    "os": "ROCU",
+    "payload": 750,
+    "top_speed_kmh": 12,
+    "ip_rating": "IP65",
+    "role": [
+      "Logistics carrier",
+      "CASEVAC / MEDEVAC",
+      "CBRN",
+      "ISR"
+    ],
+    "deploy_method": [
+      "Wheeled (optional tracks)"
+    ],
+    "export_control": "Israel export-controlled",
+    "customers": [
+      "US military",
+      "IDF",
+      "Special Forces"
+    ]
   },
   {
     "id": "roboteam-rt-2000-rook-",
@@ -53908,7 +53992,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty unmanned ground vehicle built for power, endurance, and mission versatility with advanced all-terrain mobility, long-range communication, day and night vision, and modular design.",
+    "desc": "RoboTeam's ROOK (RT-2000) is a modular tracked UGV that hosts mission payloads for logistics, ISR and EOD/route-clearance tasks. Part of RoboTeam's interoperable family controlled from the ROCU, it brings heavier payload capacity than the backpackable MTGR while keeping rapid deployability.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -53918,7 +54002,7 @@
     },
     "origin": "Israel",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 2000,
     "payload_kg": 1200,
@@ -53931,14 +54015,29 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Military operations",
-      "Border security",
-      "EOD missions",
-      "Surveillance",
-      "Search and rescue",
-      "Logistics support"
+      "Logistics",
+      "ISR",
+      "EOD / route clearance"
     ],
-    "manufacturer_url": "https://www.roboteam.com"
+    "manufacturer_url": "https://www.roboteam.com",
+    "autonomy_level": 2,
+    "mil_spec": true,
+    "autonomous": true,
+    "made_in": "Israel / USA",
+    "os": "ROCU",
+    "top_speed_kmh": 12,
+    "payload": 1200,
+    "role": [
+      "Multi-mission UGV",
+      "Logistics",
+      "ISR",
+      "EOD"
+    ],
+    "export_control": "Israel export-controlled",
+    "customers": [
+      "US military",
+      "Allied forces"
+    ]
   },
   {
     "id": "flir-partner-launch-digital-technology-intelligent-power-inspection-robot",
