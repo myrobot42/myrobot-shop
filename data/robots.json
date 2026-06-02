@@ -54296,17 +54296,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Hybrid autonomy sidewalk delivery robot with human teleoperator assist. Over 1,000 units produced with 500K+ deliveries and 1M+ miles traveled. Serves 3,000+ restaurant partners. RoboScore of 78.4/100 for delivery applications. Features remote pilot assistance for complex navigation scenarios.",
+    "desc": "The third-generation Coco delivery robot continues Coco Robotics' remotely-piloted urban delivery approach with incremental autonomy and sensing upgrades for dense city food delivery.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "height_mm": 1372,
     "width_mm": 711,
@@ -54316,18 +54311,24 @@
     "speed_ms": 1.8,
     "payload_kg": 18,
     "lidar": true,
-    "cameras": "Multiple cameras for 360-degree vision",
+    "cameras": 4,
     "imu": true,
     "depth_sensing": true,
     "wifi": true,
     "cellular": "4G LTE",
     "use_cases": [
       "Food delivery",
-      "Package delivery",
-      "Last-mile logistics",
-      "Campus delivery"
+      "Urban last-mile"
     ],
-    "manufacturer_url": "https://www.cocodelivery.com"
+    "manufacturer_url": "https://www.cocodelivery.com",
+    "autonomy_level": "Remote-piloted with assisted autonomy",
+    "autonomous": false,
+    "wheels": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Coco",
+    "made_in": "USA",
+    "fleet_management": true
   },
   {
     "id": "coco-robotics-coco-1",
@@ -54346,22 +54347,17 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Larger, more advanced version of signature pink delivery robot. Features more efficient drivetrain and larger battery capacity. Built in partnership with Segway. Includes multiple cameras and sensors for navigation assistance. Can hold up to four full grocery bags making it suitable for grocery deliveries.",
+    "desc": "Coco 1 is Coco Robotics' purpose-built last-mile delivery robot. Unlike fully autonomous competitors, Coco's pink cargo bots are remotely piloted by human operators, focusing on reliable short-range food delivery in dense urban areas such as Los Angeles.",
     "highlights": [
       "LA operations",
       "DoorDash partner",
       "Contractor-driven model",
       "Sub-3-mile delivery"
     ],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2021,
     "origin": "USA",
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "height_mm": 559,
     "width_mm": 508,
@@ -54372,19 +54368,25 @@
     "payload_kg": 18,
     "wifi": true,
     "bluetooth": true,
-    "cameras": "Multiple RGB cameras for navigation and object detection",
+    "cameras": 4,
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Last-mile delivery",
       "Food delivery",
-      "Package delivery",
-      "Grocery delivery"
+      "Urban last-mile"
     ],
     "manufacturer_url": "https://www.cocodelivery.com",
     "ip_rating": "IPX4",
-    "cellular": "4G"
+    "cellular": "4G",
+    "autonomy_level": "Teleoperated (remote pilot)",
+    "autonomous": false,
+    "wheels": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Coco",
+    "made_in": "USA",
+    "fleet_management": true
   },
   {
     "id": "kiwibot-kiwibot-warehouse-robot",
@@ -61156,24 +61158,19 @@
     "name": "Kiwibot Leap",
     "brand": "Kiwibot",
     "cat": "Delivery",
-    "sub": "Last-Mile Delivery",
+    "sub": "Sidewalk Delivery Robot",
     "tags": [],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Autonomous robots for meal and goods delivery on campuses and cities with Level 4 autonomy, GPS navigation, multiple cameras, and sensors",
+    "desc": "Kiwibot Leap is a variant in Kiwibot's sidewalk delivery family for campus and last-mile food delivery, using LiDAR-and-vision autonomy with remote operator support.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "height_mm": 600,
     "width_mm": 500,
@@ -61185,17 +61182,22 @@
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
-    "cameras": "Multiple HD cameras for 360-degree vision and obstacle detection",
+    "cameras": 4,
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Food delivery",
-      "Package delivery",
       "Campus delivery",
       "Last-mile delivery"
     ],
-    "manufacturer_url": "https://www.kiwibot.com"
+    "manufacturer_url": "https://www.kiwibot.com",
+    "autonomy_level": "L4 in mapped zones",
+    "autonomous": true,
+    "wheels": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Kiwibot",
+    "made_in": "Colombia / USA"
   },
   {
     "id": "kiwibot-kiwibot-advertising",
@@ -61289,7 +61291,7 @@
     "name": "Kiwibot 4.0",
     "brand": "Kiwibot",
     "cat": "Delivery",
-    "sub": "Last-Mile Delivery",
+    "sub": "Sidewalk Delivery Robot",
     "tags": [
       "sidewalk",
       "campus",
@@ -61302,70 +61304,73 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Latest generation autonomous delivery robot with NVIDIA Jetson Xavier processing, enhanced sensors, lidar capability, and improved cargo capacity",
+    "desc": "Kiwibot 4.0 is a compact four-wheeled campus food-delivery robot from the Berkeley-based startup, navigating with LiDAR and stereo vision (full autonomy in mapped zones, remote assist elsewhere). IP54 weather resistance, partnerships with Segway, Chick-fil-A and Shopify, and a fleet that has surpassed 150,000 deliveries across dozens of US universities.",
     "highlights": [
       "Animated eyes",
       "30+ universities",
       "250K+ deliveries",
       "Affordable RaaS"
     ],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2021,
     "origin": "Colombia/USA",
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "height_mm": 610,
     "width_mm": 660,
     "depth_mm": 660,
     "weight_kg": 27,
     "battery_life": "8 hours",
-    "speed_ms": 1.3,
+    "speed_ms": 1.6,
     "payload_kg": 6.8,
     "chipset": "NVIDIA Jetson Xavier",
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G LTE",
-    "cameras": "Multiple HD cameras with 360-degree vision",
+    "cellular": "4G",
+    "cameras": 4,
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Food delivery",
-      "Package delivery",
-      "Campus delivery",
-      "Last-mile logistics"
+      "Campus food delivery",
+      "Last-mile delivery"
     ],
     "manufacturer_url": "https://www.kiwibot.com",
-    "ip_rating": "IPX4"
+    "ip_rating": "IP54",
+    "autonomy_level": "L4 in mapped zones (semi-autonomous elsewhere)",
+    "autonomous": true,
+    "wheels": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Kiwibot",
+    "compute_platform": "Kiwibot AI (LiDAR + stereo vision)",
+    "made_in": "Colombia / USA",
+    "fleet_management": true,
+    "pilot_customers": [
+      "UC Berkeley",
+      "Chick-fil-A",
+      "Segway",
+      "Shopify"
+    ]
   },
   {
     "id": "kiwibot-kiwibot-a-404",
     "name": "Kiwibot A-404",
     "brand": "Kiwibot",
     "cat": "Delivery",
-    "sub": "Last-Mile Delivery",
+    "sub": "Sidewalk Delivery Robot",
     "tags": [],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Compact autonomous delivery robot with GPS, cameras, sensors for urban navigation. Dimensions: 22\" x 17\" x 22\" (55.9cm x 43.2cm x 55.9cm), weighs 45lb empty",
+    "desc": "A model in Kiwibot's four-wheeled sidewalk delivery line, used for campus and urban last-mile food delivery with LiDAR-and-vision navigation and remote assist.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2017,
-    "status": "Released",
+    "status": "Active",
     "released": "2017",
     "height_mm": 559,
     "width_mm": 432,
@@ -61377,17 +61382,22 @@
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
-    "cameras": "Multiple cameras for navigation and security",
+    "cameras": 4,
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Food delivery",
-      "Package delivery",
-      "Campus delivery",
-      "Last-mile logistics"
+      "Campus food delivery",
+      "Last-mile delivery"
     ],
-    "manufacturer_url": "https://www.kiwibot.com"
+    "manufacturer_url": "https://www.kiwibot.com",
+    "autonomy_level": "L4 in mapped zones",
+    "autonomous": true,
+    "wheels": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Kiwibot",
+    "made_in": "Colombia / USA"
   },
   {
     "id": "coco-robotics-coco-robot-gen-1-",
@@ -61401,17 +61411,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Human-piloted sidewalk delivery robots for food, groceries, and goods delivery. Operates on Uber Eats, DoorDash, and Wolt platforms with over 500,000 zero-emission deliveries completed.",
+    "desc": "The first-generation Coco delivery robot - a remotely-piloted, insulated cargo bot built for short-range urban food delivery.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "height_mm": 559,
     "width_mm": 584,
@@ -61420,18 +61425,23 @@
     "battery_life": "8 hours",
     "speed_ms": 1.5,
     "payload_kg": 9,
-    "cameras": "Multiple cameras for navigation and safety",
+    "cameras": 4,
     "lidar": true,
     "imu": true,
     "wifi": true,
     "cellular": "4G LTE",
     "use_cases": [
       "Food delivery",
-      "Grocery delivery",
-      "Last-mile delivery",
-      "Urban logistics"
+      "Urban last-mile"
     ],
-    "manufacturer_url": "https://www.cocorobotics.com"
+    "manufacturer_url": "https://www.cocorobotics.com",
+    "autonomy_level": "Teleoperated (remote pilot)",
+    "autonomous": false,
+    "wheels": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Coco",
+    "made_in": "USA"
   },
   {
     "id": "righthand-robotics-rightcare",
@@ -82000,32 +82010,45 @@
       "2024-launch",
       "ubc-vancouver"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "5th-gen with focus on Level 4 autonomy. UBC Vancouver launch 2025. Pittsburgh, Miami, LA cities.",
+    "desc": "Kiwibot 5.0 (2024) is the latest generation of Kiwibot's four-wheeled sidewalk delivery robot, with improved autonomy, sensing and cargo capacity over the 4.0, continuing the company's campus and urban last-mile food-delivery deployments.",
     "highlights": [
       "Level 4 autonomy focus",
       "UBC Vancouver",
       "Multi-city",
       "Compact"
     ],
-    "perf": {
-      "speed_ms": 1.7,
-      "payload_kg": 11
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 35,
     "battery_life": 480,
-    "ip_rating": "IPX4",
+    "ip_rating": "IP54",
     "origin": "Colombia/USA",
-    "cameras": 6,
+    "cameras": 4,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "autonomy_level": "L4 in mapped zones",
+    "autonomous": true,
+    "speed_ms": 1.6,
+    "wheels": 4,
+    "lidar": true,
+    "imu": true,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Kiwibot",
+    "compute_platform": "Kiwibot AI (LiDAR + vision)",
+    "made_in": "Colombia / USA",
+    "fleet_management": true,
+    "use_cases": [
+      "Campus & urban food delivery",
+      "Last-mile delivery"
+    ]
   },
   {
     "id": "cartken-model-c-2024",
@@ -82041,27 +82064,24 @@
       "japan-deploy",
       "2024-launch"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://images.squarespace-cdn.com/content/v1/50f8dd42e4b0dc4dd5c8555c/a2236bdc-3af2-4d00-98b2-02fd29bf6cd8/CartkenRobot_2",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Vision-only sidewalk delivery (no LiDAR). Ex-Google engineers founded. Mitsubishi partnership for Japan deployment.",
+    "desc": "Cartken's six-wheeled Model C is a camera-SLAM autonomous delivery robot (a Google Area 120 spin-off) that operates both outdoors on sidewalks and indoors with elevator/multi-floor capability. It runs L4 autonomy with instant remote-operator override, carries ~20 kg / 30 L, and is assembled by Magna in Michigan. Deployed for food and campus delivery with Uber Eats and Grubhub, and increasingly for in-facility logistics.",
     "highlights": [
       "Vision-only navigation",
       "No LiDAR (low cost)",
       "Mitsubishi partner",
       "Japan launched"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 13
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 30,
     "battery_life": 480,
-    "ip_rating": "IPX4",
+    "ip_rating": "Rain to 10 mm/h",
     "origin": "USA",
     "cameras": 6,
     "wifi": true,
@@ -82070,6 +82090,34 @@
     "gallery": [
       "https://images.squarespace-cdn.com/content/v1/50f8dd42e4b0dc4dd5c8555c/18b6abd4-a10c-4b83-a12c-6aeeda6613cf/CartkenRobot_1?format=2500w",
       "https://images.squarespace-cdn.com/content/v1/50f8dd42e4b0dc4dd5c8555c/0a9219a6-02c5-40fe-b5c9-87a72394f939/Cartken-in-AM_square.jpg?format=2500w"
+    ],
+    "autonomy_level": "L4 (remote-operable when needed)",
+    "autonomous": true,
+    "payload_kg": 20,
+    "payload": 20,
+    "cargo_volume_l": 30,
+    "speed_ms": 1.6,
+    "wheels": 6,
+    "imu": true,
+    "gps": true,
+    "outdoor_capable": true,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "max_grade_pct": 17,
+    "os": "Cartken",
+    "compute_platform": "Cartken AI (camera SLAM)",
+    "made_in": "USA (assembled by Magna, Michigan)",
+    "fleet_management": true,
+    "use_cases": [
+      "Food & grocery delivery",
+      "Campus delivery",
+      "Indoor/outdoor interbuilding logistics"
+    ],
+    "pilot_customers": [
+      "Uber Eats",
+      "Grubhub",
+      "Mitsubishi",
+      "Ohio State University"
     ]
   },
   {
@@ -82085,22 +82133,19 @@
       "university",
       "compact"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://cdn.prod.website-files.com/63cee399b1ef775ba444e177/67f297d2a1aa4919ed4116d8_1-Courier.webp",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Campus version of Cartken's sidewalk bot. Grubhub partnership at OSU + other universities.",
+    "desc": "Cartken's Courier is the outdoor last-mile configuration of its six-wheeled, camera-SLAM delivery platform. Built for sidewalk food and grocery runs within a ~3-mile radius, it uses vision-only autonomy with remote-operator backup and is manufactured with Magna.",
     "highlights": [
       "Campus-optimized",
       "Grubhub partner",
       "Ohio State University",
       "Compact"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 13
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 30,
@@ -82113,6 +82158,28 @@
     "cellular": "4G",
     "gallery": [
       "https://cdn.prod.website-files.com/63cee399b1ef775ba444e177/67f297d2a1aa4919ed4116e1_2-Courier.webp"
+    ],
+    "autonomy_level": "L4 (remote-operable when needed)",
+    "autonomous": true,
+    "payload_kg": 20,
+    "payload": 20,
+    "cargo_volume_l": 30,
+    "speed_ms": 1.6,
+    "wheels": 6,
+    "imu": true,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Cartken",
+    "compute_platform": "Cartken AI (camera SLAM)",
+    "made_in": "USA (assembled by Magna, Michigan)",
+    "fleet_management": true,
+    "use_cases": [
+      "Food & grocery delivery",
+      "Campus & urban last-mile"
+    ],
+    "pilot_customers": [
+      "Uber Eats",
+      "Grubhub"
     ]
   },
   {
@@ -82127,32 +82194,41 @@
       "more-autonomous",
       "openai-partner"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Gen 2 with more autonomy. OpenAI partnership for AI navigation. Multi-city expansion.",
+    "desc": "Coco 2 (2024) is the next generation of Coco Robotics' urban delivery bot, adding more driver-assist autonomy on top of its remote-piloted model while keeping the insulated cargo compartment for food delivery across cities including Los Angeles and Miami.",
     "highlights": [
       "OpenAI AI partner",
       "More autonomy",
       "Multi-city",
       "Improved Gen 2"
     ],
-    "perf": {
-      "speed_ms": 1.8,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 35,
     "battery_life": 540,
     "ip_rating": "IPX4",
     "origin": "USA",
-    "cameras": 7,
+    "cameras": 4,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "4G",
+    "autonomy_level": "Remote-piloted with assisted autonomy",
+    "autonomous": false,
+    "wheels": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Coco",
+    "made_in": "USA",
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Urban last-mile"
+    ]
   },
   {
     "id": "refraction-rev1-2020",
@@ -82206,32 +82282,40 @@
       "teleop",
       "food-delivery"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 78,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Miami sidewalk delivery robot. Teleoperated last-mile food delivery.",
+    "desc": "Tinymile is a Toronto-based sidewalk delivery robot operated by remote human pilots, delivering food on city sidewalks. Its small, insulated cargo bot focuses on dense downtown restaurant delivery.",
     "highlights": [
       "Miami operations",
       "Teleoperated",
       "Food delivery",
       "Sidewalk"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 30,
     "battery_life": 480,
     "ip_rating": "IPX4",
     "origin": "Canada",
-    "cameras": 5,
+    "cameras": 4,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "autonomy_level": "Teleoperated (remote pilot)",
+    "autonomous": false,
+    "wheels": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Tinymile",
+    "made_in": "Canada",
+    "use_cases": [
+      "Food delivery",
+      "Urban last-mile"
+    ]
   },
   {
     "id": "tortoise-tortoise-2020",
@@ -82245,32 +82329,43 @@
       "teleop",
       "compact"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 76,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Walmart-tested sidewalk delivery robot. Teleoperated model. Compact form factor.",
+    "desc": "Tortoise builds low-speed, remotely-managed delivery and repositioning robots for retail and residential communities. Its devices, tested by Walmart, are human-piloted remotely rather than fully autonomous, handling neighbourhood grocery delivery and shared-cart repositioning.",
     "highlights": [
       "Walmart pilot",
       "Teleoperated",
       "Compact",
       "Cooler-sized"
     ],
-    "perf": {
-      "speed_ms": 1.3,
-      "payload_kg": 8
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 25,
     "battery_life": 360,
     "ip_rating": "IPX4",
     "origin": "USA",
-    "cameras": 4,
+    "cameras": 2,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "autonomy_level": "Teleoperated / remotely managed",
+    "autonomous": false,
+    "wheels": 4,
+    "gps": true,
+    "outdoor_capable": true,
+    "os": "Tortoise",
+    "made_in": "USA",
+    "use_cases": [
+      "Grocery & retail delivery",
+      "Cart repositioning"
+    ],
+    "pilot_customers": [
+      "Walmart"
+    ]
   },
   {
     "id": "avride-rover-2024",
