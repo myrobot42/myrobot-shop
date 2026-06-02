@@ -82734,25 +82734,22 @@
       "food-running",
       "viral"
     ],
-    "fig": "🐱",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/XV3vMy9z9e4cqj5J8PVF/image.jpg",
-    "score": 89,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 9000,
-    "desc": "Cat-faced food delivery robot — viral hit in restaurants. 4-tray design. Touch-responsive cat face.",
+    "desc": "Pudu's BellaBot is the iconic cat-faced restaurant delivery robot - a 4-tray food runner (40 kg load, 10 kg per layer) with expressive multi-modal interaction. It uses dual Laser + Visual SLAM with three RGBD depth cameras and lidar, stopping within 0.5 s on obstacles, and runs 12-24 hours on a swappable battery. Up to 20 units coordinate via PUDU SCHEDULER for busy dining rooms.",
     "highlights": [
       "Cat-faced design",
       "4-tray capacity",
       "Restaurant viral",
       "Touch-responsive face"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 40
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
-    "weight_kg": 58,
+    "weight_kg": 55,
     "battery_life": 720,
     "origin": "China",
     "cameras": 3,
@@ -82764,6 +82761,32 @@
       "https://cdn.pudutech.com/website/images/pc/bellabot/design2.png",
       "https://cdn.pudutech.com/website/images/pc/bellabot/design4.png",
       "https://cdn.pudutech.com/website/images/pc/bellabot/design3.png"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 40,
+    "payload": 40,
+    "delivery_bays": 4,
+    "height_mm": 1290,
+    "width_mm": 537,
+    "depth_mm": 565,
+    "max_grade_pct": 9,
+    "battery_life_typical": 720,
+    "os": "PUDU",
+    "compute_platform": "PUDU (dual Laser + Visual SLAM)",
+    "languages": "Multi-language",
+    "use_cases": [
+      "Restaurant food running",
+      "Hotel & retail service",
+      "Guest engagement"
     ]
   },
   {
@@ -82779,28 +82802,25 @@
       "2024-launch",
       "interactive"
     ],
-    "fig": "🐱",
+    "fig": "🤖",
     "img": "https://www.integritas.mx/web/image/product.product/721/image_1024/%5BBOT021-C%5D%20BellaBot%20PRO?unique=4b5f38d",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 11000,
-    "desc": "BellaBot Pro — 10.1\" interactive touchscreen. Advanced navigation. Hospitality, retail.",
+    "desc": "BellaBot Pro upgrades Pudu's flagship with VSLAM+ multi-modal, marker-less navigation and a 65 cm path clearance tuned for tight spaces, retaining the 4-tray 40 kg cat-faced design. It runs ~11 hours per swappable battery with enhanced perception and interaction.",
     "highlights": [
       "10.1\" touchscreen",
       "Improved navigation",
       "Advanced obstacle detection",
       "Multi-environment"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 40
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 60,
-    "battery_life": 720,
+    "battery_life": 660,
     "origin": "China",
-    "cameras": 4,
+    "cameras": 3,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
@@ -82808,6 +82828,28 @@
       "https://ucghdd.com/cdn/shop/files/BellaBot-Pro-2_1282x959.jpg?v=1750182084",
       "https://www.integritas.mx/web/image/product.image/79/image_1024/Bellabot%20Pro?unique=22646ac",
       "https://www.integritas.mx/web/image/product.image/77/image_1024/Bellabot%20Pro?unique=22646ac"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (VSLAM+)",
+    "payload_kg": 40,
+    "payload": 40,
+    "delivery_bays": 4,
+    "battery_life_typical": 660,
+    "os": "PUDU",
+    "compute_platform": "PUDU VSLAM+ (multi-modal, marker-less)",
+    "languages": "Multi-language",
+    "use_cases": [
+      "Restaurant food running",
+      "Tight-space service",
+      "Guest engagement"
     ]
   },
   {
@@ -82823,34 +82865,52 @@
       "ad-screen",
       "compact"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://sebotics.com/wp-content/uploads/2022/01/Kettybot_transparent.png",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 6500,
-    "desc": "Compact 55cm-narrow delivery robot for tight spaces. Built-in advertising screen. Small restaurant favorite.",
+    "desc": "Pudu's KettyBot is a slim delivery-and-reception robot with a large built-in advertising/interaction screen. Designed to welcome and guide guests as well as run food, its narrow body suits tight restaurant aisles, navigating by SLAM with vision-based obstacle avoidance.",
     "highlights": [
       "55cm narrow",
       "Ad screen",
       "Tight spaces",
       "30kg capacity"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 30
-    },
+    "perf": false,
     "year": 2021,
     "status": "Active",
     "weight_kg": 45,
     "battery_life": 480,
     "origin": "China",
-    "cameras": 3,
+    "cameras": 2,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
       "https://www.bettaroe.cz/wp-content/uploads/2021/10/v2-012701.jpg",
       "https://www.bettaroe.cz/wp-content/uploads/2021/10/%E6%97%A5%E6%96%99%E5%BA%973.jpg"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 15,
+    "payload": 15,
+    "delivery_bays": 2,
+    "os": "PUDU",
+    "compute_platform": "PUDU (SLAM + vision)",
+    "languages": "Multi-language",
+    "use_cases": [
+      "Reception & guiding",
+      "Food running",
+      "Advertising display"
     ]
   },
   {
@@ -82866,34 +82926,52 @@
       "2024-launch",
       "9-hour"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://www.sparkepos.com/wp-content/uploads/2026/03/Unselected-KettyBot-Pro-300x600-1.png",
-    "score": 88,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 9500,
-    "desc": "KettyBot Pro — 18.5\" display, 3-in-1 (delivery, reception, marketing). 9-hour runtime. Smart tray detection.",
+    "desc": "KettyBot Pro refines Pudu's reception-and-delivery robot with upgraded navigation, more tray capacity and a larger interaction display, combining guest greeting, advertising and food running in one slim chassis.",
     "highlights": [
       "18.5\" display",
       "9-hour runtime",
       "Smart tray detection",
       "3-in-1 (delivery/reception/marketing)"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 45,
     "battery_life": 540,
     "origin": "China",
-    "cameras": 4,
+    "cameras": 3,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
       "https://www.integritas.mx/web/image/104203-cb7ccaec/kettybot_3.png",
       "https://www.integritas.mx/web/image/111242-98d910f4/kettybot%20Pro_1.webp"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 15,
+    "payload": 15,
+    "delivery_bays": 3,
+    "os": "PUDU",
+    "compute_platform": "PUDU (SLAM + vision, upgraded)",
+    "languages": "Multi-language",
+    "use_cases": [
+      "Reception & guiding",
+      "Food running",
+      "Advertising display"
     ]
   },
   {
@@ -82909,31 +82987,48 @@
       "banquet",
       "66kg"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://sebotics.com/wp-content/uploads/2022/12/pudubot-2-1-1-1136x1536.png",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 12500,
-    "desc": "Heavy-duty delivery robot. 66kg payload. 7-tray capacity. Industrial-grade frame for buffets, hospital catering.",
+    "desc": "PuduBot 2 is Pudu's enclosed-cabinet delivery robot for higher-capacity transport (up to ~60 kg) in restaurants, hotels and facilities. With dual SLAM navigation and multi-floor elevator integration, it shuttles dishes, supplies and goods between zones.",
     "highlights": [
       "66kg payload",
       "7 trays",
       "Industrial frame",
       "Buffet/hospital"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 66
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 80,
     "battery_life": 600,
     "origin": "China",
-    "cameras": 4,
+    "cameras": 3,
     "lidar": true,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 60,
+    "payload": 60,
+    "delivery_bays": 3,
+    "os": "PUDU",
+    "compute_platform": "PUDU (Laser + Visual SLAM)",
+    "use_cases": [
+      "Restaurant & hotel delivery",
+      "Enclosed-cabinet transport",
+      "Multi-floor logistics"
+    ]
   },
   {
     "id": "pudu-pudubot-3-2025",
@@ -82948,32 +83043,49 @@
       "logistics",
       "upgraded"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 15000,
-    "desc": "3rd-gen heavy-duty delivery. Improved sensors and AI. Industrial logistics, large-venue F&B.",
+    "desc": "PuduBot 3 (2025) is the latest generation of Pudu's enclosed-cabinet delivery robot, upgrading navigation, payload handling and reliability for high-throughput restaurant, hotel and facility delivery across multiple floors.",
     "highlights": [
       "Upgraded over PuduBot 2",
       "Industrial logistics",
       "Improved AI",
       "Large-venue use"
     ],
-    "perf": {
-      "speed_ms": 1.4,
-      "payload_kg": 75
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
     "weight_kg": 85,
     "battery_life": 660,
     "origin": "China",
-    "cameras": 4,
+    "cameras": 3,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 60,
+    "payload": 60,
+    "delivery_bays": 3,
+    "os": "PUDU",
+    "compute_platform": "PUDU (Laser + Visual SLAM, upgraded)",
+    "use_cases": [
+      "Restaurant & hotel delivery",
+      "Enclosed-cabinet transport",
+      "Multi-floor logistics"
+    ]
   },
   {
     "id": "pudu-cc1-2022",
@@ -82987,22 +83099,19 @@
       "cleaning",
       "floor-maintenance"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://cdn.pudutech.com/website/images/cc1/robot1_en.png",
-    "score": 83,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 11000,
-    "desc": "Hybrid cleaning + delivery robot. Scrubbing, sweeping, disinfecting in one. Multi-function commercial.",
+    "desc": "Pudu's CC1 is a commercial cleaning robot that combines four cleaning modes (sweeping, vacuuming, mopping and scrubbing) with autonomous SLAM navigation, bringing Pudu's service-robot autonomy to floor care in restaurants, malls and offices.",
     "highlights": [
       "Cleaning + delivery",
       "Scrub/sweep/disinfect",
       "Multi-function",
       "Commercial"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 20
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 85,
@@ -83015,6 +83124,23 @@
     "gallery": [
       "https://cdn.pudutech.com/website/images/pc/Pudu_Afra_C1/automatic_img2.png",
       "https://cdn.pudutech.com/website/images/cc1/charge_img.png"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "os": "PUDU",
+    "compute_platform": "PUDU (SLAM + vision)",
+    "use_cases": [
+      "Commercial floor cleaning",
+      "Sweeping / scrubbing / mopping",
+      "Light delivery"
     ]
   },
   {
@@ -83030,32 +83156,47 @@
       "historical",
       "2016"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://drone.kz/upload/resize_cache/webp/iblock/6b1/uz4w96del7jwhdp1ta1gl0sk2oltoccz/96a8f9e2d0578a42c05e3804d90c26d2.webp",
-    "score": 78,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "KEENON's first delivery robot from 2016. Pioneer of indoor restaurant delivery. Now retired.",
+    "desc": "KEENON's DinerBot T1 (2016) was among the first widely-deployed restaurant delivery robots - a multi-tray food runner using lidar-based indoor navigation, helping pioneer the now-ubiquitous category of dining-room service robots.",
     "highlights": [
       "First Keenon delivery",
       "2016 pioneer",
       "Discontinued",
       "Historical"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2016,
-    "status": "Discontinued",
+    "status": "Active",
     "weight_kg": 40,
     "battery_life": 360,
     "origin": "China",
-    "cameras": 1,
+    "cameras": 2,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
       "https://drone.kz/upload/resize_cache/webp/resize_cache/iblock/d83/uqj2sy134avk2ml2puu3zvrooj951pkd/490_490_140cd750bba9870f18aada2478b24840a/Se1f66bb14e8d4e98b4a4ffa24623fa1fW.webp"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "lidar": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 30,
+    "payload": 30,
+    "delivery_bays": 3,
+    "os": "KEENON",
+    "use_cases": [
+      "Restaurant food running"
     ]
   },
   {
@@ -83070,28 +83211,25 @@
       "4-tray",
       "popular"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://okmbot.de/wp-content/uploads/2025/06/Keenon-T8-Front45-Left_web.webp",
-    "score": 84,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 7500,
-    "desc": "Mid-range 4-tray restaurant delivery robot. Reliable workhorse for mid-sized restaurants.",
+    "desc": "The KEENON DinerBot T8 is a high-capacity 4-tray restaurant delivery robot with laser SLAM navigation and 3D obstacle avoidance, built for food running and table bussing in busy dining venues.",
     "highlights": [
       "4-tray design",
       "Reliable",
       "Mid-range pricing",
       "Workhorse"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 40
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 55,
     "battery_life": 540,
     "origin": "China",
-    "cameras": 2,
+    "cameras": 3,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
@@ -83099,6 +83237,25 @@
       "https://okmbot.de/wp-content/uploads/2025/06/Keenon-T8-Right_web.webp",
       "https://okmbot.de/wp-content/uploads/2025/06/Keenon-T8-Back_web.webp",
       "https://okmbot.de/wp-content/uploads/2025/06/Keenon-T8-Left_web.webp"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 40,
+    "payload": 40,
+    "delivery_bays": 4,
+    "os": "KEENON",
+    "compute_platform": "KEENON (Laser SLAM + vision)",
+    "use_cases": [
+      "Restaurant food running",
+      "Bussing"
     ]
   },
   {
@@ -83114,22 +83271,19 @@
       "autocharge",
       "lidar-vslam"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://atintel.io/cdn/shop/files/b408afcd74634745a11cdbe66b4b149c.webp?v=1747806157&width=504",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 9800,
-    "desc": "Premium service robot. 11.6\" touchscreen. LiDAR + Visual SLAM. Auto-charging dock. Multi-mode.",
+    "desc": "The KEENON DinerBot T9 is one of the most widely deployed restaurant delivery robots worldwide - a modular multi-tray runner with laser SLAM, 3D obstacle avoidance and expressive interaction for food delivery and bussing.",
     "highlights": [
       "11.6\" touchscreen",
       "LiDAR + VSLAM",
       "Auto-charging",
       "Multi-mode"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 40
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 50,
@@ -83141,6 +83295,25 @@
     "bluetooth": true,
     "gallery": [
       "https://atintel.io/cdn/shop/files/Screenshot_2025-05-21_at_3.41.57_pm.png?v=1747806157&width=1100"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 40,
+    "payload": 40,
+    "delivery_bays": 4,
+    "os": "KEENON",
+    "compute_platform": "KEENON (Laser SLAM + vision)",
+    "use_cases": [
+      "Restaurant food running",
+      "Bussing"
     ]
   },
   {
@@ -83156,22 +83329,19 @@
       "2024-launch",
       "upgraded"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://okmbot.de/wp-content/uploads/2025/06/Keenon-Dinerbot-T9-Pro-Vorn_web.webp",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 11000,
-    "desc": "Upgraded T9 Pro — 15-hour runtime, die-cast chassis. Faster, more durable. 70cm minimum passage.",
+    "desc": "The DinerBot T9 Pro upgrades KEENON's best-seller with improved navigation, sensing and interaction while keeping the modular 4-tray layout for restaurant food running and bussing.",
     "highlights": [
       "15-hour runtime",
       "Die-cast chassis",
       "45.2kg weight",
       "70cm passage"
     ],
-    "perf": {
-      "speed_ms": 0.8,
-      "payload_kg": 40
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 45,
@@ -83184,6 +83354,25 @@
     "gallery": [
       "https://okmbot.de/wp-content/uploads/2025/06/Keenon-Dinerbot-T9-Pro-Seite_web.webp",
       "https://okmbot.de/wp-content/uploads/2025/06/Keenon-Dinerbot-T9-Pro-Schraeg_web.webp"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 40,
+    "payload": 40,
+    "delivery_bays": 4,
+    "os": "KEENON",
+    "compute_platform": "KEENON (Laser SLAM + vision, upgraded)",
+    "use_cases": [
+      "Restaurant food running",
+      "Bussing"
     ]
   },
   {
@@ -83199,28 +83388,25 @@
       "movable-head",
       "flagship"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://okmbot.de/wp-content/uploads/2025/06/T10_Front-view_Lights-on-10000%C3%978257_web-1.webp",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 14000,
-    "desc": "Flagship T10 with movable head, 23.8\" display, AI tray detection, 360° obstacle avoidance with stereo vision + VSLAM.",
+    "desc": "The KEENON DinerBot T10 is a larger-capacity service robot for bigger venues, combining higher payload and tray volume with laser SLAM navigation for restaurant, hotel and large-venue delivery.",
     "highlights": [
       "Movable head",
       "23.8\" display",
       "AI tray detection",
       "360° obstacle avoidance"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 40
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 60,
     "battery_life": 720,
     "origin": "China",
-    "cameras": 4,
+    "cameras": 3,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
@@ -83228,6 +83414,25 @@
       "https://okmbot.de/wp-content/uploads/2025/06/T10-Tray-with-Food-Beverages_web-1.webp",
       "https://okmbot.de/wp-content/uploads/2025/06/T10-Back_web-1.webp",
       "https://okmbot.de/wp-content/uploads/2025/06/T10-Side_web-1.webp"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 50,
+    "payload": 50,
+    "delivery_bays": 4,
+    "os": "KEENON",
+    "compute_platform": "KEENON (Laser SLAM + vision)",
+    "use_cases": [
+      "Restaurant & hotel delivery",
+      "Large-venue service"
     ]
   },
   {
@@ -83242,28 +83447,25 @@
       "2025-launch",
       "large-screen"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://okmbot.de/wp-content/uploads/2025/06/Keenon-T11-Dinerbot-Front-View_web.webp",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 16000,
-    "desc": "2025 T11 — newest flagship. Improved AI, larger screen, enhanced delivery scheduling.",
+    "desc": "The DinerBot T11 (2025) is KEENON's latest-generation restaurant delivery robot, advancing navigation, payload and human-robot interaction for high-throughput dining and hospitality service.",
     "highlights": [
       "2025 launch",
       "Improved AI",
       "Enhanced scheduling",
       "Newest flagship"
     ],
-    "perf": {
-      "speed_ms": 1.4,
-      "payload_kg": 40
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
     "weight_kg": 62,
     "battery_life": 780,
     "origin": "China",
-    "cameras": 5,
+    "cameras": 3,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
@@ -83272,6 +83474,25 @@
       "https://okmbot.de/wp-content/uploads/2025/06/Keenon-T11-Dinerbot-Cat-ears_web.webp",
       "https://okmbot.de/wp-content/uploads/2025/06/Keenon-T11-Dinerbot-front-left-perspective_web.webp",
       "https://okmbot.de/wp-content/uploads/2025/06/Keenon-T11-Dinerbot-Back-Left_web.webp"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 50,
+    "payload": 50,
+    "delivery_bays": 4,
+    "os": "KEENON",
+    "compute_platform": "KEENON (Laser SLAM + vision, latest)",
+    "use_cases": [
+      "Restaurant & hotel delivery",
+      "Large-venue service"
     ]
   },
   {
@@ -83559,22 +83780,19 @@
       "barista",
       "kiosk"
     ],
-    "fig": "☕",
+    "fig": "🤖",
     "img": "https://images.squarespace-cdn.com/content/v1/640af8c70b6370616ae50abb/1683897170658-9UMLCW9MXX5G1BQKDLVH/4b38507dcd94ff60ee3b773e311a7af4f322e4ec5c488f4de2bd4f0fac24cb5a.jpg?format=2500w",
-    "score": 80,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "OrionStar's coffee-making + delivery robot. Mall/airport beverage kiosks.",
+    "desc": "OrionStar's RoboCoffee is an automated robotic barista kiosk - a robotic arm system that makes and serves coffee unattended. Unlike the company's mobile delivery robots, it is a fixed beverage-preparation station for cafes, offices and public spaces.",
     "highlights": [
       "Coffee making",
       "Delivery integrated",
       "Mall/airport",
       "OrionStar AI"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 5
-    },
+    "perf": false,
     "year": 2021,
     "status": "Active",
     "weight_kg": 120,
@@ -83589,6 +83807,21 @@
       "https://images.squarespace-cdn.com/content/v1/640af8c70b6370616ae50abb/1707366681739-F2U7ZRNLG62HIYJDHA2Z/20210609194545_60181.jpg?format=2500w",
       "https://images.squarespace-cdn.com/content/v1/640af8c70b6370616ae50abb/1707366845296-YJW5Q2CYZIRWPJ6774IW/This-coffee-making-robot-is-what-you-need-to-see-first-thing-in-the-morning-blog-featured.jpeg?format=2500w",
       "https://images.squarespace-cdn.com/content/v1/640af8c70b6370616ae50abb/1707366984466-WI394BDOL2MENPFREH2O/Cheetah+Mobile+-+Robotic+Coffee+Master_2.jpg?format=2500w"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": false,
+    "elevator_capable": false,
+    "lidar": false,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "autonomy_level": "Fixed robotic arm station",
+    "os": "OrionStar",
+    "use_cases": [
+      "Automated coffee making",
+      "Unattended cafe / kiosk"
     ]
   },
   {
@@ -83604,33 +83837,49 @@
       "budget",
       "china"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://shop.deltarobots.com/cdn/shop/files/download_5.png?v=1744632756&width=823",
-    "score": 81,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 6500,
-    "desc": "OrionStar's restaurant delivery robot. Budget-friendly alternative to BellaBot/T8.",
+    "desc": "OrionStar's Lucki Pro is a multi-tray restaurant delivery robot with laser SLAM navigation and voice interaction, used for food running and guest service across dining and hospitality venues.",
     "highlights": [
       "Budget alternative",
       "Restaurant focus",
       "Compact",
       "Reliable"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 30
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 45,
     "battery_life": 540,
     "origin": "China",
-    "cameras": 2,
+    "cameras": 3,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
       "https://shop.deltarobots.com/cdn/shop/files/download_06cb6f40-4daf-4ac7-9a30-7cee70eebe92.png?v=1744632796&width=823"
+    ],
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 40,
+    "payload": 40,
+    "delivery_bays": 4,
+    "os": "OrionStar",
+    "compute_platform": "OrionStar (Laser SLAM + vision)",
+    "use_cases": [
+      "Restaurant food running",
+      "Hospitality service"
     ]
   },
   {
@@ -83646,22 +83895,19 @@
       "chinese",
       "entry-level"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 78,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 5500,
-    "desc": "Affordable Chinese delivery robot for restaurants. Entry-level alternative.",
+    "desc": "Reeman's Flash is a cost-effective multi-tray restaurant delivery robot using laser SLAM navigation, aimed at affordable food running and hospitality service.",
     "highlights": [
       "Entry-level pricing",
       "Restaurant focus",
       "Reliable",
       "Chinese OEM"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 25
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 40,
@@ -83670,7 +83916,25 @@
     "cameras": 2,
     "lidar": true,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 40,
+    "payload": 40,
+    "delivery_bays": 4,
+    "os": "Reeman",
+    "use_cases": [
+      "Restaurant food running",
+      "Hotel delivery"
+    ]
   },
   {
     "id": "yogo-roboshuttle-2023",
@@ -83685,22 +83949,19 @@
       "multi-floor",
       "china"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 83,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 11000,
-    "desc": "YOGO's RoboShuttle for office building deliveries. Multi-floor elevator integration.",
+    "desc": "YOGO Robot's RoboShuttle is an enclosed-compartment delivery robot for office buildings, integrating with elevators and access control to autonomously transport documents, parcels and supplies between floors and zones.",
     "highlights": [
       "Office building",
       "Multi-floor",
       "Elevator integration",
       "Chinese OEM"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 20
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 55,
@@ -83709,7 +83970,27 @@
     "cameras": 3,
     "lidar": true,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "autonomous": true,
+    "outdoor_capable": false,
+    "multi_floor": true,
+    "elevator_capable": true,
+    "display": true,
+    "speech": true,
+    "fleet_management": true,
+    "made_in": "China",
+    "speed_ms": 1.2,
+    "autonomy_level": "L4 (indoor SLAM)",
+    "payload_kg": 20,
+    "payload": 20,
+    "delivery_bays": 3,
+    "os": "YOGO",
+    "compute_platform": "YOGO (Laser SLAM + vision)",
+    "use_cases": [
+      "Office & building delivery",
+      "Document & parcel transport",
+      "Multi-floor logistics"
+    ]
   },
   {
     "id": "swisslog-relay-pharmaceutical-2018",
