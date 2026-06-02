@@ -88099,7 +88099,7 @@
     "name": "Einride Pod",
     "brand": "Einride",
     "cat": "Autonomous Vehicles",
-    "sub": "Autonomous Truck",
+    "sub": "Autonomous Electric Freight Pod",
     "tags": [
       "cabless",
       "electric",
@@ -88107,12 +88107,12 @@
       "driverless",
       "ge-appliances"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/lftjfJ1AqQ886dL8bZQg/image.jpg",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Cabless all-electric autonomous truck. Swedish-engineered. GE Appliances commercial deployment. US public road testing.",
+    "desc": "The Einride Pod is a cabless, all-electric autonomous freight vehicle - it has no driver compartment at all. Operating at Level 4 with a single remote operator able to supervise multiple Pods, it carries up to ~16 tonnes of cargo on battery-electric power (~180 km range) using NVIDIA DRIVE compute and a lidar-based sensor suite. Deployed on defined routes and in closed facilities across Sweden and the US for shippers including GE Appliances, Maersk and PepsiCo.",
     "highlights": [
       "Cabless design",
       "All-electric",
@@ -88120,10 +88120,7 @@
       "GE Appliances commercial",
       "US public road"
     ],
-    "perf": {
-      "speed_ms": 24,
-      "payload_kg": 16000
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 9000,
@@ -88133,7 +88130,46 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "Cabless autonomous electric freight Pod",
+    "autonomy_level": "L4 (remote-supervised)",
+    "operational_design_domain": "Defined routes, closed facilities + public roads",
+    "powertrain": "Battery electric (cabless - no driver compartment)",
+    "range_km": 180,
+    "top_speed_kmh": 85,
+    "payload_kg": 16000,
+    "cargo_capacity_kg": 16000,
+    "battery_capacity_kwh": 300,
+    "compute_platform": "NVIDIA DRIVE",
+    "redundant_systems": [
+      "Steering",
+      "Braking",
+      "Power",
+      "Sensing"
+    ],
+    "operating_cities": [
+      "Sweden",
+      "United States"
+    ],
+    "commercial_service_year": 2022,
+    "safety_driver": "No (cabless; one remote operator supervises multiple Pods)",
+    "remote_operations": true,
+    "os": "Einride",
+    "made_in": "Sweden",
+    "width_mm": 2550,
+    "use_cases": [
+      "Autonomous electric freight",
+      "Closed-facility logistics",
+      "Sustainable trucking"
+    ],
+    "pilot_customers": [
+      "GE Appliances",
+      "Maersk",
+      "PepsiCo",
+      "Bridgestone"
+    ],
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "stackav-class-8-2024",
