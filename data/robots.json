@@ -61809,18 +61809,10 @@
     "price": 0,
     "desc": "Teleoperated, dual-armed underwater manipulation system with six-function dexterity per arm. Operates in depths up to 1 kilometer (1,000 meters). Electronically driven system eliminating hydraulic power units. Typically integrated with VideoRay's Defender ROV for enhanced power and maneuverability.",
     "highlights": [],
-    "perf": {
-      "depth_rating_m": 1000,
-      "arms": 2,
-      "functions_per_arm": 6,
-      "dof": 12,
-      "reach_mm": 1500,
-      "payload_kg": 23,
-      "host_platform": "VideoRay Defender ROV"
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "dof": 12,
     "reach_mm": 1500,
@@ -61842,7 +61834,11 @@
     "ros": true,
     "warranty_months": 12,
     "product_url": "https://www.sarcos.com/products/guardian-sea-class/",
-    "depth_rating_m": 1000
+    "depth_rating_m": false,
+    "vehicle_type": "Dual-arm manipulation system",
+    "max_depth_m": 1000,
+    "manipulator_arms": 2,
+    "arm_payload_kg": 23
   },
   {
     "id": "teledyne-flir-packbot-525",
@@ -87857,7 +87853,7 @@
     ],
     "fig": "🤖",
     "img": "https://sea-machines.com/wp-content/uploads/2025/08/SR1v2.png",
-    "score": 86,
+    "score": 75,
     "rating": 4,
     "price": "POA",
     "desc": "All-new 8-meter HDPE unmanned surface vessel (USV) from Sea Machines Robotics, designed for high-performance defense and commercial marine autonomy. Powered by the SM300-SP autonomous command and control system, it offers a 40+ knot top speed, 500-700 nautical mile range, and a 500 kg modular payload bay. Selected by Leonardo DRS in 2026 to demonstrate maritime counter-UAS (C-UAS) capability. Built from 100% high-density polyethylene for durability.",
@@ -87867,11 +87863,7 @@
       "Defense platform",
       "Aerial threat neutralization"
     ],
-    "perf": {
-      "speed_ms": 21,
-      "payload_kg": 500,
-      "range_km": 1296
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
     "weight_kg": 3500,
@@ -87921,7 +87913,12 @@
     "gallery": [
       "https://sea-machines.com/wp-content/uploads/2025/08/Hero.jpg",
       "https://sea-machines.com/wp-content/uploads/2025/08/nowires-scaled.png"
-    ]
+    ],
+    "vehicle_type": "Unmanned surface vessel (USV)",
+    "propulsion_type": "8 m HDPE hull",
+    "max_speed_kn": 40,
+    "endurance_km": 1296,
+    "depth_rating_m": false
   },
   {
     "id": "rivian-r2-robotaxi-2026",
@@ -88028,10 +88025,10 @@
       "inspection",
       "100m"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 4500,
     "desc": "The world's most popular sub-$10K ROV - an open-source, highly modular inspection and research vehicle with thousands of units deployed. 457 x 338 x 254 mm, 12 kg, rated to 100 m (acrylic) or 300 m (aluminum enclosure). Six vectored T200 thrusters (expandable to eight in Heavy configuration) give full six-DOF control and best-in-class thrust-to-weight. Live 1080p HD tilt camera, up to 6,000 lumens of lighting, quick-swap lithium-ion battery, and open-source ArduSub software on a Pixhawk autopilot for hackable autonomy. Built around a modular frame supporting cameras, sonar, grippers and scientific instruments.",
     "highlights": [
@@ -88041,17 +88038,7 @@
       "100m depth",
       "Thousands deployed"
     ],
-    "perf": {
-      "depth_rating_m": 100,
-      "depth_rating_aluminum_m": 300,
-      "max_speed_ms": 1.5,
-      "dof": 6,
-      "thrusters": "6 vectored T200 (8 in Heavy config)",
-      "payload_kg": 2,
-      "camera": "1080p30 HD tilt",
-      "lights_lumens": 6000,
-      "software": "open-source ArduSub + Pixhawk"
-    },
+    "perf": false,
     "year": 2016,
     "status": "Active",
     "weight_kg": 12,
@@ -88063,7 +88050,7 @@
     "bluetooth": false,
     "sdk": true,
     "ros": true,
-    "depth_rating_m": 100,
+    "depth_rating_m": false,
     "depth_mm": 457,
     "width_mm": 338,
     "height_mm": 254,
@@ -88075,7 +88062,13 @@
       "Education",
       "Search and recovery",
       "Aquaculture"
-    ]
+    ],
+    "vehicle_type": "Observation-class ROV",
+    "propulsion_type": "6-8 vectored T200 thrusters",
+    "thruster_count": 6,
+    "max_depth_m": 100,
+    "max_speed_kn": 3,
+    "tether_type": "Neutrally buoyant"
   },
   {
     "id": "saab-seaeye-falcon-2010",
@@ -88090,10 +88083,10 @@
       "work-class",
       "offshore"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/falcon2.jpg",
-    "score": 90,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 150000,
     "desc": "The world's most successful observation-class electric ROV — lightweight, portable and proven across thousands of demanding missions. Five S1-MCT01 thrusters (four horizontal, one vertical) deliver 50 kgf forward, 23 kgf lateral and 13 kgf vertical thrust at >3 knots. Rated to 300 m (1,000 m in the Falcon DR version), 1000 x 600 x 500 mm, 60 kg in air, 14 kg payload. Saab Seaeye iCON intelligent control provides auto-depth and auto-heading; single-phase 110/230 V operation makes it deployable almost anywhere. Widely used in offshore wind, survey, search-and-recovery and aquaculture, with 1- or 5-function manipulator and tilt-platform options.",
     "highlights": [
@@ -88103,16 +88096,7 @@
       "300m depth",
       "Japan/UK fleets"
     ],
-    "perf": {
-      "depth_rating_m": 300,
-      "max_speed_knots": 3,
-      "thrust_forward_kgf": 50,
-      "thrust_lateral_kgf": 23,
-      "thrust_vertical_kgf": 13,
-      "payload_kg": 14,
-      "thrusters": "5 (4H + 1V)",
-      "power": "single-phase 110/230 VAC"
-    },
+    "perf": false,
     "year": 2010,
     "status": "Active",
     "weight_kg": 60,
@@ -88128,7 +88112,7 @@
     "depth_mm": 1000,
     "width_mm": 600,
     "height_mm": 500,
-    "depth_rating_m": 300,
+    "depth_rating_m": false,
     "frame_material": "Polypropylene",
     "imu": true,
     "use_cases": [
@@ -88137,7 +88121,14 @@
       "Search and recovery",
       "Aquaculture",
       "Light intervention"
-    ]
+    ],
+    "vehicle_type": "Observation-class ROV",
+    "propulsion_type": "5 thrusters (4H + 1V), 50 kgf",
+    "thruster_count": 5,
+    "max_depth_m": 300,
+    "max_speed_kn": 3,
+    "manipulator_arms": 1,
+    "arm_payload_kg": 14
   },
   {
     "id": "saab-seaeye-lynx-2014",
@@ -88151,10 +88142,10 @@
       "work-class",
       "heritage-survey"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/lynx3.jpg",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Leading inspection-class ROV for the oil and gas industry, rated to 1,500 m. Six brushless-DC thrusters (four horizontal, two vertical) at 250 VDC deliver 66/47/43 kgf forward/lateral/vertical thrust and 3 knots, with a 360 kg safe working load and 160 kg through-frame lift at Sea State 6. 1230 x 815 x 605 mm, ~200 kg launch weight, ~34 kg bare payload. Rugged modular polypropylene chassis, single-mode fibre data link with up to four video channels (HD option), depth sensor (300 bar, +/-0.01% FS) and magneto-resistive AHRS. Free-swimming or with a Type 8 TMS (200 m excursion); interchangeable tooling skids and 4-function manipulator options.",
     "highlights": [
@@ -88163,17 +88154,7 @@
       "Work-class",
       "Famous San José survey"
     ],
-    "perf": {
-      "depth_rating_m": 1500,
-      "max_speed_knots": 3,
-      "thrust_forward_kgf": 66,
-      "thrust_lateral_kgf": 47,
-      "thrust_vertical_kgf": 43,
-      "payload_kg": 34,
-      "safe_working_load_kg": 360,
-      "through_frame_lift_kg": 160,
-      "thrusters": "6 (4H + 2V) brushless DC, 250 VDC"
-    },
+    "perf": false,
     "year": 2014,
     "status": "Active",
     "weight_kg": 200,
@@ -88189,7 +88170,7 @@
     "depth_mm": 1230,
     "width_mm": 815,
     "height_mm": 605,
-    "depth_rating_m": 1500,
+    "depth_rating_m": false,
     "frame_material": "Polypropylene (modular)",
     "imu": true,
     "use_cases": [
@@ -88197,7 +88178,14 @@
       "Deepwater platform inspection",
       "Light IMR",
       "Subsea survey"
-    ]
+    ],
+    "vehicle_type": "Inspection-class ROV",
+    "propulsion_type": "6 brushless-DC thrusters (4H + 2V)",
+    "thruster_count": 6,
+    "max_depth_m": 1500,
+    "max_speed_kn": 3,
+    "arm_payload_kg": 34,
+    "tether_type": "Single-mode fibre"
   },
   {
     "id": "saab-seaeye-sabertooth-2012",
@@ -88212,10 +88200,10 @@
       "3000m",
       "360-hover"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/sabertooth-image-right.jpg",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Hybrid AUV/ROV that works in deep water fully autonomously, operator-assisted, or manually via fibre-optic tether, with 360 degree hovering and six degrees of freedom. Single-hull: 1,200 m, 3.6 x 0.66 x 0.45 m, 650 kg launch weight (max 800), 5 knots, 10 kWh LiPo. Double-hull: 3,000 m, 4 x 1.35 x 0.67 m, 1,300 kg (max 2,000), 4 knots, 30 kWh. Full autonomous navigation with inertial navigation system and Doppler velocity log; advanced autopilots for heading, depth, altitude, pitch/roll and station keeping; obstacle-avoidance sonar; fault-tolerant control with non-invasive self-diagnostics. An open API lets third-party software act as backseat driver. Can reside at a 3,000 m-rated subsea docking station for 6+ months without maintenance, recharging and exchanging data via satellite or cable.",
     "highlights": [
@@ -88224,16 +88212,7 @@
       "Up to 3000m depth",
       "Autonomous inspection"
     ],
-    "perf": {
-      "depth_rating_m_single_hull": 1200,
-      "depth_rating_m_double_hull": 3000,
-      "max_speed_knots": 5,
-      "dof": 6,
-      "battery_kwh": 10,
-      "navigation": "INS + DVL (full autonomous)",
-      "launch_weight_kg": 650,
-      "subsea_residency_months": 6
-    },
+    "perf": false,
     "year": 2012,
     "status": "Active",
     "weight_kg": 650,
@@ -88249,7 +88228,7 @@
     "depth_mm": 3600,
     "width_mm": 660,
     "height_mm": 450,
-    "depth_rating_m": 1200,
+    "depth_rating_m": false,
     "dof": 6,
     "api": true,
     "imu": true,
@@ -88261,7 +88240,15 @@
       "Offshore survey",
       "Tunnel inspection",
       "Environmental monitoring"
-    ]
+    ],
+    "vehicle_type": "Hybrid AUV/ROV",
+    "propulsion_type": "Electric (battery or tether)",
+    "max_depth_m": 1200,
+    "crush_depth_m": 3000,
+    "max_speed_kn": 5,
+    "autonomous": true,
+    "inertial_navigation": true,
+    "dvl_integrated": true
   },
   {
     "id": "saab-seaeye-ewrov-2024",
@@ -88333,10 +88320,10 @@
       "ISR",
       "navy"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://cdn.sanity.io/images/61nocsj5/production/650e26c7301d4f9afb85f08d23d8773800af3332-4000x2660.png?rect=434,361,3297,1800&w=960&fit=min&auto=format",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Large-displacement AUV (LDUUV) for long-endurance military undersea ISR, survey and inspection. 5.8 m long, 1.2 m diameter, 2,720 kg (6,000 lb) dry weight, with a 3D-printed composite exterior. All-electric, rated to 6,000 m, cruising 1.0-3.6 m/s (2-7 knots) with up to 10-day autonomous missions and a 580 line-km survey range. Modular payload bays and Anduril's Lattice AI autonomy stack; originally designed by Dive Technologies (acquired by Anduril in 2022) and used as the testbed for the Ghost Shark XL-AUV program.",
     "highlights": [
@@ -88345,17 +88332,7 @@
       "Long endurance",
       "Navy programs"
     ],
-    "perf": {
-      "depth_rating_m": 6000,
-      "length_m": 5.8,
-      "diameter_m": 1.2,
-      "dry_weight_kg": 2720,
-      "speed_range_ms": "1.0-3.6",
-      "max_speed_knots": 7,
-      "endurance_days": 10,
-      "survey_range_km": 580,
-      "propulsion": "all-electric"
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 2720,
@@ -88368,7 +88345,7 @@
       "https://cdn.sanity.io/images/61nocsj5/production/6043d2f4236aeff07461232ae87ad00f58aabad0-2000x1501.jpg?rect=0,189,2000,1125&w=2000&h=1125&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/0126fc76978b2fedd63aeeacd2e3b1f55f5c617f-952x952.png?rect=0,208,952,536&w=952&h=536&fit=min&auto=format"
     ],
-    "depth_rating_m": 6000,
+    "depth_rating_m": false,
     "depth_mm": 5800,
     "width_mm": 1200,
     "imu": true,
@@ -88379,7 +88356,16 @@
       "Inspection",
       "Mine countermeasures",
       "Payload delivery"
-    ]
+    ],
+    "vehicle_type": "Large-displacement AUV (LDUUV)",
+    "propulsion_type": "All-electric",
+    "max_depth_m": 6000,
+    "max_speed_kn": 7,
+    "endurance_hours": 240,
+    "endurance_km": 580,
+    "diameter_mm": 1200,
+    "autonomous": true,
+    "inertial_navigation": true
   },
   {
     "id": "anduril-dive-xl-2024",
@@ -88395,10 +88381,10 @@
       "navy-camp",
       "modular"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://cdn.sanity.io/images/61nocsj5/production/4f81837bb229ae5f90e07d07f4d87d1e780f0346-4000x2660.png?rect=401,428,3362,1683&w=960&fit=min&auto=format",
-    "score": 94,
-    "rating": 4.8,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Extra-large autonomous undersea vehicle (XL-AUV) - the basis of the Royal Australian Navy's Ghost Shark and selected by the US Navy for its CAMP underwater-mothership program. All-electric, ~11 m long with a 2 m beam, rated to ~6,000 m, with a 2,000 nm (3,704 km) range and a demonstrated 100-hour single voyage over a 10-day period - the longest for its class. Modular design carries three standard payload modules or one extra-large module and can act as a mothership for Copperhead effectors and Seabed Sentry sensors. Fits inside a standard 4-ft shipping container, is C-17 air-transportable, and is controlled by Anduril's Lattice AI autonomy software.",
     "highlights": [
@@ -88407,18 +88393,7 @@
       "Navy CAMP project",
       "Modular payloads"
     ],
-    "perf": {
-      "depth_rating_m": 6000,
-      "length_m": 11,
-      "beam_m": 2,
-      "range_nm": 2000,
-      "range_km": 3704,
-      "endurance_hours": 100,
-      "endurance_days": 10,
-      "cruise_speed_knots": "3-4",
-      "payload": "3 standard modules or 1 XL module",
-      "propulsion": "all-electric"
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 15000,
@@ -88430,7 +88405,7 @@
       "https://cdn.sanity.io/images/61nocsj5/production/346164d2c39499d2b98dde5a2249caa29b6e7cd5-1920x1280.jpg?rect=0,100,1920,1080&w=1920&h=1080&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/5ed9c2d7cd0b76640849737f9e6167d854b3b8e2-1920x1280.jpg?rect=0,100,1920,1080&w=1920&h=1080&fit=min&auto=format"
     ],
-    "depth_rating_m": 6000,
+    "depth_rating_m": false,
     "depth_mm": 11000,
     "width_mm": 2000,
     "imu": true,
@@ -88441,7 +88416,15 @@
       "Anti-submarine warfare",
       "Mine countermeasures",
       "Payload/effector delivery"
-    ]
+    ],
+    "vehicle_type": "Extra-large AUV (XL-AUV)",
+    "propulsion_type": "All-electric",
+    "max_depth_m": 6000,
+    "max_speed_kn": 4,
+    "endurance_hours": 100,
+    "endurance_km": 3704,
+    "autonomous": true,
+    "inertial_navigation": true
   },
   {
     "id": "anduril-copperhead-2024",
@@ -88456,10 +88439,10 @@
       "mothership-launched",
       "2024-launch"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://cdn.sanity.io/images/61nocsj5/production/97bf67d28f633cf7f3b49e804029eaed52940bcc-4000x2660.png?rect=730,808,2673,1019&w=960&fit=min&auto=format",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Family of reusable, torpedo-inspired underwater effectors loaded into and launched by larger host UUVs such as the Dive-XL / Ghost Shark. Two size classes: Copperhead-100 (106 in long, 12.75 in diameter, 100 lb-class payload) and Copperhead-500 (163 in long, 21 in diameter, 500 lb-class payload). Electric propulsion with speeds in excess of 30 knots. Payload options span active/passive sensing, acoustic communications relay, magnetometer and side-scan sonar, with warhead-equipped 'M' variants for anti-submarine and anti-surface strike.",
     "highlights": [
@@ -88468,14 +88451,7 @@
       "Torpedo-style",
       "Multi-mission"
     ],
-    "perf": {
-      "variant_100": "106 in long, 12.75 in dia, 100 lb-class payload",
-      "variant_500": "163 in long, 21 in dia, 500 lb-class payload",
-      "max_speed_knots": "30+",
-      "propulsion": "electric",
-      "launched_from": "Dive-XL / Ghost Shark and other host vehicles",
-      "reusable": true
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 150,
@@ -88496,7 +88472,13 @@
       "Acoustic comms relay",
       "Magnetometer/side-scan survey",
       "Anti-submarine strike (M variants)"
-    ]
+    ],
+    "vehicle_type": "Reusable UUV effector (family)",
+    "propulsion_type": "Electric",
+    "max_speed_kn": 30,
+    "autonomous": true,
+    "launch_method": "Launched from Dive-XL / Ghost Shark",
+    "depth_rating_m": false
   },
   {
     "id": "anduril-seabed-sentry-2024",
@@ -88511,10 +88493,10 @@
       "2024-launch",
       "persistent"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://cdn.sanity.io/images/61nocsj5/production/2fa8693972cb42e5687e92b097d90edb0b62bc7c-4000x2660.png?rect=391,609,3309,1485&w=960&fit=min&auto=format",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "AI-powered, battery-powered subsea-resident sensing system that forms a persistent undersea surveillance network. Deployed, repositioned and recharged by the Dive-XL / Ghost Shark, Seabed Sentry nodes remain on station to provide long-dwell maritime domain awareness and anti-submarine detection, feeding Anduril's Lattice command-and-control. (Exact dimensions not publicly disclosed.)",
     "highlights": [
@@ -88523,12 +88505,7 @@
       "Launches from Dive-XL",
       "Naval surveillance"
     ],
-    "perf": {
-      "type": "AI-powered subsea-resident sensor network",
-      "deployment": "launched and recharged by Dive-XL",
-      "function": "persistent maritime surveillance and undersea ISR",
-      "power": "rechargeable battery (host-serviced)"
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 300,
@@ -88546,7 +88523,11 @@
       "Persistent undersea surveillance",
       "Anti-submarine detection",
       "Maritime domain awareness"
-    ]
+    ],
+    "vehicle_type": "Subsea-resident sensor node",
+    "autonomous": true,
+    "launch_method": "Deployed & recharged by Dive-XL",
+    "depth_rating_m": false
   },
   {
     "id": "boxfish-auv-2020",
@@ -88561,10 +88542,10 @@
       "6-DOF",
       "new-zealand"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/27/09xIu3E87vQDPzDSyofH/image.jpg",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Autonomous / subsea-resident underwater vehicle built on Boxfish Robotics' proven 1000 m ROV platform. Eight 3D-vectored thrusters provide true six degrees of freedom with a fault-tolerant design that keeps operating even with a failed thruster, all in a hard-anodised aluminium-alloy pressure vessel rated to 1,000 m (-10 to +45 C). Carries an uncompressed 4K main camera plus ultra-wide-angle navigation cameras for surround visibility; supports profiling sonar for 3D modelling and autonomous inspection/monitoring of subsea assets with minimal surface-vessel support.",
     "highlights": [
@@ -88573,14 +88554,7 @@
       "Marine science",
       "NZ-engineered"
     ],
-    "perf": {
-      "depth_rating_m": 1000,
-      "thrusters": "8 (3D vectored)",
-      "dof": 6,
-      "fault_tolerant": true,
-      "operation": "autonomous / subsea-resident",
-      "camera": "4K + ultra-wide nav cameras"
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 23,
@@ -88595,8 +88569,8 @@
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/04/boxfish-auv-2.jpeg",
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/04/boxfish-oem_auv.jpeg"
     ],
-    "depth_rating_m": 1000,
-    "frame_material": "Hard-anodised aluminium alloy",
+    "depth_rating_m": false,
+    "frame_material": "Hard-anodised aluminium",
     "imu": true,
     "api": true,
     "operating_temp_min": -10,
@@ -88606,7 +88580,12 @@
       "Resident monitoring",
       "Marine science",
       "Offshore survey"
-    ]
+    ],
+    "vehicle_type": "Autonomous / resident UUV",
+    "propulsion_type": "8 vectored thrusters",
+    "thruster_count": 8,
+    "max_depth_m": 1000,
+    "autonomous": true
   },
   {
     "id": "boxfish-luna-rov-2023",
@@ -88620,10 +88599,10 @@
       "freshwater",
       "real-time"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/27/yWQtryOzdT4uhnY0q48O/image.jpg",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Professional 8K underwater cinematography ROV - 714 x 435 x 351 mm, 24 kg, rated to 1,000 m. Houses a full-frame Sony A1 (8K 10-bit) or A7S III behind a 200 mm precision optical dome with a Zeiss 16-35 mm f/4 lens, capturing 50MP stills and 4K ProRes RAW with full remote control of focus, exposure and white balance. Eight 3D-vectored thrusters give six-DOF, with active stabilisation for steady shots; two 8,500-lumen dimmable high-CRI lights, dual 180-degree navigation cameras, dual IMU and compass. Multiple 100 Wh batteries deliver up to 15 hours; a fibre-optic tether runs 200 m (up to 3,000 m). Monitored on a 17-inch 4K UHD console. Hard-anodised aluminium body, neutrally buoyant in salt water.",
     "highlights": [
@@ -88632,15 +88611,7 @@
       "Scientific exploration",
       "Freshwater capable"
     ],
-    "perf": {
-      "depth_rating_m": 1000,
-      "thrusters": "8 (3D vectored)",
-      "dof": 6,
-      "camera": "Sony A1 (8K 10-bit) or A7SIII, 50MP",
-      "battery_runtime_hours": 15,
-      "lights_lumens": "2 x 8500",
-      "tether_max_m": 3000
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 24,
@@ -88654,11 +88625,11 @@
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/05/Boxfish-LUNA-underwater-cinematography-ROV.jpg",
       "https://www.oceansciencetechnology.com/wp-content/uploads/2024/04/Cinematography-ROV.jpeg"
     ],
-    "depth_rating_m": 1000,
+    "depth_rating_m": false,
     "depth_mm": 714,
     "width_mm": 435,
     "height_mm": 351,
-    "frame_material": "Hard-anodised aluminium alloy",
+    "frame_material": "Hard-anodised aluminium",
     "shell_material": "Acrylic dome",
     "imu": true,
     "operating_temp_min": -10,
@@ -88668,7 +88639,13 @@
       "Marine science",
       "Inspection",
       "Documentary filming"
-    ]
+    ],
+    "vehicle_type": "Cinematography ROV",
+    "propulsion_type": "8 vectored thrusters",
+    "thruster_count": 8,
+    "max_depth_m": 1000,
+    "tether_length_m": 200,
+    "tether_type": "Fibre-optic (to 3000 m)"
   },
   {
     "id": "mbari-mola-auv-2024",
@@ -88684,10 +88661,10 @@
       "2024-launch",
       "high-resolution-mapping"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://www.mbari.org/wp-content/uploads/MOLA_AUV_outside_Test_Tank_01_1920-300x169.jpg",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Multimodality, Observing, Low-cost, Agile (MOLA) AUV - a portable research robot from MBARI's CoMPAS Lab for high-resolution data gathering in deep, complex terrain like reefs, canyon walls and hydrothermal vents. 72 x 45 cm, 30 kg, deployable by a small crew from a small boat or shore. Built on a commercially available Boxfish submersible (rated to 1,000 m) modified with MBARI custom instruments, with vectored thrusters giving full six degrees of freedom. Carries a 4K camera plus stereo cameras and sonar that sees ~30 m ahead, using deep-learning perception and advanced localisation. Its design specifications and software algorithms are open-source to broaden access to ocean science.",
     "highlights": [
@@ -88696,16 +88673,7 @@
       "Under-ice mapping",
       "Research-grade"
     ],
-    "perf": {
-      "depth_rating_m": 1000,
-      "length_mm": 720,
-      "width_mm": 450,
-      "weight_kg": 30,
-      "dof": 6,
-      "camera": "4K + stereo cameras",
-      "sonar_range_m": 30,
-      "platform": "Boxfish submersible (MBARI-modified)"
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 30,
@@ -88714,10 +88682,10 @@
     "cameras": 2,
     "wifi": true,
     "bluetooth": false,
-    "depth_rating_m": 1000,
+    "depth_rating_m": false,
     "depth_mm": 720,
     "width_mm": 450,
-    "frame_material": "Hard-anodised aluminium alloy",
+    "frame_material": "Hard-anodised aluminium",
     "imu": true,
     "api": true,
     "use_cases": [
@@ -88725,7 +88693,12 @@
       "Marine ecosystem monitoring",
       "Deep-sea research",
       "Reef and vent mapping"
-    ]
+    ],
+    "vehicle_type": "Research AUV",
+    "propulsion_type": "Vectored thrusters (6-DOF)",
+    "thruster_count": 6,
+    "max_depth_m": 1000,
+    "autonomous": true
   },
   {
     "id": "oceanserver-iver4-2020",
@@ -88740,10 +88713,10 @@
       "hydrographic",
       "survey"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/27/HVK4SI5jlBuXJWSyL6d9/image.jpg",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Small-diameter, man-portable workhorse AUV (Iver4 900) for long-range survey, multi-domain ISR and mine warfare. 2.5 m long, 9-inch (229 mm) diameter, under 100 kg, with titanium and carbon-fiber construction rated to 300 m. Standard rechargeable NiMH packs (lithium-free and air-transportable) give ~20-hour / 40 nm missions; an optional Li-Ion pack extends this to ~40 hours / 80 nm. Modular wet-mate sections with bi-directional GigE communications allow field sensor changes; deployable from surface ships, piers, or clandestinely through submarine torpedo tubes. Integrates side-scan, micro-SAS (Northrop), magnetometer and forward-looking obstacle-avoidance sonar.",
     "highlights": [
@@ -88752,18 +88725,7 @@
       "Commercial mapping",
       "Multiple sensors"
     ],
-    "perf": {
-      "depth_rating_m": 300,
-      "length_m": 2.5,
-      "diameter_mm": 229,
-      "weight_kg": "<100",
-      "endurance_hours_nimh": 20,
-      "range_nm_nimh": 40,
-      "endurance_hours_liion": 40,
-      "range_nm_liion": 80,
-      "navigation": "INS",
-      "launch": "ship, pier or submarine torpedo tube"
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 100,
@@ -88775,7 +88737,7 @@
     "gallery": [
       "https://www.l3harris.com/sites/default/files/styles/625_x_570_2x/public/2026-04/ims-maritime-product-hero-oceanserver-iver4-900-1205x-1250x1140.jpg?h=10bd7e82&itok=GnRDwhej"
     ],
-    "depth_rating_m": 300,
+    "depth_rating_m": false,
     "depth_mm": 2500,
     "width_mm": 229,
     "frame_material": "Titanium & carbon fiber",
@@ -88786,7 +88748,16 @@
       "Multi-domain ISR",
       "Mine countermeasures",
       "Explosive ordnance disposal"
-    ]
+    ],
+    "vehicle_type": "AUV (man-portable)",
+    "propulsion_type": "Electric",
+    "max_depth_m": 300,
+    "endurance_hours": 20,
+    "endurance_km": 74,
+    "diameter_mm": 229,
+    "autonomous": true,
+    "inertial_navigation": true,
+    "launch_method": "Ship, pier or submarine torpedo tube"
   },
   {
     "id": "teledyne-gavia-2018",
@@ -88800,10 +88771,10 @@
       "sensor",
       "sub-100kg"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://www.teledynemarine.com/en-us/products/PublishingImages/Gavia/732x732/Gavia%20base%20model%20new.jpg",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Fully modular, low-logistics survey AUV with field-swappable plug-and-play modules, rated to 500 or 1,000 m. Configurable from 1.8 to 4.5 m and 50-130 kg depending on payload, 20 cm diameter, reaching over 5.5 knots. Swappable lithium-ion battery modules give 7-8 h at 3 knots each, with up to three batteries for extended endurance. Base configuration adds nose, battery, control and propulsion modules; options include side-scan, multibeam and sub-bottom sonar, cameras, INS and environmental sensors. Single-person-portable, deployable by a two-person team from shore or vessels of opportunity. In service since the program's 1997 origins for commercial survey, MCM, search-and-rescue and research.",
     "highlights": [
@@ -88812,17 +88783,7 @@
       "Sub-100kg",
       "Customizable"
     ],
-    "perf": {
-      "depth_rating_m": 1000,
-      "depth_option_m": 500,
-      "length_m_range": "1.8-4.5",
-      "weight_kg_range": "50-130",
-      "diameter_mm": 200,
-      "max_speed_knots": 5.5,
-      "endurance_hours_per_battery": "7-8 at 3 kt",
-      "batteries_max": 3,
-      "navigation": "INS + DVL + sound velocity"
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 70,
@@ -88838,7 +88799,7 @@
       "https://www.teledynemarine.com/en-us/products/PublishingImages/gavia-auv-ice.jpg",
       "https://www.teledynemarine.com/en-us/products/PublishingImages/Gavia-AUV-in-carrier-harbor.jpg"
     ],
-    "depth_rating_m": 1000,
+    "depth_rating_m": false,
     "width_mm": 200,
     "imu": true,
     "battery_type": "Lithium-ion (swappable)",
@@ -88847,7 +88808,15 @@
       "Mine countermeasures",
       "Search and rescue",
       "Scientific research"
-    ]
+    ],
+    "vehicle_type": "Modular AUV",
+    "propulsion_type": "Electric",
+    "max_depth_m": 1000,
+    "max_speed_kn": 5.5,
+    "diameter_mm": 200,
+    "autonomous": true,
+    "inertial_navigation": true,
+    "dvl_integrated": true
   },
   {
     "id": "teledyne-slocum-glider-2010",
@@ -88862,10 +88831,10 @@
       "ocean-research",
       "12-month"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://www.teledynemarine.com/en-us/products/PublishingImages/Webb%20Research/732x732/Slocum%20Glider%202.jpg",
-    "score": 88,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Long-range, long-duration autonomous underwater glider that moves by changing its buoyancy and pitching its wings, sipping power to patrol for weeks to months at a time. Rated to 1,000 m (200 m version available), it cruises slowly (~0.35 m/s) but covers vast distances, with a dry modular center payload bay plus wetted bow and stern bays accepting 40-plus sensor options. Networkable for fleet operations - fleets perform sampling and dynamic mapping across large regions for research, commercial and defense applications, surfacing periodically to relay data via satellite.",
     "highlights": [
@@ -88874,15 +88843,7 @@
       "Climate research",
       "Industry-standard glider"
     ],
-    "perf": {
-      "depth_rating_m": 1000,
-      "depth_option_m": 200,
-      "propulsion": "variable-buoyancy (thermal/electric)",
-      "endurance": "weeks to months",
-      "horizontal_speed_ms": 0.35,
-      "sensors": "40+ modular options",
-      "networkable": true
-    },
+    "perf": false,
     "year": 2010,
     "status": "Active",
     "weight_kg": 54,
@@ -88893,14 +88854,19 @@
     "gallery": [
       "https://www.teledynemarine.com/en-us/products/PublishingImages/Webb%20Research/732x732/Slocum%20Glider.jpg"
     ],
-    "depth_rating_m": 1000,
+    "depth_rating_m": false,
     "imu": true,
     "use_cases": [
       "Ocean observation",
       "Water-column sampling",
       "Dynamic mapping",
       "Defense / research surveys"
-    ]
+    ],
+    "vehicle_type": "Underwater glider",
+    "propulsion_type": "Variable buoyancy",
+    "max_depth_m": 1000,
+    "max_speed_kn": 0.7,
+    "autonomous": true
   },
   {
     "id": "liquid-robotics-wave-glider-2009",
@@ -88915,10 +88881,10 @@
       "boeing-owned",
       "ocean-data"
     ],
-    "fig": "⛵",
+    "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Wave- and solar-powered unmanned surface vehicle (USV) - the most field-proven USV in the world. A surface float is tethered to a submerged 'sub' whose articulated wings convert vertical wave motion into forward thrust, eliminating fuel; solar arrays (225 W nominal) recharge batteries that run sensors, comms and a low-power auxiliary thruster. Holds station within a 50 m radius and runs persistently for up to a year, moving 0.8-2.0 knots depending on sea state, in water deeper than 15 m. SATCOM, cellular, Wi-Fi and line-of-sight links provide real-time tasking and data exfiltration; an optional 150 m winch enables profiling casts. A Boeing subsidiary platform widely used for ASW/ISR and ocean science.",
     "highlights": [
@@ -88927,15 +88893,7 @@
       "Months at sea",
       "Persistent monitoring"
     ],
-    "perf": {
-      "max_speed_knots": "0.8 (SS2) / 1.4 (SS3) / 2.0 (SS4+)",
-      "endurance": "up to 1 year",
-      "solar_w": 225,
-      "station_keeping_radius_m": 50,
-      "min_water_depth_m": 15,
-      "propulsion": "wave-converted thrust + solar",
-      "comms": "SATCOM / cellular / Wi-Fi / line-of-sight"
-    },
+    "perf": false,
     "year": 2009,
     "status": "Active",
     "weight_kg": 90,
@@ -88950,7 +88908,14 @@
       "ASW / ISR",
       "Met-ocean data collection",
       "Communications relay"
-    ]
+    ],
+    "vehicle_type": "USV (wave + solar powered)",
+    "propulsion_type": "Wave-converted thrust + solar",
+    "max_speed_kn": 2,
+    "autonomous": true,
+    "gps_when_surfaced": true,
+    "iridium_satcom": true,
+    "depth_rating_m": false
   },
   {
     "id": "kongsberg-hugin-superior-2019",
@@ -88965,10 +88930,10 @@
       "deep-water",
       "6000m"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/27/Lsq88q4sjwbhXImeQj2d/image.jpg",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "The most capable commercially available AUV when introduced (December 2018). 6.6 m long, 2,200 kg, rated to 6,000 m, operating at 3-4 knots (2-5.2 knot range) with up to 72 h endurance at 3 knots. Carries a fixed high-end sensor suite: HISAS 1032 dual-receiver synthetic aperture sonar, EM2040 Mk2 multibeam, camera, laser profiler, sub-bottom profiler, magnetometer and methane/CO2/O2 sensors. Navigates with Kongsberg Sunstone aided INS, DVL, nav-grade IMU and DPCA micro-navigated SAS; communicates via UHF radio, Iridium satellite, Wi-Fi and cNode acoustic links, with under-ice forward-looking sonar.",
     "highlights": [
@@ -88977,16 +88942,7 @@
       "Norwegian made",
       "Premier commercial AUV"
     ],
-    "perf": {
-      "depth_rating_m": 6000,
-      "length_m": 6.6,
-      "weight_kg": 2200,
-      "operating_speed_knots": "3-4",
-      "speed_range_knots": "2-5.2",
-      "endurance_hours_at_3kt": 72,
-      "endurance_hours_at_4kt": 52,
-      "navigation": "Sunstone AINS + DVL + nav-grade IMU"
-    },
+    "perf": false,
     "year": 2019,
     "status": "Active",
     "weight_kg": 2200,
@@ -88999,7 +88955,7 @@
       "https://www.naval-technology.com/wp-content/uploads/sites/15/2019/01/Image-2-HUGIN-Superior-AUV.jpg",
       "https://www.naval-technology.com/wp-content/uploads/sites/15/2019/01/Image-3-HUGIN-Superior-AUV.jpg"
     ],
-    "depth_rating_m": 6000,
+    "depth_rating_m": false,
     "depth_mm": 6600,
     "imu": true,
     "use_cases": [
@@ -89007,7 +88963,18 @@
       "Rapid environmental assessment",
       "Mine countermeasures",
       "Deep-sea mapping"
-    ]
+    ],
+    "vehicle_type": "AUV",
+    "propulsion_type": "Electric",
+    "max_depth_m": 6000,
+    "max_speed_kn": 4,
+    "endurance_hours": 72,
+    "autonomous": true,
+    "inertial_navigation": true,
+    "dvl_integrated": true,
+    "acoustic_modem": true,
+    "iridium_satcom": true,
+    "gps_when_surfaced": true
   },
   {
     "id": "kongsberg-remus-100-2010",
@@ -89022,10 +88989,10 @@
       "portable",
       "100m"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/27/gVnYVoDYdBM90c4T3hex/image.jpg",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "The world's most proven compact AUV - designed by Woods Hole Oceanographic Institution and the US Navy's tool of choice for shallow-water mine countermeasures. Man-portable at just 37 kg (<80 lb), 1.6 m long and 19 cm diameter, rated to 100 m, reaching ~5 knots (2.6 m/s) with 8-10 h endurance. Configurable with side-scan sonar and a wide range of survey sensors; deployable and recoverable by two people with no special equipment. Tens of thousands of mission hours across coastal survey, MCM and rapid environmental assessment.",
     "highlights": [
@@ -89034,16 +89001,7 @@
       "Man-portable",
       "100m depth"
     ],
-    "perf": {
-      "depth_rating_m": 100,
-      "length_mm": 1600,
-      "diameter_mm": 190,
-      "weight_kg": 37,
-      "max_speed_knots": 5,
-      "max_speed_ms": 2.6,
-      "endurance_hours": "8-10",
-      "man_portable": true
-    },
+    "perf": false,
     "year": 2010,
     "status": "Active",
     "weight_kg": 37,
@@ -89051,7 +89009,7 @@
     "origin": "USA",
     "wifi": true,
     "bluetooth": false,
-    "depth_rating_m": 100,
+    "depth_rating_m": false,
     "depth_mm": 1600,
     "width_mm": 190,
     "imu": true,
@@ -89060,7 +89018,17 @@
       "Hydrographic survey",
       "Rapid environmental assessment",
       "Harbor security"
-    ]
+    ],
+    "vehicle_type": "AUV (man-portable)",
+    "propulsion_type": "Electric",
+    "max_depth_m": 100,
+    "max_speed_kn": 5,
+    "endurance_hours": 10,
+    "diameter_mm": 190,
+    "autonomous": true,
+    "inertial_navigation": true,
+    "dvl_integrated": true,
+    "acoustic_modem": true
   },
   {
     "id": "kongsberg-remus-6000-2014",
@@ -89075,10 +89043,10 @@
       "famous-air-france",
       "titanic"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://cdn.geo-matching.com/dogbLvpZ.jpg?w=1200&s=033810bb2f7b86ee8d073c3a826dcb22",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Deep-rated survey AUV for abyssal-plain operations - 4.0 m long, 0.66 m diameter, 880 kg in air, rated to 6,000 m. Cruises 2.5-4 knots with up to 22 h mission time and a 120 km range on twin lithium-ion battery packs. Used for deep-ocean mapping, scientific research and high-profile search operations (including the recovery of Air France 447). Carries side-scan/multibeam and sub-bottom sonar payloads for high-resolution seafloor survey.",
     "highlights": [
@@ -89087,15 +89055,7 @@
       "6,000m depth",
       "Famous deep AUV"
     ],
-    "perf": {
-      "depth_rating_m": 6000,
-      "length_m": 4,
-      "diameter_m": 0.66,
-      "weight_air_kg": 880,
-      "speed_range_knots": "2.5-4",
-      "endurance_hours": 22,
-      "range_km": 120
-    },
+    "perf": false,
     "year": 2014,
     "status": "Active",
     "weight_kg": 880,
@@ -89104,7 +89064,7 @@
     "cameras": 2,
     "wifi": true,
     "bluetooth": false,
-    "depth_rating_m": 6000,
+    "depth_rating_m": false,
     "depth_mm": 4000,
     "width_mm": 660,
     "imu": true,
@@ -89113,7 +89073,17 @@
       "Search and recovery",
       "Scientific research",
       "Seafloor mapping"
-    ]
+    ],
+    "vehicle_type": "AUV",
+    "propulsion_type": "Electric",
+    "max_depth_m": 6000,
+    "max_speed_kn": 4,
+    "endurance_hours": 22,
+    "endurance_km": 120,
+    "diameter_mm": 660,
+    "autonomous": true,
+    "inertial_navigation": true,
+    "dvl_integrated": true
   },
   {
     "id": "deeptrekker-revolution-2023",
@@ -89128,10 +89098,10 @@
       "battery-internal",
       "305m"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://www.deeptrekker.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fkzewhs8e6cvu%2F74CEzTDtY3lzWvZpQebrbl%2F29753720526e8272bca6419ca4946898%2FUntitled-1.jpg&w=1920&q=75",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 18000,
     "desc": "Deep Trekker's most powerful and stable ROV, rated to 305 m with six vectored thrusters and a copper tether (300 lb working strength) extendable to 700 m. Its defining feature is a 260-degree rotating head carrying a 4K camera and grabber arm, plus a 180-degree rotating outer shell/thruster assembly for lateral movement while a weighted internal frame keeps it stable. BRIDGE software gives near-zero-latency control and waypoint mission planning, integrating imaging sonar, DVL, USBL and GPS. Built from machined aluminium, stainless steel and carbon fiber for harsh-environment durability; widely used for EOD, public safety and offshore inspection.",
     "highlights": [
@@ -89140,14 +89110,7 @@
       "Compact portable",
       "No power tether"
     ],
-    "perf": {
-      "depth_rating_m": 305,
-      "thrusters": "6 vectored",
-      "camera": "4K on 260 deg rotating head",
-      "tether_max_m": 700,
-      "navigation": "BRIDGE waypoint autonomy; DVL/USBL/GPS options",
-      "shell_rotation_deg": 180
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 28,
@@ -89163,8 +89126,8 @@
       "https://www.deeptrekker.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fkzewhs8e6cvu%2F2Oy6ybwRKw9tQ9RwF3yZ8N%2Fca5bdf3f22d8ffcd6057ed1de42aee7d%2FIMG_7833.jpg&w=1920&q=75",
       "https://www.deeptrekker.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fkzewhs8e6cvu%2F2yUoXGLNG5HrZcDjCXujZ3%2F6bec2c00575f1d023dc33185580f07b2%2F90345293_3185784238133458_7800688433864638464_o.jpg&w=1920&q=75"
     ],
-    "depth_rating_m": 305,
-    "frame_material": "Machined aluminum, stainless steel & carbon fiber",
+    "depth_rating_m": false,
+    "frame_material": "Aluminium / stainless / carbon fiber",
     "imu": true,
     "api": true,
     "use_cases": [
@@ -89172,7 +89135,14 @@
       "Infrastructure inspection",
       "Military / EOD",
       "Search and recovery"
-    ]
+    ],
+    "vehicle_type": "Inspection-class ROV",
+    "propulsion_type": "6 vectored thrusters",
+    "thruster_count": 6,
+    "max_depth_m": 305,
+    "tether_length_m": 700,
+    "dvl_integrated": true,
+    "usbl_integrated": true
   },
   {
     "id": "qysea-fifish-v6-expert-2024",
@@ -89187,10 +89157,10 @@
       "cinema",
       "100m"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://usercontent.one/wp/www.fifish.co.uk/wp-content/uploads/2021/09/V6-Expert2.jpg",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 3500,
     "desc": "Professional-class omni-directional 4K underwater drone. Six vectored thrusters deliver full 360-degree, six-DOF motion with posture lock to +/-0.1 degrees, rated to 100 m at up to 3 knots. UHD 4K30 (1080p120 / 720p240) camera with 12MP RAW DNG, a 1-inch CMOS sensor and an ultra-wide 166-degree field of view, plus 6,000-lumen lighting. 14,400 mAh battery gives up to 6 hours per charge (90% quick-charge in an hour). AI Vision Lock keeps subjects centred; an optional robotic arm provides 100 N grip for salvage. Controlled via VR goggles or the FIFISH app, with a Q-interface for professional tooling.",
     "highlights": [
@@ -89199,17 +89169,7 @@
       "100m depth",
       "Underwater filming"
     ],
-    "perf": {
-      "depth_rating_m": 100,
-      "max_speed_knots": 3,
-      "dof": 6,
-      "posture_lock_deg": 0.1,
-      "camera": "4K30 / 12MP RAW / 166 deg FOV / 1in CMOS",
-      "lights_lumens": 6000,
-      "dive_time_hours": 6,
-      "arm_grip_n": 100,
-      "thrusters": "6 vectored"
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 4,
@@ -89224,7 +89184,7 @@
       "https://plain-eeur-prod-public.komododecks.com/202605/27/O44sxt3PqlVs4iayOTmC/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202605/27/rkbQ2WAJr6rwf0qmPZH6/image.jpg"
     ],
-    "depth_rating_m": 100,
+    "depth_rating_m": false,
     "imu": true,
     "use_cases": [
       "Underwater filming",
@@ -89232,7 +89192,14 @@
       "Salvage",
       "Aquaculture",
       "Marine research"
-    ]
+    ],
+    "vehicle_type": "Prosumer ROV",
+    "propulsion_type": "6 vectored thrusters",
+    "thruster_count": 6,
+    "max_depth_m": 100,
+    "max_speed_kn": 3,
+    "tether_length_m": 100,
+    "manipulator_arms": 1
   },
   {
     "id": "qysea-fifish-w6-2024",
@@ -89247,10 +89214,10 @@
       "350m",
       "manipulator"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://imgs.qysea.com/qiyuan/2025/03/07/PMOEPUzUoCfKx.png",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 15000,
     "desc": "Industrial-grade underwater ROV platform rated to 350 m, built on a patented six Q-Motor vectored propulsion system for strong current-fighting performance at up to 4 knots. Dual 4K UHD camera system with 12,000-lumen lighting; a 388 Wh removable battery runs up to 6-8 hours and quick-charges to 70% in one hour. Five Q-interface payload ports allow simultaneous tools - 2D/3D imaging sonar, claws, dozers and water samplers. A sonar array provides distance lock, altitude lock, collision avoidance and contour scanning, while U-QPS positioning and Station Lock give 3D path recording and drift-free station keeping. VR goggle control with head tracking.",
     "highlights": [
@@ -89259,17 +89226,7 @@
       "Industrial",
       "Light intervention"
     ],
-    "perf": {
-      "depth_rating_m": 350,
-      "max_speed_knots": 4,
-      "cameras": "dual 4K UHD",
-      "lights_lumens": 12000,
-      "battery_wh": 388,
-      "dive_time_hours": 8,
-      "payload_ports": 5,
-      "motors": "6 Q-Motor vectored",
-      "sonar": "distance/altitude lock + collision avoidance"
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 18,
@@ -89285,7 +89242,7 @@
       "https://imgs.qysea.com/qiyuan/2025/03/07/h70bNsOR7DsWL.jpg",
       "https://imgs.qysea.com/qiyuan/2025/03/07/J7rnbZgsmnebu.jpg"
     ],
-    "depth_rating_m": 350,
+    "depth_rating_m": false,
     "battery_wh": 388,
     "imu": true,
     "use_cases": [
@@ -89294,7 +89251,12 @@
       "Aquaculture",
       "Infrastructure inspection",
       "Search and survey"
-    ]
+    ],
+    "vehicle_type": "Industrial ROV",
+    "propulsion_type": "6 Q-Motor vectored thrusters",
+    "thruster_count": 6,
+    "max_depth_m": 350,
+    "max_speed_kn": 4
   },
   {
     "id": "chasing-m2-pro-2022",
@@ -89309,10 +89271,10 @@
       "battery-internal",
       "compact"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://na-file.chasing.com/FqOlE2L0Q-MI3CF-C2AonGQiTHUp",
-    "score": 83,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 2000,
     "desc": "Light-industrial underwater ROV with eight vectored thrusters for full 360-degree omni-directional motion and one-key depth-lock hovering, rated to 150 m with a 400 m horizontal radius and up to 4 knots. 4K / 12MP camera on a 1/2.3-inch Sony CMOS with f/1.8 optics, EIS and a 152-degree wide field of view, plus 4,000-lumen lighting. A 300 Wh swappable battery gives up to 5 hours (700 Wh option), with an AC power module for unlimited runtime. Compatible with grabber claw, laser scaler, imaging/multibeam sonar, USBL positioning, docking station and high-brightness control console; motor output upgraded 50% over the base M2.",
     "highlights": [
@@ -89321,17 +89283,7 @@
       "4K camera",
       "Consumer-friendly"
     ],
-    "perf": {
-      "depth_rating_m": 150,
-      "max_speed_knots": 4,
-      "dof": 6,
-      "camera": "4K / 12MP / 1/2.3in Sony CMOS / 152 deg FOV",
-      "lights_lumens": 4000,
-      "battery_wh": 300,
-      "dive_time_hours": 5,
-      "thrusters": 8,
-      "horizontal_radius_m": 400
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 4,
@@ -89347,7 +89299,7 @@
       "https://na-file.chasing.com/Fi3TqqOl7ElYwOhBY_EVjodEfLw4",
       "https://na-file.chasing.com/FmjBnt4s4cZfH5qrivIidXy84Pqk"
     ],
-    "depth_rating_m": 150,
+    "depth_rating_m": false,
     "battery_wh": 300,
     "imu": true,
     "use_cases": [
@@ -89355,7 +89307,13 @@
       "Survey",
       "Search and rescue",
       "Aquaculture"
-    ]
+    ],
+    "vehicle_type": "Light-industrial ROV",
+    "propulsion_type": "8 vectored thrusters",
+    "thruster_count": 8,
+    "max_depth_m": 150,
+    "max_speed_kn": 4,
+    "tether_length_m": 200
   },
   {
     "id": "chasing-m2-s-2023",
@@ -89369,10 +89327,10 @@
       "100m",
       "robotic-arm-optional"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://na-file.chasing.com/FrGj0JDTyTZk8_HX5h-z1yCYY7kD-WEBP",
-    "score": 84,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 2500,
     "desc": "Compact, industrial-grade open-body inspection ROV - 380 x 267 x 165 mm, 4.5 kg, rated to 100 m with a 200 m operating radius. Eight symmetric vectored thrusters with third-generation anti-stuck C-Motor 3.0 give full 360-degree omni-directional motion and independent translation/rotation; a Kalman inertial-navigation depth-fusion system holds position against vertical currents. 4K / 12MP camera on a 1/2.3-inch CMOS with EIS, dual 2,000-lumen lights, and a 97.68 Wh swappable battery (200 Wh option). Forward load capacity 3.2 kg; optional aluminium grabber arm. VR and multi-viewer support via the CHASING app.",
     "highlights": [
@@ -89381,17 +89339,7 @@
       "Affordable",
       "Hobbyist-prosumer"
     ],
-    "perf": {
-      "depth_rating_m": 100,
-      "dof": 6,
-      "camera": "4K / 12MP / 1/2.3in CMOS",
-      "lights_lumens": "2 x 2000",
-      "battery_wh": 97.68,
-      "thrusters": "8 symmetric vectored",
-      "horizontal_radius_m": 200,
-      "payload_kg": 3.2,
-      "motor": "anti-stuck C-Motor 3.0"
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 4.5,
@@ -89407,7 +89355,7 @@
       "https://na-file.chasing.com/FtLhNY9-SzlkTfWAV1Ds_HMSIgHN",
       "https://na-file.chasing.com/FhAw8SmiO0ux6mfNbkR7S8U3TYEz"
     ],
-    "depth_rating_m": 100,
+    "depth_rating_m": false,
     "depth_mm": 380,
     "width_mm": 267,
     "height_mm": 165,
@@ -89418,7 +89366,12 @@
       "Hull and infrastructure survey",
       "Content creation",
       "Aquaculture"
-    ]
+    ],
+    "vehicle_type": "Compact inspection ROV",
+    "propulsion_type": "8 vectored thrusters",
+    "thruster_count": 8,
+    "max_depth_m": 100,
+    "tether_length_m": 200
   },
   {
     "id": "openrov-trident-2017",
@@ -89433,10 +89386,10 @@
       "education",
       "100m"
     ],
-    "fig": "🐠",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/Znv6Nc635kLcRBPvq1V0/image.jpg",
-    "score": 80,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 1500,
     "desc": "Pioneering low-cost consumer/prosumer underwater drone - a four-thruster, ~2.9 kg ROV rated to 100 m reaching up to 5.6 km/h, with a stabilisation system and a buoyant Wi-Fi surface module on a 25 m tether (extensible). Streamed 1080p HD video to a phone or tablet and was designed to be extensible with custom sensors and cameras, pricing from $1,699. Helped popularise affordable underwater robotics alongside the BlueROV2. Discontinued after OpenROV pivoted to become Sofar Ocean.",
     "highlights": [
@@ -89445,13 +89398,7 @@
       "Education",
       "Citizen science"
     ],
-    "perf": {
-      "depth_rating_m": 100,
-      "max_speed_kmh": 5.6,
-      "thrusters": 4,
-      "camera": "1080p HD",
-      "tether_base_m": 25
-    },
+    "perf": false,
     "year": 2017,
     "status": "Discontinued",
     "weight_kg": 2.9,
@@ -89461,14 +89408,20 @@
     "wifi": true,
     "bluetooth": false,
     "sdk": true,
-    "depth_rating_m": 100,
+    "depth_rating_m": false,
     "imu": true,
     "use_cases": [
       "Exploration",
       "Education",
       "Hobbyist survey",
       "Citizen science"
-    ]
+    ],
+    "vehicle_type": "Consumer ROV",
+    "propulsion_type": "3 thrusters",
+    "thruster_count": 3,
+    "max_depth_m": 100,
+    "max_speed_kn": 2,
+    "tether_length_m": 25
   },
   {
     "id": "aquabotix-swarmdiver-2022",
@@ -89483,10 +89436,10 @@
       "military",
       "navy"
     ],
-    "fig": "🐟",
+    "fig": "🤖",
     "img": "https://www.hisutton.com/images/US_SwarmDiverStealth.jpg",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "The first commercially available swarming micro USV/UUV - a hybrid surface-and-subsurface vehicle just 75 cm long and 1.7 kg that operates on the surface and dives to 50 m. A single operator commands an entire fleet (around 30 units) as one coordinated entity, issuing swarm-formation and synchronized-dive commands so multiple points of data are captured simultaneously and transmitted wirelessly on surfacing. Rugged enough to work in the surf zone for near-shore, shallow data collection. Carries high-accuracy temperature and depth sensors plus multi-constellation GNSS, for oceanography, environmental monitoring, autonomous depth sounding and ISR.",
     "highlights": [
@@ -89495,14 +89448,7 @@
       "Navy ISR",
       "Surveillance"
     ],
-    "perf": {
-      "depth_rating_m": 50,
-      "length_mm": 750,
-      "weight_kg": 1.7,
-      "swarm": "single operator controls a fleet (~30 units)",
-      "capability": "synchronized vertical dive + simultaneous multi-point capture",
-      "sensors": "high-accuracy temperature + depth, multi-constellation GNSS"
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 1.7,
@@ -89514,7 +89460,7 @@
     "gallery": [
       "https://www.hisutton.com/images/US_SwarmDiver.jpg"
     ],
-    "depth_rating_m": 50,
+    "depth_rating_m": false,
     "depth_mm": 750,
     "imu": true,
     "use_cases": [
@@ -89523,7 +89469,11 @@
       "Plume analysis",
       "Autonomous depth sounding",
       "ISR"
-    ]
+    ],
+    "vehicle_type": "Micro USV/UUV (swarming)",
+    "propulsion_type": "Electric twin-thruster",
+    "max_depth_m": 50,
+    "autonomous": true
   },
   {
     "id": "irobot-510-packbot-2002",
