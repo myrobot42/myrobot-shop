@@ -53564,7 +53564,7 @@
     "score": 75,
     "rating": 4,
     "price": 160000,
-    "desc": "First IOP fielded robotic system to pass Army Test and Evaluation Command testing. Used for EOD, reconnaissance, communications, CBRN, security missions.",
+    "desc": "QinetiQ's TALON V is the modernised sixth-generation of the world-renowned TALON family, with 4,000+ units delivered. An IOP-first, modular tracked EOD/CBRN robot with heavy-lift manipulator, 16 I/O ports, HD and thermal cameras and JAUS interoperability, it performs bomb disposal, CBRN/HazMat reconnaissance, surveillance and comms-relay missions.",
     "highlights": [
       "4,000+ delivered",
       "World-renowned EOD",
@@ -53586,9 +53586,9 @@
       "Autonomy": 70,
       "Durability": 75
     },
-    "year": 2000,
+    "year": 2023,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Production",
     "height_mm": 635,
     "width_mm": 610,
     "depth_mm": 762,
@@ -53605,7 +53605,22 @@
       "Communications relay"
     ],
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "made_in": "USA",
+    "role": [
+      "EOD / IEDD",
+      "CBRN / HazMat reconnaissance",
+      "Surveillance & comms relay"
+    ],
+    "autonomy_level": 2,
+    "communication_range_km": 1,
+    "cbrn_protection": true,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "customers": [
+      "US Army (4,000+ delivered)",
+      "Police & military EOD units"
+    ]
   },
   {
     "id": "roboteam-rt-7-rocu-",
@@ -91476,12 +91491,12 @@
       "famous",
       "4500-units"
     ],
-    "fig": "💥",
+    "fig": "🤖",
     "img": "https://defense.flir.com/globalassets/defense/images/product-lync-images/packbot-510_thumbs.png",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 150000,
-    "desc": "Most-deployed EOD robot worldwide. 4,500+ in service. Used at 9/11, Iraq, Afghanistan, Fukushima nuclear cleanup, Boston Marathon bombing.",
+    "desc": "iRobot's 510 PackBot is one of the most battle-proven EOD robots ever built - over 4,500 delivered, used at 9/11, across Iraq and Afghanistan, and the first robots into the Fukushima reactors in 2011. Man-portable at under 24 kg and deployable in two minutes, its OmniReach manipulator reaches 2 m and lifts ~20 kg, climbs 45-degree stairs, is submersible, and carries LWIR thermal, FLIR Fido explosives detection and CBRN/HazMat kits. Now part of Teledyne FLIR.",
     "highlights": [
       "4,500+ deployed",
       "9/11/Iraq/Afghanistan",
@@ -91489,10 +91504,7 @@
       "Man-portable",
       "13.6kg payload"
     ],
-    "perf": {
-      "speed_ms": 2.6,
-      "payload_kg": 13.6
-    },
+    "perf": false,
     "year": 2002,
     "status": "Active",
     "weight_kg": 24,
@@ -91504,6 +91516,30 @@
     "gallery": [
       "https://www.army-technology.com/wp-content/uploads/sites/3/2024/09/Image-1-PackBot-510-robot.jpg",
       "https://www.army-technology.com/wp-content/uploads/sites/3/2024/09/Image-2-PackBot-510-robot.jpg"
+    ],
+    "payload_kg": 20,
+    "speed_ms": 2.6,
+    "made_in": "USA",
+    "role": [
+      "EOD / IEDD",
+      "Surveillance & reconnaissance",
+      "CBRN / HazMat detection"
+    ],
+    "autonomy_level": 1,
+    "communication_range_km": 0.8,
+    "cbrn_protection": true,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "customers": [
+      "US Army",
+      "US first responders",
+      "Civil defence (40+ nations)"
+    ],
+    "use_cases": [
+      "Bomb disposal",
+      "IED detection",
+      "CBRN detection",
+      "Building & route clearance"
     ]
   },
   {
@@ -91519,22 +91555,19 @@
       "stair-climbing",
       "famous"
     ],
-    "fig": "💥",
+    "fig": "🤖",
     "img": "https://spectrum.ieee.org/media-library/northrop-grumman-remotec-andros-f6b-robot.jpg?id=25581054&width=2400&height=2335",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 150000,
-    "desc": "Used by 90% of US bomb squads. Stair-climbing, multi-tool. Industry standard for police EOD.",
+    "desc": "Remotec's (Northrop Grumman) Andros F6B is a large, heavy-duty EOD platform with dual mobility - quick-release pneumatic wheels for a narrow profile plus patented articulating tracks for rough terrain and stairs. Its 7-degree-of-freedom manipulator arm offers high dexterity for render-safe procedures, making it a long-serving bomb-squad workhorse worldwide.",
     "highlights": [
       "90% of US bomb squads",
       "Stair-climbing",
       "Multi-tool",
       "Police standard"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 30
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 220,
@@ -91542,7 +91575,27 @@
     "origin": "USA",
     "cameras": 4,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "made_in": "USA",
+    "role": [
+      "EOD / IEDD",
+      "HazMat handling",
+      "Heavy bomb disposal"
+    ],
+    "autonomy_level": 1,
+    "communication_range_km": 1,
+    "cbrn_protection": true,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "customers": [
+      "US military & EOD units",
+      "Police bomb squads"
+    ],
+    "use_cases": [
+      "Heavy EOD",
+      "IED render-safe",
+      "HazMat handling"
+    ]
   },
   {
     "id": "remotec-titus-2022",
@@ -91557,22 +91610,19 @@
       "police",
       "tactical"
     ],
-    "fig": "💥",
+    "fig": "🤖",
     "img": "https://vpk.name/file/img/Andros-F6..jpg",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 80000,
-    "desc": "Backpackable compact EOD robot. Tactical police use. Faster deployment than Andros.",
+    "desc": "Remotec's (Northrop Grumman) Titus is a newer-generation medium EOD robot emphasising modularity and ease of transport, with a manipulator arm and sensor payloads for explosive-ordnance disposal and CBRN reconnaissance for military and public-safety users.",
     "highlights": [
       "Backpackable",
       "Compact",
       "Fast deployment",
       "Tactical police"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 25,
@@ -91580,7 +91630,25 @@
     "origin": "USA",
     "cameras": 3,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "made_in": "USA",
+    "role": [
+      "EOD / IEDD",
+      "CBRN reconnaissance"
+    ],
+    "autonomy_level": 1,
+    "communication_range_km": 1,
+    "cbrn_protection": true,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "customers": [
+      "US military & public-safety EOD units"
+    ],
+    "use_cases": [
+      "Bomb disposal",
+      "Remote inspection",
+      "CBRN detection"
+    ]
   },
   {
     "id": "icor-cobra-mk3-2018",
@@ -91595,22 +91663,19 @@
       "police",
       "commercial"
     ],
-    "fig": "💥",
+    "fig": "🤖",
     "img": "https://icortechnology.com/wp-content/uploads/2016/09/MK3-CALIBER%C2%AE-EOD-ROBOT.jpg",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 120000,
-    "desc": "Canadian-made EOD robot. Modular design. Used by police agencies worldwide.",
+    "desc": "ICOR Technology's CALIBER MK3 is a mid-size Canadian EOD robot with a powerful articulating manipulator arm, designed for affordability and ruggedness. A popular choice for police bomb squads, it handles IED render-safe procedures, remote inspection and disruptor deployment.",
     "highlights": [
       "Canadian-made",
       "Modular",
       "Police use",
       "Worldwide deployment"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 85,
@@ -91618,7 +91683,24 @@
     "origin": "Canada",
     "cameras": 3,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "made_in": "Canada",
+    "role": [
+      "EOD / IEDD",
+      "Render-safe operations"
+    ],
+    "autonomy_level": 1,
+    "communication_range_km": 0.8,
+    "export_control": "Canada controlled goods",
+    "customers": [
+      "Police bomb squads",
+      "Military EOD units"
+    ],
+    "use_cases": [
+      "Bomb disposal",
+      "IED render-safe",
+      "Remote inspection"
+    ]
   },
   {
     "id": "thales-bobcat-2020",
@@ -91633,22 +91715,19 @@
       "military",
       "police"
     ],
-    "fig": "💥",
+    "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 110000,
-    "desc": "French-made EOD robot. European military + police use. Versatile modular platform.",
+    "desc": "Thales' Bobcat is a tracked unmanned ground vehicle for explosive-ordnance disposal and hazardous-environment reconnaissance, carrying a manipulator and sensor suite for remote inspection and render-safe tasks.",
     "highlights": [
       "French-made",
       "Military + police",
       "Modular",
       "European use"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 80,
@@ -91656,7 +91735,24 @@
     "origin": "France",
     "cameras": 3,
     "wifi": true,
-    "bluetooth": true
+    "bluetooth": true,
+    "made_in": "France",
+    "role": [
+      "EOD / IEDD",
+      "Reconnaissance",
+      "CBRN detection"
+    ],
+    "autonomy_level": 1,
+    "communication_range_km": 1,
+    "export_control": "EU dual-use",
+    "customers": [
+      "Military & security forces"
+    ],
+    "use_cases": [
+      "Explosive ordnance disposal",
+      "Remote inspection",
+      "Hazard reconnaissance"
+    ]
   },
   {
     "id": "chiba-tech-quince-2011",
@@ -92058,22 +92154,19 @@
       "european-standard",
       "arm-7-DOF"
     ],
-    "fig": "💥",
+    "fig": "🤖",
     "img": "https://esut.de/wp-content/uploads/2020/02/telemax-EVO_telerob.jpg",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 140000,
-    "desc": "German EOD robot. Modular design. 7-DOF arm. European police/military standard.",
+    "desc": "telerob's teleMAX EVO (telerob, an AeroVironment company) is a compact, highly agile German EOD robot with a multi-jointed manipulator and hybrid wheel/track mobility for stairs and tight spaces. Widely used by European police and military bomb-disposal units for render-safe and HazMat operations.",
     "highlights": [
       "German-engineered",
       "7-DOF arm",
       "Modular",
       "European standard"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 30
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 75,
@@ -92084,6 +92177,23 @@
     "bluetooth": true,
     "gallery": [
       "https://www.roboticgizmos.com/wp-content/uploads/2021/10/28/Telemax-Evo-Hybrid-Unmanned-Ground-Robot-640x438.jpg"
+    ],
+    "made_in": "Germany",
+    "role": [
+      "EOD / IEDD",
+      "CBRN / HazMat reconnaissance"
+    ],
+    "autonomy_level": 1,
+    "communication_range_km": 1,
+    "cbrn_protection": true,
+    "export_control": "EU dual-use",
+    "customers": [
+      "European police & military EOD units"
+    ],
+    "use_cases": [
+      "Bomb disposal",
+      "HazMat handling",
+      "Confined-space inspection"
     ]
   },
   {
@@ -92214,22 +92324,19 @@
       "medium-tactical",
       "fielded"
     ],
-    "fig": "💥",
+    "fig": "🤖",
     "img": "https://cache.getarchive.net/Prod/thumb/cdn2/L3Bob3RvLzIwMTQvMDcvMjMvYW4tbWstMi1tdHJzLXRhbG9uLXJvYm90LXByZXBhcmVzLXRvLXBpY2stdXAtYS1iYXR0ZXJ5LWQ2NjQyNC0xMDI0LmpwZw%3D%3D/1024/683/jpg",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Medium-sized tactical robot (MTRS). US Army field deployment. Multi-mission EOD.",
+    "desc": "The MTRS Mk II (Man Transportable Robotic System, Increment II) is a medium-class US military EOD robot - a modular, interoperable (IOP/JAUS) tracked platform with a manipulator arm for explosive-ordnance disposal, remote inspection and CBRN tasks, replacing earlier man-transportable EOD systems across US ground forces.",
     "highlights": [
       "MTRS Army",
       "Medium-tactical",
       "Multi-mission",
       "Army-fielded"
     ],
-    "perf": {
-      "speed_ms": 2.5,
-      "payload_kg": 25
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 75,
@@ -92242,6 +92349,26 @@
       "https://cache.getarchive.net/Prod/thumb/cdn2/L3Bob3RvLzIwMTQvMDcvMjMvYW4tbWstMi1tdHJzLXRhbG9uLXJvYm90LWFycmFuZ2VzLW9iamVjdHMtYnktc2l6ZS0xMzBkNmYtNjQwLmpwZw%3D%3D/853/1280/jpg",
       "https://cache.getarchive.net/Prod/thumb/cdn2/L3Bob3RvLzIwMTQvMDcvMjMvYW4tbWstMi1tdHJzLXRhbG9uLXJvYm90LW1vdmVzLWEtc2ltdWxhdGVkLXByZXNzdXJlLTExNGEyYi0xMDI0LmpwZw%3D%3D/1024/683/jpg",
       "https://cache.getarchive.net/Prod/thumb/cdn2/L3Bob3RvLzIwMTQvMDcvMjMvYW4tbWstMi1tdHJzLXRhbG9uLXJvYm90LWlzLXV0aWxpemVkLXRvLXNoYWtlLWEtc2ltdWxhdGVkLTRmMjQyMC0xMDI0LmpwZw%3D%3D/1024/683/jpg"
+    ],
+    "made_in": "USA",
+    "role": [
+      "EOD / IEDD",
+      "Reconnaissance",
+      "CBRN detection"
+    ],
+    "autonomy_level": 1,
+    "communication_range_km": 1,
+    "cbrn_protection": true,
+    "mil_spec": true,
+    "export_control": "ITAR (USA)",
+    "customers": [
+      "US Army",
+      "US Marine Corps"
+    ],
+    "use_cases": [
+      "Explosive ordnance disposal",
+      "Remote inspection",
+      "CBRN reconnaissance"
     ]
   },
   {
@@ -92392,22 +92519,19 @@
       "sub-50lb",
       "police"
     ],
-    "fig": "💥",
+    "fig": "🤖",
     "img": "https://icortechnology.com/wp-content/uploads/2016/09/MINI.png",
-    "score": 83,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 60000,
-    "desc": "Compact CALIBER variant. Sub-50lb. Police rapid-response EOD.",
+    "desc": "ICOR's Mini-CALIBER is a compact, lightweight EOD robot for confined spaces, stairwells and under-vehicle inspection where a full-size platform cannot reach. It carries a manipulator and cameras for reconnaissance and small-charge render-safe tasks.",
     "highlights": [
       "Sub-50lb",
       "Compact EOD",
       "Police rapid response",
       "Portable"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 7
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
     "weight_kg": 22,
@@ -92420,6 +92544,22 @@
       "https://messsecurity.com/wp-content/uploads/2018/10/Mini-CALIBER-SWAT-Robot-Stowed.jpg",
       "https://messsecurity.com/wp-content/uploads/2018/10/Mini-CALIBER-SWAT-Robot-Disrupting-Package.jpg",
       "https://messsecurity.com/wp-content/uploads/2018/10/Mini-CALIBER-SWAT-Robot-CCU.jpg"
+    ],
+    "made_in": "Canada",
+    "role": [
+      "EOD / IEDD",
+      "Reconnaissance"
+    ],
+    "autonomy_level": 1,
+    "communication_range_km": 0.5,
+    "export_control": "Canada controlled goods",
+    "customers": [
+      "Police bomb squads"
+    ],
+    "use_cases": [
+      "Compact bomb disposal",
+      "Confined-space inspection",
+      "Under-vehicle inspection"
     ]
   },
   {
