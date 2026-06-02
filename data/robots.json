@@ -81579,32 +81579,54 @@
       "campus",
       "11M-miles"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7bozd44PKAIj4QkGa6lpnKCU15DXgUSNCIQ&s",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Original 6-wheel sidewalk delivery robot. Active on 50+ university campuses globally. 11M+ delivery miles logged.",
+    "desc": "Starship's six-wheeled autonomous sidewalk delivery robot - the most-deployed in the world with 10M+ deliveries. It travels at pedestrian pace (~6 km/h) within ~2-3 km of a store, carrying up to 10 kg (about three shopping bags) in an app-locked insulated compartment. A bogie/six-wheel system climbs curbs; perception uses 12 cameras plus ultrasonic, radar and GPS. Operates at L4 with remote human assist and runs ~18 hours on a charge.",
     "highlights": [
       "50+ campuses",
       "11M+ delivery miles",
       "6-wheel design",
       "Tallinn-engineered"
     ],
-    "perf": {
-      "speed_ms": 1.8,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 25,
     "battery_life": 1080,
     "ip_rating": "IPX4",
     "origin": "Estonia/UK",
-    "cameras": 9,
+    "cameras": 12,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "autonomy_level": "L4 (99% autonomous, remote assist)",
+    "autonomous": true,
+    "payload_kg": 10,
+    "payload": 10,
+    "height_mm": 571,
+    "width_mm": 569,
+    "depth_mm": 697,
+    "speed_ms": 1.67,
+    "battery_wh": 1260,
+    "battery_life_typical": 1080,
+    "lidar": false,
+    "imu": true,
+    "gps": true,
+    "compute_platform": "Starship onboard AI",
+    "os": "Starship",
+    "made_in": "Estonia / USA",
+    "outdoor_capable": true,
+    "multi_floor": false,
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Grocery delivery",
+      "Campus & neighbourhood last-mile",
+      "Parcel delivery"
+    ]
   },
   {
     "id": "starship-delivery-robot-gen6-2023",
@@ -81619,25 +81641,22 @@
       "upgraded",
       "2023-launch"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7bozd44PKAIj4QkGa6lpnKCU15DXgUSNCIQ&s",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Gen 6 with improved sensors, AI, weather handling. €83.6M funding round 2024. RaaS model.",
+    "desc": "The sixth-generation Starship delivery robot refines the six-wheeled sidewalk platform with upgraded compute, sensing and world-first onsite wireless charging (overnight, no plug). It carries up to 10 kg in an insulated, app-locked compartment at pedestrian speed, operating ~18 hours per charge with winter wheels for snow. Part of the fleet that makes ~125,000 road/driveway crossings daily worldwide at L4 autonomy.",
     "highlights": [
       "Upgraded sensors",
       "Better navigation",
       "€83.6M funded",
       "RaaS pricing"
     ],
-    "perf": {
-      "speed_ms": 1.8,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
-    "weight_kg": 27,
+    "weight_kg": 25,
     "battery_life": 1080,
     "ip_rating": "IPX4",
     "origin": "Estonia/UK",
@@ -81648,6 +81667,31 @@
     "gallery": [
       "https://sustainable.fostercity.org/wp-content/uploads/bb-plugin/cache/DSC_0292-1024x768-landscape-5d349a178c7dbada34a078ed0bca3bb9-59ea6ca5e75bb.jpg",
       "https://sustainable.fostercity.org/wp-content/uploads/bb-plugin/cache/DSC_0323-1024x683-landscape-66bcfa6db89af54c4a49c4a5478b6201-59ea6cb332420.jpg"
+    ],
+    "autonomy_level": "L4 (99% autonomous, remote assist)",
+    "autonomous": true,
+    "payload_kg": 10,
+    "payload": 10,
+    "height_mm": 571,
+    "width_mm": 569,
+    "depth_mm": 697,
+    "speed_ms": 1.67,
+    "battery_wh": 1260,
+    "battery_life_typical": 1080,
+    "lidar": false,
+    "imu": true,
+    "gps": true,
+    "wireless_charging": true,
+    "compute_platform": "Starship onboard AI (upgraded)",
+    "os": "Starship",
+    "made_in": "Estonia / USA",
+    "outdoor_capable": true,
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Grocery delivery",
+      "Campus & neighbourhood last-mile",
+      "Industrial-site delivery"
     ]
   },
   {
@@ -81779,33 +81823,49 @@
       "postmates-spinoff",
       "uber-eats"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Postmates spinoff. 4-wheel sidewalk delivery. Pink color signature. Uber Eats partner since 2022.",
+    "desc": "Serve Robotics' first-generation low-emission sidewalk delivery robot, spun out of Postmates/Uber. A four-wheeled L4 bot with fail-safe mechanical braking and autonomous collision avoidance, it delivers food on sidewalks with remote human assist, deployed initially with Uber Eats in Los Angeles.",
     "highlights": [
       "Postmates spinoff",
       "Uber Eats partner",
       "Distinctive pink",
       "Sidewalk operation"
     ],
-    "perf": {
-      "speed_ms": 1.8,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2021,
     "status": "Active",
     "weight_kg": 40,
     "battery_life": 600,
     "ip_rating": "IPX5",
     "origin": "USA",
-    "cameras": 7,
+    "cameras": 6,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "autonomy_level": "L4 (remote assist)",
+    "autonomous": true,
+    "payload_kg": 23,
+    "payload": 23,
+    "speed_ms": 1.4,
+    "imu": true,
+    "gps": true,
+    "compute_platform": "NVIDIA Jetson",
+    "os": "Serve",
+    "made_in": "USA",
+    "outdoor_capable": true,
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Sidewalk last-mile"
+    ],
+    "pilot_customers": [
+      "Uber Eats"
+    ]
   },
   {
     "id": "serve-robotics-gen2-2023",
@@ -81820,33 +81880,50 @@
       "public-safety",
       "2023-launch"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Gen 2 with NVIDIA Jetson Orin. Level 4 autonomy in defined areas. Major Uber Eats LA expansion.",
+    "desc": "Serve Robotics' second-generation sidewalk delivery robot - the workhorse of its commercial Los Angeles fleet with Uber Eats. L4 autonomy with fail-safe mechanical braking, a multi-camera-plus-lidar sensor suite, and an app-locked cargo compartment for food and convenience orders.",
     "highlights": [
       "Level 4 autonomy",
       "NVIDIA Jetson Orin",
       "LA expansion",
       "Improved over Gen 1"
     ],
-    "perf": {
-      "speed_ms": 1.8,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 40,
     "battery_life": 600,
     "ip_rating": "IPX5",
     "origin": "USA",
-    "cameras": 8,
+    "cameras": 7,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "autonomy_level": "L4 (remote assist)",
+    "autonomous": true,
+    "payload_kg": 23,
+    "payload": 23,
+    "speed_ms": 1.4,
+    "imu": true,
+    "gps": true,
+    "compute_platform": "NVIDIA Jetson",
+    "os": "Serve",
+    "made_in": "USA",
+    "outdoor_capable": true,
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Sidewalk last-mile"
+    ],
+    "pilot_customers": [
+      "Uber Eats",
+      "7-Eleven"
+    ]
   },
   {
     "id": "serve-robotics-gen3-2025",
@@ -81860,29 +81937,26 @@
       "2000-fleet",
       "NVIDIA"
     ],
-    "fig": "📦",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/01/IGTCoofOSWbjzVkCSC36/image.jpg",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "2025 Gen 3 — targeting 2,000-unit fleet rollout. Improved range, payload, weather handling. NVIDIA-powered.",
+    "desc": "Serve Robotics' third-generation sidewalk delivery robot, built for national scaling with 2,000 units rolling out from 2025. It moves roughly twice as fast and twice as far as Gen 2, adds ~6 hours of daily field time, and runs 5x more AI on an NVIDIA Jetson Orin module with Ouster's REV7 digital lidar. Emergency braking stops 40% more quickly, at roughly half the prior manufacturing cost.",
     "highlights": [
       "2,000-unit fleet plan",
       "Improved weather",
       "Extended range",
       "Uber/7-Eleven partners"
     ],
-    "perf": {
-      "speed_ms": 2.2,
-      "payload_kg": 20
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
     "weight_kg": 45,
     "battery_life": 720,
     "ip_rating": "IPX5",
     "origin": "USA",
-    "cameras": 10,
+    "cameras": 8,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
@@ -81891,6 +81965,27 @@
       "https://cdn.sanity.io/images/dh33lj7y/production/c4edde8256c9e2d9a0822e899c27cf9e5ac3d5c3-8192x5464.jpg?rect=1364,0,5464,5464&w=1440&h=1440&max-h=3840&max-w=3840&q=85&auto=format",
       "https://cdn.sanity.io/images/dh33lj7y/production/d965c0e43f529be01b651e53c51eefb7e8bda86c-7481x4990.jpg?rect=1246,0,4990,4990&w=1440&h=1440&max-h=3840&max-w=3840&q=85&auto=format",
       "https://image.mux.com/01ob2hs00AwqPMSEyTsQifp4CJgAuZvvSS6mf9Kjfr45k/thumbnail.webp?time=1"
+    ],
+    "autonomy_level": "L4 (remote assist)",
+    "autonomous": true,
+    "payload_kg": 23,
+    "payload": 23,
+    "speed_ms": 2.5,
+    "lidar_model": "Ouster REV7 digital lidar",
+    "imu": true,
+    "gps": true,
+    "compute_platform": "NVIDIA Jetson Orin (5x compute)",
+    "os": "Serve",
+    "made_in": "USA",
+    "outdoor_capable": true,
+    "fleet_management": true,
+    "use_cases": [
+      "Food delivery",
+      "Sidewalk last-mile",
+      "High-density urban delivery"
+    ],
+    "pilot_customers": [
+      "Uber Eats"
     ]
   },
   {
