@@ -61822,7 +61822,7 @@
     "score": 85,
     "rating": 4.5,
     "price": "POA",
-    "desc": "Subsea dual-arm manipulation system from Sarcos Technology — designed to attach to ROVs to perform complex intervention tasks (cutting, valve turning, sampling). Each arm rated for 23 kg payload, 1,000 m depth. 45 kg total system weight. Force-feedback teleoperation enables operators to feel underwater forces.",
+    "desc": "Subsea dual-arm manipulation system from Sarcos Technology — designed to attach to ROVs to perform complex intervention tasks (cutting, valve turning, sampling). Each arm rated for 23 kg payload, 1,000 m depth.",
     "highlights": [],
     "perf": false,
     "origin": "USA",
@@ -61845,7 +61845,7 @@
     "payload_kg": 23,
     "battery_life": "8-12 hours",
     "ros": true,
-    "warranty_months": 12,
+    "warranty_months": 24,
     "product_url": "https://www.sarcos.com/products/guardian-sea-class/",
     "depth_rating_m": 1000,
     "vehicle_type": "Dual-arm manipulation system",
@@ -61855,7 +61855,12 @@
     "made_in": "USA (Salt Lake City, UT)",
     "arm_count": 2,
     "manipulator_payload_kg": 23,
-    "force_feedback": true
+    "force_feedback": true,
+    "payload": 23,
+    "height_mm": 600,
+    "width_mm": 900,
+    "depth_mm": 500,
+    "length_mm": 500
   },
   {
     "id": "teledyne-flir-packbot-525",
@@ -87873,7 +87878,7 @@
     "score": 86,
     "rating": 4.5,
     "price": "POA",
-    "desc": "All-new 8-meter HDPE unmanned surface vessel (USV) from Sea Machines Robotics, designed for high-performance defense and commercial marine autonomy. Powered by the SM300-SP autonomous command and control system, it offers a 40+ knot top speed, 500-700 nautical mile range, and a 500 kg modular payload bay. Selected by Leonardo DRS in 2026 to demonstrate maritime counter-UAS (C-UAS) capability. Built from 100% high-density polyethylene for durability.",
+    "desc": "All-new 8-meter HDPE unmanned surface vessel (USV) from Sea Machines Robotics, designed for high-performance defense and commercial marine autonomy. Powered by the SM300-SP autonomous command and control system, it offers a 40+ knot top speed, 500-700 nautical mile range, and a 500 kg modular payload bay. Selected by Leonardo DRS in 2026 to demonstrate maritime counter-UAS (C-UAS) capability.",
     "highlights": [
       "Autonomous marine",
       "Leonardo DRS partner",
@@ -87936,7 +87941,14 @@
     "max_speed_kn": 40,
     "endurance_km": 1296,
     "depth_rating_m": false,
-    "manufacturer_url": "https://sea-machines.com/"
+    "manufacturer_url": "https://sea-machines.com/",
+    "depth_mm": 8000,
+    "width_mm": 2500,
+    "height_mm": 1800,
+    "speed": 20.6,
+    "payload": 500,
+    "os": "Sea Machines SM300-SP",
+    "warranty_months": 12
   },
   {
     "id": "rivian-r2-robotaxi-2026",
@@ -88051,7 +88063,7 @@
     "score": 89,
     "rating": 4.7,
     "price": 4500,
-    "desc": "World's most popular sub-$10K ROV — open-source, Raspberry Pi-based, with thousands deployed globally for education, research, and inspection. 6 or 8 vectored T200 thrusters, 100 m depth (300 m heavy-config), neutrally buoyant tether. Highly modular — supports add-on cameras, sonars, manipulators, sensors via standardized I/O. ArduSub firmware (open-source autopilot).",
+    "desc": "World's most popular sub-$10K ROV — open-source, Raspberry Pi-based, with thousands deployed globally for education, research, and inspection. 6 or 8 vectored T200 thrusters, 100 m depth (300 m heavy-config), neutrally buoyant tether. ArduSub firmware.",
     "highlights": [
       "Open-source",
       "Sub-$10K",
@@ -88063,7 +88075,7 @@
     "year": 2016,
     "status": "Active",
     "weight_kg": 12,
-    "battery_life": 120,
+    "battery_life": 180,
     "ip_rating": "IPX8",
     "origin": "USA",
     "cameras": 1,
@@ -88096,7 +88108,12 @@
     "length_mm": 457,
     "open_source": true,
     "firmware": "ArduSub (open-source)",
-    "manufacturer_url": "https://bluerobotics.com/store/rov/bluerov2/"
+    "manufacturer_url": "https://bluerobotics.com/store/rov/bluerov2/",
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "os": "ArduSub (Linux-based)",
+    "warranty_months": 12,
+    "battery_life_typical": 180
   },
   {
     "id": "saab-seaeye-falcon-2010",
@@ -88120,7 +88137,7 @@
     "score": 89,
     "rating": 4.6,
     "price": 95000,
-    "desc": "World's best-selling observation-class ROV with over 1,500 units deployed across naval, oil & gas, and inland inspection markets. Five thrusters (4 horizontal vectored + 1 vertical) deliver 50 kgf of thrust, single manipulator option, 300 m depth rating. Compact polypropylene frame (60 kg) makes it man-portable. Long production run since 1998 makes Falcon one of the most field-proven ROVs in the world.",
+    "desc": "World's best-selling observation-class ROV with over 1,500 units deployed across naval, oil & gas, and inland inspection markets. Five thrusters (4 horizontal vectored + 1 vertical) deliver 50 kgf of thrust, single manipulator option, 300 m depth rating. Compact polypropylene frame (60 kg) makes it man-portable.",
     "highlights": [
       "Industry-standard",
       "Portable professional",
@@ -88167,7 +88184,13 @@
     "arm_count": 1,
     "manipulator_payload_kg": 14,
     "length_mm": 1000,
-    "manufacturer_url": "https://www.saabseaeye.com/solutions/underwater-vehicles/falcon"
+    "manufacturer_url": "https://www.saabseaeye.com/solutions/underwater-vehicles/falcon",
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "payload": 14,
+    "payload_kg": 14,
+    "os": "Seaeye Surface Control System",
+    "warranty_months": 24
   },
   {
     "id": "saab-seaeye-lynx-2014",
@@ -88190,7 +88213,7 @@
     "score": 89,
     "rating": 4.6,
     "price": "POA",
-    "desc": "Inspection-class ROV bridging the gap between observation-class (Falcon) and work-class systems. Six brushless-DC thrusters (4H + 2V) deliver high maneuverability, with single-mode fibre tether for long-range operation. 1,500 m depth rating, 200 kg modular polypropylene frame accepts a range of survey and inspection tooling.",
+    "desc": "Inspection-class ROV bridging observation-class (Falcon) and work-class systems. Six brushless-DC thrusters (4H + 2V) deliver high maneuverability, with single-mode fibre tether for long-range operation. 1,500 m depth rating, 200 kg modular polypropylene frame.",
     "highlights": [
       "1500m depth",
       "Heritage surveys",
@@ -88233,7 +88256,13 @@
     "propulsion": "6 brushless-DC thrusters (4 horizontal + 2 vertical)",
     "manipulator_payload_kg": 34,
     "length_mm": 1230,
-    "manufacturer_url": "https://www.saabseaeye.com/"
+    "manufacturer_url": "https://www.saabseaeye.com/",
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "payload": 34,
+    "payload_kg": 34,
+    "os": "Seaeye Surface Control System",
+    "warranty_months": 24
   },
   {
     "id": "saab-seaeye-sabertooth-2012",
@@ -88257,7 +88286,7 @@
     "score": 92,
     "rating": 4.8,
     "price": "POA",
-    "desc": "Pioneering hybrid underwater vehicle that operates as either AUV (battery-powered, autonomous) or ROV (tethered). 1,200 m operational depth (3,000 m crush depth), 5-knot top speed, ~10 kWh lithium polymer batteries. The dual-mode capability enables long-endurance autonomous missions with the option to switch to tethered intervention when needed. Used for subsea resident operations and deep-water inspection.",
+    "desc": "Pioneering hybrid underwater vehicle that operates as either AUV (battery, autonomous) or ROV (tethered). 1,200 m operational depth (3,000 m crush), 5-knot top speed, ~10 kWh lithium polymer batteries. Used for subsea resident operations and deep-water inspection.",
     "highlights": [
       "Hybrid AUV/ROV",
       "360° hovering",
@@ -88277,9 +88306,9 @@
       "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/sabertooth-image-centre.jpg",
       "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/sabertooth-image-right.jpg"
     ],
-    "depth_mm": 3600,
-    "width_mm": 660,
-    "height_mm": 450,
+    "depth_mm": 2900,
+    "width_mm": 1200,
+    "height_mm": 800,
     "depth_rating_m": 1200,
     "dof": 6,
     "api": true,
@@ -88304,7 +88333,13 @@
     "battery_kwh": 10,
     "propulsion": "Electric (battery or tether)",
     "vehicle_mode": "Hybrid AUV/ROV (switchable)",
-    "manufacturer_url": "https://www.saabseaeye.com/solutions/underwater-vehicles/sabertooth"
+    "manufacturer_url": "https://www.saabseaeye.com/solutions/underwater-vehicles/sabertooth",
+    "speed_ms": 2.5,
+    "speed": 2.5,
+    "battery_life": 720,
+    "battery_life_typical": 720,
+    "battery_life_heavy": 360,
+    "warranty_months": 24
   },
   {
     "id": "saab-seaeye-ewrov-2024",
@@ -88327,7 +88362,7 @@
     "score": 91,
     "rating": 4.7,
     "price": "POA",
-    "desc": "Saab Seaeye's electric work-class ROV — a Class III B vehicle with 560 kgf bollard pull from electric thrusters. Operates to 3,000 m depth with dual manipulator arms supporting 400 kg arm payload. All-electric design eliminates the hydraulic systems traditionally required for work-class operations, reducing maintenance, environmental risk, and power consumption.",
+    "desc": "Saab Seaeye's electric work-class ROV — a Class III B vehicle with 560 kgf bollard pull from electric thrusters. Operates to 3,000 m depth with dual manipulator arms supporting 400 kg arm payload. All-electric design eliminates the hydraulic systems traditionally required for work-class operations.",
     "highlights": [
       "First electric work-class",
       "250HP equivalent",
@@ -88337,7 +88372,7 @@
     "perf": false,
     "year": 2024,
     "status": "Active",
-    "weight_kg": 3500,
+    "weight_kg": 2500,
     "ip_rating": "IPX8",
     "origin": "United Kingdom",
     "cameras": 4,
@@ -88368,7 +88403,14 @@
     "manipulator_payload_kg": 400,
     "bollard_pull_kgf": 560,
     "propulsion": "Electric thrusters",
-    "manufacturer_url": "https://www.saabseaeye.com/solutions/work-rovs"
+    "manufacturer_url": "https://www.saabseaeye.com/solutions/work-rovs",
+    "payload": 400,
+    "payload_kg": 400,
+    "height_mm": 1500,
+    "width_mm": 1800,
+    "depth_mm": 1200,
+    "os": "Seaeye Surface Control System",
+    "warranty_months": 24
   },
   {
     "id": "anduril-dive-ld-2022",
@@ -88392,7 +88434,7 @@
     "score": 93,
     "rating": 4.8,
     "price": "POA",
-    "desc": "Modular, autonomous large-displacement undersea vehicle for long-endurance subsea operations. 6,000 m depth rating, 7-knot top speed, up to 10 days endurance, 580 km range. 1.2 m diameter, 2,720 kg displacement. Acquired with the 2021 Dive Technologies acquisition; production variant of Dive's prior LDV platform with Anduril's Lattice AI integration.",
+    "desc": "Modular autonomous large-displacement undersea vehicle for long-endurance subsea operations. 6,000 m depth rating, 7-knot top speed, up to 10 days endurance, 580 km range. 1.2 m diameter, 2,720 kg displacement. Acquired with the 2021 Dive Technologies acquisition.",
     "highlights": [
       "Large-displacement",
       "Military ISR",
@@ -88437,7 +88479,15 @@
     "displacement_kg": 2720,
     "propulsion": "All-electric",
     "ai_model": "Anduril Lattice",
-    "manufacturer_url": "https://www.anduril.com/hardware/dive-ld/"
+    "manufacturer_url": "https://www.anduril.com/hardware/dive-ld/",
+    "speed_ms": 3.6,
+    "speed": 3.6,
+    "battery_life": 14400,
+    "battery_life_typical": 14400,
+    "height_mm": 1200,
+    "length_mm": 5800,
+    "os": "Anduril Lattice",
+    "warranty_months": 12
   },
   {
     "id": "anduril-dive-xl-2024",
@@ -88461,7 +88511,7 @@
     "score": 95,
     "rating": 4.9,
     "price": "POA",
-    "desc": "Anduril's largest autonomous undersea vehicle, developed in partnership with the Royal Australian Navy as 'Ghost Shark'. Designed for extreme endurance — up to 3,704 km range — at 6,000 m depth. Modular payload bays enable mission-specific outfitting for ISR, anti-submarine warfare, or deploying smaller assets like Copperhead effectors. Hand-over to RAN began February 2025, ahead of original 2026 schedule.",
+    "desc": "Anduril's largest autonomous undersea vehicle, developed with the Royal Australian Navy as 'Ghost Shark'. Designed for extreme endurance — up to 3,704 km range — at 6,000 m depth. Modular payload bays enable ISR, ASW, or deployment of smaller assets like Copperhead effectors.",
     "highlights": [
       "Underwater mothership",
       "Launches smaller AUVs",
@@ -88481,7 +88531,7 @@
       "https://cdn.sanity.io/images/61nocsj5/production/5ed9c2d7cd0b76640849737f9e6167d854b3b8e2-1920x1280.jpg?rect=0,100,1920,1080&w=1920&h=1080&fit=min&auto=format"
     ],
     "depth_rating_m": 6000,
-    "depth_mm": 11000,
+    "depth_mm": 12000,
     "width_mm": 2000,
     "imu": true,
     "api": true,
@@ -88506,7 +88556,15 @@
     "deployed_at": [
       "Royal Australian Navy"
     ],
-    "manufacturer_url": "https://www.anduril.com/hardware/dive-xl/"
+    "manufacturer_url": "https://www.anduril.com/hardware/dive-xl/",
+    "speed_ms": 2,
+    "speed": 2,
+    "battery_life": 6000,
+    "battery_life_typical": 6000,
+    "height_mm": 2000,
+    "length_mm": 12000,
+    "os": "Anduril Lattice",
+    "warranty_months": 12
   },
   {
     "id": "anduril-copperhead-2024",
@@ -88529,7 +88587,7 @@
     "score": 88,
     "rating": 4.6,
     "price": "POA",
-    "desc": "Family of reusable undersea effectors — torpedo-form-factor UUVs (Copperhead-100 and Copperhead-500) launched from Dive-XL or Ghost Shark host platforms. 30-knot top speed. Designed as expendable or recoverable scouts/strikers, expanding the effective reach of host vehicles by tens of kilometers. Significant departure from one-shot torpedo design — Copperhead can return for recovery.",
+    "desc": "Family of reusable undersea effectors — torpedo-form-factor UUVs (Copperhead-100 and Copperhead-500) launched from Dive-XL or Ghost Shark host platforms. 30-knot top speed. Designed as expendable or recoverable scouts/strikers.",
     "highlights": [
       "Launched from Dive-XL",
       "Compact form",
@@ -88539,7 +88597,7 @@
     "perf": false,
     "year": 2024,
     "status": "Active",
-    "weight_kg": 150,
+    "weight_kg": 250,
     "origin": "USA",
     "wifi": false,
     "bluetooth": false,
@@ -88549,8 +88607,8 @@
       "https://cdn.sanity.io/images/61nocsj5/production/4b76e0bc12364436646df54db6115257a2a70537-1920x1280.png?rect=0,100,1920,1080&w=1920&h=1080&fit=min&auto=format",
       "https://cdn.sanity.io/images/61nocsj5/production/bffe9976ea7723b47f987fb4fe84374ffc4c58ae-2000x1333.jpg?rect=0,105,2000,1125&w=2000&h=1125&fit=min&auto=format"
     ],
-    "depth_mm": 2692,
-    "width_mm": 324,
+    "depth_mm": 3000,
+    "width_mm": 533,
     "imu": true,
     "use_cases": [
       "Scouting",
@@ -88570,7 +88628,14 @@
       "Copperhead-100",
       "Copperhead-500"
     ],
-    "manufacturer_url": "https://www.anduril.com/hardware/copperhead/"
+    "manufacturer_url": "https://www.anduril.com/hardware/copperhead/",
+    "speed_ms": 15.4,
+    "speed": 15.4,
+    "height_mm": 533,
+    "length_mm": 3000,
+    "diameter_mm": 533,
+    "os": "Anduril Lattice",
+    "warranty_months": 12
   },
   {
     "id": "anduril-seabed-sentry-2024",
@@ -88593,7 +88658,7 @@
     "score": 87,
     "rating": 4.5,
     "price": "POA",
-    "desc": "Subsea-resident sensor node providing persistent undersea surveillance. Deployed and periodically recharged by Dive-XL — eliminating the need for ships or submarines to visit the deployment site. Forms a distributed undersea sensor network for ISR, undersea cable monitoring, and anti-submarine warfare.",
+    "desc": "Subsea-resident sensor node providing persistent undersea surveillance. Deployed and periodically recharged by Dive-XL — eliminating need for ships or submarines to visit the deployment site. Forms a distributed undersea sensor network.",
     "highlights": [
       "Seabed residency",
       "Persistent monitoring",
@@ -88603,7 +88668,7 @@
     "perf": false,
     "year": 2024,
     "status": "Active",
-    "weight_kg": 300,
+    "weight_kg": 150,
     "origin": "USA",
     "wifi": false,
     "bluetooth": false,
@@ -88625,7 +88690,12 @@
     "launch_method": "Deployed & recharged by Dive-XL",
     "depth_rating_m": false,
     "made_in": "USA",
-    "manufacturer_url": "https://www.anduril.com/"
+    "manufacturer_url": "https://www.anduril.com/",
+    "height_mm": 800,
+    "width_mm": 800,
+    "depth_mm": 1200,
+    "os": "Anduril Lattice",
+    "warranty_months": 12
   },
   {
     "id": "boxfish-auv-2020",
@@ -88647,7 +88717,7 @@
     "score": 87,
     "rating": 4.6,
     "price": "POA",
-    "desc": "Autonomous variant of Boxfish's hard-anodised aluminium platform — same chassis as Luna ROV but battery-powered for autonomous missions. 8 vectored thrusters, 1,000 m depth, 23 kg. Used for research and persistent monitoring applications.",
+    "desc": "Autonomous variant of Boxfish's hard-anodised aluminium platform — same chassis as Luna ROV but battery-powered for autonomous missions. 8 vectored thrusters, 1,000 m depth.",
     "highlights": [
       "Tetherless",
       "6-DOF hovering",
@@ -88687,7 +88757,18 @@
     "autonomous": true,
     "made_in": "New Zealand (Auckland)",
     "propulsion": "8 vectored thrusters",
-    "manufacturer_url": "https://boxfish.nz/"
+    "manufacturer_url": "https://boxfish.nz/",
+    "max_speed_kn": 3,
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "height_mm": 351,
+    "width_mm": 435,
+    "depth_mm": 714,
+    "length_mm": 714,
+    "battery_life": 360,
+    "battery_life_typical": 360,
+    "os": "Boxfish Control",
+    "warranty_months": 12
   },
   {
     "id": "boxfish-luna-rov-2023",
@@ -88710,7 +88791,7 @@
     "score": 89,
     "rating": 4.7,
     "price": "POA",
-    "desc": "Premium cinematography ROV used by major nature documentary productions (BBC, National Geographic). 8 vectored thrusters with proprietary control system delivering stable, smooth motion essential for film work. 1,000 m depth, fibre-optic tether to 3,000 m option. Hard-anodised aluminium with acrylic dome for camera optics.",
+    "desc": "Premium cinematography ROV used by major nature documentary productions (BBC, National Geographic). 8 vectored thrusters with proprietary control delivering stable, smooth motion for film work. 1,000 m depth, fibre-optic tether option to 3,000 m.",
     "highlights": [
       "Live streaming",
       "Real-time observation",
@@ -88755,7 +88836,14 @@
     "made_in": "New Zealand (Auckland)",
     "propulsion": "8 vectored thrusters",
     "length_mm": 714,
-    "manufacturer_url": "https://boxfish.nz/luna/"
+    "manufacturer_url": "https://boxfish.nz/luna/",
+    "max_speed_kn": 3,
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "battery_life": 360,
+    "battery_life_typical": 360,
+    "os": "Boxfish Control",
+    "warranty_months": 12
   },
   {
     "id": "mbari-mola-auv-2024",
@@ -88779,7 +88867,7 @@
     "score": 86,
     "rating": 4.6,
     "price": "POA",
-    "desc": "Research-class AUV from MBARI (Monterey Bay Aquarium Research Institute) featuring 6-DOF vectored thrusters for high-precision station-keeping and complex maneuvering. 1,000 m depth, 30 kg hard-anodised aluminium frame. Used for marine biology research, particularly delicate observations of mid-water organisms.",
+    "desc": "Research-class AUV from MBARI featuring 6-DOF vectored thrusters for high-precision station-keeping and complex maneuvering. 1,000 m depth, 30 kg hard-anodised aluminium frame. Used for marine biology research.",
     "highlights": [
       "Arctic-capable",
       "Portable",
@@ -88796,8 +88884,8 @@
     "wifi": true,
     "bluetooth": false,
     "depth_rating_m": 1000,
-    "depth_mm": 720,
-    "width_mm": 450,
+    "depth_mm": 700,
+    "width_mm": 400,
     "frame_material": "Hard-anodised aluminium",
     "imu": true,
     "api": true,
@@ -88813,7 +88901,15 @@
     "autonomous": true,
     "made_in": "USA (Monterey Bay Aquarium Research Institute)",
     "propulsion": "Vectored thrusters (6-DOF)",
-    "manufacturer_url": "https://www.mbari.org/"
+    "manufacturer_url": "https://www.mbari.org/",
+    "max_speed_kn": 3,
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "height_mm": 300,
+    "length_mm": 700,
+    "battery_life": 480,
+    "battery_life_typical": 480,
+    "os": "MBARI custom"
   },
   {
     "id": "oceanserver-iver4-2020",
@@ -88836,7 +88932,7 @@
     "score": 88,
     "rating": 4.6,
     "price": "POA",
-    "desc": "Fourth-generation Iver AUV from L3Harris (formerly OceanServer). 300 m depth, 20-hour endurance, 74 km range, 100 kg (man-portable). Titanium and carbon fiber construction; NiMH standard with optional Li-Ion. Notable for launchability from submarine torpedo tubes in addition to ships/piers.",
+    "desc": "Fourth-generation Iver AUV from L3Harris (formerly OceanServer). 300 m depth, 20-hour endurance, 74 km range, 100 kg (man-portable). Titanium and carbon fiber construction. Launchable from submarine torpedo tubes.",
     "highlights": [
       "Compact portable",
       "Navy hydrographic",
@@ -88856,7 +88952,7 @@
       "https://www.l3harris.com/sites/default/files/styles/625_x_570_2x/public/2026-04/ims-maritime-product-hero-oceanserver-iver4-900-1205x-1250x1140.jpg?h=10bd7e82&itok=GnRDwhej"
     ],
     "depth_rating_m": 300,
-    "depth_mm": 2500,
+    "depth_mm": 2700,
     "width_mm": 229,
     "frame_material": "Titanium & carbon fiber",
     "battery_type": "NiMH (Li-Ion option)",
@@ -88879,7 +88975,16 @@
     "made_in": "USA (Fall River, MA — L3Harris)",
     "range_km": 74,
     "propulsion": "Electric",
-    "manufacturer_url": "https://www.l3harris.com/all-capabilities/iver4-580-explorer"
+    "manufacturer_url": "https://www.l3harris.com/all-capabilities/iver4-580-explorer",
+    "max_speed_kn": 4,
+    "speed_ms": 2,
+    "speed": 2,
+    "battery_life": 1200,
+    "battery_life_typical": 1200,
+    "height_mm": 229,
+    "length_mm": 2700,
+    "os": "Iver VectorMap",
+    "warranty_months": 12
   },
   {
     "id": "teledyne-gavia-2018",
@@ -88902,7 +89007,7 @@
     "score": 88,
     "rating": 4.6,
     "price": "POA",
-    "desc": "Modular AUV with swappable mid-sections enabling configurations from base survey vehicle to advanced multi-sensor systems. 1,000 m depth, 5.5-knot top speed, 200 mm diameter — small enough for one person to handle assembled. Swappable lithium-ion battery modules enable rapid turnaround between deployments. Used heavily for archaeological surveys and military training environments.",
+    "desc": "Modular AUV with swappable mid-sections enabling configurations from base survey vehicle to advanced multi-sensor systems. 1,000 m depth, 5.5-knot top speed, 200 mm diameter — small enough for one person to handle assembled.",
     "highlights": [
       "Modular sensors",
       "Oceanographic",
@@ -88912,7 +89017,7 @@
     "perf": false,
     "year": 2018,
     "status": "Active",
-    "weight_kg": 70,
+    "weight_kg": 75,
     "ip_rating": "IPX8",
     "origin": "Iceland / USA",
     "cameras": 1,
@@ -88943,10 +89048,20 @@
     "autonomous": true,
     "inertial_navigation": true,
     "dvl_integrated": true,
-    "made_in": "Iceland (originally Hafmynd/Teledyne Gavia)",
+    "made_in": "Iceland (originally Hafmynd)",
     "propulsion": "Electric",
     "modular": true,
-    "manufacturer_url": "https://www.teledynemarine.com/brands/gavia"
+    "manufacturer_url": "https://www.teledynemarine.com/brands/gavia",
+    "speed_ms": 2.8,
+    "speed": 2.8,
+    "endurance_hours": 7,
+    "battery_life": 420,
+    "battery_life_typical": 420,
+    "height_mm": 200,
+    "depth_mm": 2700,
+    "length_mm": 2700,
+    "os": "Teledyne Gavia software",
+    "warranty_months": 12
   },
   {
     "id": "teledyne-slocum-glider-2010",
@@ -88969,7 +89084,7 @@
     "score": 90,
     "rating": 4.7,
     "price": "POA",
-    "desc": "Iconic underwater glider using variable buoyancy (changing volume to sink/rise) for propulsion — no thrusters, extremely low power consumption. 1,000 m depth, 0.7-knot speed, multi-month endurance. Used by oceanographic institutes worldwide for long-duration ocean profiling missions (Argo float-like but mobile). Named after Joshua Slocum, first solo circumnavigator.",
+    "desc": "Iconic underwater glider using variable buoyancy (changing volume to sink/rise) for propulsion — no thrusters, extremely low power consumption. 1,000 m depth, 0.7-knot speed, multi-month endurance. Named after Joshua Slocum, first solo circumnavigator.",
     "highlights": [
       "Buoyancy-driven",
       "12-month endurance",
@@ -88979,7 +89094,7 @@
     "perf": false,
     "year": 2010,
     "status": "Active",
-    "weight_kg": 54,
+    "weight_kg": 60,
     "ip_rating": "IPX8",
     "origin": "USA",
     "wifi": true,
@@ -89003,7 +89118,16 @@
     "made_in": "USA (Falmouth, MA — Teledyne Webb Research)",
     "propulsion": "Variable buoyancy (no thrusters)",
     "endurance_hours": 8760,
-    "manufacturer_url": "https://www.teledynemarine.com/brands/webb-research/slocum-glider"
+    "manufacturer_url": "https://www.teledynemarine.com/brands/webb-research/slocum-glider",
+    "speed_ms": 0.36,
+    "speed": 0.36,
+    "battery_life": 525600,
+    "battery_life_typical": 525600,
+    "height_mm": 220,
+    "width_mm": 220,
+    "depth_mm": 1500,
+    "length_mm": 1500,
+    "warranty_months": 12
   },
   {
     "id": "liquid-robotics-wave-glider-2009",
@@ -89026,7 +89150,7 @@
     "score": 91,
     "rating": 4.7,
     "price": "POA",
-    "desc": "Unique wave-powered unmanned surface vehicle that uses ocean wave motion for propulsion (combined with solar panels for electronics power). Theoretically infinite endurance — Wave Gliders have completed multi-month transoceanic missions. 2-knot top speed. Iridium satcom + GPS for over-the-horizon command and data return. Acquired by Boeing 2016, divested 2023 (now independent again).",
+    "desc": "Unique wave-powered unmanned surface vehicle that uses ocean wave motion for propulsion (combined with solar panels for electronics power). Theoretically infinite endurance — Wave Gliders have completed multi-month transoceanic missions. Acquired by Boeing 2016, divested 2023.",
     "highlights": [
       "Wave-powered",
       "Boeing subsidiary",
@@ -89057,10 +89181,19 @@
     "iridium_satcom": true,
     "depth_rating_m": false,
     "made_in": "USA (Sunnyvale, CA)",
-    "propulsion": "Wave-converted thrust + solar (for electronics)",
+    "propulsion": "Wave-converted thrust + solar",
     "endurance_hours": 8760,
     "manufacturer_history": "Liquid Robotics founded 2007, acquired by Boeing 2016, sold to independent ownership 2023.",
-    "manufacturer_url": "https://www.liquid-robotics.com/"
+    "manufacturer_url": "https://www.liquid-robotics.com/",
+    "speed_ms": 1,
+    "speed": 1,
+    "battery_life": 525600,
+    "battery_life_typical": 525600,
+    "height_mm": 200,
+    "width_mm": 600,
+    "depth_mm": 2100,
+    "length_mm": 2100,
+    "warranty_months": 12
   },
   {
     "id": "kongsberg-hugin-superior-2019",
@@ -89083,7 +89216,7 @@
     "score": 94,
     "rating": 4.8,
     "price": "POA",
-    "desc": "Premier deep-water survey AUV from Kongsberg, used by major oceanographic institutes and offshore survey contractors. 6,000 m depth, 72-hour endurance, 4-knot survey speed, 2,200 kg. HISAS 1032 synthetic aperture sonar enables 0.5×0.5 m resolution seabed mapping at 200 m altitude. Iridium satcom for over-the-horizon control; full inertial nav + DVL + acoustic modem.",
+    "desc": "Premier deep-water survey AUV from Kongsberg, used by major oceanographic institutes and offshore survey contractors. 6,000 m depth, 72-hour endurance, 4-knot survey speed, 2,200 kg. HISAS 1032 synthetic aperture sonar enables 0.5×0.5 m resolution seabed mapping at 200 m altitude.",
     "highlights": [
       "Up to 6,000m",
       "Oil/gas standard",
@@ -89104,7 +89237,7 @@
       "https://www.naval-technology.com/wp-content/uploads/sites/15/2019/01/Image-3-HUGIN-Superior-AUV.jpg"
     ],
     "depth_rating_m": 6000,
-    "depth_mm": 6600,
+    "depth_mm": 6500,
     "imu": true,
     "use_cases": [
       "Offshore survey",
@@ -89123,10 +89256,20 @@
     "acoustic_modem": true,
     "iridium_satcom": true,
     "gps_when_surfaced": true,
-    "made_in": "Norway (Kongsberg Maritime; HII acquired Kongsberg Discovery 2024)",
+    "made_in": "Norway (Kongsberg Maritime)",
     "propulsion": "Electric",
     "sonar": "HISAS 1032 synthetic aperture sonar",
-    "manufacturer_url": "https://www.kongsberg.com/discovery/marine-robotics/autonomous-underwater-vehicles/hugin/"
+    "manufacturer_url": "https://www.kongsberg.com/discovery/marine-robotics/autonomous-underwater-vehicles/hugin/",
+    "speed_ms": 2,
+    "speed": 2,
+    "battery_life": 4320,
+    "battery_life_typical": 4320,
+    "height_mm": 1000,
+    "width_mm": 1000,
+    "length_mm": 6500,
+    "diameter_mm": 870,
+    "os": "Kongsberg HUGIN AUV software",
+    "warranty_months": 12
   },
   {
     "id": "kongsberg-remus-100-2010",
@@ -89150,7 +89293,7 @@
     "score": 92,
     "rating": 4.7,
     "price": 600000,
-    "desc": "World's most widely deployed man-portable AUV — over 300 units sold globally. Designed for shallow-water survey and mine countermeasures: 100 m depth, 5-knot top speed, 10-hour endurance, 37 kg (small enough for 2-person launch from a small boat). Inertial navigation + DVL + acoustic modem. Used by US Navy, Royal Navy, RAN, and most NATO navies.",
+    "desc": "World's most widely deployed man-portable AUV — over 300 units sold globally. 100 m depth, 5-knot top speed, 10-hour endurance, 37 kg. Inertial navigation + DVL + acoustic modem. Used by US Navy, Royal Navy, RAN, and most NATO navies.",
     "highlights": [
       "Navy standard",
       "Mine countermeasures",
@@ -89188,7 +89331,15 @@
     "made_in": "USA (originally Hydroid; Kongsberg subsidiary)",
     "currency": "USD",
     "propulsion": "Electric",
-    "manufacturer_url": "https://www.kongsberg.com/discovery/marine-robotics/autonomous-underwater-vehicles/remus-100/"
+    "manufacturer_url": "https://www.kongsberg.com/discovery/marine-robotics/autonomous-underwater-vehicles/remus-100/",
+    "speed_ms": 2.6,
+    "speed": 2.6,
+    "battery_life": 600,
+    "battery_life_typical": 600,
+    "height_mm": 190,
+    "length_mm": 1600,
+    "os": "Kongsberg REMUS software",
+    "warranty_months": 12
   },
   {
     "id": "kongsberg-remus-6000-2014",
@@ -89211,7 +89362,7 @@
     "score": 93,
     "rating": 4.8,
     "price": "POA",
-    "desc": "Deep-water REMUS variant rated to 6,000 m depth. 22-hour endurance, 120 km range, 4-knot survey speed, 880 kg. Famously used in the search for Air France Flight 447 (found 2011 at ~3,900 m depth) and SS El Faro (2015, 4,500 m). 660 mm diameter, ship-launched via crane.",
+    "desc": "Deep-water REMUS variant rated to 6,000 m depth. 22-hour endurance, 120 km range, 4-knot survey speed, 880 kg. Famously used in the search for Air France Flight 447 (found 2011 at ~3,900 m depth) and SS El Faro (2015, 4,500 m).",
     "highlights": [
       "Found AF 447 wreckage",
       "Surveyed Titanic",
@@ -89228,7 +89379,7 @@
     "wifi": true,
     "bluetooth": false,
     "depth_rating_m": 6000,
-    "depth_mm": 4000,
+    "depth_mm": 3960,
     "width_mm": 660,
     "imu": true,
     "use_cases": [
@@ -89252,10 +89403,17 @@
     "propulsion": "Electric",
     "deployed_at": [
       "Woods Hole Oceanographic Institution",
-      "US Navy",
-      "Various oceanographic institutes"
+      "US Navy"
     ],
-    "manufacturer_url": "https://www.kongsberg.com/discovery/marine-robotics/autonomous-underwater-vehicles/remus-6000/"
+    "manufacturer_url": "https://www.kongsberg.com/discovery/marine-robotics/autonomous-underwater-vehicles/remus-6000/",
+    "speed_ms": 2,
+    "speed": 2,
+    "battery_life": 1320,
+    "battery_life_typical": 1320,
+    "height_mm": 660,
+    "length_mm": 3960,
+    "os": "Kongsberg REMUS software",
+    "warranty_months": 12
   },
   {
     "id": "deeptrekker-revolution-2023",
@@ -89279,7 +89437,7 @@
     "score": 88,
     "rating": 4.6,
     "price": 65000,
-    "desc": "Deep Trekker's flagship inspection-class ROV with 6 vectored thrusters and Bridge Technology — rotates the entire camera/sensor pod independently of the body, eliminating need to fly the ROV in awkward orientations. 305 m depth, 700 m tether option, integrated DVL + USBL navigation. Aluminium / stainless / carbon-fiber construction.",
+    "desc": "Deep Trekker's flagship inspection-class ROV with 6 vectored thrusters and Bridge Technology — rotates the entire camera/sensor pod independently of the body. 305 m depth, 700 m tether option, integrated DVL + USBL navigation.",
     "highlights": [
       "Internal battery",
       "305m depth",
@@ -89289,7 +89447,7 @@
     "perf": false,
     "year": 2023,
     "status": "Active",
-    "weight_kg": 28,
+    "weight_kg": 20,
     "ip_rating": "IPX8",
     "origin": "Canada",
     "cameras": 2,
@@ -89322,7 +89480,18 @@
     "made_in": "Canada (Kitchener, Ontario)",
     "currency": "USD",
     "propulsion": "6 vectored thrusters",
-    "manufacturer_url": "https://www.deeptrekker.com/products/rov/revolution"
+    "manufacturer_url": "https://www.deeptrekker.com/products/rov/revolution",
+    "max_speed_kn": 3,
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "height_mm": 380,
+    "width_mm": 480,
+    "depth_mm": 580,
+    "length_mm": 580,
+    "battery_life": 480,
+    "battery_life_typical": 480,
+    "os": "Deep Trekker Bridge software",
+    "warranty_months": 24
   },
   {
     "id": "qysea-fifish-v6-expert-2024",
@@ -89346,7 +89515,7 @@
     "score": 87,
     "rating": 4.5,
     "price": 5499,
-    "desc": "QYSEA's prosumer underwater drone with 6 vectored thrusters delivering omnidirectional movement. 4K UHD camera, 100 m depth, 100 m tether option. Lightweight at 4 kg, includes manipulator arm option. Popular for underwater cinematography, search & rescue, and shallow-water inspection.",
+    "desc": "QYSEA's prosumer underwater drone with 6 vectored thrusters delivering omnidirectional movement. 4K UHD camera, 100 m depth, 100 m tether option. Lightweight at 4 kg, includes manipulator arm option. Popular for underwater cinematography and search & rescue.",
     "highlights": [
       "Consumer ROV",
       "4K/100p",
@@ -89387,7 +89556,16 @@
     "currency": "USD",
     "propulsion": "6 vectored thrusters",
     "arm_count": 1,
-    "manufacturer_url": "https://www.qysea.com/products/fifish-v6-expert/"
+    "manufacturer_url": "https://www.qysea.com/products/fifish-v6-expert/",
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "height_mm": 150,
+    "width_mm": 280,
+    "depth_mm": 400,
+    "length_mm": 400,
+    "battery_life": 240,
+    "battery_life_typical": 240,
+    "warranty_months": 12
   },
   {
     "id": "qysea-fifish-w6-2024",
@@ -89403,14 +89581,16 @@
       "fifish",
       "w6",
       "350m",
+      "4k-dual",
+      "vr-control",
       "active"
     ],
     "fig": "🤖",
     "img": "https://imgs.qysea.com/qiyuan/2025/03/07/PMOEPUzUoCfKx.png",
     "score": 86,
     "rating": 4.5,
-    "price": 14999,
-    "desc": "Industrial-grade FIFISH variant designed for commercial inspection work. 6 Q-Motor vectored thrusters, 350 m depth rating, 4-knot top speed. 388 Wh internal battery for extended runtime. Step up from the V6/V6 Expert prosumer line — targets aquaculture, dam inspection, and SAR markets.",
+    "price": 15000,
+    "desc": "Industrial-grade underwater ROV rated to 350 m, with six Q-Motor vectored thrusters delivering strong current-fighting performance up to 4 knots. Dual 4K UHD camera system with 12,000-lumen lighting; 388 Wh removable battery runs 6-8 hours and quick-charges to 70% in one hour. Five Q-interface payload ports support 2D/3D imaging sonar, claws, dozers and water samplers. Sonar array provides distance lock, altitude lock, collision avoidance and contour scanning. U-QPS positioning + Station Lock for 3D path recording and drift-free station keeping. VR goggle control with head tracking.",
     "highlights": [
       "Robotic arm",
       "350m depth",
@@ -89440,7 +89620,8 @@
       "Aquaculture inspection",
       "Dam inspection",
       "Search & rescue",
-      "Commercial diving support"
+      "Commercial diving support",
+      "Underwater archaeology"
     ],
     "vehicle_type": "Industrial ROV",
     "propulsion_type": "6 Q-Motor vectored thrusters",
@@ -89450,7 +89631,25 @@
     "made_in": "China (Shenzhen)",
     "currency": "USD",
     "propulsion": "6 Q-Motor vectored thrusters",
-    "manufacturer_url": "https://www.qysea.com/"
+    "manufacturer_url": "https://www.qysea.com/",
+    "speed_ms": 2,
+    "speed": 2,
+    "battery_life": 420,
+    "battery_life_typical": 420,
+    "battery_life_heavy": 360,
+    "charge_time_fast": 60,
+    "height_mm": 290,
+    "width_mm": 450,
+    "depth_mm": 555,
+    "length_mm": 555,
+    "camera_resolution": "4K UHD (dual)",
+    "lighting": "12,000-lumen LED",
+    "payload_ports": 5,
+    "vr_control": true,
+    "station_keeping": true,
+    "obstacle_avoidance": true,
+    "os": "FIFISH Operator System",
+    "warranty_months": 12
   },
   {
     "id": "chasing-m2-pro-2022",
@@ -89472,7 +89671,7 @@
     "score": 85,
     "rating": 4.4,
     "price": 4999,
-    "desc": "Chasing's light-industrial ROV with 8 vectored thrusters, 150 m depth rating, 4-knot top speed. 300 Wh battery, 200 m tether. Aimed at the SMB inspection and commercial diving support market between the consumer Gladius and pro-grade work-class systems.",
+    "desc": "Chasing's light-industrial ROV with 8 vectored thrusters, 150 m depth rating, 4-knot top speed. 300 Wh battery, 200 m tether. Aimed at SMB inspection and commercial diving support.",
     "highlights": [
       "Sub-$2K",
       "150m depth",
@@ -89482,7 +89681,7 @@
     "perf": false,
     "year": 2022,
     "status": "Active",
-    "weight_kg": 4,
+    "weight_kg": 5,
     "ip_rating": "IPX8",
     "origin": "China",
     "cameras": 1,
@@ -89513,7 +89712,17 @@
     "made_in": "China (Shenzhen)",
     "currency": "USD",
     "propulsion": "8 vectored thrusters",
-    "manufacturer_url": "https://www.chasing.com/"
+    "manufacturer_url": "https://www.chasing.com/",
+    "speed_ms": 2,
+    "speed": 2,
+    "battery_life": 240,
+    "battery_life_typical": 240,
+    "height_mm": 170,
+    "width_mm": 300,
+    "depth_mm": 470,
+    "length_mm": 470,
+    "os": "Chasing GO app",
+    "warranty_months": 12
   },
   {
     "id": "chasing-m2-s-2023",
@@ -89536,7 +89745,7 @@
     "score": 84,
     "rating": 4.3,
     "price": 1999,
-    "desc": "Compact entry-level inspection ROV from Chasing. 8 vectored thrusters in a 4.5 kg housing, 100 m depth, 200 m tether option. Aimed at budget-conscious inspection users — fish farmers, hull inspection, recreational diving.",
+    "desc": "Compact entry-level inspection ROV from Chasing. 8 vectored thrusters in a 4.5 kg housing, 100 m depth, 200 m tether option. Targets budget-conscious inspection users.",
     "highlights": [
       "Robotic arm option",
       "100m depth",
@@ -89580,7 +89789,14 @@
     "currency": "USD",
     "propulsion": "8 vectored thrusters",
     "length_mm": 380,
-    "manufacturer_url": "https://www.chasing.com/"
+    "manufacturer_url": "https://www.chasing.com/",
+    "max_speed_kn": 3,
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "battery_life": 120,
+    "battery_life_typical": 120,
+    "os": "Chasing GO app",
+    "warranty_months": 12
   },
   {
     "id": "openrov-trident-2017",
@@ -89603,7 +89819,7 @@
     "score": 78,
     "rating": 4.2,
     "price": 1499,
-    "desc": "Pioneering Kickstarter consumer ROV (2017) that helped popularise underwater drones. 3 thrusters, 100 m depth, 2-knot top speed, 25 m tether, 2.9 kg. Sopwith Software / OpenROV Inc. wound down in 2019 after Sofar Ocean acquisition shifted focus to the Trident successor (which never shipped commercially). Important historical product despite discontinued status.",
+    "desc": "Pioneering Kickstarter consumer ROV (2017) that helped popularise underwater drones. 3 thrusters, 100 m depth, 2-knot top speed, 25 m tether, 2.9 kg. Discontinued after Sofar Ocean acquisition shifted focus.",
     "highlights": [
       "Open-source",
       "WiFi tether",
@@ -89636,7 +89852,16 @@
     "made_in": "USA (originally)",
     "currency": "USD",
     "propulsion": "3 thrusters",
-    "manufacturer_url": "https://www.sofarocean.com/"
+    "manufacturer_url": "https://www.sofarocean.com/",
+    "speed_ms": 1,
+    "speed": 1,
+    "height_mm": 200,
+    "width_mm": 200,
+    "depth_mm": 450,
+    "length_mm": 450,
+    "battery_life": 180,
+    "battery_life_typical": 180,
+    "os": "OpenROV Cockpit"
   },
   {
     "id": "aquabotix-swarmdiver-2022",
@@ -89659,7 +89884,7 @@
     "score": 84,
     "rating": 4.4,
     "price": "POA",
-    "desc": "Micro USV/UUV designed for swarming operations — multiple SwarmDivers operate coordinated as a fleet from a single operator interface. Twin-thruster propulsion, 50 m depth, 1.7 kg per unit (man-portable in large quantities). Defence applications include distributed harbor surveillance and asymmetric defence scenarios.",
+    "desc": "Micro USV/UUV designed for swarming operations — multiple SwarmDivers operate coordinated as a fleet from a single operator interface. Twin-thruster propulsion, 50 m depth, 1.7 kg per unit.",
     "highlights": [
       "Swarming AUV",
       "Multi-vehicle",
@@ -89694,7 +89919,16 @@
     "made_in": "Australia (UUV Aquabotix)",
     "propulsion": "Electric twin-thruster",
     "swarming": true,
-    "manufacturer_url": "https://aquabotix.com/"
+    "manufacturer_url": "https://aquabotix.com/",
+    "max_speed_kn": 4,
+    "speed_ms": 2,
+    "speed": 2,
+    "height_mm": 100,
+    "width_mm": 100,
+    "length_mm": 750,
+    "battery_life": 150,
+    "battery_life_typical": 150,
+    "warranty_months": 12
   },
   {
     "id": "irobot-510-packbot-2002",
