@@ -87865,7 +87865,7 @@
     "name": "PlusCore",
     "brand": "Plus",
     "cat": "Autonomous Vehicles",
-    "sub": "Self-Driving Truck Platform",
+    "sub": "Autonomous Trucking System",
     "tags": [
       "truck",
       "level-4",
@@ -87873,12 +87873,12 @@
       "international-trucks",
       "driver-as-service"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "L4 trucking platform. Software-first. International Trucks integration. PlusDrive ADAS-as-stepping-stone strategy.",
+    "desc": "Plus develops SuperDrive, an L4 autonomous-driving software stack delivered through PlusCore - a production domain controller designed to be factory-installed on OEM Class 8 trucks. Partnered with TRATON/Scania, IVECO and Hyundai, Plus uses a generative-AI foundation-model approach and NVIDIA DRIVE compute, targeting driver-out long-haul freight.",
     "highlights": [
       "L4 trucking",
       "Software-first",
@@ -87886,10 +87886,7 @@
       "International Trucks",
       "ADAS stepping-stone"
     ],
-    "perf": {
-      "speed_ms": 29,
-      "payload_kg": 36000
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 12000,
@@ -87899,14 +87896,52 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "L4 autonomous trucking software (factory-installable)",
+    "autonomy_level": "L4 (SuperDrive)",
+    "operational_design_domain": "Highway long-haul",
+    "powertrain": "OEM Class 8 (TRATON/Scania, IVECO, Hyundai)",
+    "top_speed_kmh": 105,
+    "payload_kg": 22680,
+    "cargo_capacity_kg": 22680,
+    "height_mm": 3962,
+    "width_mm": 2591,
+    "depth_mm": 7100,
+    "compute_platform": "NVIDIA DRIVE (PlusCore domain controller)",
+    "redundant_systems": [
+      "Braking",
+      "Steering",
+      "Compute",
+      "Sensing"
+    ],
+    "operating_cities": [
+      "USA",
+      "Europe (testing)"
+    ],
+    "commercial_service_year": 2024,
+    "safety_driver": "Transitioning to driver-out",
+    "remote_operations": true,
+    "os": "PlusCore",
+    "ai_model": "Plus SuperDrive (generative-AI foundation model)",
+    "made_in": "USA",
+    "use_cases": [
+      "Long-haul trucking",
+      "Factory-installed OEM autonomy"
+    ],
+    "pilot_customers": [
+      "TRATON / Scania",
+      "IVECO",
+      "Hyundai"
+    ],
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "gatik-class-6-7-2023",
     "name": "Gatik Class 6/7",
     "brand": "Gatik",
     "cat": "Autonomous Vehicles",
-    "sub": "Autonomous Truck",
+    "sub": "Autonomous Trucking System",
     "tags": [
       "middle-mile",
       "walmart",
@@ -87915,12 +87950,12 @@
       "class-7",
       "short-haul"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/589QHhltyTcd6JzEetxZ/image.jpg",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Middle-mile autonomous trucking. Walmart Bentonville driverless since 2021. Class 6/7 box trucks. Loblaw Canada partnership.",
+    "desc": "Gatik's Driver is a Level 4 autonomous system purpose-built for the middle mile - fixed, repeatable B2B routes between distribution centers and retail stores. Deployed on Isuzu medium-duty box trucks (multi-temperature compartments) with fully redundant braking, steering and sensing, NVIDIA DRIVE Thor compute and Velodyne lidar. Gatik launched the world's first driverless commercial transport service with Walmart in 2021 and runs daily revenue routes across Arkansas, Texas, Arizona and Ontario.",
     "highlights": [
       "Walmart partner",
       "Driverless since 2021",
@@ -87928,10 +87963,7 @@
       "Middle-mile",
       "Loblaw Canada"
     ],
-    "perf": {
-      "speed_ms": 28,
-      "payload_kg": 11000
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 8500,
@@ -87941,7 +87973,50 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "L4 medium-duty autonomous box truck (middle-mile)",
+    "autonomy_level": "L4",
+    "operational_design_domain": "Fixed middle-mile routes (up to ~480 km), urban + highway",
+    "powertrain": "Isuzu medium-duty (Class 6/7), multi-temperature box",
+    "top_speed_kmh": 105,
+    "payload_kg": 5900,
+    "cargo_capacity_kg": 5900,
+    "height_mm": 3300,
+    "width_mm": 2130,
+    "depth_mm": 7000,
+    "lidar_brand": "Velodyne Alpha Prime / Ultra Puck",
+    "compute_platform": "NVIDIA DRIVE Thor",
+    "redundant_systems": [
+      "Braking",
+      "Steering",
+      "Sensing",
+      "Compute"
+    ],
+    "operating_cities": [
+      "Bentonville AR",
+      "Dallas-Fort Worth",
+      "Arizona",
+      "Ontario (Canada)"
+    ],
+    "commercial_service_year": 2021,
+    "safety_driver": "No (driverless commercial since 2021)",
+    "remote_operations": true,
+    "os": "Gatik Driver",
+    "ai_model": "Gatik Driver (3rd-gen, interpretable AI)",
+    "made_in": "USA",
+    "use_cases": [
+      "Middle-mile B2B logistics",
+      "Retail distribution",
+      "Dock-to-dock freight"
+    ],
+    "pilot_customers": [
+      "Walmart",
+      "Tyson Foods",
+      "Loblaw",
+      "Kroger"
+    ],
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "torc-truck-2022",
@@ -88063,7 +88138,7 @@
     "name": "Stack AV Class 8",
     "brand": "Stack AV",
     "cat": "Autonomous Vehicles",
-    "sub": "Autonomous Truck",
+    "sub": "Autonomous Trucking System",
     "tags": [
       "truck",
       "softbank",
@@ -88071,12 +88146,12 @@
       "pittsburgh",
       "2024-launch"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/8RwoW1bGZMFWczJ8WjUP/image.jpg",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Ex-Argo AI team. SoftBank-backed. Pittsburgh-based autonomous trucking. 2024 commercial launch.",
+    "desc": "Stack AV is an autonomous trucking company founded in 2023 by Argo AI co-founders Bryan Salesky and Peter Rander and backed by SoftBank. It is developing a Level 4 self-driving stack for Class 8 long-haul trucks, currently in testing.",
     "highlights": [
       "Ex-Argo AI team",
       "SoftBank-backed",
@@ -88084,10 +88159,7 @@
       "2024 commercial",
       "Hub-to-hub"
     ],
-    "perf": {
-      "speed_ms": 29,
-      "payload_kg": 36000
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 12000,
@@ -88100,14 +88172,39 @@
     "cellular": "5G",
     "gallery": [
       "https://stackav.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fstack_truck_1.480772c0.jpg&w=3840&q=75"
-    ]
+    ],
+    "vehicle_class": "L4 autonomous Class 8 trucking platform",
+    "autonomy_level": "L4 (development)",
+    "operational_design_domain": "Highway long-haul (planned)",
+    "powertrain": "Class 8 trucks",
+    "top_speed_kmh": 105,
+    "payload_kg": 22680,
+    "cargo_capacity_kg": 22680,
+    "height_mm": 3962,
+    "width_mm": 2591,
+    "depth_mm": 7100,
+    "compute_platform": "Stack AV autonomy stack",
+    "operating_cities": [
+      "USA (testing)"
+    ],
+    "safety_driver": "Yes (testing)",
+    "remote_operations": true,
+    "os": "Stack AV",
+    "made_in": "USA",
+    "use_cases": [
+      "Autonomous freight",
+      "Long-haul trucking"
+    ],
+    "manufacturer_history": "Founded 2023 by ex-Argo AI founders Bryan Salesky & Peter Rander; SoftBank-backed",
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "inceptio-xuanyuan-2024",
     "name": "Xuanyuan",
     "brand": "Inceptio Technology",
     "cat": "Autonomous Vehicles",
-    "sub": "Autonomous Truck",
+    "sub": "Autonomous Trucking System",
     "tags": [
       "truck",
       "china",
@@ -88115,22 +88212,19 @@
       "400-trucks",
       "commercial-scale"
     ],
-    "fig": "🚚",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/29/GUD55FqG2s40eBypcJwR/image.jpg",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Chinese autonomous trucking leader. Delivered 400 autonomous heavy trucks to ZTO Express. Large-scale commercial.",
+    "desc": "Inceptio Technology's Xuanyuan is a full-stack, mass-production autonomous driving system for heavy trucks, factory-integrated with Sinotruk and Dongfeng Class 8 tractors. Operating commercial L3 highway trunk logistics across China's expressway network for shippers including AB InBev and Nestle, with an L4 driver-out roadmap.",
     "highlights": [
       "400 trucks to ZTO",
       "Largest China deployment",
       "Chinese leader",
       "ZTO Express scale"
     ],
-    "perf": {
-      "speed_ms": 29,
-      "payload_kg": 36000
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 12000,
@@ -88140,7 +88234,40 @@
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "5G"
+    "cellular": "5G",
+    "vehicle_class": "L3/L4 autonomous heavy-truck system",
+    "autonomy_level": "L3 (commercial), L4 (development)",
+    "operational_design_domain": "Highway trunk logistics (China)",
+    "powertrain": "Heavy-duty Class 8 (Sinotruk / Dongfeng)",
+    "top_speed_kmh": 90,
+    "payload_kg": 22680,
+    "cargo_capacity_kg": 22680,
+    "height_mm": 3962,
+    "width_mm": 2550,
+    "depth_mm": 7100,
+    "compute_platform": "Inceptio Xuanyuan (full-stack)",
+    "operating_cities": [
+      "China national expressways"
+    ],
+    "commercial_service_year": 2021,
+    "safety_driver": "Yes (L3 supervised)",
+    "remote_operations": true,
+    "os": "Xuanyuan",
+    "ai_model": "Inceptio Xuanyuan",
+    "made_in": "China",
+    "use_cases": [
+      "Highway trunk logistics",
+      "Heavy freight",
+      "Green logistics"
+    ],
+    "pilot_customers": [
+      "AB InBev (Budweiser)",
+      "Nestle",
+      "JD Logistics",
+      "Deppon"
+    ],
+    "speed": false,
+    "speed_ms": false
   },
   {
     "id": "outrider-yardbot-2022",
