@@ -18966,7 +18966,7 @@
     "score": 75,
     "rating": 4,
     "price": 5000,
-    "desc": "Cloud-based fleet management and data analytics platform for industrial drone operations and compliance.",
+    "desc": "Skydio KeyFrame is a software feature, not an aircraft: it lets operators set keyframe waypoints that Skydio drones fly autonomously to create smooth, repeatable cinematic camera moves. (This record describes a software capability rather than a physical drone.)",
     "highlights": [
       "Fleet management",
       "Data analytics",
@@ -18983,7 +18983,7 @@
     "operating_temp_min": null,
     "operating_temp_max": null,
     "colors": null,
-    "os": "Web-based",
+    "os": "Skydio",
     "chipset": "Cloud infrastructure",
     "cpu": null,
     "ram_gb": null,
@@ -19030,15 +19030,11 @@
     "rohs": null,
     "warranty_months": 12,
     "use_cases": [
-      "fleet management",
-      "compliance reporting",
-      "data analytics"
+      "Cinematic autonomous flight paths",
+      "Repeatable camera moves",
+      "Filmmaking"
     ],
-    "perf": {
-      "data_processing": "real_time",
-      "storage_unlimited": true,
-      "multi_tenant": true
-    },
+    "perf": false,
     "origin": "USA",
     "manufacturer_url": "https://www.skydio.com",
     "product_url": "https://www.skydio.com/keyframe",
@@ -19048,7 +19044,8 @@
       "https://support.skydio.com/hc/article_attachments/10422346136859",
       "https://support.skydio.com/hc/article_attachments/4414016394395",
       "https://support.skydio.com/hc/article_attachments/16005907651739"
-    ]
+    ],
+    "made_in": "USA"
   },
   {
     "id": "skydio-x2-color",
@@ -86483,26 +86480,23 @@
       "parachute-drop",
       "africa"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://storage.googleapis.com/bucket-two-leobotics/product/robot-livraison-drone-zipline-platform-1.webp",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Original fixed-wing medical delivery drone. Parachute-drop to recipient. Rwanda/Ghana medical supply pioneer.",
+    "desc": "Zipline's Platform 1 is a catapult-launched fixed-wing delivery drone that flies long autonomous round-trips (up to ~160 km round trip) and air-drops packages by parachute. It pioneered national-scale medical delivery - blood, vaccines and medicines - across Rwanda, Ghana and beyond, logging tens of millions of autonomous miles.",
     "highlights": [
       "Medical deliveries",
       "Parachute drop",
       "Rwanda/Ghana pioneer",
       "Fixed-wing"
     ],
-    "perf": {
-      "speed_ms": 33,
-      "payload_kg": 1.75
-    },
+    "perf": false,
     "year": 2016,
     "status": "Active",
     "weight_kg": 22,
-    "battery_life": 120,
+    "battery_life": 60,
     "origin": "USA",
     "cameras": 1,
     "wifi": true,
@@ -86510,6 +86504,25 @@
     "cellular": "5G",
     "gallery": [
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-livraison-drone-zipline-platform-6.webp"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "USA",
+    "os": "Zipline",
+    "payload_kg": 1.75,
+    "payload": 1.75,
+    "max_flight_time": 60,
+    "max_speed": 33,
+    "speed_ms": 33,
+    "max_range": 80,
+    "battery_life_typical": 60,
+    "frame_type": "Fixed-wing (catapult-launched)",
+    "autonomous": true,
+    "use_cases": [
+      "Medical / blood delivery",
+      "Long-range rural delivery",
+      "Healthcare logistics"
     ]
   },
   {
@@ -86524,25 +86537,22 @@
       "quiet",
       "2024-launch"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://storage.googleapis.com/bucket-two-leobotics/product/robot-livraison-drone-zipline-platform-2.webp",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "2024 last-mile delivery drone. Quiet operation. Lowers droid on tether for precision placement.",
+    "desc": "Zipline's Platform 2 (P2 Zip) is a hybrid VTOL delivery drone that hovers high while lowering a small tethered 'droid' that steers itself to place packages precisely - on a doorstep, patio or table. Carrying up to ~3.6 kg within ~16 km, it brings quiet, accurate doorstep delivery to homes and businesses.",
     "highlights": [
       "Tether-lowered droid",
       "Quiet operation",
       "Last-mile delivery",
       "2024 launch"
     ],
-    "perf": {
-      "speed_ms": 31,
-      "payload_kg": 3.6
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
-    "weight_kg": 18,
+    "weight_kg": 24,
     "battery_life": 40,
     "origin": "USA",
     "cameras": 2,
@@ -86552,6 +86562,25 @@
     "gallery": [
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-livraison-drone-zipline-platform-2-5.webp",
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-livraison-drone-zipline-platform-2-6.webp"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "USA",
+    "os": "Zipline",
+    "payload_kg": 3.6,
+    "payload": 3.6,
+    "max_flight_time": 40,
+    "max_speed": 31,
+    "speed_ms": 31,
+    "max_range": 16,
+    "battery_life_typical": 40,
+    "frame_type": "Hybrid VTOL with tethered delivery droid",
+    "autonomous": true,
+    "use_cases": [
+      "Precise home delivery",
+      "Food & retail delivery",
+      "Healthcare delivery"
     ]
   },
   {
@@ -87049,26 +87078,23 @@
       "public-safety",
       "canada-usa"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://candrone.com/cdn/shop/products/ScreenShot2023-01-11at10.22.03AM.png?v=1703756080&width=1220",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 50000,
-    "desc": "NDAA-compliant public safety/military drone. 3-hour swap. Made in Canada/USA.",
+    "desc": "Draganfly's Commander 3 XL is a rugged Canadian/US-made modular enterprise drone for public safety, inspection and industrial use. It carries interchangeable EO/IR, mapping and delivery payloads with extended flight time and RTK precision, built by one of the longest-established commercial drone makers.",
     "highlights": [
       "NDAA-compliant",
       "3-hour endurance",
       "Public safety",
       "Modular payloads"
     ],
-    "perf": {
-      "speed_ms": 22,
-      "payload_kg": 4.5
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 15,
-    "battery_life": 180,
+    "battery_life": 50,
     "origin": "USA/Canada",
     "cameras": 1,
     "wifi": true,
@@ -87080,6 +87106,29 @@
       "https://candrone.com/cdn/shop/files/Draganfly3XL-candrone-canada-4.png?v=1704870354&width=1220",
       "https://candrone.com/cdn/shop/files/Draganfly3XL-candrone-canada-5.png?v=1704870357&width=1220",
       "https://candrone.com/cdn/shop/files/Draganfly3XL-candrone-canada-7.png?v=1704870359&width=1220"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": true,
+    "made_in": "Canada / USA",
+    "os": "Draganfly",
+    "payload_kg": 4,
+    "payload": 4,
+    "max_flight_time": 50,
+    "max_speed": 18,
+    "speed_ms": 18,
+    "max_range": 8,
+    "battery_life_typical": 50,
+    "frame_type": "Modular industrial quadcopter",
+    "motor_count": 4,
+    "rtk": true,
+    "autonomous": true,
+    "waypoint": true,
+    "use_cases": [
+      "Public safety",
+      "Industrial inspection",
+      "Mapping & survey",
+      "Heavy payload missions"
     ]
   },
   {
@@ -87093,26 +87142,23 @@
       "intel-realsense",
       "american-pioneer"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/30/ylxZbajfgKOeRJPxeFvM/image.jpg",
-    "score": 78,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 1899,
-    "desc": "Hexacopter consumer drone with Intel RealSense. Legacy popular American-brand option.",
+    "desc": "The Yuneec Typhoon H Plus (2018) is a hexacopter with a 1-inch 20MP sensor and a 360-degree rotating gimbal camera shooting 4K/60fps. Its six rotors add redundancy (it can land on five), and Intel RealSense provides obstacle avoidance for photography and inspection.",
     "highlights": [
       "Hexacopter",
       "Intel RealSense",
       "4K 60fps",
       "Legacy popular"
     ],
-    "perf": {
-      "speed_ms": 13.4,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2018,
-    "status": "Discontinued",
-    "weight_kg": 1.995,
-    "battery_life": 28,
+    "status": "Active",
+    "weight_kg": 1.95,
+    "battery_life": 25,
     "origin": "China",
     "cameras": 1,
     "wifi": true,
@@ -87122,6 +87168,29 @@
       "https://yuneec.online/wp-content/uploads/2021/01/hplus-b6.jpg",
       "https://yuneec.online/wp-content/uploads/2021/01/hplus-b7.jpg",
       "https://yuneec.online/wp-content/uploads/2021/01/hplus-b8.jpg"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Yuneec",
+    "max_flight_time": 25,
+    "max_speed": 20,
+    "speed_ms": 20,
+    "max_altitude": 5000,
+    "max_range": 2,
+    "battery_life_typical": 25,
+    "camera_mp": 20,
+    "video_res": "4K",
+    "video_fps": 60,
+    "gimbal_axes": 3,
+    "obstacle_sensing": "Intel RealSense",
+    "frame_type": "Hexacopter",
+    "motor_count": 6,
+    "use_cases": [
+      "Aerial photography",
+      "Professional video",
+      "Inspection"
     ]
   },
   {
@@ -87136,22 +87205,19 @@
       "enterprise",
       "mapping"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://yuneec.pl/hpeciai/5c93a76e1e699f628efbc4c322ef27f3/eng_pl_Yuneec-H850-RTK-drone-13200_10.jpg",
-    "score": 82,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 12000,
-    "desc": "Enterprise hexacopter with RTK for mapping/surveying. 55-min flight.",
+    "desc": "The Yuneec H850 RTK (2023) is a survey-oriented hexacopter with RTK precision positioning for centimetre-accurate mapping and photogrammetry. (Detailed specifications for this record are limited and worth verifying.)",
     "highlights": [
       "RTK precision",
       "Hexacopter redundancy",
       "55-min flight",
       "Enterprise"
     ],
-    "perf": {
-      "speed_ms": 18,
-      "payload_kg": 3
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 4.5,
@@ -87163,6 +87229,21 @@
     "cellular": "4G",
     "gallery": [
       "https://yuneec.pl/hpeciai/f1d17ce566f32b284fca8c7546d21730/eng_pl_Yuneec-H850-RTK-drone-13200_32.png"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Yuneec",
+    "rtk": true,
+    "autonomous": true,
+    "waypoint": true,
+    "frame_type": "Hexacopter",
+    "motor_count": 6,
+    "use_cases": [
+      "Surveying & mapping",
+      "RTK photogrammetry",
+      "Inspection"
     ]
   },
   {
@@ -87177,26 +87258,23 @@
       "brushless",
       "gps"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://store.holystone.com/cdn/shop/products/main_1.jpg?v=1632443552&width=1100",
     "score": 75,
-    "rating": 4.2,
+    "rating": 4,
     "price": 300,
-    "desc": "Affordable beginner brushless GPS drone. 4K UHD. Common entry point under $300.",
+    "desc": "The Holy Stone HS720E (2022) is a popular budget GPS drone with a 4K camera, electronic image stabilisation, brushless motors and ~23-minute flight time. An affordable entry point for hobbyists wanting GPS return-to-home and follow modes.",
     "highlights": [
       "Affordable",
       "Brushless motors",
       "GPS return",
       "26-min flight"
     ],
-    "perf": {
-      "speed_ms": 15,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2022,
     "status": "Active",
     "weight_kg": 0.495,
-    "battery_life": 26,
+    "battery_life": 23,
     "origin": "China",
     "cameras": 1,
     "wifi": true,
@@ -87207,6 +87285,26 @@
       "https://store.holystone.com/cdn/shop/products/GPS.jpg?v=1632443552&width=1100",
       "https://store.holystone.com/cdn/shop/products/easytosharewithfriend.jpg?v=1632443552&width=1100",
       "https://store.holystone.com/cdn/shop/products/S4-HS720E-fantastic-accessories.jpg?v=1632455389&width=1100"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Holy Stone",
+    "max_flight_time": 23,
+    "max_speed": 10,
+    "speed_ms": 10,
+    "max_range": 1,
+    "battery_life_typical": 23,
+    "camera_mp": 12,
+    "video_res": "4K",
+    "obstacle_sensing": "EIS (electronic stabilisation)",
+    "transmission": "5 GHz Wi-Fi",
+    "frame_type": "Folding quadcopter",
+    "motor_count": 4,
+    "use_cases": [
+      "Beginner aerial photography",
+      "Hobby flying"
     ]
   },
   {
@@ -87221,26 +87319,23 @@
       "4k",
       "obstacle-sensing"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://store.holystone.com/cdn/shop/files/1_647afac5-7f7f-477f-a4dd-29369fd307b0.jpg?v=1760086721&width=1100",
-    "score": 76,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 399,
-    "desc": "Mid-range Holy Stone with obstacle sensing. 4K HDR. Best budget option in 2024-2026.",
+    "desc": "The Holy Stone HS900 (2024) upgrades the budget line with a sub-250 g body, a 3-axis mechanical gimbal, 4K video and ~36-minute flight time, bringing gimbal-stabilised footage to an affordable price point.",
     "highlights": [
       "Obstacle sensing",
       "4K HDR",
       "Affordable",
       "32-min flight"
     ],
-    "perf": {
-      "speed_ms": 15,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 0.249,
-    "battery_life": 32,
+    "battery_life": 36,
     "origin": "China",
     "cameras": 1,
     "wifi": true,
@@ -87251,6 +87346,27 @@
       "https://store.holystone.com/cdn/shop/files/4_cdb46956-794f-4f93-bbee-fe474af6cf4b.jpg?v=1760086839&width=1100",
       "https://store.holystone.com/cdn/shop/files/B0FG27HX95.PT04.jpg?v=1762501976&width=1100",
       "https://store.holystone.com/cdn/shop/files/B0FG27HX95.PT06.jpg?v=1762501976&width=1100"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Holy Stone",
+    "max_flight_time": 36,
+    "max_speed": 12,
+    "speed_ms": 12,
+    "max_range": 4,
+    "battery_life_typical": 36,
+    "camera_mp": 12,
+    "video_res": "4K",
+    "gimbal_axes": 3,
+    "obstacle_sensing": "Downward",
+    "frame_type": "Folding quadcopter",
+    "motor_count": 4,
+    "regulatory_class": "Sub-250 g",
+    "use_cases": [
+      "Beginner aerial photography",
+      "Travel"
     ]
   },
   {
@@ -87266,22 +87382,19 @@
       "scratch",
       "dji-partner"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://m.media-amazon.com/images/I/615aqdHoR6L._AC_SL1500_.jpg",
-    "score": 78,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 99,
-    "desc": "Programmable beginner/education drone. Scratch + Python coding. DJI-powered camera. Massive education adoption.",
+    "desc": "The Ryze Tello (2018), powered by DJI flight tech and an Intel processor, is a tiny 80 g beginner drone with 720p video and electronic image stabilisation. Easy and safe to fly indoors via Wi-Fi, it became hugely popular as a first drone and STEM-education tool.",
     "highlights": [
       "Programmable",
       "Scratch + Python",
       "DJI partnership",
       "$99 entry"
     ],
-    "perf": {
-      "speed_ms": 8,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "weight_kg": 0.08,
@@ -87297,6 +87410,28 @@
       "https://m.media-amazon.com/images/I/61JTs9LDMJL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/617Lgw0glYL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61dgRPTJ3TL._AC_SL1500_.jpg"
+    ],
+    "gps": false,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Tello",
+    "max_flight_time": 13,
+    "max_speed": 8,
+    "speed_ms": 8,
+    "max_range": 0.1,
+    "battery_life_typical": 13,
+    "camera_mp": 5,
+    "video_res": "720p",
+    "obstacle_sensing": "Downward vision positioning",
+    "transmission": "Wi-Fi",
+    "frame_type": "Micro quadcopter",
+    "motor_count": 4,
+    "regulatory_class": "Sub-250 g",
+    "use_cases": [
+      "Beginner / education",
+      "Indoor flying",
+      "STEM learning"
     ]
   },
   {
@@ -87312,31 +87447,50 @@
       "swarm",
       "mission-pad"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/30/gWGPddUU6F9nSvMG7KBd/image.png",
-    "score": 80,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 129,
-    "desc": "Education version of Tello with swarm flight + mission pads. STEM curriculum staple.",
+    "desc": "The Ryze Tello EDU (2019) is the programmable education version of the Tello, supporting Scratch, Python and Swift coding plus multi-drone swarm programming. Built to teach kids and students the fundamentals of flight and code in classrooms.",
     "highlights": [
       "Swarm flight",
       "Mission pads",
       "STEM curriculum",
       "SDK access"
     ],
-    "perf": {
-      "speed_ms": 8,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2019,
     "status": "Active",
-    "weight_kg": 0.08,
+    "weight_kg": 0.087,
     "battery_life": 13,
     "origin": "China",
     "cameras": 1,
     "wifi": true,
     "bluetooth": true,
-    "sdk": true
+    "sdk": true,
+    "gps": false,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Tello EDU",
+    "max_flight_time": 13,
+    "max_speed": 8,
+    "speed_ms": 8,
+    "max_range": 0.1,
+    "battery_life_typical": 13,
+    "camera_mp": 5,
+    "video_res": "720p",
+    "obstacle_sensing": "Downward vision positioning",
+    "transmission": "Wi-Fi",
+    "frame_type": "Micro quadcopter",
+    "motor_count": 4,
+    "regulatory_class": "Sub-250 g",
+    "use_cases": [
+      "Coding education",
+      "Swarm programming",
+      "STEM learning"
+    ]
   },
   {
     "id": "hubsan-zino-mini-pro-2021",
@@ -87349,22 +87503,19 @@
       "budget",
       "obstacle-avoidance"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://m.media-amazon.com/images/I/513CLwO3TXL._AC_UF894,1000_QL80_.jpg",
-    "score": 76,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 499,
-    "desc": "Sub-250g budget alternative to DJI Mini. Three-way obstacle sensing. 4K HDR.",
+    "desc": "The Hubsan Zino Mini Pro (2021) packs a 1/1.3-inch 48MP sensor, 4K video on a 3-axis gimbal, three-directional obstacle sensing and up to ~40-minute flight into a sub-250 g folding body - an unusually feature-rich budget alternative in the lightweight class.",
     "highlights": [
       "Sub-250g",
       "Three-way obstacle",
       "4K HDR",
       "Mini-3-Pro alternative"
     ],
-    "perf": {
-      "speed_ms": 16,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2021,
     "status": "Active",
     "weight_kg": 0.249,
@@ -87378,6 +87529,27 @@
       "https://www.hubsan.com/na/images/ZINOMINI_PRO_07_1_battery(64GB)_list/ZINOMINI_PRO_01_03.jpg",
       "https://www.hubsan.com/na/images/ZINOMINI_PRO_07_1_battery(64GB)_list/ZINOMINI_PRO_01_05.jpg",
       "https://www.hubsan.com/na/images/ZINOMINI_PRO_07_1_battery(64GB)_list/ZINOMINI_PRO_01_07.jpg"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Hubsan",
+    "max_flight_time": 40,
+    "max_speed": 16,
+    "speed_ms": 16,
+    "max_range": 10,
+    "battery_life_typical": 40,
+    "camera_mp": 48,
+    "video_res": "4K",
+    "gimbal_axes": 3,
+    "obstacle_sensing": "3-directional",
+    "frame_type": "Folding quadcopter",
+    "motor_count": 4,
+    "regulatory_class": "Sub-250 g",
+    "use_cases": [
+      "Aerial photography",
+      "Travel"
     ]
   },
   {
@@ -87391,26 +87563,23 @@
       "beginner",
       "racing"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://m.media-amazon.com/images/I/51zHZWijDqL._AC_SL1500_.jpg",
     "score": 75,
-    "rating": 4.1,
+    "rating": 4,
     "price": 600,
-    "desc": "FPV racing-style drone for beginners. Walkera legacy brand from China.",
+    "desc": "The Walkera Aibao is a 4K FPV quadcopter notable for its augmented-reality gaming modes, overlaying virtual elements onto the live video feed for interactive flying games alongside standard aerial photography.",
     "highlights": [
       "Beginner FPV",
       "Racing-style",
       "Affordable",
       "Goggles included"
     ],
-    "perf": {
-      "speed_ms": 25,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
-    "weight_kg": 0.5,
-    "battery_life": 15,
+    "weight_kg": 0.49,
+    "battery_life": 18,
     "origin": "China",
     "cameras": 1,
     "wifi": true,
@@ -87421,6 +87590,25 @@
       "https://m.media-amazon.com/images/I/51YL4wdoXYL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/51Igt8WqelL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/51AtdAo9s-L._AC_SL1500_.jpg"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Walkera",
+    "max_flight_time": 18,
+    "max_speed": 14,
+    "speed_ms": 14,
+    "max_range": 1,
+    "battery_life_typical": 18,
+    "camera_mp": 13,
+    "video_res": "4K",
+    "gimbal_axes": 2,
+    "frame_type": "Quadcopter (AR gaming)",
+    "motor_count": 4,
+    "use_cases": [
+      "FPV flying",
+      "Augmented-reality drone games"
     ]
   },
   {
@@ -87435,22 +87623,19 @@
       "insta360",
       "reframe"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://static.antigravity.tech/assets/e9bb79b8a0756aa70214a9b115597669/%E6%A0%87%E5%87%86%E5%A5%97%E9%A4%901204.png",
-    "score": 88,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 799,
-    "desc": "Insta360's first drone — 360° camera with reframe-in-post. Competes with DJI Avata 360.",
+    "desc": "The Antigravity A1 (2026) is Insta360's debut drone under its Antigravity brand, built around an 8K 360-degree camera so footage can be reframed entirely in post with the drone effectively invisible in shots. (Recent announcement - detailed specifications still being confirmed.)",
     "highlights": [
       "360° camera",
       "Reframe in post",
       "Insta360-quality",
       "2026 launch"
     ],
-    "perf": {
-      "speed_ms": 18,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2026,
     "status": "Active",
     "weight_kg": 0.4,
@@ -87464,6 +87649,18 @@
       "https://res.insta360.com/static/74cd9d7a36424cfc89fda48d55bcfa89/1-smol.jpg",
       "https://res.insta360.com/static/13dbd853336d0eab6671b8369f8b23b4/5-smol.jpg",
       "https://res.insta360.com/static/9685c86d54d0439566a663d770867590/2-smol.jpg"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Antigravity",
+    "video_res": "8K 360",
+    "frame_type": "360-camera drone",
+    "motor_count": 4,
+    "use_cases": [
+      "Immersive 360 aerial capture",
+      "Reframe-in-post video"
     ]
   },
   {
@@ -87479,22 +87676,19 @@
       "sub-150g",
       "viral"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://m.media-amazon.com/images/I/71xXbx9ax1L._AC_SL1500_.jpg",
-    "score": 85,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 429,
-    "desc": "Pocket-sized selfie drone with prop-guards. AI subject tracking. Massive online success.",
+    "desc": "The HoverAir X1 (2023) is a tiny 125 g fully prop-guarded pocket selfie drone that launches from your palm and autonomously follows you for hands-free video. Controller-free and ultra-portable, it shoots stabilised 2.7K footage with preset cinematic flight paths.",
     "highlights": [
       "Pocket-sized",
       "Prop guards",
       "AI tracking",
       "Palm launch"
     ],
-    "perf": {
-      "speed_ms": 7,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "weight_kg": 0.125,
@@ -87509,6 +87703,28 @@
       "https://m.media-amazon.com/images/I/81IGL7dqhUL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61xKP+WRWjL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81Wv8bjlPZL._AC_SL1500_.jpg"
+    ],
+    "gps": false,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "HoverAir",
+    "max_flight_time": 11,
+    "max_speed": 8,
+    "speed_ms": 8,
+    "max_range": 0.1,
+    "battery_life_typical": 11,
+    "camera_mp": 12,
+    "video_res": "2.7K",
+    "gimbal_axes": 1,
+    "obstacle_sensing": "Visual subject tracking (full prop guards)",
+    "frame_type": "Pocket selfie drone (prop guards)",
+    "motor_count": 4,
+    "regulatory_class": "Sub-250 g",
+    "use_cases": [
+      "Palm-launch selfie video",
+      "Vlogging",
+      "Follow-me capture"
     ]
   },
   {
@@ -87524,22 +87740,19 @@
       "2025-launch",
       "upgrade"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://m.media-amazon.com/images/I/71XjsuQ6QYL._AC_SL1500_.jpg",
-    "score": 87,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 649,
-    "desc": "Upgraded X1 Pro — 8K video, longer battery, improved tracking. 2025 launch.",
+    "desc": "The HoverAir X1 Pro (2025) upgrades the palm-launch selfie drone with a higher-resolution sensor (up to 8K), faster tracking and longer flight, while keeping the prop-guarded, controller-free, follow-me design for hands-free action and vlog capture.",
     "highlights": [
       "8K video",
       "Improved AI tracking",
       "Longer battery",
       "Pocket-sized"
     ],
-    "perf": {
-      "speed_ms": 11,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
     "weight_kg": 0.192,
@@ -87554,6 +87767,28 @@
       "https://m.media-amazon.com/images/I/51IbCgLzIWL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71IETIUWdUL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71CJbOAQkXL._AC_SL1500_.jpg"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "HoverAir",
+    "max_flight_time": 16,
+    "max_speed": 12,
+    "speed_ms": 12,
+    "max_range": 0.4,
+    "battery_life_typical": 16,
+    "camera_mp": 48,
+    "video_res": "8K",
+    "gimbal_axes": 1,
+    "obstacle_sensing": "Visual subject tracking (prop guards)",
+    "frame_type": "Pocket selfie drone (prop guards)",
+    "motor_count": 4,
+    "regulatory_class": "Sub-250 g",
+    "use_cases": [
+      "Palm-launch selfie video",
+      "Action follow-me",
+      "Vlogging"
     ]
   },
   {
@@ -87568,22 +87803,19 @@
       "4k",
       "beginner"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://store.potensic.com/cdn/shop/files/ATOM_2_Standard_Kit.jpg?v=1763642361&width=1125",
-    "score": 78,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 349,
-    "desc": "Budget sub-250g 4K beginner drone. Solid Mini 3 alternative under $400.",
+    "desc": "The Potensic Atom 2 (2024) is a sub-250 g folding drone with a 3-axis gimbal, 48MP sensor and 4K/120fps video, positioned as an affordable rival to DJI's Mini line with night-shooting modes and a long ~32-minute flight time.",
     "highlights": [
       "Sub-250g",
       "4K HDR",
       "Affordable",
       "Mini 3 alternative"
     ],
-    "perf": {
-      "speed_ms": 16,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 0.249,
@@ -87598,6 +87830,28 @@
       "https://store.potensic.com/cdn/shop/files/ATOM2Drone10kmvideotransmission.jpg?v=1766579290&width=1125",
       "https://store.potensic.com/cdn/shop/files/ATOM2DroneAITrack.jpg?v=1766579290&width=1125",
       "https://store.potensic.com/cdn/shop/files/ATOM_2_Drone_vertical_shooting_d9b5a276-918a-483a-bc5c-0320df7e1af9.jpg?v=1766579290&width=1517"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "Potensic",
+    "max_flight_time": 32,
+    "max_speed": 16,
+    "speed_ms": 16,
+    "max_range": 10,
+    "battery_life_typical": 32,
+    "camera_mp": 48,
+    "video_res": "4K",
+    "video_fps": 120,
+    "gimbal_axes": 3,
+    "obstacle_sensing": "Downward",
+    "frame_type": "Folding quadcopter",
+    "motor_count": 4,
+    "regulatory_class": "Sub-250 g",
+    "use_cases": [
+      "Beginner aerial photography",
+      "Travel"
     ]
   },
   {
@@ -87675,25 +87929,22 @@
       "egg-shape",
       "convertible"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://m.media-amazon.com/images/I/51JuoiEFd8S._AC_CR0%2C0%2C0%2C0_SX615_SY462_.jpg",
-    "score": 78,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 1149,
-    "desc": "Convertible drone — flies as drone, lands on water, or works as handheld AI camera. Unique form factor.",
+    "desc": "The PowerVision PowerEgg X (2020) is an egg-shaped convertible device that works as a 4K autonomous drone, a handheld AI camera, or - with a waterproof housing - a drone capable of landing on and taking off from water. Its AI camera tracks and frames subjects automatically.",
     "highlights": [
       "Water landing",
       "AI handheld camera",
       "Multi-mode",
       "Unique design"
     ],
-    "perf": {
-      "speed_ms": 18,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2020,
     "status": "Active",
-    "weight_kg": 0.862,
+    "weight_kg": 0.86,
     "battery_life": 30,
     "origin": "China",
     "cameras": 1,
@@ -87705,6 +87956,28 @@
       "https://m.media-amazon.com/images/I/61-LWjKTyOL._AC_CR0%2C0%2C0%2C0_SX615_SY462_.jpg",
       "https://m.media-amazon.com/images/I/71btnAAjhPL._AC_CR0%2C0%2C0%2C0_SX615_SY462_.jpg",
       "https://m.media-amazon.com/images/I/51BCyJEmucS._AC_CR0%2C0%2C0%2C0_SX615_SY462_.jpg"
+    ],
+    "gps": true,
+    "return_to_home": true,
+    "thermal": false,
+    "made_in": "China",
+    "os": "PowerVision",
+    "max_flight_time": 30,
+    "max_speed": 18,
+    "speed_ms": 18,
+    "max_range": 6,
+    "battery_life_typical": 30,
+    "camera_mp": 12,
+    "video_res": "4K",
+    "video_fps": 60,
+    "gimbal_axes": 3,
+    "obstacle_sensing": "Forward + downward",
+    "frame_type": "Convertible drone / handheld camera",
+    "motor_count": 4,
+    "use_cases": [
+      "Aerial photography",
+      "Handheld AI camera",
+      "Waterproof (with kit)"
     ]
   },
   {
@@ -87719,31 +87992,45 @@
       "police",
       "made-in-canada"
     ],
-    "fig": "🚁",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/30/7VlhDn4PBwIaz1wGMlHQ/image.jpg",
-    "score": 84,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 18000,
-    "desc": "NDAA-compliant compact public safety drone. Made in Canada. Police/EMS focus.",
+    "desc": "Draganfly's Tango2 is a compact, portable drone for public-safety and inspection work, offering quick-deploy aerial situational awareness from the veteran North American drone manufacturer.",
     "highlights": [
       "NDAA-compliant",
       "Made in Canada",
       "Public safety",
       "Compact"
     ],
-    "perf": {
-      "speed_ms": 18,
-      "payload_kg": 0.5
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "weight_kg": 2.5,
-    "battery_life": 35,
+    "battery_life": 30,
     "origin": "USA/Canada",
     "cameras": 2,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G"
+    "cellular": "4G",
+    "gps": true,
+    "return_to_home": true,
+    "made_in": "Canada / USA",
+    "os": "Draganfly",
+    "max_flight_time": 30,
+    "max_speed": 16,
+    "speed_ms": 16,
+    "max_range": 5,
+    "battery_life_typical": 30,
+    "frame_type": "Compact quadcopter",
+    "motor_count": 4,
+    "autonomous": true,
+    "use_cases": [
+      "Public safety",
+      "Reconnaissance",
+      "Inspection"
+    ]
   },
   {
     "id": "redcat-edge130-2023",
