@@ -80109,31 +80109,28 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 95,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Boston Dynamics' original hydraulic Atlas. DARPA Robotics Challenge platform (2013), evolved through HD Atlas (2016) which dropped from 330lb to 180lb. Famous for parkour, backflips, dance, gymnastics demonstrations 2017-2024. Retired April 2024 in favor of the all-electric Atlas. Powered by 28 hydraulic actuators. Historic — defined what humanoid robotics could be.",
+    "desc": "The original hydraulic Atlas (2013) was built by Boston Dynamics for the DARPA Robotics Challenge - a 1.88 m, ~150 kg hydraulically actuated humanoid for disaster-response research. Successive versions grew dramatically more agile (parkour, backflips) before the hydraulic Atlas was retired in 2024 in favour of the all-electric Atlas.",
     "highlights": [
       "DARPA-funded",
       "Parkour demos",
       "Backflip capability",
       "Discontinued April 2024"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 11
-    },
+    "perf": false,
     "year": 2013,
-    "status": "Decommissioned",
-    "height_mm": 1500,
-    "weight_kg": 80,
+    "status": "Discontinued",
+    "height_mm": 1880,
+    "weight_kg": 150,
     "origin": "USA",
     "cameras": "Stereo + LiDAR head sensors",
     "wifi": true,
     "bluetooth": true,
     "made_in": "USA",
     "announced": "2013-07",
-    "released": "2013",
+    "released": 2013,
     "actuator_type": "Hydraulic (28 actuators)",
     "dof": 28,
     "stair_climbing": true,
@@ -80142,15 +80139,15 @@
     "imu": true,
     "use_cases": [
       "DARPA Robotics Challenge",
-      "R&D",
-      "Parkour demonstrations",
-      "Manipulation research"
+      "Disaster-response research",
+      "Bipedal R&D"
     ],
     "pilot_customers": [
       "DARPA",
       "Boston Dynamics R&D"
     ],
-    "website": "https://bostondynamics.com"
+    "website": "https://bostondynamics.com",
+    "os": "Boston Dynamics"
   },
   {
     "id": "boston-dynamics-atlas-electric-2024",
@@ -80687,20 +80684,17 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "UBTECH's industrial humanoid deployed at BYD, Geely, Foxconn factories for quality inspection, material handling. 41 high-precision joints, intelligent collaborative inspection of multiple Walker S1 working together. AI BrainNet 'multi-brain collaborative network'.",
+    "desc": "UBTECH's Walker S1 (2024) is an industrial humanoid designed for factory work - it has been trialled on automotive and electronics production lines (with partners including BYD and Foxconn) performing sorting, handling and inspection tasks as part of UBTECH's push into commercial humanoid labour.",
     "highlights": [
       "NIO pilot",
       "Audi pilot",
       "Industrial focus",
       "Improved gait"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 20
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "height_mm": 1720,
@@ -80712,8 +80706,8 @@
     "bluetooth": true,
     "made_in": "China",
     "announced": "2024",
-    "released": "2024",
-    "dof": 41,
+    "released": 2024,
+    "dof": 43,
     "arm_dof": 7,
     "actuator_type": "Servo motor",
     "torque_nm": 200,
@@ -80729,9 +80723,8 @@
     "battery_life_typical": 240,
     "hot_swap": true,
     "use_cases": [
-      "Factory inspection",
-      "Material handling",
-      "Automotive assembly",
+      "Industrial / factory work",
+      "Logistics",
       "Quality inspection"
     ],
     "pilot_customers": [
@@ -80741,7 +80734,8 @@
       "NIO",
       "Audi"
     ],
-    "website": "https://www.ubtrobot.com"
+    "website": "https://www.ubtrobot.com",
+    "os": "UBTECH"
   },
   {
     "id": "ubtech-alpha-1e-2018",
@@ -80761,22 +80755,19 @@
     "fig": "🤖",
     "img": "",
     "score": 75,
-    "rating": 4.1,
+    "rating": 4,
     "price": 449,
-    "desc": "UBTECH consumer/educational mini-humanoid. Programmable via app for dancing, gestures, simple movements. Targeted STEM education and home entertainment.",
+    "desc": "UBTECH's Alpha 1E (2018) is a 39 cm desktop educational humanoid with 16 servo joints, programmable for walking, dancing and choreographed routines via app or visual coding - an affordable platform for teaching robotics and programming.",
     "highlights": [
       "$200 entry",
       "Education",
       "Programmable",
       "16 servos"
     ],
-    "perf": {
-      "speed_ms": 0.4,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2018,
-    "status": "Discontinued",
-    "height_mm": 397,
+    "status": "Active",
+    "height_mm": 395,
     "weight_kg": 1.6,
     "battery_life": 60,
     "origin": "China",
@@ -80785,17 +80776,18 @@
     "sdk": true,
     "made_in": "China",
     "announced": "2018",
-    "released": "2018",
+    "released": 2018,
     "dof": 16,
     "actuator_type": "Servo",
     "app_companion": "UBTECH",
     "battery_life_typical": 60,
     "use_cases": [
       "STEM education",
-      "Programming learning",
+      "Coding & choreography",
       "Entertainment"
     ],
-    "website": "https://www.ubtrobot.com"
+    "website": "https://www.ubtrobot.com",
+    "os": "UBTECH"
   },
   {
     "id": "xpeng-iron-2025",
@@ -80814,10 +80806,10 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "XPeng (EV manufacturer) IRON humanoid. Uses Turing AI chip — same proprietary silicon as XPeng's vehicles. Cat-like spine articulation for flexibility. Demonstrated walking through factory at XPeng's Tech Day Nov 2024. Mass production targeted 2026.",
+    "desc": "XPENG's IRON (Next-Gen, 2025) is a lifelike bipedal humanoid with a human-like flexible spine, full-body touch-sensing soft skin, up to 82 degrees of freedom (22 per hand) and three proprietary Turing AI chips (~2,250 TOPS) running XPENG's Physical World model. Built with solid-state batteries, XPENG targets mass production for retail, guidance and inspection roles.",
     "highlights": [
       "82 DOF",
       "2250 TOPS",
@@ -80826,12 +80818,9 @@
       "Baosteel partner",
       "Customizable physique"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 25
-    },
+    "perf": false,
     "year": 2025,
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1780,
     "weight_kg": 70,
     "battery_life": 480,
@@ -80844,7 +80833,7 @@
     "cellular": "5G",
     "made_in": "China",
     "announced": "2024-11",
-    "dof": 60,
+    "dof": 82,
     "arm_dof": 7,
     "hand_dof": 15,
     "actuator_type": "Custom electric",
@@ -80860,14 +80849,16 @@
     "battery_type": "Li-ion",
     "battery_life_typical": 360,
     "use_cases": [
-      "Factory assembly",
+      "Retail & guidance",
       "Logistics",
-      "Consumer (future)"
+      "Commercial service"
     ],
     "pilot_customers": [
       "XPeng Guangzhou plant"
     ],
-    "website": "https://www.xpeng.com"
+    "website": "https://www.xpeng.com",
+    "os": "XPENG Turing",
+    "released": 2025
   },
   {
     "id": "kepler-k2-2024",
@@ -81084,20 +81075,17 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 78,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Hanson Robotics' famous social humanoid. First robot granted citizenship (Saudi Arabia, 2017). Designed by David Hanson with patented Frubber skin for realistic facial expressions. 60+ facial expressions, gaze tracking, conversational AI. Public-facing celebrity robot — appeared at UN, talk shows, conferences worldwide. Primarily an AI conversation platform; locomotion is limited.",
+    "desc": "Hanson Robotics' Sophia (2016) is a highly expressive android famous for its lifelike face (Frubber skin) capable of dozens of expressions, conversational AI and global media appearances - even being granted symbolic Saudi citizenship. A platform for human-robot interaction research and AI demonstration.",
     "highlights": [
       "Frubber skin",
       "Saudi citizenship",
       "Cultural icon",
       "Research platform"
     ],
-    "perf": {
-      "speed_ms": 0.3,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2016,
     "status": "Active",
     "height_mm": 1670,
@@ -81108,7 +81096,7 @@
     "bluetooth": true,
     "made_in": "Hong Kong",
     "announced": "2016-02",
-    "released": "2016",
+    "released": 2016,
     "shell_material": "Frubber (patented silicone skin)",
     "bionic_face": true,
     "display_face": false,
@@ -81120,13 +81108,12 @@
     "natural_language_commands": true,
     "head_dof": 12,
     "use_cases": [
-      "Public speaking",
-      "Conferences",
-      "Media appearances",
-      "Conversational AI demonstrations",
-      "Education"
+      "Social interaction & media",
+      "AI/HRI research",
+      "Public engagement"
     ],
-    "website": "https://www.hansonrobotics.com"
+    "website": "https://www.hansonrobotics.com",
+    "os": "Hanson AI"
   },
   {
     "id": "pal-tiago-2018",
@@ -81147,20 +81134,17 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 80,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 95000,
-    "desc": "PAL Robotics TIAGo — single-arm wheeled humanoid, widely deployed in academic research. ROS-native, modular (different head/arm/hand configurations). 100+ universities deployed worldwide.",
+    "desc": "PAL Robotics' TIAGo (2018) is a mobile manipulator on a differential-drive base with a liftable torso and a 7-DOF arm - a modular, ROS-based research platform for service robotics, mobile manipulation and assistive applications rather than a bipedal humanoid.",
     "highlights": [
       "ROS-native",
       "Research staple",
       "Modular",
       "European-made"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "height_mm": 1450,
@@ -81174,7 +81158,7 @@
     "sdk": true,
     "made_in": "Spain",
     "announced": "2015",
-    "released": "2018",
+    "released": 2018,
     "payload_kg": 3,
     "speed_ms": 1,
     "dof": 11,
@@ -81191,13 +81175,13 @@
     ],
     "battery_life_typical": 480,
     "use_cases": [
-      "Academic research",
-      "HRI studies",
-      "Service tasks",
-      "Manipulation research"
+      "Service robotics research",
+      "Mobile manipulation",
+      "Healthcare & assistance R&D"
     ],
     "warranty_months": 12,
-    "website": "https://pal-robotics.com"
+    "website": "https://pal-robotics.com",
+    "os": "PAL / ROS"
   },
   {
     "id": "pal-talos-2017",
@@ -81218,20 +81202,17 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 81,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 950000,
-    "desc": "PAL Robotics TALOS — full-size 175cm bipedal humanoid for industrial research. Custom electric actuators in all 32 joints. Torque-controlled, ROS 2 compatible. Used by aerospace + automotive research labs.",
+    "desc": "PAL Robotics' TALOS (2017) is a 175 cm, 95 kg fully electric, torque-controlled humanoid built for research and industrial manipulation. With 32 DOF and EtherCAT torque-sensing joints, it can lift 6 kg per arm and serves as a high-end ROS research platform.",
     "highlights": [
       "Torque control",
       "ROS-native",
       "Research-grade",
       "€800K+"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 6
-    },
+    "perf": false,
     "year": 2017,
     "status": "Active",
     "height_mm": 1750,
@@ -81245,7 +81226,7 @@
     "sdk": true,
     "made_in": "Spain",
     "announced": "2016",
-    "released": "2017",
+    "released": 2017,
     "payload_kg": 6,
     "dof": 32,
     "arm_dof": 7,
@@ -81260,12 +81241,12 @@
     "ros_version": "ROS 2",
     "battery_life_typical": 180,
     "use_cases": [
-      "Aerospace research",
-      "Automotive R&D",
-      "Bipedal locomotion",
-      "Whole-body control"
+      "Research",
+      "Industrial manipulation R&D",
+      "Bipedal locomotion"
     ],
-    "website": "https://pal-robotics.com"
+    "website": "https://pal-robotics.com",
+    "os": "PAL / ROS"
   },
   {
     "id": "xiaomi-cyberone-2022",
@@ -81284,22 +81265,19 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 82,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 100000,
-    "desc": "Xiaomi's first humanoid robot, unveiled August 2022 by Lei Jun. 21 joints, 30 kg payload-grade actuators (peak torque 300 N·m). Mi-AI environment perception, OAK depth vision, MiAI semantic recognition. Emotion recognition (85 environmental sounds, 45 human emotions). Mostly demonstration platform — limited commercial deployment.",
+    "desc": "Xiaomi's CyberOne (2022) is a 177 cm, 52 kg full-size bipedal humanoid with 21 DOF, emotion recognition and Xiaomi's self-developed actuators. Unveiled as a technology demonstrator showcasing Xiaomi's move into humanoid robotics.",
     "highlights": [
       "Emotion recognition",
       "21 DOF",
       "Xiaomi-branded",
       "Showcase robot"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2022,
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1770,
     "weight_kg": 52,
     "battery_life": 150,
@@ -81323,11 +81301,12 @@
     "languages_spoken": "Mandarin",
     "battery_type": "Li-ion",
     "use_cases": [
-      "R&D",
-      "Public demonstration",
-      "Xiaomi ecosystem integration"
+      "Research & demonstration",
+      "Human-robot interaction"
     ],
-    "website": "https://www.mi.com"
+    "website": "https://www.mi.com",
+    "os": "Xiaomi",
+    "released": 2022
   },
   {
     "id": "robotera-star1-2024",
@@ -81346,19 +81325,16 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 81,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "RobotEra (Tsinghua University spin-off) STAR1 — set world record running humanoid speed at 3.6 m/s. 55 DOF, lightweight design with high-torque joints. Research and demo platform.",
+    "desc": "RobotEra's STAR1 (2024) is a 171 cm, 55-DOF bipedal humanoid that set a world record for bipedal running at 3.6 m/s outdoors, with joints up to 400 N.m torque and direct-drive 12-DOF hands. Paired with RobotEra's ERA-42 AI model, it executes high-precision commercial tasks.",
     "highlights": [
       "Chinese emerging brand",
       "General purpose",
       "Research platform"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "height_mm": 1710,
@@ -81381,11 +81357,13 @@
     "imu": true,
     "lidar": true,
     "use_cases": [
-      "R&D",
-      "Locomotion research",
-      "Public demonstrations"
+      "Mobility research",
+      "Commercial tasks",
+      "Dexterous manipulation"
     ],
-    "website": "https://www.robotera.com"
+    "website": "https://www.robotera.com",
+    "os": "ERA-42",
+    "released": 2024
   },
   {
     "id": "robotera-l7-2025",
@@ -81403,19 +81381,16 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 83,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "RobotEra second-generation humanoid for industrial deployment. Improved torque density, longer endurance than STAR1.",
+    "desc": "RobotEra's L7 (2025) is a next-generation full-size humanoid from the Chinese maker of the record-setting STAR1, advancing locomotion and whole-body manipulation. (Recent release - detailed specifications still being confirmed.)",
     "highlights": [
       "Improved 2025",
       "Industrial pilots",
       "China-made"
     ],
-    "perf": {
-      "speed_ms": 1.4,
-      "payload_kg": 18
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
     "height_mm": 1750,
@@ -81436,10 +81411,12 @@
     "imu": true,
     "lidar": true,
     "use_cases": [
-      "Industrial deployment",
-      "R&D"
+      "Commercial humanoid tasks",
+      "Mobility & manipulation R&D"
     ],
-    "website": "https://www.robotera.com"
+    "website": "https://www.robotera.com",
+    "os": "ERA",
+    "released": 2025
   },
   {
     "id": "astribot-s1-2024",
@@ -81458,24 +81435,21 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Astribot's S1 — wheeled humanoid with extremely fast arms. Demonstrated chopping vegetables, pouring drinks, folding shirts. 1m/s arm tip speed, 10kg arm payload. Wheel-based mobility rather than legs.",
+    "desc": "Astribot's S1 (Stardust Intelligence, 2024) is a wheeled-base bimanual humanoid with 36 DOF (7 per arm) and exceptional manipulation speed, trained via imitation learning to cook, clean, pour drinks and play instruments. Launched at the World Robot Conference, it targets home, lab and hospitality tasks.",
     "highlights": [
       "Viral demos",
       "Fast manipulation",
       "Wheeled base",
       "Chinese maker"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
-    "height_mm": 1700,
-    "weight_kg": 75,
+    "height_mm": 1650,
+    "weight_kg": 58,
     "battery_life": 240,
     "origin": "China",
     "cameras": "RGB-D",
@@ -81483,11 +81457,11 @@
     "bluetooth": true,
     "made_in": "China",
     "announced": "2024",
-    "released": "2024",
+    "released": 2024,
     "payload_kg": 10,
     "speed_ms": 1,
     "actuator_type": "High-speed servo",
-    "dof": 30,
+    "dof": 36,
     "arm_dof": 7,
     "fingers": 5,
     "bimanual": true,
@@ -81497,11 +81471,12 @@
     "imu": true,
     "natural_language_commands": true,
     "use_cases": [
-      "Service tasks",
-      "Cooking demonstrations",
-      "Hospitality"
+      "Home assistance",
+      "Lab automation",
+      "Retail / hospitality"
     ],
-    "website": "https://www.astribot.com"
+    "website": "https://www.astribot.com",
+    "os": "Astribot"
   },
   {
     "id": "engineai-em02-2024",
@@ -81520,20 +81495,17 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 79,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "EngineAI EM02 — bipedal humanoid focused on natural walking gait. Open-source SDK for research community.",
+    "desc": "EngineAI's EM-02 (Shenzhen, 2024) is an agile humanoid robot notable for dynamic motions including a demonstrated front flip, part of the wave of Chinese humanoid developers pushing athletic locomotion. (Detailed specifications worth verifying against EngineAI.)",
     "highlights": [
       "Natural gait",
       "Chinese emerging",
       "Walking demos",
       "Research platform"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "height_mm": 1700,
@@ -81556,10 +81528,13 @@
       "C++"
     ],
     "use_cases": [
-      "Research",
-      "Locomotion development"
+      "Agile-locomotion research",
+      "Demonstration",
+      "Commercial development"
     ],
-    "website": "https://www.engineai.com.cn"
+    "website": "https://www.engineai.com.cn",
+    "os": "EngineAI",
+    "released": 2024
   },
   {
     "id": "deep-robotics-dr01-2024",
@@ -81629,20 +81604,17 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 78,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Noetix N1 — research humanoid focused on dynamic locomotion. Demonstrated parkour-style movement in early footage.",
+    "desc": "Noetix Robotics' N1 (2024) is a humanoid from the Chinese maker known for aggressively low-priced humanoids, aimed at research, education and developers entering the field. (Detailed specifications worth verifying against Noetix.)",
     "highlights": [
       "~$15K",
       "Education",
       "Compact",
       "Chinese-made"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 3
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "height_mm": 1600,
@@ -81661,10 +81633,12 @@
     "imu": true,
     "ros": true,
     "use_cases": [
-      "Research",
-      "Locomotion"
+      "Research & education",
+      "Affordable humanoid development"
     ],
-    "website": "https://www.noetix.com.cn"
+    "website": "https://www.noetix.com.cn",
+    "os": "Noetix",
+    "released": 2024
   },
   {
     "id": "promobot-v4-2018",
@@ -81683,20 +81657,17 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 76,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 25000,
-    "desc": "Russian/Cypriot service humanoid for retail and reception. 100,000-word conversation vocabulary, facial recognition, wheel-based mobility. Deployed in shopping malls, banks, hotels.",
+    "desc": "Promobot V.4 (2018) is a wheeled service humanoid with an expressive animatronic face, speech interaction and autonomous indoor navigation, deployed for reception, customer service, promotion and public information in malls, banks and airports.",
     "highlights": [
       "Reception use",
       "Wheeled",
       "Voice interaction",
       "Hospitality"
     ],
-    "perf": {
-      "speed_ms": 0.6,
-      "payload_kg": 5
-    },
+    "perf": false,
     "year": 2018,
     "status": "Active",
     "height_mm": 1450,
@@ -81706,8 +81677,8 @@
     "cameras": "RGB + 3D depth",
     "wifi": true,
     "bluetooth": true,
-    "made_in": "Russia",
-    "released": "2018",
+    "made_in": "Russia / USA",
+    "released": 2018,
     "speed_ms": 1.5,
     "dof": 14,
     "facial_recognition": true,
@@ -81721,12 +81692,12 @@
     "depth_sensing": true,
     "battery_life_typical": 1080,
     "use_cases": [
-      "Retail reception",
-      "Banking",
-      "Tourism information",
-      "Hospitality"
+      "Reception & customer service",
+      "Promotion & engagement",
+      "Public information"
     ],
-    "website": "https://promo-bot.com"
+    "website": "https://promo-bot.com",
+    "os": "Promobot"
   },
   {
     "id": "fauna-sprout-2025",
@@ -81744,22 +81715,19 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 76,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Fauna Robotics' Sprout — service-focused humanoid in development. US startup.",
+    "desc": "Sprout is a humanoid robot from US startup Fauna Robotics (2025), an early-stage entrant in the general-purpose humanoid space. (Recent/limited public data - specifications worth verifying.)",
     "highlights": [
       "$50K dev platform",
       "Open SDK",
       "Home pilots",
       "Research-friendly"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2025,
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1700,
     "weight_kg": 65,
     "battery_life": 180,
@@ -81777,10 +81745,12 @@
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Service tasks",
-      "R&D"
+      "Humanoid research",
+      "General-purpose development"
     ],
-    "website": "https://www.faunarobotics.com"
+    "website": "https://www.faunarobotics.com",
+    "os": "Fauna",
+    "released": 2025
   },
   {
     "id": "toyota-tro-2017",
@@ -81800,22 +81770,19 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 80,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Toyota's third-generation Humanoid Robot — teleoperated avatar designed for remote presence and high-precision manipulation. Operator wore haptic exoskeleton + HMD for full-body remote control. 29 DOF, torque servo modules in all joints for safe human-environment interaction. Historic teleoperation milestone.",
+    "desc": "Toyota's T-HR3 (2017) is a 32-DOF teleoperated humanoid controlled via a wearable Master Maneuvering System and force-feedback, letting an operator remotely mirror movements and feel what the robot touches. A research platform for safe human-robot collaboration and remote work.",
     "highlights": [
       "Teleoperated",
       "Toyota research",
       "Olympics showcase",
       "Discontinued"
     ],
-    "perf": {
-      "speed_ms": 0.8,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2017,
-    "status": "Decommissioned",
+    "status": "Active",
     "height_mm": 1540,
     "weight_kg": 75,
     "origin": "Japan",
@@ -81823,7 +81790,7 @@
     "bluetooth": true,
     "made_in": "Japan",
     "announced": "2017-11",
-    "dof": 29,
+    "dof": 32,
     "actuator_type": "Torque servo (all joints)",
     "fingers": 5,
     "bimanual": true,
@@ -81833,11 +81800,13 @@
     "imu": true,
     "force_sensing": true,
     "use_cases": [
-      "Teleoperation R&D",
-      "Remote presence",
-      "Disaster response research"
+      "Teleoperation research",
+      "Humanoid R&D",
+      "Remote manipulation"
     ],
-    "website": "https://global.toyota"
+    "website": "https://global.toyota",
+    "os": "Toyota",
+    "released": 2017
   },
   {
     "id": "honda-asimo-2000",
@@ -81857,24 +81826,21 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "Honda's iconic Advanced Step in Innovative MObility. THE humanoid robot of the 2000s — defined what humanoid robotics could look like for the public. Walked, ran, climbed stairs, served drinks, conducted orchestras. Final generation (2011) ran at 9 km/h, jumped, hopped on one leg. Honda retired ASIMO in March 2018 after 18 years of development. Historic — predates current humanoid wave by decades.",
+    "desc": "Honda's ASIMO (2000-2018) was the world's most famous bipedal humanoid for two decades - 130 cm tall, it could walk, run at ~9 km/h, climb stairs, hop and recognise faces and gestures. A landmark in dynamic bipedal locomotion, it was retired in 2018 with its technology feeding Honda's later robotics work.",
     "highlights": [
       "Historic icon",
       "Defined field",
       "Honda flagship",
       "Retired 2018"
     ],
-    "perf": {
-      "speed_ms": 1.6,
-      "payload_kg": 1
-    },
+    "perf": false,
     "year": 2000,
-    "status": "Decommissioned",
+    "status": "Discontinued",
     "height_mm": 1300,
-    "weight_kg": 54,
+    "weight_kg": 50,
     "battery_life": 60,
     "origin": "Japan",
     "cameras": "Stereo vision",
@@ -81882,7 +81848,7 @@
     "bluetooth": true,
     "made_in": "Japan",
     "announced": "2000-10",
-    "released": "2000",
+    "released": 2000,
     "speed_ms": 2.5,
     "dof": 57,
     "stair_climbing": true,
@@ -81893,12 +81859,12 @@
     "speech_synthesis": true,
     "facial_recognition": true,
     "use_cases": [
-      "Public demonstrations",
-      "Research",
-      "Reception",
-      "Conducting orchestra"
+      "Research & demonstration",
+      "Mobility R&D",
+      "Public engagement"
     ],
-    "website": "https://global.honda/innovation/robotics/ASIMO.html"
+    "website": "https://global.honda/innovation/robotics/ASIMO.html",
+    "os": "Honda"
   },
   {
     "id": "softbank-pepper-2014",
@@ -81918,32 +81884,29 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 82,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 1790,
-    "desc": "SoftBank/Aldebaran's social humanoid — over 30,000 units deployed worldwide in retail, banking, hospitality, education. Tablet-mounted interface, emotion recognition, multilingual conversation. SoftBank halted production June 2021. Aldebaran (the actual designer) entered bankruptcy in February 2025. Pepper marked the first mass-deployed social humanoid.",
+    "desc": "Pepper (SoftBank/Aldebaran, 2014) is a 120 cm social humanoid on a wheeled omnidirectional base with a chest tablet, designed to read emotions and interact in retail, reception and hospitality. Hugely visible in stores and research, production was paused in 2021.",
     "highlights": [
       "Retail deployments",
       "Social focus",
       "Affordable",
       "Japan widely used"
     ],
-    "perf": {
-      "speed_ms": 0.6,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2014,
     "status": "Discontinued",
-    "height_mm": 1210,
+    "height_mm": 1200,
     "weight_kg": 28,
     "battery_life": 720,
     "origin": "Japan",
     "cameras": "2x RGB + 3D depth + IR",
     "wifi": "Wi-Fi 4",
     "bluetooth": true,
-    "made_in": "France",
+    "made_in": "France / Japan",
     "announced": "2014-06",
-    "released": "2014",
+    "released": 2014,
     "dof": 20,
     "speed_ms": 1,
     "actuator_type": "Servo motor",
@@ -81962,13 +81925,12 @@
     "battery_type": "Li-ion",
     "battery_life_typical": 720,
     "use_cases": [
-      "Retail reception",
-      "Banking",
-      "Hospitality",
-      "Education",
-      "Customer engagement"
+      "Retail & reception",
+      "Customer engagement",
+      "Research & education"
     ],
-    "website": "https://www.softbankrobotics.com"
+    "website": "https://www.softbankrobotics.com",
+    "os": "NAOqi"
   },
   {
     "id": "softbank-nao-2008",
@@ -81989,22 +81951,19 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 84,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 9500,
-    "desc": "Aldebaran's iconic NAO — the most-deployed humanoid in academia ever. Over 13,000 units sold across 70+ countries by 2018. RoboCup standard platform for over a decade. 6th generation (NAO 6, 2018) was the final version. SoftBank/Aldebaran entered bankruptcy February 2025; NAO production ceased.",
+    "desc": "NAO (Aldebaran, later SoftBank Robotics) is a 58 cm, 25-DOF programmable humanoid that became the world's most widely used educational and research robot. With cameras, microphones and the NAOqi platform, it teaches coding and serves HRI research, autism therapy and classrooms globally.",
     "highlights": [
       "University standard",
       "25 DOF",
       "Programmable",
       "Wide adoption"
     ],
-    "perf": {
-      "speed_ms": 0.4,
-      "payload_kg": 0
-    },
+    "perf": false,
     "year": 2008,
-    "status": "Discontinued",
+    "status": "Active",
     "height_mm": 574,
     "weight_kg": 5.4,
     "battery_life": 90,
@@ -82015,7 +81974,7 @@
     "sdk": true,
     "made_in": "France",
     "announced": "2008",
-    "released": "2008",
+    "released": 2008,
     "dof": 25,
     "fingers": 3,
     "speed_ms": 0.1,
@@ -82038,13 +81997,12 @@
       "C#"
     ],
     "use_cases": [
-      "Academic research",
-      "RoboCup",
-      "STEM education",
-      "Autism therapy",
-      "HRI studies"
+      "Education & STEM",
+      "Research & HRI",
+      "Healthcare engagement"
     ],
-    "website": "https://www.softbankrobotics.com"
+    "website": "https://www.softbankrobotics.com",
+    "os": "NAOqi"
   },
   {
     "id": "starship-delivery-robot-gen5-2018",
