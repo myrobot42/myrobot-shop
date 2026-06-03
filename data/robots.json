@@ -47679,19 +47679,14 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Earlier KUAVO 3.0 generation. Superseded by KUAVO 5 series. Active in academic deployments through 2024.",
+    "desc": "Leju Robotics' Kuavo 3.0 is a generation of the full-size Kuavo humanoid (360 N.m joints, ~4.6 km/h omnidirectional gait, KaihongOS) with refinements in motion and AI for service, education and research deployments.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2023,
     "origin": "China",
-    "status": "Discontinued",
-    "released": "2023",
-    "height_mm": 1400,
+    "status": "Active",
+    "released": 2024,
+    "height_mm": 1700,
     "weight_kg": 40,
     "dof": 22,
     "ros": true,
@@ -47700,7 +47695,9 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Academic research"
+      "Service & guidance",
+      "Education",
+      "Embodied-AI research"
     ],
     "manufacturer_url": "https://www.lejurobot.com",
     "made_in": "China",
@@ -47715,7 +47712,9 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68279475128232adf8f1c12f_KUAVO%203.0_07.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68279475c7c8bca776cb3fdd_KUAVO%203.0_02-p-2000.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68279475c1fe61fed513436e_KUAVO%203.0_04.png"
-    ]
+    ],
+    "os": "KaihongOS (HarmonyOS)",
+    "speed_ms": 1.28
   },
   {
     "id": "rainbow-robotics-amr-serving-robot",
@@ -48374,21 +48373,16 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Wheeled variant of KUAVO 5 with modular design, interchangeable limbs and hands, optimized for smooth indoor surfaces and factory floors",
+    "desc": "Leju Robotics' Kuavo 5-W is a wheeled-base configuration of the Kuavo 5 humanoid, trading bipedal legs for a mobile wheeled base for stable, long-duty service mobility while keeping the dual-arm upper body and KaihongOS intelligence.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
-    "height_mm": 1650,
+    "status": "Active",
+    "height_mm": 1700,
     "weight_kg": 85,
     "dof": 40,
-    "speed_ms": 1.5,
+    "speed_ms": 1.28,
     "payload_kg": 10,
     "battery_life": "4-6 hours",
     "charge_time": "2 hours",
@@ -48400,12 +48394,14 @@
     "wifi": true,
     "bluetooth": true,
     "use_cases": [
-      "Industrial automation",
-      "Warehouse logistics",
-      "Research and development",
-      "Educational robotics"
+      "Service & guidance",
+      "Education",
+      "Embodied-AI research"
     ],
-    "manufacturer_url": "https://www.lejurobotics.com"
+    "manufacturer_url": "https://www.lejurobotics.com",
+    "made_in": "China",
+    "os": "KaihongOS (HarmonyOS)",
+    "released": 2025
   },
   {
     "id": "leju-robotics-kuavo-5",
@@ -48419,21 +48415,16 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Modular humanoid robot with interchangeable hands (dexterous, grippers, claws), adjustable height, walk/wheel mobility options, designed for industrial automation and household applications",
+    "desc": "Leju Robotics' Kuavo 5 is a newer generation of the Kuavo full-size humanoid (high-torque joints, omnidirectional walking, KaihongOS with large-model AI) for service, education and embodied-AI research.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
-    "height_mm": 1650,
+    "status": "Active",
+    "height_mm": 1700,
     "weight_kg": 85,
     "dof": 42,
-    "speed_ms": 1.2,
+    "speed_ms": 1.28,
     "payload_kg": 10,
     "battery_life": "8 hours",
     "ros": true,
@@ -48442,23 +48433,23 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Industrial automation",
-      "Warehouse logistics",
-      "Household assistance",
-      "Research and development",
-      "Security patrol"
+      "Service & guidance",
+      "Education",
+      "Embodied-AI research"
     ],
     "width_mm": 600,
     "depth_mm": 300,
     "reach_mm": 800,
     "wifi": true,
     "bluetooth": true,
-    "os": "Linux",
+    "os": "KaihongOS (HarmonyOS)",
     "charge_time": "4 hours",
     "warranty_months": 12,
     "manufacturer_url": "https://www.lejurobot.com",
     "cellular": "4G/5G optional",
-    "ai_model": "Custom AI framework with computer vision and motion planning"
+    "ai_model": "Custom AI framework with computer vision and motion planning",
+    "made_in": "China",
+    "released": 2025
   },
   {
     "id": "leju-robotics-aelos-pro",
@@ -48588,22 +48579,17 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Hybrid robot combining humanoid upper body with wheeled chassis and lifting module, offering both upper limb flexibility and fast mobility. Features three-in-one design for versatile applications.",
+    "desc": "Leju Robotics' Kuavo 4 Pro is an upgraded generation of the Kuavo full-size humanoid, building on the 360 N.m-joint, KaihongOS platform with improved performance for commercial service and research.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
-    "released": "2024",
-    "height_mm": 1650,
+    "status": "Active",
+    "released": 2025,
+    "height_mm": 1700,
     "weight_kg": 85,
     "dof": 14,
-    "speed_ms": 3,
+    "speed_ms": 1.28,
     "payload_kg": 20,
     "battery_life": "4-6 hours",
     "wifi": true,
@@ -48614,25 +48600,24 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Industrial automation",
-      "Warehouse logistics",
-      "Service robotics",
-      "Research and development",
-      "Healthcare assistance"
+      "Service & guidance",
+      "Education",
+      "Embodied-AI research"
     ],
     "manufacturer_url": "https://www.lejurobot.com",
     "width_mm": 600,
     "depth_mm": 500,
     "reach_mm": 800,
     "charge_time": "2-3 hours",
-    "os": "Linux",
+    "os": "KaihongOS (HarmonyOS)",
     "cellular": "4G/5G optional",
     "warranty_months": 12,
     "product_url": "https://www.lejurobot.com/kuavo-4pro",
     "cpu": "ARM Cortex-A78",
     "ram_gb": 8,
     "storage_gb": 128,
-    "ai_model": "Custom neural networks for perception and navigation"
+    "ai_model": "Custom neural networks for perception and navigation",
+    "made_in": "China"
   },
   {
     "id": "leju-robotics-kuavo-5-5-w",
@@ -48653,22 +48638,17 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/frcHBElS0fw68kdeEUPU/image.jpg",
-    "score": 80,
+    "score": 75,
     "rating": 4,
     "price": 30000,
-    "desc": "Leju Robotics' KUAVO — research-grade bipedal humanoid with open-source SDK. KUAVO-W variant uses wheeled mobility for stability. Educational/research focused.",
+    "desc": "Leju Robotics' Kuavo 5.5-W is a wheeled variant in the Kuavo 5 series, pairing the dual-arm humanoid upper body with a wheeled base for service and mobile-manipulation tasks.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
     "status": "Active",
-    "released": "2024",
-    "height_mm": 1450,
+    "released": 2025,
+    "height_mm": 1700,
     "weight_kg": 45,
     "dof": 26,
     "ros": true,
@@ -48677,9 +48657,9 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Research",
+      "Service & guidance",
       "Education",
-      "Locomotion development"
+      "Embodied-AI research"
     ],
     "manufacturer_url": "https://www.lejurobot.com",
     "made_in": "China",
@@ -48696,7 +48676,9 @@
     ],
     "battery_life_typical": 120,
     "wifi": true,
-    "website": "https://www.lejurobot.com"
+    "website": "https://www.lejurobot.com",
+    "os": "KaihongOS (HarmonyOS)",
+    "speed_ms": 1.28
   },
   {
     "id": "leju-robotics-kuavo-my",
@@ -48710,22 +48692,17 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Advanced humanoid robot with 26 DoF, 360 Nm torque joints, designed for intelligent guidance and customer service in commercial spaces, exhibition halls, and shopping centers. Features advanced AI, imitation learning capabilities, and runs on KaihongOS based on OpenHarmony.",
+    "desc": "Leju Robotics' Kuavo MY is a configuration of the Kuavo full-size humanoid platform (360 N.m joints, KaihongOS). (Detailed variant specifications are limited and worth verifying against Leju.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
-    "height_mm": 1650,
+    "height_mm": 1700,
     "weight_kg": 85,
     "dof": 26,
-    "os": "KaihongOS (OpenHarmony-based)",
+    "os": "KaihongOS (HarmonyOS)",
     "cameras": "Multiple RGB cameras for navigation and interaction",
     "lidar": true,
     "imu": true,
@@ -48734,17 +48711,16 @@
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Customer service",
-      "Intelligent guidance",
-      "Reception",
-      "Information kiosk",
-      "Exhibition assistance",
-      "Shopping center guidance"
+      "Service & guidance",
+      "Education",
+      "Embodied-AI research"
     ],
     "gallery": [
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68275bce68264860365cde05_KUAVO-MY_Hero.png",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/682794455105baea8d6e3746_KUAVO-MY_03-p-2000.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "speed_ms": 1.28
   },
   {
     "id": "agibot-agibot-omnihand-o10",
@@ -49941,26 +49917,19 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Part of the Kepler Forerunner series standing 178 cm tall and weighing 85 kg, featuring 40 degrees of freedom, AI-powered cognitive systems, and precise planetary roller screw actuators, designed for industrial applications and research environments.",
+    "desc": "Kepler's Forerunner D1 is a variant in the Shanghai Kepler Forerunner humanoid family. (Detailed specifications for this variant are limited and worth verifying against Kepler.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
-    "released": "2023",
+    "status": "Active",
+    "released": 2024,
     "height_mm": 1780,
     "weight_kg": 85,
     "dof": 40,
     "use_cases": [
-      "Industrial automation",
-      "Research and development",
-      "Manufacturing",
-      "Laboratory assistance"
+      "Industrial / commercial humanoid tasks",
+      "Research"
     ],
     "battery_life": "8 hours",
     "speed_ms": 1.4,
@@ -49973,7 +49942,9 @@
     "bluetooth": true,
     "warranty_months": 12,
     "lidar": true,
-    "manufacturer_url": "https://www.kepleruniverse.com"
+    "manufacturer_url": "https://www.kepleruniverse.com",
+    "made_in": "China",
+    "os": "Kepler OS"
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-k2",
@@ -49987,22 +49958,17 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Fifth-generation industrial-grade humanoid robot standing 178 cm tall and weighing 85 kg, featuring 52 degrees of freedom, advanced tactile sensors with 96 contact points per fingertip, rotating/tilting head module, and enhanced AI capabilities for manufacturing, logistics, and research applications.",
+    "desc": "Kepler's Forerunner K2 (Shanghai Kepler, 2024) is a full-size industrial humanoid - 178 cm, 85 kg, 52 DOF with 100 TOPS of compute and a 2.33 kWh battery good for an ~8-hour shift. Its tactile hands (96 fingertip sensors) handle ~15 kg per hand / 30 kg dual-arm, and a cloud cognitive model plus imitation/reinforcement learning drive autonomous task completion. Marketed as the company's fifth-generation design, also branded 'Bumblebee'/'Hornet'.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
-    "released": "2023",
+    "status": "Active",
+    "released": 2024,
     "height_mm": 1780,
     "weight_kg": 85,
     "dof": 52,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
@@ -50010,13 +49976,16 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Manufacturing",
-      "Logistics",
-      "Warehouse automation",
-      "Research",
-      "Industrial inspection"
+      "Industrial materials handling",
+      "Inspection / patrol",
+      "Logistics"
     ],
-    "manufacturer_url": "https://www.kepler-robotics.com"
+    "manufacturer_url": "https://www.kepler-robotics.com",
+    "made_in": "China",
+    "os": "Kepler OS",
+    "payload_kg": 30,
+    "battery_life_typical": 480,
+    "npu_tops": 100
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-k1",
@@ -50030,37 +49999,35 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "General-purpose humanoid robot standing 178 cm tall and weighing 85 kg, featuring 40 degrees of freedom with 11-12 DOF smart hands, proprietary planetary roller screw actuators, and AI-powered Nebula system for industrial, research, and service applications.",
+    "desc": "Kepler's Forerunner K1 (Shanghai Kepler, Nov 2023) was the company's first full-size humanoid, with in-house roller-screw arm/leg actuators, custom rotary waist/shoulder joints, an 8-hour battery and sensor-packed hands handling up to ~25 kg, taking aim at Tesla's Optimus at CES 2024.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
-    "released": "2023",
+    "status": "Active",
+    "released": 2023,
     "height_mm": 1780,
     "weight_kg": 85,
     "dof": 40,
     "use_cases": [
       "Industrial automation",
-      "Research and development",
-      "Service applications",
-      "Manufacturing"
+      "Logistics",
+      "Research"
     ],
     "manufacturer_url": "https://www.kepler-robotics.com",
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
     "cameras": "Multiple stereo cameras for navigation and object recognition",
-    "battery_life": "2-4 hours",
+    "battery_life": 480,
     "speed_ms": 1.5,
     "wifi": true,
     "bluetooth": true,
-    "ros": true
+    "ros": true,
+    "made_in": "China",
+    "os": "Kepler OS",
+    "payload_kg": 25,
+    "battery_life_typical": 480
   },
   {
     "id": "kepler-robotics-kepler-forerunner-k2-bumblebee",
@@ -50078,17 +50045,12 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/629S35sEXQEjegdw5M4r/image.jpg",
-    "score": 84,
+    "score": 75,
     "rating": 4,
     "price": 30000,
-    "desc": "Kepler K2 Bumblebee — yellow color variant of Forerunner K2 with refined sensor stack. Often featured in Kepler's demo videos.",
+    "desc": "The Kepler K2 'Bumblebee' is the Forerunner K2 industrial humanoid (178 cm, 85 kg, 52 DOF, ~8-hr battery) under its demonstration branding - it debuted at the SAIC-GM automotive plant in Shanghai in April 2025 and made its public appearance at ICRA 2025, aimed at blue-collar industrial automation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
     "status": "Active",
@@ -50096,12 +50058,12 @@
     "weight_kg": 85,
     "dof": 52,
     "use_cases": [
-      "Industrial assembly",
-      "Logistics",
-      "Demonstration"
+      "Industrial materials handling",
+      "Inspection / patrol",
+      "Logistics"
     ],
     "manufacturer_url": "https://www.keplerbots.com",
-    "released": "2023",
+    "released": 2024,
     "wifi": true,
     "bluetooth": true,
     "cameras": "RGB-D + RGB",
@@ -50109,7 +50071,7 @@
     "depth_sensing": true,
     "made_in": "China",
     "announced": "2024",
-    "payload_kg": 15,
+    "payload_kg": 30,
     "arm_dof": 7,
     "hand_dof": 11,
     "colors": [
@@ -50120,7 +50082,10 @@
     "can_use_tools": true,
     "lidar": true,
     "battery_life_typical": 480,
-    "website": "https://www.gotokepler.com"
+    "website": "https://www.gotokepler.com",
+    "os": "Kepler OS",
+    "battery_life": 480,
+    "npu_tops": 100
   },
   {
     "id": "engineered-arts-ameca-generation-3",
@@ -50207,21 +50172,16 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 85,
+    "score": 75,
     "rating": 4,
     "price": 22000,
-    "desc": "Kepler S-series successor to Forerunner K-line. Refined dexterity and reduced cost. Aimed at scale industrial deployment.",
+    "desc": "Kepler's Forerunner S1 is a variant in the Shanghai Kepler full-size humanoid family aimed at commercial and industrial deployment. (Detailed specifications for this variant are limited and worth verifying against Kepler.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2025,
     "status": "Active",
-    "released": "2025",
+    "released": 2024,
     "height_mm": 1780,
     "weight_kg": 80,
     "dof": 52,
@@ -50232,8 +50192,8 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Industrial assembly",
-      "Cost-sensitive deployment"
+      "Industrial / commercial humanoid tasks",
+      "Research"
     ],
     "manufacturer_url": "https://www.kepler-robotics.com",
     "made_in": "China",
@@ -50247,7 +50207,8 @@
     "lidar": true,
     "natural_language_commands": true,
     "battery_life_typical": 480,
-    "website": "https://www.gotokepler.com"
+    "website": "https://www.gotokepler.com",
+    "os": "Kepler OS"
   },
   {
     "id": "kepler-robotics-k2-bumblebee",
@@ -50261,24 +50222,19 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "World's first commercially available hybrid-architecture humanoid robot in mass production. Features hybrid serial-parallel design combining roller screw linear actuators with rotary actuators for enhanced stability and extended operating life.",
+    "desc": "The Kepler K2 'Bumblebee' is the Forerunner K2 industrial humanoid (178 cm, 85 kg, 52 DOF, ~8-hr battery) under its demonstration branding - it debuted at the SAIC-GM automotive plant in Shanghai in April 2025 and made its public appearance at ICRA 2025, aimed at blue-collar industrial automation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
-    "released": "2024",
-    "height_mm": 1750,
-    "weight_kg": 55,
+    "status": "Active",
+    "released": 2024,
+    "height_mm": 1780,
+    "weight_kg": 85,
     "dof": 52,
     "speed_ms": 1.5,
-    "payload_kg": 15,
-    "battery_life": "4 hours",
+    "payload_kg": 30,
+    "battery_life": 480,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
@@ -50286,12 +50242,15 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Manufacturing",
-      "Logistics",
-      "Warehouse automation",
-      "Assembly line operations"
+      "Industrial materials handling",
+      "Inspection / patrol",
+      "Logistics"
     ],
-    "manufacturer_url": "https://www.keplerbots.com"
+    "manufacturer_url": "https://www.keplerbots.com",
+    "made_in": "China",
+    "os": "Kepler OS",
+    "battery_life_typical": 480,
+    "npu_tops": 100
   },
   {
     "id": "kepler-robotics-forerunner-k2",
@@ -50309,17 +50268,12 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/d8f2C9uIj36MsPuXTy5Y/image.jpg",
-    "score": 83,
+    "score": 75,
     "rating": 4,
     "price": 25000,
-    "desc": "Kepler's first-generation Forerunner K2 production unit. Linear actuators + planetary gearbox, anthropomorphic body. Differs from the K2 industrial in mounting/sensor configuration.",
+    "desc": "Kepler's Forerunner K2 (Shanghai Kepler, 2024) is a full-size industrial humanoid - 178 cm, 85 kg, 52 DOF with 100 TOPS of compute and a 2.33 kWh battery good for an ~8-hour shift. Its tactile hands (96 fingertip sensors) handle ~15 kg per hand / 30 kg dual-arm, and a cloud cognitive model plus imitation/reinforcement learning drive autonomous task completion. Marketed as the company's fifth-generation design, also branded 'Bumblebee'/'Hornet'.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
     "status": "Active",
@@ -50332,15 +50286,15 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Industrial assembly",
-      "Logistics",
-      "Security patrol"
+      "Industrial materials handling",
+      "Inspection / patrol",
+      "Logistics"
     ],
     "manufacturer_url": "https://www.kepler-robotics.com",
     "made_in": "China",
     "announced": "2024",
-    "released": "2024",
-    "payload_kg": 15,
+    "released": 2024,
+    "payload_kg": 30,
     "arm_dof": 7,
     "hand_dof": 11,
     "actuator_type": "Linear actuators + harmonic drive",
@@ -50350,7 +50304,10 @@
     "can_use_tools": true,
     "lidar": true,
     "battery_life_typical": 480,
-    "website": "https://www.gotokepler.com"
+    "website": "https://www.gotokepler.com",
+    "os": "Kepler OS",
+    "battery_life": 480,
+    "npu_tops": 100
   },
   {
     "id": "kepler-robotics-kepler-forerunner-s1",
@@ -50364,26 +50321,19 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Part of the Kepler Forerunner series with 40 degrees of freedom, 178cm tall, 85kg weight, designed for versatility with AI-powered cognitive systems and planetary roller screw actuators for industrial and research applications.",
+    "desc": "Kepler's Forerunner S1 is a variant in the Shanghai Kepler full-size humanoid family aimed at commercial and industrial deployment. (Detailed specifications for this variant are limited and worth verifying against Kepler.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
-    "released": "2024",
+    "status": "Active",
+    "released": 2024,
     "height_mm": 1780,
     "weight_kg": 85,
     "dof": 40,
     "use_cases": [
-      "Industrial automation",
-      "Research",
-      "Service applications",
-      "Warehousing"
+      "Industrial / commercial humanoid tasks",
+      "Research"
     ],
     "manufacturer_url": "https://www.kepler-robotics.com",
     "cameras": "Multi-modal vision system",
@@ -50394,7 +50344,9 @@
     "payload_kg": 20,
     "ros": true,
     "lidar": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "China",
+    "os": "Kepler OS"
   },
   {
     "id": "engineered-arts-quinn",
@@ -60378,22 +60330,17 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Full-sized humanoid robot with 360 Nm torque joints, omnidirectional walking, and HarmonyOS-based intelligence designed for service, education, and adaptive interaction",
+    "desc": "Leju Robotics' Kuavo is a full-size humanoid with self-developed 360 N.m peak-torque joints and ~4.6 km/h omnidirectional walking, running KaihongOS (a HarmonyOS-based system) with large-model AI and imitation learning. Priced around US$50,000, it is deployed for retail guidance, education and embodied-AI research.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2023,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
-    "height_mm": 1650,
+    "height_mm": 1700,
     "weight_kg": 75,
     "dof": 41,
-    "os": "HarmonyOS",
+    "os": "KaihongOS (HarmonyOS)",
     "wifi": true,
     "bluetooth": true,
     "cameras": "Multiple RGB cameras for vision and navigation",
@@ -60401,13 +60348,13 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Service robotics",
+      "Service & guidance",
       "Education",
-      "Research",
-      "Entertainment",
-      "Elderly care"
+      "Embodied-AI research"
     ],
-    "manufacturer_url": "https://www.lejurobot.com"
+    "manufacturer_url": "https://www.lejurobot.com",
+    "made_in": "China",
+    "speed_ms": 1.28
   },
   {
     "id": "mentee-robotics-menteebot-base-model-",
@@ -80781,33 +80728,30 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/d8f2C9uIj36MsPuXTy5Y/image.jpg",
-    "score": 84,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 30000,
-    "desc": "Kepler Robotics' K2 — second-generation industrial humanoid. Linear actuators + harmonic drive joints, anthropomorphic dexterous hand (11 DOF), 15kg payload. Targeted at automotive, logistics, security patrol.",
+    "desc": "Kepler's Forerunner K2 (Shanghai Kepler, 2024) is a full-size industrial humanoid - 178 cm, 85 kg, 52 DOF with 100 TOPS of compute and a 2.33 kWh battery good for an ~8-hour shift. Its tactile hands (96 fingertip sensors) handle ~15 kg per hand / 30 kg dual-arm, and a cloud cognitive model plus imitation/reinforcement learning drive autonomous task completion. Marketed as the company's fifth-generation design, also branded 'Bumblebee'/'Hornet'.",
     "highlights": [
       "Force-controlled",
       "Affordable",
       "Industrial",
       "12 DOF hands"
     ],
-    "perf": {
-      "speed_ms": 1.4,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "height_mm": 1780,
     "weight_kg": 85,
-    "battery_life": 300,
+    "battery_life": 480,
     "origin": "China",
     "cameras": "RGB-D",
     "wifi": true,
     "bluetooth": true,
     "made_in": "China",
     "announced": "2024",
-    "released": "2024",
-    "payload_kg": 15,
+    "released": 2024,
+    "payload_kg": 30,
     "dof": 52,
     "arm_dof": 7,
     "hand_dof": 11,
@@ -80823,12 +80767,13 @@
     "natural_language_commands": true,
     "battery_life_typical": 480,
     "use_cases": [
-      "Automotive assembly",
-      "Logistics",
-      "Security patrol",
-      "Inspection"
+      "Industrial materials handling",
+      "Inspection / patrol",
+      "Logistics"
     ],
-    "website": "https://www.gotokepler.com"
+    "website": "https://www.gotokepler.com",
+    "os": "Kepler OS",
+    "npu_tops": 100
   },
   {
     "id": "neura-4ne1-2024",
