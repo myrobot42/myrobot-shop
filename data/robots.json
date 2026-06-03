@@ -168,20 +168,15 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 73,
+    "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Robotics AI (RAI) Roadrunner — research humanoid platform. Bipedal locomotion focus, AI-first design philosophy. Limited public information.",
+    "desc": "A humanoid/robotics development record ('Roadrunner') with limited public information available. (Specifications and manufacturer worth verifying.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "USA",
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1700,
     "weight_kg": 60,
     "speed_ms": 3.6,
@@ -190,8 +185,7 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "R&D",
-      "Locomotion research"
+      "Robotics research"
     ],
     "made_in": "USA",
     "announced": "2024",
@@ -211,22 +205,15 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Humanoid robots deployed at Fortune Global 500 customer, company emerged from stealth mode",
+    "desc": "Noble Machines is an early-stage humanoid robotics developer. (Detailed specifications and origin for this record are limited and worth verifying.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "USA",
-    "status": "Released",
+    "status": "Active",
     "released": "2024",
     "use_cases": [
-      "Industrial automation",
-      "Warehouse operations",
-      "Manufacturing"
+      "General-purpose humanoid development"
     ],
     "height_mm": 1700,
     "weight_kg": 45,
@@ -306,17 +293,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Wheeled humanoid robots deployed at BMW's Leipzig plant for car production integration",
+    "desc": "Hexagon's humanoid programme (AEON, unveiled 2025) leverages the metrology and reality-capture company's sensing and spatial-intelligence expertise for industrial humanoid tasks such as inspection, scanning and manipulation. (Detailed specifications worth verifying against Hexagon.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2023,
     "origin": "Sweden",
-    "status": "Released",
+    "status": "Active",
     "height_mm": 1650,
     "weight_kg": 65,
     "speed_ms": 1.4,
@@ -330,11 +312,13 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Manufacturing",
-      "Automotive assembly",
-      "Industrial automation",
-      "Quality inspection"
-    ]
+      "Industrial inspection & metrology",
+      "Reality capture",
+      "Manipulation"
+    ],
+    "made_in": "Sweden",
+    "os": "Hexagon / AEON",
+    "released": 2025
   },
   {
     "id": "lucid-bots-lavo-ai",
@@ -394,22 +378,17 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 78,
+    "score": 75,
     "rating": 4,
     "price": 4500,
-    "desc": "LG's CLOiD — home companion robot announced at CES 2024. AI Agent for home automation, controlling LG ecosystem appliances. Wheeled mobility, expressive LCD face, GPT-class LLM integration. Limited Korean market rollout.",
+    "desc": "LG's CLOi line of service robots provides guidance, reception, serving and delivery in hospitality, retail and public spaces, navigating autonomously and interacting via voice and screens as part of LG's commercial robotics portfolio.",
     "highlights": [
       "LG Electronics",
       "Service focus",
       "Korean-made",
       "Pilot deployments"
     ],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "South Korea",
     "status": "Active",
@@ -421,9 +400,9 @@
     "wifi": "Wi-Fi 6",
     "bluetooth": true,
     "use_cases": [
-      "Home companion",
-      "LG smart-home control",
-      "Family interaction"
+      "Reception & guidance",
+      "Hospitality & retail service",
+      "Information & delivery"
     ],
     "manufacturer_url": "https://www.lg.com",
     "weight_kg": 25,
@@ -444,7 +423,9 @@
     "regions": [
       "South Korea"
     ],
-    "website": "https://www.lg.com"
+    "website": "https://www.lg.com",
+    "os": "LG",
+    "autonomous": true
   },
   {
     "id": "vention-rapid-operator-ai",
@@ -40806,31 +40787,26 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 78,
+    "score": 75,
     "rating": 4,
     "price": 25000,
-    "desc": "RealMan RM75-B — dual-arm wheeled humanoid platform. 7-DOF arm with integrated torque-controlled joints. Targeted at education/research deployments and light service tasks.",
+    "desc": "The RealMan RM75-B is a lightweight 7-DOF collaborative robotic arm (not a full humanoid) from RealMan, offering redundant-axis dexterity for compliant manipulation and frequently used as the arm in mobile-manipulator and humanoid integrations.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
     "status": "Active",
     "released": "2024",
     "weight_kg": 80,
-    "dof": 14,
+    "dof": 7,
     "reach_mm": 610,
     "payload_kg": 5,
     "ros": true,
     "wifi": true,
     "use_cases": [
-      "Education",
-      "Research",
-      "Light service tasks"
+      "Dexterous manipulation",
+      "Mobile manipulation",
+      "Research & integration"
     ],
     "manufacturer_url": "https://www.realman-robotics.com",
     "made_in": "China",
@@ -40850,7 +40826,8 @@
       "Python",
       "C++"
     ],
-    "website": "https://www.realman-robotics.com"
+    "website": "https://www.realman-robotics.com",
+    "os": "RealMan"
   },
   {
     "id": "realman-robotics-realman-rm65-series",
@@ -40864,28 +40841,21 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Ultra-lightweight robotic arm weighing only 7.2kg with integrated controller, 610mm working radius, 1:1.44 load-to-weight ratio, drag teaching capability, collision detection for human-machine collaboration",
+    "desc": "The RealMan RM65 series is a lightweight 6-DOF collaborative robotic arm (not a full humanoid) from RealMan (Beijing), often integrated onto mobile bases and humanoid torsos for compact, modular manipulation in research and light automation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "weight_kg": 7.2,
     "payload_kg": 5,
     "dof": 6,
     "reach_mm": 610,
     "ros": true,
     "use_cases": [
-      "Industrial automation",
-      "Research and education",
-      "Human-robot collaboration",
-      "Pick and place operations",
-      "Assembly tasks"
+      "Lightweight automation",
+      "Mobile manipulation",
+      "Research & integration"
     ],
     "manufacturer_url": "https://www.realman-robotics.com",
     "height_mm": 697,
@@ -40911,7 +40881,9 @@
       "Velocity control",
       "Torque control",
       "Drag teaching"
-    ]
+    ],
+    "made_in": "China",
+    "os": "RealMan"
   },
   {
     "id": "yeedi-yeedi-s14-plus",
@@ -46667,27 +46639,21 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Traditional bipedal humanoid robot approximately 173 cm tall, 88 kg weight, with 25 degrees of freedom. Capable of walking and running with human-like mobility. Designed for object grasping and multi-tasking in home and commercial environments.",
+    "desc": "Galbot (Galaxy General, Beijing) builds a wheeled humanoid that pairs dual dexterous arms with a wheeled mobile base and a telescoping torso for stable mobile manipulation. Trained using NVIDIA Isaac Sim and the DexGraspNet dataset, it targets retail, service and unmanned-store applications.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "height_mm": 1730,
     "weight_kg": 88,
     "dof": 25,
     "use_cases": [
-      "Home assistance",
-      "Commercial service",
-      "Research and development",
-      "Educational demonstrations"
+      "Retail & service",
+      "Mobile manipulation",
+      "Embodied-AI research"
     ],
     "year": 2023,
-    "status": "Released",
-    "released": "2023",
+    "status": "Active",
+    "released": 2024,
     "battery_life": "2-4 hours",
     "charge_time": "3-4 hours",
     "speed_ms": 1.2,
@@ -46696,7 +46662,9 @@
     "depth_sensing": true,
     "wifi": true,
     "bluetooth": true,
-    "ros": true
+    "ros": true,
+    "made_in": "China",
+    "os": "Galbot"
   },
   {
     "id": "galbot-galbot-g1-wheeled-bionic-robot",
@@ -46757,18 +46725,13 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty industrial humanoid robot designed for manufacturing environments. Features 360° obstacle avoidance, vision-based navigation without QR codes, and capability for 24/7 operation. Currently deployed at CATL battery manufacturing facilities with partnerships including Bosch and Toyota.",
+    "desc": "The Galbot S1 is a configuration of Galaxy General's wheeled humanoid, combining dexterous dual arms with a mobile base for mobile manipulation in retail and service environments such as unmanned stores and pharmacies.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
-    "released": "2023",
+    "status": "Active",
+    "released": 2025,
     "height_mm": 1800,
     "weight_kg": 85,
     "payload_kg": 20,
@@ -46782,12 +46745,12 @@
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Manufacturing automation",
-      "Material handling",
-      "Quality inspection",
-      "Assembly line operations",
-      "Warehouse logistics"
-    ]
+      "Retail & service",
+      "Mobile manipulation",
+      "Unmanned retail"
+    ],
+    "made_in": "China",
+    "os": "Galbot"
   },
   {
     "id": "mentee-robotics-menteebot",
@@ -51867,18 +51830,13 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Care-focused humanoid robot standing 165cm tall, weighing 71kg, with 55 degrees of freedom. Features multimodal interaction system integrating vision, audio, and tactile feedback. Equipped with 31 distributed pressure sensors for touch detection, animated micro-expressions, and emotion recognition capabilities. Designed for companionship, health monitoring, and rehabilitation in nursing homes and care facilities.",
+    "desc": "Fourier's GR-3 is a care-and-companion humanoid with 55 DOF, emotional interaction and multimodal sensing for lifelike, gentle motion. Drawing on Fourier's rehabilitation-robotics heritage, it targets healthcare, elder care and human-facing service, and made the company's US debut at CES 2026.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
-    "released": "2024",
+    "status": "Active",
+    "released": 2025,
     "height_mm": 1650,
     "weight_kg": 71,
     "dof": 55,
@@ -51888,13 +51846,13 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Elder care",
+      "Elder & health care",
       "Companionship",
-      "Health monitoring",
-      "Rehabilitation assistance",
-      "Nursing home support"
+      "Service & interaction"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "made_in": "China",
+    "os": "Fourier"
   },
   {
     "id": "fourier-rehab-cyclemotus-a4",
@@ -52073,17 +52031,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Care-focused humanoid with 55 degrees of freedom, 165cm height, 71kg weight, multimodal interaction system with emotional intelligence",
+    "desc": "Fourier's GR-3 is a care-and-companion humanoid with 55 DOF, emotional interaction and multimodal sensing for lifelike, gentle motion. Drawing on Fourier's rehabilitation-robotics heritage, it targets healthcare, elder care and human-facing service, and made the company's US debut at CES 2026.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "In development",
+    "status": "Active",
     "height_mm": 1650,
     "weight_kg": 71,
     "dof": 55,
@@ -52093,12 +52046,14 @@
     "wifi": true,
     "bluetooth": true,
     "use_cases": [
-      "elderly care",
-      "companion robotics",
-      "healthcare assistance",
-      "emotional support"
+      "Elder & health care",
+      "Companionship",
+      "Service & interaction"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "made_in": "China",
+    "os": "Fourier",
+    "released": 2025
   },
   {
     "id": "fourier-gr-2",
@@ -52112,18 +52067,13 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Second generation humanoid with 1.75m height, 63kg weight, 53 independently controllable joints, improved maintainability and modularity",
+    "desc": "Fourier's GR-2 (Shanghai Fourier, 2024) is the second-generation GRx humanoid - 175 cm, 63 kg, 53 DOF with 12-DOF hands and ~380 N.m joint torque. Trained with NVIDIA Isaac, it builds on Fourier's rehabilitation-robotics pedigree as a research and dexterous-manipulation platform.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
-    "released": "2024",
+    "status": "Active",
+    "released": 2024,
     "height_mm": 1750,
     "weight_kg": 63,
     "dof": 53,
@@ -52137,12 +52087,13 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Research",
-      "Education",
-      "Service robotics",
-      "Industrial automation"
+      "Research & dexterous manipulation",
+      "Rehabilitation / healthcare",
+      "Development platform"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "made_in": "China",
+    "os": "Fourier"
   },
   {
     "id": "dyson-dyson-spot-scrub-ai",
@@ -53037,17 +52988,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Smaller, more accessible version of 4NE1 with full cognitive capabilities, same AI and comprehensive perception as foundation model. Designed for research, education, and entertainment applications.",
+    "desc": "NEURA Robotics' 4NE1 Mini is a smaller household-focused member of the 4NE1 humanoid family, aimed at domestic tasks such as cleaning, organizing, health monitoring and daily-routine support - bringing NEURA's cognitive robotics toward the consumer home.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2024,
-    "status": "In development",
+    "status": "Active",
     "height_mm": 1400,
     "dof": 42,
     "wifi": true,
@@ -53057,10 +53003,9 @@
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Research",
-      "Education",
-      "Entertainment",
-      "Personal assistance"
+      "Household tasks",
+      "Cleaning & organizing",
+      "Health monitoring"
     ],
     "manufacturer_url": "https://neura-robotics.com",
     "weight_kg": 35,
@@ -53069,9 +53014,11 @@
     "battery_life": "4-6 hours",
     "charge_time": "2-3 hours",
     "cpu": "NVIDIA Jetson",
-    "os": "Linux-based",
+    "os": "AURA / Neuraverse",
     "warranty_months": 12,
-    "speed_ms": 1
+    "speed_ms": 1,
+    "made_in": "Germany",
+    "released": 2026
   },
   {
     "id": "neura-robotics-neura-quadruped-robot",
@@ -57854,32 +57801,26 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "180 cm humanoid design redefines industrial aesthetics with streamlined elegance. 31 degrees of freedom, 360N.m joint torque, and precise dynamic movement replication. Powered by a 2070 TOPS chip, supporting diverse intelligent models for multiple work scenarios.",
+    "desc": "The Unitree H2 (2025) is Unitree's newer full-size general-purpose humanoid succeeding the H1, offered to research and commercial buyers at a fraction of Western humanoid prices (around US$30,000-40,000), continuing Unitree's push to make capable humanoids broadly affordable.",
     "highlights": [
       "H1 successor",
       "Commercial-grade",
       "Open SDK"
     ],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "height_mm": 1800,
-    "dof": 31,
+    "dof": 43,
     "chipset": "2070 TOPS AI chip",
     "cameras": "Multiple RGB cameras for vision and navigation",
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Industrial automation",
-      "Manufacturing",
-      "Warehouse operations",
-      "Research and development"
+      "General-purpose humanoid",
+      "Research",
+      "Commercial development"
     ],
     "manufacturer_url": "https://www.unitree.com",
     "weight_kg": 47,
@@ -57896,7 +57837,10 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1761147192/robots/vc7yyeymbbnth7exocgz.jpg?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1761147048/robots/iociwfukhtgy61o5z7oc.jpg?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1761147708/robots/busyvy0qzu7ob33weyh0.jpg?cache=604800"
-    ]
+    ],
+    "made_in": "China",
+    "os": "Unitree",
+    "released": 2025
   },
   {
     "id": "unitree-r1",
@@ -57915,31 +57859,25 @@
     "score": 75,
     "rating": 4,
     "price": 4900,
-    "desc": "Price from $4,900, fully customizable. 20-26-DOF for adaptation to complex scenarios. Lightweight structure, ≤123cm agile form, ultra-lightweight at about 29kg. Integrates a powerful multimodal model for speech and image processing, enabling seamless human-robot interaction.",
+    "desc": "The Unitree R1 (2025) is billed as the cheapest humanoid ever at under US$6,000 - a 127 cm, 25 kg, 26-DOF robot using a multimodal LLM, binocular cameras and a four-mic array, with swappable batteries (~1 hour), an 8-core+GPU compute base and an educational variant with NVIDIA Jetson Orin and Python/ROS control.",
     "highlights": [
       "$5,900 cheapest",
       "Compact",
       "Education",
       "Entry research"
     ],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
-    "released": "2024",
-    "height_mm": 1230,
-    "weight_kg": 29,
+    "status": "Active",
+    "released": 2025,
+    "height_mm": 1270,
+    "weight_kg": 25,
     "dof": 26,
     "use_cases": [
-      "Research",
-      "Education",
-      "Entertainment",
-      "Service robotics"
+      "Education & research",
+      "Affordable development",
+      "Demonstration"
     ],
     "cameras": "Multiple cameras for computer vision",
     "imu": true,
@@ -57947,7 +57885,7 @@
     "wifi": true,
     "bluetooth": true,
     "manufacturer_url": "https://www.unitree.com",
-    "battery_life": 100,
+    "battery_life": 60,
     "sdk": true,
     "gallery": [
       "https://images4.joy-sourcing.com/product/s1248x1248_jfsintlpro-000-product/t1/4294967296/4849664/61097966320490/110261/69d86a42E1faf7261/42b10752b5083d5e.jpg!q70.webp",
@@ -57955,7 +57893,10 @@
       "https://uk.robotshop.com/cdn/shop/files/unitree-r1-humanoid-robot-grey-uk-01.webp?v=1770057900&width=1024",
       "https://plain-eeur-prod-public.komododecks.com/202605/24/MbRuO2yInpfSWQOwtbIv/image.jpg",
       ""
-    ]
+    ],
+    "made_in": "China",
+    "os": "Unitree",
+    "battery_life_typical": 60
   },
   {
     "id": "dji-zenmuse-l2",
@@ -59966,17 +59907,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
+    "score": 75,
     "rating": 4,
     "price": 70000,
-    "desc": "Cosmetic/social variant of GR-3 with refined exterior styling for consumer-facing deployment (events, retail, hospitality).",
+    "desc": "Fourier's GR-3C 'Cosmo' is a variant of the GR-3 care-and-companion humanoid, emphasising friendly, emotive interaction and multimodal sensing for healthcare, elder care and service settings.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2025,
     "status": "Active",
@@ -59991,9 +59927,9 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Hospitality",
-      "Events",
-      "Retail engagement"
+      "Elder & health care",
+      "Companionship",
+      "Service & interaction"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "made_in": "China",
@@ -60006,7 +59942,9 @@
     "speech_synthesis": true,
     "natural_language_commands": true,
     "battery_life_typical": 180,
-    "website": "https://www.fftai.com"
+    "website": "https://www.fftai.com",
+    "os": "Fourier",
+    "released": 2025
   },
   {
     "id": "milrem-robotics-mifik-autonomy-kit",
@@ -80717,25 +80655,22 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/24/fMIV5kqKt6teg9qJWUzo/image.jpg",
-    "score": 88,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 120000,
-    "desc": "NEURA Robotics flagship humanoid — German cognitive robotics with AI-native design. Integrates with NEURA's Neuraverse cognitive OS. 4NE-1 means '4th Neuraverse Edition 1'. 20kg payload, multi-domain perception, force-aware manipulation. Used in pharma, electronics, hospitality.",
+    "desc": "NEURA Robotics' 4NE1 (Germany) is a cognitive humanoid notable for an exceptionally high ~100 kg payload and 6-8 hour runtime, powered by NEURA's AURA AI and Neuraverse ecosystem with 'artificial skin' pre-touch sensing. Built via NEURA's automated 'Hive' production, the Gen 3 was unveiled at Automatica 2025 (with a Porsche-studio-designed Gen 3.5).",
     "highlights": [
       "CE-safety certified",
       "Cobot rated",
       "NVIDIA GR00T",
       "European-made"
     ],
-    "perf": {
-      "speed_ms": 1.4,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "height_mm": 1800,
     "weight_kg": 80,
-    "battery_life": 300,
+    "battery_life": 420,
     "origin": "Germany",
     "cameras": "Multi-camera RGB-D",
     "ai_model": "NEURA Neuraverse cognitive OS",
@@ -80743,8 +80678,8 @@
     "bluetooth": true,
     "made_in": "Germany",
     "announced": "2024",
-    "released": "2024",
-    "payload_kg": 20,
+    "released": 2024,
+    "payload_kg": 100,
     "dof": 33,
     "arm_dof": 7,
     "force_sensing": true,
@@ -80757,16 +80692,16 @@
     "touch_sensing": "Capacitive skin",
     "natural_language_commands": true,
     "voice_recognition": true,
-    "battery_life_typical": 240,
+    "battery_life_typical": 420,
     "safety_rating": "PLd",
     "ce": true,
     "use_cases": [
-      "Pharma manufacturing",
-      "Electronics assembly",
-      "Hospitality",
-      "Research"
+      "Industrial automation",
+      "Logistics & heavy handling",
+      "Service"
     ],
-    "website": "https://neura-robotics.com"
+    "website": "https://neura-robotics.com",
+    "os": "AURA / Neuraverse"
   },
   {
     "id": "neura-mipa-gen3-2026",
@@ -80786,22 +80721,19 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/24/mYGZOs6swyyezfM92Qup/image.jpg",
-    "score": 81,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "NEURA Robotics MiPa Gen 3 — third-generation cognitive service robot. Wheeled humanoid platform for hospitality and reception, integrated with Neuraverse cognitive OS.",
+    "desc": "NEURA Robotics' MiPA Gen 3 (2026) is the latest generation of the cognitive household/service mobile-manipulator, demonstrated at CES 2026 unloading dishwashers and monitoring vital signs. Powered by AURA AI and the Neuraverse app ecosystem, with global reservations open.",
     "highlights": [
       "€9,999 preorder",
       "Personal assistant",
       "Safety sensors",
       "AI integration"
     ],
-    "perf": {
-      "speed_ms": 1,
-      "payload_kg": 10
-    },
+    "perf": false,
     "year": 2026,
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1500,
     "weight_kg": 80,
     "battery_life": 240,
@@ -80823,11 +80755,14 @@
     "voice_recognition": true,
     "speech_synthesis": true,
     "use_cases": [
-      "Hospitality",
-      "Reception",
-      "Customer service"
+      "Household assistance",
+      "Care & health monitoring",
+      "Retail / hospitality service"
     ],
-    "website": "https://neura-robotics.com"
+    "website": "https://neura-robotics.com",
+    "os": "AURA / Neuraverse",
+    "released": 2026,
+    "autonomous": true
   },
   {
     "id": "hanson-sophia-2016",
