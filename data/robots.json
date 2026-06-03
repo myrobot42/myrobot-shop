@@ -43488,17 +43488,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Intelligent vision-guided collaborative robots with integrated vision controller, software, industrial camera and light source. Features one-key hand-eye calibration and powerful vision algorithms.",
+    "desc": "The AUBO iV-Vision Series integrates machine vision with AUBO's cobots for vision-guided picking, inspection and adaptive automation. (A vision system/series rather than a single arm.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 5,
     "dof": 6,
@@ -43507,20 +43502,19 @@
     "cameras": "Integrated industrial camera with adjustable light source",
     "depth_sensing": true,
     "use_cases": [
-      "Pick and place",
-      "Quality inspection",
-      "Assembly",
-      "Machine tending",
-      "Packaging"
+      "Vision-guided automation",
+      "Inspection",
+      "Pick-and-place"
     ],
     "manufacturer_url": "https://www.aubo-robotics.com",
     "weight_kg": 25,
     "speed_ms": 1,
-    "os": "Linux",
+    "os": "AUBO",
     "wifi": true,
     "bluetooth": false,
     "imu": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "China"
   },
   {
     "id": "aubo-aubo-is35",
@@ -43534,33 +43528,29 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heaviest payload cobot with 35kg capacity and 2100mm reach. Built for medium-duty applications in wide workspaces. IP67/68 rated for industrial environments.",
+    "desc": "The AUBO-iS35 is a high-payload 35 kg 6-axis cobot for heavy palletizing and machine tending.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 68,
     "payload_kg": 35,
     "dof": 6,
-    "reach_mm": 2100,
+    "reach_mm": 1800,
     "speed_ms": 1.5,
     "ros": true,
     "use_cases": [
-      "Heavy lifting",
+      "Pick-and-place",
       "Machine tending",
-      "Material handling",
       "Assembly",
-      "Welding",
       "Palletizing"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com"
+    "manufacturer_url": "https://www.aubo-robotics.com",
+    "made_in": "China",
+    "os": "AUBO",
+    "repeatability": 0.02
   },
   {
     "id": "aubo-aubo-is20l",
@@ -43574,29 +43564,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Extended reach version of the i20 with 2000mm reach, improved repeatability, and 20kg payload capacity. Designed for larger workspaces, handling oversized equipment, and covering wide work cells.",
+    "desc": "The AUBO-iS20L is a long-reach 20 kg-payload 6-axis cobot in AUBO's iS series for palletizing and large-workspace handling.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "payload_kg": 20,
     "dof": 6,
-    "reach_mm": 2000,
+    "reach_mm": 1700,
     "ros": true,
     "use_cases": [
-      "Heavy material handling",
+      "Pick-and-place",
       "Machine tending",
-      "Large workspace assembly",
-      "Palletizing",
-      "Welding",
-      "Pick and place operations"
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.aubo-cobot.com",
     "weight_kg": 68,
@@ -43628,7 +43611,10 @@
       "Force limiting",
       "Emergency stop",
       "Safety I/O"
-    ]
+    ],
+    "made_in": "China",
+    "os": "AUBO",
+    "repeatability": 0.02
   },
   {
     "id": "aubo-aubo-i20",
@@ -43642,28 +43628,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Maximum capacity cobot with 1650mm reach, ±0.1mm repeatability, 63kg weight. Features enhanced safety systems and designed for heavy-duty industrial applications requiring high payload capacity.",
+    "desc": "The AUBO i20 is a 6-axis collaborative robot (20 kg payload) from AUBO Robotics, offering drag-teach programming and fenceless operation for machine tending, assembly and material handling.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 63,
     "payload_kg": 20,
     "dof": 6,
-    "reach_mm": 1650,
+    "reach_mm": 1000,
     "ros": true,
     "use_cases": [
-      "Heavy payload handling",
-      "Large parts assembly",
-      "Material handling",
+      "Pick-and-place",
       "Machine tending",
+      "Assembly",
       "Palletizing"
     ],
     "manufacturer_url": "https://www.aubo-cobot.com",
@@ -43699,7 +43679,10 @@
       "Emergency stop"
     ],
     "warranty_months": 12,
-    "product_url": "https://www.aubo-cobot.com/product/aubo-i20"
+    "product_url": "https://www.aubo-cobot.com/product/aubo-i20",
+    "made_in": "China",
+    "os": "AUBO",
+    "repeatability": 0.02
   },
   {
     "id": "aubo-aubo-i16",
@@ -43713,30 +43696,23 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Powerful cobot with 967.5mm reach, ±0.03-0.1mm repeatability, 38kg weight. Perfect for packaging applications when combined with advanced vacuum gripper. Easy machine operation automation.",
+    "desc": "The AUBO i16 is a 6-axis collaborative robot (16 kg payload) from AUBO Robotics, offering drag-teach programming and fenceless operation for machine tending, assembly and material handling.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 38,
     "payload_kg": 16,
     "dof": 6,
-    "reach_mm": 967.5,
+    "reach_mm": 921,
     "ros": true,
     "use_cases": [
-      "Heavy payload handling",
+      "Pick-and-place",
       "Machine tending",
-      "Pick and place",
       "Assembly",
-      "Palletizing",
-      "Material handling"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.aubo-cobot.com",
     "height_mm": 1050,
@@ -43778,7 +43754,10 @@
       "Ceiling",
       "Wall",
       "Angle"
-    ]
+    ],
+    "made_in": "China",
+    "os": "AUBO",
+    "repeatability": 0.02
   },
   {
     "id": "aubo-aubo-i12",
@@ -43792,17 +43771,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty cobot with 1250mm reach, ±0.03mm repeatability, 40kg weight. Launched across APAC markets for industrial automation applications.",
+    "desc": "The AUBO i12 is a 6-axis collaborative robot (12 kg payload) from AUBO Robotics, offering drag-teach programming and fenceless operation for machine tending, assembly and material handling.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 40,
     "payload_kg": 12,
@@ -43810,16 +43784,15 @@
     "reach_mm": 1250,
     "ros": true,
     "use_cases": [
-      "Heavy payload handling",
+      "Pick-and-place",
       "Machine tending",
-      "Palletizing",
-      "Material handling",
-      "Assembly operations"
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.aubo-robotics.com",
     "height_mm": 1470,
     "speed_ms": 2,
-    "os": "Linux",
+    "os": "AUBO",
     "wifi": true,
     "bluetooth": false,
     "cameras": "Optional vision system support",
@@ -43838,7 +43811,9 @@
     "mounting": "Floor, ceiling, wall, angle",
     "communication_protocols": "Modbus TCP, Ethernet/IP, Profinet",
     "width_mm": 190,
-    "depth_mm": 190
+    "depth_mm": 190,
+    "made_in": "China",
+    "repeatability": 0.02
   },
   {
     "id": "aubo-aubo-i10",
@@ -43852,17 +43827,12 @@
     "score": 75,
     "rating": 4,
     "price": 35000,
-    "desc": "High-capacity cobot with 1350mm reach, ±0.03-0.1mm repeatability, 38.5kg weight. Designed for human-centric manufacturing including assembly, machine tending, and packaging tasks. Features 6-degrees-of-freedom motion.",
+    "desc": "The AUBO i10 is a 6-axis collaborative robot (10 kg payload) from AUBO Robotics, offering drag-teach programming and fenceless operation for machine tending, assembly and material handling.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 38.5,
     "payload_kg": 10,
@@ -43871,12 +43841,10 @@
     "speed_ms": 2,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Machine tending",
-      "Palletizing",
-      "Material handling",
       "Assembly",
-      "Packaging",
-      "Pick and place"
+      "Palletizing"
     ],
     "warranty_months": 24,
     "manufacturer_url": "https://www.aubo-robotics.com",
@@ -43931,7 +43899,10 @@
       "CE",
       "CR",
       "ISO 10218"
-    ]
+    ],
+    "made_in": "China",
+    "os": "AUBO",
+    "repeatability": 0.02
   },
   {
     "id": "aubo-aubo-i7",
@@ -44204,17 +44175,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Combined solution integrating AGV mobility with collaborative robot manipulation. Includes Robot Monitoring Service (RMS) using Hanwha Techwin camera technology and Robot Positioning Compensation (RPC) for enhanced accuracy.",
+    "desc": "Hanwha's AGV+COBOT Integrated Solution combines an autonomous mobile robot with an HCR collaborative arm for mobile manipulation - autonomously navigating a facility to tend machines and move parts.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "ros": true,
     "lidar": true,
@@ -44222,19 +44188,19 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Warehouse automation",
-      "Material handling",
-      "Pick and place operations",
-      "Logistics",
-      "Manufacturing automation"
+      "Mobile manipulation",
+      "Intralogistics",
+      "Machine tending"
     ],
     "manufacturer_url": "https://www.hanwha-robotics.com",
     "payload_kg": 10,
     "speed_ms": 1.5,
     "wifi": true,
     "bluetooth": true,
-    "os": "Linux",
-    "warranty_months": 12
+    "os": "Hanwha",
+    "warranty_months": 12,
+    "made_in": "South Korea",
+    "autonomous": true
   },
   {
     "id": "hanwha-robotics-hcr-advanced-series-extended-range-",
@@ -44248,29 +44214,21 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Extended range cobots with payloads from 3kg to 14kg and reaches up to 1800mm. Aluminum casing construction for durability, offering exceptional speed and precision for human-robot collaboration.",
+    "desc": "Hanwha's HCR Advanced Series (Extended Range) extends the HCR cobot family with longer reach for larger work envelopes such as palletizing and multi-machine tending.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "dof": 6,
     "reach_mm": 1800,
     "payload_kg": 14,
     "ros": true,
     "use_cases": [
-      "Assembly",
-      "Material handling",
-      "Machine tending",
-      "Packaging",
-      "Quality inspection",
-      "Palletizing"
+      "Extended-reach automation",
+      "Palletizing",
+      "Machine tending"
     ],
     "manufacturer_url": "https://www.hanwharobotics.com",
     "weight_kg": 33,
@@ -44284,7 +44242,9 @@
     "programming_interface": "Hanwha Teach Pendant, PC Software",
     "safety_features": "Collision detection, Force limiting, Emergency stop",
     "mounting_options": "Floor, Wall, Ceiling, Inverted",
-    "communication_protocols": "Ethernet/IP, Modbus TCP, TCP/IP"
+    "communication_protocols": "Ethernet/IP, Modbus TCP, TCP/IP",
+    "made_in": "South Korea",
+    "os": "Hanwha"
   },
   {
     "id": "st-ubli-sterimove",
@@ -45112,25 +45072,18 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Safety solution that adjusts cobot speed based on operator distance using dual 3D cameras. Provides 360-degree robot/human safety without need for safety fences through integrated functional safety measures.",
+    "desc": "Hanwha's Robot Visual Safety (RVS) is a camera-based safety system that monitors the area around a cobot for speed-and-separation safety - a safety subsystem rather than a robot.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "cameras": "Dual 3D cameras for depth perception and human detection",
     "depth_sensing": true,
     "use_cases": [
-      "Industrial safety monitoring",
-      "Human-robot collaboration",
-      "Cobot safety systems",
-      "Manufacturing automation safety"
+      "Vision-based safety",
+      "Speed & separation monitoring"
     ],
     "manufacturer_url": "https://www.hanwharobotics.com",
     "warranty_months": 12,
@@ -45139,7 +45092,9 @@
     "bluetooth": false,
     "lidar": false,
     "imu": false,
-    "product_url": "https://www.hanwharobotics.com/en/product/rvs"
+    "product_url": "https://www.hanwharobotics.com/en/product/rvs",
+    "made_in": "South Korea",
+    "os": "Hanwha"
   },
   {
     "id": "hanwha-robotics-robot-ai-3d-vision-raiv-",
@@ -45153,27 +45108,20 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "AI visual solution using 3D camera and deep learning technology to recognize objects of various sizes and shapes. Can optimize efficiency for vision-based cobot applications and integrates with HCR series robots.",
+    "desc": "Hanwha's Robot AI 3D Vision (RAIV) is a 3D machine-vision system that gives Hanwha cobots AI-driven object recognition and bin-picking - a perception add-on rather than a standalone robot.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "cameras": "3D stereo camera with depth sensing capability",
     "depth_sensing": true,
     "ai_model": "Deep learning neural network for object recognition",
     "use_cases": [
-      "Industrial automation",
-      "Pick and place operations",
-      "Quality inspection",
-      "Collaborative robot guidance",
-      "Object sorting"
+      "3D vision-guided picking",
+      "Bin picking",
+      "Inspection"
     ],
     "manufacturer_url": "https://www.hanwharobotics.com",
     "ros": true,
@@ -45183,7 +45131,8 @@
     "imu": false,
     "wifi": true,
     "bluetooth": false,
-    "os": "Linux"
+    "os": "Hanwha",
+    "made_in": "South Korea"
   },
   {
     "id": "hanwha-robotics-hcr-10l",
@@ -45197,28 +45146,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Newest state-of-the-art cobot featuring the longest reach among the HCR series at 1800mm. Expected availability Q4 2024, designed for extended-reach applications.",
+    "desc": "The Hanwha HCR-10L is a 6-axis collaborative robot (10 kg payload) with a slim design and intuitive direct-teaching for fenceless machine tending, assembly and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2024,
-    "status": "In development",
+    "status": "Active",
     "released": "2024",
     "payload_kg": 10,
     "dof": 6,
-    "reach_mm": 1800,
+    "reach_mm": 1300,
     "ros": true,
     "use_cases": [
-      "Assembly",
+      "Pick-and-place",
       "Machine tending",
-      "Packaging",
-      "Material handling",
-      "Pick and place"
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.hanwharobotics.com",
     "weight_kg": 33,
@@ -45244,7 +45187,10 @@
       "Analog I/O"
     ],
     "programming_interface": "Teach pendant and PC software",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "South Korea",
+    "os": "Hanwha",
+    "repeatability": 0.05
   },
   {
     "id": "hanwha-robotics-hcr-14",
@@ -45258,17 +45204,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Highest payload capacity in the HCR series with industry-leading joint speeds and slim design. Features advanced collaborative safety systems and is optimized for human-robot collaboration in industrial environments.",
+    "desc": "The Hanwha HCR-14 is a 6-axis collaborative robot (14 kg payload) with a slim design and intuitive direct-teaching for fenceless machine tending, assembly and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "weight_kg": 48,
     "payload_kg": 14,
@@ -45276,11 +45217,10 @@
     "reach_mm": 1300,
     "ros": true,
     "use_cases": [
-      "Industrial assembly",
-      "Material handling",
+      "Pick-and-place",
       "Machine tending",
-      "Palletizing",
-      "Quality inspection"
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.hanwharobotics.com",
     "height_mm": 1300,
@@ -45290,7 +45230,10 @@
     "cameras": "Optional vision system compatible",
     "imu": true,
     "warranty_months": 12,
-    "product_url": "https://www.hanwharobotics.com/products/hcr-14"
+    "product_url": "https://www.hanwharobotics.com/products/hcr-14",
+    "made_in": "South Korea",
+    "os": "Hanwha",
+    "repeatability": 0.05
   },
   {
     "id": "hanwha-robotics-hcr-12a",
@@ -45304,28 +45247,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Medium-payload collaborative robot with 1300mm reach, designed for heavier handling tasks while maintaining collaborative safety features.",
+    "desc": "The Hanwha HCR-12A is a 6-axis collaborative robot (12 kg payload) with a slim design and intuitive direct-teaching for fenceless machine tending, assembly and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "payload_kg": 12,
     "dof": 6,
     "reach_mm": 1300,
     "ros": true,
     "use_cases": [
-      "Assembly",
-      "Material handling",
+      "Pick-and-place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection"
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.hanwharobotics.com",
     "weight_kg": 33,
@@ -45348,7 +45285,10 @@
       "Ceiling",
       "Wall",
       "Table"
-    ]
+    ],
+    "made_in": "South Korea",
+    "os": "Hanwha",
+    "repeatability": 0.05
   },
   {
     "id": "hanwha-robotics-hcr-5a",
@@ -45362,17 +45302,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Most popular collaborative robot model with 915mm reach equivalent to average human arm. ISO Class 2 cleanroom certified, suitable for pick-and-place, welding, inspection, machine tending, assembly, palletizing, packaging, polishing, and dispensing applications.",
+    "desc": "The Hanwha HCR-5A is a 6-axis collaborative robot (5 kg payload) with a slim design and intuitive direct-teaching for fenceless machine tending, assembly and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2019,
     "origin": "South Korea",
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 34,
     "payload_kg": 5,
@@ -45380,15 +45315,10 @@
     "reach_mm": 915,
     "ros": true,
     "use_cases": [
-      "pick-and-place",
-      "welding",
-      "inspection",
-      "machine tending",
-      "assembly",
-      "palletizing",
-      "packaging",
-      "polishing",
-      "dispensing"
+      "Pick-and-place",
+      "Machine tending",
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.hanwharobotics.com",
     "height_mm": 647,
@@ -45398,7 +45328,10 @@
     "cellular": "none",
     "imu": true,
     "warranty_months": 12,
-    "product_url": "https://www.hanwharobotics.com/product/hcr-5a"
+    "product_url": "https://www.hanwharobotics.com/product/hcr-5a",
+    "made_in": "South Korea",
+    "os": "Hanwha",
+    "repeatability": 0.05
   },
   {
     "id": "hanwha-robotics-hcr-3a",
@@ -45412,17 +45345,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Collaborative table-top robot designed for narrow spaces with 630mm reach. Features infinite rotation on end joint, weighs only 13kg, suitable for light-weight handling tasks in electronics industry including inspection, screw driving and assembly.",
+    "desc": "The Hanwha HCR-3A is a 6-axis collaborative robot (3 kg payload) with a slim design and intuitive direct-teaching for fenceless machine tending, assembly and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2019,
     "origin": "South Korea",
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 13,
     "payload_kg": 3,
@@ -45430,11 +45358,10 @@
     "reach_mm": 630,
     "ros": true,
     "use_cases": [
-      "assembly",
-      "inspection",
-      "screw driving",
-      "pick and place",
-      "electronics manufacturing"
+      "Pick-and-place",
+      "Machine tending",
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.hanwharobotics.com",
     "height_mm": 470,
@@ -45458,7 +45385,10 @@
       "Ethernet",
       "Modbus TCP",
       "EtherCAT"
-    ]
+    ],
+    "made_in": "South Korea",
+    "os": "Hanwha",
+    "repeatability": 0.05
   },
   {
     "id": "swisslog-healthcare-hospital-agv-forklift",
@@ -47052,17 +46982,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Semi-humanoid wheeled robot with dual 7-DOF arms, 6-DOF torso, and omnidirectional movement capabilities. Features 24 degrees of freedom total and is designed for AI research and industrial applications.",
+    "desc": "The Rainbow Robotics RB-Y1 bimanual mobile manipulator combines two cobot arms on a wheeled, liftable base for two-handed mobile manipulation. (Record of the RB-Y1 mobile manipulator.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2023,
     "origin": "South Korea",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "height_mm": 1650,
     "weight_kg": 120,
@@ -47074,13 +46999,14 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "AI research",
-      "industrial automation",
-      "service robotics",
-      "logistics",
-      "manufacturing"
+      "Bimanual mobile manipulation",
+      "Service & logistics",
+      "Research"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics",
+    "autonomous": true
   },
   {
     "id": "rainbow-robotics-milk-tea-barista-robot",
@@ -47534,17 +47460,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Dual-arm mobile manipulator with 22 axes, 7-DOF arms, 6-DOF leg, designed for AI-driven applications and industrial automation",
+    "desc": "Rainbow Robotics' RB-Y1 is a bimanual mobile manipulator - two collaborative arms on a wheeled, height-adjustable mobile base - for dynamic dual-arm tasks in service, logistics and research.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "height_mm": 1650,
     "weight_kg": 85,
@@ -47555,13 +47476,14 @@
     "depth_sensing": true,
     "cameras": "Multiple RGB cameras and depth cameras for perception",
     "use_cases": [
-      "Industrial automation",
-      "Research and development",
-      "AI applications",
-      "Material handling",
-      "Assembly tasks"
+      "Bimanual mobile manipulation",
+      "Service & logistics",
+      "Research"
     ],
-    "manufacturer_url": "https://www.rainbow-robotics.com"
+    "manufacturer_url": "https://www.rainbow-robotics.com",
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics",
+    "autonomous": true
   },
   {
     "id": "rainbow-robotics-rb20-1900",
@@ -47575,28 +47497,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Most powerful RB series cobot with 1900mm reach, designed for heavy-lifting tasks like palletizing and packaging",
+    "desc": "The Rainbow Robotics RB20-1900 is a 6-axis collaborative robot (20 kg payload, 1900 mm reach) from the Korean maker of the HUBO humanoid, with in-house actuators and an intuitive teaching interface for fenceless automation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "payload_kg": 20,
     "dof": 6,
     "reach_mm": 1900,
     "ros": true,
     "use_cases": [
-      "Palletizing",
-      "Heavy material handling",
-      "Packaging",
+      "Pick-and-place",
       "Machine tending",
-      "Pick and place"
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com",
     "weight_kg": 53,
@@ -47626,7 +47542,10 @@
       "Wall",
       "Angle"
     ],
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics",
+    "repeatability": 0.03
   },
   {
     "id": "rainbow-robotics-rb16-900",
@@ -47640,17 +47559,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Robust cobot designed for heavy loads with 900mm reach, most capable in RB series for load capacity",
+    "desc": "The Rainbow Robotics RB16-900 is a 6-axis collaborative robot (16 kg payload, 900 mm reach) from the Korean maker of the HUBO humanoid, with in-house actuators and an intuitive teaching interface for fenceless automation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "payload_kg": 16,
     "dof": 6,
@@ -47658,11 +47572,10 @@
     "weight_kg": 34,
     "ros": true,
     "use_cases": [
-      "Heavy payload assembly",
-      "Material handling",
+      "Pick-and-place",
       "Machine tending",
-      "Palletizing",
-      "Industrial automation"
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com",
     "height_mm": 600,
@@ -47671,7 +47584,10 @@
     "wifi": true,
     "bluetooth": true,
     "cellular": "Optional",
-    "product_url": "https://www.rainbow-robotics.com/rb-series"
+    "product_url": "https://www.rainbow-robotics.com/rb-series",
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics",
+    "repeatability": 0.03
   },
   {
     "id": "rainbow-robotics-rb10-1300",
@@ -47685,28 +47601,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Powerful cobot with 1300mm reach, ideal for packaging, palletizing and heavy object handling",
+    "desc": "The Rainbow Robotics RB10-1300 is a 6-axis collaborative robot (10 kg payload, 1300 mm reach) from the Korean maker of the HUBO humanoid, with in-house actuators and an intuitive teaching interface for fenceless automation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 10,
     "dof": 6,
     "reach_mm": 1300,
     "ros": true,
     "use_cases": [
-      "packaging",
-      "palletizing",
-      "material handling",
-      "machine tending",
-      "assembly"
+      "Pick-and-place",
+      "Machine tending",
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com",
     "weight_kg": 34,
@@ -47714,7 +47624,10 @@
     "repeatability_mm": 0.03,
     "operating_temp_range": "-10°C to 50°C",
     "protection_rating": "IP54",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics",
+    "repeatability": 0.03
   },
   {
     "id": "rainbow-robotics-rb5-850",
@@ -47728,17 +47641,12 @@
     "score": 75,
     "rating": 4,
     "price": 35000,
-    "desc": "Versatile standard model with 850mm reach, optimized for manufacturing and service industries with 0.05mm repeatability",
+    "desc": "The Rainbow Robotics RB5-850 is a 6-axis collaborative robot (5 kg payload, 850 mm reach) from the Korean maker of the HUBO humanoid, with in-house actuators and an intuitive teaching interface for fenceless automation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "weight_kg": 33,
     "payload_kg": 5,
@@ -47746,11 +47654,10 @@
     "reach_mm": 850,
     "ros": true,
     "use_cases": [
-      "Assembly",
+      "Pick-and-place",
       "Machine tending",
-      "Pick and place",
-      "Quality inspection",
-      "Packaging"
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com",
     "height_mm": 985,
@@ -47760,7 +47667,10 @@
     "bluetooth": true,
     "imu": true,
     "cameras": "Built-in vision system with RGB camera",
-    "product_url": "https://www.rainbow-robotics.com/rb-series"
+    "product_url": "https://www.rainbow-robotics.com/rb-series",
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics",
+    "repeatability": 0.03
   },
   {
     "id": "rainbow-robotics-rb3-1200",
@@ -47774,17 +47684,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High-precision cobot with 1200mm reach, largest working radius among small-load cobots, suitable for complex tasks",
+    "desc": "The Rainbow Robotics RB3-1200 is a 6-axis collaborative robot (3 kg payload, 1200 mm reach) from the Korean maker of the HUBO humanoid, with in-house actuators and an intuitive teaching interface for fenceless automation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 28,
     "payload_kg": 3,
@@ -47792,11 +47697,10 @@
     "reach_mm": 1200,
     "ros": true,
     "use_cases": [
-      "Assembly",
-      "Pick and place",
+      "Pick-and-place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection"
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com",
     "height_mm": 650,
@@ -47808,7 +47712,10 @@
     "operating_temp_min": 5,
     "operating_temp_max": 45,
     "warranty_months": 12,
-    "product_url": "https://www.rainbow-robotics.com/rb3"
+    "product_url": "https://www.rainbow-robotics.com/rb3",
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics",
+    "repeatability": 0.03
   },
   {
     "id": "rainbow-robotics-rb3-730",
@@ -47822,17 +47729,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Compact cobot with 730mm reach, 0.05mm repeatability, ideal for welding and gluing applications",
+    "desc": "The Rainbow Robotics RB3-730 is a 6-axis collaborative robot (3 kg payload, 730 mm reach) from the Korean maker of the HUBO humanoid, with in-house actuators and an intuitive teaching interface for fenceless automation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 28,
     "payload_kg": 3,
@@ -47840,23 +47742,24 @@
     "reach_mm": 730,
     "ros": true,
     "use_cases": [
-      "welding",
-      "gluing",
-      "assembly",
-      "pick and place",
-      "machine tending"
+      "Pick-and-place",
+      "Machine tending",
+      "Assembly",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com",
     "height_mm": 990,
     "width_mm": 160,
     "depth_mm": 160,
     "speed_ms": 2,
-    "os": "Linux",
+    "os": "Rainbow Robotics",
     "wifi": true,
     "bluetooth": false,
     "imu": true,
     "warranty_months": 12,
-    "product_url": "https://www.rainbow-robotics.com/rb3"
+    "product_url": "https://www.rainbow-robotics.com/rb3",
+    "made_in": "South Korea",
+    "repeatability": 0.03
   },
   {
     "id": "leju-robotics-aelos-1s",
@@ -52535,17 +52438,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Versatile collaborative robot with 1,000mm reach, ±0.02mm repeatability, IP66 protection, advanced control systems and intuitive user interface for medium-sized industrial tasks.",
+    "desc": "NEURA Robotics' LARA 10 is a 6-axis collaborative robot (10 kg payload) in the LARA (Lightweight Agile Robotic Assistant) line, offering cost-effective cobot automation within NEURA's cognitive-robotics ecosystem.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "weight_kg": 25,
     "payload_kg": 10,
@@ -52553,11 +52451,9 @@
     "reach_mm": 1000,
     "ros": true,
     "use_cases": [
-      "Assembly",
-      "Pick and place",
+      "Pick-and-place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Assembly"
     ],
     "manufacturer_url": "https://www.neura-robotics.com",
     "product_url": "https://www.neura-robotics.com/products/lara",
@@ -52569,11 +52465,12 @@
     "imu": true,
     "depth_sensing": true,
     "speed_ms": 2,
-    "os": "Linux-based",
+    "os": "NEURA",
     "cpu": "ARM-based processor",
     "cellular": "4G/5G optional",
     "width_mm": 150,
-    "depth_mm": 150
+    "depth_mm": 150,
+    "made_in": "Germany"
   },
   {
     "id": "neura-robotics-lara-5",
@@ -52587,28 +52484,21 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "6-axis collaborative robot with 800mm reach, ±0.02mm repeatability, IP66 protection, designed for pick-and-place and assembly tasks in production environments.",
+    "desc": "NEURA Robotics' LARA 5 is a 6-axis collaborative robot (5 kg payload) in the LARA (Lightweight Agile Robotic Assistant) line, offering cost-effective cobot automation within NEURA's cognitive-robotics ecosystem.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "weight_kg": 28,
     "payload_kg": 5,
     "dof": 6,
     "reach_mm": 800,
     "use_cases": [
-      "Pick and place",
-      "Assembly",
+      "Pick-and-place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Assembly"
     ],
     "manufacturer_url": "https://www.neura-robotics.com",
     "height_mm": 1030,
@@ -52625,7 +52515,9 @@
     "cameras": "Integrated RGB-D camera for vision-guided applications",
     "depth_sensing": true,
     "imu": true,
-    "ai_model": "Integrated AI for cognitive robotics"
+    "ai_model": "Integrated AI for cognitive robotics",
+    "made_in": "Germany",
+    "os": "NEURA"
   },
   {
     "id": "neura-robotics-maira-m",
@@ -52639,17 +52531,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "7-axis collaborative robot with 1,400mm reach, 0.01mm repeatability, integrated 3D camera for AI-based object recognition, and IP65 rating for industrial environments.",
+    "desc": "NEURA Robotics' MAiRA M is a mid-size MAiRA cognitive cobot - a sensitive, AI-enabled collaborative arm with integrated perception (vision, touch, voice) for cognitive automation and close human-robot collaboration.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "payload_kg": 12,
     "dof": 7,
@@ -52658,21 +52545,20 @@
     "cameras": "Integrated 3D camera for AI-based object recognition",
     "depth_sensing": true,
     "use_cases": [
-      "Industrial automation",
-      "Pick and place",
-      "Assembly",
-      "Quality inspection",
-      "Machine tending"
+      "Cognitive automation",
+      "Sensitive assembly",
+      "Human-robot collaboration"
     ],
     "manufacturer_url": "https://www.neura-robotics.com",
     "weight_kg": 37,
     "speed_ms": 3,
-    "os": "NEURA OS",
+    "os": "AURA / NEURA",
     "wifi": true,
     "bluetooth": true,
     "imu": true,
     "warranty_months": 24,
-    "product_url": "https://www.neura-robotics.com/maira-m"
+    "product_url": "https://www.neura-robotics.com/maira-m",
+    "made_in": "Germany"
   },
   {
     "id": "neura-robotics-4ne1-mini",
@@ -55501,17 +55387,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Integrated solution combining autonomous mobile robot with collaborative robot arm for mobile manipulation tasks. Includes Robot Monitoring Service (RMS) and Robot Positioning Compensation (RPC) for enhanced accuracy and safety monitoring.",
+    "desc": "Hanwha's AGV+COBOT Solution pairs a mobile base with an HCR cobot arm for flexible mobile manipulation across a facility. (Companion to the integrated AGV+COBOT solution.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 20,
     "dof": 6,
@@ -55523,19 +55404,18 @@
     "cameras": "Multiple RGB and depth cameras for navigation and manipulation",
     "wifi": true,
     "use_cases": [
-      "Industrial automation",
-      "Material handling",
-      "Pick and place operations",
-      "Warehouse logistics",
-      "Manufacturing assembly"
+      "Mobile manipulation",
+      "Intralogistics"
     ],
     "manufacturer_url": "https://www.hanwha-robotics.com",
     "height_mm": 1400,
     "weight_kg": 150,
     "speed_ms": 1.5,
-    "os": "Linux",
+    "os": "Hanwha",
     "bluetooth": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "South Korea",
+    "autonomous": true
   },
   {
     "id": "swisslog-carrypick",
@@ -55957,28 +55837,21 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Mid-size collaborative robot with 1300mm reach and ±0.02mm repeatability. Combines lightweight design with industrial performance. Features revolutionary encoders and intelligent kinematic layout for easy servicing.",
+    "desc": "NEURA Robotics' LARA 8 is a 6-axis collaborative robot (8 kg payload) in the LARA (Lightweight Agile Robotic Assistant) line, offering cost-effective cobot automation within NEURA's cognitive-robotics ecosystem.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "payload_kg": 8,
-    "dof": 7,
+    "dof": 6,
     "reach_mm": 1300,
     "ros": true,
     "use_cases": [
-      "Assembly",
-      "Pick and place",
+      "Pick-and-place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Assembly"
     ],
     "manufacturer_url": "https://www.neura-robotics.com",
     "weight_kg": 25,
@@ -55987,7 +55860,9 @@
     "bluetooth": true,
     "imu": true,
     "warranty_months": 24,
-    "product_url": "https://www.neura-robotics.com/lara"
+    "product_url": "https://www.neura-robotics.com/lara",
+    "made_in": "Germany",
+    "os": "NEURA"
   },
   {
     "id": "neura-robotics-lara-3",
@@ -56001,17 +55876,12 @@
     "score": 75,
     "rating": 4,
     "price": 15000,
-    "desc": "Lightweight collaborative robot with 590mm reach and ±0.02mm repeatability. Features intuitive programming, IP66 protection, and advanced safety features. Perfect for education and SME applications.",
+    "desc": "NEURA Robotics' LARA 3 is a 6-axis collaborative robot (3 kg payload) in the LARA (Lightweight Agile Robotic Assistant) line, offering cost-effective cobot automation within NEURA's cognitive-robotics ecosystem.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "weight_kg": 12,
     "payload_kg": 3,
@@ -56019,12 +55889,9 @@
     "reach_mm": 590,
     "ros": true,
     "use_cases": [
-      "Education",
-      "Small manufacturing",
-      "Assembly",
-      "Pick and place",
-      "Quality inspection",
-      "Research"
+      "Pick-and-place",
+      "Machine tending",
+      "Assembly"
     ],
     "manufacturer_url": "https://www.neura-robotics.com",
     "height_mm": 600,
@@ -56034,7 +55901,9 @@
     "bluetooth": true,
     "cameras": "Integrated vision system",
     "imu": true,
-    "product_url": "https://www.neura-robotics.com/lara"
+    "product_url": "https://www.neura-robotics.com/lara",
+    "made_in": "Germany",
+    "os": "NEURA"
   },
   {
     "id": "agile-robots-distributed-by-franka-diana-7",
@@ -59937,17 +59806,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Mobile platform with collaborative robot arm featuring hybrid positioning, natural navigation technology, 360° dual safety LiDAR sensor, and intelligent obstacle avoidance.",
+    "desc": "The AUBO Mobile Cobot mounts an AUBO collaborative arm on an autonomous mobile base for mobile manipulation - moving between stations to tend machines and transport parts.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "payload_kg": 5,
     "dof": 6,
@@ -59962,13 +59826,13 @@
     "cameras": "RGB-D camera for vision guidance",
     "depth_sensing": true,
     "use_cases": [
-      "Material handling",
-      "Machine tending",
-      "Quality inspection",
-      "Pick and place",
-      "Warehouse automation",
-      "Assembly operations"
-    ]
+      "Mobile manipulation",
+      "Logistics",
+      "Machine tending"
+    ],
+    "made_in": "China",
+    "os": "AUBO",
+    "autonomous": true
   },
   {
     "id": "realman-robotics-rm65-6f",
