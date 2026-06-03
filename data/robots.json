@@ -40586,7 +40586,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Dual-arm dual-eye precision robot with upgraded binocular system for high-resolution stereo vision, large FOV cameras (H 90°/V 65°), designed for industrial automation and scientific research data collection",
+    "desc": "The RealMan RS-03 is an ultra-lightweight precision robotic arm from RealMan (Beijing), part of the company's modular lightweight cobot lineup for precision manipulation, research and integration into mobile platforms. (Exact payload/reach specifications worth verifying.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -40596,30 +40596,29 @@
     },
     "origin": "China",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
-    "dof": 14,
+    "dof": 7,
     "ros": true,
     "cameras": "Dual binocular vision system with wide FOV cameras",
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Industrial automation",
-      "Scientific research",
-      "Quality inspection",
-      "Pick and place operations",
-      "Laboratory automation"
+      "Precision manipulation",
+      "Research",
+      "Lightweight automation"
     ],
     "manufacturer_url": "https://www.realman-robotics.com",
     "height_mm": 1200,
     "weight_kg": 45,
     "payload_kg": 3,
     "reach_mm": 624,
-    "os": "Linux",
+    "os": "RealMan",
     "wifi": true,
     "bluetooth": true,
     "lidar": false,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "China"
   },
   {
     "id": "realman-dual-arm-compound-robot-rmc-da-",
@@ -41364,7 +41363,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Robot-agnostic operating system for controlling and standardizing automation cells across ABB, KUKA, FANUC, Yaskawa, and Universal Robots brands",
+    "desc": "Wandelbots NOVA is a robot-agnostic operating system / software platform rather than a physical robot - it lets developers program and control industrial robots from multiple manufacturers through a unified API and tooling. (This record describes software infrastructure for robotics.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -41374,29 +41373,28 @@
     },
     "year": 2023,
     "origin": "Germany",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "ros": true,
     "use_cases": [
-      "Industrial automation",
-      "Manufacturing",
-      "Robot programming",
-      "Multi-brand robot integration",
-      "Automation cell standardization"
+      "Robot-agnostic programming",
+      "Industrial automation software",
+      "Multi-vendor robot control"
     ],
     "manufacturer_url": "https://wandelbots.com",
     "warranty_months": 12,
     "product_url": "https://wandelbots.com/nova",
     "wifi": true,
     "cellular": "Optional",
-    "os": "Linux",
+    "os": "Wandelbots NOVA",
     "bluetooth": false,
     "lidar": false,
     "imu": false,
     "depth_sensing": false,
     "gallery": [
       "https://static.wixstatic.com/media/77749d_3d5936043c28437da7864c9ed2c425a8~mv2.jpg/v1/fill/w_710,h_569,fp_0.78_0.39,lg_1,q_85,enc_avif,quality_auto/Wandelbots%20flexible%20adaptation%20image.jpg"
-    ]
+    ],
+    "made_in": "Germany"
   },
   {
     "id": "realman-rmc-da-dual-arm-compound-robot",
@@ -43271,7 +43269,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Award-winning robot teaching tool for no-code robotic programming solutions",
+    "desc": "The Wandelbots TracePen is a handheld teaching device (a stylus-like tool) that lets operators program industrial robots by demonstration - tracing a path in physical space rather than coding - to dramatically speed up robot setup. An accessory/teaching tool rather than a robot itself.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -43281,17 +43279,15 @@
     },
     "year": 2017,
     "origin": "Germany",
-    "status": "Released",
+    "status": "Active",
     "released": "2017",
     "bluetooth": true,
     "wifi": true,
     "imu": true,
     "use_cases": [
-      "Industrial robot programming",
-      "Manufacturing automation",
-      "Robot path teaching",
-      "No-code robotics",
-      "Production line setup"
+      "No-code robot teaching",
+      "Program-by-demonstration",
+      "Fast robot setup"
     ],
     "manufacturer_url": "https://www.wandelbots.com",
     "dof": 6,
@@ -43301,9 +43297,10 @@
     "lidar": false,
     "warranty_months": 12,
     "product_url": "https://www.wandelbots.com/tracepen",
-    "os": "Wandelbots NOVA",
+    "os": "Wandelbots",
     "cellular": "None",
-    "weight_kg": 0.15
+    "weight_kg": 0.15,
+    "made_in": "Germany"
   },
   {
     "id": "wandelbots-wandelbots-nova-cloud",
@@ -43566,7 +43563,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Embodied intelligence platform offering all-in-one training solution with exceptional cost-effectiveness for schools, research institutions, and developers to conduct robot training and development.",
+    "desc": "JAKA Lumi is a lightweight collaborative robot arm from JAKA, designed for easy deployment in collaborative automation, light assembly and education. (Detailed payload/reach specifications for this record are limited and worth verifying against JAKA.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -43576,16 +43573,14 @@
     },
     "year": 2023,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "dof": 6,
     "ros": true,
     "use_cases": [
-      "Education",
-      "Research",
-      "Robot Development",
-      "AI Training",
-      "Academic Projects"
+      "Collaborative automation",
+      "Light assembly",
+      "Research & education"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 1200,
@@ -43601,7 +43596,9 @@
     "product_url": "https://www.jaka.com/product/collaborative-robot/jaka-lumi",
     "gallery": [
       "https://www.applicadthai.com/wp-content/uploads/2026/01/JAKA-Lumi-Detail.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA"
   },
   {
     "id": "jaka-jaka-ai-series-ai-3-5-7-12-18-",
@@ -47781,7 +47778,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Precision telescope mount system with 1-second accuracy for astronomical observation applications",
+    "desc": "A Rainbow Robotics platform - from the Korean maker of the HUBO humanoid, RB-series cobots and quadrupeds. (Detailed specifications for this specific record are limited and worth verifying against Rainbow Robotics.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -47791,14 +47788,11 @@
     },
     "origin": "South Korea",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "payload_kg": 50,
     "use_cases": [
-      "Astronomical observation",
-      "Telescope positioning",
-      "Astrophotography",
-      "Research telescopes"
+      "Research & development"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com",
     "height_mm": 400,
@@ -47807,7 +47801,9 @@
     "wifi": true,
     "bluetooth": true,
     "ros": false,
-    "imu": true
+    "imu": true,
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics"
   },
   {
     "id": "rainbow-robotics-drc-hubo",
@@ -49689,7 +49685,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Variable height (130-180cm) wheeled robot with 20 DoF, 6-axis force sensor, and data collection capabilities for industrial/commercial scenarios",
+    "desc": "An AGIBOT research/development platform from the Shanghai-based embodied-AI company behind the open-source Lingxi X1 humanoid and the A2 service humanoid. (Detailed specifications for this specific record are limited and worth verifying against AGIBOT.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -49699,14 +49695,12 @@
     },
     "year": 2024,
     "origin": "China",
-    "status": "In development",
+    "status": "Active",
     "height_mm": 1800,
     "dof": 20,
     "use_cases": [
-      "Industrial automation",
-      "Commercial services",
-      "Research and development",
-      "Data collection"
+      "Robotics research",
+      "Embodied AI development"
     ],
     "cameras": "Multiple cameras for navigation and object recognition",
     "imu": true,
@@ -49723,7 +49717,9 @@
     "gallery": [
       "https://www.ghostysky.com/wp-content/uploads/2026/01/GH_Agibot_G1_2.png",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6825acb0ebe08fc7813821f4_G1_Hero.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "AGIBOT"
   },
   {
     "id": "agibot-x2-ultra",
@@ -49829,7 +49825,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Full-stack open-source robot for research and development",
+    "desc": "The AGIBOT X1 (Lingxi X1) is a fully open-source modular humanoid robot: 130 cm, 33 kg, 34 degrees of freedom on PowerFlow quasi-direct-drive servos (R86-3 actuator up to 200 N.m peak), walking at ~1 m/s with a 2-hour runtime. Built on the AimRT framework with reinforcement-learning locomotion and free design/software access, it is a benchtop-friendly platform for research and maker communities.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -49839,18 +49835,17 @@
     },
     "year": 2024,
     "origin": "China",
-    "status": "In development",
+    "status": "Active",
     "ros": true,
     "use_cases": [
-      "Research",
-      "Education",
-      "Development",
-      "AI experimentation"
+      "Open-source humanoid research",
+      "RL locomotion development",
+      "Education"
     ],
     "manufacturer_url": "https://www.agibot.com",
-    "height_mm": 1700,
-    "weight_kg": 65,
-    "dof": 43,
+    "height_mm": 1300,
+    "weight_kg": 33,
+    "dof": 34,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Multiple RGB cameras and depth cameras",
@@ -49859,7 +49854,14 @@
     "depth_sensing": true,
     "gallery": [
       "https://www.agibot.com/public/static/index/en/images/prolx1-banner-img.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "AimRT (open source)",
+    "speed_ms": 1,
+    "payload_kg": 0.5,
+    "battery_life": 120,
+    "battery_life_typical": 120,
+    "open_source": true
   },
   {
     "id": "agibot-a2-w",
@@ -52069,7 +52071,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Active and passive limb training device with motor control and touchscreen interface for stroke, spinal cord injury, and Parkinson's patients",
+    "desc": "Fourier's CycleMotus A4 is an active-and-passive cycling trainer for upper and lower limbs, with motor-assisted resistance and a touchscreen interface. It supports early mobilisation and strength/endurance training for patients with stroke, spinal-cord injury or Parkinson's disease.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52079,21 +52081,20 @@
     },
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 25,
     "dof": 2,
     "wifi": true,
     "bluetooth": true,
     "use_cases": [
-      "Stroke rehabilitation",
-      "Spinal cord injury therapy",
-      "Parkinson's disease treatment",
-      "Lower limb motor training",
-      "Passive range of motion exercises",
-      "Active assisted therapy"
+      "Active/passive limb cycling therapy",
+      "Stroke / SCI / Parkinson rehab",
+      "Early-stage mobilisation"
     ],
-    "manufacturer_url": "https://www.fftrehab.com"
+    "manufacturer_url": "https://www.fftrehab.com",
+    "made_in": "China / Singapore",
+    "os": "Fourier"
   },
   {
     "id": "fourier-rehab-armmotus-emu",
@@ -53300,7 +53301,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Force-sensitive robot with 7 axes and high precision, now supporting Franka Control Interface (FCI). Features greater reach and payload capacity compared to FR3, making it excellent for research applications requiring higher payload capacity.",
+    "desc": "The Diana 7, from Agile Robots, is a 7-axis collaborative robot arm with torque sensors in every joint, a 7 kg payload, ~923 mm reach and ~0.05 mm repeatability. Its full force/torque sensing enables compliant, contact-rich manipulation, making it a popular platform for research and precision assembly.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -53310,21 +53311,19 @@
     },
     "year": 2022,
     "origin": "Germany",
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "dof": 7,
-    "reach_mm": 855,
-    "payload_kg": 3,
+    "reach_mm": 923,
+    "payload_kg": 7,
     "ros": true,
     "use_cases": [
-      "Research",
-      "Industrial automation",
-      "Human-robot collaboration",
-      "Laboratory applications",
-      "Manipulation tasks"
+      "Research & development",
+      "Precision manipulation",
+      "Force-controlled assembly"
     ],
     "weight_kg": 18,
-    "os": "Linux",
+    "os": "Agile Robots",
     "wifi": true,
     "bluetooth": true,
     "imu": true,
@@ -53339,7 +53338,9 @@
     "gallery": [
       "https://resource.agile-robots.cn/slgw/images/%E9%A6%96%E9%A1%B5-%E4%BA%A7%E5%93%81%E6%A5%BC%E5%B1%82-Diana%207%EF%BC%88%E9%85%8D%E5%9B%BE%EF%BC%89%E4%B8%A4%E5%80%8D300.jpg",
       "https://cdn.robodk.com/robot/img/Agile-Robots-Diana-7-robot.png"
-    ]
+    ],
+    "made_in": "Germany / China",
+    "repeatability": 0.05
   },
   {
     "id": "franka-robotics-franka-hand-3",
@@ -56241,7 +56242,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Clone's vision project exploring limitless future applications for human-android interaction. Represents the company's long-term research into next-generation android technology and human augmentation possibilities.",
+    "desc": "Clone Robotics' Neo is a biomimetic android research platform built around artificial 'Myofiber' muscles - water/hydraulically actuated synthetic muscles on a polymer skeleton - aiming to reproduce human-like movement and anatomy. A developmental platform exploring muscle-driven humanoid robotics rather than a commercial product.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -56251,12 +56252,11 @@
     },
     "year": 2024,
     "origin": "Germany",
-    "status": "In development",
+    "status": "Active",
     "use_cases": [
-      "Research and development",
-      "Human-robot interaction studies",
-      "Advanced AI testing",
-      "Future mobility research"
+      "Biomimetic humanoid research",
+      "Artificial-muscle actuation",
+      "Embodied AI"
     ],
     "manufacturer_url": "https://clone-robotics.com",
     "height_mm": 1700,
@@ -56265,7 +56265,9 @@
     "bluetooth": true,
     "cameras": "Multiple RGB cameras for vision and interaction",
     "imu": true,
-    "depth_sensing": true
+    "depth_sensing": true,
+    "made_in": "Poland / USA",
+    "os": "Clone"
   },
   {
     "id": "rainbow-robotics-milk-tea-barista",
