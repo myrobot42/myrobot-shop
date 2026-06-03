@@ -58552,13 +58552,14 @@
     "slope_max_percent": 25,
     "battery_type": "Li-ion",
     "battery_life_typical": 60,
-    "navigation": "Wireless beacons (Imprint Smart Mapping)",
+    "navigation": "Wireless beacon boundary",
     "requires_perimeter_wire": false,
     "requires_beacons": true,
     "ip_rating": "IPX4",
     "app_companion": "iRobot Home",
     "anti_theft": true,
-    "autonomous": true
+    "autonomous": true,
+    "max_slope_pct": 45
   },
   {
     "id": "fourier-intelligence-gr-3c-cosmo",
@@ -70071,7 +70072,10 @@
       "https://m.media-amazon.com/images/I/71A-ZEWF5XL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/A1yesjG0hkL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81sLrrGngbL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 3200
   },
   {
     "id": "husqvarna-automower-450x",
@@ -70167,7 +70171,10 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/action/h/h350/04/h350-0439.webp?v=57996f018427f33c&format=WEBP_LANDSCAPE_COVER_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/action/h/h370/03/h370-0326.webp?v=a8f423438427f33c&format=WEBP_LANDSCAPE_COVER_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/11/h310-1183.webp?v=20a46d29148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 5000
   },
   {
     "id": "husqvarna-automower-315x",
@@ -70265,7 +70272,10 @@
       "https://m.media-amazon.com/images/I/81MR+ODprvL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91iYbBVFVzL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71OS-H+CtxL._AC_SL1000_.jpg"
-    ]
+    ],
+    "max_slope_pct": 40,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 1600
   },
   {
     "id": "husqvarna-automower-305",
@@ -70364,7 +70374,10 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/20/h310-2059.webp?v=e955aea148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/20/h310-2060.webp?v=eb588390148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/22/h310-2279.webp?v=9190c3c4148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "max_slope_pct": 40,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 600
   },
   {
     "id": "husqvarna-automower-405x",
@@ -70460,7 +70473,10 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/f/fu/fu-426681.webp?v=413eb4c6148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/f/fz/fz-436358.webp?v=8b4475c8148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/g/gm/gm-783742.webp?v=5af88828148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "max_slope_pct": 40,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 600
   },
   {
     "id": "husqvarna-automower-535awdx",
@@ -70558,7 +70574,10 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/19/h310-1902.webp?v=4cb3f37b148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/p/pb/pb-804634.webp?v=cb62479b148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       ""
-    ]
+    ],
+    "max_slope_pct": 70,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 3500
   },
   {
     "id": "husqvarna-automower-520",
@@ -70657,7 +70676,10 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/16/h310-1619.webp?v=c6086c26148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/16/h310-1659b.webp?v=dbd3cb7e148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/16/h310-1660.webp?v=d7b39e55148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 2200
   },
   {
     "id": "husqvarna-automower-105",
@@ -70755,7 +70777,9 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/04/h310-0498.webp?v=29039dc3148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/04/h310-0499.webp?v=fc3781f5148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/05/h310-0500.webp?v=e8b445d6148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Boundary wire + GPS mapping"
   },
   {
     "id": "husqvarna-automower-415x",
@@ -70850,7 +70874,10 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/d/du/du-849284.webp?v=e39d39db148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/k/kz/kz-930298.webp?v=c7fd9c4148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/l/lf/lf-206466.webp?v=bc0726a9148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "max_slope_pct": 40,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 1500
   },
   {
     "id": "mammotion-luba-awdx9000",
@@ -70948,7 +70975,10 @@
       "https://m.media-amazon.com/images/I/91sH94ORvNL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81TK-94LZ9L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/811QJKDJluL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision",
+    "max_area_m2": 9000
   },
   {
     "id": "mammotion-luba-awdx5000",
@@ -71044,7 +71074,10 @@
     "origin": "China",
     "gallery": [
       "https://images.openai.com/static-rsc-4/zdskJqZK22HSDJOqvSvA_clIoOfnK07erXKh37N_DvTHvB8gVlPZu0GerEiZ9-5Hl8Wtos2ujI1R5ofLw_-xaiuyAZfWU15Y3CaNqXe9vu_zcSWzdv0VJSrJhN18CeyVNjRIz0YW4ZycqKeaQ0iU9tZWopvh2PZAIsBo6l0Aj2Wqgi5IyN2tESB3gpKXhhwN?purpose=fullsize"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision",
+    "max_area_m2": 5000
   },
   {
     "id": "mammotion-luba-awdx3000",
@@ -71137,7 +71170,10 @@
       "Sloped terrain"
     ],
     "perf": false,
-    "origin": "China"
+    "origin": "China",
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision",
+    "max_area_m2": 3000
   },
   {
     "id": "mammotion-luba-awdx1000",
@@ -71234,7 +71270,10 @@
       "https://robotlawnmowers.com.au/wp-content/uploads/2025/01/LUBA2AWD3-1024x1024.webp",
       "https://robotlawnmowers.com.au/wp-content/uploads/2025/01/Window_Picture-All-Packing-List-LUBA-2-AWD-EN-1024x1024.webp",
       "https://robotlawnmowers.com.au/wp-content/uploads/2025/01/LUBA2AWD-1024x1024.webp"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision",
+    "max_area_m2": 1000
   },
   {
     "id": "mammotion-yuka-2in1",
@@ -71334,7 +71373,9 @@
       "https://eu.mammotion.com/cdn/shop/files/6_dca02082-5475-4284-98b1-282beb1f4fba.jpg?v=1758599105&width=1000",
       "https://eu.mammotion.com/cdn/shop/files/YUKA_3_f603eada-e05d-463d-b7fd-0133de6364e0.jpg?v=1758599105&width=1000",
       "https://eu.mammotion.com/cdn/shop/files/YUKA_3.jpg?v=1758599105&width=1000"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision"
   },
   {
     "id": "mammotion-luba-2-awdx10000h",
@@ -71434,7 +71475,10 @@
       "https://m.media-amazon.com/images/I/71d+i-Iln2L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91kZRI6vjBL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81mKgvIvtML._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision + 360° LiDAR",
+    "max_area_m2": 10000
   },
   {
     "id": "mammotion-luba-2-awdx5000",
@@ -71534,7 +71578,10 @@
       "https://m.media-amazon.com/images/I/818Z1IhxibL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61v2MsIIjlL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71TRsVeAszL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision + 360° LiDAR",
+    "max_area_m2": 5000
   },
   {
     "id": "mammotion-luba-awdv-5000",
@@ -71630,7 +71677,10 @@
       "https://m.media-amazon.com/images/I/71nDmxfNziL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81D7zPi3-9L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71qHxHvcTJL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision",
+    "max_area_m2": 5000
   },
   {
     "id": "mammotion-luba-awdv-3000",
@@ -71727,7 +71777,10 @@
       "https://m.media-amazon.com/images/I/71UPRmwkDAL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71G9d9IcUxL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/613DM10n9PL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision",
+    "max_area_m2": 3000
   },
   {
     "id": "mammotion-luba-2-awdv-5000",
@@ -71826,7 +71879,10 @@
       "https://m.media-amazon.com/images/I/91kZRI6vjBL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71d+i-Iln2L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61v2MsIIjlL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision + 360° LiDAR",
+    "max_area_m2": 5000
   },
   {
     "id": "mammotion-luba-2-awdv-3000",
@@ -71925,7 +71981,10 @@
       "https://m.media-amazon.com/images/I/61v2MsIIjlL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71d+i-Iln2L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81Pn+KWLwOL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision + 360° LiDAR",
+    "max_area_m2": 3000
   },
   {
     "id": "mammotion-luba-awdv-1000",
@@ -72021,7 +72080,10 @@
       "https://m.media-amazon.com/images/I/71UPRmwkDAL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/813m-nkiNhL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61iVR0nS8SL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision",
+    "max_area_m2": 1000
   },
   {
     "id": "mammotion-yuka-600",
@@ -72115,7 +72177,10 @@
       "https://therobotmower.co.uk/wp-content/uploads/2025/04/Yuka-Ai-camera-Tech.webp",
       "https://therobotmower.co.uk/wp-content/uploads/2025/04/Yuka-side-view-robot-lawn-mower.webp",
       "https://therobotmower.co.uk/wp-content/uploads/2025/04/Robot-grass-collector-and-leaf.webp"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision",
+    "max_area_m2": 600
   },
   {
     "id": "mammotion-luba-2-awdv-10000",
@@ -72214,7 +72279,10 @@
       "https://m.media-amazon.com/images/I/810uXSM0dNL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61YrG7JkZKL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/718dswILRQL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "navigation": "Wire-free RTK + AI vision + 360° LiDAR",
+    "max_area_m2": 10000
   },
   {
     "id": "husqvarna-automower-310",
@@ -72309,7 +72377,10 @@
       "https://m.media-amazon.com/images/I/71Enve3rpfL._AC_SX679_.jpg",
       "https://m.media-amazon.com/images/I/91MEKffQgrL._AC_SX679_.jpg",
       ""
-    ]
+    ],
+    "max_slope_pct": 40,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 1000
   },
   {
     "id": "husqvarna-automower-435x-awd",
@@ -72409,7 +72480,10 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/18/h310-1893.webp?v=1a110ef5148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/18/h310-1894.webp?v=9cbf4218148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/18/h310-1895.webp?v=3c3698f4148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "max_slope_pct": 70,
+    "navigation": "Boundary wire + GPS mapping",
+    "max_area_m2": 3500
   },
   {
     "id": "husqvarna-automower-520-epos",
@@ -72507,7 +72581,10 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/b/bt/bt-106561.webp?v=da420f62148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/q/qu/qu-100019.webp?v=66c84047148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/studio/h/h310/18/h310-1895.webp?v=3c3698f4148fd9b9&format=WEBP_LANDSCAPE_CONTAIN_XXL"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Wire-free EPOS RTK satellite",
+    "max_area_m2": 2200
   },
   {
     "id": "segway-navimow-h500e",
@@ -72602,7 +72679,10 @@
     "gallery": [
       "https://www.cheapmowers.com/acatalog/NavimowH500E2.jpg",
       "https://www.cheapmowers.com/acatalog/NavimowH500E1.jpg"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Wire-free RTK + VisionFence",
+    "max_area_m2": 500
   },
   {
     "id": "segway-navimow-h800e",
@@ -72697,7 +72777,10 @@
     "origin": "China",
     "gallery": [
       "https://files.ekmcdn.com/2c25cf/images/segway-navimow-robotic-lawnmower-h800e-up-to-800m-s-(2)-999-p.jpg?v=1FAA355F-62CC-4C29-B3D1-86E8D8848411"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Wire-free RTK + VisionFence",
+    "max_area_m2": 800
   },
   {
     "id": "segway-navimow-i105",
@@ -72793,7 +72876,10 @@
       "https://navimow.com/cdn/shop/files/i105-square-right_f7218837-e219-48ec-858b-11bb0caa68cc.png?v=1766745896&width=1000",
       "https://navimow.com/cdn/shop/files/i105-square-top_427d4620-5a60-4b13-b41f-a9c52ab13dfa.png?v=1766745896&width=1000",
       "https://navimow.com/cdn/shop/files/i105-square-front_450333e0-8a53-4cf0-b454-6d2d2fa1218f.png?v=1766745896&width=1000"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Wire-free RTK + VisionFence",
+    "max_area_m2": 600
   },
   {
     "id": "segway-navimow-i108e",
@@ -72887,7 +72973,10 @@
       "https://segwaynavimow.co.uk/cdn/shop/files/edited-photo_10.png?v=1771609134",
       "https://segwaynavimow.co.uk/cdn/shop/files/edited-photo_11.png?v=1771609134",
       "https://segwaynavimow.co.uk/cdn/shop/files/segway-navimow-i108-robotic-mower-lifestyle.jpg-2.webp?v=1771609134"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Wire-free RTK + VisionFence",
+    "max_area_m2": 800
   },
   {
     "id": "segway-navimow-i115e",
@@ -72978,7 +73067,10 @@
       "Scheduled Mowing"
     ],
     "perf": false,
-    "origin": "China"
+    "origin": "China",
+    "max_slope_pct": 45,
+    "navigation": "Wire-free RTK + VisionFence",
+    "max_area_m2": 1500
   },
   {
     "id": "segway-navimow-h3000e",
@@ -73076,7 +73168,10 @@
       "https://m.media-amazon.com/images/I/41PNZNwYvzL._AC_SL1024_.jpg",
       "https://m.media-amazon.com/images/I/51Eddcuu1aL._AC_SL1024_.jpg",
       "https://m.media-amazon.com/images/I/51sOia1HGBL._AC_SL1024_.jpg"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Wire-free RTK + VisionFence",
+    "max_area_m2": 3000
   },
   {
     "id": "segway-navimow-h1500e",
@@ -73172,7 +73267,10 @@
       "https://m.media-amazon.com/images/I/51+UckgWNPL._AC_SL1024_.jpg",
       "https://m.media-amazon.com/images/I/41pCakfEhpL._AC_SL1024_.jpg",
       "https://m.media-amazon.com/images/I/410mp7jKkAL._AC_SL1024_.jpg"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "navigation": "Wire-free RTK + VisionFence",
+    "max_area_m2": 1500
   },
   {
     "id": "husqvarna-automower-308v-2026",
@@ -73228,7 +73326,7 @@
     "slope_max_percent": 45,
     "battery_type": "Li-ion",
     "battery_life_typical": 70,
-    "navigation": "EPOS satellite + AI vision camera",
+    "navigation": "Boundary wire + GPS mapping",
     "gps_rtk": true,
     "rtk_type": "Wi-Fi based RTK or RS1 Reference Station",
     "requires_perimeter_wire": false,
@@ -73291,7 +73389,8 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/action/f/fd/fd-131056.webp?v=2c1a03be8427f33c&format=WEBP_LANDSCAPE_COVER_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/action/p/pn/pn-767030.webp?v=ac7da6068427f33c&format=WEBP_LANDSCAPE_COVER_XXL",
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/action/k/ks/ks-065118.webp?v=9724ee448427f33c&format=WEBP_LANDSCAPE_COVER_XXL"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "husqvarna-automower-312v-2026",
@@ -73341,7 +73440,7 @@
     "slope_max_percent": 45,
     "battery_type": "Li-ion",
     "battery_life_typical": 60,
-    "navigation": "Vision (camera + AI)",
+    "navigation": "Boundary wire + GPS mapping",
     "ai_obstacle_avoidance": true,
     "requires_perimeter_wire": false,
     "gps_rtk": false,
@@ -73364,7 +73463,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "husqvarna-automower-aspire-r6v-2026",
@@ -73412,7 +73512,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 50,
-    "navigation": "Vision",
+    "navigation": "Boundary wire + GPS mapping",
     "ai_obstacle_avoidance": true,
     "requires_perimeter_wire": false,
     "app_companion": "Automower Connect",
@@ -73430,7 +73530,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "husqvarna-automower-405ve-2026",
@@ -73478,7 +73579,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 80,
-    "navigation": "Vision",
+    "navigation": "Boundary wire + GPS mapping",
     "ai_obstacle_avoidance": true,
     "requires_perimeter_wire": false,
     "app_companion": "Automower Connect",
@@ -73496,7 +73597,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 40,
+    "max_area_m2": 600
   },
   {
     "id": "husqvarna-automower-410ve-2026",
@@ -73543,7 +73646,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 100,
-    "navigation": "Vision",
+    "navigation": "Boundary wire + GPS mapping",
     "ai_obstacle_avoidance": true,
     "requires_perimeter_wire": false,
     "app_companion": "Automower Connect",
@@ -73561,7 +73664,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "husqvarna-automower-430v-2026",
@@ -73611,7 +73715,7 @@
     "slope_max_percent": 45,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "Vision (camera + AI)",
+    "navigation": "Boundary wire + GPS mapping",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -73633,7 +73737,9 @@
       "Alexa",
       "Google Home",
       "IFTTT"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 3200
   },
   {
     "id": "husqvarna-automower-450v-nera-2026",
@@ -73685,7 +73791,7 @@
     "slope_max_percent": 45,
     "battery_type": "Li-ion",
     "battery_life_typical": 180,
-    "navigation": "Vision + EPOS option",
+    "navigation": "Wire-free EPOS RTK satellite",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -73707,7 +73813,9 @@
       "Alexa",
       "Google Home",
       "IFTTT"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 5000
   },
   {
     "id": "husqvarna-automower-450xh-epos-2024",
@@ -73762,7 +73870,7 @@
     "battery_type": "Li-ion",
     "battery_ah": 10,
     "battery_life_typical": 200,
-    "navigation": "Husqvarna EPOS (RTK satellite)",
+    "navigation": "Wire-free EPOS RTK satellite",
     "gps_rtk": true,
     "rtk_type": "RTK + reference station required",
     "requires_perimeter_wire": false,
@@ -73799,7 +73907,9 @@
       "https://www-static-nw.husqvarna.com/-/images/aprimo/husqvarna/robotic-mowers/photos/banner/jm-240892.webp?v=62832c8b8427f33c&format=WEBP_LANDSCAPE_COVER_XXL",
       "",
       ""
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 5000
   },
   {
     "id": "husqvarna-automower-535-awd-epos-2025",
@@ -73850,7 +73960,7 @@
     "slope_max_percent": 70,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "Husqvarna EPOS (RTK)",
+    "navigation": "Wire-free EPOS RTK satellite",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "requires_reference_station": true,
@@ -73871,7 +73981,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 70,
+    "max_area_m2": 3500
   },
   {
     "id": "husqvarna-automower-550-epos-2024",
@@ -73922,7 +74034,7 @@
     "slope_max_percent": 45,
     "battery_type": "Li-ion",
     "battery_life_typical": 300,
-    "navigation": "Husqvarna EPOS (RTK-GNSS)",
+    "navigation": "Wire-free EPOS RTK satellite",
     "gps_rtk": true,
     "rtk_accuracy_cm": 2,
     "requires_perimeter_wire": false,
@@ -73941,7 +74053,9 @@
       "Municipal grounds",
       "Commercial properties",
       "Large estates"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 5000
   },
   {
     "id": "husqvarna-automower-560-epos-2025",
@@ -73990,7 +74104,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 240,
-    "navigation": "Husqvarna EPOS",
+    "navigation": "Wire-free EPOS RTK satellite",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "requires_reference_station": true,
@@ -74004,7 +74118,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "husqvarna-automower-580-epos-2025",
@@ -74053,7 +74168,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 360,
-    "navigation": "Husqvarna EPOS",
+    "navigation": "Wire-free EPOS RTK satellite",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "requires_reference_station": true,
@@ -74068,7 +74183,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "husqvarna-automower-580l-epos-2025",
@@ -74115,7 +74231,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion (extended)",
     "battery_life_typical": 480,
-    "navigation": "Husqvarna EPOS",
+    "navigation": "Wire-free EPOS RTK satellite",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "requires_reference_station": true,
@@ -74128,7 +74244,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "husqvarna-ceora-2024",
@@ -74179,7 +74296,7 @@
     "slope_max_deg": 17,
     "battery_type": "Li-ion",
     "battery_life_typical": 720,
-    "navigation": "Husqvarna EPOS",
+    "navigation": "Boundary wire + GPS mapping",
     "gps_rtk": true,
     "rtk_accuracy_cm": 2,
     "requires_perimeter_wire": false,
@@ -74196,7 +74313,8 @@
     "warranty_months": 24,
     "manufacturer_url": "https://www.husqvarna.com",
     "website": "https://www.husqvarna.com",
-    "autonomous": true
+    "autonomous": true,
+    "max_slope_pct": 45
   },
   {
     "id": "mammotion-luba-awd-1000-2023",
@@ -74245,7 +74363,7 @@
     "slope_max_percent": 75,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "RTK + Vision",
+    "navigation": "Wire-free RTK + AI vision",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "cameras": "Vision system",
@@ -74269,7 +74387,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "max_area_m2": 1000
   },
   {
     "id": "mammotion-luba-2-awd-5000h-2024",
@@ -74323,7 +74443,7 @@
     "slope_max_percent": 80,
     "battery_type": "Li-ion",
     "battery_life_typical": 180,
-    "navigation": "RTK-GNSS + binocular UltraSense AI Vision (5 TOPS chip)",
+    "navigation": "Wire-free RTK + AI vision + 360° LiDAR",
     "gps_rtk": true,
     "rtk_type": "RTK with antenna station",
     "requires_perimeter_wire": false,
@@ -74388,7 +74508,9 @@
       "https://m.media-amazon.com/images/I/61v2MsIIjlL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91kZRI6vjBL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81mKgvIvtML._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "max_area_m2": 5000
   },
   {
     "id": "mammotion-luba-3-awd-1000-2026",
@@ -74441,7 +74563,7 @@
     "slope_max_percent": 80,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "RTK + UltraSense AI Vision (Gen 2)",
+    "navigation": "Wire-free RTK + AI vision",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -74455,7 +74577,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "max_area_m2": 1000
   },
   {
     "id": "mammotion-luba-3-awd-3000-2026",
@@ -74508,7 +74632,7 @@
     "slope_max_percent": 80,
     "battery_type": "Li-ion",
     "battery_life_typical": 220,
-    "navigation": "RTK + UltraSense AI Vision (Gen 2)",
+    "navigation": "Wire-free RTK + AI vision",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -74522,7 +74646,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 80,
+    "max_area_m2": 3000
   },
   {
     "id": "mammotion-luba-3-awd-5000-2026",
@@ -74577,7 +74703,7 @@
     "slope_max_percent": 80,
     "battery_type": "Li-ion",
     "battery_life_typical": 300,
-    "navigation": "RTK + UltraSense AI Vision (Gen 2)",
+    "navigation": "Wire-free RTK + AI vision",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -74588,7 +74714,9 @@
     "anti_theft": true,
     "app_companion": "Mammotion",
     "warranty_months": 24,
-    "manufacturer_url": "https://mammotion.com"
+    "manufacturer_url": "https://mammotion.com",
+    "max_slope_pct": 80,
+    "max_area_m2": 5000
   },
   {
     "id": "mammotion-luba-mini-2-awd-2026",
@@ -74641,7 +74769,7 @@
     "slope_max_percent": 50,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "RTK + AI Vision",
+    "navigation": "Wire-free RTK + AI vision + 360° LiDAR",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -74659,7 +74787,8 @@
       "https://m.media-amazon.com/images/I/91fgwIe4tWL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91M6YjXRzeL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81FsOps8hxL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 80
   },
   {
     "id": "mammotion-yuka-mini-2-lidar-2026",
@@ -74711,7 +74840,7 @@
     "slope_max_percent": 45,
     "battery_type": "Li-ion",
     "battery_life_typical": 90,
-    "navigation": "360° LiDAR + AI Vision",
+    "navigation": "Wire-free RTK + AI vision + 360° LiDAR",
     "lidar_type": "360° spinning",
     "gps_rtk": false,
     "requires_perimeter_wire": false,
@@ -74731,7 +74860,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 80
   },
   {
     "id": "mammotion-yuka-mini-2-vision-2026",
@@ -74780,7 +74910,7 @@
     "slope_max_deg": 20,
     "battery_type": "Li-ion",
     "battery_life_typical": 60,
-    "navigation": "Vision-only (AI camera)",
+    "navigation": "Wire-free RTK + AI vision + 360° LiDAR",
     "ai_obstacle_avoidance": true,
     "requires_perimeter_wire": false,
     "gps_rtk": false,
@@ -74798,7 +74928,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 80
   },
   {
     "id": "navimow-i105e-2024",
@@ -74848,7 +74979,7 @@
     "battery_type": "Li-ion",
     "battery_ah": 2.5,
     "battery_life_typical": 65,
-    "navigation": "EFLS RTK + Vision (VisionFence 2.0)",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -74863,7 +74994,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 600
   },
   {
     "id": "navimow-i108e-2024",
@@ -74910,7 +75043,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 75,
-    "navigation": "EFLS RTK + Vision",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -74923,7 +75056,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 800
   },
   {
     "id": "navimow-i110-2024",
@@ -74969,7 +75104,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 90,
-    "navigation": "EFLS RTK + Vision",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -74982,7 +75117,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 1000
   },
   {
     "id": "navimow-i206-awd-2025",
@@ -75034,7 +75171,7 @@
     "battery_type": "Li-ion",
     "battery_ah": 2.5,
     "battery_life_typical": 60,
-    "navigation": "EFLS RTK + Vision + Auto Mapping",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "rtk_type": "Network RTK (no antenna)",
     "requires_perimeter_wire": false,
@@ -75051,7 +75188,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 50,
+    "max_area_m2": 600
   },
   {
     "id": "navimow-i210-awd-2025",
@@ -75102,7 +75241,7 @@
     "battery_type": "Li-ion",
     "battery_ah": 5.1,
     "battery_life_typical": 120,
-    "navigation": "EFLS RTK + Vision",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -75115,7 +75254,9 @@
     "width_mm": 384,
     "depth_mm": 544,
     "warranty_months": 24,
-    "manufacturer_url": "https://navimow.com"
+    "manufacturer_url": "https://navimow.com",
+    "max_slope_pct": 50,
+    "max_area_m2": 1000
   },
   {
     "id": "navimow-i215-lidar-2026",
@@ -75164,7 +75305,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 130,
-    "navigation": "EFLS LiDAR+",
+    "navigation": "Wire-free RTK + 360° LiDAR",
     "lidar_type": "Solid-state",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
@@ -75179,7 +75320,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 1500
   },
   {
     "id": "navimow-h210-2024",
@@ -75231,7 +75374,7 @@
     "battery_ah": 5.1,
     "battery_life_typical": 110,
     "charge_time_min": 70,
-    "navigation": "EFLS LiDAR+ (solid-state LiDAR + Network RTK + Vision)",
+    "navigation": "Wire-free RTK + VisionFence",
     "lidar": true,
     "lidar_type": "Solid-state high-resolution",
     "gps_rtk": true,
@@ -75268,7 +75411,9 @@
       "Lawns with tree canopy"
     ],
     "manufacturer_url": "https://navimow.com",
-    "website": "https://navimow.segway.com"
+    "website": "https://navimow.segway.com",
+    "max_slope_pct": 45,
+    "max_area_m2": 1000
   },
   {
     "id": "navimow-h220-2024",
@@ -75321,7 +75466,7 @@
     "battery_life_typical": 220,
     "charge_time_min": 120,
     "max_daily_coverage_acres": 0.93,
-    "navigation": "EFLS LiDAR+ (solid-state LiDAR + Network RTK + Vision)",
+    "navigation": "Wire-free RTK + VisionFence",
     "lidar": true,
     "gps_rtk": true,
     "requires_perimeter_wire": false,
@@ -75341,7 +75486,9 @@
     "use_cases": [
       "Mid-large residential lawns up to 0.5 acre"
     ],
-    "manufacturer_url": "https://navimow.com"
+    "manufacturer_url": "https://navimow.com",
+    "max_slope_pct": 45,
+    "max_area_m2": 2200
   },
   {
     "id": "navimow-x315-2024",
@@ -75390,7 +75537,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 150,
-    "navigation": "RTK + Vision",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -75402,7 +75549,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "navimow-x330-2024",
@@ -75450,7 +75598,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 240,
-    "navigation": "RTK + Vision",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -75462,7 +75610,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "navimow-x350-2024",
@@ -75513,7 +75662,7 @@
     "slope_max_deg": 40,
     "battery_type": "Li-ion",
     "battery_life_typical": 180,
-    "navigation": "EFLS RTK + Vision",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -75531,7 +75680,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "navimow-x390-2025",
@@ -75577,7 +75727,7 @@
     "slope_max_deg": 40,
     "battery_type": "Li-ion",
     "battery_life_typical": 210,
-    "navigation": "EFLS RTK + Vision",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -75595,7 +75745,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "navimow-x430-2026",
@@ -75647,7 +75798,7 @@
     "slope_max_percent": 84,
     "battery_type": "Li-ion",
     "battery_life_typical": 240,
-    "navigation": "EFLS LiDAR+ (Solid-state LiDAR + RTK + Vision)",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -75661,7 +75812,8 @@
     "announced": "2026",
     "released": "2026",
     "lidar": true,
-    "lidar_type": "Solid-state"
+    "lidar_type": "Solid-state",
+    "max_slope_pct": 45
   },
   {
     "id": "navimow-x450-2026",
@@ -75712,7 +75864,7 @@
     "slope_max_percent": 84,
     "battery_type": "Li-ion",
     "battery_life_typical": 300,
-    "navigation": "EFLS LiDAR+",
+    "navigation": "Wire-free RTK + VisionFence",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -75724,7 +75876,8 @@
     "manufacturer_url": "https://navimow.com",
     "announced": "2026",
     "released": "2026",
-    "lidar": true
+    "lidar": true,
+    "max_slope_pct": 45
   },
   {
     "id": "ecovacs-goat-g1-2023",
@@ -75772,7 +75925,7 @@
     "slope_max_deg": 27,
     "battery_type": "Li-ion",
     "battery_life_typical": 90,
-    "navigation": "TrueMapping 2.0 (UWB beacons + AI camera)",
+    "navigation": "Wire-free RTK",
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
     "app_companion": "ECOVACS HOME",
@@ -75794,7 +75947,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "ecovacs-goat-gx-600-2024",
@@ -75841,7 +75995,7 @@
     "slope_max_deg": 27,
     "battery_type": "Li-ion",
     "battery_life_typical": 70,
-    "navigation": "AI vision + UWB",
+    "navigation": "Wire-free RTK",
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
     "app_companion": "ECOVACS HOME",
@@ -75861,7 +76015,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 600
   },
   {
     "id": "ecovacs-goat-a2000-lidar-pro-2026",
@@ -75915,7 +76071,7 @@
     "battery_life_typical": 150,
     "charge_time_min": 50,
     "charge_power_w": 113.4,
-    "navigation": "HoloScope 360 Dual-LiDAR",
+    "navigation": "Wire-free 360° LiDAR",
     "lidar_type": "Dual (360° mechanical + 3D ToF)",
     "requires_perimeter_wire": false,
     "gps_rtk": false,
@@ -75940,7 +76096,9 @@
       "https://m.media-amazon.com/images/I/914lj5DPxoL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/8126khFhbPL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81fSgG8zqhL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 2000
   },
   {
     "id": "ecovacs-goat-a3000-lidar-pro-2026",
@@ -75996,7 +76154,7 @@
     "battery_life_typical": 240,
     "charge_time_min": 70,
     "charge_power_w": 189,
-    "navigation": "HoloScope 360 Dual-LiDAR + AI camera",
+    "navigation": "Wire-free 360° LiDAR",
     "lidar_type": "Dual (360° + 3D ToF)",
     "requires_perimeter_wire": false,
     "gps_rtk": false,
@@ -76023,7 +76181,9 @@
       "https://m.media-amazon.com/images/I/914lj5DPxoL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81X4hDX8jXL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91Z2BGgF6eL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 3000
   },
   {
     "id": "ecovacs-goat-o1000-lidar-pro-2026",
@@ -76076,7 +76236,7 @@
     "slope_max_percent": 45,
     "battery_type": "Li-ion",
     "battery_life_typical": 90,
-    "navigation": "HoloScope 360 Dual-LiDAR + AI camera",
+    "navigation": "Wire-free 360° LiDAR",
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
     "obstacle_categories": "200+ types (incl. hedgehogs)",
@@ -76114,7 +76274,9 @@
       "https://m.media-amazon.com/images/I/91NwvJgIEIL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91ev34jcDRL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91neByaQI9L._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 1000
   },
   {
     "id": "worx-landroid-s-wr165-2023",
@@ -76167,7 +76329,7 @@
     "battery_voltage_v": 20,
     "battery_life_typical": 60,
     "charge_time_min": 75,
-    "navigation": "AIA + boundary wire",
+    "navigation": "Boundary wire",
     "requires_perimeter_wire": true,
     "perimeter_wire_length_m": 250,
     "anti_tangle": "Floating blade disc",
@@ -76190,7 +76352,9 @@
       "https://m.media-amazon.com/images/I/811lD+PdPQS._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71WX8q2+IgS._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/813GpAWUFRS._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 35,
+    "max_area_m2": 300
   },
   {
     "id": "worx-landroid-m-wr147-2023",
@@ -76241,7 +76405,7 @@
     "battery_voltage_v": 20,
     "battery_life_typical": 100,
     "charge_time_min": 75,
-    "navigation": "AIA + boundary wire",
+    "navigation": "Boundary wire",
     "requires_perimeter_wire": true,
     "perimeter_wire_length_m": 250,
     "anti_tangle": "Floating blade disc",
@@ -76259,7 +76423,9 @@
       "https://m.media-amazon.com/images/I/91jSAS++l7S._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/61EqodIE8EL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71AtGaZICAL._AC_SL1000_.jpg"
-    ]
+    ],
+    "max_slope_pct": 35,
+    "max_area_m2": 750
   },
   {
     "id": "worx-landroid-l-wr155-2023",
@@ -76311,7 +76477,7 @@
     "battery_voltage_v": 20,
     "battery_life_typical": 150,
     "charge_time_min": 115,
-    "navigation": "AIA + boundary wire + cloud auto-scheduling",
+    "navigation": "Boundary wire",
     "requires_perimeter_wire": true,
     "perimeter_wire_length_m": 250,
     "anti_tangle": "Floating blade disc",
@@ -76334,7 +76500,9 @@
       "https://m.media-amazon.com/images/I/81-pp44cSnS._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/71ki44nr+2S._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91jh+TB9y0S._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 35,
+    "max_area_m2": 1000
   },
   {
     "id": "worx-landroid-wr235-vision-2025",
@@ -76387,7 +76555,7 @@
     "battery_type": "Li-ion (20V Power Share)",
     "battery_ah": 4,
     "battery_life_typical": 120,
-    "navigation": "AI vision (grass recognition)",
+    "navigation": "Wire-free AI camera vision",
     "ai_obstacle_avoidance": true,
     "requires_perimeter_wire": false,
     "gps_rtk": false,
@@ -76407,7 +76575,9 @@
       "https://m.media-amazon.com/images/I/8105--Lr9fL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81K-F8u-LCL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/712pl4xnCUL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 35,
+    "max_area_m2": 800
   },
   {
     "id": "worx-landroid-vision-cloud-m1000-2026",
@@ -76459,7 +76629,7 @@
     "battery_type": "Li-ion (20V Power Share)",
     "battery_ah": 6,
     "battery_life_typical": 100,
-    "navigation": "AI vision (cloud-trained)",
+    "navigation": "Wire-free AI camera vision",
     "ai_obstacle_avoidance": true,
     "requires_perimeter_wire": false,
     "gps_rtk": true,
@@ -76478,7 +76648,9 @@
       "https://m.media-amazon.com/images/I/81uISUXcslL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/81ypmeyqa5L._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/A1u27pePdML._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 35,
+    "max_area_m2": 1000
   },
   {
     "id": "kress-rtkn-mission-mega-2025",
@@ -76527,7 +76699,7 @@
     "slope_max_deg": 27,
     "battery_type": "Li-ion",
     "battery_life_typical": 240,
-    "navigation": "Network RTK",
+    "navigation": "Wire-free RTKn",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "app_companion": "Kress Robotik",
@@ -76550,7 +76722,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "kress-kr136e-2024",
@@ -76595,7 +76768,7 @@
     "slope_max_deg": 25,
     "battery_type": "Li-ion",
     "battery_life_typical": 90,
-    "navigation": "RTK + GPS",
+    "navigation": "Wire-free RTKn",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "app_companion": "Kress Robotik",
@@ -76614,7 +76787,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "kress-kr160e-2024",
@@ -76660,7 +76834,7 @@
     "slope_max_deg": 25,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "RTK + GPS",
+    "navigation": "Wire-free RTKn",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "app_companion": "Kress Robotik",
@@ -76677,7 +76851,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "greenworks-optimow-15h-2024",
@@ -76721,7 +76896,7 @@
     "slope_max_deg": 25,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "Boundary wire + sensors",
+    "navigation": "Wire-free RTK",
     "requires_perimeter_wire": true,
     "app_companion": "Greenworks",
     "warranty_months": 24,
@@ -76737,7 +76912,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 1500
   },
   {
     "id": "greenworks-optimow-50h-2025",
@@ -76782,7 +76959,7 @@
     "slope_max_deg": 25,
     "battery_type": "Li-ion",
     "battery_life_typical": 240,
-    "navigation": "Boundary wire + sensors",
+    "navigation": "Wire-free RTK",
     "requires_perimeter_wire": true,
     "app_companion": "Greenworks",
     "manufacturer_url": "https://www.greenworkstools.com",
@@ -76797,7 +76974,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 5000
   },
   {
     "id": "dreame-a1-2024",
@@ -76845,7 +77024,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "RTK + Vision (OmniSense 3D)",
+    "navigation": "Wire-free RTK + AI vision",
     "lidar": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -76868,7 +77047,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 2000
   },
   {
     "id": "dreame-a2-2025",
@@ -76915,7 +77096,7 @@
     "slope_max_deg": 27,
     "battery_type": "Li-ion",
     "battery_life_typical": 150,
-    "navigation": "RTK + Vision",
+    "navigation": "Wire-free RTK + AI vision",
     "lidar": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -76937,7 +77118,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45,
+    "max_area_m2": 3000
   },
   {
     "id": "dreame-a3-awd-2026",
@@ -76989,7 +77172,7 @@
     "slope_max_percent": 75,
     "battery_type": "Li-ion",
     "battery_life_typical": 200,
-    "navigation": "LiDAR + RTK + Vision",
+    "navigation": "Wire-free RTK + AI vision",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -77011,7 +77194,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 70,
+    "max_area_m2": 2000
   },
   {
     "id": "dreame-a3-awd-pro-2026",
@@ -77063,7 +77248,7 @@
     "slope_max_percent": 80,
     "battery_type": "Li-ion",
     "battery_life_typical": 220,
-    "navigation": "OmniSense 3D Ultra + RTK",
+    "navigation": "Wire-free RTK + AI vision",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -77083,7 +77268,9 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 70,
+    "max_area_m2": 2000
   },
   {
     "id": "roborock-rockmow-z130-2026",
@@ -77132,7 +77319,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "StarSight ToF + Vision",
+    "navigation": "Wire-free 360° LiDAR + vision",
     "lidar": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -77154,7 +77341,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "roborock-rockmow-x1-lidar-2026",
@@ -77203,7 +77391,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 180,
-    "navigation": "Solid-state LiDAR + Vision",
+    "navigation": "Wire-free 360° LiDAR + vision",
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
     "cellular": "4G",
@@ -77223,7 +77411,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "eufy-e18-2025",
@@ -77271,7 +77460,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 100,
-    "navigation": "RTK + Vision",
+    "navigation": "Wire-free RTK + AI vision",
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
     "app_companion": "eufy Clean",
@@ -77292,7 +77481,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "mova-lidax-ultra-1000-2026",
@@ -77340,7 +77530,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "360° 3D LiDAR + AI Vision (no RTK required)",
+    "navigation": "Wire-free 360° LiDAR + vision",
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
     "app_companion": "MOVA",
@@ -77362,7 +77552,8 @@
       "https://m.media-amazon.com/images/I/A1LuyUqozbL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91ROUABD9wL._AC_SL1500_.jpg",
       "https://m.media-amazon.com/images/I/91UWvWCsQlL._AC_SL1500_.jpg"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "sunseeker-s4-2026",
@@ -77412,7 +77603,7 @@
     "slope_max_percent": 42,
     "battery_type": "Li-ion",
     "battery_life_typical": 100,
-    "navigation": "Vision AI + 360° 3D LiDAR",
+    "navigation": "Wire-free RTK + AI vision",
     "lidar": true,
     "lidar_type": "360° 3D",
     "requires_perimeter_wire": false,
@@ -77433,7 +77624,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "sunseeker-elite-x4-2026",
@@ -77480,7 +77672,7 @@
     "slope_max_deg": 25,
     "battery_type": "Li-ion",
     "battery_life_typical": 140,
-    "navigation": "RTK + Vision",
+    "navigation": "Wire-free RTK + AI vision",
     "lidar": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -77499,7 +77691,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "litheli-eyeon-500-2026",
@@ -77547,7 +77740,7 @@
     "slope_max_deg": 20,
     "battery_type": "Li-ion",
     "battery_life_typical": 80,
-    "navigation": "AI vision only",
+    "navigation": "Wire-free RTK + AI vision",
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
     "app_companion": "Litheli",
@@ -77560,7 +77753,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "litheli-skope-800-2026",
@@ -77607,7 +77801,7 @@
     "slope_max_deg": 22,
     "battery_type": "Li-ion",
     "battery_life_typical": 90,
-    "navigation": "AI Vision",
+    "navigation": "Wire-free RTK + AI vision",
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
     "app_companion": "Litheli",
@@ -77621,7 +77815,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "keenon-keenmow-k1-2026",
@@ -77669,7 +77864,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 150,
-    "navigation": "RTK + Vision",
+    "navigation": "Wire-free RTK + AI vision",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -77687,7 +77882,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "lymow-one-plus-2026",
@@ -77735,7 +77931,7 @@
     "slope_max_percent": 80,
     "battery_type": "Li-ion",
     "battery_life_typical": 180,
-    "navigation": "RTK + Vision",
+    "navigation": "Wire-free RTK + AI vision",
     "gps_rtk": true,
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
@@ -77757,7 +77953,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "airseekers-tron-ultra-2026",
@@ -77804,7 +78001,7 @@
     "slope_max_deg": 24,
     "battery_type": "Li-ion",
     "battery_life_typical": 120,
-    "navigation": "AI Vision",
+    "navigation": "Wire-free RTK + AI vision",
     "requires_perimeter_wire": false,
     "ai_obstacle_avoidance": true,
     "app_companion": "Airseekers",
@@ -77815,7 +78012,8 @@
       "Autonomous lawn mowing",
       "Lawn maintenance",
       "Scheduled grass cutting"
-    ]
+    ],
+    "max_slope_pct": 45
   },
   {
     "id": "nexlawn-navia-6000-2026",
