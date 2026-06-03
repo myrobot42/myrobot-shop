@@ -43773,8 +43773,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Billed as the world's first mobile robot compatible with GMP cleanroom Grades A/B/C/D, designed for pharmaceutical sterile-production environments where conventional AGVs cannot operate.",
     "highlights": [
@@ -43782,13 +43782,10 @@
       "Built for pharma cleanrooms",
       "Sterile-production rated"
     ],
-    "perf": {
-      "payload_kg": 300,
-      "gmp_grades": "A/B/C/D"
-    },
+    "perf": false,
     "origin": "Switzerland",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 300,
     "speed_ms": 1.5,
@@ -43804,7 +43801,8 @@
     "manufacturer_url": "https://www.staubli.com",
     "bluetooth": true,
     "ros": true,
-    "frame_material": "Stainless steel"
+    "frame_material": "Stainless steel",
+    "gmp_grades": "A/B/C/D"
   },
   {
     "id": "st-ubli-fl1500",
@@ -43821,8 +43819,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Ultra-compact 1.5-tonne counterbalanced forklift AGV with a modular counterbalance-weight and battery design. Equipped with a hydraulic mono mast, it moves, stacks and rack-stores pallets and containers, and is highly maneuverable with a small turning circle.",
     "highlights": [
@@ -43832,12 +43830,10 @@
       "Stacks and rack-stores pallets",
       "Small turning circle"
     ],
-    "perf": {
-      "payload_kg": 1500
-    },
+    "perf": false,
     "origin": "Switzerland",
     "year": 2025,
-    "status": "Available",
+    "status": "Active",
     "payload_kg": 1500,
     "use_cases": [
       "Pallet transport",
@@ -44913,8 +44909,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 83,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Fork-type hospital AGV configuration in the TransCar family, able to pick up and handle a wide range of trolleys for food, waste, pharmaceuticals and non-standard loads. Part of the OTSAW–Swisslog Healthcare hospital logistics system with elevator and door integration for autonomous multi-floor delivery.",
     "highlights": [
@@ -44923,13 +44919,10 @@
       "Elevator & door integration",
       "Part of the TransCar hospital AGV system"
     ],
-    "perf": {
-      "payload_kg": 500,
-      "type": "Fork"
-    },
+    "perf": false,
     "origin": "Singapore/Switzerland",
     "year": 2018,
-    "status": "Available",
+    "status": "Active",
     "released": "2018",
     "height_mm": 1400,
     "width_mm": 800,
@@ -44952,7 +44945,8 @@
     "ai_cloud_required": false,
     "ota": true,
     "depth_sensing": true,
-    "wifi": true
+    "wifi": true,
+    "type": "Fork"
   },
   {
     "id": "swisslog-healthcare-hospital-agv-tower",
@@ -44969,8 +44963,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 82,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Tower-type hospital AGV configuration in the TransCar family for vertical transport tasks, designed for intensive clinical use with natural-feature navigation. Integrates with elevators and doors for autonomous multi-floor material movement within healthcare facilities.",
     "highlights": [
@@ -44979,13 +44973,10 @@
       "Natural-feature navigation",
       "Part of the TransCar hospital AGV system"
     ],
-    "perf": {
-      "payload_kg": 150,
-      "type": "Tower"
-    },
+    "perf": false,
     "origin": "Singapore/Switzerland",
     "year": 2019,
-    "status": "Available",
+    "status": "Active",
     "height_mm": 1800,
     "payload_kg": 150,
     "speed_ms": 1.5,
@@ -45001,7 +44992,8 @@
     "auto_charge": true,
     "ai_cloud_required": false,
     "ota": true,
-    "depth_sensing": true
+    "depth_sensing": true,
+    "type": "Tower"
   },
   {
     "id": "swisslog-healthcare-hospital-agv-platform",
@@ -45018,8 +45010,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 83,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Platform-type hospital AGV configuration in the TransCar family for transporting patient meals, linens, trash and medical waste. Uses natural-feature laser navigation and integrates with the hospital's elevators and doors for autonomous in-house delivery.",
     "highlights": [
@@ -45028,13 +45020,10 @@
       "Natural-feature laser navigation",
       "Part of the TransCar hospital AGV system"
     ],
-    "perf": {
-      "payload_kg": 300,
-      "type": "Platform"
-    },
+    "perf": false,
     "origin": "Singapore/Switzerland",
     "year": 2018,
-    "status": "Available",
+    "status": "Active",
     "released": "2018",
     "height_mm": 220,
     "width_mm": 600,
@@ -45060,7 +45049,8 @@
     "warranty_months": 24,
     "auto_charge": true,
     "ai_cloud_required": false,
-    "ota": true
+    "ota": true,
+    "type": "Platform"
   },
   {
     "id": "swisslog-healthcare-relay-asr-200",
@@ -45231,8 +45221,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Industrial open-platform variant of the TUG from ST Engineering Aethon, built for manufacturing and warehouse material flow. An independent suspension system handles uneven floors, with roughly 5° slope capability and a tight ~17-inch turning radius. The open deck integrates with active payloads and conveyors.",
     "highlights": [
@@ -45241,14 +45231,10 @@
       "~17-inch turning radius",
       "Open platform for active payloads/conveyors"
     ],
-    "perf": {
-      "payload_kg": 680,
-      "slope_deg": 5,
-      "turning_radius_in": 17
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2019,
-    "status": "Available",
+    "status": "Active",
     "height_mm": 1270,
     "width_mm": 610,
     "depth_mm": 914,
@@ -45288,8 +45274,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 84,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Autonomous cabinet robot from ST Engineering Aethon for secure delivery of medications and specimens in hospitals. Lockable drawers (11-drawer, 9-drawer 2× deep, 7-drawer 4× deep, or door-cart configurations) open via combined PIN code and fingerprint biometric access. Navigates with overlapping laser, sonar and infrared sensors — no wires or magnets — and integrates with elevators and doors over WiFi.",
     "highlights": [
@@ -45299,16 +45285,10 @@
       "WiFi link to Aethon Command Center",
       "~10 h runtime"
     ],
-    "perf": {
-      "max_speed_ms": 0.76,
-      "payload_kg": 227,
-      "runtime_h": 10,
-      "turning_radius_in": 23,
-      "torque_in_lb": 25
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2014,
-    "status": "Available",
+    "status": "Active",
     "released": "2014",
     "height_mm": 1372,
     "width_mm": 610,
@@ -45350,8 +45330,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Autonomous mobile robot from ST Engineering Aethon that tows carts and racks for hospital and industrial material transport — meals, linens, waste and supplies. Omnidirectional four-wheel drive with 2D SLAM and multi-sensor (LiDAR, sonar, infrared) navigation; auto-docks and auto-charges for near-24/7 operation and integrates with elevators, doors and fire systems over WiFi. Deployed across 250+ hospitals.",
     "highlights": [
@@ -45361,16 +45341,10 @@
       "Built-in lift for carts/racks",
       "Auto-dock and auto-charge"
     ],
-    "perf": {
-      "max_speed_ms": 0.7,
-      "payload_kg": 635,
-      "runtime_h": 10,
-      "navigation": "2D SLAM, omnidirectional",
-      "compliance": "CE, FCC, ISO 12100, EU Machinery Directive 2006/42/EC"
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2018,
-    "status": "Available",
+    "status": "Active",
     "released": "2018",
     "height_mm": 1372,
     "width_mm": 610,
@@ -45515,8 +45489,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "AI-driven horizontal pallet-transport AMR rated for 3000 kg. Navigates by SLAM using two laser scanners with AI path planning — no cables, strips or tape — and carries an integrated lifting device with interchangeable top modules (platforms, conveyors). Connects to fleet management via the VDA 5050 standard and links to Swisslog's SynQ WMS/WCS. Heavy-duty omnidirectional drive enables sideways movement.",
     "highlights": [
@@ -45527,12 +45501,10 @@
       "Interchangeable top modules",
       "Omnidirectional drive (sideways travel)"
     ],
-    "perf": {
-      "payload_kg": 3000
-    },
+    "perf": false,
     "origin": "Switzerland",
     "year": 2025,
-    "status": "Available",
+    "status": "Active",
     "height_mm": 1400,
     "width_mm": 850,
     "depth_mm": 600,
@@ -45577,8 +45549,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "AI-driven horizontal pallet-transport AMR rated for 1500 kg. Navigates by SLAM using two laser scanners with AI path planning — no cables, strips or tape — and carries an integrated lifting device with interchangeable top modules (platforms, conveyors). Connects to fleet management via the VDA 5050 standard and links to Swisslog's SynQ WMS/WCS.",
     "highlights": [
@@ -45588,12 +45560,10 @@
       "Integrated lifting device",
       "Interchangeable top modules"
     ],
-    "perf": {
-      "payload_kg": 1500
-    },
+    "perf": false,
     "origin": "Switzerland",
     "year": 2025,
-    "status": "Available",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 1500,
     "speed_ms": 1.5,
@@ -45635,8 +45605,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "AI-driven horizontal pallet-transport AMR rated for 600 kg. Navigates by SLAM using two laser scanners with AI path planning — no cables, strips or tape — and carries an integrated lifting device with interchangeable top modules (platforms, conveyors). Connects to fleet management via the VDA 5050 standard and links to Swisslog's SynQ WMS/WCS.",
     "highlights": [
@@ -45646,12 +45616,10 @@
       "Integrated lifting device",
       "Interchangeable top modules"
     ],
-    "perf": {
-      "payload_kg": 600
-    },
+    "perf": false,
     "origin": "Switzerland",
     "year": 2025,
-    "status": "Available",
+    "status": "Active",
     "released": "2019",
     "height_mm": 1400,
     "width_mm": 600,
@@ -45696,8 +45664,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 90,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Fifth-generation Red Line grid robot that drives across the top of an aluminum cube-storage grid, digging out and delivering bins to workstations for goods-to-person fulfillment. Eight wheels enable five-directional movement; each robot is independently controlled with no single point of failure.",
     "highlights": [
@@ -45707,20 +45675,10 @@
       "~20 h/day operation",
       "Lifts bins up to 36 kg"
     ],
-    "perf": {
-      "max_speed_ms": 3.1,
-      "acceleration_ms2": 0.8,
-      "lift_speed_ms": 1.6,
-      "max_lift_load_kg": 36,
-      "bin_load_kg": 30,
-      "uptime_pct": 99.7,
-      "bins_per_hour": 30,
-      "voltage_vdc": 24,
-      "power_w": 100
-    },
+    "perf": false,
     "origin": "Norway",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "released": "2010",
     "height_mm": 545,
     "width_mm": 700,
@@ -46761,8 +46719,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 82,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Autonomous serving robot from Rainbow Robotics (a KAIST humanoid-lab spin-out) that uses the company's patented grid-free SLAM to localize and navigate without floor markers, carrying food and items to tables in restaurants and hospitality settings.",
     "highlights": [
@@ -46771,13 +46729,10 @@
       "Multi-tray serving",
       "Restaurant & hospitality use"
     ],
-    "perf": {
-      "payload_kg": 30,
-      "navigation": "Grid-free SLAM"
-    },
+    "perf": false,
     "origin": "South Korea",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "released": "2022",
     "height_mm": 1400,
     "width_mm": 500,
@@ -51800,8 +51755,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Multi-Sensing Autonomous Vehicle for indoor intralogistics, built to move larger, heavier goods than conventional AMRs — up to 1.5 tonnes on four lifting units for pallets. Navigates with 360° laser scanners at ±5 mm accuracy, supports hand-gesture control via 3D vision, shows status on side LEDs, and pairs with NEURA's LARA cobot or MAiRA for mobile manipulation.",
     "highlights": [
@@ -51811,16 +51766,10 @@
       "Combines with LARA/MAiRA for manipulation",
       "Fleet-managed"
     ],
-    "perf": {
-      "payload_kg": 1500,
-      "max_speed_ms": 1.5,
-      "positioning_accuracy_mm": 5,
-      "load_current_a": 60,
-      "runtime_h": 10
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2021,
-    "status": "Available",
+    "status": "Active",
     "height_mm": 293,
     "weight_kg": 400,
     "payload_kg": 500,
@@ -52193,8 +52142,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 84,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Mobile robot base built for teleoperation, mobile manipulation and physical-AI research, natively compatible with the Franka Research 3 (FR3) arm. Pre-configured mechanical, electrical and software interfaces integrate it with FR3 Duo setups, and standardized mounting points let researchers add sensors and actuators. Supports 1 kHz control via the Franka Control Interface and is fully integrated with ROS 2.",
     "highlights": [
@@ -52204,14 +52153,10 @@
       "Omnidirectional mobile base",
       "Standardized mounting/interface ports"
     ],
-    "perf": {
-      "control_rate_hz": 1000,
-      "mobility": "Omnidirectional",
-      "companion_arm": "Franka Research 3"
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "released": "2023",
     "ros": "ROS 2",
     "lidar": true,
@@ -52984,8 +52929,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Bin-carrying RoboShuttle robot for high-density tote-to-person storage in narrow-aisle layouts. Lifts totes from mezzanine racking up to ~2.9 m and delivers them to picking stations. Certified 'Best of Intralogistics 2020' by the IFOY award.",
     "highlights": [
@@ -52995,18 +52940,10 @@
       "10-min charge for 2–3 h of work",
       "IFOY 2020 award"
     ],
-    "perf": {
-      "payload_kg": 40,
-      "max_speed_ms": 2,
-      "max_lift_height_mm": 2915,
-      "stop_accuracy_mm": 10,
-      "max_slope_deg": 2.5,
-      "navigation": "Inertial + QR code",
-      "obstacle_detection": "2 m infrared / 3 m laser"
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Available",
+    "status": "Active",
     "released": "2019",
     "height_mm": 2500,
     "width_mm": 702,
@@ -53054,8 +52991,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "P-Series goods-to-person robot that lifts and moves racks and shelves to operators in automated warehouses. Compact body with a fast lifting response and inertial + QR-code navigation; adapts to varied floor and temperature conditions and is reported to cut manual labor by 50–70%.",
     "highlights": [
@@ -53065,14 +53002,10 @@
       "Cuts manual labor 50–70%",
       "E-commerce, retail, 3PL, pharma"
     ],
-    "perf": {
-      "payload_kg": 500,
-      "navigation": "Inertial + QR code",
-      "labor_reduction_pct": "50-70"
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Available",
+    "status": "Active",
     "height_mm": 280,
     "width_mm": 750,
     "depth_mm": 550,
@@ -53116,8 +53049,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Heavy-duty pallet-moving autonomous mobile robot that extends the 6 River / Ocado Mobile Robot System beyond picking, handling cross-docking, bulk-item picking, putaway and palletized inventory moves. Works the floor alongside Chuck under Ocado IQ system-directed orchestration.",
     "highlights": [
@@ -53126,12 +53059,10 @@
       "Pairs with Chuck on the floor",
       "Ocado IQ system-directed"
     ],
-    "perf": {
-      "payload_kg": 1361
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2021,
-    "status": "Available",
+    "status": "Active",
     "released": "2021",
     "payload_kg": 1361,
     "speed_ms": 2,
@@ -53211,8 +53142,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "The heavyweight LocusBot, designed for safe autonomous transport of large and heavy payloads — pallets, pallet-sized containers, cartons, totes and boxes. An industrial-strength chassis and omnidirectional mobility move up to 3,000 lb smoothly across industrial and material-handling facilities, coordinated as part of a multi-bot LocusOne fleet.",
     "highlights": [
@@ -53222,13 +53153,10 @@
       "Handles pallets, cartons and totes",
       "Coordinated multi-bot fleet (LocusOne)"
     ],
-    "perf": {
-      "payload_kg": 1361,
-      "drive": "Omnidirectional"
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "released": "2023",
     "payload_kg": 500,
     "speed_ms": 1.8,
@@ -54836,8 +54764,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Mobile robotic storage-and-picking system: low-profile robots drive beneath mobile racks ('CarryPick shelves'), lift them and carry them to ergonomic pick stations, bringing goods to the operator. Used for automated goods-to-person order fulfillment in e-commerce and healthcare distribution, coordinated by Swisslog's SynQ software.",
     "highlights": [
@@ -54846,12 +54774,10 @@
       "Ergonomic pick stations",
       "SynQ fleet/warehouse software"
     ],
-    "perf": {
-      "function": "Lifts and transports mobile racks to pick stations"
-    },
+    "perf": false,
     "origin": "Switzerland",
     "year": 2015,
-    "status": "Available",
+    "status": "Active",
     "released": "2015",
     "height_mm": 300,
     "width_mm": 800,
@@ -54891,8 +54817,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Hospital automated guided vehicle from the OTSAW–Swisslog Healthcare joint venture that travels predetermined paths to deliver supplies, medication, linens, meals and waste 24/7, freeing staff for patient care. A tricycle drive system and lift deck with photocell sensors give precise container handling in tight spaces, and it integrates with elevators, auto-doors and hospital information systems via the TransCar Management System (TCMS2). 700+ AGVs deployed across 50+ hospitals.",
     "highlights": [
@@ -54902,15 +54828,10 @@
       "Elevator / auto-door / HIS integration",
       "10+ year design lifespan"
     ],
-    "perf": {
-      "payload_kg": 300,
-      "operation": "24/7",
-      "drive": "Tricycle",
-      "fleet_software": "TCMS2"
-    },
+    "perf": false,
     "origin": "Singapore/Switzerland",
     "year": 2018,
-    "status": "Available",
+    "status": "Active",
     "released": "2018",
     "height_mm": 1400,
     "width_mm": 600,
@@ -59048,8 +58969,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Ultra-compact, low-profile 3-tonne mobile platform AGV with ±5 mm positioning precision. Drives underneath tables and loads to lift and transport them along assembly and intralogistics flows. Recognized with a Red Dot Design Award.",
     "highlights": [
@@ -59059,19 +58980,10 @@
       "360° human safety scanner",
       "Red Dot Design Award"
     ],
-    "perf": {
-      "payload_kg": 3000,
-      "max_speed_ms": 1.2,
-      "positioning_precision_mm": 5,
-      "recharge_cycles": 7000,
-      "charge_current_a": 80,
-      "emergency_stops": 5,
-      "lift_stroke_addon_mm": 100,
-      "navigation": "Laser / SLAM / inertial / vision"
-    },
+    "perf": false,
     "origin": "Switzerland",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "released": "2019",
     "payload_kg": 3000,
     "speed_ms": 2,
@@ -59094,7 +59006,8 @@
     "battery_life": "~8 h",
     "charge_time": "~1.4 h",
     "charge_type": "Fast charging up to 80 A",
-    "cycle_life": 7000
+    "cycle_life": 7000,
+    "repeatability": 5
   },
   {
     "id": "aubo-robotics-aubo-mobile-cobot",
@@ -60343,8 +60256,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Collaborative mobile picking robot — resembling a pick cart — that leads warehouse associates through picking, putaway, sorting and returns, navigating autonomously and guiding workers via an 11-inch touchscreen for roughly 2–3× the productivity of manual cart picking. Built by ex-Kiva founders; now the core of the Ocado Mobile Robot System after Ocado's 2023 acquisition. Twice a Red Dot Award winner.",
     "highlights": [
@@ -60354,14 +60267,10 @@
       "Deployed at 100+ facilities",
       "Two Red Dot Awards"
     ],
-    "perf": {
-      "payload_kg": 113,
-      "productivity": "2-3x manual cart",
-      "touchscreen_in": 11
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2017,
-    "status": "Available",
+    "status": "Active",
     "released": "2017",
     "height_mm": 1219,
     "width_mm": 610,
@@ -60409,8 +60318,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Geek+ M-Series moving robots transport materials across the facility with a maximum carrying load of about 1,000 kg (a higher-capacity variant reaches 1,200 kg). They navigate with laser SLAM plus QR-code and other methods for smooth, accurate operation, and deploy easily into existing flat-floored warehouses.",
     "highlights": [
@@ -60419,14 +60328,10 @@
       "Modular, multi-purpose",
       "Deploys into existing warehouses"
     ],
-    "perf": {
-      "payload_kg": 1000,
-      "payload_variant_kg": 1200,
-      "navigation": "Laser SLAM + QR"
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Available",
+    "status": "Active",
     "released": "2019",
     "payload_kg": 300,
     "speed_ms": 2,
@@ -60469,8 +60374,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Rack-climbing tote-to-person shuttle that retrieves totes from vertical storage up to 5 m, 8 m or 11 m and delivers them to pick stations, improving picking efficiency 2–3×. Supports up to ~350 totes/hour/station and connects to conveyors and other Geek+ robots; part of the RoboShuttle solution scaling to 12 m of storage.",
     "highlights": [
@@ -60480,15 +60385,10 @@
       "Up to ~350 totes/hour/station",
       "Conveyor & multi-robot integration"
     ],
-    "perf": {
-      "payload_kg": 40,
-      "storage_heights_m": "5 / 8 / 11",
-      "throughput_totes_hr": 350,
-      "picking_efficiency": "2-3x"
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Available",
+    "status": "Active",
     "released": "2019",
     "payload_kg": 30,
     "speed_ms": 2,
@@ -60527,8 +60427,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Pallet-to-person four-way shuttle for high-density, high-rate storage and retrieval of palletized goods. Four-way horizontal movement through three-dimensional racking with a narrow-body design that cuts aisle footprint by about 40%, supporting both pallet storage/retrieval and piece picking in one system.",
     "highlights": [
@@ -60538,14 +60438,10 @@
       "~40% smaller aisle footprint",
       "Pallet + piece picking in one system"
     ],
-    "perf": {
-      "payload_kg": 1500,
-      "movement": "Four-way horizontal",
-      "aisle_footprint_reduction_pct": 40
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Available",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 1500,
     "speed_ms": 3,
@@ -60586,8 +60482,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Self-driven mobile sortation robots that dynamically sort items and parcels by order logic, making order picking and sortation up to 10× more efficient than manual processes. Robots operate as a coordinated fleet across a sortation floor.",
     "highlights": [
@@ -60596,13 +60492,10 @@
       "Self-driven mobile sorters",
       "Coordinated fleet operation"
     ],
-    "perf": {
-      "payload_kg": 30,
-      "efficiency_gain": "up to 10x"
-    },
+    "perf": false,
     "origin": "China",
     "year": 2018,
-    "status": "Available",
+    "status": "Active",
     "released": "2018",
     "payload_kg": 30,
     "speed_ms": 2,
@@ -60639,8 +60532,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Compact goods-to-person transport robot that carries totes and shelves to picking stations and travels under racks to save aisle space — about 20% faster than comparable robots. Pairs with RoboShuttle and the Robot Arm Picking Station. A vision-only variant — billed as the world's first — uses an Intel RealSense camera with V-SLAM to navigate curved paths without floor markers.",
     "highlights": [
@@ -60650,14 +60543,10 @@
       "Vision-only variant (Intel RealSense V-SLAM)",
       "Pairs with RoboShuttle / Robot Arm Picking Station"
     ],
-    "perf": {
-      "payload_kg": 40,
-      "max_speed_ms": 2.5,
-      "navigation": "Inertial+QR / vision V-SLAM variant"
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Available",
+    "status": "Active",
     "height_mm": 406,
     "payload_kg": 40,
     "speed_ms": 2,
@@ -82916,8 +82805,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Industrial-strength autonomous mobile robot for warehouse material handling, part of the LocusBots family orchestrated by LocusOne. Mecanum wheels give omnidirectional movement and precise positioning, with a compact chassis suited to almost any environment. Sold under Locus's all-inclusive Robots-as-a-Service model.",
     "highlights": [
@@ -82927,13 +82816,9 @@
       "Multi-role: pick, putaway, transport, sortation",
       "Robots-as-a-Service pricing"
     ],
-    "perf": {
-      "payload_kg": 272,
-      "runtime_h": "8-10",
-      "drive": "Mecanum omnidirectional"
-    },
+    "perf": false,
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "weight_kg": 70,
     "battery_life": "8–10 h",
     "origin": "USA",
@@ -82953,7 +82838,8 @@
       "Sortation",
       "Shelf/rack moving",
       "Parts-to-line"
-    ]
+    ],
+    "payload_kg": 272
   },
   {
     "id": "fetch-freight500-2018",
@@ -82970,8 +82856,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Heavy autonomous mobile robot base for cases and smaller palletized loads — carries up to 500 kg on a 1265×838 mm surface (fits EUR6 pallets) through 40-inch-wide aisles. Maps and plans its own routes with dynamic obstacle avoidance and a certified hardware safety system, configured via the FetchCore cloud platform. Now part of Zebra Technologies.",
     "highlights": [
@@ -82981,14 +82867,9 @@
       "Dynamic obstacle avoidance + certified safety",
       "FetchCore cloud fleet software"
     ],
-    "perf": {
-      "payload_kg": 500,
-      "runtime_h": 9,
-      "payload_surface_mm": "1265 x 838",
-      "safety": "ANSI/RIA R15.08 hardware safety"
-    },
+    "perf": false,
     "year": 2018,
-    "status": "Available",
+    "status": "Active",
     "weight_kg": 300,
     "battery_life": "~9 h",
     "origin": "USA",
@@ -83011,7 +82892,8 @@
       "Putaway",
       "Cross-docking",
       "Pallet recycling"
-    ]
+    ],
+    "payload_kg": 1265
   },
   {
     "id": "unity-drive-uda-2022",
@@ -105563,7 +105445,7 @@
     "name": "B1 (Black Line)",
     "brand": "AutoStore",
     "year": 2019,
-    "status": "Available",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Cube-Storage Bin Robot",
     "tags": [
@@ -105575,8 +105457,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 91,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Lighter, faster Black Line grid robot with a cavity design roughly half the footprint of the R5. Uses individual direct-drive wheel motors and a swappable BattPack lithium-ion battery, giving about 75% higher acceleration and ~20% higher bin throughput than the R5, and can carry taller bins.",
     "highlights": [
@@ -105643,12 +105525,7 @@
       "Dense robot clusters",
       "Tall-bin storage"
     ],
-    "perf": {
-      "acceleration_vs_r5_pct": 75,
-      "throughput_vs_r5_pct": 20,
-      "port_bins_per_hour": 650,
-      "max_bin_height_mm": 425
-    },
+    "perf": false,
     "origin": "Norway"
   },
   {
@@ -105656,7 +105533,7 @@
     "name": "Origin",
     "brand": "Locus Robotics",
     "year": 2016,
-    "status": "Available",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Goods-to-Person Picking AMR",
     "tags": [
@@ -105668,8 +105545,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 90,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "The original, category-defining LocusBot — a nimble goods-to-person AMR built for collaborative, high-volume order fulfillment. Works alongside human pickers to roughly double productivity by eliminating walking time, and supports dynamic task-interleaving of picking and putaway. Configurable with multi-level shelving and a range of containers, using LiDAR and vision navigation. Sold via Robots-as-a-Service.",
     "highlights": [
@@ -105734,18 +105611,16 @@
       "Putaway/replenishment",
       "Case/each picking"
     ],
-    "perf": {
-      "payload_kg": 36,
-      "productivity_multiplier": "~2x"
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "payload_kg": 36
   },
   {
     "id": "mir-250",
     "name": "MiR250",
     "brand": "Mobile Industrial Robots",
     "year": 2020,
-    "status": "Available",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Light-Transport AMR",
     "tags": [
@@ -105757,8 +105632,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 90,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Compact, agile autonomous mobile robot from MiR (Teradyne) carrying up to 250 kg at 2 m/s. With a 580×800 mm footprint and ~30 cm height it slips through gaps as narrow as 80 cm and uses lifts and doors autonomously, navigating by laser scanners and 3D cameras under MiR Fleet. Modular tops (Hook, Top Roller, shelf lift) adapt it to many tasks.",
     "highlights": [
@@ -105823,19 +105698,17 @@
       "Cart/rack transport",
       "Lab & light manufacturing"
     ],
-    "perf": {
-      "payload_kg": 250,
-      "max_speed_ms": 2,
-      "min_passage_cm": 80
-    },
-    "origin": "Denmark"
+    "perf": false,
+    "origin": "Denmark",
+    "payload_kg": 250,
+    "speed_ms": 2
   },
   {
     "id": "mir-600",
     "name": "MiR600",
     "brand": "Mobile Industrial Robots",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Pallet-Transport AMR",
     "tags": [
@@ -105847,8 +105720,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "IP52-rated pallet-transport AMR from MiR moving up to 600 kg at 2 m/s — the first IP52-rated AMR on the market, able to withstand dust and water drops for more demanding environments. Designed to ISO 3691-4 safety standards, with modular pallet-lifter and conveyor tops and MiR Fleet orchestration.",
     "highlights": [
@@ -105913,19 +105786,17 @@
       "Manufacturing logistics",
       "Warehouse automation"
     ],
-    "perf": {
-      "payload_kg": 600,
-      "max_speed_ms": 2,
-      "ip_rating": "IP52"
-    },
-    "origin": "Denmark"
+    "perf": false,
+    "origin": "Denmark",
+    "payload_kg": 600,
+    "speed_ms": 2
   },
   {
     "id": "mir-1350",
     "name": "MiR1350",
     "brand": "Mobile Industrial Robots",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Heavy Pallet-Transport AMR",
     "tags": [
@@ -105937,8 +105808,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "MiR's most powerful AMR, moving loaded pallets and heavy goods up to 1,350 kg on a 1,304×864 mm load surface. IP52-rated with 13 TÜV-certified safety features and ISO 3691-4 compliance, it pairs pallet-lifter tops with MiR Fleet for autonomous heavy intralogistics.",
     "highlights": [
@@ -106003,20 +105874,17 @@
       "Dock-to-staging",
       "Heavy intralogistics"
     ],
-    "perf": {
-      "payload_kg": 1350,
-      "max_speed_ms": 1.5,
-      "load_surface_mm": "1304 x 864",
-      "safety_features": "13 TÜV-certified"
-    },
-    "origin": "Denmark"
+    "perf": false,
+    "origin": "Denmark",
+    "payload_kg": 1350,
+    "speed_ms": 1.5
   },
   {
     "id": "otto-100",
     "name": "OTTO 100",
     "brand": "OTTO Motors",
     "year": 2021,
-    "status": "Available",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Light AMR",
     "tags": [
@@ -106028,8 +105896,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Strong, agile light-duty AMR from OTTO Motors (Rockwell Automation) that moves boxes, bins and carts up to 150 kg at 2 m/s through person-to-person workflows. An integrated lift works with carts, laser and 3D-camera sensors enable autonomous navigation, and the rugged body is built to shrug off forklift collisions.",
     "highlights": [
@@ -106094,19 +105962,17 @@
       "Work-in-progress transport",
       "Cart/rack moves"
     ],
-    "perf": {
-      "payload_kg": 150,
-      "max_speed_ms": 2,
-      "footprint_mm": "740 x 550 x 308"
-    },
-    "origin": "Canada"
+    "perf": false,
+    "origin": "Canada",
+    "payload_kg": 150,
+    "speed_ms": 2
   },
   {
     "id": "otto-600",
     "name": "OTTO 600",
     "brand": "OTTO Motors",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Mid-Payload AMR",
     "tags": [
@@ -106118,8 +105984,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Tough, nimble mid-payload AMR from OTTO Motors moving up to 600 kg through high-traffic, tight spaces. The narrowest footprint in its class with an all-metal IP54 body; two forward cameras plus dual 360° corner LiDARs handle perception, and rapid-access drawers make single-person servicing simple.",
     "highlights": [
@@ -106184,19 +106050,17 @@
       "Pallet & tote moves",
       "Manufacturing supply"
     ],
-    "perf": {
-      "payload_kg": 600,
-      "max_speed_ms": 1.4,
-      "footprint_mm": "1050 x 700 x 320"
-    },
-    "origin": "Canada"
+    "perf": false,
+    "origin": "Canada",
+    "payload_kg": 600,
+    "speed_ms": 1.4
   },
   {
     "id": "otto-1500",
     "name": "OTTO 1500",
     "brand": "OTTO Motors",
     "year": 2015,
-    "status": "Available",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Heavy AMR",
     "tags": [
@@ -106208,8 +106072,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Heavy-duty workhorse AMR from OTTO Motors that moves up to 1,900 kg at top speeds of 2 m/s, even around turns, in demanding industrial environments. Built on a proven chassis introduced in 2015 with 4M+ hours of operational runtime, it supports a wide range of attachments and a modular top panel for quick servicing.",
     "highlights": [
@@ -106274,20 +106138,17 @@
       "Industrial logistics",
       "Line-to-warehouse transport"
     ],
-    "perf": {
-      "payload_kg": 1900,
-      "max_speed_ms": 2,
-      "runtime_hours_fleet": "4M+ cumulative",
-      "compliance": "CE, ANSI/RIA R15.08-1, ISO 12100/13849-1/3691-4"
-    },
-    "origin": "Canada"
+    "perf": false,
+    "origin": "Canada",
+    "payload_kg": 1900,
+    "speed_ms": 2
   },
   {
     "id": "amazon-proteus",
     "name": "Proteus",
     "brand": "Amazon Robotics",
     "year": 2022,
-    "status": "Deployed (internal)",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Autonomous Cart-Moving AMR",
     "tags": [
@@ -106299,8 +106160,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Amazon's first fully autonomous mobile robot, built to operate in the same open floor space as employees rather than caged areas. It autonomously lifts and moves wheeled GoCarts of packages through fulfillment and sort centers, projecting a green light ahead and stopping if a person steps into its path. Named after a moon of Neptune; used internally across Amazon's network (not sold commercially).",
     "highlights": [
@@ -106365,10 +106226,7 @@
       "Fulfillment-center logistics",
       "Sort-center automation"
     ],
-    "perf": {
-      "autonomy": "Fully autonomous",
-      "safety": "Projected light field, human-collaborative"
-    },
+    "perf": false,
     "origin": "USA"
   },
   {
@@ -106376,7 +106234,7 @@
     "name": "Hercules",
     "brand": "Amazon Robotics",
     "year": 2019,
-    "status": "Deployed (internal)",
+    "status": "Active",
     "cat": "AGV/AMR",
     "sub": "Inventory-Pod Drive Unit",
     "tags": [
@@ -106388,8 +106246,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Amazon Robotics drive unit — the modern successor to the Kiva drives — that slides under inventory pods and lifts up to ~567 kg (1,250 lb) to bring goods to stationary pickers. A forward-facing 3D camera identifies people, pods and other robots for safe, fast decisions, and thousands coordinate per site as a fleet under centralized planning. First widely deployed mobile robot certified to Safety Integrity Level (SIL) 2.",
     "highlights": [
@@ -106454,11 +106312,8 @@
       "Order picking support",
       "Warehouse automation"
     ],
-    "perf": {
-      "payload_kg": 567,
-      "safety": "SIL 2 certified",
-      "navigation": "Fiducial grid + centralized planning"
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "payload_kg": 567
   }
 ]
