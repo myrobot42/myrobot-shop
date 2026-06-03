@@ -96500,7 +96500,7 @@
     "origin": "China",
     "img": "",
     "score": 75,
-    "desc": "China's first Mars lander, part of the Tianwen-1 mission combining orbiter, lander, and rover. Soft-landed at Utopia Planitia on 15 May 2021 and deployed the Zhurong rover, making China the third nation (after the USA and USSR) to soft-land on Mars and the first to attempt orbiter, lander, and rover in a single mission.",
+    "desc": "China's Tianwen-1 lander (2021) delivered the Zhurong rover to Utopia Planitia on Mars, making China the second nation to operate a rover on the Martian surface. It used a combination of aeroshell, parachute and retro-propulsion with hazard-avoidance hovering for landing.",
     "price": "POA",
     "status": "Active",
     "weight_kg": 1300,
@@ -96543,7 +96543,14 @@
     "website": "http://www.cnsa.gov.cn/",
     "chipset": "Chinese SPARC V8 rad-hardened processor (classified specifics)",
     "cpu_arch": "SPARC V8",
-    "rtos": "Custom CASC flight software"
+    "rtos": "Custom CASC flight software",
+    "os": "CNSA",
+    "release_year": 2021,
+    "use_cases": [
+      "Mars soft landing",
+      "Rover deployment",
+      "Surface science"
+    ]
   },
   {
     "id": "huygens-probe",
@@ -96964,10 +96971,10 @@
     "year": 2018,
     "origin": "Japan",
     "img": "",
-    "score": 87,
-    "desc": "First robot to successfully operate on an asteroid surface. Cylindrical hopping rover deployed by Hayabusa 2 onto asteroid Ryugu on 21 September 2018. Uses internal torquers (flywheels) to hop in Ryugu's micro-gravity environment (1/80,000th of Earth). Returned 18 hops worth of surface imagery and temperature data.",
+    "score": 75,
+    "desc": "JAXA's MINERVA-II-1A (Rover-1A) was one of two tiny hopping rovers deployed from Hayabusa2 onto asteroid Ryugu in 2018 - the first rovers to successfully operate on an asteroid surface. It moved by hopping in the micro-gravity and returned surface images.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 1.1,
     "tags": [
       "asteroid",
@@ -97014,7 +97021,14 @@
       "Accelerometer"
     ],
     "power_source": "Solar cells",
-    "website": "https://global.jaxa.jp/projects/sas/hayabusa2/"
+    "website": "https://global.jaxa.jp/projects/sas/hayabusa2/",
+    "os": "JAXA",
+    "release_year": 2018,
+    "use_cases": [
+      "Asteroid surface exploration",
+      "Hopping locomotion",
+      "Imaging"
+    ]
   },
   {
     "id": "minerva-ii-1b",
@@ -97025,10 +97039,10 @@
     "year": 2018,
     "origin": "Japan",
     "img": "",
-    "score": 86,
-    "desc": "Companion hopping rover to MINERVA-II-1A. Deployed alongside its twin onto asteroid Ryugu by Hayabusa 2 on 21 September 2018, returning surface imagery and temperature data from the asteroid surface. Identical hardware to 1A.",
+    "score": 75,
+    "desc": "JAXA's MINERVA-II-1B (Rover-1B) was the second of the paired hopping rovers released from Hayabusa2 onto asteroid Ryugu in 2018, working alongside Rover-1A to image the surface and demonstrate hopping mobility in extremely low gravity.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "weight_kg": 1.1,
     "tags": [
       "asteroid",
@@ -97074,7 +97088,14 @@
       "Accelerometer"
     ],
     "power_source": "Solar cells",
-    "website": "https://global.jaxa.jp/projects/sas/hayabusa2/"
+    "website": "https://global.jaxa.jp/projects/sas/hayabusa2/",
+    "os": "JAXA",
+    "release_year": 2018,
+    "use_cases": [
+      "Asteroid surface exploration",
+      "Hopping locomotion",
+      "Imaging"
+    ]
   },
   {
     "id": "mascot",
@@ -105164,7 +105185,7 @@
     "year": 2013,
     "origin": "China",
     "score": 75,
-    "desc": "First Chinese spacecraft to soft-land on the Moon and first soft landing on the Moon since the Soviet Luna 24 in 1976. Landed in Mare Imbrium on 14 December 2013, deploying the Yutu rover. The lander remained operational for over 7 years, far beyond its 1-year design life, conducting astronomy from the lunar surface with an ultraviolet telescope.",
+    "desc": "China's Chang'e 3 lander (2013) achieved the first soft lunar landing since 1976, touching down in Mare Imbrium and deploying the Yutu rover. It carried cameras, an extreme-ultraviolet telescope and ground-penetrating instruments, operating for years beyond its design life.",
     "price": "POA",
     "status": "Active",
     "announced": "2008",
@@ -105200,7 +105221,14 @@
     "rating": 4,
     "chipset": "SPARC V8 rad-hardened (Chinese-developed)",
     "cpu_arch": "SPARC V8",
-    "rtos": "Custom CASC flight software"
+    "rtos": "Custom CASC flight software",
+    "os": "CNSA",
+    "release_year": 2013,
+    "use_cases": [
+      "Lunar soft landing",
+      "Rover deployment",
+      "Surface science"
+    ]
   },
   {
     "id": "change-4-lander",
@@ -105211,7 +105239,7 @@
     "year": 2019,
     "origin": "China",
     "score": 75,
-    "desc": "First spacecraft to soft-land on the far side of the Moon. Touched down in Von Kármán crater within the South Pole-Aitken Basin on 3 January 2019. Deployed the Yutu-2 rover. Communicates with Earth via the Queqiao relay satellite at the Earth-Moon L2 Lagrange point — a first-of-its-kind communication architecture for lunar far-side operations.",
+    "desc": "China's Chang'e 4 lander (2019) made the first-ever soft landing on the far side of the Moon, in Von Karman crater, relaying data via the Queqiao relay satellite and deploying the Yutu-2 rover for the longest-running lunar surface mission.",
     "price": "POA",
     "status": "Active",
     "announced": "2013",
@@ -105245,7 +105273,14 @@
     "rating": 4,
     "chipset": "SPARC V8 rad-hardened (Chinese-developed)",
     "cpu_arch": "SPARC V8",
-    "rtos": "Custom CASC flight software"
+    "rtos": "Custom CASC flight software",
+    "os": "CNSA",
+    "release_year": 2019,
+    "use_cases": [
+      "Far-side lunar landing",
+      "Rover deployment",
+      "Surface & subsurface science"
+    ]
   },
   {
     "id": "change-5-lander",
@@ -105708,10 +105743,10 @@
     "sub": "Commercial Lunar Lander",
     "year": 2025,
     "origin": "Japan",
-    "score": 74,
-    "desc": "ispace's second lunar landing attempt, carrying the Tenacious micro-rover (built by ispace's Luxembourg subsidiary — the first European rover to reach the Moon). Launched January 2025 on the same SpaceX Falcon 9 as Firefly's Blue Ghost. Took a 4.5-month low-energy lunar transfer. Attempted landing in Mare Frigoris on 5 June 2025 but failed due to a laser rangefinder issue causing freefall from ~5 km altitude.",
+    "score": 75,
+    "desc": "ispace's Hakuto-R Mission 2 (Resilience, 2025) was a Japanese commercial lunar lander carrying the Tenacious micro-rover. Like Mission 1 (2023), it reached lunar orbit but did not achieve a successful soft landing, as ispace continues developing commercial cislunar transport.",
     "price": "POA",
-    "status": "Lost",
+    "status": "Active",
     "announced": "2022",
     "released": "2025-06-05",
     "also_known_as": "Resilience, M2, ispace Mission 2, Hakuto-R-2",
@@ -105719,7 +105754,7 @@
       "Japan"
     ],
     "operating_agency": "ispace, inc. (commercial)",
-    "made_in": "Japan (Tokyo)",
+    "made_in": "Japan",
     "height_mm": 2300,
     "width_mm": 2600,
     "depth_mm": 2600,
@@ -105760,7 +105795,13 @@
     ],
     "website": "https://ispace-inc.com/missions",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "ispace",
+    "release_year": 2025,
+    "use_cases": [
+      "Commercial lunar landing",
+      "Micro-rover deployment"
+    ]
   },
   {
     "id": "astrobotic-griffin-mission-1",
@@ -105770,17 +105811,17 @@
     "sub": "Commercial Lunar Lander",
     "year": 2026,
     "origin": "USA",
-    "score": 78,
-    "desc": "Astrobotic's second commercial lunar lander and first using their larger Griffin platform. Originally designed to carry NASA's VIPER rover, but NASA cancelled VIPER's flight on Griffin in 2024 to manage costs. Griffin Mission One will now fly with mass simulator and other payloads. Targeting late 2026 launch on a Falcon Heavy. 6× the payload capacity of Peregrine.",
+    "score": 75,
+    "desc": "Astrobotic's Griffin Mission 1 is a large commercial lunar lander developed under NASA's CLPS programme. Originally tasked with delivering NASA's VIPER rover (later removed by NASA), Griffin is one of the biggest US commercial landers, designed to carry substantial payloads to the lunar surface.",
     "price": "POA",
-    "status": "Development",
+    "status": "Active",
     "announced": "2020",
     "also_known_as": "GM1, Griffin-1",
     "regions": [
       "USA"
     ],
     "operating_agency": "Astrobotic Technology (commercial)",
-    "made_in": "USA (Pittsburgh, PA)",
+    "made_in": "USA",
     "height_mm": 3700,
     "width_mm": 5200,
     "depth_mm": 4500,
@@ -105819,7 +105860,13 @@
     ],
     "website": "https://www.astrobotic.com/lunar-delivery/griffin/",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "Astrobotic",
+    "release_year": 2025,
+    "use_cases": [
+      "Commercial lunar delivery",
+      "Payload landing"
+    ]
   },
   {
     "id": "jaxa-int-ball-2017",
@@ -106015,8 +106062,8 @@
     "sub": "Satellite Servicer",
     "year": 2020,
     "origin": "USA",
-    "score": 92,
-    "desc": "Mission Extension Vehicle 2. Second commercial satellite servicer, docked with Intelsat 10-02 on 12 April 2021. Demonstrated the first docking with a fully active operational satellite in geostationary orbit (MEV-1 had docked with a graveyard-orbit satellite first). 5-year service contract.",
+    "score": 75,
+    "desc": "Northrop Grumman's Mission Extension Vehicle-2 (MEV-2) docked with the Intelsat 10-02 communications satellite in 2021 to take over station-keeping and attitude control, extending the client's operational life - the second operational commercial life-extension servicer after MEV-1.",
     "price": "POA",
     "status": "Active",
     "announced": "2017",
@@ -106027,7 +106074,7 @@
       "Global GEO"
     ],
     "operating_agency": "SpaceLogistics LLC (Northrop Grumman subsidiary)",
-    "made_in": "USA (Northrop Grumman)",
+    "made_in": "USA",
     "height_mm": 5000,
     "diameter_mm": 2300,
     "weight_kg": 2326,
@@ -106064,7 +106111,14 @@
     ],
     "website": "https://www.northropgrumman.com/space/space-logistics-services",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "SpaceLogistics",
+    "release_year": 2020,
+    "use_cases": [
+      "Satellite life extension",
+      "Orbital station-keeping",
+      "In-orbit servicing"
+    ]
   },
   {
     "id": "northrop-mrv-mission-robotic-vehicle",
@@ -106074,10 +106128,10 @@
     "sub": "Satellite Servicer",
     "year": 2025,
     "origin": "USA",
-    "score": 89,
-    "desc": "Next-generation satellite servicer succeeding the MEV series. Equipped with a robotic arm developed by DARPA (formerly RSGS program) to install Mission Extension Pods (MEPs) on client satellites, perform inspections, and conduct repair operations. Six undisclosed commercial customers signed up at announcement. Launching on a U.S. rocket due to ITAR restrictions on DARPA payload.",
+    "score": 75,
+    "desc": "Northrop Grumman's Mission Robotic Vehicle (MRV) is a next-generation servicing spacecraft equipped with robotic arms (developed with DARPA) to inspect client satellites and install Mission Extension Pods, enabling a scalable in-orbit life-extension service rather than one dedicated servicer per client.",
     "price": "POA",
-    "status": "Development",
+    "status": "Active",
     "announced": "2021",
     "also_known_as": "MRV, RSGS (legacy name)",
     "regions": [
@@ -106120,7 +106174,13 @@
     ],
     "website": "https://www.northropgrumman.com/space/space-logistics-services",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "SpaceLogistics",
+    "use_cases": [
+      "In-orbit servicing",
+      "Installing Mission Extension Pods",
+      "Robotic inspection & repair"
+    ]
   },
   {
     "id": "northrop-mission-extension-pods",
@@ -106130,10 +106190,10 @@
     "sub": "Satellite Servicer",
     "year": 2025,
     "origin": "USA",
-    "score": 87,
-    "desc": "Smaller, less expensive life-extension pods that only provide orbit control (not full attitude control like MEVs). Installed by the Mission Robotic Vehicle (MRV) on customer satellites. Designed as a more economical alternative to MEV docking, enabling multi-customer servicing per MRV deployment.",
+    "score": 75,
+    "desc": "Northrop Grumman's Mission Extension Pods (MEPs) are small propulsion 'jetpacks' that the Mission Robotic Vehicle attaches to a client satellite to provide years of additional station-keeping - a lighter, lower-cost alternative to a full Mission Extension Vehicle per satellite.",
     "price": "POA",
-    "status": "Development",
+    "status": "Active",
     "announced": "2021",
     "also_known_as": "MEPs, Mission Extension Pod",
     "regions": [
@@ -106169,7 +106229,12 @@
     ],
     "website": "https://www.northropgrumman.com/space/space-logistics-services",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "SpaceLogistics",
+    "use_cases": [
+      "Satellite life extension",
+      "Propulsion augmentation"
+    ]
   },
   {
     "id": "nasa-osam-1-restore-l",
@@ -106179,17 +106244,17 @@
     "sub": "Satellite Servicer",
     "year": 2026,
     "origin": "USA",
-    "score": 80,
-    "desc": "On-orbit Servicing, Assembly, and Manufacturing 1 (formerly Restore-L). NASA/Maxar technology demonstrator designed to robotically refuel the Landsat 7 imaging satellite in low Earth orbit. Project was paused in 2024 due to technical and budget issues but core technologies feed into future NASA servicing programs. Would be the first robotic refueling of a satellite that wasn't designed to be refueled.",
+    "score": 75,
+    "desc": "NASA's OSAM-1 (On-orbit Servicing, Assembly and Manufacturing-1, formerly Restore-L) was designed to robotically rendezvous with and refuel the Landsat 7 satellite and demonstrate in-space assembly/manufacturing using dexterous robotic arms. NASA cancelled the project in 2024 amid cost and technical challenges.",
     "price": "POA",
-    "status": "Development",
+    "status": "Active",
     "announced": "2016",
     "also_known_as": "On-orbit Servicing Assembly and Manufacturing 1, Restore-L (legacy)",
     "regions": [
       "USA"
     ],
     "operating_agency": "NASA Goddard / Maxar Technologies",
-    "made_in": "USA (Maxar Technologies)",
+    "made_in": "USA",
     "weight_kg": 2200,
     "chipset": "BAE Systems RAD750",
     "cpu_arch": "PowerPC 750",
@@ -106228,7 +106293,14 @@
     ],
     "website": "https://www.nasa.gov/mission/on-orbit-servicing-assembly-and-manufacturing-1/",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "NASA",
+    "release_year": 2020,
+    "use_cases": [
+      "On-orbit refueling demo",
+      "Robotic servicing",
+      "In-space assembly & manufacturing"
+    ]
   },
   {
     "id": "nasa-robonaut-2",
@@ -106524,10 +106596,10 @@
     "sub": "Debris Remover",
     "year": 2021,
     "origin": "Japan",
-    "score": 87,
-    "desc": "End-of-Life Service by Astroscale - demonstration. World's first commercial mission to demonstrate orbital debris removal technology. Launched 22 March 2021 with a servicer + replica client satellite stacked together. Successfully demonstrated repeated magnetic capture/release operations, autonomous rendezvous, and proximity operations. Concluded mission 24 January 2024 after de-orbit operations.",
+    "score": 75,
+    "desc": "Astroscale's ELSA-d (End-of-Life Services by Astroscale-demonstration, 2021) was a two-spacecraft mission - a servicer and a client - that demonstrated repeated magnetic capture and release of a client satellite in orbit, proving core technologies for future debris removal.",
     "price": "POA",
-    "status": "Decommissioned",
+    "status": "Active",
     "announced": "2018",
     "released": "2021-03-22",
     "also_known_as": "End-of-Life Service by Astroscale - demonstration",
@@ -106536,7 +106608,7 @@
       "UK"
     ],
     "operating_agency": "Astroscale Holdings",
-    "made_in": "Japan / UK (Astroscale)",
+    "made_in": "Japan / UK",
     "weight_kg": 175,
     "chipset": "Standard commercial space-grade SoC",
     "rtos": "Custom Astroscale flight software",
@@ -106573,7 +106645,14 @@
     ],
     "website": "https://www.astroscale.com/en/missions/elsa-d",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "Astroscale",
+    "release_year": 2021,
+    "use_cases": [
+      "Debris-removal technology demo",
+      "Magnetic capture",
+      "End-of-life servicing"
+    ]
   },
   {
     "id": "astroscale-adras-j-2024",
@@ -106583,8 +106662,8 @@
     "sub": "Debris Remover",
     "year": 2024,
     "origin": "Japan",
-    "score": 90,
-    "desc": "Active Debris Removal by Astroscale-Japan. World's first commercial spacecraft to rendezvous with and characterize an actual piece of space debris. Approached the H-IIA upper stage rocket body left in orbit since 2009. Launched 18 February 2024 and successfully captured close-up images of the tumbling debris from just 50 meters away, validating proximity operations on uncooperative targets.",
+    "score": 75,
+    "desc": "Astroscale's ADRAS-J (Active Debris Removal by Astroscale-Japan, 2024) rendezvoused with and closely inspected a derelict Japanese H-IIA rocket upper stage - the first commercial mission to safely approach and survey a large piece of real space debris, a key step toward future removal.",
     "price": "POA",
     "status": "Active",
     "announced": "2020",
@@ -106594,7 +106673,7 @@
       "Japan"
     ],
     "operating_agency": "Astroscale Japan / JAXA",
-    "made_in": "Japan (Astroscale Japan)",
+    "made_in": "Japan",
     "weight_kg": 150,
     "chipset": "Space-grade SoC",
     "rtos": "Custom Astroscale flight software",
@@ -106628,7 +106707,14 @@
     ],
     "website": "https://www.astroscale.com/en/missions/adras-j",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "Astroscale",
+    "release_year": 2024,
+    "use_cases": [
+      "Active debris removal",
+      "Rendezvous & proximity ops",
+      "Derelict-object inspection"
+    ]
   },
   {
     "id": "astroscale-elsa-m-2026",
@@ -106638,10 +106724,10 @@
     "sub": "Debris Remover",
     "year": 2026,
     "origin": "United Kingdom",
-    "score": 84,
-    "desc": "End-of-Life Service by Astroscale - Multi-client. Commercial debris removal servicer designed to capture and de-orbit multiple defunct satellites in a single mission. Partnered with OneWeb under ESA's Sunrise Programme. Will demonstrate operational debris removal for the OneWeb constellation, with a vision to make debris removal routine by 2030.",
+    "score": 75,
+    "desc": "Astroscale's ELSA-M is a commercial debris-removal servicer designed to capture and de-orbit multiple defunct satellites in a single mission, building on ELSA-d to provide an operational end-of-life service for satellite operators.",
     "price": "POA",
-    "status": "Development",
+    "status": "Active",
     "announced": "2022",
     "also_known_as": "End-of-Life Service Multi",
     "regions": [
@@ -106649,7 +106735,7 @@
       "Europe"
     ],
     "operating_agency": "Astroscale UK / OneWeb / ESA",
-    "made_in": "UK (Astroscale Ltd, Harwell)",
+    "made_in": "UK / Japan",
     "rtos": "Custom Astroscale flight software",
     "target_body": "Low Earth orbit (OneWeb constellation)",
     "mission_type": "Multi-target commercial debris remover",
@@ -106678,7 +106764,14 @@
     ],
     "website": "https://www.astroscale.com/en/missions/elsa-m",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "Astroscale",
+    "release_year": 2026,
+    "use_cases": [
+      "Commercial debris removal",
+      "Multi-client de-orbiting",
+      "End-of-life servicing"
+    ]
   },
   {
     "id": "clearspace-1-2026",
@@ -106688,10 +106781,10 @@
     "sub": "Debris Remover",
     "year": 2026,
     "origin": "Switzerland",
-    "score": 83,
-    "desc": "First mission to remove an existing piece of space debris from orbit. Swiss-led, ESA-backed mission designed to capture and de-orbit a defunct VESPA (Vega Secondary Payload Adapter) using a four-armed robotic capture system. Originally targeting 2025 launch, now targeting 2026. €86 million contract. The VESPA target is a ~100 kg conical object left by Vega's 2013 second flight.",
+    "score": 75,
+    "desc": "ClearSpace-1 is an ESA-contracted active-debris-removal mission led by Swiss startup ClearSpace, designed to rendezvous with and capture a derelict payload adapter using a four-arm tentacle-like capture mechanism, then de-orbit it - one of the first dedicated debris-capture missions.",
     "price": "POA",
-    "status": "Development",
+    "status": "Active",
     "announced": "2019",
     "also_known_as": "ClearSpace 1",
     "regions": [
@@ -106699,7 +106792,7 @@
       "Europe"
     ],
     "operating_agency": "ClearSpace SA / ESA",
-    "made_in": "Switzerland (ClearSpace SA, EPFL spinoff)",
+    "made_in": "Switzerland",
     "weight_kg": 500,
     "rtos": "Custom ClearSpace flight software",
     "reach_mm": 1000,
@@ -106735,7 +106828,13 @@
     ],
     "website": "https://clearspace.today/",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "os": "ClearSpace",
+    "release_year": 2026,
+    "use_cases": [
+      "Active debris removal",
+      "Robotic capture of derelict object"
+    ]
   },
   {
     "id": "autostore-b1",
