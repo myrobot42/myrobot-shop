@@ -48796,36 +48796,28 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Industrial-focused humanoid robot capable of precise tasks like bolt tightening, vehicle inspections, and laboratory experiments. Equipped with RGBD camera, LiDAR sensors, and modular components for various scenarios.",
+    "desc": "AGIBOT's RAISE A1 (Aug 2023) was the company's first humanoid - a 175 cm, 53 kg, 49-DOF industrial biped that walks at ~7 km/h and handles loads up to 80 kg. Equipped with RGB-D and LiDAR sensors and modular components, it targets automotive, 3C-manufacturing, logistics and laboratory tasks like bolt-tightening and vehicle inspection.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
-    "released": "2024",
-    "height_mm": 1700,
-    "weight_kg": 55,
-    "dof": 42,
+    "status": "Active",
+    "released": 2023,
+    "height_mm": 1750,
+    "weight_kg": 53,
+    "dof": 49,
     "lidar": true,
     "depth_sensing": true,
     "cameras": "RGBD camera system",
     "imu": true,
     "ros": true,
     "use_cases": [
-      "Industrial assembly",
-      "Quality inspection",
-      "Laboratory automation",
-      "Manufacturing tasks",
-      "Bolt tightening",
-      "Vehicle inspection"
+      "Industrial manipulation",
+      "Automotive / 3C manufacturing",
+      "Lab & inspection"
     ],
     "manufacturer_url": "https://www.agibot.com",
-    "payload_kg": 5,
+    "payload_kg": 80,
     "reach_mm": 650,
     "battery_life": "8 hours",
     "wifi": true,
@@ -48835,7 +48827,10 @@
       "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdfkl8apl1vibe0nb16h.png",
       "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1b69o4c13sbtmlc7bi.png",
       "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1kebdcnmra8ppodfl.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "speed_ms": 1.9
   },
   {
     "id": "agibot-agibot-c5-juechen-",
@@ -48894,30 +48889,24 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "1.31 m tall, 35 kg humanoid robot with 25 degrees of freedom. Features multimodal interaction including facial recognition, voice, and gestures. Ideal for education, entertainment, and research applications.",
+    "desc": "AGIBOT's Lingxi X2 is a compact half-size humanoid (~1.31 m, ~35 kg, ~27-31 DOF) built for education, research, entertainment and service. Agile enough to walk, run, dance and ride a bicycle, it uses the AimDK_X2 developer kit with AGIBOT's WorkGPT AI and GO-1 foundation model.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
-    "released": "2023",
+    "status": "Active",
+    "released": 2025,
     "height_mm": 1310,
     "weight_kg": 35,
-    "dof": 25,
+    "dof": 28,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Multiple cameras for facial recognition and vision",
     "imu": true,
     "use_cases": [
-      "Education",
-      "Entertainment",
-      "Research",
-      "Human-robot interaction"
+      "Education & research",
+      "Entertainment & events",
+      "Human-facing service"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "depth_sensing": true,
@@ -48927,7 +48916,9 @@
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/6/-/6-2.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/1/-/1-2.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/5/-/5-2.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1"
   },
   {
     "id": "agibot-agibot-a2-max",
@@ -49060,17 +49051,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Industrial-grade wheeled humanoid with 7-DoF force-controlled arms, IP42 protection, and multimodal perception. Designed for precision assembly, factory automation, and interactive tasks. Features 26 total degrees of freedom and sub-millimeter assembly capabilities.",
+    "desc": "AGIBOT's G2 is an industrial wheeled humanoid introduced in 2025 for mobile manipulation and logistics, pairing a humanoid upper body with a wheeled base for stable, long-duty operation in commercial and industrial settings.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
+    "status": "Active",
     "height_mm": 1650,
     "weight_kg": 85,
     "dof": 26,
@@ -49083,17 +49069,18 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Precision assembly",
-      "Factory automation",
-      "Manufacturing",
-      "Quality inspection",
-      "Material handling"
+      "Industrial automation",
+      "Wheeled mobile manipulation",
+      "Logistics"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "gallery": [
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-2.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-3.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "released": 2025
   },
   {
     "id": "agibot-agibot-x2-n",
@@ -49107,21 +49094,16 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Cutting-edge humanoid with unique hybrid locomotion system, seamlessly transitioning between bipedal walking and wheeled movement using integrated foot wheels. Suitable for logistics, search-and-rescue, and industrial automation.",
+    "desc": "AGIBOT's Lingxi X2-N is the terrain-adaptive variant of the compact X2 humanoid, tuned for more robust locomotion across varied surfaces while keeping the ~1.31 m agile form factor and AimDK_X2 developer ecosystem.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "In development",
-    "height_mm": 1700,
-    "weight_kg": 65,
+    "status": "Active",
+    "height_mm": 1310,
+    "weight_kg": 35,
     "speed_ms": 1.5,
-    "dof": 43,
+    "dof": 28,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
@@ -49130,11 +49112,9 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "logistics",
-      "warehouse automation",
-      "search and rescue",
-      "industrial inspection",
-      "delivery services"
+      "Terrain-adaptive locomotion",
+      "Research & service",
+      "Entertainment"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "gallery": [
@@ -49142,7 +49122,10 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258692/robots/agibot-x2-n-by-agibot/l9kzkm0r0neg9jstj6tx.webp?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258692/robots/agibot-x2-n-by-agibot/v4eczriflsmhyfseamb4.webp?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258690/robots/agibot-x2-n-by-agibot/mxxrvt5xstlqbqcdxgai.webp?cache=604800"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "released": 2025
   },
   {
     "id": "agibot-agibot-a2-w",
@@ -49202,26 +49185,19 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Cost-effective humanoid robot for entertainment and commercial performance sector. Features multi-robot fleet control, unrestricted choreography capabilities, 7x2DoF arms, 6x2DoF legs, 2DoF head, and 6x2DoF dexterous hands. Manufactured under automotive-grade production principles.",
+    "desc": "AGIBOT's A2 Lite is the cost-efficient service member of the full-size Yuanzheng A2 family, with 23 DOF, a simplified hand and Wi-Fi interaction but no LiDAR/RGB-D, aimed at affordable human-robot-interaction roles such as reception, guidance and exhibition presentations.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
-    "height_mm": 1700,
+    "status": "Active",
+    "height_mm": 1750,
     "weight_kg": 55,
-    "dof": 30,
+    "dof": 23,
     "use_cases": [
-      "Entertainment performances",
-      "Commercial demonstrations",
-      "Theme parks",
-      "Events and exhibitions",
-      "Dance performances"
+      "Reception & guidance",
+      "Marketing & exhibitions",
+      "Cost-efficient HRI"
     ],
     "battery_life": "2-4 hours",
     "charge_time": "2 hours",
@@ -49237,7 +49213,11 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329158/robots/agibot-a2-lite-by-agibot/n4tzcpdaak7amrwikxuf.jpg?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329162/robots/agibot-a2-lite-by-agibot/u8iuvs2ysprl7bcmltnn.jpg?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329184/robots/agibot-a2-lite-by-agibot/adivu5l1bdfqiqzqm8xv.jpg?cache=604800"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "lidar": false,
+    "released": 2024
   },
   {
     "id": "agibot-agibot-a2-ultra",
@@ -49251,20 +49231,15 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Full-size humanoid robot for commercial applications including autonomous reception, route guidance, customer service, and entertainment. Features 40+ degrees of freedom, stands 169-175cm tall, weighs 69-85kg. Used for enterprise service operations, hotels, malls, corporate campuses.",
+    "desc": "AGIBOT's A2 Ultra is the perception-rich variant of the full-size Yuanzheng A2, with 40 DOF, dexterous hands and a sensor stack of 3D LiDAR, RGB-D and multiple cameras for mapping, obstacle awareness and crowd-safe audience interaction in service and research deployments.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
-    "released": "2024",
-    "height_mm": 1720,
-    "weight_kg": 77,
+    "status": "Active",
+    "released": 2024,
+    "height_mm": 1750,
+    "weight_kg": 55,
     "dof": 40,
     "battery_life": "8-12 hours",
     "wifi": true,
@@ -49274,13 +49249,9 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Reception services",
-      "Customer service",
-      "Route guidance",
-      "Entertainment",
-      "Hotel services",
-      "Mall assistance",
-      "Corporate campus operations"
+      "Perception-rich service",
+      "Reception & exhibitions",
+      "Research"
     ],
     "gallery": [
       "https://www.agibot.com/public/static/index/en/images/A2_Ultra/20260113-110338.png",
@@ -49288,7 +49259,9 @@
       "https://www.agibot.com/public/static/index/en/images/A2_Ultra/A2Ultra_Five-img3.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a2-ultra-1.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a2-ultra-4.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1"
   },
   {
     "id": "agibot-expedition-a3",
@@ -49302,18 +49275,13 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Viral 'kung fu robot' capable of aerial flying kicks, backflips, and cyclone kicks. Features flexible waist, lightweight exoskeleton legs, wake-word-free AI conversations, designed for retail assistance and live entertainment.",
+    "desc": "AGIBOT's A3 (Yuanzheng/Expedition A3, 2025) is a newer full-size humanoid in AGIBOT's rapidly expanding lineup. (Recent release - detailed specifications still being confirmed.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "In development",
-    "height_mm": 1700,
+    "status": "Active",
+    "height_mm": 1750,
     "weight_kg": 55,
     "dof": 43,
     "wifi": true,
@@ -49322,12 +49290,13 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Entertainment",
-      "Retail assistance",
-      "Demonstrations",
-      "Research"
+      "General-purpose humanoid tasks",
+      "Service & industrial"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "released": 2025
   },
   {
     "id": "agibot-x2-n",
@@ -49341,21 +49310,16 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Cutting-edge humanoid with unique hybrid locomotion system, seamlessly transitioning between bipedal walking and wheeled movement using integrated foot wheels. Uses proprioceptive feedback for terrain adaptation without external cameras.",
+    "desc": "AGIBOT's Lingxi X2-N is the terrain-adaptive variant of the compact X2 humanoid, tuned for more robust locomotion across varied surfaces while keeping the ~1.31 m agile form factor and AimDK_X2 developer ecosystem.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "In development",
-    "height_mm": 1700,
-    "weight_kg": 85,
+    "status": "Active",
+    "height_mm": 1310,
+    "weight_kg": 35,
     "speed_ms": 2,
-    "dof": 43,
+    "dof": 28,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
@@ -49363,9 +49327,8 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Research and development",
-      "Service robotics",
-      "Industrial automation",
+      "Terrain-adaptive locomotion",
+      "Research & service",
       "Entertainment"
     ],
     "manufacturer_url": "https://www.agibot.com",
@@ -49374,7 +49337,10 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258692/robots/agibot-x2-n-by-agibot/l9kzkm0r0neg9jstj6tx.webp?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258692/robots/agibot-x2-n-by-agibot/v4eczriflsmhyfseamb4.webp?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769258690/robots/agibot-x2-n-by-agibot/mxxrvt5xstlqbqcdxgai.webp?cache=604800"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "released": 2025
   },
   {
     "id": "agibot-omnihand-pro-2025",
@@ -49640,23 +49606,18 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Industrial-grade wheeled humanoid with IP42 protection, 7-DoF force-controlled arms, sub-mm assembly precision, and NVIDIA Jetson Thor integration",
+    "desc": "AGIBOT's G2 is an industrial wheeled humanoid introduced in 2025 for mobile manipulation and logistics, pairing a humanoid upper body with a wheeled base for stable, long-duty operation in commercial and industrial settings.",
     "highlights": [
       "Sub-mm precision",
       "Wheeled",
       "NVIDIA GR00T partner",
       "Industrial focus"
     ],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
-    "released": "2024",
+    "status": "Active",
+    "released": 2025,
     "height_mm": 1650,
     "weight_kg": 60,
     "battery_life": "8 hours",
@@ -49670,17 +49631,18 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Manufacturing assembly",
-      "Quality inspection",
-      "Material handling",
-      "Industrial automation"
+      "Industrial automation",
+      "Wheeled mobile manipulation",
+      "Logistics"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "ai_model": "NVIDIA GR00T",
     "gallery": [
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-2.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-3.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1"
   },
   {
     "id": "agibot-g1",
@@ -49742,20 +49704,15 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Enhanced version with LiDAR, RGB-D cameras, autonomous navigation, obstacle avoidance, and facial recognition capabilities",
+    "desc": "AGIBOT's Lingxi X2 Ultra is the sensor-rich, developer-enabled member of the compact X2 series (~1.31 m, ~39 kg), adding a richer perception suite for research and perception-heavy service while retaining the agile half-size form.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
-    "height_mm": 1700,
-    "weight_kg": 63,
-    "dof": 43,
+    "status": "Active",
+    "height_mm": 1310,
+    "weight_kg": 39,
+    "dof": 31,
     "lidar": true,
     "depth_sensing": true,
     "cameras": "RGB-D cameras for computer vision and facial recognition",
@@ -49764,10 +49721,9 @@
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Research",
-      "Education",
-      "Service robotics",
-      "Human-robot interaction"
+      "Developer / research platform",
+      "Perception-rich service",
+      "Entertainment"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "ai_model": "200 TOPS AI computing",
@@ -49776,7 +49732,10 @@
       "https://store.agibot.com/cdn/shop/files/3_1106b757-4704-472f-9f6d-4dbae574df89.png?v=1765524332&width=800",
       "https://store.agibot.com/cdn/shop/files/4_3ccddb30-9d58-45e6-94da-a37a0bc74153.png?v=1765524332&width=800",
       "https://store.agibot.com/cdn/shop/files/75f297965427c6c6c31b317dc7853cc0_ccdc52d3-b9c1-4f21-8635-c6fb2d5021e0.png?v=1765524332&width=800"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "released": 2025
   },
   {
     "id": "agibot-x2",
@@ -49790,29 +49749,23 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "25-30 DoF compact humanoid with multimodal interaction, dance capabilities, and coordinated head movements",
+    "desc": "AGIBOT's Lingxi X2 is a compact half-size humanoid (~1.31 m, ~35 kg, ~27-31 DOF) built for education, research, entertainment and service. Agile enough to walk, run, dance and ride a bicycle, it uses the AimDK_X2 developer kit with AGIBOT's WorkGPT AI and GO-1 foundation model.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
-    "height_mm": 650,
-    "weight_kg": 8,
-    "dof": 30,
+    "status": "Active",
+    "height_mm": 1310,
+    "weight_kg": 35,
+    "dof": 28,
     "wifi": true,
     "bluetooth": true,
     "cameras": "RGB camera with computer vision capabilities",
     "imu": true,
     "use_cases": [
-      "Entertainment",
-      "Education",
-      "Research",
-      "Companion robot"
+      "Education & research",
+      "Entertainment & events",
+      "Human-facing service"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "gallery": [
@@ -49820,7 +49773,10 @@
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/6/-/6-2.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/1/-/1-2.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/5/-/5-2.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "released": 2025
   },
   {
     "id": "agibot-x1",
@@ -49932,31 +49888,26 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/OYsvkAjvvJfJLXV8NwfQ/image.jpg",
-    "score": 84,
+    "score": 75,
     "rating": 4,
     "price": 35000,
-    "desc": "Cost-reduced version of A2 for service/HRI roles. 23 DOF with simplified hands, no LiDAR or RGB-D. Targets reception, guidance, brand activation roles where the Ultra's dexterity isn't needed.",
+    "desc": "AGIBOT's A2 Lite is the cost-efficient service member of the full-size Yuanzheng A2 family, with 23 DOF, a simplified hand and Wi-Fi interaction but no LiDAR/RGB-D, aimed at affordable human-robot-interaction roles such as reception, guidance and exhibition presentations.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2025,
     "origin": "China",
     "status": "Active",
-    "height_mm": 1690,
+    "height_mm": 1750,
     "weight_kg": 65,
     "dof": 23,
     "use_cases": [
-      "Reception",
-      "Brand activation",
-      "Exhibition guides"
+      "Reception & guidance",
+      "Marketing & exhibitions",
+      "Cost-efficient HRI"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "made_in": "China",
-    "released": "2025",
+    "released": 2024,
     "fingers": 5,
     "bimanual": true,
     "cameras": "RGB",
@@ -49975,7 +49926,8 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329158/robots/agibot-a2-lite-by-agibot/n4tzcpdaak7amrwikxuf.jpg?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329162/robots/agibot-a2-lite-by-agibot/u8iuvs2ysprl7bcmltnn.jpg?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329184/robots/agibot-a2-lite-by-agibot/adivu5l1bdfqiqzqm8xv.jpg?cache=604800"
-    ]
+    ],
+    "os": "WorkGPT / GO-1"
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
@@ -56386,18 +56338,13 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Industrial-grade wheeled humanoid with 26 DoF, 7-DoF force-controlled arms, IP42 protection, 360° perception with LiDAR/RGB-D, designed for precision assembly and continuous operation.",
+    "desc": "AGIBOT's G2 Genie is a wheeled/mobile configuration of the G2 industrial humanoid, pairing a humanoid upper body with a mobile base for service and light industrial mobile-manipulation tasks.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
-    "released": "2024",
+    "status": "Active",
+    "released": 2025,
     "height_mm": 1650,
     "weight_kg": 65,
     "dof": 26,
@@ -56407,10 +56354,9 @@
     "imu": true,
     "ros": true,
     "use_cases": [
-      "Industrial assembly",
-      "Manufacturing automation",
-      "Precision handling",
-      "Quality inspection"
+      "Industrial automation",
+      "Wheeled mobile manipulation",
+      "Logistics"
     ],
     "payload_kg": 5,
     "reach_mm": 650,
@@ -56420,7 +56366,9 @@
     "wifi": true,
     "bluetooth": true,
     "manufacturer_url": "https://www.agibot.com",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "China",
+    "os": "WorkGPT / GO-1"
   },
   {
     "id": "agibot-d1-maxpro",
@@ -80315,19 +80263,16 @@
     ],
     "fig": "🤖",
     "img": "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1sjof5a5qsdkj16e0f.jpg",
-    "score": 80,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "AGIBOT's first humanoid product (Raise A1, August 2023 unveiling). Predecessor to the A2 line that propelled AGIBOT to #1 humanoid volume globally.",
+    "desc": "AGIBOT's RAISE A1 (Aug 2023) was the company's first humanoid - a 175 cm, 53 kg, 49-DOF industrial biped that walks at ~7 km/h and handles loads up to 80 kg. Equipped with RGB-D and LiDAR sensors and modular components, it targets automotive, 3C-manufacturing, logistics and laboratory tasks like bolt-tightening and vehicle inspection.",
     "highlights": [
       "First-gen",
       "China leader",
       "Open architecture"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 20
-    },
+    "perf": false,
     "year": 2023,
     "status": "Active",
     "height_mm": 1750,
@@ -80339,8 +80284,8 @@
     "bluetooth": true,
     "made_in": "China",
     "announced": "2023-08",
-    "released": "2023",
-    "dof": 40,
+    "released": 2023,
+    "dof": 49,
     "arm_dof": 7,
     "fingers": 5,
     "bimanual": true,
@@ -80348,9 +80293,9 @@
     "imu": true,
     "ai_model": "AGIBOT Embodied AI (predecessor to GO-1)",
     "use_cases": [
-      "R&D",
-      "Service tasks",
-      "Public demonstrations"
+      "Industrial manipulation",
+      "Automotive / 3C manufacturing",
+      "Lab & inspection"
     ],
     "website": "https://www.agibot.com",
     "gallery": [
@@ -80358,7 +80303,11 @@
       "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdfkl8apl1vibe0nb16h.png",
       "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1b69o4c13sbtmlc7bi.png",
       "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1kebdcnmra8ppodfl.png"
-    ]
+    ],
+    "os": "WorkGPT / GO-1",
+    "speed_ms": 1.9,
+    "payload_kg": 80,
+    "lidar": true
   },
   {
     "id": "agibot-a2-2025",
@@ -80471,22 +80420,19 @@
     ],
     "fig": "🤖",
     "img": "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a3-1.jpg",
-    "score": 85,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "AGIBOT A3 (Expedition A3) — third-generation humanoid in development. Builds on A2 platform with refined dexterity and longer endurance.",
+    "desc": "AGIBOT's A3 (Yuanzheng/Expedition A3, 2025) is a newer full-size humanoid in AGIBOT's rapidly expanding lineup. (Recent release - detailed specifications still being confirmed.)",
     "highlights": [
       "10-hr endurance",
       "Production scale",
       "Quote pricing"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 25
-    },
+    "perf": false,
     "year": 2025,
-    "status": "Development",
-    "height_mm": 1690,
+    "status": "Active",
+    "height_mm": 1750,
     "weight_kg": 65,
     "battery_life": 600,
     "origin": "China",
@@ -80509,6 +80455,12 @@
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a3-3.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a3-4.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-a3-5.jpg"
+    ],
+    "os": "WorkGPT / GO-1",
+    "released": 2025,
+    "use_cases": [
+      "General-purpose humanoid tasks",
+      "Service & industrial"
     ]
   },
   {
@@ -80527,21 +80479,18 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 84,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "AGIBOT H2 (Heavy 2) — industrial humanoid for heavy logistics, in development. Sister product to A2 Max.",
+    "desc": "AGIBOT's H2 (2025) is an industrial-oriented humanoid in AGIBOT's lineup. (Recent release - detailed specifications still being confirmed against AGIBOT.)",
     "highlights": [
       "Value-focused",
       "Physical tasks",
       "More $/capability"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 25
-    },
+    "perf": false,
     "year": 2025,
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1750,
     "weight_kg": 80,
     "battery_life": 300,
@@ -80559,7 +80508,13 @@
     "lidar": true,
     "imu": true,
     "ai_model": "GO-1",
-    "website": "https://www.agibot.com"
+    "website": "https://www.agibot.com",
+    "os": "WorkGPT / GO-1",
+    "released": 2025,
+    "use_cases": [
+      "Industrial humanoid tasks",
+      "Manufacturing"
+    ]
   },
   {
     "id": "agibot-x2-nezha-2026",
@@ -80578,24 +80533,21 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 83,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
-    "desc": "AGIBOT X2-N Nezha — child-sized humanoid platform for compact applications. Named after the Chinese mythological figure.",
+    "desc": "AGIBOT's Lingxi X2-N 'Nezha' (2026) is a styled variant of the terrain-adaptive compact X2-N humanoid, continuing AGIBOT's agile half-size service/entertainment line.",
     "highlights": [
       "Bipedal + wheeled",
       "Transforming",
       "Unique mobility",
       "Shanghai-developed"
     ],
-    "perf": {
-      "speed_ms": 3,
-      "payload_kg": 25
-    },
+    "perf": false,
     "year": 2026,
-    "status": "Development",
-    "height_mm": 1300,
-    "weight_kg": 45,
+    "status": "Active",
+    "height_mm": 1310,
+    "weight_kg": 35,
     "battery_life": 360,
     "origin": "China",
     "cameras": "RGB-D",
@@ -80603,14 +80555,21 @@
     "bluetooth": true,
     "made_in": "China",
     "announced": "2026",
-    "dof": 35,
+    "dof": 28,
     "arm_dof": 7,
     "fingers": 5,
     "bimanual": true,
     "depth_sensing": true,
     "imu": true,
     "ai_model": "GO-1",
-    "website": "https://www.agibot.com"
+    "website": "https://www.agibot.com",
+    "os": "WorkGPT / GO-1",
+    "released": 2026,
+    "use_cases": [
+      "Terrain-adaptive locomotion",
+      "Research & service",
+      "Entertainment"
+    ]
   },
   {
     "id": "ubtech-walker-s1-2024",
@@ -104149,8 +104108,8 @@
     "origin": "China",
     "made_in": "China",
     "status": "Active",
-    "score": 93,
-    "desc": "Top-tier A2 flagship. 40 DOF, dexterous 6-DoF hands, 3D LiDAR + RGB-D + RGB/fisheye sensor suite. Multi-region certified (China, US, Europe). Designed for interactive services and high-endurance walking — proven by 106km Guinness-certified walk.",
+    "score": 75,
+    "desc": "AGIBOT's A2 Ultra is the perception-rich variant of the full-size Yuanzheng A2, with 40 DOF, dexterous hands and a sensor stack of 3D LiDAR, RGB-D and multiple cameras for mapping, obstacle awareness and crowd-safe audience interaction in service and research deployments.",
     "price": 95000,
     "img": "",
     "tags": [
@@ -104163,9 +104122,9 @@
       "certified",
       "long-walking"
     ],
-    "released": "2025",
-    "height_mm": 1690,
-    "weight_kg": 69,
+    "released": 2024,
+    "height_mm": 1750,
+    "weight_kg": 55,
     "depth_mm": 300,
     "dof": 40,
     "hand_dof": 6,
@@ -104188,12 +104147,15 @@
     "ce": true,
     "fcc": true,
     "use_cases": [
-      "Interactive services",
-      "Public demonstrations",
-      "Long-distance walking deployments",
-      "Industrial assistance"
+      "Perception-rich service",
+      "Reception & exhibitions",
+      "Research"
     ],
-    "website": "https://www.agibot.com"
+    "website": "https://www.agibot.com",
+    "os": "WorkGPT / GO-1",
+    "perf": false,
+    "fig": "🤖",
+    "rating": 4
   },
   {
     "id": "agibot-a2-max-2025",
@@ -104204,9 +104166,9 @@
     "year": 2025,
     "origin": "China",
     "made_in": "China",
-    "status": "Pre-order",
-    "score": 89,
-    "desc": "Heavy-duty industrial variant of A2. 175cm, 85kg with 67 DOF, 40kg dual-arm payload, 450 N·m torque, 8800N leg thrust. Demoed lifting 40kg aviation box. Designed for material handling and palletizing in industrial/warehousing.",
+    "status": "Active",
+    "score": 75,
+    "desc": "AGIBOT's A2 Max is the heavy-duty industrial member of the A2 family - larger and heavier at 175 cm and ~85 kg - presented for material handling and palletizing, a step beyond the service orientation of A2 Lite/Ultra.",
     "price": 0,
     "img": "",
     "tags": [
@@ -104221,7 +104183,7 @@
     "announced": "2024-08",
     "height_mm": 1750,
     "weight_kg": 85,
-    "dof": 67,
+    "dof": 40,
     "payload_kg": 40,
     "torque_nm": 450,
     "arm_dof": 7,
@@ -104234,11 +104196,16 @@
     "imu": true,
     "ai_model": "GO-1",
     "use_cases": [
-      "Material handling",
+      "Heavy-duty material handling",
       "Palletizing",
-      "Industrial logistics"
+      "Industrial automation"
     ],
-    "website": "https://www.agibot.com/products/A2_Max"
+    "website": "https://www.agibot.com/products/A2_Max",
+    "os": "WorkGPT / GO-1",
+    "released": 2025,
+    "perf": false,
+    "fig": "🤖",
+    "rating": 4
   },
   {
     "id": "eufy-omni-s1-pro",
