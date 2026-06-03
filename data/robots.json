@@ -8082,7 +8082,7 @@
     "name": "Tesla Optimus Workplace Edition",
     "brand": "Tesla",
     "year": 2024,
-    "status": "limited production",
+    "status": "Active",
     "cat": "Autonomous Vehicles",
     "sub": "Industrial Humanoid",
     "tags": [
@@ -8099,10 +8099,10 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 9,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 25000,
-    "desc": "Tesla's vision-only FSD robotaxi service. Launched June 2025 in Austin. Bay Area expansion. ~50% cheaper per mile than Waymo. Currently waitlist + safety drivers.",
+    "desc": "The Tesla Optimus Workplace Edition is a configuration of Tesla's Optimus humanoid intended for workplace/industrial tasks - bimanual manipulation with ~45 kg handling, ~950 mm reach and slow, safe walking (~6 km/h). (Note: this record is filed under Autonomous Vehicles but is a humanoid robot - consider recategorizing to Humanoid.)",
     "highlights": [
       "Industrial grade",
       "Safety certified",
@@ -8176,15 +8176,13 @@
       "assembly",
       "quality control"
     ],
-    "perf": {
-      "max_speed_kmh": 6,
-      "max_payload_kg": 45,
-      "reach_mm": 950,
-      "precision_mm": 0.1,
-      "response_time_ms": 40
-    },
+    "perf": false,
     "origin": "USA",
-    "cellular": "5G"
+    "cellular": "5G",
+    "payload_kg": 45,
+    "reach_mm": 950,
+    "repeatability": 0.1,
+    "top_speed_kmh": 6
   },
   {
     "id": "apptronik-apollo-gen1",
