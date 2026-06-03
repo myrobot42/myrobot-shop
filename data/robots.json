@@ -46004,7 +46004,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Laser-guided automated guided vehicle with platform, tower, and forklift configurations for hospital material transport including food, medication, linen, and waste",
+    "desc": "The TransCar AGV (Swisslog, with OTSAW) is an automated guided vehicle for heavy hospital logistics - autonomously transporting carts of meals, linen, sterile supplies and waste through corridors and elevators, handling the high-volume material flows of large hospitals.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -46014,14 +46014,14 @@
     },
     "origin": "Singapore",
     "year": 2018,
-    "status": "Released",
+    "status": "Active",
     "released": "2018",
     "height_mm": 1400,
     "width_mm": 600,
     "depth_mm": 800,
     "weight_kg": 120,
     "speed_ms": 1.5,
-    "payload_kg": 300,
+    "payload_kg": 500,
     "lidar": true,
     "cameras": "Multiple safety cameras and navigation cameras",
     "imu": true,
@@ -46029,12 +46029,9 @@
     "bluetooth": true,
     "ros": false,
     "use_cases": [
-      "Hospital material transport",
-      "Medication delivery",
-      "Linen transport",
-      "Food service delivery",
-      "Waste collection",
-      "Laboratory sample transport"
+      "Bulk hospital logistics",
+      "Meal / linen / waste cart transport",
+      "Automated material handling"
     ],
     "manufacturer_url": "https://www.otsaw.com",
     "battery_life": "8-12 hours",
@@ -46043,14 +46040,17 @@
     "warranty_months": 12,
     "battery_life_typical": "10 hours",
     "dof": 3,
-    "os": "Linux-based",
+    "os": "Swisslog",
     "cellular": "4G LTE optional",
     "product_url": "https://www.swisslog-healthcare.com/en-us/products-and-services/transport-and-pharmacy-automation/automated-guided-vehicles",
     "gallery": [
       "https://img.medicalexpo.com/images_me/photo-mg/4579365-18422797.webp",
       "https://img.medicalexpo.com/images_me/photo-mg/4579365-18422807.webp",
       "https://img.medicalexpo.com/images_me/photo-mg/4579365-18442301.webp"
-    ]
+    ],
+    "made_in": "Singapore / Switzerland",
+    "autonomous": true,
+    "payload": 500
   },
   {
     "id": "swisslog-healthcare-via-savioke-partnership-relay",
@@ -46064,7 +46064,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Compact autonomous service robot with intuitive user interface for delivering items prohibited in pneumatic tube systems like chemotherapy medications, bridges gaps in hospital transport systems",
+    "desc": "The Relay robot (originally from Savioke, deployed in healthcare via Swisslog) is a compact autonomous delivery robot that carries medications, specimens and small items through hospitals, navigating autonomously and operating elevators for secure point-to-point delivery.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -46074,7 +46074,7 @@
     },
     "origin": "Switzerland",
     "year": 2014,
-    "status": "Released",
+    "status": "Active",
     "released": "2014",
     "height_mm": 1070,
     "width_mm": 610,
@@ -46091,14 +46091,14 @@
     "depth_sensing": true,
     "ros": true,
     "use_cases": [
-      "Medication delivery",
-      "Laboratory sample transport",
-      "Medical supply delivery",
-      "Hospital logistics automation",
-      "Clean and dirty utility transport"
+      "Hospital delivery",
+      "Medication & specimen transport"
     ],
     "manufacturer_url": "https://www.swisslog-healthcare.com",
-    "cellular": "LTE"
+    "cellular": "LTE",
+    "made_in": "USA",
+    "os": "Relay (Savioke)",
+    "autonomous": true
   },
   {
     "id": "aethon-tug-t4",
@@ -46301,7 +46301,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Autonomous Mobile Robot for secure, hospital-wide transport of lab specimens, medications, supplies and protected health information.",
+    "desc": "Swisslog Healthcare's RoboCourier is an autonomous mobile robot for hospital logistics, navigating corridors and using elevators to deliver medications, lab specimens and supplies between departments, freeing clinical staff from courier runs.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -46311,7 +46311,7 @@
     },
     "origin": "Switzerland",
     "year": 2015,
-    "status": "Released",
+    "status": "Active",
     "released": "2015",
     "height_mm": 1400,
     "width_mm": 600,
@@ -46325,11 +46325,9 @@
     "imu": true,
     "wifi": true,
     "use_cases": [
-      "Laboratory specimen transport",
-      "Medication delivery",
-      "Medical supply distribution",
-      "Pharmacy automation",
-      "Hospital logistics"
+      "Hospital medication delivery",
+      "Lab specimen transport",
+      "Supply logistics"
     ],
     "manufacturer_url": "https://www.swisslog-healthcare.com",
     "product_url": "https://www.swisslog-healthcare.com/en-us/products-and-services/transport-automation/robocourier",
@@ -46338,7 +46336,10 @@
       "https://i.ebayimg.com/images/g/BC8AAOSwAkFmLpnO/s-l1600.webp",
       "https://i.ebayimg.com/images/g/RN8AAOSw9glmLpn2/s-l1600.webp",
       "https://i.ebayimg.com/images/g/lZQAAOSwDYhmLpm5/s-l1600.webp"
-    ]
+    ],
+    "made_in": "USA",
+    "os": "Swisslog",
+    "autonomous": true
   },
   {
     "id": "swisslog-itempiq",
@@ -52369,7 +52370,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Biomechanics analysis and rehabilitation platform integrating virtual reality and robotics technology for comprehensive rehabilitation assessment and training",
+    "desc": "Fourier's MetaMotus Galileo is an integrated VR-enhanced rehabilitation platform combining a treadmill, force plates and exoskeleton/upper-limb device integration (e.g. ExoMotus M4, dual ArmMotus EMU) for immersive gait, balance and motor training. Award-winning (Good Design Award, Shanghai Design 100+).",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52379,7 +52380,7 @@
     },
     "origin": "China",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "dof": 6,
     "wifi": true,
@@ -52389,22 +52390,20 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Physical rehabilitation",
-      "Gait analysis",
-      "Balance training",
-      "Motor function assessment",
-      "Virtual reality therapy",
-      "Biomechanics research",
-      "Sports medicine"
+      "Integrated VR rehabilitation",
+      "Gait & balance training",
+      "Multi-device therapy"
     ],
     "manufacturer_url": "https://www.fftai.com/",
     "height_mm": 1800,
     "width_mm": 2000,
     "depth_mm": 3000,
     "weight_kg": 150,
-    "os": "Linux",
+    "os": "Fourier",
     "warranty_months": 12,
-    "reach_mm": 1500
+    "reach_mm": 1500,
+    "made_in": "China / Singapore",
+    "ce_marked": true
   },
   {
     "id": "fourier-intelligence-fourier-rehab-cyclemotus-a4",
@@ -52418,7 +52417,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Active & passive training system for upper and lower limb training, high-resolution touchscreen, controlled motor system for different rehabilitation stages, improves cardiopulmonary circulation and muscle strength",
+    "desc": "Fourier's CycleMotus A4 is an active-and-passive cycling trainer for upper and lower limbs with motor-assisted resistance and a touchscreen interface, used for early mobilisation and endurance training in stroke, spinal-cord-injury and Parkinson's patients.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52428,7 +52427,7 @@
     },
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "height_mm": 1400,
     "width_mm": 800,
@@ -52443,12 +52442,8 @@
     "imu": true,
     "depth_sensing": false,
     "use_cases": [
-      "Physical rehabilitation",
-      "Stroke recovery",
-      "Motor function training",
-      "Cardiopulmonary rehabilitation",
-      "Muscle strength training",
-      "Range of motion therapy"
+      "Active/passive limb cycling therapy",
+      "Stroke / SCI / Parkinson rehab"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "warranty_months": 12,
@@ -52459,7 +52454,10 @@
       "https://mediotronics.co.za/wp-content/uploads/2025/06/CycleMotus-A4_web2.jpg",
       "https://mediotronics.co.za/wp-content/uploads/2025/06/cyclemotus-a4_1.jpg",
       "https://mediotronics.co.za/wp-content/uploads/2025/06/cyclemotus-a4-movement-and-balance.png"
-    ]
+    ],
+    "made_in": "China / Singapore",
+    "os": "Fourier",
+    "ce_marked": true
   },
   {
     "id": "fourier-intelligence-fourier-rehab-anklemotus",
@@ -52473,7 +52471,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Ankle joint rehabilitation equipment designed based on ankle motion patterns, focuses on lower limb muscle strengthening and inducing neuroplasticity for walking ability recovery",
+    "desc": "Fourier's AnkleMotus (M1-A) is an ankle-joint rehabilitation robot providing active and passive movement training, strength and proprioception exercises for patients recovering ankle function after stroke or injury.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52483,14 +52481,11 @@
     },
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "dof": 3,
     "use_cases": [
-      "ankle rehabilitation",
-      "stroke recovery",
-      "lower limb therapy",
-      "gait training",
-      "neurological rehabilitation"
+      "Ankle-joint rehabilitation",
+      "Proprioception & strength training"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "weight_kg": 15,
@@ -52498,7 +52493,10 @@
     "bluetooth": true,
     "imu": true,
     "warranty_months": 12,
-    "product_url": "https://www.fftai.com/en/product-ankle"
+    "product_url": "https://www.fftai.com/en/product-ankle",
+    "made_in": "China / Singapore",
+    "os": "Fourier",
+    "ce_marked": true
   },
   {
     "id": "fourier-intelligence-fourier-rehab-balancemotus-kine-sim",
@@ -52512,7 +52510,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Balance and gait rehabilitation device with dual motorized force plates, multimedia content reproducing real-life scenarios for balance, gait, lower body orthopaedics, and cognitive training",
+    "desc": "Fourier's BalanceMotus / Kine-Sim is a balance assessment and training system using a motion platform and interactive tasks to evaluate and retrain postural control, supporting fall-prevention and vestibular rehabilitation.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52522,7 +52520,7 @@
     },
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "height_mm": 1650,
     "width_mm": 800,
     "depth_mm": 1200,
@@ -52533,16 +52531,14 @@
     "cameras": "Integrated motion tracking cameras for posture analysis",
     "imu": true,
     "use_cases": [
-      "Balance rehabilitation",
-      "Gait training",
-      "Fall prevention therapy",
-      "Lower limb orthopedic rehabilitation",
-      "Cognitive rehabilitation",
-      "Elderly mobility training",
-      "Stroke recovery therapy",
-      "Sports medicine rehabilitation"
+      "Balance assessment & training",
+      "Fall-prevention therapy",
+      "Vestibular rehab"
     ],
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "made_in": "China / Singapore",
+    "os": "Fourier",
+    "ce_marked": true
   },
   {
     "id": "fourier-intelligence-fourier-rehab-handyrehab",
@@ -52556,7 +52552,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Intelligent hand rehabilitation robotic glove targeting fine motor skills with functional finger movement training, portable and lightweight with electromyographic biofeedback technology",
+    "desc": "Fourier's HandyRehab is a wearable hand-rehabilitation exoskeleton (robotic glove) that assists finger flexion/extension and grasp retraining, supporting task-oriented hand therapy for neurological patients.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52566,7 +52562,7 @@
     },
     "origin": "China",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 0.8,
     "battery_life": "8 hours",
@@ -52575,16 +52571,16 @@
     "wifi": true,
     "imu": true,
     "use_cases": [
-      "Hand rehabilitation",
-      "Stroke recovery",
-      "Fine motor skill training",
-      "Neurological rehabilitation",
-      "Physical therapy"
+      "Hand / finger rehabilitation",
+      "Grasp retraining"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "gallery": [
       "https://gies2021.hkcss.org.hk/files/exhibit/ece7d54c-77f0-4b77-957b-da021fcaf0c3.jpg"
-    ]
+    ],
+    "made_in": "China / Singapore",
+    "os": "Fourier",
+    "ce_marked": true
   },
   {
     "id": "fourier-intelligence-fourier-rehab-exomotus-m4",
@@ -52598,7 +52594,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Lower-limb exoskeleton for gait training, lightweight at 18kg, programmable gait databases, optional VR integration, smartwatch control for velocity and gait adjustment",
+    "desc": "Fourier's ExoMotus M4 is a powered lower-limb gait-training exoskeleton paired with a wheeled self-balancing frame, using in-house servo-motors and multi-dimensional force sensors for early-stage sit-to-stand and ambulation retraining.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52608,17 +52604,14 @@
     },
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "weight_kg": 18,
     "battery_life": "4 hours",
-    "dof": 12,
+    "dof": 4,
     "imu": true,
     "use_cases": [
-      "Gait rehabilitation",
-      "Stroke recovery",
-      "Spinal cord injury therapy",
-      "Physical therapy",
-      "Mobility training"
+      "Lower-limb gait training",
+      "Sit-to-stand & ambulation"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "wifi": true,
@@ -52627,7 +52620,10 @@
       "https://www.fftai.com/uploads/upload/images/20250401/e4db508016366006830b960790b434ef.jpg",
       "https://www.fftai.com/uploads/upload/images/20250401/3664359148a2d6860d631f3ad24e761f.jpg",
       "https://www.fftai.com/uploads/upload/images/20250401/6606a34805d424adcc15f0d160fccd36.jpg"
-    ]
+    ],
+    "made_in": "China / Singapore",
+    "os": "Fourier",
+    "ce_marked": true
   },
   {
     "id": "fourier-intelligence-fourier-rehab-armmotus-emu",
@@ -52641,7 +52637,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "3D back-drivable upper limb rehabilitation robot with cable-driven mechanism, parallel structure with lightweight carbon fiber rods, reduces friction and inertia for efficient human-machine interaction",
+    "desc": "Fourier's ArmMotus EMU is a 3D back-drivable upper-limb rehabilitation robot using a cable-driven mechanism with carbon-fibre rods, delivering gravity-compensated multi-directional training with haptic feedback and gamified exercises for stroke and neurological recovery.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52651,15 +52647,13 @@
     },
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "dof": 3,
     "reach_mm": 600,
     "use_cases": [
-      "Upper limb rehabilitation",
-      "Stroke recovery",
-      "Neurological rehabilitation",
-      "Physical therapy",
-      "Motor function training"
+      "Upper-limb stroke rehab",
+      "Neurorehabilitation",
+      "Bilateral / mirror therapy"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "weight_kg": 12,
@@ -52670,7 +52664,10 @@
     "released": "2020",
     "wifi": true,
     "bluetooth": true,
-    "imu": true
+    "imu": true,
+    "made_in": "China / Singapore",
+    "os": "Fourier",
+    "ce_marked": true
   },
   {
     "id": "fourier-intelligence-fourier-rehab-armmotus-m2-pro",
@@ -52684,7 +52681,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Upper limb rehabilitation device for neurological and musculoskeletal disorders, designed with force feedback technology for adaptive movement support",
+    "desc": "Fourier's ArmMotus M2 Pro is an upper-limb rehabilitation robot for neurological and musculoskeletal disorders, using force-feedback technology to deliver adaptive, assist-as-needed movement support with planar reaching exercises and performance tracking.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52694,7 +52691,7 @@
     },
     "origin": "China",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "dof": 3,
     "reach_mm": 600,
@@ -52702,11 +52699,8 @@
     "bluetooth": true,
     "imu": true,
     "use_cases": [
-      "Stroke rehabilitation",
-      "Neurological disorder therapy",
-      "Upper limb motor function recovery",
-      "Physical therapy",
-      "Movement assessment"
+      "Upper-limb rehabilitation",
+      "Neurological & musculoskeletal therapy"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "weight_kg": 15,
@@ -52720,7 +52714,10 @@
     "depth_sensing": true,
     "gallery": [
       "https://www.fftai.com/uploads/upload/images/20250401/a81c607fa88936c8aa4e1b060329e27f.jpg"
-    ]
+    ],
+    "made_in": "China / Singapore",
+    "os": "Fourier",
+    "ce_marked": true
   },
   {
     "id": "fourier-intelligence-dexterous-hand",
@@ -54694,7 +54691,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Enhanced version of ROSA Knee with FDA 510(k) clearance. Features customized intelligent surgical planning, automated kinematic alignment, OptimiZe Planning algorithm, and simplified user interface. Offers industry's only automated kinematic alignment feature.",
+    "desc": "Zimmer Biomet's ROSA (Robotic Surgical Assistant) Knee System is a surgeon-collaborative orthopedic robot for total knee arthroplasty. The surgeon stays in control while ROSA provides real-time data on alignment, stability, gaps and bone-cut orientation - in imageless or image-based versions - improving cut accuracy and reproducibility after a short (6-14 case) learning curve. The OptimiZe update adds workflow enhancements.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -54704,13 +54701,11 @@
     },
     "origin": "USA",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "use_cases": [
-      "Total knee arthroplasty",
-      "Partial knee replacement",
-      "Revision knee surgery",
-      "Kinematic alignment procedures"
+      "Robotic-assisted total knee arthroplasty",
+      "Bone-cut planning & alignment"
     ],
     "manufacturer_url": "https://www.zimmerbiomet.com",
     "warranty_months": 12,
@@ -54722,7 +54717,13 @@
     "imu": true,
     "depth_sensing": true,
     "ros": false,
-    "cameras": "Multiple intraoperative cameras for real-time surgical field visualization and bone tracking"
+    "cameras": "Multiple intraoperative cameras for real-time surgical field visualization and bone tracking",
+    "made_in": "USA",
+    "os": "ROSA",
+    "fda_cleared": true,
+    "surgical_type": "Orthopedic - total knee arthroplasty",
+    "robotic_arms": 1,
+    "vision": "Optical tracking (imageless or image-based)"
   },
   {
     "id": "johnson-johnson-medtech-ethicon-ottava-robotic-surgical-system",
@@ -54736,7 +54737,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Multi-specialty soft-tissue surgery robot designed for general surgery procedures in the upper abdomen including gastric bypass, gastric sleeve, small bowel resection, and hiatal hernia repair. Features unified architecture with robotic arms integrated into the operating table that can be stowed underneath, twin motion capability allowing table and arm movement together, and exclusively uses Ethicon instrumentation. Currently in FDA clinical trials with De Novo classification application submitted in January 2026.",
+    "desc": "J&J MedTech's OTTAVA is a general-surgery soft-tissue robotic platform with four arms integrated into the operating table for a low profile and flexible setup, differentiated by deep digital integration (Polyphonic ecosystem). Aimed at procedures like cholecystectomy, hernia repair and colorectal surgery, it was in FDA IDE clinical trials rather than commercially cleared.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -54746,15 +54747,12 @@
     },
     "year": 2024,
     "origin": "USA",
-    "status": "In development",
+    "status": "Active",
     "dof": 7,
     "use_cases": [
-      "General surgery",
-      "Gastric bypass",
-      "Gastric sleeve",
-      "Small bowel resection",
-      "Hiatal hernia repair",
-      "Upper abdominal procedures"
+      "Cholecystectomy",
+      "Hernia repair",
+      "Colorectal surgery"
     ],
     "manufacturer_url": "https://www.jnjmedtech.com",
     "ros": false,
@@ -54765,7 +54763,13 @@
     "reach_mm": 600,
     "cameras": "4K 3D endoscopic camera with fluorescence imaging",
     "warranty_months": 12,
-    "product_url": "https://www.jnjmedtech.com/en-US/product/ottava-surgical-robotic-platform"
+    "product_url": "https://www.jnjmedtech.com/en-US/product/ottava-surgical-robotic-platform",
+    "made_in": "USA",
+    "os": "J&J Polyphonic",
+    "fda_cleared": false,
+    "fda_class": "Investigational (FDA IDE trials)",
+    "surgical_type": "General / soft-tissue surgery",
+    "robotic_arms": 4
   },
   {
     "id": "medrobotics-flex360-robotic-system",
@@ -54779,7 +54783,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Next-generation version of the Flex system. Features steerable and shapeable robotic scope technology allowing surgeons to operate on previously unreachable parts of the body. Uses follow-the-leader movement strategy with sequence of mechanical linkages for complex navigation through anatomy.",
+    "desc": "The Medrobotics Flex Robotic System uses a steerable, articulating flexible scope to navigate non-linear anatomical pathways the rigid instruments of other systems cannot reach, enabling minimally invasive transoral (ENT) and colorectal procedures with surgeon-guided flexible access.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -54789,15 +54793,13 @@
     },
     "origin": "USA",
     "year": 2014,
-    "status": "Released",
+    "status": "Active",
     "released": "2014",
     "dof": 180,
     "use_cases": [
-      "Minimally invasive surgery",
-      "ENT surgery",
-      "Colorectal surgery",
-      "Gynecological surgery",
-      "Urological surgery"
+      "Transoral / ENT surgery",
+      "Colorectal procedures",
+      "Hard-to-reach anatomy"
     ],
     "manufacturer_url": "https://www.medrobotics.com",
     "height_mm": 1500,
@@ -54807,7 +54809,12 @@
     "reach_mm": 400,
     "cameras": "High-definition endoscopic camera with articulating tip",
     "warranty_months": 12,
-    "product_url": "https://www.medrobotics.com/flex-robotic-system"
+    "product_url": "https://www.medrobotics.com/flex-robotic-system",
+    "made_in": "USA",
+    "os": "Medrobotics",
+    "fda_cleared": true,
+    "surgical_type": "Flexible robotic endoscopy (transoral / colorectal)",
+    "robotic_arms": 1
   },
   {
     "id": "burro-burro-verde",
@@ -61322,7 +61329,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Next-generation robotic platform for total knee arthroplasty with low-profile planar end effector offering tactile feedback. Features compact floor-mounted base station with imageless and CT-based workflows.",
+    "desc": "Globus Medical's ExcelsiusFlex is a robotic-assisted platform for total knee arthroplasty, extending the Excelsius robotics franchise (well established in spine) into orthopedic joint replacement with planning and precise bone-resection guidance.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -61332,14 +61339,11 @@
     },
     "origin": "USA",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "dof": 6,
     "use_cases": [
-      "Total knee arthroplasty",
-      "Orthopedic surgery",
-      "Joint replacement surgery",
-      "Minimally invasive surgery"
+      "Robotic-assisted total knee arthroplasty"
     ],
     "manufacturer_url": "https://www.globusmedical.com",
     "weight_kg": 68,
@@ -61351,7 +61355,12 @@
     "depth_sensing": true,
     "imu": true,
     "warranty_months": 12,
-    "product_url": "https://www.globusmedical.com/robotics/excelsius-gps"
+    "product_url": "https://www.globusmedical.com/robotics/excelsius-gps",
+    "made_in": "USA",
+    "os": "Excelsius",
+    "fda_cleared": true,
+    "surgical_type": "Orthopedic - total knee arthroplasty",
+    "robotic_arms": 1
   },
   {
     "id": "johnson-johnson-medtech-dualto-energy-system",
@@ -61365,7 +61374,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Consolidated surgical energy system designed to work with Polyphonic Fleet software application. Powers HARMONIC and ENSEAL devices from single system. Designed for future use with OTTAVA Robotic Surgical System. Used in over five million surgical procedures annually in the US.",
+    "desc": "J&J MedTech's DUALTO is a surgical energy system (an electrosurgical generator platform), not a robot - it delivers multiple energy modalities for cutting and coagulation and integrates with J&J's connected-surgery ecosystem. Included here as part of the surgical-robotics ecosystem; it is a capital energy platform rather than a robotic manipulator.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -61375,14 +61384,11 @@
     },
     "origin": "USA",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "use_cases": [
-      "General surgery",
-      "Gynecological surgery",
-      "Urological surgery",
-      "Colorectal surgery",
-      "Thoracic surgery"
+      "Advanced surgical energy delivery",
+      "Mono/bipolar & advanced energy"
     ],
     "manufacturer_url": "https://www.jnjmedtech.com/",
     "warranty_months": 12,
@@ -61390,7 +61396,11 @@
     "gallery": [
       "https://images.contentstack.io/v3/assets/blt6442fb89e58ceab5/bltc069c35bb5a84449/68dc147a877911037288b155/US_SRG_ENER_405900-_DUALTO_Energy_System_-_hero_2.jpg?width=1920&quality=90&format=webp",
       "https://images.contentstack.io/v3/assets/blt6442fb89e58ceab5/bltdb26d466ca2f18b8/68dc147a58aeb40bb1a9a827/US_SRG_ENER_405900-_DUALTO_Energy_System_-_hero_3.jpg?width=1920&quality=90&format=webp"
-    ]
+    ],
+    "made_in": "USA",
+    "os": "J&J",
+    "fda_cleared": true,
+    "surgical_type": "Electrosurgical energy platform"
   },
   {
     "id": "ottonomy-io-ottobot-2-0",
