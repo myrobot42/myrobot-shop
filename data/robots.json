@@ -42079,17 +42079,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Integrated collaborative robots with built-in 2D vision and plug-and-play functionality",
+    "desc": "The JAKA All-in-one (Ai) Series is JAKA's range of 6-axis collaborative robots with built-in machine vision and visual safety protection, spanning 3-18 kg payloads. Designed around plug-and-play vision and wireless, drag-and-drop programming for fast, fenceless deployment.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 5,
     "dof": 6,
@@ -42097,11 +42092,10 @@
     "ros": true,
     "cameras": "Built-in 2D vision camera",
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 23,
@@ -42111,7 +42105,9 @@
     "imu": true,
     "depth_sensing": false,
     "warranty_months": 12,
-    "product_url": "https://www.jaka.com/products/all-in-one"
+    "product_url": "https://www.jaka.com/products/all-in-one",
+    "made_in": "China",
+    "os": "JAKA"
   },
   {
     "id": "jaka-jaka-s12",
@@ -42125,28 +42121,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High-payload collaborative robot with enhanced safety and force control capabilities",
+    "desc": "The JAKA JAKA S12 is a 6-axis collaborative robot (12 kg payload, 1327 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing. Includes a built-in force/torque sensor for force-controlled tasks.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 12,
     "dof": 6,
     "reach_mm": 1327,
     "ros": true,
     "use_cases": [
-      "Manufacturing automation",
-      "Assembly operations",
-      "Material handling",
-      "Quality inspection",
-      "Pick and place"
+      "Pick-and-place",
+      "Assembly",
+      "Machine tending",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 48,
@@ -42169,7 +42159,10 @@
       "Ethernet",
       "Modbus TCP",
       "EtherCAT"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-jaka-pro16",
@@ -42183,27 +42176,21 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty industrial robot with enhanced capabilities for complex automation tasks",
+    "desc": "The JAKA JAKA Pro16 is a 6-axis collaborative robot (16 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 16,
     "dof": 6,
     "reach_mm": 1327,
     "ros": true,
     "use_cases": [
-      "Heavy material handling",
-      "Automotive assembly",
+      "Pick-and-place",
+      "Assembly",
       "Machine tending",
-      "Welding",
       "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
@@ -42238,7 +42225,10 @@
     "gallery": [
       "https://insularobotics.gr/wp-content/uploads/2022/06/Pro-16-Render-Base.115.png",
       "https://insularobotics.gr/wp-content/uploads/2022/06/Pro-16-Render_Home-Page.110.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-jaka-pro12",
@@ -42252,28 +42242,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High-performance industrial robot for demanding manufacturing applications",
+    "desc": "The JAKA JAKA Pro12 is a 6-axis collaborative robot (12 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "payload_kg": 12,
     "dof": 6,
     "reach_mm": 1327,
     "weight_kg": 52,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Welding",
-      "Material handling"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "repeatability_mm": 0.03,
@@ -42309,7 +42293,10 @@
     ],
     "gallery": [
       "https://top3dshop.com/image/cache/catalog/products/robots/jaka/pro_12/jaka_pro_12_image_05-370x455.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-jaka-pro5",
@@ -42323,17 +42310,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Industrial-grade robot designed for extreme environments with enhanced safety features",
+    "desc": "The JAKA JAKA Pro5 is a 6-axis collaborative robot (5 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 5,
     "dof": 6,
@@ -42341,11 +42323,10 @@
     "repeatability_mm": 0.02,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 28,
@@ -42363,7 +42344,10 @@
     "operating_temp_max": 50,
     "voltage": "24V DC",
     "communication": "Ethernet, Modbus, RS485",
-    "product_url": "https://www.jaka.com/product/jaka-pro"
+    "product_url": "https://www.jaka.com/product/jaka-pro",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-jaka-zu35",
@@ -42377,28 +42361,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Ultra-heavy-duty collaborative robot with 2000mm reach for maximum performance",
+    "desc": "The JAKA JAKA Zu35 is a 6-axis collaborative robot (35 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "payload_kg": 35,
     "dof": 6,
     "reach_mm": 2000,
     "ros": true,
     "use_cases": [
-      "Heavy material handling",
-      "Palletizing",
+      "Pick-and-place",
+      "Assembly",
       "Machine tending",
-      "Welding",
-      "Assembly"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 85,
@@ -42413,7 +42391,10 @@
     "force_sensing": true,
     "warranty_months": 24,
     "height_mm": 1200,
-    "product_url": "https://www.jaka.com/product/zu35"
+    "product_url": "https://www.jaka.com/product/zu35",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-jaka-zu30",
@@ -42427,17 +42408,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty collaborative robot with maximum payload capacity",
+    "desc": "The JAKA JAKA Zu30 is a 6-axis collaborative robot (30 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 85,
     "payload_kg": 30,
@@ -42445,9 +42421,8 @@
     "reach_mm": 1327,
     "ros": true,
     "use_cases": [
-      "Heavy manufacturing",
-      "Assembly operations",
-      "Material handling",
+      "Pick-and-place",
+      "Assembly",
       "Machine tending",
       "Palletizing"
     ],
@@ -42464,7 +42439,10 @@
     "product_url": "https://www.jaka.com/product/zu30",
     "gallery": [
       "https://cdn.robodk.com/robot/img/JAKA-Zu30-robot.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-jaka-zu20",
@@ -42478,28 +42456,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High-capacity collaborative robot for demanding industrial automation tasks",
+    "desc": "The JAKA JAKA Zu20 is a 6-axis collaborative robot (20 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 20,
     "dof": 6,
     "reach_mm": 1700,
     "ros": true,
     "use_cases": [
-      "Heavy payload automation",
+      "Pick-and-place",
+      "Assembly",
       "Machine tending",
-      "Material handling",
-      "Assembly operations",
-      "Packaging"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 63,
@@ -42526,7 +42498,7 @@
     "end_effector_compatible": true,
     "vision_system_ready": true,
     "warranty_months": 24,
-    "os": "Linux",
+    "os": "JAKA",
     "wifi": true,
     "bluetooth": true,
     "imu": true,
@@ -42535,7 +42507,9 @@
     "product_url": "https://www.jaka.com/products/collaborative-robot/zu20",
     "gallery": [
       "https://cdn.robodk.com/robot/img/JAKA-Zu20-robot.png"
-    ]
+    ],
+    "made_in": "China",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-jaka-zu18",
@@ -42549,29 +42523,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty 6-axis collaborative robot with 1073mm reach for industrial applications",
+    "desc": "The JAKA JAKA Zu18 is a 6-axis collaborative robot (18 kg payload, 1073 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 18,
     "dof": 6,
     "reach_mm": 1073,
     "ros": true,
     "use_cases": [
-      "Heavy lifting",
-      "Material handling",
+      "Pick-and-place",
       "Assembly",
-      "Welding",
       "Machine tending",
-      "Packaging"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 70,
@@ -42593,7 +42560,10 @@
     "product_url": "https://www.jaka.com/product/zu18",
     "gallery": [
       "https://deltaglobal.com.my/wp-content/uploads/2022/08/jakazu18cobot.webp"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-jaka-zu12",
@@ -42607,28 +42577,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High-payload collaborative robot with 1327mm reach for heavy-duty automation tasks",
+    "desc": "The JAKA JAKA Zu12 is a 6-axis collaborative robot (12 kg payload, 1327 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 12,
     "dof": 6,
     "reach_mm": 1327,
     "ros": true,
     "use_cases": [
-      "Heavy-duty material handling",
+      "Pick-and-place",
+      "Assembly",
       "Machine tending",
-      "Palletizing",
-      "Assembly operations",
-      "Pick and place"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 33,
@@ -42682,7 +42646,10 @@
     ],
     "gallery": [
       "https://cdn.robodk.com/robot/img/JAKA-Zu12-robot.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-jaka-zu7",
@@ -42696,29 +42663,23 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "6-axis cobot with over 800mm reach, suitable for various manufacturing applications",
+    "desc": "The JAKA JAKA Zu7 is a 6-axis collaborative robot (7 kg payload, 796 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 22.5,
     "payload_kg": 7,
     "dof": 6,
-    "reach_mm": 820,
+    "reach_mm": 796,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 650,
@@ -42752,7 +42713,10 @@
     ],
     "gallery": [
       "https://cdn.robodk.com/robot/img/JAKA-Zu7-robot.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-jaka-zu5",
@@ -42766,29 +42730,23 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Mid-range collaborative robot with enhanced payload capacity for industrial automation",
+    "desc": "The JAKA JAKA Zu5 is a 6-axis collaborative robot (5 kg payload, 954 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 5,
     "dof": 6,
-    "reach_mm": 924,
+    "reach_mm": 954,
     "weight_kg": 18.5,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "repeatability_mm": 0.03,
@@ -42818,7 +42776,10 @@
     ],
     "gallery": [
       "https://cdn.robodk.com/robot/img/JAKA-Zu5-robot.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-jaka-zu3",
@@ -42832,17 +42793,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "6-axis collaborative robot with 626mm reach, featuring drag programming and wireless connectivity",
+    "desc": "The JAKA JAKA Zu3 is a 6-axis collaborative robot (3 kg payload, 626 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "height_mm": 465,
     "weight_kg": 12,
@@ -42854,19 +42810,20 @@
     "bluetooth": true,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection",
-      "Light manufacturing"
+      "Palletizing"
     ],
     "warranty_months": 12,
     "manufacturer_url": "https://www.jaka.com",
     "product_url": "https://www.jaka.com/product/zu3",
     "gallery": [
       "https://cdn.robodk.com/robot/img/JAKA-Zu3-robot.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-jaka-mini-2",
@@ -42880,29 +42837,23 @@
     "score": 75,
     "rating": 4,
     "price": 15000,
-    "desc": "Compact cobot with 580mm reach and improved payload capacity over MiniCobo",
+    "desc": "The JAKA JAKA Mini 2 is a 6-axis collaborative robot (1 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "weight_kg": 12.9,
-    "payload_kg": 2,
+    "payload_kg": 1,
     "dof": 6,
     "reach_mm": 580,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com/",
     "height_mm": 664,
@@ -42927,7 +42878,10 @@
       "https://iautomatia.com/wp-content/uploads/2024/10/mini2.png",
       "https://iautomatia.com/wp-content/uploads/2024/10/32.jpg",
       "https://iautomatia.com/wp-content/uploads/2024/10/31.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-jaka-s5",
@@ -42941,29 +42895,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Advanced force control cobot with built-in force sensor for multi-dimensional force perception. Features zero-installation, zero-configuration design, hand-guided teaching, and configurable torque control for precision operations like screwdriving.",
+    "desc": "The JAKA JAKA S5 is a 6-axis collaborative robot (5 kg payload, 954 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing. Includes a built-in force/torque sensor for force-controlled tasks.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 5,
     "dof": 6,
-    "reach_mm": 924,
+    "reach_mm": 954,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
-      "Screwdriving",
-      "Quality inspection",
       "Machine tending",
-      "Polishing"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 22,
@@ -42987,7 +42934,10 @@
     "warranty_months": 12,
     "gallery": [
       "https://cobotglobal.com/wp-content/uploads/2025/06/JAKA-S5.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-jaka-ai-5",
@@ -43001,20 +42951,15 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "All-in-one cobot with integrated vision system and compact control unit. Designed for plug-and-play operation with natural human-robot interaction capabilities.",
+    "desc": "The JAKA JAKA Ai 5 is a 6-axis collaborative robot (5 kg payload, 954 mm reach) from Shanghai-based JAKA with integrated machine vision, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "dof": 6,
-    "reach_mm": 910,
+    "reach_mm": 954,
     "payload_kg": 5,
     "weight_kg": 21,
     "cameras": "Integrated vision system",
@@ -43023,14 +42968,16 @@
     "ethernet": true,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Palletizing"
     ],
     "warranty_months": 24,
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-jaka-ai-3",
@@ -43044,29 +42991,23 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "All-in-one cobot with integrated machine vision camera, following S3 principles (Smart, Simple, Small). Features wireless training, visual programming, and built-in safety vision system.",
+    "desc": "The JAKA JAKA Ai 3 is a 6-axis collaborative robot (3 kg payload, 626 mm reach) from Shanghai-based JAKA with integrated machine vision, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "dof": 6,
-    "reach_mm": 650,
+    "reach_mm": 626,
     "payload_kg": 3,
     "cameras": "Integrated machine vision camera for visual programming and safety",
     "depth_sensing": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
-      "Quality inspection",
       "Machine tending",
-      "Packaging"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 713,
@@ -43077,7 +43018,10 @@
     "ros": true,
     "imu": true,
     "warranty_months": 12,
-    "product_url": "https://www.jaka.com/product/jaka-ai-3"
+    "product_url": "https://www.jaka.com/product/jaka-ai-3",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-jaka-zu-5s",
@@ -43528,17 +43472,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "All-in-one cobots with integrated machine vision cameras, designed with S³ principles (Smart, Simple, Small). Features wireless teaching, graphical programming, and visual protection for enhanced human-robot interaction.",
+    "desc": "The JAKA Ai (All-in-one) Series spans five 6-axis cobots - Ai 3, 5, 7, 12 and 18 (3-18 kg payload, 626-1327 mm reach) - each with integrated plug-and-play machine vision, wireless teaching and graphical programming, built on JAKA's S3 (Smart, Simple, Small) design principles.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2020,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 18,
     "dof": 6,
@@ -43549,20 +43488,19 @@
     "cameras": "Integrated machine vision cameras for visual protection and guidance",
     "depth_sensing": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection",
-      "Collaborative manufacturing"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 27,
     "speed_ms": 3,
-    "os": "JAKA APP",
+    "os": "JAKA",
     "warranty_months": 12,
     "product_url": "https://www.jaka.com/products/collaborative-robot",
-    "imu": true
+    "imu": true,
+    "made_in": "China"
   },
   {
     "id": "jaka-jaka-ai-7",
@@ -43576,30 +43514,23 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "All-in-one cobot with integrated machine vision, 819mm working radius, and ±0.02mm repeatability. Features wireless teaching, graphical programming, and visual protection systems. Ideal for welding, packaging, inspection, and testing applications.",
+    "desc": "The JAKA JAKA Ai 7 is a 6-axis collaborative robot (7 kg payload, 796 mm reach) from Shanghai-based JAKA with integrated machine vision, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2020,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 20,
     "payload_kg": 7,
     "dof": 6,
-    "reach_mm": 819,
+    "reach_mm": 796,
     "cameras": "Integrated machine vision camera",
     "use_cases": [
-      "welding",
-      "packaging",
-      "inspection",
-      "testing",
-      "pick and place",
-      "assembly"
+      "Pick-and-place",
+      "Assembly",
+      "Machine tending",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 1270,
@@ -43607,7 +43538,10 @@
     "wifi": true,
     "bluetooth": true,
     "speed_ms": 2,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-jaka-minicobo",
@@ -43621,35 +43555,31 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Lightweight and compact collaborative robot designed for education, retail, and service industries. Features wireless control, quiet operation, and simple programming interface. Suitable for dispensing, light assembly, and educational applications.",
+    "desc": "The JAKA JAKA MiniCobo is a 6-axis collaborative robot (1 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "height_mm": 664,
     "weight_kg": 12.9,
-    "payload_kg": 0.5,
+    "payload_kg": 1,
     "dof": 6,
     "reach_mm": 350,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Education",
-      "Light assembly",
-      "Pick and place",
-      "Dispensing",
-      "Service applications",
-      "Research"
+      "Pick-and-place",
+      "Assembly",
+      "Machine tending",
+      "Palletizing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "aubo-aubo-iv-vision-series",
@@ -54934,17 +54864,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Mid-range collaborative robot with 7kg payload for various manufacturing and assembly applications.",
+    "desc": "The JAKA C7 is a 6-axis collaborative robot (7 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 24,
     "payload_kg": 7,
@@ -54952,11 +54877,10 @@
     "reach_mm": 820,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 910,
@@ -54976,7 +54900,10 @@
       "CE",
       "ISO 10218"
     ],
-    "product_url": "https://www.jaka.com/products/collaborative-robot/jaka-zu-7"
+    "product_url": "https://www.jaka.com/products/collaborative-robot/jaka-zu-7",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-c5",
@@ -54990,17 +54917,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Collaborative robot model with 5kg payload capacity for industrial automation applications.",
+    "desc": "The JAKA C5 is a 6-axis collaborative robot (5 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 18,
     "payload_kg": 5,
@@ -55008,11 +54930,10 @@
     "reach_mm": 924,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com/",
     "height_mm": 658,
@@ -55044,7 +54965,10 @@
       "CE",
       "ISO 10218",
       "ISO/TS 15066"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-minicobo",
@@ -55058,28 +54982,22 @@
     "score": 75,
     "rating": 4,
     "price": 15000,
-    "desc": "Smallest collaborative robot designed for catering, service sectors, and education. Compact size with modest energy consumption for versatile placement.",
+    "desc": "The JAKA MiniCobo is a 6-axis collaborative robot (1 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "dof": 6,
     "reach_mm": 350,
-    "payload_kg": 0.5,
+    "payload_kg": 1,
     "weight_kg": 12,
     "use_cases": [
-      "Food service",
-      "Light assembly",
-      "Educational robotics",
-      "Research",
-      "Pick and place"
+      "Pick-and-place",
+      "Assembly",
+      "Machine tending",
+      "Palletizing"
     ],
     "ros": true,
     "manufacturer_url": "https://www.jaka.com",
@@ -55091,7 +55009,10 @@
     "cameras": "Built-in vision system",
     "imu": true,
     "warranty_months": 12,
-    "product_url": "https://www.jaka.com/product/minicobo"
+    "product_url": "https://www.jaka.com/product/minicobo",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-pro-16",
@@ -55105,17 +55026,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Industrial cobot with 1713mm reach, IP68 protection rating. Built for high-precision demanding tasks in harsh environments including metal cutting and grinding.",
+    "desc": "The JAKA Pro 16 is a 6-axis collaborative robot (16 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "weight_kg": 36,
     "payload_kg": 16,
@@ -55123,12 +55039,10 @@
     "reach_mm": 1713,
     "ros": true,
     "use_cases": [
-      "Metal cutting",
-      "Grinding",
-      "Welding",
-      "Material handling",
+      "Pick-and-place",
       "Assembly",
-      "Machine tending"
+      "Machine tending",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "repeatability_mm": 0.03,
@@ -55146,7 +55060,10 @@
     "warranty_months": 24,
     "gallery": [
       "https://cdn.robodk.com/robot/img/JAKA-Pro-16-robot.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-ai-18",
@@ -55160,29 +55077,23 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy-duty all-in-one collaborative robot with integrated vision system and plug-and-play capabilities.",
+    "desc": "The JAKA Ai 18 is a 6-axis collaborative robot (18 kg payload, 1073 mm reach) from Shanghai-based JAKA with integrated machine vision, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2022,
-    "status": "Released",
+    "status": "Active",
     "released": "2022",
     "payload_kg": 18,
     "dof": 6,
-    "reach_mm": 1327,
+    "reach_mm": 1073,
     "ros": true,
     "cameras": "Integrated vision system",
     "use_cases": [
-      "Manufacturing",
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "weight_kg": 52,
@@ -55216,7 +55127,10 @@
     "warranty_months": 12,
     "gallery": [
       "https://www.jaka.electra.md/images/2021/04/02/161482286741586800.png"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-ai-12",
@@ -55230,17 +55144,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Higher payload all-in-one cobot with integrated machine vision for personnel safety and visual programming.",
+    "desc": "The JAKA Ai 12 is a 6-axis collaborative robot (12 kg payload, 1327 mm reach) from Shanghai-based JAKA with integrated machine vision, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "weight_kg": 32,
     "payload_kg": 12,
@@ -55249,11 +55158,10 @@
     "ros": true,
     "cameras": "Integrated machine vision camera for visual programming and safety monitoring",
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 1327,
@@ -55265,7 +55173,10 @@
     "programming_interface": "Visual programming, drag-and-drop interface",
     "safety_features": "Integrated safety monitoring, collision detection, emergency stop",
     "connectivity": "Ethernet, USB",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-ai-7",
@@ -55279,30 +55190,24 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Integrated vision system cobot with wireless training capabilities and natural human-robot interaction features.",
+    "desc": "The JAKA Ai 7 is a 6-axis collaborative robot (7 kg payload, 796 mm reach) from Shanghai-based JAKA with integrated machine vision, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "weight_kg": 26,
     "payload_kg": 7,
     "dof": 6,
-    "reach_mm": 819,
+    "reach_mm": 796,
     "ros": true,
     "cameras": "Integrated vision system",
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 400,
@@ -55321,7 +55226,10 @@
     "force_feedback": true,
     "wifi": true,
     "ethernet": true,
-    "warranty_months": 24
+    "warranty_months": 24,
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-ai-5",
@@ -55335,31 +55243,24 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "All-in-one cobot with built-in machine vision system and mini-cabinet control unit option for confined spaces or mobile platforms.",
+    "desc": "The JAKA Ai 5 is a 6-axis collaborative robot (5 kg payload, 954 mm reach) from Shanghai-based JAKA with integrated machine vision, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "payload_kg": 5,
     "dof": 6,
-    "reach_mm": 924,
+    "reach_mm": 954,
     "weight_kg": 25,
     "cameras": "Built-in machine vision system with integrated camera",
     "depth_sensing": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
-      "Quality inspection",
       "Machine tending",
-      "Packaging",
-      "Welding"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 924,
@@ -55384,7 +55285,10 @@
       "Ethernet",
       "Modbus TCP",
       "TCP/IP"
-    ]
+    ],
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-ai-3",
@@ -55398,33 +55302,29 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Smart, Simple, Small (S3) design with integrated machine vision cameras, wireless training, and visual programming capabilities.",
+    "desc": "The JAKA Ai 3 is a 6-axis collaborative robot (3 kg payload, 626 mm reach) from Shanghai-based JAKA with integrated machine vision, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 18,
     "payload_kg": 3,
     "dof": 6,
-    "reach_mm": 625,
+    "reach_mm": 626,
     "cameras": "Integrated machine vision cameras",
     "wifi": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Packaging",
-      "Quality inspection",
-      "Education"
+      "Palletizing"
     ],
-    "manufacturer_url": "https://www.jaka.com/"
+    "manufacturer_url": "https://www.jaka.com/",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-zu-20",
@@ -55438,17 +55338,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "6-axis robot arm with 1780mm reach for collaborative manufacturing applications.",
+    "desc": "The JAKA Zu 20 is a 6-axis collaborative robot (20 kg payload) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 67,
     "payload_kg": 20,
@@ -55457,14 +55352,15 @@
     "speed_ms": 2,
     "ros": true,
     "use_cases": [
-      "Industrial automation",
-      "Pick and place",
-      "Machine tending",
+      "Pick-and-place",
       "Assembly",
-      "Palletizing",
-      "Collaborative manufacturing"
+      "Machine tending",
+      "Palletizing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-zu-18",
@@ -55478,17 +55374,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy payload cobot with 1073mm working radius. Weighs 35kg with multiple safety protection for heavy load applications in automotive and manufacturing.",
+    "desc": "The JAKA Zu 18 is a 6-axis collaborative robot (18 kg payload, 1073 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "weight_kg": 35,
     "payload_kg": 18,
@@ -55496,11 +55387,10 @@
     "reach_mm": 1073,
     "ros": true,
     "use_cases": [
-      "Heavy payload handling",
-      "Automotive assembly",
-      "Manufacturing",
-      "Material handling",
-      "Machine tending"
+      "Pick-and-place",
+      "Assembly",
+      "Machine tending",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 1153,
@@ -55532,7 +55422,10 @@
       "Table"
     ],
     "warranty_months": 24,
-    "product_url": "https://www.jaka.com/product/zu18"
+    "product_url": "https://www.jaka.com/product/zu18",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-zu-12",
@@ -55546,17 +55439,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Higher payload cobot with 1327mm working radius. Weighs 41kg with aluminum and PC body construction. Features six integral joints design.",
+    "desc": "The JAKA Zu 12 is a 6-axis collaborative robot (12 kg payload, 1327 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 41,
     "payload_kg": 12,
@@ -55564,12 +55452,10 @@
     "reach_mm": 1327,
     "ros": true,
     "use_cases": [
-      "Industrial automation",
-      "Machine tending",
-      "Pick and place",
+      "Pick-and-place",
       "Assembly",
-      "Packaging",
-      "Material handling"
+      "Machine tending",
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "height_mm": 904,
@@ -55600,7 +55486,10 @@
       "Wall",
       "Table"
     ],
-    "warranty_months": 24
+    "warranty_months": 24,
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.03
   },
   {
     "id": "jaka-zu-7",
@@ -55614,29 +55503,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High payload to weight ratio (1:3) cobot with 819mm working radius. Weighs 22kg with high applicability and cost-effectiveness.",
+    "desc": "The JAKA Zu 7 is a 6-axis collaborative robot (7 kg payload, 796 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "weight_kg": 22,
     "payload_kg": 7,
     "dof": 6,
-    "reach_mm": 819,
+    "reach_mm": 796,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
       "Machine tending",
-      "Pick and place",
-      "Packaging",
-      "Quality inspection",
-      "Material handling"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "product_url": "https://www.jaka.com/products/collaborative-robot/zu-series",
@@ -55645,7 +55527,10 @@
     "speed_ms": 3,
     "ip_rating": "IP54",
     "repeatability_mm": 0.02,
-    "power_consumption_w": 300
+    "power_consumption_w": 300,
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-zu-5s",
@@ -55659,28 +55544,22 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Force control version with industrial force sensor. Features tri-co interactions (coexisting, cooperative, cognitive) with 954mm working radius.",
+    "desc": "The JAKA Zu 5s is a 6-axis collaborative robot (5 kg payload, 954 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing. Includes a built-in force/torque sensor for force-controlled tasks.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 23,
     "payload_kg": 5,
     "dof": 6,
     "reach_mm": 954,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Palletizing"
     ],
     "manufacturer_url": "https://www.jaka.com",
     "repeatability_mm": 0.03,
@@ -55711,7 +55590,10 @@
     "imu": true,
     "depth_sensing": false,
     "lidar": false,
-    "product_url": "https://www.jaka.com/products/zu5s"
+    "product_url": "https://www.jaka.com/products/zu5s",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-zu-5",
@@ -55725,17 +55607,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Compact and portable 6-axis cobot with 954mm working radius. Features high flexibility and well adaptability for lightweight operations.",
+    "desc": "The JAKA Zu 5 is a 6-axis collaborative robot (5 kg payload, 954 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 18,
     "payload_kg": 5,
@@ -55744,14 +55621,16 @@
     "speed_ms": 3,
     "ros": true,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Palletizing"
     ],
     "warranty_months": 24,
-    "manufacturer_url": "https://www.jaka.com/"
+    "manufacturer_url": "https://www.jaka.com/",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "jaka-zu-3",
@@ -55765,17 +55644,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Lightweight smart 6-axis modular collaborative robot with 626mm working radius. Flexible and light design with small space requirement and high cost-effectiveness.",
+    "desc": "The JAKA Zu 3 is a 6-axis collaborative robot (3 kg payload, 626 mm reach) from Shanghai-based JAKA, featuring wireless drag-and-drop/graphical programming, collision detection and fenceless operation for pick-and-place, assembly, machine tending and palletizing.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "weight_kg": 12,
     "payload_kg": 3,
@@ -55783,13 +55657,15 @@
     "reach_mm": 626,
     "speed_ms": 2.5,
     "use_cases": [
+      "Pick-and-place",
       "Assembly",
-      "Pick and place",
       "Machine tending",
-      "Quality inspection",
-      "Packaging"
+      "Palletizing"
     ],
-    "manufacturer_url": "https://www.jaka.com"
+    "manufacturer_url": "https://www.jaka.com",
+    "made_in": "China",
+    "os": "JAKA",
+    "repeatability": 0.02
   },
   {
     "id": "hanwha-robotics-agv-cobot-solution",
