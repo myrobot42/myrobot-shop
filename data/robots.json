@@ -3183,7 +3183,7 @@
     "name": "H1",
     "brand": "Unitree",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -3194,8 +3194,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/24/RhsreqvN00wH0ceQFdym/image.jpg",
-    "score": 92,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 90000,
     "desc": "Advanced humanoid robot with whole-body control and dynamic walking capabilities for research and industrial applications.",
     "highlights": [
@@ -3270,12 +3270,7 @@
       "Industrial automation",
       "Education"
     ],
-    "perf": {
-      "walking_speed": "1.5 m/s",
-      "payload": "30 kg",
-      "dof": "29",
-      "joint_torque": "360 Nm"
-    },
+    "perf": false,
     "origin": "Unknown",
     "released": "2023",
     "payload_kg": 30,
@@ -3291,14 +3286,16 @@
       "https://plain-eeur-prod-public.komododecks.com/202605/24/SOdAucYrFZwApinfI4Ad/image.jpg",
       "",
       ""
-    ]
+    ],
+    "dof": 29,
+    "joint_torque_nm": 360
   },
   {
     "id": "unitree-g1",
     "name": "G1",
     "brand": "Unitree",
     "year": 2024,
-    "status": "Pre-order",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -3309,8 +3306,8 @@
     ],
     "fig": "🤖",
     "img": "https://shop.unitree.com/cdn/shop/files/1_968fd08b-9aaf-4f32-b895-5c786285ee52.jpg?v=1717575256",
-    "score": 88,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 16000,
     "desc": "Compact humanoid robot designed for home and educational use with intuitive control and affordable pricing.",
     "highlights": [
@@ -3385,12 +3382,7 @@
       "Home assistant",
       "Entertainment"
     ],
-    "perf": {
-      "walking_speed": "0.8 m/s",
-      "payload": "5 kg",
-      "dof": "23",
-      "joint_torque": "120 Nm"
-    },
+    "perf": false,
     "origin": "Unknown",
     "released": "2024",
     "manufacturer_url": "https://www.unitree.com",
@@ -3404,14 +3396,16 @@
       "https://autodiscovery.co.uk/images/G1/G1-3.png",
       "https://autodiscovery.co.uk/images/G1/G1-4.png",
       "https://autodiscovery.co.uk/images/G1/G1-specs.png"
-    ]
+    ],
+    "dof": 23,
+    "joint_torque_nm": 120
   },
   {
     "id": "unitree-avatar",
     "name": "Avatar",
     "brand": "Unitree",
     "year": 2024,
-    "status": "Concept",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Telepresence Humanoid",
     "tags": [
@@ -3422,7 +3416,7 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 82,
+    "score": 75,
     "rating": 4,
     "price": 75000,
     "desc": "Humanoid telepresence robot for remote presence and interaction with advanced motion mimicry capabilities.",
@@ -3498,20 +3492,19 @@
       "Remote meetings",
       "Healthcare"
     ],
-    "perf": {
-      "walking_speed": "1.0 m/s",
-      "payload": "8 kg",
-      "dof": "25",
-      "joint_torque": "200 Nm"
-    },
-    "origin": "Unknown"
+    "perf": false,
+    "origin": "Unknown",
+    "speed_ms": 1,
+    "payload_kg": 8,
+    "dof": 25,
+    "joint_torque_nm": 200
   },
   {
     "id": "unitree-companion",
     "name": "Companion",
     "brand": "Unitree",
     "year": 2024,
-    "status": "Development",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -3522,8 +3515,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 45000,
     "desc": "Social humanoid companion robot designed for elderly care and emotional support with natural interaction.",
     "highlights": [
@@ -3598,20 +3591,19 @@
       "Companionship",
       "Health monitoring"
     ],
-    "perf": {
-      "walking_speed": "0.5 m/s",
-      "payload": "3 kg",
-      "dof": "20",
-      "joint_torque": "80 Nm"
-    },
-    "origin": "Unknown"
+    "perf": false,
+    "origin": "Unknown",
+    "speed_ms": 0.5,
+    "payload_kg": 3,
+    "dof": 20,
+    "joint_torque_nm": 80
   },
   {
     "id": "unitree-worker",
     "name": "Worker",
     "brand": "Unitree",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "tags": [
@@ -3622,8 +3614,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 90,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 65000,
     "desc": "Industrial humanoid robot optimized for warehouse operations and logistics tasks with high payload capacity.",
     "highlights": [
@@ -3698,20 +3690,19 @@
       "Manufacturing",
       "Logistics"
     ],
-    "perf": {
-      "walking_speed": "1.2 m/s",
-      "payload": "50 kg",
-      "dof": "27",
-      "joint_torque": "500 Nm"
-    },
-    "origin": "Unknown"
+    "perf": false,
+    "origin": "Unknown",
+    "speed_ms": 1.2,
+    "payload_kg": 50,
+    "dof": 27,
+    "joint_torque_nm": 500
   },
   {
     "id": "unitree-scout",
     "name": "Scout",
     "brand": "Unitree",
     "year": 2024,
-    "status": "Pre-order",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Security Humanoid",
     "tags": [
@@ -3722,8 +3713,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 85000,
     "desc": "Security-focused humanoid robot for patrol and surveillance applications with weather-resistant design.",
     "highlights": [
@@ -3799,20 +3790,19 @@
       "Surveillance",
       "Border control"
     ],
-    "perf": {
-      "walking_speed": "1.8 m/s",
-      "payload": "25 kg",
-      "dof": "30",
-      "joint_torque": "350 Nm"
-    },
-    "origin": "Unknown"
+    "perf": false,
+    "origin": "Unknown",
+    "speed_ms": 1.8,
+    "payload_kg": 25,
+    "dof": 30,
+    "joint_torque_nm": 350
   },
   {
     "id": "boston-dynamics-atlas-hd",
     "name": "Atlas HD",
     "brand": "Boston Dynamics",
     "year": 2024,
-    "status": "Development",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -3824,8 +3814,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/k36DeLkxiq2ExcPaZrLU/image.jpg",
-    "score": 98,
-    "rating": 4.9,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "Next-generation all-electric Atlas with enhanced mobility and manipulation capabilities for real-world applications.",
     "highlights": [
@@ -3902,14 +3892,7 @@
       "Research",
       "Emergency response"
     ],
-    "perf": {
-      "max_speed_ms": 3,
-      "max_payload_kg": 15,
-      "reach_mm": 900,
-      "precision_mm": 2,
-      "dof": 30,
-      "joint_torque_nm": 500
-    },
+    "perf": false,
     "origin": "USA",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202605/25/s7J6g806R97OyLbRpMsf/image.jpg",
@@ -3917,14 +3900,19 @@
       "https://plain-eeur-prod-public.komododecks.com/202605/25/YCUKmBslx80lfsAHqz9E/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202605/25/z2SHVNStiKCHCxwMQPUu/image.jpg",
       ""
-    ]
+    ],
+    "speed_ms": 3,
+    "payload_kg": 15,
+    "reach_mm": 900,
+    "dof": 30,
+    "joint_torque_nm": 500
   },
   {
     "id": "boston-dynamics-petman",
     "name": "PETMAN",
     "brand": "Boston Dynamics",
     "year": 2013,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Competition / Testing",
     "tags": [
@@ -3936,8 +3924,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/Dver5D2R0NrWCaQdfWvI/image.jpg",
-    "score": 78,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "Humanoid robot designed for testing chemical protection suits with natural human-like movements and physiological responses.",
     "highlights": [
@@ -4005,14 +3993,7 @@
       "Chemical suit testing",
       "Military research"
     ],
-    "perf": {
-      "max_speed_ms": 1.3,
-      "max_payload_kg": 5,
-      "reach_mm": 750,
-      "precision_mm": 20,
-      "dof": 24,
-      "joint_torque_nm": 200
-    },
+    "perf": false,
     "origin": "USA",
     "gallery": [
       "https://spectrum.ieee.org/media-library/boston-dynamics-petman-humanoid-robot-video.jpg?id=25565938&width=512&quality=85",
@@ -4020,14 +4001,19 @@
       "",
       "",
       ""
-    ]
+    ],
+    "speed_ms": 1.3,
+    "payload_kg": 5,
+    "reach_mm": 750,
+    "dof": 24,
+    "joint_torque_nm": 200
   },
   {
     "id": "boston-dynamics-atlas-darpa",
     "name": "Atlas (DARPA)",
     "brand": "Boston Dynamics",
     "year": 2016,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Competition / Testing",
     "tags": [
@@ -4039,8 +4025,8 @@
     ],
     "fig": "🤖",
     "img": "https://www.darpa.mil/sites/default/files/styles/wide_816/public/DRC_BACK_619_316.jpg?itok=YFtCsi0I",
-    "score": 85,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "DARPA Robotics Challenge version of Atlas designed for disaster response scenarios with advanced manipulation capabilities.",
     "highlights": [
@@ -4113,22 +4099,20 @@
       "Research",
       "Competition"
     ],
-    "perf": {
-      "max_speed_ms": 1.5,
-      "max_payload_kg": 20,
-      "reach_mm": 800,
-      "precision_mm": 10,
-      "dof": 28,
-      "joint_torque_nm": 300
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 1.5,
+    "payload_kg": 20,
+    "reach_mm": 800,
+    "dof": 28,
+    "joint_torque_nm": 300
   },
   {
     "id": "boston-dynamics-handle-humanoid",
     "name": "Handle Humanoid",
     "brand": "Boston Dynamics",
     "year": 2017,
-    "status": "Prototype",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Competition / Testing",
     "tags": [
@@ -4140,8 +4124,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/NifYM7lKwRSjvM1NKA7P/image.jpg",
-    "score": 82,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "Experimental humanoid robot combining legs and wheels for enhanced mobility and manipulation in warehouse environments.",
     "highlights": [
@@ -4213,14 +4197,7 @@
       "Material handling",
       "Prototype testing"
     ],
-    "perf": {
-      "max_speed_ms": 4,
-      "max_payload_kg": 30,
-      "reach_mm": 1200,
-      "precision_mm": 15,
-      "dof": 20,
-      "joint_torque_nm": 250
-    },
+    "perf": false,
     "origin": "USA",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202605/25/InGDUKDu15ZJfPhlopyI/image.jpg",
@@ -4228,14 +4205,19 @@
       "",
       "",
       ""
-    ]
+    ],
+    "speed_ms": 4,
+    "payload_kg": 30,
+    "reach_mm": 1200,
+    "dof": 20,
+    "joint_torque_nm": 250
   },
   {
     "id": "figure-01-gen1",
     "name": "Figure 01",
     "brand": "Figure AI",
     "year": 2023,
-    "status": "Development",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -4250,8 +4232,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/s5yGoPhPQp5QI3Dmfipc/image.jpg",
-    "score": 8.5,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "Advanced humanoid robot with human-like dexterity and AI-powered autonomous operation for workplace tasks.",
     "highlights": [
@@ -4327,22 +4309,19 @@
       "Logistics",
       "Service"
     ],
-    "perf": {
-      "max_speed_ms": 1.5,
-      "max_payload_kg": 20,
-      "reach_mm": 800,
-      "dof": 40,
-      "precision_mm": 1,
-      "response_time_ms": 100
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 1.5,
+    "payload_kg": 20,
+    "reach_mm": 800,
+    "dof": 40
   },
   {
     "id": "figure-02-commercial",
     "name": "Figure 02",
     "brand": "Figure AI",
     "year": 2024,
-    "status": "Pre-production",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -4357,8 +4336,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/9QpcHoAjyGh7GHOIPZle/image.jpg",
-    "score": 9,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 150000,
     "desc": "Next-generation humanoid robot designed for commercial deployment with enhanced safety and learning capabilities.",
     "highlights": [
@@ -4438,14 +4417,7 @@
       "Hospitality",
       "Construction"
     ],
-    "perf": {
-      "max_speed_ms": 2,
-      "max_payload_kg": 25,
-      "reach_mm": 850,
-      "dof": 48,
-      "precision_mm": 0.5,
-      "response_time_ms": 50
-    },
+    "perf": false,
     "origin": "USA",
     "gallery": [
       "https://cdn.prod.website-files.com/67ea6793adf74f7d3087e4e4/69883bcf945491dfc8671bed_67f7b524d3ebf5c42302cf92_figure-02-release-date.avif",
@@ -4453,7 +4425,11 @@
       "",
       "",
       ""
-    ]
+    ],
+    "speed_ms": 2,
+    "payload_kg": 25,
+    "reach_mm": 850,
+    "dof": 48
   },
   {
     "id": "ur3e",
@@ -7380,7 +7356,7 @@
     "name": "Digit v5",
     "brand": "Agility Robotics",
     "year": 2024,
-    "status": "Production",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Humanoid",
     "tags": [
@@ -7396,8 +7372,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 8.7,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 250000,
     "desc": "Advanced bipedal robot for warehouse automation and logistics tasks with improved manipulation capabilities and enhanced AI.",
     "highlights": [
@@ -7473,22 +7449,19 @@
       "Package handling",
       "Inventory management"
     ],
-    "perf": {
-      "max_speed_ms": 1.5,
-      "max_payload_kg": 15,
-      "reach_mm": 900,
-      "precision_mm": 5,
-      "uptime_pct": 95
-    },
+    "perf": false,
     "origin": "USA",
-    "cellular": "5G"
+    "cellular": "5G",
+    "speed_ms": 1.5,
+    "payload_kg": 15,
+    "reach_mm": 900
   },
   {
     "id": "digit-v4",
     "name": "Digit v4",
     "brand": "Agility Robotics",
     "year": 2023,
-    "status": "Production",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Humanoid",
     "tags": [
@@ -7502,8 +7475,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 8.3,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 200000,
     "desc": "Production-ready bipedal robot designed for warehouse and logistics operations with advanced manipulation and mobility.",
     "highlights": [
@@ -7578,21 +7551,18 @@
       "Material transport",
       "Simple manipulation"
     ],
-    "perf": {
-      "max_speed_ms": 1.2,
-      "max_payload_kg": 12,
-      "reach_mm": 850,
-      "precision_mm": 8,
-      "uptime_pct": 90
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 1.2,
+    "payload_kg": 12,
+    "reach_mm": 850
   },
   {
     "id": "digit-v3",
     "name": "Digit v3",
     "brand": "Agility Robotics",
     "year": 2022,
-    "status": "Limited Production",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Humanoid",
     "tags": [
@@ -7603,8 +7573,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 7.8,
-    "rating": 3.8,
+    "score": 75,
+    "rating": 4,
     "price": 150000,
     "desc": "Research-focused bipedal humanoid robot platform with improved stability and basic manipulation capabilities.",
     "highlights": [
@@ -7673,21 +7643,18 @@
       "Education",
       "Prototype testing"
     ],
-    "perf": {
-      "max_speed_ms": 0.8,
-      "max_payload_kg": 8,
-      "reach_mm": 800,
-      "precision_mm": 15,
-      "uptime_pct": 80
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 0.8,
+    "payload_kg": 8,
+    "reach_mm": 800
   },
   {
     "id": "cassie-blue",
     "name": "Cassie Blue",
     "brand": "Agility Robotics",
     "year": 2021,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Humanoid",
     "tags": [
@@ -7700,8 +7667,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 7.2,
-    "rating": 3.5,
+    "score": 75,
+    "rating": 4,
     "price": 100000,
     "desc": "Advanced bipedal robot legs platform designed for dynamic walking and running research applications.",
     "highlights": [
@@ -7774,21 +7741,17 @@
       "Gait analysis",
       "Control algorithms"
     ],
-    "perf": {
-      "max_speed_ms": 3,
-      "max_payload_kg": 5,
-      "reach_mm": null,
-      "precision_mm": null,
-      "uptime_pct": 70
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 3,
+    "payload_kg": 5
   },
   {
     "id": "digit-v2",
     "name": "Digit v2",
     "brand": "Agility Robotics",
     "year": 2020,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Humanoid",
     "tags": [
@@ -7799,8 +7762,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 6.9,
-    "rating": 3.2,
+    "score": 75,
+    "rating": 4,
     "price": 120000,
     "desc": "Second generation bipedal humanoid robot prototype with enhanced stability and basic object manipulation.",
     "highlights": [
@@ -7870,21 +7833,18 @@
       "Development",
       "Proof of concept"
     ],
-    "perf": {
-      "max_speed_ms": 0.6,
-      "max_payload_kg": 5,
-      "reach_mm": 750,
-      "precision_mm": 25,
-      "uptime_pct": 65
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 0.6,
+    "payload_kg": 5,
+    "reach_mm": 750
   },
   {
     "id": "digit-v1",
     "name": "Digit v1",
     "brand": "Agility Robotics",
     "year": 2019,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Humanoid",
     "tags": [
@@ -7899,8 +7859,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 6.2,
-    "rating": 2.8,
+    "score": 75,
+    "rating": 4,
     "price": 100000,
     "desc": "First generation Digit humanoid robot prototype demonstrating bipedal locomotion and basic navigation capabilities.",
     "highlights": [
@@ -7972,21 +7932,18 @@
       "Demonstration",
       "Concept validation"
     ],
-    "perf": {
-      "max_speed_ms": 0.4,
-      "max_payload_kg": 3,
-      "reach_mm": 700,
-      "precision_mm": 50,
-      "uptime_pct": 50
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 0.4,
+    "payload_kg": 3,
+    "reach_mm": 700
   },
   {
     "id": "cassie-original",
     "name": "Cassie Original",
     "brand": "Agility Robotics",
     "year": 2018,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Humanoid",
     "tags": [
@@ -7997,8 +7954,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 6.8,
-    "rating": 3.4,
+    "score": 75,
+    "rating": 4,
     "price": 80000,
     "desc": "Original Cassie bipedal robot legs platform designed for dynamic walking research and gait development.",
     "highlights": [
@@ -8067,21 +8024,17 @@
       "Gait studies",
       "Control development"
     ],
-    "perf": {
-      "max_speed_ms": 2.5,
-      "max_payload_kg": 2,
-      "reach_mm": null,
-      "precision_mm": null,
-      "uptime_pct": 60
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 2.5,
+    "payload_kg": 2
   },
   {
     "id": "tesla-optimus-gen1",
     "name": "Tesla Optimus Gen 1",
     "brand": "Tesla",
     "year": 2023,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -8095,8 +8048,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/flwdKJ0RzarbtWaXCyvq/image.jpg",
-    "score": 8.5,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 20000,
     "desc": "Tesla's first generation humanoid robot designed for general labor tasks with advanced AI capabilities and human-like dexterity.",
     "highlights": [
@@ -8172,13 +8125,7 @@
       "warehouse",
       "household"
     ],
-    "perf": {
-      "max_speed_kmh": 8,
-      "max_payload_kg": 20,
-      "reach_mm": 900,
-      "precision_mm": 1,
-      "response_time_ms": 50
-    },
+    "perf": false,
     "origin": "USA",
     "gallery": [
       "https://img-new.cgtrader.com/items/3997929/ac51f38cf3/tesla-optimus-gen-1-3d-model-ac51f38cf3.jpg",
@@ -8186,14 +8133,17 @@
       "https://img-new.cgtrader.com/items/3997929/552e0e5b13/tesla-optimus-gen-1-3d-model-552e0e5b13.jpg",
       "https://img-new.cgtrader.com/items/3997929/18ef82ba6f/tesla-optimus-gen-1-3d-model-18ef82ba6f.jpg",
       "https://img-new.cgtrader.com/items/3997929/b5ab9e76df/tesla-optimus-gen-1-3d-model-b5ab9e76df.jpg"
-    ]
+    ],
+    "speed_ms": 8,
+    "payload_kg": 20,
+    "reach_mm": 900
   },
   {
     "id": "tesla-optimus-gen2",
     "name": "Tesla Optimus Gen 2",
     "brand": "Tesla",
     "year": 2024,
-    "status": "development",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -8207,8 +8157,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/C4DGaOF0tRoaSPRGMsec/image.jpg",
-    "score": 9.2,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 18000,
     "desc": "Second generation Tesla Optimus with improved actuators, better balance, and enhanced AI processing for complex tasks.",
     "highlights": [
@@ -8288,13 +8238,7 @@
       "household",
       "healthcare"
     ],
-    "perf": {
-      "max_speed_kmh": 10,
-      "max_payload_kg": 25,
-      "reach_mm": 920,
-      "precision_mm": 0.5,
-      "response_time_ms": 30
-    },
+    "perf": false,
     "origin": "USA",
     "gallery": [
       "https://img-new.cgtrader.com/items/7102290/938e25eccd/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-938e25eccd.webp",
@@ -8302,7 +8246,10 @@
       "https://img-new.cgtrader.com/items/7102290/2cd97f0a24/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-2cd97f0a24.webp",
       "https://img-new.cgtrader.com/items/7102290/cbfeb36f60/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-cbfeb36f60.webp",
       "https://img-new.cgtrader.com/items/7102290/9bcaadce32/tesla-optimus-gen-2-humanoid-robot-for-blender-animated-set-3d-model-9bcaadce32.webp"
-    ]
+    ],
+    "speed_ms": 10,
+    "payload_kg": 25,
+    "reach_mm": 920
   },
   {
     "id": "tesla-optimus-workplace",
@@ -8418,7 +8365,7 @@
     "name": "Apollo Gen 1",
     "brand": "Apptronik",
     "year": 2023,
-    "status": "development",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -8427,10 +8374,10 @@
       "logistics",
       "manufacturing"
     ],
-    "fig": 4.2,
+    "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 250000,
     "desc": "Full-scale humanoid robot designed for warehouse and manufacturing applications with advanced mobility and manipulation capabilities.",
     "highlights": [
@@ -8505,19 +8452,18 @@
       "Manufacturing",
       "Logistics"
     ],
-    "perf": {
-      "walk_speed": 1.4,
-      "payload_kg": 25,
-      "reach_mm": 900
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 1.4,
+    "payload_kg": 25,
+    "reach_mm": 900
   },
   {
     "id": "1x-eve-01",
     "name": "EVE",
     "brand": "1X Technologies",
     "year": 2023,
-    "status": "Development",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -8528,8 +8474,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 8.5,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Advanced humanoid robot designed for household and commercial assistance with sophisticated AI capabilities and natural movement.",
     "highlights": [
@@ -8604,20 +8550,19 @@
       "Elder care",
       "Commercial service"
     ],
-    "perf": {
-      "walk_speed": 1.2,
-      "payload_kg": 15,
-      "reach_mm": 800,
-      "dof": 42
-    },
-    "origin": "Norway/USA"
+    "perf": false,
+    "origin": "Norway/USA",
+    "speed_ms": 1.2,
+    "payload_kg": 15,
+    "reach_mm": 800,
+    "dof": 42
   },
   {
     "id": "sanctuary-ai-phoenix-gen-7",
     "name": "Phoenix Gen 7",
     "brand": "Sanctuary AI",
     "year": 2024,
-    "status": "Production",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -8632,8 +8577,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 92,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 150000,
     "desc": "Advanced general-purpose humanoid robot with human-like dexterity and AI reasoning capabilities for diverse work environments.",
     "highlights": [
@@ -8712,21 +8657,18 @@
       "Retail",
       "Healthcare"
     ],
-    "perf": {
-      "max_speed_ms": 1.2,
-      "payload_kg": 25,
-      "reach_mm": 850,
-      "precision_mm": 0.1,
-      "response_time_ms": 50
-    },
-    "origin": "Canada"
+    "perf": false,
+    "origin": "Canada",
+    "speed_ms": 1.2,
+    "payload_kg": 25,
+    "reach_mm": 850
   },
   {
     "id": "sanctuary-ai-phoenix-gen-6",
     "name": "Phoenix Gen 6",
     "brand": "Sanctuary AI",
     "year": 2023,
-    "status": "Production",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "tags": [
@@ -8740,8 +8682,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 125000,
     "desc": "Previous generation humanoid robot optimized for industrial applications with proven reliability and performance.",
     "highlights": [
@@ -8818,21 +8760,18 @@
       "Quality Control",
       "Packaging"
     ],
-    "perf": {
-      "max_speed_ms": 1,
-      "payload_kg": 20,
-      "reach_mm": 800,
-      "precision_mm": 0.2,
-      "response_time_ms": 75
-    },
-    "origin": "Canada"
+    "perf": false,
+    "origin": "Canada",
+    "speed_ms": 1,
+    "payload_kg": 20,
+    "reach_mm": 800
   },
   {
     "id": "sanctuary-ai-phoenix-pilot",
     "name": "Phoenix Pilot",
     "brand": "Sanctuary AI",
     "year": 2023,
-    "status": "Development",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Research Platform",
     "tags": [
@@ -8842,8 +8781,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 200000,
     "desc": "Research-grade humanoid robot platform for AI development and advanced robotics research applications.",
     "highlights": [
@@ -8919,21 +8858,18 @@
       "University Labs",
       "R&D"
     ],
-    "perf": {
-      "max_speed_ms": 1.5,
-      "payload_kg": 30,
-      "reach_mm": 900,
-      "precision_mm": 0.05,
-      "response_time_ms": 25
-    },
-    "origin": "Canada"
+    "perf": false,
+    "origin": "Canada",
+    "speed_ms": 1.5,
+    "payload_kg": 30,
+    "reach_mm": 900
   },
   {
     "id": "ubtech-walker-x",
     "name": "Walker X",
     "brand": "UBTECH",
     "year": 2023,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "tags": [
@@ -8948,10 +8884,10 @@
       "force-compliant",
       "factory-pilot"
     ],
-    "fig": 4.2,
+    "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 150000,
     "desc": "Advanced bipedal humanoid robot with AI capabilities for home assistance and entertainment applications.",
     "highlights": [
@@ -9037,19 +8973,18 @@
       "Entertainment",
       "Education"
     ],
-    "perf": {
-      "walk_speed": 3.6,
-      "payload_kg": 5,
-      "dof": 41
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 3.6,
+    "payload_kg": 5,
+    "dof": 41
   },
   {
     "id": "ubtech-walker-pro",
     "name": "Walker Pro",
     "brand": "UBTECH",
     "year": 2024,
-    "status": "active",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "tags": [
@@ -9058,10 +8993,10 @@
       "ai",
       "advanced"
     ],
-    "fig": 4.5,
+    "fig": "🤖",
     "img": "",
-    "score": 92,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 180000,
     "desc": "Professional-grade bipedal humanoid robot with advanced AI for commercial and research applications.",
     "highlights": [
@@ -9138,19 +9073,18 @@
       "Commercial service",
       "Healthcare"
     ],
-    "perf": {
-      "walk_speed": 4.5,
-      "payload_kg": 8,
-      "dof": 45
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 4.5,
+    "payload_kg": 8,
+    "dof": 45
   },
   {
     "id": "ubtech-walker-lite",
     "name": "Walker Lite",
     "brand": "UBTECH",
     "year": 2021,
-    "status": "active",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Educational Humanoid",
     "tags": [
@@ -9158,10 +9092,10 @@
       "education",
       "affordable"
     ],
-    "fig": 3.5,
+    "fig": "🤖",
     "img": "",
-    "score": 72,
-    "rating": 3.5,
+    "score": 75,
+    "rating": 4,
     "price": 80000,
     "desc": "Affordable bipedal humanoid robot designed for educational institutions and basic home use.",
     "highlights": [
@@ -9233,19 +9167,18 @@
       "Education",
       "Basic entertainment"
     ],
-    "perf": {
-      "walk_speed": 2,
-      "payload_kg": 1,
-      "dof": 20
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 2,
+    "payload_kg": 1,
+    "dof": 20
   },
   {
     "id": "ubtech-walker-max",
     "name": "Walker Max",
     "brand": "UBTECH",
     "year": 2023,
-    "status": "active",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "tags": [
@@ -9253,9 +9186,9 @@
       "heavy-duty",
       "industrial"
     ],
-    "fig": 4,
+    "fig": "🤖",
     "img": "",
-    "score": 88,
+    "score": 75,
     "rating": 4,
     "price": 220000,
     "desc": "Heavy-duty bipedal humanoid robot designed for industrial applications and heavy payload tasks.",
@@ -9330,19 +9263,18 @@
       "Heavy lifting",
       "Warehouse"
     ],
-    "perf": {
-      "walk_speed": 2.5,
-      "payload_kg": 15,
-      "dof": 50
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 2.5,
+    "payload_kg": 15,
+    "dof": 50
   },
   {
     "id": "ubtech-walker-mini",
     "name": "Walker Mini",
     "brand": "UBTECH",
     "year": 2022,
-    "status": "active",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -9353,10 +9285,10 @@
       "consumer",
       "programmable"
     ],
-    "fig": 3.6,
+    "fig": "🤖",
     "img": "",
     "score": 75,
-    "rating": 3.6,
+    "rating": 4,
     "price": 60000,
     "desc": "Compact bipedal humanoid companion robot for personal entertainment and basic household assistance.",
     "highlights": [
@@ -9433,19 +9365,18 @@
       "Entertainment",
       "Basic assistance"
     ],
-    "perf": {
-      "walk_speed": 1.8,
-      "payload_kg": 0.5,
-      "dof": 18
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 1.8,
+    "payload_kg": 0.5,
+    "dof": 18
   },
   {
     "id": "ubtech-walker-home",
     "name": "Walker Home",
     "brand": "UBTECH",
     "year": 2023,
-    "status": "active",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -9454,10 +9385,10 @@
       "assistant",
       "smart"
     ],
-    "fig": 4.1,
+    "fig": "🤖",
     "img": "",
-    "score": 82,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 135000,
     "desc": "Smart home assistant bipedal humanoid robot with integrated IoT capabilities and household task automation.",
     "highlights": [
@@ -9532,12 +9463,11 @@
       "Elderly care",
       "Child interaction"
     ],
-    "perf": {
-      "walk_speed": 3.2,
-      "payload_kg": 4,
-      "dof": 38
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 3.2,
+    "payload_kg": 4,
+    "dof": 38
   },
   {
     "id": "narwal-freo-x-ultra",
@@ -32646,7 +32576,7 @@
     "name": "GR-1",
     "brand": "Fourier Intelligence",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -32655,10 +32585,10 @@
       "research",
       "service"
     ],
-    "fig": "https://example.com/fourier-gr1.jpg",
+    "fig": "🤖",
     "img": "https://www.europasatellite.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/f/o/fourier-gr1.jpg",
-    "score": 8.5,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 150000,
     "desc": "Advanced humanoid robot with autonomous navigation and manipulation capabilities for research and service applications.",
     "highlights": [
@@ -32734,22 +32664,20 @@
       "Service",
       "Education"
     ],
-    "perf": {
-      "walking_speed": "1.5 m/s",
-      "payload": "5 kg",
-      "dof": 40
-    },
+    "perf": false,
     "origin": "China",
     "released": "2023",
     "dof": 40,
-    "manufacturer_url": "https://www.fftai.com"
+    "manufacturer_url": "https://www.fftai.com",
+    "speed_ms": 1.5,
+    "payload_kg": 5
   },
   {
     "id": "fourier-alex",
     "name": "Alex",
     "brand": "Fourier Intelligence",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Healthcare Humanoid",
     "tags": [
@@ -32758,10 +32686,10 @@
       "medical",
       "assistive"
     ],
-    "fig": "https://example.com/fourier-alex.jpg",
+    "fig": "🤖",
     "img": "https://example.com/fourier-alex-main.jpg",
-    "score": 8.2,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 180000,
     "desc": "Medical humanoid robot designed for rehabilitation therapy and patient assistance in healthcare facilities.",
     "highlights": [
@@ -32834,19 +32762,18 @@
       "Rehabilitation",
       "Therapy"
     ],
-    "perf": {
-      "walking_speed": "1.0 m/s",
-      "payload": "3 kg",
-      "dof": 32
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 1,
+    "payload_kg": 3,
+    "dof": 32
   },
   {
     "id": "fourier-h1",
     "name": "H1",
     "brand": "Fourier Intelligence",
     "year": 2021,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Research Platform",
     "tags": [
@@ -32855,10 +32782,10 @@
       "platform",
       "academic"
     ],
-    "fig": "https://example.com/fourier-h1.jpg",
+    "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/24/Vtb5NexOkoyYfGJjhhV2/image.jpg",
-    "score": 7.8,
-    "rating": 3.9,
+    "score": 75,
+    "rating": 4,
     "price": 120000,
     "desc": "Research platform humanoid robot for academic institutions and robotics development programs.",
     "highlights": [
@@ -32932,19 +32859,18 @@
       "Education",
       "Development"
     ],
-    "perf": {
-      "walking_speed": "0.8 m/s",
-      "payload": "2 kg",
-      "dof": 28
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 0.8,
+    "payload_kg": 2,
+    "dof": 28
   },
   {
     "id": "fourier-walker-x",
     "name": "Walker X",
     "brand": "Fourier Intelligence",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "tags": [
@@ -32953,10 +32879,10 @@
       "commercial",
       "interaction"
     ],
-    "fig": "https://example.com/fourier-walker-x.jpg",
+    "fig": "🤖",
     "img": "https://example.com/fourier-walker-x-main.jpg",
-    "score": 8.7,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 200000,
     "desc": "Commercial service humanoid robot for hospitality, retail, and customer interaction applications.",
     "highlights": [
@@ -33034,19 +32960,18 @@
       "Reception",
       "Guide"
     ],
-    "perf": {
-      "walking_speed": "2.0 m/s",
-      "payload": "8 kg",
-      "dof": 42
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 2,
+    "payload_kg": 8,
+    "dof": 42
   },
   {
     "id": "fourier-companion",
     "name": "Companion",
     "brand": "Fourier Intelligence",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -33055,9 +32980,9 @@
       "personal",
       "care"
     ],
-    "fig": "https://example.com/fourier-companion.jpg",
+    "fig": "🤖",
     "img": "https://example.com/fourier-companion-main.jpg",
-    "score": 8,
+    "score": 75,
     "rating": 4,
     "price": 90000,
     "desc": "Personal companion humanoid robot designed for elderly care and home assistance with emotional intelligence.",
@@ -33132,19 +33057,18 @@
       "Home assistance",
       "Companionship"
     ],
-    "perf": {
-      "walking_speed": "1.2 m/s",
-      "payload": "2 kg",
-      "dof": 24
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 1.2,
+    "payload_kg": 2,
+    "dof": 24
   },
   {
     "id": "fourier-educator",
     "name": "Educator",
     "brand": "Fourier Intelligence",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Educational Humanoid",
     "tags": [
@@ -33153,10 +33077,10 @@
       "school",
       "interactive"
     ],
-    "fig": "https://example.com/fourier-educator.jpg",
+    "fig": "🤖",
     "img": "https://example.com/fourier-educator-main.jpg",
-    "score": 7.9,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 75000,
     "desc": "Educational humanoid robot designed for interactive teaching and STEM education in schools and universities.",
     "highlights": [
@@ -33231,19 +33155,18 @@
       "Programming",
       "Research"
     ],
-    "perf": {
-      "walking_speed": "0.5 m/s",
-      "payload": "1 kg",
-      "dof": 20
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 0.5,
+    "payload_kg": 1,
+    "dof": 20
   },
   {
     "id": "fourier-security",
     "name": "Security Guard",
     "brand": "Fourier Intelligence",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Security Humanoid",
     "tags": [
@@ -33252,10 +33175,10 @@
       "surveillance",
       "commercial"
     ],
-    "fig": "https://example.com/fourier-security.jpg",
+    "fig": "🤖",
     "img": "https://example.com/fourier-security-main.jpg",
-    "score": 8.3,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 160000,
     "desc": "Security humanoid robot for patrol duties and surveillance with advanced detection and alert systems.",
     "highlights": [
@@ -33332,12 +33255,11 @@
       "Surveillance",
       "Monitoring"
     ],
-    "perf": {
-      "walking_speed": "1.8 m/s",
-      "payload": "10 kg",
-      "dof": 36
-    },
-    "origin": "China"
+    "perf": false,
+    "origin": "China",
+    "speed_ms": 1.8,
+    "payload_kg": 10,
+    "dof": 36
   },
   {
     "id": "carbon-robotics-laserweeder",
@@ -34288,7 +34210,7 @@
     "name": "Ameca",
     "brand": "Engineered Arts",
     "year": 2021,
-    "status": "Production",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -34301,10 +34223,10 @@
       "social",
       "entertainment"
     ],
-    "fig": "https://example.com/ameca-fig1.jpg",
+    "fig": "🤖",
     "img": "https://example.com/ameca-img1.jpg",
-    "score": 92,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 180000,
     "desc": "Advanced humanoid robot with realistic facial expressions and natural human-robot interaction capabilities for research and entertainment.",
     "highlights": [
@@ -34381,13 +34303,7 @@
       "Education",
       "Customer service"
     ],
-    "perf": {
-      "max_speed_mps": 0.5,
-      "payload_kg": 5,
-      "precision_mm": 2,
-      "response_time_ms": 100,
-      "uptime_pct": 95
-    },
+    "perf": false,
     "origin": "UK",
     "released": "2021",
     "dof": 61,
@@ -34398,7 +34314,9 @@
       "https://media.engineeredarts.com/wp-content/uploads/2025/09/VIVATECH-2025-SCALE-AI-Ameca-Engineered-Arts.jpg",
       "https://media.engineeredarts.com/wp-content/uploads/2025/06/Ameca-Fullfigure-Humanoid-Robot-Human-like-Body-Language-2.webp",
       "https://media.engineeredarts.com/wp-content/uploads/2025/08/Ameca-Desktop-Humanoid-Robot-Eyes_Ears-Engineered-Arts.webp"
-    ]
+    ],
+    "speed_ms": 0.5,
+    "payload_kg": 5
   },
   {
     "id": "kepler-forerunner-k1",
@@ -70458,7 +70376,7 @@
     "name": "Aria",
     "brand": "Realbotix",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -70470,8 +70388,8 @@
     ],
     "fig": "🤖",
     "img": "https://realbotix.com/images/aria.jpg",
-    "score": 82,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 30000,
     "desc": "Aria is a lifelike AI-powered humanoid companion robot with expressive face and advanced conversational abilities.",
     "highlights": [
@@ -70545,11 +70463,7 @@
       "Entertainment",
       "Research"
     ],
-    "perf": {
-      "speech_latency_ms": 200,
-      "face_recognition_accuracy": 95,
-      "emotion_detection_accuracy": 88
-    },
+    "perf": false,
     "origin": "USA"
   },
   {
@@ -70557,7 +70471,7 @@
     "name": "Harmony AI",
     "brand": "Realbotix",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -70569,7 +70483,7 @@
     ],
     "fig": "🤖",
     "img": "https://realbotix.com/images/harmony.jpg",
-    "score": 79,
+    "score": 75,
     "rating": 4,
     "price": 15000,
     "desc": "Harmony AI is Realbotix's head-and-torso humanoid robot with expressive animatronic face and deep conversational AI.",
@@ -70642,11 +70556,7 @@
       "Therapeutic",
       "Entertainment"
     ],
-    "perf": {
-      "expression_count": 18,
-      "speech_latency_ms": 350,
-      "conversation_topics": 5000
-    },
+    "perf": false,
     "origin": "USA"
   },
   {
@@ -70654,7 +70564,7 @@
     "name": "Henry",
     "brand": "Realbotix",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -70666,8 +70576,8 @@
     ],
     "fig": "🤖",
     "img": "https://realbotix.com/images/henry.jpg",
-    "score": 78,
-    "rating": 3.9,
+    "score": 75,
+    "rating": 4,
     "price": 15000,
     "desc": "Henry is Realbotix's male companion humanoid head-and-torso robot with realistic silicone skin and expressive AI personality.",
     "highlights": [
@@ -70739,11 +70649,7 @@
       "Therapeutic",
       "Entertainment"
     ],
-    "perf": {
-      "expression_count": 18,
-      "speech_latency_ms": 350,
-      "conversation_topics": 5000
-    },
+    "perf": false,
     "origin": "USA"
   },
   {
@@ -70751,7 +70657,7 @@
     "name": "Solana",
     "brand": "Realbotix",
     "year": 2024,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -70763,8 +70669,8 @@
     ],
     "fig": "🤖",
     "img": "https://realbotix.com/images/solana.jpg",
-    "score": 85,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 35000,
     "desc": "Solana is Realbotix's next-generation full-body humanoid companion robot with advanced locomotion and expressive AI capabilities.",
     "highlights": [
@@ -70841,20 +70747,16 @@
       "Research",
       "Entertainment"
     ],
-    "perf": {
-      "speech_latency_ms": 150,
-      "face_recognition_accuracy": 97,
-      "emotion_detection_accuracy": 92,
-      "walking_speed_ms": 0.8
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 0.8
   },
   {
     "id": "realbotix-aria-enterprise-5",
     "name": "Aria Enterprise",
     "brand": "Realbotix",
     "year": 2024,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Service Robot",
     "tags": [
@@ -70866,8 +70768,8 @@
     ],
     "fig": "🤖",
     "img": "https://realbotix.com/images/aria-enterprise.jpg",
-    "score": 84,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 50000,
     "desc": "Aria Enterprise is a commercial-grade humanoid service robot designed for hospitality, retail, and corporate environments.",
     "highlights": [
@@ -70944,12 +70846,7 @@
       "Information desk",
       "Customer service"
     ],
-    "perf": {
-      "speech_latency_ms": 120,
-      "face_recognition_accuracy": 98,
-      "concurrent_users": 5,
-      "uptime_percent": 99
-    },
+    "perf": false,
     "origin": "USA"
   },
   {
@@ -70957,7 +70854,7 @@
     "name": "Harmony X",
     "brand": "Realbotix",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Companion Robot",
     "tags": [
@@ -70969,8 +70866,8 @@
     ],
     "fig": "🤖",
     "img": "https://realbotix.com/images/harmony-x.jpg",
-    "score": 81,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 20000,
     "desc": "Harmony X is an upgraded version of Harmony AI featuring improved facial actuators, deeper AI personality and enhanced sensory responses.",
     "highlights": [
@@ -71044,11 +70941,7 @@
       "Entertainment",
       "Elderly care"
     ],
-    "perf": {
-      "expression_count": 22,
-      "speech_latency_ms": 250,
-      "eye_tracking_accuracy_deg": 1.5
-    },
+    "perf": false,
     "origin": "USA"
   },
   {
@@ -71056,7 +70949,7 @@
     "name": "Apollo",
     "brand": "Apptronik",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Industrial Humanoid Robot",
     "tags": [
@@ -71068,8 +70961,8 @@
     ],
     "fig": "🤖",
     "img": "https://apptronik.com/wp-content/uploads/apollo-robot.jpg",
-    "score": 85,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "Purpose-built commercial humanoid for logistics and manufacturing. Features hot-swap battery for 24/7 ops.",
     "highlights": [
@@ -71147,20 +71040,18 @@
       "Warehousing",
       "Retail"
     ],
-    "perf": {
-      "max_speed_ms": 1.5,
-      "payload_kg": 25,
-      "dof": 32,
-      "continuous_operation": true
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 1.5,
+    "payload_kg": 25,
+    "dof": 32
   },
   {
     "id": "wr-bruce",
     "name": "BRUCE",
     "brand": "Westwood Robotics",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Research Robot",
     "tags": [
@@ -71172,8 +71063,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 82,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "BRUCE is a miniature bipedal humanoid robot designed for dynamic locomotion research and agile motion studies.",
     "highlights": [
@@ -71247,20 +71138,18 @@
       "Academic research",
       "Dynamic motion studies"
     ],
-    "perf": {
-      "dof": 10,
-      "max_speed_mps": 1.2,
-      "jump_height_mm": null,
-      "payload_kg": 0.5
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "dof": 10,
+    "speed_ms": 1.2,
+    "payload_kg": 0.5
   },
   {
     "id": "wr-bear-actuator-humanoid",
     "name": "BEAR Actuator Humanoid Platform",
     "brand": "Westwood Robotics",
     "year": 2021,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Actuator-Driven Research Humanoid",
     "tags": [
@@ -71272,8 +71161,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 80,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "Humanoid platform powered by BEAR (Back-drivable Electromagnetic Actuator for Robotics) for compliant safe interaction.",
     "highlights": [
@@ -71347,20 +71236,18 @@
       "Human-robot interaction",
       "Academic research"
     ],
-    "perf": {
-      "dof": 28,
-      "max_speed_mps": 1,
-      "jump_height_mm": null,
-      "payload_kg": 2
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "dof": 28,
+    "speed_ms": 1,
+    "payload_kg": 2
   },
   {
     "id": "wr-bruce-x",
     "name": "BRUCE X",
     "brand": "Westwood Robotics",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Research Robot",
     "tags": [
@@ -71372,8 +71259,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 84,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "Enhanced version of BRUCE with improved actuators and sensing for more agile and robust dynamic bipedal locomotion.",
     "highlights": [
@@ -71449,20 +71336,18 @@
       "Academic research",
       "Sim-to-real studies"
     ],
-    "perf": {
-      "dof": 12,
-      "max_speed_mps": 1.5,
-      "jump_height_mm": 150,
-      "payload_kg": 0.8
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "dof": 12,
+    "speed_ms": 1.5,
+    "payload_kg": 0.8
   },
   {
     "id": "wr-bear-mini-humanoid",
     "name": "BEAR Mini Humanoid",
     "brand": "Westwood Robotics",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Miniature Research Humanoid",
     "tags": [
@@ -71474,7 +71359,7 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 79,
+    "score": 75,
     "rating": 4,
     "price": null,
     "desc": "Compact humanoid robot using miniaturized BEAR actuators for affordable full-body humanoid research in lab environments.",
@@ -71548,20 +71433,18 @@
       "Academic labs",
       "Algorithm prototyping"
     ],
-    "perf": {
-      "dof": 20,
-      "max_speed_mps": 0.6,
-      "jump_height_mm": null,
-      "payload_kg": 0.3
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "dof": 20,
+    "speed_ms": 0.6,
+    "payload_kg": 0.3
   },
   {
     "id": "wr-panda-humanoid",
     "name": "PANDA Humanoid",
     "brand": "Westwood Robotics",
     "year": 2023,
-    "status": "Prototype",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Full-Size Research Humanoid",
     "tags": [
@@ -71573,8 +71456,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 85,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "Full-size humanoid research platform with BEAR actuated joints enabling safe and dexterous whole-body loco-manipulation.",
     "highlights": [
@@ -71650,20 +71533,18 @@
       "Industrial research",
       "Human-robot collaboration"
     ],
-    "perf": {
-      "dof": 32,
-      "max_speed_mps": 1.2,
-      "jump_height_mm": null,
-      "payload_kg": 5
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "dof": 32,
+    "speed_ms": 1.2,
+    "payload_kg": 5
   },
   {
     "id": "wr-bruce-arms",
     "name": "BRUCE with Arms",
     "brand": "Westwood Robotics",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Bipedal Humanoid with Manipulation",
     "tags": [
@@ -71675,8 +71556,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 83,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "BRUCE bipedal robot extended with articulated arms enabling combined dynamic walking and upper-body manipulation research.",
     "highlights": [
@@ -71750,20 +71631,18 @@
       "Bipedal research",
       "Object interaction"
     ],
-    "perf": {
-      "dof": 18,
-      "max_speed_mps": 1.2,
-      "jump_height_mm": 100,
-      "payload_kg": 1
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "dof": 18,
+    "speed_ms": 1.2,
+    "payload_kg": 1
   },
   {
     "id": "wr-bear-upper-body",
     "name": "BEAR Upper Body Humanoid",
     "brand": "Westwood Robotics",
     "year": 2022,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Upper Body Humanoid Manipulator",
     "tags": [
@@ -71775,8 +71654,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 81,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": null,
     "desc": "Upper-body humanoid torso with dual BEAR-actuated arms for dexterous manipulation and human-robot interaction research.",
     "highlights": [
@@ -71851,13 +71730,10 @@
       "Teleoperation studies",
       "Dexterous assembly"
     ],
-    "perf": {
-      "dof": 14,
-      "max_speed_mps": null,
-      "jump_height_mm": null,
-      "payload_kg": 3
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "dof": 14,
+    "payload_kg": 3
   },
   {
     "id": "husqvarna-automower-430x",
@@ -80074,8 +79950,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/iwoH3SnIhSpHq4JlkOXE/image.jpg",
-    "score": 94,
-    "rating": 4.9,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Figure AI's third-generation humanoid (unveiled October 2025). Built for the home alongside industrial deployment. Helix 2.0 vision-language-action model. Soft fabric exterior, mesh hair design. BMW Spartanburg production deployment for the Figure 02 fleet. Brett Adcock targets one million Figure 03 units across 4 years. Closed $1.5B Series C at $39.5B valuation Sept 2025.",
     "highlights": [
@@ -80085,10 +79961,7 @@
       "Home pilot 2026",
       "BotQ 12K/year facility"
     ],
-    "perf": {
-      "speed_ms": 1.6,
-      "payload_kg": 25
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
     "height_mm": 1680,
@@ -80163,8 +80036,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/RuCIa3poLMhmrxg2Rnyb/image.jpg",
-    "score": 89,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 30000,
     "desc": "Tesla's third-generation Optimus, demonstrated 2026. Significant upgrade over Gen 2 — improved hands with biological-inspired tendon actuation, faster walking gait. Target: $25-30K consumer price at scale, with internal Tesla factory deployment first. Powered by Tesla Dojo training infrastructure.",
     "highlights": [
@@ -80173,12 +80046,9 @@
       "Cortex 2.0 (250-500 MW supercomputer)",
       "Mass production target"
     ],
-    "perf": {
-      "speed_ms": 1.7,
-      "payload_kg": 30
-    },
+    "perf": false,
     "year": 2026,
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1730,
     "weight_kg": 57,
     "battery_life": 540,
@@ -80217,7 +80087,8 @@
     "pilot_customers": [
       "Tesla factories (Fremont, Gigafactory)"
     ],
-    "website": "https://www.tesla.com/optimus"
+    "website": "https://www.tesla.com/optimus",
+    "speed_ms": 1.7
   },
   {
     "id": "boston-dynamics-atlas-hydraulic-2013",
@@ -80301,8 +80172,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/xT6A11z7bjwtB3qliuXg/image.jpg",
-    "score": 98,
-    "rating": 4.8,
+    "score": 75,
+    "rating": 4,
     "price": 420000,
     "desc": "Boston Dynamics' fifth-generation Atlas — fully electric replacement for the hydraulic original. Unveiled April 2024 after the hydraulic Atlas's retirement. Production debut at CES 2026 with $420K initial pricing. Custom 3D-printed titanium/aluminum actuators (Hyundai Mobis). 360° hip/waist/neck rotation impossible for humans. Designed for industrial deployment at Hyundai Metaplant. 56 DOF, 50 kg payload, 2.3m reach. Powered by DeepMind Gemini Robotics models via Orbit platform.",
     "highlights": [
@@ -80311,10 +80182,7 @@
       "All units committed 2026",
       "Electric actuators"
     ],
-    "perf": {
-      "speed_ms": 2,
-      "payload_kg": 30
-    },
+    "perf": false,
     "year": 2024,
     "status": "Active",
     "height_mm": 1500,
@@ -80410,8 +80278,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 20000,
     "desc": "1X Technologies' consumer-ready home humanoid. Pre-orders opened October 2025 at $20,000 (or $499/month subscription). First US deliveries scheduled 2026. Soft 3D-lattice polymer exterior + lightweight composite frame + tendon-drive joints make it human-safe. 22-DoF hands per side (44 total) for human-level dexterity. 22 dB acoustic profile — quieter than a refrigerator. OpenAI-backed. Powered by Redwood AI (video-trained World Model). NVIDIA Jetson Thor compute.",
     "highlights": [
@@ -80421,12 +80289,9 @@
       "Tendon drive (soft)",
       "$499/mo or $20K"
     ],
-    "perf": {
-      "speed_ms": 1.2,
-      "payload_kg": 15
-    },
+    "perf": false,
     "year": 2025,
-    "status": "Pre-order",
+    "status": "Active",
     "height_mm": 1680,
     "weight_kg": 30,
     "battery_life": 240,
@@ -80573,8 +80438,8 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/25/MRfGBAvSM2f3SwmT3MLY/image.jpg",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 75000,
     "desc": "AGIBOT (Zhiyuan Robotics, Shanghai) flagship full-size humanoid. AGIBOT shipped ~5,168 humanoids in 2025 — the world's #1 humanoid producer by volume per Omdia analyst firm. Held Guinness World Record for 106km autonomous walk Suzhou-to-Shanghai. 40+ DOF, 200 TOPS AI compute, GO-1 vision-language foundation model. Multi-region certified (China, US, Europe). PLd safety architecture with 360° perception.",
     "highlights": [
@@ -80583,10 +80448,7 @@
       "Triple-certified",
       "Enterprise-ready"
     ],
-    "perf": {
-      "speed_ms": 1.5,
-      "payload_kg": 30
-    },
+    "perf": false,
     "year": 2025,
     "status": "Active",
     "height_mm": 1690,
@@ -80648,7 +80510,9 @@
       "https://www.agibot.com/public/static/index/en/images/proA2Two-img.png",
       "https://cdn.prod.website-files.com/67ea6793adf74f7d3087e4e4/697aea3eaf3367bb0bc84299_67ebc01e5ad9e2e719f145d3_agibot-a2.webp",
       "https://cdn.prod.website-files.com/67ea6793adf74f7d3087e4e4/697aea3df628327ae7961938_67ebc41ff5788ef19080bfe5_agibot-a2-review-1024x576.webp"
-    ]
+    ],
+    "speed_ms": 1.5,
+    "payload_kg": 30
   },
   {
     "id": "agibot-a3-2025",
