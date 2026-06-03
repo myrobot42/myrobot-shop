@@ -11,28 +11,21 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Advanced vision-language-action AI model designed to power robots with improved generalization, adaptability, and dexterity capabilities",
+    "desc": "Gemini Robotics is a Google DeepMind vision-language-action AI MODEL (not a physical robot) that brings Gemini's multimodal reasoning to robot control, letting robots perceive, reason and act from natural-language instructions. Included here as foundational robotics software.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "USA",
-    "status": "In development",
+    "status": "Active",
     "ai_model": "Gemini",
     "ros": true,
     "cameras": "Multi-modal vision system for object recognition and scene understanding",
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Manufacturing automation",
-      "Warehouse operations",
-      "Assembly tasks",
-      "Quality inspection",
-      "Material handling"
+      "Vision-language-action model",
+      "Robot control AI",
+      "Embodied reasoning"
     ],
     "manufacturer_url": "https://deepmind.google/",
     "product_url": "https://deepmind.google/discover/blog/shaping-the-future-of-advanced-robotics/",
@@ -42,7 +35,8 @@
     "warranty_months": 12,
     "cellular": "Optional",
     "released": "2025",
-    "os": "Linux"
+    "os": "Gemini",
+    "made_in": "USA"
   },
   {
     "id": "ubtech-walker-s2",
@@ -439,37 +433,30 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "AI system for automating complex unstructured manufacturing tasks like deep bin picking",
+    "desc": "Vention's Rapid Operator AI is software (not a robot) - an AI assistant within Vention's cloud platform that helps design, program and operate robotic automation cells with minimal coding.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2023,
     "origin": "Canada",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "ros": true,
     "cameras": "Multiple depth cameras for 3D vision",
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Bin picking",
-      "Part sorting",
-      "Quality inspection",
-      "Assembly automation",
-      "Material handling"
+      "No-code automation programming",
+      "AI-assisted cell design"
     ],
     "manufacturer_url": "https://vention.com",
     "warranty_months": 12,
     "wifi": true,
     "bluetooth": true,
-    "os": "Linux",
+    "os": "Vention MachineMotion",
     "ai_model": "Deep learning neural networks",
     "product_url": "https://vention.com/rapid-operator-ai",
-    "lidar": false
+    "lidar": false,
+    "made_in": "Canada"
   },
   {
     "id": "roborock-s8-pro-ultra",
@@ -37523,17 +37510,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Autonomous Inspection and Monitoring platform that fully automates visual data workflows from capture to insight. Listed in TIME's 100 Best Inventions of 2021. Features AI change detection, sector-specific solutions, and integration with third-party drones and cameras.",
+    "desc": "Percepto AIM (Autonomous Inspection & Monitoring) is a software platform that orchestrates autonomous drones and robots for industrial site inspection and monitoring - managing missions, data and analytics rather than being a robot itself.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Israel",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "wifi": true,
     "cellular": "4G/5G",
@@ -37541,13 +37523,9 @@
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Industrial inspection",
-      "Infrastructure monitoring",
-      "Security surveillance",
-      "Asset management",
-      "Oil and gas inspection",
-      "Solar farm monitoring",
-      "Construction site monitoring"
+      "Autonomous inspection & monitoring",
+      "Drone-in-a-box management",
+      "Industrial site monitoring"
     ],
     "manufacturer_url": "https://www.percepto.co",
     "bluetooth": true,
@@ -37555,7 +37533,9 @@
     "lidar": false,
     "warranty_months": 12,
     "product_url": "https://www.percepto.co/percepto-aim",
-    "os": "Cloud-based / Linux"
+    "os": "Percepto AIM",
+    "made_in": "Israel",
+    "autonomous": true
   },
   {
     "id": "percepto-percepto-base",
@@ -43091,37 +43071,31 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Cloud platform to run and supervise entire robot fleets across brands, lines, and locations while collecting structured real-time data",
+    "desc": "Wandelbots NOVA Cloud is the cloud edition of Wandelbots' robot-agnostic operating system (software, not a robot), letting developers program and orchestrate industrial robots from multiple makers through a unified cloud API.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "wifi": true,
     "ros": true,
     "use_cases": [
-      "Industrial automation",
-      "Robot fleet management",
-      "Manufacturing optimization",
-      "Multi-brand robot coordination",
-      "Production monitoring"
+      "Cloud robot programming",
+      "Multi-vendor robot control",
+      "Automation software"
     ],
     "manufacturer_url": "https://wandelbots.com",
     "product_url": "https://wandelbots.com/nova",
     "bluetooth": true,
-    "os": "Cloud-based platform",
+    "os": "Wandelbots NOVA",
     "cameras": "Supports integration with various camera systems for visual monitoring",
     "warranty_months": 12,
     "cellular": "Supported via cloud infrastructure",
     "lidar": false,
     "imu": false,
-    "depth_sensing": false
+    "depth_sensing": false,
+    "made_in": "Germany"
   },
   {
     "id": "flexiv-grav-enhanced-gripper",
@@ -44987,31 +44961,27 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Innovative automated storage and picking system robot designed for multi-channel intralogistics. Features new lifting turntable, faster and more agile operation, navigates via grid to deliver mobile racks to workstations. Part of goods-to-person solution with pick-by-light and pick pointer technology.",
+    "desc": "Swisslog's CarryPick (KMP600) is an autonomous mobile robot that lifts and transports mobile storage racks to picking stations in a goods-to-person fulfillment system, carrying up to ~600 kg.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Switzerland",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
-    "payload_kg": 40,
+    "payload_kg": 600,
     "speed_ms": 1.5,
     "battery_life": "8-16 hours",
     "lidar": true,
     "wifi": true,
     "use_cases": [
-      "Warehouse automation",
-      "E-commerce fulfillment",
-      "Order picking",
-      "Inventory management",
-      "Goods-to-person operations"
+      "Goods-to-person fulfillment",
+      "Mobile rack transport",
+      "Intralogistics"
     ],
-    "manufacturer_url": "https://www.swisslog.com"
+    "manufacturer_url": "https://www.swisslog.com",
+    "made_in": "Germany / Switzerland",
+    "os": "Swisslog",
+    "autonomous": true
   },
   {
     "id": "swisslog-relay-asr-200-",
@@ -45961,17 +45931,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Robotic single item picking solution featuring a KUKA six-axis lightweight robot with 3D vision system and smart image recognition software.",
+    "desc": "Swisslog's ItemPiQ is a robotic piece-picking cell - a vision-guided robotic arm that picks individual items for order fulfillment in automated warehouses.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Switzerland",
     "year": 2018,
-    "status": "Released",
+    "status": "Active",
     "released": "2018",
     "dof": 6,
     "reach_mm": 1300,
@@ -45980,11 +45945,8 @@
     "depth_sensing": true,
     "ros": true,
     "use_cases": [
-      "Warehouse automation",
-      "Order fulfillment",
-      "E-commerce picking",
-      "Retail distribution",
-      "Single item picking"
+      "Robotic piece picking",
+      "Order fulfillment"
     ],
     "manufacturer_url": "https://www.swisslog.com",
     "height_mm": 2200,
@@ -45992,11 +45954,12 @@
     "depth_mm": 800,
     "weight_kg": 29,
     "speed_ms": 2,
-    "os": "KUKA System Software",
+    "os": "Swisslog",
     "lidar": false,
     "imu": true,
     "warranty_months": 12,
-    "product_url": "https://www.swisslog.com/en-us/products-systems-solutions/products/itempiq"
+    "product_url": "https://www.swisslog.com/en-us/products-systems-solutions/products/itempiq",
+    "made_in": "Germany / Switzerland"
   },
   {
     "id": "swisslog-intramove-amr-3000",
@@ -46306,17 +46269,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Semi-humanoid mobile manipulator combining mobility with dexterous dual-arm manipulation, designed for commercial and industrial applications including inventory management, replenishment, and delivery tasks.",
+    "desc": "The Galbot G1 is Galaxy General's wheeled 'bionic' humanoid - dual dexterous arms on a wheeled base with a telescoping torso for stable mobile manipulation, targeted at unmanned retail and pharmacy fulfillment.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "height_mm": 1650,
     "weight_kg": 85,
@@ -46333,13 +46291,13 @@
     "wifi": true,
     "bluetooth": true,
     "use_cases": [
-      "warehouse automation",
-      "inventory management",
-      "logistics",
-      "retail automation",
-      "material handling",
-      "inspection tasks"
-    ]
+      "Retail & unmanned stores",
+      "Mobile manipulation",
+      "Pharmacy fulfillment"
+    ],
+    "made_in": "China",
+    "os": "Galbot",
+    "autonomous": true
   },
   {
     "id": "galbot-galbot-s1",
@@ -46841,23 +46799,16 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Most human-level robotic hand with 27 degrees of freedom, soft muscle fat and skin, anthropomorphic design with Myofiber technology. Features carbon fiber bones, artificial ligaments, and can survive 650,000 contraction cycles.",
+    "desc": "The Clone Hand is Clone Robotics' biomimetic robotic hand actuated by water-driven Myofiber artificial muscles on an anatomically accurate skeleton, reproducing human-like finger dexterity for its androids and research.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "Poland",
-    "status": "In development",
+    "status": "Active",
     "dof": 27,
     "use_cases": [
-      "Prosthetics",
-      "Research",
-      "Humanoid robotics",
-      "Manipulation tasks"
+      "Biomimetic dexterous grasping",
+      "Research"
     ],
     "manufacturer_url": "https://www.clonerobotics.com",
     "weight_kg": 1.2,
@@ -46867,7 +46818,9 @@
     "warranty_months": 12,
     "bluetooth": false,
     "lidar": false,
-    "depth_sensing": false
+    "depth_sensing": false,
+    "made_in": "Poland",
+    "os": "Clone"
   },
   {
     "id": "clone-robotics-clone-alpha",
@@ -48247,23 +48200,17 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Compact high-degree-of-freedom interactive dexterous hand with small body design adaptable to diverse environments. Features advanced tactile sensors for precise object manipulation.",
+    "desc": "The AGIBOT OmniHand O10 is a dexterous multi-finger robotic hand with tactile sensing, designed as an end-effector for AGIBOT humanoids to perform fine, human-like grasping and manipulation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
-    "dof": 15,
+    "status": "Active",
+    "dof": 10,
     "use_cases": [
-      "Industrial automation",
-      "Research and development",
-      "Precise manipulation tasks",
-      "Human-robot interaction"
+      "Dexterous grasping",
+      "Humanoid end-effector",
+      "Fine manipulation"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "weight_kg": 1.2,
@@ -48271,7 +48218,9 @@
     "imu": true,
     "product_url": "https://www.agibot.com/products/omnihand-o10",
     "payload_kg": 1.5,
-    "depth_sensing": true
+    "depth_sensing": true,
+    "made_in": "China",
+    "os": "AGIBOT"
   },
   {
     "id": "agibot-agibot-a1-raise-a1-",
@@ -48421,29 +48370,24 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "175 cm tall, 85 kg full-size humanoid robot designed for heavy-duty operations. Features dual reduction ratio joint modules with 450 Nm peak torque and 8800N thrust in leg joints for material handling and stacking applications.",
+    "desc": "AGIBOT A2-Max, the heavy-duty industrial member of the Yuanzheng A2 family (~175 cm, ~85 kg) for material handling and palletizing. (Industrial-category record of the A2-Max.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "Released",
+    "status": "Active",
     "height_mm": 1750,
     "weight_kg": 85,
     "payload_kg": 20,
-    "dof": 12,
+    "dof": 40,
     "use_cases": [
-      "Material handling",
-      "Industrial automation",
-      "Heavy lifting",
-      "Warehouse operations",
-      "Manufacturing assembly"
+      "Heavy material handling",
+      "Palletizing",
+      "Industrial automation"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "made_in": "China",
+    "os": "WorkGPT / GO-1"
   },
   {
     "id": "agibot-agibot-omnihand-pro-2025",
@@ -48457,25 +48401,19 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Professional version of the dexterous hand with advanced tactile sensing and manipulation capabilities for industrial and research applications.",
+    "desc": "The AGIBOT OmniHand Pro (2025) is the high-end dexterous hand in AGIBOT's OmniHand line, adding more articulation and richer tactile sensing for fine, human-like manipulation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2024,
-    "status": "In development",
+    "status": "Active",
     "dof": 15,
     "weight_kg": 1.2,
     "ros": true,
     "use_cases": [
-      "Industrial automation",
-      "Research applications",
-      "Prosthetics development",
-      "Laboratory manipulation"
+      "High-dexterity grasping",
+      "Fine manipulation",
+      "Humanoid end-effector"
     ],
     "height_mm": 280,
     "width_mm": 95,
@@ -48485,7 +48423,9 @@
     "depth_sensing": true,
     "imu": true,
     "warranty_months": 12,
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "made_in": "China",
+    "os": "AGIBOT"
   },
   {
     "id": "agibot-agibot-omnihand-2025",
@@ -48499,23 +48439,16 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High-integration multifunctional dexterous hand with enhanced perception and manipulation capabilities. Compatible only with AGIBOT A2 series robots.",
+    "desc": "The AGIBOT OmniHand (2025) is a dexterous multi-finger robotic hand with tactile feedback for human-like grasping, used as an end-effector on AGIBOT's humanoid robots.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2025,
-    "status": "In development",
+    "status": "Active",
     "dof": 16,
     "use_cases": [
-      "Industrial automation",
-      "Research",
-      "Assistive robotics",
-      "Manufacturing"
+      "Dexterous grasping",
+      "Humanoid end-effector"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "weight_kg": 1.2,
@@ -48526,7 +48459,9 @@
     "warranty_months": 12,
     "fingers": 5,
     "payload_kg": 3,
-    "product_url": "https://www.agibot.com/product/omnihand"
+    "product_url": "https://www.agibot.com/product/omnihand",
+    "made_in": "China",
+    "os": "AGIBOT"
   },
   {
     "id": "agibot-agibot-g2",
@@ -48628,17 +48563,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Universal wheeled robot designed for flexible manufacturing applications. Capable of grasping, placing, transporting, and inserting with proprietary embodied intelligence algorithms. Features open interfaces and tools for secondary development.",
+    "desc": "AGIBOT A2-W, the wheeled dual-arm configuration of the Yuanzheng A2 humanoid on a mobile base. (Duplicate-style record of the A2-W.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "dof": 7,
     "ros": true,
@@ -48646,11 +48576,9 @@
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Assembly line automation",
-      "Pick and place operations",
-      "Material handling",
-      "Quality inspection",
-      "Flexible manufacturing"
+      "Mobile dual-arm manipulation",
+      "Service",
+      "Logistics"
     ],
     "height_mm": 1200,
     "weight_kg": 45,
@@ -48660,7 +48588,10 @@
     "bluetooth": true,
     "lidar": false,
     "warranty_months": 12,
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "autonomous": true
   },
   {
     "id": "agibot-agibot-a2-lite",
@@ -48843,26 +48774,20 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Professional version dexterous hand with enhanced capabilities",
+    "desc": "The AGIBOT OmniHand Pro (2025) is the high-end dexterous hand in AGIBOT's OmniHand line, adding more articulation and richer tactile sensing for fine, human-like manipulation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2025,
     "origin": "China",
-    "status": "In development",
+    "status": "Active",
     "dof": 5,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Industrial automation",
-      "Research and development",
-      "Prosthetics",
-      "Laboratory tasks"
+      "High-dexterity grasping",
+      "Fine manipulation",
+      "Humanoid end-effector"
     ],
     "height_mm": 280,
     "width_mm": 120,
@@ -48870,7 +48795,9 @@
     "weight_kg": 1.2,
     "payload_kg": 2,
     "reach_mm": 200,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "China",
+    "os": "AGIBOT"
   },
   {
     "id": "agibot-omnihand-2025",
@@ -48884,25 +48811,18 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High-DOF interactive dexterous hand accessory compatible with AGIBOT A2",
+    "desc": "The AGIBOT OmniHand (2025) is a dexterous multi-finger robotic hand with tactile feedback for human-like grasping, used as an end-effector on AGIBOT's humanoid robots.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2025,
     "origin": "China",
-    "status": "In development",
+    "status": "Active",
     "dof": 12,
     "weight_kg": 1.2,
     "ros": true,
     "use_cases": [
-      "Research and development",
-      "Industrial automation",
-      "Prosthetics research",
-      "Educational robotics"
+      "Dexterous grasping",
+      "Humanoid end-effector"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "warranty_months": 12,
@@ -48912,7 +48832,9 @@
     "reach_mm": 200,
     "payload_kg": 2,
     "depth_sensing": true,
-    "cameras": "Integrated tactile sensing array with force and pressure sensors"
+    "cameras": "Integrated tactile sensing array with force and pressure sensors",
+    "made_in": "China",
+    "os": "AGIBOT"
   },
   {
     "id": "agibot-c5",
@@ -49329,28 +49251,21 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Wheeled robot for flexible manufacturing with grasping, placing, transporting, and insertion capabilities using embodied intelligence algorithms",
+    "desc": "AGIBOT's A2-W is the wheeled, dual-arm version of the Yuanzheng A2, mounting the humanoid upper body on a 4WD mobile base with hot-swappable batteries for stable, long-duty mobile manipulation in service and logistics.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "dof": 7,
     "ros": true,
     "cameras": "RGB cameras for vision processing",
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Manufacturing automation",
-      "Pick and place operations",
-      "Material handling",
-      "Assembly line tasks",
-      "Quality inspection"
+      "Mobile dual-arm manipulation",
+      "Service",
+      "Logistics"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "height_mm": 1600,
@@ -49359,7 +49274,10 @@
     "speed_ms": 1.2,
     "wifi": true,
     "bluetooth": true,
-    "lidar": true
+    "lidar": true,
+    "made_in": "China",
+    "os": "WorkGPT / GO-1",
+    "autonomous": true
   },
   {
     "id": "agibot-a2-lite",
@@ -52119,25 +52037,19 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Standalone 12-degree-of-freedom dexterous hand with 6 array-type tactile sensors. Capable of force sensing, object shape/material identification, and real-time grip adjustment. Compatible with GR-2 and GR-3 humanoid platforms.",
+    "desc": "Fourier's Dexterous Hand is a multi-finger robotic hand with tactile sensing developed as an end-effector for the company's GR-series humanoids, enabling fine grasping and manipulation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "China",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "dof": 12,
     "ros": true,
     "use_cases": [
-      "Humanoid robotics",
-      "Research and development",
-      "Industrial automation",
-      "Object manipulation"
+      "Dexterous grasping",
+      "Humanoid end-effector",
+      "Research"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "height_mm": 218,
@@ -52149,7 +52061,9 @@
     "cameras": "Built-in visual perception system",
     "imu": true,
     "depth_sensing": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "China",
+    "os": "Fourier"
   },
   {
     "id": "fourier-intelligence-gr-3",
@@ -52718,17 +52632,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Parallel gripper with limited force (140N), 3D printed interchangeable fingers, integrated with FR3 systems for manipulation tasks",
+    "desc": "The Franka Hand 3 is a parallel-jaw gripper / end-effector for Franka Robotics arms (e.g. FR3), providing programmable-force grasping for sensitive assembly and research tasks.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2021,
     "origin": "Germany",
-    "status": "Released",
+    "status": "Active",
     "released": "2021",
     "width_mm": 175,
     "depth_mm": 50,
@@ -52737,11 +52646,9 @@
     "dof": 1,
     "ros": true,
     "use_cases": [
-      "Industrial automation",
-      "Research",
-      "Pick and place",
-      "Assembly tasks",
-      "Laboratory manipulation"
+      "Parallel grasping",
+      "Assembly",
+      "Research end-effector"
     ],
     "manufacturer_url": "https://www.franka.de",
     "height_mm": 84,
@@ -52753,7 +52660,9 @@
     "ip_rating": "IP30",
     "communication": "Ethernet",
     "power_consumption_w": 30,
-    "product_url": "https://www.franka.de/franka-hand"
+    "product_url": "https://www.franka.de/franka-hand",
+    "made_in": "Germany",
+    "os": "Franka"
   },
   {
     "id": "franka-robotics-tactile-mobile-robot-tmr-",
@@ -52834,17 +52743,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Mobile bimanual system integrating FR3 Duo with Tactile Mobile Robot (TMR), combining dual-arm manipulation, rich perception, and omnidirectional mobility for embodied AI research and data collection.",
+    "desc": "The Mobile FR3 Duo pairs two 7-axis torque-sensing Franka FR3 arms on a mobile base for bimanual mobile manipulation, a research platform for compliant two-handed tasks.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2024,
-    "status": "Released",
+    "status": "Active",
     "released": "2024",
     "dof": 14,
     "ros": true,
@@ -52853,11 +52757,9 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Embodied AI research",
-      "Mobile manipulation",
-      "Data collection",
-      "Research and development",
-      "Bimanual manipulation tasks"
+      "Bimanual mobile manipulation",
+      "Research",
+      "Sensitive assembly"
     ],
     "manufacturer_url": "https://www.franka.de",
     "height_mm": 1800,
@@ -52866,10 +52768,12 @@
     "reach_mm": 855,
     "speed_ms": 1,
     "battery_life": "4-6 hours",
-    "os": "Linux",
+    "os": "Franka",
     "wifi": true,
     "bluetooth": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "Germany",
+    "autonomous": true
   },
   {
     "id": "qinetiq-cecil-consolidated-edison-combined-inspection-and-lancing-",
@@ -52883,22 +52787,16 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Robotic steam generator maintenance system for nuclear facilities. Provides secondary side maintenance with remote operation capabilities.",
+    "desc": "CECIL (Consolidated Edison Combined Inspection and Lancing) is a specialized industrial robot for inspecting and lancing (cleaning) boiler tubes and confined industrial spaces, keeping workers out of hazardous maintenance environments.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2010,
-    "status": "Released",
+    "status": "Active",
     "use_cases": [
-      "Nuclear power plant maintenance",
-      "Steam generator inspection",
-      "Remote maintenance in hazardous environments",
-      "Secondary side cleaning operations"
+      "Boiler / tube inspection",
+      "Industrial cleaning (lancing)",
+      "Confined-space maintenance"
     ],
     "cameras": "Multiple inspection cameras for steam generator tube monitoring",
     "manufacturer_url": "https://www.qinetiq.com",
@@ -52912,7 +52810,9 @@
     "depth_sensing": false,
     "wifi": false,
     "bluetooth": false,
-    "ros": false
+    "ros": false,
+    "made_in": "USA",
+    "os": "QinetiQ"
   },
   {
     "id": "qinetiq-robotic-applique-kit-rak-3-",
@@ -53163,17 +53063,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Rugged control unit with sunlight-readable 7-inch touchscreen, Intel Atom E3845 1.91 GHz quad core processor, 4 GB RAM, IP65 rating, and secure multi-channel communications for robot fleet control.",
+    "desc": "The RoboTeam RT-7 is a ground robot operated via RoboTeam's ROCU controller, applied to inspection and industrial/security tasks. (Detailed specifications worth verifying against RoboTeam.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Israel",
     "year": 2016,
-    "status": "Released",
+    "status": "Active",
     "released": "2016",
     "cpu": "Intel Atom E3845 1.91GHz quad-core",
     "ram_gb": 4,
@@ -53182,11 +53077,9 @@
     "cellular": "Available",
     "cameras": "Integrated camera support",
     "use_cases": [
-      "Military operations",
-      "Law enforcement",
-      "Bomb disposal",
-      "Tactical reconnaissance",
-      "Robot fleet control"
+      "Inspection",
+      "Industrial / security UGV",
+      "Remote operations"
     ],
     "manufacturer_url": "https://www.roboteam.com",
     "height_mm": 35,
@@ -53194,7 +53087,7 @@
     "depth_mm": 150,
     "weight_kg": 1.2,
     "battery_life": "8 hours",
-    "os": "Windows Embedded",
+    "os": "ROCU",
     "storage_gb": 64,
     "lidar": false,
     "imu": true,
@@ -53202,7 +53095,9 @@
     "ros": false,
     "warranty_months": 24,
     "product_url": "https://www.roboteam.com/rt-7-rocu",
-    "charge_time": "4 hours"
+    "charge_time": "4 hours",
+    "made_in": "Israel",
+    "autonomous": true
   },
   {
     "id": "roboteam-rt-20-mtgr-",
@@ -53488,17 +53383,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Equipped with thermal imaging cameras for power equipment inspection. Performs daytime and nighttime inspections with multi-sensor locating technology for navigation and motion control in electrical substations.",
+    "desc": "An intelligent power-inspection robot (a Teledyne FLIR partner product) that autonomously patrols electrical substations and power facilities, using thermal and visual imaging to detect hot spots and faults. (Partner product; detailed specs worth verifying.)",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "cameras": "Thermal imaging camera, visible light camera",
     "lidar": true,
@@ -53507,10 +53397,8 @@
     "ros": true,
     "use_cases": [
       "Power substation inspection",
-      "Electrical equipment monitoring",
-      "Thermal anomaly detection",
-      "Preventive maintenance",
-      "Remote infrastructure assessment"
+      "Thermal monitoring",
+      "Autonomous patrol"
     ],
     "manufacturer_url": "https://www.teledyneflir.com",
     "height_mm": 1200,
@@ -53522,7 +53410,11 @@
     "depth_sensing": true,
     "bluetooth": true,
     "cellular": "4G LTE",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "made_in": "China",
+    "os": "FLIR partner",
+    "autonomous": true,
+    "thermal": true
   },
   {
     "id": "sarcos-guardian-dx",
@@ -53536,28 +53428,20 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Single-armed defense variant developed for U.S. Navy. Platform-agnostic upper-body robot designed for maintenance, inspection, welding, cutting, and lifting tasks in military environments. Can be mounted on various mobile platforms including boom lifts and bucket trucks.",
+    "desc": "Sarcos' Guardian DX (now Palladyne) is a highly dexterous, force-reflective dual-arm robot that can be teleoperated with intuitive motion mirroring or run semi-autonomously, for dexterous work in hazardous or remote industrial environments.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2020,
     "origin": "USA",
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "payload_kg": 91,
     "dof": 7,
     "reach_mm": 1372,
     "use_cases": [
-      "Military maintenance",
-      "Defense inspection",
-      "Explosive ordnance disposal",
-      "Welding",
-      "Cutting",
-      "Material handling"
+      "Dexterous teleoperated manipulation",
+      "Hazardous-environment work",
+      "Inspection & repair"
     ],
     "manufacturer_url": "https://www.sarcos.com",
     "weight_kg": 88,
@@ -53567,7 +53451,9 @@
     "imu": true,
     "depth_sensing": true,
     "warranty_months": 12,
-    "product_url": "https://www.sarcos.com/products/guardian-dx"
+    "product_url": "https://www.sarcos.com/products/guardian-dx",
+    "made_in": "USA",
+    "os": "Sarcos / Palladyne"
   },
   {
     "id": "geekplus-c200-roboshuttle",
@@ -53765,17 +53651,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Wider version of Chuck robot with shelf width extender and wider shelves to carry wider loads. Same base as regular Chuck but configured for handling larger items, shoes, garments on hangers, aircraft and computer parts.",
+    "desc": "Chuck, from 6 River Systems (Ocado Group), is a collaborative warehouse fulfillment robot that guides associates through pick paths and carries totes - boosting picking productivity without fixed infrastructure. 'Chuck+' denotes a newer generation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2018,
-    "status": "Released",
+    "status": "Active",
     "released": "2018",
     "height_mm": 1828,
     "width_mm": 813,
@@ -53792,13 +53673,14 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "warehouse fulfillment",
-      "order picking",
-      "inventory management",
-      "collaborative picking",
-      "wide item handling"
+      "Collaborative warehouse fulfillment",
+      "Pick assist",
+      "Sortation"
     ],
-    "manufacturer_url": "https://www.ocadogroup.com"
+    "manufacturer_url": "https://www.ocadogroup.com",
+    "made_in": "USA",
+    "os": "6 River Systems",
+    "autonomous": true
   },
   {
     "id": "locus-robotics-locus-max",
@@ -53867,27 +53749,21 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Earlier generation piece-picking systems with proven field deployment across multiple continents. Features AI-enabled picking brain with hand-eye coordination, smart exception handling, and barcode scanning capabilities.",
+    "desc": "RightHand Robotics' RightPick is an AI-driven robotic piece-picking system (arm + adaptive gripper + vision) that grasps a wide variety of items for e-commerce and pharmacy order fulfillment. This record covers previous RightPick generations.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2019,
-    "status": "Discontinued",
+    "status": "Active",
     "released": "2019",
     "dof": 6,
     "cameras": "RGB-D camera for computer vision and object recognition",
     "depth_sensing": true,
     "ros": true,
     "use_cases": [
+      "Robotic piece picking",
       "E-commerce fulfillment",
-      "Warehouse automation",
-      "Order picking",
-      "Package sorting"
+      "Pharma & healthcare picking"
     ],
     "manufacturer_url": "https://www.righthandrobotics.com",
     "payload_kg": 3,
@@ -53897,7 +53773,9 @@
     "bluetooth": false,
     "lidar": false,
     "imu": true,
-    "product_url": "https://www.righthandrobotics.com/rightpick"
+    "product_url": "https://www.righthandrobotics.com/rightpick",
+    "made_in": "USA",
+    "os": "RightHand Robotics"
   },
   {
     "id": "coco-robotics-coco-delivery-robot-v3",
@@ -54015,17 +53893,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Enhanced cargo capacity tailored for warehouses and factories. Handles bulk orders across warehouses with mobility for dynamic environments and shifting priorities.",
+    "desc": "The Kiwibot Warehouse Robot is an autonomous mobile robot adapting Kiwibot's navigation stack for indoor warehouse material transport.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2020,
-    "status": "Released",
+    "status": "Active",
     "released": "2020",
     "battery_life": "8 hours",
     "speed_ms": 1.5,
@@ -54038,13 +53911,13 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "warehouse automation",
-      "inventory management",
-      "goods transportation",
-      "order fulfillment",
-      "factory logistics"
+      "Warehouse logistics",
+      "Material transport"
     ],
-    "manufacturer_url": "https://www.kiwibot.com"
+    "manufacturer_url": "https://www.kiwibot.com",
+    "made_in": "USA / Colombia",
+    "os": "Kiwibot",
+    "autonomous": true
   },
   {
     "id": "zimmer-biomet-rosa-knee-with-optimize",
@@ -55917,31 +55790,24 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Force-sensitive robotic arm with 7 axes, 923 mm reach, and torque sensors in all seven axes. Integrates with Franka Control Interface for 1 kHz real-time control and research applications.",
+    "desc": "The Diana 7 (Agile Robots, distributed by Franka) is a 7-axis collaborative arm with torque sensing in every joint, 7 kg payload, ~923 mm reach and ~0.05 mm repeatability, for compliant, contact-rich manipulation and research.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "Germany",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "weight_kg": 18,
-    "payload_kg": 3,
+    "payload_kg": 7,
     "dof": 7,
     "reach_mm": 923,
     "ros": true,
     "cameras": "Optional external camera integration",
     "imu": true,
     "use_cases": [
-      "Research and development",
-      "Precision assembly",
-      "Human-robot collaboration",
-      "Laboratory automation",
-      "Educational robotics"
+      "Force-controlled assembly",
+      "Precision manipulation",
+      "Research"
     ],
     "manufacturer_url": "https://www.agile-robots.com",
     "product_url": "https://www.franka.de/diana",
@@ -55963,7 +55829,10 @@
     "depth_sensing": false,
     "lidar": false,
     "bluetooth": false,
-    "wifi": false
+    "wifi": false,
+    "made_in": "Germany / China",
+    "os": "Agile Robots",
+    "repeatability": 0.05
   },
   {
     "id": "irobot-roomba-combo-j5-robot-vacuum-and-mop",
@@ -59624,25 +59493,19 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Compact high-degree-of-freedom interactive dexterous hand with small body design adaptable to various environments. Compatible with AGIBOT humanoid robots for enhanced manipulation capabilities.",
+    "desc": "The AGIBOT OmniHand O10 is a dexterous multi-finger robotic hand with tactile sensing, designed as an end-effector for AGIBOT humanoids to perform fine, human-like grasping and manipulation.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "year": 2024,
     "origin": "China",
-    "status": "Released",
+    "status": "Active",
     "released": "2024",
-    "dof": 12,
+    "dof": 10,
     "ros": true,
     "use_cases": [
-      "Humanoid robot manipulation",
-      "Research and development",
-      "Industrial automation",
-      "Service robotics"
+      "Dexterous grasping",
+      "Humanoid end-effector",
+      "Fine manipulation"
     ],
     "weight_kg": 1.2,
     "manufacturer_url": "https://www.agibot.com",
@@ -59653,7 +59516,9 @@
     "imu": false,
     "lidar": false,
     "bluetooth": false,
-    "wifi": false
+    "wifi": false,
+    "made_in": "China",
+    "os": "AGIBOT"
   },
   {
     "id": "leju-robotics-kuavo",
@@ -60850,17 +60715,12 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Enhanced cargo capacity robot tailored for warehouses and factories with autonomous navigation and material handling capabilities",
+    "desc": "Kiwibot Cargo is a larger-capacity version of Kiwibot's autonomous sidewalk robot, built to carry bigger cargo loads for campus and facility logistics.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "battery_life": "8-12 hours",
     "payload_kg": 50,
@@ -60872,13 +60732,13 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Warehouse automation",
-      "Material handling",
-      "Inventory transport",
-      "Last-mile delivery",
-      "Factory logistics"
+      "Cargo delivery",
+      "Campus & facility logistics"
     ],
-    "manufacturer_url": "https://www.kiwibot.com"
+    "manufacturer_url": "https://www.kiwibot.com",
+    "made_in": "USA / Colombia",
+    "os": "Kiwibot",
+    "autonomous": true
   },
   {
     "id": "kiwibot-kiwibot-4-0",
