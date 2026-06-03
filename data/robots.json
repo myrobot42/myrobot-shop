@@ -348,7 +348,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Autonomous ground-based power-washing mobile robot designed to clean sidewalks, driveways, and parking lots",
+    "desc": "Lavo AI, from Lucid Bots (maker of the Sherpa cleaning drone), is an AI-driven cleaning robot aimed at automating exterior surface cleaning and pressure-washing for facilities. (Detailed specifications for this record are limited and worth verifying against Lucid Bots.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -358,7 +358,7 @@
     },
     "year": 2023,
     "origin": "USA",
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "battery_life": "4-6 hours",
     "speed_ms": 1.34,
@@ -366,13 +366,14 @@
     "cameras": "Multiple cameras for navigation and obstacle detection",
     "wifi": true,
     "use_cases": [
-      "Commercial cleaning",
-      "Parking lot maintenance",
-      "Sidewalk cleaning",
-      "Driveway cleaning",
-      "Property maintenance"
+      "Exterior surface cleaning",
+      "Pressure washing",
+      "Facility maintenance"
     ],
-    "manufacturer_url": "https://lucidbots.com"
+    "manufacturer_url": "https://lucidbots.com",
+    "made_in": "USA",
+    "os": "Lucid Bots",
+    "autonomous": true
   },
   {
     "id": "lg-electronics-cloid",
@@ -45389,7 +45390,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Dynamic, low-profile autonomous robot that combines fast, secure delivery with a responsive, friendly human interface for reliable, personalized services. Features fully autonomous indoor navigation, obstacle avoidance, multi-floor navigation, elevator control, 3D vision, LIDAR, and WiFi/LTE communications. Designed for hospital-wide transport of medications, lab specimens, supplies and equipment.",
+    "desc": "The Relay ASR-200 (Autonomous Service Robot, originally from Savioke) is a compact indoor delivery robot for hotels, hospitals and offices, autonomously navigating corridors and operating elevators to deliver amenities, supplies and small items to rooms and departments.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -45399,7 +45400,7 @@
     },
     "origin": "Switzerland",
     "year": 2014,
-    "status": "Released",
+    "status": "Active",
     "released": "2014",
     "height_mm": 1372,
     "width_mm": 559,
@@ -45415,13 +45416,14 @@
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Hospital medication delivery",
-      "Laboratory specimen transport",
-      "Medical supply distribution",
-      "Equipment transport",
-      "Healthcare logistics"
+      "Hotel & hospitality delivery",
+      "Healthcare delivery",
+      "Indoor point-to-point service"
     ],
-    "manufacturer_url": "https://www.swisslog-healthcare.com"
+    "manufacturer_url": "https://www.swisslog-healthcare.com",
+    "made_in": "USA",
+    "os": "Relay (Savioke)",
+    "autonomous": true
   },
   {
     "id": "hanwha-robotics-robot-visual-safety-rvs-",
@@ -45959,7 +45961,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Front-of-house autonomous service robot for secure hospital-wide delivery. Operates elevators, doors and navigates busy public corridors. Delivers medicines, blood, lab specimens, snacks and documents 24/7. Developed in partnership with Savioke.",
+    "desc": "The healthcare configuration of the Relay ASR-200 autonomous service robot, deployed in hospitals to deliver medications, specimens and supplies between departments, navigating autonomously and using elevators for secure point-to-point delivery.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -45969,7 +45971,7 @@
     },
     "origin": "Switzerland",
     "year": 2016,
-    "status": "Released",
+    "status": "Active",
     "released": "2016",
     "height_mm": 1219,
     "width_mm": 610,
@@ -45984,13 +45986,14 @@
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Hospital delivery",
-      "Medication transport",
-      "Laboratory specimen delivery",
-      "Document delivery",
-      "Supply transport"
+      "Healthcare delivery",
+      "Medication & specimen transport",
+      "Indoor logistics"
     ],
-    "manufacturer_url": "https://www.swisslog-healthcare.com"
+    "manufacturer_url": "https://www.swisslog-healthcare.com",
+    "made_in": "USA",
+    "os": "Relay (Savioke)",
+    "autonomous": true
   },
   {
     "id": "otsaw-swisslog-transcar-agv",
@@ -47462,7 +47465,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Beverage platform jointly developed with ROBA ROBO, equipped with AI robot technology for unmanned beverage service",
+    "desc": "A Rainbow Robotics robotic barista system for automated milk/bubble-tea preparation, using collaborative arms to dispense, mix and serve drinks in unattended cafe and kiosk settings. (Duplicate-style record of Rainbow's barista product.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -47472,12 +47475,10 @@
     },
     "origin": "South Korea",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "use_cases": [
-      "beverage preparation",
-      "unmanned cafe service",
-      "milk tea making",
-      "food service automation"
+      "Automated beverage preparation",
+      "Bubble-tea / cafe service"
     ],
     "wifi": true,
     "bluetooth": true,
@@ -47492,7 +47493,9 @@
     "ros": true,
     "lidar": true,
     "imu": true,
-    "depth_sensing": true
+    "depth_sensing": true,
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics"
   },
   {
     "id": "rainbow-robotics-fx-2",
@@ -50442,7 +50445,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "AI-powered customer service robot designed for business applications, providing extraordinary customer service experiences with advanced interaction capabilities.",
+    "desc": "Quinn is an Engineered Arts humanoid robot from the UK maker of RoboThespian, Mesmer and Ameca, focused on lifelike expression and human-robot interaction for displays, research and education. (Detailed specifications for this record are limited and worth verifying against Engineered Arts.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50452,19 +50455,19 @@
     },
     "origin": "UK",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "height_mm": 1700,
     "use_cases": [
-      "Customer service",
-      "Reception",
-      "Information kiosks",
-      "Retail assistance",
-      "Healthcare reception"
+      "Interactive display",
+      "Research & HRI",
+      "Education"
     ],
     "cameras": "Multiple HD cameras for facial recognition and interaction",
     "wifi": true,
     "bluetooth": true,
-    "manufacturer_url": "https://www.engineeredarts.co.uk"
+    "manufacturer_url": "https://www.engineeredarts.co.uk",
+    "made_in": "UK",
+    "os": "Engineered Arts"
   },
   {
     "id": "engineered-arts-ami-and-azi-desktop",
@@ -50543,7 +50546,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Full-size humanoid robot (1.75m tall, 33kg) with over 30 axes of movement, pneumatic motors, LCD screen eyes, speaking 30+ languages. Features telepresence capabilities and touchscreen interface control.",
+    "desc": "Engineered Arts' RoboThespian is a life-size interactive humanoid robot built for visitor attractions, science centres and education. Highly expressive through gestures, speech and projected facial animation, and remotely operable for telepresence, it has been one of the most widely deployed entertainment/education humanoids worldwide.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50553,20 +50556,19 @@
     },
     "year": 2005,
     "origin": "UK",
-    "status": "Released",
+    "status": "Active",
     "released": "2005",
     "height_mm": 1750,
     "weight_kg": 33,
     "dof": 30,
     "use_cases": [
-      "Entertainment",
-      "Education",
-      "Museums",
-      "Exhibitions",
-      "Public engagement",
-      "Telepresence"
+      "Visitor attractions & museums",
+      "Education & outreach",
+      "Research & HRI"
     ],
-    "manufacturer_url": "https://www.engineeredarts.co.uk"
+    "manufacturer_url": "https://www.engineeredarts.co.uk",
+    "made_in": "UK",
+    "os": "Engineered Arts"
   },
   {
     "id": "engineered-arts-mesmer",
@@ -52918,7 +52920,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "AI-powered personal assistant robot with environmental sensors, autonomous navigation, multi-language voice commands, gesture control, modular design for home, care, and workplace environments.",
+    "desc": "NEURA Robotics' MiPA ('My intelligent Personal Assistant') is a cognitive mobile-manipulator service robot with two fine-motor arms, autonomous navigation and a rich sensor suite. Powered by NEURA's AURA cloud AI and the Neuraverse app ecosystem (skills added like phone apps), it performs tasks such as vacuuming, unloading a dishwasher, tidying, beverage service and health monitoring for home, care and retail settings.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -52928,7 +52930,7 @@
     },
     "origin": "Germany",
     "year": 2023,
-    "status": "In development",
+    "status": "Active",
     "height_mm": 1650,
     "weight_kg": 85,
     "battery_life": "8 hours",
@@ -52939,25 +52941,34 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Home assistance",
-      "Elder care",
-      "Office automation",
-      "Reception duties"
+      "Household assistance",
+      "Elder & health care",
+      "Retail / hospitality service",
+      "Light logistics"
     ],
     "manufacturer_url": "https://www.neura-robotics.com",
     "width_mm": 600,
     "depth_mm": 450,
-    "dof": 7,
+    "dof": 14,
     "ros": true,
     "cellular": "Optional 5G",
     "product_url": "https://www.neura-robotics.com/mipa",
-    "os": "NEURA OS",
+    "os": "AURA / Neuraverse",
     "ai_model": "NEURA AI",
     "speed_ms": 1.5,
     "payload_kg": 5,
     "reach_mm": 800,
     "charge_time": "4 hours",
-    "warranty_months": 24
+    "warranty_months": 24,
+    "made_in": "Germany",
+    "autonomous": true,
+    "sensors": [
+      "Force-torque",
+      "LiDAR",
+      "Cameras",
+      "Ultrasonic",
+      "Environmental"
+    ]
   },
   {
     "id": "neura-robotics-mav",
@@ -56267,7 +56278,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "AI-powered beverage platform developed with ROBA ROBO. Enables customers to order drinks from unmanned kiosk within 95 seconds, with supervisory monitoring capabilities.",
+    "desc": "Rainbow Robotics' milk-tea barista is an automated beverage-making robot that prepares bubble/milk tea using robotic arms, dispensing, mixing and sealing drinks for unattended cafe and kiosk service. From the Korean maker of the HUBO humanoid and RB cobots.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -56277,12 +56288,11 @@
     },
     "origin": "South Korea",
     "year": 2023,
-    "status": "Released",
+    "status": "Active",
     "released": "2023",
     "use_cases": [
-      "beverage preparation",
-      "unmanned food service",
-      "customer ordering"
+      "Automated beverage preparation",
+      "Bubble-tea / cafe service"
     ],
     "wifi": true,
     "cameras": "integrated vision system for order processing and monitoring",
@@ -56294,7 +56304,9 @@
     "lidar": false,
     "imu": true,
     "depth_sensing": true,
-    "ros": true
+    "ros": true,
+    "made_in": "South Korea",
+    "os": "Rainbow Robotics"
   },
   {
     "id": "rainbow-robotics-rbq",
@@ -60274,7 +60286,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Civilian forestry variant for forest planting, maintenance, and monitoring operations. Part of the Multiscope family of civilian applications.",
+    "desc": "MultiScope Forester is the forestry configuration of Milrem's THeMIS-based UGV, equipped with mulching/brush-cutting tools to clear undergrowth and create firebreaks for wildfire prevention and forest management without putting crews in hazardous terrain.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -60284,7 +60296,7 @@
     },
     "origin": "Estonia",
     "year": 2021,
-    "status": "Released",
+    "status": "Active",
     "weight_kg": 1600,
     "payload_kg": 500,
     "speed_ms": 1.4,
@@ -60294,13 +60306,14 @@
     "lidar": true,
     "imu": true,
     "use_cases": [
-      "Forest planting",
-      "Tree maintenance",
-      "Forest monitoring",
-      "Seedling transportation",
-      "Terrain surveying"
+      "Forestry",
+      "Firebreak clearing / brush cutting",
+      "Wildfire prevention"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "made_in": "Estonia",
+    "os": "Milrem",
+    "autonomous": true
   },
   {
     "id": "milrem-robotics-multiscope-city",
@@ -60314,7 +60327,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Municipal services variant for street cleaning and urban maintenance tasks. Designed for city and municipal applications.",
+    "desc": "MultiScope City is the civilian municipal configuration of Milrem's THeMIS-based tracked UGV, fitted with attachments for urban maintenance tasks such as sweeping, mowing and material transport, bringing unmanned ground automation to city and facility upkeep.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -60324,7 +60337,7 @@
     },
     "origin": "Estonia",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "weight_kg": 750,
     "speed_ms": 1.5,
@@ -60335,13 +60348,14 @@
     "imu": true,
     "ros": true,
     "use_cases": [
-      "Street cleaning",
-      "Snow removal",
-      "Municipal maintenance",
-      "Urban logistics",
-      "Waste collection"
+      "Urban maintenance",
+      "Municipal sweeping / mowing",
+      "Civil logistics"
     ],
-    "manufacturer_url": "https://milremrobotics.com"
+    "manufacturer_url": "https://milremrobotics.com",
+    "made_in": "Estonia",
+    "os": "Milrem",
+    "autonomous": true
   },
   {
     "id": "agibot-omnihand-o10",
@@ -61558,7 +61572,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Mobile advertising platform with customizable wraps, animated screens, and interactive displays for brand visibility and promotional campaigns",
+    "desc": "The Kiwibot Advertising robot is a variant of Kiwibot's sidewalk delivery platform fitted with digital screens for mobile out-of-home advertising and brand activations, driving along campuses and city sidewalks to display dynamic ads while collecting impression analytics.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -61568,7 +61582,7 @@
     },
     "origin": "USA",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "height_mm": 600,
     "width_mm": 400,
@@ -61583,13 +61597,14 @@
     "lidar": true,
     "imu": true,
     "use_cases": [
-      "Outdoor advertising",
-      "Brand promotion",
-      "Event marketing",
-      "Campus advertising",
-      "Mall promotions"
+      "Mobile out-of-home advertising",
+      "Brand activation",
+      "Sidewalk media"
     ],
-    "manufacturer_url": "https://www.kiwibot.com"
+    "manufacturer_url": "https://www.kiwibot.com",
+    "made_in": "USA / Colombia",
+    "os": "Kiwibot",
+    "autonomous": true
   },
   {
     "id": "kiwibot-kiwibot-cargo",
@@ -61802,7 +61817,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Comprehensive service and support program supporting customers and integrators from initial concept through implementation and beyond. Includes pre-and post-sales service options.",
+    "desc": "RightCare is associated with RightHand Robotics, known for AI-driven robotic piece-picking (the RightPick system) that grasps a wide range of items for e-commerce and healthcare order fulfillment. (Detailed specifications for this specific record are limited and worth verifying.)",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -61812,17 +61827,17 @@
     },
     "origin": "USA",
     "year": 2019,
-    "status": "Released",
+    "status": "Active",
     "released": "2019",
     "use_cases": [
-      "Order fulfillment",
-      "E-commerce automation",
-      "Warehouse operations",
-      "Pick and pack operations"
+      "Automated piece-picking",
+      "Order fulfillment"
     ],
     "manufacturer_url": "https://www.righthandrobotics.com",
     "warranty_months": 12,
-    "product_url": "https://www.righthandrobotics.com/rightcare"
+    "product_url": "https://www.righthandrobotics.com/rightcare",
+    "made_in": "USA",
+    "os": "RightHand Robotics"
   },
   {
     "id": "6-river-systems-ocado-chuck-amr",
