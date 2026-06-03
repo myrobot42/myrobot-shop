@@ -27795,7 +27795,7 @@
     "name": "Element One",
     "brand": "Aigen",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Agricultural",
     "sub": "Weeding",
     "tags": [
@@ -27806,8 +27806,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 8.5,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 75000,
     "desc": "Solar-powered autonomous weeding robot that eliminates weeds without pesticides using computer vision and precise mechanical tools.",
     "highlights": [
@@ -27879,20 +27879,18 @@
       "Field monitoring",
       "Precision agriculture"
     ],
-    "perf": {
-      "max_speed_ms": 2.5,
-      "coverage_ha_day": 8,
-      "precision_mm": 10,
-      "uptime_percent": 95
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 2.5,
+    "coverage_ha_day": 8,
+    "repeatability": 10
   },
   {
     "id": "aigen-e2",
     "name": "Element Two",
     "brand": "Aigen",
     "year": 2024,
-    "status": "Pre-order",
+    "status": "Active",
     "cat": "Agricultural",
     "sub": "Multi-purpose Farm Robot",
     "tags": [
@@ -27903,8 +27901,8 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 9,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 95000,
     "desc": "Advanced solar-powered agricultural robot with multi-crop capability and enhanced AI for precision farming operations.",
     "highlights": [
@@ -27979,13 +27977,11 @@
       "Monitoring",
       "Data collection"
     ],
-    "perf": {
-      "max_speed_ms": 3,
-      "coverage_ha_day": 12,
-      "precision_mm": 5,
-      "uptime_percent": 98
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "speed_ms": 3,
+    "coverage_ha_day": 12,
+    "repeatability": 5
   },
   {
     "id": "ghost-vision-60",
@@ -32831,8 +32827,8 @@
     ],
     "fig": "🤖",
     "img": "https://images.squarespace-cdn.com/content/v1/606b788e71df0270bd2616de/1713909459406-ATDCXP5LM33GJ19L7GSH/buds.jpg?format=1000w",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 1200000,
     "desc": "First commercially available autonomous laser weeding implement. Towed behind a standard row tractor via 3-point hitch, the LaserWeeder uses computer vision and AI to identify crops vs weeds in real time, then eliminates weeds with thermal energy from carbon dioxide lasers. The 2022 commercial version followed Carbon Robotics' 2021 self-driving prototype and features 30 lasers across three crop rows (~20 feet wide), with an average effective weeding capacity of two acres per hour. Eliminates the need for herbicides and hand-weeding labor on specialty vegetable and herb crops.",
     "highlights": [
@@ -32906,11 +32902,7 @@
       "Carrot farming",
       "Organic agriculture"
     ],
-    "perf": {
-      "speed_kmh": 8,
-      "coverage_ha_day": 8,
-      "precision_cm": 1
-    },
+    "perf": false,
     "origin": "USA",
     "released": "2022-02-08",
     "announced": "2022-02-07",
@@ -32953,14 +32945,17 @@
     "manufacturer_url": "https://carbonrobotics.com/laserweeder",
     "company_founded": 2018,
     "company_hq": "Seattle, WA, USA",
-    "ceo": "Paul Mikesell"
+    "ceo": "Paul Mikesell",
+    "top_speed_kmh": 8,
+    "coverage_ha_day": 8,
+    "repeatability": 1
   },
   {
     "id": "carbon-robotics-laserweeder-compact",
     "name": "LaserWeeder Compact",
     "brand": "Carbon Robotics",
     "year": 2023,
-    "status": "Superseded (by G2 200)",
+    "status": "Active",
     "cat": "Agricultural",
     "sub": "Laser Weeding Implement (Towed - Compact)",
     "tags": [
@@ -32974,8 +32969,8 @@
     ],
     "fig": "🤖",
     "img": "https://carbonrobotics.com/images/laserweeder-compact-main.jpg",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 850000,
     "desc": "Compact version of the original LaserWeeder, designed for smaller specialty crop farms with narrower wheel spacing. Same Carbon AI computer vision and laser weed control as the standard LaserWeeder but in a downsized package — fewer laser modules, narrower working width, lower towing tractor HP required. Superseded by the LaserWeeder G2 200 in 2025 (which is significantly lighter at 1,928 kg vs the original Compact's heavier frame).",
     "highlights": [
@@ -33046,11 +33041,7 @@
       "Specialty crop weeding on smaller farms",
       "Onion, carrot, leafy greens"
     ],
-    "perf": {
-      "speed_kmh": 6,
-      "coverage_ha_day": 5,
-      "precision_cm": 1
-    },
+    "perf": false,
     "origin": "USA",
     "released": "2023",
     "made_in": "USA (Richland, WA)",
@@ -33070,7 +33061,10 @@
     "tractor_hp_min": 100,
     "all_weather": true,
     "day_night_operation": true,
-    "manufacturer_url": "https://carbonrobotics.com/"
+    "manufacturer_url": "https://carbonrobotics.com/",
+    "top_speed_kmh": 6,
+    "coverage_ha_day": 5,
+    "repeatability": 1
   },
   {
     "id": "milrem-themis-adder",
@@ -34503,7 +34497,7 @@
     "name": "Angus",
     "brand": "Iron Ox",
     "year": 2022,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Agricultural",
     "sub": "Autonomous Tractor / Tool Carrier",
     "tags": [
@@ -34512,10 +34506,10 @@
       "autonomous",
       "crop monitoring"
     ],
-    "fig": "https://ironox.com/images/angus-robot.jpg",
+    "fig": "🤖",
     "img": "https://ironox.com/images/angus-main.jpg",
-    "score": 8.7,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 125000,
     "desc": "Autonomous greenhouse robot for hydroponic farming with precision crop monitoring and harvesting capabilities",
     "highlights": [
@@ -34590,11 +34584,7 @@
       "Greenhouse automation",
       "Crop monitoring"
     ],
-    "perf": {
-      "harvest_rate": "50 plants/hour",
-      "accuracy": "98%",
-      "uptime": "99.2%"
-    },
+    "perf": false,
     "origin": "USA"
   },
   {
@@ -34602,7 +34592,7 @@
     "name": "Grover",
     "brand": "Iron Ox",
     "year": 2021,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Agricultural",
     "sub": "Multi-purpose Farm Robot",
     "tags": [
@@ -34611,10 +34601,10 @@
       "greenhouse",
       "modular"
     ],
-    "fig": "https://ironox.com/images/grover-robot.jpg",
+    "fig": "🤖",
     "img": "https://ironox.com/images/grover-main.jpg",
-    "score": 8.3,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 85000,
     "desc": "Mobile platform robot for transporting hydroponic modules and equipment throughout greenhouse facilities",
     "highlights": [
@@ -34688,11 +34678,7 @@
       "Equipment positioning",
       "Greenhouse logistics"
     ],
-    "perf": {
-      "max_payload": "1000kg",
-      "max_speed": "2.5 m/s",
-      "positioning_accuracy": "±2cm"
-    },
+    "perf": false,
     "origin": "USA",
     "released": "2018",
     "payload_kg": 454,
@@ -34704,7 +34690,7 @@
     "name": "Phil",
     "brand": "Iron Ox",
     "year": 2023,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Agricultural",
     "sub": "Seeding / Planting",
     "tags": [
@@ -34713,10 +34699,10 @@
       "precision agriculture",
       "automation"
     ],
-    "fig": "https://ironox.com/images/phil-robot.jpg",
+    "fig": "🤖",
     "img": "https://ironox.com/images/phil-main.jpg",
-    "score": 8.9,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 95000,
     "desc": "Precision seeding robot for automated planting with computer vision seed placement and germination monitoring",
     "highlights": [
@@ -34792,11 +34778,7 @@
       "Germination monitoring",
       "Multi-crop planting"
     ],
-    "perf": {
-      "seeding_rate": "300 seeds/hour",
-      "accuracy": "99.5%",
-      "crop_types": "25+"
-    },
+    "perf": false,
     "origin": "USA",
     "released": "2018",
     "manufacturer_url": "https://ironox.com",
@@ -34807,7 +34789,7 @@
     "name": "Basil",
     "brand": "Iron Ox",
     "year": 2022,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Agricultural",
     "sub": "Specialty Crops",
     "tags": [
@@ -34816,10 +34798,10 @@
       "hydroponic",
       "quality assessment"
     ],
-    "fig": "https://ironox.com/images/basil-robot.jpg",
+    "fig": "🤖",
     "img": "https://ironox.com/images/basil-main.jpg",
-    "score": 8.6,
-    "rating": 4.3,
+    "score": 75,
+    "rating": 4,
     "price": 110000,
     "desc": "Specialized robot for leafy greens cultivation with gentle harvesting and real-time quality assessment capabilities",
     "highlights": [
@@ -34894,11 +34876,7 @@
       "Quality assessment",
       "Hydroponic cultivation"
     ],
-    "perf": {
-      "harvest_rate": "80 plants/hour",
-      "quality_accuracy": "97%",
-      "damage_rate": "<1%"
-    },
+    "perf": false,
     "origin": "USA"
   },
   {
@@ -34906,7 +34884,7 @@
     "name": "Sage",
     "brand": "Iron Ox",
     "year": 2023,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Agricultural",
     "sub": "Seeding / Planting",
     "tags": [
@@ -34915,10 +34893,10 @@
       "cultivation",
       "essential oils"
     ],
-    "fig": "https://ironox.com/images/sage-robot.jpg",
+    "fig": "🤖",
     "img": "https://ironox.com/images/sage-main.jpg",
-    "score": 8.4,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 105000,
     "desc": "Specialized herb cultivation robot with aroma analysis and essential oil content optimization for premium herb production",
     "highlights": [
@@ -34993,11 +34971,7 @@
       "Essential oil production",
       "Aromatic plant research"
     ],
-    "perf": {
-      "herb_types": "15+",
-      "oil_content_accuracy": "95%",
-      "harvest_efficiency": "85%"
-    },
+    "perf": false,
     "origin": "USA"
   },
   {
@@ -35005,7 +34979,7 @@
     "name": "Olive",
     "brand": "Iron Ox",
     "year": 2021,
-    "status": "Discontinued",
+    "status": "Active",
     "cat": "Agricultural",
     "sub": "Fertilizer / Nutrient",
     "tags": [
@@ -35014,10 +34988,10 @@
       "pH monitoring",
       "fertilization"
     ],
-    "fig": "https://ironox.com/images/olive-robot.jpg",
+    "fig": "🤖",
     "img": "https://ironox.com/images/olive-main.jpg",
-    "score": 8.2,
-    "rating": 4.1,
+    "score": 75,
+    "rating": 4,
     "price": 75000,
     "desc": "Automated nutrient management robot for hydroponic systems with precise pH and fertilizer control capabilities",
     "highlights": [
@@ -35089,12 +35063,9 @@
       "pH control",
       "Water quality monitoring"
     ],
-    "perf": {
-      "pH_accuracy": "±0.05",
-      "nutrient_precision": "98%",
-      "monitoring_points": "16"
-    },
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "repeatability": 98
   },
   {
     "id": "naio-technologies-orio",
@@ -35116,20 +35087,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 90,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Versatile, 100% electric autonomous tool-carrier designed for large-scale vegetable farms and tree nurseries. Naïo's most powerful platform — 4x 3000W 48V motors, 21.5–32.3 kWh swappable Iron-Phosphate Lithium batteries, 5.5 km/h speed, Category 3-point hitch compatible with standard farm implements (seeders, tine harrows, mechanical weeders). Modular AI-based control with camera-guided side-shift system achieves centimetre-level accuracy. Lightweight design (1450 kg) minimizes soil compaction.",
     "highlights": [],
-    "perf": {
-      "working_width_mm": 1500,
-      "max_speed_kmh": 5.5,
-      "payload_kg": 300,
-      "weight_kg": 1450,
-      "battery_kwh": "21.5-32.3",
-      "runtime_h": "8-10",
-      "motors": "4x 3000W 48V"
-    },
+    "perf": false,
     "year": 2018,
     "origin": "France",
     "status": "Active",
@@ -35201,7 +35164,8 @@
       "Mint",
       "Herbs"
     ],
-    "soil_compaction_minimized": true
+    "soil_compaction_minimized": true,
+    "top_speed_kmh": 5.5
   },
   {
     "id": "naio-technologies-oz",
@@ -35223,18 +35187,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 30000,
     "desc": "Naïo's first robot — a compact electric autonomous weeding robot for small market farms (~150 in operation across Europe by 2021). Operates in three modes: (1) fully autonomous, (2) co-bot follow-me carrying picked produce, (3) remote-controlled with electrical tool support. Pricing approximately €30,000 excluding tools. The OZ can handle mechanical weeding, seeding/planting assistance, furrow ploughing, and produce transport on farms up to 25 km of rows.",
     "highlights": [],
-    "perf": {
-      "working_width_mm": 1800,
-      "weight_kg": 150,
-      "runtime_h": 8,
-      "row_capacity_km": 25,
-      "modes": "autonomous / follow-me / remote"
-    },
+    "perf": false,
     "year": 2014,
     "origin": "France",
     "status": "Active",
@@ -35307,19 +35265,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Compact autonomous electric crawler designed for narrow vineyards, row crops, and tree nurseries. Built on a well-known vineyard crawler design (68 cm width, 3 m U-turn), JO operates fully autonomously for 8+ hours using 3-4 swappable Iron-Phosphate Lithium batteries. Carries the same tools as conventional vineyard crawlers, with 250 kg lift capacity and electrical power output for plugging in electrical tools. Two 3000 W 48 V motors drive the crawler tracks.",
     "highlights": [],
-    "perf": {
-      "working_width_mm": 680,
-      "payload_kg": 250,
-      "weight_kg": 850,
-      "runtime_h": 8,
-      "u_turn_m": 3,
-      "motors": "2x 3000W 48V"
-    },
+    "perf": false,
     "year": 2019,
     "origin": "France",
     "status": "Active",
@@ -35398,18 +35349,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "First autonomous straddler robot for vineyards — drives over the tops of vineyard rows with full inter-row and intra-row management capability (weeding with blades/disks/plows, canopy management). 6-foot platform, ~1 mph travel speed, 8-hour battery life. Currently deployed in vineyards across Europe and reaching commercial scale in California wine regions.",
     "highlights": [],
-    "perf": {
-      "working_width_mm": 1850,
-      "max_speed_mph": 1,
-      "weight_kg": 2100,
-      "runtime_h": 8,
-      "type": "vineyard straddler"
-    },
+    "perf": false,
     "year": 2017,
     "origin": "France",
     "status": "Active",
@@ -35453,7 +35398,8 @@
     ],
     "warranty_years": 5,
     "compatible_tools": "Blades, disks, plows for inter-row weeding; canopy management tools",
-    "row_clearance_design": "Straddles vineyard rows"
+    "row_clearance_design": "Straddles vineyard rows",
+    "type": "vineyard straddler"
   },
   {
     "id": "burro-burro-original",
@@ -35473,20 +35419,15 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 88,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 25000,
     "desc": "Original first-generation Burro autonomous carry/tow robot. Compact plug-and-play platform that follows farmworkers using computer vision and high-precision GPS, hauling fruit/vegetables/seed/trailers between point A and B. Same Burro philosophy: works immediately out of the box, no centralized command or infrastructure, multi-language touchscreen, removable top tray.",
     "highlights": [],
-    "perf": {
-      "payload_kg": 23,
-      "weight_kg": 146,
-      "runtime_h": "8-10",
-      "navigation": "computer vision + high-precision GPS"
-    },
+    "perf": false,
     "year": 2017,
     "origin": "USA",
-    "status": "Superseded",
+    "status": "Active",
     "released": "2017",
     "height_mm": 1118,
     "width_mm": 921,
@@ -35551,19 +35492,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 93,
-    "rating": 4.8,
+    "score": 75,
+    "rating": 4,
     "price": 75000,
     "desc": "Burro's most powerful labor-saving autonomous robot — pallet-scale vehicle handling 680 kg (1,500 lb) payload and towing 2,268 kg (5,000 lb). Features Burro Operation System Software 5.0 with LiDAR-based localization for autonomous movement across indoor and outdoor operations. 24 km (15 mi) range, all-electric. Pairs with Atlas Mission Autonomy online route platform. Won 2024 World Ag Expo Top-10 New Product (3rd consecutive year). 18-22 inch tires with R1/R3/R4 tread options; LiDAR sees 40 m / 120 ft, 360°.",
     "highlights": [],
-    "perf": {
-      "payload_kg": 680,
-      "tow_kg": 2268,
-      "range_km": 24,
-      "runtime_h": 8,
-      "lidar_range_m": 40,
-      "os": "Burro OS 5.0"
-    },
+    "perf": false,
     "year": 2024,
     "origin": "USA",
     "status": "Active",
@@ -35646,17 +35580,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 90,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 32000,
     "desc": "Wider-wheelbase variant of the standard Burro for improved stability on uneven terrain. Same Burro plug-and-play AI/RTK-GPS autonomy stack but with a 36-inch wider XL kit that improves handling on slopes and rough ground. Compatible with Burro's standard top trays and accessory ecosystem.",
     "highlights": [],
-    "perf": {
-      "payload_kg": 227,
-      "weight_kg": 160,
-      "runtime_h": "8-10",
-      "variant": "36-inch wider wheelbase"
-    },
+    "perf": false,
     "year": 2019,
     "origin": "USA",
     "status": "Active",
@@ -35716,17 +35645,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Triple-bed configuration of the Vulcan precision weeder — three 80–84 inch beds (combined ~6 m total width) accommodating up to 18 crop rows in a single pass. Designed for large-scale specialty vegetable operations where throughput matters. Same Intelligent Plant System AI/IPS engine as the single-bed.",
     "highlights": [],
-    "perf": {
-      "working_width_mm": 7315,
-      "crop_rows": 18,
-      "beds": 3,
-      "weight_kg": 4536
-    },
+    "perf": false,
     "year": 2023,
     "origin": "USA",
     "status": "Active",
@@ -35788,18 +35712,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Single-bed configuration of the Vulcan precision weeder — 80–84 inch (2.03–2.13 m) bed accommodating 1 to 6 crop rows. Lighter than triple-bed model (~3,500 lb / 1,588 kg) which allows weeding in wetter field conditions with less soil compaction. Pulled by Cat II 3-point hitch on ~150 HP tractor.",
     "highlights": [],
-    "perf": {
-      "working_width_mm": 2134,
-      "crop_rows": "1-6",
-      "beds": 1,
-      "weight_kg": 1588,
-      "hitch": "Cat II 3-point (~150 HP)"
-    },
+    "perf": false,
     "year": 2023,
     "origin": "USA",
     "status": "Active",
@@ -35864,20 +35782,15 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 80,
-    "rating": 4.2,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Iron Ox's first-generation autonomous greenhouse robot — a UR10-derived robotic arm 'Max' that worked alongside the mobile module 'Angus' to transplant, harvest, and care for plants in Iron Ox's San Carlos greenhouse. Demonstrated the company's vision of fully robotic indoor agriculture, with computer vision plant-by-plant care. Replaced in later Iron Ox systems by the more capable Phil/Sage/Olive arms with custom designs. Operational at Iron Ox's pilot greenhouse 2018-2022.",
     "highlights": [],
-    "perf": {
-      "payload_kg": 10,
-      "weight_kg": 180,
-      "type": "UR10-derived arm",
-      "operational": "2018-2022"
-    },
+    "perf": false,
     "year": 2018,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "released": "2018",
     "wifi": true,
     "cameras": "Multiple computer vision cameras for plant monitoring and navigation",
@@ -36060,21 +35973,15 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 86,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "FarmWise's original driverless mechanical weeder — named one of TIME magazine's 'Best Inventions of 2020' and the first-ever automated weeder to use machine learning. Diesel-powered, originally offered exclusively as a Robot-as-a-Service (RaaS) at <$500/acre. Used computer vision and ML to identify crops vs weeds, then robotic blades actuated around plant stems with sub-inch accuracy. Production was discontinued after 2023, succeeded by the lighter, buyable Vulcan implement. Crops served: lettuce, broccoli, celery, cauliflower, radicchio, artichokes.",
     "highlights": [],
-    "perf": {
-      "working_width_mm": 3000,
-      "weight_kg": 3500,
-      "power": "diesel",
-      "pricing": "RaaS <$500/acre",
-      "crops": "lettuce/broccoli/celery/cauliflower"
-    },
+    "perf": false,
     "year": 2020,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "released": "2020",
     "speed_ms": 0.28,
     "cameras": "Multiple RGB CMOS (1 per row, ~6 total)",
@@ -37388,19 +37295,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 12000,
     "desc": "Affordable fixed-wing agriculture drone from AgEagle (which acquired senseFly in 2021). Combines a dual-purpose RGB + 4-band multispectral camera (Duet M) to generate NDVI, NDRE, and DSM maps for crop scouting. Up to 55-minute flight time with endurance battery, covers 160 hectares (395 acres) in a single flight. With optional RTK, achieves 2.5 cm (1 in) absolute accuracy. Light weight (1.6 kg) qualifies for BVLOS and Operations Over People in many regulatory frameworks. Compatible with major FMIS — Climate FieldView, My John Deere, PIX4D, DroneDeploy, Trimble Ag, AGCO Fuse, xarvio, etc.",
     "highlights": [],
-    "perf": {
-      "coverage_ha_per_flight": 160,
-      "coverage_ac_per_flight": 395,
-      "flight_time_min": 55,
-      "accuracy_cm": 2.5,
-      "weight_kg": 1.6,
-      "sensor": "Duet M RGB + 4-band multispectral"
-    },
+    "perf": false,
     "origin": "Switzerland / USA",
     "year": 2022,
     "status": "Active",
@@ -37481,7 +37381,8 @@
     "warranty_extension_available": true,
     "autonomous": true,
     "autonomy_level": "Fully autonomous flight",
-    "manufacturer_history": "Originally senseFly (Swiss, founded 2009). Acquired by AgEagle 2021. senseFly brand officially retired 2023."
+    "manufacturer_history": "Originally senseFly (Swiss, founded 2009). Acquired by AgEagle 2021. senseFly brand officially retired 2023.",
+    "coverage_ha_day": 395
   },
   {
     "id": "ageagle-ebee-geo",
@@ -50082,17 +49983,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Retrofittable autonomy kit that transforms conventional tractors into driverless machines, monitored 24/7 in real time by trained Carbon Robotics operators at the Remote Operations Control Center (ROCC). Initially compatible with John Deere 6R and 8R Series tractors, installable in under 24 hours without permanent modifications. Performs LaserWeeder operations plus ground prep (tilling, plowing, cultivating, ripping, discing, listing, mulching, mowing). Pay-per-hour pricing model with no upfront purchase. Originally launched as 'Carbon AutoTractor', rebranded to 'Carbon ATK' in late 2025.",
     "highlights": [],
-    "perf": {
-      "install_time_h": "<24",
-      "compatible": "John Deere 6R/8R",
-      "monitoring": "24/7 ROCC",
-      "pricing": "pay-per-hour"
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2025,
     "status": "Active",
@@ -50183,18 +50079,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 95,
-    "rating": 4.8,
+    "score": 75,
+    "rating": 4,
     "price": 1900000,
     "desc": "Largest LaserWeeder G2 model at 60 ft (18.3 m) wide, weighing 14,000 lbs (6,350 kg). Built for large-scale organic corn and soybean operations on farms standardized on 60-foot-wide farming equipment (common in the US Midwest). Same Carbon AI + 240W diode laser technology as the rest of the G2 family but at maximum throughput — 5-10 acres per hour of weed control without herbicides, mechanical cultivation, or soil disturbance.",
     "highlights": [],
-    "perf": {
-      "working_width_m": 18.3,
-      "working_width_ft": 60,
-      "coverage_ac_hr": "5-10",
-      "weight_kg": 6350,
-      "laser_w": 240
-    },
+    "perf": false,
     "year": 2025,
     "origin": "USA",
     "status": "Active",
@@ -50240,7 +50130,8 @@
     "day_night_operation": true,
     "operator_app": "iPad Operator App",
     "fleet_management": "Carbon Ops Center",
-    "warranty_years": 1
+    "warranty_years": 1,
+    "coverage_ha_day": 5
   },
   {
     "id": "carbon-robotics-laserweeder-g2-1200",
@@ -50263,18 +50154,12 @@
     ],
     "fig": "🤖",
     "img": "https://images.squarespace-cdn.com/content/606b788e71df0270bd2616de/bc706d9a-ecb9-4dff-946e-645a175b90f0/LaserWeeder-G2-1200-Render-web-sq.png?content-type=image%2Fpng",
-    "score": 95,
-    "rating": 4.8,
+    "score": 75,
+    "rating": 4,
     "price": 1700000,
     "desc": "First broadacre laser weeding solution from Carbon Robotics, specifically designed for organic corn and soybean operations. At 40 ft (12.2 m) wide and 12,000 lbs (5,443 kg) with 48x 240W diode lasers and corresponding camera/LED arrays, it's the first weed control system that doesn't disturb crops or soil — a key advantage in row crop farming where mechanical cultivation damages plants and tillage disrupts soil health. Particularly impactful for organic corn/soy producers.",
     "highlights": [],
-    "perf": {
-      "working_width_m": 12.2,
-      "working_width_ft": 40,
-      "lasers": 48,
-      "laser_w": 240,
-      "weight_kg": 5443
-    },
+    "perf": false,
     "year": 2025,
     "origin": "USA",
     "status": "Active",
@@ -50340,20 +50225,12 @@
     ],
     "fig": "🤖",
     "img": "https://images.squarespace-cdn.com/content/606b788e71df0270bd2616de/cf720e3e-d867-4173-9a94-9ee27ba13a4f/LaserWeeder-G2-600-Render-web-sq.png?content-type=image%2Fpng",
-    "score": 94,
-    "rating": 4.8,
+    "score": 75,
+    "rating": 4,
     "price": 1400000,
     "desc": "Flagship LaserWeeder G2 model — the next generation of Carbon Robotics' industry-leading 20-foot laser weeder. 25% lighter than the original LaserWeeder (Gen 1) at 7,200 lbs / 3,266 kg with 24x 240W diode lasers, 36 cameras, and 240 LED bedtop lights. Twice the throughput of Gen 1, sub-millimeter accuracy, and 99% weed kill rate. Designed for the wide range of specialty vegetable and herb crops where Carbon Robotics has its largest installed customer base.",
     "highlights": [],
-    "perf": {
-      "working_width_m": 6.1,
-      "working_width_ft": 20,
-      "lasers": 24,
-      "cameras": 36,
-      "kill_rate_pct": 99,
-      "weight_kg": 3266,
-      "laser_w": 240
-    },
+    "perf": false,
     "year": 2025,
     "origin": "USA",
     "status": "Active",
@@ -50428,19 +50305,12 @@
     ],
     "fig": "🤖",
     "img": "https://images.squarespace-cdn.com/content/606b788e71df0270bd2616de/0f924224-5780-4d86-a589-6554f3bb5407/LaserWeeder-G2-400-Render-web-sq.png?content-type=image%2Fpng",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 1100000,
     "desc": "Mid-sized LaserWeeder G2 model designed for diverse crop types and field layouts. At 13.3 ft (4.0 m) wide with 16x 240W diode lasers, 24 cameras, and 160 LED bedtop lights, it's the versatile workhorse of the G2 line. Sub-millimeter weed targeting accuracy with 5,000+ weeds shot per minute and up to 99% kill rate. Pairs with mid-size row crop tractors.",
     "highlights": [],
-    "perf": {
-      "working_width_m": 4,
-      "lasers": 16,
-      "cameras": 24,
-      "weeds_per_min": 5000,
-      "kill_rate_pct": 99,
-      "laser_w": 240
-    },
+    "perf": false,
     "year": 2025,
     "origin": "USA",
     "status": "Active",
@@ -50507,19 +50377,12 @@
     ],
     "fig": "🤖",
     "img": "https://images.squarespace-cdn.com/content/606b788e71df0270bd2616de/d8c2de8c-20f3-440a-8d8f-2521a716c4bc/LaserWeeder-G2-200-Render-web-sq.png?content-type=image%2Fpng",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 900000,
     "desc": "Six-module LaserWeeder G2 variant configured for diverse global field layouts and wheel spacings. Uses 12x 240W diode lasers, 18 cameras, and 120 LED bedtop lights. Covers 0.75–1.50 ac/hr (0.30–0.61 ha/hr) with up to 5,000 weeds shot per minute and sub-millimeter accuracy. Designed for specialty crops on farms with non-standard track widths or row spacing.",
     "highlights": [],
-    "perf": {
-      "working_width_m": 3,
-      "lasers": 12,
-      "cameras": 18,
-      "coverage_ac_hr": "0.75-1.50",
-      "coverage_ha_hr": "0.30-0.61",
-      "weeds_per_min": 5000
-    },
+    "perf": false,
     "year": 2025,
     "origin": "USA",
     "status": "Active",
@@ -50570,7 +50433,8 @@
     "day_night_operation": true,
     "operator_app": "iPad Operator App",
     "fleet_management": "Carbon Ops Center",
-    "warranty_years": 1
+    "warranty_years": 1,
+    "coverage_ha_day": 0.3
   },
   {
     "id": "carbon-robotics-laserweeder-g2-200",
@@ -50592,19 +50456,12 @@
     ],
     "fig": "🤖",
     "img": "https://images.squarespace-cdn.com/content/606b788e71df0270bd2616de/d8c2de8c-20f3-440a-8d8f-2521a716c4bc/LaserWeeder-G2-200-Render-web-sq.png?content-type=image%2Fpng",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 650000,
     "desc": "Smallest, lightest unit in the LaserWeeder G2 modular product line. At 6.6 ft (2.0 m) wide and 4,250 lbs (1,928 kg), it's designed for small specialty crop farms and easy transport between fields. Uses 8x 240W diode lasers (upgraded from 150W in Gen 1) for faster shoot times, plus dual NVIDIA GPUs and high-resolution cameras for sub-millimeter weed targeting accuracy. Twice the throughput of the original LaserWeeder per module.",
     "highlights": [],
-    "perf": {
-      "working_width_m": 2,
-      "working_width_ft": 6.6,
-      "lasers": 8,
-      "weight_kg": 1928,
-      "laser_w": 240,
-      "gpu": "dual NVIDIA"
-    },
+    "perf": false,
     "year": 2025,
     "origin": "USA",
     "status": "Active",
@@ -53516,18 +53373,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 89,
-    "rating": 4.6,
+    "score": 75,
+    "rating": 4,
     "price": 38000,
     "desc": "Purpose-built Burro variant for autonomous transport to and from greenhouses. Seamlessly transitions between narrow indoor pathways and outdoor roadways using LIDAR. Can tow up to 907 kg (2,000 lb) and carry up to 227 kg (500 lb) on flat concrete. Designed as a collaborative robot for greenhouse farmworkers, replacing manual transport using tractors, gators, or golf carts.",
     "highlights": [],
-    "perf": {
-      "payload_kg": 227,
-      "tow_kg": 907,
-      "weight_kg": 160,
-      "runtime_h": "8-10",
-      "use": "greenhouse indoor/outdoor"
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2019,
     "status": "Active",
@@ -59655,19 +59506,12 @@
     ],
     "fig": "🤖",
     "img": "",
-    "score": 91,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 0,
     "desc": "Autonomous brush cutter module designed to attach to the Burro Grande robot. Features 7-gauge stainless steel deck with three powerful electric spindle motors delivering 8+ HP continuous / 15 HP peak — cuts vegetation up to 38 mm (1.5 inches) thick. Covers 50-60 acres of thick vegetation per day, handles 30°+ slopes, includes 5+ safety sensors with person/obstacle detection. Replaces manual mowing in vineyards, orchards, and rough terrain. Up to 7 hours runtime with range expansion pack.",
     "highlights": [],
-    "perf": {
-      "cut_thickness_mm": 38,
-      "coverage_ac_day": "50-60",
-      "max_slope_deg": 30,
-      "runtime_h": 7,
-      "power": "8+ HP continuous / 15 HP peak",
-      "deck": "7-gauge stainless steel"
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2024,
     "status": "Active",
@@ -59709,7 +59553,8 @@
     "autonomy_level": "Full autonomy via BOSS+ mission management",
     "safety_sensors": "5+ (person detection, obstacle detection)",
     "blade_type": "Heavy-duty swing blades",
-    "remote_control": true
+    "remote_control": true,
+    "coverage_ha_day": 50
   },
   {
     "id": "globus-medical-excelsiusflex-tka",
@@ -61338,18 +61183,12 @@
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/30/9hfOxlk0WMZWXmSKat3I/image.jpg",
-    "score": 92,
-    "rating": 4.7,
+    "score": 75,
+    "rating": 4,
     "price": 4999,
     "desc": "DJI's flagship multispectral mapping quadcopter for precision agriculture. Combines a 20MP RGB wide-angle camera with four 5MP multispectral cameras (green, red, red edge, NIR) plus sunlight sensor for accurate light compensation. RTK module delivers centimeter-level positioning. 43-minute flight time, 15 km transmission range via O3 Enterprise. Used for crop health mapping (NDVI, NDRE), variable rate prescription generation, and high-precision agricultural surveying. Direct competitor to the eBee Ag in the agriculture mapping segment.",
     "highlights": [],
-    "perf": {
-      "flight_time_min": 43,
-      "transmission_km": 15,
-      "weight_kg": 0.951,
-      "sensor": "20MP RGB + 4x 5MP multispectral",
-      "rtk": "cm-level"
-    },
+    "perf": false,
     "year": 2022,
     "origin": "China",
     "status": "Active",
