@@ -92537,7 +92537,11 @@
       "best-selling",
       "300m",
       "compact",
-      "active"
+      "active",
+      "ROV",
+      "Saab Seaeye",
+      "Falcon",
+      "inspection"
     ],
     "fig": "🤖",
     "img": "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/falcon2.jpg",
@@ -92597,7 +92601,8 @@
     "payload": 14,
     "payload_kg": 14,
     "os": "Seaeye Surface Control System",
-    "warranty_months": 24
+    "warranty_months": 24,
+    "depth_m": 1000
   },
   {
     "id": "saab-seaeye-lynx-2014",
@@ -92686,7 +92691,12 @@
       "sabertooth",
       "1200m",
       "deep-water",
-      "active"
+      "active",
+      "AUV",
+      "ROV",
+      "Saab Seaeye",
+      "Sabertooth",
+      "subsea"
     ],
     "fig": "🤖",
     "img": "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/sabertooth-image-right.jpg",
@@ -92746,7 +92756,8 @@
     "battery_life": 720,
     "battery_life_typical": 720,
     "battery_life_heavy": 360,
-    "warranty_months": 24
+    "warranty_months": 24,
+    "depth_m": 3000
   },
   {
     "id": "saab-seaeye-ewrov-2024",
@@ -93607,7 +93618,7 @@
     "name": "HUGIN Superior",
     "brand": "Kongsberg",
     "cat": "Aquatic",
-    "sub": "Survey AUV",
+    "sub": "Autonomous Underwater Vehicle (AUV)",
     "tags": [
       "aquatic",
       "auv",
@@ -93616,7 +93627,12 @@
       "survey",
       "6000m",
       "sas-sonar",
-      "active"
+      "active",
+      "AUV",
+      "Kongsberg",
+      "HUGIN",
+      "seabed mapping",
+      "deep"
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202605/27/Lsq88q4sjwbhXImeQj2d/image.jpg",
@@ -93676,7 +93692,8 @@
     "length_mm": 6500,
     "diameter_mm": 870,
     "os": "Kongsberg HUGIN AUV software",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "depth_m": 6000
   },
   {
     "id": "kongsberg-remus-100-2010",
@@ -111233,6 +111250,179 @@
       "industrial",
       "IP68",
       "inspection"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "cat": "Aquatic",
+    "perf": false,
+    "price": "POA",
+    "id": "qysea-fifish-v-evo",
+    "name": "FIFISH V-EVO",
+    "brand": "QYSEA",
+    "sub": "Consumer/Pro Underwater Drone (ROV)",
+    "year": 2023,
+    "origin": "China",
+    "status": "Active",
+    "depth_m": 100,
+    "desc": "The QYSEA FIFISH V-EVO is a prosumer underwater drone with full 360° omnidirectional movement, a 4K UHD 60 FPS camera, AI Vision Lock subject tracking, 5,000-lumen lights and FPV goggle control - rated to ~100 m for inspection, filming and research.",
+    "tags": [
+      "aquatic",
+      "underwater drone",
+      "ROV",
+      "QYSEA",
+      "FIFISH",
+      "4K"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "cat": "Aquatic",
+    "perf": false,
+    "price": "POA",
+    "id": "saildrone-explorer",
+    "name": "Explorer",
+    "brand": "Saildrone",
+    "sub": "Unmanned Surface Vessel (USV)",
+    "year": 2022,
+    "origin": "USA",
+    "status": "Active",
+    "desc": "The Saildrone Explorer is a wind-and-solar-powered uncrewed surface vehicle with 12+ months of endurance, used for ocean-data collection, bathymetric mapping, fisheries and maritime-domain awareness with a minimal carbon footprint.",
+    "tags": [
+      "aquatic",
+      "USV",
+      "Saildrone",
+      "Explorer",
+      "ocean data",
+      "autonomous"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "cat": "Aquatic",
+    "perf": false,
+    "price": "POA",
+    "id": "saildrone-surveyor",
+    "name": "Surveyor",
+    "brand": "Saildrone",
+    "sub": "Unmanned Surface Vessel (USV)",
+    "year": 2023,
+    "origin": "USA",
+    "status": "Active",
+    "desc": "The Saildrone Surveyor is a large (~20 m) uncrewed surface vessel for deep-ocean bathymetric and acoustic mapping - one mission mapped ~90,000 km² of deep water - offering ship-grade survey at a fraction of crewed-vessel cost.",
+    "tags": [
+      "aquatic",
+      "USV",
+      "Saildrone",
+      "Surveyor",
+      "bathymetric mapping",
+      "deep ocean"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "cat": "Aquatic",
+    "perf": false,
+    "price": "POA",
+    "id": "blueye-x3",
+    "name": "X3",
+    "brand": "Blueye Robotics",
+    "sub": "Underwater Drone (ROV)",
+    "year": 2021,
+    "origin": "Norway",
+    "status": "Active",
+    "depth_m": 305,
+    "desc": "The Blueye X3 is a professional underwater drone (ROV) with three guest ports for sensors/tooling (grippers, sonar, lasers), HD camera and ~305 m depth rating, used for inspection, aquaculture and research.",
+    "tags": [
+      "aquatic",
+      "ROV",
+      "Blueye",
+      "X3",
+      "inspection",
+      "Norway"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "cat": "Aquatic",
+    "perf": false,
+    "price": "POA",
+    "id": "notilo-plus-ibubble",
+    "name": "iBubble",
+    "brand": "Notilo Plus",
+    "sub": "Autonomous Dive Drone",
+    "year": 2019,
+    "origin": "France",
+    "status": "Active",
+    "depth_m": 60,
+    "desc": "iBubble (Notilo Plus) is a wireless autonomous underwater camera drone that follows and films a diver hands-free using acoustic tracking, rated to ~60 m - aimed at recreational and professional dive filming.",
+    "tags": [
+      "aquatic",
+      "underwater drone",
+      "Notilo Plus",
+      "iBubble",
+      "autonomous",
+      "diving"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "cat": "Aquatic",
+    "perf": false,
+    "price": "POA",
+    "id": "chasing-m2-pro",
+    "name": "M2 Pro",
+    "brand": "Chasing Innovation",
+    "sub": "Consumer/Pro Underwater Drone (ROV)",
+    "year": 2021,
+    "origin": "China",
+    "status": "Active",
+    "depth_m": 150,
+    "desc": "The Chasing M2 Pro is a versatile underwater ROV with omnidirectional movement, 4K camera and accessory mounts (grabber arm, sonar), rated to ~150 m, used for filming, inspection and light recovery.",
+    "tags": [
+      "aquatic",
+      "ROV",
+      "Chasing",
+      "M2 Pro",
+      "4K",
+      "inspection"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "cat": "Aquatic",
+    "perf": false,
+    "price": "POA",
+    "id": "robosea-biki",
+    "name": "BIKI",
+    "brand": "Robosea",
+    "sub": "Bionic Fish Robot",
+    "year": 2018,
+    "origin": "China",
+    "status": "Active",
+    "depth_m": 60,
+    "desc": "BIKI (Robosea) is a compact bionic fish-shaped underwater drone that swims with a tail fin for quiet, low-disturbance filming, with a 4K camera and ~60 m depth rating - a consumer-oriented bionic aquatic robot.",
+    "tags": [
+      "aquatic",
+      "bionic fish",
+      "Robosea",
+      "BIKI",
+      "underwater drone",
+      "4K"
     ],
     "fig": "🤖",
     "score": 75,
