@@ -18236,24 +18236,26 @@
   },
   {
     "id": "skydio-x10",
-    "name": "Skydio X10",
+    "name": "X10",
     "brand": "Skydio",
-    "year": 2023,
+    "year": 2024,
     "status": "Active",
     "cat": "Drones",
-    "sub": "Enterprise / Inspection",
+    "sub": "Autonomous Enterprise Drone",
     "tags": [
+      "drone",
+      "Skydio",
+      "X10",
+      "autonomous",
       "enterprise",
-      "long range",
-      "dual cameras",
-      "weatherproof"
+      "Blue UAS"
     ],
     "fig": "🤖",
     "img": "https://cdn.sanity.io/images/mgxz50fq/production-v3-red/cd1548472b57be4da19c8f202ba4cdfe3148f76b-2930x1120.png?w=2000&fit=max&auto=format",
     "score": 75,
     "rating": 4,
     "price": 25000,
-    "desc": "Next-generation enterprise drone with dual gimbaled cameras, 45-minute flight time, and advanced AI autonomy.",
+    "desc": "The Skydio X10 (2024) is a Blue-UAS-approved autonomous quadcopter for public safety, defense and infrastructure inspection, with best-in-class AI obstacle avoidance, thermal/zoom payloads and NDAA-compliant US supply chain.",
     "highlights": [
       "Dual gimbaled cameras",
       "45min flight time",
@@ -18336,7 +18338,8 @@
       "https://www.adorama.com/images/XLarge/SKYD4ESKT2VL_4.jpg",
       "https://www.adorama.com/images/XLarge/SKYD4ESKT2VL_5.jpg",
       "https://www.adorama.com/images/XLarge/SKYD4ESKT2VL_7.jpg"
-    ]
+    ],
+    "price_band": "Flagship"
   },
   {
     "id": "skydio-dock",
@@ -88005,13 +88008,18 @@
     "name": "Ghost X",
     "brand": "Anduril",
     "cat": "Drones",
-    "sub": "Military Drone",
+    "sub": "Autonomous sUAS (Military)",
     "tags": [
       "military",
       "NDAA",
       "lattice-ai",
       "autonomous",
-      "ISR"
+      "ISR",
+      "drone",
+      "Anduril",
+      "Ghost",
+      "sUAS",
+      "Lattice AI"
     ],
     "fig": "🤖",
     "img": "https://cdn.sanity.io/images/61nocsj5/production/2e450d75ba11cf85095f28039381c3e5b44ab59a-4000x2660.png?rect=224,334,3776,1726&w=960&fit=min&auto=format",
@@ -88064,7 +88072,8 @@
       "Expeditionary ISR",
       "Tactical reconnaissance",
       "Targeting"
-    ]
+    ],
+    "price_band": "n/a"
   },
   {
     "id": "anduril-altius-700m-2024",
@@ -113589,6 +113598,54 @@
       "GoMate",
       "wheeled-leg",
       "automotive"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "cat": "Drones",
+    "perf": false,
+    "id": "zipline-p2",
+    "name": "Platform 2 (P2 Zip)",
+    "brand": "Zipline",
+    "sub": "Autonomous Delivery Drone",
+    "year": 2024,
+    "origin": "USA",
+    "status": "Active",
+    "price_band": "n/a",
+    "desc": "Zipline's Platform 2 (P2 Zip) is an autonomous delivery drone that hovers and lowers a tethered \"droid\" on a line to place packages precisely on doorsteps, extending Zipline's long-range medical/retail delivery network to homes.",
+    "tags": [
+      "drone",
+      "Zipline",
+      "P2",
+      "delivery",
+      "autonomous",
+      "precision"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "cat": "Drones",
+    "perf": false,
+    "id": "wing-delivery-drone",
+    "name": "Wing Delivery Drone",
+    "brand": "Wing (Alphabet)",
+    "sub": "Autonomous Delivery Drone",
+    "year": 2023,
+    "origin": "USA",
+    "status": "Active",
+    "price_band": "n/a",
+    "desc": "Wing (an Alphabet company) operates fixed-wing/multirotor hybrid autonomous delivery drones that carry small packages from local hubs to homes, with commercial operations in the US, Australia and beyond.",
+    "tags": [
+      "drone",
+      "Wing",
+      "Alphabet",
+      "delivery",
+      "autonomous",
+      "hybrid VTOL"
     ],
     "fig": "🤖",
     "score": 75,
