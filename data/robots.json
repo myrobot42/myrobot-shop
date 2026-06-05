@@ -90655,7 +90655,10 @@
       "Ride-hailing",
       "Urban mobility"
     ],
-    "manufacturer_history": "Acquired by Amazon (2020, ~$1.3B)"
+    "manufacturer_history": "Acquired by Amazon (2020, ~$1.3B)",
+    "config": "Bidirectional, no steering wheel, 4 carriage seats",
+    "sensors": "LiDAR + radar + cameras (360 deg)",
+    "operations": "Las Vegas, San Francisco, Austin"
   },
   {
     "id": "baidu-apollo-go-rt5-2022",
@@ -112066,10 +112069,15 @@
     "id": "cruise-origin",
     "name": "Origin",
     "brand": "Cruise",
-    "sub": "Purpose-built Robotaxi",
+    "sub": {
+      "sub": "Purpose-built Robotaxi",
+      "status": "Discontinued",
+      "config": "Steering-wheel-free shared shuttle",
+      "desc": "The Cruise Origin (GM) was a purpose-built, steering-wheel-free shared robotaxi. Development was wound down after GM ended Cruise's robotaxi program in 2024 - a notable discontinued milestone in the robotaxi category."
+    },
     "year": 2022,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "autonomy_level": "L4",
     "desc": "The Cruise Origin (GM) was a purpose-built, steering-wheel-free shared robotaxi. Development was wound down after GM ended Cruise's robotaxi program in 2024 - included here as a notable discontinued milestone in the robotaxi category.",
     "tags": [
@@ -112096,7 +112104,7 @@
     "origin": "China",
     "status": "Active",
     "autonomy_level": "L4",
-    "desc": "Pony.ai's seventh-generation Robotaxi (built on GAC and BAIC platforms) entered mass production in 2025 - the first to use 100% automotive-grade components with a ~70% lower autonomous-driving-kit BOM cost. Pony.ai runs fully-driverless service across China's four tier-one cities.",
+    "desc": "Pony.ai's seventh-generation Robotaxi entered mass production in 2025 - the first to use 100% automotive-grade components with a ~70% lower autonomous-driving-kit BOM. Pony.ai runs fully-driverless service across China's four tier-one cities.",
     "tags": [
       "autonomous vehicle",
       "robotaxi",
@@ -112107,7 +112115,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "config": "Built on GAC & BAIC platforms; automotive-grade",
+    "operations": "China tier-1 cities (driverless)",
+    "feature": "~70% lower autonomous-kit BOM vs prior gen"
   },
   {
     "cat": "Autonomous Vehicles",
@@ -112116,7 +112127,13 @@
     "id": "may-mobility-shuttle",
     "name": "Autonomous Shuttle (Sienna)",
     "brand": "May Mobility",
-    "sub": "Autonomous Shuttle",
+    "sub": {
+      "sub": "Autonomous Shuttle",
+      "status": "Active",
+      "platform": "Toyota Sienna",
+      "operations": "US microtransit (multiple cities)",
+      "desc": "May Mobility operates autonomous microtransit shuttles (Toyota Sienna platform) for on-demand and fixed-route public transit in several US cities, moving toward driver-out L4 operation in defined service zones."
+    },
     "year": 2023,
     "origin": "USA",
     "status": "Active",
@@ -112141,7 +112158,13 @@
     "id": "aurora-driver-truck",
     "name": "Aurora Driver (Autonomous Truck)",
     "brand": "Aurora Innovation",
-    "sub": "Autonomous Truck",
+    "sub": {
+      "sub": "Autonomous Truck",
+      "status": "Active",
+      "platform": "Class 8 freight trucks",
+      "operations": "Driverless freight, Texas highways (Dallas-Houston)",
+      "desc": "The Aurora Driver is a self-driving system for Class 8 freight trucks; Aurora launched commercial driverless freight runs on Texas highways (Dallas-Houston) in 2025, hauling loads with no human in the cab."
+    },
     "year": 2025,
     "origin": "USA",
     "status": "Active",
@@ -112166,7 +112189,13 @@
     "id": "kodiak-driver-truck",
     "name": "Kodiak Driver",
     "brand": "Kodiak Robotics",
-    "sub": "Autonomous Truck",
+    "sub": {
+      "sub": "Autonomous Truck",
+      "status": "Active",
+      "platform": "Long-haul & off-road trucks",
+      "operations": "Driverless commercial (incl. Permian Basin)",
+      "desc": "The Kodiak Driver is a self-driving system for long-haul and off-road trucking; Kodiak delivered driverless commercial trucks for customers (including Permian Basin oilfield routes), focusing on autonomous freight at scale."
+    },
     "year": 2024,
     "origin": "USA",
     "status": "Active",
