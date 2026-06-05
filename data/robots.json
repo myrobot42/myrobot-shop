@@ -111679,7 +111679,7 @@
     "year": 2020,
     "origin": "USA",
     "status": "Active",
-    "desc": "The Howe & Howe Thermite RS3 is a remotely-operated firefighting robot on industrial tank treads, powered by a 24 hp diesel engine, able to climb slopes up to ~70° and blast up to ~2,500 gallons/min of water or foam. Purpose-built for oil-refinery, HAZMAT and industrial fires (BLEVEs).",
+    "desc": "The Howe & Howe Thermite RS3 is a remote firefighting robot on industrial tank treads - 24 hp diesel, climbs ~70 deg slopes, and blasts up to ~2,500 gal/min of water or foam. Built for refinery, HAZMAT and industrial fires (BLEVEs).",
     "tags": [
       "disaster response",
       "firefighting",
@@ -111690,7 +111690,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "power": "24 hp diesel",
+    "flow": "~2,500 gal/min water/foam",
+    "mobility": "Tracked; climbs ~70 deg",
+    "control": "Remote-operated"
   },
   {
     "cat": "Disaster Response",
@@ -111703,7 +111707,7 @@
     "year": 2019,
     "origin": "USA",
     "status": "Active",
-    "desc": "The Howe & Howe Thermite RS1 is a compact remotely-operated firefighting robot on tank treads with a diesel powerplant, designed to enter structures and industrial fires too dangerous for crews and deliver high-volume water/foam streams.",
+    "desc": "The Howe & Howe Thermite RS1 is a compact remote firefighting robot on tank treads with a diesel powerplant, designed to enter structures and industrial fires too dangerous for crews and deliver high-volume water/foam streams.",
     "tags": [
       "disaster response",
       "firefighting",
@@ -111714,7 +111718,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "power": "Diesel",
+    "mobility": "Tracked",
+    "control": "Remote-operated"
   },
   {
     "cat": "Disaster Response",
@@ -111729,7 +111736,7 @@
     "status": "Active",
     "weight_kg": 12,
     "speed_ms": 10,
-    "desc": "EMILY (Emergency Integrated Lifesaving Lanyard, Hydronalix) is a ~4-ft, ~26-lb remote-controlled rescue flotation robot reaching ~23 mph, used to reach drowning victims fast; it famously helped rescue 240+ refugees off the Greek coast and can act as a flotation platform for several people.",
+    "desc": "EMILY (Hydronalix) is a ~4-ft, ~12 kg remote-controlled rescue flotation robot reaching ~10 m/s (23 mph), used to reach drowning victims fast; it helped rescue 240+ refugees off the Greek coast and can act as a flotation platform for several people.",
     "tags": [
       "disaster response",
       "water rescue",
@@ -111740,7 +111747,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "control": "Remote-controlled",
+    "role": "Drowning rescue flotation platform"
   },
   {
     "cat": "Disaster Response",
@@ -111753,7 +111762,7 @@
     "year": 2020,
     "origin": "USA",
     "status": "Active",
-    "desc": "Velox (Pliant Energy Systems) is an amphibious robot propelled by undulating silicone fins, able to swim through water, skate on ice and push through snow - suited to cold-water and ice rescues where humans cannot safely approach.",
+    "desc": "Velox (Pliant Energy Systems) is an amphibious robot propelled by undulating silicone fins, able to swim, skate on ice and push through snow - suited to cold-water and ice rescues where humans cannot safely approach.",
     "tags": [
       "disaster response",
       "amphibious",
@@ -111764,7 +111773,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Undulating silicone fins",
+    "mobility": "Water, ice, snow, sand"
   },
   {
     "cat": "Disaster Response",
@@ -111777,7 +111788,7 @@
     "year": 2021,
     "origin": "Switzerland",
     "status": "Active",
-    "desc": "Fotokite Sigma is a fully-autonomous tethered drone system for first responders that launches from a vehicle and holds a persistent aerial thermal/visual overwatch of an incident scene, giving incident commanders continuous situational awareness without a trained pilot.",
+    "desc": "Fotokite Sigma is a fully-autonomous tethered drone for first responders that launches from a vehicle and holds persistent aerial thermal/visual overwatch of an incident, giving commanders continuous situational awareness without a trained pilot.",
     "tags": [
       "disaster response",
       "tethered drone",
@@ -111788,20 +111799,22 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "type": "Vehicle-launched tethered drone",
+    "feature": "Persistent thermal/visual overwatch; no pilot needed"
   },
   {
     "cat": "Disaster Response",
     "perf": false,
     "price": "POA",
     "id": "cmu-snakebot",
-    "name": "Snakebot (Hardened Underwater Modular Robot Snake)",
+    "name": "Snakebot",
     "brand": "Carnegie Mellon University",
     "sub": "Search & Rescue Snake Robot",
     "year": 2019,
     "origin": "USA",
     "status": "Active",
-    "desc": "The CMU Snakebot (Biorobotics Lab, Howie Choset) is a many-jointed serpentine robot that crawls and climbs through rubble and pipes inaccessible to people or dogs, used in earthquake search-and-rescue (deployed after the 2017 Mexico City quake) and infrastructure inspection.",
+    "desc": "The CMU Snakebot (Biorobotics Lab) is a many-jointed serpentine robot that crawls and climbs through rubble and pipes inaccessible to people or dogs - deployed after the 2017 Mexico City earthquake and used for infrastructure inspection.",
     "tags": [
       "disaster response",
       "snake robot",
@@ -111812,7 +111825,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "form": "Many-jointed serpentine",
+    "role": "Rubble/pipe search & rescue, inspection"
   },
   {
     "cat": "Disaster Response",
@@ -111826,7 +111841,7 @@
     "origin": "Croatia",
     "status": "Active",
     "weight_kg": 5500,
-    "desc": "The DOK-ING MV-4 is a compact remote-controlled demining machine that uses a flail/tiller to safely detonate and clear landmines, widely deployed for humanitarian mine clearance in former conflict zones.",
+    "desc": "The DOK-ING MV-4 is a compact remote-controlled demining machine using a flail/tiller to safely detonate and clear landmines, widely deployed for humanitarian mine clearance in former conflict zones.",
     "tags": [
       "disaster response",
       "demining",
@@ -111837,7 +111852,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "mechanism": "Flail / tiller",
+    "control": "Remote-controlled"
   },
   {
     "cat": "Disaster Response",
@@ -111850,7 +111867,7 @@
     "year": 2021,
     "origin": "Germany",
     "status": "Active",
-    "desc": "The Magirus TAF 35 is a remote-controlled tracked firefighting robot with a large turbine that atomises and projects water/foam at high volume over long distances, used for tunnel fires, industrial blazes and scenarios too hazardous for crews.",
+    "desc": "The Magirus TAF 35 is a remote-controlled tracked firefighting robot with a large turbine that atomises and projects water/foam at high volume over long distances - for tunnel fires, industrial blazes and scenarios too hazardous for crews.",
     "tags": [
       "disaster response",
       "firefighting",
@@ -111861,7 +111878,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "mechanism": "Large water/foam atomising turbine",
+    "mobility": "Tracked, remote-controlled",
+    "role": "Tunnel & industrial fires"
   },
   {
     "cat": "Agricultural",
