@@ -25405,7 +25405,7 @@
     "name": "Mako SmartRobotics Platform",
     "brand": "Stryker",
     "year": 2020,
-    "status": "active",
+    "status": "Active",
     "cat": "Medical",
     "sub": "Surgical Robot",
     "tags": [
@@ -25414,12 +25414,12 @@
       "data analytics",
       "outcome tracking"
     ],
-    "fig": 9.2,
+    "fig": "🤖",
     "img": "https://media-assets.stryker.com/is/image/stryker/Mako%204%20TKA%20and%20Q%20Guidance%204K%20(1)?$max_width_1440$",
-    "score": 95,
-    "rating": 4.8,
-    "price": 1500000,
-    "desc": "Next-generation AI-powered surgical robotics platform with advanced data analytics and outcome tracking for evidence-based surgical decisions.",
+    "score": 75,
+    "rating": 4,
+    "price": "POA",
+    "desc": "Stryker Mako SmartRobotics is an orthopedic surgical robot for total/partial knee and total hip replacement, using a patient-specific 3D plan and a haptic-feedback robotic arm to guide bone preparation precisely within planned boundaries.",
     "highlights": [
       "AI-powered insights",
       "Predictive analytics",
@@ -25492,8 +25492,12 @@
       "Outcome analysis",
       "Surgical training"
     ],
-    "perf": "AI-enhanced precision",
-    "origin": "USA"
+    "perf": false,
+    "origin": "USA",
+    "specialty": "Orthopedics (total/partial knee, total hip)",
+    "approach": "Haptic robotic arm",
+    "regulatory": "FDA-cleared",
+    "key_feature": "Patient-specific 3D plan with haptic boundaries"
   },
   {
     "id": "stryker-mako-triathlon",
@@ -25703,10 +25707,10 @@
     ],
     "fig": "🤖",
     "img": "https://ifdalivestorage.blob.core.windows.net/user-uploads/profile/16932/portfolio/4552/92f5641f4b102ba59fa289eb929593d55b860091.jpg",
-    "score": 9.2,
-    "rating": 4.6,
-    "price": 2500000,
-    "desc": "CMR Surgical's Versius is a modular surgical robot built around small, portable, biomimetic arms that mount individually, fitting existing operating rooms. Widely adopted across Europe, Asia and beyond for minimally invasive procedures.",
+    "score": 75,
+    "rating": 4,
+    "price": "POA",
+    "desc": "CMR Surgical Versius is a modular surgical robot built around small, portable, biomimetic arms that mount individually, fitting existing ORs. CE-marked and widely used across Europe/Asia, it secured a US FDA de novo clearance for gallbladder removal (cholecystectomy).",
     "highlights": [
       "Modular design",
       "3D HD vision",
@@ -25775,7 +25779,7 @@
       "Urology",
       "Colorectal surgery"
     ],
-    "perf": "Sub-millimeter precision",
+    "perf": false,
     "origin": "United Kingdom",
     "gallery": [
       "https://www.cambridgefilmworks.com/wp-content/uploads/2022/07/CMR-Surgical-Versius.jpg"
@@ -26437,9 +26441,9 @@
     ],
     "fig": "🤖",
     "img": "https://www.surgicalroboticstechnology.com/wp-content/uploads/2021/07/Medtronic-RAS-Hugo-740x481.jpeg",
-    "score": 92,
-    "rating": 4.8,
-    "price": 3500000,
+    "score": 75,
+    "rating": 4,
+    "price": "POA",
     "desc": "The Medtronic Hugo RAS is a modular robotic-assisted surgery system with independent arm carts and an open console. It received US FDA clearance for urologic procedures in December 2025 (CE-marked since 2021, used in 30+ countries), with general and gynecologic submissions to follow - the first major soft-tissue robotic rival to da Vinci in the US in two decades.",
     "highlights": [
       "4-arm robotic system",
@@ -26513,7 +26517,7 @@
       "Urology",
       "Colorectal"
     ],
-    "perf": "Precision surgical movements with sub-millimeter accuracy",
+    "perf": false,
     "origin": "USA",
     "gallery": [
       "https://www.surgicalroboticstechnology.com/wp-content/uploads/2025/11/hugo-ras-system-hcps-or-full-system-use.jpg"
@@ -35603,13 +35607,6 @@
     "sub": "Autonomous Carry/Tow Robot (Original Model)",
     "tags": [
       "agricultural",
-      "burro",
-      "original",
-      "first-gen",
-      "compact",
-      "carry-tow",
-      "follow-me",
-      "discontinued-superseded",
       "transport",
       "Burro",
       "autonomous",
@@ -35620,8 +35617,8 @@
     "img": "",
     "score": 75,
     "rating": 4,
-    "price": 25000,
-    "desc": "Original first-generation Burro autonomous carry/tow robot. Compact plug-and-play platform that follows farmworkers using computer vision and high-precision GPS, hauling fruit/vegetables/seed/trailers between point A and B. Same Burro philosophy: works immediately out of the box, no centralized command or infrastructure, multi-language touchscreen, removable top tray.",
+    "price": "POA",
+    "desc": "Burro is an autonomous wheeled transport robot that carries harvested produce and supplies through orchards and vineyards, following workers or running learned routes (~230 kg class) - reducing manual carrying labour with vision-based autonomy.",
     "highlights": [],
     "perf": false,
     "year": 2017,
@@ -35633,7 +35630,7 @@
     "depth_mm": 1397,
     "weight_kg": 146,
     "battery_life": "8-10 hours",
-    "payload_kg": 23,
+    "payload_kg": 230,
     "speed_ms": 1.34,
     "wifi": true,
     "cellular": "4G LTE",
@@ -55337,14 +55334,9 @@
     "score": 75,
     "rating": 4,
     "price": "POA",
-    "desc": "Zimmer Biomet's ROSA (Robotic Surgical Assistant) Knee System is a surgeon-collaborative orthopedic robot for total knee arthroplasty. The surgeon stays in control while ROSA provides real-time data on alignment, stability, gaps and bone-cut orientation - in imageless or image-based versions - improving cut accuracy and reproducibility after a short (6-14 case) learning curve. The OptimiZe update adds workflow enhancements.",
+    "desc": "The Zimmer Biomet ROSA platform assists in knee and hip replacement (and, in ROSA Brain/Spine versions, neurosurgery), providing data-driven planning and intraoperative guidance for implant positioning.",
     "highlights": [],
-    "perf": {
-      "Mobility": 75,
-      "Dexterity": 70,
-      "Autonomy": 70,
-      "Durability": 75
-    },
+    "perf": false,
     "origin": "USA",
     "year": 2021,
     "status": "Active",
@@ -64397,22 +64389,19 @@
     "cat": "Educational",
     "sub": "STEAM / Programming Education",
     "tags": [
-      "programmable",
-      "led matrix",
-      "sensors",
-      "coding",
       "educational",
       "STEM",
       "Sphero",
       "BOLT",
-      "robot ball"
+      "coding",
+      "Bluetooth"
     ],
-    "fig": "https://sphero.com/bolt-figure.jpg",
+    "fig": "🤖",
     "img": "https://sphero.com/cdn/shop/products/Bolt0011_2_MAIN_800x.jpg?v=1654532946",
-    "score": 8.5,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 149.99,
-    "desc": "The Sphero BOLT is a transparent programmable robot ball with an 8x8 LED matrix, sensors and infrared inter-robot communication, coded via block-based Scratch or JavaScript - a classroom favourite for gamified coding lessons.",
+    "desc": "The Sphero BOLT is a transparent programmable robot ball with an 8x8 LED matrix, IR inter-robot communication and onboard sensors, coded via block-based Scratch or JavaScript in the Sphero Edu app - a classroom favourite for gamified coding.",
     "highlights": [
       "8x8 LED Matrix",
       "Infrared Communication",
@@ -64479,7 +64468,7 @@
       "STEAM Learning",
       "Robotics Fundamentals"
     ],
-    "perf": "Good sensor accuracy, stable Bluetooth connection",
+    "perf": false,
     "origin": "USA",
     "gallery": [
       "https://sphero.com/cdn/shop/products/BOLT-waterproof_GALLERY_800x.png?v=1678384678",
@@ -64488,7 +64477,11 @@
       "",
       ""
     ],
-    "price_band": "Mid-range"
+    "price_band": "Mid-range",
+    "programming": "Scratch (blocks) + JavaScript",
+    "connectivity": "Bluetooth",
+    "age_range": "8+",
+    "components": "8x8 LED matrix, IR comms, IMU, light/compass sensors"
   },
   {
     "id": "sphero-rvr-plus",
@@ -65080,21 +65073,19 @@
     "cat": "Educational",
     "sub": "STEAM / Programming Education",
     "tags": [
-      "coding",
-      "kids",
-      "beginner",
-      "mobile app",
       "educational",
       "STEM",
       "Wonder Workshop",
-      "Dash"
+      "Dash",
+      "kids",
+      "Bluetooth"
     ],
-    "fig": "https://www.makewonder.com/dash/",
+    "fig": "🤖",
     "img": "https://moravia-education.com/cdn/shop/files/Dash_with_Box-Contents-iPad.jpg?v=1767127104",
-    "score": 8.5,
-    "rating": 4.4,
+    "score": 75,
+    "rating": 4,
     "price": 149.95,
-    "desc": "Wonder Workshop Dash is a pre-built, ready-to-go coding robot for young children, controlled via the Blockly/Wonder apps to move, light up, make sounds and respond to voice - introducing coding without any assembly.",
+    "desc": "Wonder Workshop Dash is a pre-built, ready-to-go coding robot for young children, controlled via the Blockly/Wonder apps to move, light up, make sounds and respond to voice - introducing coding without assembly.",
     "highlights": [
       "No screen required",
       "Voice recognition",
@@ -65163,7 +65154,7 @@
       "Entertainment",
       "Programming Learning"
     ],
-    "perf": "Good for basic programming education and interactive play",
+    "perf": false,
     "origin": "USA",
     "gallery": [
       "https://moravia-education.com/cdn/shop/files/Dash_img1.png?v=1767127104&width=1426",
@@ -65172,7 +65163,11 @@
       "https://moravia-education.com/cdn/shop/files/Dash_img4.png?v=1767127104&width=1646",
       "https://moravia-education.com/cdn/shop/files/Dash_img5.png?v=1767127104&width=1646"
     ],
-    "price_band": "Mid-range"
+    "price_band": "Mid-range",
+    "programming": "Blockly + Wonder apps",
+    "connectivity": "Bluetooth",
+    "age_range": "6+",
+    "components": "Pre-built; motors, lights, mics, sensors"
   },
   {
     "id": "ww-dot-001",
@@ -90620,7 +90615,7 @@
     "score": 75,
     "rating": 4,
     "price": "POA",
-    "desc": "The Zoox robotaxi (Amazon) is a purpose-built, bidirectional, steering-wheel-free passenger vehicle with carriage-style seating for four, designed from scratch for autonomous urban ride-hailing. Operating/testing in Las Vegas, San Francisco and Austin.",
+    "desc": "The Zoox robotaxi (Amazon) is a purpose-built, bidirectional, steering-wheel-free vehicle with carriage-style seating for four, designed from scratch for autonomous urban ride-hailing. 360 deg LiDAR/radar/camera sensing; operating/testing in Las Vegas, San Francisco and Austin.",
     "highlights": [
       "Bidirectional design",
       "Amazon-owned",
@@ -92772,25 +92767,19 @@
     "sub": "Observation-Class ROV",
     "tags": [
       "aquatic",
-      "rov",
-      "observation",
-      "saab-seaeye",
-      "falcon",
-      "best-selling",
-      "300m",
-      "compact",
-      "active",
       "ROV",
       "Saab Seaeye",
       "Falcon",
-      "inspection"
+      "inspection",
+      "observation",
+      "5 thrusters"
     ],
     "fig": "🤖",
     "img": "https://www.saabseaeye.com/cdn/w_330/dpr_1.5/falcon2.jpg",
-    "score": 89,
-    "rating": 4.6,
-    "price": 95000,
-    "desc": "World's best-selling observation-class ROV with over 1,500 units deployed across naval, oil & gas, and inland inspection markets. Five thrusters (4 horizontal vectored + 1 vertical) deliver 50 kgf of thrust, single manipulator option, 300 m depth rating. Compact polypropylene frame (60 kg) makes it man-portable.",
+    "score": 75,
+    "rating": 4,
+    "price": "POA",
+    "desc": "The Saab Seaeye Falcon is one of the world's best-selling electric observation-class ROVs - five thrusters for stability in strong currents, standard 300 m (deep-rated 1000 m) depth, two LED lights, a high-res colour camera and a nav pod with auto depth/heading, all driven by iCON intelligent control. Surface kit fits in a single flight case.",
     "highlights": [
       "Industry-standard",
       "Portable professional",
@@ -92844,7 +92833,11 @@
     "payload_kg": 14,
     "os": "Seaeye Surface Control System",
     "warranty_months": 24,
-    "depth_m": 1000
+    "depth_m": 300,
+    "thrusters": 5,
+    "lights": 2,
+    "camera": "High-resolution colour",
+    "control_method": "iCON intelligent control (auto depth / auto heading)"
   },
   {
     "id": "saab-seaeye-lynx-2014",
@@ -107468,8 +107461,8 @@
     "sub": "Commercial Lunar Lander",
     "year": 2024,
     "origin": "USA",
-    "score": 70,
-    "desc": "First American CLPS (Commercial Lunar Payload Services) mission to launch. The first launch of ULA's new Vulcan Centaur rocket on 8 January 2024 was successful, but a propulsion system anomaly shortly after spacecraft separation caused a propellant leak. The mission was unable to attempt a lunar landing and made a controlled re-entry over the South Pacific on 18 January 2024. Carried 20 payloads including 5 from NASA.",
+    "score": 75,
+    "desc": "Astrobotic's Peregrine (Jan 2024) was a commercial CLPS lunar lander; a propellant leak after launch prevented a Moon landing and it was guided to re-enter Earth's atmosphere - a notable milestone attempt in commercial lunar robotics.",
     "price": "POA",
     "status": "Retired",
     "announced": "2018",
@@ -114266,7 +114259,7 @@
     "price": "POA",
     "perf": false,
     "application": "Minimally invasive lung biopsy",
-    "desc": "The Intuitive Ion is a robotic endoluminal platform for minimally invasive peripheral lung biopsy, using an ultra-thin, maneuverable catheter and shape-sensing to navigate deep into the lung for early cancer diagnosis. (Distinct from Shark ION vacuums.)",
+    "desc": "The Intuitive Ion is a robotic endoluminal platform for minimally invasive peripheral lung biopsy, using an ultrathin, maneuverable shape-sensing catheter to navigate deep into the lung for early cancer diagnosis.",
     "tags": [
       "medical",
       "bronchoscopy",
@@ -114277,7 +114270,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "specialty": "Pulmonology (peripheral lung biopsy)",
+    "approach": "Endoluminal (flexible robotic catheter)",
+    "regulatory": "FDA-cleared",
+    "key_feature": "Shape-sensing ultrathin catheter"
   },
   {
     "id": "john-deere-8r-autonomous-tractor",
@@ -114316,7 +114313,7 @@
     "status": "Discontinued",
     "price": "POA",
     "perf": false,
-    "desc": "The Sarcos Guardian XO was a full-body powered industrial exoskeleton designed to let a worker lift up to ~90 kg as if it were ~5 kg. Commercially unviable (tethered power); Sarcos exited hardware in 2023 and rebranded as Palladyne AI. (Distinct from the Guardian DX dexterous robot.)",
+    "desc": "The Sarcos Guardian XO was a full-body powered industrial exoskeleton that let an operator lift up to ~90.7 kg (200 lb) repeatedly as if it were ~4.5 kg - roughly 20x strength amplification - drawing under ~400 W with hot-swappable Li-ion batteries and ~30 s donning. Sarcos exited hardware in 2023 (now Palladyne AI).",
     "tags": [
       "exoskeleton",
       "full-body",
@@ -114327,6 +114324,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "type": "Active (powered, full-body)",
+    "body_region": "Full body",
+    "assist_kg": 90.7,
+    "power_w": 400
   }
 ]
