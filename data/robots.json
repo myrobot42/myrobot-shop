@@ -113546,19 +113546,21 @@
     "year": 2024,
     "origin": "China",
     "status": "Active",
-    "height_mm": 1180,
-    "desc": "The Booster Robotics T1 is a compact (~1.18 m) research and education humanoid designed for robot learning, sports (RoboCup-style soccer) and HRI, with a developer-friendly SDK and resilient design that withstands falls.",
+    "height_mm": 1200,
+    "desc": "The Booster Robotics T1 is a compact (~1.2 m, ~30 kg) research/education humanoid with 23-41 DOF and a fall-resilient design. The championship model of the 2025 RoboCup \"AdultSize\" soccer league, used by 50+ top robotics teams and institutes; developer-friendly SDK.",
     "tags": [
       "humanoid",
       "research",
       "Booster Robotics",
       "T1",
       "education",
-      "soccer"
+      "RoboCup"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 30,
+    "dof": "23-41 (configurable)"
   },
   {
     "cat": "Humanoid",
@@ -113572,7 +113574,7 @@
     "origin": "China",
     "status": "Active",
     "height_mm": 1650,
-    "desc": "The LimX Dynamics CL-1 is a full-size general-purpose humanoid notable for real-time terrain perception and dynamic stair climbing, developed alongside LimX's TRON 1 point-foot biped as a robot-learning platform.",
+    "desc": "The LimX Dynamics CL-1 is a full-size (~1.65 m) general-purpose humanoid notable for real-time terrain perception and dynamic stair climbing, developed alongside LimX's TRON 1 point-foot biped as a robot-learning platform.",
     "tags": [
       "humanoid",
       "LimX Dynamics",
@@ -113582,7 +113584,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "feature": "Real-time terrain perception; dynamic stair climbing"
   },
   {
     "cat": "Humanoid",
@@ -113619,7 +113622,7 @@
     "origin": "China",
     "status": "Active",
     "height_mm": 1600,
-    "desc": "PNDbotics Adam is a full-size humanoid with a high degree-of-freedom body and expressive motion, shown performing music and dance demos and targeted at research and interactive applications.",
+    "desc": "PNDbotics Adam is a full-size (~1.6 m) humanoid with a high degree-of-freedom body and expressive motion, shown performing music and dance demos and targeted at research and interactive applications.",
     "tags": [
       "humanoid",
       "PNDbotics",
@@ -113629,7 +113632,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "feature": "High-DOF expressive full body"
   },
   {
     "cat": "Humanoid",
@@ -113643,17 +113647,24 @@
     "origin": "China",
     "status": "Active",
     "height_mm": 1380,
-    "desc": "The EngineAI PM01 is a ~1.38 m agile humanoid that gained attention for performing a front flip; an open, developer-oriented platform priced aggressively for the research and education market.",
+    "desc": "The EngineAI PM01 (launched Dec 2024) is a ~1.38 m, ~40 kg agile open humanoid with 24 DOF (5/arm, 6/leg), a 320 deg rotating waist and up to 2 m/s walking. Dual-compute Intel N97 + Jetson Orin with RealSense depth and LiDAR; it became known as the first humanoid to perform a front flip, and ships as an open developer platform (ROS/Isaac).",
     "tags": [
       "humanoid",
       "EngineAI",
       "PM01",
       "agile",
-      "front flip"
+      "front flip",
+      "open platform"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 40,
+    "dof": 24,
+    "speed_ms": 2,
+    "waist_rotation": "320 deg",
+    "compute": "Intel N97 + NVIDIA Jetson Orin",
+    "perception": "Intel RealSense depth + LiDAR"
   },
   {
     "cat": "Humanoid",
@@ -113667,17 +113678,23 @@
     "origin": "China",
     "status": "Active",
     "height_mm": 1700,
-    "desc": "The EngineAI SE01 is a full-size (~1.7 m) humanoid with a natural, human-like gait driven by end-to-end neural-network locomotion, aimed at general-purpose tasks.",
+    "desc": "The EngineAI SE01 is the firm's full-size flagship humanoid - ~1.70 m, ~55 kg, 32 DOF, ~2 m/s with a natural neural-network gait. Quick-swap 10,000 mAh batteries, Engine Sense 360 deg LiDAR perception, self-developed joint modules and a 10-year aluminium chassis; debuted Oct 2024.",
     "tags": [
       "humanoid",
       "EngineAI",
       "SE01",
       "natural gait",
-      "neural network"
+      "full-size",
+      "LiDAR"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 55,
+    "dof": 32,
+    "speed_ms": 2,
+    "battery": "Quick-swap 10,000 mAh",
+    "perception": "Engine Sense 360 deg LiDAR + depth camera"
   },
   {
     "cat": "Humanoid",
@@ -113770,7 +113787,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "feature": "Variable wheeled-leg (2-wheel / 4-wheel modes)"
   },
   {
     "cat": "Drones",
