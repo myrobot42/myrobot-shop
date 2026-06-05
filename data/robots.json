@@ -107510,7 +107510,9 @@
     "website": "https://www.astrobotic.com/lunar-delivery/peregrine/",
     "fig": "🤖",
     "rating": 4,
-    "perf": false
+    "perf": false,
+    "mission": "Peregrine Mission One (Jan 2024), NASA CLPS",
+    "outcome": "Propellant leak after launch; controlled Earth re-entry (no landing)"
   },
   {
     "id": "intuitive-machines-nova-c-im-1",
@@ -113156,7 +113158,7 @@
     "origin": "USA",
     "status": "Retired",
     "weight_kg": 1.8,
-    "desc": "Ingenuity was NASA/JPL's Mars helicopter - the first powered, controlled flight on another planet (April 2021). Just 1.8 kg with counter-rotating rotors, it flew 72 times over ~3 years (far beyond its 5-flight plan), travelling ~17 km, before rotor-blade damage grounded it in January 2024.",
+    "desc": "Ingenuity was NASA/JPL's Mars helicopter - the first powered, controlled flight on another planet (Apr 2021). Just 1.8 kg with counter-rotating rotors and solar charging, it flew 72 times over ~3 years (vs a 5-flight plan), covering ~17 km, before rotor-blade damage grounded it in Jan 2024.",
     "tags": [
       "aerospace",
       "Mars",
@@ -113167,7 +113169,12 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "power": "Solar + Li-ion battery",
+    "operated": "Apr 2021 - Jan 2024",
+    "flights": 72,
+    "distance": "~17 km total",
+    "achievement": "First powered, controlled flight on another planet"
   },
   {
     "cat": "Aerospace",
@@ -113182,7 +113189,7 @@
     "status": "Retired",
     "weight_kg": 1900,
     "payload_kg": 100,
-    "desc": "The Intuitive Machines Nova-C \"Odysseus\" was the first US lunar lander since Apollo and the first commercial soft landing on the Moon (Feb 2024, IM-1). A ~1,900 kg hexagonal-cylinder lander (100 kg payload) that touched down near the lunar south pole, tipping on landing but returning data.",
+    "desc": "The Intuitive Machines Nova-C \"Odysseus\" was the first US lunar lander since Apollo and the first commercial soft landing on the Moon (IM-1, Feb 2024). A ~1,900 kg hexagonal-cylinder lander (100 kg payload) that touched down near the lunar south pole, tipping on landing but returning data.",
     "tags": [
       "aerospace",
       "lunar lander",
@@ -113193,7 +113200,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "mission": "IM-1 (Feb 2024), NASA CLPS",
+    "achievement": "First US lunar landing since Apollo; first commercial soft landing"
   },
   {
     "cat": "Aerospace",
@@ -113206,7 +113215,7 @@
     "year": 2019,
     "origin": "USA",
     "status": "Active",
-    "desc": "Astrobee is NASA's system of cube-shaped free-flying robots (Bumble, Honey, Queen) aboard the ISS, using electric fans to fly weightlessly and cameras/sensors to navigate Kibo module - assisting astronauts and hosting student programming challenges.",
+    "desc": "Astrobee is NASA's system of cube-shaped free-flying robots (Bumble, Honey, Queen) aboard the ISS, using electric impeller fans to fly weightlessly and cameras/sensors to navigate the Kibo module - assisting astronauts and hosting student programming challenges.",
     "tags": [
       "aerospace",
       "ISS",
@@ -113217,7 +113226,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "location": "ISS (Kibo module)",
+    "propulsion": "Electric impeller fans",
+    "units": "Bumble, Honey, Queen"
   },
   {
     "cat": "Aerospace",
@@ -113231,7 +113243,7 @@
     "origin": "Japan",
     "status": "Retired",
     "weight_kg": 0.25,
-    "desc": "SORA-Q (LEV-2) is JAXA's baseball-sized transformable lunar rover deployed by the SLIM \"Moon Sniper\" lander (Jan 2024). It splits open into a two-wheeled crawler to image the lander and terrain - co-developed with Tomy (the toy maker).",
+    "desc": "SORA-Q (LEV-2) is JAXA's baseball-sized (~250 g) transformable lunar rover deployed by the SLIM \"Moon Sniper\" lander (Jan 2024). It splits open into a two-wheeled crawler to image the lander and terrain - co-developed with toy maker Tomy, Sony and Doshisha University.",
     "tags": [
       "aerospace",
       "lunar rover",
@@ -113242,7 +113254,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "deployed": "SLIM \"Moon Sniper\" lander (Jan 2024)",
+    "form": "Baseball-sized sphere -> two-wheel crawler",
+    "partners": "Tomy, Sony, Doshisha University"
   },
   {
     "cat": "Aerospace",
@@ -113266,7 +113281,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "form": "Shoebox-sized multi-robot team",
+    "mission": "IM-3 (Intuitive Machines)",
+    "objective": "Autonomous multi-robot coordination on the Moon"
   },
   {
     "cat": "Aerospace",
@@ -113279,7 +113297,7 @@
     "year": 2018,
     "origin": "Germany",
     "status": "Active",
-    "desc": "CIMON (Crew Interactive Mobile Companion) is a free-floating, AI-powered spherical assistant robot aboard the ISS, built by Airbus for DLR with IBM Watson voice AI - it talks with astronauts, displays procedures and floats via internal fans.",
+    "desc": "CIMON (Crew Interactive Mobile Companion) is a free-floating, AI-powered spherical assistant aboard the ISS, built by Airbus for DLR with IBM Watson voice AI - it talks with astronauts, displays procedures and floats via internal fans.",
     "tags": [
       "aerospace",
       "ISS",
@@ -113290,7 +113308,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "location": "ISS",
+    "propulsion": "Internal fans (free-floating)",
+    "ai": "IBM Watson voice AI"
   },
   {
     "cat": "Aerospace",
@@ -113314,7 +113335,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "operator": "Lunar Gateway (NASA Artemis)",
+    "builder": "MDA",
+    "capability": "AI-enabled autonomous maintenance/inspection"
   },
   {
     "cat": "Aerospace",
@@ -113327,7 +113351,7 @@
     "year": 2021,
     "origin": "Europe",
     "status": "Active",
-    "desc": "The European Robotic Arm (ERA) is a ~11 m symmetrical robotic arm on the ISS Russian segment, able to \"walk\" end-over-end between fixed base points to move payloads and assist spacewalks; built by Airbus for ESA.",
+    "desc": "The European Robotic Arm (ERA) is a ~11 m symmetrical robotic arm on the ISS Russian segment that can \"walk\" end-over-end between fixed base points to move payloads and assist spacewalks; built by Airbus for ESA.",
     "tags": [
       "aerospace",
       "robotic arm",
@@ -113338,7 +113362,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "length_m": 11,
+    "location": "ISS Russian segment",
+    "capability": "Walks end-over-end between base points"
   },
   {
     "cat": "Educational",
