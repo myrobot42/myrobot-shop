@@ -33017,7 +33017,7 @@
     "score": 75,
     "rating": 4,
     "price": "POA",
-    "desc": "The Carbon Robotics LaserWeeder uses high-resolution cameras, computer vision and high-power lasers to identify and zap weeds with ~99% crop/weed accuracy - up to ~200,000 weeds per hour - eliminating weeds without chemicals. Available as an autonomous unit or tractor implement.",
+    "desc": "The Carbon Robotics LaserWeeder uses high-resolution cameras, deep-learning vision and high-power thermal lasers (Class 4) to identify and kill weeds with high crop/weed accuracy - up to ~200,000 weeds/hour - eliminating weeds without chemicals (~80% herbicide reduction). Available as an autonomous unit or tractor implement.",
     "highlights": [
       "30 lasers per unit",
       "20 acres per day capacity",
@@ -33135,7 +33135,11 @@
     "ceo": "Paul Mikesell",
     "top_speed_kmh": 8,
     "coverage_ha_day": 8,
-    "repeatability": 1
+    "repeatability": 1,
+    "method": "Thermal lasers (Class 4)",
+    "throughput": "~200,000 weeds/hour",
+    "herbicide_reduction": "~80%",
+    "guidance": "Computer vision (deep-learning crop/weed ID)"
   },
   {
     "id": "carbon-robotics-laserweeder-compact",
@@ -35662,7 +35666,8 @@
     "operating_modes": [
       "Autonomous A-to-B",
       "Follow-me"
-    ]
+    ],
+    "autonomy": "Vision-based follow + learned routes"
   },
   {
     "id": "burro-burro-grande",
@@ -111864,18 +111869,22 @@
     "year": 2021,
     "origin": "France",
     "status": "Active",
-    "desc": "The Naïo Dino is a large-scale autonomous weeding robot for vegetable farms, straddling beds to mechanically remove weeds with interchangeable tools, RTK-GPS guided and electric.",
+    "desc": "The Naïo Dino is a large-scale autonomous weeding robot for vegetable farms, straddling beds to mechanically remove weeds with interchangeable tools, RTK-GPS guided and fully electric.",
     "tags": [
       "agricultural",
       "weeding",
       "Naio",
       "Dino",
       "vegetable",
-      "electric"
+      "electric",
+      "RTK GPS"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "power": "Electric",
+    "guidance": "RTK GPS",
+    "function": "Straddle weeding (interchangeable tools)"
   },
   {
     "cat": "Agricultural",
@@ -111888,18 +111897,24 @@
     "year": 2023,
     "origin": "USA",
     "status": "Active",
-    "desc": "The Monarch MK-V is a ~70 hp fully-electric smart tractor with camera-based driver-optional autonomy and per-acre data collection, suited to vineyards, orchards and specialty crops; combines zero-emission drive with autonomous operation.",
+    "desc": "The Monarch MK-V is a 70 hp fully-electric driver-optional smart tractor: up to ~14 h battery (5-6 h recharge), IP65, 4WD, swappable battery packs and onboard power outlets, with camera-based autonomy and per-acre data collection. Suited to vineyards, orchards, dairy and solar-farm vegetation management; cuts ~2 t CO2/year on a 50-acre farm.",
     "tags": [
       "agricultural",
       "autonomous tractor",
       "Monarch",
       "MK-V",
       "electric",
-      "vineyard"
+      "driver-optional"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "power": "70 hp electric",
+    "battery_life": 840,
+    "recharge": "5-6 h",
+    "ip_rating": "IP65",
+    "drivetrain": "4WD",
+    "autonomy": "Driver-optional"
   },
   {
     "cat": "Agricultural",
@@ -111912,7 +111927,7 @@
     "year": 2024,
     "origin": "Brazil",
     "status": "Active",
-    "desc": "The Solinftec Solix is a lightweight, solar-powered 100% autonomous field robot that scouts crops (corn, soy, wheat, cotton), detects pests and disease and applies targeted spot-spraying, reportedly cutting herbicide use by up to ~98%.",
+    "desc": "The Solinftec Solix is a lightweight, solar-powered, 100% autonomous field robot that scouts crops (corn, soy, wheat, cotton), detects pests and disease, and applies targeted spot-spraying - reportedly cutting herbicide use by up to ~98%.",
     "tags": [
       "agricultural",
       "crop scouting",
@@ -111923,7 +111938,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "power": "Solar",
+    "autonomy": "100% autonomous",
+    "function": "Scouting + targeted spot-spraying",
+    "chemical_reduction": "Up to ~98%"
   },
   {
     "cat": "Agricultural",
@@ -111936,7 +111955,7 @@
     "year": 2022,
     "origin": "Switzerland",
     "status": "Active",
-    "desc": "The Ecorobotix ARA is an ultra-high-precision smart sprayer with six cameras and 156 nozzles achieving ~6×6 cm spray resolution, applying plant-by-plant microdoses and cutting chemical use by 70-95%. Tractor-towed, with 20+ crop-specific AI algorithms.",
+    "desc": "The Ecorobotix ARA is an ultra-high-precision smart sprayer with six cameras and 156 nozzles achieving ~6x6 cm spray resolution, applying plant-by-plant microdoses and cutting chemical use by 70-95%. Tractor-towed, with 20+ crop-specific AI algorithms.",
     "tags": [
       "agricultural",
       "precision spraying",
@@ -111947,7 +111966,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "config": "6 cameras, 156 nozzles",
+    "resolution": "~6 x 6 cm (plant-level)",
+    "chemical_reduction": "70-95%"
   },
   {
     "cat": "Agricultural",
@@ -111960,18 +111982,27 @@
     "year": 2021,
     "origin": "Denmark",
     "status": "Active",
-    "desc": "The FarmDroid FD20 is a solar-powered autonomous robot that both seeds and mechanically weeds row crops; because it records each seed's GPS position at sowing, it can weed precisely around plants before they even emerge - fully off-grid.",
+    "desc": "The FarmDroid FD20 is a fully solar-powered autonomous robot that both seeds and mechanically weeds row crops. It records each seed's RTK-GPS position (8 mm) at sowing, so it can weed between and within rows before plants even emerge. ~1,250 kg (low soil compaction), 18-24 h/day CO2-neutral operation, ~6 ha/day, 50+ crop types; the +Spray option cuts chemicals up to 94%.",
     "tags": [
       "agricultural",
       "seeding",
       "weeding",
       "FarmDroid",
       "FD20",
-      "solar"
+      "solar",
+      "RTK GPS"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "power": "Solar (4 panels, 1.6 kWh battery)",
+    "runtime": "18-24 h/day",
+    "speed": "~950 m/h",
+    "capacity": "~6-6.5 ha/day",
+    "weight_kg": 1250,
+    "guidance": "RTK GPS (8 mm precision)",
+    "function": "Seeding + inter/intra-row weeding",
+    "chemical_reduction": "Up to 94% (with +Spray)"
   },
   {
     "cat": "Agricultural",
@@ -111995,7 +112026,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "config": "Up to 24 independent robotic arms",
+    "guidance": "AI colour/ripeness vision",
+    "precision": "~1 cm"
   },
   {
     "cat": "Agricultural",
@@ -112008,7 +112042,7 @@
     "year": 2018,
     "origin": "Netherlands",
     "status": "Active",
-    "desc": "The Lely Astronaut A5 is an automatic (robotic) milking system that lets cows be milked voluntarily on demand; a robotic arm with laser-guided teat detection attaches the cups, while the system tracks per-cow yield and health data.",
+    "desc": "The Lely Astronaut A5 is an automatic (robotic) milking system that lets cows be milked voluntarily on demand; a robotic arm with 3D laser-guided teat detection attaches the cups while the system tracks per-cow yield and health data.",
     "tags": [
       "agricultural",
       "dairy",
@@ -112019,7 +112053,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "function": "Voluntary automatic milking",
+    "guidance": "Laser-guided teat detection (3D)"
   },
   {
     "cat": "Autonomous Vehicles",
@@ -114121,7 +114157,7 @@
     "status": "Active",
     "price": "POA",
     "perf": false,
-    "desc": "John Deere's autonomous 8R adds a retrofit autonomy kit (six stereo cameras, GPS, onboard AI) to its 8R tractor line, enabling driver-free tillage and field work with remote monitoring via a mobile dashboard. (Distinct from the 8RX 410 track tractor.)",
+    "desc": "John Deere's autonomous 8R adds a retrofit autonomy kit (six stereo camera pairs, GPS and onboard AI) to its 8R tractor line, enabling driver-free tillage and field work with remote monitoring and control via a mobile dashboard.",
     "tags": [
       "agricultural",
       "autonomous tractor",
@@ -114132,7 +114168,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "sensing": "6 stereo camera pairs + GPS + onboard AI",
+    "autonomy": "Driver-free (retrofit kit)"
   },
   {
     "id": "sarcos-guardian-xo-exo",
