@@ -981,21 +981,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <div id="page-news" class="page">
   <div class="news-page">
     <div style="margin-bottom:22px"><div class="page-title">Robotics News</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Latest industry news, product launches and expert analysis</p></div>
-    <div class="news-layout">
-      <div class="news-card featured"><div class="news-img featured"><div class="news-img-label">AI</div><div class="news-cat">Breaking</div></div><div class="news-body"><div class="news-title featured">Humanoid robots set to hit 1 million units annually by 2028, Goldman Sachs forecasts</div><div class="news-meta">March 26, 2026 · Industry News</div></div></div>
-      <div style="display:flex;flex-direction:column;gap:14px">
-        <div class="news-card"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:var(--acc);letter-spacing:.5px;margin-bottom:5px">PRODUCT LAUNCH</div><div class="news-title">Roborock Saros Z70 ships — world's first robot vacuum with a robotic arm is real and it works</div><div class="news-meta" style="margin-top:7px">March 25, 2026</div></div></div>
-        <div class="news-card"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:var(--org);letter-spacing:.5px;margin-bottom:5px">REVIEW</div><div class="news-title">We tested the Unitree R1 for 30 days — the $5,900 humanoid that changes everything</div><div class="news-meta" style="margin-top:7px">March 24, 2026</div></div></div>
-        <div class="news-card"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:var(--grn);letter-spacing:.5px;margin-bottom:5px">INDUSTRY</div><div class="news-title">Medtronic Hugo wins FDA clearance — the da Vinci monopoly is over</div><div class="news-meta" style="margin-top:7px">March 22, 2026</div></div></div>
-      </div>
-    </div>
-    <div class="news-list-items">
-      <div class="news-list-item"><div class="nli-cat" style="color:var(--acc)">MARKET REPORT</div><div class="nli-title">The $38 billion robotics market: Who's winning the race to commercialise humanoids?</div><div class="nli-meta">March 21, 2026 · 8 min read</div></div>
-      <div class="news-list-item"><div class="nli-cat" style="color:var(--org)">ANALYSIS</div><div class="nli-title">John Deere's autonomous 8R tractor enters full commercial release — farming will never be the same</div><div class="nli-meta">March 20, 2026 · 6 min read</div></div>
-      <div class="news-list-item"><div class="nli-cat" style="color:var(--grn)">INTERVIEW</div><div class="nli-title">1X NEO first deliveries begin — customers share their first week living with a humanoid robot</div><div class="nli-meta">March 19, 2026 · 12 min read</div></div>
-      <div class="news-list-item"><div class="nli-cat" style="color:var(--acc)">PRODUCT</div><div class="nli-title">L3Harris T7 selected by US Navy and Marine Corps for next-gen EOD missions</div><div class="nli-meta">March 18, 2026 · 5 min read</div></div>
-      <div class="news-list-item"><div class="nli-cat" style="color:var(--purple)">RESEARCH</div><div class="nli-title">Carbon Robotics LaserWeeder reduces herbicide use by 98% across 500,000 acres</div><div class="nli-meta">March 17, 2026 · 7 min read</div></div>
-    </div>
+    <div class="news-layout" id="news-layout"></div>
+    <div class="news-list-items" id="news-list-items"></div>
   </div>
 </div>
 
@@ -1192,6 +1179,7 @@ function _renderPage(p, opts){
   if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();}
   if(p==='manufacturers'){renderManufacturers();}
   if(p==='videos'){renderVideos();}
+  if(p==='news'){renderNews();}
   if(p==='submit-review'){populateReviewSelect();}
   if(p==='profile' && opts.id){
     // openProfile sets DOM content but also calls goPage('profile') — avoid the loop
@@ -3863,6 +3851,36 @@ async function fetchYouTubeVideos(){
     }
   }
   throw lastErr || new Error('All proxies failed');
+}
+
+function renderNews(){
+  var layout=document.getElementById('news-layout');
+  var list=document.getElementById('news-list-items');
+  if(!layout||!list) return;
+  var COLORS=['var(--acc)','var(--org)','var(--grn)','var(--purple)'];
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function fdate(iso){if(!iso)return'';var d=new Date(iso);if(isNaN(d))return'';return d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});}
+  layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">Loading latest robotics news…</div>';
+  list.innerHTML='';
+  fetch('data/news.json',{cache:'no-store'})
+    .then(function(r){if(!r.ok)throw new Error('news.json '+r.status);return r.json();})
+    .then(function(d){
+      var items=d.items||[];
+      if(!items.length){layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">No news yet — the feed will populate shortly.</div>';return;}
+      var feat=items[0], right=items.slice(1,4), rest=items.slice(4,16);
+      var fImg=feat.image
+        ? '<div class="news-img featured" style="background:url(\''+esc(feat.image)+'\') center/cover;background-size:cover"><div class="news-cat">'+esc(feat.source)+'</div></div>'
+        : '<div class="news-img featured"><div class="news-img-label">AI</div><div class="news-cat">'+esc(feat.source)+'</div></div>';
+      var featHtml='<a class="news-card featured" href="'+esc(feat.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">'+fImg+'<div class="news-body"><div class="news-title featured">'+esc(feat.title)+'</div><div class="news-meta">'+fdate(feat.published)+(feat.source?' · '+esc(feat.source):'')+'</div></div></a>';
+      var rightHtml='<div style="display:flex;flex-direction:column;gap:14px">'+right.map(function(it,i){
+        return '<a class="news-card" href="'+esc(it.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:'+COLORS[i%COLORS.length]+';letter-spacing:.5px;margin-bottom:5px">'+esc((it.source||'').toUpperCase())+'</div><div class="news-title">'+esc(it.title)+'</div><div class="news-meta" style="margin-top:7px">'+fdate(it.published)+'</div></div></a>';
+      }).join('')+'</div>';
+      layout.innerHTML=featHtml+rightHtml;
+      list.innerHTML=rest.map(function(it,i){
+        return '<a class="news-list-item" href="'+esc(it.url)+'" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit"><div class="nli-cat" style="color:'+COLORS[i%COLORS.length]+'">'+esc((it.source||'').toUpperCase())+'</div><div class="nli-title">'+esc(it.title)+'</div><div class="nli-meta">'+fdate(it.published)+'</div></a>';
+      }).join('');
+    })
+    .catch(function(e){console.error('news load failed',e);layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">News feed unavailable right now.</div>';});
 }
 
 async function renderVideos(){
