@@ -113985,18 +113985,25 @@
     "origin": "China",
     "status": "Active",
     "price_band": "Flagship",
-    "desc": "The Beatbot AquaSense 2 Ultra is a cordless robotic pool cleaner that cleans floor, walls, waterline and surface, using multiple motors and AI mapping; it also dispenses clarifier and parks itself at the pool edge for easy retrieval.",
+    "desc": "The Beatbot AquaSense 2 Ultra (CES 2025 flagship) is a cordless robotic pool cleaner covering floor, walls, waterline and water surface. AI HybridSense navigation (27 sensors incl. cameras + ultrasonics) builds a pool map and targets high-debris zones; dual brushes, a 5 L debris basket (150um+250um dual filter), dual LED night cleaning and self-parking at the pool edge. ~3.5 h runtime, 4-5 h charge.",
     "tags": [
       "consumer",
       "pool cleaner",
       "Beatbot",
       "AquaSense",
       "cordless",
-      "AI mapping"
+      "AI navigation"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "type": "Cordless",
+    "coverage": "Floor, walls, waterline + surface skimming",
+    "navigation": "AI HybridSense (27 sensors: cameras + ultrasonic)",
+    "brushes": "Dual active",
+    "filter": "5L basket; dual-layer 150um + 250um",
+    "runtime_min": 210,
+    "recharge": "4-5 h"
   },
   {
     "cat": "Consumer",
@@ -114009,7 +114016,7 @@
     "origin": "Israel",
     "status": "Active",
     "price_band": "Mid-range",
-    "desc": "The Maytronics Dolphin Nautilus CC Plus is a popular corded robotic pool cleaner with dual scrubbing brushes, large top-load filter and CleverClean navigation for floors and walls of in-ground pools.",
+    "desc": "The Maytronics Dolphin Nautilus CC Plus is a popular corded robotic pool cleaner (~8.6 kg) with dual scrubbing brushes, a large top-load filter, wall-climbing and CleverClean navigation, plus app scheduling on the CC Plus model. 60 ft anti-tangle swivel cable for in-ground pools.",
     "tags": [
       "consumer",
       "pool cleaner",
@@ -114020,7 +114027,13 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "type": "Corded (60 ft anti-tangle swivel)",
+    "coverage": "Floor + walls",
+    "brushes": "Dual scrubbing",
+    "filter": "Top-load basket",
+    "control": "App scheduling (CC Plus)",
+    "weight_kg": 8.6
   },
   {
     "cat": "Consumer",
@@ -114033,7 +114046,7 @@
     "origin": "China",
     "status": "Active",
     "price_band": "Mid-range",
-    "desc": "The WYBOT S2 Solar is a solar-powered autonomous surface pool skimmer that floats and collects leaves and debris from the water surface continuously, recharging from the sun.",
+    "desc": "The WYBOT S2 Solar is a solar-powered autonomous surface pool skimmer that floats and continuously collects leaves and debris from the water surface, recharging from the sun for hands-free daily skimming.",
     "tags": [
       "consumer",
       "pool skimmer",
@@ -114044,7 +114057,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "type": "Solar surface skimmer",
+    "power": "Solar (continuous)",
+    "coverage": "Water surface (leaves/debris)"
   },
   {
     "cat": "Consumer",
@@ -114057,7 +114073,7 @@
     "origin": "Taiwan",
     "status": "Active",
     "price_band": "Mid-range",
-    "desc": "The HOBOT-S6 is a window-cleaning robot using ultrasonic water spray and a tri-spray system with AI route planning, cleaning framed and frameless glass with safety tether and battery backup.",
+    "desc": "The HOBOT-S6 is a window-cleaning robot using ultrasonic water spray and a tri-spray system with AI route planning, cleaning framed and frameless glass with a safety tether and battery backup against power loss.",
     "tags": [
       "consumer",
       "window cleaner",
@@ -114068,7 +114084,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "type": "Vacuum-adhesion window robot",
+    "cleaning": "Ultrasonic water spray + tri-spray",
+    "navigation": "AI route planning",
+    "safety": "Safety tether + UPS battery backup"
   },
   {
     "cat": "Consumer",
@@ -114081,7 +114101,7 @@
     "origin": "USA",
     "status": "Active",
     "price_band": "Premium",
-    "desc": "The Whisker Litter-Robot 4 is a self-cleaning automatic litter box that sifts and rotates to separate waste after each use, with sensors that track cat weight and litter level, reporting to an app - a robotic appliance for cat owners.",
+    "desc": "The Whisker Litter-Robot 4 is a self-cleaning automatic litter box that sifts and rotates to separate waste after each use, with OmniSense weight/litter-level sensing that tracks each cat's weight and litter level, reporting to the Whisker app over Wi-Fi.",
     "tags": [
       "consumer",
       "litter box",
@@ -114092,7 +114112,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "control": "Whisker app (Wi-Fi)",
+    "sensors": "Weight + litter-level (OmniSense / laser)",
+    "feature": "Auto-sifting rotating globe; multi-cat tracking"
   },
   {
     "cat": "Consumer",
