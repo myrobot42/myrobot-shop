@@ -786,6 +786,19 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="chart-list" id="home-rankings"></div>
     </div>
   </div>
+  <section style="background:linear-gradient(135deg,var(--acc-l),var(--bg2));border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)">
+    <div style="max-width:760px;margin:0 auto;padding:46px 24px;text-align:center">
+      <div style="font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:24px;color:var(--txt);margin-bottom:8px">Stay ahead of the robots</div>
+      <div style="color:var(--mut);font-size:14px;margin-bottom:20px">Join the myrobot.shop briefing &mdash; the latest launches, reviews and breakthroughs, straight to your inbox. No spam.</div>
+      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="newsletter-form-home" class="nl-form" style="display:flex;gap:8px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p style="display:none"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" required placeholder="you@email.com" style="flex:1;min-width:220px;padding:12px 15px;border:1px solid var(--bdr2);border-radius:9px;font-size:14px;color:var(--txt);background:#fff">
+        <button type="submit" style="background:var(--acc);color:#fff;border:none;border-radius:9px;padding:12px 26px;font-weight:600;font-size:14px;cursor:pointer">Subscribe</button>
+      </form>
+      <div class="nl-msg" style="margin-top:13px;font-size:13px;color:var(--grn);display:none">Thanks &mdash; you&rsquo;re on the list!</div>
+    </div>
+  </section>
   <footer>
     <div class="footer-inner">
       <div>
@@ -923,6 +936,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
           <div id="profile-verified" style="margin-top:10px;font-size:11px;color:var(--mut);display:none"></div>
         </div>
       </div>
+      <div class="section-block" id="profile-video-block"><div class="block-title">Video</div><div id="profile-video"></div></div>
       <div class="section-block"><div class="block-title">Performance Scores</div><div class="perf-grid" id="profile-perf"></div></div>
       <div class="section-block"><div class="block-title">Full Specifications</div><table class="specs-table" id="profile-specs"></table></div>
       <div class="section-block"><div class="block-title">User Reviews</div><div class="review-list" id="profile-reviews-list"></div></div>
@@ -983,6 +997,17 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     <div style="margin-bottom:22px"><div class="page-title">Robotics News</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Latest industry news, product launches and expert analysis</p></div>
     <div class="news-layout" id="news-layout"></div>
     <div class="news-list-items" id="news-list-items"></div>
+    <div class="news-signup" style="margin-top:34px;padding:30px 26px;border:1px solid var(--bdr);border-radius:14px;background:linear-gradient(135deg,var(--acc-l),var(--bg2));text-align:center">
+      <div style="font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:19px;color:var(--txt);margin-bottom:6px">Get the robotics briefing</div>
+      <div style="color:var(--mut);font-size:13.5px;margin-bottom:16px">The latest launches, reviews and breakthroughs &mdash; in your inbox. No spam.</div>
+      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="newsletter-form-news" class="nl-form" style="display:flex;gap:8px;max-width:430px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p style="display:none"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" required placeholder="you@email.com" style="flex:1;min-width:200px;padding:11px 14px;border:1px solid var(--bdr2);border-radius:9px;font-size:14px;color:var(--txt);background:#fff">
+        <button type="submit" style="background:var(--acc);color:#fff;border:none;border-radius:9px;padding:11px 24px;font-weight:600;font-size:14px;cursor:pointer">Subscribe</button>
+      </form>
+      <div class="nl-msg" style="margin-top:13px;font-size:13px;color:var(--grn);display:none">Thanks &mdash; you&rsquo;re on the list!</div>
+    </div>
   </div>
 </div>
 
@@ -2811,6 +2836,21 @@ function _renderProfile(id){
   document.getElementById('profile-year-badge').style.display=r.year?'':'none';
   document.getElementById('profile-name').textContent=r.name;
   document.getElementById('profile-tagline').textContent=r.desc;
+  // --- Manufacturer video: embed curated r.video, else YouTube search button ---
+  (function(){
+    var vEl=document.getElementById('profile-video'); if(!vEl) return;
+    function ytId(u){ if(!u) return ''; u=String(u).trim();
+      if(/^[A-Za-z0-9_-]{11}$/.test(u)) return u;
+      var m=u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+      return m?m[1]:''; }
+    var id=ytId(r.video);
+    if(id){
+      vEl.innerHTML='<div style="position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;background:#000"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
+    } else {
+      var q=encodeURIComponent(((r.brand||'')+' '+(r.name||'')+' robot').trim());
+      vEl.innerHTML='<a href="https://www.youtube.com/results?search_query='+q+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;padding:12px 20px;background:#ff0000;color:#fff;border-radius:9px;font-size:14px;font-weight:700;text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>Watch '+((r.brand||'')+' ').trim()+' videos on YouTube</a><div style="margin-top:8px;font-size:11px;color:var(--mut)">Searches YouTube for this model. A curated official video can be pinned per robot.</div>';
+    }
+  })();
   document.getElementById('profile-stars').textContent='★'.repeat(Math.round(r.rating))+'☆'.repeat(5-Math.round(r.rating));
   document.getElementById('profile-rating').textContent=r.rating;
   document.getElementById('profile-reviews').textContent=(r.reviews||0)+' reviews';
@@ -3853,6 +3893,22 @@ async function fetchYouTubeVideos(){
   throw lastErr || new Error('All proxies failed');
 }
 
+(function(){
+  function bindNL(){
+    var forms=document.querySelectorAll('.nl-form');
+    Array.prototype.forEach.call(forms,function(f){
+      if(f.dataset.bound)return; f.dataset.bound='1';
+      f.addEventListener('submit',function(e){e.preventDefault();
+        var body=new URLSearchParams(new FormData(f)).toString();
+        var m=f.parentElement.querySelector('.nl-msg');
+        fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
+          .then(function(){f.style.display='none';if(m)m.style.display='block';})
+          .catch(function(){if(m){m.style.display='block';m.style.color='var(--org)';m.textContent='Something went wrong, please try again.';}});
+      });
+    });
+  }
+  if(document.readyState!=='loading')bindNL();else document.addEventListener('DOMContentLoaded',bindNL);
+})();
 function renderNews(){
   var layout=document.getElementById('news-layout');
   var list=document.getElementById('news-list-items');
@@ -3870,7 +3926,7 @@ function renderNews(){
       var feat=items[0], right=items.slice(1,4), rest=items.slice(4,16);
       var fImg=feat.image
         ? '<div class="news-img featured" style="background:url(\''+esc(feat.image)+'\') center/cover;background-size:cover"><div class="news-cat">'+esc(feat.source)+'</div></div>'
-        : '<div class="news-img featured"><div class="news-img-label">AI</div><div class="news-cat">'+esc(feat.source)+'</div></div>';
+        : '<div class="news-img featured"><div class="news-img-label" style="font-size:22px;padding:0 20px;text-align:center;line-height:1.25;word-break:break-word">'+esc((feat.source||'NEWS').toUpperCase())+'</div><div class="news-cat">'+esc(feat.source)+'</div></div>';
       var featHtml='<a class="news-card featured" href="'+esc(feat.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">'+fImg+'<div class="news-body"><div class="news-title featured">'+esc(feat.title)+'</div><div class="news-meta">'+fdate(feat.published)+(feat.source?' · '+esc(feat.source):'')+'</div></div></a>';
       var rightHtml='<div style="display:flex;flex-direction:column;gap:14px">'+right.map(function(it,i){
         return '<a class="news-card" href="'+esc(it.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:'+COLORS[i%COLORS.length]+';letter-spacing:.5px;margin-bottom:5px">'+esc((it.source||'').toUpperCase())+'</div><div class="news-title">'+esc(it.title)+'</div><div class="news-meta" style="margin-top:7px">'+fdate(it.published)+'</div></div></a>';
