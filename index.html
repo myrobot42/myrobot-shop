@@ -2836,19 +2836,22 @@ function _renderProfile(id){
   document.getElementById('profile-year-badge').style.display=r.year?'':'none';
   document.getElementById('profile-name').textContent=r.name;
   document.getElementById('profile-tagline').textContent=r.desc;
-  // --- Manufacturer video: embed curated r.video, else YouTube search button ---
+  // --- Manufacturer video: embed curated r.video inline; hide section if none (keep users on-site) ---
   (function(){
-    var vEl=document.getElementById('profile-video'); if(!vEl) return;
+    var vEl=document.getElementById('profile-video');
+    var blk=document.getElementById('profile-video-block');
+    if(!vEl||!blk) return;
     function ytId(u){ if(!u) return ''; u=String(u).trim();
       if(/^[A-Za-z0-9_-]{11}$/.test(u)) return u;
       var m=u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
       return m?m[1]:''; }
     var id=ytId(r.video);
     if(id){
+      blk.style.display='';
       vEl.innerHTML='<div style="position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;background:#000"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
     } else {
-      var q=encodeURIComponent(((r.brand||'')+' '+(r.name||'')+' robot').trim());
-      vEl.innerHTML='<a href="https://www.youtube.com/results?search_query='+q+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:9px;padding:12px 20px;background:#ff0000;color:#fff;border-radius:9px;font-size:14px;font-weight:700;text-decoration:none"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>Watch '+((r.brand||'')+' ').trim()+' videos on YouTube</a><div style="margin-top:8px;font-size:11px;color:var(--mut)">Searches YouTube for this model. A curated official video can be pinned per robot.</div>';
+      blk.style.display='none';
+      vEl.innerHTML='';
     }
   })();
   document.getElementById('profile-stars').textContent='★'.repeat(Math.round(r.rating))+'☆'.repeat(5-Math.round(r.rating));
