@@ -308,9 +308,10 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="modal-field full"><div class="modal-label">Highlights (comma separated)</div><input class="modal-input" id="edit-highlights" type="text" placeholder="60-day dust bag, AI obstacle avoidance, 6000Pa suction"></div>
     </div>
 
-    <div class="modal-section">IMAGES</div>
+    <div class="modal-section">IMAGES &amp; VIDEO</div>
     <div class="modal-grid">
       <div class="modal-field full"><div class="modal-label">Main Image URL</div><input class="modal-input" id="edit-img" type="text" placeholder="https://upload.wikimedia.org/..."></div>
+      <div class="modal-field full"><div class="modal-label">Video URL &mdash; official manufacturer video (YouTube)</div><input class="modal-input" id="edit-video" type="text" placeholder="https://www.youtube.com/watch?v=..."></div>
     </div>
 
     <div class="modal-section">KEY SPECS</div>
@@ -788,6 +789,19 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <!-- IMAGE MANAGER -->
       <div class="page" id="page-images">
         <div class="gen-page">
+          <div class="sec-card" id="mirror-card">
+            <div class="sec-head">☁️ MIRROR EXTERNAL IMAGES TO CLOUDINARY</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">
+              Copies every robot image that lives on someone else's server into <strong>your</strong> Cloudinary, then points the robot at your permanent copy &mdash; so images never die when a manufacturer changes their site or discontinues a model. Safe to run repeatedly; images already on your Cloudinary are skipped. You can stop anytime &mdash; progress is saved as it goes.
+            </div>
+            <div id="mirror-stats" style="font-size:12px;margin-bottom:12px;color:var(--txt)">Click &ldquo;Scan images&rdquo; to see how many need mirroring.</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px">
+              <button class="save-btn" id="mirror-scan-btn" onclick="scanMirror()" style="background:#475569">🔍 Scan images</button>
+              <button class="save-btn" id="mirror-run-btn" onclick="runMirror()" style="background:#0066ff;display:none">☁️ Mirror all external images</button>
+              <button class="tbl-action" id="mirror-stop-btn" onclick="MIRROR_STOP=true" style="display:none">⏹ Stop</button>
+            </div>
+            <div id="mirror-progress" style="font-size:11px;color:var(--mut);white-space:pre-wrap;max-height:220px;overflow:auto;font-family:monospace"></div>
+          </div>
           <div class="sec-card">
             <div class="sec-head">IMAGE MANAGER — Main photo + Gallery</div>
             <div style="font-size:12px;color:var(--mut);margin-bottom:16px;line-height:1.7">
@@ -1834,7 +1848,7 @@ function showPage(id, el) {
   if (id === 'queue') renderQueue();
   if (id === 'detected') renderDetected();
   if (id === 'ingest') renderIngestStats();
-    if (id === 'images') renderImgManager();
+    if (id === 'images') { renderImgManager(); try{ scanMirror(); }catch(e){} }
   if (id === 'cleanup') runCleanupScan();
 }
 
@@ -3249,8 +3263,9 @@ function editRobotPrompt(id) {
   document.getElementById('edit-desc').value = r.desc || '';
   document.getElementById('edit-tags').value = (r.tags||[]).join(', ');
   document.getElementById('edit-highlights').value = (r.highlights||[]).join(', ');
-  // Images
+  // Images & video
   document.getElementById('edit-img').value = r.img || '';
+  document.getElementById('edit-video').value = r.video || '';
   // Specs
   document.getElementById('edit-weight').value = r.weight_kg || '';
   document.getElementById('edit-battery').value = r.battery_life || '';
@@ -3295,9 +3310,11 @@ function saveEditModal() {
   r.desc = document.getElementById('edit-desc').value.trim();
   r.tags = document.getElementById('edit-tags').value.split(',').map(t=>t.trim()).filter(Boolean);
   r.highlights = document.getElementById('edit-highlights').value.split(',').map(t=>t.trim()).filter(Boolean);
-  // Image
+  // Image & video
   const img = document.getElementById('edit-img').value.trim();
   r.img = img.startsWith('http') ? img : '';
+  const video = document.getElementById('edit-video').value.trim();
+  if (video) r.video = video; else delete r.video;
   // Specs
   if(document.getElementById('edit-weight').value) r.weight_kg = parseFloat(document.getElementById('edit-weight').value);
   if(document.getElementById('edit-battery').value) r.battery_life = parseInt(document.getElementById('edit-battery').value);
@@ -4714,6 +4731,78 @@ async function handleCloudinaryUpload(robotId, input) {
 
 
 // ════════════════════════════════════════════════════════════════════
+// ════════════════════════════════════════════════════════════════════
+// MIRROR EXTERNAL IMAGES TO CLOUDINARY — own your media, never hotlink
+// ════════════════════════════════════════════════════════════════════
+let MIRROR_STOP = false;
+function _isCloudinaryImg(u){ return /res\.cloudinary\.com/i.test(u || ''); }
+function _isExternalImg(u){ u = String(u || '').trim(); return /^https?:\/\//i.test(u) && !_isCloudinaryImg(u); }
+function scanMirror(){
+  if (typeof ROBOTS === 'undefined' || !Array.isArray(ROBOTS)) return [];
+  const ext = ROBOTS.filter(r => _isExternalImg(r.img));
+  const mir = ROBOTS.filter(r => _isCloudinaryImg(r.img));
+  const none = ROBOTS.filter(r => !r.img || !String(r.img).trim());
+  const dom = {};
+  ext.forEach(r => { try { const d = new URL(r.img).hostname.replace(/^www\./,''); dom[d] = (dom[d]||0)+1; } catch(e){} });
+  const top = Object.entries(dom).sort((a,b)=>b[1]-a[1]).slice(0,6).map(([d,n])=>n+' '+d).join('  ·  ');
+  const statsEl = document.getElementById('mirror-stats');
+  if (statsEl) statsEl.innerHTML =
+    '<strong>' + ext.length + '</strong> external images to mirror &nbsp;·&nbsp; <strong style="color:var(--grn)">' + mir.length + '</strong> already on your Cloudinary &nbsp;·&nbsp; ' + none.length + ' have no image' +
+    (top ? '<div style="margin-top:6px;color:var(--mut);font-size:11px">Top external hosts: ' + top + '</div>' : '');
+  const runBtn = document.getElementById('mirror-run-btn');
+  if (runBtn) runBtn.style.display = ext.length ? 'inline-flex' : 'none';
+  return ext;
+}
+async function runMirror(){
+  if (!CLOUDINARY_NAME) { alert('Set your Cloudinary Cloud Name in Settings first.'); return; }
+  const ext = ROBOTS.filter(r => _isExternalImg(r.img));
+  if (!ext.length) { alert('Nothing to mirror — every image is already on your Cloudinary.'); return; }
+  if (!confirm('Mirror ' + ext.length + ' external images into your Cloudinary?\n\nThis can take several minutes. You can Stop anytime; progress is saved in batches as it goes.')) return;
+  MIRROR_STOP = false;
+  const runBtn = document.getElementById('mirror-run-btn');
+  const stopBtn = document.getElementById('mirror-stop-btn');
+  const scanBtn = document.getElementById('mirror-scan-btn');
+  const prog = document.getElementById('mirror-progress');
+  const stats = document.getElementById('mirror-stats');
+  if (runBtn) runBtn.style.display = 'none';
+  if (stopBtn) stopBtn.style.display = 'inline-flex';
+  if (scanBtn) scanBtn.disabled = true;
+  let ok = 0, fail = 0; const failed = []; let pending = [];
+  function log(m){ if (prog) prog.textContent = m + '\n' + prog.textContent; }
+  async function flush(){
+    if (!pending.length) return;
+    try { await callBulkMergeChunked({ upsert: pending.slice() }, 'Mirror images to Cloudinary'); pending = []; }
+    catch(e){ log('⚠️ Save batch failed: ' + e.message + ' — will retry on next batch'); }
+  }
+  log('Starting — ' + ext.length + ' images to mirror…');
+  for (let i = 0; i < ext.length; i++){
+    if (MIRROR_STOP){ log('⏹ Stopped by user at ' + (i) + '/' + ext.length + '.'); break; }
+    const r = ext[i]; const orig = r.img;
+    try {
+      const fd = new FormData();
+      fd.append('file', orig);                 // Cloudinary fetches the remote URL server-side
+      fd.append('upload_preset', CLOUDINARY_PRESET);
+      fd.append('folder', 'myrobot');
+      const resp = await fetch('https://api.cloudinary.com/v1_1/' + CLOUDINARY_NAME + '/image/upload', { method: 'POST', body: fd });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      const data = await resp.json();
+      if (!data.secure_url) throw new Error('no url returned');
+      r.img = data.secure_url;
+      pending.push({ id: r.id, name: r.name, brand: r.brand, cat: r.cat, sub: r.sub, img: data.secure_url });
+      ok++;
+    } catch(e){ fail++; failed.push((r.brand||'') + ' ' + (r.name||'')); }
+    if (stats) stats.innerHTML = 'Mirroring… <strong>' + (i+1) + '/' + ext.length + '</strong> &nbsp; ✅ ' + ok + ' done &nbsp; ❌ ' + fail + ' failed';
+    if ((i+1) % 20 === 0){ await flush(); log('… saved ' + ok + ' so far (' + (i+1) + '/' + ext.length + ')'); }
+    await new Promise(res => setTimeout(res, 250)); // gentle pacing for Cloudinary + the merge endpoint
+  }
+  await flush();
+  if (stopBtn) stopBtn.style.display = 'none';
+  if (scanBtn) scanBtn.disabled = false;
+  try { addLog('success', 'Cloudinary mirror: ' + ok + ' mirrored, ' + fail + ' failed'); } catch(e){}
+  log('✅ Done. ' + ok + ' mirrored, ' + fail + ' failed.' + (failed.length ? '\nFailed (kept original): ' + failed.slice(0,25).join(', ') + (failed.length>25?' …':'') : ''));
+  scanMirror();
+}
+
 // DATA CLEANUP TOOL — detect & fix data quality issues
 // ════════════════════════════════════════════════════════════════════
 let CLEANUP_ISSUES = {url_in_name: [], empty_name: [], bad_id: [], missing_fields: [], dup_brands: []};
