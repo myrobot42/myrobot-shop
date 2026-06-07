@@ -2887,13 +2887,17 @@ function _renderProfile(id){
   ].filter(Boolean).join(' · ') || '—';
   const payloadVal = r.payload_kg || r.payload;
   const speedVal = r.speed_ms || r.speed;
-  const batteryVal = r.battery_life_typical || r.battery_life || r.battery;
+  // Hero BATTERY cell = capacity (Wh / Ah / mAh), not runtime
+  let batteryVal = '—', batteryUnit = '';
+  if (r.battery_wh) { batteryVal = r.battery_wh.toLocaleString(); batteryUnit = 'Wh'; }
+  else if (r.battery_ah) { batteryVal = r.battery_ah; batteryUnit = 'Ah'; }
+  else if (r.battery_capacity) { batteryVal = r.battery_capacity; batteryUnit = ''; }
   const specs=[
     {l:'CATEGORY',v:r.cat||'—',u:''},
     {l:'STATUS',v:r.status||'—',u:''},
     {l:'ORIGIN',v:r.origin||r.country||'—',u:''},
     {l:'PAYLOAD',v:payloadVal||'—',u:payloadVal?'kg':''},
-    {l:'BATTERY',v:batteryVal||'—',u:''},
+    {l:'BATTERY',v:batteryVal,u:batteryUnit},
     {l:'SPEED',v:speedVal||'—',u:speedVal?'m/s':''},
     {l:'DIMENSIONS',v:dims,u:dimsUnit},
     {l:'WEIGHT',v:r.weight_kg||r.weight||'—',u:(r.weight_kg||r.weight)?'kg':''},
