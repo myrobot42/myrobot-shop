@@ -114726,7 +114726,7 @@
     "dof": 31,
     "ai": "LimX embodied AI stack — COSA, VGM, DreamActor, Agentic OS",
     "backers": "Alibaba (2024), JD.com (2025); $200M Series B (Feb 2026)",
-    "desc": "Oli is LimX Dynamics' full-size general-purpose humanoid for research, manufacturing and commercial use — 165 cm (Super tier 175 cm), ≤55 kg, with 31 active DoF (6/leg, 7/arm, 3 waist, 2 neck), rising to 43 on the top tier. Unlike the performance-focused Luna, Oli is a developer platform: head/chest/hip depth cameras, LiDAR, a self-developed IMU, and interchangeable end-effectors (parallel/dexterous grippers up to a 6-DoF five-finger hand). Compute pairs an RK3588 controller with an NVIDIA Orin NX (157 TOPS) perception unit, expandable to a 275-TOPS AGX Orin backpack. Full SDK with low- and high-level motion APIs (walking, mobile manipulation, teleoperation), 5 km/h walking, 3 kg/arm payload. Sold as Lite, EDU and Super tiers.",
+    "desc": "Oli is LimX Dynamics' full-size general-purpose humanoid for research, manufacturing and commercial use — 165 cm (Super tier 175 cm), ≤55 kg, with 31 active DoF (6/leg, 7/arm, 3 waist, 2 neck), up to 43 on the top tier. Unlike the performance-focused Luna, Oli is a developer platform: head/chest/hip depth cameras, LiDAR, an in-house IMU and interchangeable end-effectors up to a 6-DoF five-finger hand. Compute pairs an RK3588 controller with an NVIDIA Orin NX (157 TOPS), expandable to a 275-TOPS AGX Orin backpack, with a full SDK and low/high-level motion APIs. Sold as Lite, EDU and Super tiers.",
     "tags": [
       "humanoid",
       "LimX Dynamics",
@@ -114735,7 +114735,6 @@
       "research",
       "Orin NX",
       "LiDAR",
-      "depth camera",
       "China"
     ],
     "fig": "🤖",
@@ -114745,7 +114744,12 @@
     "shoulder_width_cm": 55,
     "arm_length_cm": 70,
     "dof_breakdown": "Legs 6×2, Arms 7×2, Waist 3, Neck 2 (31; up to 43 on Super tier)",
-    "variants": "Oli Lite (31 DoF) / Oli EDU (31, +Orin NX perception) / Oli Super (33) / Super tall (175cm, 43 DoF, 250 N·m, 9-axis IMU)",
+    "variants": [
+      "Oli Lite (31 DoF)",
+      "Oli EDU (31, +Orin NX)",
+      "Oli Super (33 DoF)",
+      "Super tall (175cm, 43 DoF)"
+    ],
     "payload_kg": 3,
     "max_speed": "5 km/h",
     "max_motor_torque": "150 N·m (250 N·m top tier)",
@@ -114760,7 +114764,55 @@
     "cooling": "Main-control air cooling",
     "joint_ranges": "Neck P-30~45°/Y±45°; Shoulder P±160°/R-5~185°/Y-90~195°; Elbow P-66~137°; Wrist P±90°/R±90°/Y-45~135°; Waist P-30~45°/R±30°/Y±150°; Hip P±150°/R-50~120°/Y±150°; Knee P+5~148°; Ankle P-35~58°/R±25°",
     "software": "Secondary development; controller & sensor APIs; low- & high-level motion-control APIs (walking, mobile manipulation, teleoperation); OTA; Studio package; voice, light interaction, status monitoring, basic motion library",
-    "warranty": "12 months"
+    "warranty": "12 months",
+    "announced": "2026",
+    "website": "https://www.limxdynamics.com/en/products/oli",
+    "datasheet": "https://www.limxdynamics.com/pdf/LimX_Oli_Brochure_20250910-1.pdf",
+    "shoulder_width_mm": 550,
+    "arm_length_mm": 700,
+    "frame_material": "Aluminum alloy + plastic",
+    "leg_dof": 6,
+    "arm_dof": 7,
+    "waist_dof": 3,
+    "neck_dof": 2,
+    "speed_ms": 1.4,
+    "torque_nm": 150,
+    "chipset": "RK3588 (motion control)",
+    "ai_chip": "NVIDIA Orin NX (EDU/Super)",
+    "ai_chip_tops": 157,
+    "depth_sensing": "Head, chest & hip depth cameras + wrist mount",
+    "lidar": "Yes",
+    "imu_axes": 6,
+    "hand_type": "Parallel two-finger gripper (standard)",
+    "hand_interchangeable": "Yes",
+    "hand_variants": [
+      "Parallel 2-finger (1 DoF)",
+      "5-finger dexterous (6 DoF)",
+      "Self-dev 2-finger (1 DoF)",
+      "3-finger dexterous (4 DoF)"
+    ],
+    "hand_dof": 6,
+    "battery_ah": 9.5,
+    "charge_power_w": 588,
+    "quick_release": "Drawer-type module",
+    "wifi": "Wi-Fi 6",
+    "bluetooth": "Yes",
+    "ethernet": "Gigabit",
+    "usb_ports": "USB 3.0/3.2, Type-C",
+    "cellular": "5G (higher tiers)",
+    "ros": "Yes",
+    "sdk": "Yes",
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "warranty_months": 12,
+    "ota": "Yes",
+    "use_cases": [
+      "Scientific research",
+      "Manufacturing",
+      "Commercial"
+    ]
   },
   {
     "id": "limx-dynamics-tron-1",
@@ -114777,7 +114829,7 @@
     "sensors": "IMU (standard); optional RGBD camera",
     "feature": "3-in-1 modular foot-ends — Point-Foot, Sole, Wheeled; climbs ≤30°; clears ≤20 cm obstacles",
     "software": "SDK, data visualization, record & playback, joint-control algorithms, simulation platform; secondary development; OTA",
-    "desc": "TRON 1 is billed as the first multi-modal biped robot — a compact (≤845 mm, ≤20 kg) all-terrain research and reinforcement-learning platform with interchangeable Point-Foot, Sole and Wheeled foot-ends. It carries up to 10 kg, climbs 30°, clears 20 cm obstacles, and runs on a 46.8V/4.5Ah quick-swap pack (~2 h). 48V actuators deliver 30 N·m rated / 60 N·m peak torque at 15 rad/s; a 12th-gen Intel i3 brain, IMU (optional RGBD), open SDK with data record/playback and a simulation platform make it a favourite locomotion and RL testbed. Sold in Standard and EDU editions.",
+    "desc": "TRON 1 is billed as the first multi-modal biped robot — a compact (≤845 mm, ≤20 kg) all-terrain research and RL platform with interchangeable Point-Foot, Sole and Wheeled foot-ends. It carries up to 10 kg, climbs 30°, clears 20 cm obstacles, and runs ~2 h on a 46.8V/4.5Ah quick-swap pack. 48V actuators deliver 30 N·m rated / 60 N·m peak at 15 rad/s; a 12th-gen Intel i3 brain, IMU (optional RGBD) and an open SDK with simulation tooling make it a favourite locomotion/RL testbed. Standard and EDU editions.",
     "tags": [
       "research",
       "LimX Dynamics",
@@ -114785,8 +114837,7 @@
       "biped",
       "wheel-legged",
       "reinforcement learning",
-      "modular",
-      "education"
+      "modular"
     ],
     "fig": "🤖",
     "score": 75,
@@ -114799,7 +114850,46 @@
     "actuators": "48V; rated torque 30 N·m, peak 60 N·m; peak speed 15 rad/s",
     "battery": "46.8V ternary lithium, 4.5 Ah, 1,000 W max; ≤2 h; quick-swap; <1 h (20-80%) / 1.5 h full",
     "connectivity": "USB 3.0 ×1, Gigabit Ethernet ×1; 24V/100W (peak 200W) peripheral power; peripheral mounting points",
-    "controller": "Handheld remote (50 m range) with E-stop"
+    "controller": "Handheld remote (50 m range) with E-stop",
+    "announced": "2024",
+    "website": "https://www.limxdynamics.com/en/products/tron1",
+    "datasheet": "https://www.limxdynamics.com/pdf/Tron1_1_b803c2ea26.pdf",
+    "variants": [
+      "Standard",
+      "EDU"
+    ],
+    "height_mm": 845,
+    "width_mm": 392,
+    "depth_mm": 420,
+    "frame_material": "Aluminum alloy + industrial plastic",
+    "operating_temp_min": -5,
+    "operating_temp_max": 40,
+    "speed_ms": 3,
+    "max_incline_deg": 30,
+    "max_step_height_mm": 200,
+    "torque_nm": 60,
+    "actuator_type": "48V joint actuators — 30 N·m rated, 60 N·m peak, 15 rad/s",
+    "gait_modes": [
+      "Point-foot",
+      "Sole",
+      "Wheeled"
+    ],
+    "cpu": "12th Gen Intel i3",
+    "ram_gb": 16,
+    "storage_gb": 512,
+    "imu": "Yes",
+    "cameras": "Optional RGBD",
+    "battery_type": "Ternary lithium",
+    "battery_ah": 4.5,
+    "battery_voltage": "46.8 V",
+    "battery_life": 120,
+    "charge_time": 90,
+    "charge_time_fast": 60,
+    "hot_swap": "Yes (quick swap)",
+    "usb_ports": "USB 3.0",
+    "ethernet": "Gigabit",
+    "sdk": "Yes",
+    "warranty_months": 12
   },
   {
     "id": "limx-dynamics-tron-2",
@@ -114813,7 +114903,7 @@
     "year": 2025,
     "origin": "China",
     "feature": "Multi-form embodied robot platform; successor to TRON 1 in LimX's layered lineup",
-    "desc": "TRON 2 is LimX Dynamics' multi-form embodied robot — one body, three configurations — pairing high-performance dual manipulator arms with all-terrain bipedal/wheeled mobility as an integrated platform for VLA research, mobile manipulation and whole-body motion control. Each 7-DoF arm lifts up to 5 kg at 5 m/s with ±0.5 mm repeatability and VR (Quest 3) teleoperation; the multi-form base does 2-3 m/s on soles or 3-5 m/s on wheels, climbs to 30°, and carries 30 kg on flat ground. Powered by a 46.8V/9Ah swappable pack (fast 30-min charge), sensed by waist/head/wrist RGBD cameras and an IMU, and driven by an Intel i7 AI computing box with full SDK, ROS1/ROS2 and simulation tooling. Sold in EDU and Standard editions.",
+    "desc": "TRON 2 is LimX Dynamics' multi-form embodied robot — one body, three configurations — pairing high-performance dual 7-DoF manipulator arms with all-terrain bipedal/wheeled mobility for VLA research, mobile manipulation and whole-body control. Each arm lifts up to 5 kg at 5 m/s with ±0.5 mm repeatability and Quest 3 VR teleoperation (100 ms delay); the base does up to 5 m/s on wheels, climbs 30°, and carries 30 kg on flat ground. Powered by a 46.8V/9Ah swappable pack (30-min fast charge), sensed by waist/head/wrist RGBD cameras and an IMU, driven by an Intel i7 AI computing box with full SDK, ROS1/ROS2 and simulation tooling. EDU and Standard editions.",
     "tags": [
       "research",
       "LimX Dynamics",
@@ -114822,7 +114912,6 @@
       "VLA",
       "dual-arm",
       "wheel-legged",
-      "teleoperation",
       "ROS"
     ],
     "fig": "🤖",
@@ -114837,7 +114926,47 @@
     "sensors": "Waist RGBD camera, IMU; head & wrist RGBD cameras (dual-arm config)",
     "connectivity": "Ethernet, USB 3.0, EtherCAT ×2, RS485; 12V/24V/48V power outputs",
     "compute": "AI computing box — Intel Core i7-1165G7, 2TB; 4×ETH, 4×USB 3.0",
-    "software": "SDK, robot management / data / simulation platforms; Python, C++, ROS1/ROS2"
+    "software": "SDK, robot management / data / simulation platforms; Python, C++, ROS1/ROS2",
+    "announced": "2025",
+    "website": "https://www.limxdynamics.com/en/products/tron2",
+    "variants": [
+      "Standard",
+      "EDU"
+    ],
+    "frame_material": "Aluminum alloy + plastic",
+    "payload_peak": 30,
+    "speed_ms": 5,
+    "max_incline_deg": 30,
+    "max_step_height_mm": 200,
+    "repeatability": 0.5,
+    "gait_modes": [
+      "Bipedal (sole)",
+      "Wheeled"
+    ],
+    "cpu": "Intel Core i7-1165G7",
+    "cpu_freq_ghz": 2.8,
+    "storage_gb": 2000,
+    "depth_sensing": "Waist / head / wrist RGBD cameras",
+    "imu": "Yes",
+    "battery_type": "Ternary lithium",
+    "battery_ah": 9,
+    "battery_voltage": "46.8 V",
+    "charge_power_w": 542,
+    "charge_time": 54,
+    "charge_time_fast": 30,
+    "hot_swap": "Yes",
+    "ethernet": "Yes",
+    "usb_ports": "USB 3.0",
+    "industrial_protocols": [
+      "EtherCAT ×2",
+      "RS485"
+    ],
+    "ros": "Yes",
+    "sdk": "Yes",
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ]
   },
   {
     "id": "limx-dynamics-p1",
@@ -114858,12 +114987,15 @@
       "P1",
       "point-foot",
       "biped",
-      "reinforcement learning",
-      "locomotion"
+      "reinforcement learning"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2023",
+    "gait_modes": [
+      "Point-foot"
+    ]
   },
   {
     "id": "limx-dynamics-luna",
@@ -114898,7 +115030,7 @@
     "joint_ranges": "Neck P±30°/Y±45°; Shoulder P-60~175°/R-5~110°/Y-90~145°; Elbow P-30~137°; Wrist Y±90°; Waist P-45~30°/R±30°/Y±90°; Hip P-90~175°/R-60~90°/Y±90°; Knee P+5~140°; Ankle P-35~58°/R±25°",
     "warranty": "12 months",
     "features": "OTA, app, optional custom skin, portable carrying case, content development kit (tablet + software: video imitation, manual teaching, choreography, smart tasks, swarm control)",
-    "desc": "Luna is LimX Dynamics' full-size interactive humanoid, built primarily for commercial performance — shopping malls, tourist attractions, trade shows and entertainment venues. It stands 160 cm (47 cm shoulder, 69 cm reach), weighs 54 kg, and has 27 active DoF (6/leg, 5/arm, 3 waist, 2 neck) combining high-dynamic motion with multi-modal interaction. A 10,000 mAh drawer-style hot-swap battery gives ~4 h; dual RK3588 compute, a 6-axis IMU and RGB camera handle motion and perception; and a face interaction screen, speaker, mic and LED strip — plus optional custom skin and a content-development kit (choreography, swarm control, video imitation) — make it a turnkey performance robot. Walks to 5 km/h, 3 kg/arm payload, 200 N·m peak torque.",
+    "desc": "Luna is LimX Dynamics' full-size interactive humanoid, built primarily for commercial performance in malls, attractions, trade shows and entertainment venues. It stands 160 cm (47 cm shoulder, 69 cm reach), weighs 54 kg, and has 27 active DoF, combining high-dynamic motion with multi-modal interaction. A 10,000 mAh drawer-style hot-swap battery gives ~4 h; dual RK3588 compute drives motion and perception; and a face interaction screen, speaker, mic and LED strip — plus optional custom skin and a content-development kit (choreography, swarm control, video imitation) — make it a turnkey performance robot.",
     "tags": [
       "humanoid",
       "LimX Dynamics",
@@ -114910,6 +115042,44 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2026",
+    "website": "https://www.limxdynamics.com/en/products/luna",
+    "datasheet": "https://www.limxdynamics.com/pdf/LimX_Luna_Brochure_20260525.pdf",
+    "shoulder_width_mm": 470,
+    "arm_length_mm": 690,
+    "frame_material": "Aluminum alloy + plastic",
+    "display_face": "Face interaction screen",
+    "leg_dof": 6,
+    "arm_dof": 5,
+    "waist_dof": 3,
+    "neck_dof": 2,
+    "speed_ms": 1.4,
+    "torque_nm": 200,
+    "chipset": "Dual RK3588 (motion control 16G/256G + perception 8G/32G)",
+    "imu_axes": 6,
+    "cameras": "RGB camera",
+    "hand_type": "Palm-shaped (standard)",
+    "hand_interchangeable": "Yes",
+    "hand_variants": [
+      "Palm-shaped",
+      "Fist-shaped",
+      "Dexterous 5-finger (6 DoF)"
+    ],
+    "hand_dof": 6,
+    "battery_ah": 10,
+    "charge_time": 60,
+    "charge_power_w": 588,
+    "hot_swap": "Yes",
+    "wifi": "Wi-Fi 6",
+    "bluetooth": "Yes",
+    "warranty_months": 12,
+    "ota": "Yes",
+    "use_cases": [
+      "Shopping malls",
+      "Tourist attractions",
+      "Trade shows",
+      "Entertainment venues"
+    ]
   }
 ]
