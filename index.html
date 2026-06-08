@@ -1698,6 +1698,7 @@ function resetDb(){
 // ════════════ PROFILE ════════════
 
 // ════════════ GSMArena-style dynamic spec table ════════════
+let __SPEC_COLLECT=null, __SPEC_SECTION='';
 function row(label, val, unit='', note='') {
   if (val === null || val === undefined || val === '' || val === 0 && unit) {
     if (val !== false && val !== 0) return '';
@@ -1709,10 +1710,22 @@ function row(label, val, unit='', note='') {
   else display = val;
   const unitHtml = unit ? ` <span style="color:var(--mut);font-size:11px">${unit}</span>` : '';
   const noteHtml = note ? `<br><span style="color:var(--mut);font-size:11px">${note}</span>` : '';
+  if (__SPEC_COLLECT){ let _cv = (display===undefined||display===null)?'':display; if(unit)_cv=_cv+' '+unit; if(note)_cv=_cv+' — '+note; __SPEC_COLLECT.push({section:__SPEC_SECTION,label:label,value:_cv}); }
   return `<tr><td style="color:var(--mut);font-size:12px;padding:7px 12px;white-space:nowrap;width:42%">${label}</td><td style="font-size:12px;padding:7px 12px">${display}${unitHtml}${noteHtml}</td></tr>`;
 }
 function grp(name) {
+  if (__SPEC_COLLECT) __SPEC_SECTION = name;
   return `<tr><td colspan="2" style="background:var(--bg2);font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--txt);padding:18px 12px 8px;border-top:2px solid var(--bdr2);border-bottom:1px solid var(--bdr)">${name}</td></tr>`;
+}
+
+// Collect the SAME rows buildSpecTable() renders, as structured data, for Compare.
+function getSpecRows(r){
+  const prev=__SPEC_COLLECT, prevS=__SPEC_SECTION;
+  __SPEC_COLLECT=[]; __SPEC_SECTION='';
+  try{ buildSpecTable(r); }catch(e){ console.warn('getSpecRows failed', e); }
+  const rows=__SPEC_COLLECT;
+  __SPEC_COLLECT=prev; __SPEC_SECTION=prevS;
+  return rows;
 }
 
 function buildSpecTable(r) {
@@ -3081,54 +3094,37 @@ function renderCompare(){
   const wrap=document.getElementById('compare-table');
   if(active.length<2){wrap.innerHTML='';return;}
   // Defensive value helpers
+  // Mirror the EXACT Full Specifications table: collect the same rows the
+  // profile renders, for each robot, then merge — so Compare and the profile
+  // pages can never drift apart.
   const ps=r=>(r.price||0)>0?'$'+r.price.toLocaleString():'POA';
-  const fv=(r,field,unit='')=>r[field]?(r[field]+unit):'—';
-  const perf=(r,k)=>(r.perf&&typeof r.perf[k]!=='undefined')?r.perf[k]:0;
-  const fields=[
-    {cat:true,label:'OVERVIEW'},
+  const cols=active.length;
+  const thCells=active.map(function(r){return '<th>'+(r.fig||'🤖')+' '+(r.name||'(unnamed)')+'</th>';}).join('');
+  const sv=function(t){return String(t==null?'':t);};
+  const overview=[
     {label:'Category',fn:r=>r.cat||'—'},
     {label:'Subcategory',fn:r=>r.sub||'—'},
-    {label:'Year',fn:r=>r.year||'—',num:true,nv:r=>r.year||0,higher:true},
     {label:'Origin',fn:r=>r.origin||'—'},
-    {label:'Status',fn:r=>r.status||'—'},
-    {cat:true,label:'PERFORMANCE'},
-    {label:'Expert Score',fn:r=>r.score||0,num:true,nv:r=>r.score||0,higher:true},
-    {label:'User Rating',fn:r=>(r.rating||0)+'★',num:true,nv:r=>r.rating||0,higher:true},
-    {label:'Payload',fn:r=>fv(r,'payload','kg'),num:true,nv:r=>r.payload||0,higher:true},
-    {label:'Battery',fn:r=>fv(r,'battery','min'),num:true,nv:r=>r.battery||0,higher:true},
-    {label:'Speed',fn:r=>fv(r,'speed','m/s'),num:true,nv:r=>r.speed||0,higher:true},
-    {label:'DOF',fn:r=>r.dof||'—',num:true,nv:r=>r.dof||0,higher:true},
-    {cat:true,label:'SCORES'},
-    {label:'Mobility',fn:r=>perf(r,'Mobility'),num:true,nv:r=>perf(r,'Mobility'),higher:true},
-    {label:'Dexterity',fn:r=>perf(r,'Dexterity'),num:true,nv:r=>perf(r,'Dexterity'),higher:true},
-    {label:'Autonomy',fn:r=>perf(r,'Autonomy'),num:true,nv:r=>perf(r,'Autonomy'),higher:true},
-    {label:'Durability',fn:r=>perf(r,'Durability'),num:true,nv:r=>perf(r,'Durability'),higher:true},
-    {cat:true,label:'TECHNOLOGY'},
-    {label:'AI / Vision',fn:r=>r.ai?'✓ Yes':'—'},
-    {label:'ROS Compatible',fn:r=>r.ros?'✓ Yes':'—'},
-    {label:'SDK Available',fn:r=>r.sdk?'✓ Yes':'—'},
-    {label:'Robotic Arm',fn:r=>r.arm?'✓ Yes':'—'},
-    {cat:true,label:'PRICING'},
-    {label:'Price',fn:r=>ps(r)},
+    {label:'Year',fn:r=>r.year||'—'},
+    {label:'Expert Score',fn:r=>r.score||'—'},
+    {label:'User Rating',fn:r=>r.rating?r.rating+'★':'—'},
+    {label:'Price',fn:r=>ps(r)}
   ];
-  const cols=active.length;
-  const thCells=active.map(r=>`<th>${r.fig||'🤖'} ${r.name||'(unnamed)'}</th>`).join('');
-  const bodyRows=fields.map(row=>{
-    if(row.cat)return`<tr class="cat-row"><td colspan="${cols+1}">${row.label}</td></tr>`;
-    let vals,nums;
-    try{
-      vals=active.map(r=>row.fn(r));
-      nums=row.num?active.map(r=>row.nv?row.nv(r):(typeof row.fn(r)==='number'?row.fn(r):parseFloat(row.fn(r))||0)):null;
-    }catch(e){
-      console.warn('Compare row failed for',row.label,e);
-      vals=active.map(()=>'—');
-      nums=null;
-    }
-    let bestIdx=-1;
-    if(nums){const mx=Math.max(...nums);if(mx>0&&nums.filter(n=>n===mx).length===1)bestIdx=nums.indexOf(mx);}
-    const tds=vals.map((v,i)=>`<td>${i===bestIdx?`<span class="best-val">${v}</span>`:v}</td>`).join('');
-    return`<tr><td>${row.label}</td>${tds}</tr>`;
-  }).join('');
+  const perRobot=active.map(function(r){try{return getSpecRows(r);}catch(e){return [];}});
+  const maps=perRobot.map(function(rows){var m={};rows.forEach(function(x){m[x.section+'||'+x.label]=x.value;});return m;});
+  const order=[]; const seen=new Set();
+  perRobot.forEach(function(rows){rows.forEach(function(x){var k=x.section+'||'+x.label; if(!seen.has(k)){seen.add(k); order.push({section:x.section,label:x.label,key:k});}});});
+  let bodyRows='<tr class="cat-row"><td colspan="'+(cols+1)+'">OVERVIEW</td></tr>';
+  overview.forEach(function(o){
+    var tds=active.map(function(r){return '<td>'+sv(o.fn(r))+'</td>';}).join('');
+    bodyRows+='<tr><td>'+o.label+'</td>'+tds+'</tr>';
+  });
+  let curSection=null;
+  order.forEach(function(o){
+    if(o.section!==curSection){curSection=o.section; bodyRows+='<tr class="cat-row"><td colspan="'+(cols+1)+'">'+sv(curSection||'SPECIFICATIONS')+'</td></tr>';}
+    var tds=maps.map(function(m){return '<td>'+sv(m[o.key]!==undefined?m[o.key]:'—')+'</td>';}).join('');
+    bodyRows+='<tr><td>'+o.label+'</td>'+tds+'</tr>';
+  });
   wrap.innerHTML=`<div class="compare-table-wrap" id="compare-table-rendered"><table class="compare-table"><thead><tr><th>Specification</th>${thCells}</tr></thead><tbody>${bodyRows}</tbody></table></div>`;
 }
 
