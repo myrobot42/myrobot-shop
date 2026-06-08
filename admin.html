@@ -4318,6 +4318,10 @@ function renderImgManager() {
       <input type="file" id="cf-${r.id}" accept="image/*" style="display:none" onchange="handleCloudinaryUpload('${r.id}',this)">
       <div class="img-field-label">Gallery Images (up to 5) — shown when user clicks View</div>
       <div class="img-gallery-grid">${gallerySlots}</div>
+      <div class="img-field-label" style="margin-top:12px">🎬 Video URL — official manufacturer video (YouTube — not reaction channels)</div>
+      <div class="img-main-row">
+        <input class="inp" type="text" placeholder="https://www.youtube.com/watch?v=..." value="${r.video||''}" id="video-${r.id}" style="flex:1;font-size:11px">
+      </div>
     </div>`;
   }).join('') + (totalFiltered > IMG_MGR_PAGE_SIZE ? pager : '');
 }
@@ -4514,6 +4518,12 @@ async function saveSingleRobotImages(robotId){
     changes.gallery = gallery.filter(u => u);
   }
 
+  const videoInput = document.getElementById('video-' + robotId);
+  if (videoInput){
+    const newVid = videoInput.value.trim();
+    if (newVid !== (r.video || '')) changes.video = newVid;
+  }
+
   if (Object.keys(changes).length === 0){
     return {ok: true, robotId, updated: [], noop: true};
   }
@@ -4524,6 +4534,10 @@ async function saveSingleRobotImages(robotId){
   if ('gallery' in changes){
     if (changes.gallery.length) r.gallery = changes.gallery;
     else delete r.gallery;
+  }
+  if ('video' in changes){
+    if (changes.video) r.video = changes.video;
+    else delete r.video;
   }
   saveDB();
 
@@ -4587,6 +4601,10 @@ function detectChangedRobots(){
         const oldVal = (existing[i] || '').trim();
         if (newVal !== oldVal){ hasChange = true; break; }
       }
+    }
+    if (!hasChange){
+      const v = document.getElementById('video-' + r.id);
+      if (v && v.value.trim() !== (r.video || '')) hasChange = true;
     }
     if (hasChange) changed.push(r.id);
   });
