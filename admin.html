@@ -312,6 +312,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
     <div class="modal-grid">
       <div class="modal-field full"><div class="modal-label">Main Image URL</div><input class="modal-input" id="edit-img" type="text" placeholder="https://upload.wikimedia.org/..."></div>
       <div class="modal-field full"><div class="modal-label">Video URL &mdash; official manufacturer video (YouTube)</div><input class="modal-input" id="edit-video" type="text" placeholder="https://www.youtube.com/watch?v=..."></div>
+      <div class="modal-field full"><div class="modal-label">Review Video URL &mdash; optional 2nd video (bottom of page)</div><input class="modal-input" id="edit-video2" type="text" placeholder="https://www.youtube.com/watch?v=..."></div>
     </div>
 
     <div class="modal-section">KEY SPECS</div>
@@ -796,7 +797,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
             </div>
             <div id="mirror-stats" style="font-size:12px;margin-bottom:12px;color:var(--txt)">Click &ldquo;Scan images&rdquo; to see how many need mirroring.</div>
             <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px">
-              <button class="save-btn" id="mirror-scan-btn" onclick="scanMirror()" style="background:#475569">🔍 Scan images</button>
+              <button class="save-btn" id="mirror-scan-btn" onclick="manualScan()" style="background:#475569">🔍 Scan images</button>
               <button class="save-btn" id="mirror-run-btn" onclick="runMirror()" style="background:#0066ff;display:none">☁️ Mirror all external images</button>
               <button class="tbl-action" id="mirror-stop-btn" onclick="MIRROR_STOP=true" style="display:none">⏹ Stop</button>
             </div>
@@ -3266,6 +3267,7 @@ function editRobotPrompt(id) {
   // Images & video
   document.getElementById('edit-img').value = r.img || '';
   document.getElementById('edit-video').value = r.video || '';
+  document.getElementById('edit-video2').value = r.video2 || '';
   // Specs
   document.getElementById('edit-weight').value = r.weight_kg || '';
   document.getElementById('edit-battery').value = r.battery_life || '';
@@ -3315,6 +3317,8 @@ function saveEditModal() {
   r.img = img.startsWith('http') ? img : '';
   const video = document.getElementById('edit-video').value.trim();
   if (video) r.video = video; else delete r.video;
+  const video2 = document.getElementById('edit-video2').value.trim();
+  if (video2) r.video2 = video2; else delete r.video2;
   // Specs
   if(document.getElementById('edit-weight').value) r.weight_kg = parseFloat(document.getElementById('edit-weight').value);
   if(document.getElementById('edit-battery').value) r.battery_life = parseInt(document.getElementById('edit-battery').value);
@@ -4322,6 +4326,10 @@ function renderImgManager() {
       <div class="img-main-row">
         <input class="inp" type="text" placeholder="https://www.youtube.com/watch?v=..." value="${r.video||''}" id="video-${r.id}" style="flex:1;font-size:11px">
       </div>
+      <div class="img-field-label" style="margin-top:10px">🎬 Review Video URL — optional 2nd video (shown at bottom of page)</div>
+      <div class="img-main-row">
+        <input class="inp" type="text" placeholder="https://www.youtube.com/watch?v=..." value="${r.video2||''}" id="video2-${r.id}" style="flex:1;font-size:11px">
+      </div>
     </div>`;
   }).join('') + (totalFiltered > IMG_MGR_PAGE_SIZE ? pager : '');
 }
@@ -4523,6 +4531,11 @@ async function saveSingleRobotImages(robotId){
     const newVid = videoInput.value.trim();
     if (newVid !== (r.video || '')) changes.video = newVid;
   }
+  const video2Input = document.getElementById('video2-' + robotId);
+  if (video2Input){
+    const newVid2 = video2Input.value.trim();
+    if (newVid2 !== (r.video2 || '')) changes.video2 = newVid2;
+  }
 
   if (Object.keys(changes).length === 0){
     return {ok: true, robotId, updated: [], noop: true};
@@ -4538,6 +4551,10 @@ async function saveSingleRobotImages(robotId){
   if ('video' in changes){
     if (changes.video) r.video = changes.video;
     else delete r.video;
+  }
+  if ('video2' in changes){
+    if (changes.video2) r.video2 = changes.video2;
+    else delete r.video2;
   }
   saveDB();
 
@@ -4605,6 +4622,8 @@ function detectChangedRobots(){
     if (!hasChange){
       const v = document.getElementById('video-' + r.id);
       if (v && v.value.trim() !== (r.video || '')) hasChange = true;
+      const v2 = document.getElementById('video2-' + r.id);
+      if (v2 && v2.value.trim() !== (r.video2 || '')) hasChange = true;
     }
     if (hasChange) changed.push(r.id);
   });
@@ -4755,6 +4774,17 @@ async function handleCloudinaryUpload(robotId, input) {
 let MIRROR_STOP = false;
 function _isCloudinaryImg(u){ return /res\.cloudinary\.com/i.test(u || ''); }
 function _isExternalImg(u){ u = String(u || '').trim(); return /^https?:\/\//i.test(u) && !_isCloudinaryImg(u); }
+function manualScan(){
+  var st=document.getElementById('mirror-stats');
+  var btn=document.getElementById('mirror-scan-btn');
+  if(st) st.innerHTML='🔍 Scanning all robot images…';
+  if(btn){ btn.disabled=true; btn.textContent='Scanning…'; }
+  setTimeout(function(){
+    scanMirror();
+    if(btn){ btn.disabled=false; btn.textContent='🔍 Scan images'; }
+    if(st){ st.style.transition='background .15s'; st.style.background='rgba(34,197,94,.18)'; setTimeout(function(){ st.style.background=''; },600); }
+  },200);
+}
 function scanMirror(){
   if (typeof ROBOTS === 'undefined' || !Array.isArray(ROBOTS)) return [];
   const ext = ROBOTS.filter(r => _isExternalImg(r.img));
