@@ -33,7 +33,7 @@ const GITHUB_FILE_PATH = process.env.GITHUB_FILE_PATH || 'data/robots.json';
 // Fields a worker is allowed to touch via this endpoint. Anything else is silently dropped.
 // Keep this list tight — it's the security boundary.
 const ALLOWED_FIELDS = new Set([
-  'gallery', 'img', 'video',
+  'gallery', 'img', 'video', 'video2',
   'desc', 'tags',
   'price', 'status',
   'last_verified',
