@@ -2965,7 +2965,7 @@ function _renderProfile(id){
   const perfObj=r.perf&&typeof r.perf==='object'?r.perf:{};
   document.getElementById('profile-perf').innerHTML=Object.entries(perfObj).map(([k,v],i)=>`<div class="perf-card"><div class="perf-top"><span class="perf-label">${k}</span><span class="perf-num" style="color:${pcols[i%4]}">${v}</span></div><div class="perf-bar"><div class="perf-fill" style="width:${v}%;background:${pcols[i%4]}"></div></div></div>`).join('');
   // Specs table
-  document.getElementById('profile-specs').innerHTML = renderSpecsGSM(r);
+  document.getElementById('profile-specs').innerHTML = buildSpecTable(r);
   // Reviews
   document.getElementById('profile-reviews-list').innerHTML=[
     {init:'JK',name:'James K.',role:'Robotics Engineer, Toyota',stars:5,text:`We've been running ${r.name} in our facility for 6 months. The results speak for themselves — best-in-class for our use case. Highly recommended.`},
