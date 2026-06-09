@@ -959,9 +959,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         </div>
       </div>
       <div class="section-block" id="profile-video-block"><div class="block-title">Video</div><div id="profile-video"></div></div>
-      <div class="section-block"><div class="block-title">Performance Scores</div><div class="perf-grid" id="profile-perf"></div></div>
       <div class="section-block"><div class="block-title">Full Specifications</div><table class="specs-table" id="profile-specs"></table></div>
       <div class="section-block"><div class="block-title">User Reviews</div><div class="review-list" id="profile-reviews-list"></div></div>
+      <div class="section-block" id="profile-video2-block"><div class="block-title">Review Video</div><div id="profile-video2"></div></div>
     </div>
     <div class="sidebar">
       <div class="price-card"><div class="price-label">STARTING PRICE</div><div class="price-main" id="profile-price"></div><div class="price-note" id="profile-price-note"></div><button class="btn-full primary">Request a Quote →</button><button class="btn-full outline" onclick="addToCompareFromProfile()">Add to Compare</button><div class="price-features"><div class="pf"><div class="pf-check">✓</div>12-month warranty included</div><div class="pf"><div class="pf-check">✓</div>Dedicated support team</div><div class="pf"><div class="pf-check">✓</div>SDK & training package</div></div></div>
@@ -2901,23 +2901,22 @@ function _renderProfile(id){
   document.getElementById('profile-year-badge').style.display=r.year?'':'none';
   document.getElementById('profile-name').textContent=r.name;
   document.getElementById('profile-tagline').textContent=r.desc;
-  // --- Manufacturer video: embed curated r.video inline; hide section if none (keep users on-site) ---
+  // --- Videos: top manufacturer video (r.video) + bottom review video (r.video2) ---
   (function(){
-    var vEl=document.getElementById('profile-video');
-    var blk=document.getElementById('profile-video-block');
-    if(!vEl||!blk) return;
     function ytId(u){ if(!u) return ''; u=String(u).trim();
       if(/^[A-Za-z0-9_-]{11}$/.test(u)) return u;
       var m=u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
       return m?m[1]:''; }
-    var id=ytId(r.video);
-    if(id){
-      blk.style.display='';
-      vEl.innerHTML='<div style="position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;background:#000"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
-    } else {
-      blk.style.display='none';
-      vEl.innerHTML='';
+    function mount(elId, blkId, url){
+      var vEl=document.getElementById(elId), blk=document.getElementById(blkId);
+      if(!vEl||!blk) return;
+      var id=ytId(url);
+      if(id){ blk.style.display='';
+        vEl.innerHTML='<div style="position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;background:#000"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
+      } else { blk.style.display='none'; vEl.innerHTML=''; }
     }
+    mount('profile-video','profile-video-block',r.video);
+    mount('profile-video2','profile-video2-block',r.video2);
   })();
   document.getElementById('profile-stars').textContent='★'.repeat(Math.round(r.rating))+'☆'.repeat(5-Math.round(r.rating));
   document.getElementById('profile-rating').textContent=r.rating;
@@ -2972,10 +2971,7 @@ function _renderProfile(id){
     {l:'WARRANTY',v:r.warranty_months||'—',u:r.warranty_months?'mo':''},
   ];
   document.getElementById('profile-quick-specs').innerHTML=specs.map(s=>`<div class="qs"><div class="qs-label">${s.l}</div><div class="qs-val">${s.v}<span class="qs-unit"> ${s.u}</span></div></div>`).join('');
-  // Performance
-  const pcols=['var(--acc)','#7c3aed','var(--grn)','var(--org)'];
-  const perfObj=r.perf&&typeof r.perf==='object'?r.perf:{};
-  document.getElementById('profile-perf').innerHTML=Object.entries(perfObj).map(([k,v],i)=>`<div class="perf-card"><div class="perf-top"><span class="perf-label">${k}</span><span class="perf-num" style="color:${pcols[i%4]}">${v}</span></div><div class="perf-bar"><div class="perf-fill" style="width:${v}%;background:${pcols[i%4]}"></div></div></div>`).join('');
+  // (Performance Scores removed — placeholder values, not real spec data)
   // Specs table
   document.getElementById('profile-specs').innerHTML = renderSpecsGSM(r);
   // Reviews
