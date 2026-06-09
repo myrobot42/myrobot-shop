@@ -1740,13 +1740,25 @@ function getSpecRows(r){
 // right, and empty sections omitted entirely. Driven by the same getSpecRows()
 // data the Compare page uses, so layout differs but content never drifts.
 function renderSpecsGSM(r){
-  const rows=getSpecRows(r);
-  if(!rows.length) return '<tr><td style="padding:14px;color:var(--mut);font-size:12px">Detailed specifications coming soon.</td></tr>';
-  const groups=[]; let cur=null;
-  rows.forEach(function(x){ if(!cur||cur.section!==x.section){cur={section:x.section,items:[]};groups.push(cur);} cur.items.push(x); });
+  // Transform the COMPLETE buildSpecTable() output into GSMArena's left-gutter
+  // layout. Because we reformat the full HTML (not a re-collection), it is
+  // impossible to drop a row — every spec the old table showed still shows.
+  var html=buildSpecTable(r);
+  var trs=html.match(/<tr\b[\s\S]*?<\/tr>/g)||[];
+  var groups=[]; var cur=null;
+  trs.forEach(function(tr){
+    var isHeader=/colspan="2"/.test(tr) && /var\(--bg2\)/.test(tr);
+    if(isHeader){ var nm=tr.replace(/<[^>]+>/g,'').trim(); cur={section:nm,rows:[]}; groups.push(cur); return; }
+    var m=tr.match(/<td\b[^>]*>([\s\S]*?)<\/td>\s*<td\b[^>]*>([\s\S]*?)<\/td>/);
+    if(!m) return;
+    if(!cur){cur={section:'',rows:[]};groups.push(cur);}
+    cur.rows.push({label:m[1],value:m[2]});
+  });
+  groups=groups.filter(function(g){return g.rows.length;});
+  if(!groups.length) return '<tr><td style="padding:14px;color:var(--mut);font-size:12px">Detailed specifications coming soon.</td></tr>';
   return groups.map(function(g){
-    const fields=g.items.map(function(it){return '<div class="sf-row"><span class="sf-label">'+it.label+'</span><span class="sf-val">'+it.value+'</span></div>';}).join('');
-    return '<tr class="spec-grp"><td class="spec-cat">'+(g.section||'')+'</td><td class="spec-fields">'+fields+'</td></tr>';
+    var fields=g.rows.map(function(rw){return '<div class="sf-row"><span class="sf-label">'+rw.label+'</span><span class="sf-val">'+rw.value+'</span></div>';}).join('');
+    return '<tr class="spec-grp"><td class="spec-cat">'+g.section+'</td><td class="spec-fields">'+fields+'</td></tr>';
   }).join('');
 }
 
@@ -2685,9 +2697,9 @@ function buildSpecTable(r) {
 
   // ── COMMS ──
   html += grp('COMMS');
-  if (r.wifi) html += row('WLAN', r.wifi + (r.wifi_bands ? ', ' + r.wifi_bands : ''));
+  if (r.wifi) html += row('WLAN', r.wifi === true ? true : (r.wifi + (r.wifi_bands ? ', ' + r.wifi_bands : '')));
   if (r.bluetooth) html += row('Bluetooth', r.bluetooth);
-  if (r.cellular) html += row('Cellular', r.cellular + (r.cellular_sim ? ', ' + r.cellular_sim : ''));
+  if (r.cellular) html += row('Cellular', r.cellular === true ? true : (r.cellular + (r.cellular_sim ? ', ' + r.cellular_sim : '')));
   if (r.uwb !== undefined) html += row('UWB', r.uwb);
   if (r.nfc !== undefined) html += row('NFC', r.nfc);
   if (r.ethernet) html += row('Ethernet', r.ethernet);
@@ -2965,7 +2977,7 @@ function _renderProfile(id){
   const perfObj=r.perf&&typeof r.perf==='object'?r.perf:{};
   document.getElementById('profile-perf').innerHTML=Object.entries(perfObj).map(([k,v],i)=>`<div class="perf-card"><div class="perf-top"><span class="perf-label">${k}</span><span class="perf-num" style="color:${pcols[i%4]}">${v}</span></div><div class="perf-bar"><div class="perf-fill" style="width:${v}%;background:${pcols[i%4]}"></div></div></div>`).join('');
   // Specs table
-  document.getElementById('profile-specs').innerHTML = buildSpecTable(r);
+  document.getElementById('profile-specs').innerHTML = renderSpecsGSM(r);
   // Reviews
   document.getElementById('profile-reviews-list').innerHTML=[
     {init:'JK',name:'James K.',role:'Robotics Engineer, Toyota',stars:5,text:`We've been running ${r.name} in our facility for 6 months. The results speak for themselves — best-in-class for our use case. Highly recommended.`},
