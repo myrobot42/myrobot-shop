@@ -273,6 +273,12 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .specs-table td{padding:9px 0;font-size:12px;vertical-align:top}
 .specs-table td:first-child{color:var(--mut);width:42%;padding-right:14px;font-weight:500}
 .specs-table td:last-child{color:var(--txt);font-weight:600}
+.specs-table .spec-grp td.spec-cat{vertical-align:top;width:150px;padding:13px 14px 13px 0;font-size:12px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--acc)}
+.specs-table .spec-grp td.spec-fields{padding:7px 0;font-weight:400}
+.sf-row{display:flex;gap:14px;padding:6px 0;align-items:baseline}
+.sf-row .sf-label{flex:0 0 38%;color:var(--mut);font-size:12px;font-weight:500}
+.sf-row .sf-val{flex:1;font-size:12.5px;color:var(--txt);font-weight:600;line-height:1.5}
+@media(max-width:560px){.specs-table .spec-grp td.spec-cat{width:92px;font-size:10px;padding-right:8px}.sf-row{flex-direction:column;gap:2px}.sf-row .sf-label{flex:none}}
 .spec-group{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--acc);padding:11px 0 3px!important;border-bottom:none!important}
 .review-list{display:flex;flex-direction:column;gap:11px}
 .review{background:var(--bg2);border:1px solid var(--bdr);border-radius:9px;padding:14px}
@@ -960,6 +966,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     <div class="sidebar">
       <div class="price-card"><div class="price-label">STARTING PRICE</div><div class="price-main" id="profile-price"></div><div class="price-note" id="profile-price-note"></div><button class="btn-full primary">Request a Quote →</button><button class="btn-full outline" onclick="addToCompareFromProfile()">Add to Compare</button><div class="price-features"><div class="pf"><div class="pf-check">✓</div>12-month warranty included</div><div class="pf"><div class="pf-check">✓</div>Dedicated support team</div><div class="pf"><div class="pf-check">✓</div>SDK & training package</div></div></div>
       <div class="vs-card" onclick="goPage('compare')"><div class="vs-label">POPULAR COMPARISON</div><div class="vs-names" id="profile-vs"></div><button class="btn-vs">Compare side by side →</button></div>
+      <div class="sidebar-title" id="profile-news-title" style="display:none">In the News</div>
+      <div class="similar-list" id="profile-news" style="display:none;margin-bottom:18px"></div>
       <div class="sidebar-title">Similar Robots</div>
       <div class="similar-list" id="profile-similar"></div>
     </div>
@@ -1726,6 +1734,20 @@ function getSpecRows(r){
   const rows=__SPEC_COLLECT;
   __SPEC_COLLECT=prev; __SPEC_SECTION=prevS;
   return rows;
+}
+
+// GSMArena-style profile specs: section label in the left gutter, fields on the
+// right, and empty sections omitted entirely. Driven by the same getSpecRows()
+// data the Compare page uses, so layout differs but content never drifts.
+function renderSpecsGSM(r){
+  const rows=getSpecRows(r);
+  if(!rows.length) return '<tr><td style="padding:14px;color:var(--mut);font-size:12px">Detailed specifications coming soon.</td></tr>';
+  const groups=[]; let cur=null;
+  rows.forEach(function(x){ if(!cur||cur.section!==x.section){cur={section:x.section,items:[]};groups.push(cur);} cur.items.push(x); });
+  return groups.map(function(g){
+    const fields=g.items.map(function(it){return '<div class="sf-row"><span class="sf-label">'+it.label+'</span><span class="sf-val">'+it.value+'</span></div>';}).join('');
+    return '<tr class="spec-grp"><td class="spec-cat">'+(g.section||'')+'</td><td class="spec-fields">'+fields+'</td></tr>';
+  }).join('');
 }
 
 function buildSpecTable(r) {
@@ -2943,14 +2965,18 @@ function _renderProfile(id){
   const perfObj=r.perf&&typeof r.perf==='object'?r.perf:{};
   document.getElementById('profile-perf').innerHTML=Object.entries(perfObj).map(([k,v],i)=>`<div class="perf-card"><div class="perf-top"><span class="perf-label">${k}</span><span class="perf-num" style="color:${pcols[i%4]}">${v}</span></div><div class="perf-bar"><div class="perf-fill" style="width:${v}%;background:${pcols[i%4]}"></div></div></div>`).join('');
   // Specs table
-  document.getElementById('profile-specs').innerHTML = buildSpecTable(r);
+  document.getElementById('profile-specs').innerHTML = renderSpecsGSM(r);
   // Reviews
   document.getElementById('profile-reviews-list').innerHTML=[
     {init:'JK',name:'James K.',role:'Robotics Engineer, Toyota',stars:5,text:`We've been running ${r.name} in our facility for 6 months. The results speak for themselves — best-in-class for our use case. Highly recommended.`},
     {init:'SL',name:'Dr. Sara L.',role:'Research Lead, MIT CSAIL',stars:4,text:`Everything about ${r.name} — performance, documentation, support — is excellent. The integration was faster than expected. Minor limitations noted but overall outstanding.`},
   ].map(rv=>`<div class="review"><div class="review-top"><div class="reviewer"><div class="avatar">${rv.init}</div><div><div class="reviewer-name">${rv.name}</div><div class="reviewer-role">${rv.role}</div></div></div><div class="review-stars">${'★'.repeat(rv.stars)+'☆'.repeat(5-rv.stars)}</div></div><div class="review-text">${rv.text}</div><span class="review-tag">Verified</span></div>`).join('');
-  // Similar
-  const sim=ROBOTS.filter(x=>x.id!==r.id&&(x.cat===r.cat||x.tags.some(t=>r.tags.includes(t)))).slice(0,4);
+  // Similar — brand siblings first (most related), then same category / shared tags
+  const _rt=r.tags||[];
+  const sameBrand=ROBOTS.filter(x=>x.id!==r.id&&x.brand&&x.brand===r.brand);
+  const byCat=ROBOTS.filter(x=>x.id!==r.id&&x.brand!==r.brand&&(x.cat===r.cat||(x.tags||[]).some(t=>_rt.includes(t))));
+  const sim=sameBrand.concat(byCat).slice(0,4);
+  try{ renderProfileNews(r); }catch(e){}
   document.getElementById('profile-similar').innerHTML=sim.map(s=>{
     const imgHtml = (s.img && s.img.trim())
       ? `<img src="${s.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:7px;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain';this.style.background='#fff'">`
@@ -3965,6 +3991,31 @@ async function fetchYouTubeVideos(){
   }
   if(document.readyState!=='loading')bindNL();else document.addEventListener('DOMContentLoaded',bindNL);
 })();
+let NEWS_ALL=null;
+function loadNewsOnce(cb){
+  if(NEWS_ALL){cb(NEWS_ALL);return;}
+  fetch('data/news.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).then(function(d){NEWS_ALL=(d&&d.items)?d.items:(Array.isArray(d)?d:[]);cb(NEWS_ALL);}).catch(function(){NEWS_ALL=[];cb([]);});
+}
+function renderProfileNews(r){
+  var titleEl=document.getElementById('profile-news-title');
+  var box=document.getElementById('profile-news');
+  if(!box||!titleEl) return;
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function fdate(iso){if(!iso)return'';var d=new Date(iso);if(isNaN(d))return'';return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
+  loadNewsOnce(function(items){
+    var terms=[(r.brand||'').toLowerCase(),(r.name||'').toLowerCase()].filter(function(t){return t&&t.length>2;});
+    var matched=(items||[]).filter(function(it){var hay=((it.title||'')+' '+(it.summary||'')).toLowerCase();return terms.some(function(t){return hay.indexOf(t)>=0;});}).slice(0,4);
+    if(!matched.length){titleEl.style.display='none';box.style.display='none';box.innerHTML='';return;}
+    titleEl.textContent=(r.brand||r.name)+' in the News';
+    titleEl.style.display='';box.style.display='';
+    box.innerHTML=matched.map(function(it){
+      var thumb=it.image
+        ? '<div class="similar-icon" style="overflow:hidden"><img src="'+esc(it.image)+'" style="width:100%;height:100%;object-fit:cover;border-radius:7px"></div>'
+        : '<div class="similar-icon" style="display:flex;align-items:center;justify-content:center;font-size:16px">📰</div>';
+      return '<a class="similar-item" href="'+esc(it.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">'+thumb+'<div class="similar-info"><div class="similar-name" style="font-size:12px;line-height:1.3;white-space:normal">'+esc(it.title)+'</div><div class="similar-sub">'+esc(it.source||'')+(it.published?' · '+fdate(it.published):'')+'</div></div></a>';
+    }).join('');
+  });
+}
 function renderNews(){
   var layout=document.getElementById('news-layout');
   var list=document.getElementById('news-list-items');
