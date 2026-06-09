@@ -312,7 +312,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
     <div class="modal-grid">
       <div class="modal-field full"><div class="modal-label">Main Image URL</div><input class="modal-input" id="edit-img" type="text" placeholder="https://upload.wikimedia.org/..."></div>
       <div class="modal-field full"><div class="modal-label">Video URL &mdash; official manufacturer video (YouTube)</div><input class="modal-input" id="edit-video" type="text" placeholder="https://www.youtube.com/watch?v=..."></div>
-      <div class="modal-field full"><div class="modal-label">Review Video URL &mdash; optional 2nd video (bottom of page)</div><input class="modal-input" id="edit-video2" type="text" placeholder="https://www.youtube.com/watch?v=..."></div>
+      <div class="modal-field full"><div class="modal-label">Video URL &mdash; second video (bottom of page)</div><input class="modal-input" id="edit-video2" type="text" placeholder="https://www.youtube.com/watch?v=..."></div>
     </div>
 
     <div class="modal-section">KEY SPECS</div>
@@ -4326,7 +4326,7 @@ function renderImgManager() {
       <div class="img-main-row">
         <input class="inp" type="text" placeholder="https://www.youtube.com/watch?v=..." value="${r.video||''}" id="video-${r.id}" style="flex:1;font-size:11px">
       </div>
-      <div class="img-field-label" style="margin-top:10px">🎬 Review Video URL — optional 2nd video (shown at bottom of page)</div>
+      <div class="img-field-label" style="margin-top:10px">🎬 Video URL — second video (shown at bottom of page)</div>
       <div class="img-main-row">
         <input class="inp" type="text" placeholder="https://www.youtube.com/watch?v=..." value="${r.video2||''}" id="video2-${r.id}" style="flex:1;font-size:11px">
       </div>
