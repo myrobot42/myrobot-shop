@@ -112358,7 +112358,17 @@
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2024/02/02165250/Dingo-O-Vision.65-e1706910995560.png",
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2024/10/24093822/do-more-with-dingo_16_9-1080x675.jpg",
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2023/10/09122106/Dingo-D-web-5.png"
-    ]
+    ],
+    "weight_kg": 9.3,
+    "payload_kg": 20,
+    "speed_ms": 1.3,
+    "battery_life": 240,
+    "ros": true,
+    "use_cases": [
+      "Indoor research & education UGV"
+    ],
+    "made_in": "Canada",
+    "website": "https://clearpathrobotics.com"
   },
   {
     "cat": "Research",
@@ -112388,7 +112398,17 @@
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2023/10/08225107/RB-Lifts-web-3-1920x1282.png",
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2023/07/24190445/RIDGEBACK-1-1024x664.png",
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2023/10/08225203/RB-Lifts-web-1-1920x1282.jpg"
-    ]
+    ],
+    "weight_kg": 135,
+    "payload_kg": 100,
+    "speed_ms": 1.1,
+    "actuator_type": "Omnidirectional mecanum drive",
+    "ros": true,
+    "use_cases": [
+      "Indoor omnidirectional manipulation base"
+    ],
+    "made_in": "Canada",
+    "website": "https://clearpathrobotics.com"
   },
   {
     "cat": "Research",
@@ -112419,7 +112439,21 @@
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2025/02/07143444/Warthog_UGV-2_resized.jpg",
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2025/02/07143435/WarthogGallery3.jpg",
       "https://www.roboticgizmos.com/wp-content/uploads/2018/08/13/Warthog-UGV-1280x720.jpg"
-    ]
+    ],
+    "weight_kg": 280,
+    "payload_kg": 272,
+    "speed_ms": 5,
+    "actuator_type": "Amphibious skid-steer (land + water)",
+    "ros": true,
+    "terrain": [
+      "All-terrain",
+      "Amphibious"
+    ],
+    "use_cases": [
+      "Outdoor & amphibious research UGV"
+    ],
+    "made_in": "Canada",
+    "website": "https://clearpathrobotics.com"
   },
   {
     "cat": "Research",
@@ -112873,7 +112907,13 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "payload_kg": 500,
+    "actuator_type": "Based on KUKA KR 500 6-axis industrial arm",
+    "use_cases": [
+      "Passenger-carrying ride arm (theme parks & attractions)"
+    ],
+    "made_in": "Germany"
   },
   {
     "cat": "Entertainment",
@@ -112969,7 +113009,13 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "display_face": "21.5-inch FHD display",
+    "use_cases": [
+      "Telepresence for offices, healthcare & education"
+    ],
+    "made_in": "Denmark",
+    "website": "https://gobe-robots.com"
   },
   {
     "cat": "Telepresence",
@@ -113097,7 +113143,7 @@
     "sub": "Home AI Companion Robot",
     "year": 2025,
     "origin": "South Korea",
-    "status": "Announced",
+    "status": "Active",
     "desc": "LG's Q9 is a two-legged-wheeled home AI agent (part of the CLOi line) that moves around the home, recognises faces and emotions, and uses generative AI (integrating large language models) to manage smart-home routines and provide companionship.",
     "tags": [
       "social",
@@ -113116,7 +113162,13 @@
       "https://www.kedglobal.com/data/ked/image/2024/09/06/ked202409060028.700x.0.jpg",
       "https://content.abt.com/media/blog/lg-q9-robot-thumbnail.webp",
       "https://www.red-dot.org/fileadmin/_processed_/a/6/csm_35-05940-2025PD.1211174_CO_fdbd42afad.jpg"
-    ]
+    ],
+    "display_face": "Expressive face display",
+    "actuator_type": "Two-wheeled self-balancing drive",
+    "use_cases": [
+      "AI home agent: voice assistant, smart-home hub, patrol (announced CES 2025)"
+    ],
+    "made_in": "South Korea"
   },
   {
     "cat": "Social",
@@ -113488,7 +113540,12 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "speed_ms": 4.2,
+    "use_cases": [
+      "Consumer quadruped companion (up to ~15 km/h)"
+    ],
+    "made_in": "China"
   },
   {
     "cat": "Quadruped",
@@ -113794,7 +113851,13 @@
     "power": "24 hp diesel",
     "flow": "~2,500 gal/min water/foam",
     "mobility": "Tracked; climbs ~70 deg",
-    "control": "Remote-operated"
+    "control": "Remote-operated",
+    "actuator_type": "Diesel-powered tracked platform, multi-directional nozzle",
+    "use_cases": [
+      "Remote firefighting (2,500 GPM / ~9,500 L/min pump)"
+    ],
+    "made_in": "USA",
+    "website": "https://www.howeandhowe.com"
   },
   {
     "cat": "Disaster Response",
@@ -113821,7 +113884,13 @@
     "rating": 4,
     "power": "Diesel",
     "mobility": "Tracked",
-    "control": "Remote-operated"
+    "control": "Remote-operated",
+    "actuator_type": "Diesel-powered tracked platform",
+    "use_cases": [
+      "Remote firefighting (1,250 GPM / ~4,700 L/min pump)"
+    ],
+    "made_in": "USA",
+    "website": "https://www.howeandhowe.com"
   },
   {
     "cat": "Disaster Response",
@@ -113875,7 +113944,12 @@
     "score": 75,
     "rating": 4,
     "propulsion": "Undulating silicone fins",
-    "mobility": "Water, ice, snow, sand"
+    "mobility": "Water, ice, snow, sand",
+    "actuator_type": "Undulating fin propulsion (amphibious)",
+    "use_cases": [
+      "Amphibious operations: swims, crawls, traverses ice & sand"
+    ],
+    "made_in": "USA"
   },
   {
     "cat": "Disaster Response",
@@ -113901,7 +113975,14 @@
     "score": 75,
     "rating": 4,
     "type": "Vehicle-launched tethered drone",
-    "feature": "Persistent thermal/visual overwatch; no pilot needed"
+    "feature": "Persistent thermal/visual overwatch; no pilot needed",
+    "battery_life": 1440,
+    "actuator_type": "Tethered quadcopter (continuous power over tether)",
+    "use_cases": [
+      "Persistent aerial situational awareness for first responders (24 h flight, no pilot licence)"
+    ],
+    "made_in": "Switzerland",
+    "website": "https://fotokite.com"
   },
   {
     "cat": "Disaster Response",
@@ -113927,7 +114008,13 @@
     "score": 75,
     "rating": 4,
     "form": "Many-jointed serpentine",
-    "role": "Rubble/pipe search & rescue, inspection"
+    "role": "Rubble/pipe search & rescue, inspection",
+    "dof": 16,
+    "actuator_type": "Modular chained joints, gait-based locomotion",
+    "use_cases": [
+      "Search & rescue in rubble, pipes & confined spaces"
+    ],
+    "made_in": "USA"
   },
   {
     "cat": "Disaster Response",
@@ -113940,7 +114027,7 @@
     "year": 2018,
     "origin": "Croatia",
     "status": "Active",
-    "weight_kg": 5500,
+    "weight_kg": 5560,
     "desc": "The DOK-ING MV-4 is a compact remote-controlled demining machine using a flail/tiller to safely detonate and clear landmines, widely deployed for humanitarian mine clearance in former conflict zones.",
     "tags": [
       "disaster response",
@@ -113954,7 +114041,13 @@
     "score": 75,
     "rating": 4,
     "mechanism": "Flail / tiller",
-    "control": "Remote-controlled"
+    "control": "Remote-controlled",
+    "actuator_type": "Remote-controlled tracked flail (demining)",
+    "use_cases": [
+      "Humanitarian demining & mine clearance"
+    ],
+    "made_in": "Croatia",
+    "website": "https://dok-ing.hr"
   },
   {
     "cat": "Disaster Response",
@@ -113981,7 +114074,13 @@
     "rating": 4,
     "mechanism": "Large water/foam atomising turbine",
     "mobility": "Tracked, remote-controlled",
-    "role": "Tunnel & industrial fires"
+    "role": "Tunnel & industrial fires",
+    "actuator_type": "Tracked, remote-controlled firefighting unit",
+    "use_cases": [
+      "Turbine-aided firefighting (high-volume water/foam monitor + blower)",
+      "Tunnel & industrial fires"
+    ],
+    "made_in": "Germany"
   },
   {
     "cat": "Agricultural",
@@ -114017,7 +114116,14 @@
       "https://static.wixstatic.com/media/30d883_5352304fe0524eda9163113f5edd7669~mv2.png/v1/fill/w_560,h_316,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/30d883_5352304fe0524eda9163113f5edd7669~mv2.png",
       "https://www.researchgate.net/publication/381573708/figure/fig3/AS:11431281501061772@1749963097104/Weeding-robot-dino-Reproduced-with-permission-from-Naio-Technologies-All-rights.jpg",
       "https://www.naio-technologies.com/wp-content/uploads/2021/04/dino-naio-technologies-10.jpg"
-    ]
+    ],
+    "battery_life": 480,
+    "actuator_type": "Electric drive, RTK-GPS guidance",
+    "use_cases": [
+      "Autonomous mechanical weeding for vegetable row crops"
+    ],
+    "made_in": "France",
+    "website": "https://www.naio-technologies.com"
   },
   {
     "cat": "Agricultural",
@@ -114083,7 +114189,13 @@
     "function": "Scouting + targeted spot-spraying",
     "chemical_reduction": "Up to ~98%",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781218469/myrobot/in8j3w2uc4t2orpouufl.webp",
-    "video": "https://www.solinftec.com/wp-content/uploads/2023/09/Solix-Ag-Robotics-Solinftec.mp4"
+    "video": "https://www.solinftec.com/wp-content/uploads/2023/09/Solix-Ag-Robotics-Solinftec.mp4",
+    "battery_type": "Solar-powered",
+    "use_cases": [
+      "24/7 crop scouting & targeted spraying"
+    ],
+    "made_in": "Brazil/USA",
+    "website": "https://www.solinftec.com"
   },
   {
     "cat": "Agricultural",
@@ -114116,7 +114228,12 @@
       "https://ecorobotix.com/wp-content/uploads/2025/03/8d67f2ffd1aee2bd89cd053b262611de-1440x958.jpeg",
       "https://ecorobotix.com/wp-content/uploads/2025/05/ARA-Key-Components-scaled.jpg",
       "https://agfundernews.com/wp-content/uploads/2023/05/ecorobotix-ara-lettuce-czech-republic-august-2022-1-scaled-1-e1683738309411.jpg"
-    ]
+    ],
+    "use_cases": [
+      "Ultra-high-precision plant-by-plant spraying (6 m width, ~6×6 cm targeting, up to 95% herbicide reduction)"
+    ],
+    "made_in": "Switzerland",
+    "website": "https://ecorobotix.com"
   },
   {
     "cat": "Agricultural",
@@ -114191,7 +114308,13 @@
       "https://static.wixstatic.com/media/30d883_fc90676e45bf4e8992214ea921f6c294~mv2.png/v1/fill/w_626,h_417,al_c,lg_1,q_85,enc_avif,quality_auto/30d883_fc90676e45bf4e8992214ea921f6c294~mv2.png",
       "https://static.wixstatic.com/media/30d883_8dda8158ec1f487db089110671f51f8b~mv2.png/v1/fill/w_738,h_491,al_c,q_90,enc_avif,quality_auto/30d883_8dda8158ec1f487db089110671f51f8b~mv2.png",
       "https://static.wixstatic.com/media/30d883_c9db650224a24fd19795fbddb013cad2~mv2.jpg/v1/fill/w_749,h_498,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/30d883_c9db650224a24fd19795fbddb013cad2~mv2.jpg"
-    ]
+    ],
+    "actuator_type": "Up to 24 independent picking arms with AI ripeness vision",
+    "use_cases": [
+      "Autonomous strawberry harvesting"
+    ],
+    "made_in": "Spain",
+    "website": "https://www.agrobot.com"
   },
   {
     "cat": "Agricultural",
@@ -114687,7 +114810,13 @@
       "https://www.hairobotics.com/sites/default/files/2023-02/haipick-a42-robots-video-overseas.jpg",
       "https://www.hairobotics.com/sites/default/files/2024-11/a42-g-e6s_2_670x900.png",
       "https://www.hairobotics.com/sites/default/files/2024-11/a42-g-e6s_1_670x900.png"
-    ]
+    ],
+    "actuator_type": "Telescopic-mast autonomous case-handling robot (multi-tote)",
+    "use_cases": [
+      "Tote-to-person warehouse picking at height"
+    ],
+    "made_in": "China",
+    "website": "https://www.hairobotics.com"
   },
   {
     "cat": "AGV/AMR",
@@ -114745,7 +114874,14 @@
     "img": "https://www.robotics247.com/images/legacy_images/Seegrid-Palion_Tow.jpg",
     "gallery": [
       "https://hub.seegrid.com/hubfs/manu.jpg"
-    ]
+    ],
+    "payload": "Tows up to 4,500 kg",
+    "cameras": "Vision-guided stereo camera navigation",
+    "use_cases": [
+      "Autonomous warehouse towing"
+    ],
+    "made_in": "USA",
+    "website": "https://seegrid.com"
   },
   {
     "cat": "AGV/AMR",
@@ -114774,7 +114910,13 @@
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/12/VK6inWQvaTqbkLgZ76t4/image.jpg",
       "https://www.automate.org/images/imgLibrary/RIA-p-300x300-AT.png"
-    ]
+    ],
+    "payload": "Pallets up to ~3,600 kg",
+    "use_cases": [
+      "Autonomous pallet transport & lifting"
+    ],
+    "made_in": "USA",
+    "website": "https://www.vecnarobotics.com"
   },
   {
     "cat": "AGV/AMR",
@@ -114845,7 +114987,12 @@
       "https://imgproxy.divecdn.com/TGt94ZQ9yESpZqYePfDc1Lm2oWd0VytvDWpn3ir-TF8/g:ce/rs:fill:1200:1200:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9JbWFnZV9mcm9tX2lPUy5wbmc=.webp",
       "https://www.allaboutlean.com/wp-content/uploads/2020/03/Amazon-Pegasus-300x119.jpg",
       "https://assets.aboutamazon.com/dims4/default/0599407/2147483647/strip/false/crop/2000x1333+0+0/resize/1486x990!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fc0%2Fe9%2Fff488e0d4b84825555f8eba6b382%2Fdenver-robotics-promo.jpg"
-    ]
+    ],
+    "actuator_type": "Drive unit with conveyor top module",
+    "use_cases": [
+      "Package sortation in Amazon fulfillment centers"
+    ],
+    "made_in": "USA"
   },
   {
     "cat": "AGV/AMR",
@@ -115296,7 +115443,12 @@
       "https://www.robotlab.com/hubfs/CC1.png",
       "https://www.robotshop.com/cdn/shop/files/pp_4478613.webp?v=1779464371&width=1024",
       "https://ucghdd.com/cdn/shop/files/nav_product_cc1Pro-2_875x700.jpg?v=1749828755"
-    ]
+    ],
+    "use_cases": [
+      "Commercial floor scrubbing, sweeping & vacuuming (multi-mode)"
+    ],
+    "made_in": "China",
+    "website": "https://www.pudurobotics.com"
   },
   {
     "cat": "Service",
@@ -116899,7 +117051,13 @@
       "https://www.wybotpool.com/cdn/shop/files/7_93addc62-b9bc-4311-95a2-8782d7b9e7c1.webp?v=1767161706&width=600",
       "https://www.wybotpool.com/cdn/shop/files/8_e10080ff-fee0-49fc-99e7-c312e471428b.webp?v=1767161706&width=600",
       "https://www.wybotpool.com/cdn/shop/files/12_7773f66e-6e8b-43e0-8fec-8d8e783c79a2.webp?v=1767161706&width=600"
-    ]
+    ],
+    "battery_type": "Rechargeable, with floating solar charging dock",
+    "use_cases": [
+      "Cordless robotic pool cleaning (wall & waterline)"
+    ],
+    "made_in": "China",
+    "website": "https://www.wybotics.com"
   },
   {
     "cat": "Consumer",
@@ -117054,7 +117212,14 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "battery_life": 100,
+    "actuator_type": "Single-rotor modular sUAS",
+    "use_cases": [
+      "ISR & expeditionary missions (Lattice AI integration)"
+    ],
+    "made_in": "USA",
+    "website": "https://www.anduril.com"
   },
   {
     "id": "intuitive-ion-bronchoscopy",
