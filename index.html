@@ -1334,7 +1334,7 @@ function renderHome(){
     const price=r.price||0;
     const name=r.name||'';
     const brand=r.brand||'';
-    const fig=r.fig||'🤖';
+    const fig=robotFig(r);
     const id=r.id||'';
     return `
     <div class="robot-card" onclick="openProfile('${id}')">
@@ -1355,7 +1355,7 @@ function renderHome(){
   document.getElementById('home-rankings').innerHTML=top5.map((r,i)=>{
     const tags=Array.isArray(r.tags)?r.tags:[];
     const score=r.score||0;
-    const fig=r.fig||'🤖';
+    const fig=robotFig(r);
     const id=r.id||'';
     const brand=r.brand||'';
     const name=r.name||'';
@@ -1606,6 +1606,13 @@ function renderSubcatFilter(){
 function toggleSubcatExpanded(){
   SUBCAT_EXPANDED = !SUBCAT_EXPANDED;
   renderSubcatFilter();
+}
+// Safe fig: emoji only — never render URL junk from bad imports
+function robotFig(r){ const f=(r&&r.fig)||''; return (f && !/^https?:/i.test(f)) ? f : '🤖'; }
+// Small photo chip for compare UI: real image when available, emoji fallback
+function compareThumb(r){
+  if(r && r.img) return `<img src="${r.img}" alt="" style="width:34px;height:34px;object-fit:contain;border-radius:6px;background:#fff;border:1px solid var(--bdr);vertical-align:middle;margin-right:6px" onerror="this.outerHTML=robotFig({fig:'🤖'})">`;
+  return robotFig(r)+' ';
 }
 // Helper for safely embedding strings into HTML attributes (handles quotes)
 function escapeAttr(s){
@@ -3130,7 +3137,7 @@ function renderCompare(){
     if(r){
       const tags=Array.isArray(r.tags)?r.tags:[];
       slot.className='compare-slot filled';slot.onclick=null;
-      slot.innerHTML=`<div class="slot-brand">${r.brand||''}</div><div class="slot-name">${r.fig||'🤖'} ${r.name||''}</div><div>${tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join(' ')}</div><span class="slot-remove" onclick="event.stopPropagation();removeSlot(${i})">✕ Remove</span>`;
+      slot.innerHTML=`<div class="slot-brand">${r.brand||''}</div><div class="slot-name">${compareThumb(r)}${r.name||''}</div><div>${tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join(' ')}</div><span class="slot-remove" onclick="event.stopPropagation();removeSlot(${i})">✕ Remove</span>`;
     } else {
       slot.className='compare-slot';slot.onclick=()=>openSlot(i);
       slot.innerHTML=`<div class="slot-plus">+</div><div class="slot-placeholder">Robot ${i+1}</div>`;
@@ -3157,7 +3164,7 @@ function renderCompare(){
   // pages can never drift apart.
   const ps=r=>(r.price||0)>0?'$'+r.price.toLocaleString():'POA';
   const cols=active.length;
-  const thCells=active.map(function(r){return '<th>'+(r.fig||'🤖')+' '+(r.name||'(unnamed)')+'</th>';}).join('');
+  const thCells=active.map(function(r){return '<th>'+compareThumb(r)+(r.name||'(unnamed)')+'</th>';}).join('');
   const sv=function(t){return String(t==null?'':t);};
   const overview=[
     {label:'Category',fn:r=>r.cat||'—'},
