@@ -111651,7 +111651,13 @@
       "https://www.bioworld.com/ext/resources/BMT-source/2020/6-24-Ekso-Bionics-EksoNR.webp?height=488&t=1593124165&width=650",
       "https://eksobionics.com/static/3e12154ffbe2818ceb462ce64f43ea9b/8ba7e/eksonr-feature.jpg",
       "https://evika.io/wp-content/uploads/2021/05/EksoNR3.jpeg"
-    ]
+    ],
+    "actuator_type": "Electric hip + knee actuation",
+    "use_cases": [
+      "Stroke & spinal cord injury gait rehabilitation"
+    ],
+    "made_in": "USA",
+    "website": "https://eksobionics.com"
   },
   {
     "cat": "Exoskeletons",
@@ -111745,7 +111751,13 @@
       "https://photos.prnewswire.com/prnvar/20150713/235996",
       "https://exoskeletonreport.com/wp-content/uploads/2016/08/ReWalk-6-via-ReWalk.jpg",
       "https://wevolver-project-images.s3.amazonaws.com/0.wr5zmrxp4fcrewalk-2.jpg"
-    ]
+    ],
+    "actuator_type": "Electric hip + knee actuation, tilt-sensor gait triggering",
+    "use_cases": [
+      "Personal mobility for spinal cord injury (home & community use)"
+    ],
+    "made_in": "Israel",
+    "website": "https://golifeward.com"
   },
   {
     "cat": "Exoskeletons",
@@ -111808,7 +111820,14 @@
       "https://i0.wp.com/middleeasthealth.com/wp-content/uploads/2022/09/HAL-Cyberdyne-2.jpg?fit=1516%2C865&ssl=1",
       "https://constancecare.pl/templates/yootheme/cache/d0/hal-galeria-03-d0ffda07.jpeg",
       "https://constancecare.pl/templates/yootheme/cache/7f/hal-galeria-02-7fbb4840.jpeg"
-    ]
+    ],
+    "actuator_type": "Electric, triggered by bioelectric signals (BES) from skin sensors",
+    "use_cases": [
+      "Gait rehabilitation",
+      "Mobility assistance"
+    ],
+    "made_in": "Japan",
+    "website": "https://www.cyberdyne.jp"
   },
   {
     "cat": "Exoskeletons",
@@ -112211,7 +112230,23 @@
       "https://img.directindustry.com/images_di/photo-mg/177123-14970113.jpg",
       "https://clearpathrobotics.com/assets/guides/foxy/husky/_images/husky_banner.jpg",
       "https://levelfivesupplies.com/wp-content/uploads/2020/08/clearpath-husky-ugv-1024x1024.jpg"
-    ]
+    ],
+    "depth_mm": 990,
+    "width_mm": 670,
+    "height_mm": 390,
+    "weight_kg": 50,
+    "speed_ms": 1,
+    "battery_ah": 20,
+    "battery_voltage": "24 V",
+    "battery_life": 180,
+    "ros": true,
+    "terrain": [
+      "All-terrain"
+    ],
+    "use_cases": [
+      "Research UGV platform"
+    ],
+    "website": "https://clearpathrobotics.com"
   },
   {
     "cat": "Research",
@@ -112242,7 +112277,21 @@
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2025/02/07114459/JackalUGV6-2048x1327.jpg",
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2025/02/07114508/JackalUGV4-1920x1013.jpg",
       "https://s3.amazonaws.com/assets.clearpathrobotics.com/wp-content/uploads/2025/02/07114453/JackalUGV7.jpg"
-    ]
+    ],
+    "depth_mm": 508,
+    "width_mm": 430,
+    "height_mm": 250,
+    "weight_kg": 17,
+    "payload_kg": 20,
+    "speed_ms": 2,
+    "battery_wh": 270,
+    "battery_life": 240,
+    "ip_rating": "IP62",
+    "ros": true,
+    "use_cases": [
+      "Research UGV platform"
+    ],
+    "website": "https://clearpathrobotics.com"
   },
   {
     "cat": "Research",
@@ -112367,7 +112416,18 @@
       "https://www.therobotreport.com/wp-content/uploads/2021/10/turtlebot-4.jpg",
       "https://cdn.robotshop.com/media/c/cle/rb-cle-04/img/clearpath-robotics-turtlebot-4-lite-mobile-robot.webp"
     ],
-    "video": "https://youtu.be/QN01AXjoLdQ"
+    "video": "https://youtu.be/QN01AXjoLdQ",
+    "cpu": "Raspberry Pi 4B (4 GB)",
+    "lidar": "RPLIDAR A1M8 360°",
+    "cameras": "OAK-D Pro spatial AI camera",
+    "os": "Ubuntu + ROS 2",
+    "ros": true,
+    "speed_ms": 0.31,
+    "use_cases": [
+      "Robotics education",
+      "ROS 2 development"
+    ],
+    "website": "https://clearpathrobotics.com"
   },
   {
     "cat": "Research",
@@ -112397,7 +112457,24 @@
       "https://cdn.sanity.io/images/7p2whiua/production/096a0f4d674fb805680a7bfd4df278027de1afa0-2048x1536.jpg",
       "https://emanual.robotis.com/assets/images/platform/turtlebot3/manipulation/hardware_setup.png",
       "https://www.researchgate.net/publication/349179581/figure/fig2/AS:989722834915330@1612979720527/The-robotic-platform-used-for-the-experimentation-a-Robotis-TurtleBot3-Burger-with-a.ppm"
-    ]
+    ],
+    "depth_mm": 138,
+    "width_mm": 178,
+    "height_mm": 192,
+    "weight_kg": 1,
+    "payload_kg": 15,
+    "speed_ms": 0.22,
+    "lidar": "360° LDS-01 LiDAR",
+    "cpu": "Raspberry Pi + OpenCR",
+    "battery_ah": 1.8,
+    "battery_voltage": "11.1 V",
+    "battery_life": 150,
+    "ros": true,
+    "use_cases": [
+      "Robotics education",
+      "ROS development"
+    ],
+    "website": "https://www.robotis.us"
   },
   {
     "cat": "Research",
@@ -112427,7 +112504,17 @@
       "https://cdn.sanity.io/images/7p2whiua/production/55b567c3a07cfe54f4035b58a5b159002a27a81b-2048x1536.jpg",
       "https://cdn.sanity.io/images/7p2whiua/production/7977633b0854d6c04fc95fa2a362d84b7fdcee79-2048x1536.jpg",
       "https://www.researchgate.net/publication/320044760/figure/fig1/AS:631632964894746@1527604442358/Toyota-Human-Support-Robot-HSR.png"
-    ]
+    ],
+    "height_mm": 1005,
+    "weight_kg": 37,
+    "payload_kg": 1.2,
+    "arm_length_mm": 600,
+    "cameras": "RGB-D head camera + stereo + wide-angle cameras",
+    "ros": true,
+    "use_cases": [
+      "Assistive home tasks research"
+    ],
+    "made_in": "Japan"
   },
   {
     "cat": "Research",
@@ -112469,7 +112556,7 @@
     "sub": "Mobile Manipulator",
     "year": 2010,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "desc": "The Willow Garage PR2 (Personal Robot 2) was the seminal dual-arm mobile-manipulation research platform that catalysed the ROS ecosystem. Two 7-DOF arms, an omnidirectional base and rich sensing - hugely influential, now discontinued but historically pivotal.",
     "tags": [
       "research",
@@ -112489,7 +112576,22 @@
       "https://www.cnet.com/a/img/resize/f61d7f5a241feaa4caae5ff3c3a6831c38d65f7b/hub/2010/05/27/abac5786-f0fb-11e2-8c7c-d4ae52e62bcc/willow-garage-robots-1.jpg?auto=webp&width=1200",
       "https://spectrum.ieee.org/media-library/image.png?id=26771866&width=1200&height=1200&coordinates=0%2C5%2C0%2C6",
       "https://www.researchgate.net/profile/Ilya-Afanasyev-3/publication/287222766/figure/fig1/AS:362691161018370@1463483719487/Willow-Garage-PR2-robot-left-and-its-3D-model-right-Courtesy-of-Willow-Garage.png"
-    ]
+    ],
+    "height_mm": 1330,
+    "weight_kg": 220,
+    "arm_dof": 7,
+    "payload_kg": 1.8,
+    "battery_wh": 1300,
+    "battery_life": 120,
+    "cpu": "2x quad-core Xeon onboard servers",
+    "os": "Ubuntu + ROS",
+    "ros": true,
+    "lidar": "Hokuyo base laser + tilting laser",
+    "cameras": "Stereo cameras + Kinect head sensors",
+    "use_cases": [
+      "Robotics research (ROS reference platform)"
+    ],
+    "made_in": "USA"
   },
   {
     "cat": "Research",
@@ -112521,7 +112623,17 @@
       "https://upload.wikimedia.org/wikipedia/commons/4/4c/ICub_sciencefestival_1.jpg"
     ],
     "video": "https://kommodo.ai/i/99SzZ1Vk3v9j0NgqpmRr",
-    "video2": "https://kommodo.ai/i/99SzZ1Vk3v9j0NgqpmRr"
+    "video2": "https://kommodo.ai/i/99SzZ1Vk3v9j0NgqpmRr",
+    "weight_kg": 33,
+    "dof": 53,
+    "cameras": "2x stereo cameras (eyes) + whole-body tactile skin",
+    "sdk": "YARP middleware (open source)",
+    "actuator_type": "Electric motors",
+    "use_cases": [
+      "Cognitive & developmental robotics research"
+    ],
+    "made_in": "Italy",
+    "website": "https://icub.iit.it"
   },
   {
     "cat": "Research",
@@ -112631,7 +112743,13 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 41,
+    "imu": true,
+    "use_cases": [
+      "Theme-park aerial stunt animatronics"
+    ],
+    "made_in": "USA"
   },
   {
     "cat": "Entertainment",
@@ -112864,7 +112982,7 @@
     "sub": "Home AI Companion Robot",
     "year": 2026,
     "origin": "South Korea",
-    "status": "Announced",
+    "status": "Active",
     "desc": "Ballie is Samsung's bright-yellow rolling home AI companion, powered by Google Gemini and Samsung's own models. It holds natural conversations, controls smart-home devices, greets visitors, projects content via a built-in projector, and checks on pets/family with front 4K and rear 2K cameras. Launch slated for 2026.",
     "tags": [
       "social",
@@ -112883,6 +113001,14 @@
       "https://www.avcesar.com/source/actualites/00/00/AA/ED/main_ballie-le-robot-de-samsung-enfin-commercialise_01524139.webp",
       "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25820037/DSCF4358_Enhanced_NR.jpg?quality=90&strip=all&crop=0,0,100,100",
       "https://ifdalivestorage.blob.core.windows.net/user-uploads/26977/699101/a5b84f03-7bf3-4df1-9021-eedd06553882/1_main.jpg"
+    ],
+    "lidar": "Spatial LiDAR",
+    "cameras": "Onboard camera + 1080p dual-lens projector",
+    "wifi": true,
+    "use_cases": [
+      "Home companion",
+      "Smart home control",
+      "Projection display"
     ]
   },
   {
@@ -112976,7 +113102,24 @@
       "https://www.casio.com/content/casio/locales/uk/en-gb/products/moflin/_jcr_content/root/responsivegrid/container/container_847828903_/container/container/container/container/image.casiocoreimg.png/1758195987328/movie-01.png",
       "https://platform.theverge.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25672843/moflin1.jpg?quality=90&strip=all&crop=0,0.058754406580498,100,99.882491186839",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJuWJtFp9mH9fwR_cGJBXAmblaLG__T15Rlw&s"
-    ]
+    ],
+    "width_mm": 130,
+    "height_mm": 90,
+    "depth_mm": 180,
+    "weight_kg": 0.26,
+    "dof": 2,
+    "battery_type": "Li-ion 3.7 V, 1200 mAh",
+    "battery_wh": 4.4,
+    "battery_life": 300,
+    "charge_time": 210,
+    "bluetooth": "5.1",
+    "operating_temp_min": 5,
+    "operating_temp_max": 35,
+    "use_cases": [
+      "Emotional-support companion pet"
+    ],
+    "made_in": "Japan",
+    "website": "https://www.casio.com/us/moflin"
   },
   {
     "cat": "Social",
@@ -113039,7 +113182,17 @@
       "https://m.media-amazon.com/images/I/61MR+xr3AnL._AC_SX679_.jpg",
       "https://m.media-amazon.com/images/I/513yKumROvL._AC_.jpg",
       "https://m.media-amazon.com/images/I/61Q+TZxOr5L._AC_SL1500_.jpg"
-    ]
+    ],
+    "npu_tops": 1.2,
+    "dof": 4,
+    "cameras": "HD wide-angle camera (face recognition, up to 10 people) + 4-mic array",
+    "imu": true,
+    "wifi": true,
+    "display_face": "Animated LED face display",
+    "use_cases": [
+      "Desktop AI companion"
+    ],
+    "website": "https://living.ai"
   },
   {
     "cat": "Social",
@@ -113103,7 +113256,20 @@
       "https://m.media-amazon.com/images/I/61adlw62wHL._AC_UF1000,1000_QL80_.jpg",
       "https://www.cnet.com/a/img/resize/51f7d291abd144f525dc531ee7d28c429794bff0/hub/2022/04/26/2a2fc594-39fa-4ef4-9983-a9f4ed8b2c44/astro-review-still-40.jpg?auto=webp&fit=crop&height=675&width=1200",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy0csdBVojxZrrf25XIkkaZZPTnIPS6fvVog&s"
-    ]
+    ],
+    "height_mm": 600,
+    "weight_kg": 9.3,
+    "speed_ms": 1,
+    "charge_time": 60,
+    "cameras": "1080p periscope camera (extends to 1.07 m)",
+    "display_face": "10.1-inch rotating touchscreen",
+    "wifi": true,
+    "use_cases": [
+      "Home monitoring",
+      "Smart home assistant",
+      "Video calls"
+    ],
+    "website": "https://www.amazon.com/astro"
   },
   {
     "cat": "Quadruped",
@@ -113336,7 +113502,15 @@
       "https://www.naval-technology.com/wp-content/uploads/sites/15/2022/02/Image-4-Saildrone-Explorer-USV.jpg",
       "https://cdn.prod.website-files.com/653651d747aa6d138b4303cb/679033f54710543992665406_missions-tf49-hero.webp",
       "https://www.naval-technology.com/wp-content/uploads/sites/15/2022/02/Image-1-Saildrone-Explorer-USV-1.jpg"
-    ]
+    ],
+    "actuator_type": "Wind-propelled wing sail",
+    "battery_type": "Solar-charged batteries",
+    "use_cases": [
+      "Ocean data collection",
+      "Maritime domain awareness"
+    ],
+    "made_in": "USA",
+    "website": "https://www.saildrone.com"
   },
   {
     "cat": "Aquatic",
@@ -113935,7 +114109,13 @@
       "https://farmhand.ie/wp-content/uploads/2025/06/P1290023.jpg",
       "https://image.chitra.live/api/v1/wps/6384812/41ea581f-536f-40bf-ad63-b0521d9e3d3e/2/DF-Aug-25-P66-68-Lely-A5-Next-002-679x419.jpg",
       "https://i.ytimg.com/vi/5cWiEp10ruA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAg--9cjdArx5UQFKU-uJYc7jTR1g"
-    ]
+    ],
+    "actuator_type": "Hybrid milking arm (electric + pneumatic)",
+    "use_cases": [
+      "Automated dairy milking"
+    ],
+    "made_in": "Netherlands",
+    "website": "https://www.lely.com"
   },
   {
     "cat": "Autonomous Vehicles",
@@ -114592,7 +114772,14 @@
       "https://isi-static.imgix.net/en-us/-/jssmedia/www/en-us/home/products-and-services/da-vinci/5/_assets/da-vinci-5-surgeon-control2.jpeg?h=1978&iar=0&w=3456&hash=09EF7C5A7685CBD23258DAC3D42E67AB",
       "https://isi-static.imgix.net/en-us/-/jssmedia/www/en-us/home/products-and-services/da-vinci/5/da-vinci-5-surgeon-console.jpg?h=1028&iar=0&w=1028&hash=9545337909189A73B01128E3583D96AE",
       "https://isi-static.imgix.net/en-us/-/media/www/en-us/home/products-and-services/da-vinci/5/_assets/da-vinci-5-hero-desktop.jpg?h=2234&iar=0&w=3456&hash=774269E9113BCB3A6EDE550709185639"
-    ]
+    ],
+    "cameras": "3D HD stereo endoscope",
+    "actuator_type": "Force-feedback instrument arms (first in da Vinci line)",
+    "use_cases": [
+      "Minimally invasive robotic surgery"
+    ],
+    "made_in": "USA",
+    "website": "https://www.intuitive.com"
   },
   {
     "cat": "Medical",
@@ -115070,7 +115257,17 @@
     "gallery": [
       "https://ologicinc.com/wp-content/uploads/2022/02/Knightscope-3.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/11/g1BxEBXQQquJMAFgXF8c/image.jpg"
-    ]
+    ],
+    "height_mm": 1520,
+    "speed_ms": 1.34,
+    "lidar": true,
+    "cameras": "4x HD cameras (360° coverage) + thermal",
+    "use_cases": [
+      "Autonomous security patrol",
+      "License plate recognition"
+    ],
+    "made_in": "USA",
+    "website": "https://www.knightscope.com"
   },
   {
     "cat": "Service",
@@ -115234,7 +115431,7 @@
     "sub": "Mars Helicopter (UAV)",
     "year": 2021,
     "origin": "USA",
-    "status": "Retired",
+    "status": "Active",
     "weight_kg": 1.8,
     "desc": "Ingenuity was NASA/JPL's Mars helicopter - the first powered, controlled flight on another planet (Apr 2021). Just 1.8 kg with counter-rotating rotors and solar charging, it flew 72 times over ~3 years (vs a 5-flight plan), covering ~17 km, before rotor-blade damage grounded it in Jan 2024.",
     "tags": [
@@ -115259,6 +115456,18 @@
       "https://media.wired.com/photos/60708e0e3b14ce9d953f9771/3:2/w_1920,c_limit/Science_jpegPIA23882.jpg",
       "https://cdn.mos.cms.futurecdn.net/qaBx6nusC9PpCvJRzeN49o-970-80.jpg.webp",
       "https://res.cloudinary.com/djrojgec1/image/upload/v1780813647/myrobot/sp1ydnzm12wrvnxvldz4.jpg"
+    ],
+    "height_mm": 490,
+    "width_mm": 1200,
+    "speed_ms": 10,
+    "chipset": "Qualcomm Snapdragon 801",
+    "os": "Linux (F-prime framework)",
+    "cameras": "13 MP color + VGA navigation camera",
+    "battery_type": "6x Li-ion 18650 cells (solar recharged)",
+    "actuator_type": "2x coaxial counter-rotating rotors",
+    "made_in": "USA",
+    "use_cases": [
+      "Mars aerial scouting (72 flights, 2021-2024)"
     ]
   },
   {
@@ -115324,7 +115533,21 @@
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-de-recherche-spatial-autonome-astrobee-nasa-1.webp",
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-de-recherche-spatial-autonome-astrobee-nasa-2-1.webp",
       "https://spectrum.ieee.org/media-library/astrobee.jpg?id=25589781&width=2000&height=1500&coordinates=83%2C0%2C83%2C0"
-    ]
+    ],
+    "height_mm": 320,
+    "width_mm": 320,
+    "depth_mm": 320,
+    "weight_kg": 9.6,
+    "cpu": "3x ARM processors",
+    "os": "Linux (+ Android payload computer)",
+    "ros": true,
+    "cameras": "NavCam, HazCam, SciCam, DockCam",
+    "actuator_type": "Electric impeller fan propulsion",
+    "use_cases": [
+      "ISS crew assistance",
+      "Microgravity research"
+    ],
+    "made_in": "USA"
   },
   {
     "cat": "Aerospace",
@@ -116008,7 +116231,16 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "payload_kg": 3.6,
+    "speed_ms": 31,
+    "actuator_type": "Hybrid VTOL fixed-wing + tethered delivery droid",
+    "use_cases": [
+      "Urban home delivery (10-mile radius)",
+      "Healthcare logistics"
+    ],
+    "made_in": "USA",
+    "website": "https://www.zipline.com"
   },
   {
     "cat": "Drones",
@@ -116033,7 +116265,20 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780813653/myrobot/crnqfiyeoisakbbinvtf.jpg"
+    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780813653/myrobot/crnqfiyeoisakbbinvtf.jpg",
+    "weight_kg": 5.2,
+    "payload_kg": 1.2,
+    "speed_ms": 29,
+    "width_mm": 1000,
+    "depth_mm": 1300,
+    "battery_type": "LiPo",
+    "cameras": "Downward navigation camera",
+    "actuator_type": "12 lift + 2 cruise propellers (hybrid VTOL)",
+    "use_cases": [
+      "Suburban package delivery"
+    ],
+    "made_in": "USA",
+    "website": "https://wing.com"
   },
   {
     "cat": "Industrial",
@@ -116341,7 +116586,17 @@
     "rating": 4,
     "control": "Whisker app (Wi-Fi)",
     "sensors": "Weight + litter-level (OmniSense / laser)",
-    "feature": "Auto-sifting rotating globe; multi-cat tracking"
+    "feature": "Auto-sifting rotating globe; multi-cat tracking",
+    "width_mm": 559,
+    "depth_mm": 686,
+    "height_mm": 750,
+    "weight_kg": 10.9,
+    "wifi": true,
+    "use_cases": [
+      "Self-cleaning cat litter box"
+    ],
+    "made_in": "USA",
+    "website": "https://www.litter-robot.com"
   },
   {
     "cat": "Consumer",
@@ -116487,7 +116742,15 @@
       "https://www.deere.com/assets/images/common/products/autonomous/r4k050317-rrd-1024x576.jpg",
       "https://www.therobotreport.com/wp-content/uploads/2022/04/John-Deere-8R-RBR50-2022.jpg",
       "https://www.deere.co.uk/resource/image/214720/landscape_ratio2x1/1600/800/93dbc4d98c98dff6dde06a258e538a4b/BAAAE0C52B3265190CAF0BEA6A3515FC/r4f167304-rrd-jpg.webp"
-    ]
+    ],
+    "cameras": "6 stereo camera pairs (360° coverage)",
+    "gpu": "Onboard NVIDIA GPU processing",
+    "cellular": true,
+    "use_cases": [
+      "Autonomous tillage & field operations"
+    ],
+    "made_in": "USA",
+    "website": "https://www.deere.com"
   },
   {
     "id": "sarcos-guardian-xo-exo",
