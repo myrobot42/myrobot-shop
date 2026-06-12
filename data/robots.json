@@ -33755,9 +33755,9 @@
   {
     "id": "kepler-forerunner-k1",
     "name": "Forerunner K1",
-    "brand": "Kepler Robotics",
+    "brand": "Kepler",
     "year": 2023,
-    "status": "Available",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "tags": [
@@ -33765,9 +33765,9 @@
       "Home Service",
       "Bipedal"
     ],
-    "fig": "https://example.com/kepler-k1.jpg",
-    "score": 8.5,
-    "rating": 4.2,
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4,
     "price": 89999,
     "desc": "Advanced humanoid robot with AI-powered service capabilities for home and office environments",
     "highlights": [
@@ -33775,7 +33775,7 @@
       "Autonomous navigation",
       "Multi-task execution"
     ],
-    "height_mm": 1750,
+    "height_mm": 1780,
     "width_mm": 580,
     "depth_mm": 320,
     "weight_kg": 85,
@@ -33795,10 +33795,10 @@
     "ram_type": "LPDDR5",
     "storage_gb": 512,
     "storage_type": "NVMe SSD",
-    "npu_tops": 45,
+    "npu_tops": 100,
     "battery_type": "Li-ion",
     "battery_wh": 2400,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "charge_time": "3 hours",
     "charge_power_w": 150,
     "charge_type": "USB-C PD",
@@ -33807,7 +33807,7 @@
     "hot_swap": false,
     "quick_release": true,
     "cycle_life": 2000,
-    "ai_model": "KeplerGPT",
+    "ai_model": "NEBULA system: cloud-based multimodal LLM + onboard industry-specific model",
     "ai_model_type": "Multimodal LLM",
     "learning_methods": [
       "Supervised",
@@ -33834,14 +33834,19 @@
     "rohs": true,
     "warranty_months": 24,
     "use_cases": [
-      "Home assistance",
-      "Office reception",
-      "Elder care"
+      "General-purpose industrial humanoid (CES 2024 debut; mass production target US$20,000-30,000)"
     ],
     "perf": "Advanced mobility and manipulation",
     "origin": "China",
     "released": "2023",
-    "dof": 40
+    "dof": 40,
+    "manufacturer_url": "https://www.kepler-robotics.com",
+    "speed_ms": 1.5,
+    "made_in": "China",
+    "payload_kg": 25,
+    "battery_life_typical": 480,
+    "hand_dof": 12,
+    "actuator_type": "Proprietary planetary roller screw + rotary actuators"
   },
   {
     "id": "kepler-atlas-h2",
@@ -49749,7 +49754,7 @@
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
     "name": "Kepler Forerunner D1",
-    "brand": "Kepler Robotics",
+    "brand": "Kepler",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -49770,15 +49775,14 @@
     "highlights": [],
     "perf": false,
     "origin": "China",
-    "year": 2023,
+    "year": 2024,
     "status": "Active",
     "released": 2024,
     "height_mm": 1780,
     "weight_kg": 85,
     "dof": 40,
     "use_cases": [
-      "Industrial / commercial humanoid tasks",
-      "Research"
+      "Dexterity-focused Forerunner variant: intricate tasks, hazard detection, healthcare & manufacturing"
     ],
     "battery_life": "8 hours",
     "speed_ms": 1.4,
@@ -49793,7 +49797,11 @@
     "lidar": true,
     "manufacturer_url": "https://www.kepleruniverse.com",
     "made_in": "China",
-    "os": "Kepler OS"
+    "os": "Kepler OS",
+    "hand_dof": 12,
+    "npu_tops": 100,
+    "actuator_type": "Proprietary planetary roller screw + rotary actuators",
+    "ai_model": "NEBULA system: cloud-based multimodal LLM + onboard industry-specific model"
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-k2",
@@ -50018,7 +50026,7 @@
   {
     "id": "kepler-robotics-forerunner-s1",
     "name": "Forerunner S1",
-    "brand": "Kepler Robotics",
+    "brand": "Kepler",
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "tags": [
@@ -50038,12 +50046,12 @@
     "highlights": [],
     "perf": false,
     "origin": "China",
-    "year": 2025,
+    "year": 2024,
     "status": "Active",
     "released": "2025",
     "height_mm": 1780,
-    "weight_kg": 80,
-    "dof": 52,
+    "weight_kg": 85,
+    "dof": 40,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
@@ -50051,15 +50059,14 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Industrial / commercial humanoid tasks",
-      "Research"
+      "Agility-focused Forerunner variant: exploration, search & rescue, confined spaces"
     ],
     "manufacturer_url": "https://www.kepler-robotics.com",
     "made_in": "China",
     "announced": "2025",
     "payload_kg": 18,
     "arm_dof": 7,
-    "hand_dof": 11,
+    "hand_dof": 12,
     "fingers": 5,
     "bimanual": true,
     "can_use_tools": true,
@@ -50067,7 +50074,13 @@
     "natural_language_commands": true,
     "battery_life_typical": 480,
     "website": "https://www.gotokepler.com",
-    "os": "Kepler OS"
+    "os": "Kepler OS",
+    "battery_life": "2-4 hours",
+    "speed_ms": 1.4,
+    "warranty_months": 12,
+    "npu_tops": 100,
+    "actuator_type": "Proprietary planetary roller screw + rotary actuators",
+    "ai_model": "NEBULA system: cloud-based multimodal LLM + onboard industry-specific model"
   },
   {
     "id": "kepler-robotics-k2-bumblebee",
@@ -81276,8 +81289,8 @@
   },
   {
     "id": "kepler-k2-2024",
-    "name": "K2",
-    "brand": "Kepler Robotics",
+    "name": "Forerunner K2 \"Bumblebee\"",
+    "brand": "Kepler",
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "tags": [
@@ -81304,11 +81317,11 @@
     "perf": false,
     "year": 2024,
     "status": "Active",
-    "height_mm": 1780,
-    "weight_kg": 85,
+    "height_mm": 1750,
+    "weight_kg": 75,
     "battery_life": 480,
     "origin": "China",
-    "cameras": "RGB-D",
+    "cameras": "80+ integrated sensors: visual SLAM, multimodal perception",
     "wifi": true,
     "bluetooth": true,
     "made_in": "China",
@@ -81318,7 +81331,7 @@
     "dof": 52,
     "arm_dof": 7,
     "hand_dof": 11,
-    "actuator_type": "Linear actuators + harmonic drive",
+    "actuator_type": "Biomimetic planetary roller screw actuators (thighs & calves) — Gen 5.0 platform",
     "fingers": 5,
     "opposable_thumb": true,
     "bimanual": true,
@@ -81326,17 +81339,30 @@
     "depth_sensing": true,
     "imu": true,
     "lidar": true,
-    "ai_model": "Kepler Embodied AI",
+    "ai_model": "NEBULA system: cloud-based multimodal LLM + onboard industry-specific model",
     "natural_language_commands": true,
     "battery_life_typical": 480,
     "use_cases": [
-      "Industrial materials handling",
-      "Inspection / patrol",
-      "Logistics"
+      "Industrial \"blue-collar\" humanoid: logistics sorting, material handling, automotive (deployed at SAIC-GM)",
+      "First 8-hour nonstop shift livestream (WAIC 2025); three configs from CN¥248,000"
     ],
     "website": "https://www.gotokepler.com",
     "os": "Kepler OS",
-    "npu_tops": 100
+    "npu_tops": 100,
+    "ros": true,
+    "manufacturer_url": "https://www.kepler-robotics.com",
+    "colors": [
+      "Yellow"
+    ],
+    "speed_ms": 1.5,
+    "hand_type": "Dexterous hands: 11 DoF + 25 high-resolution force-sensing touchpoints per finger (15 kg per hand)",
+    "battery_wh": 2330,
+    "charge_time": 60,
+    "learning_methods": [
+      "Imitation learning",
+      "Reinforcement learning",
+      "Autonomous task learning"
+    ]
   },
   {
     "id": "neura-4ne1-2024",
