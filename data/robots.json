@@ -111857,7 +111857,15 @@
       "https://www.robotics247.com/images/legacy_images/German_Bionic_5th_Generation_Cray_X_2.jpg",
       "https://www.robotics247.com/images/legacy_images/German_Bionic_Cray_X_lift.jpeg",
       "https://www.designboom.com/wp-content/uploads/2020/07/german-bionics-cray-x-exoskeleton-carbon-designboom-fb.jpg"
-    ]
+    ],
+    "payload": "Up to 30 kg lift compensation",
+    "hot_swap": true,
+    "actuator_type": "Active electric back & hip support",
+    "use_cases": [
+      "Logistics & warehouse lifting support"
+    ],
+    "made_in": "Germany",
+    "website": "https://germanbionic.com"
   },
   {
     "cat": "Exoskeletons",
@@ -111887,7 +111895,14 @@
     "gallery": [
       "https://cdn1.vogel.de/sxfpLhl04Z1yU-9trdMkuw9L9U8=/fit-in/800x0/p7i.vogel.de/wcms/55/40/5540028b113f95484bd5d701ad22ba23/0122381767v2.jpeg",
       "https://www.domusweb.it/content/dam/domusweb/en/speciali/modern-work/gallery/2023/the-apogee-is-a-lightweight-exoskeleton-for-heavy-workers/gallery/exoskeleton-domus-1.jpg.foto.rmedium.png"
-    ]
+    ],
+    "payload": "Up to 30 kg lift compensation",
+    "actuator_type": "Active electric back support, walking assistance",
+    "use_cases": [
+      "Logistics, manufacturing & healthcare lifting support"
+    ],
+    "made_in": "Germany",
+    "website": "https://germanbionic.com"
   },
   {
     "cat": "Exoskeletons",
@@ -111919,7 +111934,16 @@
       "https://cdn.prod.website-files.com/622f44804ae66481b4e5532d/63ea07e7737b7e1a8ed97ce4_img-mohero.webp",
       "https://cdn.prod.website-files.com/622f44804ae66481b4e5532d/623436f786057ffe35888735_walk.webp",
       "https://cdn.prod.website-files.com/622f44804ae66481b4e5532d/623436f78e5915915d3a3999_product-hero.jpeg"
-    ]
+    ],
+    "weight_kg": 75,
+    "dof": 12,
+    "leg_dof": 6,
+    "actuator_type": "12 powered joints (hips, knees, ankles), self-balancing dynamic walking",
+    "use_cases": [
+      "Hands-free gait rehabilitation (SCI C4-L5, MS, stroke)"
+    ],
+    "made_in": "France",
+    "website": "https://en.wandercraft.eu"
   },
   {
     "cat": "Exoskeletons",
@@ -111931,7 +111955,7 @@
     "sub": "Self-balancing Personal Exoskeleton",
     "year": 2025,
     "origin": "France",
-    "status": "Development",
+    "status": "Active",
     "desc": "Eve is Wandercraft's first self-balancing personal exoskeleton for home and outdoor use - fully hands-free and aimed at becoming a direct substitute for the wheelchair. Clinical trials began in early 2025.",
     "tags": [
       "exoskeleton",
@@ -111948,7 +111972,13 @@
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/09/Z5QE1zkYY1ttx9IHIyNh/image.jpg",
       "https://cdn.prod.website-files.com/622f44804ae66481b4e5532d/67ebb6d1a80200eb17bb1d00_K%C3%A9vin_olympics_HD_Landscape-p-2000.jpg"
-    ]
+    ],
+    "actuator_type": "Self-balancing powered lower-body exoskeleton",
+    "use_cases": [
+      "Personal mobility for wheelchair users (in clinical trials)"
+    ],
+    "made_in": "France",
+    "website": "https://en.wandercraft.eu"
   },
   {
     "cat": "Exoskeletons",
@@ -112043,7 +112073,13 @@
       "https://www.exoskelette.com/wp-content/uploads/2023/07/Branchen_ExoskelettIndustrie_950x500.jpg",
       "https://www.produktive.at/media/PROJEKTE/OBO_Paexo/PRODUKTIVE_Ottobock_Paexo_Shoulder_Exoskelett_FingerHaus_Copyright_Ottobock_KatharinaJaeger_S.jpg",
       "https://www.researchgate.net/publication/382030749/figure/fig1/AS:11431281429613034@1746712843243/The-Ottobock-Paexo-Shoulder-worn-a-front-a-and-back-b-view.tif"
-    ]
+    ],
+    "actuator_type": "Passive (mechanical spring support, no battery)",
+    "use_cases": [
+      "Overhead assembly work shoulder support"
+    ],
+    "made_in": "Germany",
+    "website": "https://paexo.com"
   },
   {
     "cat": "Exoskeletons",
@@ -112544,7 +112580,16 @@
       "https://cdn.sanity.io/images/7p2whiua/production/75f974d4aee422309e4dc28e6f356ced33e445ac-500x500.jpg",
       "https://spectrum.ieee.org/media-library/image.jpg?id=25577853&width=1200&height=1200&coordinates=90%2C0%2C91%2C0",
       "https://www.theconstruct.ai/wp-content/uploads/2021/02/fetch-simulation-The-Construct-2.png"
-    ]
+    ],
+    "arm_dof": 7,
+    "payload_kg": 6,
+    "ros": true,
+    "cameras": "RGB-D head camera",
+    "lidar": "Base laser scanner",
+    "use_cases": [
+      "Mobile manipulation research"
+    ],
+    "made_in": "USA"
   },
   {
     "cat": "Research",
@@ -112663,7 +112708,16 @@
       "https://aloha-2.github.io/assets/topdown_collab_highres.png",
       "https://aloha-2.github.io/assets/workcell_render.png",
       "https://aloha-2.github.io/assets/aloha-2.png"
-    ]
+    ],
+    "arm_dof": 6,
+    "actuator_type": "2x leader + 2x follower arms (bimanual teleoperation)",
+    "ros": true,
+    "sdk": "Open-source (ALOHA 2 protocol)",
+    "use_cases": [
+      "Bimanual manipulation & imitation learning research"
+    ],
+    "made_in": "USA",
+    "website": "https://www.trossenrobotics.com"
   },
   {
     "cat": "Research",
@@ -112687,7 +112741,18 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "arm_dof": 7,
+    "payload_kg": 3,
+    "cameras": "Stereo vision head + depth camera",
+    "ros": true,
+    "sdk": "Open-source Python SDK, VR teleoperation",
+    "use_cases": [
+      "AI & teleoperation research",
+      "Embodied AI development"
+    ],
+    "made_in": "France",
+    "website": "https://www.pollen-robotics.com"
   },
   {
     "cat": "Research",
@@ -112719,7 +112784,18 @@
       "https://robotics.segway.com/wp-content/uploads/2024/04/2-2048x1229.png",
       "https://robotics.segway.com/wp-content/uploads/2024/04/1.png",
       "https://media.githubusercontent.com/media/NVIDIA-ISAAC-ROS/.github/release-3.1/resources/isaac_ros_docs/robots/nova_carter/carter_header.jpg/"
-    ]
+    ],
+    "ai_chip": "NVIDIA Jetson AGX Orin",
+    "npu_tops": 275,
+    "lidar": "3D + 2D LiDAR",
+    "cameras": "4x stereo + 4x fisheye cameras",
+    "os": "ROS 2 / NVIDIA Isaac",
+    "ros": true,
+    "use_cases": [
+      "AMR reference & research platform"
+    ],
+    "made_in": "USA",
+    "website": "https://developer.nvidia.com/isaac/nova-carter"
   },
   {
     "cat": "Entertainment",
@@ -114274,7 +114350,16 @@
       "https://focus.ua/static/storage/thumbs/920x465/d/7e/22iq5c-34552def1181abc59203b537fa6507ed.jpg?v=2323_1",
       "https://esut.de/wp-content/uploads/2024/03/Mission-SP-mit-Fieldranger-RCWS_Rheinmetall.jpg"
     ],
-    "video": "https://youtu.be/tNYsne9qnHY"
+    "video": "https://youtu.be/tNYsne9qnHY",
+    "payload_kg": 600,
+    "actuator_type": "Electric 8x8 drivetrain (silent watch capable)",
+    "use_cases": [
+      "Cargo transport",
+      "Casualty evacuation",
+      "Surveillance"
+    ],
+    "made_in": "Germany/Canada",
+    "website": "https://www.rheinmetall.com"
   },
   {
     "cat": "Military",
@@ -114305,7 +114390,15 @@
       "https://www.shephardmedia.com/media/cache/images/images/article/titan_side_sm/499f0163980145422461bef63c8ed38b.jpg",
       "https://www.army-technology.com/wp-content/uploads/sites/3/2017/08/Image-1-Titan-Unmanned-Ground-Vehicle-UGV.jpg",
       "https://i.redd.it/dxbvkanlnq851.jpg"
-    ]
+    ],
+    "actuator_type": "Modular tracked UGV (THeMIS-based)",
+    "use_cases": [
+      "Cargo transport",
+      "Route clearance",
+      "ISR"
+    ],
+    "made_in": "USA/Estonia",
+    "website": "https://www.qinetiq.com"
   },
   {
     "cat": "Military",
@@ -114369,7 +114462,19 @@
       "https://static0.mltimages.com/wordpress/wp-content/uploads/2019-10/Ripsaw%20M5_Photo%201%201800.jpg?&fit=crop&w=1200&h=675",
       "https://defense.flir.com/globalassets/defense/discover/government--defense/20-2059-uis-ausa-article-1200x625.jpg",
       "https://www.defenseadvancement.com/wp-content/uploads/2025/03/Ripsaw-M5-combat-UGV.jpg"
-    ]
+    ],
+    "weight_kg": 10500,
+    "payload_kg": 3628,
+    "speed_ms": 18,
+    "depth_mm": 5944,
+    "width_mm": 2667,
+    "height_mm": 1511,
+    "actuator_type": "Hybrid diesel-electric drivetrain, tracked",
+    "cameras": "FLIR 360° EO/IR sensor suite",
+    "use_cases": [
+      "Robotic combat vehicle (US Army RCV-M candidate)"
+    ],
+    "made_in": "USA"
   },
   {
     "cat": "Military",
@@ -114433,7 +114538,15 @@
       "https://www.gdls.com/wp-content/uploads/2025/12/TRX-Razorback.webp",
       "https://www.gdls.com/wp-content/uploads/2025/12/TRX-Breacher-1536x1120.webp"
     ],
-    "video": "https://youtu.be/rYou6eRbX-k"
+    "video": "https://youtu.be/rYou6eRbX-k",
+    "payload": "Payload capacity ~equal to vehicle weight (10-ton class)",
+    "actuator_type": "Hybrid-electric tracked drivetrain",
+    "use_cases": [
+      "Robotic combat vehicle",
+      "Counter-drone & fires platforms"
+    ],
+    "made_in": "USA",
+    "website": "https://www.gdls.com"
   },
   {
     "cat": "Military",
@@ -114496,7 +114609,15 @@
       "https://www.materialhandling247.com/images/article/MH247_POY_Exotec_main_800p.jpg",
       "https://mms.businesswire.com/media/20250206521256/en/2373480/5/Lyreco-191_1.jpg?download=1",
       "https://www.exotec.com/app/uploads/2023/05/ergonomics-3-690x460.jpg"
-    ]
+    ],
+    "payload_kg": 30,
+    "battery_type": "Lithium battery, opportunity charging (5 min/hour)",
+    "lidar": "Laser scanner navigation",
+    "use_cases": [
+      "Goods-to-person warehouse fulfillment (climbs racks to 12 m)"
+    ],
+    "made_in": "France",
+    "website": "https://www.exotec.com"
   },
   {
     "cat": "AGV/AMR",
@@ -114647,7 +114768,15 @@
       "https://mobilerobotguide.com/wp-content/uploads/2024/03/JPG-Version-2-3_2024_MiR1200-PalletJack-5.jpg",
       "https://a.storyblok.com/f/230581/5840x3886/a9d552cadf/mir1200-palletjack-photos.jpg/m/fit-in/984x554/filters:format(webp)",
       "https://a.storyblok.com/f/230581/574x332/a7ab1c2e1b/mir1200_detectpallets_fallbackimage.png/m/"
-    ]
+    ],
+    "ai_chip": "NVIDIA Jetson AGX Orin",
+    "cameras": "AI-based 3D pallet detection cameras",
+    "lidar": true,
+    "use_cases": [
+      "Autonomous pallet transport"
+    ],
+    "made_in": "Denmark",
+    "website": "https://www.mobile-industrial-robots.com"
   },
   {
     "cat": "AGV/AMR",
@@ -115043,7 +115172,22 @@
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-de-livraison-industriel-polyvalent-t300-pudu-robotics-1.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR22QadkjL4pm67682q4i9oSf_AoobV8FXHOw&s",
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-de-livraison-industriel-polyvalent-t300-pudu-robotics-5.webp"
-    ]
+    ],
+    "depth_mm": 780,
+    "width_mm": 500,
+    "height_mm": 1340,
+    "weight_kg": 60,
+    "speed_ms": 1.2,
+    "battery_ah": 30,
+    "battery_life": 720,
+    "charge_time": 120,
+    "lidar": "LiDAR SLAM + VSLAM+ navigation",
+    "use_cases": [
+      "Industrial material delivery",
+      "Factory logistics"
+    ],
+    "made_in": "China",
+    "website": "https://www.pudurobotics.com"
   },
   {
     "cat": "Service",
@@ -115106,7 +115250,14 @@
       "https://robotplace.io/wp-content/uploads/2021/04/parameter_2.png",
       "https://i.ytimg.com/vi/NR0ZO0CE7WQ/maxresdefault.jpg",
       "https://www.jackys.com/wp-content/uploads/2022/01/0f49a4ee-c963-4ef5-8356-3d7f605f393e.jpg"
-    ]
+    ],
+    "lidar": true,
+    "display_face": "10.1-inch touchscreen",
+    "use_cases": [
+      "Dish return & delivery (restaurants, hotels)"
+    ],
+    "made_in": "China",
+    "website": "https://www.pudurobotics.com"
   },
   {
     "cat": "Service",
@@ -115136,7 +115287,13 @@
       "https://images.squarespace-cdn.com/content/v1/66f3dc038a96c04b2884bd13/c9439e8d-febd-432e-8d4e-87884c43d44b/C30.jpg",
       "https://herolifecare.com/cdn/shop/files/Screenshot2024-05-01at12.05.38PM.png?v=1748366126&width=1946",
       "https://store.todsystem.com/wp-content/uploads/2024/09/Keenon_Kleenbot_C30_2.webp"
-    ]
+    ],
+    "lidar": true,
+    "use_cases": [
+      "Commercial floor cleaning (vacuum, sweep, scrub, dust mop)"
+    ],
+    "made_in": "China",
+    "website": "https://www.keenon.com"
   },
   {
     "cat": "Service",
@@ -115167,7 +115324,15 @@
       "https://www.therobotreport.com/wp-content/uploads/2018/11/Screen-Shot-2018-11-19-at-9.11.46-AM.png",
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-aspirateur-whiz-softbank-robotics-2.jpg",
       "https://www.therobotreport.com/wp-content/uploads/2022/05/featured-web-whiz.jpg"
-    ]
+    ],
+    "weight_kg": 32,
+    "battery_life": 180,
+    "os": "BrainOS autonomous navigation",
+    "lidar": true,
+    "use_cases": [
+      "Commercial vacuum cleaning (up to 1,500 m² per charge)"
+    ],
+    "made_in": "Japan"
   },
   {
     "cat": "Service",
@@ -115195,7 +115360,14 @@
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781257614/myrobot/ajw8ddd5wxltvtqmznnd.jpg",
     "gallery": [
       "https://www.therobotreport.com/wp-content/uploads/2019/03/avidbots-neo.jpg"
-    ]
+    ],
+    "lidar": "3D LiDAR + depth cameras",
+    "battery_life": 360,
+    "use_cases": [
+      "Autonomous commercial floor scrubbing"
+    ],
+    "made_in": "Canada",
+    "website": "https://avidbots.com"
   },
   {
     "cat": "Service",
@@ -115227,7 +115399,14 @@
       "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/images/t7-amr-3-card.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg",
       "https://www.tennantco.com/content/dam/tennant/tennantco/products/machines/scrubber%20riders/t7amr/images/t7-amr-2-card.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg"
     ],
-    "video": "https://www.tennantco.com/en_us/1/machines/scrubbers/product.t7amr.robotic-floor-scrubber.2000056.html#galleryTab=gallery-video-tab&videoIndex=1?jwsource=cl"
+    "video": "https://www.tennantco.com/en_us/1/machines/scrubbers/product.t7amr.robotic-floor-scrubber.2000056.html#galleryTab=gallery-video-tab&videoIndex=1?jwsource=cl",
+    "os": "BrainOS autonomous navigation",
+    "lidar": "LiDAR + 2D/3D cameras",
+    "use_cases": [
+      "Autonomous industrial floor scrubbing"
+    ],
+    "made_in": "USA",
+    "website": "https://www.tennantco.com"
   },
   {
     "cat": "Service",
@@ -115297,7 +115476,14 @@
       "https://ifdalivestorage.blob.core.windows.net/user-uploads/8309/632771/fc12e445-346a-4e95-a32e-f6fc342bb5e3/lg_cloi_servebot_image_1.jpg",
       "https://p.turbosquid.com/ts-thumb/DM/lGPZUi/21/2/png/1729006403/1920x1080/fit_q87/1bb0fc3c6a8f23c20daa6f8c62997550c57e5494/2.jpg",
       "https://new.robotlab.com/hubfs/new%20ServeBot%203.png"
-    ]
+    ],
+    "lidar": true,
+    "display_face": "Front display",
+    "use_cases": [
+      "Restaurant & hotel tray delivery"
+    ],
+    "made_in": "South Korea",
+    "website": "https://www.lg.com"
   },
   {
     "cat": "Delivery",
@@ -115789,7 +115975,20 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "cpu": "CyberPi (ESP32) controller",
+    "wifi": true,
+    "bluetooth": true,
+    "programming": [
+      "mBlock (Scratch-based)",
+      "Python"
+    ],
+    "cameras": "Ultrasonic 2.0 + quad RGB line-follow sensors",
+    "use_cases": [
+      "STEM education & coding"
+    ],
+    "made_in": "China",
+    "website": "https://www.makeblock.com"
   },
   {
     "cat": "Educational",
@@ -116760,7 +116959,7 @@
     "sub": "Full-body Industrial Exoskeleton",
     "year": 2020,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "perf": false,
     "desc": "The Sarcos Guardian XO was a full-body powered industrial exoskeleton that let an operator lift up to ~90.7 kg (200 lb) repeatedly as if it were ~4.5 kg - roughly 20x strength amplification - drawing under ~400 W with hot-swappable Li-ion batteries and ~30 s donning. Sarcos exited hardware in 2023 (now Palladyne AI).",
@@ -116785,7 +116984,17 @@
       "https://www.materialhandling247.com/images/article/sarcos_civ-wht-Main_600px.jpg",
       "https://cdn.sanity.io/images/7p2whiua/production/7ce6c4471de0c84a32b914086efdfdffe199d346-2048x1536.jpg",
       "https://www.materialhandling247.com/images/2020_images/sarcos_civ-wht-INlnie2.jpg"
-    ]
+    ],
+    "dof": 24,
+    "payload_kg": 90,
+    "hot_swap": true,
+    "battery_life": 120,
+    "actuator_type": "Full-body powered exoskeleton, electric actuation",
+    "use_cases": [
+      "Industrial heavy lifting (up to 90 kg, fatigue-free)"
+    ],
+    "made_in": "USA",
+    "website": "https://www.sarcos.com"
   },
   {
     "perf": false,
@@ -116894,7 +117103,17 @@
       "https://substackcdn.com/image/fetch/$s_!csQN!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F08b40192-2844-4c9f-929a-395276f72278_1280x720.jpeg",
       "https://www.therobotreport.com/wp-content/uploads/2025/07/reachy-mini.jpg",
       "https://aivancity.ai/en/blog/wp-content/uploads/2025/07/Article4-1.png"
-    ]
+    ],
+    "height_mm": 280,
+    "weight_kg": 1.5,
+    "cameras": "Wide-angle camera + 4-microphone array",
+    "cpu": "Raspberry Pi 5 (wireless version)",
+    "sdk": "Open-source Python SDK, Hugging Face Hub integration",
+    "wifi": true,
+    "use_cases": [
+      "Desktop AI & robotics development"
+    ],
+    "website": "https://huggingface.co"
   },
   {
     "id": "limx-dynamics-oli",
