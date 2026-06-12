@@ -412,10 +412,10 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .finder-band h1{font-family:'Space Mono','Courier New',monospace;font-size:24px;font-weight:800;color:var(--txt);margin-bottom:4px;text-align:center}
 .finder-band p{font-size:12px;color:var(--mut);text-align:center;margin-bottom:18px}
 .cat-wrap{margin:0 -20px;padding:0 20px;border-bottom:1px solid var(--bdr)}
-.ftabs{display:flex;flex-wrap:wrap;gap:2px;justify-content:center}
-.ftab{padding:9px 13px;font-size:12px;font-weight:600;color:var(--mut);cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;display:flex;align-items:center;gap:6px;white-space:nowrap;background:transparent}
-.ftab:hover{color:var(--txt);background:var(--bg2)}
-.ftab.active{color:var(--acc);border-bottom-color:var(--acc)}
+.ftabs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;max-width:1100px;margin:0 auto;padding-bottom:20px}
+.ftab{padding:9px 12px;font-size:12px;font-weight:600;color:var(--mut);cursor:pointer;border:1px solid var(--bdr);border-radius:8px;background:#fff;transition:all .15s;display:flex;align-items:center;justify-content:space-between;gap:6px;white-space:nowrap}
+.ftab:hover{color:var(--txt);border-color:var(--mut)}
+.ftab.active{color:var(--acc);border-color:var(--acc);background:var(--acc-l)}
 .fcnt{font-size:10px;color:var(--mut);font-weight:600;background:var(--bg2);padding:1px 6px;border-radius:9px}
 .ftab.active .fcnt{background:var(--acc-l);color:var(--acc)}
 .finder-body{display:block;max-width:1100px;margin:0 auto;padding:24px 20px 100px}
@@ -3271,9 +3271,9 @@ const FF = {
   year: {label:'Year', type:'range', field:'year', min:2000, max:2026, unit:''},
   price: {label:'Price', type:'range', field:'price', min:0, max:200000, unit:'$', step:100, fmt:'price'},
   status: {label:'Availability', type:'cbgroup', options:[
-    {val:'active', label:'Available', match:r=>(r.status||'').toLowerCase().match(/(active|available|released|shipping)/i)},
-    {val:'coming', label:'Coming Soon', match:r=>(r.status||'').toLowerCase().match(/(coming|pilot|pre-order|announced)/i)},
-    {val:'discontinued', label:'Discontinued', match:r=>(r.status||'').toLowerCase().match(/discontinued/i)},
+    {val:'active', label:'Available', match:r=>/(active|available|released|shipping|production)/i.test(r.status||'')},
+    {val:'coming', label:'Coming Soon / In Development', match:r=>/(coming|pilot|pre-order|announced|development|prototype|concept|testing)/i.test(r.status||'')},
+    {val:'discontinued', label:'Retired / Discontinued', match:r=>/(discontinued|retired|superseded|decommissioned|lost)/i.test(r.status||'')},
   ]},
   // Body
   weight: {label:'Weight', type:'range', field:'weight_kg', min:0, max:500, unit:'kg', step:0.1},
@@ -3285,14 +3285,14 @@ const FF = {
   dof: {label:'DOF (Degrees of Freedom)', type:'range', field:'dof', min:0, max:40, unit:''},
   reach: {label:'Reach', type:'range', field:'reach_mm', min:0, max:5000, unit:'mm', step:10},
   // Battery
-  battery_life: {label:'Battery Life', type:'range', field:'battery_life_minutes', min:0, max:600, unit:'min', step:5},
+  battery_life: {label:'Battery Life', type:'range', field:'battery_life', min:0, max:600, unit:'min', step:5},
   // Sensors
   sensors: {label:'Sensors', type:'cbgroup', options:[
     {val:'lidar', label:'LiDAR', match:r=>r.lidar},
     {val:'depth_sensing', label:'Depth', match:r=>r.depth_sensing},
     {val:'imu', label:'IMU', match:r=>r.imu},
     {val:'touch_sensing', label:'Touch', match:r=>r.touch_sensing},
-    {val:'cameras', label:'Cameras', match:r=>r.cameras && r.cameras > 0},
+    {val:'cameras', label:'Cameras', match:r=>!!r.cameras && (typeof r.cameras !== 'number' || r.cameras > 0)},
   ]},
   // Connectivity / Platform
   connectivity: {label:'Connectivity', type:'cbgroup', options:[
@@ -3314,9 +3314,10 @@ const FF = {
   sub_type: {label:'Type', type:'cbgroup_auto', field:'sub'},
   // Medical-specific
   fda_certified: {label:'Certifications', type:'cbgroup', options:[
-    {val:'fda', label:'FDA cleared', match:r=>r.fda_cleared || r.fda_approved || /fda/i.test(r.certifications||'')},
+    {val:'fda', label:'FDA cleared', match:r=>r.fda_cleared || r.fda_approved || /fda/i.test(r.certifications||'') || /FDA[\s-]?(cleared|approved|authoriz)/i.test(r.desc||'')},
     {val:'ce', label:'CE marked', match:r=>r.ce || /ce[\s-]?mark/i.test(r.certifications||'')},
-    {val:'iso', label:'ISO certified', match:r=>r.iso || /iso/i.test(r.certifications||'')},
+    {val:'fcc', label:'FCC', match:r=>r.fcc},
+    {val:'rohs', label:'RoHS', match:r=>r.rohs},
   ]},
   // Origin (country)
   origin: {label:'Origin', type:'select', field:'origin', auto:true},
@@ -3348,13 +3349,12 @@ const CATEGORY_SCHEMA = {
   'Drones': [
     {title:'General', fields:['brand','sub_type','year']},
     {title:'Pricing & Availability', fields:['price','status','origin']},
-    {title:'Performance', fields:['flight_time','speed','weight']},
+    {title:'Performance', fields:['battery_life','speed','weight']},
     {title:'Camera & Sensors', fields:['sensors','connectivity']},
   ],
   'Educational': [
     {title:'General', fields:['brand','sub_type','year']},
     {title:'Pricing & Availability', fields:['price','status']},
-    {title:'Audience', fields:['age_range']},
     {title:'Features', fields:['connectivity','sensors']},
   ],
   'Medical': [
@@ -3402,7 +3402,7 @@ const SELECTED_CB = {};  // {sectionKey: Set of selected option vals}
 function buildFinderTabs(){
   document.getElementById('finder-tabs').innerHTML=FINDER_CATS.map(function(c){
     var cnt=c.id==='all'?ROBOTS.length:ROBOTS.filter(function(r){return r.cat===c.id;}).length;
-    return '<div class="ftab'+(c.id===finderCat?' active':'')+'" onclick="setFinderCat(\''+c.id+'\',this)">'+c.icon+' '+c.label+'<span class="fcnt">'+cnt+'</span></div>';
+    return '<div class="ftab'+(c.id===finderCat?' active':'')+'" onclick="setFinderCat(\''+c.id+'\',this)">'+c.label+'<span class="fcnt">'+cnt+'</span></div>';
   }).join('');
   // Update meta line
   const meta = document.getElementById('finder-band-meta');
@@ -3452,6 +3452,8 @@ function computeFieldRange(field, fallbackMin, fallbackMax){
   }
   if (values.length === 0) return [fallbackMin, fallbackMax];
   values.sort((a, b) => a - b);
+  // Year: always show the full historical range (1939 → future), never clipped
+  if (field === 'year') return [Math.floor(values[0]), Math.ceil(values[values.length - 1])];
   // Use 5th and 95th percentile to stay tight to real data
   const p5 = values[Math.max(0, Math.floor(values.length * 0.05))];
   const p95 = values[Math.min(values.length - 1, Math.ceil(values.length * 0.95))];
@@ -3825,10 +3827,12 @@ function getFinderFiltered(){
           const st = FILTER_STATE['rng_' + def.field];
           if (!st) continue;
           const v = parseFloat(r[def.field]);
-          // Skip range filter if user hasn't moved sliders from data extents
-          // Apply: if we have a value, it must be within range
           if (!isNaN(v) && v > 0){
-            if (v < st.lo || v > st.hi) return false;
+            // Handles parked at the slider's extents are open-ended:
+            // hi at max means "and above", lo at min means "and below"
+            const [sMin, sMax] = getSliderRange(def);
+            if (st.lo > sMin && v < st.lo) return false;
+            if (st.hi < sMax && v > st.hi) return false;
           }
         } else if (def.type === 'multi'){
           // brand is the only multi for now
