@@ -3647,6 +3647,39 @@ async function bdDeleteAndDeploy(){
       catch(_){ /* give up on backup but proceed */ }
     }
 
+    // Step 1.5: SYNC FRESH DB from GitHub before deleting — prevents clobbering
+    // imports/edits made after this page was opened (lost-update protection)
+    btn.textContent = 'Syncing latest DB…';
+    const bdToken = GH_TOKEN || localStorage.getItem('mrsh_gh_token') || localStorage.getItem('mrsh_github_token') || '';
+    const bdRepo = GH_REPO || localStorage.getItem('mrsh_gh_repo') || localStorage.getItem('mrsh_github_repo') || 'myrobot42/myrobot-shop';
+    if (bdToken) {
+      try {
+        const metaResp = await fetch('https://api.github.com/repos/' + bdRepo + '/contents/data/robots.json', {
+          headers: {'Authorization': 'token ' + bdToken, 'Accept': 'application/vnd.github.v3+json'}
+        });
+        if (metaResp.ok) {
+          const meta = await metaResp.json();
+          const blobResp = await fetch('https://api.github.com/repos/' + bdRepo + '/git/blobs/' + meta.sha, {
+            headers: {'Authorization': 'token ' + bdToken, 'Accept': 'application/vnd.github.v3+json'}
+          });
+          if (blobResp.ok) {
+            const blob = await blobResp.json();
+            const bin = atob((blob.content || '').replace(/\n/g, ''));
+            const bytes = new Uint8Array(bin.length);
+            for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+            const freshData = JSON.parse(new TextDecoder('utf-8').decode(bytes));
+            const freshList = Array.isArray(freshData) ? freshData : freshData.robots;
+            if (Array.isArray(freshList) && freshList.length > 0) {
+              ROBOTS = freshList;
+              addLog && addLog('info', 'Bulk delete — synced fresh DB from GitHub: ' + ROBOTS.length + ' robots');
+            }
+          }
+        }
+      } catch(e) {
+        console.warn('Fresh-sync before delete failed; falling back to in-memory DB', e);
+      }
+    }
+
     // Step 2: filter ROBOTS in memory
     btn.textContent = 'Deleting locally…';
     const before = ROBOTS.length;
