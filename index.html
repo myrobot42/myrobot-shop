@@ -3095,7 +3095,7 @@ function renderRobotSelector(query){
   }
   const grid = document.getElementById('rs-grid');
   const countEl = document.getElementById('rs-count');
-  if (countEl) countEl.textContent = q ? `${list.length} matching` : `Top 50 (search to see all 1,129)`;
+  if (countEl) countEl.textContent = q ? `${list.length} matching` : `Top 50 (search to see all ${ROBOTS.length.toLocaleString()})`;
   if (!grid) return;
   if (list.length === 0){
     grid.innerHTML = `<div style="grid-column:1/-1;padding:30px 20px;text-align:center;color:var(--mut);font-size:13px">No robots match "<em>${escapeHtml(q)}</em>"</div>`;
@@ -3107,7 +3107,10 @@ function renderRobotSelector(query){
     const name = r.name||'(unnamed)';
     const score = r.score||0;
     const isSelected = compareSlots.some(s => s && s.id === r.id);
-    return `<div class="rs-item${isSelected?' selected':''}" onclick="selectForSlot('${id}')"><div class="rs-brand">${escapeHtml(brand)}</div><div class="rs-name">${escapeHtml(name)}</div><div class="rs-score">${score}</div></div>`;
+    const thumb = r.img
+      ? `<img src="${r.img}" alt="" loading="lazy" style="max-height:48px;max-width:88%;object-fit:contain" onerror="this.outerHTML='<span style=\\'font-size:26px\\'>'+robotFig({fig:'🤖'})+'</span>'">`
+      : `<span style="font-size:26px">${robotFig(r)}</span>`;
+    return `<div class="rs-item${isSelected?' selected':''}" onclick="selectForSlot('${id}')"><div style="height:52px;display:flex;align-items:center;justify-content:center;margin-bottom:5px">${thumb}</div><div class="rs-brand">${escapeHtml(brand)}</div><div class="rs-name">${escapeHtml(name)}</div><div class="rs-score">${score}</div></div>`;
   }).join('');
 }
 
