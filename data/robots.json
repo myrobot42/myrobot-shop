@@ -42309,7 +42309,11 @@
     "protection_rating": "IP54",
     "operating_temp": "-10°C to +50°C",
     "force_sensor": "Built-in 6-axis force/torque sensor",
-    "programming": "RealMan Studio, Python SDK, C++ SDK",
+    "programming": [
+      "RealMan Studio",
+      "Python SDK",
+      "C++ SDK"
+    ],
     "warranty_months": 12,
     "made_in": "China",
     "os": "RealMan",
@@ -42365,7 +42369,11 @@
     "operating_temp": "-10°C to +50°C",
     "power_consumption": "300W",
     "control_system": "Real-time control system",
-    "programming": "Python, C++, ROS",
+    "programming": [
+      "Python",
+      "C++",
+      "ROS"
+    ],
     "safety_features": "Collision detection, emergency stop",
     "released": "2023",
     "operating_temp_max": 45,
@@ -44992,7 +45000,9 @@
     "power_consumption": "≤200W",
     "joint_range": "±360°",
     "communication": "Ethernet, Modbus, RS485",
-    "programming": "Graphical programming interface",
+    "programming": [
+      "Graphical programming interface"
+    ],
     "safety_features": "Collision detection, force limiting",
     "mounting": "Floor, ceiling, wall, angle",
     "warranty_months": 12,
@@ -65201,7 +65211,10 @@
       ""
     ],
     "price_band": "Mid-range",
-    "programming": "Scratch (blocks) + JavaScript",
+    "programming": [
+      "Scratch (blocks)",
+      "JavaScript"
+    ],
     "connectivity": "Bluetooth",
     "age_range": "8+",
     "components": "8x8 LED matrix, IR comms, IMU, light/compass sensors"
@@ -65887,7 +65900,10 @@
       "https://moravia-education.com/cdn/shop/files/Dash_img5.png?v=1767127104&width=1646"
     ],
     "price_band": "Mid-range",
-    "programming": "Blockly + Wonder apps",
+    "programming": [
+      "Blockly",
+      "Wonder apps"
+    ],
     "connectivity": "Bluetooth",
     "age_range": "6+",
     "components": "Pre-built; motors, lights, mics, sensors"
@@ -113928,12 +113944,7 @@
     "id": "cruise-origin",
     "name": "Origin",
     "brand": "Cruise",
-    "sub": {
-      "sub": "Purpose-built Robotaxi",
-      "status": "Discontinued",
-      "config": "Steering-wheel-free shared shuttle",
-      "desc": "The Cruise Origin (GM) was a purpose-built, steering-wheel-free shared robotaxi. Development was wound down after GM ended Cruise's robotaxi program in 2024 - a notable discontinued milestone in the robotaxi category."
-    },
+    "sub": "Purpose-built Robotaxi",
     "year": 2022,
     "origin": "USA",
     "status": "Active",
@@ -113986,13 +113997,7 @@
     "id": "may-mobility-shuttle",
     "name": "Autonomous Shuttle (Sienna)",
     "brand": "May Mobility",
-    "sub": {
-      "sub": "Autonomous Shuttle",
-      "status": "Active",
-      "platform": "Toyota Sienna",
-      "operations": "US microtransit (multiple cities)",
-      "desc": "May Mobility operates autonomous microtransit shuttles (Toyota Sienna platform) for on-demand and fixed-route public transit in several US cities, moving toward driver-out L4 operation in defined service zones."
-    },
+    "sub": "Autonomous Shuttle",
     "year": 2023,
     "origin": "USA",
     "status": "Active",
@@ -114017,13 +114022,7 @@
     "id": "aurora-driver-truck",
     "name": "Aurora Driver (Autonomous Truck)",
     "brand": "Aurora Innovation",
-    "sub": {
-      "sub": "Autonomous Truck",
-      "status": "Active",
-      "platform": "Class 8 freight trucks",
-      "operations": "Driverless freight, Texas highways (Dallas-Houston)",
-      "desc": "The Aurora Driver is a self-driving system for Class 8 freight trucks; Aurora launched commercial driverless freight runs on Texas highways (Dallas-Houston) in 2025, hauling loads with no human in the cab."
-    },
+    "sub": "Autonomous Truck",
     "year": 2025,
     "origin": "USA",
     "status": "Active",
@@ -114048,13 +114047,7 @@
     "id": "kodiak-driver-truck",
     "name": "Kodiak Driver",
     "brand": "Kodiak Robotics",
-    "sub": {
-      "sub": "Autonomous Truck",
-      "status": "Active",
-      "platform": "Long-haul & off-road trucks",
-      "operations": "Driverless commercial (incl. Permian Basin)",
-      "desc": "The Kodiak Driver is a self-driving system for long-haul and off-road trucking; Kodiak delivered driverless commercial trucks for customers (including Permian Basin oilfield routes), focusing on autonomous freight at scale."
-    },
+    "sub": "Autonomous Truck",
     "year": 2024,
     "origin": "USA",
     "status": "Active",
@@ -116615,7 +116608,10 @@
     "year": 2025,
     "origin": "France/USA",
     "status": "Active",
-    "programming": "Python (open-source); Hugging Face Hub integration",
+    "programming": [
+      "Python (open-source)",
+      "Hugging Face Hub integration"
+    ],
     "connectivity": "Wi-Fi",
     "sensors": "Camera, microphones, speaker",
     "desc": "Reachy Mini (Hugging Face, from Pollen Robotics) is a low-cost open-source expressive desktop robot for embodied-AI development - a moving/animated head with camera, mics and speaker, programmable in Python and integrated with the Hugging Face Hub. A May 2026 agentic toolkit lets users build working apps in under an hour with no manual coding. Lite (~99) and wireless (~49) versions.",
