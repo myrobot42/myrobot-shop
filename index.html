@@ -2055,7 +2055,7 @@ function buildSpecTable(r) {
     if (r.power_consumption_w) html += row('Power consumption', r.power_consumption_w, 'W');
     if (r.temp_range) html += row('Temperature range', r.temp_range);
     if (r.cleanroom_class) html += row('Cleanroom class', r.cleanroom_class);
-    if (r.programming && r.programming.length) html += row('Programming methods', r.programming.join(', '));
+    if (r.programming && r.programming.length) html += row('Programming methods', Array.isArray(r.programming) ? r.programming.join(', ') : String(r.programming));
     if (r.controller) html += row('Controller unit', r.controller);
     if (r.teach_pendant) html += row('Teach pendant', r.teach_pendant);
     if (r.simulation_software) html += row('Simulation software', r.simulation_software);
