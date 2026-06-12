@@ -4355,14 +4355,16 @@ function renderImgManager() {
       <input type="file" id="cf-${r.id}" accept="image/*" style="display:none" onchange="handleCloudinaryUpload('${r.id}',this)">
       <div class="img-field-label">Gallery Images (up to 5) — shown when user clicks View</div>
       <div class="img-gallery-grid">${gallerySlots}</div>
-      <div class="img-field-label" style="margin-top:12px">🎬 Video URL — official manufacturer video (YouTube — not reaction channels)</div>
+      <div class="img-field-label" style="margin-top:12px">🎬 Video URL — official manufacturer video (YouTube ONLY — Amazon/TikTok/site links will NOT play)</div>
       <div class="img-main-row">
-        <input class="inp" type="text" placeholder="https://www.youtube.com/watch?v=..." value="${r.video||''}" id="video-${r.id}" style="flex:1;font-size:11px">
+        <input class="inp" type="text" placeholder="https://www.youtube.com/watch?v=..." value="${r.video||''}" id="video-${r.id}" style="flex:1;font-size:11px" oninput="vidCheck(this,'vidstat1-${r.id}')">
       </div>
+      <div id="vidstat1-${r.id}" style="font-size:11px;margin-top:3px;min-height:14px"></div>
       <div class="img-field-label" style="margin-top:10px">🎬 Video URL — second video (shown at bottom of page)</div>
       <div class="img-main-row">
-        <input class="inp" type="text" placeholder="https://www.youtube.com/watch?v=..." value="${r.video2||''}" id="video2-${r.id}" style="flex:1;font-size:11px">
+        <input class="inp" type="text" placeholder="https://www.youtube.com/watch?v=..." value="${r.video2||''}" id="video2-${r.id}" style="flex:1;font-size:11px" oninput="vidCheck(this,'vidstat2-${r.id}')">
       </div>
+      <div id="vidstat2-${r.id}" style="font-size:11px;margin-top:3px;min-height:14px"></div>
     </div>`;
   }).join('') + (totalFiltered > IMG_MGR_PAGE_SIZE ? pager : '');
 }
@@ -4371,6 +4373,18 @@ function imgMgrPrev(){ if (IMG_MGR_PAGE > 0){ IMG_MGR_PAGE--; renderImgManager()
 function imgMgrNext(){ IMG_MGR_PAGE++; renderImgManager(); window.scrollTo(0, 0); }
 
 function filterImgManager() { IMG_MGR_PAGE = 0; renderImgManager(); }
+
+// Live YouTube-link validation for video fields (same regex the site player uses)
+function vidCheck(inp, statId){
+  const el = document.getElementById(statId);
+  if (!el) return;
+  const v = (inp.value || '').trim();
+  if (!v){ el.innerHTML=''; return; }
+  const ok = /(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/.test(v);
+  el.innerHTML = ok
+    ? '<span style="color:#4ade80">✓ Valid YouTube link — will play on the site</span>'
+    : '<span style="color:#f87171">✗ Not a YouTube link — this will NOT play. Find the video on YouTube and paste that link instead.</span>';
+}
 
 function updateMainPreview(id, url) {
   const thumb = document.getElementById('main-thumb-'+id);
