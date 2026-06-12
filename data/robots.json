@@ -236,10 +236,10 @@
     "status": "Active",
     "released": "2026",
     "use_cases": [
-      "General-purpose humanoid development"
+      "Hazardous industrial work: construction, manufacturing, logistics, energy, mining, semiconductor"
     ],
     "height_mm": 1700,
-    "weight_kg": 45,
+    "weight_kg": 72,
     "dof": 40,
     "cameras": "Multiple RGB cameras for computer vision and navigation",
     "lidar": true,
@@ -249,14 +249,29 @@
     "bluetooth": true,
     "ros": true,
     "manufacturer_url": "https://noblemachines.com",
-    "payload_kg": 23,
+    "payload_kg": 27,
     "made_in": "USA",
     "price_band": "n/a",
     "gallery": [
       "https://res.cloudinary.com/djrojgec1/image/upload/v1780732931/myrobot/wx2mbggl9mi9mwxytm3i.jpg",
       "https://7jopx6ax2qhwmgqx.public.blob.vercel-storage.com/images/noble-hero.webp",
       "https://7jopx6ax2qhwmgqx.public.blob.vercel-storage.com/images/noble-profile.webp"
-    ]
+    ],
+    "battery_life": 300,
+    "ai_chip": "NVIDIA Jetson Orin (single edge AI computer)",
+    "ai_model": "Whole-body AI control",
+    "learning_methods": [
+      "Language-based task learning",
+      "Demonstration learning"
+    ],
+    "actuator_type": "Rugged whole-body design (~200 W average power consumption)",
+    "terrain": [
+      "Stairs",
+      "Scaffolding",
+      "Steep inclines",
+      "Outdoor worksites"
+    ],
+    "website": "https://www.noblemachines.ai"
   },
   {
     "id": "rivr-formerly-swiss-mile-rivr-quadruped",
