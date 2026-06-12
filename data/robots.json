@@ -47759,16 +47759,17 @@
     "height_mm": 1750,
     "weight_kg": 70,
     "dof": 40,
-    "cameras": "360-degree vision system with multiple cameras",
+    "cameras": "Vision-based navigation (camera-only, no LiDAR)",
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "General-purpose humanoid",
-      "Embodied-AI research"
+      "Warehouse & household tasks via natural-language commands"
     ],
     "manufacturer_url": "https://www.mentee-robotics.com",
     "made_in": "Israel",
-    "os": "Mentee AI"
+    "os": "Mentee AI",
+    "ai_model": "VLM-driven task understanding (Sim2Real learning)",
+    "website": "https://www.menteebot.com"
   },
   {
     "id": "rainbow-robotics-hubo",
@@ -49811,9 +49812,7 @@
     "cameras": "Multiple cameras for facial recognition and vision",
     "imu": true,
     "use_cases": [
-      "Education & research",
-      "Entertainment & events",
-      "Human-facing service"
+      "Compact agile humanoid (dancing, cycling demos; AgiBot/Zhiyuan)"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "depth_sensing": true,
@@ -49825,7 +49824,8 @@
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/5/-/5-2.jpg"
     ],
     "made_in": "China",
-    "os": "WorkGPT / GO-1"
+    "os": "WorkGPT / GO-1",
+    "website": "https://www.zhiyuan-robot.com"
   },
   {
     "id": "agibot-agibot-a2-max",
@@ -50784,9 +50784,7 @@
     "cameras": "RGB camera with computer vision capabilities",
     "imu": true,
     "use_cases": [
-      "Education & research",
-      "Entertainment & events",
-      "Human-facing service"
+      "Compact agile humanoid (dancing, cycling demos; AgiBot/Zhiyuan)"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "gallery": [
@@ -50797,7 +50795,8 @@
     ],
     "made_in": "China",
     "os": "WorkGPT / GO-1",
-    "released": 2025
+    "released": 2025,
+    "website": "https://www.zhiyuan-robot.com"
   },
   {
     "id": "agibot-x1",
@@ -53039,13 +53038,13 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Elder & health care",
-      "Companionship",
-      "Service & interaction"
+      "Care & companionship (eldercare, rehabilitation, reception)"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "made_in": "China",
-    "os": "Fourier"
+    "os": "Fourier",
+    "actuator_type": "Full-body soft-skin design, force-controlled joints",
+    "website": "https://www.fftai.com"
   },
   {
     "id": "fourier-rehab-cyclemotus-a4",
@@ -53291,9 +53290,7 @@
     "wifi": true,
     "bluetooth": true,
     "use_cases": [
-      "Elder & health care",
-      "Companionship",
-      "Service & interaction"
+      "Care & companionship (eldercare, rehabilitation, reception)"
     ],
     "manufacturer_url": "https://www.fftai.com",
     "made_in": "China",
@@ -53305,7 +53302,9 @@
       "https://www.fftai.com/uploads/upload/images/20251201/75c827822a3500e1e3a329961431072f.jpg",
       "https://unibot.ru/upload/iblock/2c6/rc9l1yzkjgf5yu9rfg8vnznnc82b8mrf.png",
       "https://unibot.ru/upload/iblock/8ed/svyki4z2oohn5zpickf28r7vp6g0fcc0.jpg"
-    ]
+    ],
+    "actuator_type": "Full-body soft-skin design, force-controlled joints",
+    "website": "https://www.fftai.com"
   },
   {
     "id": "fourier-gr-2",
@@ -59636,13 +59635,11 @@
     "origin": "China",
     "status": "Active",
     "released": 2025,
-    "height_mm": 1270,
+    "height_mm": 1210,
     "weight_kg": 25,
     "dof": 26,
     "use_cases": [
-      "Education & research",
-      "Affordable development",
-      "Demonstration"
+      "Entry-level developer humanoid (launched 2025 from US$5,900)"
     ],
     "cameras": "Multiple cameras for computer vision",
     "imu": true,
@@ -59661,7 +59658,8 @@
     ],
     "made_in": "China",
     "os": "Unitree",
-    "battery_life_typical": 60
+    "battery_life_typical": 60,
+    "website": "https://www.unitree.com"
   },
   {
     "id": "dji-zenmuse-l2",
@@ -62132,13 +62130,13 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Service & guidance",
-      "Education",
-      "Embodied-AI research"
+      "First humanoid running openEuler OS; jumping & terrain walking"
     ],
     "manufacturer_url": "https://www.lejurobot.com",
     "made_in": "China",
-    "speed_ms": 1.28
+    "speed_ms": 1.28,
+    "actuator_type": "Blade-leg bipedal design, self-developed actuators",
+    "website": "https://www.lejurobot.com"
   },
   {
     "id": "mentee-robotics-menteebot-base-model-",
@@ -82853,16 +82851,17 @@
     "announced": "2018",
     "released": 2018,
     "dof": 16,
-    "actuator_type": "Servo",
+    "actuator_type": "16 smart servo joints",
     "app_companion": "UBTECH",
     "battery_life_typical": 60,
     "use_cases": [
-      "STEM education",
-      "Coding & choreography",
-      "Entertainment"
+      "Programmable home & education entertainment humanoid"
     ],
     "website": "https://www.ubtrobot.com",
-    "os": "UBTECH"
+    "os": "UBTECH",
+    "programming": [
+      "Blockly (Alpha app)"
+    ]
   },
   {
     "id": "xpeng-iron-2025",
@@ -116528,7 +116527,7 @@
     "year": 2024,
     "origin": "China",
     "status": "Active",
-    "height_mm": 1200,
+    "height_mm": 1180,
     "desc": "The Booster Robotics T1 is a compact (~1.2 m, ~30 kg) research/education humanoid with 23-41 DOF and a fall-resilient design. The championship model of the 2025 RoboCup \"AdultSize\" soccer league, used by 50+ top robotics teams and institutes; developer-friendly SDK.",
     "tags": [
       "humanoid",
@@ -116542,7 +116541,7 @@
     "score": 75,
     "rating": 4,
     "weight_kg": 30,
-    "dof": "23-41 (configurable)",
+    "dof": 23,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999207/myrobot/nmbkfguga02qm82n53z5.jpg",
     "gallery": [
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1761111261/robots/tya7qaensresadal26vb.webp",
@@ -116550,7 +116549,12 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6825ad0e01603ff729322703_BoosterT1_tn.jpg",
       "https://www.roboticgizmos.com/wp-content/uploads/2025/04/14/t1-booster.jpg",
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-humanoide-open-source-avancee-developpeurs-chercheurs-t1-booster-robotics-6"
-    ]
+    ],
+    "use_cases": [
+      "RoboCup soccer & research humanoid (impact-resistant, self-righting)"
+    ],
+    "made_in": "China",
+    "website": "https://www.boosterobotics.com"
   },
   {
     "cat": "Humanoid",
@@ -116582,7 +116586,14 @@
       "https://cdn.inspenet.com/Las-capacidades-del-robot-humanoide-CL-1.webp",
       "https://www.inceptivemind.com/wp-content/uploads/2024/01/cl-1-climbing-1024x683.jpg",
       "https://www.therobotreport.com/wp-content/uploads/2023/12/5-LimX-Dynamics-Humanoid-Robot-CL-1-featured.jpg"
-    ]
+    ],
+    "lidar": "Vision + LiDAR real-time terrain perception",
+    "actuator_type": "Hollow direct-drive motors, dynamic whole-body control",
+    "use_cases": [
+      "Research demonstrator: dynamic stair climbing, heavy-load handling (succeeded by LimX Oli; detailed specs never published)"
+    ],
+    "made_in": "China",
+    "website": "https://www.limxdynamics.com"
   },
   {
     "cat": "Humanoid",
@@ -116705,7 +116716,14 @@
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/p/m/pm01_5_1.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68278bb6b2560d3799a14495_EngineAI%20PM01_03.png",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68278bb6caeebd5fc6c2fde3_EngineAI%20PM01_04-p-2000.jpeg"
-    ]
+    ],
+    "ai_chip": "NVIDIA Jetson Orin",
+    "actuator_type": "High-dynamic joints (straight-knee anthropomorphic gait)",
+    "use_cases": [
+      "Developer & education humanoid (front-flip capable)"
+    ],
+    "made_in": "China",
+    "website": "https://www.engineai.com.cn"
   },
   {
     "cat": "Humanoid",
@@ -116743,7 +116761,13 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68278bdb1e39455eb291a07b_EngineAI%20SE%2001_02.png",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1767698705/robots/se01-by-engineai/xeiibrafuha4deazzzbw.webp?cache=604800",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68278bda79fd59084ed7e393_EngineAI%20SE%2001_04.png"
-    ]
+    ],
+    "actuator_type": "Harmonic-drive joints, natural straight-leg gait",
+    "use_cases": [
+      "Full-size general-purpose humanoid"
+    ],
+    "made_in": "China",
+    "website": "https://www.engineai.com.cn"
   },
   {
     "cat": "Humanoid",
@@ -116773,7 +116797,24 @@
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/m/a/magicbot-z1-3.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68d8d3ec261c2c4fd41580af_Z1_Hero.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68d8d3f7261fdf55b0d8447a_Z1_14.webp"
-    ]
+    ],
+    "height_mm": 1369,
+    "width_mm": 422,
+    "depth_mm": 200,
+    "weight_kg": 40,
+    "dof": 24,
+    "torque_nm": 130,
+    "speed_ms": 2.5,
+    "max_step_height_mm": 150,
+    "lidar": "3D LiDAR",
+    "cameras": "Depth cameras + binocular fisheye vision",
+    "hand_type": "Optional MagicHand S01 dexterous hand (11 DoF, tactile)",
+    "frame_material": "High-strength aluminium alloy + engineering plastics",
+    "use_cases": [
+      "Industrial, commercial & research humanoid (expandable to 50 DoF)"
+    ],
+    "made_in": "China",
+    "website": "https://www.magiclab.top"
   },
   {
     "cat": "Humanoid",
@@ -116835,7 +116876,12 @@
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999235/myrobot/bq5aie2ogoaxusjdmf13.jpg",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/09/q63MQ29Lks5DHOmRxcAV/image.jpg"
-    ]
+    ],
+    "use_cases": [
+      "High-performance robotic manipulation platform for embodied-AI research"
+    ],
+    "made_in": "China",
+    "website": "https://galaxea.ai"
   },
   {
     "cat": "Humanoid",
@@ -117531,7 +117577,13 @@
       "https://humanoidroboticstechnology.com/wp-content/uploads/2026/05/t800-humanoid-robot-productionline.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoy-IvXZC5uX0p1gO-TAuT_JVaN6KkMejMpg&s",
       "https://en-engineai-1304599088.cos.ap-guangzhou.myqcloud.com/uploads/upload/images/20251128/27b23751f79c2b3892498f87d925f81c.jpg"
-    ]
+    ],
+    "actuator_type": "Heavy-duty high-torque joint design",
+    "use_cases": [
+      "Industrial heavy-work humanoid (announced)"
+    ],
+    "made_in": "China",
+    "website": "https://www.engineai.com.cn"
   },
   {
     "perf": false,
@@ -117543,8 +117595,8 @@
     "sub": "General-purpose Humanoid",
     "year": 2026,
     "origin": "United Kingdom",
-    "status": "Development",
-    "height_mm": 1790,
+    "status": "Active",
+    "height_mm": 1750,
     "dof": 29,
     "payload_kg": 15,
     "desc": "HMND 01 is London-based startup Humanoid's first bipedal robot - a ~1.79 m general-purpose humanoid with 29 DOF and ~15 kg bimanual payload that achieved stable walking just 48 hours after final assembly (design-to-prototype in five months). Working with Bosch to scale production; 19,000+ pre-orders reported.",
@@ -117565,7 +117617,14 @@
       "https://thehumanoid.ai/wp-content/uploads/2025/12/10-4-2.jpg",
       "https://thehumanoid.ai/wp-content/uploads/2025/12/10-3-2.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/69302ed90c8e77e571daded6_HMND%20Bipedal_04.webp"
-    ]
+    ],
+    "weight_kg": 70,
+    "battery_life": 240,
+    "use_cases": [
+      "Labor automation humanoid (UK; announced target specs)"
+    ],
+    "made_in": "UK",
+    "website": "https://thehumanoid.ai"
   },
   {
     "perf": false,
