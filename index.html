@@ -2977,20 +2977,23 @@ function _renderProfile(id){
   if (r.battery_wh) { batteryVal = r.battery_wh.toLocaleString(); batteryUnit = 'Wh'; }
   else if (r.battery_ah) { batteryVal = r.battery_ah; batteryUnit = 'Ah'; }
   else if (r.battery_capacity) { batteryVal = r.battery_capacity; batteryUnit = ''; }
+  // Units only attach to numeric values (text like "Up to 30 kg support" already carries its own)
+  const isNum = v => typeof v === 'number' || (typeof v === 'string' && /^[\d.,]+$/.test(v.trim()));
+  const weightVal = r.weight_kg || r.weight;
   const specs=[
     {l:'CATEGORY',v:r.cat||'—',u:''},
     {l:'STATUS',v:r.status||'—',u:''},
     {l:'ORIGIN',v:r.origin||r.country||'—',u:''},
-    {l:'PAYLOAD',v:payloadVal||'—',u:payloadVal?'kg':''},
+    {l:'PAYLOAD',v:payloadVal||'—',u:isNum(payloadVal)?'kg':''},
     {l:'BATTERY',v:batteryVal,u:batteryUnit},
-    {l:'SPEED',v:speedVal||'—',u:speedVal?'m/s':''},
+    {l:'SPEED',v:speedVal||'—',u:isNum(speedVal)?'m/s':''},
     {l:'DIMENSIONS',v:dims,u:dimsUnit},
-    {l:'WEIGHT',v:r.weight_kg||r.weight||'—',u:(r.weight_kg||r.weight)?'kg':''},
+    {l:'WEIGHT',v:weightVal||'—',u:isNum(weightVal)?'kg':''},
     {l:'YEAR',v:r.year||'—',u:''},
     {l:'CONNECTIVITY',v:connectivity,u:''},
     {l:'OS',v:r.os||'—',u:''},
     {l:'WARRANTY',v:r.warranty_months||'—',u:r.warranty_months?'mo':''},
-  ];
+  ].filter(s => s.v !== '—' && s.v !== '' && s.v != null);
   document.getElementById('profile-quick-specs').innerHTML=specs.map(s=>`<div class="qs"><div class="qs-label">${s.l}</div><div class="qs-val">${s.v}<span class="qs-unit"> ${s.u}</span></div></div>`).join('');
   // (Performance Scores removed — placeholder values, not real spec data)
   // Specs table
