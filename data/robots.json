@@ -49837,8 +49837,7 @@
     "cameras": "Visual navigation cameras for SLAM positioning",
     "wifi": true,
     "use_cases": [
-      "Floor vacuuming",
-      "Automated home cleaning"
+      "Commercial floor cleaning: sweep, scrub, mop with auto-charge, self-filling water tank & self-cleaning drainage"
     ],
     "imu": true,
     "height_mm": 350,
@@ -49858,7 +49857,9 @@
       "https://www.robotshop.com/cdn/shop/files/pp_4501309.webp?v=1775137277&width=750"
     ],
     "made_in": "China",
-    "autonomous": true
+    "autonomous": true,
+    "manufacturer_url": "https://www.agibot.com",
+    "website": "https://www.agibot.com"
   },
   {
     "id": "agibot-d1-pro",
@@ -49895,9 +49896,7 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Inspection",
-      "Mobile robotics R&D",
-      "Technology demonstration"
+      "Entertainment & education quadruped (~CN¥13,000)"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "made_in": "China",
@@ -49911,7 +49910,8 @@
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Edu-2.png?v=1764049158&width=800",
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Edu-3.png?v=1764049158&width=800",
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Edu-4.png?v=1764049158&width=800"
-    ]
+    ],
+    "website": "https://www.agibot.com"
   },
   {
     "id": "agibot-d1-ultra",
@@ -49951,9 +49951,7 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Security patrol",
-      "Emergency response",
-      "Research & education"
+      "Industrial quadruped: security patrol, emergency response, inspection (35 cm jump, all-terrain RL gait)"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "made_in": "China",
@@ -49970,7 +49968,9 @@
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Pro-2_fd80cbea-0c69-4176-9265-d3c8af870065.png?v=1764049139&width=800",
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Pro-3_6329e6db-7712-4bde-a96d-a74b6186c6cc.png?v=1764049139&width=800",
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Pro-4_40115140-f7c0-478d-b9bc-9d2f4128f664.png?v=1764049140&width=800"
-    ]
+    ],
+    "max_incline_deg": 30,
+    "website": "https://www.agibot.com"
   },
   {
     "id": "agibot-g2",
@@ -50015,9 +50015,7 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Industrial automation",
-      "Wheeled mobile manipulation",
-      "Logistics"
+      "Industrial precision tasks & flexible production"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "ai_model": "NVIDIA GR00T",
@@ -50026,7 +50024,14 @@
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-3.jpg"
     ],
     "made_in": "China",
-    "os": "WorkGPT / GO-1"
+    "os": "WorkGPT / GO-1",
+    "payload_kg": 5,
+    "reach_mm": 650,
+    "speed_ms": 1,
+    "charge_time": "2 hours",
+    "warranty_months": 12,
+    "actuator_type": "Wheeled humanoid, dual arms (sub-millimetre operation precision)",
+    "website": "https://www.agibot.com"
   },
   {
     "id": "agibot-g1",
@@ -50063,8 +50068,8 @@
     "height_mm": 1800,
     "dof": 20,
     "use_cases": [
-      "Robotics research",
-      "Embodied AI development"
+      "Embodied-AI data collection (AGIBOT World dataset)",
+      "Exhibition & industrial service"
     ],
     "cameras": "Multiple cameras for navigation and object recognition",
     "imu": true,
@@ -50083,7 +50088,10 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6825acb0ebe08fc7813821f4_G1_Hero.png"
     ],
     "made_in": "China",
-    "os": "AGIBOT"
+    "os": "AGIBOT",
+    "actuator_type": "Wheeled dual-arm platform",
+    "ai_model": "Genie Operator-1 (GO-1) ViLLA foundation model",
+    "website": "https://www.agibot.com"
   },
   {
     "id": "agibot-x2-ultra",
@@ -50161,15 +50169,16 @@
     "year": 2024,
     "origin": "China",
     "status": "Active",
-    "height_mm": 1310,
-    "weight_kg": 35,
-    "dof": 28,
+    "height_mm": 1300,
+    "weight_kg": 33.8,
+    "dof": 31,
     "wifi": true,
     "bluetooth": true,
     "cameras": "RGB camera with computer vision capabilities",
     "imu": true,
     "use_cases": [
-      "Compact agile humanoid (dancing, cycling demos; AgiBot/Zhiyuan)"
+      "Compact interactive humanoid (rides bicycles, scooters, hoverboards)",
+      "Education & household (~US$13,800-55,000)"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "gallery": [
@@ -50181,9 +50190,21 @@
     "made_in": "China",
     "os": "WorkGPT / GO-1",
     "released": 2025,
-    "website": "https://www.zhiyuan-robot.com",
+    "website": "https://www.agibot.com",
     "depth_sensing": true,
-    "ai_model": "ActionGPT"
+    "ai_model": "Genie Operator-1 (GO-1) foundation model",
+    "speed_ms": 1.5,
+    "ros": true,
+    "lidar": true,
+    "battery_life": 360,
+    "announced": "2026",
+    "arm_dof": 7,
+    "fingers": 5,
+    "bimanual": true,
+    "cpu": "Xyber-Edge cerebellar controller + DCU decision unit",
+    "learning_methods": [
+      "Reinforcement learning (NVIDIA Isaac Gym sim-to-real)"
+    ]
   },
   {
     "id": "agibot-x1",
@@ -50218,9 +50239,7 @@
     "status": "Active",
     "ros": true,
     "use_cases": [
-      "Open-source humanoid research",
-      "RL locomotion development",
-      "Education"
+      "Open-source developer humanoid (Lingxi series, Aug 2024)"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "height_mm": 1300,
@@ -50241,7 +50260,9 @@
     "payload_kg": 0.5,
     "battery_life": 120,
     "battery_life_typical": 120,
-    "open_source": true
+    "open_source": true,
+    "sdk": "Fully open-source: design materials, software frameworks, AimRT middleware & motion-control source",
+    "website": "https://www.agibot.com"
   },
   {
     "id": "agibot-a2-w",
@@ -50276,9 +50297,7 @@
     "depth_sensing": true,
     "imu": true,
     "use_cases": [
-      "Mobile dual-arm manipulation",
-      "Service",
-      "Logistics"
+      "Flexible manufacturing & logistics"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "height_mm": 1600,
@@ -50293,7 +50312,12 @@
     "autonomous": true,
     "gallery": [
       "https://www.agibot.com/public/static/index/en/images/proA2WOne-img.png"
-    ]
+    ],
+    "released": "2023",
+    "weight_kg": 45,
+    "warranty_months": 12,
+    "actuator_type": "Wheeled base + dual arms",
+    "website": "https://www.agibot.com"
   },
   {
     "id": "agibot-a2-lite",
@@ -50350,7 +50374,11 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329162/robots/agibot-a2-lite-by-agibot/u8iuvs2ysprl7bcmltnn.jpg?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329184/robots/agibot-a2-lite-by-agibot/adivu5l1bdfqiqzqm8xv.jpg?cache=604800"
     ],
-    "os": "WorkGPT / GO-1"
+    "os": "WorkGPT / GO-1",
+    "battery_life": "2-4 hours",
+    "charge_time": "2 hours",
+    "speed_ms": 1.5,
+    "ros": true
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
@@ -57026,9 +57054,7 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Robotics education",
-      "Research & algorithm validation",
-      "Secondary development"
+      "Education quadruped (~CN¥36,000)"
     ],
     "manufacturer_url": "https://www.agibot.com",
     "made_in": "China",
@@ -57042,7 +57068,8 @@
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Edu-2.png?v=1764049158&width=800",
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Edu-3.png?v=1764049158&width=800",
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Edu-4.png?v=1764049158&width=800"
-    ]
+    ],
+    "website": "https://www.agibot.com"
   },
   {
     "id": "neura-robotics-lara-8",
@@ -81562,9 +81589,7 @@
     "imu": true,
     "ai_model": "AGIBOT Embodied AI (predecessor to GO-1)",
     "use_cases": [
-      "Industrial manipulation",
-      "Automotive / 3C manufacturing",
-      "Lab & inspection"
+      "First-gen AGIBOT humanoid (debut Aug 2023): vehicle inspection, bolt tightening demos"
     ],
     "website": "https://www.agibot.com",
     "gallery": [
@@ -81576,7 +81601,10 @@
     "os": "WorkGPT / GO-1",
     "speed_ms": 1.9,
     "payload_kg": 80,
-    "lidar": true
+    "lidar": true,
+    "ros": true,
+    "manufacturer_url": "https://www.agibot.com",
+    "reach_mm": 650
   },
   {
     "id": "agibot-a2-2025",
@@ -81642,7 +81670,7 @@
     "lidar_type": "3D",
     "depth_sensing": true,
     "imu": true,
-    "ai_model": "GO-1 Foundation Model (WorkGPT)",
+    "ai_model": "WorkGPT multimodal engine (~96% accuracy across text, audio & visual)",
     "ai_model_type": "Vision-Language Embodied AI",
     "npu_tops": 200,
     "natural_language_commands": true,
@@ -81658,11 +81686,8 @@
     "ce": true,
     "fcc": true,
     "use_cases": [
-      "Industrial automation",
-      "Service & reception",
-      "Warehouse logistics",
-      "Research",
-      "Exhibition guides"
+      "Interactive service: reception, showrooms, exhibitions",
+      "Part of 10,000-unit production milestone (March 2026)"
     ],
     "warranty_months": 12,
     "website": "https://www.agibot.com",
@@ -81701,7 +81726,7 @@
     "perf": false,
     "year": 2025,
     "status": "Active",
-    "height_mm": 1750,
+    "height_mm": 1730,
     "weight_kg": 65,
     "battery_life": 600,
     "origin": "China",
@@ -81728,9 +81753,9 @@
     "os": "WorkGPT / GO-1",
     "released": 2025,
     "use_cases": [
-      "General-purpose humanoid tasks",
-      "Service & industrial"
-    ]
+      "Next-gen Expedition humanoid (Aug 2025): industrial work, martial-arts agility demos, 10-hour endurance"
+    ],
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "agibot-h2-2025",
@@ -106272,7 +106297,9 @@
     "gallery": [
       "https://www.agibot.com/public/static/index/en/images/A2_Ultra/20260113-110338.png",
       "https://www.agibot.com/public/static/index/en/images/A2_Ultra/20260113-110324.png"
-    ]
+    ],
+    "battery_life": "8-12 hours",
+    "bluetooth": true
   },
   {
     "id": "agibot-a2-max-2025",
@@ -106313,16 +106340,15 @@
     "imu": true,
     "ai_model": "GO-1",
     "use_cases": [
-      "Heavy-duty material handling",
-      "Palletizing",
-      "Industrial automation"
+      "Heavy-duty industrial humanoid (Yuanzheng series)"
     ],
-    "website": "https://www.agibot.com/products/A2_Max",
+    "website": "https://www.agibot.com",
     "os": "WorkGPT / GO-1",
     "released": 2025,
     "perf": false,
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "manufacturer_url": "https://www.agibot.com"
   },
   {
     "id": "eufy-omni-s1-pro",
