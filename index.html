@@ -1793,10 +1793,13 @@ function buildSpecTable(r) {
   const cat = (r.cat||'').toLowerCase();
   const sub = (r.sub||'').toLowerCase();
   const isVacuum = cat.includes('consumer') || sub.includes('vacuum') || sub.includes('floor') || sub.includes('mop');
-  const isHumanoid = cat.includes('humanoid') || sub.includes('humanoid') || sub.includes('biped');
+  const isHumanoid = cat.includes('humanoid') || cat.includes('mecha') || sub.includes('humanoid') || sub.includes('biped');
   const isCobot = cat.includes('industrial') || sub.includes('cobot') || sub.includes('arm') || sub.includes('manipulator');
   const isDrone = cat.includes('drone') || sub.includes('drone') || sub.includes('uav') || sub.includes('aerial');
   const isMedical = cat.includes('medical') || sub.includes('surgical') || sub.includes('ortho');
+  const isExo = cat.includes('exoskeleton') || sub.includes('exoskeleton') || sub.includes('exosuit');
+  const isResearch = cat.includes('research');
+  const isDelivery = cat.includes('delivery');
   const isAgri = cat.includes('agri') || sub.includes('tractor') || sub.includes('farm') || sub.includes('harvest');
   const isService = cat.includes('service') || sub.includes('delivery') || sub.includes('hospitality') || sub.includes('inspection');
   const isMilitary = cat.includes('military') || sub.includes('eod') || sub.includes('defense') || sub.includes('security');
@@ -2099,6 +2102,60 @@ function buildSpecTable(r) {
     if (r.faa_remote_id !== undefined) html += row('FAA Remote ID', r.faa_remote_id);
     if (r.regulatory_class) html += row('Regulatory class', r.regulatory_class);
     if (r.transmission) html += row('Transmission system', r.transmission);
+  }
+
+  if (isResearch) {
+    html += grp('RESEARCH PLATFORM');
+    if (r.platform_type) html += row('Platform type', r.platform_type);
+    if (r.ros !== undefined) html += row('ROS support', r.ros);
+    if (r.ros_version) html += row('ROS version', r.ros_version);
+    if (r.sdk) html += row('SDK', r.sdk);
+    if (r.api !== undefined) html += row('API access', r.api);
+    if (r.programming && r.programming.length) html += row('Programming', Array.isArray(r.programming) ? r.programming.join(', ') : r.programming);
+    if (r.open_source !== undefined) html += row('Open source', r.open_source);
+    if (r.simulation_support) html += row('Simulation', r.simulation_support);
+    if (r.modular !== undefined) html += row('Modular/extensible', r.modular);
+    if (r.payload_kg) html += row('Payload capacity', r.payload_kg, 'kg');
+    if (r.research_areas && r.research_areas.length) html += row('Research areas', r.research_areas.join(', '));
+  }
+
+  if (isDelivery) {
+    html += grp('DELIVERY CAPABILITY');
+    if (r.autonomy_level) html += row('Autonomy level', r.autonomy_level);
+    if (r.payload_kg) html += row('Cargo payload', r.payload_kg, 'kg');
+    if (r.cargo_volume_l) html += row('Cargo volume', r.cargo_volume_l, 'L');
+    if (r.cargo_compartments) html += row('Compartments', r.cargo_compartments);
+    if (r.range_km) html += row('Range', r.range_km, 'km');
+    if (r.outdoor_capable !== undefined) html += row('Outdoor operation', r.outdoor_capable);
+    if (r.sidewalk_or_road) html += row('Operating environment', r.sidewalk_or_road);
+    if (r.max_incline_deg) html += row('Max incline', r.max_incline_deg, '°');
+    if (r.weatherproof_rating) html += row('Weatherproofing', r.weatherproof_rating);
+    html += grp('FLEET & AUTONOMY');
+    if (r.fleet_management !== undefined) html += row('Fleet management', r.fleet_management);
+    if (r.compute_platform) html += row('Compute platform', r.compute_platform);
+    if (r.cellular !== undefined) html += row('Cellular connectivity', r.cellular);
+    if (r.remote_operation !== undefined) html += row('Remote operation fallback', r.remote_operation);
+    if (r.locker_access) html += row('Recipient access', r.locker_access);
+  }
+
+  if (isExo) {
+    html += grp('ASSISTANCE');
+    if (r.exo_type) html += row('Exoskeleton type', r.exo_type);
+    if (r.body_region) html += row('Body region supported', r.body_region);
+    if (r.assist_force) html += row('Assistance force', r.assist_force);
+    if (r.lift_support_kg) html += row('Lift support', r.lift_support_kg, 'kg per movement');
+    if (r.strength_amplification) html += row('Strength amplification', r.strength_amplification);
+    if (r.powered !== undefined) html += row('Powered', r.powered);
+    if (r.control_method) html += row('Control method', r.control_method);
+    html += grp('FIT & USE');
+    if (r.user_height_range) html += row('User height range', r.user_height_range);
+    if (r.user_weight_max_kg) html += row('Max user weight', r.user_weight_max_kg, 'kg');
+    if (r.don_doff_time) html += row('Don/doff time', r.don_doff_time);
+    if (r.target_conditions && r.target_conditions.length) html += row('Target conditions', r.target_conditions.join(', '));
+    html += grp('REGULATORY');
+    if (r.fda_cleared !== undefined) html += row('FDA cleared', r.fda_cleared);
+    if (r.ce !== undefined) html += row('CE marked', r.ce);
+    if (r.iso_13482 !== undefined) html += row('ISO 13482 certified', r.iso_13482);
   }
 
   if (isMedical) {
