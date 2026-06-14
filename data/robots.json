@@ -110303,7 +110303,7 @@
     "year": 2020,
     "origin": "USA",
     "status": "Active",
-    "desc": "EksoNR is Ekso Bionics' FDA-cleared lower-limb rehabilitation exoskeleton used in 400+ neuro-rehab clinics to help stroke, spinal-cord-injury and acquired-brain-injury patients relearn to walk. Its SmartAssist software adapts powered assistance at the hips and knees to each patient's effort.",
+    "desc": "The clinical standard for rehabilitation walking. EksoNR’s SmartAssist software adapts help to each patient, and it was the first exoskeleton FDA-cleared for stroke and acquired brain injury, later expanded to SCI and MS.",
     "tags": [
       "exoskeleton",
       "rehabilitation",
@@ -110324,10 +110324,22 @@
     ],
     "actuator_type": "Electric hip + knee actuation",
     "use_cases": [
-      "Stroke & spinal cord injury gait rehabilitation"
+      "Clinical gait rehabilitation"
     ],
     "made_in": "USA",
-    "website": "https://eksobionics.com"
+    "website": "https://eksobionics.com",
+    "exo_type": "Powered lower-limb (clinical)",
+    "body_region": "Hips + knees",
+    "powered": true,
+    "control_method": "SmartAssist adaptive software, variable assistance",
+    "target_conditions": [
+      "Stroke",
+      "Acquired brain injury",
+      "Spinal cord injury",
+      "Multiple sclerosis"
+    ],
+    "fda_cleared": true,
+    "ce": true
   },
   {
     "cat": "Exoskeletons",
@@ -110340,8 +110352,8 @@
     "year": 2018,
     "origin": "USA",
     "status": "Active",
-    "weight_kg": 13,
-    "desc": "The Ekso Indego (originally Parker Hannifin) is a modular, lightweight (~12 kg) lower-limb exoskeleton for spinal-cord-injury users, snapping together in segments. Available in Therapy and Personal (home/community use) versions, it is FDA-cleared and CE-marked.",
+    "weight_kg": 12,
+    "desc": "Notable for being modular and light: Indego breaks into five pieces that assemble around a seated user, weighs ~12 kg, and is FDA-cleared for both clinical rehabilitation and personal use. Originally developed at Vanderbilt University.",
     "tags": [
       "exoskeleton",
       "lower-limb",
@@ -110362,10 +110374,19 @@
     ],
     "actuator_type": "Modular powered hip-knee exoskeleton (5-piece, self-assembled)",
     "use_cases": [
-      "Personal & clinical gait training for SCI"
+      "Clinical rehab + personal mobility"
     ],
     "made_in": "USA",
-    "website": "https://eksobionics.com"
+    "website": "https://eksobionics.com",
+    "exo_type": "Powered lower-limb (modular)",
+    "body_region": "Hips + knees",
+    "powered": true,
+    "control_method": "Modular 5-piece, motion-intention sensing",
+    "target_conditions": [
+      "Spinal cord injury"
+    ],
+    "fda_cleared": true,
+    "ce": true
   },
   {
     "cat": "Exoskeletons",
@@ -110378,7 +110399,7 @@
     "year": 2021,
     "origin": "USA",
     "status": "Active",
-    "desc": "EksoEVO is a passive upper-body industrial exoskeleton (vest) that supports a worker's arms during overhead tasks, reducing shoulder and arm fatigue in manufacturing, construction and aviation. No batteries - mechanical spring assistance.",
+    "desc": "A passive industrial vest, not a powered medical device. Ekso EVO supports raised arms using spring tension — no motors or battery — transferring overhead-work load to the hips. Widely deployed in automotive and aerospace assembly.",
     "tags": [
       "exoskeleton",
       "industrial",
@@ -110400,10 +110421,15 @@
     ],
     "actuator_type": "Passive spring-supported upper-body vest",
     "use_cases": [
-      "Overhead work fatigue reduction"
+      "Industrial overhead work fatigue reduction"
     ],
     "made_in": "USA",
-    "website": "https://eksobionics.com"
+    "website": "https://eksobionics.com",
+    "weight_kg": 3.6,
+    "exo_type": "Passive upper-body (industrial)",
+    "body_region": "Shoulders + arms",
+    "powered": false,
+    "control_method": "Spring-tensioned arm support (no battery)"
   },
   {
     "cat": "Exoskeletons",
@@ -110416,7 +110442,7 @@
     "year": 2019,
     "origin": "Israel",
     "status": "Active",
-    "desc": "ReWalk Personal 6.0 (now Lifeward) is an FDA-cleared powered lower-limb exoskeleton enabling people with spinal cord injury to stand, walk and climb stairs, using motorised hip and knee joints with subtle upper-body tilt control via wrist-worn controller.",
+    "desc": "The best-known personal exoskeleton, commercially available since 2012. The 6th-generation ReWalk Personal is custom-built to each user’s measurements, drops the shoulder backpack of earlier models, and reaches 0.71 m/s — the fastest of any exoskeleton of its era. FDA-cleared and adopted by the US Department of Veterans Affairs.",
     "tags": [
       "exoskeleton",
       "SCI",
@@ -110436,10 +110462,24 @@
     ],
     "actuator_type": "Electric hip + knee actuation, tilt-sensor gait triggering",
     "use_cases": [
-      "Personal mobility for spinal cord injury (home & community use)"
+      "Personal SCI mobility (home & community)",
+      "Stair ascent/descent"
     ],
     "made_in": "Israel",
-    "website": "https://golifeward.com"
+    "website": "https://golifeward.com",
+    "speed_ms": 0.71,
+    "weight_kg": 23.3,
+    "exo_type": "Powered lower-limb (personal)",
+    "body_region": "Hips + knees",
+    "powered": true,
+    "control_method": "Tilt-sensor gait initiation from center-of-gravity shifts (crutches required)",
+    "user_height_range": "160–190 cm",
+    "user_weight_max_kg": 100,
+    "target_conditions": [
+      "Spinal cord injury"
+    ],
+    "fda_cleared": true,
+    "ce": true
   },
   {
     "cat": "Exoskeletons",
@@ -110452,7 +110492,7 @@
     "year": 2019,
     "origin": "Israel",
     "status": "Active",
-    "desc": "ReStore is a soft, lightweight exo-suit from ReWalk (Lifeward) for stroke rehabilitation, using cable-driven assistance to support ankle dorsiflexion and plantarflexion during gait therapy.",
+    "desc": "A lightweight soft exosuit rather than a rigid frame. ReStore uses textile components and a cable-driven actuator to assist ankle movement during post-stroke gait therapy, making it one of the lightest clinical rehabilitation exoskeletons. FDA-cleared in 2019.",
     "tags": [
       "exoskeleton",
       "soft exosuit",
@@ -110475,8 +110515,17 @@
     "use_cases": [
       "Post-stroke gait rehabilitation"
     ],
-    "made_in": "Israel/USA",
-    "website": "https://golifeward.com"
+    "made_in": "Israel",
+    "website": "https://golifeward.com",
+    "exo_type": "Soft exo-suit (clinical)",
+    "body_region": "Ankle",
+    "powered": true,
+    "control_method": "Cable-driven plantarflexion/dorsiflexion assist",
+    "target_conditions": [
+      "Post-stroke gait deficit"
+    ],
+    "fda_cleared": true,
+    "ce": true
   },
   {
     "cat": "Exoskeletons",
@@ -110489,7 +110538,7 @@
     "year": 2012,
     "origin": "Japan",
     "status": "Active",
-    "desc": "Cyberdyne's HAL (Hybrid Assistive Limb) reads faint bioelectric signals on the skin to detect intended motion and powers the hip and knee joints accordingly. Versions exist for medical lower-limb therapy, single-joint, and lumbar (care/industrial) support.",
+    "desc": "The original wearable cyborg. Cyberdyne’s HAL reads faint bioelectric (EMG) signals on the skin before the muscle moves, then drives powered hip and knee joints to assist — the medical lower-limb suit weighs ~23 kg, runs ~2h40m per charge, and was the first robot certified to the ISO 13482 personal-care safety standard. FDA-cleared in the US in 2018.",
     "tags": [
       "exoskeleton",
       "HAL",
@@ -110512,10 +110561,27 @@
     "actuator_type": "Electric, triggered by bioelectric signals (BES) from skin sensors",
     "use_cases": [
       "Gait rehabilitation",
-      "Mobility assistance"
+      "Strength augmentation",
+      "Labor support (lumbar variant)"
     ],
     "made_in": "Japan",
-    "website": "https://www.cyberdyne.jp"
+    "website": "https://www.cyberdyne.jp",
+    "height_mm": 1600,
+    "weight_kg": 23,
+    "battery_life": 160,
+    "exo_type": "Powered full-body / lower-limb (medical)",
+    "body_region": "Hips + knees (lower limb)",
+    "strength_amplification": "Up to 10x",
+    "powered": true,
+    "control_method": "Bioelectric (EMG) skin-surface signals + autonomous mode",
+    "target_conditions": [
+      "Spinal cord injury",
+      "Stroke",
+      "Neuromuscular disease"
+    ],
+    "fda_cleared": true,
+    "ce": true,
+    "iso_13482": true
   },
   {
     "cat": "Exoskeletons",
@@ -110528,7 +110594,7 @@
     "year": 2020,
     "origin": "Germany",
     "status": "Active",
-    "desc": "The German Bionic Cray X is an AI-powered active industrial exoskeleton that supports the lower back during lifting, providing powered assistance and tracking ergonomic data to the cloud to prevent workplace injuries in logistics and manufacturing.",
+    "desc": "The first fully connected industrial exoskeleton. The 5th-generation Cray X is a carbon-fiber power suit giving up to 30 kg of lift support plus active walking assistance, running a full 8-hour shift on hot-swappable 40 V batteries. IP54-rated, it streams ergonomic telemetry to German Bionic’s AI and is used at BMW, IKEA and DPD.",
     "tags": [
       "exoskeleton",
       "industrial",
@@ -110550,10 +110616,21 @@
     "hot_swap": true,
     "actuator_type": "Active electric back & hip support",
     "use_cases": [
-      "Logistics & warehouse lifting support"
+      "Industrial lifting injury prevention (BMW, IKEA, DPD)"
     ],
     "made_in": "Germany",
-    "website": "https://germanbionic.com"
+    "website": "https://germanbionic.com",
+    "lift_support_kg": 30,
+    "battery_life": 480,
+    "ip_rating": "IP54",
+    "frame_material": "Carbon fiber",
+    "ota": true,
+    "exo_type": "Powered (industrial, connected)",
+    "body_region": "Lower back + legs",
+    "assist_force": "Up to 30 kg (66 lb) per lift",
+    "powered": true,
+    "control_method": "Dual servo motors, AI-adaptive (Smart Safety Companion)",
+    "don_doff_time": "Under 1 minute"
   },
   {
     "cat": "Exoskeletons",
@@ -110567,7 +110644,7 @@
     "origin": "Germany",
     "status": "Active",
     "weight_kg": 7.4,
-    "desc": "The German Bionic Apogee is a lighter (~7.4 kg) AI-driven back-support exosuit offering up to ~30 kg of dynamic lift assistance and active walking support, with subscription-based fleet telemetry for industrial ergonomics.",
+    "desc": "German Bionic’s 6th-generation suit, leaner and lighter than the Cray X, with dual-motor support for lifting (up to 30 kg) and walking. The Apogee Ultra shown at CES 2025 pushes assist to 80 lb (36 kg), targeting baggage handling, construction and nursing.",
     "tags": [
       "exoskeleton",
       "industrial",
@@ -110587,10 +110664,17 @@
     "payload": "Up to 30 kg lift compensation",
     "actuator_type": "Active electric back support, walking assistance",
     "use_cases": [
-      "Logistics, manufacturing & healthcare lifting support"
+      "Logistics, construction, nursing, baggage handling"
     ],
     "made_in": "Germany",
-    "website": "https://germanbionic.com"
+    "website": "https://germanbionic.com",
+    "lift_support_kg": 30,
+    "hot_swap": true,
+    "exo_type": "Powered (industrial, 6th gen)",
+    "body_region": "Lower back + legs",
+    "assist_force": "Up to 30 kg (Ultra: 36 kg / 80 lb)",
+    "powered": true,
+    "control_method": "Dual-motor active support, AI-adaptive"
   },
   {
     "cat": "Exoskeletons",
@@ -110603,7 +110687,7 @@
     "year": 2022,
     "origin": "France",
     "status": "Active",
-    "desc": "Atalante X is Wandercraft's hands-free, self-balancing lower-limb exoskeleton for clinical rehabilitation - users walk without crutches as the device dynamically balances itself, enabling natural gait therapy after stroke or spinal injury.",
+    "desc": "The first crutchless self-balancing walking exoskeleton. Atalante X balances itself across 12 powered joints, freeing the patient’s hands entirely during gait therapy. CE-marked, deployed in rehab clinics across Europe and the US.",
     "tags": [
       "exoskeleton",
       "self-balancing",
@@ -110628,10 +110712,20 @@
     "leg_dof": 6,
     "actuator_type": "12 powered joints (hips, knees, ankles), self-balancing dynamic walking",
     "use_cases": [
-      "Hands-free gait rehabilitation (SCI C4-L5, MS, stroke)"
+      "Hands-free gait rehabilitation"
     ],
     "made_in": "France",
-    "website": "https://en.wandercraft.eu"
+    "website": "https://en.wandercraft.eu",
+    "exo_type": "Powered self-balancing (clinical)",
+    "body_region": "Full lower body",
+    "powered": true,
+    "control_method": "Self-balancing dynamic walking (hands-free, no crutches)",
+    "target_conditions": [
+      "Spinal cord injury",
+      "Stroke",
+      "Multiple sclerosis"
+    ],
+    "ce": true
   },
   {
     "cat": "Exoskeletons",
@@ -110643,8 +110737,8 @@
     "sub": "Self-balancing Personal Exoskeleton",
     "year": 2025,
     "origin": "France",
-    "status": "Active",
-    "desc": "Eve is Wandercraft's first self-balancing personal exoskeleton for home and outdoor use - fully hands-free and aimed at becoming a direct substitute for the wheelchair. Clinical trials began in early 2025.",
+    "status": "Development",
+    "desc": "Wandercraft’s personal-use exoskeleton, bringing self-balancing hands-free walking into daily life. In clinical trials and being industrialized with Renault Group.",
     "tags": [
       "exoskeleton",
       "self-balancing",
@@ -110663,10 +110757,14 @@
     ],
     "actuator_type": "Self-balancing powered lower-body exoskeleton",
     "use_cases": [
-      "Personal mobility for wheelchair users (in clinical trials)"
+      "Personal hands-free mobility (clinical trials; Renault manufacturing partnership)"
     ],
     "made_in": "France",
-    "website": "https://en.wandercraft.eu"
+    "website": "https://en.wandercraft.eu",
+    "exo_type": "Powered self-balancing (personal)",
+    "body_region": "Full lower body",
+    "powered": true,
+    "control_method": "Self-balancing (personal successor to Atalante)"
   },
   {
     "cat": "Exoskeletons",
@@ -110701,9 +110799,15 @@
     "weight_kg": 1.9,
     "actuator_type": "Passive carbon-composite torque module (2.9–3.7 kgf assist, no battery)",
     "use_cases": [
-      "Overhead industrial work (reduces shoulder load up to 60%)"
+      "Overhead industrial work"
     ],
-    "made_in": "South Korea"
+    "made_in": "South Korea",
+    "exo_type": "Passive (industrial)",
+    "body_region": "Shoulders",
+    "powered": false,
+    "control_method": "Passive torque module (no battery)",
+    "assist_force": "Reduces shoulder load up to 60%",
+    "website": "https://www.hyundai-robotics.com"
   },
   {
     "cat": "Exoskeletons",
@@ -110716,7 +110820,7 @@
     "year": 2021,
     "origin": "Italy",
     "status": "Active",
-    "desc": "The Comau MATE-XT is a passive, spring-based industrial exoskeleton that supports the upper limbs during repetitive or overhead tasks, weather- and dust-resistant for outdoor use - deployed at companies including John Deere.",
+    "desc": "A passive, batteryless shoulder exoskeleton from Comau weighing ~3 kg. MATE-XT mirrors arm movements with spring support across 8 levels and resists dust, UV and water for outdoor use in agriculture, construction and shipbuilding.",
     "tags": [
       "exoskeleton",
       "industrial",
@@ -110738,10 +110842,14 @@
     "weight_kg": 3,
     "actuator_type": "Passive spring-based shoulder support (8 adjustment levels, no battery)",
     "use_cases": [
-      "Overhead assembly & outdoor work (carbon-fiber, weatherproof)"
+      "Overhead industrial & outdoor work (dust/UV/water resistant)"
     ],
     "made_in": "Italy",
-    "website": "https://www.comau.com"
+    "website": "https://mate.comau.com",
+    "exo_type": "Passive (industrial, outdoor)",
+    "body_region": "Shoulders",
+    "powered": false,
+    "control_method": "Spring-based, 8 assist levels (no battery)"
   },
   {
     "cat": "Exoskeletons",
@@ -110755,7 +110863,7 @@
     "origin": "Germany",
     "status": "Active",
     "weight_kg": 1.9,
-    "desc": "The Ottobock Paexo Shoulder is an ultralight (~1.9 kg) passive exoskeleton that mechanically transfers overhead-work arm loads to the hips, reducing shoulder strain in assembly and construction. Part of the Paexo family (Back, Thumb, Neck).",
+    "desc": "One of the lightest industrial exoskeletons at just 1.9 kg. Ottobock’s Paexo Shoulder is passive, transferring the weight of raised arms from the shoulders to the hips during overhead assembly. Deployed at Volkswagen.",
     "tags": [
       "exoskeleton",
       "industrial",
@@ -110777,10 +110885,14 @@
     ],
     "actuator_type": "Passive (mechanical spring support, no battery)",
     "use_cases": [
-      "Overhead assembly work shoulder support"
+      "Overhead assembly work"
     ],
     "made_in": "Germany",
-    "website": "https://paexo.com"
+    "website": "https://paexo.com",
+    "exo_type": "Passive (industrial)",
+    "body_region": "Shoulders",
+    "powered": false,
+    "control_method": "Mechanical weight transfer to hips (no battery)"
   },
   {
     "cat": "Exoskeletons",
@@ -110793,7 +110905,7 @@
     "year": 2018,
     "origin": "USA",
     "status": "Active",
-    "desc": "The Myomo MyoPro is a powered myoelectric upper-limb orthosis that senses faint EMG signals from a weakened or paralysed arm and assists elbow and hand movement, helping people with stroke, brachial plexus injury or ALS regain arm function.",
+    "desc": "A powered arm brace controlled by the wearer’s own body. MyoPro reads EMG signals from a weakened arm and drives a powered elbow and hand to complete the intended motion.",
     "tags": [
       "exoskeleton",
       "myoelectric",
@@ -110815,10 +110927,21 @@
     ],
     "actuator_type": "EMG-controlled powered elbow-wrist-hand orthosis",
     "use_cases": [
-      "Restoring arm function after stroke, BPI or neurological injury"
+      "Restoring arm/hand reach and grasp"
     ],
     "made_in": "USA",
-    "website": "https://myomo.com"
+    "website": "https://myomo.com",
+    "exo_type": "Powered orthosis (medical)",
+    "body_region": "Elbow + hand",
+    "powered": true,
+    "control_method": "EMG signals from the wearer’s own arm",
+    "target_conditions": [
+      "Stroke",
+      "Brachial plexus injury",
+      "ALS",
+      "Spinal cord injury"
+    ],
+    "fda_cleared": true
   },
   {
     "cat": "Exoskeletons",
@@ -110831,7 +110954,7 @@
     "year": 2022,
     "origin": "USA",
     "status": "Active",
-    "desc": "Roam Robotics' Ascend is a lightweight, fabric-and-air powered knee exoskeleton that provides on-demand support for mobility-impaired users, using a pneumatic actuation system far lighter than rigid motorised frames.",
+    "desc": "A featherweight exoskeleton that runs on air. Roam’s Ascend uses lightweight pneumatic actuation instead of motors, sensing movement to assist the knee — aimed at osteoarthritis and general mobility.",
     "tags": [
       "exoskeleton",
       "knee",
@@ -110851,11 +110974,17 @@
     ],
     "actuator_type": "Pneumatic knee assistance (sensor-driven air actuation)",
     "use_cases": [
-      "Knee osteoarthritis support",
-      "Mobility assistance"
+      "Knee support & mobility assistance"
     ],
     "made_in": "USA",
-    "website": "https://www.roamrobotics.com"
+    "website": "https://www.roamrobotics.com",
+    "exo_type": "Powered pneumatic (mobility)",
+    "body_region": "Knee",
+    "powered": true,
+    "control_method": "Sensor-driven pneumatic (air) actuation",
+    "target_conditions": [
+      "Knee osteoarthritis"
+    ]
   },
   {
     "cat": "Exoskeletons",
@@ -110868,7 +110997,7 @@
     "year": 2021,
     "origin": "Sweden",
     "status": "Active",
-    "desc": "The Bioservo Carbonhand is a soft, tendon-driven grip-strengthening glove that adds grip force for people with reduced hand strength, used in both industrial and clinical settings; CE-marked.",
+    "desc": "A soft robotic glove that adds strength to a human grip. Carbonhand’s fingertip sensors detect grasping, then artificial tendons add up to ~20% more force — used medically for weak hands and industrially to prevent strain.",
     "tags": [
       "exoskeleton",
       "glove",
@@ -110889,10 +111018,15 @@
     ],
     "actuator_type": "Soft robotic glove with artificial tendons & fingertip force sensors",
     "use_cases": [
-      "Grip strengthening for weakened hand function"
+      "Grip strengthening (medical rehab + industrial endurance)"
     ],
     "made_in": "Sweden",
-    "website": "https://www.bioservo.com"
+    "website": "https://www.bioservo.com",
+    "exo_type": "Soft robotic glove",
+    "body_region": "Hand / grip",
+    "assist_force": "Up to ~20% added grip force",
+    "powered": true,
+    "control_method": "Fingertip pressure sensors + artificial tendons (SEM technology)"
   },
   {
     "cat": "Exoskeletons",
@@ -110905,7 +111039,7 @@
     "year": 2014,
     "origin": "New Zealand",
     "status": "Active",
-    "desc": "REX by Rex Bionics is a hands-free, self-supporting lower-limb exoskeleton that does not require crutches, used in rehabilitation clinics to allow wheelchair users to stand and undertake supported exercise.",
+    "desc": "A self-supporting exoskeleton that stands on its own — no crutches required. REX bears its full weight independently and is joystick-driven, letting users with significant paralysis stand, walk and exercise hands-free.",
     "tags": [
       "exoskeleton",
       "hands-free",
@@ -110927,9 +111061,18 @@
     "weight_kg": 38,
     "actuator_type": "Self-supporting powered legs, joystick control (no crutches)",
     "use_cases": [
-      "Hands-free standing & walking rehabilitation"
+      "Standing & walking rehab, supported physiotherapy"
     ],
-    "made_in": "New Zealand/UK"
+    "made_in": "New Zealand/UK",
+    "exo_type": "Self-supporting powered (clinical)",
+    "body_region": "Full lower body",
+    "powered": true,
+    "control_method": "Joystick-controlled, self-supporting (no crutches)",
+    "target_conditions": [
+      "Spinal cord injury",
+      "Paralysis"
+    ],
+    "website": "https://www.rexbionics.com"
   },
   {
     "cat": "Research",
@@ -116361,7 +116504,7 @@
     "status": "Active",
     "price": "POA",
     "perf": false,
-    "desc": "The Sarcos Guardian XO was a full-body powered industrial exoskeleton that let an operator lift up to ~90.7 kg (200 lb) repeatedly as if it were ~4.5 kg - roughly 20x strength amplification - drawing under ~400 W with hot-swappable Li-ion batteries and ~30 s donning. Sarcos exited hardware in 2023 (now Palladyne AI).",
+    "desc": "A full-body powered exoskeleton letting a worker lift up to 90 kg as if a fraction of the weight, at ~200:1 amplification. The 24-DoF Guardian XO runs on hot-swappable batteries for continuous shift work.",
     "tags": [
       "exoskeleton",
       "full-body",
@@ -116374,7 +116517,7 @@
     "score": 75,
     "rating": 4,
     "type": "Active (powered, full-body)",
-    "body_region": "Full body",
+    "body_region": "Whole body",
     "assist_kg": 90.7,
     "power_w": 400,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999241/myrobot/o1j46cuytxfhzzbvxdry.jpg",
@@ -116390,10 +116533,16 @@
     "battery_life": 120,
     "actuator_type": "Full-body powered exoskeleton, electric actuation",
     "use_cases": [
-      "Industrial heavy lifting (up to 90 kg, fatigue-free)"
+      "Industrial heavy lifting — logistics, aviation, defense"
     ],
     "made_in": "USA",
-    "website": "https://www.sarcos.com"
+    "website": "https://www.sarcos.com",
+    "lift_support_kg": 90,
+    "exo_type": "Powered full-body (industrial)",
+    "assist_force": "Up to 90 kg (200 lb)",
+    "strength_amplification": "200:1",
+    "powered": true,
+    "control_method": "Full-body force-reflective control"
   },
   {
     "perf": false,
