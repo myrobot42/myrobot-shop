@@ -115645,7 +115645,7 @@
   {
     "cat": "Humanoid",
     "perf": false,
-    "price": "POA",
+    "price": 13800,
     "id": "engineai-pm01",
     "name": "PM01",
     "brand": "EngineAI",
@@ -115654,7 +115654,7 @@
     "origin": "China",
     "status": "Active",
     "height_mm": 1380,
-    "desc": "The EngineAI PM01 (launched Dec 2024) is a ~1.38 m, ~40 kg agile open humanoid with 24 DOF (5/arm, 6/leg), a 320 deg rotating waist and up to 2 m/s walking. Dual-compute Intel N97 + Jetson Orin with RealSense depth and LiDAR; it became known as the first humanoid to perform a front flip, and ships as an open developer platform (ROS/Isaac).",
+    "desc": "EngineAI’s lightweight open humanoid platform (CES 2025). At 1.38 m and 40 kg with 24 DoF and 320° waist rotation, the PM01 pairs an Intel N97 with NVIDIA Jetson Orin and ships fully open-source (ROS/ONNX, MuJoCo, Isaac) for developers. Founded by Zhao Tongyang, former lead of XPENG’s humanoid program.",
     "tags": [
       "humanoid",
       "EngineAI",
@@ -115681,17 +115681,37 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68278bb6caeebd5fc6c2fde3_EngineAI%20PM01_04-p-2000.jpeg"
     ],
     "ai_chip": "NVIDIA Jetson Orin",
-    "actuator_type": "High-dynamic joints (straight-knee anthropomorphic gait)",
+    "actuator_type": "Custom electric actuators, self-developed joint modules, dual encoders",
     "use_cases": [
-      "Developer & education humanoid (front-flip capable)"
+      "Education",
+      "Research",
+      "Commercial demos & service (open developer platform)"
     ],
     "made_in": "China",
-    "website": "https://www.engineai.com.cn"
+    "website": "https://www.engineai.com.cn",
+    "waist_rotation_deg": 320,
+    "knee_torque_nm": 186,
+    "cpu": "Dual compute: Intel N97 (x86) + NVIDIA Jetson Orin",
+    "cameras": "Intel RealSense D435i depth camera + multi-array microphones",
+    "lidar": true,
+    "imu": true,
+    "battery_type": "10,000 mAh",
+    "os": "Ubuntu/Windows; NVIDIA Isaac/Metropolis/Holoscan",
+    "sdk": "Open-source: ROS/ONNX, MuJoCo sim2sim, Isaac training",
+    "ros": true,
+    "api": true,
+    "open_source": true,
+    "learning_methods": [
+      "Reinforcement learning",
+      "Imitation learning",
+      "Sim-to-real"
+    ],
+    "price_note": "(~88,000 yuan)"
   },
   {
     "cat": "Humanoid",
     "perf": false,
-    "price": "POA",
+    "price": 20000,
     "id": "engineai-se01",
     "name": "SE01",
     "brand": "EngineAI",
@@ -115700,7 +115720,7 @@
     "origin": "China",
     "status": "Active",
     "height_mm": 1700,
-    "desc": "The EngineAI SE01 is the firm's full-size flagship humanoid - ~1.70 m, ~55 kg, 32 DOF, ~2 m/s with a natural neural-network gait. Quick-swap 10,000 mAh batteries, Engine Sense 360 deg LiDAR perception, self-developed joint modules and a 10-year aluminium chassis; debuted Oct 2024.",
+    "desc": "EngineAI’s flagship full-size humanoid, unveiled October 2024 — claimed as the first humanoid to achieve a natural human-like gait via an end-to-end neural network. At 170 cm and 55 kg with 32 DoF, it uses self-developed harmonic/planetary/ball-screw joints rated to 186 N·m, an aerospace-aluminum 10-year frame, and quick-swap batteries. Founded by Zhao Tongyang (ex-XPENG PX5 lead).",
     "tags": [
       "humanoid",
       "EngineAI",
@@ -115725,12 +115745,27 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1767698705/robots/se01-by-engineai/xeiibrafuha4deazzzbw.webp?cache=604800",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68278bda79fd59084ed7e393_EngineAI%20SE%2001_04.png"
     ],
-    "actuator_type": "Harmonic-drive joints, natural straight-leg gait",
+    "actuator_type": "Self-developed harmonic, planetary & ball-screw joints; dual encoders; cross-roller bearings; forced-air joint cooling",
     "use_cases": [
-      "Full-size general-purpose humanoid"
+      "Flagship general-purpose humanoid",
+      "Commercial & educational (CCTV New Year Gala debut)"
     ],
     "made_in": "China",
-    "website": "https://www.engineai.com.cn"
+    "website": "https://www.engineai.com.cn",
+    "payload_kg": 15,
+    "knee_torque_nm": 186,
+    "force_precision_nm": 0.2,
+    "cpu": "NVIDIA Jetson Orin",
+    "cameras": "Depth camera + multi-mic array + LiDAR 360° (Engine Sense)",
+    "lidar": true,
+    "imu": true,
+    "frame_material": "Aerospace-grade aluminum alloy (10-year design life)",
+    "battery_type": "10,000 mAh quick-swap",
+    "hot_swap": true,
+    "ai_model": "End-to-end neural network (RL + imitation learning) — first humanoid with natural human-like gait",
+    "ros": true,
+    "sdk": "Open developer stack",
+    "price_note": "($20,000-30,000)"
   },
   {
     "cat": "Humanoid",
@@ -115815,13 +115850,13 @@
     "website": "https://www.weaverobots.com"
   },
   {
-    "cat": "Humanoid",
+    "cat": "Research",
     "perf": false,
     "price": "POA",
     "id": "galaxea-a1",
     "name": "A1",
     "brand": "Galaxea AI",
-    "sub": "Mobile Manipulation Humanoid",
+    "sub": "Mobile manipulation arm",
     "year": 2024,
     "origin": "China",
     "status": "Active",
