@@ -1667,7 +1667,7 @@ function renderDb(){
   renderSubcatFilter();
   const sort=document.getElementById('db-sort')?.value||'score';
   let list=getDbFiltered();
-  list=[...list].sort((a,b)=>sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):sort==='payload'?b.payload-a.payload:b.year-a.year);
+  list=[...list].sort((a,b)=>sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):sort==='payload'?b.payload-a.payload:(robotSortKey(b)-robotSortKey(a)||a.name.localeCompare(b.name)));
   document.getElementById('db-count').textContent=`Showing ${list.length} robot${list.length!==1?'s':''}`;
   // Active filter tags
   const tags=[];
@@ -1789,6 +1789,45 @@ function renderSpecsGSM(r){
   }).join('');
 }
 
+// Compute the date a robot should sort by for "Newest":
+// available robots sort by release date; not-yet-released sort by announced date; fallback to year.
+// Returns a comparable number (YYYYMMDD-ish). Higher = newer.
+function robotSortDate(r){
+  function parse(v){
+    if(v===undefined||v===null||v==='') return null;
+    var m=String(v).trim().match(/^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{1,2})?/);
+    if(!m) return null;
+    var y=parseInt(m[1])||0, hasMonth=m[2]!==undefined;
+    var mo=parseInt(m[2]||'6')||6, d=parseInt(m[3]||'15')||15;
+    return {n:y*10000+mo*100+d, precise:hasMonth};
+  }
+  var now=new Date();
+  var today=now.getFullYear()*10000+(now.getMonth()+1)*100+now.getDate();
+  var status=(r.status||'').toLowerCase();
+  var isAvailable=/active|available|released|shipping|production|discontinued|retired|superseded|decommissioned/.test(status);
+  var released=parse(r.released)||parse(r.launch_date);
+  var announced=parse(r.announced);
+  var yearOnly=parse(r.year);
+  var pick;
+  if(isAvailable && released) pick=released;
+  else if(!isAvailable && announced) pick=announced;
+  else pick=released||announced||yearOnly||{n:0,precise:false};
+  var val = pick.precise ? pick.n : (Math.floor(pick.n/10000)*10000+101);
+  // Future-dated robots haven't shipped yet — they shouldn't top "Newest". Park them just below
+  // the current year's released robots (a year back from today) so they're present but not leading,
+  // ordered among themselves by how soon they arrive.
+  if(val > today){
+    return (today - 10000) + (val - today)/1e7;
+  }
+  return val;
+}
+
+// Secondary tiebreak for robots that share the same sort date (e.g. both year-only 2026):
+// order by score so the more notable/complete robot leads, then name for stability.
+function robotSortKey(r){
+  return robotSortDate(r) * 1000 + Math.min(999, (r.score||0));
+}
+
 function _asArr(v){ return Array.isArray(v) ? v : (v===undefined||v===null||v==='' ? [] : [v]); }
 function buildSpecTable(r) {
   if (r && typeof r==='object'){
@@ -1828,11 +1867,35 @@ function buildSpecTable(r) {
 
   let html = '';
 
-  // ── LAUNCH ──
+  // ── LAUNCH ── (GSMArena-style: Announced + Status with expected release)
   html += grp('LAUNCH');
   if (r.also_known_as) html += row('Also known as', r.also_known_as);
-  html += row('Announced', r.announced);
-  html += row('Status', r.released ? `Released ${r.released}` : r.status);
+  // Format a date value as "2026, June" or "2026, June 10" or just "2026"
+  function fmtDate(v){
+    if(!v) return '';
+    var m=String(v).trim().match(/^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{1,2})?/);
+    if(!m) return String(v);
+    var months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var out=m[1];
+    if(m[2]){ out+=', '+months[parseInt(m[2])-1]; if(m[3]) out+=' '+parseInt(m[3]); }
+    return out;
+  }
+  var st=(r.status||'').toLowerCase();
+  var isReleased=/active|available|released|shipping|production|discontinued|retired|superseded|decommissioned|lost/.test(st);
+  var isFuture=/announced|coming|pre-order|development|prototype|concept|testing|pilot/.test(st);
+  // Announced row
+  if (r.announced) html += row('Announced', fmtDate(r.announced));
+  // Status row — GSMArena style
+  if (isReleased && r.released) {
+    html += row('Status', 'Available. Released ' + fmtDate(r.released));
+  } else if (isReleased) {
+    html += row('Status', 'Available' + (r.year ? '. Released ' + r.year : ''));
+  } else if (isFuture) {
+    var exp = r.released || r.expected_release || r.year;
+    html += row('Status', 'Coming soon' + (exp ? '. Exp. release ' + fmtDate(exp) : ''));
+  } else {
+    html += row('Status', r.status || '—');
+  }
   if (r.regions && r.regions.length) html += row('Availability', r.regions.join(', '));
   if (r.variants && r.variants.length) html += row('Variants', r.variants.join(' · '));
 
@@ -3929,7 +3992,7 @@ function renderFinder(){
   var sort=document.getElementById('finder-sort')?document.getElementById('finder-sort').value:'score';
   var list=getFinderFiltered();
   list=[...list].sort(function(a,b){
-    return sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):b.year-a.year;
+    return sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):(robotSortKey(b)-robotSortKey(a)||a.name.localeCompare(b.name));
   });
   var countEl=document.getElementById('finder-count');
   if(countEl)countEl.textContent=list.length;
