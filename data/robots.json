@@ -96132,7 +96132,9 @@
     "payload_kg": 105,
     "speed_ms": 0.56,
     "actuator_type": "8 independent wheel motors with springs (no suspension)",
-    "terrain": "Mare Imbrium lunar regolith",
+    "terrain": [
+      "Mare Imbrium lunar regolith"
+    ],
     "max_incline_deg": 30,
     "target_body": "Moon (Mare Imbrium)",
     "mission_type": "Teleoperated lunar rover",
@@ -96219,7 +96221,9 @@
     "rtos": "Teleoperation with improved 3.2-second TV update rate",
     "speed_ms": 1.11,
     "actuator_type": "8 independent wheel motors",
-    "terrain": "Le Monnier crater lunar regolith",
+    "terrain": [
+      "Le Monnier crater lunar regolith"
+    ],
     "max_incline_deg": 30,
     "target_body": "Moon (Le Monnier crater)",
     "mission_type": "Teleoperated lunar rover",
@@ -96307,7 +96311,9 @@
     "speed_ms": 0.056,
     "dof": 6,
     "actuator_type": "6 independently driven wheels with rocker suspension",
-    "terrain": "Mare Imbrium regolith",
+    "terrain": [
+      "Mare Imbrium regolith"
+    ],
     "max_incline_deg": 30,
     "target_body": "Moon (Mare Imbrium)",
     "mission_type": "Mobile lunar geology rover",
@@ -96398,7 +96404,10 @@
     "speed_ms": 0.056,
     "dof": 6,
     "actuator_type": "6 independently driven wheels with rocker suspension",
-    "terrain": "Far-side regolith, crater interior",
+    "terrain": [
+      "Far-side regolith",
+      "crater interior"
+    ],
     "max_incline_deg": 30,
     "target_body": "Moon (far side, Von Kármán crater)",
     "mission_type": "Far-side mobile geology rover",
@@ -96484,7 +96493,9 @@
     "speed_ms": 0.0083,
     "dof": 6,
     "actuator_type": "6 independently driven wheels with rocker-bogie",
-    "terrain": "Lunar south polar regolith",
+    "terrain": [
+      "Lunar south polar regolith"
+    ],
     "max_incline_deg": 25,
     "target_body": "Moon (south polar region, Statio Shiv Shakti)",
     "mission_type": "Lunar south pole mobile geology rover",
@@ -96570,7 +96581,10 @@
     "speed_ms": 0.056,
     "dof": 6,
     "actuator_type": "Active suspension with 6 independently driven wheels (can crab-walk)",
-    "terrain": "Rocky Mars surface, sand",
+    "terrain": [
+      "Rocky Mars surface",
+      "sand"
+    ],
     "max_incline_deg": 30,
     "stair_climbing": false,
     "target_body": "Mars (Utopia Planitia)",
@@ -96742,7 +96756,9 @@
     "frame_material": "Aluminum, composite",
     "dof": 4,
     "actuator_type": "Leaf-spring hopping mechanism + reaction wheels",
-    "terrain": "Lunar regolith (hopping locomotion)",
+    "terrain": [
+      "Lunar regolith (hopping locomotion)"
+    ],
     "target_body": "Moon (Shioli crater)",
     "mission_type": "Hopping micro-rover technology demo",
     "mission_status": "Decommissioned (one lunar-day mission)",
@@ -96819,7 +96835,9 @@
     "speed_ms": 0.001,
     "dof": 2,
     "actuator_type": "Two transformable wheel/hemisphere shells",
-    "terrain": "Lunar regolith (rolling locomotion)",
+    "terrain": [
+      "Lunar regolith (rolling locomotion)"
+    ],
     "target_body": "Moon (Shioli crater)",
     "mission_type": "Miniature transformable rover technology demo",
     "mission_status": "Decommissioned (operated ~2 hours after deployment)",
@@ -103698,7 +103716,10 @@
     "battery_mah": 5200,
     "battery_life_typical": 240,
     "charge_time_min": 240,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "Dreamehome app",
     "matter_support": false,
     "wifi": "Wi-Fi 5 (2.4 GHz)",
@@ -103730,7 +103751,9 @@
     "price_band": "Flagship",
     "multi_zone": true,
     "auto_charge": true,
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "perf": false
   },
   {
@@ -103777,7 +103800,10 @@
     "battery_mah": 5200,
     "battery_life_typical": 220,
     "charge_time_min": 240,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "Dreamehome app",
     "wifi": "Wi-Fi 5",
     "carpet_detection": true,
@@ -103803,7 +103829,9 @@
     "anti_tangle": true,
     "multi_zone": true,
     "auto_charge": true,
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "perf": false,
     "website": "https://www.dreametech.com"
   },
@@ -103866,9 +103894,14 @@
     "battery_mah": 5200,
     "battery_type": "Li-ion",
     "auto_charge": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "Dreamehome app",
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "mop_wash_temp_c": 70,
     "website": "https://www.dreametech.com"
   },
@@ -103933,9 +103966,14 @@
     "battery_mah": 5200,
     "battery_type": "Li-ion",
     "auto_charge": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "Dreamehome app",
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "mop_wash_temp_c": 58,
     "website": "https://www.dreametech.com"
   },
@@ -103998,9 +104036,14 @@
     "battery_mah": 5200,
     "battery_type": "Li-ion",
     "auto_charge": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "Dreamehome app",
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "website": "https://www.dreametech.com"
   },
   {
@@ -104062,9 +104105,14 @@
     "battery_mah": 5200,
     "battery_type": "Li-ion",
     "auto_charge": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "Dreamehome app",
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "website": "https://www.dreametech.com"
   },
   {
@@ -104119,7 +104167,10 @@
     "anti_tangle": true,
     "battery_type": "Li-ion",
     "battery_life_typical": 220,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "ECOVACS HOME app",
     "wifi": "Wi-Fi 5",
     "use_cases": [
@@ -104144,7 +104195,9 @@
     "battery_mah": 5200,
     "auto_charge": true,
     "multi_zone": true,
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "perf": false,
     "cameras": "RGB AI camera",
     "video": "https://youtu.be/pJ4k7VQxo-M"
@@ -104209,9 +104262,14 @@
     "anti_tangle": true,
     "multi_zone": true,
     "no_go_zones": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "ECOVACS HOME app",
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "mop_wash_temp_c": 55,
     "cameras": "RGB AI camera",
     "height_mm": 95,
@@ -104274,9 +104332,14 @@
     "anti_tangle": true,
     "multi_zone": true,
     "no_go_zones": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "ECOVACS HOME app",
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "mop_wash_temp_c": 70,
     "self_refill_water": true,
     "height_mm": 81,
@@ -104342,8 +104405,13 @@
     "auto_charge": true,
     "multi_zone": true,
     "no_go_zones": true,
-    "smart_home": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "smart_home": [
+      "true"
+    ],
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "carpet_detection": true,
     "app_companion": "eufy Clean app",
     "video": "https://youtu.be/jnnQ-xGEH_I",
@@ -104401,8 +104469,13 @@
     "auto_charge": true,
     "multi_zone": true,
     "no_go_zones": true,
-    "smart_home": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "smart_home": [
+      "true"
+    ],
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "battery_life_typical": 180,
     "video": "https://youtu.be/sV7s90f8NuQ",
     "website": "https://www.eufy.com"
@@ -104464,8 +104537,13 @@
     "multi_zone": true,
     "no_go_zones": true,
     "app_companion": "iRobot Home app",
-    "voice_assistant": "Alexa, Google Assistant",
-    "smart_home": true,
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
+    "smart_home": [
+      "true"
+    ],
     "battery_life_typical": 180,
     "video": "https://youtu.be/Hxlm2_l3H_0",
     "website": "https://www.irobot.com"
@@ -104479,7 +104557,7 @@
     "year": 2024,
     "origin": "South Korea",
     "made_in": "South Korea",
-    "status": "Announced",
+    "status": "Active",
     "score": 75,
     "desc": "The Samsung Bespoke Jet Bot Combo (2023) is Samsung's flagship vacuum-and-mop with AI object recognition, LiDAR navigation and an all-in-one Clean Station that empties dust and washes/steams the mop pad.",
     "price": 1499,
@@ -104535,7 +104613,9 @@
     "price_band": "Flagship",
     "battery_type": "Li-ion",
     "auto_charge": true,
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "suction_pa": 8000
   },
   {
@@ -105814,7 +105894,10 @@
     "carpet_mop_lift_mm": 12.7,
     "battery_type": "Li-ion",
     "battery_life_typical": 180,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "eufy Clean app",
     "wifi": "Wi-Fi 5",
     "use_cases": [
@@ -105835,7 +105918,9 @@
     "price_band": "Flagship",
     "auto_charge": true,
     "multi_zone": true,
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "perf": false,
     "fig": "🤖",
     "rating": 4,
@@ -105899,8 +105984,13 @@
     "auto_charge": true,
     "multi_zone": true,
     "no_go_zones": true,
-    "smart_home": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "smart_home": [
+      "true"
+    ],
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "battery_life_typical": 180,
     "video": "https://youtu.be/K9dv2-86uA0",
     "website": "https://www.eufy.com"
@@ -105961,8 +106051,13 @@
     "auto_charge": true,
     "multi_zone": true,
     "no_go_zones": true,
-    "smart_home": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "smart_home": [
+      "true"
+    ],
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "battery_life_typical": 180,
     "video": "https://youtu.be/sV7s90f8NuQ",
     "website": "https://www.eufy.com"
@@ -106740,9 +106835,14 @@
     "battery_mah": 5200,
     "battery_life_typical": 180,
     "coverage_m2": 300,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "app_companion": "Roborock app",
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "imu": true,
     "mop_rpm": 200,
     "video": "https://youtu.be/BThA37ibXB4",
@@ -106877,7 +106977,10 @@
     "ai_obstacle_avoidance": true,
     "ai_model": "Reactive AI 2.0",
     "voice_recognition": true,
-    "voice_assistant": "Alexa, Google Assistant",
+    "voice_assistant": [
+      "Alexa",
+      "Google Assistant"
+    ],
     "no_go_zones": true,
     "multi_floor_mapping": true,
     "matter_support": true,
@@ -106919,7 +107022,9 @@
     "depth_sensing": true,
     "multi_zone": true,
     "coverage_m2": 300,
-    "smart_home": true,
+    "smart_home": [
+      "true"
+    ],
     "imu": true,
     "fig": "🤖",
     "rating": 4,
@@ -107135,10 +107240,10 @@
     "sub": "Lunar Rover",
     "year": 2027,
     "origin": "USA",
-    "score": 84,
+    "score": 75,
     "desc": "Volatiles Investigating Polar Exploration Rover. Golf-cart-sized rover designed to search for water ice at the lunar south pole. Originally targeting a 2023 launch on Astrobotic's Griffin lander, then cancelled by NASA in July 2024 to cut costs, but revived in September 2025 with Blue Origin's Blue Moon Mark 1 as the new delivery vehicle. Will be the first rover specifically designed to operate in permanently shadowed lunar regions.",
     "price": "POA",
-    "status": "Development",
+    "status": "Active",
     "announced": "2019",
     "also_known_as": "Volatiles Investigating Polar Exploration Rover",
     "regions": [
@@ -107160,7 +107265,10 @@
     "speed_ms": 0.22,
     "dof": 4,
     "actuator_type": "4 independently steered wheels with active suspension",
-    "terrain": "Lunar south pole, permanently shadowed regions",
+    "terrain": [
+      "Lunar south pole",
+      "permanently shadowed regions"
+    ],
     "max_incline_deg": 15,
     "target_body": "Moon (south polar region)",
     "mission_type": "Ice-prospecting rover",
@@ -112566,7 +112674,9 @@
     "score": 75,
     "rating": 4,
     "control": "Remote-controlled",
-    "role": "Drowning rescue flotation platform"
+    "role": [
+      "Drowning rescue flotation platform"
+    ]
   },
   {
     "cat": "Disaster Response",
@@ -112656,7 +112766,10 @@
     "score": 75,
     "rating": 4,
     "form": "Many-jointed serpentine",
-    "role": "Rubble/pipe search & rescue, inspection",
+    "role": [
+      "Rubble/pipe search & rescue",
+      "inspection"
+    ],
     "dof": 16,
     "actuator_type": "Modular chained joints, gait-based locomotion",
     "use_cases": [
@@ -112723,7 +112836,9 @@
     "rating": 4,
     "mechanism": "Large water/foam atomising turbine",
     "mobility": "Tracked, remote-controlled",
-    "role": "Tunnel & industrial fires",
+    "role": [
+      "Tunnel & industrial fires"
+    ],
     "actuator_type": "Tracked, remote-controlled firefighting unit",
     "use_cases": [
       "Turbine-aided firefighting (high-volume water/foam monitor + blower)",
@@ -116040,7 +116155,9 @@
     "score": 75,
     "rating": 4,
     "control": "Whisker app (Wi-Fi)",
-    "sensors": "Weight + litter-level (OmniSense / laser)",
+    "sensors": [
+      "Weight + litter-level (OmniSense / laser)"
+    ],
     "feature": "Auto-sifting rotating globe; multi-cat tracking",
     "width_mm": 559,
     "depth_mm": 686,
@@ -116296,7 +116413,9 @@
     "torque": "450 Nm peak",
     "battery": "Solid-state (~3 h)",
     "compute": "NVIDIA Jetson",
-    "sensors": "360 deg LiDAR + Intel RealSense depth",
+    "sensors": [
+      "360 deg LiDAR + Intel RealSense depth"
+    ],
     "desc": "The EngineAI T800 is the company's flagship full-size humanoid (CES 2026 debut, mass production from ~June 2026): ~1.73 m, ~75 kg, 29 body DOF (+7/hand), up to 3 m/s, 450 Nm peak-torque joints, a magnesium-aluminium alloy frame and a notable solid-state battery (~3 h). NVIDIA Jetson compute, 360 deg LiDAR + RealSense. Went viral for fluid martial-arts demos; offered in multiple editions from ~5,000.",
     "tags": [
       "humanoid",
@@ -116380,7 +116499,11 @@
       "Hugging Face Hub integration"
     ],
     "connectivity": "Wi-Fi",
-    "sensors": "Camera, microphones, speaker",
+    "sensors": [
+      "Camera",
+      "microphones",
+      "speaker"
+    ],
     "desc": "Reachy Mini (Hugging Face, from Pollen Robotics) is a low-cost open-source expressive desktop robot for embodied-AI development - a moving/animated head with camera, mics and speaker, programmable in Python and integrated with the Hugging Face Hub. A May 2026 agentic toolkit lets users build working apps in under an hour with no manual coding. Lite (~99) and wireless (~49) versions.",
     "tags": [
       "research",
@@ -116458,7 +116581,14 @@
     "end_effector": "Parallel two-finger gripper (1 DoF) standard; optional five-finger dexterous hand (6 DoF), self-developed two-finger (1 DoF) or three-finger dexterous hand (4 DoF)",
     "controller": "Handheld remote; optional handheld emergency stop",
     "compute": "Remote control RK3588 (8-16G); Perception NVIDIA Orin NX 157TOPS (EDU/Super); optional computing backpack AGX Orin 275TOPS",
-    "sensors": "Self-developed IMU (6-axis; 9-axis top tier); head, chest & hip depth cameras; wrist depth-camera mount; LiDAR",
+    "sensors": [
+      "Self-developed IMU (6-axis",
+      "9-axis top tier)",
+      "head",
+      "chest & hip depth cameras",
+      "wrist depth-camera mount",
+      "LiDAR"
+    ],
     "connectivity": "Wi-Fi 6, Bluetooth, USB 3.0/3.2, Gigabit Ethernet, Type-C, 5G (higher tiers)",
     "cooling": "Main-control air cooling",
     "joint_ranges": "Neck P-30~45°/Y±45°; Shoulder P±160°/R-5~185°/Y-90~195°; Elbow P-66~137°; Wrist P±90°/R±90°/Y-45~135°; Waist P-30~45°/R±30°/Y±150°; Hip P±150°/R-50~120°/Y±150°; Knee P+5~148°; Ankle P-35~58°/R±25°",
@@ -116533,7 +116663,10 @@
     "year": 2024,
     "origin": "China",
     "compute": "12th Gen Intel i3 / 16GB / 512GB; operating range -5°C to 40°C",
-    "sensors": "IMU (standard); optional RGBD camera",
+    "sensors": [
+      "IMU (standard)",
+      "optional RGBD camera"
+    ],
     "feature": "3-in-1 modular foot-ends — Point-Foot, Sole, Wheeled; climbs ≤30°; clears ≤20 cm obstacles",
     "software": "SDK, data visualization, record & playback, joint-control algorithms, simulation platform; secondary development; OTA",
     "desc": "TRON 1 is billed as the first multi-modal biped robot — a compact (≤845 mm, ≤20 kg) all-terrain research and RL platform with interchangeable Point-Foot, Sole and Wheeled foot-ends. It carries up to 10 kg, climbs 30°, clears 20 cm obstacles, and runs ~2 h on a 46.8V/4.5Ah quick-swap pack. 48V actuators deliver 30 N·m rated / 60 N·m peak at 15 rad/s; a 12th-gen Intel i3 brain, IMU (optional RGBD) and an open SDK with simulation tooling make it a favourite locomotion/RL testbed. Standard and EDU editions.",
@@ -116638,7 +116771,11 @@
     "dual_arm": "Max 5 kg/arm (3 kg extended); end-effector speed 5 m/s, accel 36 m/s²; repeat accuracy ±0.5 mm; VR teleop (Oculus Quest 3), 100 ms delay; gripper (20 N, 85 mm) or dexterous hand",
     "mobility": "Multi-form base — Sole 2-3 m/s / Wheeled 3-5 m/s; climbs 15° (sole) / 30° (wheeled); 20 cm step; load 30 kg flat-ground, 20 kg stair-climbing",
     "battery": "46.8V ternary lithium, 9 Ah, 2,800 W max; charge 542 W, 30 min (20-80%) / 54 min (100%); swappable",
-    "sensors": "Waist RGBD camera, IMU; head & wrist RGBD cameras (dual-arm config)",
+    "sensors": [
+      "Waist RGBD camera",
+      "IMU",
+      "head & wrist RGBD cameras (dual-arm config)"
+    ],
     "connectivity": "Ethernet, USB 3.0, EtherCAT ×2, RS485; 12V/24V/48V power outputs",
     "compute": "AI computing box — Intel Core i7-1165G7, 2TB; 4×ETH, 4×USB 3.0",
     "software": "SDK, robot management / data / simulation platforms; Python, C++, ROS1/ROS2",
@@ -116754,7 +116891,10 @@
     "end_effector": "Palm-shaped hand (standard); optional fist-shaped or dexterous 5-finger hand (6 DoF)",
     "controller": "Handheld remote (with charging cable)",
     "compute": "Motion control RK3588/16G/256G · Perception RK3588/8G/32G",
-    "sensors": "In-house 6-axis IMU; RGB camera",
+    "sensors": [
+      "In-house 6-axis IMU",
+      "RGB camera"
+    ],
     "connectivity": "Wi-Fi 6, Bluetooth",
     "cooling": "Main-control air cooling",
     "interaction": "Face interaction screen, microphone, speaker, LED indicator strip",
