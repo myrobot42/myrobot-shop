@@ -30958,8 +30958,8 @@
     "brand": "NEURA Robotics",
     "year": 2023,
     "status": "Active",
-    "cat": "Humanoid",
-    "sub": "Collaborative Humanoid",
+    "cat": "Industrial",
+    "sub": "Collaborative robot arm",
     "tags": [
       "Cobot",
       "AI-powered",
@@ -31092,8 +31092,8 @@
     "brand": "NEURA Robotics",
     "year": 2023,
     "status": "Active",
-    "cat": "Humanoid",
-    "sub": "Service Humanoid",
+    "cat": "Industrial",
+    "sub": "Cognitive cobot arm",
     "tags": [
       "Autonomous",
       "AI-driven",
@@ -52314,7 +52314,7 @@
     "status": "Active",
     "height_mm": 293,
     "weight_kg": 400,
-    "payload_kg": 500,
+    "payload_kg": 1500,
     "speed_ms": 2,
     "battery_life": "~10 h",
     "lidar": true,
@@ -52324,10 +52324,9 @@
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Heavy intralogistics",
-      "Automotive manufacturing",
-      "Pallet transport",
-      "Mobile manipulation (with LARA)"
+      "Intralogistics",
+      "Autonomous material transport (up to 1.5 t)",
+      "Pairs with LARA/MAiRA for mobile manipulation"
     ],
     "manufacturer_url": "https://www.neura-robotics.com",
     "width_mm": 910,
@@ -52350,7 +52349,8 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/MAV_PB4_28fff2d7.png",
       "https://neura-robotics.com/wp-content/uploads/2025/06/MAV_NEURA_Robotics_Header_Image.png"
     ],
-    "website": "https://neura-robotics.com"
+    "website": "https://neura-robotics.com",
+    "actuator_type": "Autonomous mobile platform, 360° laser-scanner safety"
   },
   {
     "id": "neura-robotics-lara-10",
@@ -81484,8 +81484,8 @@
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734108/myrobot/eavgk6rwpfiu55f9pytv.jpg",
     "score": 75,
     "rating": 4,
-    "price": 120000,
-    "desc": "NEURA Robotics' 4NE1 (Germany) is a cognitive humanoid notable for an exceptionally high ~100 kg payload and 6-8 hour runtime, powered by NEURA's AURA AI and Neuraverse ecosystem with 'artificial skin' pre-touch sensing. Built via NEURA's automated 'Hive' production, the Gen 3 was unveiled at Automatica 2025 (with a Porsche-studio-designed Gen 3.5).",
+    "price": 105000,
+    "desc": "NEURA Robotics’ flagship cognitive humanoid and Europe’s first humanoid designed for series production. Standing 180 cm and 80 kg, the Gen 3.5 lifts up to 100 kg — the highest among general-purpose humanoids — via ~490 N·m leg joints. Co-designed with Studio F.A. Porsche, powered by NVIDIA Thor T5000 and Isaac GR00T, with full-body artificial skin for safe human collaboration. Premiered at Automatica 2025; Gen 3.5 from €98,000.",
     "highlights": [
       "CE-safety certified",
       "Cobot rated",
@@ -81493,21 +81493,21 @@
       "European-made"
     ],
     "perf": false,
-    "year": 2024,
+    "year": 2025,
     "status": "Active",
     "height_mm": 1800,
     "weight_kg": 80,
-    "battery_life": 420,
+    "battery_life": "6-8 hours",
     "origin": "Germany",
     "cameras": "Multi-camera RGB-D",
-    "ai_model": "NEURA Neuraverse cognitive OS",
+    "ai_model": "Cognitive AI (NVIDIA Isaac GR00T)",
     "wifi": true,
     "bluetooth": true,
     "made_in": "Germany",
     "announced": "2024",
-    "released": 2024,
+    "released": "2025-06-01",
     "payload_kg": 100,
-    "dof": 33,
+    "dof": 55,
     "arm_dof": 7,
     "force_sensing": true,
     "fingers": 5,
@@ -81516,25 +81516,39 @@
     "depth_sensing": true,
     "lidar": true,
     "imu": true,
-    "touch_sensing": "Capacitive skin",
+    "touch_sensing": "Artificial skin (full-body)",
     "natural_language_commands": true,
     "voice_recognition": true,
     "battery_life_typical": 420,
     "safety_rating": "PLd",
     "ce": true,
     "use_cases": [
-      "Industrial automation",
-      "Logistics & heavy handling",
-      "Service"
+      "Industrial workflows",
+      "Logistics",
+      "High-payload manipulation (up to 100 kg)",
+      "Caregiving",
+      "Research"
     ],
     "website": "https://neura-robotics.com",
-    "os": "AURA / Neuraverse"
+    "os": "AURA / Neuraverse",
+    "speed_ms": 1.4,
+    "torque_nm": 490,
+    "hand_type": "Integrated high-dexterity hands",
+    "cpu": "NVIDIA Thor T5000",
+    "ai_chip": "NVIDIA",
+    "learning_methods": [
+      "Autonomous continuous learning",
+      "Shared Neuraverse skill pool"
+    ],
+    "hot_swap": true,
+    "design_partner": "Studio F.A. Porsche",
+    "price_note": "(€98,000, Gen 3.5)"
   },
   {
     "id": "neura-mipa-gen3-2026",
     "name": "MiPa Gen 3",
     "brand": "NEURA Robotics",
-    "cat": "Humanoid",
+    "cat": "Service",
     "sub": "Service Humanoid",
     "tags": [
       "humanoid",
