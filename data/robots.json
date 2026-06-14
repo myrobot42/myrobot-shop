@@ -111707,10 +111707,15 @@
       "https://agfundernews.com/wp-content/uploads/2023/05/ecorobotix-ara-lettuce-czech-republic-august-2022-1-scaled-1-e1683738309411.jpg"
     ],
     "use_cases": [
-      "Ultra-high-precision plant-by-plant spraying (6 m width, ~6×6 cm targeting, up to 95% herbicide reduction)"
+      "AI plant-by-plant precision spraying (6 m boom, ~6x6 cm targeting)"
     ],
     "made_in": "Switzerland",
-    "website": "https://ecorobotix.com"
+    "website": "https://ecorobotix.com",
+    "robot_type": "Smart sprayer (tractor-mounted/towed)",
+    "working_width_m": 6,
+    "plant_recognition": true,
+    "computer_vision": true,
+    "herbicide_reduction": "Up to 95%"
   },
   {
     "cat": "Agricultural",
@@ -111842,7 +111847,7 @@
     "year": 2022,
     "origin": "USA",
     "status": "Active",
-    "autonomy_level": "L4",
+    "autonomy_level": "SAE Level 4",
     "desc": "The Cruise Origin (GM) was a purpose-built, steering-wheel-free shared robotaxi. Development was wound down after GM ended Cruise's robotaxi program in 2024 - included here as a notable discontinued milestone in the robotaxi category.",
     "tags": [
       "autonomous vehicle",
@@ -111854,7 +111859,18 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "vehicle_class": "Purpose-built robotaxi (no steering wheel)",
+    "passenger_capacity": 6,
+    "powertrain": "Electric (GM BEV3 platform)",
+    "redundant_systems": [
+      "Braking",
+      "Steering",
+      "Compute"
+    ],
+    "use_cases": [
+      "Shared autonomous ride-hailing (program wound down 2024; design never mass-deployed)"
+    ]
   },
   {
     "cat": "Autonomous Vehicles",
@@ -111902,7 +111918,7 @@
     "year": 2023,
     "origin": "USA",
     "status": "Active",
-    "autonomy_level": "L4",
+    "autonomy_level": "SAE Level 4",
     "desc": "May Mobility operates autonomous microtransit shuttles (Toyota Sienna platform) for on-demand and fixed-route public transit in several US cities, moving toward driver-out L4 operation in defined service zones.",
     "tags": [
       "autonomous vehicle",
@@ -111914,7 +111930,19 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "vehicle_class": "Autonomous shuttle (Toyota Sienna platform)",
+    "passenger_capacity": 5,
+    "powertrain": "Hybrid",
+    "operating_cities": [
+      "Detroit",
+      "Phoenix",
+      "Atlanta",
+      "Arlington"
+    ],
+    "use_cases": [
+      "Public microtransit shuttle service (multi-passenger autonomous transit)"
+    ]
   },
   {
     "cat": "Autonomous Vehicles",
@@ -111927,7 +111955,7 @@
     "year": 2025,
     "origin": "USA",
     "status": "Active",
-    "autonomy_level": "L4",
+    "autonomy_level": "SAE Level 4",
     "desc": "The Aurora Driver is a self-driving system for Class 8 freight trucks; Aurora launched commercial driverless freight runs on Texas highways (Dallas-Houston) in 2025, hauling loads with no human in the cab.",
     "tags": [
       "autonomous vehicle",
@@ -111939,7 +111967,28 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "vehicle_class": "Class 8 autonomous semi-truck",
+    "operational_design_domain": "Highway (Dallas-Houston launch lane)",
+    "lidar_brand": "FirstLight FMCW (400m+ range)",
+    "imaging_radar": true,
+    "redundant_systems": [
+      "Braking",
+      "Steering",
+      "Power",
+      "Compute"
+    ],
+    "powertrain": "Diesel (Paccar & Volvo chassis partnerships)",
+    "operating_cities": [
+      "Dallas",
+      "Houston",
+      "Fort Worth",
+      "El Paso",
+      "Phoenix"
+    ],
+    "use_cases": [
+      "Driverless freight (Aurora Horizon subscription; launched commercial driverless 2025)"
+    ]
   },
   {
     "cat": "Autonomous Vehicles",
@@ -111952,7 +112001,7 @@
     "year": 2024,
     "origin": "USA",
     "status": "Active",
-    "autonomy_level": "L4",
+    "autonomy_level": "SAE Level 4",
     "desc": "The Kodiak Driver is a self-driving system for long-haul and off-road trucking; Kodiak delivered driverless commercial trucks for customers (including Permian Basin oilfield routes) and focuses on autonomous freight at scale.",
     "tags": [
       "autonomous vehicle",
@@ -111964,7 +112013,28 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "vehicle_class": "Class 8 autonomous semi-truck",
+    "operational_design_domain": "Highway (Texas launch lanes)",
+    "lidar_count": 4,
+    "lidar_brand": "Luminar Iris",
+    "camera_count": 12,
+    "radar_count": 6,
+    "compute_platform": "NVIDIA GPU (+ Ambarella CV3-AD SoC)",
+    "redundant_systems": [
+      "Braking",
+      "Steering",
+      "Power",
+      "Compute"
+    ],
+    "powertrain": "Diesel (Kenworth T680 / retrofittable)",
+    "operating_cities": [
+      "Dallas",
+      "Houston"
+    ],
+    "use_cases": [
+      "Driverless freight hauling (vehicle-agnostic, 2.5M+ test miles; Bosch manufacturing partnership)"
+    ]
   },
   {
     "cat": "Military",
@@ -112075,7 +112145,23 @@
       "https://defenceredefined.com.cy/wp-content/uploads/2024/04/OptioX20-knds.jpg",
       "https://www.aljundi.ae/wp-content/uploads/2024/02/OPTIO-X20-019-e1708493384256.jpg",
       "https://www.army-guide.com/eng/images/optio_x-20_dssdfsh11529332135.jpg"
-    ]
+    ],
+    "role": [
+      "Tracked combat & support UGV"
+    ],
+    "endurance_hours": 8,
+    "deploy_method": [
+      "Self-deploying tracked"
+    ],
+    "mil_spec": true,
+    "autonomy_level": "Teleoperated + waypoint autonomy",
+    "customers": [
+      "European defense forces"
+    ],
+    "use_cases": [
+      "Remote weapon platform, ISR, cargo (20-tonne class tracked UGV)"
+    ],
+    "made_in": "France"
   },
   {
     "cat": "Military",
@@ -112151,7 +112237,22 @@
       "https://cdn.prod.website-files.com/685a80f356c82ad5ff0fa008/689b32b08be7a3ad64f74065_ARX%20Robotics%20Gereon%20RCS.avif",
       "https://cdn.prod.website-files.com/685a80f356c82ad5ff0fa008/6a195cadcf2d3a2813e5f123_ARX-Robotics_11_11zon.webp",
       "https://cdn.prod.website-files.com/685a80f356c82ad5ff0fa008/6a195afd2af7527cb505a316_ARX-Robotics_01.webp"
-    ]
+    ],
+    "role": [
+      "Modular tracked support UGV"
+    ],
+    "deploy_method": [
+      "Tracked"
+    ],
+    "mil_spec": true,
+    "autonomy_level": "Teleoperated + assisted autonomy",
+    "customers": [
+      "European militaries"
+    ],
+    "use_cases": [
+      "Logistics, casualty evacuation, ISR (scalable modular platform)"
+    ],
+    "made_in": "Germany"
   },
   {
     "cat": "Military",
@@ -112223,7 +112324,23 @@
       "https://defence-blog.com/wp-content/uploads/2016/03/Roboteam-Probot-1200x801.jpg",
       "https://www.army-technology.com/wp-content/uploads/sites/3/2019/03/2l-image-Professional-Robot-Probot-UGV.jpg",
       "https://www.overtdefense.com/wp-content/uploads/2020/10/head-1024x453.jpg"
-    ]
+    ],
+    "role": [
+      "Tracked/wheeled logistics UGV"
+    ],
+    "endurance_hours": 8,
+    "deploy_method": [
+      "8x8 wheeled"
+    ],
+    "mil_spec": true,
+    "autonomy_level": "Teleoperated + follow-me",
+    "customers": [
+      "Multiple militaries"
+    ],
+    "use_cases": [
+      "Cargo transport (up to 750 kg), casualty evac, ISR"
+    ],
+    "made_in": "Israel"
   },
   {
     "cat": "AGV/AMR",
@@ -112623,9 +112740,13 @@
     "regulatory": "Investigational - first US clinical cases done; FDA submission expected early 2026",
     "key_feature": "Table-integrated low-profile arms",
     "use_cases": [
-      "General surgery (4 arms integrated into operating table)"
+      "Multi-specialty soft-tissue surgery (6 arms integrated into the OR table; clinical trials underway)"
     ],
-    "made_in": "USA"
+    "made_in": "USA",
+    "surgical_type": "General/soft-tissue laparoscopic",
+    "robotic_arms": 6,
+    "fda_cleared": false,
+    "ai_assist": true
   },
   {
     "cat": "Medical",
@@ -112662,10 +112783,14 @@
       "https://www.medicaldesignandoutsourcing.com/wp-content/uploads/2023/06/Moon-Surgical-Maestro.jpg"
     ],
     "use_cases": [
-      "Laparoscopic surgical assistance (two collaborative arms)"
+      "Collaborative laparoscopic surgery (works with existing instruments; FDA-cleared & CE-marked)"
     ],
     "made_in": "France",
-    "website": "https://www.moonsurgical.com"
+    "website": "https://www.moonsurgical.com",
+    "surgical_type": "Laparoscopic assistance",
+    "robotic_arms": 2,
+    "fda_cleared": true,
+    "ce_marked": true
   },
   {
     "cat": "Medical",
@@ -112703,10 +112828,12 @@
       "https://www.bch.org/images/blogs/mazor-feb-newsletter-640w.jpg"
     ],
     "use_cases": [
-      "Robotic spine surgery guidance (StealthStation navigation integration)"
+      "Robotic-guided spine surgery with StealthStation navigation & predictive analytics"
     ],
     "made_in": "USA/Israel",
-    "website": "https://www.medtronic.com"
+    "website": "https://www.medtronic.com",
+    "surgical_type": "Spine surgery guidance",
+    "fda_cleared": true
   },
   {
     "cat": "Medical",
@@ -112944,10 +113071,12 @@
       "https://ucghdd.com/cdn/shop/files/nav_product_cc1Pro-2_875x700.jpg?v=1749828755"
     ],
     "use_cases": [
-      "Commercial floor scrubbing, sweeping & vacuuming (multi-mode)"
+      "Multi-mode commercial floor cleaning: sweep, scrub, vacuum, mop"
     ],
     "made_in": "China",
-    "website": "https://www.pudurobotics.com"
+    "website": "https://www.pudurobotics.com",
+    "robot_type": "Commercial cleaning robot",
+    "navigation_type": "LiDAR + vision SLAM"
   },
   {
     "cat": "Service",
@@ -113568,9 +113697,11 @@
       "https://d2pn8kiwq2w21t.cloudfront.net/images/e3-PIA26168_CADRE_Mars_Yard_tests.width-1600.jpg"
     ],
     "use_cases": [
-      "Multi-robot autonomous lunar exploration demo (3 cooperative mini rovers)"
+      "Cooperative multi-robot lunar exploration (3 autonomous shoebox-sized rovers mapping in formation; Intuitive Machines IM-3 delivery)"
     ],
-    "made_in": "USA"
+    "made_in": "USA",
+    "actuator_type": "4-wheel rover, solar powered",
+    "autonomous": true
   },
   {
     "cat": "Aerospace",
@@ -114298,10 +114429,15 @@
       "https://plain-eeur-prod-public.komododecks.com/202606/09/q63MQ29Lks5DHOmRxcAV/image.jpg"
     ],
     "use_cases": [
-      "High-performance robotic manipulation platform for embodied-AI research"
+      "Robotic manipulation & embodied-AI research platform (mobile + tabletop variants)"
     ],
     "made_in": "China",
-    "website": "https://galaxea.ai"
+    "website": "https://galaxea.ai",
+    "dof": 6,
+    "payload_kg": 5,
+    "reach_mm": 700,
+    "ros": true,
+    "actuator_type": "High-torque direct-drive arm"
   },
   {
     "cat": "Humanoid",
