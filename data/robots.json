@@ -112505,7 +112505,15 @@
       "AI Vision Lock & diver tracking"
     ],
     "made_in": "China",
-    "website": "https://www.qysea.com"
+    "website": "https://www.qysea.com",
+    "vehicle_type": "Consumer ROV",
+    "propulsion_type": "6 thrusters (omnidirectional)",
+    "thruster_count": 6,
+    "max_depth_m": 100,
+    "max_speed_kn": 3,
+    "autonomous": false,
+    "water_type": "Salt & fresh",
+    "launch_method": "Hand-launched"
   },
   {
     "cat": "Aquatic",
@@ -112543,7 +112551,15 @@
       "Maritime domain awareness"
     ],
     "made_in": "USA",
-    "website": "https://www.saildrone.com"
+    "website": "https://www.saildrone.com",
+    "vehicle_type": "Uncrewed surface vehicle (USV)",
+    "propulsion_type": "Wind (wing sail) + solar",
+    "endurance_km": "Up to 1 year missions",
+    "autonomous": true,
+    "gps_when_surfaced": true,
+    "iridium_satcom": true,
+    "water_type": "Ocean",
+    "launch_method": "Dockside launch"
   },
   {
     "cat": "Aquatic",
@@ -112577,7 +112593,16 @@
       "Autonomous ocean-floor mapping (multibeam sonar to 7,000 m)"
     ],
     "made_in": "USA",
-    "website": "https://www.saildrone.com"
+    "website": "https://www.saildrone.com",
+    "vehicle_type": "Large ocean-mapping USV",
+    "propulsion_type": "Wind + solar (diesel backup)",
+    "endurance_km": "Trans-ocean range",
+    "autonomous": true,
+    "gps_when_surfaced": true,
+    "iridium_satcom": true,
+    "inertial_navigation": true,
+    "water_type": "Ocean",
+    "launch_method": "Dockside launch"
   },
   {
     "cat": "Aquatic",
@@ -112618,7 +112643,16 @@
       "Research & aquaculture (3 guest ports: sonar, grippers, sensors)"
     ],
     "made_in": "Norway",
-    "website": "https://www.blueyerobotics.com"
+    "website": "https://www.blueyerobotics.com",
+    "vehicle_type": "Observation-class ROV",
+    "propulsion_type": "4 thrusters",
+    "thruster_count": 4,
+    "max_depth_m": 305,
+    "endurance_hours": 2,
+    "tether_type": "Neutrally buoyant",
+    "autonomous": false,
+    "water_type": "Salt & fresh",
+    "launch_method": "Hand-launched"
   },
   {
     "cat": "Aquatic",
@@ -112650,7 +112684,14 @@
     "use_cases": [
       "Hands-free underwater filming to 60 m"
     ],
-    "made_in": "France"
+    "made_in": "France",
+    "vehicle_type": "Autonomous underwater drone",
+    "propulsion_type": "Multi-thruster",
+    "max_depth_m": 60,
+    "endurance_hours": 1,
+    "autonomous": true,
+    "water_type": "Salt & fresh",
+    "launch_method": "Hand-launched"
   },
   {
     "cat": "Aquatic",
@@ -112691,7 +112732,17 @@
       "Industrial underwater inspection to 150 m depth"
     ],
     "made_in": "China",
-    "website": "https://www.chasing.com"
+    "website": "https://www.chasing.com",
+    "vehicle_type": "Consumer/prosumer ROV",
+    "propulsion_type": "8 vectored thrusters",
+    "thruster_count": 8,
+    "max_depth_m": 150,
+    "max_speed_kn": 3,
+    "tether_type": "Tethered (200 m options)",
+    "manipulator_arms": 1,
+    "autonomous": false,
+    "water_type": "Salt & fresh",
+    "launch_method": "Hand-launched"
   },
   {
     "cat": "Aquatic",
@@ -112722,7 +112773,15 @@
     "use_cases": [
       "Underwater filming & exploration (consumer bionic fish)"
     ],
-    "made_in": "China"
+    "made_in": "China",
+    "vehicle_type": "Bionic underwater drone (fish)",
+    "propulsion_type": "Bionic tail fin",
+    "max_depth_m": 60,
+    "endurance_hours": 1.5,
+    "max_speed_kn": 1.16,
+    "autonomous": true,
+    "water_type": "Salt & fresh",
+    "launch_method": "Hand-launched"
   },
   {
     "cat": "Disaster Response",
