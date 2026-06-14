@@ -1789,7 +1789,15 @@ function renderSpecsGSM(r){
   }).join('');
 }
 
+function _asArr(v){ return Array.isArray(v) ? v : (v===undefined||v===null||v==='' ? [] : [v]); }
 function buildSpecTable(r) {
+  if (r && typeof r==='object'){
+    r = Object.assign({}, r);
+    ['water_type','wms_integration','comms','sensors','terrain','smart_home','voice_assistant','mounting','role','deploy_method','call_platforms','programming','use_cases','research_areas','redundant_systems','operating_cities','target_conditions','mission_types','customers','safety_certifications','learning_methods','pilot_devices'].forEach(function(k){
+      if (r[k]!==undefined && r[k]!==null && !Array.isArray(r[k])) r[k] = _asArr(r[k]);
+    });
+    if (typeof r.speed_ms === 'number' && r.speed_ms > 40) r.speed_ms = null;
+  }
   const cat = (r.cat||'').toLowerCase();
   const sub = (r.sub||'').toLowerCase();
   const isVacuum = cat.includes('consumer') || sub.includes('vacuum') || sub.includes('floor') || sub.includes('mop');
