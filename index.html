@@ -1345,7 +1345,7 @@ function renderHome(){
         <div class="rc-specs">${tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div>
         <div class="rc-footer">
           <div class="rc-rating"><span class="stars">${'★'.repeat(Math.round(rating))}</span><span style="margin-left:3px">${rating} (${reviews})</span></div>
-          <span style="font-size:12px;font-weight:800">${price>0?'$'+price.toLocaleString():'POA'}</span>
+          <span style="font-size:12px;font-weight:800" title="${price>0?'$'+price.toLocaleString():(priceBand(r)?priceBandLabel(priceBand(r)):'Price on application')}">${price>0?'$'+price.toLocaleString():(priceBand(r)||'POA')}</span>
         </div>
       </div>
     </div>`;}).join('');
@@ -1792,6 +1792,22 @@ function renderSpecsGSM(r){
 // Compute the date a robot should sort by for "Newest":
 // available robots sort by release date; not-yet-released sort by announced date; fallback to year.
 // Returns a comparable number (YYYYMMDD-ish). Higher = newer.
+// Price band: stable budget signal that never goes stale (unlike exact prices).
+// Tiers tuned for the robot market: $ consumer, $$ prosumer, $$$ professional, $$$$ enterprise.
+function priceBand(r){
+  var p = r.price_band || null;            // explicit override if set
+  if (p) return p;
+  var v = r.price || r.msrp_usd || 0;
+  if (!v || v <= 0) return null;           // unknown → no band (shows POA)
+  if (v < 1500) return '$';                // consumer (vacuums, toys, edu)
+  if (v < 15000) return '$$';              // prosumer / small business
+  if (v < 100000) return '$$$';            // professional
+  return '$$$$';                           // enterprise / industrial
+}
+function priceBandLabel(b){
+  return ({'$':'Budget','$$':'Mid-range','$$$':'Premium','$$$$':'Enterprise'})[b] || '';
+}
+
 function robotSortDate(r){
   function parse(v){
     if(v===undefined||v===null||v==='') return null;
@@ -2882,6 +2898,14 @@ function buildSpecTable(r) {
   if (r.collision_detection !== undefined) html += row('Collision detection', r.collision_detection);
   if (r.sar_head) html += row('SAR (head)', r.sar_head, 'W/kg');
   if (r.sar_body) html += row('SAR (body)', r.sar_body, 'W/kg');
+
+  // ── PRICING ──
+  var _band = priceBand(r);
+  if ((r.price && r.price > 0) || _band) {
+    html += grp('PRICING');
+    if (r.price && r.price > 0) html += row('Price', '$' + r.price.toLocaleString() + (r.price_note ? ' ' + r.price_note : ''));
+    if (_band) html += row('Price tier', _band + ' · ' + priceBandLabel(_band));
+  }
 
   // ── MISC ──
   html += grp('MISC');
