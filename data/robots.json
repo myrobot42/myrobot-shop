@@ -111104,7 +111104,21 @@
       "https://spectrum.ieee.org/media-library/a-picture-of-a-tall-skinny-robot-with-a-two-wheeled-base-and-a-single-arm-with-a-flexible-wrist-on-the-end.png?id=51473667&width=1200&height=1200&coordinates=720%2C0%2C720%2C0",
       "https://mobilerobotguide.com/wp-content/uploads/2024/02/hello-robot-stretch3-mast.jpg",
       "https://images.squarespace-cdn.com/content/v1/65789f5bc31b3c64091939a3/682152c5-fe68-45c0-9602-3547680aa7f0/STRETCH+3+KEYSHOT+2024+FULL+Narrow.png"
-    ]
+    ],
+    "platform_type": "Mobile manipulator",
+    "ros": true,
+    "ros_version": "ROS 2",
+    "open_source": true,
+    "modular": true,
+    "sdk": "Open Python SDK",
+    "api": true,
+    "payload_kg": 1.5,
+    "research_areas": [
+      "Mobile manipulation",
+      "Home robotics",
+      "Assistive robotics"
+    ],
+    "simulation_support": "Gazebo, MuJoCo"
   },
   {
     "cat": "Research",
@@ -111493,7 +111507,16 @@
     "use_cases": [
       "Mobile manipulation research"
     ],
-    "made_in": "USA"
+    "made_in": "USA",
+    "platform_type": "Mobile manipulator",
+    "open_source": true,
+    "sdk": "Fetch SDK",
+    "research_areas": [
+      "Mobile manipulation",
+      "Navigation",
+      "Warehouse automation"
+    ],
+    "simulation_support": "Gazebo"
   },
   {
     "cat": "Research",
@@ -111616,12 +111639,22 @@
     "arm_dof": 6,
     "actuator_type": "2x leader + 2x follower arms (bimanual teleoperation)",
     "ros": true,
-    "sdk": "Open-source (ALOHA 2 protocol)",
+    "sdk": "Open-source ALOHA 2 stack",
     "use_cases": [
       "Bimanual manipulation & imitation learning research"
     ],
     "made_in": "USA",
-    "website": "https://www.trossenrobotics.com"
+    "website": "https://www.trossenrobotics.com",
+    "platform_type": "Bimanual manipulation platform",
+    "ros_version": "ROS 2",
+    "open_source": true,
+    "api": true,
+    "research_areas": [
+      "Imitation learning",
+      "Bimanual manipulation",
+      "Embodied AI"
+    ],
+    "simulation_support": "MuJoCo"
   },
   {
     "cat": "Research",
@@ -114898,7 +114931,7 @@
     "origin": "USA",
     "status": "Active",
     "speed_ms": 4.9,
-    "autonomy_level": "L4",
+    "autonomy_level": "Level 4 (in defined zones)",
     "desc": "The Serve Robotics third-generation sidewalk delivery robot (spun out of Uber) runs Level 4 autonomy on an NVIDIA Jetson Orin brain with Ouster LiDAR, ~11 mph top speed, ~14 h battery and ~15 gal insulated cargo (holds 4x 16\" pizzas). Serve deployed its 2,000th robot in 2025 across LA, Miami, Dallas, Chicago and Atlanta with Uber Eats and DoorDash.",
     "tags": [
       "delivery",
@@ -114911,7 +114944,18 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "website": "https://www.serverobotics.com"
+    "website": "https://www.serverobotics.com",
+    "payload_kg": 15,
+    "cargo_volume_l": 53,
+    "range_km": 40,
+    "outdoor_capable": true,
+    "sidewalk_or_road": "Sidewalk",
+    "fleet_management": true,
+    "compute_platform": "NVIDIA Jetson Orin",
+    "cellular": true,
+    "remote_operation": true,
+    "locker_access": "App-controlled lid",
+    "weatherproof_rating": "All-weather"
   },
   {
     "cat": "Delivery",
@@ -114940,7 +114984,15 @@
       "Remote-piloted sidewalk delivery (insulated cargo bay)"
     ],
     "made_in": "USA",
-    "website": "https://cocodelivery.com"
+    "website": "https://cocodelivery.com",
+    "autonomy_level": "Remote-piloted + assisted autonomy",
+    "payload_kg": 45,
+    "outdoor_capable": true,
+    "sidewalk_or_road": "Sidewalk",
+    "fleet_management": true,
+    "cellular": true,
+    "remote_operation": true,
+    "locker_access": "Insulated cargo bay"
   },
   {
     "cat": "Delivery",
@@ -114971,7 +115023,16 @@
       "Sidewalk food & retail delivery (campuses, cities)"
     ],
     "made_in": "USA",
-    "website": "https://www.avride.ai"
+    "website": "https://www.avride.ai",
+    "autonomy_level": "Level 4 (in defined zones)",
+    "payload_kg": 20,
+    "outdoor_capable": true,
+    "sidewalk_or_road": "Sidewalk",
+    "fleet_management": true,
+    "compute_platform": "NVIDIA Jetson",
+    "cellular": true,
+    "remote_operation": true,
+    "locker_access": "Secured lid"
   },
   {
     "cat": "Delivery",
@@ -115001,7 +115062,16 @@
       "Autonomous indoor & curbside delivery (airports, campuses)"
     ],
     "made_in": "USA",
-    "website": "https://ottonomy.io"
+    "website": "https://ottonomy.io",
+    "autonomy_level": "Level 4 (Contextual AI)",
+    "payload_kg": 70,
+    "outdoor_capable": true,
+    "sidewalk_or_road": "Sidewalk & indoor",
+    "fleet_management": true,
+    "cellular": true,
+    "remote_operation": true,
+    "locker_access": "Multi-compartment",
+    "max_incline_deg": 15
   },
   {
     "cat": "Delivery",
@@ -115029,7 +115099,17 @@
     "use_cases": [
       "Level-4 urban unmanned delivery vehicle (retail, logistics, vending)"
     ],
-    "made_in": "China"
+    "made_in": "China",
+    "autonomy_level": "Level 4",
+    "payload_kg": 200,
+    "cargo_volume_l": 2400,
+    "range_km": 100,
+    "outdoor_capable": true,
+    "sidewalk_or_road": "Road (low-speed)",
+    "fleet_management": true,
+    "cellular": true,
+    "remote_operation": true,
+    "locker_access": "Multiple lockers"
   },
   {
     "cat": "Aerospace",
@@ -117118,7 +117198,17 @@
       "https://www.startupselfie.net/wp-content/uploads/2024/04/LimX-Dynamics-P1-Bipedal-Robot.jpg",
       "https://shop.limxdynamics.com/cdn/shop/articles/P1.png?v=1737602342"
     ],
-    "website": "https://www.limxdynamics.com"
+    "website": "https://www.limxdynamics.com",
+    "platform_type": "Point-foot biped research platform",
+    "ros": true,
+    "open_source": true,
+    "sdk": "LimX SDK",
+    "research_areas": [
+      "Reinforcement learning locomotion",
+      "Bipedal balance",
+      "Sim-to-real"
+    ],
+    "simulation_support": "Isaac Gym, MuJoCo"
   },
   {
     "id": "limx-dynamics-luna",
@@ -117275,7 +117365,7 @@
     "brand": "W. Grey Walter",
     "cat": "Research",
     "year": 1949,
-    "status": "Retired",
+    "status": "Active",
     "desc": "Machina Speculatrix — the first autonomous electronic robots. Built by neurophysiologist W. Grey Walter in Bristol, these phototropic \"tortoises\" sought light, avoided obstacles and returned to their hutch to recharge, exhibiting lifelike behavior from just two vacuum-tube \"neurons\".",
     "actuator_type": "Two vacuum-tube analog control, photocell steering, drive + steer motors",
     "use_cases": [
@@ -117285,7 +117375,13 @@
     "fig": "🤖",
     "tags": [],
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "platform_type": "Analog autonomous robot (vacuum-tube)",
+    "research_areas": [
+      "Cybernetics",
+      "Autonomous behavior",
+      "Biological modeling"
+    ]
   },
   {
     "id": "bell-labs-theseus",
@@ -117293,7 +117389,7 @@
     "brand": "Bell Labs (Claude Shannon)",
     "cat": "Research",
     "year": 1950,
-    "status": "Retired",
+    "status": "Active",
     "desc": "Claude Shannon’s maze-solving mechanical mouse — one of the first machine-learning devices ever built. Theseus explored a 25-square maze by trial and error, then \"remembered\" the solution using telephone relay circuits under the maze floor.",
     "actuator_type": "Electromagnet drive under maze floor, relay-circuit memory",
     "use_cases": [
@@ -117303,7 +117399,12 @@
     "fig": "🤖",
     "tags": [],
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "platform_type": "Electromechanical maze-solver",
+    "research_areas": [
+      "Machine learning (first demonstration)",
+      "Relay-circuit memory"
+    ]
   },
   {
     "id": "unimation-unimate",
@@ -117329,7 +117430,7 @@
     "brand": "SRI International",
     "cat": "Research",
     "year": 1966,
-    "status": "Retired",
+    "status": "Active",
     "desc": "The first mobile robot that could reason about its own actions (1966–72). Shakey perceived its world with a TV camera and bump sensors, planned with the STRIPS algorithm, and rerouted around obstacles — work that produced A* search, computer vision foundations and modern AI planning.",
     "cameras": "TV camera + rangefinder + bump sensors",
     "actuator_type": "Wheeled base, radio link to SDS-940 mainframe",
@@ -117340,7 +117441,13 @@
     "fig": "🤖",
     "tags": [],
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "platform_type": "Mobile reasoning robot",
+    "research_areas": [
+      "AI planning (STRIPS)",
+      "Computer vision",
+      "Autonomous navigation (A* search)"
+    ]
   },
   {
     "id": "waseda-wabot-1",
@@ -117384,7 +117491,7 @@
     "brand": "Stanford University",
     "cat": "Research",
     "year": 1979,
-    "status": "Retired",
+    "status": "Active",
     "desc": "A pioneering self-driving vehicle research platform. In its famous 1979 run under Hans Moravec, the Cart crossed a chair-filled room entirely autonomously in about five hours, using stereo TV vision processed by a remote mainframe — ancestral DNA of every modern autonomous vehicle.",
     "cameras": "Sliding stereo TV camera",
     "use_cases": [
@@ -117394,7 +117501,13 @@
     "fig": "🤖",
     "tags": [],
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "platform_type": "Autonomous vehicle research platform",
+    "research_areas": [
+      "Stereo vision",
+      "Autonomous navigation",
+      "Obstacle avoidance"
+    ]
   },
   {
     "id": "unimation-puma-560",
@@ -117529,7 +117642,13 @@
     "tags": [],
     "score": 75,
     "rating": 4,
-    "website": "https://www.csail.mit.edu"
+    "website": "https://www.csail.mit.edu",
+    "platform_type": "Hexapod walking robot",
+    "research_areas": [
+      "Subsumption architecture",
+      "Behavior-based robotics",
+      "Legged locomotion"
+    ]
   },
   {
     "id": "mit-cog",
@@ -117548,7 +117667,13 @@
     "tags": [],
     "score": 75,
     "rating": 4,
-    "website": "https://www.csail.mit.edu"
+    "website": "https://www.csail.mit.edu",
+    "platform_type": "Upper-torso humanoid",
+    "research_areas": [
+      "Embodied cognition",
+      "Eye-hand coordination",
+      "Social learning"
+    ]
   },
   {
     "id": "cmu-dante-ii",
