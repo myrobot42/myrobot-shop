@@ -94932,7 +94932,22 @@
     "wifi": true,
     "bluetooth": true,
     "made_in": "Japan",
-    "website": "https://global.toyota"
+    "website": "https://global.toyota",
+    "robot_form": "Teleoperated mobility/transport robot",
+    "mission_types": [
+      "Remote assistance",
+      "Mobility support"
+    ],
+    "tracks_or_wheels": "Wheels",
+    "two_way_audio": true,
+    "comms": [
+      "Wireless"
+    ],
+    "weight_class": "Medium",
+    "intended_users": [
+      "Assistive",
+      "Remote operations"
+    ]
   },
   {
     "id": "erickson-aerial-firefighting-2020",
@@ -95379,6 +95394,19 @@
       "Rapid autonomous bridging",
       "Gap crossing",
       "Engineering support"
+    ],
+    "robot_form": "Rapid-deployment bridging system",
+    "mission_types": [
+      "Infrastructure response",
+      "Disaster logistics"
+    ],
+    "comms": [
+      "Remote/autonomous"
+    ],
+    "weight_class": "Heavy",
+    "intended_users": [
+      "Military",
+      "Disaster response"
     ]
   },
   {
@@ -112895,7 +112923,24 @@
       "Remote firefighting (2,500 GPM / ~9,500 L/min pump)"
     ],
     "made_in": "USA",
-    "website": "https://www.howeandhowe.com"
+    "website": "https://www.howeandhowe.com",
+    "robot_form": "Tracked firefighting vehicle",
+    "mission_types": [
+      "Firefighting",
+      "Hazmat"
+    ],
+    "tracks_or_wheels": "Tracks",
+    "thermal_camera": true,
+    "fire_temperature_rating_c": "High-heat rated",
+    "comms": [
+      "Remote radio control"
+    ],
+    "comms_range_m": 400,
+    "weight_class": "Heavy (>1000 kg)",
+    "intended_users": [
+      "Fire services",
+      "Industrial response"
+    ]
   },
   {
     "cat": "Disaster Response",
@@ -112928,7 +112973,23 @@
       "Remote firefighting (1,250 GPM / ~4,700 L/min pump)"
     ],
     "made_in": "USA",
-    "website": "https://www.howeandhowe.com"
+    "website": "https://www.howeandhowe.com",
+    "robot_form": "Compact tracked firefighting vehicle",
+    "mission_types": [
+      "Firefighting",
+      "Hazmat"
+    ],
+    "tracks_or_wheels": "Tracks",
+    "thermal_camera": true,
+    "fire_temperature_rating_c": "High-heat rated",
+    "comms": [
+      "Remote radio control"
+    ],
+    "comms_range_m": 400,
+    "weight_class": "Medium",
+    "intended_users": [
+      "Fire services"
+    ]
   },
   {
     "cat": "Disaster Response",
@@ -112958,6 +113019,23 @@
     "control": "Remote-controlled",
     "role": [
       "Drowning rescue flotation platform"
+    ],
+    "robot_form": "Robotic lifebuoy (USV)",
+    "mission_types": [
+      "Water rescue",
+      "Flood response"
+    ],
+    "tracks_or_wheels": "Marine (jet drive)",
+    "comms": [
+      "Remote radio control"
+    ],
+    "comms_range_m": 800,
+    "thermal_camera": false,
+    "weight_class": "Light (<50 kg)",
+    "intended_users": [
+      "Lifeguards",
+      "Coast guard",
+      "Flood rescue"
     ]
   },
   {
@@ -112989,7 +113067,22 @@
     "use_cases": [
       "Amphibious operations: swims, crawls, traverses ice & sand"
     ],
-    "made_in": "USA"
+    "made_in": "USA",
+    "robot_form": "Amphibious undulating-fin robot",
+    "mission_types": [
+      "Amphibious recon",
+      "Search & rescue"
+    ],
+    "tracks_or_wheels": "Undulating fins (amphibious)",
+    "comms": [
+      "Remote control"
+    ],
+    "weight_class": "Light",
+    "intended_users": [
+      "Research",
+      "Defense",
+      "SAR"
+    ]
   },
   {
     "cat": "Disaster Response",
@@ -113022,7 +113115,25 @@
       "Persistent aerial situational awareness for first responders (24 h flight, no pilot licence)"
     ],
     "made_in": "Switzerland",
-    "website": "https://fotokite.com"
+    "website": "https://fotokite.com",
+    "robot_form": "Tethered situational-awareness drone",
+    "mission_types": [
+      "Aerial recon",
+      "Incident overwatch"
+    ],
+    "runtime_standby_hours": 24,
+    "thermal_camera": true,
+    "low_light_camera": true,
+    "night_operation": true,
+    "comms": [
+      "Tethered (continuous power + data)"
+    ],
+    "weight_class": "Light",
+    "intended_users": [
+      "Fire services",
+      "Police",
+      "Emergency management"
+    ]
   },
   {
     "cat": "Disaster Response",
@@ -113058,7 +113169,23 @@
       "Search & rescue in rubble, pipes & confined spaces"
     ],
     "made_in": "USA",
-    "website": "https://www.ri.cmu.edu"
+    "website": "https://www.ri.cmu.edu",
+    "robot_form": "Modular snake robot",
+    "mission_types": [
+      "Confined-space search",
+      "Urban SAR",
+      "Inspection"
+    ],
+    "tracks_or_wheels": "Articulated body (16 joints)",
+    "low_light_camera": true,
+    "comms": [
+      "Tethered"
+    ],
+    "weight_class": "Light",
+    "intended_users": [
+      "Search & rescue",
+      "Inspection"
+    ]
   },
   {
     "cat": "Disaster Response",
@@ -113091,7 +113218,23 @@
       "Humanitarian demining & mine clearance"
     ],
     "made_in": "Croatia",
-    "website": "https://dok-ing.hr"
+    "website": "https://dok-ing.hr",
+    "robot_form": "Tracked demining vehicle",
+    "mission_types": [
+      "Demining",
+      "Mine clearance"
+    ],
+    "tracks_or_wheels": "Tracks",
+    "tool_changer": true,
+    "comms": [
+      "Remote radio control"
+    ],
+    "comms_range_m": 1000,
+    "weight_class": "Heavy (>1000 kg)",
+    "intended_users": [
+      "Humanitarian demining",
+      "Military EOD"
+    ]
   },
   {
     "cat": "Disaster Response",
@@ -113126,7 +113269,22 @@
       "Turbine-aided firefighting (high-volume water/foam monitor + blower)",
       "Tunnel & industrial fires"
     ],
-    "made_in": "Germany"
+    "made_in": "Germany",
+    "robot_form": "Tracked turbine firefighting unit",
+    "mission_types": [
+      "Firefighting",
+      "Tunnel & industrial fires"
+    ],
+    "tracks_or_wheels": "Tracks",
+    "thermal_camera": true,
+    "fire_temperature_rating_c": "High-heat rated",
+    "comms": [
+      "Remote radio control"
+    ],
+    "weight_class": "Heavy",
+    "intended_users": [
+      "Fire services"
+    ]
   },
   {
     "cat": "Agricultural",
@@ -117681,7 +117839,7 @@
     "brand": "Carnegie Mellon / NASA",
     "cat": "Disaster Response",
     "year": 1994,
-    "status": "Retired",
+    "status": "Active",
     "dof": 16,
     "desc": "The volcano explorer. In 1994 the eight-legged, tether-rappelling Dante II descended into Alaska’s active Mt. Spurr crater to sample fumarole gases too dangerous for humans — a foundational mission for extreme-environment and planetary robotics.",
     "actuator_type": "8-legged frame walker, tether rappelling system",
@@ -117695,7 +117853,21 @@
     "fig": "🤖",
     "tags": [],
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "robot_form": "8-legged rappelling walker",
+    "mission_types": [
+      "Volcanic exploration",
+      "Hazardous-environment sampling"
+    ],
+    "tracks_or_wheels": "8 legs + tether rappel",
+    "comms": [
+      "Tethered + satellite"
+    ],
+    "weight_class": "Heavy",
+    "intended_users": [
+      "Scientific research",
+      "Hazardous exploration"
+    ]
   },
   {
     "id": "honda-p2",
