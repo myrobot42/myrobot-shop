@@ -114106,7 +114106,16 @@
       "Goods-to-person warehouse fulfillment (climbs racks to 12 m)"
     ],
     "made_in": "France",
-    "website": "https://www.exotec.com"
+    "website": "https://www.exotec.com",
+    "robot_type": "3D storage & retrieval robot",
+    "navigation_type": "Laser-guided, climbs racks",
+    "lifting_height_mm": 12000,
+    "max_speed_ms": 4,
+    "safety_lidar": true,
+    "fleet_software": "Deepsky",
+    "fleet_size_max": 1000,
+    "wms_integration": true,
+    "opportunity_charging": true
   },
   {
     "cat": "AGV/AMR",
@@ -114144,7 +114153,16 @@
       "Tote-to-person warehouse picking at height"
     ],
     "made_in": "China",
-    "website": "https://www.hairobotics.com"
+    "website": "https://www.hairobotics.com",
+    "robot_type": "Autonomous case-handling robot (ACR)",
+    "navigation_type": "QR + LiDAR hybrid",
+    "payload_kg": 80,
+    "lifting_height_mm": 7000,
+    "safety_lidar": true,
+    "fleet_software": "HAIQ",
+    "wms_integration": true,
+    "dock_charging": true,
+    "fleet_size_max": 500
   },
   {
     "cat": "AGV/AMR",
@@ -114178,7 +114196,19 @@
       "Warehouse goods-to-person & sortation AMR fleet (GreyMatter software)"
     ],
     "made_in": "USA/India",
-    "website": "https://www.greyorange.com"
+    "website": "https://www.greyorange.com",
+    "robot_type": "Goods-to-person AMR",
+    "navigation_type": "Vision + LiDAR SLAM",
+    "max_speed_ms": 1.7,
+    "safety_lidar": true,
+    "fleet_software": "GreyMatter",
+    "wms_integration": true,
+    "dock_charging": true,
+    "opportunity_charging": true,
+    "multi_floor": false,
+    "safety_certifications": [
+      "CE"
+    ]
   },
   {
     "cat": "AGV/AMR",
@@ -114214,7 +114244,19 @@
       "Autonomous warehouse towing"
     ],
     "made_in": "USA",
-    "website": "https://seegrid.com"
+    "website": "https://seegrid.com",
+    "robot_type": "Autonomous tow tractor",
+    "navigation_type": "Vision-guided (stereo cameras)",
+    "lifting_capacity_kg": 4500,
+    "max_speed_ms": 1.8,
+    "safety_lidar": true,
+    "bumper_safety": true,
+    "fleet_software": "Seegrid Supervisor",
+    "wms_integration": true,
+    "dock_charging": true,
+    "safety_certifications": [
+      "ANSI B56.5"
+    ]
   },
   {
     "cat": "AGV/AMR",
@@ -114227,7 +114269,7 @@
     "year": 2021,
     "origin": "USA",
     "status": "Active",
-    "payload_kg": 1360,
+    "payload_kg": 3600,
     "desc": "Vecna Robotics builds autonomous pallet trucks and tuggers for warehouse material handling, with the Pivotal orchestration platform and a human-in-the-loop remote support model for handling edge cases.",
     "tags": [
       "AGV/AMR",
@@ -114249,7 +114291,18 @@
       "Autonomous pallet transport & lifting"
     ],
     "made_in": "USA",
-    "website": "https://www.vecnarobotics.com"
+    "website": "https://www.vecnarobotics.com",
+    "robot_type": "Autonomous pallet truck",
+    "navigation_type": "LiDAR + camera SLAM",
+    "lifting_capacity_kg": 3600,
+    "safety_lidar": true,
+    "bumper_safety": true,
+    "fleet_software": "Pivotal",
+    "wms_integration": true,
+    "dock_charging": true,
+    "safety_certifications": [
+      "ANSI/ITSDF B56.5"
+    ]
   },
   {
     "cat": "AGV/AMR",
@@ -114289,7 +114342,20 @@
       "Autonomous pallet transport"
     ],
     "made_in": "Denmark",
-    "website": "https://www.mobile-industrial-robots.com"
+    "website": "https://www.mobile-industrial-robots.com",
+    "robot_type": "Autonomous pallet jack",
+    "navigation_type": "AI 3D vision + LiDAR SLAM",
+    "lifting_capacity_kg": 1200,
+    "safety_lidar": true,
+    "bumper_safety": true,
+    "fleet_software": "MiR Fleet",
+    "fleet_size_max": 100,
+    "wms_integration": true,
+    "dock_charging": true,
+    "safety_certifications": [
+      "CE",
+      "ISO 3691-4"
+    ]
   },
   {
     "cat": "AGV/AMR",
@@ -114325,7 +114391,16 @@
     "use_cases": [
       "Package sortation in Amazon fulfillment centers"
     ],
-    "made_in": "USA"
+    "made_in": "USA",
+    "robot_type": "Autonomous sortation drive unit",
+    "navigation_type": "Fiducial + sensor fusion",
+    "payload_kg": 570,
+    "max_speed_ms": 1.7,
+    "safety_lidar": true,
+    "fleet_software": "Amazon Robotics platform",
+    "fleet_size_max": 1000,
+    "dock_charging": true,
+    "opportunity_charging": true
   },
   {
     "cat": "AGV/AMR",
@@ -114359,7 +114434,16 @@
       "Autonomous trailer unloading & dock work (robotic forklift)"
     ],
     "made_in": "USA",
-    "website": "https://www.foxrobotics.com"
+    "website": "https://www.foxrobotics.com",
+    "robot_type": "Autonomous forklift (trailer unloading)",
+    "navigation_type": "3D vision + LiDAR",
+    "payload_kg": 1600,
+    "safety_lidar": true,
+    "wms_integration": true,
+    "dock_charging": true,
+    "safety_certifications": [
+      "ANSI/ITSDF B56.5"
+    ]
   },
   {
     "cat": "AGV/AMR",
@@ -114394,7 +114478,14 @@
       "Autonomous tote retrieval & goods-to-person picking"
     ],
     "made_in": "USA",
-    "website": "https://www.inviarobotics.com"
+    "website": "https://www.inviarobotics.com",
+    "robot_type": "Goods-to-person picking AMR",
+    "navigation_type": "Vision-guided",
+    "payload_kg": 14,
+    "safety_lidar": true,
+    "fleet_software": "inVia Logic",
+    "wms_integration": true,
+    "dock_charging": true
   },
   {
     "cat": "Medical",
