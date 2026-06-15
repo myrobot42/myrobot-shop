@@ -1346,8 +1346,22 @@ function renderHome(){
     }
     btHome.innerHTML=html;
   }
-  // Featured robots — defensive against missing fields
-  const top4=[...ROBOTS].sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,4);
+  // Featured robots — surface the NEWEST, most in-demand robots people search for
+  // (recency + famous-brand boost + has-image), not just highest score.
+  const _hotBrands=['Tesla','Boston Dynamics','Unitree','Figure','Figure AI','Agility Robotics','1X','1X Technologies','NEURA Robotics','Sanctuary AI','Apptronik','UBTECH','Xiaomi','Fourier','Galbot','Clone Robotics','Deep Robotics','EngineAI','Engine AI','Booster Robotics','Noble Machines','Hexagon','Hyundai','Samsung','LG','Honda'];
+  function robotBuzz(r){
+    var d = (typeof robotSortDate==='function') ? robotSortDate(r) : ((parseInt(r.year)||2018)*10000+101);
+    var yr = Math.floor(d/10000);
+    var buzz = (yr-2018)*10;                    // recency
+    if(_hotBrands.indexOf(r.brand)>=0) buzz+=40; // famous, frequently-searched brands
+    if(r.cat==='Humanoid') buzz+=15;            // humanoids drive the most search traffic
+    if(r.img) buzz+=8;                          // has a real image → better-looking card
+    if(yr>2026) buzz-=100;                      // future/unreleased shouldn't headline
+    return {buzz:buzz, d:d};
+  }
+  const top4=[...ROBOTS].map(function(r){return {r:r, b:robotBuzz(r)};})
+    .sort(function(a,b){return b.b.buzz-a.b.buzz || b.b.d-a.b.d || (b.r.score||0)-(a.r.score||0);})
+    .slice(0,4).map(function(x){return x.r;});
   document.getElementById('home-robots').innerHTML=top4.map(r=>{
     const tags=Array.isArray(r.tags)?r.tags:[];
     const rating=r.rating||0;
