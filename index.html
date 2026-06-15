@@ -764,7 +764,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <a id="nav-db" onclick="goPage('db')">Database</a>
       <a id="nav-finder" onclick="goPage('finder')">Finder</a>
       <a id="nav-compare" onclick="goPage('compare')">Compare</a>
-      <a id="nav-rankings" onclick="goPage('rankings')">Rankings</a>
+      <a id="nav-rankings" onclick="goPage('rankings')">Discover</a>
       <a id="nav-news" onclick="goPage('news')">News</a>
       <a id="nav-videos" onclick="goPage('videos')">Videos</a>
       <a id="nav-manufacturers" onclick="goPage('manufacturers')">Brands</a>
@@ -835,7 +835,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   </div>
   <div class="section">
     <div class="mw">
-      <div class="sec-header"><div class="sec-title">Top Rated This Month</div><span class="sec-link" onclick="goPage('rankings')">Full rankings →</span></div>
+      <div class="sec-header"><div class="sec-title">Trending Now</div><span class="sec-link" onclick="goPage('rankings')">See all →</span></div>
       <div class="chart-list" id="home-rankings"></div>
     </div>
   </div>
@@ -876,7 +876,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
           email@myrobot.shop
         </a>
       </div>
-      <div class="footer-col"><h4>DATABASE</h4><a onclick="goPage('db')">All Robots</a><a onclick="goPage('db')">New Releases</a><a onclick="goPage('rankings')">Top Rated</a><a onclick="goPage('manufacturers')">By Brand</a></div>
+      <div class="footer-col"><h4>DATABASE</h4><a onclick="goPage('db')">All Robots</a><a onclick="goPage('db')">New Releases</a><a onclick="goPage('rankings')">Trending</a><a onclick="goPage('manufacturers')">By Brand</a></div>
       <div class="footer-col"><h4>TOOLS</h4><a onclick="goPage('compare')">Compare</a><a onclick="goPage('finder')">Robot Finder</a><a onclick="goPage('news')">News</a><a onclick="goPage('videos')">Videos</a><a onclick="goPage('submit-review')">Reviews</a></div>
       <div class="footer-col"><h4>COMPANY</h4><a>About</a><a>Advertise</a><a href="mailto:email@myrobot.shop">Contact</a><a>Privacy</a></div>
     </div>
@@ -1030,17 +1030,21 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <!-- RANKINGS -->
 <div id="page-rankings" class="page">
   <div class="rankings-page">
-    <div style="margin-bottom:4px"><div class="page-title">Robot Rankings</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Top-rated robots scored by specs, user reviews and expert analysis</p></div>
-    <div class="tabs" id="ranking-tabs">
-      <div class="tab active" onclick="filterRankings('all',this)">Overall</div>
+    <div style="margin-bottom:4px"><div class="page-title">Discover Robots</div><p style="color:var(--mut);font-size:13px;margin-top:5px">What's being searched for, what's newest, and what's available — straight from the data. We list the facts; we don't rank or rate robots.</p></div>
+    <div class="tabs" id="ranking-mode-tabs">
+      <div class="tab active" onclick="setRankMode('trending',this)">🔥 Trending Now</div>
+      <div class="tab" onclick="setRankMode('latest',this)">🆕 Latest Robots</div>
+      <div class="tab" onclick="setRankMode('available',this)">🛒 Available Now</div>
+    </div>
+    <div class="tabs" id="ranking-tabs" style="margin-top:10px">
+      <div class="tab active" onclick="filterRankings('all',this)">All</div>
       <div class="tab" onclick="filterRankings('Humanoid',this)">Humanoid</div>
       <div class="tab" onclick="filterRankings('Industrial',this)">Industrial</div>
       <div class="tab" onclick="filterRankings('Service',this)">Service</div>
       <div class="tab" onclick="filterRankings('Consumer',this)">Consumer/Home</div>
+      <div class="tab" onclick="filterRankings('Quadruped',this)">Quadruped</div>
       <div class="tab" onclick="filterRankings('Drones',this)">Drones</div>
       <div class="tab" onclick="filterRankings('Medical',this)">Medical</div>
-      <div class="tab" onclick="filterRankings('Agricultural',this)">Agriculture</div>
-      <div class="tab" onclick="filterRankings('Military',this)">Military</div>
     </div>
     <div id="rankings-list" style="margin-top:20px"></div>
   </div>
@@ -1184,7 +1188,17 @@ const ALL_CATS=['Aerospace','Agricultural','AGV/AMR','Aquatic','Autonomous Vehic
 
 // Load robots.json then refresh whatever page is currently showing
 let ROBOTS_LOADED = false;
+// Load real Google Trends data (refreshed daily by the scheduled function). Optional —
+// the homepage falls back to the buzz proxy if this file isn't present yet.
+window.TRENDING = null;
+function loadTrending(){
+  return fetch('data/trending.json',{cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(t){ if(t && t.scores) window.TRENDING = t; })
+    .catch(function(){ /* no trending file yet — fine, we fall back */ });
+}
 function loadRobots(){
+  loadTrending(); // fire alongside; non-blocking
   return fetch('data/robots.json',{cache:'no-store'})
     .then(r=>{if(!r.ok)throw new Error('robots.json '+r.status);return r.json();})
     .then(data=>{
@@ -1384,9 +1398,25 @@ function renderHome(){
         </div>
       </div>
     </div>`;}).join('');
-  // Rankings — defensive against missing fields
-  const top5=[...ROBOTS].sort((a,b)=>(b.score||0)-(a.score||0)).slice(0,5);
-  const ranks=['gold','silver','bronze','',''];
+  // Trending Now — uses REAL Google Trends data (data/trending.json, refreshed daily by
+  // a scheduled function) when available; falls back to the buzz proxy until the first run.
+  const _featuredIds = top4.map(function(x){return x.id;});
+  var _trendScores = (window.TRENDING && window.TRENDING.scores) ? window.TRENDING.scores : null;
+  const top5=[...ROBOTS]
+    .filter(function(r){ return _featuredIds.indexOf(r.id)<0; })
+    .map(function(r){
+      var b=robotBuzz(r);
+      var k;
+      if(_trendScores && _trendScores[r.id]!=null){
+        k = 10000 + _trendScores[r.id]*100 + b.buzz; // real trend data leads, buzz breaks ties
+      } else {
+        k = b.buzz*2 + (r.score||0);                  // fallback: buzz proxy
+      }
+      return {r:r, k:k, d:b.d};
+    })
+    .sort(function(a,b){return b.k-a.k || b.d-a.d || (b.r.score||0)-(a.r.score||0);})
+    .slice(0,5).map(function(x){return x.r;});
+  const ranks=['','','','',''];  // neutral — trending is a fact, not a podium
   document.getElementById('home-rankings').innerHTML=top5.map((r,i)=>{
     const tags=Array.isArray(r.tags)?r.tags:[];
     const score=r.score||0;
@@ -3392,32 +3422,74 @@ function scrollToCompareTable(){
 
 // ════════════ RANKINGS ════════════
 function filterRankings(cat,el){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('#ranking-tabs .tab').forEach(function(t){t.classList.remove('active');});
   if(el)el.classList.add('active');
   renderRankings(cat);
 }
+var RANK_MODE='trending', RANK_CAT='all';
+function setRankMode(mode,el){
+  RANK_MODE=mode;
+  document.querySelectorAll('#ranking-mode-tabs .tab').forEach(function(t){t.classList.remove('active');});
+  if(el)el.classList.add('active');
+  renderRankings(RANK_CAT);
+}
 function renderRankings(cat){
   if (!cat) cat = 'all';
-  let list=cat==='all'?[...ROBOTS]:[...ROBOTS].filter(r=>r.cat===cat);
-  list.sort((a,b)=>b.score-a.score);
-  const ranks=['gold','silver','bronze'];
-  document.getElementById('rankings-list').innerHTML=list.map((r,i)=>`
-    <div class="rank-item" onclick="openProfile('${r.id}')">
-      <div class="rank-num ${ranks[i]||''}">${i+1}</div>
-      <div class="rank-icon" style="overflow:hidden;background:#fff">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:100%;height:100%;object-fit:cover;border-radius:9px" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain'">`:`<img src="${MASCOT_URL}" alt="${r.name}" style="width:100%;height:100%;object-fit:contain;border-radius:9px">`}</div>
-      <div class="rank-info">
-        <div class="rank-brand">${r.brand}</div>
-        <div class="rank-name">${r.name}</div>
-        <div class="rank-cat">${r.sub} · ${r.year}</div>
-        <div class="rank-pills">${r.tags.slice(0,3).map(t=>`<span class="pill">${t}</span>`).join('')}</div>
-      </div>
-      <div class="rank-score-wrap">
-        <div class="rank-score">${r.score}</div>
-        <div class="rank-stars">${'★'.repeat(Math.round(r.rating))}</div>
-        <div class="score-bar"><div class="score-fill" style="width:${r.score}%"></div></div>
-        <div class="rank-score-lbl">Expert Score</div>
-      </div>
-    </div>`).join('');
+  RANK_CAT = cat;
+  var list = cat==='all' ? ROBOTS.slice() : ROBOTS.filter(function(r){return r.cat===cat;});
+  var trend = (window.TRENDING && window.TRENDING.scores) ? window.TRENDING.scores : null;
+
+  // Sort + choose the right-hand signal per mode
+  var signalLabel, signalFn;
+  if (RANK_MODE==='latest') {
+    list.sort(function(a,b){return (robotSortDate(b))-(robotSortDate(a));});
+    signalLabel='Launched';
+    signalFn=function(r){ return r.released ? fmtLaunch(r.released) : (r.year||'—'); };
+  } else if (RANK_MODE==='available') {
+    list = list.filter(function(r){return /active|available|released|shipping|production/i.test(r.status||'');});
+    list.sort(function(a,b){
+      var pa=(a.price&&a.price>0)?a.price:1e12, pb=(b.price&&b.price>0)?b.price:1e12;
+      return robotBuzz(b).buzz-robotBuzz(a).buzz;
+    });
+    signalLabel='Status';
+    signalFn=function(r){ return 'Available'; };
+  } else { // trending
+    list = list.map(function(r){
+      var b=robotBuzz(r);
+      var t=(trend && trend[r.id]!=null) ? trend[r.id] : null;
+      var k = (t!=null) ? (10000 + t*100 + b.buzz) : (b.buzz*2 + (r.score||0));
+      return {r:r,k:k,t:t,d:b.d};
+    }).sort(function(a,b){return b.k-a.k || b.d-a.d;}).map(function(x){x.r._t=x.t;return x.r;});
+    signalLabel='Interest';
+    signalFn=function(r){ return (r._t!=null) ? r._t+'/100' : 'Hot'; };
+  }
+
+  var ranks=['','',''];  // neutral — no gold/silver/bronze "winner" medals; these are factual lists, not a contest
+  document.getElementById('rankings-list').innerHTML = list.slice(0,100).map(function(r,i){
+    var tags=Array.isArray(r.tags)?r.tags:[];
+    var sub=r.sub||r.cat||'';
+    return '<div class="rank-item" onclick="openProfile(\''+r.id+'\')">'+
+      '<div class="rank-num '+(ranks[i]||'')+'">'+(i+1)+'</div>'+
+      '<div class="rank-icon" style="overflow:hidden;background:#fff">'+(r.img?'<img src="'+r.img+'" alt="'+esc(r.name)+'" style="width:100%;height:100%;object-fit:cover;border-radius:9px" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'">':'<img src="'+MASCOT_URL+'" alt="'+esc(r.name)+'" style="width:100%;height:100%;object-fit:contain;border-radius:9px">')+'</div>'+
+      '<div class="rank-info">'+
+        '<div class="rank-brand">'+esc(r.brand||'')+'</div>'+
+        '<div class="rank-name">'+esc(r.name||'')+'</div>'+
+        '<div class="rank-cat">'+esc(sub)+' · '+(r.year||'')+'</div>'+
+        '<div class="rank-pills">'+tags.slice(0,3).map(function(t){return '<span class="pill">'+esc(t)+'</span>';}).join('')+'</div>'+
+      '</div>'+
+      '<div class="rank-score-wrap">'+
+        '<div class="rank-score">'+signalFn(r)+'</div>'+
+        '<div class="rank-score-lbl">'+signalLabel+'</div>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+// format a launch date like "Mar 2026"
+function fmtLaunch(v){
+  var m=String(v).match(/^(\d{4})[-/]?(\d{1,2})?/);
+  if(!m)return String(v);
+  var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return (m[2]?mo[parseInt(m[2])-1]+' ':'')+m[1];
 }
 
 // ════════════ FINDER ════════════
