@@ -1215,6 +1215,7 @@ function loadTrending(){
 }
 function loadRobots(){
   loadTrending(); // fire alongside; non-blocking
+  try{ _fieldRangeCache = {}; }catch(e){} // fresh data → recompute slider ranges
   return fetch('data/robots.json',{cache:'no-store'})
     .then(r=>{if(!r.ok)throw new Error('robots.json '+r.status);return r.json();})
     .then(data=>{
@@ -1430,14 +1431,14 @@ function renderHome(){
     var b=robotBuzz(r);
     var k=(_trendScores && _trendScores[r.id]!=null) ? (10000+_trendScores[r.id]*100+b.buzz) : (b.buzz*2+(r.score||0));
     return {r:r,k:k,d:b.d};
-  }).sort(function(a,b){return b.k-a.k||b.d-a.d;}).slice(0,10).map(function(x){return x.r;});
+  }).sort(function(a,b){return b.k-a.k||b.d-a.d;}).slice(0,5).map(function(x){return x.r;});
   // Latest — newest by real launch date
-  var latestList=[...ROBOTS].sort(function(a,b){return robotSortDate(b)-robotSortDate(a);}).slice(0,10);
+  var latestList=[...ROBOTS].sort(function(a,b){return robotSortDate(b)-robotSortDate(a);}).slice(0,5);
   // Available — robots you can actually BUY now (have a real price), newest first.
   // Distinct from Latest (which includes announced/POA robots).
   var availList=[...ROBOTS].filter(function(r){
     return /active|available|released|shipping|production/i.test(r.status||'') && r.price && r.price>0;
-  }).sort(function(a,b){return robotSortDate(b)-robotSortDate(a);}).slice(0,10);
+  }).sort(function(a,b){return robotSortDate(b)-robotSortDate(a);}).slice(0,5);
   var te=document.getElementById('home-trending'); if(te) te.innerHTML=trendList.map(chartRow).join('');
   var le=document.getElementById('home-latest'); if(le) le.innerHTML=latestList.map(chartRow).join('');
   var ae=document.getElementById('home-available'); if(ae) ae.innerHTML=availList.map(chartRow).join('');
@@ -3474,7 +3475,10 @@ function renderRankings(cat){
   }
 
   var ranks=['','',''];  // neutral — no gold/silver/bronze "winner" medals; these are factual lists, not a contest
-  document.getElementById('rankings-list').innerHTML = list.slice(0,100).map(function(r,i){
+  var el = document.getElementById('rankings-list');
+  if(!el) return;
+  try {
+    el.innerHTML = list.slice(0,100).map(function(r,i){
     var tags=Array.isArray(r.tags)?r.tags:[];
     var sub=r.sub||r.cat||'';
     return '<div class="rank-item" onclick="openProfile(\''+r.id+'\')">'+
@@ -3492,6 +3496,10 @@ function renderRankings(cat){
       '</div>'+
     '</div>';
   }).join('');
+  } catch(err) {
+    console.error('renderRankings error:', err);
+    el.innerHTML = '<div style="padding:40px;text-align:center;color:var(--mut)">Could not load this list. <a onclick="goPage(\'db\')" style="color:var(--acc);cursor:pointer">Browse all robots →</a></div>';
+  }
 }
 // format a launch date like "Mar 2026"
 function fmtLaunch(v){
@@ -3712,25 +3720,32 @@ function getSliderRange(def){
 // Compute reasonable min/max for a numeric field using 5th–95th percentile
 // to avoid one outlier stretching the slider scale. Outliers are still filterable
 // (slider goes to the actual max), but the default range is sensible.
+// Cache computed ranges so we scan the data once per field, not on every form rebuild.
+var _fieldRangeCache = {};
 function computeFieldRange(field, fallbackMin, fallbackMax){
   const pool = getPool();
+  // cache key includes the current category pool so per-category ranges stay correct
+  const ckey = (typeof finderCat!=='undefined'?finderCat:'all') + '|' + field;
+  if (_fieldRangeCache[ckey]) return _fieldRangeCache[ckey];
   const values = [];
   for (const r of pool){
     const v = parseFloat(r[field]);
     if (!isNaN(v) && v > 0) values.push(v);
   }
-  if (values.length === 0) return [fallbackMin, fallbackMax];
+  if (values.length === 0){ _fieldRangeCache[ckey]=[fallbackMin, fallbackMax]; return _fieldRangeCache[ckey]; }
   values.sort((a, b) => a - b);
-  // Year: always show the full historical range (1939 → future), never clipped
-  if (field === 'year') return [Math.floor(values[0]), Math.ceil(values[values.length - 1])];
-  // Use 5th and 95th percentile to stay tight to real data
-  const p5 = values[Math.max(0, Math.floor(values.length * 0.05))];
-  const p95 = values[Math.min(values.length - 1, Math.ceil(values.length * 0.95))];
-  // Round to a nice number
-  const lo = Math.max(0, Math.floor(p5));
-  const hi = Math.ceil(p95);
-  // Sanity: ensure hi > lo
-  return [lo, hi > lo ? hi : lo + 1];
+  let out;
+  if (field === 'year') {
+    out = [Math.floor(values[0]), Math.ceil(values[values.length - 1])];
+  } else {
+    const p5 = values[Math.max(0, Math.floor(values.length * 0.05))];
+    const p95 = values[Math.min(values.length - 1, Math.ceil(values.length * 0.95))];
+    const lo = Math.max(0, Math.floor(p5));
+    const hi = Math.ceil(p95);
+    out = [lo, hi > lo ? hi : lo + 1];
+  }
+  _fieldRangeCache[ckey] = out;
+  return out;
 }
 
 // Format a numeric value for display
