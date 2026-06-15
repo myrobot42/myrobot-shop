@@ -4553,7 +4553,7 @@ function runFinderSearch(){
     return "You are the Robot Expert for myrobot.shop, the world's most complete robot database ("+R.length+" robots, "+brands.length+" brands, "+cats.length+" categories). You are knowledgeable, precise, and genuinely helpful — like a seasoned robotics analyst who knows every machine in the catalog.\n\n"+
     "YOUR JOB (all of these):\n1. RECOMMEND robots based on need, budget, use case, environment.\n2. ANSWER questions about any specific robot — specs, capabilities.\n3. COMPARE robots head-to-head.\n4. EXPLAIN robotics concepts plainly.\n\n"+
     "CATEGORIES: "+cats.join(', ')+".\n\n"+
-    "HOW TO USE DATA:\n- Below is a digest of EVERY robot (one per line): id|name|brand|category [specs] — uses.\n- Reason across the whole digest to shortlist and recommend.\n- When you reference specific robots, ALWAYS cite them with this EXACT format so the site renders rich cards: [[robot:robot-id]] using the exact id (the part before the first |).\n- Don't invent specs not shown; for deep detail, point the user to the robot's page.\n\n"+
+    "HOW TO USE DATA:\n- Below is a digest of EVERY robot (one per line): id|name|brand|category [specs] — uses.\n- Reason across the whole digest to shortlist and recommend.\n- When you reference specific robots, cite them with this EXACT format: [[robot:EXACT-ID]] — copy the id verbatim from the digest (the part before the first | on that robot's line). Example: [[robot:pudu-bellabot-2020]].\n- NEVER write markdown links like [Name](url) for robots. NEVER link to myrobot.shop. ONLY use the [[robot:id]] tag — the site turns it into a clickable card automatically.\n- Put the [[robot:id]] tag on its own line right after you mention that robot. Don't repeat the specs in text; the card shows them.\n- Don't invent specs not shown; for deep detail, point the user to the robot's page.\n\n"+
     "STYLE:\n- Concise, scannable. Lead with the answer. Short paragraphs, tight bullets.\n- When recommending, give 2-5 options each with a one-line reason and a [[robot:id]] tag.\n- Never fabricate robots, specs, or prices. If unsure, say so. Be warm but expert; no filler, no 'as an AI'.\n\n"+
     "ROBOT DIGEST ("+R.length+" robots):\n"+buildDigest();
   }
@@ -4582,6 +4582,9 @@ function runFinderSearch(){
   function renderContent(text){
     var ids=[];
     var body=text.replace(/\[\[robot:([a-z0-9\-_]+)\]\]/gi,function(m,id){ids.push(id);return '';});
+    // Strip any stray markdown links pointing at the site itself (the AI sometimes adds
+    // [Name](https://myrobot.shop/#) duplicates next to robot tags) — keep only the link text.
+    body=body.replace(/\[([^\]]+)\]\((?:https?:\/\/)?(?:www\.)?myrobot\.shop[^)]*\)/gi,'$1');
     body=esc(body).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
       .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g,'<a href="$2" target="_blank">$1</a>')
       .replace(/^[-•]\s+(.+)$/gm,'<li>$1</li>')
@@ -4590,7 +4593,28 @@ function runFinderSearch(){
     return {body:body, ids:[...new Set(ids)]};
   }
 
-  function robotById(id){var R=window.ROBOTS||[];return R.find(function(x){return x.id===id;})||null;}
+  function robotById(id){
+    var R=window.ROBOTS||[];
+    if(!R.length) return null;
+    var want=String(id||'').toLowerCase().trim();
+    // 1. exact id
+    var hit=R.find(function(x){return x.id===id;});
+    if(hit) return hit;
+    // 2. case-insensitive id
+    hit=R.find(function(x){return String(x.id).toLowerCase()===want;});
+    if(hit) return hit;
+    // 3. id starts-with / contains (AI sometimes drops the year suffix, e.g. "pudu-bellabot")
+    hit=R.find(function(x){var xi=String(x.id).toLowerCase();return xi.indexOf(want)===0||want.indexOf(xi)===0;});
+    if(hit) return hit;
+    // 4. match by slugified name (AI may pass "bellabot" or "pudu-bellabot")
+    var slug=want.replace(/[^a-z0-9]+/g,'');
+    hit=R.find(function(x){
+      var ns=String(x.name).toLowerCase().replace(/[^a-z0-9]+/g,'');
+      var bs=String(x.brand).toLowerCase().replace(/[^a-z0-9]+/g,'');
+      return ns===slug || (bs+ns).indexOf(slug)>=0 || slug.indexOf(ns)>=0 && ns.length>3;
+    });
+    return hit||null;
+  }
 
   function robotCardHTML(id){
     var r=robotById(id); if(!r) return '';
