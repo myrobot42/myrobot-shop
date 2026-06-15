@@ -139,6 +139,9 @@ h1 em{color:var(--acc);font-style:normal}
 .cb-left p{font-size:13px;color:rgba(255,255,255,.6);max-width:400px;line-height:1.6}
 .btn-cb{padding:11px 24px;background:#fff;color:var(--txt);border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
 .chart-list{display:flex;flex-direction:column;gap:8px}
+.home-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.home-col{min-width:0}
+@media(max-width:900px){.home-cols{grid-template-columns:1fr}}
 .chart-item{display:flex;align-items:center;gap:12px;border:1px solid var(--bdr);border-radius:10px;padding:11px 14px;cursor:pointer;transition:all .15s;background:#fff}
 .chart-item:hover{border-color:var(--acc);background:var(--acc-l)}
 .chart-rank{font-family:'Space Mono','Courier New',monospace;font-size:15px;font-weight:800;color:var(--mut);min-width:22px;text-align:center}
@@ -835,8 +838,21 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   </div>
   <div class="section">
     <div class="mw">
-      <div class="sec-header"><div class="sec-title">Trending Now</div><span class="sec-link" onclick="goPage('rankings')">See all →</span></div>
-      <div class="chart-list" id="home-rankings"></div>
+      <div class="home-cols">
+        <div class="home-col">
+          <div class="sec-header"><div class="sec-title">🔥 Trending Now</div></div>
+          <div class="chart-list" id="home-trending"></div>
+        </div>
+        <div class="home-col">
+          <div class="sec-header"><div class="sec-title">🆕 Latest Robots</div></div>
+          <div class="chart-list" id="home-latest"></div>
+        </div>
+        <div class="home-col">
+          <div class="sec-header"><div class="sec-title">🛒 Available Now</div></div>
+          <div class="chart-list" id="home-available"></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:18px"><span class="sec-link" onclick="goPage('rankings')" style="cursor:pointer">Discover all robots →</span></div>
     </div>
   </div>
   <section style="background:linear-gradient(135deg,var(--acc-l),var(--bg2));border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)">
@@ -1332,6 +1348,19 @@ if (document.readyState === 'loading'){
 }
 
 // ════════════ HOME ════════════
+// Buzz score — shared by homepage (Featured/Trending) AND the Discover page.
+// Top-level so every render path can use it. Surfaces famous + recent + image-backed robots.
+var _hotBrands=['Tesla','Boston Dynamics','Unitree','Figure','Figure AI','Agility Robotics','1X','1X Technologies','NEURA Robotics','Sanctuary AI','Apptronik','UBTECH','Xiaomi','Fourier','Galbot','Clone Robotics','Deep Robotics','EngineAI','Engine AI','Booster Robotics','Noble Machines','Hexagon','Hyundai','Samsung','LG','Honda'];
+function robotBuzz(r){
+  var d = (typeof robotSortDate==='function') ? robotSortDate(r) : ((parseInt(r.year)||2018)*10000+101);
+  var yr = Math.floor(d/10000);
+  var buzz = (yr-2018)*10;
+  if(_hotBrands.indexOf(r.brand)>=0) buzz+=40;
+  if(r.cat==='Humanoid') buzz+=15;
+  if(r.img) buzz+=8;
+  if(yr>2026) buzz-=100;
+  return {buzz:buzz, d:d};
+}
 function renderHome(){
   // Live counts
   const total=ROBOTS.length;
@@ -1360,19 +1389,7 @@ function renderHome(){
     }
     btHome.innerHTML=html;
   }
-  // Featured robots — surface the NEWEST, most in-demand robots people search for
-  // (recency + famous-brand boost + has-image), not just highest score.
-  const _hotBrands=['Tesla','Boston Dynamics','Unitree','Figure','Figure AI','Agility Robotics','1X','1X Technologies','NEURA Robotics','Sanctuary AI','Apptronik','UBTECH','Xiaomi','Fourier','Galbot','Clone Robotics','Deep Robotics','EngineAI','Engine AI','Booster Robotics','Noble Machines','Hexagon','Hyundai','Samsung','LG','Honda'];
-  function robotBuzz(r){
-    var d = (typeof robotSortDate==='function') ? robotSortDate(r) : ((parseInt(r.year)||2018)*10000+101);
-    var yr = Math.floor(d/10000);
-    var buzz = (yr-2018)*10;                    // recency
-    if(_hotBrands.indexOf(r.brand)>=0) buzz+=40; // famous, frequently-searched brands
-    if(r.cat==='Humanoid') buzz+=15;            // humanoids drive the most search traffic
-    if(r.img) buzz+=8;                          // has a real image → better-looking card
-    if(yr>2026) buzz-=100;                      // future/unreleased shouldn't headline
-    return {buzz:buzz, d:d};
-  }
+  // Featured robots — surface the NEWEST, most in-demand robots people search for.
   const top4=[...ROBOTS].map(function(r){return {r:r, b:robotBuzz(r)};})
     .sort(function(a,b){return b.b.buzz-a.b.buzz || b.b.d-a.b.d || (b.r.score||0)-(a.r.score||0);})
     .slice(0,4).map(function(x){return x.r;});
@@ -1398,40 +1415,32 @@ function renderHome(){
         </div>
       </div>
     </div>`;}).join('');
-  // Trending Now — uses REAL Google Trends data (data/trending.json, refreshed daily by
-  // a scheduled function) when available; falls back to the buzz proxy until the first run.
-  const _featuredIds = top4.map(function(x){return x.id;});
+  // ── Three homepage columns: Trending / Latest / Available (10 each, genuinely different) ──
   var _trendScores = (window.TRENDING && window.TRENDING.scores) ? window.TRENDING.scores : null;
-  const top5=[...ROBOTS]
-    .filter(function(r){ return _featuredIds.indexOf(r.id)<0; })
-    .map(function(r){
-      var b=robotBuzz(r);
-      var k;
-      if(_trendScores && _trendScores[r.id]!=null){
-        k = 10000 + _trendScores[r.id]*100 + b.buzz; // real trend data leads, buzz breaks ties
-      } else {
-        k = b.buzz*2 + (r.score||0);                  // fallback: buzz proxy
-      }
-      return {r:r, k:k, d:b.d};
-    })
-    .sort(function(a,b){return b.k-a.k || b.d-a.d || (b.r.score||0)-(a.r.score||0);})
-    .slice(0,5).map(function(x){return x.r;});
-  const ranks=['','','','',''];  // neutral — trending is a fact, not a podium
-  document.getElementById('home-rankings').innerHTML=top5.map((r,i)=>{
-    const tags=Array.isArray(r.tags)?r.tags:[];
-    const score=r.score||0;
-    const fig=robotFig(r);
-    const id=r.id||'';
-    const brand=r.brand||'';
-    const name=r.name||'';
-    const sub=r.sub||'';
-    return `
-    <div class="chart-item" onclick="openProfile('${id}')">
-      <div class="chart-rank ${ranks[i]}">${i+1}</div>
-      <div class="chart-icon" style="overflow:hidden;background:#fff">${r.img?`<img src="${r.img}" alt="${name}" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain'">`:`<img src="${MASCOT_URL}" alt="${name}" style="width:100%;height:100%;object-fit:contain;display:block">`}</div>
-      <div class="chart-info"><div class="chart-name">${brand} ${name}</div><div class="chart-sub">${tags[0]||''} · ${sub}</div></div>
-      <div class="chart-score"><span class="score-num">${score}</span><div class="score-bar-mini"><div class="score-fill-mini" style="width:${score}%"></div></div></div>
-    </div>`;}).join('');
+  function chartRow(r){
+    var tags=Array.isArray(r.tags)?r.tags:[];
+    var id=r.id||'', brand=r.brand||'', name=r.name||'', sub=r.sub||r.cat||'';
+    return '<div class="chart-item" onclick="openProfile(\''+id+'\')">'+
+      '<div class="chart-icon" style="overflow:hidden;background:#fff">'+(r.img?'<img src="'+r.img+'" alt="'+name+'" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'">':'<img src="'+MASCOT_URL+'" alt="'+name+'" style="width:100%;height:100%;object-fit:contain;display:block">')+'</div>'+
+      '<div class="chart-info"><div class="chart-name">'+brand+' '+name+'</div><div class="chart-sub">'+(tags[0]||sub)+'</div></div>'+
+    '</div>';
+  }
+  // Trending — real Google Trends when available, else buzz proxy
+  var trendList=[...ROBOTS].map(function(r){
+    var b=robotBuzz(r);
+    var k=(_trendScores && _trendScores[r.id]!=null) ? (10000+_trendScores[r.id]*100+b.buzz) : (b.buzz*2+(r.score||0));
+    return {r:r,k:k,d:b.d};
+  }).sort(function(a,b){return b.k-a.k||b.d-a.d;}).slice(0,10).map(function(x){return x.r;});
+  // Latest — newest by real launch date
+  var latestList=[...ROBOTS].sort(function(a,b){return robotSortDate(b)-robotSortDate(a);}).slice(0,10);
+  // Available — robots you can actually BUY now (have a real price), newest first.
+  // Distinct from Latest (which includes announced/POA robots).
+  var availList=[...ROBOTS].filter(function(r){
+    return /active|available|released|shipping|production/i.test(r.status||'') && r.price && r.price>0;
+  }).sort(function(a,b){return robotSortDate(b)-robotSortDate(a);}).slice(0,10);
+  var te=document.getElementById('home-trending'); if(te) te.innerHTML=trendList.map(chartRow).join('');
+  var le=document.getElementById('home-latest'); if(le) le.innerHTML=latestList.map(chartRow).join('');
+  var ae=document.getElementById('home-available'); if(ae) ae.innerHTML=availList.map(chartRow).join('');
 }
 
 function heroSearch(){
