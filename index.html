@@ -4582,8 +4582,21 @@ function runFinderSearch(){
   function renderContent(text){
     var ids=[];
     var body=text.replace(/\[\[robot:([a-z0-9\-_]+)\]\]/gi,function(m,id){ids.push(id);return '';});
-    // Strip any stray markdown links pointing at the site itself (the AI sometimes adds
-    // [Name](https://myrobot.shop/#) duplicates next to robot tags) — keep only the link text.
+    // The AI sometimes emits markdown links to robots instead of [[robot:id]] tags.
+    // Catch a run of myrobot.shop links (brand/name/meta/score) and turn the NAME into a card.
+    // Strategy: find groups of consecutive [text](myrobot.shop...) lines; use the text that
+    // best matches a real robot to create a card, drop the rest.
+    body=body.replace(/(?:\[[^\]]+\]\((?:https?:\/\/)?(?:www\.)?myrobot\.shop[^)]*\)\s*){2,}/gi,function(block){
+      // pull all the link texts
+      var texts=[]; block.replace(/\[([^\]]+)\]\(/g,function(m,t){texts.push(t);return m;});
+      // try each text as a robot lookup; first match becomes the card
+      for(var i=0;i<texts.length;i++){
+        var r=robotById(texts[i]);
+        if(r){ ids.push(r.id); return ''; }
+      }
+      return ''; // no match → just remove the junk links
+    });
+    // Strip any remaining single myrobot.shop markdown links (keep link text only)
     body=body.replace(/\[([^\]]+)\]\((?:https?:\/\/)?(?:www\.)?myrobot\.shop[^)]*\)/gi,'$1');
     body=esc(body).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
       .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g,'<a href="$2" target="_blank">$1</a>')
