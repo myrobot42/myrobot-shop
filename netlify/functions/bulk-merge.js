@@ -276,7 +276,7 @@ exports.handler = async (event) => {
     if (addedCount) summary.push(`+${addedCount}`);
     if (updatedCount) summary.push(`~${updatedCount}`);
     if (deletedCount) summary.push(`-${deletedCount}`);
-    const commitMsg = `Bulk merge: ${summary.join(' ')} (${robots.length} total)${reason ? ' — ' + reason : ''}${workerName ? ' — ' + workerName : ''}`;
+    const commitMsg = `Bulk merge: ${summary.join(' ')} (${robots.length} total)${reason ? ' — ' + reason : ''}${workerName ? ' — ' + workerName : ''} [skip ci]`;
 
     const putBody = {
       message: commitMsg,
