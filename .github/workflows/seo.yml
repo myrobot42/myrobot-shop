@@ -1,10 +1,17 @@
 name: Build SEO pages
 
+# Runs ONCE DAILY (not on every data change) so a batch of image/robot
+# updates produces a single SEO rebuild instead of hundreds.
 on:
-  push:
-    paths:
-      - 'data/robots.json'
-  workflow_dispatch:
+  schedule:
+    - cron: '0 4 * * *'   # daily at 04:00 UTC
+  workflow_dispatch:        # plus a manual "Run workflow" button
+
+# Only one run at a time — prevents the concurrent-push collisions that
+# caused the "Run failed" emails.
+concurrency:
+  group: seo-pages
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -30,6 +37,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes."
           else
-            git commit -m "SEO: regenerate robot pages + sitemap"
+            # [skip ci] stops this commit from triggering a Netlify deploy
+            git commit -m "SEO: regenerate robot pages + sitemap [skip ci]"
             git push
           fi
