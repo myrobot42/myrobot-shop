@@ -268,6 +268,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .rating-num{font-family:'Space Mono','Courier New',monospace;font-size:18px;font-weight:800}
 .rating-count{font-size:12px;color:var(--mut)}
 .overall-score{display:flex;align-items:center;gap:10px;margin-left:auto}
+.trending-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#f97316,#ef4444);color:#fff;font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;cursor:pointer;box-shadow:0 2px 8px rgba(239,68,68,.3);transition:transform .15s}
+.trending-badge:hover{transform:translateY(-1px)}
+.trending-rank{background:rgba(255,255,255,.25);border-radius:10px;padding:1px 7px;font-size:11px;margin-left:1px}
 .score-circle{width:48px;height:48px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;flex-direction:column}
 .score-circle-num{font-family:'Space Mono','Courier New',monospace;font-size:15px;font-weight:800;color:#fff;line-height:1}
 .score-circle-lbl{font-size:7px;color:rgba(255,255,255,.8);margin-top:1px}
@@ -783,7 +786,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <!-- AI ASSISTANT PAGE -->
 <div id="page-ai" class="page">
   <div style="max-width:880px;margin:0 auto;padding:28px 16px 10px">
-    <h1 style="font-size:24px;font-weight:800;margin:0 0 6px">Ask the Robot Expert</h1>
+    <h1 style="font-size:24px;font-weight:800;margin:0 0 6px">Ask Tobo</h1>
     <p style="color:var(--mut);font-size:14px;margin:0 0 20px">Your AI guide to every robot in the database — get recommendations, compare models, or ask anything.</p>
   </div>
   <div id="rc-fullpage-mount" style="max-width:880px;margin:0 auto 50px;padding:0 16px"></div>
@@ -999,7 +1002,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
           <div class="brand-row"><span class="brand-name" id="profile-brand"></span><span class="badge badge-hot2" id="profile-year-badge"></span><span class="badge badge-top2">TOP RATED</span></div>
           <div class="robot-title" id="profile-name"></div>
           <div class="robot-tagline" id="profile-tagline"></div>
-          <div class="rating-row"><span class="stars-lg" id="profile-stars"></span><span class="rating-num" id="profile-rating"></span><span class="rating-count" id="profile-reviews"></span><div class="overall-score"><div class="score-circle"><div class="score-circle-num" id="profile-score"></div><div class="score-circle-lbl">SCORE</div></div><span style="font-size:11px;color:var(--mut)">Overall<br>rating</span></div></div>
+          <div class="rating-row" id="profile-rating-row"><span class="stars-lg" id="profile-stars"></span><span class="rating-num" id="profile-rating"></span><span class="rating-count" id="profile-reviews"></span><div class="overall-score" id="profile-trending-wrap"></div></div>
           <div class="quick-specs" id="profile-quick-specs"></div>
           <div class="action-row"><button class="btn-action primary">Get a Quote →</button><button class="btn-action secondary" onclick="addToCompareFromProfile()">+ Compare</button><button class="btn-action ghost">+ Watchlist</button></div>
           <div id="profile-verified" style="margin-top:10px;font-size:11px;color:var(--mut);display:none"></div>
@@ -3109,7 +3112,23 @@ function _renderProfile(id){
   if(!r)return;
   currentProfile=r;
   document.title=r.name+' by '+r.brand+' — specs, price & videos | myrobot.shop';
-  document.getElementById('profile-crumb-cat').textContent=r.cat;
+  (function(){
+    var cc=document.getElementById('profile-crumb-cat');
+    cc.textContent=r.cat;
+    cc.style.cursor='pointer';
+    cc.onclick=function(){
+      goPage('db');
+      // tick the matching category checkbox and apply the filter
+      setTimeout(function(){
+        try{
+          document.querySelectorAll('#db-cat-filters input[data-cat]').forEach(function(cb){
+            cb.checked = (cb.dataset.cat===r.cat);
+          });
+          if(typeof onCatChange==='function') onCatChange();
+        }catch(e){}
+      },60);
+    };
+  })();
   document.getElementById('profile-crumb-name').textContent=r.name;
   const figEl = document.getElementById('profile-fig');
   const thumbsEl = document.getElementById('profile-gallery-thumbs');
@@ -3173,10 +3192,41 @@ function _renderProfile(id){
     mount('profile-video','profile-video-block',r.video);
     mount('profile-video2','profile-video2-block',r.video2);
   })();
-  document.getElementById('profile-stars').textContent='★'.repeat(Math.round(r.rating))+'☆'.repeat(5-Math.round(r.rating));
-  document.getElementById('profile-rating').textContent=r.rating;
-  document.getElementById('profile-reviews').textContent=(r.reviews||0)+' reviews';
-  document.getElementById('profile-score').textContent=r.score;
+  // Reviews: only show stars + count when there are REAL user reviews (no fake scores).
+  (function(){
+    var realCount = (r.reviews && r.reviews>0) ? r.reviews : 0;
+    var starsEl=document.getElementById('profile-stars');
+    var ratingEl=document.getElementById('profile-rating');
+    var revEl=document.getElementById('profile-reviews');
+    if(realCount>0 && r.rating){
+      starsEl.textContent='★'.repeat(Math.round(r.rating))+'☆'.repeat(5-Math.round(r.rating));
+      ratingEl.textContent=r.rating;
+      revEl.textContent=realCount+(realCount===1?' review':' reviews');
+    } else {
+      // No real reviews yet — show a subtle invite instead of a fake score
+      starsEl.textContent='';
+      ratingEl.textContent='';
+      revEl.innerHTML='<span style="color:var(--mut);font-size:12px">No reviews yet</span>';
+    }
+    // Auto "Trending" badge — appears if this robot is in the live top-100 by search interest.
+    // Reads window.TRENDING (data/trending.json, refreshed daily). Fully automatic: in/out of
+    // the top 100 → badge added/removed on its own. Links to the Discover/Trending page.
+    var wrap=document.getElementById('profile-trending-wrap');
+    if(wrap){
+      wrap.innerHTML='';
+      try{
+        var T=(window.TRENDING&&window.TRENDING.scores)?window.TRENDING.scores:null;
+        if(T){
+          // rank this robot among all tracked scores
+          var ranked=Object.keys(T).sort(function(a,b){return T[b]-T[a];});
+          var rank=ranked.indexOf(r.id);
+          if(rank>=0 && rank<100){
+            wrap.innerHTML='<span class="trending-badge" onclick="goPage(\'rankings\')" title="In the top 100 most-searched robots right now">🔥 Trending<span class="trending-rank">#'+(rank+1)+'</span></span>';
+          }
+        }
+      }catch(e){}
+    }
+  })();
   document.getElementById('profile-price').textContent=r.price>0?'$'+r.price.toLocaleString():'POA';
   document.getElementById('profile-price-note').textContent=r.price>0?'Starting at $'+r.price.toLocaleString():'Fleet / enterprise pricing · Quote required';
   // Last verified — set expectations honestly. Colour-coded by age.
@@ -4607,18 +4657,18 @@ function runFinderSearch(){
   @media(max-width:480px){#rc-panel{width:100vw;height:100vh;max-height:100vh;bottom:0;right:0;border-radius:0}}
 </style>
 
-<button id="rc-launch" onclick="rcToggle(true)" title="Ask the Robot Expert" aria-label="Ask the Robot Expert">
+<button id="rc-launch" onclick="rcToggle(true)" title="Ask Tobo · Robot Expert" aria-label="Ask Tobo">
   <span class="rc-pulse"></span>
   <span class="rc-badge">AI</span>
   <span class="rc-tip">Ask me!</span>
-  <img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt="Robot Expert">
+  <img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt="Tobo">
 </button>
 
 <div id="rc-panel">
   <div class="rc-head">
     <div class="rc-avatar"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt="" style="width:100%;height:100%;border-radius:11px;object-fit:cover"></div>
     <div class="rc-head-txt">
-      <div class="rc-head-name" id="rc-name">Robot Expert</div>
+      <div class="rc-head-name" id="rc-name">Tobo · Robot Expert</div>
       <div class="rc-head-sub">Knows every robot in the database</div>
     </div>
     <button class="rc-head-btn" onclick="rcReset()" title="New chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8m0-5v5h5"/></svg></button>
@@ -4660,7 +4710,7 @@ function runFinderSearch(){
   function systemPrompt(){
     var R=(window.ROBOTS||[]); var cats=[...new Set(R.map(function(r){return r.cat;}))].sort();
     var brands=[...new Set(R.map(function(r){return r.brand;}))];
-    return "You are the Robot Expert for myrobot.shop, the world's most complete robot database ("+R.length+" robots, "+brands.length+" brands, "+cats.length+" categories). You are knowledgeable, precise, and genuinely helpful — like a seasoned robotics analyst who knows every machine in the catalog.\n\n"+
+    return "You are Tobo, the friendly robot expert for myrobot.shop, the world's most complete robot database ("+R.length+" robots, "+brands.length+" brands, "+cats.length+" categories). You are knowledgeable, precise, and genuinely helpful — like a seasoned robotics analyst who knows every machine in the catalog.\n\n"+
     "YOUR JOB (all of these):\n1. RECOMMEND robots based on need, budget, use case, environment.\n2. ANSWER questions about any specific robot — specs, capabilities.\n3. COMPARE robots head-to-head.\n4. EXPLAIN robotics concepts plainly.\n\n"+
     "CATEGORIES: "+cats.join(', ')+".\n\n"+
     "HOW TO USE DATA:\n- Below is a digest of EVERY robot (one per line): id|name|brand|category [specs] — uses.\n- Reason across the whole digest to shortlist and recommend.\n- When you reference specific robots, cite them with this EXACT format: [[robot:EXACT-ID]] — copy the id verbatim from the digest (the part before the first | on that robot's line). Example: [[robot:pudu-bellabot-2020]].\n- NEVER write markdown links like [Name](url) for robots. NEVER link to myrobot.shop. ONLY use the [[robot:id]] tag — the site turns it into a clickable card automatically.\n- Put the [[robot:id]] tag on its own line right after you mention that robot. Don't repeat the specs in text; the card shows them.\n- Don't invent specs not shown; for deep detail, point the user to the robot's page.\n\n"+
@@ -4681,7 +4731,7 @@ function runFinderSearch(){
 
   function greet(){
     var n=(window.ROBOTS||[]).length||'all the';
-    addAI("Hi — I'm your robot expert. I know every one of the "+(typeof n==='number'?n.toLocaleString():n)+" robots in the database. I can recommend the right machine for your needs, compare options, or dig into any robot's details.\n\nWhat are you looking for?");
+    addAI("Hi — I'm Tobo, your robot expert. I know every one of the "+(typeof n==='number'?n.toLocaleString():n)+" robots in the database. I can recommend the right machine for your needs, compare options, or dig into any robot's details.\n\nWhat are you looking for?");
     addSuggestions(['Best humanoid under $20k','Warehouse picking robots','Compare Unitree G1 vs H1','Newest robots in 2026','Robot vacuum recommendations']);
   }
 
@@ -4796,7 +4846,7 @@ function runFinderSearch(){
     var mount=document.getElementById('rc-fullpage-mount'); if(!mount)return;
     var panel=$('rc-panel');
     panel.classList.add('rc-fullpage','rc-open');
-    var cb=panel.querySelector('.rc-close-btn'); if(cb)cb.style.display='none';
+    var cb=panel.querySelector('.rc-close-btn'); if(cb){ cb.style.display=''; cb.setAttribute('onclick',"goPage('home')"); cb.title='Close'; }
     mount.appendChild(panel);
     $('rc-launch').classList.add('rc-hide');
     if(history.length===0)greet();
