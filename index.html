@@ -1472,13 +1472,24 @@ function filterCat(cat){
 }
 
 // ════════════ DATABASE ════════════
+var _pendingDbCat = null;  // set by breadcrumb/category links; applied when DB filters are ready
 function buildDbFilters(){
   const catF=document.getElementById('db-cat-filters');
-  if(!catF||catF.dataset.built)return;
-  catF.dataset.built='1';
-  catF.innerHTML=ALL_CATS.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
-  renderSubcatFilter();  // initial render: hidden (no cat selected)
-  renderBrandFilter();   // initial render: all brands
+  if(catF && !catF.dataset.built){
+    catF.dataset.built='1';
+    catF.innerHTML=ALL_CATS.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
+    renderSubcatFilter();  // initial render: hidden (no cat selected)
+    renderBrandFilter();   // initial render: all brands
+  }
+  // Apply a pending category filter (from a breadcrumb/category click), even if the
+  // filters were already built on a previous visit.
+  if(_pendingDbCat){
+    const want=_pendingDbCat; _pendingDbCat=null;
+    document.querySelectorAll('#db-cat-filters input[data-cat]').forEach(function(cb){
+      cb.checked = (cb.dataset.cat===want);
+    });
+    if(typeof onCatChange==='function') onCatChange();
+  }
 }
 
 // Re-render the manufacturer list based on currently selected categories.
@@ -3116,18 +3127,7 @@ function _renderProfile(id){
     var cc=document.getElementById('profile-crumb-cat');
     cc.textContent=r.cat;
     cc.style.cursor='pointer';
-    cc.onclick=function(){
-      goPage('db');
-      // tick the matching category checkbox and apply the filter
-      setTimeout(function(){
-        try{
-          document.querySelectorAll('#db-cat-filters input[data-cat]').forEach(function(cb){
-            cb.checked = (cb.dataset.cat===r.cat);
-          });
-          if(typeof onCatChange==='function') onCatChange();
-        }catch(e){}
-      },60);
-    };
+    cc.onclick=function(){ _pendingDbCat=r.cat; goPage('db'); };
   })();
   document.getElementById('profile-crumb-name').textContent=r.name;
   const figEl = document.getElementById('profile-fig');
