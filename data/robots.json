@@ -119604,8 +119604,8 @@
     "weight_kg": 110,
     "payload_kg": 150,
     "speed_ms": 1.6,
-    "actuator_type": "Hydraulic, gasoline-engine powered",
-    "sensors": "LIDAR, stereo vision, joint sensors",
+    "actuator_type": "Hydraulic, gasoline-engine (go-kart engine driving hydraulic pump)",
+    "sensors": "~50 sensors: joint position/force, LIDAR, stereo vision, gyroscope",
     "tags": [
       "quadruped",
       "Boston Dynamics",
@@ -119622,7 +119622,11 @@
     ],
     "made_in": "USA",
     "website": "https://www.bostondynamics.com",
-    "desc": "The hydraulically-actuated, gasoline-powered quadruped that put Boston Dynamics on the map (2005, DARPA-funded). BigDog could carry ~150 kg over rough terrain, ice and slopes, famously staying upright when kicked. Loud and never deployed, but its dynamic-balance research directly led to Spot and the modern quadruped industry."
+    "desc": "The hydraulically-actuated, gasoline-powered quadruped that put Boston Dynamics on the map (2005, DARPA-funded). BigDog could carry ~150 kg over rough terrain, ice and slopes, famously staying upright when kicked. Loud and never deployed, but its dynamic-balance research directly led to Spot and the modern quadruped industry.",
+    "length_mm": 1000,
+    "height_mm": 760,
+    "funding": "DARPA-funded (2005)",
+    "note": "Stayed upright when kicked/on ice; loud, never fielded; led to Spot"
   },
   {
     "cat": "Research",
@@ -119635,7 +119639,7 @@
     "status": "Research",
     "weight_kg": 45,
     "speed_ms": 3,
-    "actuator_type": "High-torque-density electric, backdriveable, proprioceptive",
+    "actuator_type": "Custom high-torque-density backdriveable electric motors (proprioceptive)",
     "sensors": "Proprioceptive (no external vision needed for locomotion)",
     "tags": [
       "quadruped",
@@ -119655,7 +119659,9 @@
     ],
     "made_in": "USA",
     "website": "",
-    "desc": "MIT Biomimetic Robotics Lab's blind dynamic quadruped (Sangbae Kim). Using high-torque backdriveable electric motors and pure proprioception — no cameras — Cheetah 3 climbs stairs, recovers from shoves and runs ~3 m/s. Successor to the 6 m/s tethered MIT Cheetah; its actuator design seeded Mini Cheetah and much of modern legged robotics."
+    "desc": "MIT Biomimetic Robotics Lab's blind dynamic quadruped (Sangbae Kim). Using high-torque backdriveable electric motors and pure proprioception — no cameras — Cheetah 3 climbs stairs, recovers from shoves and runs ~3 m/s. Successor to the 6 m/s tethered MIT Cheetah; its actuator design seeded Mini Cheetah and much of modern legged robotics.",
+    "control": "Blind locomotion — no cameras; contact-detection + model-predictive control",
+    "note": "MIT Biomimetic Robotics Lab (Sangbae Kim); climbs stairs blind, recovers from shoves"
   },
   {
     "cat": "Research",
@@ -119668,7 +119674,7 @@
     "status": "Research",
     "weight_kg": 9,
     "speed_ms": 2.45,
-    "actuator_type": "Custom modular electric actuators",
+    "actuator_type": "Custom low-cost modular electric actuators (3 per leg)",
     "tags": [
       "quadruped",
       "MIT",
@@ -119686,7 +119692,9 @@
     ],
     "made_in": "USA",
     "website": "",
-    "desc": "A 9 kg agile quadruped from MIT (2019) — the first robot of its kind to do a backflip. Built from low-cost custom modular actuators, designed to survive high-impact falls and operate upside-down, MIT built a pack of them for distributed locomotion research. Hugely influential on the affordable-quadruped wave."
+    "desc": "A 9 kg agile quadruped from MIT (2019) — the first robot of its kind to do a backflip. Built from low-cost custom modular actuators, designed to survive high-impact falls and operate upside-down, MIT built a pack of them for distributed locomotion research. Hugely influential on the affordable-quadruped wave.",
+    "dof": 12,
+    "note": "First robot to backflip (2019); built as a pack for distributed locomotion research"
   },
   {
     "cat": "Humanoid",
@@ -119700,7 +119708,7 @@
     "height_mm": 1580,
     "weight_kg": 43,
     "dof": 42,
-    "sensors": "Camera, gyroscope, accelerometer, 6-axis force sensors",
+    "sensors": "Cameras, gyroscope, accelerometer, 6-axis force sensors",
     "frame_material": "Silicone face/hands, plastic exterior, metal frame",
     "tags": [
       "humanoid",
@@ -119721,7 +119729,9 @@
     ],
     "made_in": "Japan",
     "website": "",
-    "desc": "Nicknamed 'Miim', HRP-4C is a 158 cm humanoid 'gynoid' from Japan's AIST (2009) with a realistic female face and 42 DoF. Built to average Japanese female body dimensions, it walks, sings (via Vocaloid) and models on catwalks — an early icon of expressive entertainment humanoids."
+    "desc": "Nicknamed 'Miim', HRP-4C is a 158 cm humanoid 'gynoid' from Japan's AIST (2009) with a realistic female face and 42 DoF. Built to average Japanese female body dimensions, it walks, sings (via Vocaloid) and models on catwalks — an early icon of expressive entertainment humanoids.",
+    "dof_note": "30 body + 8 face + facial expressions",
+    "note": "AIST gynoid \"Miim\"; built to average Japanese female dimensions; sings (Vocaloid), models on catwalks"
   },
   {
     "cat": "Humanoid",
@@ -119753,7 +119763,9 @@
     ],
     "made_in": "Japan",
     "website": "",
-    "desc": "A teleoperated android copy of a real woman, built by Kokoro and Hiroshi Ishiguro (ATR/Osaka University, 2010). Pneumatically actuated with silicone skin and real human hair, Geminoid F autonomously breathes and blinks and mirrors a remote operator's expressions — a landmark in uncanny-realistic HRI research."
+    "desc": "A teleoperated android copy of a real woman, built by Kokoro and Hiroshi Ishiguro (ATR/Osaka University, 2010). Pneumatically actuated with silicone skin and real human hair, Geminoid F autonomously breathes and blinks and mirrors a remote operator's expressions — a landmark in uncanny-realistic HRI research.",
+    "control": "Teleoperated (mirrors remote operator); autonomous breathing + blinking",
+    "note": "Kokoro + Hiroshi Ishiguro (ATR/Osaka Univ); copy of a real woman; landmark uncanny-realism HRI"
   },
   {
     "cat": "Research",
@@ -119765,7 +119777,7 @@
     "origin": "USA",
     "status": "Research",
     "weight_kg": 0.1,
-    "actuator_type": "Series-elastic leg, single motor",
+    "actuator_type": "Single motor + series-elastic leg (8.5cm)",
     "tags": [
       "research",
       "UC Berkeley",
@@ -119783,7 +119795,8 @@
     ],
     "made_in": "USA",
     "website": "",
-    "desc": "A 100 g single-legged jumping robot from UC Berkeley (2016), inspired by the galago (bushbaby). Salto can do rapid, repeated wall-to-wall vertical leaps with the highest robotic 'vertical jumping agility' of its time — a benchmark in dynamic agile-locomotion research."
+    "desc": "A 100 g single-legged jumping robot from UC Berkeley (2016), inspired by the galago (bushbaby). Salto can do rapid, repeated wall-to-wall vertical leaps with the highest robotic 'vertical jumping agility' of its time — a benchmark in dynamic agile-locomotion research.",
+    "note": "UC Berkeley (2016); galago-inspired; highest robotic vertical jumping agility of its time; wall-to-wall leaps"
   },
   {
     "cat": "Research",
@@ -119795,7 +119808,7 @@
     "origin": "USA",
     "status": "Research",
     "dof": 6,
-    "actuator_type": "Six compliant C-shaped rotating legs",
+    "actuator_type": "Six C-shaped compliant rotating legs (1 motor each)",
     "sensors": "IMU, terrain sensors",
     "tags": [
       "hexapod",
@@ -119815,7 +119828,8 @@
     ],
     "made_in": "USA",
     "website": "",
-    "desc": "A rugged six-legged robot using simple C-shaped compliant rotating legs to traverse rocks, mud, sand and stairs with remarkable robustness. Originating from a DARPA/university collaboration (~2001) and commercialized as the all-terrain X-RHex; a foundational bio-inspired legged-locomotion platform."
+    "desc": "A rugged six-legged robot using simple C-shaped compliant rotating legs to traverse rocks, mud, sand and stairs with remarkable robustness. Originating from a DARPA/university collaboration (~2001) and commercialized as the all-terrain X-RHex; a foundational bio-inspired legged-locomotion platform.",
+    "note": "DARPA/university origin (~2001); traverses rocks/mud/sand/stairs; commercialized as X-RHex"
   },
   {
     "cat": "Autonomous Vehicles",
@@ -119826,8 +119840,8 @@
     "year": 2005,
     "origin": "USA",
     "status": "Discontinued",
-    "sensors": "5 LIDAR, radar, stereo vision, GPS/IMU",
-    "base_vehicle": "VW Touareg",
+    "sensors": "5 roof LIDAR, radar, stereo + mono vision, GPS/IMU",
+    "base_vehicle": "VW Touareg R5",
     "tags": [
       "autonomous vehicle",
       "Stanley",
@@ -119845,7 +119859,10 @@
     ],
     "made_in": "USA",
     "website": "",
-    "desc": "The self-driving VW Touareg from Stanford (Sebastian Thrun's team) that won the 2005 DARPA Grand Challenge, completing a 212 km desert course autonomously. Stanley's LIDAR + machine-learning terrain approach is widely credited with kick-starting the modern self-driving-car industry."
+    "desc": "The self-driving VW Touareg from Stanford (Sebastian Thrun's team) that won the 2005 DARPA Grand Challenge, completing a 212 km desert course autonomously. Stanley's LIDAR + machine-learning terrain approach is widely credited with kick-starting the modern self-driving-car industry.",
+    "compute": "6 Pentium-M computers",
+    "achievement": "Won 2005 DARPA Grand Challenge (212km, ~6h 54m)",
+    "note": "Stanford Racing Team (Sebastian Thrun); ML terrain classification; kick-started self-driving industry; now in Smithsonian"
   },
   {
     "cat": "Research",
@@ -119942,8 +119959,8 @@
     "origin": "Singapore",
     "status": "Research",
     "dof": 27,
-    "frame_material": "Silicone skin, realistic features",
-    "ai_model": "Conversational AI with memory & emotions",
+    "frame_material": "Silicone skin, realistic features (modeled on creator)",
+    "ai_model": "Conversational AI with memory + emotional responses",
     "cameras": "Vision (face/emotion recognition)",
     "tags": [
       "humanoid",
@@ -119963,7 +119980,9 @@
     ],
     "made_in": "Singapore",
     "website": "",
-    "desc": "A lifelike social humanoid from NTU Singapore (Nadia Thalmann), modeled on her creator. Nadine has soft silicone skin, recognizes faces and emotions, remembers past conversations and expresses moods — deployed as a receptionist and used to study long-term human-robot social interaction."
+    "desc": "A lifelike social humanoid from NTU Singapore (Nadia Thalmann), modeled on her creator. Nadine has soft silicone skin, recognizes faces and emotions, remembers past conversations and expresses moods — deployed as a receptionist and used to study long-term human-robot social interaction.",
+    "sensors": "Cameras (face + emotion recognition), microphones",
+    "note": "NTU Singapore (Nadia Thalmann); remembers past conversations; deployed as receptionist"
   },
   {
     "cat": "Social",
@@ -119977,7 +119996,7 @@
     "dof": 4,
     "height_mm": 120,
     "cameras": "Eye camera",
-    "mic_array": true,
+    "mic_array": "Nose microphone",
     "tags": [
       "social",
       "Keepon",
@@ -119996,7 +120015,8 @@
     ],
     "made_in": "USA/Japan",
     "website": "",
-    "desc": "A small yellow snowman-shaped social robot (Hideki Kozima) designed to study social development with children, including autism-therapy research. Its minimal 4-DoF design conveys attention and emotion expressively; the bouncing 'Dancing Keepon' became a viral sensation and a retail toy."
+    "desc": "A small yellow snowman-shaped social robot (Hideki Kozima) designed to study social development with children, including autism-therapy research. Its minimal 4-DoF design conveys attention and emotion expressively; the bouncing 'Dancing Keepon' became a viral sensation and a retail toy.",
+    "note": "Hideki Kozima; snowman-shaped social robot for child-development/autism research; \"Dancing Keepon\" viral toy"
   },
   {
     "cat": "Educational",
