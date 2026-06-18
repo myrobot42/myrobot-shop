@@ -119514,8 +119514,8 @@
     "weight_kg": 75,
     "arms": 2,
     "cameras": "Head + wrist cameras",
-    "display": "Animated LCD face",
-    "actuator_type": "Series elastic actuators (compliant)",
+    "display": "Animated LCD face (expresses intent)",
+    "actuator_type": "Series Elastic Actuators (SEA) — compliant/safe",
     "programming": [
       "Drag-teach",
       "ROS",
@@ -119540,7 +119540,12 @@
     ],
     "made_in": "USA",
     "website": "",
-    "desc": "A pioneering dual-arm collaborative robot from Rethink Robotics (founded by iRobot/Roomba co-creator Rodney Brooks). Baxter's 7-DoF compliant arms with series-elastic actuators let it work safely beside people and be trained by physical demonstration, with an animated LCD face showing intent. A landmark in accessible factory automation; Rethink shut down in 2018."
+    "desc": "A pioneering dual-arm collaborative robot from Rethink Robotics (founded by iRobot/Roomba co-creator Rodney Brooks). Baxter's 7-DoF compliant arms with series-elastic actuators let it work safely beside people and be trained by physical demonstration, with an animated LCD face showing intent. A landmark in accessible factory automation; Rethink shut down in 2018.",
+    "dof_note": "7 per arm (dual-arm)",
+    "height_mm": 1800,
+    "sensors": "Head + wrist cameras, sonar, force sensing",
+    "software": "ROS, Baxter SDK; drag-teach by demonstration",
+    "note": "Pioneering dual-arm cobot from Rethink (Rodney Brooks); SEA compliance for safe human collaboration"
   },
   {
     "cat": "Industrial",
@@ -119555,7 +119560,7 @@
     "dof": 7,
     "payload_kg": 4,
     "reach_mm": 1260,
-    "actuator_type": "Series elastic actuators",
+    "actuator_type": "Series Elastic Actuators",
     "display": "Animated LCD face",
     "cameras": "Embedded Cognex vision",
     "ros": true,
@@ -119580,7 +119585,12 @@
     ],
     "made_in": "USA",
     "website": "",
-    "desc": "Rethink Robotics' single-arm successor to Baxter: a 7-DoF high-precision collaborative arm with series-elastic actuators, embedded Cognex vision and an animated LCD face. Built for machine tending and precision tasks. After Rethink folded in 2018, the Sawyer design and IP were acquired and the robot continued under HAHN Group."
+    "desc": "Rethink Robotics' single-arm successor to Baxter: a 7-DoF high-precision collaborative arm with series-elastic actuators, embedded Cognex vision and an animated LCD face. Built for machine tending and precision tasks. After Rethink folded in 2018, the Sawyer design and IP were acquired and the robot continued under HAHN Group.",
+    "weight_kg": 19,
+    "repeatability_mm": 0.1,
+    "sensors": "Embedded Cognex vision, force sensing",
+    "software": "Intera SDK, ROS; drag-teach",
+    "note": "Single-arm successor to Baxter; high-precision; continued under HAHN Group after Rethink closed"
   },
   {
     "cat": "Quadruped",
@@ -119847,12 +119857,12 @@
     "origin": "Canada",
     "status": "Active",
     "dof": 6,
-    "payload_kg": 1.6,
+    "payload_kg": 1.5,
     "reach_mm": 900,
     "weight_kg": 5.7,
-    "hand_type": "3-finger underactuated gripper",
+    "hand_type": "3-fingered underactuated gripper",
     "ros": true,
-    "api": true,
+    "api": "KINOVA KORTEX API + ROS packages",
     "tags": [
       "arm",
       "Kinova",
@@ -119871,7 +119881,15 @@
     ],
     "made_in": "Canada",
     "website": "https://www.kinovarobotics.com",
-    "desc": "A lightweight 6-DoF assistive robotic arm from Canada's Kinova, designed to mount on powered wheelchairs so people with upper-body mobility impairments can grasp and manipulate objects. Carbon-fibre, quiet and ROS-friendly, Jaco is also widely used as a research manipulator."
+    "desc": "A lightweight 6-DoF assistive robotic arm from Canada's Kinova, designed to mount on powered wheelchairs so people with upper-body mobility impairments can grasp and manipulate objects. Carbon-fibre, quiet and ROS-friendly, Jaco is also widely used as a research manipulator.",
+    "payload_note": "1.5 kg extended / up to 2.4 kg (Jaco2 7-DoF)",
+    "sensors": "Per-actuator torque, position, current, temperature, acceleration sensors",
+    "control_modes": "Position, velocity, or torque control; embedded controller",
+    "connectivity": "USB, Ethernet, Bluetooth (Jaco Blue), DB9; KINOVA KORTEX API",
+    "power": "24V; ~36W average",
+    "warranty": "2-year",
+    "mounting": "Wheelchair-mountable (assistive); also research manipulator",
+    "note": "Carbon-fibre assistive arm; per-actuator sensing; widely used as research manipulator"
   },
   {
     "cat": "Consumer",
@@ -119884,9 +119902,9 @@
     "status": "Active",
     "price": 499,
     "dof": 12,
-    "os": "ROS / Ubuntu",
-    "cpu": "Raspberry Pi",
-    "sensors": "Camera, IMU, optional LIDAR",
+    "os": "Ubuntu + ROS / ROS2",
+    "cpu": "Raspberry Pi 4 / CM4 (+ ESP32 motor control)",
+    "sensors": "Camera, IMU, optional LiDAR, OLED display",
     "ros": true,
     "api": true,
     "open_source": true,
@@ -119909,7 +119927,10 @@
     ],
     "made_in": "China",
     "website": "https://www.mangdang.net",
-    "desc": "An affordable open-source quadruped (from ~$499) built on Raspberry Pi and ROS, derived from Stanford's Pupper project. Mini Pupper walks, does SLAM mapping and runs AI demos, making legged-robot and ROS education accessible to students and makers."
+    "desc": "An affordable open-source quadruped (from ~$499) built on Raspberry Pi and ROS, derived from Stanford's Pupper project. Mini Pupper walks, does SLAM mapping and runs AI demos, making legged-robot and ROS education accessible to students and makers.",
+    "actuator_type": "12 servo motors (3 per leg)",
+    "software": "ROS/ROS2, Python; SLAM, navigation, AI demos",
+    "note": "Open-source quadruped derived from Stanford Pupper; Pi-based; SLAM-capable"
   },
   {
     "cat": "Social",
@@ -119988,8 +120009,8 @@
     "status": "Active",
     "dof": 25,
     "height_mm": 840,
-    "actuator_type": "Dynamixel servos",
-    "frame_material": "3D-printed parts",
+    "actuator_type": "Robotis Dynamixel servos (MX-28, MX-64)",
+    "frame_material": "3D-printed parts (fully fabricable/modifiable)",
     "os": "Python / ROS",
     "ros": true,
     "api": true,
@@ -120013,7 +120034,16 @@
     ],
     "made_in": "France",
     "website": "https://www.poppy-project.org",
-    "desc": "An open-source, 3D-printed humanoid platform from France's INRIA (2014). At 84 cm with Dynamixel servos and a Python/ROS stack, Poppy is fully fabricable and modifiable — widely used in classrooms, labs and art projects as an accessible entry into humanoid robotics."
+    "desc": "An open-source, 3D-printed humanoid platform from France's INRIA (2014). At 84 cm with Dynamixel servos and a Python/ROS stack, Poppy is fully fabricable and modifiable — widely used in classrooms, labs and art projects as an accessible entry into humanoid robotics.",
+    "weight_kg": 3.5,
+    "software": "Python (pypot library), ROS, Snap!/visual programming, Jupyter",
+    "programming": [
+      "Python",
+      "Snap!",
+      "ROS"
+    ],
+    "sensors": "Camera, position feedback per joint",
+    "note": "Open-source 3D-printed humanoid from INRIA Flowers lab; bent-knee biped; classroom/research/art"
   },
   {
     "cat": "Educational",
@@ -120025,11 +120055,11 @@
     "origin": "Switzerland",
     "status": "Active",
     "price": 170,
-    "sensors": "9 IR proximity, accelerometer, temperature, mic, IR receiver",
+    "sensors": "9 IR proximity, accelerometer (3-axis), temperature, microphone, IR remote receiver, ground sensors",
     "programming": [
-      "VPL",
-      "Scratch",
+      "VPL (visual)",
       "Blockly",
+      "Scratch",
       "Aseba",
       "Python"
     ],
@@ -120052,7 +120082,12 @@
     ],
     "made_in": "Switzerland",
     "website": "https://www.thymio.org",
-    "desc": "A small, affordable open-source educational robot from Switzerland (EPFL/Mobsya). With many sensors and colour-coded preprogrammed behaviours, Thymio teaches coding from visual blocks up to Python — a classroom staple across Europe for introducing children to robotics."
+    "desc": "A small, affordable open-source educational robot from Switzerland (EPFL/Mobsya). With many sensors and colour-coded preprogrammed behaviours, Thymio teaches coding from visual blocks up to Python — a classroom staple across Europe for introducing children to robotics.",
+    "actuator_type": "2 differential-drive wheels",
+    "display": "39 LEDs (full-body light feedback)",
+    "battery": "Built-in rechargeable (USB) or AAA versions",
+    "behaviors": "6 colour-coded preprogrammed behaviours",
+    "note": "EPFL/Mobsya open-source education robot; scaffolds from visual blocks to Python"
   },
   {
     "cat": "Social",
