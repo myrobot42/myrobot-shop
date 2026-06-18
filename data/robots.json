@@ -119006,8 +119006,8 @@
     "speed_ms": 1.2,
     "reach_mm": 450,
     "repeatability_mm": 0.05,
-    "battery_life": "8 hours",
-    "cpu": "NVIDIA Jetson Orin Nano SUPER 8GB",
+    "battery_life": "Up to 8 hours",
+    "cpu": "NVIDIA Jetson Orin Nano SUPER 8GB (40 TOPS) main + Jetson Nano",
     "ai_chip": "32-40 TOPS",
     "cameras": "3D machine vision + 2D vision",
     "lidar": true,
@@ -119016,7 +119016,7 @@
     "ros": true,
     "sdk": "Open-source ecosystem",
     "api": true,
-    "ai_model": "Embodied AI with LLM integration",
+    "ai_model": "Embodied AI with LLM integration; 2D/3D vision + motion planning + obstacle avoidance + autonomous navigation",
     "hand_type": "Dual 7-DoF arms",
     "tags": [
       "humanoid",
@@ -119036,7 +119036,15 @@
     ],
     "made_in": "China",
     "website": "https://www.elephantrobotics.com",
-    "desc": "Elephant Robotics' first full humanoid: a wheeled platform pairing the Mercury B1 dual-7-DoF-arm torso with a high-performance mobile base. 19 DoF, 1.18 m, 55 kg, 0.05 mm repeatability, 8-hour endurance. LiDAR, ultrasonic and 3D vision on an NVIDIA Jetson Orin Nano core (up to 40 TOPS), with an open-source software ecosystem and LLM-based embodied AI. Siblings: B1 (no wheels), A1 (single arm)."
+    "desc": "Elephant Robotics' first full humanoid: a wheeled platform pairing the Mercury B1 dual-7-DoF-arm torso with a high-performance mobile base. 19 DoF, 1.18 m, 55 kg, 0.05 mm repeatability, 8-hour endurance. LiDAR, ultrasonic and 3D vision on an NVIDIA Jetson Orin Nano core (up to 40 TOPS), with an open-source software ecosystem and LLM-based embodied AI. Siblings: B1 (no wheels), A1 (single arm).",
+    "voltage": "24V",
+    "arm_config": "Dual 7-DoF arms (B1 torso) on wheeled mobile base",
+    "actuator_type": "Self-developed Power-Spring harmonic modules (brakes + hollow cable routing, up to 20Nm); carbon-fibre arm shells",
+    "mobility": "Direct-drive wheeled base; 1.2 m/s, climbs 2cm obstacles, 15 degree inclines",
+    "sensors": "LiDAR, ultrasonic radar, 2D/3D vision, microphones",
+    "software": "ROS, Moveit, Gazebo, Mujoco; myBlockly; open-source ecosystem",
+    "display": "Touchscreen head (expressive face)",
+    "gripper": "myCobot Pro Adaptive Gripper compatible (M8 aviation connector)"
   },
   {
     "cat": "Humanoid",
@@ -119052,9 +119060,9 @@
     "payload_kg": 1,
     "reach_mm": 450,
     "repeatability_mm": 0.05,
-    "cpu": "NVIDIA Jetson Orin Nano SUPER 8GB",
+    "cpu": "NVIDIA Jetson Orin Nano SUPER 8GB (40 TOPS) / Xavier",
     "ai_chip": "32 TOPS",
-    "cameras": "3D machine vision",
+    "cameras": "Integrated 3D camera / 3D machine vision",
     "imu": true,
     "mic_array": true,
     "ros": true,
@@ -119079,7 +119087,14 @@
     ],
     "made_in": "China",
     "website": "https://www.elephantrobotics.com",
-    "desc": "A stationary semi-humanoid with 17 DoF and dual seven-axis arms, built for human-robot interaction and dual-arm coordination research. NVIDIA Jetson Orin Nano core, 3D machine vision and voice interaction. The torso that the wheeled Mercury X1 is built upon."
+    "desc": "A stationary semi-humanoid with 17 DoF and dual seven-axis arms, built for human-robot interaction and dual-arm coordination research. NVIDIA Jetson Orin Nano core, 3D machine vision and voice interaction. The torso that the wheeled Mercury X1 is built upon.",
+    "voltage": "24V",
+    "arm_config": "Dual 7-axis arms (no mobile base)",
+    "actuator_type": "Power-Spring harmonic modules (up to 20Nm); carbon-fibre arm shells",
+    "display": "9-inch touchscreen",
+    "teleoperation": "VR-assisted teleoperation",
+    "ai_model": "AI voice interaction + LLM integration",
+    "software": "ROS, Moveit, Gazebo, Mujoco; open-source ecosystem"
   },
   {
     "cat": "Industrial",
@@ -119095,14 +119110,15 @@
     "payload_kg": 0.25,
     "reach_mm": 280,
     "repeatability_mm": 0.5,
-    "cpu": "M5Stack / Raspberry Pi / Jetson Nano / Arduino (by version)",
+    "cpu": "M5Stack Basic / ESP32; Pi/Jetson Nano/Arduino versions",
     "ros": true,
     "api": true,
     "sdk": "Python, C++, C#, JavaScript, myBlockly",
     "programming": [
-      "Python",
       "myBlockly",
-      "ROS"
+      "Python",
+      "ROS",
+      "C++"
     ],
     "tags": [
       "cobot",
@@ -119122,7 +119138,10 @@
     ],
     "made_in": "China",
     "website": "https://www.elephantrobotics.com",
-    "desc": "Billed as the world's smallest and lightest 6-axis collaborative arm: 280 mm reach, 250 g payload, ±0.5 mm. Available in M5Stack, Raspberry Pi, Jetson Nano and Arduino versions with drag-teach, myBlockly visual programming, Python/C++/ROS APIs. Over 10,000 sold across 50+ countries; a staple of STEM labs."
+    "desc": "Billed as the world's smallest and lightest 6-axis collaborative arm: 280 mm reach, 250 g payload, ±0.5 mm. Available in M5Stack, Raspberry Pi, Jetson Nano and Arduino versions with drag-teach, myBlockly visual programming, Python/C++/ROS APIs. Over 10,000 sold across 50+ countries; a staple of STEM labs.",
+    "weight_kg": 0.85,
+    "software": "myBlockly (visual), Python, ROS (Ubuntu 18.04); myStudio platform",
+    "note": "Worlds smallest/lightest 6-axis cobot; 10,000+ sold across 50+ countries"
   },
   {
     "cat": "Industrial",
@@ -119141,8 +119160,8 @@
     "api": true,
     "sdk": "Python, ROS, myBlockly",
     "programming": [
-      "Python",
       "myBlockly",
+      "Python",
       "ROS"
     ],
     "tags": [
@@ -119161,7 +119180,10 @@
     ],
     "made_in": "China",
     "website": "https://www.elephantrobotics.com",
-    "desc": "A larger 6-DoF desktop cobot: 320 mm reach, 1 kg payload. Open-source with ROS, Python and myBlockly support plus a 60-minute drag-teach record function. Offered in M5Stack and Raspberry Pi compute versions for makers and university labs."
+    "desc": "A larger 6-DoF desktop cobot: 320 mm reach, 1 kg payload. Open-source with ROS, Python and myBlockly support plus a 60-minute drag-teach record function. Offered in M5Stack and Raspberry Pi compute versions for makers and university labs.",
+    "repeatability_mm": 0.5,
+    "cpu": "M5Stack / Raspberry Pi versions",
+    "software": "myBlockly, Python, ROS; 60-min drag-teach record"
   },
   {
     "cat": "Industrial",
@@ -119181,7 +119203,8 @@
     "sdk": "Python, ROS",
     "programming": [
       "Python",
-      "ROS"
+      "ROS",
+      "myBlockly"
     ],
     "tags": [
       "cobot",
@@ -119199,7 +119222,11 @@
     ],
     "made_in": "China",
     "website": "https://www.elephantrobotics.com",
-    "desc": "A centrally-symmetric 6-DoF desktop arm with a 270 mm working radius and 250 g payload, offered with Raspberry Pi 4B integration for out-of-the-box ROS development. Popular for teaching kinematics, trajectory planning and vision-guided pick-and-place."
+    "desc": "A centrally-symmetric 6-DoF desktop arm with a 270 mm working radius and 250 g payload, offered with Raspberry Pi 4B integration for out-of-the-box ROS development. Popular for teaching kinematics, trajectory planning and vision-guided pick-and-place.",
+    "repeatability_mm": 0.5,
+    "cpu": "M5Stack / Raspberry Pi 4B versions",
+    "design": "Centrally-symmetric 6-DoF structure",
+    "software": "Python, ROS; myBlockly"
   },
   {
     "cat": "Consumer",
@@ -119214,7 +119241,7 @@
     "dof": 16,
     "cameras": "Vision system",
     "mic_array": true,
-    "ai_model": "Autonomous personality AI",
+    "ai_model": "Autonomous personality AI — develops behaviour from interaction; no app required",
     "tags": [
       "robot pet",
       "Elephant Robotics",
@@ -119232,7 +119259,9 @@
     ],
     "made_in": "China",
     "website": "https://www.elephantrobotics.com",
-    "desc": "A bionic robot cat with 16 DoF that walks, plays and develops its own personality based on interaction. Vision and touch sensing let it respond to people and avoid obstacles; no app required. One of Elephant's companion-pet line alongside metaCat and metaDog."
+    "desc": "A bionic robot cat with 16 DoF that walks, plays and develops its own personality based on interaction. Vision and touch sensing let it respond to people and avoid obstacles; no app required. One of Elephant's companion-pet line alongside metaCat and metaDog.",
+    "sensors": "Vision (obstacle avoidance), touch sensing, microphones",
+    "note": "Bionic robot cat; walks, plays, develops own personality; part of pet line w/ metaCat, metaDog"
   },
   {
     "cat": "Humanoid",
