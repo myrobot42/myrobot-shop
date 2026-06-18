@@ -119278,16 +119278,16 @@
     "dof": 52,
     "ai_chip": "550 TOPS",
     "battery_life": "4+ hours",
-    "hand_type": "Five-fingered dexterous hands",
+    "hand_type": "Five-fingered precision bionic dexterous hands; high-dynamic force control",
     "cpu": "Edge computing modules",
     "cameras": "Vision suite",
     "imu": true,
-    "ai_model": "Hierarchical end-to-end model + reinforcement learning (CASBOT Embodied Brain)",
+    "ai_model": "Hierarchical end-to-end model + reinforcement-learning post-training (embodied intelligence, real-world data feedback loop)",
     "learning_methods": [
       "End-to-end learning",
       "Reinforcement learning"
     ],
-    "actuator_type": "Self-developed high-efficiency joint system; real-time force/torque control",
+    "actuator_type": "Self-developed high-efficiency integrated joint system; compliant force control",
     "tags": [
       "humanoid",
       "CASBOT",
@@ -119307,7 +119307,14 @@
     ],
     "made_in": "China",
     "website": "https://www.casbot.com",
-    "desc": "Nicknamed \"Wednesday\", CASBOT 01 is a full-size bipedal humanoid (1.79 m, 60 kg, 52 DoF) unveiled Nov 2024 and shown at CES 2025. 550 TOPS of compute, 4+ hour runtime, five-fingered dexterous hands and high-dynamic force control. Developed by Beijing's Lingbao CASBOT with Lenovo's Fire Seed Project; first deployment is precise micro-assembly at a Lenovo laptop factory."
+    "desc": "Nicknamed \"Wednesday\", CASBOT 01 is a full-size bipedal humanoid (1.79 m, 60 kg, 52 DoF) unveiled Nov 2024 and shown at CES 2025. 550 TOPS of compute, 4+ hour runtime, five-fingered dexterous hands and high-dynamic force control. Developed by Beijing's Lingbao CASBOT with Lenovo's Fire Seed Project; first deployment is precise micro-assembly at a Lenovo laptop factory.",
+    "head_dof": "2-DoF head (vision + auditory sensors)",
+    "frame_material": "High-strength metal skeleton + reinforced ultra-thin hollow-cavity structure (impact-resistant, lightweight)",
+    "sensors": "Vision, auditory, force/torque, IMU",
+    "demonstrated_tasks": "Stand, walk, run, jump; sort clothes, assemble table lamp, change bulbs, twist screws",
+    "manufacturer_full": "Lingbao CASBOT (Beijing Zhongke Huiling Robotics), founded Aug 2023",
+    "deployment": "Deployed in Lenovo intelligent-manufacturing factory (Sept 2024); Lenovo Venture Capital backing",
+    "unveiled": "CES 2025 / 13 Nov 2024"
   },
   {
     "cat": "Humanoid",
@@ -119320,7 +119327,7 @@
     "status": "Active",
     "price": "POA",
     "dof": 52,
-    "actuator_type": "High-strength metal + reinforced ultra-thin hollow-cavity structure",
+    "actuator_type": "High-strength metal + reinforced ultra-thin hollow-cavity structure (low weight, impact resistance for speed)",
     "tags": [
       "humanoid",
       "CASBOT",
@@ -119337,7 +119344,8 @@
     ],
     "made_in": "China",
     "website": "https://www.casbot.com",
-    "desc": "An agility-focused variant of CASBOT 01, redesigned with a shorter frame for higher speed and maneuverability. Built to compete alongside human runners in Beijing's world-first robot half-marathon (April 2025), using a high-strength metal hollow-cavity structure for low weight and impact resistance."
+    "desc": "An agility-focused variant of CASBOT 01, redesigned with a shorter frame for higher speed and maneuverability. Built to compete alongside human runners in Beijing's world-first robot half-marathon (April 2025), using a high-strength metal hollow-cavity structure for low weight and impact resistance.",
+    "note": "Agility-focused variant of CASBOT 01 with shorter frame for higher speed/maneuverability; built for Beijing robot half-marathon (April 2025)"
   },
   {
     "cat": "Humanoid",
@@ -119358,7 +119366,7 @@
     "lidar": true,
     "imu": true,
     "mic_array": true,
-    "actuator_type": "Electric servo actuators + differential drive wheels",
+    "actuator_type": "Electric servo actuators + differential-drive wheels",
     "tags": [
       "humanoid",
       "CASBOT",
@@ -119378,7 +119386,10 @@
     ],
     "made_in": "China",
     "website": "https://www.casbot.com",
-    "desc": "A wheeled humanoid combining a lift-adjustable upper body with dual 7-DoF arms (10 kg payload) on a differential-drive base. Runs CASBOT Embodied Brain 2.0 for VLA control and perception fusion on an Intel i9 + RTX 4060 industrial PC, with RGB-D cameras and waist-mounted 360° LiDAR. Built for warehouse, retail and light-industrial manipulation."
+    "desc": "A wheeled humanoid combining a lift-adjustable upper body with dual 7-DoF arms (10 kg payload) on a differential-drive base. Runs CASBOT Embodied Brain 2.0 for VLA control and perception fusion on an Intel i9 + RTX 4060 industrial PC, with RGB-D cameras and waist-mounted 360° LiDAR. Built for warehouse, retail and light-industrial manipulation.",
+    "arm_config": "Dual 7-DoF arms + vertical lift column",
+    "lidar_model": "Waist-mounted 360 degree LiDAR",
+    "note": "Wheeled humanoid for warehouse/retail/light-industrial manipulation"
   },
   {
     "cat": "Humanoid",
@@ -119394,7 +119405,7 @@
     "payload_kg": 10,
     "battery_life": "8 hours",
     "hand_type": "Dual 7-DoF arms",
-    "ai_model": "DexVerse Sim2Real embodied-intelligence engine",
+    "ai_model": "DexVerse Sim2Real embodied-intelligence engine (large-scale synthetic 3D training data)",
     "learning_methods": [
       "Sim-to-real",
       "3D generative AI synthetic data"
@@ -119418,7 +119429,10 @@
     ],
     "made_in": "China",
     "website": "https://www.dexforce.com",
-    "desc": "DexForce's second-generation wheeled humanoid: 34 powered joints, dual 7-DoF arms lifting up to 10 kg, and ~8-hour runtime. Built on DexForce's DexVerse Sim2Real engine, which generates large-scale synthetic 3D training data for robust real-world manipulation. Shenzhen-based, founded 2021, backed by Lenovo Capital."
+    "desc": "DexForce's second-generation wheeled humanoid: 34 powered joints, dual 7-DoF arms lifting up to 10 kg, and ~8-hour runtime. Built on DexForce's DexVerse Sim2Real engine, which generates large-scale synthetic 3D training data for robust real-world manipulation. Shenzhen-based, founded 2021, backed by Lenovo Capital.",
+    "arm_config": "Dual 7-DoF arms on wheeled base",
+    "manufacturer_full": "DexForce (Shenzhen, founded 2021; Lenovo Capital-backed)",
+    "note": "Second-generation wheeled humanoid; DexVerse engine generates synthetic training data for robust manipulation"
   },
   {
     "cat": "Humanoid",
@@ -119446,7 +119460,11 @@
     ],
     "made_in": "USA",
     "website": "https://www.ff.com",
-    "desc": "A full-size professional humanoid from Faraday Future's new robotics subsidiary, opened for sales and paid pre-order at the 2026 NADA Show in Las Vegas (first deliveries targeted end of Feb 2026). One of three embodied-AI products launched alongside the FF Master humanoid and FX Aegis quadruped, as Faraday Future pivots from EVs to robotics."
+    "desc": "A full-size professional humanoid from Faraday Future's new robotics subsidiary, opened for sales and paid pre-order at the 2026 NADA Show in Las Vegas (first deliveries targeted end of Feb 2026). One of three embodied-AI products launched alongside the FF Master humanoid and FX Aegis quadruped, as Faraday Future pivots from EVs to robotics.",
+    "manufacturer_full": "Faraday Future (FF) robotics subsidiary",
+    "launch_event": "Opened for sales/paid pre-order at 2026 NADA Show, Las Vegas; first deliveries targeted end Feb 2026",
+    "product_line": "One of three embodied-AI products (with FF Master humanoid + FX Aegis quadruped)",
+    "spec_notes": "Just-announced — full technical specifications (DoF, height, weight, compute, payload) not yet publicly disclosed by Faraday Future."
   },
   {
     "cat": "Quadruped",
@@ -119474,7 +119492,11 @@
     ],
     "made_in": "USA",
     "website": "https://www.ff.com",
-    "desc": "A bionic quadruped robot in Faraday Future's first wave of embodied-AI products (NADA Show, Feb 2026), launched alongside the FF Futurist and FF Master humanoids. Part of FF's pivot into humanoid and bionic robotics."
+    "desc": "A bionic quadruped robot in Faraday Future's first wave of embodied-AI products (NADA Show, Feb 2026), launched alongside the FF Futurist and FF Master humanoids. Part of FF's pivot into humanoid and bionic robotics.",
+    "manufacturer_full": "Faraday Future (FF) robotics subsidiary",
+    "launch_event": "Unveiled at 2026 NADA Show, Las Vegas (Feb 2026)",
+    "product_line": "Bionic quadruped in FF first embodied-AI wave (with FF Futurist + FF Master humanoids)",
+    "spec_notes": "Just-announced — detailed technical specifications not yet publicly disclosed by Faraday Future."
   },
   {
     "cat": "Industrial",
