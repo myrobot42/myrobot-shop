@@ -48,6 +48,12 @@ exports.handler = async () => {
     }
 
     // 4. Build the output and commit it
+    const gotCount = Object.keys(scores).length;
+    // If Google blocked everything (0 scores), DON'T overwrite the last good file — just report.
+    if (gotCount === 0) {
+      return { statusCode: 200, body: JSON.stringify({ ok: false, tracked: 0, note: 'Google Trends returned no usable data (likely rate-limited/blocked). Kept previous trending.json. Consider a paid source.' }) };
+    }
+
     const out = {
       updated: new Date().toISOString(),
       source: 'google-trends',
@@ -56,7 +62,7 @@ exports.handler = async () => {
 
     await ghPutJson('data/trending.json', out, GH_TOKEN, 'Daily trends refresh [skip ci]');
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, tracked: Object.keys(scores).length }) };
+    return { statusCode: 200, body: JSON.stringify({ ok: true, tracked: gotCount }) };
   } catch (err) {
     return { statusCode: 500, body: 'Trends refresh failed: ' + (err.message || String(err)) };
   }
@@ -76,21 +82,27 @@ async function fetchTrendScore(term) {
       property: '',
     })) + '&tz=0';
 
-  const tokenResp = await fetch(explore, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  const tokenResp = await fetch(explore, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36' } });
   if (!tokenResp.ok) return null;
   let txt = await tokenResp.text();
+  if (!txt || txt.length < 10) return null; // blocked / empty response
   txt = txt.replace(/^\)\]\}',?\s*/, ''); // strip Google's anti-JSON prefix
-  const widgets = JSON.parse(txt).widgets || [];
+  let widgets;
+  try { widgets = JSON.parse(txt).widgets || []; }
+  catch (e) { return null; } // Google returned non-JSON (blocked) — skip this term
   const tl = widgets.find(w => w.id === 'TIMESERIES');
   if (!tl) return null;
 
   const dataUrl = 'https://trends.google.com/trends/api/widgetdata/multiline?hl=en-US&tz=0&req=' +
     encodeURIComponent(JSON.stringify(tl.request)) + '&token=' + tl.token + '&tz=0';
-  const dataResp = await fetch(dataUrl, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  const dataResp = await fetch(dataUrl, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0 Safari/537.36' } });
   if (!dataResp.ok) return null;
   let d = await dataResp.text();
+  if (!d || d.length < 10) return null;
   d = d.replace(/^\)\]\}',?\s*/, '');
-  const timeline = JSON.parse(d).default.timelineData || [];
+  let timeline;
+  try { timeline = (JSON.parse(d).default || {}).timelineData || []; }
+  catch (e) { return null; }
   if (!timeline.length) return null;
 
   // Use the average of the last week's daily interest values as the score
