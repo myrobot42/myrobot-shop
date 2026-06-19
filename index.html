@@ -777,7 +777,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <a id="nav-ai" onclick="goPage('ai')" style="color:var(--acc);font-weight:600">✦ Ask AI</a>
     </div>
     <div class="nav-right">
-      <button class="btn btn-ghost" onclick="goPage('signin')">Sign in</button>
+      <button class="btn btn-ghost" id="nav-auth-btn" onclick="authButtonClick()">Sign in</button>
       <button class="btn btn-primary" onclick="goPage('submit-robot')">Submit a Robot</button>
     </div>
   </div>
@@ -810,7 +810,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="hero-right">
         <div class="hero-stat"><div class="hsi" style="overflow:hidden;background:#fff"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_120/v1777366404/output_17_t74qys.jpg" alt="" style="width:100%;height:100%;object-fit:contain"></div><div><div class="hst-num" id="home-hero-count">467</div><div class="hst-lbl">Robots catalogued</div></div></div>
         <div class="hero-stat"><div class="hsi">🏭</div><div><div class="hst-num" id="home-mfr-count">56</div><div class="hst-lbl">Manufacturers listed</div></div></div>
-        <div class="hero-stat"><div class="hsi">⭐</div><div><div class="hst-num">14,200+</div><div class="hst-lbl">User reviews</div></div></div>
+        <div class="hero-stat"><div class="hsi">🤖</div><div><div class="hst-num" id="hero-robot-count">—</div><div class="hst-lbl">Robots tracked</div></div></div>
       </div>
     </div>
   </div>
@@ -1190,7 +1190,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- SUBMIT REVIEW -->
 <div id="page-submit-review" class="page">
-  <div class="submit-page"><div class="submit-card"><div class="submit-title">Write a Review</div><div class="submit-sub">Share your experience to help others make the right decision.</div><div class="form-group-full"><label class="form-label">Robot *</label><select class="form-select" id="review-robot-select"><option value="">Select a robot...</option></select></div><div class="form-group-full"><label class="form-label">Your Rating *</label><div class="stars-select" id="stars-select"><span class="star-btn" onclick="setStars(1)">★</span><span class="star-btn" onclick="setStars(2)">★</span><span class="star-btn" onclick="setStars(3)">★</span><span class="star-btn" onclick="setStars(4)">★</span><span class="star-btn" onclick="setStars(5)">★</span></div></div><div class="form-row"><div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" placeholder="e.g. James K."></div><div class="form-group"><label class="form-label">Your Role</label><input class="form-input" type="text" placeholder="e.g. Robotics Engineer, Toyota"></div></div><div class="form-group-full"><label class="form-label">Review *</label><textarea class="form-textarea" style="min-height:120px" placeholder="Share your experience — pros, cons, use case, how long you've used it..."></textarea></div><div style="margin-top:20px;display:flex;gap:12px;align-items:center"><button class="submit-btn">Submit Review →</button><span style="font-size:11px;color:var(--mut)">Reviews moderated within 24 hours</span></div></div></div>
+  <div class="submit-page"><div class="submit-card"><div class="submit-title">Write a Review</div><div class="submit-sub">Share your experience to help others make the right decision.</div><div class="form-group-full"><label class="form-label">Robot *</label><select class="form-select" id="review-robot-select"><option value="">Select a robot...</option></select></div><div class="form-group-full"><label class="form-label">Your Rating *</label><div class="stars-select" id="stars-select"><span class="star-btn" onclick="setStars(1)">★</span><span class="star-btn" onclick="setStars(2)">★</span><span class="star-btn" onclick="setStars(3)">★</span><span class="star-btn" onclick="setStars(4)">★</span><span class="star-btn" onclick="setStars(5)">★</span></div></div><div class="form-row"><div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" id="review-name" placeholder="e.g. James K."></div><div class="form-group"><label class="form-label">Your Role</label><input class="form-input" type="text" id="review-role" placeholder="e.g. Robotics Engineer, Toyota"></div></div><div class="form-group-full"><label class="form-label">Review *</label><textarea class="form-textarea" id="review-text" style="min-height:120px" placeholder="Share your experience — pros, cons, use case, how long you've used it..."></textarea></div><div style="margin-top:20px;display:flex;gap:12px;align-items:center"><button class="submit-btn" onclick="submitReview()">Submit Review →</button><span style="font-size:11px;color:var(--mut)">Reviews moderated within 24 hours</span></div></div></div>
 </div>
 <script>
 
@@ -1210,6 +1210,13 @@ let ROBOTS_LOADED = false;
 // Load real Google Trends data (refreshed daily by the scheduled function). Optional —
 // the homepage falls back to the buzz proxy if this file isn't present yet.
 window.TRENDING = null;
+window.REVIEWS = {};  // data/reviews.json — { robotId: [ {rating,name,role,text,created,...}, ... ] }
+function loadReviews(){
+  return fetch('data/reviews.json',{cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){ if(d && d.reviews) window.REVIEWS = d.reviews; })
+    .catch(function(){ /* no reviews file yet — fine, shows "No reviews yet" */ });
+}
 function loadTrending(){
   return fetch('data/trending.json',{cache:'no-store'})
     .then(function(r){ return r.ok ? r.json() : null; })
@@ -1217,7 +1224,7 @@ function loadTrending(){
     .catch(function(){ /* no trending file yet — fine, we fall back */ });
 }
 function loadRobots(){
-  loadTrending(); // fire alongside; non-blocking
+  loadTrending(); loadReviews(); // fire alongside; non-blocking
   try{ _fieldRangeCache = {}; }catch(e){} // fresh data → recompute slider ranges
   return fetch('data/robots.json',{cache:'no-store'})
     .then(r=>{if(!r.ok)throw new Error('robots.json '+r.status);return r.json();})
@@ -1225,6 +1232,7 @@ function loadRobots(){
       ROBOTS.length=0; ROBOTS.push.apply(ROBOTS,data);
       window.ROBOTS = ROBOTS;
       ROBOTS_LOADED = true;
+      var _hc=document.getElementById('hero-robot-count'); if(_hc)_hc.textContent=ROBOTS.length.toLocaleString()+'+';
       // Recompute brand list now that we have data
       ALL_BRANDS.length=0;
       const brandSet=new Set(ROBOTS.map(r=>r.brand).filter(b=>b&&b!=='undefined'));
@@ -3194,16 +3202,18 @@ function _renderProfile(id){
   })();
   // Reviews: only show stars + count when there are REAL user reviews (no fake scores).
   (function(){
-    var realCount = (r.reviews && r.reviews>0) ? r.reviews : 0;
+    var _rv=(window.REVIEWS&&window.REVIEWS[r.id])?window.REVIEWS[r.id]:[];
+    var realCount=_rv.length;
+    var avg=realCount?(_rv.reduce(function(s,x){return s+(Number(x.rating)||0);},0)/realCount):0;
     var starsEl=document.getElementById('profile-stars');
     var ratingEl=document.getElementById('profile-rating');
     var revEl=document.getElementById('profile-reviews');
-    if(realCount>0 && r.rating){
-      starsEl.textContent='★'.repeat(Math.round(r.rating))+'☆'.repeat(5-Math.round(r.rating));
-      ratingEl.textContent=r.rating;
+    if(realCount>0){
+      starsEl.textContent='★'.repeat(Math.round(avg))+'☆'.repeat(5-Math.round(avg));
+      ratingEl.textContent=(Math.round(avg*10)/10);
       revEl.textContent=realCount+(realCount===1?' review':' reviews');
     } else {
-      // No real reviews yet — show a subtle invite instead of a fake score
+      // No real reviews yet — honest empty state, never a fabricated score
       starsEl.textContent='';
       ratingEl.textContent='';
       revEl.innerHTML='<span style="color:var(--mut);font-size:12px">No reviews yet</span>';
@@ -3283,10 +3293,28 @@ function _renderProfile(id){
   // Specs table
   document.getElementById('profile-specs').innerHTML = renderSpecsGSM(r);
   // Reviews
-  document.getElementById('profile-reviews-list').innerHTML=[
-    {init:'JK',name:'James K.',role:'Robotics Engineer, Toyota',stars:5,text:`We've been running ${r.name} in our facility for 6 months. The results speak for themselves — best-in-class for our use case. Highly recommended.`},
-    {init:'SL',name:'Dr. Sara L.',role:'Research Lead, MIT CSAIL',stars:4,text:`Everything about ${r.name} — performance, documentation, support — is excellent. The integration was faster than expected. Minor limitations noted but overall outstanding.`},
-  ].map(rv=>`<div class="review"><div class="review-top"><div class="reviewer"><div class="avatar">${rv.init}</div><div><div class="reviewer-name">${rv.name}</div><div class="reviewer-role">${rv.role}</div></div></div><div class="review-stars">${'★'.repeat(rv.stars)+'☆'.repeat(5-rv.stars)}</div></div><div class="review-text">${rv.text}</div><span class="review-tag">Verified</span></div>`).join('');
+  (function(){
+    var list=document.getElementById('profile-reviews-list');
+    if(!list) return;
+    var _rv=(window.REVIEWS&&window.REVIEWS[r.id])?window.REVIEWS[r.id]:[];
+    if(!_rv.length){
+      list.innerHTML='<div style="color:var(--mut);font-size:13px;padding:6px 0">No reviews yet. '
+        +'<a onclick="goPage(\'submit-review\')" style="color:var(--acc);cursor:pointer;font-weight:600">Be the first to write one →</a></div>';
+      return;
+    }
+    function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]);});}
+    function initials(n){n=(n||'?').trim();var p=n.split(/\s+/);return((p[0]||'')[0]||'?').toUpperCase()+((p[1]||'')[0]||'').toUpperCase();}
+    list.innerHTML=_rv.slice().sort(function(a,b){return new Date(b.created||0)-new Date(a.created||0);}).map(function(rv){
+      var st=Math.max(0,Math.min(5,Math.round(Number(rv.rating)||0)));
+      var role=rv.role?'<div class="reviewer-role">'+esc(rv.role)+'</div>':'';
+      var when=rv.created?'<div class="reviewer-role" style="opacity:.7">'+new Date(rv.created).toLocaleDateString('en-AU',{month:'short',year:'numeric'})+'</div>':'';
+      return '<div class="review"><div class="review-top"><div class="reviewer">'
+        +'<div class="avatar">'+initials(rv.name)+'</div>'
+        +'<div><div class="reviewer-name">'+esc(rv.name||'Anonymous')+'</div>'+role+when+'</div></div>'
+        +'<div class="review-stars">'+'★'.repeat(st)+'☆'.repeat(5-st)+'</div></div>'
+        +'<div class="review-text">'+esc(rv.text||rv.body||'')+'</div></div>';
+    }).join('');
+  })();
   // Similar — brand siblings first (most related), then same category / shared tags
   const _rt=r.tags||[];
   const sameBrand=ROBOTS.filter(x=>x.id!==r.id&&x.brand&&x.brand===r.brand);
@@ -4862,5 +4890,86 @@ function runFinderSearch(){
 </script>
 </div>
 
+
+<!-- ===== Netlify Identity (accounts for reviews) ===== -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+(function(){
+  function authBtn(){ return document.getElementById('nav-auth-btn'); }
+  function refreshAuthBtn(){
+    var b=authBtn(); if(!b||!window.netlifyIdentity) return;
+    var u=netlifyIdentity.currentUser();
+    if(u){
+      var nm=(u.user_metadata&&u.user_metadata.full_name)||(u.email?u.email.split('@')[0]:'Account');
+      b.textContent=nm;
+    } else { b.textContent='Sign in'; }
+  }
+  window.authButtonClick=function(){
+    if(window.netlifyIdentity) netlifyIdentity.open();
+  };
+  if(window.netlifyIdentity){
+    netlifyIdentity.on('init', refreshAuthBtn);
+    netlifyIdentity.on('login', function(){ refreshAuthBtn(); netlifyIdentity.close(); });
+    netlifyIdentity.on('logout', refreshAuthBtn);
+    netlifyIdentity.init();
+  }
+
+  // lightweight client-side profanity pre-check (server function is authoritative)
+  var WORDS=/\b(fuck|shit|bitch|bastard|asshole|arsehole|ass|dick|piss|prick|wank|wanker|bollocks?|cock|pussy|slut|whore|jackass|dipshit|bullshit|motherfucker|twat|knob|tit|tits|nigger|nigga|faggot|fag|retard|spic|chink|kike|cunt|anal|cum|damn|hell|crap|arse|bugger|bloody)\b/i;
+  var TIGHT=['fuck','shit','bitch','asshole','arsehole','motherfucker','nigger','faggot','pussy','bullshit'];
+  function norm(s){return String(s||'').toLowerCase()
+    .replace(/[0@]/g,'o').replace(/[1!]/g,'i').replace(/3/g,'e').replace(/4/g,'a').replace(/5/g,'s').replace(/7/g,'t')
+    .replace(/(.)\1+/g,'$1');}
+  function looksProfane(s){
+    var n=norm(s);
+    if(WORDS.test(n)) return true;
+    var toks=n.split(/\s+/);
+    for(var i=0;i<toks.length;i++){
+      var t=toks[i].replace(/[^a-z]/g,''); if(t.length<3) continue;
+      for(var j=0;j<TIGHT.length;j++) if(t.indexOf(TIGHT[j])>=0) return true;
+    }
+    return false;
+  }
+
+  window.submitReview=async function(){
+    var u=window.netlifyIdentity&&netlifyIdentity.currentUser();
+    if(!u){ alert('Please sign in to post a review.'); if(window.netlifyIdentity) netlifyIdentity.open(); return; }
+    var sel=document.getElementById('review-robot-select');
+    var robot_id=sel?sel.value:'';
+    var robot_name=(sel&&sel.selectedIndex>0)?sel.options[sel.selectedIndex].textContent:'';
+    var rating=document.querySelectorAll('#stars-select .star-btn.active').length;
+    var name=(document.getElementById('review-name')||{}).value||'';
+    var role=(document.getElementById('review-role')||{}).value||'';
+    var text=(document.getElementById('review-text')||{}).value||'';
+    if(!robot_id){ alert('Please choose a robot.'); return; }
+    if(!(rating>=1&&rating<=5)){ alert('Please pick a star rating.'); return; }
+    if(text.trim().length<10){ alert('Please write at least a sentence (10+ characters).'); return; }
+    if(looksProfane(text)||looksProfane(name)||looksProfane(role)){ alert('Please remove inappropriate language before submitting.'); return; }
+    var btn=document.querySelector('#page-submit-review .submit-btn');
+    var orig=btn?btn.textContent:''; if(btn){ btn.disabled=true; btn.textContent='Submitting...'; }
+    try{
+      var token=await u.jwt();
+      var res=await fetch('/.netlify/functions/submit-review',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},
+        body:JSON.stringify({robot_id:robot_id,robot_name:robot_name,rating:rating,name:name,role:role,text:text})
+      });
+      var data={}; try{ data=await res.json(); }catch(e){}
+      if(res.ok){
+        alert(data.message||'Thanks! Your review is pending moderation.');
+        ['review-name','review-role','review-text'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});
+        if(typeof setStars==='function') setStars(0);
+        if(sel) sel.selectedIndex=0;
+      } else {
+        alert(data.error||'Could not submit your review. Please try again.');
+      }
+    }catch(e){
+      alert('Network error - please try again.');
+    } finally {
+      if(btn){ btn.disabled=false; btn.textContent=orig; }
+    }
+  };
+})();
+</script>
 </body>
 </html>
