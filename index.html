@@ -760,6 +760,26 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .frrow-stars{font-size:11px;color:#f59e0b}.frrow-actions{display:flex;gap:4px;margin-top:3px}
 
 </style>
+<style>
+.news-shell{display:flex;gap:24px;align-items:flex-start}
+.news-sidebar{width:232px;flex-shrink:0}
+.news-main{flex:1;min-width:0}
+.news-sb-box{border:1px solid var(--bdr);border-radius:12px;background:#fff;margin-bottom:18px;overflow:hidden}
+.news-sb-head{background:var(--bg2);font-family:'Space Mono','Courier New',monospace;font-size:11px;font-weight:700;letter-spacing:.4px;color:var(--mut);padding:9px 12px;border-bottom:1px solid var(--bdr)}
+.news-sb-brands{display:flex;flex-wrap:wrap;gap:5px 12px;padding:12px}
+.news-sb-brand{font-size:11.5px;color:var(--acc);cursor:pointer;font-weight:600;line-height:1.1}
+.news-sb-brand:hover{text-decoration:underline}
+.news-sb-all{display:block;padding:9px 12px;border-top:1px solid var(--bdr);font-size:11px;color:var(--mut);cursor:pointer;font-weight:600}
+.news-sb-all:hover{color:var(--acc)}
+.news-sb-top10{display:flex;flex-direction:column}
+.news-sb-rank{display:flex;align-items:center;gap:9px;padding:7px 12px;cursor:pointer;border-bottom:1px solid var(--bdr);text-decoration:none}
+.news-sb-rank:last-child{border-bottom:none}
+.news-sb-rank:hover{background:var(--bg2)}
+.news-sb-num{font-weight:800;font-size:12px;color:var(--mut);width:15px;flex-shrink:0;text-align:center}
+.news-sb-rlabel{font-size:12px;line-height:1.25;flex:1;color:var(--txt)}
+.news-sb-hits{font-size:11px;color:var(--acc);font-weight:700;flex-shrink:0}
+@media(max-width:900px){.news-shell{flex-direction:column}.news-sidebar{width:100%;order:2}.news-main{order:1}}
+</style>
 </head>
 <body>
 <nav>
@@ -1073,8 +1093,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <div id="page-news" class="page">
   <div class="news-page">
     <div style="margin-bottom:22px"><div class="page-title">Robotics News</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Latest industry news, product launches and expert analysis</p></div>
-    <div class="news-layout" id="news-layout"></div>
-    <div class="news-list-items" id="news-list-items"></div>
+    <div class="news-shell"><aside class="news-sidebar" id="news-sidebar"></aside><div class="news-main"><div class="news-layout" id="news-layout"></div>
+    <div class="news-list-items" id="news-list-items"></div></div></div>
     <div class="news-signup" style="margin-top:34px;padding:30px 26px;border:1px solid var(--bdr);border-radius:14px;background:linear-gradient(135deg,var(--acc-l),var(--bg2));text-align:center">
       <div style="font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:19px;color:var(--txt);margin-bottom:6px">Get the robotics briefing</div>
       <div style="color:var(--mut);font-size:13.5px;margin-bottom:16px">The latest launches, reviews and breakthroughs &mdash; in your inbox. No spam.</div>
@@ -4444,7 +4464,40 @@ function renderProfileNews(r){
     }).join('');
   });
 }
+function renderNewsSidebar(){
+  var sb=document.getElementById('news-sidebar'); if(!sb) return;
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  // ---- Brand box (top brands by robot count) ----
+  var counts={};
+  ROBOTS.forEach(function(r){ if(r.brand) counts[r.brand]=(counts[r.brand]||0)+1; });
+  var brands=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];}).slice(0,30);
+  var brandHtml='<div class="news-sb-box"><div class="news-sb-head">BRANDS</div><div class="news-sb-brands">'
+    +brands.map(function(b){var bn=b.replace(/'/g,'');return '<a class="news-sb-brand" onclick="searchBrand(&apos;'+esc(bn)+'&apos;)">'+esc(b)+'</a>';}).join('')
+    +'</div><a class="news-sb-all" onclick="goPage(&apos;manufacturers&apos;)">All brands &rarr;</a></div>';
+  sb.innerHTML=brandHtml
+    +'<div class="news-sb-box"><div class="news-sb-head">TOP 10 BY DAILY INTEREST</div>'
+    +'<div id="news-sb-top10" class="news-sb-top10"><div style="color:var(--mut);font-size:12px;padding:10px 12px">Loading&hellip;</div></div></div>';
+  // ---- Top 10 from trending.json scores ----
+  fetch('data/trending.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+    var el=document.getElementById('news-sb-top10'); if(!el) return;
+    var scores=(d&&d.scores)?d.scores:{};
+    var ranked=Object.keys(scores).map(function(id){return {id:id,score:scores[id]};})
+      .sort(function(a,b){return b.score-a.score;}).slice(0,10);
+    if(!ranked.length){ el.innerHTML='<div style="color:var(--mut);font-size:12px;padding:10px 12px">No trending data yet.</div>'; return; }
+    var byId={}; ROBOTS.forEach(function(r){byId[r.id]=r;});
+    el.innerHTML=ranked.map(function(it,i){
+      var r=byId[it.id];
+      var label=r?((r.brand?r.brand+' ':'')+(r.name||'')):it.id;
+      return '<a class="news-sb-rank" onclick="openProfile(&apos;'+esc(it.id)+'&apos;)">'
+        +'<span class="news-sb-num">'+(i+1)+'</span>'
+        +'<span class="news-sb-rlabel">'+esc(label)+'</span>'
+        +'<span class="news-sb-hits">'+it.score+'</span></a>';
+    }).join('');
+  }).catch(function(){ var el=document.getElementById('news-sb-top10'); if(el) el.innerHTML='<div style="color:var(--mut);font-size:12px;padding:10px 12px">Unavailable.</div>'; });
+}
+
 function renderNews(){
+  renderNewsSidebar();
   var layout=document.getElementById('news-layout');
   var list=document.getElementById('news-list-items');
   if(!layout||!list) return;
@@ -4456,19 +4509,19 @@ function renderNews(){
   fetch('data/news.json',{cache:'no-store'})
     .then(function(r){if(!r.ok)throw new Error('news.json '+r.status);return r.json();})
     .then(function(d){
-      var items=d.items||[];
+      var items=d.items||[]; window.NEWS_ITEMS=items;
       if(!items.length){layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">No news yet — the feed will populate shortly.</div>';return;}
       var feat=items[0], right=items.slice(1,4), rest=items.slice(4,16);
       var fImg=feat.image
         ? '<div class="news-img featured" style="background:url(\''+esc(feat.image)+'\') center/cover;background-size:cover"><div class="news-cat">'+esc(feat.source)+'</div></div>'
         : '<div class="news-img featured"><div class="news-img-label" style="font-size:22px;padding:0 20px;text-align:center;line-height:1.25;word-break:break-word">'+esc((feat.source||'NEWS').toUpperCase())+'</div><div class="news-cat">'+esc(feat.source)+'</div></div>';
-      var featHtml='<a class="news-card featured" href="'+esc(feat.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">'+fImg+'<div class="news-body"><div class="news-title featured">'+esc(feat.title)+'</div><div class="news-meta">'+fdate(feat.published)+(feat.source?' · '+esc(feat.source):'')+'</div></div></a>';
+      var featHtml='<a class="news-card featured" onclick="openNewsItem(0)" style="text-decoration:none;color:inherit;cursor:pointer">'+fImg+'<div class="news-body"><div class="news-title featured">'+esc(feat.title)+'</div><div class="news-meta">'+fdate(feat.published)+(feat.source?' · '+esc(feat.source):'')+'</div></div></a>';
       var rightHtml='<div style="display:flex;flex-direction:column;gap:14px">'+right.map(function(it,i){
-        return '<a class="news-card" href="'+esc(it.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:'+COLORS[i%COLORS.length]+';letter-spacing:.5px;margin-bottom:5px">'+esc((it.source||'').toUpperCase())+'</div><div class="news-title">'+esc(it.title)+'</div><div class="news-meta" style="margin-top:7px">'+fdate(it.published)+'</div></div></a>';
+        return '<a class="news-card" onclick="openNewsItem('+(1+i)+')" style="text-decoration:none;color:inherit;cursor:pointer"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:'+COLORS[i%COLORS.length]+';letter-spacing:.5px;margin-bottom:5px">'+esc((it.source||'').toUpperCase())+'</div><div class="news-title">'+esc(it.title)+'</div><div class="news-meta" style="margin-top:7px">'+fdate(it.published)+'</div></div></a>';
       }).join('')+'</div>';
       layout.innerHTML=featHtml+rightHtml;
       list.innerHTML=rest.map(function(it,i){
-        return '<a class="news-list-item" href="'+esc(it.url)+'" target="_blank" rel="noopener" style="display:block;text-decoration:none;color:inherit"><div class="nli-cat" style="color:'+COLORS[i%COLORS.length]+'">'+esc((it.source||'').toUpperCase())+'</div><div class="nli-title">'+esc(it.title)+'</div><div class="nli-meta">'+fdate(it.published)+'</div></a>';
+        return '<a class="news-list-item" onclick="openNewsItem('+(4+i)+')" style="display:block;text-decoration:none;color:inherit;cursor:pointer"><div class="nli-cat" style="color:'+COLORS[i%COLORS.length]+'">'+esc((it.source||'').toUpperCase())+'</div><div class="nli-title">'+esc(it.title)+'</div><div class="nli-meta">'+fdate(it.published)+'</div></a>';
       }).join('');
     })
     .catch(function(e){console.error('news load failed',e);layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">News feed unavailable right now.</div>';});
@@ -4990,6 +5043,46 @@ function runFinderSearch(){
     }
   };
 })();
+</script>
+
+<!-- ===== On-site news reader ===== -->
+<div id="news-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);padding:20px;overflow:auto" onclick="if(event.target===this)closeNewsItem()">
+  <div style="max-width:720px;margin:40px auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3)">
+    <div id="news-modal-img" style="height:240px;background:var(--bg3);background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center"></div>
+    <div style="padding:24px 26px">
+      <div id="news-modal-cat" style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--acc);margin-bottom:8px"></div>
+      <div id="news-modal-title" style="font-size:22px;font-weight:800;line-height:1.25;margin-bottom:8px;color:var(--txt)"></div>
+      <div id="news-modal-meta" style="font-size:12px;color:var(--mut);margin-bottom:16px"></div>
+      <div id="news-modal-summary" style="font-size:15px;line-height:1.7;color:var(--txt);margin-bottom:22px"></div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <a id="news-modal-link" href="#" target="_blank" rel="noopener" style="display:inline-block;background:var(--acc);color:#fff;padding:10px 18px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none">Read full story →</a>
+        <button onclick="closeNewsItem()" style="background:var(--bg3);border:1px solid var(--bdr);color:var(--txt);padding:10px 16px;border-radius:8px;font-size:13px;cursor:pointer">Close</button>
+      </div>
+      <div style="margin-top:13px"><a href="https://google.com/preferences/source?q=myrobot.shop" target="_blank" rel="noopener" title="Add myrobot.shop as a preferred source on Google" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--bdr2);border-radius:8px;padding:8px 13px;font-size:12px;color:var(--mut);text-decoration:none;font-weight:600;line-height:1"><svg width="15" height="15" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>Add <span style="color:var(--txt);margin:0 3px">myrobot.shop</span> as a preferred source on Google</a></div>
+    </div>
+  </div>
+</div>
+<script>
+function openNewsItem(i){
+  var it=(window.NEWS_ITEMS||[])[i]; if(!it) return;
+  var img=document.getElementById('news-modal-img');
+  if(it.image){ img.style.backgroundImage='url("'+it.image+'")'; img.innerHTML=''; }
+  else { img.style.backgroundImage='none'; img.innerHTML='<div style="font-family:\'Space Mono\',monospace;font-size:26px;font-weight:800;color:var(--bdr2);text-align:center;padding:0 24px;line-height:1.2;word-break:break-word">'+String(it.source||'NEWS').toUpperCase()+'</div>'; }
+  document.getElementById('news-modal-cat').textContent=String(it.source||'').toUpperCase();
+  document.getElementById('news-modal-title').textContent=it.title||'';
+  var d=it.published?new Date(it.published):null;
+  var ds=(d&&!isNaN(d))?d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}):'';
+  document.getElementById('news-modal-meta').textContent=ds+(it.source?(ds?' · ':'')+it.source:'');
+  document.getElementById('news-modal-summary').textContent=it.summary||'';
+  var link=document.getElementById('news-modal-link');
+  if(it.url){ link.href=it.url; link.style.display=''; link.textContent='Read full story at '+(it.source||'source')+' →'; }
+  else { link.style.display='none'; }
+  document.getElementById('news-modal').style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeNewsItem(){ var m=document.getElementById('news-modal'); if(m) m.style.display='none'; document.body.style.overflow=''; }
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeNewsItem(); });
+
 </script>
 </body>
 </html>
