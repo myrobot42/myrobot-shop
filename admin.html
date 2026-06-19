@@ -399,6 +399,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
     <div class="nav-item" onclick="showPage('vault',this)"><span class="nav-icon">🔗</span>URL Vault <span class="nbadge" id="nb-vault">0</span></div>
     <div class="nav-section">REVIEW</div>
     <div class="nav-item" onclick="showPage('queue',this)"><span class="nav-icon">📥</span>Review Queue <span class="nbadge red" id="nb-queue">0</span></div>
+    <div class="nav-item" onclick="showPage('reviewmod',this)"><span class="nav-icon">⭐</span>Review Moderation <span class="nbadge red" id="nb-reviewmod">0</span></div>
     <div class="nav-item" onclick="showPage('detected',this)"><span class="nav-icon">🤖</span>Robots Detected <span class="nbadge red" id="nb-detected">0</span></div>
     <div class="nav-section">TOOLS</div>
     <div class="nav-item" onclick="showPage('ingest',this)"><span class="nav-icon">🏭</span>Brand Ingestion</div>
@@ -846,6 +847,22 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       </div>
 
       <!-- BULK DELETE (admin-only) -->
+      <div class="page" id="page-reviewmod">
+        <div class="gen-page">
+          <div class="sec-card" style="border-left:3px solid #f59e0b">
+            <div class="sec-head">⭐ REVIEW MODERATION — Admin-only · Approve or reject user-submitted reviews</div>
+            <div style="font-size:12px;color:var(--mut);margin-bottom:14px;line-height:1.7">
+              Reviews land here from signed-in users on the public site. <strong>Approve &amp; publish</strong> writes to <code style="background:var(--bg3);padding:1px 4px;border-radius:3px">data/reviews.json</code> (live in ~30s); <strong>Reject</strong> discards. Emails show for context only and are never published.
+            </div>
+            <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap">
+              <button class="save-btn" onclick="renderModeration()" style="background:#3b82f6">↻ Refresh queue</button>
+              <span id="rm-status" style="font-size:12px;color:var(--mut);align-self:center"></span>
+            </div>
+            <div id="rm-list"></div>
+          </div>
+        </div>
+      </div>
+
       <div class="page" id="page-bulkdelete">
         <div class="gen-page">
           <div class="sec-card" style="border-left:3px solid #ef4444">
@@ -1841,7 +1858,7 @@ function showPage(id, el) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   if (el) el.classList.add('active');
-  const titles = {cmd:'⚡ Command Centre', db:'🗄️ Robot Database', cleanup:'🔧 Data Cleanup', logs:'📋 Activity Log', settings:'⚙️ Settings', rss:'📡 RSS Feeds', vault:'🔗 URL Vault', queue:'📥 Review Queue', detected:'🤖 Robots Detected', ingest:'🏭 Brand Ingestion', images:'🖼️ Image Manager', bulkdelete:'🗑️ Bulk Delete'};
+  const titles = {cmd:'⚡ Command Centre', db:'🗄️ Robot Database', cleanup:'🔧 Data Cleanup', logs:'📋 Activity Log', settings:'⚙️ Settings', rss:'📡 RSS Feeds', vault:'🔗 URL Vault', queue:'📥 Review Queue', detected:'🤖 Robots Detected', ingest:'🏭 Brand Ingestion', images:'🖼️ Image Manager', bulkdelete:'🗑️ Bulk Delete', reviewmod:'⭐ Review Moderation'};
   document.getElementById('page-title').textContent = titles[id] || id;
   if (id === 'db') renderDB();
   if (id === 'rss') renderFeeds();
@@ -1851,6 +1868,7 @@ function showPage(id, el) {
   if (id === 'ingest') renderIngestStats();
     if (id === 'images') { renderImgManager(); try{ scanMirror(); }catch(e){} }
   if (id === 'cleanup') runCleanupScan();
+  if (id === 'reviewmod') renderModeration();
 }
 
 // ════ RSS FEEDS ════
@@ -7014,5 +7032,109 @@ setTimeout(() => { try { runCleanupScan(); } catch(e){ console.warn('Initial cle
 </script>
 
 
+
+<script>
+// ===== Review moderation (admin) =====
+// Reads data/reviews-pending.json, publishes approved items to data/reviews.json.
+// Reuses the same GitHub token + Contents API path as the rest of the admin tools.
+(function(){
+  var PENDING_PATH='data/reviews-pending.json';
+  var PUBLISHED_PATH='data/reviews.json';
+
+  function ghHeaders(token){ return {'Authorization':'token '+token,'Accept':'application/vnd.github.v3+json'}; }
+  function b64encode(str){ var bytes=new TextEncoder().encode(str); var bin=''; bytes.forEach(function(b){ bin+=String.fromCharCode(b); }); return btoa(bin); }
+  function b64decode(b64){ b64=(b64||'').replace(/\n/g,''); var bin=atob(b64); var bytes=new Uint8Array(bin.length); for(var i=0;i<bin.length;i++){ bytes[i]=bin.charCodeAt(i); } return new TextDecoder().decode(bytes); }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+
+  async function ghGetJson(path){
+    var token=getGhToken(), repo=getGhRepo();
+    if(!token) throw new Error('No GitHub token set — open Settings and add a token with Contents:write.');
+    var url='https://api.github.com/repos/'+repo+'/contents/'+path+'?ref=main&t='+Date.now();
+    var resp=await fetch(url,{headers:ghHeaders(token),cache:'no-store'});
+    if(resp.status===404) return {sha:null,data:null};
+    if(!resp.ok) throw new Error('GET '+path+' -> '+resp.status);
+    var fd=await resp.json();
+    var data=null; try{ data=JSON.parse(b64decode(fd.content)); }catch(e){ data=null; }
+    return {sha:fd.sha,data:data};
+  }
+  async function ghPutJson(path,obj,sha,message){
+    var token=getGhToken(), repo=getGhRepo();
+    var url='https://api.github.com/repos/'+repo+'/contents/'+path;
+    var body={message:message,content:b64encode(JSON.stringify(obj,null,2))};
+    if(sha){ body.sha=sha; }
+    var resp=await fetch(url,{method:'PUT',headers:Object.assign(ghHeaders(token),{'Content-Type':'application/json'}),body:JSON.stringify(body)});
+    if(!resp.ok){ var e=await resp.json().catch(function(){return {};}); throw new Error('PUT '+path+' -> '+resp.status+': '+(e.message||'check token Contents:write')); }
+    return resp.json();
+  }
+
+  window._rmPending=null; window._rmPendingSha=null;
+
+  window.renderModeration=async function(){
+    var list=document.getElementById('rm-list'), status=document.getElementById('rm-status');
+    if(!list) return;
+    if(typeof isAdmin==='function' && !isAdmin()){ list.innerHTML='<div style="color:#fca5a5;font-size:13px">Admin only.</div>'; return; }
+    list.innerHTML='<div style="color:var(--mut);font-size:13px">Loading queue...</div>';
+    try{
+      var pf=await ghGetJson(PENDING_PATH);
+      var pending=(pf.data&&Array.isArray(pf.data.pending))?pf.data.pending:[];
+      window._rmPending=pending; window._rmPendingSha=pf.sha;
+      var badge=document.getElementById('nb-reviewmod'); if(badge){ badge.textContent=pending.length; }
+      if(status){ status.textContent=pending.length+' pending'; }
+      if(!pending.length){ list.innerHTML='<div style="color:var(--mut);font-size:13px;padding:8px 0">Nothing to moderate — the queue is empty.</div>'; return; }
+      list.innerHTML=pending.map(function(r,i){
+        var st=Math.max(0,Math.min(5,Math.round(Number(r.rating)||0)));
+        return '<div class="sec-card" style="margin-bottom:10px">'
+          +'<div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap">'
+            +'<div style="font-weight:700">'+esc(r.robot_name||r.robot_id)+' &nbsp;<span style="color:#f59e0b">'+'★'.repeat(st)+'☆'.repeat(5-st)+'</span></div>'
+            +'<div style="font-size:11px;color:var(--mut)">'+esc((r.created||'').slice(0,10))+'</div>'
+          +'</div>'
+          +'<div style="font-size:12px;color:var(--mut);margin:6px 0">by <strong>'+esc(r.name||'Anonymous')+'</strong>'+(r.role?' &middot; '+esc(r.role):'')+(r.user_email?' &middot; <span style="opacity:.7" title="moderation only — never published">'+esc(r.user_email)+'</span>':'')+'</div>'
+          +'<div style="font-size:13px;line-height:1.6;background:var(--bg3);padding:10px;border-radius:6px">'+esc(r.text||'')+'</div>'
+          +'<div style="display:flex;gap:8px;margin-top:10px">'
+            +'<button class="save-btn" style="background:#16a34a" onclick="rmApprove('+i+')">&#10003; Approve &amp; publish</button>'
+            +'<button class="save-btn" style="background:#dc2626" onclick="rmReject('+i+')">&#10007; Reject</button>'
+          +'</div>'
+        +'</div>';
+      }).join('');
+    }catch(e){
+      list.innerHTML='<div style="color:#fca5a5;font-size:13px">'+esc(e.message)+'</div>';
+    }
+  };
+
+  window.rmApprove=async function(i){
+    var pending=window._rmPending; if(!pending||!pending[i]) return;
+    var item=pending[i];
+    if(!confirm('Publish this review for '+(item.robot_name||item.robot_id)+'?')) return;
+    try{
+      var pub=await ghGetJson(PUBLISHED_PATH);
+      var data=(pub.data&&pub.data.reviews)?pub.data:{_note:'Published user reviews, keyed by robot id.',reviews:{}};
+      if(!data.reviews){ data.reviews={}; }
+      // strip email — never published
+      var clean={id:item.id,rating:item.rating,name:item.name,role:item.role,text:item.text,user_id:item.user_id,created:item.created};
+      if(!Array.isArray(data.reviews[item.robot_id])){ data.reviews[item.robot_id]=[]; }
+      data.reviews[item.robot_id].push(clean);
+      data._generated=new Date().toISOString();
+      await ghPutJson(PUBLISHED_PATH,data,pub.sha,'Publish review: '+item.robot_id+' [skip ci]');
+      pending.splice(i,1);
+      await ghPutJson(PENDING_PATH,{_note:'Moderation queue.',_generated:new Date().toISOString(),pending:pending},window._rmPendingSha,'Approved review: '+item.robot_id+' [skip ci]');
+      if(typeof addLog==='function'){ addLog('success','Review approved & published: '+item.robot_id+' (live in ~30s)'); }
+      renderModeration();
+    }catch(e){ alert('Approve failed: '+e.message); renderModeration(); }
+  };
+
+  window.rmReject=async function(i){
+    var pending=window._rmPending; if(!pending||!pending[i]) return;
+    var item=pending[i];
+    if(!confirm('Reject and permanently delete this review?')) return;
+    try{
+      pending.splice(i,1);
+      await ghPutJson(PENDING_PATH,{_note:'Moderation queue.',_generated:new Date().toISOString(),pending:pending},window._rmPendingSha,'Rejected review: '+(item.robot_id||'')+' [skip ci]');
+      if(typeof addLog==='function'){ addLog('info','Review rejected: '+item.robot_id); }
+      renderModeration();
+    }catch(e){ alert('Reject failed: '+e.message); renderModeration(); }
+  };
+})();
+
+</script>
 </body>
 </html>
