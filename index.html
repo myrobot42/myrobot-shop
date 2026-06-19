@@ -896,7 +896,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         </a>
       </div>
       <div class="footer-col"><h4>DATABASE</h4><a onclick="goPage('db')">All Robots</a><a onclick="goPage('db')">New Releases</a><a onclick="goPage('rankings')">Trending</a><a onclick="goPage('manufacturers')">By Brand</a></div>
-      <div class="footer-col"><h4>TOOLS</h4><a onclick="goPage('compare')">Compare</a><a onclick="goPage('finder')">Robot Finder</a><a onclick="goPage('news')">News</a><a onclick="goPage('videos')">Videos</a><a onclick="goPage('submit-review')">Reviews</a></div>
+      <div class="footer-col"><h4>TOOLS</h4><a onclick="goPage('compare')">Compare</a><a onclick="goPage('finder')">Robot Finder</a><a onclick="goPage('news')">News</a><a onclick="goPage('videos')">Videos</a><a onclick="openReviewFor()">Reviews</a></div>
       <div class="footer-col"><h4>COMPANY</h4><a>About</a><a>Advertise</a><a href="mailto:email@myrobot.shop">Contact</a><a>Privacy</a></div>
     </div>
   </footer>
@@ -1190,7 +1190,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- SUBMIT REVIEW -->
 <div id="page-submit-review" class="page">
-  <div class="submit-page"><div class="submit-card"><div class="submit-title">Write a Review</div><div class="submit-sub">Share your experience to help others make the right decision.</div><div class="form-group-full"><label class="form-label">Robot *</label><select class="form-select" id="review-robot-select"><option value="">Select a robot...</option></select></div><div class="form-group-full"><label class="form-label">Your Rating *</label><div class="stars-select" id="stars-select"><span class="star-btn" onclick="setStars(1)">★</span><span class="star-btn" onclick="setStars(2)">★</span><span class="star-btn" onclick="setStars(3)">★</span><span class="star-btn" onclick="setStars(4)">★</span><span class="star-btn" onclick="setStars(5)">★</span></div></div><div class="form-row"><div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" id="review-name" placeholder="e.g. James K."></div><div class="form-group"><label class="form-label">Your Role</label><input class="form-input" type="text" id="review-role" placeholder="e.g. Robotics Engineer, Toyota"></div></div><div class="form-group-full"><label class="form-label">Review *</label><textarea class="form-textarea" id="review-text" style="min-height:120px" placeholder="Share your experience — pros, cons, use case, how long you've used it..."></textarea></div><div style="margin-top:20px;display:flex;gap:12px;align-items:center"><button class="submit-btn" onclick="submitReview()">Submit Review →</button><span style="font-size:11px;color:var(--mut)">Reviews moderated within 24 hours</span></div></div></div>
+  <div class="submit-page"><div class="submit-card"><div class="submit-title">Write a Review</div><div class="submit-sub">Share your experience to help others make the right decision.</div><div class="form-group-full" id="review-robot-row"><label class="form-label">Robot *</label><select class="form-select" id="review-robot-select"><option value="">Select a robot...</option></select></div><div class="form-group-full" id="review-robot-fixed" style="display:none"><label class="form-label">Robot</label><div id="review-robot-fixed-name" style="font-weight:700;font-size:15px;padding:6px 0"></div></div><div class="form-group-full"><label class="form-label">Your Rating *</label><div class="stars-select" id="stars-select"><span class="star-btn" onclick="setStars(1)">★</span><span class="star-btn" onclick="setStars(2)">★</span><span class="star-btn" onclick="setStars(3)">★</span><span class="star-btn" onclick="setStars(4)">★</span><span class="star-btn" onclick="setStars(5)">★</span></div></div><div class="form-row"><div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" id="review-name" placeholder="e.g. James K."></div><div class="form-group"><label class="form-label">Your Role</label><input class="form-input" type="text" id="review-role" placeholder="e.g. Robotics Engineer, Toyota"></div></div><div class="form-group-full"><label class="form-label">Review *</label><textarea class="form-textarea" id="review-text" style="min-height:120px" placeholder="Share your experience — pros, cons, use case, how long you've used it..."></textarea></div><div style="margin-top:20px;display:flex;gap:12px;align-items:center"><button class="submit-btn" onclick="submitReview()">Submit Review →</button><span style="font-size:11px;color:var(--mut)">Reviews moderated within 24 hours</span></div></div></div>
 </div>
 <script>
 
@@ -1308,7 +1308,7 @@ function _renderPage(p, opts){
   if(p==='manufacturers'){renderManufacturers();}
   if(p==='videos'){renderVideos();}
   if(p==='news'){renderNews();}
-  if(p==='submit-review'){populateReviewSelect();}
+  if(p==='submit-review'){populateReviewSelect();setupReviewForm();}
   if(p==='profile' && opts.id){
     // openProfile sets DOM content but also calls goPage('profile') — avoid the loop
     // by calling the internal renderer directly here when we arrive via hash.
@@ -3297,9 +3297,10 @@ function _renderProfile(id){
     var list=document.getElementById('profile-reviews-list');
     if(!list) return;
     var _rv=(window.REVIEWS&&window.REVIEWS[r.id])?window.REVIEWS[r.id]:[];
+    var writeBtn='<div style="margin-top:14px"><a onclick="openReviewFor(\''+r.id+'\')" style="display:inline-block;background:var(--acc);color:#fff;padding:8px 16px;border-radius:7px;cursor:pointer;font-weight:600;font-size:13px">✍ Write a review</a></div>';
     if(!_rv.length){
       list.innerHTML='<div style="color:var(--mut);font-size:13px;padding:6px 0">No reviews yet. '
-        +'<a onclick="goPage(\'submit-review\')" style="color:var(--acc);cursor:pointer;font-weight:600">Be the first to write one →</a></div>';
+        +'<a onclick="openReviewFor(\''+r.id+'\')" style="color:var(--acc);cursor:pointer;font-weight:600">Be the first to write one →</a></div>';
       return;
     }
     function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]);});}
@@ -3313,7 +3314,7 @@ function _renderProfile(id){
         +'<div><div class="reviewer-name">'+esc(rv.name||'Anonymous')+'</div>'+role+when+'</div></div>'
         +'<div class="review-stars">'+'★'.repeat(st)+'☆'.repeat(5-st)+'</div></div>'
         +'<div class="review-text">'+esc(rv.text||rv.body||'')+'</div></div>';
-    }).join('');
+    }).join('')+writeBtn;
   })();
   // Similar — brand siblings first (most related), then same category / shared tags
   const _rt=r.tags||[];
@@ -4300,6 +4301,25 @@ function populateReviewSelect(){
   const sel=document.getElementById('review-robot-select');
   if(sel&&sel.options.length<=1){
     ROBOTS.forEach(r=>{const o=document.createElement('option');o.value=r.id;o.textContent=`${r.brand} ${r.name}`;sel.appendChild(o);});
+  }
+}
+function openReviewFor(id){ window.REVIEW_TARGET=id||null; goPage('submit-review'); }
+function setupReviewForm(){
+  var row=document.getElementById('review-robot-row');
+  var fixed=document.getElementById('review-robot-fixed');
+  var fixedName=document.getElementById('review-robot-fixed-name');
+  var sel=document.getElementById('review-robot-select');
+  var tgt=window.REVIEW_TARGET;
+  if(tgt){
+    var rb=(window.ROBOTS||[]).filter(function(x){return x.id===tgt;})[0];
+    if(sel) sel.value=tgt;
+    if(fixedName) fixedName.textContent=rb?((rb.brand?rb.brand+' ':'')+rb.name):tgt;
+    if(row) row.style.display='none';
+    if(fixed) fixed.style.display='';
+  } else {
+    if(row) row.style.display='';
+    if(fixed) fixed.style.display='none';
+    if(sel) sel.selectedIndex=0;
   }
 }
 
