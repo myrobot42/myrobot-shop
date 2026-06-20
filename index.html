@@ -50,14 +50,6 @@ nav{border-bottom:1px solid var(--bdr);background:#fff;position:sticky;top:0;z-i
 .nav-links a{padding:5px 12px;font-size:13px;color:var(--mut);cursor:pointer;border-radius:6px;font-weight:500;text-decoration:none;transition:all .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--txt);background:var(--bg2)}
 .nav-right{display:flex;gap:8px}
-.nav-burger{display:none;background:none;border:none;font-size:22px;line-height:1;cursor:pointer;color:var(--txt);padding:4px 8px;border-radius:6px}
-.nav-burger:hover{background:var(--bg2)}
-.mobile-nav{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--bdr)}
-.mobile-nav.open{display:flex}
-.mobile-nav a{padding:13px 20px;font-size:15px;color:var(--txt);cursor:pointer;text-decoration:none;border-bottom:1px solid var(--bdr);font-weight:500}
-.mobile-nav a:last-child{border-bottom:none}
-.mobile-nav a:hover{background:var(--bg2)}
-@media(min-width:769px){.mobile-nav{display:none!important}}
 .btn{padding:6px 16px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;border:none}
 .btn-ghost{background:transparent;color:var(--mut);border:1px solid var(--bdr)}
 .btn-ghost:hover{border-color:var(--bdr2);color:var(--txt)}
@@ -614,7 +606,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   .mfr-robots-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-  .nav-inner{padding:0 16px}.nav-links{display:none}.nav-right{display:none}.nav-burger{display:block}
+  .nav-inner{padding:0 16px}.nav-links{display:none}
   .hero-inner{flex-direction:column;padding:28px 20px}.hero-right{min-width:unset;width:100%}
   h1{font-size:28px}
   .section .mw{padding:0 20px}
@@ -690,6 +682,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .frrow.gsm:last-child{border-bottom:none}
 .frrow-left{display:flex;gap:14px;align-items:flex-start;flex:1;min-width:0}
 .frrow-num{min-width:28px;height:28px;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--mut);flex-shrink:0;margin-top:2px}
+.frrow-thumb{width:66px;height:66px;flex-shrink:0;border-radius:8px;overflow:hidden;background:#fff;border:1px solid var(--bdr)}
+.frrow-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:600px){.frrow-thumb{width:52px;height:52px}}
 .frrow-num.gold{background:#fef3c7;color:#d97706}
 .frrow-num.silver{background:#f1f5f9;color:#64748b}
 .frrow-num.bronze{background:#fef6ee;color:#c2410c}
@@ -707,6 +702,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .frrow-price{font-size:14px;font-weight:800;color:var(--txt)}
 .frrow-score{font-size:22px;font-weight:900;color:var(--acc);line-height:1}
 .frrow-stars{font-size:12px;color:#f59e0b}
+.price-stars{color:#16a34a;font-size:13px;letter-spacing:1px;font-weight:700;white-space:nowrap}
+.price-tbc{color:var(--mut);font-size:11px;font-style:italic;font-weight:600}
 .frrow-actions{display:flex;gap:5px;margin-top:4px}
 
 
@@ -821,20 +818,6 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <button class="btn btn-ghost" id="nav-auth-btn" onclick="authButtonClick()">Sign in</button>
       <button class="btn btn-primary" onclick="goPage('submit-robot')">Submit a Robot</button>
     </div>
-    <button class="nav-burger" id="nav-burger" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
-  </div>
-  <div class="mobile-nav" id="mobile-nav">
-    <a onclick="goPage('home');closeMobileNav()">Home</a>
-    <a onclick="goPage('db');closeMobileNav()">Database</a>
-    <a onclick="goPage('finder');closeMobileNav()">Finder</a>
-    <a onclick="goPage('compare');closeMobileNav()">Compare</a>
-    <a onclick="goPage('rankings');closeMobileNav()">Discover</a>
-    <a onclick="goPage('news');closeMobileNav()">News</a>
-    <a onclick="goPage('videos');closeMobileNav()">Videos</a>
-    <a onclick="goPage('manufacturers');closeMobileNav()">Brands</a>
-    <a onclick="goPage('ai');closeMobileNav()" style="color:var(--acc);font-weight:600">✦ Ask AI</a>
-    <a onclick="goPage('submit-robot');closeMobileNav()" style="color:var(--acc);font-weight:700">Submit a Robot</a>
-    <a onclick="authButtonClick();closeMobileNav()">Sign in</a>
   </div>
 </nav>
 
@@ -1069,7 +1052,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="section-block" id="profile-video2-block"><div class="block-title">Video</div><div id="profile-video2"></div></div>
     </div>
     <div class="sidebar">
-      <div class="price-card"><div class="price-label">STARTING PRICE</div><div class="price-main" id="profile-price"></div><div class="price-note" id="profile-price-note"></div><button class="btn-full primary">Request a Quote →</button><button class="btn-full outline" onclick="addToCompareFromProfile()">Add to Compare</button><div class="price-features"><div class="pf"><div class="pf-check">✓</div>12-month warranty included</div><div class="pf"><div class="pf-check">✓</div>Dedicated support team</div><div class="pf"><div class="pf-check">✓</div>SDK & training package</div></div></div>
+      <div class="price-card"><div class="price-label">PRICE LEVEL</div><div class="price-main" id="profile-price"></div><div class="price-note" id="profile-price-note"></div><button class="btn-full primary">Request a Quote →</button><button class="btn-full outline" onclick="addToCompareFromProfile()">Add to Compare</button><div class="price-features"><div class="pf"><div class="pf-check">✓</div>12-month warranty included</div><div class="pf"><div class="pf-check">✓</div>Dedicated support team</div><div class="pf"><div class="pf-check">✓</div>SDK & training package</div></div></div>
       <div class="vs-card" onclick="goPage('compare')"><div class="vs-label">POPULAR COMPARISON</div><div class="vs-names" id="profile-vs"></div><button class="btn-vs">Compare side by side →</button></div>
       <div class="sidebar-title" id="profile-news-title" style="display:none">In the News</div>
       <div class="similar-list" id="profile-news" style="display:none;margin-bottom:18px"></div>
@@ -1325,8 +1308,6 @@ loadRobots();
 // the hash, which triggers the hashchange listener, which calls _renderPage to actually
 // swap the DOM. This indirection means programmatic navigation and Back/Forward both
 // go through the same render path.
-function toggleMobileNav(){var m=document.getElementById("mobile-nav");if(m)m.classList.toggle("open");}
-function closeMobileNav(){var m=document.getElementById("mobile-nav");if(m)m.classList.remove("open");}
 function goPage(p, opts){
   // AI assistant page mount/unmount
   try{
@@ -1480,7 +1461,7 @@ function renderHome(){
         <div class="rc-specs">${tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div>
         <div class="rc-footer">
           <div class="rc-rating"><span class="stars">${'★'.repeat(Math.round(rating))}</span><span style="margin-left:3px">${rating} (${reviews})</span></div>
-          <span style="font-size:12px;font-weight:800" title="${price>0?'$'+price.toLocaleString():(priceBand(r)?priceBandLabel(priceBand(r)):'Price on application')}">${price>0?'$'+price.toLocaleString():(priceBand(r)||'POA')}</span>
+          ${priceStars(r)}
         </div>
       </div>
     </div>`;}).join('');
@@ -1542,7 +1523,8 @@ function buildDbFilters(){
   const catF=document.getElementById('db-cat-filters');
   if(catF && !catF.dataset.built){
     catF.dataset.built='1';
-    catF.innerHTML=ALL_CATS.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
+    const cats=[...new Set(ROBOTS.map(r=>r.cat).filter(Boolean))].sort();
+    catF.innerHTML=cats.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
     renderSubcatFilter();  // initial render: hidden (no cat selected)
     renderBrandFilter();   // initial render: all brands
   }
@@ -1849,7 +1831,7 @@ function renderDb(){
         </div>
         <div class="rr-right">
           <div class="rr-score">${r.score}</div>
-          <div class="rr-price">${r.price>0?'$'+r.price.toLocaleString():'POA'}</div>
+          <div class="rr-price">${priceStars(r)}</div>
           <div class="rr-rating">${'★'.repeat(Math.round(r.rating))}</div>
           <div class="rr-actions">
             <label class="rr-cmp" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>
@@ -1861,7 +1843,7 @@ function renderDb(){
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
         <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
-        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${r.price>0?'$'+r.price.toLocaleString():'POA'}</span><span style="padding:2px 7px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800">${r.score}</span></div></div>
+        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${priceStars(r)}</span><span style="padding:2px 7px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800">${r.score}</span></div></div>
       </div>`).join('')}</div>`;
   }
   renderCompareTray();
@@ -1961,6 +1943,34 @@ function priceBand(r){
 function priceBandLabel(b){
   return ({'$':'Budget','$$':'Mid-range','$$$':'Premium','$$$$':'Enterprise'})[b] || '';
 }
+
+// ── Category-relative price tiers (1–5 stars, judged within each category) ──
+function priceTierData(){
+  var n=(ROBOTS||[]).length;
+  if(window._PT_CACHE && window._PT_N===n) return window._PT_CACHE;
+  var by={};
+  (ROBOTS||[]).forEach(function(r){
+    var p=(typeof r.price==='number'&&r.price>0)?r.price:0;
+    if(p>0){ (by[r.cat]=by[r.cat]||[]).push(p); }
+  });
+  Object.keys(by).forEach(function(c){ by[c].sort(function(a,b){return a-b;}); });
+  window._PT_CACHE=by; window._PT_N=n; return by;
+}
+function priceTier(r){
+  var p=(r&&typeof r.price==='number'&&r.price>0)?r.price:0;
+  if(!p) return null;                       // no price → To be confirmed
+  var arr=priceTierData()[r.cat]||[]; var n=arr.length;
+  if(n<=1) return 3;                         // lone data point → mid
+  var below=0; for(var k=0;k<n;k++){ if(arr[k]<p) below++; }
+  return Math.max(1,Math.min(5,Math.round((below/(n-1))*4)+1));
+}
+function _ptStars(t){ var s=''; for(var k=1;k<=5;k++){ s+=(k<=t)?'\u2605':'\u2606'; } return s; }
+function priceStars(r){
+  var t=priceTier(r);
+  if(t==null) return '<span class="price-tbc">To be confirmed</span>';
+  return '<span class="price-stars" title="Price '+t+'/5 within '+(r.cat||'')+'">'+_ptStars(t)+'</span>';
+}
+function priceStarsTxt(r){ var t=priceTier(r); return t==null?'To be confirmed':_ptStars(t); }
 
 function robotSortDate(r){
   function parse(v){
@@ -3054,12 +3064,8 @@ function buildSpecTable(r) {
   if (r.sar_body) html += row('SAR (body)', r.sar_body, 'W/kg');
 
   // ── PRICING ──
-  var _band = priceBand(r);
-  if ((r.price && r.price > 0) || _band) {
-    html += grp('PRICING');
-    if (r.price && r.price > 0) html += row('Price', '$' + r.price.toLocaleString() + (r.price_note ? ' ' + r.price_note : ''));
-    if (_band) html += row('Price tier', _band + ' · ' + priceBandLabel(_band));
-  }
+  html += grp('PRICING');
+  html += row('Price level', priceTier(r)!=null ? (priceStarsTxt(r) + ' (relative to ' + (r.cat||'category') + ')') : 'To be confirmed');
 
   // ── MISC ──
   html += grp('MISC');
@@ -3294,8 +3300,8 @@ function _renderProfile(id){
       }catch(e){}
     }
   })();
-  document.getElementById('profile-price').textContent=r.price>0?'$'+r.price.toLocaleString():'POA';
-  document.getElementById('profile-price-note').textContent=r.price>0?'Starting at $'+r.price.toLocaleString():'Fleet / enterprise pricing · Quote required';
+  document.getElementById('profile-price').innerHTML=priceStars(r);
+  document.getElementById('profile-price-note').textContent=(priceTier(r)==null?'Pricing to be confirmed \u00b7 request a quote':'Relative price level within '+(r.cat||'its category')+' \u00b7 request a quote');
   // Last verified — set expectations honestly. Colour-coded by age.
   const verifyEl = document.getElementById('profile-verified');
   if (verifyEl){
@@ -3528,7 +3534,7 @@ function renderCompare(){
   // Mirror the EXACT Full Specifications table: collect the same rows the
   // profile renders, for each robot, then merge — so Compare and the profile
   // pages can never drift apart.
-  const ps=r=>(r.price||0)>0?'$'+r.price.toLocaleString():'POA';
+  const ps=r=>priceStarsTxt(r);
   const cols=active.length;
   const thCells=active.map(function(r){return '<th>'+compareThumb(r)+(r.name||'(unnamed)')+'</th>';}).join('');
   const sv=function(t){return String(t==null?'':t);};
@@ -4313,13 +4319,14 @@ function renderFinder(){
       if(r.sdk)sp.push('<span class="fspec-pill fsp-yes">SDK</span>');
       if(r.lidar)sp.push('<span class="fspec-pill fsp-yes">LiDAR</span>');
       if(r.wifi)sp.push('<span class="fspec-pill fsp-yes">WiFi</span>');
-      return '<div class="frrow gsm" onclick="openProfile(&apos;'+r.id+'&apos;)"><div class="frrow-left"><div class="frrow-num '+(ranks[i]||'')+'">'+( i+1)+'</div><div class="frrow-info"><div class="frrow-brand">'+r.brand+'</div><div class="frrow-name">'+r.name+'</div><div class="frrow-meta"><span class="frrow-cat">'+r.cat+'</span>'+(r.year?' &middot; '+r.year:'')+(r.sub?' &middot; <span style="color:var(--mut)">'+r.sub+'</span>':'')+'</div><div class="frrow-specs">'+sp.join('')+'</div><div class="frrow-tags">'+r.tags.slice(0,4).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')+'</div></div></div><div class="frrow-right"><div class="frrow-price">'+(r.price>0?'$'+r.price.toLocaleString():'POA')+'</div><div class="frrow-score">'+r.score+'<span style="font-size:9px;opacity:.6">/100</span></div><div class="frrow-stars">'+'&#9733;'.repeat(Math.round(r.rating||0))+'</div><div class="frrow-actions"><button class="fra" onclick="event.stopPropagation();addRobotToCompare(&apos;'+r.id+'&apos;);goPage(&apos;compare&apos;)">Compare</button><button class="fra p" onclick="event.stopPropagation();openProfile(&apos;'+r.id+'&apos;)">→ View</button></div></div></div>';
+      var thumb=r.img?'<div class="frrow-thumb"><img src="'+r.img+'" alt="" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'"></div>':'<div class="frrow-thumb"><img src="'+MASCOT_URL+'" alt="" style="object-fit:contain"></div>';
+      return '<div class="frrow gsm" onclick="openProfile(&apos;'+r.id+'&apos;)"><div class="frrow-left"><div class="frrow-num '+(ranks[i]||'')+'">'+( i+1)+'</div>'+thumb+'<div class="frrow-info"><div class="frrow-brand">'+r.brand+'</div><div class="frrow-name">'+r.name+'</div><div class="frrow-meta"><span class="frrow-cat">'+r.cat+'</span>'+(r.year?' &middot; '+r.year:'')+(r.sub?' &middot; <span style="color:var(--mut)">'+r.sub+'</span>':'')+'</div><div class="frrow-specs">'+sp.join('')+'</div><div class="frrow-tags">'+r.tags.slice(0,4).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')+'</div></div></div><div class="frrow-right"><div class="frrow-price">'+priceStars(r)+'</div><div class="frrow-score">'+r.score+'<span style="font-size:9px;opacity:.6">/100</span></div><div class="frrow-stars">'+'&#9733;'.repeat(Math.round(r.rating||0))+'</div><div class="frrow-actions"><button class="fra" onclick="event.stopPropagation();addRobotToCompare(&apos;'+r.id+'&apos;);goPage(&apos;compare&apos;)">Compare</button><button class="fra p" onclick="event.stopPropagation();openProfile(&apos;'+r.id+'&apos;)">→ View</button></div></div></div>';
     }).join('')+'</div>';
   } else {
     c.innerHTML='<div class="frgrid">'+list.map(function(r,i){
       return '<div class="frgc" onclick="openProfile(\''+r.id+'\')">'
         +'<div class="frgci" style="background:#fff">'+(r.img?'<img src="'+r.img+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:0" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'">':'<img src="'+MASCOT_URL+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:contain;position:absolute;inset:0">')+'<div style="position:absolute;top:4px;left:4px;width:15px;height:15px;border-radius:50%;background:var(--txt);color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">'+(i+1)+'</div></div>'
-        +'<div class="frgcb"><div class="frgcbrand">'+r.brand+'</div><div class="frgcname">'+r.name+'</div><div class="frgcsub">'+r.sub+'</div><div class="frgcfoot"><div class="frgcprice">'+(r.price>0?'$'+r.price.toLocaleString():'POA')+'</div><div class="frgcscore">'+r.score+'</div></div></div>'
+        +'<div class="frgcb"><div class="frgcbrand">'+r.brand+'</div><div class="frgcname">'+r.name+'</div><div class="frgcsub">'+r.sub+'</div><div class="frgcfoot"><div class="frgcprice">'+priceStars(r)+'</div><div class="frgcscore">'+r.score+'</div></div></div>'
       +'</div>';
     }).join('')+'</div>';
   }
