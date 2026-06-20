@@ -1,13 +1,14 @@
-// netlify/functions/news-refresh.js
-// Scheduled daily (see netlify.toml schedule). Pulls robotics RSS feeds,
-// extracts title/url/summary/image/date, and commits data/news.json to the
-// repo with [skip ci] (no deploy — the site reads data/news.json from GitHub raw).
+// netlify/functions/news-refresh-now.js
+// MANUAL TRIGGER (HTTP). Same logic as the scheduled news-refresh.js, but
+// invokable on demand by visiting /.netlify/functions/news-refresh-now
+// Use it to populate data/news.json with real headlines + images immediately,
+// instead of waiting for the daily 05:00 UTC cron. Safe to delete after first use.
 
 const REPO   = "myrobot42/myrobot-shop";
 const BRANCH = "main";
 const FILE   = "data/news.json";
 const MAX_ITEMS = 30;
-const SUMMARY_MAX = 280;
+const SUMMARY_MAX = 500;
 
 const FEEDS = [
   { url: "https://www.therobotreport.com/feed/",                source: "The Robot Report" },
