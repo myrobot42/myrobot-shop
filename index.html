@@ -4440,9 +4440,14 @@ async function fetchYouTubeVideos(){
   if(document.readyState!=='loading')bindNL();else document.addEventListener('DOMContentLoaded',bindNL);
 })();
 let NEWS_ALL=null;
+function fetchNewsJson(){
+  var RAW='https://raw.githubusercontent.com/myrobot42/myrobot-shop/main/data/news.json';
+  return fetch(RAW,{cache:'no-store'}).then(function(r){if(r.ok)return r;throw new Error('raw '+r.status);})
+    .catch(function(){return fetch('data/news.json',{cache:'no-store'});});
+}
 function loadNewsOnce(cb){
   if(NEWS_ALL){cb(NEWS_ALL);return;}
-  fetch('data/news.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():{};}).then(function(d){NEWS_ALL=(d&&d.items)?d.items:(Array.isArray(d)?d:[]);cb(NEWS_ALL);}).catch(function(){NEWS_ALL=[];cb([]);});
+  fetchNewsJson().then(function(r){return r.ok?r.json():{};}).then(function(d){NEWS_ALL=(d&&d.items)?d.items:(Array.isArray(d)?d:[]);cb(NEWS_ALL);}).catch(function(){NEWS_ALL=[];cb([]);});
 }
 function renderProfileNews(r){
   var titleEl=document.getElementById('profile-news-title');
@@ -4506,7 +4511,7 @@ function renderNews(){
   function fdate(iso){if(!iso)return'';var d=new Date(iso);if(isNaN(d))return'';return d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});}
   layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">Loading latest robotics news…</div>';
   list.innerHTML='';
-  fetch('data/news.json',{cache:'no-store'})
+  fetchNewsJson()
     .then(function(r){if(!r.ok)throw new Error('news.json '+r.status);return r.json();})
     .then(function(d){
       var items=d.items||[]; window.NEWS_ITEMS=items;
