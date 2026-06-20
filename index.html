@@ -50,6 +50,14 @@ nav{border-bottom:1px solid var(--bdr);background:#fff;position:sticky;top:0;z-i
 .nav-links a{padding:5px 12px;font-size:13px;color:var(--mut);cursor:pointer;border-radius:6px;font-weight:500;text-decoration:none;transition:all .15s}
 .nav-links a:hover,.nav-links a.active{color:var(--txt);background:var(--bg2)}
 .nav-right{display:flex;gap:8px}
+.nav-burger{display:none;background:none;border:none;font-size:22px;line-height:1;cursor:pointer;color:var(--txt);padding:4px 8px;border-radius:6px}
+.nav-burger:hover{background:var(--bg2)}
+.mobile-nav{display:none;flex-direction:column;background:#fff;border-bottom:1px solid var(--bdr)}
+.mobile-nav.open{display:flex}
+.mobile-nav a{padding:13px 20px;font-size:15px;color:var(--txt);cursor:pointer;text-decoration:none;border-bottom:1px solid var(--bdr);font-weight:500}
+.mobile-nav a:last-child{border-bottom:none}
+.mobile-nav a:hover{background:var(--bg2)}
+@media(min-width:769px){.mobile-nav{display:none!important}}
 .btn{padding:6px 16px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;border:none}
 .btn-ghost{background:transparent;color:var(--mut);border:1px solid var(--bdr)}
 .btn-ghost:hover{border-color:var(--bdr2);color:var(--txt)}
@@ -606,7 +614,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   .mfr-robots-grid{grid-template-columns:1fr 1fr}
 }
 @media(max-width:768px){
-  .nav-inner{padding:0 16px}.nav-links{display:none}
+  .nav-inner{padding:0 16px}.nav-links{display:none}.nav-right{display:none}.nav-burger{display:block}
   .hero-inner{flex-direction:column;padding:28px 20px}.hero-right{min-width:unset;width:100%}
   h1{font-size:28px}
   .section .mw{padding:0 20px}
@@ -813,6 +821,20 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <button class="btn btn-ghost" id="nav-auth-btn" onclick="authButtonClick()">Sign in</button>
       <button class="btn btn-primary" onclick="goPage('submit-robot')">Submit a Robot</button>
     </div>
+    <button class="nav-burger" id="nav-burger" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav">
+    <a onclick="goPage('home');closeMobileNav()">Home</a>
+    <a onclick="goPage('db');closeMobileNav()">Database</a>
+    <a onclick="goPage('finder');closeMobileNav()">Finder</a>
+    <a onclick="goPage('compare');closeMobileNav()">Compare</a>
+    <a onclick="goPage('rankings');closeMobileNav()">Discover</a>
+    <a onclick="goPage('news');closeMobileNav()">News</a>
+    <a onclick="goPage('videos');closeMobileNav()">Videos</a>
+    <a onclick="goPage('manufacturers');closeMobileNav()">Brands</a>
+    <a onclick="goPage('ai');closeMobileNav()" style="color:var(--acc);font-weight:600">✦ Ask AI</a>
+    <a onclick="goPage('submit-robot');closeMobileNav()" style="color:var(--acc);font-weight:700">Submit a Robot</a>
+    <a onclick="authButtonClick();closeMobileNav()">Sign in</a>
   </div>
 </nav>
 
@@ -1303,6 +1325,8 @@ loadRobots();
 // the hash, which triggers the hashchange listener, which calls _renderPage to actually
 // swap the DOM. This indirection means programmatic navigation and Back/Forward both
 // go through the same render path.
+function toggleMobileNav(){var m=document.getElementById("mobile-nav");if(m)m.classList.toggle("open");}
+function closeMobileNav(){var m=document.getElementById("mobile-nav");if(m)m.classList.remove("open");}
 function goPage(p, opts){
   // AI assistant page mount/unmount
   try{
