@@ -7,7 +7,7 @@ const REPO   = "myrobot42/myrobot-shop";
 const BRANCH = "main";
 const FILE   = "data/news.json";
 const MAX_ITEMS = 30;
-const SUMMARY_MAX = 650;
+const SUMMARY_MAX = 900;
 
 const FEEDS = [
   { url: "https://www.therobotreport.com/feed/",                source: "The Robot Report" },
@@ -66,6 +66,12 @@ function parseFeed(xml, source){
     if (!title || !url) continue;
 
     let summary = tag(x, "content:encoded") || tag(x, "description") || tag(x, "summary") || "";
+    // strip common WordPress feed boilerplate so we don't waste lines on junk
+    summary = summary
+      .replace(/\s*The post\b[\s\S]*?appeared first on\b[^.]*\.?\s*$/i, "")
+      .replace(/\s*(?:Continue reading|Read more|Read the full (?:article|story))\b[\s\S]*$/i, "")
+      .replace(/\s*\[(?:…|\.\.\.)\]\s*$/i, "")
+      .trim();
     if (summary.length > SUMMARY_MAX) summary = summary.slice(0, SUMMARY_MAX - 1).trim() + "…";
 
     const pub = tag(x, "pubDate") || tag(x, "published") || tag(x, "updated") || tag(x, "dc:date") || "";
