@@ -7,7 +7,7 @@ const REPO   = "myrobot42/myrobot-shop";
 const BRANCH = "main";
 const FILE   = "data/news.json";
 const MAX_ITEMS = 30;
-const SUMMARY_MAX = 500;
+const SUMMARY_MAX = 650;
 
 const FEEDS = [
   { url: "https://www.therobotreport.com/feed/",                source: "The Robot Report" },
@@ -31,6 +31,8 @@ function decode(s){
     .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;|&rsquo;|&lsquo;/g, "'")
     .replace(/&#8217;/g, "'").replace(/&#8230;/g, "…").replace(/&nbsp;/g, " ")
     .replace(/&hellip;/g, "…").replace(/&mdash;/g, "—").replace(/&ndash;/g, "–")
+    .replace(/&#x([0-9a-fA-F]+);/g, function(m,h){return String.fromCodePoint(parseInt(h,16));})
+    .replace(/&#(\d+);/g, function(m,n){return String.fromCodePoint(parseInt(n,10));})
     .replace(/\s+/g, " ").trim();
 }
 
@@ -63,7 +65,7 @@ function parseFeed(xml, source){
     if (!url){ const hm = x.match(/<link[^>]+href=["']([^"']+)["']/i); if (hm) url = hm[1]; }
     if (!title || !url) continue;
 
-    let summary = tag(x, "description") || tag(x, "summary") || tag(x, "content:encoded") || "";
+    let summary = tag(x, "content:encoded") || tag(x, "description") || tag(x, "summary") || "";
     if (summary.length > SUMMARY_MAX) summary = summary.slice(0, SUMMARY_MAX - 1).trim() + "…";
 
     const pub = tag(x, "pubDate") || tag(x, "published") || tag(x, "updated") || tag(x, "dc:date") || "";
