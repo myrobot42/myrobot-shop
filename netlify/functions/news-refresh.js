@@ -1,110 +1,149 @@
-{
-  "generated": "2026-06-19T11:39:23.000Z",
-  "count": 8,
-  "items": [
-    {
-      "id": "5b934d30",
-      "title": "Automate 2026 brings humanoid robotics to the spotlight in Chicago",
-      "url": "https://www.mmh.com/article/automate-2026-preview-ai-robotics-humanoids-chicago",
-      "source": "Modern Materials Handling",
-      "published": "2026-06-17T09:00:00.000Z",
-      "summary": "North America's largest automation show returns to Chicago's McCormick Place on June 22-25 with 1,000+ exhibitors, AI-focused keynotes, and an NVIDIA-sponsored Humanoid Robot Pavilion featuring more than 20 humanoids.",
-      "image": null,
-      "tags": [
-        "Humanoid"
-      ]
-    },
-    {
-      "id": "4ec5c3a9",
-      "title": "Figure 03 production hits one robot per hour as Boston Dynamics Atlas deployments begin",
-      "url": "https://www.humanoid.press/",
-      "source": "Humanoid Press",
-      "published": "2026-06-15T09:00:00.000Z",
-      "summary": "Figure AI's BotQ factory has reached a build rate of one Figure 03 per hour, while Boston Dynamics' electric Atlas starts its first deployments — with 2026 units committed to Hyundai and Google DeepMind.",
-      "image": null,
-      "tags": [
-        "Figure",
-        "Boston Dynamics",
-        "Humanoid"
-      ]
-    },
-    {
-      "id": "6ae298f1",
-      "title": "Rivian CEO's Mind Robotics raises over $1 billion for humanoids",
-      "url": "https://www.cnbc.com/2026/06/13/rivian-humanoid-robots.html",
-      "source": "CNBC",
-      "published": "2026-06-13T09:00:00.000Z",
-      "summary": "RJ Scaringe's separate humanoid venture, Mind Robotics, has raised more than $1 billion and expects to reveal its first product within a year, with Rivian as a major shareholder and launch customer.",
-      "image": null,
-      "tags": [
-        "Humanoid"
-      ]
-    },
-    {
-      "id": "2cef5962",
-      "title": "China targets 10,000 humanoid robot deployments by end of 2026",
-      "url": "https://www.eweek.com/news/humanoid-robots-work-mode-2026-apac-china/",
-      "source": "eWeek",
-      "published": "2026-06-12T09:00:00.000Z",
-      "summary": "A new government program directs Chinese provinces to put humanoid robots to work across factories, hospitals, logistics centres and emergency response, aiming for 10,000 real-world deployments by year end.",
-      "image": null,
-      "tags": [
-        "Humanoid"
-      ]
-    },
-    {
-      "id": "6c5a39cd",
-      "title": "Investors bet humanoid robots will transform industry and homes",
-      "url": "https://www.cnbc.com/2026/06/03/humanoid-robots-trillion-dollar-ai-market.html",
-      "source": "CNBC",
-      "published": "2026-06-03T09:00:00.000Z",
-      "summary": "Capital is flowing into physical AI as Unitree opens Asia's first embodied-intelligence store in Shanghai; SoftBank's Masayoshi Son calls robotics the source of the next trillion-dollar company, with forecasts of 100-fold growth.",
-      "image": null,
-      "tags": [
-        "Unitree",
-        "Humanoid"
-      ]
-    },
-    {
-      "id": "3ce1b059",
-      "title": "Japan Airlines deploys humanoids at Haneda as BMW's Figure pilot scales",
-      "url": "https://kraneshares.com/humanoid-robotics-in-2026-the-race-from-pilot-to-platform/",
-      "source": "KraneShares",
-      "published": "2026-05-12T09:00:00.000Z",
-      "summary": "JAL began a three-year humanoid deployment at Tokyo's Haneda Airport, while BMW reported its Figure 02 robots helped build over 30,000 vehicles at Spartanburg before expanding the program to its Leipzig plant in Europe.",
-      "image": null,
-      "tags": [
-        "Figure",
-        "Humanoid"
-      ]
-    },
-    {
-      "id": "33cf13f8",
-      "title": "Humanoid Robot Forum returns to Automate 2026",
-      "url": "https://www.automate.org/blogs/what-hurdles-remain-for-widespread-humanoid-adoption",
-      "source": "Automate (A3)",
-      "published": "2026-05-08T09:00:00.000Z",
-      "summary": "The June 23-24 forum gathers leaders from Boston Dynamics, Neura Robotics, NVIDIA and Toyota Research Institute to tackle a shifting question: not whether humanoids work, but what it takes to run them safely at scale.",
-      "image": null,
-      "tags": [
-        "Humanoid",
-        "Boston Dynamics"
-      ]
-    },
-    {
-      "id": "41c9921d",
-      "title": "Unitree Robotics' IPO accepted for Shanghai's STAR Market",
-      "url": "https://kraneshares.com/a-complete-guide-to-unitree-robotics-2026-ipo-why-it-matters-for-star-market-etf-kstr-humanoid-robotics-etf-koid/",
-      "source": "KraneShares",
-      "published": "2026-04-16T09:00:00.000Z",
-      "summary": "Unitree's IPO application has been accepted for Shanghai's STAR Market, positioning the fast-growing, profitable maker of quadrupeds and humanoids — which shipped 5,500+ robots in 2025 — for a public listing.",
-      "image": null,
-      "tags": [
-        "Unitree",
-        "Quadruped",
-        "Humanoid"
-      ]
-    }
-  ],
-  "_note": "Manually curated robotics headlines. The news-refresh.js cron overwrites this automatically once it runs."
+// netlify/functions/news-refresh.js
+// Scheduled daily (see netlify.toml schedule). Pulls robotics RSS feeds,
+// extracts title/url/summary/image/date, and commits data/news.json to the
+// repo with [skip ci] (no deploy — the site reads data/news.json from GitHub raw).
+
+const REPO   = "myrobot42/myrobot-shop";
+const BRANCH = "main";
+const FILE   = "data/news.json";
+const MAX_ITEMS = 30;
+const SUMMARY_MAX = 280;
+
+const FEEDS = [
+  { url: "https://www.therobotreport.com/feed/",                source: "The Robot Report" },
+  { url: "https://spectrum.ieee.org/feeds/topic/robotics.rss",  source: "IEEE Spectrum" },
+  { url: "https://www.unite.ai/feed/",                          source: "Unite.AI" },
+  { url: "https://robohub.org/feed/",                           source: "Robohub" },
+];
+
+// stable 8-char hex id from a string (unique per url)
+function hashId(s){
+  let h = 5381;
+  for (let i=0;i<s.length;i++){ h = (((h<<5)+h) ^ s.charCodeAt(i)) >>> 0; }
+  return h.toString(16).padStart(8,"0").slice(0,8);
 }
+
+function decode(s){
+  return s
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"').replace(/&#0?39;|&apos;|&rsquo;|&lsquo;/g, "'")
+    .replace(/&#8217;/g, "'").replace(/&#8230;/g, "…").replace(/&nbsp;/g, " ")
+    .replace(/&hellip;/g, "…").replace(/&mdash;/g, "—").replace(/&ndash;/g, "–")
+    .replace(/\s+/g, " ").trim();
+}
+
+function tag(xml, name){
+  const m = xml.match(new RegExp("<"+name+"[^>]*>([\\s\\S]*?)<\\/"+name+">", "i"));
+  return m ? decode(m[1]) : "";
+}
+
+function extractImage(itemXml){
+  let m =
+    itemXml.match(/<media:content[^>]+url=["']([^"']+)["'][^>]*>/i) ||
+    itemXml.match(/<media:thumbnail[^>]+url=["']([^"']+)["']/i) ||
+    itemXml.match(/<enclosure[^>]+url=["']([^"']+)["'][^>]*type=["']image/i) ||
+    itemXml.match(/<enclosure[^>]+type=["']image[^>]*url=["']([^"']+)["']/i) ||
+    itemXml.match(/<img[^>]+src=["']([^"']+)["']/i); // first <img> in content:encoded/description
+  if (m && m[1] && /^https?:\/\//i.test(m[1])) return m[1];
+  return null;
+}
+
+function parseFeed(xml, source){
+  const out = [];
+  const unit = /<item[\s>]/i.test(xml) ? "item" : "entry";
+  const parts = xml.split(new RegExp("<"+unit+"[\\s>]", "i")).slice(1);
+  for (const raw of parts){
+    const x = raw.split(new RegExp("<\\/"+unit+">", "i"))[0];
+    const title = tag(x, "title");
+    let url = "";
+    const lm = x.match(/<link[^>]*>([\s\S]*?)<\/link>/i);
+    if (lm) url = decode(lm[1]);
+    if (!url){ const hm = x.match(/<link[^>]+href=["']([^"']+)["']/i); if (hm) url = hm[1]; }
+    if (!title || !url) continue;
+
+    let summary = tag(x, "description") || tag(x, "summary") || tag(x, "content:encoded") || "";
+    if (summary.length > SUMMARY_MAX) summary = summary.slice(0, SUMMARY_MAX - 1).trim() + "…";
+
+    const pub = tag(x, "pubDate") || tag(x, "published") || tag(x, "updated") || tag(x, "dc:date") || "";
+    let published = new Date().toISOString();
+    if (pub){ const d = new Date(pub); if (!isNaN(d)) published = d.toISOString(); }
+
+    out.push({
+      id: hashId(url),
+      title, url, source, published,
+      summary,
+      image: extractImage(x),
+      tags: []
+    });
+  }
+  return out;
+}
+
+exports.handler = async function(){
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) return { statusCode: 500, body: "Missing GITHUB_TOKEN env var" };
+
+  // 1) Pull & parse all feeds (a failing feed is skipped, not fatal)
+  let all = [];
+  for (const f of FEEDS){
+    try {
+      const r = await fetch(f.url, { headers: { "User-Agent": "myrobot-shop-newsbot/1.0" } });
+      if (!r.ok) continue;
+      all = all.concat(parseFeed(await r.text(), f.source));
+    } catch (e) { /* skip this feed */ }
+  }
+
+  // 2) Dedupe by url, newest first, cap
+  all.sort((a, b) => new Date(b.published) - new Date(a.published));
+  const seen = new Set();
+  const items = [];
+  for (const it of all){
+    if (seen.has(it.url)) continue;
+    seen.add(it.url);
+    items.push(it);
+    if (items.length >= MAX_ITEMS) break;
+  }
+  if (!items.length) return { statusCode: 502, body: "No items parsed from any feed" };
+
+  // 3) Commit data/news.json with [skip ci]
+  const payload = {
+    generated: new Date().toISOString(),
+    count: items.length,
+    items,
+    _note: "Auto-generated daily from robotics RSS feeds by news-refresh.js."
+  };
+  const content = Buffer.from(JSON.stringify(payload, null, 2)).toString("base64");
+  const api = `https://api.github.com/repos/${REPO}/contents/${FILE}`;
+  const ghHeaders = {
+    "Authorization": `Bearer ${token}`,
+    "Accept": "application/vnd.github+json",
+    "User-Agent": "myrobot-shop-newsbot",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+
+  let sha;
+  try {
+    const g = await fetch(`${api}?ref=${BRANCH}`, { headers: ghHeaders });
+    if (g.ok){ sha = (await g.json()).sha; }
+  } catch (e) { /* file may not exist yet */ }
+
+  const put = await fetch(api, {
+    method: "PUT",
+    headers: ghHeaders,
+    body: JSON.stringify({
+      message: `chore(news): daily refresh ${new Date().toISOString().slice(0,10)} [skip ci]`,
+      content,
+      branch: BRANCH,
+      ...(sha ? { sha } : {})
+    })
+  });
+
+  if (!put.ok){
+    const t = await put.text();
+    return { statusCode: put.status, body: `GitHub write failed: ${t.slice(0,400)}` };
+  }
+  const withImg = items.filter(i => i.image).length;
+  return { statusCode: 200, body: `Wrote ${items.length} items (${withImg} with images) to ${FILE}` };
+};
