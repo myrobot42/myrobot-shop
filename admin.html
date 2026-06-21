@@ -315,6 +315,12 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="modal-field full"><div class="modal-label">Video URL &mdash; second video (bottom of page)</div><input class="modal-input" id="edit-video2" type="text" placeholder="https://www.youtube.com/watch?v=..."></div>
     </div>
 
+    <div class="modal-section">AFFILIATE / BUY LINK</div>
+    <div class="modal-grid">
+      <div class="modal-field full"><div class="modal-label">Buy URL &mdash; exact product page (optional)</div><input class="modal-input" id="edit-buy-url" type="text" placeholder="https://www.amazon.com/dp/...  (leave blank = auto search link)"></div>
+      <div class="modal-field full"><div style="font-size:11px;color:#888;line-height:1.5;margin-top:-4px">Paste the exact Amazon product page for high-traffic robots (Roborock, Roomba, Dreame, eufy&hellip;) to lift conversions &mdash; the affiliate tag is added automatically for Amazon links. Leave blank and the site falls back to an automatic Amazon search link. For DJI, paste your approved Awin/Webgains product link here once approved.</div></div>
+    </div>
+
     <div class="modal-section">KEY SPECS</div>
     <div class="modal-grid">
       <div class="modal-field"><div class="modal-label">Weight (kg)</div><input class="modal-input" id="edit-weight" type="number" step="0.1"></div>
@@ -3286,6 +3292,7 @@ function editRobotPrompt(id) {
   document.getElementById('edit-img').value = r.img || '';
   document.getElementById('edit-video').value = r.video || '';
   document.getElementById('edit-video2').value = r.video2 || '';
+  document.getElementById('edit-buy-url').value = r.buy_url || '';
   // Specs
   document.getElementById('edit-weight').value = r.weight_kg || '';
   document.getElementById('edit-battery').value = r.battery_life || '';
@@ -3337,6 +3344,8 @@ function saveEditModal() {
   if (video) r.video = video; else delete r.video;
   const video2 = document.getElementById('edit-video2').value.trim();
   if (video2) r.video2 = video2; else delete r.video2;
+  const buyUrl = document.getElementById('edit-buy-url').value.trim();
+  if (buyUrl) r.buy_url = buyUrl; else delete r.buy_url;
   // Specs
   if(document.getElementById('edit-weight').value) r.weight_kg = parseFloat(document.getElementById('edit-weight').value);
   if(document.getElementById('edit-battery').value) r.battery_life = parseInt(document.getElementById('edit-battery').value);
