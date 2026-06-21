@@ -1,5 +1,11 @@
 # netlify.toml
 
+# Regenerate all per-robot SEO pages (/r/*.html) + sitemap.xml from data/robots.json
+# on every deploy, so search pages always reflect the latest catalogue.
+[build]
+  command = "node generate-pages.js"
+  publish = "."
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "zisi"
