@@ -1,0 +1,34 @@
+# netlify.toml
+
+# Regenerate all per-robot SEO pages (/r/*.html) + sitemap.xml from data/robots.json
+# on every deploy, so search pages always reflect the latest catalogue.
+[build]
+  command = "node generate-pages.js"
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "zisi"
+
+[functions."chat"]
+  timeout = 26
+
+[functions."trends-refresh"]
+  timeout = 120
+
+[functions."news-refresh"]
+  schedule = "0 5 * * *"   # daily 05:00 UTC = 15:00 Brisbane
+  timeout = 60
+
+# IMPORTANT: the /api/chat redirect MUST come BEFORE the catch-all below,
+# or every request (including /api/chat) gets sent to index.html.
+[[redirects]]
+  from = "/api/chat"
+  to = "/.netlify/functions/chat"
+  status = 200
+
+# SPA catch-all — sends everything else to index.html
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
