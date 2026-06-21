@@ -702,7 +702,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .frrow-price{font-size:14px;font-weight:800;color:var(--txt)}
 .frrow-score{font-size:22px;font-weight:900;color:var(--acc);line-height:1}
 .frrow-stars{font-size:12px;color:#f59e0b}
-.price-stars{font-size:14px;letter-spacing:1px;font-weight:700;white-space:nowrap}
+.price-stars{font-size:14px;letter-spacing:1px;font-weight:700;white-space:nowrap}.aff-btn{display:inline-flex;align-items:center;gap:6px;background:#ff9900;color:#111;font-weight:700;font-size:12px;padding:8px 14px;border-radius:8px;text-decoration:none;border:1px solid #e88a00;white-space:nowrap;line-height:1;cursor:pointer}.aff-btn:hover{background:#ffad33}.aff-btn-lg{font-size:14px;padding:12px 18px;width:100%;justify-content:center;margin-bottom:8px}.aff-card{font-size:11px;padding:7px 10px;width:100%;justify-content:center;margin-top:8px}.aff-disclosure{font-size:10px;color:var(--mut);margin-top:2px;margin-bottom:8px;line-height:1.4}.footer-aff{display:block;font-size:11px;color:var(--mut);margin-top:6px;max-width:680px;line-height:1.5}
 .price-stars .ps-full{color:#16a34a}
 .price-stars .ps-empty{color:#d1d5db}
 .price-main .price-stars{font-size:24px}
@@ -941,7 +941,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="footer-col"><h4>COMPANY</h4><a>About</a><a>Advertise</a><a href="mailto:email@myrobot.shop">Contact</a><a>Privacy</a></div>
     </div>
   </footer>
-  <div class="footer-bottom"><div class="footer-bottom-inner"><span>© 2026 myrobot.shop — All rights reserved</span></div></div>
+  <div class="footer-bottom"><div class="footer-bottom-inner"><span>© 2026 myrobot.shop — All rights reserved</span><span class="footer-aff">As an Amazon Associate, myrobot.shop earns from qualifying purchases. Links marked “Check price” may be affiliate links — if you buy through them we may earn a commission at no extra cost to you.</span></div></div>
 </div>
 
 <!-- DATABASE -->
@@ -1055,7 +1055,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="section-block" id="profile-video2-block"><div class="block-title">Video</div><div id="profile-video2"></div></div>
     </div>
     <div class="sidebar">
-      <div class="price-card"><div class="price-label">PRICE LEVEL</div><div class="price-main" id="profile-price"></div><div class="price-note" id="profile-price-note"></div><button class="btn-full primary">Request a Quote →</button><button class="btn-full outline" onclick="addToCompareFromProfile()">Add to Compare</button><div class="price-features"><div class="pf"><div class="pf-check">✓</div>12-month warranty included</div><div class="pf"><div class="pf-check">✓</div>Dedicated support team</div><div class="pf"><div class="pf-check">✓</div>SDK & training package</div></div></div>
+      <div class="price-card"><div class="price-label">PRICE LEVEL</div><div class="price-main" id="profile-price"></div><div class="price-note" id="profile-price-note"></div><div id="profile-buy"></div><button class="btn-full primary">Request a Quote →</button><button class="btn-full outline" onclick="addToCompareFromProfile()">Add to Compare</button><div class="price-features"><div class="pf"><div class="pf-check">✓</div>12-month warranty included</div><div class="pf"><div class="pf-check">✓</div>Dedicated support team</div><div class="pf"><div class="pf-check">✓</div>SDK & training package</div></div></div>
       <div class="vs-card" onclick="goPage('compare')"><div class="vs-label">POPULAR COMPARISON</div><div class="vs-names" id="profile-vs"></div><button class="btn-vs">Compare side by side →</button></div>
       <div class="sidebar-title" id="profile-news-title" style="display:none">In the News</div>
       <div class="similar-list" id="profile-news" style="display:none;margin-bottom:18px"></div>
@@ -1846,7 +1846,7 @@ function renderDb(){
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
         <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
-        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${priceStars(r)}</span><span style="padding:2px 7px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800">${r.score}</span></div></div>
+        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${priceStars(r)}</span><span style="padding:2px 7px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800">${r.score}</span></div>${affiliateBtn(r,'card')}</div>
       </div>`).join('')}</div>`;
   }
   renderCompareTray();
@@ -1976,6 +1976,37 @@ function priceStars(r){
   return '<span class="price-stars" title="Price '+t+'/5 within '+(r.cat||'')+'"><span class="ps-full">'+f+'</span><span class="ps-empty">'+e+'</span></span>';
 }
 function priceStarsTxt(r){ var t=priceTier(r); return t==null?'To be confirmed':_ptStars(t); }
+/* ===== Affiliate link system (Amazon Associates: myrobotshop-20) ===== */
+var AFFILIATE={
+  amazon:{tag:'myrobotshop-20',domain:'www.amazon.com'},
+  brands:{ 'dji':{type:'direct',label:'Check price at DJI'} },
+  buyableCats:['Consumer','Drones','Educational','Social','Entertainment','Telepresence']
+};
+function withAmazonTag(u){
+  if(!u) return u;
+  if(/amazon\./i.test(u) && u.indexOf('tag=')<0){ return u+(u.indexOf('?')>=0?'&':'?')+'tag='+AFFILIATE.amazon.tag; }
+  return u;
+}
+function affiliateLink(r){
+  if(!r) return null;
+  if(r.buy_url){ return {url:withAmazonTag(r.buy_url),label:r.buy_label||'Check price',retailer:r.buy_retailer||''}; }
+  var brand=(r.brand||'').toLowerCase();
+  var direct=false;
+  for(var k in AFFILIATE.brands){ if(brand.indexOf(k)>=0 && AFFILIATE.brands[k].type==='direct'){ direct=true; } }
+  if(direct) return null; /* brand program needs explicit product link; dormant until buy_url set */
+  if(AFFILIATE.buyableCats.indexOf(r.cat)>=0){
+    var q=encodeURIComponent(((r.brand||'')+' '+(r.name||'')).trim());
+    return {url:'https://'+AFFILIATE.amazon.domain+'/s?k='+q+'&tag='+AFFILIATE.amazon.tag,label:'Check price on Amazon',retailer:'Amazon'};
+  }
+  return null;
+}
+function affiliateBtn(r,size){
+  var a=affiliateLink(r); if(!a) return '';
+  var cls='aff-btn'+(size==='lg'?' aff-btn-lg':(size==='card'?' aff-card':''));
+  var label=(size==='card')?'Check price':a.label;
+  return '<a class="'+cls+'" href="'+a.url+'" target="_blank" rel="sponsored nofollow noopener" onclick="event.stopPropagation()">'+label+' \u2192</a>';
+}
+
 
 function robotSortDate(r){
   function parse(v){
@@ -3306,6 +3337,7 @@ function _renderProfile(id){
     }
   })();
   document.getElementById('profile-price').innerHTML=priceStars(r);
+  var _pb=document.getElementById('profile-buy'); if(_pb){ var _a=affiliateLink(r); _pb.innerHTML=_a?(affiliateBtn(r,'lg')+'<div class="aff-disclosure">As an Amazon Associate, myrobot.shop earns from qualifying purchases.</div>'):''; }
   document.getElementById('profile-price-note').textContent=(priceTier(r)==null?'Pricing to be confirmed \u00b7 request a quote':'Relative price level within '+(r.cat||'its category')+' \u00b7 request a quote');
   // Last verified — set expectations honestly. Colour-coded by age.
   const verifyEl = document.getElementById('profile-verified');
@@ -4325,7 +4357,7 @@ function renderFinder(){
       if(r.lidar)sp.push('<span class="fspec-pill fsp-yes">LiDAR</span>');
       if(r.wifi)sp.push('<span class="fspec-pill fsp-yes">WiFi</span>');
       var thumb=r.img?'<div class="frrow-thumb"><img src="'+r.img+'" alt="" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'"></div>':'<div class="frrow-thumb"><img src="'+MASCOT_URL+'" alt="" style="object-fit:contain"></div>';
-      return '<div class="frrow gsm" onclick="openProfile(&apos;'+r.id+'&apos;)"><div class="frrow-left"><div class="frrow-num '+(ranks[i]||'')+'">'+( i+1)+'</div>'+thumb+'<div class="frrow-info"><div class="frrow-brand">'+r.brand+'</div><div class="frrow-name">'+r.name+'</div><div class="frrow-meta"><span class="frrow-cat">'+r.cat+'</span>'+(r.year?' &middot; '+r.year:'')+(r.sub?' &middot; <span style="color:var(--mut)">'+r.sub+'</span>':'')+'</div><div class="frrow-specs">'+sp.join('')+'</div><div class="frrow-tags">'+r.tags.slice(0,4).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')+'</div></div></div><div class="frrow-right"><div class="frrow-price">'+priceStars(r)+'</div><div class="frrow-score">'+r.score+'<span style="font-size:9px;opacity:.6">/100</span></div><div class="frrow-stars">'+'&#9733;'.repeat(Math.round(r.rating||0))+'</div><div class="frrow-actions"><button class="fra" onclick="event.stopPropagation();addRobotToCompare(&apos;'+r.id+'&apos;);goPage(&apos;compare&apos;)">Compare</button><button class="fra p" onclick="event.stopPropagation();openProfile(&apos;'+r.id+'&apos;)">→ View</button></div></div></div>';
+      return '<div class="frrow gsm" onclick="openProfile(&apos;'+r.id+'&apos;)"><div class="frrow-left"><div class="frrow-num '+(ranks[i]||'')+'">'+( i+1)+'</div>'+thumb+'<div class="frrow-info"><div class="frrow-brand">'+r.brand+'</div><div class="frrow-name">'+r.name+'</div><div class="frrow-meta"><span class="frrow-cat">'+r.cat+'</span>'+(r.year?' &middot; '+r.year:'')+(r.sub?' &middot; <span style="color:var(--mut)">'+r.sub+'</span>':'')+'</div><div class="frrow-specs">'+sp.join('')+'</div><div class="frrow-tags">'+r.tags.slice(0,4).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')+'</div></div></div><div class="frrow-right"><div class="frrow-price">'+priceStars(r)+'</div><div class="frrow-score">'+r.score+'<span style="font-size:9px;opacity:.6">/100</span></div><div class="frrow-stars">'+'&#9733;'.repeat(Math.round(r.rating||0))+'</div><div class="frrow-actions">'+affiliateBtn(r)+'<button class="fra" onclick="event.stopPropagation();addRobotToCompare(&apos;'+r.id+'&apos;);goPage(&apos;compare&apos;)">Compare</button><button class="fra p" onclick="event.stopPropagation();openProfile(&apos;'+r.id+'&apos;)">→ View</button></div></div></div>';
     }).join('')+'</div>';
   } else {
     c.innerHTML='<div class="frgrid">'+list.map(function(r,i){
