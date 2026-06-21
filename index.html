@@ -37,7 +37,7 @@
 body{font-family:'Instrument Sans','Segoe UI',sans-serif;font-size:14px;color:var(--txt);background:var(--bg2);overflow-x:hidden}
 [class*='Space'],[style*='Space Mono']{letter-spacing:-.5px}
 h1,h2,h3{letter-spacing:-1px}
-.page{display:none}.page.active{display:block}
+.page{display:none}.page.active{display:block}.method-page{max-width:840px;margin:0 auto;padding:48px 20px 64px}.method-kicker{font-family:'Space Mono','Courier New',monospace;font-size:11px;font-weight:700;letter-spacing:1px;color:var(--acc);margin-bottom:10px}.method-page h1{font-size:30px;font-weight:800;line-height:1.2;margin-bottom:16px;color:var(--txt)}.method-page h2{font-size:18px;font-weight:800;color:var(--txt);margin:34px 0 10px}.method-page p{font-size:15px;line-height:1.7;color:var(--mut);margin-bottom:14px}.method-page ul{margin:0 0 14px;padding:0;list-style:none}.method-page li{font-size:14px;line-height:1.6;color:var(--mut);padding:9px 0 9px 22px;position:relative;border-bottom:1px solid var(--bdr)}.method-page li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:50%;background:var(--acc)}.method-page strong{color:var(--txt);font-weight:700}.method-cta{display:inline-block;margin:6px 0 8px;background:var(--acc);color:#fff;font-size:14px;font-weight:700;padding:11px 18px;border-radius:9px;border:none;cursor:pointer;text-decoration:none}.method-box{background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;padding:18px 20px;margin:8px 0 14px}.method-box p:last-child{margin-bottom:0}
 .mw{max-width:1200px;margin:0 auto;width:100%;padding:0 40px}
 
 /* ── NAV ── */
@@ -835,7 +835,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- HOME -->
 <div id="page-home" class="page active">
-  <div class="top-bar"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_60/v1777366404/output_17_t74qys.jpg" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:6px;border-radius:50%;background:#fff"> World's #1 Robot Database — <span id="home-top-count">467</span> robots catalogued and growing daily</div>
+  <div class="top-bar"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_60/v1777366404/output_17_t74qys.jpg" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:6px;border-radius:50%;background:#fff"> World's #1 Robot Database — <span id="home-top-count">1,600+</span> robots catalogued and growing daily</div>
   <div class="hero">
     <div class="hero-inner">
       <div class="hero-left">
@@ -849,9 +849,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         <div class="brand-tags" id="brand-tags-home"></div>
       </div>
       <div class="hero-right">
-        <div class="hero-stat"><div class="hsi" style="overflow:hidden;background:#fff"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_120/v1777366404/output_17_t74qys.jpg" alt="" style="width:100%;height:100%;object-fit:contain"></div><div><div class="hst-num" id="home-hero-count">467</div><div class="hst-lbl">Robots catalogued</div></div></div>
-        <div class="hero-stat"><div class="hsi">🏭</div><div><div class="hst-num" id="home-mfr-count">56</div><div class="hst-lbl">Manufacturers listed</div></div></div>
-        <div class="hero-stat"><div class="hsi">🤖</div><div><div class="hst-num" id="hero-robot-count">—</div><div class="hst-lbl">Robots tracked</div></div></div>
+        <div class="hero-stat"><div class="hsi" style="overflow:hidden;background:#fff"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_120/v1777366404/output_17_t74qys.jpg" alt="" style="width:100%;height:100%;object-fit:contain"></div><div><div class="hst-num" id="home-hero-count">—</div><div class="hst-lbl">Robots catalogued</div></div></div>
+        <div class="hero-stat"><div class="hsi">🏭</div><div><div class="hst-num" id="home-mfr-count">—</div><div class="hst-lbl">Manufacturers listed</div></div></div>
+        <div class="hero-stat"><div class="hsi">🤖</div><div><div class="hst-num" id="hero-robot-count">—</div><div class="hst-lbl">Categories</div></div></div>
       </div>
     </div>
   </div>
@@ -938,7 +938,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       </div>
       <div class="footer-col"><h4>DATABASE</h4><a onclick="goPage('db')">All Robots</a><a onclick="goPage('db')">New Releases</a><a onclick="goPage('rankings')">Trending</a><a onclick="goPage('manufacturers')">By Brand</a></div>
       <div class="footer-col"><h4>TOOLS</h4><a onclick="goPage('compare')">Compare</a><a onclick="goPage('finder')">Robot Finder</a><a onclick="goPage('news')">News</a><a onclick="goPage('videos')">Videos</a><a onclick="openReviewFor()">Reviews</a></div>
-      <div class="footer-col"><h4>COMPANY</h4><a>About</a><a>Advertise</a><a href="mailto:email@myrobot.shop">Contact</a><a>Privacy</a></div>
+      <div class="footer-col"><h4>COMPANY</h4><a onclick="goPage('methodology')">How We Source Data</a><a onclick="goPage('methodology')">About</a><a>Advertise</a><a href="mailto:email@myrobot.shop">Contact</a><a>Privacy</a></div>
     </div>
   </footer>
   <div class="footer-bottom"><div class="footer-bottom-inner"><span>© 2026 myrobot.shop — All rights reserved</span><span class="footer-aff">As an Amazon Associate, myrobot.shop earns from qualifying purchases. Links marked “Check price” may be affiliate links — if you buy through them we may earn a commission at no extra cost to you.</span></div></div>
@@ -1184,7 +1184,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <div id="page-finder" class="page">
   <div class="finder-band">
     <h1>Robot Finder</h1>
-    <p id="finder-band-meta">All categories · 1,129 robots · Updated April 2026</p>
+    <p id="finder-band-meta">All categories · Live filters</p>
     <div class="cat-wrap"><div class="ftabs" id="finder-tabs"></div></div>
   </div>
   <div class="finder-body">
@@ -1230,6 +1230,43 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 </div>
 
 <!-- SUBMIT REVIEW -->
+<div id="page-methodology" class="page">
+  <div class="method-page">
+    <div class="method-kicker">DATA &amp; METHODOLOGY</div>
+    <h1>How we build the robot database</h1>
+    <p>myrobot.shop is an independent reference catalogue covering robots of every kind — from industrial arms and surgical systems to drones, vacuums, lawn mowers and educational kits. The goal is simple: one place where any robot can be looked up, compared, and understood on the same terms. This page explains where our information comes from and how we work to keep it trustworthy.</p>
+
+    <h2>Where our data comes from</h2>
+    <p>Every entry is compiled from primary and public sources, in this order of preference:</p>
+    <ul>
+      <li><strong>Manufacturer specifications</strong> — official datasheets, spec sheets and technical documentation published by the maker.</li>
+      <li><strong>Manufacturer websites &amp; product pages</strong> — official descriptions, dimensions, features and pricing.</li>
+      <li><strong>Official press &amp; launch materials</strong> — announcements, press kits and verified launch details.</li>
+      <li><strong>Reputable technical press &amp; industry sources</strong> — established robotics and technology publications, used to fill gaps and cross-check figures.</li>
+    </ul>
+
+    <h2>One schema, so everything is comparable</h2>
+    <p>Robots are described in wildly different ways by different makers. We normalise every entry into a single structured schema of more than 400 fields — dimensions, payload, degrees of freedom, battery, sensors, AI, connectivity and more — with consistent units throughout. That is what makes it possible to place a $400 robot vacuum and a $90,000 industrial arm side by side and genuinely compare them.</p>
+
+    <h2>How current it is</h2>
+    <p>The catalogue is updated continuously: new robots are added as they are announced or released, existing entries are revised as specifications change, and our robotics news feed refreshes daily from leading industry sources.</p>
+
+    <h2>Accuracy &amp; corrections</h2>
+    <p>We work hard to get every detail right, but specifications change, manufacturers revise figures, and with a catalogue this large the occasional error can slip through. We would always rather be corrected than left wrong. If you spot something inaccurate or out of date, please tell us and we will review it.</p>
+    <button class="method-cta" onclick="goPage('submit-robot')">Submit a correction or a robot →</button>
+
+    <h2>How the score works</h2>
+    <p>Each robot carries a score from 0–100. It is a composite reflection of capability, specifications and how the robot stands relative to others in its class — not a measure of how much anyone paid us. Which brings us to the last and most important point.</p>
+
+    <h2>Independence &amp; how we make money</h2>
+    <div class="method-box">
+      <p><strong>Listings and scores are never paid for.</strong> No manufacturer can pay to be included, excluded, ranked higher or scored better. Coverage is editorial, and we list every type of robot — including toys, kits and companions — not just the "serious" ones.</p>
+      <p>Some outbound “Check price” links are affiliate links (for example through the Amazon Associates programme). If you buy through one, we may earn a small commission at no extra cost to you. This helps fund the catalogue — but it never influences which robots we include, how they are scored, or how they rank.</p>
+    </div>
+
+    <p style="margin-top:24px">Questions about our data? <a href="mailto:email@myrobot.shop" style="color:var(--acc);text-decoration:none">email@myrobot.shop</a></p>
+  </div>
+</div>
 <div id="page-submit-review" class="page">
   <div class="submit-page"><div class="submit-card"><div class="submit-title">Write a Review</div><div class="submit-sub">Share your experience to help others make the right decision.</div><div class="form-group-full" id="review-robot-row"><label class="form-label">Robot *</label><select class="form-select" id="review-robot-select"><option value="">Select a robot...</option></select></div><div class="form-group-full" id="review-robot-fixed" style="display:none"><label class="form-label">Robot</label><div id="review-robot-fixed-name" style="font-weight:700;font-size:15px;padding:6px 0"></div></div><div class="form-group-full"><label class="form-label">Your Rating *</label><div class="stars-select" id="stars-select"><span class="star-btn" onclick="setStars(1)">★</span><span class="star-btn" onclick="setStars(2)">★</span><span class="star-btn" onclick="setStars(3)">★</span><span class="star-btn" onclick="setStars(4)">★</span><span class="star-btn" onclick="setStars(5)">★</span></div></div><div class="form-row"><div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" id="review-name" placeholder="e.g. James K."></div><div class="form-group"><label class="form-label">Your Role</label><input class="form-input" type="text" id="review-role" placeholder="e.g. Robotics Engineer, Toyota"></div></div><div class="form-group-full"><label class="form-label">Review *</label><textarea class="form-textarea" id="review-text" style="min-height:120px" placeholder="Share your experience — pros, cons, use case, how long you've used it..."></textarea></div><div style="margin-top:20px;display:flex;gap:12px;align-items:center"><button class="submit-btn" onclick="submitReview()">Submit Review →</button><span style="font-size:11px;color:var(--mut)">Reviews moderated within 24 hours</span></div></div></div>
 </div>
@@ -1273,7 +1310,12 @@ function loadRobots(){
       ROBOTS.length=0; ROBOTS.push.apply(ROBOTS,data);
       window.ROBOTS = ROBOTS;
       ROBOTS_LOADED = true;
-      var _hc=document.getElementById('hero-robot-count'); if(_hc)_hc.textContent=ROBOTS.length.toLocaleString()+'+';
+      var _catN=new Set(ROBOTS.map(function(r){return r.cat;}).filter(Boolean)).size;
+      var _mfrN=new Set(ROBOTS.map(function(r){return r.brand;}).filter(Boolean)).size;
+      var _hc=document.getElementById('hero-robot-count'); if(_hc)_hc.textContent=_catN;
+      var _hhc=document.getElementById('home-hero-count'); if(_hhc)_hhc.textContent=ROBOTS.length.toLocaleString();
+      var _hmc=document.getElementById('home-mfr-count'); if(_hmc)_hmc.textContent=_mfrN.toLocaleString();
+      var _htc=document.getElementById('home-top-count'); if(_htc)_htc.textContent=ROBOTS.length.toLocaleString();
       // Recompute brand list now that we have data
       ALL_BRANDS.length=0;
       const brandSet=new Set(ROBOTS.map(r=>r.brand).filter(b=>b&&b!=='undefined'));
@@ -1363,7 +1405,7 @@ function _renderPage(p, opts){
   }
   // SEO/UX: per-page document titles (profile sets its own richer title)
   if(p!=='profile'){
-    var PT={home:"myrobot.shop — World's #1 Robot Database",db:"Robot Database — browse 1,600+ robots | myrobot.shop",finder:"Robot Finder | myrobot.shop",compare:"Compare Robots side by side | myrobot.shop",rankings:"Robot Rankings | myrobot.shop",news:"Robotics News | myrobot.shop",videos:"Robot Videos | myrobot.shop",manufacturers:"Robot Brands & Manufacturers | myrobot.shop"};
+    var PT={home:"myrobot.shop — World's #1 Robot Database",db:"Robot Database — browse 1,600+ robots | myrobot.shop",finder:"Robot Finder | myrobot.shop",compare:"Compare Robots side by side | myrobot.shop",rankings:"Robot Rankings | myrobot.shop",news:"Robotics News | myrobot.shop",videos:"Robot Videos | myrobot.shop",manufacturers:"Robot Brands & Manufacturers | myrobot.shop",methodology:"How We Source Our Data | myrobot.shop"};
     document.title=PT[p]||PT.home;
   }
 }
@@ -1434,6 +1476,7 @@ function renderHome(){
   const elTop=document.getElementById('home-top-count');if(elTop)elTop.textContent=total;
   const elHero=document.getElementById('home-hero-count');if(elHero)elHero.textContent=total;
   const elMfr=document.getElementById('home-mfr-count');if(elMfr)elMfr.textContent=mfrCount;
+  const elCat=document.getElementById('hero-robot-count');if(elCat)elCat.textContent=new Set(ROBOTS.map(r=>r.cat).filter(Boolean)).size;
   // Category pills — alphabetical, with live counts
   const catPills=document.getElementById('home-cat-pills');
   if(catPills){
