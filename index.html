@@ -1056,7 +1056,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     </div>
     <div class="sidebar">
       <div class="price-card"><div class="price-label">PRICE LEVEL</div><div class="price-main" id="profile-price"></div><div class="price-note" id="profile-price-note"></div><div id="profile-buy"></div><button class="btn-full primary">Request a Quote →</button><button class="btn-full outline" onclick="addToCompareFromProfile()">Add to Compare</button><div class="price-features"><div class="pf"><div class="pf-check">✓</div>12-month warranty included</div><div class="pf"><div class="pf-check">✓</div>Dedicated support team</div><div class="pf"><div class="pf-check">✓</div>SDK & training package</div></div></div>
-      <div class="vs-card" onclick="goPage('compare')"><div class="vs-label">POPULAR COMPARISON</div><div class="vs-names" id="profile-vs"></div><button class="btn-vs">Compare side by side →</button></div>
+      <div class="vs-card" onclick="openVsCompare()"><div class="vs-label">POPULAR COMPARISON</div><div class="vs-names" id="profile-vs"></div><button class="btn-vs">Compare side by side →</button></div>
       <div class="sidebar-title" id="profile-news-title" style="display:none">In the News</div>
       <div class="similar-list" id="profile-news" style="display:none;margin-bottom:18px"></div>
       <div class="sidebar-title">Similar Robots</div>
@@ -1325,6 +1325,9 @@ function goPage(p, opts){
   else if (p === 'db' && opts.cat){
     hash = 'db/cat/' + encodeURIComponent(opts.cat);
   }
+  else if (p === 'compare' && opts.ids && opts.ids.length){
+    hash = 'compare/' + opts.ids.map(encodeURIComponent).join('+');
+  }
   if (location.hash === '#' + hash){
     // Same page clicked — re-render anyway (e.g. clicking Home from Home should still scroll up)
     _renderPage(p, opts);
@@ -1346,7 +1349,7 @@ function _renderPage(p, opts){
   window.scrollTo(0,0);
   if(p==='home'){renderHome();}
   if(p==='db'){ if(opts.cat){ _pendingDbCat = opts.cat; } buildDbFilters();renderDb();}
-  if(p==='compare'){renderCompare();}
+  if(p==='compare'){ if(opts.ids&&opts.ids.length){ loadCompareIds(opts.ids); if(typeof refreshCompareUI==='function')refreshCompareUI(); } renderCompare(); if(typeof syncCompareHash==='function')syncCompareHash(); }
   if(p==='rankings'){renderRankings('all');}
   if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();}
   if(p==='manufacturers'){renderManufacturers();}
@@ -1376,6 +1379,10 @@ function parseHash(){
   }
   if (page === 'db' && parts[1] === 'cat' && parts[2]){
     return {page: 'db', opts: {cat: decodeURIComponent(parts.slice(2).join('/'))}};
+  }
+  if (page === 'compare' && parts[1]){
+    var cids = parts.slice(1).join('/').split('+').map(function(s){return decodeURIComponent(s);}).filter(Boolean);
+    return {page: 'compare', opts: {ids: cids}};
   }
   return {page, opts: {}};
 }
@@ -3435,9 +3442,17 @@ function _renderProfile(id){
       : `<img src="${MASCOT_URL}" alt="" style="width:100%;height:100%;object-fit:contain;border-radius:7px;display:block;background:#fff">`;
     return `<div class="similar-item" onclick="openProfile('${s.id}')"><div class="similar-icon" style="overflow:hidden">${imgHtml}</div><div class="similar-info"><div class="similar-name">${s.name||''}</div><div class="similar-sub">${s.brand||''} · ${s.sub||''}</div></div><div class="similar-price">${s.price>0?'$'+s.price.toLocaleString():'POA'}</div></div>`;
   }).join('');
-  // VS card
-  const other=ROBOTS.find(x=>x.id!==r.id&&x.cat===r.cat);
-  if(other)document.getElementById('profile-vs').textContent=r.name+' vs '+other.name;
+  // VS card — pick the most sensible head-to-head opponent
+  const other=pickVsOpponent(r);
+  const _vsCard=document.querySelector('.vs-card');
+  if(other){
+    window._vsPair=[r.id, other.id];
+    document.getElementById('profile-vs').textContent=r.name+' vs '+other.name;
+    if(_vsCard) _vsCard.style.display='';
+  } else {
+    window._vsPair=null;
+    if(_vsCard) _vsCard.style.display='none';
+  }
   // Note: page activation is handled by _renderPage — don't call goPage here or we'd loop.
 }
 
@@ -3448,6 +3463,48 @@ function addToCompareFromProfile(){
 }
 
 // ════════════ COMPARE ════════════
+// Pick the best head-to-head opponent: same sub-type first, then a rival brand, then closest price/score.
+function pickVsOpponent(r){
+  var pool=ROBOTS.filter(function(x){return x.id!==r.id && x.cat===r.cat;});
+  if(!pool.length) return null;
+  var rp=(typeof r.price==='number'&&r.price>0)?r.price:null;
+  function rank(x){
+    var sub=(x.sub&&x.sub===r.sub)?0:1;
+    var rival=(x.brand&&x.brand!==r.brand)?0:1;
+    var dist;
+    if(rp&&typeof x.price==='number'&&x.price>0){ dist=Math.abs(x.price-rp); }
+    else { dist=1e9+Math.abs((x.score||0)-(r.score||0)); }
+    return [sub,rival,dist];
+  }
+  return pool.slice().sort(function(a,b){
+    var ra=rank(a),rb=rank(b);
+    return (ra[0]-rb[0])||(ra[1]-rb[1])||(ra[2]-rb[2]);
+  })[0];
+}
+// "Compare side by side" — load BOTH robots and open a shareable compare link.
+function openVsCompare(){
+  if(window._vsPair && window._vsPair.length===2){ goPage('compare',{ids:window._vsPair}); }
+  else { goPage('compare'); }
+}
+// Load a specific set of robot ids into the compare slots (deep links + VS button).
+function loadCompareIds(ids){
+  compareSlots=[null,null,null,null];
+  (ids||[]).slice(0,4).forEach(function(id){
+    if(compareSlots.some(function(s){return s&&s.id===id;})) return;
+    var r=ROBOTS.find(function(x){return x.id===id;});
+    if(r){ var ei=compareSlots.findIndex(function(s){return s===null;}); if(ei>=0) compareSlots[ei]=r; }
+  });
+  saveCompare();
+}
+// Keep the URL in sync with the current comparison so it is shareable (only while on compare page).
+function syncCompareHash(){
+  try{
+    if(parseHash().page!=='compare') return;
+    var ids=compareSlots.filter(Boolean).map(function(r){return r.id;});
+    var hsh = ids.length ? ('compare/'+ids.map(encodeURIComponent).join('+')) : 'compare';
+    if(location.hash !== '#'+hsh){ history.replaceState(null,'','#'+hsh); }
+  }catch(e){}
+}
 function addRobotToCompare(id){
   if(compareSlots.some(s=>s&&s.id===id))return;
   const ei=compareSlots.findIndex(s=>s===null);
@@ -3464,6 +3521,7 @@ function saveCompare(){try{localStorage.setItem(CMP_KEY,JSON.stringify(compareSl
 function loadCompare(){try{const ids=JSON.parse(localStorage.getItem(CMP_KEY)||'[]');compareSlots=[null,null,null,null];ids.slice(0,4).forEach(function(id,k){const r=ROBOTS.find(function(x){return x.id===id;});if(r)compareSlots[k]=r;});}catch(e){}}
 function renderCompareTray(){
   saveCompare();
+  if(typeof syncCompareHash==='function')syncCompareHash();
   let tray=document.getElementById('compare-tray');
   if(!tray){tray=document.createElement('div');tray.id='compare-tray';document.body.appendChild(tray);}
   const sel=compareSlots.filter(Boolean);
