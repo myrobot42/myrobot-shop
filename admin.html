@@ -319,6 +319,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
     <div class="modal-grid">
       <div class="modal-field full"><div class="modal-label">Buy URL &mdash; exact product page (optional)</div><input class="modal-input" id="edit-buy-url" type="text" placeholder="https://www.amazon.com/dp/...  (leave blank = auto search link)"></div>
       <div class="modal-field full"><div style="font-size:11px;color:#888;line-height:1.5;margin-top:-4px">Paste the exact Amazon product page for high-traffic robots (Roborock, Roomba, Dreame, eufy&hellip;) to lift conversions &mdash; the affiliate tag is added automatically for Amazon links. Leave blank and the site falls back to an automatic Amazon search link. For DJI, paste your approved Awin/Webgains product link here once approved.</div></div>
+      <div class="modal-field full"><label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;margin-top:2px"><input type="checkbox" id="edit-buy-hide" style="width:16px;height:16px"> <span>Not sold on Amazon &mdash; hide the &ldquo;Check price&rdquo; button for this robot</span></label></div>
     </div>
 
     <div class="modal-section">KEY SPECS</div>
@@ -3293,6 +3294,7 @@ function editRobotPrompt(id) {
   document.getElementById('edit-video').value = r.video || '';
   document.getElementById('edit-video2').value = r.video2 || '';
   document.getElementById('edit-buy-url').value = r.buy_url || '';
+  document.getElementById('edit-buy-hide').checked = !!r.buy_hide;
   // Specs
   document.getElementById('edit-weight').value = r.weight_kg || '';
   document.getElementById('edit-battery').value = r.battery_life || '';
@@ -3346,6 +3348,7 @@ function saveEditModal() {
   if (video2) r.video2 = video2; else delete r.video2;
   const buyUrl = document.getElementById('edit-buy-url').value.trim();
   if (buyUrl) r.buy_url = buyUrl; else delete r.buy_url;
+  if (document.getElementById('edit-buy-hide').checked) r.buy_hide = true; else delete r.buy_hide;
   // Specs
   if(document.getElementById('edit-weight').value) r.weight_kg = parseFloat(document.getElementById('edit-weight').value);
   if(document.getElementById('edit-battery').value) r.battery_life = parseInt(document.getElementById('edit-battery').value);
