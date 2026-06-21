@@ -2003,6 +2003,7 @@ function withAmazonTag(u){
 }
 function affiliateLink(r){
   if(!r) return null;
+  if(r.buy_hide) return null;   /* worker flagged: not sold on Amazon - suppress button */
   if(r.buy_url){ return {url:withAmazonTag(r.buy_url),label:r.buy_label||'Check price',retailer:r.buy_retailer||''}; }
   var brand=(r.brand||'').toLowerCase();
   var direct=false;
