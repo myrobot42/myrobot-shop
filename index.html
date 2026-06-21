@@ -1322,6 +1322,9 @@ function goPage(p, opts){
   if (p === 'profile' && opts.id){
     hash = 'profile/' + opts.id;
   }
+  else if (p === 'db' && opts.cat){
+    hash = 'db/cat/' + encodeURIComponent(opts.cat);
+  }
   if (location.hash === '#' + hash){
     // Same page clicked — re-render anyway (e.g. clicking Home from Home should still scroll up)
     _renderPage(p, opts);
@@ -1342,7 +1345,7 @@ function _renderPage(p, opts){
   if(nav) nav.classList.add('active');
   window.scrollTo(0,0);
   if(p==='home'){renderHome();}
-  if(p==='db'){buildDbFilters();renderDb();}
+  if(p==='db'){ if(opts.cat){ _pendingDbCat = opts.cat; } buildDbFilters();renderDb();}
   if(p==='compare'){renderCompare();}
   if(p==='rankings'){renderRankings('all');}
   if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();}
@@ -1370,6 +1373,9 @@ function parseHash(){
   const page = parts[0];
   if (page === 'profile' && parts[1]){
     return {page: 'profile', opts: {id: parts[1]}};
+  }
+  if (page === 'db' && parts[1] === 'cat' && parts[2]){
+    return {page: 'db', opts: {cat: decodeURIComponent(parts.slice(2).join('/'))}};
   }
   return {page, opts: {}};
 }
@@ -1508,16 +1514,7 @@ function searchBrand(b){
 }
 
 function filterCat(cat){
-  goPage('db');
-  setTimeout(()=>{
-    document.querySelectorAll('[data-cat]').forEach(cb=>{cb.checked=cb.dataset.cat===cat;});
-    // Reset sub-cat selections since we're entering a new category context
-    document.querySelectorAll('[data-sub]:checked').forEach(el => el.checked = false);
-    SUBCAT_EXPANDED = false;
-    renderSubcatFilter();
-    renderBrandFilter();  // narrow manufacturer list to just brands in this category
-    renderDb();
-  },60);
+  goPage('db', {cat: cat});
 }
 
 // ════════════ DATABASE ════════════
@@ -1759,6 +1756,15 @@ function escapeAttr(s){
 }
 
 // Called when a category checkbox changes. Rebuilds brand list, then re-renders results.
+// Reflect the current single-category selection in the URL so the address bar is a
+// shareable deep link. Uses replaceState so it does NOT re-trigger a route/render.
+function syncDbHash(){
+  try{
+    var sel=[].slice.call(document.querySelectorAll('#db-cat-filters input[data-cat]:checked')).map(function(el){return el.dataset.cat;});
+    var hsh = (sel.length===1) ? ('db/cat/'+encodeURIComponent(sel[0])) : 'db';
+    if(location.hash !== '#'+hsh){ history.replaceState(null,'','#'+hsh); }
+  }catch(e){}
+}
 function onCatChange(){
   // When the user changes category, reset sub-category selections (they applied to the OLD cat)
   document.querySelectorAll('[data-sub]:checked').forEach(el => el.checked = false);
@@ -1766,6 +1772,7 @@ function onCatChange(){
   renderSubcatFilter();
   renderBrandFilter();
   renderDb();
+  syncDbHash();
 }
 
 function getDbFiltered(){
@@ -3234,7 +3241,7 @@ function _renderProfile(id){
     var cc=document.getElementById('profile-crumb-cat');
     cc.textContent=r.cat;
     cc.style.cursor='pointer';
-    cc.onclick=function(){ _pendingDbCat=r.cat; goPage('db'); };
+    cc.onclick=function(){ goPage('db', {cat:r.cat}); };
   })();
   document.getElementById('profile-crumb-name').textContent=r.name;
   const figEl = document.getElementById('profile-fig');
