@@ -1,0 +1,176 @@
+{
+  "_meta": {
+    "purpose": "Approved Q&A content for /questions pages. Each answer leads with the answer (40-120 words) — the format AI Overviews lift. Add more via admin queue; legal/regional questions (drone licensing etc.) need careful human drafting before adding.",
+    "status": "seed batch — drafted + ready to review",
+    "updated": "2026-06-22"
+  },
+  "categories": {
+    "robot-vacuums": {
+      "category_name": "Robot Vacuums",
+      "maps_to_cat": "Consumer",
+      "browse_href": "/#db/cat/Consumer",
+      "intro": "Honest answers to the questions people ask most before buying a robot vacuum — what to look for, what they can't do, and whether the upgrades are worth it.",
+      "questions": [
+        {
+          "slug": "are-robot-vacuums-worth-it",
+          "q": "Are robot vacuums worth it?",
+          "a": "For most homes, yes — as daily maintenance, not as a replacement for deep cleaning. A robot vacuum keeps dust, crumbs and pet hair from building up by cleaning little and often, even while you're out, so floors stay consistently tidier between manual cleans. Where they fall short: stairs, upholstery, deep-pile carpet and tight corners. Think of one as a floor-maintenance robot that handles the daily grind, freeing your manual vacuum for the occasional deep clean — not a do-everything machine."
+        },
+        {
+          "slug": "robot-vacuum-pet-hair-what-to-look-for",
+          "q": "What should I look for in a robot vacuum for pet hair?",
+          "a": "Four things matter most for pet homes: strong suction (around 6,000 Pa or more to lift hair from carpet); anti-tangle rubber brush rolls rather than bristle ones, since pet hair wraps around bristles; a self-emptying dock so you're not emptying a small bin every day; and good AI obstacle avoidance so it steers around toys and pet messes. HEPA filtration helps with dander too. Filter our robot vacuums by these features, or compare a few side by side."
+        },
+        {
+          "slug": "self-emptying-dock-worth-it",
+          "q": "Is a self-emptying dock worth it?",
+          "a": "For pet owners and busy households, almost always. Without one, you empty the robot's small onboard bin daily — sometimes two or three times a day with heavy shedders. With a self-emptying dock, the robot empties itself into a larger bag in the base, so you only deal with it every few weeks. It adds cost and the dock takes up more space, but that hands-off convenience is the main reason people upgrade."
+        },
+        {
+          "slug": "do-robot-vacuums-replace-a-regular-vacuum",
+          "q": "Do robot vacuums replace a regular vacuum?",
+          "a": "No — they complement one, they don't replace it. A robot vacuum handles open floor maintenance brilliantly, but it can't do stairs, sofas, mattresses, curtains or cobwebs, and even the most powerful models don't match the raw suction of a good upright on deep carpet. The realistic setup is a robot for everyday upkeep plus a manual vacuum for occasional deep cleans and the spots a robot can't reach."
+        }
+      ]
+    },
+    "robot-lawn-mowers": {
+      "category_name": "Robot Lawn Mowers",
+      "maps_to_cat": "Lawn Mowers",
+      "browse_href": "/#db/cat/Lawn%20Mowers",
+      "intro": "The real questions homeowners ask before buying a robot mower — wire vs wireless, slopes, shade, and whether they're worth the money.",
+      "questions": [
+        {
+          "slug": "boundary-wire-vs-gps-robot-mower",
+          "q": "Boundary wire vs GPS (wire-free) robot mower — which is better?",
+          "a": "For most buyers in 2026, wire-free wins. Wire-free mowers use RTK-GPS, LiDAR or cameras to map your lawn, so setup is fast, boundaries are easy to change in an app, and there's no cable to cut or repair. They suit larger and irregular lawns. Boundary-wire mowers are cheaper and don't rely on satellite signal — which makes them better under heavy tree cover or on a tight budget — but burying the wire is tedious and a damaged cable stops the mower. Short version: wire-free for most; wired for dense shade or low budget."
+        },
+        {
+          "slug": "are-robot-lawn-mowers-worth-it",
+          "q": "Are robot lawn mowers worth it?",
+          "a": "If you'd happily reclaim your weekend, yes. A robot mower cuts a little every day, which keeps the lawn consistently neat and actually healthier, since the fine clippings mulch back in. Most people save roughly an hour a weekend. The trade-offs: they cost more upfront than a push mower, the docking station needs an outdoor power point, and initial setup is more involved. For medium-to-large or awkward lawns, the time saved usually justifies it."
+        },
+        {
+          "slug": "robot-mower-for-slopes-what-to-look-for",
+          "q": "What should I look for in a robot mower for a sloped lawn?",
+          "a": "All-wheel drive is the single most important feature. AWD models handle gradients up to around 70% (about 38°), while two-wheel-drive and boundary-wire mowers typically lose traction above ~30% and start skidding, leaving bare patches. Also look for a low centre of gravity and grippy tyres. If your property has any meaningful hill, start with AWD models — browse our lawn mowers and compare the slope ratings side by side."
+        },
+        {
+          "slug": "do-robot-mowers-work-under-trees-shade",
+          "q": "Do robot lawn mowers work under trees and in shade?",
+          "a": "It depends on the navigation type. GPS/RTK mowers need a clear view of the sky, so a dense tree canopy or tall buildings can weaken the satellite signal and confuse them. Mowers that use LiDAR or onboard cameras build a map of the yard instead and cope far better in shade and low light. If your lawn is heavily shaded or tightly landscaped, favour a LiDAR or vision-based model, a fusion system that combines several sensors, or an older boundary-wire mower, which doesn't rely on GPS at all."
+        }
+      ]
+    },
+    "drones": {
+      "category_name": "Drones",
+      "maps_to_cat": "Drones",
+      "browse_href": "/#db/cat/Drones",
+      "intro": "Common questions from first-time drone buyers. Note: drone laws vary by country — always check your local aviation authority (FAA, CAA, EASA, CASA) before flying.",
+      "questions": [
+        {
+          "slug": "do-i-need-a-licence-to-fly-a-drone",
+          "q": "Do I need a licence to fly a drone?",
+          "a": "It depends on where you fly and whether it's for fun or for work — and the rules genuinely vary by country, so treat this as the general shape and confirm the specifics with your national aviation authority below. The common pattern: flying recreationally needs little or nothing for very light drones, but often a simple (frequently free) online safety test or competency certificate as the drone gets heavier. Flying commercially — making money from it — almost always requires a proper remote-pilot certificate. Many countries pivot their rules around the 250-gram mark and whether the drone has a camera. Because these rules change, always check the official source for your country before you fly.",
+          "links": [
+            {
+              "label": "USA — FAA (faa.gov/uas)",
+              "url": "https://www.faa.gov/uas"
+            },
+            {
+              "label": "UK — Civil Aviation Authority",
+              "url": "https://www.caa.co.uk/drones/"
+            },
+            {
+              "label": "EU — EASA civil drones",
+              "url": "https://www.easa.europa.eu/en/domains/civil-drones"
+            },
+            {
+              "label": "Australia — CASA",
+              "url": "https://www.casa.gov.au/drones"
+            },
+            {
+              "label": "Canada — Transport Canada",
+              "url": "https://tc.canada.ca/en/aviation/drone-safety"
+            },
+            {
+              "label": "New Zealand — CAA",
+              "url": "https://www.aviation.govt.nz/drones/"
+            },
+            {
+              "label": "Other EU countries — find your national authority (EASA)",
+              "url": "https://www.easa.europa.eu/en/domains/civil-drones/naa"
+            }
+          ]
+        },
+        {
+          "slug": "do-i-need-to-register-my-drone",
+          "q": "Do I need to register my drone?",
+          "a": "Often yes — and in most countries the deciding factor is weight, with 250 grams the usual threshold. Below 250g, recreational flyers are frequently exempt from registration (one reason so many mini drones weigh exactly 249g); at 250g or more, or if the drone carries a camera, registration with your national aviation authority is commonly required, sometimes with a small fee and a remote-ID requirement. Commercial use often has its own registration rules regardless of weight. Exact thresholds, fees and steps differ by country and change over time, so register through the official authority for where you fly — links below.",
+          "links": [
+            {
+              "label": "USA — FAA (faa.gov/uas)",
+              "url": "https://www.faa.gov/uas"
+            },
+            {
+              "label": "UK — Civil Aviation Authority",
+              "url": "https://www.caa.co.uk/drones/"
+            },
+            {
+              "label": "EU — EASA civil drones",
+              "url": "https://www.easa.europa.eu/en/domains/civil-drones"
+            },
+            {
+              "label": "Australia — CASA",
+              "url": "https://www.casa.gov.au/drones"
+            },
+            {
+              "label": "Canada — Transport Canada",
+              "url": "https://tc.canada.ca/en/aviation/drone-safety"
+            },
+            {
+              "label": "New Zealand — CAA",
+              "url": "https://www.aviation.govt.nz/drones/"
+            },
+            {
+              "label": "Other EU countries — find your national authority (EASA)",
+              "url": "https://www.easa.europa.eu/en/domains/civil-drones/naa"
+            }
+          ]
+        },
+        {
+          "slug": "drone-250g-weight-limit-meaning",
+          "q": "What does the 250g drone weight limit mean?",
+          "a": "250 grams is the weight threshold most countries use to decide how strictly a drone is regulated. Drones under 250g generally face the lightest rules — often no registration for recreational flying — which is why so many popular 'mini' drones are built to weigh exactly 249g. Once a drone reaches 250g or more (or, in some countries, carries any camera), registration and extra requirements usually apply. The exact rules vary by country, so always check your local aviation authority before flying."
+        },
+        {
+          "slug": "how-long-do-drone-batteries-last",
+          "q": "How long do drone batteries last?",
+          "a": "Most consumer camera drones fly for about 20–45 minutes on a single battery, depending on the model, wind and how hard you fly. That's per battery, not per day — serious flyers carry two or three spares and swap them, since recharging takes a while. When comparing drones, look at the quoted flight time but expect real-world figures to come in a little lower, especially in wind or cold."
+        },
+        {
+          "slug": "are-camera-drones-worth-it",
+          "q": "Are camera drones worth it?",
+          "a": "If you want aerial photos or video, or you'll use one for inspection, mapping or simply the fun of flying, yes — modern camera drones are remarkably capable for the money. Set expectations, though: flight time is limited to roughly half an hour per battery, strong wind grounds smaller drones, and you'll need to follow your country's rules on registration and where you can fly. For casual photography, a sub-250g model keeps both the weight and the paperwork down."
+        }
+      ]
+    },
+    "humanoid-robots": {
+      "category_name": "Humanoid Robots",
+      "maps_to_cat": "Humanoid",
+      "browse_href": "/#db/cat/Humanoid",
+      "intro": "Straight answers about what humanoid robots can actually do today — and what's still marketing.",
+      "questions": [
+        {
+          "slug": "can-you-buy-a-humanoid-robot",
+          "q": "Can you buy a humanoid robot in 2026?",
+          "a": "Sort of — but most aren't consumer products yet. A few, like Unitree's G1, sell at prices a serious enthusiast or developer might pay, but the majority of full-size humanoids (from the likes of Figure, Apptronik and Tesla) are aimed at businesses, sold on a 'price on application' basis, or still in pre-order and pilot stages. If you want one for the home today, options are very limited and expensive. Browse our humanoid robots to see what's actually available versus still in development."
+        },
+        {
+          "slug": "can-humanoid-robots-do-housework",
+          "q": "Can humanoid robots do housework yet?",
+          "a": "Not reliably, and not as a product you can buy to do your chores. Humanoid robots can be impressive in demos — folding laundry, loading dishwashers, tidying — but these are mostly controlled demonstrations or early pilots, not dependable everyday performance in a real, messy home. The technology is advancing quickly, but a humanoid that genuinely does your housework on its own isn't a commercial reality yet. Treat bold marketing clips with healthy skepticism."
+        }
+      ]
+    }
+  }
+}
