@@ -41,11 +41,19 @@ function priceTier(r){
 function priceStars(r){ const t=priceTier(r); if(t==null) return 'Price on application'; return '★'.repeat(t)+'☆'.repeat(5-t); }
 
 /* ---- affiliate (mirrors index.html affiliateLink) ---- */
+function amzQuery(r){
+  var brand=(r.brand||'').trim(), name=(r.name||'').trim();
+  name=name.split(/\s[\u2013\u2014-]\s/)[0].replace(/\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();
+  var q=name;
+  if(brand && name.toLowerCase().indexOf(brand.toLowerCase())!==0) q=brand+' '+name;
+  q=q.replace(/\s+(rose gold|graphite|titanium|black|white|silver|grey|gray|blue|red|green|gold|beige|cream|bronze|copper|pearl|navy)$/i,'');
+  return q.replace(/\s+/g,' ').trim();
+}
 function affiliate(r){
   if(r.buy_hide) return null;
   if(has(r.buy_url)){ let u=r.buy_url; if(/amazon\./i.test(u)&&u.indexOf('tag=')<0) u+=(u.indexOf('?')>=0?'&':'?')+'tag='+AMZ_TAG; return {url:u,label:r.buy_label||'Check price'}; }
   if((r.brand||'').toLowerCase().indexOf('dji')>=0) return null;
-  if(BUYABLE.indexOf(r.cat)>=0){ const q=encodeURIComponent(((r.brand||'')+' '+(r.name||'')).trim()); return {url:'https://www.amazon.com/s?k='+q+'&tag='+AMZ_TAG, label:'Check price on Amazon'}; }
+  if(BUYABLE.indexOf(r.cat)>=0){ const q=encodeURIComponent(amzQuery(r)); return {url:'https://www.amazon.com/s?k='+q+'&tag='+AMZ_TAG, label:'Check price on Amazon'}; }
   return null;
 }
 
