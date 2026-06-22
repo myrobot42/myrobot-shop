@@ -1,10 +1,14 @@
 # netlify.toml
 
-# Regenerate all per-robot SEO pages (/r/*.html) + sitemap.xml from data/robots.json
-# on every deploy, so search pages always reflect the latest catalogue.
+# Regenerate all per-robot SEO pages (/r/*.html), /questions pages + sitemap.xml
+# from data/robots.json and data/questions.json on every deploy.
 [build]
   command = "node generate-pages.js"
   publish = "."
+
+# Pin Node so the build uses a modern runtime (older defaults can fail the build).
+[build.environment]
+  NODE_VERSION = "20"
 
 [functions]
   directory = "netlify/functions"
