@@ -2045,6 +2045,16 @@ function withAmazonTag(u){
   if(/amazon\./i.test(u) && u.indexOf('tag=')<0){ return u+(u.indexOf('?')>=0?'&':'?')+'tag='+AFFILIATE.amazon.tag; }
   return u;
 }
+function amzQuery(r){
+  var brand=(r.brand||'').trim();
+  var name=(r.name||'').trim();
+  name=name.split(/\s[\u2013\u2014-]\s/)[0];
+  name=name.replace(/\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();
+  var q=name;
+  if(brand && name.toLowerCase().indexOf(brand.toLowerCase())!==0) q=brand+' '+name;
+  q=q.replace(/\s+(rose gold|graphite|titanium|black|white|silver|grey|gray|blue|red|green|gold|beige|cream|bronze|copper|pearl|navy)$/i,'');
+  return q.replace(/\s+/g,' ').trim();
+}
 function affiliateLink(r){
   if(!r) return null;
   if(r.buy_hide) return null;   /* worker flagged: not sold on Amazon - suppress button */
@@ -2054,7 +2064,7 @@ function affiliateLink(r){
   for(var k in AFFILIATE.brands){ if(brand.indexOf(k)>=0 && AFFILIATE.brands[k].type==='direct'){ direct=true; } }
   if(direct) return null; /* brand program needs explicit product link; dormant until buy_url set */
   if(AFFILIATE.buyableCats.indexOf(r.cat)>=0){
-    var q=encodeURIComponent(((r.brand||'')+' '+(r.name||'')).trim());
+    var q=encodeURIComponent(amzQuery(r));
     return {url:'https://'+AFFILIATE.amazon.domain+'/s?k='+q+'&tag='+AFFILIATE.amazon.tag,label:'Check price on Amazon',retailer:'Amazon'};
   }
   return null;
@@ -4831,7 +4841,7 @@ function openAffiliate(robotId){
   var r=ROBOTS.find(function(x){return x.id===robotId;});
   if(!r)return;
   if(r.affiliate_url||r.buy_url){window.open(r.affiliate_url||r.buy_url,'_blank');return;}
-  window.open('https://www.amazon.com/s?k='+encodeURIComponent((r.brand||'')+' '+(r.name||'')),'_blank');
+  window.open('https://www.amazon.com/s?k='+encodeURIComponent(amzQuery(r))+'&tag=myrobotshop-20','_blank');
 }
 function isVideoUrl(url){
   if(!url)return false;
