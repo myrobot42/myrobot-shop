@@ -1,0 +1,5555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Favicon — robot mascot (Cloudinary auto-cropped to square) -->
+<link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/djrojgec1/image/upload/c_fit,b_white,w_32,h_32,f_png,q_auto/v1777366404/output_17_t74qys.jpg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/djrojgec1/image/upload/c_fit,b_white,w_16,h_16,f_png,q_auto/v1777366404/output_17_t74qys.jpg">
+<link rel="icon" type="image/png" sizes="192x192" href="https://res.cloudinary.com/djrojgec1/image/upload/c_fit,b_white,w_192,h_192,f_png,q_auto/v1777366404/output_17_t74qys.jpg">
+<link rel="apple-touch-icon" sizes="180x180" href="https://res.cloudinary.com/djrojgec1/image/upload/c_fit,b_white,w_180,h_180,f_png,q_auto/v1777366404/output_17_t74qys.jpg">
+<link rel="shortcut icon" href="https://res.cloudinary.com/djrojgec1/image/upload/c_fit,b_white,w_32,h_32,f_png,q_auto/v1777366404/output_17_t74qys.jpg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>myrobot.shop — World's #1 Robot Database</title>
+<meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
+<link rel="canonical" href="https://myrobot.shop/">
+<meta property="og:site_name" content="myrobot.shop">
+<meta property="og:type" content="website">
+<meta property="og:title" content="myrobot.shop — World's #1 Robot Database">
+<meta property="og:description" content="Detailed specs, comparisons, rankings and videos for 1,600+ robots — humanoids, quadrupeds, industrial arms, drones, space robots and more.">
+<meta property="og:url" content="https://myrobot.shop/">
+<meta property="og:image" content="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_1200/v1777366404/output_17_t74qys.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="myrobot.shop — World's #1 Robot Database">
+<meta name="twitter:description" content="Detailed specs, comparisons, rankings and videos for 1,600+ robots.">
+<meta name="twitter:image" content="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_1200/v1777366404/output_17_t74qys.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"myrobot.shop","url":"https://myrobot.shop/","description":"The world's largest robot database — specs, comparisons, rankings and videos.","potentialAction":{"@type":"SearchAction","target":"https://myrobot.shop/#db?q={search_term_string}","query-input":"required name=search_term_string"}}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --acc:#0066ff;--acc-d:#0044cc;--acc-l:#e8f0ff;
+  --txt:#111827;--mut:#6b7280;--bdr:#e5e7eb;--bdr2:#d1d5db;
+  --bg:#fff;--bg2:#f7f8fa;--bg3:#f0f2f5;
+  --grn:#22c55e;--org:#f97316;--yel:#f59e0b;--red:#ef4444;--purple:#7c3aed;
+}
+body{font-family:'Instrument Sans','Segoe UI',sans-serif;font-size:14px;color:var(--txt);background:var(--bg2);overflow-x:hidden}
+[class*='Space'],[style*='Space Mono']{letter-spacing:-.5px}
+h1,h2,h3{letter-spacing:-1px}
+.page{display:none}.page.active{display:block}.method-page{max-width:840px;margin:0 auto;padding:48px 20px 64px}.method-kicker{font-family:'Space Mono','Courier New',monospace;font-size:11px;font-weight:700;letter-spacing:1px;color:var(--acc);margin-bottom:10px}.method-page h1{font-size:30px;font-weight:800;line-height:1.2;margin-bottom:16px;color:var(--txt)}.method-page h2{font-size:18px;font-weight:800;color:var(--txt);margin:34px 0 10px}.method-page p{font-size:15px;line-height:1.7;color:var(--mut);margin-bottom:14px}.method-page ul{margin:0 0 14px;padding:0;list-style:none}.method-page li{font-size:14px;line-height:1.6;color:var(--mut);padding:9px 0 9px 22px;position:relative;border-bottom:1px solid var(--bdr)}.method-page li:before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:50%;background:var(--acc)}.method-page strong{color:var(--txt);font-weight:700}.method-cta{display:inline-block;margin:6px 0 8px;background:var(--acc);color:#fff;font-size:14px;font-weight:700;padding:11px 18px;border-radius:9px;border:none;cursor:pointer;text-decoration:none}.method-box{background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;padding:18px 20px;margin:8px 0 14px}.method-box p:last-child{margin-bottom:0}
+.mw{max-width:1200px;margin:0 auto;width:100%;padding:0 40px}
+
+/* ── NAV ── */
+nav{border-bottom:1px solid var(--bdr);background:#fff;position:sticky;top:0;z-index:200}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1400px;margin:0 auto;padding:0 32px;height:56px}
+.logo{font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:16px;display:flex;align-items:center;gap:0;cursor:pointer;color:var(--txt);text-decoration:none;letter-spacing:-.5px}
+.logo-bracket{color:var(--mut);font-weight:400}
+.logo-acc{color:var(--acc)}
+.nav-links{display:flex;gap:2px}
+.nav-links a{padding:5px 12px;font-size:13px;color:var(--mut);cursor:pointer;border-radius:6px;font-weight:500;text-decoration:none;transition:all .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--txt);background:var(--bg2)}
+.nav-right{display:flex;gap:8px}
+.btn{padding:6px 16px;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s;border:none}
+.btn-ghost{background:transparent;color:var(--mut);border:1px solid var(--bdr)}
+.btn-ghost:hover{border-color:var(--bdr2);color:var(--txt)}
+.btn-primary{background:var(--acc);color:#fff}
+.btn-primary:hover{background:var(--acc-d)}
+
+/* ── HOME ── */
+.top-bar{background:var(--acc);color:#fff;text-align:center;padding:8px;font-size:12px;font-weight:500}
+.hero{border-bottom:1px solid var(--bdr);background:#fff}
+.hero-inner{display:flex;gap:40px;align-items:center;max-width:1200px;margin:0 auto;padding:48px 40px 40px}
+.hero-left{flex:1;max-width:540px}
+.hero-tag{display:inline-flex;align-items:center;gap:6px;background:var(--acc-l);color:var(--acc);border-radius:20px;padding:4px 12px;font-size:11px;font-weight:600;margin-bottom:18px}
+.hero-tag-dot{width:5px;height:5px;border-radius:50%;background:var(--acc)}
+h1{font-family:'Space Mono','Courier New',monospace;font-size:40px;font-weight:800;line-height:1.1;margin-bottom:14px;letter-spacing:-1px}
+h1 em{color:var(--acc);font-style:normal}
+.hero-sub{font-size:15px;color:var(--mut);line-height:1.7;margin-bottom:24px}
+.search-wrap{display:flex;border:1.5px solid var(--bdr2);border-radius:10px;overflow:hidden;margin-bottom:12px}
+.search-wrap:focus-within{border-color:var(--acc)}
+.search-input{flex:1;border:none;outline:none;padding:12px 15px;font-size:14px;font-family:inherit;color:var(--txt);background:#fff}
+.search-input::placeholder{color:var(--mut)}
+.search-btn{padding:12px 20px;background:var(--acc);color:#fff;border:none;font-size:13px;font-weight:600;cursor:pointer}
+.search-btn:hover{background:var(--acc-d)}
+.brand-tags{display:flex;gap:6px;flex-wrap:wrap}
+.btag{padding:4px 11px;border:1px solid var(--bdr);border-radius:20px;font-size:11px;color:var(--mut);cursor:pointer;transition:all .15s;background:#fff}
+.btag:hover{border-color:var(--acc);color:var(--acc);background:var(--acc-l)}
+.hero-right{display:flex;flex-direction:column;gap:10px;min-width:280px;flex-shrink:0}
+.hero-stat{background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:14px}
+.hsi{width:38px;height:38px;border-radius:9px;background:var(--acc-l);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.hst-num{font-family:'Space Mono','Courier New',monospace;font-size:21px;font-weight:800}
+.hst-lbl{font-size:11px;color:var(--mut);margin-top:1px}
+.section{padding:28px 0}
+.section .mw{padding:0 40px}
+.sec-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.sec-title{font-family:'Space Mono','Courier New',monospace;font-size:17px;font-weight:700}
+.sec-link{font-size:13px;color:var(--acc);cursor:pointer;font-weight:600}
+.sec-link:hover{text-decoration:underline}
+.cat-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:9px}
+.cat-pills{display:flex;flex-wrap:wrap;gap:8px}
+.cat-pill{padding:8px 16px;border:1px solid var(--bdr);border-radius:24px;font-size:12px;font-weight:500;color:var(--txt);cursor:pointer;transition:all .15s;background:#fff;display:inline-flex;align-items:center;gap:7px}
+.cat-pill:hover{border-color:var(--acc);background:var(--acc-l);color:var(--acc)}
+.cat-pill-count{font-size:10px;color:var(--mut);font-weight:600;background:var(--bg2);padding:1px 7px;border-radius:10px}
+.cat-pill:hover .cat-pill-count{background:#fff;color:var(--acc)}
+.cat-card{border:1px solid var(--bdr);border-radius:10px;padding:14px 8px;text-align:center;cursor:pointer;transition:all .15s;background:#fff}
+.cat-card:hover{border-color:var(--acc);background:var(--acc-l)}
+.cat-emoji{font-size:22px;margin-bottom:6px}
+.cat-name{font-size:11px;font-weight:600}
+.cat-count{font-size:10px;color:var(--mut);margin-top:2px}
+.divider{height:1px;background:var(--bdr)}
+.robots-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.robot-card{border:1px solid var(--bdr);border-radius:12px;overflow:hidden;cursor:pointer;transition:all .15s;background:#fff}
+.robot-card:hover{border-color:var(--acc);box-shadow:0 4px 16px rgba(0,102,255,.07)}
+.cmp-badge{position:absolute;top:7px;right:7px;z-index:3;display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.93);border:1px solid var(--bdr);border-radius:6px;padding:3px 7px;font-size:10px;font-weight:700;color:var(--txt);cursor:pointer;backdrop-filter:blur(2px)}
+.cmp-badge input{cursor:pointer;margin:0;accent-color:var(--acc)}
+#compare-tray{position:fixed;left:0;right:0;bottom:0;z-index:1000;display:none;align-items:center;gap:16px;padding:10px 18px;background:#fff;border-top:1px solid var(--bdr);box-shadow:0 -4px 20px rgba(0,0,0,.10)}
+#compare-tray .ct-label{font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--mut)}
+#compare-tray .ct-thumbs{display:flex;gap:10px;flex:1;flex-wrap:wrap}
+.ct-thumb{position:relative;width:46px;height:46px;border:1px solid var(--bdr);border-radius:8px;overflow:hidden;background:#fff}
+.ct-thumb img{width:100%;height:100%;object-fit:cover}
+.ct-thumb .ct-x{position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;background:var(--txt);color:#fff;font-size:10px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;border:2px solid #fff}
+.ct-empty{width:46px;height:46px;border:1px dashed var(--bdr);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--mut);font-size:18px}
+#compare-tray .ct-actions{display:flex;gap:8px;align-items:center}
+.ct-clear{padding:8px 14px;border:1px solid var(--bdr);background:#fff;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;color:var(--txt)}
+.ct-go{padding:8px 16px;border:none;background:var(--acc);color:#fff;border-radius:8px;font-size:12px;font-weight:800;cursor:pointer}
+.ct-go:hover{filter:brightness(1.05)}
+@media(max-width:640px){#compare-tray{gap:8px;padding:8px 10px}#compare-tray .ct-label{display:none}}
+.rr-cmp{display:inline-flex;align-items:center;gap:4px;font-size:11px;font-weight:700;color:var(--txt);cursor:pointer;padding:5px 9px;border:1px solid var(--bdr);border-radius:7px;background:#fff}
+.rr-cmp input{cursor:pointer;margin:0;accent-color:var(--acc)}
+.rc-img{aspect-ratio:1/1;background:#fff;display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px solid var(--bdr);font-size:56px;overflow:hidden;padding:12px;box-sizing:border-box}
+.rc-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;position:relative;display:block}
+.rc-img .rc-emoji{position:relative;z-index:1}
+.rc-badge{position:absolute;top:9px;left:9px;padding:2px 8px;border-radius:4px;font-size:9px;font-weight:700}
+.badge-new{background:#dcfce7;color:#16a34a}
+.badge-hot{background:#fef3c7;color:#d97706}
+.badge-top{background:#ede9fe;color:#7c3aed}
+.rc-info{padding:12px}
+.rc-brand{font-size:9px;font-weight:700;color:var(--mut);letter-spacing:.8px;margin-bottom:3px}
+.rc-name{font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:800;margin-bottom:7px}
+.rc-specs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px}
+.pill{padding:2px 7px;background:var(--bg2);border:1px solid var(--bdr);border-radius:4px;font-size:10px;color:var(--mut);font-weight:500}
+.rc-footer{display:flex;justify-content:space-between;align-items:center;padding-top:9px;border-top:1px solid var(--bdr)}
+.rc-rating{display:flex;align-items:center;gap:3px;font-size:11px;color:var(--mut)}
+.stars{color:var(--yel);font-size:10px}
+.compare-banner-outer{padding:0 40px 28px}
+.compare-banner-inner{max-width:1200px;margin:0 auto}
+.compare-banner{background:var(--txt);border-radius:14px;padding:28px 36px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.cb-left h3{font-family:'Space Mono','Courier New',monospace;font-size:20px;font-weight:800;color:#fff;margin-bottom:6px}
+.cb-left p{font-size:13px;color:rgba(255,255,255,.6);max-width:400px;line-height:1.6}
+.btn-cb{padding:11px 24px;background:#fff;color:var(--txt);border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+.chart-list{display:flex;flex-direction:column;gap:8px}
+.home-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px}
+.home-col{min-width:0}
+@media(max-width:900px){.home-cols{grid-template-columns:1fr}}
+.chart-item{display:flex;align-items:center;gap:12px;border:1px solid var(--bdr);border-radius:10px;padding:11px 14px;cursor:pointer;transition:all .15s;background:#fff}
+.chart-item:hover{border-color:var(--acc);background:var(--acc-l)}
+.chart-rank{font-family:'Space Mono','Courier New',monospace;font-size:15px;font-weight:800;color:var(--mut);min-width:22px;text-align:center}
+.chart-rank.gold{color:var(--yel)}.chart-rank.silver{color:#9ca3af}.chart-rank.bronze{color:#d97706}
+.chart-icon{width:36px;height:36px;background:var(--bg2);border:1px solid var(--bdr);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.chart-info{flex:1}
+.chart-name{font-size:12px;font-weight:600}
+.chart-sub{font-size:10px;color:var(--mut);margin-top:1px}
+.chart-score{display:flex;flex-direction:column;align-items:flex-end;gap:3px}
+.score-num{font-family:'Space Mono','Courier New',monospace;font-size:15px;font-weight:800;color:var(--acc)}
+.score-bar-mini{width:55px;height:4px;background:var(--bg3);border-radius:2px;overflow:hidden}
+.score-fill-mini{height:100%;background:var(--acc);border-radius:2px}
+footer{background:var(--bg2);border-top:1px solid var(--bdr)}
+.footer-inner{max-width:1200px;margin:0 auto;padding:36px 40px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px}
+.footer-brand{font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:15px;display:flex;align-items:center;gap:0;margin-bottom:8px;letter-spacing:-.5px}
+.footer-desc{font-size:12px;color:var(--mut);line-height:1.7;max-width:200px}
+.footer-col h4{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin-bottom:12px}
+.footer-col a{display:block;font-size:12px;color:var(--txt);margin-bottom:7px;opacity:.7;cursor:pointer;transition:opacity .15s;text-decoration:none}
+.footer-col a:hover{opacity:1;color:var(--acc)}
+.footer-bottom{border-top:1px solid var(--bdr);background:var(--bg2)}
+.footer-bottom-inner{max-width:1200px;margin:0 auto;padding:14px 40px;display:flex;justify-content:space-between;font-size:11px;color:var(--mut)}
+
+/* Social media icons */
+.social-row{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+.social-icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:all .15s;cursor:pointer}
+.social-icon:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(0,0,0,.15)}
+.social-icon svg{width:18px;height:18px}
+.social-icon.youtube{background:#ff0000}
+.social-icon.x{background:#000}
+.social-icon.facebook{background:#1877f2}
+.social-icon.instagram{background:linear-gradient(45deg,#f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)}
+.social-row-lg .social-icon{width:42px;height:42px;border-radius:10px}
+.social-row-lg .social-icon svg{width:22px;height:22px}
+
+/* ── DATABASE ── */
+.page-header{background:#fff;border-bottom:1px solid var(--bdr)}
+.page-header-inner{max-width:1400px;margin:0 auto;padding:16px 32px}
+.ph-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.page-title{font-family:'Space Mono','Courier New',monospace;font-size:19px;font-weight:800}
+.result-count{font-size:11px;color:var(--mut);font-weight:500}
+.search-row{display:flex;gap:10px;align-items:center}
+.db-search{flex:1;max-width:480px;display:flex;border:1.5px solid var(--bdr2);border-radius:8px;overflow:hidden}
+.db-search:focus-within{border-color:var(--acc)}
+.db-search input{flex:1;border:none;outline:none;padding:8px 13px;font-size:13px;font-family:inherit;color:var(--txt);background:#fff}
+.db-search button{padding:8px 15px;background:var(--acc);color:#fff;border:none;font-size:12px;font-weight:600;cursor:pointer}
+.view-btns{display:flex;border:1px solid var(--bdr);border-radius:7px;overflow:hidden}
+.view-btn{padding:6px 11px;font-size:11px;cursor:pointer;border:none;font-family:inherit;background:#fff;color:var(--mut);font-weight:500}
+.view-btn.active{background:var(--txt);color:#fff}
+.sort-sel{padding:7px 10px;border:1px solid var(--bdr2);border-radius:6px;font-size:12px;color:var(--txt);background:#fff;cursor:pointer;font-family:inherit;appearance:none;padding-right:22px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+.db-wrap{display:grid;grid-template-columns:220px 1fr;max-width:1400px;margin:0 auto;padding-bottom:40px}
+.filters{padding:18px 14px;border-right:1px solid var(--bdr);background:#fff}
+.filter-section{margin-bottom:18px}
+.filter-title{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin-bottom:9px;display:flex;justify-content:space-between;align-items:center}
+.filter-clear{font-size:10px;color:var(--acc);cursor:pointer;font-weight:600}
+.filter-options{display:flex;flex-direction:column;gap:5px}
+.filter-opt{display:flex;align-items:center;gap:7px;cursor:pointer;padding:4px 7px;border-radius:5px;transition:background .1s}
+.filter-opt:hover{background:var(--bg2)}
+.filter-opt input[type=checkbox]{accent-color:var(--acc);width:12px;height:12px;cursor:pointer}
+.filter-opt-label{font-size:12px;color:var(--txt);font-weight:500;flex:1}
+.filter-opt-count{font-size:10px;color:var(--mut)}
+.filter-divider{height:1px;background:var(--bdr);margin:14px 0}
+.apply-btn{width:100%;padding:8px;background:var(--acc);color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
+.reset-btn{width:100%;padding:7px;background:transparent;color:var(--mut);border:1px solid var(--bdr);border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;margin-top:5px}
+.results-col{padding:18px 22px}
+.robot-list{display:flex;flex-direction:column;gap:9px}
+.robot-row{background:#fff;border:1px solid var(--bdr);border-radius:10px;padding:13px 15px;display:flex;align-items:center;gap:14px;cursor:pointer;transition:all .15s}
+.robot-row:hover{border-color:var(--acc);box-shadow:0 2px 12px rgba(0,102,255,.06)}
+.rr-rank{font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:800;color:var(--mut);min-width:22px;text-align:center}
+.rr-rank.gold{color:var(--yel)}.rr-rank.silver{color:#9ca3af}.rr-rank.bronze{color:#d97706}
+.rr-icon{width:48px;height:48px;background:var(--bg2);border:1px solid var(--bdr);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.rr-info{flex:1;min-width:0}
+.rr-brand{font-size:9px;font-weight:700;color:var(--mut);letter-spacing:.8px;margin-bottom:2px}
+.rr-name{font-family:'Space Mono','Courier New',monospace;font-size:14px;font-weight:800;margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rr-pills{display:flex;gap:4px;flex-wrap:wrap}
+.rr-specs-row{display:flex;gap:14px;align-items:center}
+.rr-spec{text-align:center}
+.rr-spec-val{font-size:12px;font-weight:700}
+.rr-spec-lbl{font-size:9px;color:var(--mut);margin-top:1px}
+.rr-right{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0}
+.rr-score{width:38px;height:38px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff}
+.rr-price{font-size:12px;font-weight:800;color:var(--txt)}
+.rr-rating{color:var(--yel);font-size:10px}
+.rr-actions{display:flex;gap:5px}
+.rr-btn{padding:4px 10px;border-radius:5px;font-size:10px;font-weight:600;cursor:pointer;font-family:inherit;border:1px solid var(--bdr);background:#fff;color:var(--mut);transition:all .15s}
+.rr-btn:hover{border-color:var(--acc);color:var(--acc)}
+.rr-btn.primary{background:var(--acc);color:#fff;border-color:var(--acc)}
+.grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px}
+.no-results{text-align:center;padding:50px 20px;color:var(--mut)}
+.no-results h3{font-size:17px;font-weight:700;margin-bottom:7px;color:var(--txt)}
+.active-filters-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;min-height:20px}
+.filter-tag{display:flex;align-items:center;gap:4px;padding:3px 9px;background:var(--acc-l);border:1px solid rgba(0,102,255,.2);border-radius:20px;font-size:10px;color:var(--acc);font-weight:600}
+.pagination{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:22px}
+.page-btn{width:32px;height:32px;border-radius:6px;border:1px solid var(--bdr);background:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--mut);display:flex;align-items:center;justify-content:center}
+.page-btn.active{background:var(--acc);color:#fff;border-color:var(--acc)}
+
+/* ── PROFILE ── */
+.breadcrumb{padding:10px 0;font-size:12px;color:var(--mut);border-bottom:1px solid var(--bdr);background:var(--bg2)}
+.breadcrumb-inner{max-width:1200px;margin:0 auto;padding:0 36px}
+.breadcrumb span{color:var(--acc);cursor:pointer}
+.breadcrumb span:hover{text-decoration:underline}
+.profile-layout{display:grid;grid-template-columns:1fr 300px;max-width:1200px;margin:0 auto;padding:0 36px 50px}
+.main-col{padding-top:24px;padding-right:32px;border-right:1px solid var(--bdr)}
+.sidebar{padding-top:24px;padding-left:24px}
+.robot-header{display:flex;gap:24px;margin-bottom:28px}
+.gallery-wrap{width:400px;flex-shrink:0}
+.gallery-main{width:400px;height:400px;background:#fff;border:1px solid var(--bdr);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;position:relative;font-size:96px;overflow:hidden;padding:14px;box-sizing:border-box}
+.gallery-main img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+.gallery-badge{position:absolute;top:9px;left:9px;padding:3px 9px;border-radius:4px;font-size:9px;font-weight:700;background:#fef3c7;color:#d97706;z-index:2}
+.gallery-thumbs{display:flex;gap:6px}
+.thumb{flex:1;height:80px;background:#fff;border:1px solid var(--bdr);border-radius:7px;cursor:pointer;overflow:hidden;display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--mut);font-weight:500;transition:all .15s;padding:6px;box-sizing:border-box;min-width:0}
+.thumb img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block}
+.thumb.active{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc-l)}
+.thumb:hover{border-color:var(--acc)}
+.title-block{flex:1}
+.brand-row{display:flex;align-items:center;gap:7px;margin-bottom:7px;flex-wrap:wrap}
+.brand-name{font-size:10px;font-weight:700;color:var(--mut);letter-spacing:1px}
+.badge{padding:3px 8px;border-radius:4px;font-size:9px;font-weight:700}
+.badge-hot2{background:#fef3c7;color:#d97706}
+.badge-top2{background:#ede9fe;color:#7c3aed}
+.robot-title{font-family:'Space Mono','Courier New',monospace;font-size:26px;font-weight:800;line-height:1.15;margin-bottom:7px;letter-spacing:-.5px}
+.robot-tagline{font-size:13px;color:var(--mut);line-height:1.65;margin-bottom:14px}
+.rating-row{display:flex;align-items:center;gap:9px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--bdr);flex-wrap:wrap}
+.stars-lg{color:var(--yel);font-size:14px;letter-spacing:1px}
+.rating-num{font-family:'Space Mono','Courier New',monospace;font-size:18px;font-weight:800}
+.rating-count{font-size:12px;color:var(--mut)}
+.overall-score{display:flex;align-items:center;gap:10px;margin-left:auto}
+.trending-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#f97316,#ef4444);color:#fff;font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;cursor:pointer;box-shadow:0 2px 8px rgba(239,68,68,.3);transition:transform .15s}
+.trending-badge:hover{transform:translateY(-1px)}
+.trending-rank{background:rgba(255,255,255,.25);border-radius:10px;padding:1px 7px;font-size:11px;margin-left:1px}
+.score-circle{width:48px;height:48px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;flex-direction:column}
+.score-circle-num{font-family:'Space Mono','Courier New',monospace;font-size:15px;font-weight:800;color:#fff;line-height:1}
+.score-circle-lbl{font-size:7px;color:rgba(255,255,255,.8);margin-top:1px}
+.quick-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:18px}
+.qs{background:var(--bg2);border:1px solid var(--bdr);border-radius:8px;padding:9px 11px}
+.qs-label{font-size:9px;font-weight:600;color:var(--mut);letter-spacing:.5px;margin-bottom:2px}
+.qs-val{font-family:'Space Mono','Courier New',monospace;font-size:14px;font-weight:700}
+.qs-unit{font-size:10px;color:var(--mut);font-weight:400}
+.action-row{display:flex;gap:7px;flex-wrap:wrap}
+.btn-action{padding:10px 20px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .15s}
+.btn-action.primary{background:var(--acc);color:#fff;border:none}
+.btn-action.primary:hover{background:var(--acc-d)}
+.btn-action.secondary{background:transparent;color:var(--acc);border:1.5px solid var(--acc)}
+.btn-action.ghost{background:transparent;color:var(--mut);border:1px solid var(--bdr)}
+.section-block{margin-bottom:26px}
+.block-title{font-family:'Space Mono','Courier New',monospace;font-size:14px;font-weight:700;margin-bottom:12px;padding-bottom:9px;border-bottom:1px solid var(--bdr2)}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.perf-card{background:var(--bg2);border:1px solid var(--bdr);border-radius:9px;padding:12px}
+.perf-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:7px}
+.perf-label{font-size:11px;color:var(--mut);font-weight:500}
+.perf-num{font-family:'Space Mono','Courier New',monospace;font-size:17px;font-weight:800;color:var(--acc)}
+.perf-bar{height:5px;background:var(--bdr);border-radius:3px;overflow:hidden}
+.perf-fill{height:100%;border-radius:3px}
+.specs-table{width:100%;border-collapse:collapse}
+.specs-table tr{border-bottom:1px solid var(--bdr)}
+.specs-table tr:last-child{border-bottom:none}
+.specs-table td{padding:9px 0;font-size:12px;vertical-align:top}
+.specs-table td:first-child{color:var(--mut);width:42%;padding-right:14px;font-weight:500}
+.specs-table td:last-child{color:var(--txt);font-weight:600}
+.specs-table .spec-grp td.spec-cat{vertical-align:top;width:150px;padding:13px 14px 13px 0;font-size:12px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--acc)}
+.specs-table .spec-grp td.spec-fields{padding:7px 0;font-weight:400}
+.sf-row{display:flex;gap:14px;padding:6px 0;align-items:baseline}
+.sf-row .sf-label{flex:0 0 38%;color:var(--mut);font-size:12px;font-weight:500}
+.sf-row .sf-val{flex:1;font-size:12.5px;color:var(--txt);font-weight:600;line-height:1.5}
+@media(max-width:560px){.specs-table .spec-grp td.spec-cat{width:92px;font-size:10px;padding-right:8px}.sf-row{flex-direction:column;gap:2px}.sf-row .sf-label{flex:none}}
+.spec-group{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--acc);padding:11px 0 3px!important;border-bottom:none!important}
+.review-list{display:flex;flex-direction:column;gap:11px}
+.review{background:var(--bg2);border:1px solid var(--bdr);border-radius:9px;padding:14px}
+.review-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:9px}
+.reviewer{display:flex;align-items:center;gap:9px}
+.avatar{width:32px;height:32px;border-radius:50%;background:var(--acc-l);border:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--acc);flex-shrink:0}
+.reviewer-name{font-size:12px;font-weight:600}
+.reviewer-role{font-size:10px;color:var(--mut)}
+.review-stars{color:var(--yel);font-size:11px}
+.review-text{font-size:12px;color:var(--mut);line-height:1.65}
+.review-tag{display:inline-block;margin-top:9px;padding:2px 9px;background:var(--acc-l);border-radius:3px;font-size:10px;color:var(--acc);font-weight:600}
+.price-card{background:var(--bg2);border:1px solid var(--bdr);border-radius:11px;padding:18px;margin-bottom:14px}
+.price-label{font-size:9px;font-weight:700;color:var(--mut);letter-spacing:.8px;margin-bottom:5px}
+.price-main{font-family:'Space Mono','Courier New',monospace;font-size:28px;font-weight:800;margin-bottom:2px}
+.price-note{font-size:11px;color:var(--mut);margin-bottom:14px}
+.btn-full{width:100%;padding:11px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;margin-bottom:7px;border:none}
+.btn-full.primary{background:var(--acc);color:#fff}
+.btn-full.outline{background:transparent;color:var(--acc);border:1.5px solid var(--acc)}
+.price-features{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.pf{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--mut)}
+.pf-check{width:13px;height:13px;border-radius:50%;background:var(--acc-l);display:flex;align-items:center;justify-content:center;font-size:8px;color:var(--acc);flex-shrink:0}
+.vs-card{border:1.5px solid var(--acc);border-radius:9px;padding:12px;margin-bottom:14px;cursor:pointer;transition:background .15s}
+.vs-card:hover{background:var(--acc-l)}
+.vs-label{font-size:9px;font-weight:700;color:var(--mut);letter-spacing:.8px;margin-bottom:5px}
+.vs-names{font-size:12px;font-weight:600;margin-bottom:9px}
+.btn-vs{width:100%;padding:7px;background:var(--acc);color:#fff;border:none;border-radius:5px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit}
+.sidebar-title{font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:700;margin-bottom:11px}
+.similar-list{display:flex;flex-direction:column;gap:7px}
+.similar-item{display:flex;gap:9px;background:var(--bg2);border:1px solid var(--bdr);border-radius:9px;padding:9px 11px;cursor:pointer;transition:all .15s;align-items:center}
+.similar-item:hover{border-color:var(--acc);background:var(--acc-l)}
+.similar-icon{width:36px;height:36px;background:#fff;border:1px solid var(--bdr);border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.similar-info{flex:1}
+.similar-name{font-size:12px;font-weight:600}
+.similar-sub{font-size:10px;color:var(--mut);margin-top:1px}
+.similar-price{font-size:11px;font-weight:700;color:var(--acc)}
+
+/* ── COMPARE ── */
+.compare-page{max-width:1100px;margin:0 auto;padding:28px 36px 50px}
+.compare-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;width:100%}
+.compare-slot{border:2px dashed var(--bdr2);border-radius:10px;padding:12px;text-align:center;cursor:pointer;transition:all .15s;background:#fff;min-height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
+.compare-slot.filled{border:2px solid var(--acc);cursor:default;text-align:left;align-items:flex-start}
+.compare-slot:hover:not(.filled){border-color:var(--acc);background:var(--acc-l)}
+.slot-plus{width:28px;height:28px;border-radius:50%;border:2px dashed var(--bdr2);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--mut)}
+.slot-placeholder{font-size:11px;color:var(--mut);font-weight:500}
+.slot-brand{font-size:9px;font-weight:700;color:var(--mut);letter-spacing:.8px}
+.slot-name{font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:800;margin-bottom:3px}
+.slot-remove{font-size:10px;color:var(--red);cursor:pointer;font-weight:600;align-self:flex-end;margin-top:auto}
+.robot-selector{background:#fff;border:1px solid var(--bdr);border-radius:12px;padding:18px;margin-bottom:18px}
+.rs-title{font-family:'Space Mono','Courier New',monospace;font-size:14px;font-weight:700;margin-bottom:12px}
+.rs-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}
+.rs-item{border:1px solid var(--bdr);border-radius:9px;padding:10px 9px;cursor:pointer;transition:all .15s;background:#fff;text-align:center}
+.rs-item:hover,.rs-item.selected{border-color:var(--acc);background:var(--acc-l)}
+.rs-brand{font-size:8px;font-weight:700;color:var(--mut);letter-spacing:.7px;margin-bottom:2px}
+.rs-name{font-size:11px;font-weight:700}
+.rs-score{display:inline-block;padding:2px 6px;background:var(--acc);color:#fff;border-radius:3px;font-size:9px;font-weight:800;margin-top:4px}
+.compare-table-wrap{background:#fff;border:1px solid var(--bdr);border-radius:12px;overflow:hidden}
+.compare-table{width:100%;border-collapse:collapse}
+.compare-table th{padding:14px 18px;font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--mut);border-bottom:2px solid var(--bdr);text-align:left;background:var(--bg2)}
+.compare-table th:not(:first-child){text-align:center;color:var(--txt);font-family:'Space Mono','Courier New',monospace;font-size:13px;letter-spacing:0;font-weight:800}
+.compare-table td{padding:10px 18px;border-bottom:1px solid var(--bdr);font-size:12px}
+.compare-table td:first-child{color:var(--mut);font-weight:500;font-size:11px}
+.compare-table td:not(:first-child){text-align:center;font-weight:600}
+.compare-table tr:last-child td{border-bottom:none}
+.compare-table tr:hover td{background:var(--bg2)}
+.cat-row td{background:var(--acc-l)!important;font-size:9px;font-weight:700;letter-spacing:.8px;color:var(--acc)!important;padding:7px 18px!important}
+.best-val{color:var(--acc);font-weight:800}
+.cta-row{display:flex;justify-content:center;gap:12px;margin-top:18px}
+
+/* ── RANKINGS ── */
+.rankings-page{max-width:900px;margin:0 auto;padding:28px 36px 50px}
+.rank-item{display:flex;align-items:center;gap:14px;border:1px solid var(--bdr);border-radius:12px;padding:15px 18px;cursor:pointer;transition:all .15s;background:#fff;margin-bottom:9px}
+.rank-item:hover{border-color:var(--acc);box-shadow:0 4px 16px rgba(0,102,255,.07)}
+.rank-num{font-family:'Space Mono','Courier New',monospace;font-size:20px;font-weight:800;min-width:32px;text-align:center}
+.rank-num.gold{color:var(--yel)}.rank-num.silver{color:#9ca3af}.rank-num.bronze{color:#d97706}
+.rank-icon{width:50px;height:50px;background:var(--bg2);border:1px solid var(--bdr);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:24px;flex-shrink:0}
+.rank-info{flex:1}
+.rank-brand{font-size:9px;font-weight:700;color:var(--mut);letter-spacing:.8px;margin-bottom:2px}
+.rank-name{font-family:'Space Mono','Courier New',monospace;font-size:15px;font-weight:700}
+.rank-cat{font-size:11px;color:var(--mut);margin-top:2px}
+.rank-pills{display:flex;gap:6px;margin-top:7px}
+.rank-score-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:5px;min-width:90px}
+.rank-score{font-family:'Space Mono','Courier New',monospace;font-size:26px;font-weight:800;color:var(--acc);line-height:1}
+.rank-score-lbl{font-size:9px;color:var(--mut)}
+.rank-stars{color:var(--yel);font-size:12px}
+.score-bar{width:75px;height:4px;background:var(--bg3);border-radius:2px;overflow:hidden}
+.score-fill{height:100%;background:var(--acc);border-radius:2px}
+.tabs{display:flex;gap:3px;margin-top:16px;flex-wrap:wrap}
+.tab{padding:6px 14px;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;color:var(--mut);transition:all .15s;border:1px solid transparent}
+.tab.active{background:var(--acc);color:#fff}
+.tab:hover:not(.active){background:var(--bg2);color:var(--txt)}
+
+/* ── NEWS ── */
+.news-page{max-width:1000px;margin:0 auto;padding:28px 36px 50px}
+.news-layout{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:28px}
+.news-card{border:1px solid var(--bdr);border-radius:12px;overflow:hidden;cursor:pointer;transition:border-color .15s;background:#fff}
+.news-card:hover{border-color:var(--acc)}
+.news-card.featured{grid-column:span 2}
+.news-img{height:150px;background:var(--bg3);border-bottom:1px solid var(--bdr);display:flex;align-items:center;justify-content:center;position:relative}
+.news-img.featured{height:190px}
+.news-img-label{font-family:'Space Mono','Courier New',monospace;font-size:42px;font-weight:800;color:var(--bdr2)}
+.news-cat{position:absolute;top:11px;left:11px;padding:2px 9px;background:var(--acc);color:#fff;border-radius:3px;font-size:9px;font-weight:700;letter-spacing:.3px}
+.news-body{padding:14px}
+.news-title{font-size:13px;font-weight:600;line-height:1.5;margin-bottom:7px}
+.news-title.featured{font-size:16px}
+.news-meta{font-size:11px;color:var(--mut)}
+.news-list-items{display:flex;flex-direction:column;gap:11px}
+.news-list-item{border:1px solid var(--bdr);border-radius:10px;padding:14px 16px;cursor:pointer;transition:border-color .15s;background:#fff}
+.news-list-item:hover{border-color:var(--acc)}
+.nli-cat{font-size:9px;font-weight:700;letter-spacing:.5px;margin-bottom:5px}
+.nli-title{font-size:13px;font-weight:600;line-height:1.5;margin-bottom:5px}
+.nli-meta{font-size:11px;color:var(--mut)}
+.nli-thumb{width:116px;height:82px;flex-shrink:0;border-radius:8px;background:var(--bg3);background-size:cover;background-position:center;background-repeat:no-repeat}
+.nli-thumb-ph{display:flex;align-items:center;justify-content:center}
+.nli-thumb-ph span{font-family:'Space Mono','Courier New',monospace;font-size:11px;font-weight:800;color:var(--bdr2);letter-spacing:.5px;text-align:center;padding:0 6px;line-height:1.2}
+@media(max-width:600px){.nli-thumb{width:94px;height:68px}}
+
+/* ── FINDER ── */
+/* ── Finder: GSMArena-style ── */
+.finder-band{background:#fff;border-bottom:1px solid var(--bdr);padding:24px 20px 0}
+.finder-band h1{font-family:'Space Mono','Courier New',monospace;font-size:24px;font-weight:800;color:var(--txt);margin-bottom:4px;text-align:center}
+.finder-band p{font-size:12px;color:var(--mut);text-align:center;margin-bottom:18px}
+.cat-wrap{margin:0 -20px;padding:0 20px;border-bottom:1px solid var(--bdr)}
+.ftabs{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;max-width:1100px;margin:0 auto;padding-bottom:20px}
+.ftab{padding:9px 12px;font-size:12px;font-weight:600;color:var(--mut);cursor:pointer;border:1px solid var(--bdr);border-radius:8px;background:#fff;transition:all .15s;display:flex;align-items:center;justify-content:space-between;gap:6px;white-space:nowrap}
+.ftab:hover{color:var(--txt);border-color:var(--mut)}
+.ftab.active{color:var(--acc);border-color:var(--acc);background:var(--acc-l)}
+.fcnt{font-size:10px;color:var(--mut);font-weight:600;background:var(--bg2);padding:1px 6px;border-radius:9px}
+.ftab.active .fcnt{background:var(--acc-l);color:var(--acc)}
+.finder-body{display:block;max-width:1100px;margin:0 auto;padding:24px 20px 100px}
+.finder-fp{background:transparent;padding:0}
+
+/* Filter section grid + cards */
+.finder-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:20px}
+.fsc{background:#fff;border:1px solid var(--bdr);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:14px}
+.fsc-title{font-size:11px;font-weight:700;letter-spacing:.6px;color:var(--mut);text-transform:uppercase;margin-bottom:2px;padding-bottom:8px;border-bottom:1px solid var(--bdr)}
+.fsc-field{display:flex;flex-direction:column;gap:6px}
+.fsc-label{font-size:11px;font-weight:600;color:var(--txt);display:flex;justify-content:space-between;align-items:center}
+.fsc-label-val{font-size:10px;color:var(--acc);font-weight:600}
+
+/* Dual range slider */
+.range-slider{position:relative;height:24px;display:flex;align-items:center}
+.range-slider input[type=range]{position:absolute;left:0;right:0;width:100%;height:4px;background:transparent;-webkit-appearance:none;appearance:none;pointer-events:none;outline:none;margin:0;padding:0}
+.range-slider input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;background:var(--acc);cursor:pointer;pointer-events:all;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.range-slider input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--acc);cursor:pointer;pointer-events:all;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.range-track{position:absolute;left:0;right:0;height:4px;background:var(--bdr);border-radius:2px;top:50%;transform:translateY(-50%)}
+.range-track-fill{position:absolute;height:100%;background:var(--acc);border-radius:2px}
+
+/* Multi-select brand dropdown */
+.ms-dd{position:relative}
+.ms-dd-btn{width:100%;padding:8px 10px;border:1px solid var(--bdr2);border-radius:6px;background:#fff;font-size:12px;color:var(--txt);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit;text-align:left}
+.ms-dd-btn:hover{border-color:var(--acc)}
+.ms-dd-btn-arrow{font-size:8px;color:var(--mut)}
+.ms-dd-panel{position:absolute;left:0;right:0;top:calc(100% + 4px);background:#fff;border:1px solid var(--bdr);border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.08);max-height:260px;overflow:hidden;z-index:50;display:none;flex-direction:column}
+.ms-dd-panel.open{display:flex}
+.ms-dd-search{padding:8px;border-bottom:1px solid var(--bdr)}
+.ms-dd-search input{width:100%;padding:6px 8px;border:1px solid var(--bdr);border-radius:5px;font-size:11px;font-family:inherit}
+.ms-dd-list{flex:1;overflow-y:auto;padding:4px 0;max-height:200px}
+.ms-dd-opt{padding:6px 10px;font-size:11px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ms-dd-opt:hover{background:var(--bg2)}
+.ms-dd-opt input{accent-color:var(--acc);margin:0}
+.ms-dd-opt-label{flex:1}
+.ms-dd-opt-count{color:var(--mut);font-size:10px}
+
+/* Checkbox group */
+.fsc-cb-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:4px}
+.fsc-cb{display:flex;align-items:center;gap:6px;padding:5px 7px;border-radius:5px;cursor:pointer;transition:background .1s;font-size:11px;color:var(--txt)}
+.fsc-cb:hover{background:var(--bg2)}
+.fsc-cb input{accent-color:var(--acc);width:13px;height:13px;cursor:pointer;flex-shrink:0;margin:0}
+.fsc-cb-count{font-size:10px;color:var(--mut);margin-left:auto}
+
+/* Sticky bottom bar */
+.finder-bottom{position:sticky;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--bdr);box-shadow:0 -4px 12px rgba(0,0,0,.04);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:12px;z-index:30;margin:24px -20px 0;flex-wrap:wrap}
+.finder-bottom-count{font-size:13px;font-weight:600}
+.finder-bottom-count em{color:var(--acc);font-style:normal;font-weight:800}
+.finder-show-btn{padding:10px 22px;background:var(--acc);color:#fff;border:none;border-radius:7px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:8px;transition:all .15s}
+.finder-show-btn:hover{background:#0052cc;transform:translateY(-1px)}
+.finder-show-btn:disabled{background:var(--bdr);cursor:not-allowed}
+.finder-reset-btn{padding:8px 14px;background:transparent;color:var(--mut);border:1px solid var(--bdr);border-radius:7px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit}
+.finder-reset-btn:hover{color:var(--txt);border-color:var(--mut)}
+
+/* Active filter pills */
+.fatags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.fatag{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;background:var(--acc-l);border:1px solid rgba(0,102,255,.2);border-radius:14px;font-size:11px;color:var(--acc);font-weight:600;cursor:pointer;white-space:nowrap}
+.fatag:hover{background:rgba(0,102,255,.18)}
+
+/* Results section (existing styling kept) */
+.finder-results{padding:0}
+.finder-toolbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:8px;flex-wrap:wrap;padding-bottom:12px;border-bottom:1px solid var(--bdr)}
+.finder-count{font-size:13px;font-weight:600}
+.finder-count em{color:var(--acc);font-style:normal}
+.fr-right{display:flex;gap:6px;align-items:center;flex-shrink:0}
+.fssel{padding:6px 10px;border:1px solid var(--bdr2);border-radius:5px;font-size:11px;color:var(--txt);background:#fff;cursor:pointer;font-family:inherit;appearance:none;padding-right:20px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 7px center}
+.fvbtns{display:flex;border:1px solid var(--bdr);border-radius:5px;overflow:hidden}
+.fvbtn{padding:6px 10px;font-size:11px;cursor:pointer;border:none;font-family:inherit;background:#fff;color:var(--mut);font-weight:500}
+.fvbtn.active{background:var(--txt);color:#fff}
+
+/* Finder mobile responsive */
+@media (max-width: 640px){
+  .finder-band{padding:18px 14px 0}
+  .finder-band h1{font-size:20px}
+  .finder-band p{font-size:11px}
+  .ftab{padding:9px 11px;font-size:11px}
+  .finder-body{padding:16px 14px 110px}
+  .finder-grid{grid-template-columns:1fr;gap:10px}
+  .fsc{padding:14px}
+  .range-slider{height:32px}
+  .range-slider input[type=range]::-webkit-slider-thumb{width:22px;height:22px}
+  .range-slider input[type=range]::-moz-range-thumb{width:22px;height:22px}
+  .fsc-cb-group{grid-template-columns:1fr 1fr}
+  .finder-bottom{padding:12px 14px;margin:18px -14px 0;gap:8px}
+  .finder-show-btn{padding:11px 18px;font-size:13px;flex:1;justify-content:center}
+  .finder-reset-btn{padding:11px 12px;font-size:11px;flex-shrink:0}
+}
+.frlist{display:flex;flex-direction:column;gap:7px}
+.frrow{background:#fff;border:1px solid var(--bdr);border-radius:9px;padding:10px 12px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:all .15s}
+.frrow:hover{border-color:var(--acc);box-shadow:0 2px 10px rgba(0,102,255,.06)}
+.frnum{font-size:10px;font-weight:800;color:var(--mut);min-width:16px;text-align:center;flex-shrink:0}
+.frnum.gold{color:var(--yel)}.frnum.silver{color:#9ca3af}.frnum.bronze{color:#d97706}
+.frico{width:40px;height:40px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;background:var(--bg2);border:1px solid var(--bdr)}
+.frinfo{flex:1;min-width:0}
+.frbrand{font-size:8px;font-weight:700;color:var(--mut);letter-spacing:.6px;margin-bottom:1px}
+.frname{font-family:'Space Mono','Courier New',monospace;font-size:12px;font-weight:800;margin-bottom:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frsub{font-size:9px;color:var(--purple);font-weight:600;margin-bottom:2px}
+.frdesc{font-size:10px;color:var(--mut);line-height:1.4;margin-bottom:3px}
+.frpills{display:flex;gap:3px;flex-wrap:wrap}
+.frspecs{display:flex;gap:10px;flex-shrink:0}
+.frs{text-align:center}
+.frsv{font-size:10px;font-weight:700}
+.frsl{font-size:8px;color:var(--mut)}
+.frright{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0;min-width:70px}
+.frscore{width:30px;height:30px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff}
+.frprice{font-size:10px;font-weight:800;color:var(--txt)}
+.frstars{color:var(--yel);font-size:9px}
+.fracts{display:flex;gap:3px}
+.fra{padding:3px 7px;border-radius:4px;font-size:9px;font-weight:600;cursor:pointer;font-family:inherit;border:1px solid var(--bdr);background:#fff;color:var(--mut)}
+.fra:hover{border-color:var(--acc);color:var(--acc)}
+.fra.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+.frgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:8px}
+.frgc{background:#fff;border:1px solid var(--bdr);border-radius:9px;overflow:hidden;cursor:pointer;transition:all .15s}
+.frgc:hover{border-color:var(--acc);box-shadow:0 2px 10px rgba(0,102,255,.06)}
+.frgci{height:90px;background:var(--bg2);display:flex;align-items:center;justify-content:center;position:relative;border-bottom:1px solid var(--bdr);font-size:34px}
+.frgcb{padding:9px}
+.frgcbrand{font-size:8px;font-weight:700;color:var(--mut);letter-spacing:.6px;margin-bottom:1px}
+.frgcname{font-family:'Space Mono','Courier New',monospace;font-size:11px;font-weight:800;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frgcsub{font-size:9px;color:var(--purple);font-weight:600;margin-bottom:4px}
+.frgcfoot{display:flex;justify-content:space-between;align-items:center;padding-top:5px;border-top:1px solid var(--bdr)}
+.frgcprice{font-size:9px;font-weight:700}
+.frgcscore{padding:1px 5px;background:var(--acc);color:#fff;border-radius:3px;font-size:9px;font-weight:800}
+
+/* ── AUTH / FORMS ── */
+.auth-page{min-height:calc(100vh - 56px);display:flex;align-items:center;justify-content:center;background:var(--bg2);padding:40px 20px}
+.auth-card{background:#fff;border:1px solid var(--bdr);border-radius:16px;padding:40px;max-width:420px;width:100%}
+.auth-title{font-family:'Space Mono','Courier New',monospace;font-size:22px;font-weight:800;margin-bottom:6px;text-align:center}
+.auth-sub{font-size:13px;color:var(--mut);margin-bottom:24px;text-align:center}
+.form-group{margin-bottom:16px}
+.form-label{font-size:12px;font-weight:600;color:var(--txt);margin-bottom:5px;display:block}
+.form-input{width:100%;padding:10px 13px;border:1.5px solid var(--bdr2);border-radius:8px;font-size:13px;font-family:inherit;color:var(--txt);outline:none;transition:border-color .15s}
+.form-input:focus{border-color:var(--acc)}
+.auth-btn{width:100%;padding:12px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:8px}
+.auth-btn:hover{background:var(--acc-d)}
+.auth-divider{display:flex;align-items:center;gap:12px;margin:16px 0}
+.auth-divider span{font-size:11px;color:var(--mut)}
+.auth-divider::before,.auth-divider::after{content:'';flex:1;height:1px;background:var(--bdr)}
+.auth-switch{text-align:center;margin-top:16px;font-size:12px;color:var(--mut)}
+.auth-switch a{color:var(--acc);cursor:pointer;font-weight:600;text-decoration:none}
+.submit-page{max-width:700px;margin:0 auto;padding:32px 36px 60px}
+.submit-card{background:#fff;border:1px solid var(--bdr);border-radius:14px;padding:32px}
+.submit-title{font-family:'Space Mono','Courier New',monospace;font-size:20px;font-weight:800;margin-bottom:6px}
+.submit-sub{font-size:13px;color:var(--mut);margin-bottom:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form-group-full{margin-bottom:14px}
+.form-textarea{width:100%;padding:10px 13px;border:1.5px solid var(--bdr2);border-radius:8px;font-size:13px;font-family:inherit;color:var(--txt);outline:none;resize:vertical;min-height:80px;transition:border-color .15s}
+.form-textarea:focus{border-color:var(--acc)}
+.form-select{width:100%;padding:10px 13px;border:1.5px solid var(--bdr2);border-radius:8px;font-size:13px;font-family:inherit;color:var(--txt);outline:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 11px center;cursor:pointer;transition:border-color .15s}
+.form-select:focus{border-color:var(--acc)}
+.submit-btn{padding:12px 28px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit}
+.submit-btn:hover{background:var(--acc-d)}
+.stars-select{display:flex;gap:6px;margin-top:5px}
+.star-btn{font-size:24px;cursor:pointer;color:var(--bdr2);transition:color .1s}
+.star-btn.active,.star-btn:hover{color:var(--yel)}
+.mfr-page{max-width:1100px;margin:0 auto;padding:28px 36px 50px}
+.mfr-header{background:#fff;border:1px solid var(--bdr);border-radius:14px;padding:24px;margin-bottom:20px;display:flex;gap:20px;align-items:center}
+.mfr-logo{width:70px;height:70px;background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:32px;flex-shrink:0}
+.mfr-info{flex:1}
+.mfr-name{font-family:'Space Mono','Courier New',monospace;font-size:22px;font-weight:800;margin-bottom:4px}
+.mfr-meta{font-size:13px;color:var(--mut);margin-bottom:10px}
+.mfr-stats{display:flex;gap:20px}
+.mfr-stat{text-align:center}
+.mfr-stat-num{font-family:'Space Mono','Courier New',monospace;font-size:20px;font-weight:800;color:var(--acc)}
+.mfr-stat-lbl{font-size:10px;color:var(--mut)}
+.mfr-robots-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+@media(max-width:1024px){
+  .hero-inner{padding:36px 28px}
+  .cat-grid{grid-template-columns:repeat(4,1fr)}
+  .robots-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr 1fr;padding:24px 28px}
+  .mfr-robots-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-inner{padding:0 16px}.nav-links{display:none}
+  .hero-inner{flex-direction:column;padding:28px 20px}.hero-right{min-width:unset;width:100%}
+  h1{font-size:28px}
+  .section .mw{padding:0 20px}
+  .compare-banner-outer{padding:0 20px 20px}
+  .divider{margin:0}
+  .db-wrap,.finder-body{grid-template-columns:1fr}
+  .filters,.finder-fp{border-right:none;border-bottom:1px solid var(--bdr)}
+  .profile-layout{grid-template-columns:1fr;padding:0 20px 40px}
+  .main-col{border-right:none;padding-right:0}
+  .sidebar{padding-left:0;border-top:1px solid var(--bdr);padding-top:20px}
+  .robot-header{flex-direction:column}
+  .rs-grid{grid-template-columns:repeat(3,1fr)}
+  .compare-slots{grid-template-columns:repeat(2,1fr)}
+  .news-layout{grid-template-columns:1fr}.news-card.featured{grid-column:span 1}
+  .footer-inner{grid-template-columns:1fr;padding:24px 20px}
+  .footer-bottom-inner{padding:12px 20px;flex-direction:column;gap:5px}
+  .form-row{grid-template-columns:1fr}
+  .breadcrumb-inner{padding:0 20px}
+}
+
+.brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;padding:4px 0 24px}
+.brand-card{background:#fff;border:1px solid var(--bdr);border-radius:14px;padding:20px 16px;cursor:pointer;transition:all .15s;text-align:center;display:flex;flex-direction:column;align-items:center}
+.brand-card:hover{border-color:var(--acc);box-shadow:0 4px 20px rgba(0,102,255,.1);transform:translateY(-2px)}
+.brand-card-logo{width:72px;height:72px;margin:0 auto 10px;background:var(--bg2);border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.brand-card-logo img{width:100%;height:100%;object-fit:cover;border-radius:12px}
+.brand-card-name{font-size:13px;font-weight:700;margin-bottom:3px}
+.brand-card-cat{font-size:10px;color:var(--mut);margin-bottom:10px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.brand-card-stats{display:flex;justify-content:space-around;width:100%;margin-bottom:10px;padding:8px 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.brand-stat-num{font-size:15px;font-weight:800}
+.brand-stat-lbl{font-size:9px;color:var(--mut);font-weight:600;letter-spacing:.4px}
+.brand-card-btn{width:100%;padding:7px;background:var(--acc);color:#fff;border:none;border-radius:7px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:auto}
+.brand-card-btn:hover{background:#0052cc}
+.ad-banner{background:linear-gradient(135deg,#f0f4ff,#e8f0fe);border:1px solid #c7d7f9;border-radius:8px;padding:14px;text-align:center;cursor:pointer;margin:8px 0}
+.ad-banner-text{font-size:13px;font-weight:600;color:#1d4ed8}
+.ad-banner-sub{font-size:11px;color:#6b7280;margin-top:2px}
+.affiliate-btn{display:inline-flex;align-items:center;gap:7px;padding:11px 22px;background:#16a34a;color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:8px}
+.affiliate-btn:hover{background:#15803d}
+
+
+
+
+/* GSMArena full-width finder */
+.finder-form{background:#fff;border:1px solid var(--bdr);border-radius:10px;padding:0;overflow:hidden;margin-bottom:16px}
+.finder-section{padding:16px 20px;border-bottom:1px solid var(--bdr)}
+.finder-section:last-child{border-bottom:none}
+.finder-section-title{font-size:13px;font-weight:700;color:var(--acc);margin-bottom:14px;text-transform:uppercase;letter-spacing:.5px}
+.finder-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:10px}
+.finder-row.three{grid-template-columns:1fr 1fr 1fr}
+.finder-row.four{grid-template-columns:1fr 1fr 1fr 1fr}
+.finder-field{display:flex;flex-direction:column;gap:4px}
+.finder-field label{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);text-transform:uppercase}
+.finder-field select,.finder-field input{background:#f8f9fa;border:1px solid #dee2e6;border-radius:5px;padding:8px 10px;font-size:12px;color:#333;font-family:inherit;outline:none;width:100%}
+.finder-field select:focus,.finder-field input:focus{border-color:var(--acc);background:#fff}
+.finder-checks{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.finder-check{display:flex;align-items:center;gap:5px;padding:5px 10px;background:#f8f9fa;border:1px solid #dee2e6;border-radius:5px;cursor:pointer;font-size:11px;transition:all .15s}
+.finder-check:hover{border-color:var(--acc);background:#f0f4ff}
+.finder-check input{accent-color:var(--acc)}
+.finder-check-count{font-size:10px;color:var(--mut);margin-left:2px}
+.finder-show-bar{background:var(--txt);padding:16px 20px;display:flex;align-items:center;justify-content:space-between;border-radius:0 0 10px 10px}
+.finder-show-btn{background:var(--acc);color:#fff;border:none;border-radius:7px;padding:12px 32px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;transition:background .15s;letter-spacing:.3px}
+.finder-show-btn:hover{background:#0052cc}
+.finder-show-info{color:rgba(255,255,255,.7);font-size:12px}
+.finder-results-section{display:none}
+.finder-results-section.visible{display:block}
+.finder-brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:6px}
+.finder-brand-check{display:flex;align-items:center;gap:6px;padding:5px 8px;background:#f8f9fa;border:1px solid #dee2e6;border-radius:5px;cursor:pointer;font-size:11px}
+.finder-brand-check:hover{border-color:var(--acc)}
+.finder-brand-check input{accent-color:var(--acc)}
+
+/* GSMArena-style finder list */
+.frrow.gsm{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 34px 14px 18px;border-bottom:1px solid var(--bdr);cursor:pointer;transition:background .1s;gap:20px}
+.frrow.gsm:hover{background:#f8f9ff}
+.frrow.gsm:last-child{border-bottom:none}
+.frrow-left{display:flex;gap:14px;align-items:flex-start;flex:1;min-width:0}
+.frrow-num{min-width:28px;height:28px;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800;color:var(--mut);flex-shrink:0;margin-top:2px}
+.frrow-thumb{width:66px;height:66px;flex-shrink:0;border-radius:8px;overflow:hidden;background:#fff;border:1px solid var(--bdr)}
+.frrow-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:600px){.frrow-thumb{width:52px;height:52px}}
+.frrow-num.gold{background:#fef3c7;color:#d97706}
+.frrow-num.silver{background:#f1f5f9;color:#64748b}
+.frrow-num.bronze{background:#fef6ee;color:#c2410c}
+.frrow-info{flex:1;min-width:0}
+.frrow-brand{font-size:11px;color:var(--mut);font-weight:600;margin-bottom:1px}
+.frrow-name{font-size:15px;font-weight:700;color:var(--txt);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frrow-meta{font-size:11px;color:var(--mut);margin-bottom:6px}
+.frrow-cat{color:var(--acc);font-weight:600}
+.frrow-specs{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:5px}
+.fspec-pill{font-size:10px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:4px;padding:2px 6px;color:#374151}
+.fspec-pill b{font-weight:700;color:#111}
+.fsp-yes{background:#dcfce7;border-color:#bbf7d0;color:#15803d;font-weight:700}
+.frrow-tags{display:flex;flex-wrap:wrap;gap:3px}
+.frrow-right{display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex-shrink:0;min-width:120px}
+.frrow-price{font-size:14px;font-weight:800;color:var(--txt)}
+.frrow-score{font-size:22px;font-weight:900;color:var(--acc);line-height:1}
+.frrow-stars{font-size:12px;color:#f59e0b}
+.price-stars{font-size:14px;letter-spacing:1px;font-weight:700;white-space:nowrap}.aff-btn{display:inline-flex;align-items:center;gap:6px;background:#ff9900;color:#111;font-weight:700;font-size:12px;padding:8px 14px;border-radius:8px;text-decoration:none;border:1px solid #e88a00;white-space:nowrap;line-height:1;cursor:pointer}.aff-btn:hover{background:#ffad33}.aff-btn-lg{font-size:14px;padding:12px 18px;width:100%;justify-content:center;margin-bottom:8px}.aff-card{font-size:11px;padding:7px 10px;width:100%;justify-content:center;margin-top:8px}.aff-disclosure{font-size:10px;color:var(--mut);margin-top:2px;margin-bottom:8px;line-height:1.4}.footer-aff{display:block;font-size:11px;color:var(--mut);margin-top:6px;max-width:680px;line-height:1.5}
+.price-stars .ps-full{color:#16a34a}
+.price-stars .ps-empty{color:#d1d5db}
+.price-main .price-stars{font-size:24px}
+.price-tbc{color:var(--mut);font-size:11px;font-style:italic;font-weight:600}
+.frrow-actions{display:flex;gap:5px;margin-top:4px}
+
+
+.fabtn{width:100%;padding:10px;background:var(--acc);color:#fff;border:none;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .15s}
+.fabtn:hover{background:#0052cc}
+
+/* FINDER SPEC FILTERS */
+.ffg-section{font-size:10px;font-weight:800;letter-spacing:1px;color:var(--acc);padding:10px 0 6px;text-transform:uppercase;border-bottom:2px solid var(--acc);margin-bottom:10px}
+.fspec-row{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:6px}
+.fspec-field{display:flex;flex-direction:column;gap:3px}
+.fspec-lbl{font-size:9px;font-weight:700;letter-spacing:.5px;color:var(--mut);text-transform:uppercase}
+.fspec-inp{background:var(--bg2);border:1px solid var(--bdr);border-radius:5px;padding:6px 8px;font-size:11px;color:var(--txt);font-family:inherit;outline:none;width:100%}
+.fspec-inp:focus{border-color:var(--acc)}
+.fspec-sel{background:var(--bg2);border:1px solid var(--bdr);border-radius:5px;padding:6px 8px;font-size:11px;color:var(--txt);font-family:inherit;outline:none;width:100%}
+.fspec-sel:focus{border-color:var(--acc)}
+.finder-fp-inner{padding:4px 2px}
+
+
+.brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px;padding:4px 0 24px}
+.brand-card{background:#fff;border:1px solid var(--bdr);border-radius:14px;padding:20px 16px;cursor:pointer;transition:all .15s;text-align:center;display:flex;flex-direction:column;align-items:center}
+.brand-card:hover{border-color:var(--acc);box-shadow:0 4px 20px rgba(0,102,255,.1);transform:translateY(-2px)}
+.brand-card-logo{width:72px;height:72px;margin:0 auto 10px;background:var(--bg2);border-radius:12px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.brand-card-name{font-size:13px;font-weight:700;margin-bottom:3px}
+.brand-card-cat{font-size:10px;color:var(--mut);margin-bottom:10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.brand-card-stats{display:flex;justify-content:space-around;width:100%;margin-bottom:10px;padding:8px 0;border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)}
+.brand-stat-num{font-size:15px;font-weight:800}.brand-stat-lbl{font-size:9px;color:var(--mut);font-weight:600}
+.brand-card-btn{width:100%;padding:7px;background:var(--acc);color:#fff;border:none;border-radius:7px;font-size:11px;font-weight:600;cursor:pointer;font-family:inherit;margin-top:auto}
+.finder-form{background:#fff;border:1px solid var(--bdr);border-radius:10px;overflow:hidden;margin-bottom:16px}
+.finder-section{padding:16px 20px;border-bottom:1px solid var(--bdr)}
+.finder-section-title{font-size:12px;font-weight:800;color:var(--acc);margin-bottom:12px;text-transform:uppercase;letter-spacing:.6px}
+.finder-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:8px}
+.finder-field{display:flex;flex-direction:column;gap:3px}
+.finder-field label{font-size:9px;font-weight:700;letter-spacing:.8px;color:var(--mut);text-transform:uppercase}
+.finder-field select,.finder-field input{background:#f8f9fa;border:1px solid #dee2e6;border-radius:5px;padding:7px 10px;font-size:12px;color:#333;font-family:inherit;outline:none;width:100%}
+.finder-field select:focus,.finder-field input:focus{border-color:var(--acc);background:#fff}
+.finder-checks{display:flex;flex-wrap:wrap;gap:5px;margin-top:4px}
+.finder-check{display:flex;align-items:center;gap:5px;padding:4px 10px;background:#f8f9fa;border:1px solid #dee2e6;border-radius:5px;cursor:pointer;font-size:11px;transition:all .1s}
+.finder-check:hover{border-color:var(--acc);background:#f0f4ff}
+.finder-check input{accent-color:var(--acc)}
+.finder-check-count{font-size:10px;color:var(--mut);margin-left:2px}
+.finder-brand-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:5px;margin-top:6px}
+.finder-show-bar{background:var(--txt);padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.finder-show-btn{background:var(--acc);color:#fff;border:none;border-radius:7px;padding:11px 28px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit}
+.finder-show-btn:hover{background:#0052cc}
+.finder-show-info{color:rgba(255,255,255,.6);font-size:12px}
+.finder-results-section{display:none}.finder-results-section.visible{display:block}
+.frrow.gsm{display:flex;justify-content:space-between;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--bdr);cursor:pointer;gap:16px}
+.frrow.gsm:hover{background:#f8f9ff}
+.frrow-left{display:flex;gap:12px;flex:1;min-width:0}
+.frrow-num{min-width:26px;height:26px;border-radius:50%;background:var(--bg2);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:var(--mut);flex-shrink:0;margin-top:2px}
+.frrow-num.gold{background:#fef3c7;color:#d97706}.frrow-num.silver{background:#f1f5f9;color:#64748b}.frrow-num.bronze{background:#fef6ee;color:#c2410c}
+.frrow-info{flex:1;min-width:0}
+.frrow-brand{font-size:10px;color:var(--mut);font-weight:600;margin-bottom:1px}
+.frrow-name{font-size:15px;font-weight:700;margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frrow-meta{font-size:11px;color:var(--mut);margin-bottom:5px}
+.frrow-cat{color:var(--acc);font-weight:600}
+.frrow-specs{display:flex;flex-wrap:wrap;gap:3px;margin-bottom:4px}
+.fspec-pill{font-size:10px;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:4px;padding:2px 6px;color:#374151}
+.fspec-pill b{font-weight:700;color:#111}
+.fsp-yes{background:#dcfce7;border-color:#bbf7d0;color:#15803d;font-weight:700}
+.frrow-right{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex-shrink:0;min-width:110px}
+.frrow-price{font-size:13px;font-weight:800}.frrow-score{font-size:22px;font-weight:900;color:var(--acc);line-height:1}
+.frrow-stars{font-size:11px;color:#f59e0b}.frrow-actions{display:flex;gap:4px;margin-top:3px}
+
+
+/* ---- profile tabs + prices/pictures/videos ---- */
+.ptabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}
+.ptab{flex:1 1 auto;text-align:center;font-size:13px;font-weight:700;color:var(--acc);padding:9px 16px;cursor:pointer;border:1.5px solid var(--acc);background:#fff;font-family:inherit;border-radius:9px}
+.ptab:hover{background:#eff5ff}
+.ptab.on{color:#fff;background:var(--acc);box-shadow:0 2px 8px rgba(0,102,255,.22)}
+.ppanel{display:none}.ppanel.on{display:block;margin-top:22px}
+.pp-empty{border:1px dashed var(--bdr);border-radius:12px;padding:26px;text-align:center;color:var(--mut);font-size:14px}
+.pb{border:1px solid var(--bdr);border-radius:14px;overflow:hidden}
+.pb-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 18px;background:var(--bg2);border-bottom:1px solid var(--bdr);flex-wrap:wrap}.pb-head h3{margin:0;font-size:15px;font-weight:800}
+.pb-cur{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut)}.pb-cur select{font-family:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--bdr);border-radius:7px;background:#fff}
+.pb-region{padding:4px 18px 12px}.pb-region h4{margin:14px 0 4px;font-size:12px;font-weight:800;border-bottom:1px solid var(--bdr);padding-bottom:6px}
+.pb-grid{width:100%;border-collapse:collapse;font-size:13px}.pb-grid th{font-weight:700;color:var(--mut);text-align:right;padding:6px 10px;font-size:10px;text-transform:uppercase}.pb-grid th.s{text-align:left}
+.pb-grid td{padding:8px 10px;border-top:1px solid #f0f1f3;text-align:right}
+.pb-store{display:flex;align-items:center;gap:7px;text-align:left;font-weight:600;white-space:nowrap}.pb-store .amz{color:#ff9900;font-weight:800}
+.pb-price{color:#cc0c0c;font-weight:800;cursor:pointer;white-space:nowrap;border:none;background:none;font-family:inherit;font-size:13px;padding:2px 5px;border-radius:5px}.pb-price:hover{background:#fff3e0;text-decoration:underline}
+.pb-empty{color:#cbd0d6}.pb-note{padding:11px 18px;font-size:11px;color:var(--mut);background:var(--bg2);border-top:1px solid var(--bdr);line-height:1.5}
+.pgal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pshot{aspect-ratio:1/1;background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;cursor:zoom-in;display:flex;align-items:center;justify-content:center}
+.pshot img{width:100%;height:100%;object-fit:contain}
+.pvgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pvcard{border:1px solid var(--bdr);border-radius:12px;overflow:hidden;background:#000}
+.pvthumb{position:relative;aspect-ratio:16/9;background:#0a0a0a center/cover no-repeat;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.pvplay{width:54px;height:38px;background:rgba(220,12,12,.92);border-radius:10px;position:relative;z-index:2}
+.pvplay::after{content:'';position:absolute;top:9px;left:21px;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent}
+.pvmeta{display:flex;align-items:center;gap:8px;padding:9px 11px;background:#fff}.pvmeta .pvt{font-size:12.5px;font-weight:600;flex:1;color:var(--txt)}
+.pvsrc{font-size:9px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 7px;border-radius:20px;white-space:nowrap}.pvsrc.man{background:#eef2f7;color:#475569}.pvsrc.tobo{background:#ede9fe;color:#5b21b6}
+.pm-back{position:fixed;inset:0;background:rgba(17,24,39,.55);display:none;align-items:center;justify-content:center;padding:18px;z-index:9999}.pm-back.on{display:flex}
+.pm{background:#fff;border-radius:14px;max-width:560px;width:100%;max-height:82vh;overflow:auto}
+.pm-h{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:18px 20px 10px}.pm-h h3{margin:0;font-size:16px}.pm-h .sub{font-size:12px;color:var(--mut);margin-top:3px}
+.pm-x{border:none;background:none;font-size:22px;cursor:pointer;color:var(--mut)}.pm-note{font-size:11px;color:var(--mut);padding:0 20px 12px;line-height:1.5}
+.pm-row{display:flex;align-items:center;gap:14px;padding:12px 20px;border-top:1px solid #f0f1f3}.pm-thumb{width:46px;height:46px;background:var(--bg2);border-radius:6px;flex-shrink:0}
+.pm-row .t{flex:1;font-size:13px;line-height:1.35}.pm-row .p{font-weight:800;white-space:nowrap}
+.pm-go{background:#cc0c0c;color:#fff;text-decoration:none;font-size:11px;font-weight:800;padding:9px 14px;border-radius:7px;white-space:nowrap}
+@media(max-width:720px){.pgal{grid-template-columns:repeat(2,1fr)}.pvgrid{grid-template-columns:1fr}}
+
+/* ---- left-rail blue-band profile ---- */
+.rail-layout{display:grid;grid-template-columns:300px 1fr;gap:24px;align-items:start}
+.rail-layout .rail{display:flex;flex-direction:column;gap:16px;padding-top:24px}
+.rail-layout .main-col{min-width:0}
+.band-wrap{background:linear-gradient(125deg,#1560e3 0%,#0a50da 45%,#063fae 100%);border-radius:16px;overflow:hidden;margin-bottom:16px}
+.robot-band{display:grid;grid-template-columns:300px 1fr;background:transparent;overflow:hidden;color:#fff}
+.robot-band .band-img{position:relative;background:rgba(255,255,255,.10);min-height:300px;display:flex;align-items:center;justify-content:center;cursor:zoom-in;padding:18px}
+.robot-band .band-img img{max-width:100%;max-height:280px;object-fit:contain}
+.band-info{padding:26px 28px;display:flex;flex-direction:column;gap:9px}
+.band-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.band-name{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:30px;font-weight:800;letter-spacing:-.5px;line-height:1.1}
+.band-top .badge{background:rgba(255,255,255,.20);color:#fff}
+.band-brand{font-size:14px;opacity:.93;font-weight:600}
+.band-desc{font-size:13.5px;line-height:1.6;opacity:.96;margin-top:2px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
+.band-trending{margin-top:4px}
+.band-trending-inline{display:inline-flex;align-items:center}
+.band-readmore{display:inline-block;margin-top:7px;font-size:12.5px;font-weight:700;color:#fff;text-decoration:underline;cursor:pointer;opacity:.92}
+.band-readmore:hover{opacity:1}
+.band-stats{display:flex;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap}
+.bstat-hits{font-size:13px;font-weight:700;opacity:.96;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.bstat-hits .tu{color:#8affad}.bstat-hits .td{color:#ffb3b3}
+.bstat-fan{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);color:#fff;font-family:inherit;font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;cursor:pointer}
+.bstat-fan:hover{background:rgba(255,255,255,.26)}
+.bstat-fan.faned{background:#fff;color:#e0245e;border-color:#fff}
+.bstat-fan .heart{font-size:14px;line-height:1}
+.bstat-fan #profile-fancount{font-variant-numeric:tabular-nums}
+.band-desc.expanded{-webkit-line-clamp:unset;display:block;overflow:visible}
+.band-tiles{display:grid;grid-template-columns:repeat(5,1fr);background:transparent;border-top:1px solid rgba(255,255,255,.16);overflow:hidden}
+.band-tiles .bt{padding:16px 10px;text-align:center;color:#fff;border-right:1px solid rgba(255,255,255,.16)}
+.band-tiles .bt:last-child{border-right:none}
+.band-tiles .bt-v{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:18px;font-weight:800;line-height:1.1}
+.band-tiles .bt-u{font-size:11px;opacity:.8;margin-left:2px;font-weight:600}
+.band-tiles .bt-l{font-size:10px;letter-spacing:.6px;text-transform:uppercase;opacity:.82;margin-top:5px;font-weight:600}
+.band-thumbs{display:none!important}
+.rail-prices{border:1px solid var(--bdr);border-radius:12px;overflow:hidden}
+.rail-prices .rp-head{background:var(--bg2);padding:11px 14px;font-size:11px;font-weight:800;letter-spacing:.5px;color:var(--mut);border-bottom:1px solid var(--bdr)}
+.rail-prices .rp-row{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-bottom:1px solid #f0f1f3;text-decoration:none;color:var(--txt)}
+.rail-prices .rp-row:hover{background:#fafbfc}
+.rail-prices .rp-store{font-size:13px;font-weight:600}
+.rail-prices .rp-price{font-size:13px;font-weight:800;color:#cc0c0c}
+.rail-prices .rp-all{display:block;width:100%;text-align:left;padding:11px 14px;border:none;background:none;color:var(--acc);font-weight:700;font-size:12.5px;cursor:pointer;font-family:inherit}
+.rail-prices .rp-all:hover{text-decoration:underline}
+.cmp-cta{text-align:center;padding:18px}
+@media(max-width:900px){
+  .rail-layout{grid-template-columns:1fr}
+  .rail-layout .rail{order:2}
+  .rail-layout .main-col{order:1}
+  .robot-band{grid-template-columns:1fr}
+  .robot-band .band-img{min-height:200px}
+  .band-name{font-size:24px}
+  .band-tiles{grid-template-columns:repeat(2,1fr)}
+  .band-tiles .bt:nth-child(2n){border-right:none}
+}
+</style>
+<style>
+.news-shell{display:flex;gap:24px;align-items:flex-start}
+.news-sidebar{width:232px;flex-shrink:0}
+.news-main{flex:1;min-width:0}
+.news-sb-box{border:1px solid var(--bdr);border-radius:12px;background:#fff;margin-bottom:18px;overflow:hidden}
+.news-sb-head{background:var(--bg2);font-family:'Space Mono','Courier New',monospace;font-size:11px;font-weight:700;letter-spacing:.4px;color:var(--mut);padding:9px 12px;border-bottom:1px solid var(--bdr)}
+.news-sb-brands{display:flex;flex-wrap:wrap;gap:5px 12px;padding:12px}
+.news-sb-brand{font-size:11.5px;color:var(--acc);cursor:pointer;font-weight:600;line-height:1.1}
+.news-sb-brand:hover{text-decoration:underline}
+.news-sb-all{display:block;padding:9px 12px;border-top:1px solid var(--bdr);font-size:11px;color:var(--mut);cursor:pointer;font-weight:600}
+.news-sb-all:hover{color:var(--acc)}
+.news-sb-top10{display:flex;flex-direction:column}
+.news-sb-rank{display:flex;align-items:center;gap:9px;padding:7px 12px;cursor:pointer;border-bottom:1px solid var(--bdr);text-decoration:none}
+.news-sb-rank:last-child{border-bottom:none}
+.news-sb-rank:hover{background:var(--bg2)}
+.news-sb-num{font-weight:800;font-size:12px;color:var(--mut);width:15px;flex-shrink:0;text-align:center}
+.news-sb-rlabel{font-size:12px;line-height:1.25;flex:1;color:var(--txt)}
+.news-sb-hits{font-size:11px;color:var(--acc);font-weight:700;flex-shrink:0}
+@media(max-width:900px){.news-shell{flex-direction:column}.news-sidebar{width:100%;order:2}.news-main{order:1}}
+.nm-related{margin-top:22px;border-top:1px solid var(--bdr);padding-top:16px}
+.nm-related-h{font-family:'Space Mono','Courier New',monospace;font-size:11px;font-weight:700;letter-spacing:.4px;color:var(--mut);margin-bottom:12px}
+.nm-rel-item{display:flex;gap:11px;align-items:center;padding:8px 0;cursor:pointer;border-bottom:1px solid var(--bdr)}
+.nm-rel-item:last-child{border-bottom:none}
+.nm-rel-item:hover .nm-rel-tt{color:var(--acc)}
+.nm-rel-thumb{width:58px;height:44px;flex-shrink:0;border-radius:6px;background:var(--bg3);background-size:cover;background-position:center}
+.nm-rel-tt{font-size:12.5px;line-height:1.3;color:var(--txt);font-weight:600}
+.nm-rel-src{font-size:10px;color:var(--acc);font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
+@media(max-width:600px){#news-modal{padding:10px!important}#news-modal>div{margin:10px auto!important}#news-modal-img{max-height:300px!important}#news-modal-title{font-size:19px!important}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="logo" onclick="goPage('home')"><span class="logo-bracket">[</span>myrobot<span class="logo-acc">.shop</span><span class="logo-bracket">]</span></a>
+    <div class="nav-links">
+      <a id="nav-home" class="active" onclick="goPage('home')">Home</a>
+      <a id="nav-db" onclick="goPage('db')">Database</a>
+      <a id="nav-finder" onclick="goPage('finder')">Finder</a>
+      <a id="nav-compare" onclick="goPage('compare')">Compare</a>
+      <a id="nav-rankings" onclick="goPage('rankings')">Discover</a>
+      <a id="nav-news" onclick="goPage('news')">News</a>
+      <a id="nav-videos" onclick="goPage('videos')">Videos</a>
+      <a id="nav-questions" href="/questions/">Questions</a>
+      <a id="nav-manufacturers" onclick="goPage('manufacturers')">Brands</a>
+      <a id="nav-deals" onclick="goPage('db')">Deals</a>
+      <a id="nav-ai" onclick="goPage('ai')" style="color:var(--acc);font-weight:600">✦ Ask AI</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn btn-ghost" id="nav-auth-btn" onclick="authButtonClick()">Sign in</button>
+      <button class="btn btn-primary" onclick="goPage('submit-robot')">Submit a Robot</button>
+    </div>
+  </div>
+</nav>
+
+<!-- AI ASSISTANT PAGE -->
+<div id="page-ai" class="page">
+  <div style="max-width:880px;margin:0 auto;padding:28px 16px 10px">
+    <h1 style="font-size:24px;font-weight:800;margin:0 0 6px">Ask Tobo</h1>
+    <p style="color:var(--mut);font-size:14px;margin:0 0 20px">Your AI guide to every robot in the database — get recommendations, compare models, or ask anything.</p>
+  </div>
+  <div id="rc-fullpage-mount" style="max-width:880px;margin:0 auto 50px;padding:0 16px"></div>
+</div>
+
+<!-- HOME -->
+<div id="page-home" class="page active">
+  <div class="top-bar"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_60/v1777366404/output_17_t74qys.jpg" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:6px;border-radius:50%;background:#fff"> World's #1 Robot Database — <span id="home-top-count">1,600+</span> robots catalogued and growing daily</div>
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-tag"><div class="hero-tag-dot"></div>World's #1 Robot Database</div>
+        <h1>Find & Compare<br><em>Every Robot</em><br>Ever Built.</h1>
+        <p class="hero-sub">Specs, reviews, comparisons and news for industrial, consumer, medical and service robots — all in one place.</p>
+        <div class="search-wrap">
+          <input class="search-input" type="text" id="hero-search" placeholder="Search by robot name, brand or function..." onkeydown="if(event.key==='Enter')heroSearch()">
+          <button class="search-btn" onclick="heroSearch()">Search</button>
+        </div>
+        <div class="brand-tags" id="brand-tags-home"></div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-stat"><div class="hsi" style="overflow:hidden;background:#fff"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_120/v1777366404/output_17_t74qys.jpg" alt="" style="width:100%;height:100%;object-fit:contain"></div><div><div class="hst-num" id="home-hero-count">—</div><div class="hst-lbl">Robots catalogued</div></div></div>
+        <div class="hero-stat"><div class="hsi">🏭</div><div><div class="hst-num" id="home-mfr-count">—</div><div class="hst-lbl">Manufacturers listed</div></div></div>
+        <div class="hero-stat"><div class="hsi">🤖</div><div><div class="hst-num" id="hero-robot-count">—</div><div class="hst-lbl">Categories</div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="mw">
+      <div class="sec-header"><div class="sec-title">Explore Robot Categories</div><span class="sec-link" onclick="goPage('db')">View all →</span></div>
+      <div class="cat-pills" id="home-cat-pills"></div>
+    </div>
+  </div>
+  <div class="divider"></div>
+  <div class="section">
+    <div class="mw">
+      <div class="sec-header"><div class="sec-title">Featured Robots</div><span class="sec-link" onclick="goPage('db')">View all →</span></div>
+      <div class="robots-grid" id="home-robots"></div>
+    </div>
+  </div>
+  <div class="compare-banner-outer">
+    <div class="compare-banner-inner">
+      <div class="compare-banner">
+        <div class="cb-left">
+          <h3>Compare Up to 4 Robots Side by Side</h3>
+          <p>Payload, speed, battery, DOF, price and more — instantly compare specs across any robots in our database.</p>
+        </div>
+        <button class="btn-cb" onclick="goPage('compare')">Launch Comparison Tool →</button>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="mw">
+      <div class="home-cols">
+        <div class="home-col">
+          <div class="sec-header"><div class="sec-title">🔥 Trending Now</div></div>
+          <div class="chart-list" id="home-trending"></div>
+        </div>
+        <div class="home-col">
+          <div class="sec-header"><div class="sec-title">🆕 Latest Robots</div></div>
+          <div class="chart-list" id="home-latest"></div>
+        </div>
+        <div class="home-col">
+          <div class="sec-header"><div class="sec-title">🛒 Available Now</div></div>
+          <div class="chart-list" id="home-available"></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:18px"><span class="sec-link" onclick="goPage('rankings')" style="cursor:pointer">Discover all robots →</span></div>
+    </div>
+  </div>
+  <section style="background:linear-gradient(135deg,var(--acc-l),var(--bg2));border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)">
+    <div style="max-width:760px;margin:0 auto;padding:46px 24px;text-align:center">
+      <div style="font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:24px;color:var(--txt);margin-bottom:8px">Stay ahead of the robots</div>
+      <div style="color:var(--mut);font-size:14px;margin-bottom:20px">Join the myrobot.shop briefing &mdash; the latest launches, reviews and breakthroughs, straight to your inbox. No spam.</div>
+      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="newsletter-form-home" class="nl-form" style="display:flex;gap:8px;max-width:440px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p style="display:none"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" required placeholder="you@email.com" style="flex:1;min-width:220px;padding:12px 15px;border:1px solid var(--bdr2);border-radius:9px;font-size:14px;color:var(--txt);background:#fff">
+        <button type="submit" style="background:var(--acc);color:#fff;border:none;border-radius:9px;padding:12px 26px;font-weight:600;font-size:14px;cursor:pointer">Subscribe</button>
+      </form>
+      <div class="nl-msg" style="margin-top:13px;font-size:13px;color:var(--grn);display:none">Thanks &mdash; you&rsquo;re on the list!</div>
+    </div>
+  </section>
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand"><span class="logo-bracket">[</span>myrobot<span class="logo-acc">.shop</span><span class="logo-bracket">]</span></div>
+        <p class="footer-desc">The world's most comprehensive robot database.</p>
+        <div class="social-row">
+          <a href="https://www.youtube.com/@MYROBOTSHOP" target="_blank" rel="noopener" class="social-icon youtube" title="YouTube">
+            <svg viewBox="0 0 28 20" fill="none"><path d="M27.41 3.13a3.51 3.51 0 0 0-2.47-2.49C22.75 0 14 0 14 0S5.25 0 3.06.64A3.51 3.51 0 0 0 .59 3.13 36.6 36.6 0 0 0 0 10a36.6 36.6 0 0 0 .59 6.87 3.51 3.51 0 0 0 2.47 2.49C5.25 20 14 20 14 20s8.75 0 10.94-.64a3.51 3.51 0 0 0 2.47-2.49A36.6 36.6 0 0 0 28 10a36.6 36.6 0 0 0-.59-6.87Z" fill="currentColor"/><path d="M11.2 14.29 18.46 10 11.2 5.71v8.58Z" fill="#ff0000"/></svg>
+          </a>
+          <a href="https://x.com/myrobot_shop" target="_blank" rel="noopener" class="social-icon x" title="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/MyRobotShopOfficial" target="_blank" rel="noopener" class="social-icon facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/myrobotshop" target="_blank" rel="noopener" class="social-icon instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+        <a href="mailto:email@myrobot.shop" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:12px;color:var(--mut);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--acc)'" onmouseout="this.style.color='var(--mut)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          email@myrobot.shop
+        </a>
+      </div>
+      <div class="footer-col"><h4>DATABASE</h4><a onclick="goPage('db')">All Robots</a><a onclick="goPage('db')">New Releases</a><a onclick="goPage('rankings')">Trending</a><a onclick="goPage('manufacturers')">By Brand</a></div>
+      <div class="footer-col"><h4>TOOLS</h4><a onclick="goPage('compare')">Compare</a><a onclick="goPage('finder')">Robot Finder</a><a onclick="goPage('news')">News</a><a onclick="goPage('videos')">Videos</a><a onclick="openReviewFor()">Reviews</a><a href="/questions/">Questions</a></div>
+      <div class="footer-col"><h4>COMPANY</h4><a onclick="goPage('methodology')">How We Source Data</a><a onclick="goPage('methodology')">About</a><a>Advertise</a><a href="mailto:email@myrobot.shop">Contact</a><a>Privacy</a></div>
+    </div>
+  </footer>
+  <div class="footer-bottom"><div class="footer-bottom-inner"><span>© 2026 myrobot.shop — All rights reserved</span><span class="footer-aff">As an Amazon Associate, myrobot.shop earns from qualifying purchases. Links marked “Check price” may be affiliate links — if you buy through them we may earn a commission at no extra cost to you.</span></div></div>
+</div>
+
+<!-- DATABASE -->
+<div id="page-db" class="page">
+  <div class="page-header">
+    <div class="page-header-inner">
+      <div class="ph-top">
+        <div><div class="page-title">Robot Database</div></div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span class="result-count" id="db-count">Showing all robots</span>
+          <div class="view-btns">
+            <button class="view-btn" id="vbtn-list" onclick="setDbView('list')">☰ List</button>
+            <button class="view-btn active" id="vbtn-grid" onclick="setDbView('grid')">⊞ Grid</button>
+          </div>
+        </div>
+      </div>
+      <div class="search-row">
+        <div class="db-search"><input type="text" id="db-search" placeholder="Search robots by name, brand or category..." oninput="renderDb()"><button onclick="renderDb()">Search</button></div>
+        <select class="sort-sel" id="db-sort" onchange="renderDb()">
+          <option value="score">Highest Rated</option>
+          <option value="price_asc">Price Low–High</option>
+          <option value="price_desc">Price High–Low</option>
+          <option value="name">A–Z</option>
+          <option value="payload">Most Payload</option>
+          <option value="newest" selected>Newest</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="db-wrap">
+    <div class="filters">
+      <div class="filter-section">
+        <div class="filter-title">CATEGORY <span class="filter-clear" onclick="resetDb()">Clear all</span></div>
+        <div class="filter-options" id="db-cat-filters"></div>
+      </div>
+      <!-- Sub-category — appears below CATEGORY only when exactly one category is selected -->
+      <div class="filter-section" id="db-subcat-section" style="display:none">
+        <div class="filter-title">TYPE</div>
+        <div class="filter-options" id="db-subcat-filters"></div>
+      </div>
+      <div class="filter-divider"></div>
+      <div class="filter-section">
+        <div class="filter-title">MANUFACTURER</div>
+        <div class="filter-options" id="db-brand-filters"></div>
+      </div>
+      <div class="filter-divider"></div>
+      <div class="filter-section">
+        <div class="filter-title">PRICE RANGE</div>
+        <div class="filter-options">
+          <label class="filter-opt"><input type="checkbox" data-price="u1k" onchange="renderDb()"><span class="filter-opt-label">Under $1,000</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="u20k" onchange="renderDb()"><span class="filter-opt-label">$1K – $20K</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="u100k" onchange="renderDb()"><span class="filter-opt-label">$20K – $100K</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="u500k" onchange="renderDb()"><span class="filter-opt-label">$100K – $500K</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="over500k" onchange="renderDb()"><span class="filter-opt-label">$500K+</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="poa" onchange="renderDb()"><span class="filter-opt-label">POA / Fleet pricing</span></label>
+        </div>
+      </div>
+      <div class="filter-divider"></div>
+      <div class="filter-section">
+        <div class="filter-title">FEATURES</div>
+        <div class="filter-options">
+          <label class="filter-opt"><input type="checkbox" data-feat="arm" onchange="renderDb()"><span class="filter-opt-label">🦾 Has Robotic Arm</span></label>
+          <label class="filter-opt"><input type="checkbox" data-feat="ai" onchange="renderDb()"><span class="filter-opt-label">AI / Computer Vision</span></label>
+          <label class="filter-opt"><input type="checkbox" data-feat="ros" onchange="renderDb()"><span class="filter-opt-label">ROS Compatible</span></label>
+          <label class="filter-opt"><input type="checkbox" data-feat="sdk" onchange="renderDb()"><span class="filter-opt-label">SDK Available</span></label>
+        </div>
+      </div>
+      <div class="filter-divider"></div>
+      <div class="filter-section">
+        <div class="filter-title">AVAILABILITY</div>
+        <div class="filter-options">
+          <label class="filter-opt"><input type="checkbox" data-status="Available" onchange="renderDb()"><span class="filter-opt-label">Available now</span></label>
+          <label class="filter-opt"><input type="checkbox" data-status="Limited" onchange="renderDb()"><span class="filter-opt-label">Limited release</span></label>
+          <label class="filter-opt"><input type="checkbox" data-status="Pilot" onchange="renderDb()"><span class="filter-opt-label">Pilot / Coming soon</span></label>
+        </div>
+      </div>
+      <div class="filter-divider"></div>
+      <button class="apply-btn" onclick="renderDb()">Apply Filters</button>
+      <button class="reset-btn" onclick="resetDb()">Reset All</button>
+    </div>
+    <div class="results-col">
+      <div class="active-filters-row" id="db-active-filters"></div>
+      <div id="db-results"></div>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div id="page-profile" class="page">
+  <div class="breadcrumb"><div class="breadcrumb-inner"><span onclick="goPage('home')">Home</span> › <span onclick="goPage('db')">Database</span> › <span id="profile-crumb-cat"></span> › <span id="profile-crumb-name"></span></div></div>
+  <div class="profile-layout rail-layout">
+    <div class="rail">
+      <div class="vs-card" onclick="openVsCompare()"><div class="vs-label">POPULAR COMPARISON</div><div class="vs-names" id="profile-vs"></div><button class="btn-vs">Compare side by side &rarr;</button></div>
+      <div class="sidebar-title">Similar Robots</div>
+      <div class="similar-list" id="profile-similar"></div>
+      <div class="sidebar-title" id="profile-news-title" style="display:none">In the News</div>
+      <div class="similar-list" id="profile-news" style="display:none;margin-bottom:18px"></div>
+      <div class="rail-prices" id="profile-rail-prices" style="display:none"></div>
+    </div>
+    <div class="main-col">
+      <div class="band-wrap">
+      <div class="robot-band">
+        <div class="band-img" id="profile-fig"><div class="gallery-badge" id="profile-badge">HOT</div></div>
+        <div class="band-info">
+          <div class="band-top"><span class="band-name" id="profile-name"></span><span class="badge badge-hot2" id="profile-year-badge"></span><span id="profile-trending-wrap" class="band-trending-inline"></span></div>
+          <div class="band-brand"><span id="profile-brand"></span><span id="profile-sub-wrap" style="display:none"> &middot; <span id="profile-sub"></span></span></div>
+          <div class="band-stats" id="profile-stats"><span class="bstat-hits" id="profile-hits" style="display:none"></span><button class="bstat-fan" id="profile-fan" type="button" onclick="_toggleFan()"><span class="heart">&hearts;</span><span id="profile-fancount">0</span><span class="fan-label">Become a fan</span></button></div>
+          <div class="band-desc" id="profile-tagline"></div>
+          <span class="band-readmore" id="profile-readmore" style="display:none" onclick="_toggleDesc()">Read more</span>
+        </div>
+      </div>
+      <div class="band-tiles" id="profile-quick-specs"></div>
+      </div>
+      <div class="gallery-thumbs band-thumbs" id="profile-gallery-thumbs" style="display:none"></div>
+      <div class="ptabs">
+        <button class="ptab on" data-pp="pp-specs" onclick="pptab(this)">Specs</button>
+        <button class="ptab" data-pp="pp-pics" onclick="pptab(this)">Pictures</button>
+        <button class="ptab" data-pp="pp-videos" onclick="pptab(this)">Videos</button>
+        <button class="ptab" data-pp="pp-prices" onclick="pptab(this)">Prices</button>
+        <button class="ptab" data-pp="pp-reviews" onclick="pptab(this)">Reviews</button>
+        <button class="ptab" data-pp="pp-compare" onclick="pptab(this)">Compare</button>
+      </div>
+      <div id="pp-specs" class="ppanel on"><div class="section-block"><div class="block-title">Full Specifications</div><table class="specs-table" id="profile-specs"></table></div></div>
+      <div id="pp-pics" class="ppanel"><div class="section-block"><div class="block-title">Pictures</div><div id="profile-pictures"></div></div></div>
+      <div id="pp-videos" class="ppanel"><div class="section-block"><div class="block-title">Videos</div><div id="profile-videos"></div></div></div>
+      <div id="pp-prices" class="ppanel"><div class="section-block"><div class="block-title">Prices</div><div id="profile-prices"></div></div></div>
+      <div id="pp-reviews" class="ppanel"><div class="section-block"><div class="block-title">User Reviews</div><div class="review-list" id="profile-reviews-list"></div></div></div>
+      <div id="pp-compare" class="ppanel"><div class="section-block"><div class="block-title">Compare</div><div class="cmp-cta"><p id="profile-cmp-text" style="color:var(--mut);font-size:13px;margin-bottom:14px"></p><button class="btn-action primary" onclick="addToCompareFromProfile();goPage('compare')">Add to comparison tool &rarr;</button></div></div></div>
+      <span id="profile-price" style="display:none"></span>
+      <span id="profile-price-note" style="display:none"></span>
+      <span id="profile-buy" style="display:none"></span>
+      <span id="profile-stars" style="display:none"></span>
+      <span id="profile-rating" style="display:none"></span>
+      <span id="profile-reviews" style="display:none"></span>
+      <span id="profile-verified" style="display:none"></span>
+    </div>
+  </div>
+</div>
+
+<div class="pm-back" id="pmBack" onclick="if(event.target===this)_closePm()"><div class="pm" id="pmBody"></div></div>
+
+<!-- COMPARE -->
+<div id="page-compare" class="page">
+  <div class="compare-page">
+    <div style="margin-bottom:20px"><div class="page-title">Robot Comparison Tool</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Select up to 4 robots to compare specs side by side</p></div>
+    <div class="compare-slots" id="compare-slots">
+  <div class="compare-slot" id="cslot-0" onclick="openSlot(0)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 1</div></div>
+  <div class="compare-slot" id="cslot-1" onclick="openSlot(1)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 2</div></div>
+  <div class="compare-slot" id="cslot-2" onclick="openSlot(2)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 3</div></div>
+  <div class="compare-slot" id="cslot-3" onclick="openSlot(3)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 4</div></div>
+</div>
+    <div id="compare-action" style="display:flex;justify-content:center;align-items:center;margin:18px 0 22px;min-height:48px"></div>
+    <div class="robot-selector">
+      <div class="rs-title">Select a robot <span style="color:var(--mut);font-size:12px;font-weight:400" id="slot-label">(for slot 1)</span></div>
+      <input type="text" id="rs-search" placeholder="Search by name or brand (e.g. Atlas, Boston Dynamics, Roomba)..." oninput="filterRobotSelector(this.value)" style="width:100%;padding:10px 14px;margin:12px 0 14px;border:1px solid var(--bdr);border-radius:8px;font-size:13px;font-family:inherit;outline:none;transition:border-color .15s" onfocus="this.style.borderColor='var(--acc)'" onblur="this.style.borderColor='var(--bdr)'">
+      <div style="font-size:11px;color:var(--mut);margin-bottom:8px"><span id="rs-count">0</span> robots</div>
+      <div class="rs-grid" id="rs-grid"></div>
+    </div>
+    <div id="compare-table"></div>
+    <div class="cta-row"><button class="btn btn-ghost" onclick="clearCompare()">Clear All</button><button class="btn btn-primary" onclick="goPage('db')">Browse More Robots</button></div>
+  </div>
+</div>
+
+<!-- RANKINGS -->
+<div id="page-rankings" class="page">
+  <div class="rankings-page">
+    <div style="margin-bottom:4px"><div class="page-title">Discover Robots</div><p style="color:var(--mut);font-size:13px;margin-top:5px">What's being searched for, what's newest, and what's available — straight from the data. We list the facts; we don't rank or rate robots.</p></div>
+    <div class="tabs" id="ranking-mode-tabs">
+      <div class="tab active" onclick="setRankMode('trending',this)">🔥 Trending Now</div>
+      <div class="tab" onclick="setRankMode('latest',this)">🆕 Latest Robots</div>
+      <div class="tab" onclick="setRankMode('available',this)">🛒 Available Now</div>
+    </div>
+    <div class="tabs" id="ranking-tabs" style="margin-top:10px">
+      <div class="tab active" onclick="filterRankings('all',this)">All</div>
+      <div class="tab" onclick="filterRankings('Humanoid',this)">Humanoid</div>
+      <div class="tab" onclick="filterRankings('Industrial',this)">Industrial</div>
+      <div class="tab" onclick="filterRankings('Service',this)">Service</div>
+      <div class="tab" onclick="filterRankings('Consumer',this)">Consumer/Home</div>
+      <div class="tab" onclick="filterRankings('Quadruped',this)">Quadruped</div>
+      <div class="tab" onclick="filterRankings('Drones',this)">Drones</div>
+      <div class="tab" onclick="filterRankings('Medical',this)">Medical</div>
+    </div>
+    <div id="rankings-list" style="margin-top:20px"></div>
+  </div>
+</div>
+
+<!-- NEWS -->
+<div id="page-news" class="page">
+  <div class="news-page">
+    <div style="margin-bottom:22px"><div class="page-title">Robotics News</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Latest industry news, product launches and expert analysis</p></div>
+    <div class="news-shell"><aside class="news-sidebar" id="news-sidebar"></aside><div class="news-main"><div class="news-layout" id="news-layout"></div>
+    <div class="news-list-items" id="news-list-items"></div></div></div>
+    <div class="news-signup" style="margin-top:34px;padding:30px 26px;border:1px solid var(--bdr);border-radius:14px;background:linear-gradient(135deg,var(--acc-l),var(--bg2));text-align:center">
+      <div style="font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:19px;color:var(--txt);margin-bottom:6px">Get the robotics briefing</div>
+      <div style="color:var(--mut);font-size:13.5px;margin-bottom:16px">The latest launches, reviews and breakthroughs &mdash; in your inbox. No spam.</div>
+      <form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="newsletter-form-news" class="nl-form" style="display:flex;gap:8px;max-width:430px;margin:0 auto;flex-wrap:wrap;justify-content:center">
+        <input type="hidden" name="form-name" value="newsletter">
+        <p style="display:none"><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
+        <input type="email" name="email" required placeholder="you@email.com" style="flex:1;min-width:200px;padding:11px 14px;border:1px solid var(--bdr2);border-radius:9px;font-size:14px;color:var(--txt);background:#fff">
+        <button type="submit" style="background:var(--acc);color:#fff;border:none;border-radius:9px;padding:11px 24px;font-weight:600;font-size:14px;cursor:pointer">Subscribe</button>
+      </form>
+      <div class="nl-msg" style="margin-top:13px;font-size:13px;color:var(--grn);display:none">Thanks &mdash; you&rsquo;re on the list!</div>
+    </div>
+  </div>
+</div>
+
+<!-- VIDEOS -->
+<div id="page-videos" class="page">
+  <div class="videos-page" style="max-width:1200px;margin:0 auto;padding:24px 20px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+      <div>
+        <div class="page-title">Robot Videos</div>
+        <p style="color:var(--mut);font-size:13px;margin-top:5px">Latest videos, reviews, and news from <strong>@MYROBOTSHOP</strong></p>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+        <div class="social-row social-row-lg" style="margin-top:0">
+          <a href="https://x.com/myrobot_shop" target="_blank" rel="noopener" class="social-icon x" title="Follow on X">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/MyRobotShopOfficial" target="_blank" rel="noopener" class="social-icon facebook" title="Like on Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/myrobotshop" target="_blank" rel="noopener" class="social-icon instagram" title="Follow on Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+        <a href="https://www.youtube.com/@MYROBOTSHOP?sub_confirmation=1" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 18px;background:#ff0000;color:#fff;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none">
+          <svg width="18" height="13" viewBox="0 0 28 20" fill="none"><path d="M27.41 3.13a3.51 3.51 0 0 0-2.47-2.49C22.75 0 14 0 14 0S5.25 0 3.06.64A3.51 3.51 0 0 0 .59 3.13 36.6 36.6 0 0 0 0 10a36.6 36.6 0 0 0 .59 6.87 3.51 3.51 0 0 0 2.47 2.49C5.25 20 14 20 14 20s8.75 0 10.94-.64a3.51 3.51 0 0 0 2.47-2.49A36.6 36.6 0 0 0 28 10a36.6 36.6 0 0 0-.59-6.87Z" fill="currentColor"/><path d="M11.2 14.29 18.46 10 11.2 5.71v8.58Z" fill="#ff0000"/></svg>
+          Subscribe
+        </a>
+      </div>
+    </div>
+    <div id="videos-loading" style="text-align:center;padding:50px 20px;color:var(--mut)">
+      <div style="font-size:32px;margin-bottom:8px">📺</div>
+      <div style="font-size:14px">Loading latest videos…</div>
+    </div>
+    <div id="videos-error" style="display:none;text-align:center;padding:40px 20px;background:#fef3c7;border:1px solid #f59e0b;border-radius:10px">
+      <div style="font-size:14px;color:#92400e;margin-bottom:10px">Couldn't load videos right now.</div>
+      <a href="https://www.youtube.com/@MYROBOTSHOP" target="_blank" rel="noopener" style="color:var(--acc);font-weight:600;text-decoration:none">Visit @MYROBOTSHOP on YouTube →</a>
+    </div>
+    <div id="videos-grid" style="display:none;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px"></div>
+  </div>
+</div>
+
+<!-- Video Modal (embed player) -->
+<div id="video-modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:1000;align-items:center;justify-content:center;padding:20px" onclick="closeVideoModal(event)">
+  <div style="position:relative;width:100%;max-width:960px;background:#000;border-radius:12px;overflow:hidden" onclick="event.stopPropagation()">
+    <button onclick="closeVideoModal()" style="position:absolute;top:12px;right:12px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.6);border:none;color:#fff;font-size:18px;cursor:pointer;z-index:10;display:flex;align-items:center;justify-content:center">✕</button>
+    <div style="position:relative;padding-bottom:56.25%;height:0"><iframe id="video-modal-iframe" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+    <div style="padding:14px 18px;background:#111;color:#fff;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+      <div id="video-modal-title" style="font-weight:600;font-size:14px;flex:1;min-width:200px"></div>
+      <a id="video-modal-yt-link" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:#ff0000;color:#fff;border-radius:6px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap">Watch on YouTube →</a>
+    </div>
+  </div>
+</div>
+
+<!-- FINDER -->
+<div id="page-finder" class="page">
+  <div class="finder-band">
+    <h1>Robot Finder</h1>
+    <p id="finder-band-meta">All categories · Live filters</p>
+    <div class="cat-wrap"><div class="ftabs" id="finder-tabs"></div></div>
+  </div>
+  <div class="finder-body">
+    <div id="finder-fp"></div>
+    <div class="finder-bottom" id="finder-bottom" style="display:none">
+      <button class="finder-reset-btn" onclick="resetFinder()">Reset filters</button>
+      <div class="finder-bottom-count"><em id="finder-bottom-count">0</em> robots match</div>
+      <button class="finder-show-btn" id="finder-show-btn" onclick="runFinderSearch()">Show results →</button>
+    </div>
+    <div class="finder-results-section" id="finder-results-section" style="display:none">
+      <div class="finder-toolbar">
+        <div class="finder-count">Showing <em id="finder-count">0</em> robots</div>
+        <div class="fr-right">
+          <select class="fssel" id="finder-sort" onchange="renderFinder()">
+            <option value="score">Best Rated</option>
+            <option value="price_asc">Price ↑</option>
+            <option value="price_desc">Price ↓</option>
+            <option value="name">A–Z</option>
+            <option value="newest" selected>Newest</option>
+          </select>
+          <div class="fvbtns">
+            <button class="fvbtn active" id="fvl" onclick="setFinderView('list')">☰</button>
+            <button class="fvbtn" id="fvg" onclick="setFinderView('grid')">⊞</button>
+          </div>
+        </div>
+      </div>
+      <div id="finder-results"></div>
+    </div>
+  </div>
+</div>
+
+<!-- MANUFACTURERS -->
+<div id="page-manufacturers" class="page"><div class="mfr-page"><div style="margin-bottom:20px"><div class="page-title">Robot Manufacturers</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Browse all brands in our database</p></div><div id="mfr-list"></div></div></div>
+
+<!-- SIGN IN -->
+<div id="page-signin" class="page">
+  <div class="auth-page"><div class="auth-card"><div style="text-align:center;margin-bottom:12px"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_200/v1777366404/output_17_t74qys.jpg" alt="" style="width:64px;height:64px;border-radius:50%;background:#fff"></div><div class="auth-title">Welcome back</div><div class="auth-sub">Sign in to your myrobot.shop account</div><div class="form-group"><label class="form-label">Email address</label><input class="form-input" type="email" placeholder="you@example.com"></div><div class="form-group"><label class="form-label">Password</label><input class="form-input" type="password" placeholder="••••••••"></div><button class="auth-btn">Sign in</button><div class="auth-divider"><span>or</span></div><button class="auth-btn" style="background:var(--bg2);color:var(--txt);border:1px solid var(--bdr)">Continue with Google</button><div class="auth-switch">Don't have an account? <a onclick="goPage('signin')">Create one free →</a></div></div></div>
+</div>
+
+<!-- SUBMIT ROBOT -->
+<div id="page-submit-robot" class="page">
+  <div class="submit-page"><div class="submit-card"><div class="submit-title">Submit a Robot</div><div class="submit-sub">Help us grow the world's most complete robot database.</div><div class="form-row"><div class="form-group"><label class="form-label">Robot Name *</label><input class="form-input" type="text" placeholder="e.g. Atlas Gen 2"></div><div class="form-group"><label class="form-label">Brand / Manufacturer *</label><input class="form-input" type="text" placeholder="e.g. Boston Dynamics"></div></div><div class="form-row"><div class="form-group"><label class="form-label">Category *</label><select class="form-select"><option value="">Select category...</option><option>Humanoid</option><option>Industrial</option><option>Service</option><option>Consumer/Home</option><option>Drones</option><option>Educational</option><option>Medical</option><option>Agricultural</option><option>Military/Security</option></select></div><div class="form-group"><label class="form-label">Year Released</label><input class="form-input" type="number" placeholder="e.g. 2025"></div></div><div class="form-row"><div class="form-group"><label class="form-label">Price (USD)</label><input class="form-input" type="text" placeholder="e.g. $75,000 or POA"></div><div class="form-group"><label class="form-label">Country of Origin</label><input class="form-input" type="text" placeholder="e.g. USA"></div></div><div class="form-group-full"><label class="form-label">Description</label><textarea class="form-textarea" placeholder="Describe what this robot does, key features and use cases..."></textarea></div><div class="form-group-full"><label class="form-label">Source URL</label><input class="form-input" type="url" placeholder="https://..."></div><div style="margin-top:20px;display:flex;gap:12px;align-items:center"><button class="submit-btn">Submit Robot →</button><span style="font-size:11px;color:var(--mut)">Our team reviews within 48 hours</span></div></div></div>
+</div>
+
+<!-- SUBMIT REVIEW -->
+<div id="page-methodology" class="page">
+  <div class="method-page">
+    <div class="method-kicker">DATA &amp; METHODOLOGY</div>
+    <h1>How we build the robot database</h1>
+    <p>myrobot.shop is an independent reference catalogue covering robots of every kind — from industrial arms and surgical systems to drones, vacuums, lawn mowers and educational kits. The goal is simple: one place where any robot can be looked up, compared, and understood on the same terms. This page explains where our information comes from and how we work to keep it trustworthy.</p>
+
+    <h2>Where our data comes from</h2>
+    <p>Every entry is compiled from primary and public sources, in this order of preference:</p>
+    <ul>
+      <li><strong>Manufacturer specifications</strong> — official datasheets, spec sheets and technical documentation published by the maker.</li>
+      <li><strong>Manufacturer websites &amp; product pages</strong> — official descriptions, dimensions, features and pricing.</li>
+      <li><strong>Official press &amp; launch materials</strong> — announcements, press kits and verified launch details.</li>
+      <li><strong>Reputable technical press &amp; industry sources</strong> — established robotics and technology publications, used to fill gaps and cross-check figures.</li>
+    </ul>
+
+    <h2>One schema, so everything is comparable</h2>
+    <p>Robots are described in wildly different ways by different makers. We normalise every entry into a single structured schema of more than 400 fields — dimensions, payload, degrees of freedom, battery, sensors, AI, connectivity and more — with consistent units throughout. That is what makes it possible to place a $400 robot vacuum and a $90,000 industrial arm side by side and genuinely compare them.</p>
+
+    <h2>How current it is</h2>
+    <p>The catalogue is updated continuously: new robots are added as they are announced or released, existing entries are revised as specifications change, and our robotics news feed refreshes daily from leading industry sources.</p>
+
+    <h2>Accuracy &amp; corrections</h2>
+    <p>We work hard to get every detail right, but specifications change, manufacturers revise figures, and with a catalogue this large the occasional error can slip through. We would always rather be corrected than left wrong. If you spot something inaccurate or out of date, please tell us and we will review it.</p>
+    <button class="method-cta" onclick="goPage('submit-robot')">Submit a correction or a robot →</button>
+
+    <h2>How the score works</h2>
+    <p>Each robot carries a score from 0–100. It is a composite reflection of capability, specifications and how the robot stands relative to others in its class — not a measure of how much anyone paid us. Which brings us to the last and most important point.</p>
+
+    <h2>Independence &amp; how we make money</h2>
+    <div class="method-box">
+      <p><strong>Listings and scores are never paid for.</strong> No manufacturer can pay to be included, excluded, ranked higher or scored better. Coverage is editorial, and we list every type of robot — including toys, kits and companions — not just the "serious" ones.</p>
+      <p>Some outbound “Check price” links are affiliate links (for example through the Amazon Associates programme). If you buy through one, we may earn a small commission at no extra cost to you. This helps fund the catalogue — but it never influences which robots we include, how they are scored, or how they rank.</p>
+    </div>
+
+    <p style="margin-top:24px">Questions about our data? <a href="mailto:email@myrobot.shop" style="color:var(--acc);text-decoration:none">email@myrobot.shop</a></p>
+  </div>
+</div>
+<div id="page-submit-review" class="page">
+  <div class="submit-page"><div class="submit-card"><div class="submit-title">Write a Review</div><div class="submit-sub">Share your experience to help others make the right decision.</div><div class="form-group-full" id="review-robot-row"><label class="form-label">Robot *</label><select class="form-select" id="review-robot-select"><option value="">Select a robot...</option></select></div><div class="form-group-full" id="review-robot-fixed" style="display:none"><label class="form-label">Robot</label><div id="review-robot-fixed-name" style="font-weight:700;font-size:15px;padding:6px 0"></div></div><div class="form-group-full"><label class="form-label">Your Rating *</label><div class="stars-select" id="stars-select"><span class="star-btn" onclick="setStars(1)">★</span><span class="star-btn" onclick="setStars(2)">★</span><span class="star-btn" onclick="setStars(3)">★</span><span class="star-btn" onclick="setStars(4)">★</span><span class="star-btn" onclick="setStars(5)">★</span></div></div><div class="form-row"><div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" id="review-name" placeholder="e.g. James K."></div><div class="form-group"><label class="form-label">Your Role</label><input class="form-input" type="text" id="review-role" placeholder="e.g. Robotics Engineer, Toyota"></div></div><div class="form-group-full"><label class="form-label">Review *</label><textarea class="form-textarea" id="review-text" style="min-height:120px" placeholder="Share your experience — pros, cons, use case, how long you've used it..."></textarea></div><div style="margin-top:20px;display:flex;gap:12px;align-items:center"><button class="submit-btn" onclick="submitReview()">Submit Review →</button><span style="font-size:11px;color:var(--mut)">Reviews moderated within 24 hours</span></div></div></div>
+</div>
+<script>
+
+// ════════════ ROBOT DATABASE ════════════
+let ROBOTS=[];/* data/robots.json — loaded at runtime */
+// Mascot fallback for any robot without an image
+const MASCOT_URL = 'https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg';
+function mascotImg(r, sz){ const s = sz||'100%'; return `<img src="${MASCOT_URL}" alt="${(r&&r.name)||'Robot'}" style="width:${s};height:${s};object-fit:contain;display:block;background:#fff" loading="lazy">`; }
+let ALL_BRANDS=[]; // populated after robots.json loads
+window.ROBOTS = ROBOTS;
+// ════════════ GLOBALS ════════════
+let dbView='grid', finderView='list', compareSlots=[null,null,null,null], activeSlot=0, currentProfile=null, finderCat='all';
+const ALL_CATS=['Aerospace','Agricultural','AGV/AMR','Aquatic','Autonomous Vehicles','Consumer','Delivery','Disaster Response','Drones','Educational','Entertainment','Exoskeletons','Humanoid','Industrial','Medical','Military','Quadruped','Research','Service','Social','Telepresence'];
+
+// Load robots.json then refresh whatever page is currently showing
+let ROBOTS_LOADED = false;
+// Load real Google Trends data (refreshed daily by the scheduled function). Optional —
+// the homepage falls back to the buzz proxy if this file isn't present yet.
+window.TRENDING = null;
+window.REVIEWS = {};  // data/reviews.json — { robotId: [ {rating,name,role,text,created,...}, ... ] }
+function loadReviews(){
+  return fetch('data/reviews.json',{cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(d){ if(d && d.reviews) window.REVIEWS = d.reviews; })
+    .catch(function(){ /* no reviews file yet — fine, shows "No reviews yet" */ });
+}
+function loadTrending(){
+  return fetch('data/trending.json',{cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(t){ if(t && t.scores) window.TRENDING = t; })
+    .catch(function(){ /* no trending file yet — fine, we fall back */ });
+}
+function loadRobots(){
+  loadTrending(); loadReviews(); // fire alongside; non-blocking
+  try{ _fieldRangeCache = {}; }catch(e){} // fresh data → recompute slider ranges
+  return fetch('data/robots.json',{cache:'no-store'})
+    .then(r=>{if(!r.ok)throw new Error('robots.json '+r.status);return r.json();})
+    .then(data=>{
+      ROBOTS.length=0; ROBOTS.push.apply(ROBOTS,data);
+      window.ROBOTS = ROBOTS;
+      ROBOTS_LOADED = true;
+      var _catN=new Set(ROBOTS.map(function(r){return r.cat;}).filter(Boolean)).size;
+      var _mfrN=new Set(ROBOTS.map(function(r){return r.brand;}).filter(Boolean)).size;
+      var _hc=document.getElementById('hero-robot-count'); if(_hc)_hc.textContent=_catN;
+      var _hhc=document.getElementById('home-hero-count'); if(_hhc)_hhc.textContent=ROBOTS.length.toLocaleString();
+      var _hmc=document.getElementById('home-mfr-count'); if(_hmc)_hmc.textContent=_mfrN.toLocaleString();
+      var _htc=document.getElementById('home-top-count'); if(_htc)_htc.textContent=ROBOTS.length.toLocaleString();
+      // Recompute brand list now that we have data
+      ALL_BRANDS.length=0;
+      const brandSet=new Set(ROBOTS.map(r=>r.brand).filter(b=>b&&b!=='undefined'));
+      [...brandSet].sort().forEach(b=>ALL_BRANDS.push(b));
+      // Re-render the currently active page from scratch — clear any "built once" flags
+      try{
+        const catF=document.getElementById('db-cat-filters');
+        if(catF) delete catF.dataset.built;
+        // Find current page from hash, re-route fully. This rebuilds EVERY page properly
+        // (including ones that were stuck with stale empty data because they rendered before
+        // robots.json arrived).
+        if (typeof parseHash === 'function' && typeof _renderPage === 'function'){
+          const {page, opts} = parseHash();
+          _renderPage(page, opts);
+        }
+        // Update home count badge regardless of current page
+        if(typeof renderHome==='function'&&document.getElementById('home-robots'))renderHome();
+      }catch(e){console.error('Re-render after robots load failed:',e);}
+      document.dispatchEvent(new CustomEvent('robots-loaded',{detail:{robots:ROBOTS}}));
+      try{loadCompare();renderCompareTray();}catch(e){}
+    })
+    .catch(e=>{console.error('Failed to load robots.json:',e);});
+}
+loadRobots();
+
+// ════════════ NAVIGATION ════════════
+// Hash routing: every page change updates location.hash so the browser Back/Forward
+// buttons work, refresh keeps you on the current page, and profile links are shareable.
+//
+// Hash format:
+//   #db, #finder, #compare, #rankings, #news, #manufacturers, #signin, ...
+//   #profile/<robot-id>   — deep link to a specific robot
+//
+// goPage() is the public entry — called from every onclick in the markup. It updates
+// the hash, which triggers the hashchange listener, which calls _renderPage to actually
+// swap the DOM. This indirection means programmatic navigation and Back/Forward both
+// go through the same render path.
+function goPage(p, opts){
+  // AI assistant page mount/unmount
+  try{
+    if(p==='ai'){ if(window.rcMountFullpage) setTimeout(window.rcMountFullpage,0); }
+    else { if(window.rcUnmountFullpage) window.rcUnmountFullpage(); }
+  }catch(e){}
+  opts = opts || {};
+  let hash = p;
+  if (p === 'profile' && opts.id){
+    hash = 'profile/' + opts.id;
+  }
+  else if (p === 'db' && opts.cat){
+    hash = 'db/cat/' + encodeURIComponent(opts.cat);
+  }
+  else if (p === 'compare' && opts.ids && opts.ids.length){
+    hash = 'compare/' + opts.ids.map(encodeURIComponent).join('+');
+  }
+  if (location.hash === '#' + hash){
+    // Same page clicked — re-render anyway (e.g. clicking Home from Home should still scroll up)
+    _renderPage(p, opts);
+    return;
+  }
+  // Setting location.hash pushes a history entry; hashchange listener then renders.
+  location.hash = hash;
+}
+
+function _renderPage(p, opts){
+  opts = opts || {};
+  document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(el=>el.classList.remove('active'));
+  const pg=document.getElementById('page-'+p);
+  if(!pg) return; // Unknown page id — bail silently
+  pg.classList.add('active');
+  const nav=document.getElementById('nav-'+p);
+  if(nav) nav.classList.add('active');
+  window.scrollTo(0,0);
+  if(p==='home'){renderHome();}
+  if(p==='db'){ if(opts.cat){ _pendingDbCat = opts.cat; } buildDbFilters();renderDb();}
+  if(p==='compare'){ if(opts.ids&&opts.ids.length){ loadCompareIds(opts.ids); if(typeof refreshCompareUI==='function')refreshCompareUI(); } renderCompare(); if(typeof syncCompareHash==='function')syncCompareHash(); }
+  if(p==='rankings'){renderRankings('all');}
+  if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();}
+  if(p==='manufacturers'){renderManufacturers();}
+  if(p==='videos'){renderVideos();}
+  if(p==='news'){renderNews();}
+  if(p==='submit-review'){populateReviewSelect();setupReviewForm();}
+  if(p==='profile' && opts.id){
+    // openProfile sets DOM content but also calls goPage('profile') — avoid the loop
+    // by calling the internal renderer directly here when we arrive via hash.
+    _renderProfile(opts.id);
+  }
+  // SEO/UX: per-page document titles (profile sets its own richer title)
+  if(p!=='profile'){
+    var PT={home:"myrobot.shop — World's #1 Robot Database",db:"Robot Database — browse 1,600+ robots | myrobot.shop",finder:"Robot Finder | myrobot.shop",compare:"Compare Robots side by side | myrobot.shop",rankings:"Robot Rankings | myrobot.shop",news:"Robotics News | myrobot.shop",videos:"Robot Videos | myrobot.shop",manufacturers:"Robot Brands & Manufacturers | myrobot.shop",methodology:"How We Source Our Data | myrobot.shop"};
+    document.title=PT[p]||PT.home;
+  }
+}
+
+// Parse current location.hash into {page, opts}. Empty hash returns home.
+function parseHash(){
+  const raw = (location.hash || '').replace(/^#/, '');
+  if (!raw) return {page: 'home', opts: {}};
+  const parts = raw.split('/');
+  const page = parts[0];
+  if (page === 'profile' && parts[1]){
+    return {page: 'profile', opts: {id: parts[1]}};
+  }
+  if (page === 'db' && parts[1] === 'cat' && parts[2]){
+    return {page: 'db', opts: {cat: decodeURIComponent(parts.slice(2).join('/'))}};
+  }
+  if (page === 'compare' && parts[1]){
+    var cids = parts.slice(1).join('/').split('+').map(function(s){return decodeURIComponent(s);}).filter(Boolean);
+    return {page: 'compare', opts: {ids: cids}};
+  }
+  return {page, opts: {}};
+}
+
+// Back/Forward + manual hash edits + programmatic hash changes all funnel through here.
+window.addEventListener('hashchange', () => {
+  if (!ROBOTS_LOADED){ return; } // loadRobots will trigger a re-route once data arrives
+  const {page, opts} = parseHash();
+  _renderPage(page, opts);
+});
+
+// On first paint, honour any hash already in the URL (deep links, refreshed tabs).
+// Runs after DOM is ready — see the DOMContentLoaded handler below.
+// IMPORTANT: defer until data has actually loaded — otherwise every page (Database, Rankings,
+// Profile, Compare, etc.) renders with an empty ROBOTS array and gets stuck with stale UI.
+function applyInitialHashRoute(){
+  if (!ROBOTS_LOADED){
+    // Wait for the robots-loaded event before rendering. loadRobots() will trigger a
+    // _renderPage(...) call itself when data arrives, so we don't need to do anything here.
+    return;
+  }
+  const {page, opts} = parseHash();
+  _renderPage(page, opts);
+}
+if (document.readyState === 'loading'){
+  document.addEventListener('DOMContentLoaded', applyInitialHashRoute);
+} else {
+  applyInitialHashRoute();
+}
+
+// ════════════ HOME ════════════
+// Buzz score — shared by homepage (Featured/Trending) AND the Discover page.
+// Top-level so every render path can use it. Surfaces famous + recent + image-backed robots.
+var _hotBrands=['Tesla','Boston Dynamics','Unitree','Figure','Figure AI','Agility Robotics','1X','1X Technologies','NEURA Robotics','Sanctuary AI','Apptronik','UBTECH','Xiaomi','Fourier','Galbot','Clone Robotics','Deep Robotics','EngineAI','Engine AI','Booster Robotics','Noble Machines','Hexagon','Hyundai','Samsung','LG','Honda'];
+function robotBuzz(r){
+  var d = (typeof robotSortDate==='function') ? robotSortDate(r) : ((parseInt(r.year)||2018)*10000+101);
+  var yr = Math.floor(d/10000);
+  var buzz = (yr-2018)*10;
+  if(_hotBrands.indexOf(r.brand)>=0) buzz+=40;
+  if(r.cat==='Humanoid') buzz+=15;
+  if(r.img) buzz+=8;
+  if(yr>2026) buzz-=100;
+  return {buzz:buzz, d:d};
+}
+function renderHome(){
+  // Live counts
+  const total=ROBOTS.length;
+  const mfrCount=new Set(ROBOTS.map(r=>r.brand).filter(Boolean)).size;
+  const elTop=document.getElementById('home-top-count');if(elTop)elTop.textContent=total;
+  const elHero=document.getElementById('home-hero-count');if(elHero)elHero.textContent=total;
+  const elMfr=document.getElementById('home-mfr-count');if(elMfr)elMfr.textContent=mfrCount;
+  const elCat=document.getElementById('hero-robot-count');if(elCat)elCat.textContent=new Set(ROBOTS.map(r=>r.cat).filter(Boolean)).size;
+  // Category pills — alphabetical, with live counts
+  const catPills=document.getElementById('home-cat-pills');
+  if(catPills){
+    catPills.innerHTML=ALL_CATS.map(c=>{
+      const count=ROBOTS.filter(r=>r.cat===c).length;
+      return `<span class="cat-pill" onclick="filterCat('${c}')">${c}<span class="cat-pill-count">${count}</span></span>`;
+    }).join('');
+  }
+  // Brand tags — top 50 by robot count, then "See all" link to brands page
+  const btHome=document.getElementById('brand-tags-home');
+  if(btHome){
+    const brandCounts={};
+    for(const r of ROBOTS){if(r.brand)brandCounts[r.brand]=(brandCounts[r.brand]||0)+1;}
+    const topBrands=Object.entries(brandCounts).sort((a,b)=>b[1]-a[1]).slice(0,50).map(e=>e[0]);
+    const totalBrands=Object.keys(brandCounts).length;
+    let html=topBrands.map(b=>`<span class="btag" onclick="searchBrand('${b.replace(/'/g,"\\'")}')">${b}</span>`).join('');
+    if(totalBrands>50){
+      html+=`<span class="btag" style="background:var(--acc-l);color:var(--acc);border-color:var(--acc);font-weight:600" onclick="goPage('manufacturers')">See all ${totalBrands} brands →</span>`;
+    }
+    btHome.innerHTML=html;
+  }
+  // Featured robots — surface the NEWEST, most in-demand robots people search for.
+  const top4=[...ROBOTS].map(function(r){return {r:r, b:robotBuzz(r)};})
+    .sort(function(a,b){return b.b.buzz-a.b.buzz || b.b.d-a.b.d || (b.r.score||0)-(a.r.score||0);})
+    .slice(0,4).map(function(x){return x.r;});
+  document.getElementById('home-robots').innerHTML=top4.map(r=>{
+    const tags=Array.isArray(r.tags)?r.tags:[];
+    const rating=r.rating||0;
+    const reviews=r.reviews||0;
+    const price=r.price||0;
+    const name=r.name||'';
+    const brand=r.brand||'';
+    const fig=robotFig(r);
+    const id=r.id||'';
+    return `
+    <div class="robot-card" onclick="openProfile('${id}')">
+      <div class="rc-img">${r.img?`<img src="${r.img}" alt="${name}" onerror="this.style.display='none';this.parentNode.querySelector('.rc-mascot').style.display='flex'">`:''}${r.badge?`<div class="rc-badge ${r.bc||''}">${r.badge}</div>`:''}<div class="rc-mascot" style="${r.img?'display:none;':'display:flex;'}position:absolute;inset:0;align-items:center;justify-content:center;background:#fff">${mascotImg(r,'80%')}</div></div>
+      <div class="rc-info">
+        <div class="rc-brand">${brand}</div>
+        <div class="rc-name">${name}</div>
+        <div class="rc-specs">${tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div>
+        <div class="rc-footer">
+          <div class="rc-rating"><span class="stars">${'★'.repeat(Math.round(rating))}</span><span style="margin-left:3px">${rating} (${reviews})</span></div>
+          ${priceStars(r)}
+        </div>
+      </div>
+    </div>`;}).join('');
+  // ── Three homepage columns: Trending / Latest / Available (10 each, genuinely different) ──
+  var _trendScores = (window.TRENDING && window.TRENDING.scores) ? window.TRENDING.scores : null;
+  function chartRow(r){
+    var tags=Array.isArray(r.tags)?r.tags:[];
+    var id=r.id||'', brand=r.brand||'', name=r.name||'', sub=r.sub||r.cat||'';
+    return '<div class="chart-item" onclick="openProfile(\''+id+'\')">'+
+      '<div class="chart-icon" style="overflow:hidden;background:#fff">'+(r.img?'<img src="'+r.img+'" alt="'+name+'" style="width:100%;height:100%;object-fit:cover;display:block" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'">':'<img src="'+MASCOT_URL+'" alt="'+name+'" style="width:100%;height:100%;object-fit:contain;display:block">')+'</div>'+
+      '<div class="chart-info"><div class="chart-name">'+brand+' '+name+'</div><div class="chart-sub">'+(tags[0]||sub)+'</div></div>'+
+    '</div>';
+  }
+  // Trending — real Google Trends when available, else buzz proxy
+  var trendList=[...ROBOTS].map(function(r){
+    var b=robotBuzz(r);
+    var k=(_trendScores && _trendScores[r.id]!=null) ? (10000+_trendScores[r.id]*100+b.buzz) : (b.buzz*2+(r.score||0));
+    return {r:r,k:k,d:b.d};
+  }).sort(function(a,b){return b.k-a.k||b.d-a.d;}).slice(0,5).map(function(x){return x.r;});
+  // Latest — newest by real launch date
+  var latestList=[...ROBOTS].sort(function(a,b){return robotSortDate(b)-robotSortDate(a);}).slice(0,5);
+  // Available — robots you can actually BUY now (have a real price), newest first.
+  // Distinct from Latest (which includes announced/POA robots).
+  var availList=[...ROBOTS].filter(function(r){
+    return /active|available|released|shipping|production/i.test(r.status||'') && r.price && r.price>0;
+  }).sort(function(a,b){return robotSortDate(b)-robotSortDate(a);}).slice(0,5);
+  var te=document.getElementById('home-trending'); if(te) te.innerHTML=trendList.map(chartRow).join('');
+  var le=document.getElementById('home-latest'); if(le) le.innerHTML=latestList.map(chartRow).join('');
+  var ae=document.getElementById('home-available'); if(ae) ae.innerHTML=availList.map(chartRow).join('');
+}
+
+function heroSearch(){
+  const q=document.getElementById('hero-search').value;
+  if(q){document.getElementById('db-search').value=q;}
+  goPage('db');
+}
+
+function searchBrand(b){
+  document.getElementById('db-search').value=b;
+  goPage('db');
+}
+
+function filterCat(cat){
+  goPage('db', {cat: cat});
+}
+
+// ════════════ DATABASE ════════════
+var _pendingDbCat = null;  // set by breadcrumb/category links; applied when DB filters are ready
+function buildDbFilters(){
+  const catF=document.getElementById('db-cat-filters');
+  if(catF && !catF.dataset.built){
+    catF.dataset.built='1';
+    const cats=[...new Set(ROBOTS.map(r=>r.cat).filter(Boolean))].sort();
+    catF.innerHTML=cats.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
+    renderSubcatFilter();  // initial render: hidden (no cat selected)
+    renderBrandFilter();   // initial render: all brands
+  }
+  // Apply a pending category filter (from a breadcrumb/category click), even if the
+  // filters were already built on a previous visit.
+  if(_pendingDbCat){
+    const want=_pendingDbCat; _pendingDbCat=null;
+    document.querySelectorAll('#db-cat-filters input[data-cat]').forEach(function(cb){
+      cb.checked = (cb.dataset.cat===want);
+    });
+    if(typeof onCatChange==='function') onCatChange();
+  }
+}
+
+// Re-render the manufacturer list based on currently selected categories.
+// When no categories selected → show all brands. When categories selected → show
+// only brands that have at least one robot in those categories.
+// Editorial brand priority — when a category is selected, these brands appear at top.
+// Brands present in your data but not in any priority list still show, just sorted by count after the priority brands.
+const CAT_BRAND_PRIORITY = {
+  'Consumer': ['iRobot', 'Roborock', 'Eufy', 'Shark', 'Ecovacs', 'Yeedi', 'Proscenic', 'Lefant'],
+  'Industrial': ['Universal Robots', 'FANUC', 'ABB Robotics', 'KUKA', 'JAKA', 'AUBO', 'Stäubli'],
+  'Humanoid': ['Boston Dynamics', 'Tesla', 'Figure', 'Agility Robotics', 'Apptronik', '1X', 'UBTECH', 'Unitree', 'Fourier Intelligence', 'AGIBOT'],
+  'Drones': ['DJI', 'Skydio', 'Parrot', 'Autel Robotics', 'senseFly'],
+  'Educational': ['LEGO Education', 'Sphero', 'Wonder Workshop', 'VEX Robotics', 'Makeblock', 'Ozobot', 'ELEGOO', 'Fisher-Price', 'KinderLab Robotics', 'Learning Resources'],
+  'Medical': ['Intuitive Surgical', 'Stryker', 'Johnson & Johnson MedTech', 'Medtronic'],
+  'Agricultural': ['John Deere', 'Carbon Robotics', 'Monarch Tractor', 'Naïo Technologies'],
+  'Military': ['Milrem Robotics', 'Boston Dynamics', 'Ghost Robotics'],
+  'Service': ['SoftBank Robotics', 'Pudu Robotics', 'Bear Robotics'],
+};
+// When no category selected — show these well-known brands at top
+const GLOBAL_BRAND_PRIORITY = [
+  'iRobot', 'Boston Dynamics', 'Roborock', 'DJI', 'Tesla', 'Figure',
+  'UBTECH', 'LEGO Education', 'Sphero', 'Universal Robots', 'FANUC',
+  'ABB Robotics', 'Agility Robotics', 'Apptronik', '1X', 'Unitree',
+  'Eufy', 'Shark', 'KUKA', 'Wonder Workshop'
+];
+const BRAND_DISPLAY_LIMIT = 20;
+
+// State: whether the brand list is expanded (showing all) or collapsed (showing top 20)
+let BRANDS_EXPANDED = false;
+
+function renderBrandFilter(){
+  const brandF=document.getElementById('db-brand-filters');
+  if(!brandF)return;
+  const selCats=[...document.querySelectorAll('[data-cat]:checked')].map(el=>el.dataset.cat);
+  const selBrands=new Set([...document.querySelectorAll('[data-brand]:checked')].map(el=>el.dataset.brand));
+  // Determine which brands are relevant given the category selection
+  let relevantBrands;
+  if(selCats.length===0){
+    relevantBrands=ALL_BRANDS.filter(b=>b&&b!=='undefined');
+  }else{
+    const brandSet=new Set();
+    for(const r of ROBOTS){
+      if(selCats.includes(r.cat)&&r.brand)brandSet.add(r.brand);
+    }
+    relevantBrands=ALL_BRANDS.filter(b=>brandSet.has(b));
+  }
+  // Compute count per brand using faceted-search logic:
+  // count reflects what you'd get if you added that brand to your current filters.
+  // i.e. apply all OTHER active filters (cat, sub, price, status, feat, search) but ignore brand selection.
+  const _q = (document.getElementById('db-search')?.value || '').toLowerCase();
+  const _selSubs = [...document.querySelectorAll('[data-sub]:checked')].map(el => el.dataset.sub);
+  const _selPrice = [...document.querySelectorAll('[data-price]:checked')].map(el => el.dataset.price);
+  const _selFeat = [...document.querySelectorAll('[data-feat]:checked')].map(el => el.dataset.feat);
+  const _selStatus = [...document.querySelectorAll('[data-status]:checked')].map(el => el.dataset.status);
+  function _matchesAllExceptBrand(r){
+    if (_q && !((r.name||'').toLowerCase().includes(_q) || (r.brand||'').toLowerCase().includes(_q) || (r.tags||[]).some(t => (t||'').toLowerCase().includes(_q)) || (r.cat||'').toLowerCase().includes(_q))) return false;
+    if (selCats.length && !selCats.includes(r.cat)) return false;
+    if (_selSubs.length && !_selSubs.includes(r.sub)) return false;
+    if (_selStatus.length && !_selStatus.includes(r.status)) return false;
+    if (_selFeat.length && !_selFeat.every(f => (f==='arm'&&r.arm)||(f==='ai'&&r.ai)||(f==='ros'&&r.ros)||(f==='sdk'&&r.sdk))) return false;
+    if (_selPrice.length){
+      const ok = _selPrice.some(v => {
+        if (v==='u1k') return r.price>0 && r.price<1000;
+        if (v==='u20k') return r.price>=1000 && r.price<20000;
+        if (v==='u100k') return r.price>=20000 && r.price<100000;
+        if (v==='u500k') return r.price>=100000 && r.price<500000;
+        if (v==='over500k') return r.price>=500000;
+        if (v==='poa') return r.price===0;
+        return false;
+      });
+      if (!ok) return false;
+    }
+    return true;
+  }
+  const brandCounts = {};
+  for (const r of ROBOTS){
+    if (_matchesAllExceptBrand(r) && r.brand){
+      brandCounts[r.brand] = (brandCounts[r.brand]||0) + 1;
+    }
+  }
+
+  // Sort: priority brands first, then by robot count desc
+  let priorityList;
+  if (selCats.length === 1 && CAT_BRAND_PRIORITY[selCats[0]]){
+    priorityList = CAT_BRAND_PRIORITY[selCats[0]];
+  } else {
+    priorityList = GLOBAL_BRAND_PRIORITY;
+  }
+  // Keep checked brands always visible regardless of priority/count
+  const checkedBrands = relevantBrands.filter(b => selBrands.has(b));
+  // Hide unchecked brands with 0 count after applying current filters (they're not selectable)
+  const _hasMatches = b => (brandCounts[b] || 0) > 0;
+  const sortedBrands = [
+    // 1. Currently-checked brands (so user always sees what they've selected)
+    ...checkedBrands,
+    // 2. Priority brands (in their editorial order) that are relevant AND have matches
+    ...priorityList.filter(b => relevantBrands.includes(b) && !selBrands.has(b) && _hasMatches(b)),
+    // 3. The rest, sorted by robot count desc — also requires matches
+    ...relevantBrands.filter(b => !priorityList.includes(b) && !selBrands.has(b) && _hasMatches(b))
+      .sort((a, b) => (brandCounts[b] || 0) - (brandCounts[a] || 0))
+  ];
+
+  // Decide what to actually show
+  const visibleBrands = BRANDS_EXPANDED ? sortedBrands : sortedBrands.slice(0, BRAND_DISPLAY_LIMIT);
+  const hiddenCount = sortedBrands.length - visibleBrands.length;
+
+  const html = visibleBrands.map(b =>
+    `<label class="filter-opt"><input type="checkbox" data-brand="${b}" onchange="renderDb()" ${selBrands.has(b)?'checked':''}><span class="filter-opt-label">${b}</span><span class="filter-opt-count">${brandCounts[b]||0}</span></label>`
+  ).join('');
+
+  // Add expand/collapse toggle if there are more brands than we're showing
+  let toggleHtml = '';
+  if (hiddenCount > 0){
+    toggleHtml = `<div onclick="toggleBrandsExpanded()" style="padding:8px 4px;color:var(--acc);font-size:11px;font-weight:600;cursor:pointer;text-align:center;border-top:1px solid var(--bdr);margin-top:4px">+ See ${hiddenCount} more brands</div>`;
+  } else if (BRANDS_EXPANDED && sortedBrands.length > BRAND_DISPLAY_LIMIT){
+    toggleHtml = `<div onclick="toggleBrandsExpanded()" style="padding:8px 4px;color:var(--mut);font-size:11px;font-weight:600;cursor:pointer;text-align:center;border-top:1px solid var(--bdr);margin-top:4px">− Show less</div>`;
+  }
+  brandF.innerHTML = html + toggleHtml;
+}
+
+function toggleBrandsExpanded(){
+  BRANDS_EXPANDED = !BRANDS_EXPANDED;
+  renderBrandFilter();
+}
+
+// Render the sub-category filter. Only visible when exactly one main category is selected.
+// Shows the top sub-types within that category with counts.
+const SUBCAT_DISPLAY_LIMIT = 15;
+let SUBCAT_EXPANDED = false;
+function renderSubcatFilter(){
+  const section = document.getElementById('db-subcat-section');
+  const container = document.getElementById('db-subcat-filters');
+  if (!section || !container) return;
+  const selCats = [...document.querySelectorAll('[data-cat]:checked')].map(el => el.dataset.cat);
+  // Only show sub-cat section when exactly one main category is selected
+  if (selCats.length !== 1){
+    section.style.display = 'none';
+    container.innerHTML = '';
+    return;
+  }
+  const cat = selCats[0];
+  const selSubs = new Set([...document.querySelectorAll('[data-sub]:checked')].map(el => el.dataset.sub));
+  // Count sub-types using faceted-search: respect all OTHER active filters except sub-type itself
+  const _q2 = (document.getElementById('db-search')?.value || '').toLowerCase();
+  const _selBrands2 = [...document.querySelectorAll('[data-brand]:checked')].map(el => el.dataset.brand);
+  const _selPrice2 = [...document.querySelectorAll('[data-price]:checked')].map(el => el.dataset.price);
+  const _selFeat2 = [...document.querySelectorAll('[data-feat]:checked')].map(el => el.dataset.feat);
+  const _selStatus2 = [...document.querySelectorAll('[data-status]:checked')].map(el => el.dataset.status);
+  function _matchesAllExceptSub(r){
+    if (r.cat !== cat) return false;
+    if (_q2 && !((r.name||'').toLowerCase().includes(_q2) || (r.brand||'').toLowerCase().includes(_q2) || (r.tags||[]).some(t => (t||'').toLowerCase().includes(_q2)) || (r.cat||'').toLowerCase().includes(_q2))) return false;
+    if (_selBrands2.length && !_selBrands2.includes(r.brand)) return false;
+    if (_selStatus2.length && !_selStatus2.includes(r.status)) return false;
+    if (_selFeat2.length && !_selFeat2.every(f => (f==='arm'&&r.arm)||(f==='ai'&&r.ai)||(f==='ros'&&r.ros)||(f==='sdk'&&r.sdk))) return false;
+    if (_selPrice2.length){
+      const ok = _selPrice2.some(v => {
+        if (v==='u1k') return r.price>0 && r.price<1000;
+        if (v==='u20k') return r.price>=1000 && r.price<20000;
+        if (v==='u100k') return r.price>=20000 && r.price<100000;
+        if (v==='u500k') return r.price>=100000 && r.price<500000;
+        if (v==='over500k') return r.price>=500000;
+        if (v==='poa') return r.price===0;
+        return false;
+      });
+      if (!ok) return false;
+    }
+    return true;
+  }
+  // Count sub-types within this category, respecting other filters
+  const subCounts = {};
+  for (const r of ROBOTS){
+    if (_matchesAllExceptSub(r) && r.sub && r.sub.trim()){
+      subCounts[r.sub] = (subCounts[r.sub] || 0) + 1;
+    }
+  }
+  // Include checked sub-types even if their count drops to 0
+  selSubs.forEach(s => { if (!(s in subCounts)) subCounts[s] = 0; });
+  const subs = Object.keys(subCounts).sort((a, b) => subCounts[b] - subCounts[a]);
+  if (subs.length === 0){
+    section.style.display = 'none';
+    container.innerHTML = '';
+    return;
+  }
+  section.style.display = '';
+  // Keep checked sub-types always visible; hide unchecked ones with 0 count
+  const checkedSubs = subs.filter(s => selSubs.has(s));
+  const restSubs = subs.filter(s => !selSubs.has(s) && subCounts[s] > 0);
+  const ordered = [...checkedSubs, ...restSubs];
+  const visible = SUBCAT_EXPANDED ? ordered : ordered.slice(0, SUBCAT_DISPLAY_LIMIT);
+  const hidden = ordered.length - visible.length;
+
+  const html = visible.map(s =>
+    `<label class="filter-opt"><input type="checkbox" data-sub="${escapeAttr(s)}" onchange="renderDb()" ${selSubs.has(s)?'checked':''}><span class="filter-opt-label">${s}</span><span class="filter-opt-count">${subCounts[s]||0}</span></label>`
+  ).join('');
+  let toggle = '';
+  if (hidden > 0){
+    toggle = `<div onclick="toggleSubcatExpanded()" style="padding:8px 4px;color:var(--acc);font-size:11px;font-weight:600;cursor:pointer;text-align:center;border-top:1px solid var(--bdr);margin-top:4px">+ See ${hidden} more types</div>`;
+  } else if (SUBCAT_EXPANDED && ordered.length > SUBCAT_DISPLAY_LIMIT){
+    toggle = `<div onclick="toggleSubcatExpanded()" style="padding:8px 4px;color:var(--mut);font-size:11px;font-weight:600;cursor:pointer;text-align:center;border-top:1px solid var(--bdr);margin-top:4px">− Show less</div>`;
+  }
+  container.innerHTML = html + toggle;
+}
+function toggleSubcatExpanded(){
+  SUBCAT_EXPANDED = !SUBCAT_EXPANDED;
+  renderSubcatFilter();
+}
+// Safe fig: emoji only — never render URL junk from bad imports
+function robotFig(r){ const f=(r&&r.fig)||''; return (f && !/^https?:/i.test(f)) ? f : '🤖'; }
+// Small photo chip for compare UI: real image when available, emoji fallback
+function compareThumb(r){
+  if(r && r.img) return `<img src="${r.img}" alt="" style="width:34px;height:34px;object-fit:contain;border-radius:6px;background:#fff;border:1px solid var(--bdr);vertical-align:middle;margin-right:6px" onerror="this.outerHTML=robotFig({fig:'🤖'})">`;
+  return robotFig(r)+' ';
+}
+// Helper for safely embedding strings into HTML attributes (handles quotes)
+function escapeAttr(s){
+  return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+// Called when a category checkbox changes. Rebuilds brand list, then re-renders results.
+// Reflect the current single-category selection in the URL so the address bar is a
+// shareable deep link. Uses replaceState so it does NOT re-trigger a route/render.
+function syncDbHash(){
+  try{
+    var sel=[].slice.call(document.querySelectorAll('#db-cat-filters input[data-cat]:checked')).map(function(el){return el.dataset.cat;});
+    var hsh = (sel.length===1) ? ('db/cat/'+encodeURIComponent(sel[0])) : 'db';
+    if(location.hash !== '#'+hsh){ history.replaceState(null,'','#'+hsh); }
+  }catch(e){}
+}
+function onCatChange(){
+  // When the user changes category, reset sub-category selections (they applied to the OLD cat)
+  document.querySelectorAll('[data-sub]:checked').forEach(el => el.checked = false);
+  SUBCAT_EXPANDED = false;
+  renderSubcatFilter();
+  renderBrandFilter();
+  renderDb();
+  syncDbHash();
+}
+
+function getDbFiltered(){
+  const q=(document.getElementById('db-search').value||'').toLowerCase();
+  const selCats=[...document.querySelectorAll('[data-cat]:checked')].map(el=>el.dataset.cat);
+  const selSubs=[...document.querySelectorAll('[data-sub]:checked')].map(el=>el.dataset.sub);
+  const selBrands=[...document.querySelectorAll('[data-brand]:checked')].map(el=>el.dataset.brand);
+  const selPrice=[...document.querySelectorAll('[data-price]:checked')].map(el=>el.dataset.price);
+  const selFeat=[...document.querySelectorAll('[data-feat]:checked')].map(el=>el.dataset.feat);
+  const selStatus=[...document.querySelectorAll('[data-status]:checked')].map(el=>el.dataset.status);
+  return ROBOTS.filter(r=>{
+    if(q&&!r.name.toLowerCase().includes(q)&&!r.brand.toLowerCase().includes(q)&&!r.tags.some(t=>t.toLowerCase().includes(q))&&!r.cat.toLowerCase().includes(q))return false;
+    if(selCats.length&&!selCats.includes(r.cat))return false;
+    if(selSubs.length&&!selSubs.includes(r.sub))return false;
+    if(selBrands.length&&!selBrands.includes(r.brand))return false;
+    if(selStatus.length&&!selStatus.includes(r.status))return false;
+    if(selFeat.length&&!selFeat.every(f=>(f==='arm'&&r.arm)||(f==='ai'&&r.ai)||(f==='ros'&&r.ros)||(f==='sdk'&&r.sdk)))return false;
+    if(selPrice.length){
+      const ok=selPrice.some(v=>{
+        if(v==='u1k')return r.price>0&&r.price<1000;
+        if(v==='u20k')return r.price>=1000&&r.price<20000;
+        if(v==='u100k')return r.price>=20000&&r.price<100000;
+        if(v==='u500k')return r.price>=100000&&r.price<500000;
+        if(v==='over500k')return r.price>=500000;
+        if(v==='poa')return r.price===0;
+        return false;
+      });
+      if(!ok)return false;
+    }
+    return true;
+  });
+}
+
+function renderDb(){
+  // Faceted search: re-render sidebar counts so they reflect current filter combination
+  // (these are cheap and necessary — counts should always match the visible result set)
+  renderBrandFilter();
+  renderSubcatFilter();
+  const sort=document.getElementById('db-sort')?.value||'score';
+  let list=getDbFiltered();
+  list=[...list].sort((a,b)=>sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):sort==='payload'?b.payload-a.payload:(robotSortKey(b)-robotSortKey(a)||a.name.localeCompare(b.name)));
+  document.getElementById('db-count').textContent=`Showing ${list.length} robot${list.length!==1?'s':''}`;
+  // Active filter tags
+  const tags=[];
+  document.querySelectorAll('[data-cat]:checked').forEach(el=>tags.push(el.dataset.cat));
+  document.querySelectorAll('[data-brand]:checked').forEach(el=>tags.push(el.dataset.brand));
+  document.getElementById('db-active-filters').innerHTML=tags.map(t=>`<div class="filter-tag">${t}</div>`).join('');
+  const ranks=['gold','silver','bronze'];
+  const c=document.getElementById('db-results');
+  if(!list.length){c.innerHTML='<div class="no-results"><h3>No robots found</h3><p>Try adjusting your search or filters</p></div>';return;}
+  if(dbView==='list'){
+    c.innerHTML=`<div class="robot-list">${list.map((r,i)=>`
+      <div class="robot-row" onclick="openProfile('${r.id}')">
+        <div class="rr-rank ${ranks[i]||''}">${i+1}</div>
+        <div class="rr-icon">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:48px;height:48px;object-fit:cover;border-radius:9px;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain';this.style.background='#fff'">`:`<img src="${MASCOT_URL}" style="width:48px;height:48px;object-fit:contain;border-radius:9px;display:block;background:#fff">`}</div>
+        <div class="rr-info">
+          <div class="rr-brand">${r.brand} · ${r.year}</div>
+          <div class="rr-name">${r.name}</div>
+          <div class="rr-pills">${r.tags.slice(0,3).map(t=>`<span class="pill">${t}</span>`).join('')}${r.status!=='Available'?`<span class="pill" style="color:var(--org)">${r.status}</span>`:''}</div>
+        </div>
+        <div class="rr-specs-row">
+          ${r.payload?`<div class="rr-spec"><div class="rr-spec-val">${r.payload}kg</div><div class="rr-spec-lbl">Payload</div></div>`:''}
+          ${r.battery?`<div class="rr-spec"><div class="rr-spec-val">${r.battery}m</div><div class="rr-spec-lbl">Battery</div></div>`:''}
+          ${r.speed?`<div class="rr-spec"><div class="rr-spec-val">${r.speed}m/s</div><div class="rr-spec-lbl">Speed</div></div>`:''}
+          ${r.dof?`<div class="rr-spec"><div class="rr-spec-val">${r.dof}</div><div class="rr-spec-lbl">DOF</div></div>`:''}
+        </div>
+        <div class="rr-right">
+          <div class="rr-score">${r.score}</div>
+          <div class="rr-price">${priceStars(r)}</div>
+          <div class="rr-rating">${'★'.repeat(Math.round(r.rating))}</div>
+          <div class="rr-actions">
+            <label class="rr-cmp" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>
+            <button class="rr-btn primary" onclick="event.stopPropagation();openProfile('${r.id}')">View →</button>
+          </div>
+        </div>
+      </div>`).join('')}</div>`;
+  } else {
+    c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
+      <div class="robot-card" onclick="openProfile('${r.id}')">
+        <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
+        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${priceStars(r)}</span><span style="padding:2px 7px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800">${r.score}</span></div></div>
+      </div>`).join('')}</div>`;
+  }
+  renderCompareTray();
+}
+
+function setDbView(v){
+  dbView=v;
+  document.getElementById('vbtn-list').className='view-btn'+(v==='list'?' active':'');
+  document.getElementById('vbtn-grid').className='view-btn'+(v==='grid'?' active':'');
+  renderDb();
+}
+
+function resetDb(){
+  document.getElementById('db-search').value='';
+  document.querySelectorAll('[data-cat],[data-sub],[data-brand],[data-price],[data-feat],[data-status]').forEach(el=>{if(el.type==='checkbox')el.checked=false;});
+  BRANDS_EXPANDED = false;
+  SUBCAT_EXPANDED = false;
+  renderSubcatFilter();  // hides the sub-cat section since no cat is selected
+  renderBrandFilter();  // re-render brand list now that no categories are selected
+  renderDb();
+}
+
+// ════════════ PROFILE ════════════
+
+// ════════════ GSMArena-style dynamic spec table ════════════
+let __SPEC_COLLECT=null, __SPEC_SECTION='';
+function row(label, val, unit='', note='') {
+  if (val === null || val === undefined || val === '' || val === 0 && unit) {
+    if (val !== false && val !== 0) return '';
+  }
+  let display;
+  if (val === true) display = '✓ Yes';
+  else if (val === false) display = '✗ No';
+  else if (Array.isArray(val)) display = val.filter(Boolean).join(', ');
+  else display = val;
+  const unitHtml = unit ? ` <span style="color:var(--mut);font-size:11px">${unit}</span>` : '';
+  const noteHtml = note ? `<br><span style="color:var(--mut);font-size:11px">${note}</span>` : '';
+  if (__SPEC_COLLECT){ let _cv = (display===undefined||display===null)?'':display; if(unit)_cv=_cv+' '+unit; if(note)_cv=_cv+' — '+note; __SPEC_COLLECT.push({section:__SPEC_SECTION,label:label,value:_cv}); }
+  return `<tr><td style="color:var(--mut);font-size:12px;padding:7px 12px;white-space:nowrap;width:42%">${label}</td><td style="font-size:12px;padding:7px 12px">${display}${unitHtml}${noteHtml}</td></tr>`;
+}
+function grp(name) {
+  if (__SPEC_COLLECT) __SPEC_SECTION = name;
+  return `<tr><td colspan="2" style="background:var(--bg2);font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--txt);padding:18px 12px 8px;border-top:2px solid var(--bdr2);border-bottom:1px solid var(--bdr)">${name}</td></tr>`;
+}
+
+// Collect the SAME rows buildSpecTable() renders, as structured data, for Compare.
+function getSpecRows(r){
+  const prev=__SPEC_COLLECT, prevS=__SPEC_SECTION;
+  __SPEC_COLLECT=[]; __SPEC_SECTION='';
+  try{ buildSpecTable(r); }catch(e){ console.warn('getSpecRows failed', e); }
+  const rows=__SPEC_COLLECT;
+  __SPEC_COLLECT=prev; __SPEC_SECTION=prevS;
+  return rows;
+}
+
+// GSMArena-style profile specs: section label in the left gutter, fields on the
+// right, and empty sections omitted entirely. Driven by the same getSpecRows()
+// data the Compare page uses, so layout differs but content never drifts.
+function renderSpecsGSM(r){
+  // Transform the COMPLETE buildSpecTable() output into GSMArena's left-gutter
+  // layout. Because we reformat the full HTML (not a re-collection), it is
+  // impossible to drop a row — every spec the old table showed still shows.
+  var html=buildSpecTable(r);
+  var trs=html.match(/<tr\b[\s\S]*?<\/tr>/g)||[];
+  var groups=[]; var cur=null;
+  trs.forEach(function(tr){
+    var isHeader=/colspan="2"/.test(tr) && /var\(--bg2\)/.test(tr);
+    if(isHeader){ var nm=tr.replace(/<[^>]+>/g,'').trim(); cur={section:nm,rows:[]}; groups.push(cur); return; }
+    var m=tr.match(/<td\b[^>]*>([\s\S]*?)<\/td>\s*<td\b[^>]*>([\s\S]*?)<\/td>/);
+    if(!m) return;
+    if(!cur){cur={section:'',rows:[]};groups.push(cur);}
+    cur.rows.push({label:m[1],value:m[2]});
+  });
+  groups=groups.filter(function(g){return g.rows.length;});
+  if(!groups.length) return '<tr><td style="padding:14px;color:var(--mut);font-size:12px">Detailed specifications coming soon.</td></tr>';
+  return groups.map(function(g){
+    var fields=g.rows.map(function(rw){return '<div class="sf-row"><span class="sf-label">'+rw.label+'</span><span class="sf-val">'+rw.value+'</span></div>';}).join('');
+    return '<tr class="spec-grp"><td class="spec-cat">'+g.section+'</td><td class="spec-fields">'+fields+'</td></tr>';
+  }).join('');
+}
+
+// Compute the date a robot should sort by for "Newest":
+// available robots sort by release date; not-yet-released sort by announced date; fallback to year.
+// Returns a comparable number (YYYYMMDD-ish). Higher = newer.
+// Price band: stable budget signal that never goes stale (unlike exact prices).
+// Tiers tuned for the robot market: $ consumer, $$ prosumer, $$$ professional, $$$$ enterprise.
+function priceBand(r){
+  var p = r.price_band || null;            // explicit override if set
+  if (p) return p;
+  var v = r.price || r.msrp_usd || 0;
+  if (!v || v <= 0) return null;           // unknown → no band (shows POA)
+  if (v < 1500) return '$';                // consumer (vacuums, toys, edu)
+  if (v < 15000) return '$$';              // prosumer / small business
+  if (v < 100000) return '$$$';            // professional
+  return '$$$$';                           // enterprise / industrial
+}
+function priceBandLabel(b){
+  return ({'$':'Budget','$$':'Mid-range','$$$':'Premium','$$$$':'Enterprise'})[b] || '';
+}
+
+// ── Category-relative price tiers (1–5 stars, judged within each category) ──
+function priceTierData(){
+  var n=(ROBOTS||[]).length;
+  if(window._PT_CACHE && window._PT_N===n) return window._PT_CACHE;
+  var by={};
+  (ROBOTS||[]).forEach(function(r){
+    var p=(typeof r.price==='number'&&r.price>0)?r.price:0;
+    if(p>0){ (by[r.cat]=by[r.cat]||[]).push(p); }
+  });
+  Object.keys(by).forEach(function(c){ by[c].sort(function(a,b){return a-b;}); });
+  window._PT_CACHE=by; window._PT_N=n; return by;
+}
+function priceTier(r){
+  var p=(r&&typeof r.price==='number'&&r.price>0)?r.price:0;
+  if(!p) return null;                       // no price → To be confirmed
+  var arr=priceTierData()[r.cat]||[]; var n=arr.length;
+  if(n<=1) return 3;                         // lone data point → mid
+  var below=0; for(var k=0;k<n;k++){ if(arr[k]<p) below++; }
+  return Math.max(1,Math.min(5,Math.round((below/(n-1))*4)+1));
+}
+function _ptStars(t){ var s=''; for(var k=1;k<=5;k++){ s+=(k<=t)?'\u2605':'\u2606'; } return s; }
+function priceStars(r){
+  var t=priceTier(r);
+  if(t==null) return '<span class="price-tbc">To be confirmed</span>';
+  var f='',e='';
+  for(var k=0;k<5;k++){ if(k<t) f+='\u2605'; else e+='\u2605'; }
+  return '<span class="price-stars" title="Price '+t+'/5 within '+(r.cat||'')+'"><span class="ps-full">'+f+'</span><span class="ps-empty">'+e+'</span></span>';
+}
+function priceStarsTxt(r){ var t=priceTier(r); return t==null?'To be confirmed':_ptStars(t); }
+/* ===== Affiliate link system (Amazon Associates: myrobotshop-20) ===== */
+var AFFILIATE={
+  amazon:{tag:'myrobotshop-20',domain:'www.amazon.com'},
+  brands:{ 'dji':{type:'direct',label:'Check price at DJI'} },
+  buyableCats:['Consumer','Drones','Educational','Social','Entertainment','Telepresence']
+};
+function withAmazonTag(u){
+  if(!u) return u;
+  if(/amazon\./i.test(u) && u.indexOf('tag=')<0){ return u+(u.indexOf('?')>=0?'&':'?')+'tag='+AFFILIATE.amazon.tag; }
+  return u;
+}
+function amzQuery(r){
+  var brand=(r.brand||'').trim();
+  var name=(r.name||'').trim();
+  name=name.split(/\s[\u2013\u2014-]\s/)[0];
+  name=name.replace(/\([^)]*\)/g,' ').replace(/\s+/g,' ').trim();
+  var q=name;
+  if(brand && name.toLowerCase().indexOf(brand.toLowerCase())!==0) q=brand+' '+name;
+  q=q.replace(/\s+(rose gold|graphite|titanium|black|white|silver|grey|gray|blue|red|green|gold|beige|cream|bronze|copper|pearl|navy)$/i,'');
+  return q.replace(/\s+/g,' ').trim();
+}
+function affiliateLink(r){
+  if(!r) return null;
+  if(r.buy_hide) return null;   /* worker flagged: not sold on Amazon - suppress button */
+  if(r.buy_url){ return {url:withAmazonTag(r.buy_url),label:r.buy_label||'Check price',retailer:r.buy_retailer||''}; }
+  var brand=(r.brand||'').toLowerCase();
+  var direct=false;
+  for(var k in AFFILIATE.brands){ if(brand.indexOf(k)>=0 && AFFILIATE.brands[k].type==='direct'){ direct=true; } }
+  if(direct) return null; /* brand program needs explicit product link; dormant until buy_url set */
+  if(AFFILIATE.buyableCats.indexOf(r.cat)>=0){
+    var q=encodeURIComponent(amzQuery(r));
+    return {url:'https://'+AFFILIATE.amazon.domain+'/s?k='+q+'&tag='+AFFILIATE.amazon.tag,label:'Check price on Amazon',retailer:'Amazon'};
+  }
+  return null;
+}
+function affiliateBtn(r,size){
+  var a=affiliateLink(r); if(!a) return '';
+  var cls='aff-btn'+(size==='lg'?' aff-btn-lg':(size==='card'?' aff-card':''));
+  var label=(size==='card')?'Check price':a.label;
+  return '<a class="'+cls+'" href="'+a.url+'" target="_blank" rel="sponsored nofollow noopener" onclick="event.stopPropagation()">'+label+' \u2192</a>';
+}
+
+
+function robotSortDate(r){
+  function parse(v){
+    if(v===undefined||v===null||v==='') return null;
+    var m=String(v).trim().match(/^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{1,2})?/);
+    if(!m) return null;
+    var y=parseInt(m[1])||0, hasMonth=m[2]!==undefined;
+    var mo=parseInt(m[2]||'6')||6, d=parseInt(m[3]||'15')||15;
+    return {n:y*10000+mo*100+d, precise:hasMonth};
+  }
+  var now=new Date();
+  var today=now.getFullYear()*10000+(now.getMonth()+1)*100+now.getDate();
+  var status=(r.status||'').toLowerCase();
+  var isAvailable=/active|available|released|shipping|production|discontinued|retired|superseded|decommissioned/.test(status);
+  var released=parse(r.released)||parse(r.launch_date);
+  var announced=parse(r.announced);
+  var yearOnly=parse(r.year);
+  var pick;
+  if(isAvailable && released) pick=released;
+  else if(!isAvailable && announced) pick=announced;
+  else pick=released||announced||yearOnly||{n:0,precise:false};
+  var val = pick.precise ? pick.n : (Math.floor(pick.n/10000)*10000+101);
+  // Future-dated robots haven't shipped yet — they shouldn't top "Newest". Park them just below
+  // the current year's released robots (a year back from today) so they're present but not leading,
+  // ordered among themselves by how soon they arrive.
+  if(val > today){
+    return (today - 10000) + (val - today)/1e7;
+  }
+  return val;
+}
+
+// Secondary tiebreak for robots that share the same sort date (e.g. both year-only 2026):
+// order by score so the more notable/complete robot leads, then name for stability.
+function robotSortKey(r){
+  return robotSortDate(r) * 1000 + Math.min(999, (r.score||0));
+}
+
+function _asArr(v){ return Array.isArray(v) ? v : (v===undefined||v===null||v==='' ? [] : [v]); }
+function buildSpecTable(r) {
+  if (r && typeof r==='object'){
+    r = Object.assign({}, r);
+    ['water_type','wms_integration','comms','sensors','terrain','smart_home','voice_assistant','mounting','role','deploy_method','call_platforms','programming','use_cases','research_areas','redundant_systems','operating_cities','target_conditions','mission_types','customers','safety_certifications','learning_methods','pilot_devices'].forEach(function(k){
+      if (r[k]!==undefined && r[k]!==null && !Array.isArray(r[k])) r[k] = _asArr(r[k]);
+    });
+    if (typeof r.speed_ms === 'number' && r.speed_ms > 40) r.speed_ms = null;
+  }
+  const cat = (r.cat||'').toLowerCase();
+  const sub = (r.sub||'').toLowerCase();
+  const isVacuum = cat.includes('consumer') || sub.includes('vacuum') || sub.includes('floor') || sub.includes('mop');
+  const isHumanoid = cat.includes('humanoid') || cat.includes('mecha') || sub.includes('humanoid') || sub.includes('biped');
+  const isCobot = cat.includes('industrial') || sub.includes('cobot') || sub.includes('arm') || sub.includes('manipulator');
+  const isDrone = cat.includes('drone') || sub.includes('drone') || sub.includes('uav') || sub.includes('aerial');
+  const isMedical = cat.includes('medical') || sub.includes('surgical') || sub.includes('ortho');
+  const isExo = cat.includes('exoskeleton') || sub.includes('exoskeleton') || sub.includes('exosuit');
+  const isResearch = cat.includes('research');
+  const isDelivery = cat.includes('delivery');
+  const isAgri = cat.includes('agri') || sub.includes('tractor') || sub.includes('farm') || sub.includes('harvest');
+  const isService = cat.includes('service') || sub.includes('delivery') || sub.includes('hospitality') || sub.includes('inspection');
+  const isMilitary = cat.includes('military') || sub.includes('eod') || sub.includes('defense') || sub.includes('security');
+  const isQuadruped = sub.includes('quadruped') || sub.includes('dog') || sub.includes('legged');
+  const isEducational = cat.includes('edu') || sub.includes('edu') || sub.includes('stem');
+
+  // ── NEW CATEGORY DETECTION (added via Phase B-display extension) ──
+  const isAerospace = cat.includes('aerospace') || cat.includes('space') || sub.includes('rover') || sub.includes('lander') || sub.includes('orbiter') || sub.includes('satellite') || sub.includes('station arm') || sub.includes('free-flyer');
+  const isAquatic = cat.includes('aquatic') || cat.includes('marine') || sub.includes('rov') || sub.includes('auv') || sub.includes('usv') || sub.includes('asv') || sub.includes('underwater') || sub.includes('subsea');
+  const isLawnMower = cat.includes('lawn') || sub.includes('lawn') || sub.includes('mower') || sub.includes('lawnmower');
+  const isTelepresence = cat.includes('telepresence') || sub.includes('telepresence') || sub.includes('telepresent');
+  const isSocial = cat.includes('social') || sub.includes('social') || sub.includes('companion') || sub.includes('eldercare');
+  const isEntertainment = cat.includes('entertainment') || sub.includes('animatronic') || sub.includes('bartender') || sub.includes('performance') || sub.includes('theme park');
+  const isAV = cat.includes('autonomous vehicle') || cat.includes('autonomous-vehicle') || sub.includes('robotaxi') || sub.includes('robot truck') || sub.includes('robot bus') || sub.includes('autonomous car');
+  const isAGV = cat.includes('agv') || cat.includes('amr') || sub.includes('agv') || sub.includes('amr') || sub.includes('autonomous mobile robot');
+  const isConstruction = cat.includes('construction') || sub.includes('bricklay') || sub.includes('3d printing') || sub.includes('concrete') || sub.includes('demolition');
+  const isDisaster = cat.includes('disaster') || cat.includes('rescue') || sub.includes('usar') || sub.includes('rescue') || sub.includes('throwable');
+
+  let html = '';
+
+  // ── LAUNCH ── (GSMArena-style: Announced + Status with expected release)
+  html += grp('LAUNCH');
+  if (r.also_known_as) html += row('Also known as', r.also_known_as);
+  // Format a date value as "2026, June" or "2026, June 10" or just "2026"
+  function fmtDate(v){
+    if(!v) return '';
+    var m=String(v).trim().match(/^(\d{4})[-/]?(\d{1,2})?[-/]?(\d{1,2})?/);
+    if(!m) return String(v);
+    var months=['January','February','March','April','May','June','July','August','September','October','November','December'];
+    var out=m[1];
+    if(m[2]){ out+=', '+months[parseInt(m[2])-1]; if(m[3]) out+=' '+parseInt(m[3]); }
+    return out;
+  }
+  var st=(r.status||'').toLowerCase();
+  var isReleased=/active|available|released|shipping|production|discontinued|retired|superseded|decommissioned|lost/.test(st);
+  var isFuture=/announced|coming|pre-order|development|prototype|concept|testing|pilot/.test(st);
+  // Announced row
+  if (r.announced) html += row('Announced', fmtDate(r.announced));
+  // Status row — GSMArena style
+  if (isReleased && r.released) {
+    html += row('Status', 'Available. Released ' + fmtDate(r.released));
+  } else if (isReleased) {
+    html += row('Status', 'Available' + (r.year ? '. Released ' + r.year : ''));
+  } else if (isFuture) {
+    var exp = r.released || r.expected_release || r.year;
+    html += row('Status', 'Coming soon' + (exp ? '. Exp. release ' + fmtDate(exp) : ''));
+  } else {
+    html += row('Status', r.status || '—');
+  }
+  if (r.regions && r.regions.length) html += row('Availability', r.regions.join(', '));
+  if (r.variants && r.variants.length) html += row('Variants', r.variants.join(' · '));
+
+  // ── BODY ──
+  html += grp('BODY');
+  if (r.height_mm && r.width_mm) {
+    const dims = `${r.height_mm} × ${r.width_mm}${r.depth_mm ? ' × '+r.depth_mm : ''} mm`;
+    const imp = r.height_mm ? ` (${(r.height_mm/25.4).toFixed(2)} × ${(r.width_mm/25.4).toFixed(2)}${r.depth_mm?' × '+(r.depth_mm/25.4).toFixed(2):''} in)` : '';
+    html += row('Dimensions', dims + imp);
+  } else if (r.height_mm) html += row('Height', r.height_mm, 'mm');
+  if (r.diameter_mm) html += row('Diameter', r.diameter_mm, 'mm');
+  if (r.wingspan_mm) html += row('Wingspan', r.wingspan_mm, 'mm');
+  if (r.folded_dimensions) html += row('Folded dimensions', r.folded_dimensions);
+  if (r.weight_kg || r.weight) {
+    const w = r.weight_kg || r.weight;
+    html += row('Weight', `${w} kg (${(w*2.205).toFixed(2)} lb)`);
+  }
+  if (r.weight_without_battery_kg) html += row('Weight (no battery)', r.weight_without_battery_kg, 'kg');
+  if (r.frame_material || r.material) html += row('Frame', r.frame_material || r.material);
+  if (r.shell_material) html += row('Shell', r.shell_material);
+  if (r.surface_finish) html += row('Finish', r.surface_finish);
+  if (r.ip_rating) html += row('Protection', r.ip_rating);
+  if (r.mil_spec) html += row('MIL-SPEC', r.mil_spec);
+  if (r.operating_temp_min !== undefined && r.operating_temp_max !== undefined) html += row('Operating temp', `${r.operating_temp_min}°C to ${r.operating_temp_max}°C`);
+  else if (r.operating_temp) html += row('Operating temp', r.operating_temp);
+  if (r.storage_temp) html += row('Storage temp', r.storage_temp);
+  if (r.humidity) html += row('Humidity', r.humidity);
+  if (r.shock_resistance) html += row('Shock resistance', r.shock_resistance);
+  if (r.colors && r.colors.length) html += row('Colors', r.colors.join(', '));
+  if (r.custom_branding) html += row('Custom branding', r.custom_branding);
+
+  // ── CATEGORY-SPECIFIC BODY ──
+  if (isHumanoid) {
+    if (r.shoulder_width_mm) html += row('Shoulder width', r.shoulder_width_mm, 'mm');
+    if (r.arm_length_mm) html += row('Arm length', r.arm_length_mm, 'mm (shoulder to fingertip)');
+    if (r.leg_length_mm || r.calf_thigh_mm) html += row('Leg length', r.leg_length_mm || r.calf_thigh_mm, 'mm');
+    if (r.forearm_upper_arm_mm) html += row('Forearm + upper arm', r.forearm_upper_arm_mm, 'mm');
+    if (r.neck_dof) html += row('Neck DOF', r.neck_dof);
+    if (r.bionic_face !== undefined) html += row('Bionic face', r.bionic_face);
+    if (r.display_face) html += row('Face display', r.display_face);
+  }
+  if (isQuadruped) {
+    if (r.body_length_mm) html += row('Body length', r.body_length_mm, 'mm');
+    if (r.standing_height_mm) html += row('Standing height', r.standing_height_mm, 'mm');
+    if (r.min_height_mm) html += row('Crouched height', r.min_height_mm, 'mm');
+    if (r.ground_clearance_mm) html += row('Ground clearance', r.ground_clearance_mm, 'mm');
+  }
+  if (isDrone) {
+    if (r.frame_type) html += row('Frame type', r.frame_type);
+    if (r.diagonal_mm) html += row('Motor diagonal', r.diagonal_mm, 'mm');
+    if (r.motor_count) html += row('Motors', r.motor_count);
+    if (r.motor_type) html += row('Motor type', r.motor_type);
+    if (r.propeller_size_inch) html += row('Propeller size', r.propeller_size_inch, 'inch');
+    if (r.landing_gear_type) html += row('Landing gear', r.landing_gear_type);
+    if (r.rotor_guards) html += row('Rotor guards', r.rotor_guards);
+  }
+  if (isVacuum) {
+    if (r.shape) html += row('Shape', r.shape);
+    if (r.min_clearance_mm) html += row('Min clearance needed', r.min_clearance_mm, 'mm');
+    if (r.wheel_diameter_mm) html += row('Wheel diameter', r.wheel_diameter_mm, 'mm');
+    if (r.max_step_height_mm) html += row('Max obstacle height', r.max_step_height_mm, 'mm');
+  }
+  if (isCobot) {
+    if (r.axes_config) html += row('Arm configuration', r.axes_config);
+    if (r.base_diameter_mm || r.footprint_mm) html += row('Base diameter', r.base_diameter_mm || r.footprint_mm, 'mm');
+    if (r.hollow_wrist !== undefined) html += row('Hollow wrist', r.hollow_wrist);
+    if (r.cable_management) html += row('Cable management', r.cable_management);
+    if (r.rail_mountable !== undefined) html += row('Rail mountable', r.rail_mountable);
+    if (r.mobile_base_compatible !== undefined) html += row('Mobile base compatible', r.mobile_base_compatible);
+  }
+
+  // ── PLATFORM ──
+  html += grp('PLATFORM');
+  if (r.os) html += row('OS', r.os);
+  if (r.ros_version || r.ros) html += row('ROS', r.ros_version || (r.ros ? 'Compatible' : 'Not supported'));
+  if (r.chipset) html += row('Chipset', r.chipset);
+  if (r.cpu) html += row('CPU', r.cpu + (r.cpu_cores ? `, ${r.cpu_cores} cores` : '') + (r.cpu_freq_ghz ? ` @ ${r.cpu_freq_ghz}GHz` : ''));
+  if (r.cpu_arch) html += row('CPU architecture', r.cpu_arch);
+  if (r.cpu_count && r.cpu_count > 1) html += row('Compute units', r.cpu_count, '', r.compute_standard ? `Standard: ${r.compute_standard}` + (r.compute_edu ? ` · EDU: ${r.compute_edu}` : '') : '');
+  if (r.compute_standard && !r.cpu) html += row('Standard compute', r.compute_standard);
+  if (r.compute_edu) html += row('EDU/Pro compute', r.compute_edu);
+  if (r.gpu) html += row('GPU', r.gpu + (r.gpu_vram_gb ? ` ${r.gpu_vram_gb}GB` : ''));
+  if (r.npu || r.ai_chip) html += row('AI accelerator', r.npu || r.ai_chip);
+  if (r.npu_tops || r.ai_chip_tops) html += row('AI performance', (r.npu_tops || r.ai_chip_tops), 'TOPS');
+  if (r.fpga) html += row('FPGA', r.fpga);
+  if (r.rtos) html += row('Real-time controller', r.rtos);
+  if (r.control_freq_hz) html += row('Control loop frequency', r.control_freq_hz, 'Hz');
+
+  // ── MEMORY ──
+  html += grp('MEMORY');
+  if (r.ram_gb) html += row('RAM', `${r.ram_gb}GB` + (r.ram_type ? ` ${r.ram_type}` : '') + (r.ram_speed_mhz ? ` ${r.ram_speed_mhz}MHz` : ''));
+  if (r.ecc_memory) html += row('ECC memory', r.ecc_memory);
+  if (r.storage_gb) html += row('Storage', `${r.storage_gb}GB` + (r.storage_type ? ` ${r.storage_type}` : '') + (r.storage_speed ? `, ${r.storage_speed}` : ''));
+  if (r.expandable_storage !== undefined) html += row('Expandable storage', r.expandable_storage);
+  if (r.cloud_storage) html += row('Cloud platform', r.cloud_storage);
+
+  // ── PERFORMANCE ──
+  html += grp('PERFORMANCE');
+  if (r.payload || r.payload_kg) html += row('Payload (rated)', r.payload || r.payload_kg, 'kg');
+  if (r.payload_peak) html += row('Payload (peak)', r.payload_peak, 'kg');
+  if (r.speed || r.speed_ms) html += row('Max speed', r.speed || r.speed_ms, 'm/s');
+  if (r.run_speed || r.run_speed_ms) html += row('Running speed', r.run_speed || r.run_speed_ms, 'm/s');
+  if (r.dof) html += row('Total DOF', r.dof);
+  if (isHumanoid) {
+    if (r.leg_dof) html += row('Leg DOF (each)', r.leg_dof);
+    if (r.arm_dof) html += row('Arm DOF (each)', r.arm_dof);
+    if (r.waist_dof) html += row('Waist DOF', r.waist_dof);
+    if (r.head_dof) html += row('Head DOF', r.head_dof);
+    if (r.arm_torque_nm) html += row('Arm joint max torque', r.arm_torque_nm, 'N·m');
+    if (r.leg_torque_nm) html += row('Leg joint max torque', r.leg_torque_nm, 'N·m');
+  }
+  if (r.reach || r.reach_mm) html += row('Reach', r.reach || r.reach_mm, 'mm');
+  if (r.repeatability) html += row('Repeatability', `Â±${r.repeatability}`, 'mm');
+  if (r.position_accuracy_mm) html += row('Absolute accuracy', `Â±${r.position_accuracy_mm}`, 'mm');
+  if (r.force_output_n) html += row('Max force output', r.force_output_n, 'N');
+  if (r.torque_nm) html += row('Max torque', r.torque_nm, 'N·m');
+  if (r.actuator_type) html += row('Actuator type', r.actuator_type);
+  if (r.joint_motor) html += row('Joint motor', r.joint_motor);
+  if (r.joint_bearing) html += row('Joint bearing', r.joint_bearing);
+  if (r.cycle_time_s) html += row('Cycle time', r.cycle_time_s, 's');
+  if (r.max_incline_deg) html += row('Max incline', r.max_incline_deg, '°');
+  if (r.stair_climbing !== undefined) html += row('Stair climbing', r.stair_climbing);
+  if (r.max_step_height_mm && isHumanoid) html += row('Max step height', r.max_step_height_mm, 'mm');
+  if (r.fall_recovery !== undefined) html += row('Fall recovery', r.fall_recovery);
+  if (r.jump_height_mm) html += row('Jump height', r.jump_height_mm, 'mm');
+  if (r.working_envelope_m3) html += row('Working envelope', r.working_envelope_m3, 'mÂ³');
+  if (r.mtbf_hours) html += row('MTBF', r.mtbf_hours.toLocaleString(), 'hours');
+  if (r.design_life_years) html += row('Design life', r.design_life_years, 'years');
+  if (r.terrain && r.terrain.length) html += row('Terrain', Array.isArray(r.terrain) ? r.terrain.join(', ') : r.terrain);
+  if (r.gait_modes && r.gait_modes.length) html += row('Gait modes', r.gait_modes.join(', '));
+
+  // ── CATEGORY-SPECIFIC PERFORMANCE ──
+  if (isVacuum) {
+    html += grp('CLEANING PERFORMANCE');
+    if (r.suction_pa) html += row('Suction power', r.suction_pa.toLocaleString(), 'Pa');
+    if (r.suction_modes && r.suction_modes.length) html += row('Suction modes', r.suction_modes.join(' · '));
+    if (r.noise_db) html += row('Noise level', r.noise_db, 'dB');
+    if (r.dustbin_ml) html += row('Dustbin capacity', r.dustbin_ml, 'ml');
+    if (r.water_tank_ml) html += row('Water tank', r.water_tank_ml, 'ml');
+    if (r.mop !== undefined) html += row('Mopping', r.mop);
+    if (r.mop_type) html += row('Mop type', r.mop_type);
+    // Mop pressure — support both _g (legacy) and _n (newtons, what manufacturers actually publish)
+    if (r.mop_pressure_g) html += row('Mop pressure', r.mop_pressure_g, 'g');
+    if (r.mop_pressure_n) html += row('Mop pressure', r.mop_pressure_n, 'N');
+    if (r.mop_vibration_hz) html += row('Mop vibration', r.mop_vibration_hz.toLocaleString(), 'Hz');
+    if (r.mop_rpm) html += row('Mop rotation', r.mop_rpm, 'RPM');
+    if (r.hot_water_mop !== undefined) html += row('Heated water mopping', r.hot_water_mop);
+    if (r.mop_wash_temp_c) html += row('Mop wash temperature', r.mop_wash_temp_c, '°C');
+    if (r.mop_dry_temp_c) html += row('Mop dry temperature', r.mop_dry_temp_c, '°C');
+    // Carpet mop-lift — support both old single field and new measured-mm variant
+    if (r.mop_lift_height_mm) html += row('Mop lift (on carpet)', r.mop_lift_height_mm, 'mm');
+    if (r.carpet_mop_lift_mm) html += row('Mop lift (on carpet)', r.carpet_mop_lift_mm, 'mm');
+    if (r.carpet_mop_lift !== undefined && !r.mop_lift_height_mm && !r.carpet_mop_lift_mm) html += row('Carpet mop lift', r.carpet_mop_lift);
+    if (r.filter) html += row('Filter type', r.filter);
+    if (r.brush_type) html += row('Main brush', r.brush_type);
+    if (r.side_brushes) html += row('Side brushes', r.side_brushes);
+    if (r.edge_cleaning) html += row('Edge cleaning', r.edge_cleaning);
+    if (r.anti_tangle) html += row('Anti-tangle', r.anti_tangle);
+    if (r.carpet_boost !== undefined) html += row('Carpet boost', r.carpet_boost);
+    if (r.carpet_detection !== undefined) html += row('Carpet detection', r.carpet_detection);
+    if (r.carpet_first_mode !== undefined) html += row('Carpet-first mode', r.carpet_first_mode);
+    if (r.max_threshold_height_mm) html += row('Max threshold crossing', r.max_threshold_height_mm, 'mm');
+    if (r.arm !== undefined && r.arm) html += row('Robotic arm', '✓ Yes' + (r.arm_dof ? ` (${r.arm_dof} DOF)` : ''));
+    if (r.robotic_arm !== undefined && r.robotic_arm) html += row('Robotic arm', '✓ Yes' + (r.arm_dof ? ` (${r.arm_dof} DOF)` : ''));
+    if (r.arm_payload_g) html += row('Arm payload', r.arm_payload_g, 'g');
+    if (Array.isArray(r.arm_features) && r.arm_features.length) html += row('Arm features', r.arm_features.join(', '));
+    if (Array.isArray(r.object_recognition_categories) && r.object_recognition_categories.length) html += row('Object recognition', r.object_recognition_categories.join(', '));
+    if (r.object_pick_up !== undefined) html += row('Object pick-up', r.object_pick_up);
+    // Pool-cleaner extras
+    if (r.wall_climbing !== undefined) html += row('Wall climbing', r.wall_climbing);
+    if (r.waterline_cleaning !== undefined) html += row('Waterline cleaning', r.waterline_cleaning);
+    if (r.max_depth_m) html += row('Max depth', r.max_depth_m, 'm');
+    if (r.uv_sterilization !== undefined) html += row('UV sterilization', r.uv_sterilization);
+    if (r.ozone_sanitization !== undefined) html += row('Ozone sanitization', r.ozone_sanitization);
+    if (r.stair_climbing !== undefined && (r.sub||'').toLowerCase().includes('wheel-leg')) html += row('Stair climbing', r.stair_climbing);
+
+    html += grp('DOCK STATION');
+    if (r.auto_empty !== undefined) html += row('Auto-empty', r.auto_empty);
+    if (r.auto_empty_capacity_L) html += row('Auto-empty capacity', r.auto_empty_capacity_L, 'L');
+    if (r.auto_empty_capacity_days) html += row('Auto-empty cycle', r.auto_empty_capacity_days, 'days');
+    if (r.auto_refill !== undefined) html += row('Auto water refill', r.auto_refill);
+    if (r.self_refill_water !== undefined) html += row('Auto water refill', r.self_refill_water);
+    if (r.auto_refill_capacity_loads) html += row('Refill capacity', r.auto_refill_capacity_loads, 'loads');
+    if (r.self_cleaning !== undefined) html += row('Self-cleaning dock', r.self_cleaning);
+    if (r.auto_mop_wash !== undefined) html += row('Auto mop wash', r.auto_mop_wash);
+    if (r.auto_mop_dry !== undefined) html += row('Auto mop dry', r.auto_mop_dry);
+    if (r.auto_cleaning_solution !== undefined) html += row('Auto detergent dosing', r.auto_cleaning_solution);
+    if (r.dock_auto_wash_temp) html += row('Wash temperature', r.dock_auto_wash_temp, '°C');
+    if (r.dock_dry_type) html += row('Drying method', r.dock_dry_type);
+    if (r.dock_dry_time_min) html += row('Dry time', r.dock_dry_time_min, 'min');
+    if (r.dock_w && r.dock_h) html += row('Dock dimensions', `${r.dock_w} × ${r.dock_h}${r.dock_d ? ' × '+r.dock_d : ''} mm`);
+    if (r.dock_weight_kg) html += row('Dock weight', r.dock_weight_kg, 'kg');
+    if (r.water_plumbing_connection !== undefined) html += row('Direct plumbing', r.water_plumbing_connection);
+
+    html += grp('NAVIGATION & MAPPING');
+    if (r.navigation) html += row('Navigation', r.navigation);
+    if (r.lidar !== undefined || r.lidar_type) html += row('LiDAR', r.lidar_type || (r.lidar ? 'Yes' : 'No'));
+    if (r.obstacle_avoidance) html += row('Obstacle avoidance', r.obstacle_avoidance);
+    if (r.ai_obstacle_avoidance !== undefined && !r.obstacle_avoidance) html += row('AI obstacle avoidance', r.ai_obstacle_avoidance);
+    if (r.obstacle_detection_min_mm) html += row('Min obstacle size detected', r.obstacle_detection_min_mm, 'mm');
+    if (r.obstacle_types_recognised) html += row('Object types recognised', r.obstacle_types_recognised);
+    if (r.mapping !== undefined) html += row('Smart mapping', r.mapping);
+    if (r.multi_floor_maps) html += row('Multi-floor maps', r.multi_floor_maps);
+    if (r.multi_floor_mapping !== undefined && !r.multi_floor_maps) html += row('Multi-floor mapping', r.multi_floor_mapping);
+    if (r.zone_cleaning !== undefined) html += row('Zone cleaning', r.zone_cleaning);
+    if (r.virtual_walls !== undefined) html += row('Virtual walls', r.virtual_walls);
+    if (r.no_go_zones !== undefined && r.virtual_walls === undefined) html += row('No-go zones', r.no_go_zones);
+    if (r.cliff_sensors) html += row('Cliff sensors', r.cliff_sensors);
+    if (r.patrol_mode !== undefined) html += row('Patrol/security mode', r.patrol_mode);
+
+    html += grp('SMART FEATURES');
+    if (r.app) html += row('App', r.app);
+    if (r.app_companion && !r.app) html += row('App', r.app_companion);
+    if (r.voice_control) html += row('Voice control', r.voice_control);
+    if (Array.isArray(r.voice_assistant) && r.voice_assistant.length) html += row('Voice assistants', r.voice_assistant.join(', '));
+    if (r.ai_room_recognition !== undefined) html += row('AI room recognition', r.ai_room_recognition);
+    if (r.ai_model) html += row('AI model', r.ai_model);
+    if (r.camera_live_view !== undefined) html += row('Live camera view', r.camera_live_view);
+    if (r.matter_support !== undefined) html += row('Matter/Thread support', r.matter_support);
+    if (r.local_processing !== undefined) html += row('Local processing', r.local_processing);
+    if (r.pet_mode !== undefined) html += row('Pet mode', r.pet_mode);
+  }
+
+  if (isCobot) {
+    html += grp('END EFFECTOR');
+    if (r.end_effector_type) html += row('Gripper type', r.end_effector_type);
+    if (r.end_effectors_compatible && r.end_effectors_compatible.length) html += row('Compatible grippers', r.end_effectors_compatible.join(', '));
+    if (r.quick_change !== undefined) html += row('Quick-change tool', r.quick_change);
+    if (r.flange_standard) html += row('Flange standard', r.flange_standard);
+    if (r.gripper_stroke_mm) html += row('Gripper stroke', r.gripper_stroke_mm, 'mm');
+    if (r.gripper_force_n) html += row('Grip force', r.gripper_force_n, 'N');
+    if (r.ft_sensor_type) html += row('F/T sensor type', r.ft_sensor_type);
+    if (r.ft_force_range_n) html += row('Force sensing range', r.ft_force_range_n);
+    if (r.collision_sensitivity_n) html += row('Collision sensitivity', r.collision_sensitivity_n, 'N');
+    if (r.skin_type) html += row('Skin type', r.skin_type);
+    html += grp('INSTALLATION');
+    if (r.mounting && r.mounting.length) html += row('Mounting options', Array.isArray(r.mounting) ? r.mounting.join(', ') : r.mounting);
+    if (r.power_consumption_w) html += row('Power consumption', r.power_consumption_w, 'W');
+    if (r.temp_range) html += row('Temperature range', r.temp_range);
+    if (r.cleanroom_class) html += row('Cleanroom class', r.cleanroom_class);
+    if (r.programming && r.programming.length) html += row('Programming methods', Array.isArray(r.programming) ? r.programming.join(', ') : String(r.programming));
+    if (r.controller) html += row('Controller unit', r.controller);
+    if (r.teach_pendant) html += row('Teach pendant', r.teach_pendant);
+    if (r.simulation_software) html += row('Simulation software', r.simulation_software);
+    if (r.use_cases && r.use_cases.length) html += row('Applications', r.use_cases.join(', '));
+  }
+
+  if (isDrone) {
+    html += grp('FLIGHT PERFORMANCE');
+    if (r.max_flight_time) html += row('Max flight time', r.max_flight_time, 'min');
+    if (r.hover_time_min) html += row('Hover time', r.hover_time_min, 'min');
+    if (r.max_speed) html += row('Max speed', r.max_speed, 'm/s');
+    if (r.max_altitude) html += row('Max altitude', r.max_altitude, 'm');
+    if (r.max_range) html += row('Max transmission range', r.max_range, 'km');
+    if (r.wind_resistance) html += row('Wind resistance', r.wind_resistance);
+    if (r.noise_db) html += row('Noise level', r.noise_db, 'dB');
+    html += grp('CAMERA & IMAGING');
+    if (r.camera_mp) html += row('Camera resolution', r.camera_mp, 'MP');
+    if (r.camera_zoom) html += row('Optical zoom', r.camera_zoom);
+    if (r.video_res) html += row('Video resolution', r.video_res);
+    if (r.video_fps) html += row('Video frame rate', r.video_fps, 'fps');
+    if (r.video_formats && r.video_formats.length) html += row('Video formats', r.video_formats.join(', '));
+    if (r.color_profiles && r.color_profiles.length) html += row('Color profiles', r.color_profiles.join(', '));
+    if (r.gimbal_axes) html += row('Gimbal', r.gimbal_axes + '-axis stabilisation');
+    if (r.thermal !== undefined) html += row('Thermal imaging', r.thermal);
+    if (r.thermal_resolution) html += row('Thermal resolution', r.thermal_resolution);
+    html += grp('NAVIGATION');
+    if (r.gps !== undefined) html += row('GPS/GNSS', r.gps);
+    if (r.rtk !== undefined) html += row('RTK precision GPS', r.rtk);
+    if (r.obstacle_sensing) html += row('Obstacle sensing', r.obstacle_sensing);
+    if (r.waypoint !== undefined) html += row('Waypoint flying', r.waypoint);
+    if (r.autonomous !== undefined) html += row('Autonomous flight', r.autonomous);
+    if (r.return_to_home !== undefined) html += row('Return to home', r.return_to_home);
+    if (r.geofencing !== undefined) html += row('Geofencing', r.geofencing);
+    if (r.faa_remote_id !== undefined) html += row('FAA Remote ID', r.faa_remote_id);
+    if (r.regulatory_class) html += row('Regulatory class', r.regulatory_class);
+    if (r.transmission) html += row('Transmission system', r.transmission);
+  }
+
+  if (isResearch) {
+    html += grp('RESEARCH PLATFORM');
+    if (r.platform_type) html += row('Platform type', r.platform_type);
+    if (r.ros !== undefined) html += row('ROS support', r.ros);
+    if (r.ros_version) html += row('ROS version', r.ros_version);
+    if (r.sdk) html += row('SDK', r.sdk);
+    if (r.api !== undefined) html += row('API access', r.api);
+    if (r.programming && r.programming.length) html += row('Programming', Array.isArray(r.programming) ? r.programming.join(', ') : r.programming);
+    if (r.open_source !== undefined) html += row('Open source', r.open_source);
+    if (r.simulation_support) html += row('Simulation', r.simulation_support);
+    if (r.modular !== undefined) html += row('Modular/extensible', r.modular);
+    if (r.payload_kg) html += row('Payload capacity', r.payload_kg, 'kg');
+    if (r.research_areas && r.research_areas.length) html += row('Research areas', r.research_areas.join(', '));
+  }
+
+  if (isDelivery) {
+    html += grp('DELIVERY CAPABILITY');
+    if (r.autonomy_level) html += row('Autonomy level', r.autonomy_level);
+    if (r.payload_kg) html += row('Cargo payload', r.payload_kg, 'kg');
+    if (r.cargo_volume_l) html += row('Cargo volume', r.cargo_volume_l, 'L');
+    if (r.cargo_compartments) html += row('Compartments', r.cargo_compartments);
+    if (r.range_km) html += row('Range', r.range_km, 'km');
+    if (r.outdoor_capable !== undefined) html += row('Outdoor operation', r.outdoor_capable);
+    if (r.sidewalk_or_road) html += row('Operating environment', r.sidewalk_or_road);
+    if (r.max_incline_deg) html += row('Max incline', r.max_incline_deg, '°');
+    if (r.weatherproof_rating) html += row('Weatherproofing', r.weatherproof_rating);
+    html += grp('FLEET & AUTONOMY');
+    if (r.fleet_management !== undefined) html += row('Fleet management', r.fleet_management);
+    if (r.compute_platform) html += row('Compute platform', r.compute_platform);
+    if (r.cellular !== undefined) html += row('Cellular connectivity', r.cellular);
+    if (r.remote_operation !== undefined) html += row('Remote operation fallback', r.remote_operation);
+    if (r.locker_access) html += row('Recipient access', r.locker_access);
+  }
+
+  if (isExo) {
+    html += grp('ASSISTANCE');
+    if (r.exo_type) html += row('Exoskeleton type', r.exo_type);
+    if (r.body_region) html += row('Body region supported', r.body_region);
+    if (r.assist_force) html += row('Assistance force', r.assist_force);
+    if (r.lift_support_kg) html += row('Lift support', r.lift_support_kg, 'kg per movement');
+    if (r.strength_amplification) html += row('Strength amplification', r.strength_amplification);
+    if (r.powered !== undefined) html += row('Powered', r.powered);
+    if (r.control_method) html += row('Control method', r.control_method);
+    html += grp('FIT & USE');
+    if (r.user_height_range) html += row('User height range', r.user_height_range);
+    if (r.user_weight_max_kg) html += row('Max user weight', r.user_weight_max_kg, 'kg');
+    if (r.don_doff_time) html += row('Don/doff time', r.don_doff_time);
+    if (r.target_conditions && r.target_conditions.length) html += row('Target conditions', r.target_conditions.join(', '));
+    html += grp('REGULATORY');
+    if (r.fda_cleared !== undefined) html += row('FDA cleared', r.fda_cleared);
+    if (r.ce !== undefined) html += row('CE marked', r.ce);
+    if (r.iso_13482 !== undefined) html += row('ISO 13482 certified', r.iso_13482);
+  }
+
+  if (isMedical) {
+    html += grp('REGULATORY');
+    if (r.fda_cleared !== undefined) html += row('FDA cleared', r.fda_cleared);
+    if (r.fda_class) html += row('FDA class', r.fda_class);
+    if (r.ce_marked !== undefined) html += row('CE marked', r.ce_marked);
+    if (r.countries_approved && r.countries_approved.length) html += row('Countries approved', r.countries_approved.join(', '));
+    html += grp('SURGICAL SPECS');
+    if (r.surgical_type) html += row('Surgical type', r.surgical_type);
+    if (r.robotic_arms || r.arms) html += row('Robotic arms', r.robotic_arms || r.arms);
+    if (r.instrument_dof) html += row('Instrument DOF', r.instrument_dof);
+    if (r.tremor_filtering !== undefined) html += row('Tremor filtering', r.tremor_filtering);
+    if (r.motion_scaling) html += row('Motion scaling', r.motion_scaling);
+    if (r.haptic_feedback !== undefined) html += row('Haptic feedback', r.haptic_feedback);
+    if (r.incision_size_mm) html += row('Incision size', r.incision_size_mm, 'mm');
+    if (r.vision) html += row('Vision system', r.vision);
+    if (r.magnification) html += row('Magnification', r.magnification);
+    if (r.ar_overlay !== undefined) html += row('AR overlay guidance', r.ar_overlay);
+    if (r.fluorescence_imaging !== undefined) html += row('Fluorescence imaging', r.fluorescence_imaging);
+    if (r.console_type) html += row('Surgeon console', r.console_type);
+    if (r.setup_time_min) html += row('OR setup time', r.setup_time_min, 'min avg');
+    html += grp('CLINICAL DATA');
+    if (r.ai_assist !== undefined) html += row('AI assistance', r.ai_assist);
+    if (r.installed_base) html += row('Installed base', r.installed_base.toLocaleString() + ' systems worldwide');
+    if (r.annual_procedures) html += row('Annual procedures', r.annual_procedures.toLocaleString());
+    if (r.procedures && r.procedures.length) html += row('Approved procedures', r.procedures.join(', '));
+    if (r.training_cases_required) html += row('Training cases required', r.training_cases_required);
+    if (r.peer_reviewed_studies) html += row('Peer-reviewed studies', r.peer_reviewed_studies);
+    if (r.ehr_integration !== undefined) html += row('EHR/EMR integration', r.ehr_integration);
+  }
+
+  if (isAgri) {
+    html += grp('FIELD PERFORMANCE');
+    if (r.coverage_ha_day) html += row('Coverage', r.coverage_ha_day, 'ha/day');
+    if (r.gps_accuracy_cm) html += row('GPS accuracy', `Â±${r.gps_accuracy_cm}`, 'cm RTK');
+    if (r.working_width_m) html += row('Working width', r.working_width_m, 'm');
+    if (r.operating_speed) html += row('Operating speed', r.operating_speed, 'km/h');
+    if (r.max_slope_pct) html += row('Max slope', r.max_slope_pct, '%');
+    if (r.night_operation !== undefined) html += row('Night operation', r.night_operation);
+    html += grp('TECHNOLOGY');
+    if (r.operation) html += row('Operation mode', r.operation);
+    if (r.computer_vision !== undefined) html += row('Computer vision', r.computer_vision);
+    if (r.plant_recognition !== undefined) html += row('Plant recognition', r.plant_recognition);
+    if (r.treatment_type && r.treatment_type.length) html += row('Treatment method', r.treatment_type.join(', '));
+    if (r.chemical_free !== undefined) html += row('Chemical-free', r.chemical_free);
+    if (r.herbicide_reduction) html += row('Herbicide reduction', r.herbicide_reduction);
+    if (r.laser_power_w) html += row('Laser power', r.laser_power_w, 'W');
+    if (r.fuel) html += row('Fuel type', r.fuel);
+    if (r.tank_capacity_l) html += row('Tank capacity', r.tank_capacity_l, 'L');
+    if (r.crop_types && r.crop_types.length) html += row('Crop types', r.crop_types.join(', '));
+    if (r.integration && r.integration.length) html += row('Platform integration', r.integration.join(', '));
+  }
+
+  if (isService) {
+    html += grp('MOBILITY');
+    if (r.speed || r.speed_ms) html += row('Max speed', r.speed || r.speed_ms, 'm/s');
+    if (r.turning_radius_mm !== undefined) html += row('Turning radius', r.turning_radius_mm === 0 ? 'Zero-radius spin' : r.turning_radius_mm + 'mm');
+    if (r.max_grade_pct) html += row('Max slope', r.max_grade_pct, '%');
+    if (r.obstacle_height_mm) html += row('Obstacle clearance', r.obstacle_height_mm, 'mm');
+    if (r.elevator_capable !== undefined) html += row('Elevator capable', r.elevator_capable);
+    if (r.multi_floor !== undefined) html += row('Multi-floor', r.multi_floor);
+    if (r.outdoor_capable !== undefined) html += row('Outdoor capable', r.outdoor_capable);
+    html += grp('INTERACTION');
+    if (r.display) html += row('Display', r.display);
+    if (r.speech !== undefined) html += row('Speech synthesis', r.speech);
+    if (r.languages) html += row('Languages', r.languages);
+    if (r.delivery_bays) html += row('Delivery bays', r.delivery_bays);
+    if (r.uv_disinfection !== undefined) html += row('UV disinfection', r.uv_disinfection);
+    if (r.face_recognition !== undefined) html += row('Face recognition', r.face_recognition);
+    if (r.fleet_management !== undefined) html += row('Fleet management', r.fleet_management);
+    if (r.daily_trips) html += row('Max daily trips', r.daily_trips);
+    if (r.use_cases && r.use_cases.length) html += row('Use cases', r.use_cases.join(', '));
+  }
+
+  if (isMilitary) {
+    html += grp('MISSION');
+    if (r.role && r.role.length) html += row('Mission roles', Array.isArray(r.role) ? r.role.join(', ') : r.role);
+    if (r.endurance_hours) html += row('Endurance', r.endurance_hours, 'hours');
+    if (r.communication_range_km) html += row('Comms range', r.communication_range_km, 'km');
+    if (r.deploy_method && r.deploy_method.length) html += row('Deploy method', r.deploy_method.join(', '));
+    if (r.swim_depth_m) html += row('Swim/submersion depth', r.swim_depth_m, 'm');
+    if (r.mil_spec) html += row('MIL-SPEC', r.mil_spec);
+    if (r.blast_rating) html += row('Blast rating', r.blast_rating);
+    if (r.cbrn_protection !== undefined) html += row('CBRN protection', r.cbrn_protection);
+    if (r.autonomy_level) html += row('Autonomy level', r.autonomy_level + '/5 (DARPA scale)');
+    if (r.encryption) html += row('Encryption', r.encryption);
+    if (r.jamming_resistant !== undefined) html += row('Jamming resistant', r.jamming_resistant);
+    if (r.export_control) html += row('Export control', r.export_control);
+    if (r.customers && r.customers.length) html += row('Known customers', r.customers.join(', '));
+  }
+
+  if (isEducational) {
+    html += grp('EDUCATIONAL SPECS');
+    if (r.age_range) html += row('Age range', r.age_range);
+    if (r.grade_level) html += row('Grade level', r.grade_level);
+    if (r.curriculum) html += row('Curriculum', r.curriculum);
+    if (r.programming_interface) html += row('Programming interface', r.programming_interface);
+    if (r.programming_langs && r.programming_langs.length) html += row('Languages', r.programming_langs.join(', '));
+    if (r.sensors && r.sensors.length) html += row('Sensors included', r.sensors.join(', '));
+    if (r.actuators) html += row('Actuators/motors', r.actuators);
+    if (r.pieces) html += row('Total pieces', r.pieces.toLocaleString());
+    if (r.assembly_time_min) html += row('Assembly time', r.assembly_time_min, 'min');
+    if (r.competition_legal && r.competition_legal.length) html += row('Competition legal', r.competition_legal.join(', '));
+    if (r.lesson_library) html += row('Lesson library', r.lesson_library + ' lessons');
+    if (r.lms_integration) html += row('LMS integration', r.lms_integration);
+  }
+
+  // ══════════════════════════════════════════════════════════════════
+  // ── PHASE B DISPLAY EXTENSION — 9 NEW CATEGORY SECTIONS ──
+  // ══════════════════════════════════════════════════════════════════
+
+  // ── AEROSPACE ──
+  if (isAerospace) {
+    html += grp('SPACE MISSION');
+    if (r.target_body) html += row('Target body', r.target_body);
+    if (r.mission_type) html += row('Mission type', r.mission_type);
+    if (r.mission_status) html += row('Mission status', r.mission_status);
+    if (r.operating_agency) html += row('Operating agency', r.operating_agency);
+    if (r.launch_date) html += row('Launch date', r.launch_date);
+    if (r.arrival_date) html += row('Arrival date', r.arrival_date);
+    if (r.mission_end_date) html += row('Mission end date', r.mission_end_date);
+    if (r.launch_vehicle) html += row('Launch vehicle', r.launch_vehicle);
+    if (r.mission_cost_usd) html += row('Mission cost', '$' + r.mission_cost_usd.toLocaleString());
+    if (r.mission_duration_planned_days) html += row('Planned duration', r.mission_duration_planned_days, 'days');
+    if (r.mission_duration_actual_days) html += row('Actual duration', r.mission_duration_actual_days, 'days');
+    if (r.traverse_distance_km) html += row('Traverse distance', r.traverse_distance_km, 'km');
+    if (r.communications_band) html += row('Communications band', r.communications_band);
+    if (r.data_returned_gb) html += row('Data returned', r.data_returned_gb, 'GB');
+    if (r.payload_instruments && r.payload_instruments.length) html += row('Payload instruments', r.payload_instruments.join(', '));
+  }
+
+  // ── AQUATIC ──
+  if (isAquatic) {
+    html += grp('SUBSEA / MARINE');
+    if (r.vehicle_type) html += row('Vehicle type', r.vehicle_type);
+    if (r.propulsion_type) html += row('Propulsion', r.propulsion_type);
+    if (r.thruster_count) html += row('Thrusters', r.thruster_count);
+    if (r.max_depth_m) html += row('Max depth', r.max_depth_m.toLocaleString(), 'm');
+    if (r.crush_depth_m) html += row('Crush depth', r.crush_depth_m.toLocaleString(), 'm');
+    if (r.max_speed_kn) html += row('Max speed', r.max_speed_kn, 'knots');
+    if (r.endurance_hours && !isMilitary) html += row('Endurance', r.endurance_hours, 'hours');
+    if (r.endurance_km) html += row('Range', r.endurance_km, 'km');
+    if (r.tether_length_m) html += row('Tether length', r.tether_length_m, 'm');
+    if (r.tether_diameter_mm) html += row('Tether diameter', r.tether_diameter_mm, 'mm');
+    if (r.tether_type) html += row('Tether type', r.tether_type);
+    if (r.autonomous !== undefined && !isDrone) html += row('Autonomous', r.autonomous);
+    if (r.manipulator_arms) html += row('Manipulator arms', r.manipulator_arms);
+    if (r.arm_payload_kg) html += row('Arm payload', r.arm_payload_kg, 'kg');
+    if (r.acoustic_modem !== undefined) html += row('Acoustic modem', r.acoustic_modem);
+    if (r.inertial_navigation !== undefined) html += row('Inertial navigation', r.inertial_navigation);
+    if (r.dvl_integrated !== undefined) html += row('DVL (Doppler Velocity Log)', r.dvl_integrated);
+    if (r.usbl_integrated !== undefined) html += row('USBL acoustic positioning', r.usbl_integrated);
+    if (r.gps_when_surfaced !== undefined) html += row('GPS when surfaced', r.gps_when_surfaced);
+    if (r.iridium_satcom !== undefined) html += row('Iridium satcom', r.iridium_satcom);
+    if (r.launch_method) html += row('Launch method', r.launch_method);
+    if (r.deployment_weight_class) html += row('Deployment class', r.deployment_weight_class);
+    if (r.water_type && r.water_type.length) html += row('Water type', Array.isArray(r.water_type) ? r.water_type.join(', ') : r.water_type);
+  }
+
+  // ── LAWN MOWERS ──
+  if (isLawnMower) {
+    html += grp('CUTTING & COVERAGE');
+    if (r.cutting_width_mm) html += row('Cutting width', r.cutting_width_mm, 'mm');
+    if (r.cutting_height_min_mm && r.cutting_height_max_mm) html += row('Cutting height', `${r.cutting_height_min_mm}-${r.cutting_height_max_mm}`, 'mm');
+    if (r.cutting_height_adjustable) html += row('Height adjustment', r.cutting_height_adjustable);
+    if (r.cutting_height_electric) html += row('Electric height adjust', r.cutting_height_electric);
+    if (r.cutting_height_positions) html += row('Height positions', r.cutting_height_positions);
+    if (r.blade_count) html += row('Blades', r.blade_count);
+    if (r.blade_type) html += row('Blade type', r.blade_type);
+    // Lawn-area: support both new field name (lawn_size_m2) and legacy (max_lawn_area_sqm)
+    const lawnArea = r.lawn_size_m2 || r.max_lawn_area_sqm;
+    if (lawnArea) html += row('Max lawn area', lawnArea.toLocaleString(), 'm²');
+    if (r.lawn_size_acres) html += row('Max lawn area', r.lawn_size_acres, 'acres');
+    if (r.max_daily_coverage_acres) html += row('Daily coverage', r.max_daily_coverage_acres, 'acres');
+    // Slope: support both naming conventions
+    const slopePct = r.slope_max_percent || r.max_slope_percent;
+    if (slopePct) html += row('Max slope', slopePct, '%');
+    const slopeDeg = r.slope_max_deg || r.max_slope_degrees;
+    if (slopeDeg) html += row('Max slope (deg)', slopeDeg, '°');
+    // Mowing pattern(s) — array or single string
+    if (Array.isArray(r.mowing_patterns) && r.mowing_patterns.length) html += row('Mowing patterns', r.mowing_patterns.join(', '));
+    else if (r.mowing_pattern) html += row('Mowing pattern', r.mowing_pattern);
+    if (r.edge_cutting !== undefined) html += row('Edge cutting', r.edge_cutting);
+    if (r.mulching !== undefined) html += row('Mulching', r.mulching);
+    if (r.anti_tangle) html += row('Anti-tangle', r.anti_tangle);
+
+    html += grp('NAVIGATION & SAFETY');
+    // Navigation: support both names
+    const navType = r.navigation_type || r.navigation;
+    if (navType) html += row('Navigation type', navType);
+    if (r.requires_perimeter_wire !== undefined) html += row('Requires boundary wire', r.requires_perimeter_wire);
+    if (r.perimeter_wire_length_m) html += row('Boundary wire length', r.perimeter_wire_length_m, 'm');
+    if (r.requires_reference_station !== undefined) html += row('Reference station required', r.requires_reference_station);
+    if (r.requires_wifi_coverage !== undefined) html += row('Wi-Fi coverage required', r.requires_wifi_coverage);
+    if (r.gps_rtk !== undefined) html += row('GPS RTK', r.gps_rtk);
+    if (r.rtk_type) html += row('RTK type', r.rtk_type);
+    if (r.rtk_accuracy_cm) html += row('RTK accuracy', r.rtk_accuracy_cm, 'cm');
+    if (r.rtk_accuracy_cm_with_rs1) html += row('RTK accuracy (with RS1)', r.rtk_accuracy_cm_with_rs1, 'cm');
+    if (r.vision_navigation !== undefined) html += row('Vision navigation', r.vision_navigation);
+    if (r.cameras) html += row('Cameras', r.cameras);
+    if (r.lidar !== undefined) html += row('LiDAR', r.lidar);
+    if (r.lidar_type) html += row('LiDAR type', r.lidar_type);
+    if (r.ai_obstacle_avoidance !== undefined) html += row('AI obstacle avoidance', r.ai_obstacle_avoidance);
+    if (r.obstacle_categories) html += row('Obstacle categories', r.obstacle_categories);
+    if (r.obstacle_detection_min_mm) html += row('Min obstacle size', r.obstacle_detection_min_mm, 'mm');
+    if (r.animal_detection !== undefined) html += row('Animal detection', r.animal_detection);
+    if (r.animal_categories) html += row('Animal categories', r.animal_categories);
+    if (r.mapping !== undefined && !isVacuum) html += row('Mapping', r.mapping);
+    // Multi-zone — support both names
+    const multiZone = (r.multi_zone !== undefined) ? r.multi_zone : r.multi_zone_support;
+    if (multiZone !== undefined) html += row('Multi-zone support', multiZone);
+    if (r.max_zones || r.zones_max) html += row('Max zones', r.max_zones || r.zones_max);
+    if (r.secondary_area_supported !== undefined) html += row('Secondary areas', r.secondary_area_supported);
+    if (r.rain_sensor !== undefined && !isDrone) html += row('Rain sensor', r.rain_sensor);
+    if (r.frost_sensor !== undefined) html += row('Frost sensor', r.frost_sensor);
+    if (r.weather_timer !== undefined) html += row('Weather-adaptive timer', r.weather_timer);
+    // Theft protection — support both naming conventions and array of features
+    if (r.anti_theft !== undefined) html += row('Anti-theft', r.anti_theft);
+    if (r.theft_protection) html += row('Theft protection', r.theft_protection);
+    if (Array.isArray(r.theft_protection_features) && r.theft_protection_features.length) html += row('Theft protection features', r.theft_protection_features.join(', '));
+    if (r.anti_theft_alarm !== undefined) html += row('Anti-theft alarm', r.anti_theft_alarm);
+    if (r.lift_sensor !== undefined) html += row('Lift sensor (safety)', r.lift_sensor);
+    if (r.pet_safety !== undefined) html += row('Pet safety detection', r.pet_safety);
+    // Cellular — support both names
+    const cell = r.cellular_connectivity || r.cellular;
+    if (cell) html += row('Cellular', cell);
+    if (r.drive_type) html += row('Drive type', r.drive_type);
+    if (r.wheels) html += row('Wheels', r.wheels);
+
+    // App & smart home
+    if (r.app_companion || (Array.isArray(r.voice_assistant) && r.voice_assistant.length) || (Array.isArray(r.smart_home) && r.smart_home.length) || r.ota !== undefined){
+      html += grp('SMART FEATURES');
+      if (r.app_companion) html += row('App', r.app_companion);
+      if (Array.isArray(r.voice_assistant) && r.voice_assistant.length) html += row('Voice assistants', r.voice_assistant.join(', '));
+      if (Array.isArray(r.smart_home) && r.smart_home.length) html += row('Smart home', r.smart_home.join(', '));
+      if (r.ota !== undefined) html += row('OTA updates', r.ota);
+      if (r.fleet_management !== undefined) html += row('Fleet management', r.fleet_management);
+      if (r.auto_schedule !== undefined) html += row('Auto schedule', r.auto_schedule);
+    }
+  }
+
+  // ── TELEPRESENCE ──
+  if (isTelepresence) {
+    html += grp('TELEPRESENCE DISPLAY & CAMERA');
+    if (r.height_adjustable !== undefined) html += row('Height adjustable', r.height_adjustable);
+    if (r.height_range_mm) html += row('Height range', r.height_range_mm, 'mm');
+    if (r.screen_size_inch) html += row('Screen size', r.screen_size_inch, 'inches');
+    if (r.screen_resolution) html += row('Screen resolution', r.screen_resolution);
+    if (r.screen_brightness_nits) html += row('Screen brightness', r.screen_brightness_nits, 'nits');
+    if (r.front_camera_resolution) html += row('Front camera', r.front_camera_resolution);
+    if (r.front_camera_fov_deg) html += row('Camera FOV', r.front_camera_fov_deg, '°');
+    if (r.pan_tilt_camera !== undefined) html += row('Pan/tilt camera', r.pan_tilt_camera);
+    if (r.secondary_camera) html += row('Secondary camera', r.secondary_camera);
+    if (r.microphone_array) html += row('Microphone array', r.microphone_array);
+    if (r.speaker_output_w) html += row('Speaker output', r.speaker_output_w, 'W');
+    html += grp('PILOTING & CALL');
+    if (r.video_codec && r.video_codec.length) html += row('Video codecs', r.video_codec.join(', '));
+    if (r.audio_codec && r.audio_codec.length) html += row('Audio codecs', r.audio_codec.join(', '));
+    if (r.call_platforms && r.call_platforms.length) html += row('Call platforms', r.call_platforms.join(', '));
+    if (r.pilot_devices && r.pilot_devices.length) html += row('Pilot devices', r.pilot_devices.join(', '));
+    if (r.simultaneous_pilots) html += row('Simultaneous pilots', r.simultaneous_pilots);
+    if (r.pilot_handoff !== undefined) html += row('Pilot handoff', r.pilot_handoff);
+    if (r.latency_ms_typical) html += row('Typical latency', r.latency_ms_typical, 'ms');
+    if (r.multi_robot_management !== undefined) html += row('Fleet management', r.multi_robot_management);
+    if (r.business_seat_pricing_usd_month) html += row('Business seat', '$' + r.business_seat_pricing_usd_month + '/month');
+  }
+
+  // ── SOCIAL ──
+  if (isSocial) {
+    html += grp('SOCIAL & COMPANIONSHIP');
+    if (r.social_role) html += row('Social role', r.social_role);
+    if (r.target_user && r.target_user.length) html += row('Target user', r.target_user.join(', '));
+    if (r.form_factor) html += row('Form factor', r.form_factor);
+    if (r.face_display) html += row('Face display', r.face_display);
+    if (r.eye_contact_tracking !== undefined) html += row('Eye contact tracking', r.eye_contact_tracking);
+    if (r.facial_recognition !== undefined && !html.includes('Facial recognition')) html += row('Facial recognition', r.facial_recognition);
+    if (r.conversational_ai) html += row('Conversational AI', r.conversational_ai);
+    if (r.llm_used) html += row('LLM used', r.llm_used);
+    if (r.emotional_recognition !== undefined) html += row('Emotional recognition', r.emotional_recognition);
+    if (r.emotional_expression !== undefined) html += row('Emotional expression', r.emotional_expression);
+    if (r.touch_responsive !== undefined) html += row('Touch responsive', r.touch_responsive);
+    if (r.tactile_sensors_count) html += row('Tactile sensors', r.tactile_sensors_count);
+    if (r.mobility) html += row('Mobility', r.mobility);
+    if (r.learning_personalization !== undefined) html += row('Personalization', r.learning_personalization);
+    if (r.memory_persistent !== undefined) html += row('Persistent memory', r.memory_persistent);
+    if (r.family_account_support !== undefined) html += row('Family accounts', r.family_account_support);
+    html += grp('CARE FEATURES');
+    if (r.medication_reminders !== undefined) html += row('Medication reminders', r.medication_reminders);
+    if (r.fall_detection !== undefined) html += row('Fall detection', r.fall_detection);
+    if (r.emergency_contact_alert !== undefined) html += row('Emergency alerts', r.emergency_contact_alert);
+    if (r.video_calling !== undefined) html += row('Video calling', r.video_calling);
+    if (r.parental_controls !== undefined) html += row('Parental controls', r.parental_controls);
+    if (r.subscription_required !== undefined) html += row('Subscription required', r.subscription_required);
+    if (r.subscription_price_usd_month) html += row('Subscription', '$' + r.subscription_price_usd_month + '/month');
+    if (r.data_privacy_certification && r.data_privacy_certification.length) html += row('Privacy certifications', r.data_privacy_certification.join(', '));
+    if (r.intended_setting && r.intended_setting.length) html += row('Intended setting', r.intended_setting.join(', '));
+  }
+
+  // ── ENTERTAINMENT ──
+  if (isEntertainment) {
+    html += grp('ENTERTAINMENT & PERFORMANCE');
+    if (r.entertainment_type) html += row('Entertainment type', r.entertainment_type);
+    if (r.venue_type && r.venue_type.length) html += row('Venue type', r.venue_type.join(', '));
+    if (r.performance_modes && r.performance_modes.length) html += row('Performance modes', r.performance_modes.join(', '));
+    if (r.audience_interaction !== undefined) html += row('Audience interaction', r.audience_interaction);
+    if (r.motion_capture_driven !== undefined) html += row('Motion capture driven', r.motion_capture_driven);
+    if (r.synced_to_music !== undefined) html += row('Synced to music', r.synced_to_music);
+    if (r.instrument_played) html += row('Instrument played', r.instrument_played);
+    if (r.drinks_per_hour) html += row('Drinks per hour', r.drinks_per_hour);
+    if (r.drink_menu_size) html += row('Drink menu size', r.drink_menu_size);
+    if (r.payment_integration !== undefined) html += row('Payment integration', r.payment_integration);
+    if (r.expressive_capabilities && r.expressive_capabilities.length) html += row('Expressive capabilities', r.expressive_capabilities.join(', '));
+    if (r.stage_lighting_sync !== undefined) html += row('Stage lighting sync', r.stage_lighting_sync);
+    if (r.dmx_compatible !== undefined) html += row('DMX compatible', r.dmx_compatible);
+    if (r.permanent_installation !== undefined) html += row('Permanent installation', r.permanent_installation);
+    if (r.touring_capable !== undefined) html += row('Touring capable', r.touring_capable);
+    if (r.setup_time_min && !isMedical) html += row('Setup time', r.setup_time_min, 'min per venue');
+    if (r.crew_required) html += row('Crew required', r.crew_required, 'operator(s) on site');
+    if (r.intended_audience && r.intended_audience.length) html += row('Intended audience', r.intended_audience.join(', '));
+  }
+
+  // ── AUTONOMOUS VEHICLES ──
+  if (isAV) {
+    html += grp('AUTONOMOUS VEHICLE');
+    if (r.vehicle_class) html += row('Vehicle class', r.vehicle_class);
+    if (r.autonomy_level && !isMilitary) html += row('Autonomy level', r.autonomy_level + ' (SAE)');
+    if (r.operational_design_domain) html += row('Operational design domain', r.operational_design_domain);
+    if (r.passenger_capacity) html += row('Passenger capacity', r.passenger_capacity);
+    if (r.cargo_capacity_kg) html += row('Cargo capacity', r.cargo_capacity_kg, 'kg');
+    if (r.cargo_volume_m3) html += row('Cargo volume', r.cargo_volume_m3, 'm³');
+    if (r.range_km) html += row('Range', r.range_km, 'km');
+    if (r.top_speed_kmh) html += row('Top speed', r.top_speed_kmh, 'km/h');
+    if (r.powertrain) html += row('Powertrain', r.powertrain);
+    if (r.battery_capacity_kwh) html += row('Battery capacity', r.battery_capacity_kwh, 'kWh');
+    if (r.charging_time_min_dc) html += row('DC fast charging', r.charging_time_min_dc, 'min');
+    if (r.charging_time_h_ac) html += row('AC charging', r.charging_time_h_ac, 'hours');
+    if (r.wheelbase_mm) html += row('Wheelbase', r.wheelbase_mm, 'mm');
+    html += grp('AV SENSORS & COMPUTE');
+    if (r.lidar_count) html += row('LiDAR units', r.lidar_count);
+    if (r.lidar_brand) html += row('LiDAR brand', r.lidar_brand);
+    if (r.camera_count) html += row('Cameras', r.camera_count);
+    if (r.radar_count) html += row('Radars', r.radar_count);
+    if (r.imaging_radar !== undefined) html += row('Imaging radar', r.imaging_radar);
+    if (r.compute_platform) html += row('Compute platform', r.compute_platform);
+    if (r.redundant_systems && r.redundant_systems.length) html += row('Redundant systems', r.redundant_systems.join(', '));
+    if (r.safety_certifications && r.safety_certifications.length) html += row('Safety certifications', r.safety_certifications.join(', '));
+    html += grp('AV OPERATIONS');
+    if (r.operating_cities && r.operating_cities.length) html += row('Operating cities', r.operating_cities.join(', '));
+    if (r.commercial_service_year) html += row('Commercial service since', r.commercial_service_year);
+    if (r.safety_driver) html += row('Safety driver', r.safety_driver);
+    if (r.remote_operations !== undefined) html += row('Remote operations', r.remote_operations);
+    if (r.v2x_enabled !== undefined) html += row('V2X enabled', r.v2x_enabled);
+  }
+
+  // ── AGV / AMR ──
+  if (isAGV) {
+    html += grp('AGV / AMR');
+    if (r.robot_type) html += row('Robot type', r.robot_type);
+    if (r.navigation_type) html += row('Navigation type', r.navigation_type);
+    if (r.payload_kg && !html.includes('Payload')) html += row('Payload', r.payload_kg, 'kg');
+    if (r.max_payload_dimensions_mm) html += row('Max payload dimensions', r.max_payload_dimensions_mm);
+    if (r.lifting_height_mm) html += row('Lifting height', r.lifting_height_mm, 'mm');
+    if (r.lifting_capacity_kg) html += row('Lifting capacity', r.lifting_capacity_kg, 'kg');
+    if (r.max_speed_ms && !html.includes('Max speed')) html += row('Max speed', r.max_speed_ms, 'm/s');
+    if (r.turning_radius_mm !== undefined && !isService) html += row('Turning radius', r.turning_radius_mm === 0 ? 'Zero-radius' : r.turning_radius_mm + 'mm');
+    if (r.wheel_type) html += row('Wheel type', r.wheel_type);
+    if (r.safety_lidar !== undefined) html += row('Safety LiDAR', r.safety_lidar);
+    if (r.bumper_safety !== undefined) html += row('Bumper safety', r.bumper_safety);
+    if (r.safety_certifications && r.safety_certifications.length && !isAV) html += row('Safety certifications', r.safety_certifications.join(', '));
+    html += grp('FLEET & INTEGRATION');
+    if (r.dock_charging !== undefined) html += row('Dock charging', r.dock_charging);
+    if (r.opportunity_charging !== undefined) html += row('Opportunity charging', r.opportunity_charging);
+    if (r.fleet_software) html += row('Fleet software', r.fleet_software);
+    if (r.fleet_size_max) html += row('Max fleet size', r.fleet_size_max);
+    if (r.wms_integration && r.wms_integration.length) html += row('WMS integration', r.wms_integration.join(', '));
+    if (r.wcs_integration !== undefined) html += row('WCS integration', r.wcs_integration);
+    if (r.elevator_integration !== undefined && !isService) html += row('Elevator integration', r.elevator_integration);
+    if (r.door_integration !== undefined) html += row('Door integration', r.door_integration);
+    if (r.multi_floor !== undefined && !isService) html += row('Multi-floor', r.multi_floor);
+    if (r.pick_to_light !== undefined) html += row('Pick to light', r.pick_to_light);
+    if (r.cart_attachment_type) html += row('Cart attachment', r.cart_attachment_type);
+    if (r.coverage_area_sqm) html += row('Coverage area', r.coverage_area_sqm.toLocaleString(), 'm²');
+  }
+
+  // ── CONSTRUCTION ──
+  if (isConstruction) {
+    html += grp('CONSTRUCTION');
+    if (r.construction_role) html += row('Construction role', r.construction_role);
+    if (r.operating_environment && r.operating_environment.length) html += row('Operating environment', r.operating_environment.join(', '));
+    if (r.lift_capacity_kg) html += row('Lift capacity', r.lift_capacity_kg.toLocaleString(), 'kg');
+    if (r.reach_m) html += row('Reach', r.reach_m, 'm');
+    if (r.working_height_max_m) html += row('Max working height', r.working_height_max_m, 'm');
+    if (r.placement_accuracy_mm) html += row('Placement accuracy', r.placement_accuracy_mm, 'mm');
+    if (r.materials_compatible && r.materials_compatible.length) html += row('Materials', r.materials_compatible.join(', '));
+    if (r.mortar_type) html += row('Mortar type', r.mortar_type);
+    if (r.print_layer_mm) html += row('Print layer thickness', r.print_layer_mm, 'mm');
+    if (r.print_speed_mm_s) html += row('Print speed', r.print_speed_mm_s, 'mm/s');
+    if (r.print_volume_m3) html += row('Print volume', r.print_volume_m3, 'm³');
+    if (r.surveying_accuracy_mm) html += row('Surveying accuracy', r.surveying_accuracy_mm, 'mm');
+    if (r.bim_integration !== undefined) html += row('BIM integration', r.bim_integration);
+    if (r.bim_formats && r.bim_formats.length) html += row('BIM formats', r.bim_formats.join(', '));
+    if (r.tracked_or_wheeled) html += row('Tracks or wheels', r.tracked_or_wheeled);
+    if (r.slope_capability_degrees) html += row('Slope capability', r.slope_capability_degrees, '°');
+    if (r.weather_operation) html += row('Weather operation', r.weather_operation);
+    if (r.osha_compliant !== undefined) html += row('OSHA compliant', r.osha_compliant);
+    if (r.setup_time_min && !isMedical && !isEntertainment) html += row('Setup time', r.setup_time_min, 'min per site');
+    if (r.intended_users && r.intended_users.length) html += row('Intended users', r.intended_users.join(', '));
+  }
+
+  // ── DISASTER RESPONSE (USAR / EOD / HazMat) ──
+  if (isDisaster && !isMilitary) {
+    html += grp('DISASTER RESPONSE');
+    if (r.robot_form) html += row('Robot form', r.robot_form);
+    if (r.mission_types && r.mission_types.length) html += row('Mission types', r.mission_types.join(', '));
+    if (r.intended_users && r.intended_users.length && !isConstruction) html += row('Intended users', r.intended_users.join(', '));
+    if (r.throwable !== undefined) html += row('Throwable', r.throwable);
+    if (r.throw_distance_m) html += row('Throw distance', r.throw_distance_m, 'm');
+    if (r.survives_fall_m) html += row('Survives fall', r.survives_fall_m, 'm');
+    if (r.runtime_standby_hours) html += row('Standby runtime', r.runtime_standby_hours, 'hours');
+    if (r.manipulator_arms && !isAquatic) html += row('Manipulator arms', r.manipulator_arms);
+    if (r.disrupter_compatible !== undefined) html += row('Disrupter compatible (EOD)', r.disrupter_compatible);
+    if (r.tool_changer !== undefined && !isHumanoid) html += row('Tool changer', r.tool_changer);
+    if (r.cbrn_sensors && r.cbrn_sensors.length) html += row('CBRN sensors', r.cbrn_sensors.join(', '));
+    if (r.thermal_camera !== undefined && !isDrone && !html.includes('Thermal camera')) html += row('Thermal camera', r.thermal_camera);
+    if (r.low_light_camera !== undefined) html += row('Low-light camera', r.low_light_camera);
+    if (r.two_way_audio !== undefined) html += row('Two-way audio (victim comms)', r.two_way_audio);
+    if (r.victim_detection_ai !== undefined) html += row('Victim detection AI', r.victim_detection_ai);
+    if (r.gas_sensors && r.gas_sensors.length) html += row('Gas sensors', r.gas_sensors.join(', '));
+    if (r.fire_temperature_rating_c) html += row('Fire temperature rating', r.fire_temperature_rating_c, '°C');
+    if (r.radiation_hardened !== undefined) html += row('Radiation hardened', r.radiation_hardened);
+    if (r.comms && r.comms.length) html += row('Comms types', r.comms.join(', '));
+    if (r.comms_range_m) html += row('Comms range', r.comms_range_m, 'm');
+    if (r.night_operation !== undefined && !isAgri) html += row('Night operation', r.night_operation);
+    if (r.stair_climbing !== undefined && !html.includes('Stair climbing')) html += row('Stair climbing', r.stair_climbing);
+    if (r.tracks_or_wheels && !isConstruction) html += row('Tracks or wheels', r.tracks_or_wheels);
+    if (r.weight_class) html += row('Weight class', r.weight_class);
+  }
+
+
+  // ── NETWORK ──
+  if (r.network_tech || r.network_bands) {
+    html += grp('NETWORK');
+    if (r.network_tech) html += row('Technology', r.network_tech);
+    if (r.network_bands && r.network_bands.length) html += row('Bands', Array.isArray(r.network_bands) ? r.network_bands.join(', ') : r.network_bands);
+    if (r.carrier_aggregation) html += row('Carrier aggregation', r.carrier_aggregation);
+    if (r.sim_slot) html += row('SIM', r.sim_slot);
+    if (r.esim !== undefined) html += row('eSIM', r.esim);
+  }
+
+  // ── DISPLAY ──
+  if (r.display_type || r.display_size_inch || r.display) {
+    html += grp('DISPLAY');
+    if (r.display_count && r.display_count > 1) html += row('Displays', r.display_count);
+    if (r.display_type) html += row('Type', r.display_type);
+    if (r.display_size_inch) html += row('Size', r.display_size_inch, 'inches');
+    if (r.display_resolution) html += row('Resolution', r.display_resolution);
+    if (r.display_brightness_nits) html += row('Brightness', r.display_brightness_nits, 'nits');
+    if (r.display_refresh_hz) html += row('Refresh rate', r.display_refresh_hz, 'Hz');
+    if (r.display_touch !== undefined) html += row('Touchscreen', r.display_touch);
+    if (r.display_protection) html += row('Protection', r.display_protection);
+    if (r.display_notes) html += row('Notes', r.display_notes);
+    if (r.display && !r.display_type) html += row('Display', r.display);
+  }
+
+  // ── MAIN CAMERA ──
+  if (r.main_camera_mp || r.main_camera_setup) {
+    html += grp('MAIN CAMERA');
+    if (r.main_camera_setup) html += row('Setup', r.main_camera_setup);
+    if (r.main_camera_mp) html += row('Resolution', r.main_camera_mp, 'MP');
+    if (r.main_camera_aperture) html += row('Aperture', r.main_camera_aperture);
+    if (r.main_camera_sensor_size) html += row('Sensor size', r.main_camera_sensor_size);
+    if (r.main_camera_ois !== undefined) html += row('OIS', r.main_camera_ois);
+    if (r.main_camera_zoom) html += row('Zoom', r.main_camera_zoom);
+    if (r.main_camera_fov) html += row('FOV', r.main_camera_fov);
+    if (r.main_camera_features && r.main_camera_features.length) html += row('Features', r.main_camera_features.join(', '));
+    if (r.video_recording) html += row('Video recording', r.video_recording);
+    if (r.video_formats && r.video_formats.length && !isDrone) html += row('Video formats', r.video_formats.join(', '));
+    if (r.video_fps && !isDrone) html += row('Frame rate', r.video_fps, 'fps');
+    if (r.color_profiles && r.color_profiles.length && !isDrone) html += row('Color profiles', r.color_profiles.join(', '));
+  }
+
+  // ── SOUND ──
+  if (r.speaker_w || r.speaker_count || r.microphones || r.audio) {
+    html += grp('SOUND');
+    if (r.speaker_count) html += row('Loudspeaker', r.speaker_count + ' speaker' + (r.speaker_count > 1 ? 's' : '') + (r.speaker_w ? ` (${r.speaker_w}W total)` : ''));
+    else if (r.speaker_w) html += row('Loudspeaker', r.speaker_w, 'W');
+    if (r.speaker_placement) html += row('Speaker placement', r.speaker_placement);
+    if (r.audio_formats && r.audio_formats.length) html += row('Audio formats', r.audio_formats.join(', '));
+    if (r.spatial_audio !== undefined) html += row('Spatial audio', r.spatial_audio);
+    if (r.noise_cancellation !== undefined) html += row('Noise cancellation', r.noise_cancellation);
+    if (r.microphones && !html.includes(r.microphones)) html += row('Microphone', r.microphones);
+    if (r.audio && !r.microphones) html += row('Audio system', r.audio);
+    if (r.headphone_jack !== undefined) html += row('3.5mm jack', r.headphone_jack);
+    if (r.voice_recognition !== undefined) html += row('Voice recognition', r.voice_recognition);
+    if (r.speech_synthesis !== undefined) html += row('Speech synthesis', r.speech_synthesis);
+    if (r.languages_spoken) html += row('Languages', r.languages_spoken);
+  }
+
+  // ── FEATURES (sensors checklist like GSMArena) ──
+  html += grp('FEATURES');
+  const sensorsList = [];
+  if (r.sensors_list && r.sensors_list.length) {
+    sensorsList.push(...r.sensors_list);
+  } else {
+    if (r.lidar) sensorsList.push('LiDAR');
+    if (r.imu) sensorsList.push(r.imu_axes ? `${r.imu_axes}-axis IMU` : 'IMU');
+    if (r.gps) sensorsList.push('GPS');
+    if (r.rtk) sensorsList.push('RTK GPS');
+    if (r.force_sensing) sensorsList.push('Force/torque sensor');
+    if (r.touch_sensing && r.touch_sensing !== 'none') sensorsList.push('Tactile sensing');
+    if (r.thermal_camera) sensorsList.push('Thermal camera');
+    if (r.barometer) sensorsList.push('Barometer');
+    if (r.accelerometer !== false) sensorsList.push('Accelerometer');
+    if (r.gyroscope !== false) sensorsList.push('Gyroscope');
+    if (r.compass !== false) sensorsList.push('Compass/magnetometer');
+    if (r.proximity_sensor) sensorsList.push('Proximity sensor');
+    if (r.color_sensor) sensorsList.push('Colour sensor');
+    if (r.gas_sensor) sensorsList.push('Gas/chemical sensor');
+    if (r.rain_sensor) sensorsList.push('Rain sensor');
+    if (r.uwb) sensorsList.push('UWB');
+  }
+  if (sensorsList.length) html += row('Sensors', sensorsList.join(', '));
+  if (r.facial_recognition !== undefined) html += row('Facial recognition', r.facial_recognition);
+  if (r.emotion_detection !== undefined) html += row('Emotion detection', r.emotion_detection);
+  if (r.gesture_control !== undefined) html += row('Gesture control', r.gesture_control);
+  if (r.autonomous !== undefined) html += row('Autonomous operation', r.autonomous);
+  if (r.fleet_management !== undefined && !isService) html += row('Fleet management', r.fleet_management);
+  if (r.ota !== undefined && !html.includes('OTA')) html += row('OTA updates', r.ota);
+
+  // ── EU LABEL / SUSTAINABILITY ──
+  if (r.energy_class || r.repairability || r.carbon_footprint || r.recycled_materials_pct) {
+    html += grp('EU LABEL / SUSTAINABILITY');
+    if (r.energy_class) html += row('Energy class', r.energy_class);
+    if (r.power_consumption_w && !isCobot) html += row('Power consumption', r.power_consumption_w, 'W');
+    if (r.repairability) html += row('Repairability score', `${r.repairability}/10`);
+    if (r.carbon_footprint) html += row('Carbon footprint', r.carbon_footprint, 'kg CO₂e');
+    if (r.recycled_materials_pct) html += row('Recycled content', r.recycled_materials_pct, '%');
+    if (r.support_years) html += row('Software support', r.support_years, 'years');
+  }
+
+
+  // ── AI & LEARNING ──
+  html += grp('AI & LEARNING');
+  if (r.ai_model) html += row('AI model', r.ai_model);
+  if (r.ai_model_type) html += row('Model architecture', r.ai_model_type);
+  if (r.ai_parameters) html += row('Model parameters', r.ai_parameters);
+  if (r.ai_open_source !== undefined) html += row('Open source', r.ai_open_source);
+  if (r.ai_cloud_required !== undefined) html += row('Cloud required', r.ai_cloud_required);
+  if (r.ai_inference_local !== undefined) html += row('On-device inference', r.ai_inference_local);
+  if (r.learning_methods && r.learning_methods.length) html += row('Learning methods', r.learning_methods.join(', '));
+  if (r.sim_platform) html += row('Simulation platform', r.sim_platform);
+  if (r.training_data_hours) html += row('Training data', r.training_data_hours);
+  if (r.llm_model) html += row('Integrated LLM', r.llm_model);
+  if (r.task_generalisation) html += row('Task generalisation', r.task_generalisation);
+  if (r.new_task_learning !== undefined) html += row('Learns new tasks', r.new_task_learning);
+  if (r.continual_learning !== undefined) html += row('Continual learning', r.continual_learning);
+  if (r.object_classes) html += row('Object classes known', r.object_classes);
+  if (r.scene_understanding) html += row('Scene understanding', r.scene_understanding);
+  if (r.natural_language_commands !== undefined) html += row('Natural language commands', r.natural_language_commands);
+
+  // ── SENSORS ──
+  html += grp('SENSORS');
+  if (r.cameras) html += row('Cameras', r.cameras);
+  if (r.camera_resolution && !isDrone) html += row('Camera resolution', r.camera_resolution);
+  if (r.camera_fov || r.eye_camera_fov) html += row('Camera FOV', r.camera_fov || r.eye_camera_fov);
+  if (r.depth_sensing) html += row('Depth sensing', r.depth_sensing);
+  if (r.lidar !== undefined && !isVacuum) html += row('LiDAR', r.lidar);
+  if (r.lidar_model) html += row('LiDAR model', r.lidar_model);
+  if (r.lidar_range_m) html += row('LiDAR range', r.lidar_range_m, 'm');
+  if (r.lidar_points_per_sec) html += row('LiDAR point density', r.lidar_points_per_sec.toLocaleString(), 'pts/s');
+  if (r.imu || r.imu_axes) html += row('IMU', r.imu_axes ? `${r.imu_axes}-axis` : 'Yes');
+  if (r.thermal_camera !== undefined && !isDrone) html += row('Thermal camera', r.thermal_camera);
+  // Audio specs moved to SOUND section
+  if (r.touch_sensing) html += row('Touch sensing', r.touch_sensing);
+  if (r.touch_sensors_count) html += row('Tactile sensors', r.touch_sensors_count);
+  if (r.force_sensing && !isHumanoid) html += row('Force/torque sensing', r.force_sensing);
+
+  // ── HAND / GRIPPER (humanoid) ──
+  if (isHumanoid || r.hand_type) {
+    html += grp('HAND & MANIPULATION');
+    if (r.hand_type) html += row('Hand type', r.hand_type);
+    if (r.fingers !== undefined) html += row('Fingers per hand', r.fingers);
+    if (r.opposable_thumb !== undefined) html += row('Opposable thumb', r.opposable_thumb);
+    if (r.hand_dof) html += row('Hand DOF (each)', r.hand_dof);
+    if (r.hand_interchangeable !== undefined) html += row('Interchangeable hands', r.hand_interchangeable);
+    if (r.hand_variants && r.hand_variants.length) html += row('Hand variants', r.hand_variants.join(', '));
+    if (r.grasp_force_n) html += row('Grip force', r.grasp_force_n, 'N');
+    if (r.min_object_size_mm) html += row('Min graspable object', r.min_object_size_mm, 'mm');
+    if (r.max_object_diameter_mm) html += row('Max graspable diameter', r.max_object_diameter_mm, 'mm');
+    if (r.manipulation_level) html += row('Manipulation level', r.manipulation_level);
+    if (r.bimanual !== undefined) html += row('Bimanual coordination', r.bimanual);
+    if (r.can_use_tools !== undefined) html += row('Uses standard tools', r.can_use_tools);
+    if (r.tool_changer !== undefined) html += row('Tool changer', r.tool_changer);
+    if (r.dexterous_hand !== undefined) html += row('Dexterous hand', r.dexterous_hand, '', r.dexterous_hand_note || '');
+  }
+
+  // ── BATTERY ──
+  html += grp('BATTERY');
+  if (r.battery_type) html += row('Type', r.battery_type);
+  if (r.battery_cells) html += row('Cell configuration', r.battery_cells);
+  if (r.battery_wh) html += row('Capacity', r.battery_wh.toLocaleString(), 'Wh');
+  if (r.battery_ah) html += row('Capacity', r.battery_ah, 'Ah');
+  if (r.battery_voltage || r.voltage) html += row('Voltage', r.battery_voltage || r.voltage);
+  if (r.battery_count && r.battery_count > 1) html += row('Battery packs', r.battery_count);
+  if (r.battery_life || r.battery_life_min) html += row('Battery life (rated)', r.battery_life || r.battery_life_min, 'min');
+  if (r.battery_life_typical) html += row('Battery life (typical)', r.battery_life_typical, 'min');
+  if (r.battery_life_heavy) html += row('Battery life (full load)', r.battery_life_heavy, 'min');
+  if (r.battery_life_standby) html += row('Standby time', r.battery_life_standby, 'hours');
+  if (r.charge_time || r.charge_time_min) html += row('Charging (0→100%)', r.charge_time || r.charge_time_min, 'min');
+  if (r.charge_time_fast) html += row('Fast charge (0→80%)', r.charge_time_fast, 'min');
+  if (r.charge_power_w) html += row('Charger output', r.charge_power_w, 'W');
+  if (r.charge_type) html += row('Charging type', r.charge_type);
+  if (r.wireless_charging !== undefined) html += row('Wireless charging', r.wireless_charging);
+  if (r.auto_charge !== undefined) html += row('Auto return to dock', r.auto_charge);
+  if (r.hot_swap !== undefined) html += row('Hot-swap battery', r.hot_swap);
+  if (r.quick_release !== undefined) html += row('Quick-release battery', r.quick_release);
+  if (r.cycle_life) html += row('Cycle life', r.cycle_life + ' cycles (to 80% capacity)');
+  if (r.battery_temp_range) html += row('Battery temp range', r.battery_temp_range);
+  if (r.bms) html += row('Battery management', r.bms);
+  if (r.cooling) html += row('Thermal management', r.cooling);
+  if (r.power_source) html += row('Power source', r.power_source);
+
+  // ── COMMS ──
+  html += grp('COMMS');
+  if (r.wifi) html += row('WLAN', r.wifi === true ? true : (r.wifi + (r.wifi_bands ? ', ' + r.wifi_bands : '')));
+  if (r.bluetooth) html += row('Bluetooth', r.bluetooth);
+  if (r.cellular) html += row('Cellular', r.cellular === true ? true : (r.cellular + (r.cellular_sim ? ', ' + r.cellular_sim : '')));
+  if (r.uwb !== undefined) html += row('UWB', r.uwb);
+  if (r.nfc !== undefined) html += row('NFC', r.nfc);
+  if (r.ethernet) html += row('Ethernet', r.ethernet);
+  if (r.usb_ports) html += row('USB', r.usb_ports);
+  if (r.industrial_protocols && r.industrial_protocols.length) html += row('Industrial protocols', r.industrial_protocols.join(', '));
+  if (r.ros !== undefined) html += row('ROS compatible', r.ros);
+  if (r.sdk !== undefined) html += row('SDK', r.sdk);
+  if (r.sdk_langs && r.sdk_langs.length) html += row('SDK languages', r.sdk_langs.join(', '));
+  if (r.api !== undefined) html += row('REST API', r.api);
+  if (r.zigbee_matter) html += row('Smart home', r.zigbee_matter);
+
+  // ── SAFETY & CERTIFICATIONS ──
+  html += grp('SAFETY & CERTIFICATIONS');
+  const certs = [];
+  if (r.ce) certs.push('CE');
+  if (r.fcc) certs.push('FCC');
+  if (r.rohs) certs.push('RoHS');
+  if (r.ul_listed) certs.push('UL Listed');
+  if (r.iso_certs && r.iso_certs.length) certs.push(...r.iso_certs);
+  if (r.iso && r.iso.length) certs.push(...r.iso);
+  if (r.other_certs && r.other_certs.length) certs.push(...r.other_certs);
+  if (certs.length) html += row('Certifications', certs.join(', '));
+  if (r.safety_rating) html += row('Functional safety', r.safety_rating);
+  if (r.estop) html += row('Emergency stop', r.estop);
+  if (r.collision_detection !== undefined) html += row('Collision detection', r.collision_detection);
+  if (r.sar_head) html += row('SAR (head)', r.sar_head, 'W/kg');
+  if (r.sar_body) html += row('SAR (body)', r.sar_body, 'W/kg');
+
+  // ── PRICING ──
+  html += grp('PRICING');
+  html += row('Price level', priceTier(r)!=null ? (priceStarsTxt(r) + ' (relative to ' + (r.cat||'category') + ')') : 'To be confirmed');
+
+  // ── MISC ──
+  html += grp('MISC');
+  if (r.use_cases && r.use_cases.length && !isVacuum && !isService && !isCobot) html += row('Use cases', r.use_cases.join(', '));
+  if (r.pilot_customers && r.pilot_customers.length) html += row('Pilot customers', r.pilot_customers.join(', '));
+  if (r.warranty_months) html += row('Warranty', r.warranty_months + ' months' + (r.warranty_edu_months ? ` (EDU: ${r.warranty_edu_months} months)` : ''));
+  if (r.repairability) html += row('Repairability', r.repairability + '/10');
+  if (r.energy_class) html += row('Energy class', r.energy_class);
+  if (r.power_consumption_w && !isCobot) html += row('Power consumption', r.power_consumption_w, 'W');
+  if (r.carbon_footprint) html += row('Carbon footprint', r.carbon_footprint, 'kg CO₂e');
+  if (r.recycled_materials_pct) html += row('Recycled content', r.recycled_materials_pct, '%');
+  if (r.support_years) html += row('Software support', r.support_years, 'years');
+  if (r.made_in || r.origin) html += row('Made in', r.made_in || r.origin);
+  if (r.ota !== undefined) html += row('OTA updates', r.ota);
+  if (r.models && r.models.length) html += row('Model numbers', r.models.join(', '));
+  if (r.also_known_as && !html.includes(r.also_known_as)) html += row('Also known as', r.also_known_as);
+  if (r.datasheet) html += `<tr><td style="color:var(--mut);font-size:12px;padding:7px 12px">Datasheet</td><td style="font-size:12px;padding:7px 12px"><a href="${r.datasheet}" target="_blank" style="color:var(--acc)">Download PDF →</a></td></tr>`;
+  if (r.website) html += `<tr><td style="color:var(--mut);font-size:12px;padding:7px 12px">Official page</td><td style="font-size:12px;padding:7px 12px"><a href="${r.website}" target="_blank" style="color:var(--acc)">${r.brand} website →</a></td></tr>`;
+
+  // ── DISCLAIMER (like ArenaEV) ──
+  html += `<tr><td colspan="2" style="padding:10px 12px;font-size:10px;color:var(--mut);border-top:1px solid var(--bdr);font-style:italic">Data disclaimer: myrobot.shop makes every effort to ensure specifications are accurate and up-to-date. We cannot guarantee 100% accuracy. Always verify critical specifications with the manufacturer before purchase.</td></tr>`;
+
+  return html;
+}
+// ════════════ END spec table ════════════
+
+
+// ════════════ CLOUDINARY IMAGE OPTIMIZATION ════════════
+// Auto-transforms Cloudinary URLs to produce uniform, optimized thumbnails.
+// For thumbnails: crop to fill a 200x200 square using AI auto-gravity, deliver as auto-format (webp/avif), auto-quality.
+// For lightbox: limit max dimensions, auto-format, auto-quality. Aspect preserved (no crop).
+// Non-Cloudinary URLs are returned unchanged.
+function cldTransform(url, mode){
+  if (!url || typeof url !== 'string') return url;
+  if (url.indexOf('res.cloudinary.com') === -1) return url;
+  // Find /upload/ position — transforms go right after it.
+  const i = url.indexOf('/upload/');
+  if (i === -1) return url;
+  // If already has transforms, leave alone (assume manually set).
+  const after = url.slice(i + 8);
+  if (/^[a-z]_/i.test(after)) return url;
+  let t;
+  if (mode === 'thumb')  t = 'c_fill,g_auto,w_200,h_200,f_auto,q_auto';
+  else if (mode === 'main') t = 'c_limit,w_800,h_800,f_auto,q_auto';
+  else t = 'f_auto,q_auto';
+  return url.slice(0, i + 8) + t + '/' + after;
+}
+
+// ════════════ LIGHTBOX (gallery-aware) ════════════
+// State: holds the current gallery for prev/next navigation.
+let _lbImgs = [];
+let _lbIdx = 0;
+
+function openLightbox(src, alt, imgs){
+  // Accepts a single src, OR a list of imgs + index inferred from src position.
+  if (Array.isArray(imgs) && imgs.length){
+    _lbImgs = imgs.slice();
+    _lbIdx = Math.max(0, _lbImgs.indexOf(src));
+    if (_lbIdx === -1) _lbIdx = 0;
+  } else {
+    _lbImgs = [src];
+    _lbIdx = 0;
+  }
+  _lbRender(alt);
+  const lb = document.getElementById('lightbox');
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function _lbRender(alt){
+  const img = document.getElementById('lightbox-img');
+  const counter = document.getElementById('lightbox-counter');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+  if (!img) return;
+  img.src = cldTransform(_lbImgs[_lbIdx], 'main');
+  img.alt = alt || '';
+  // Multi-image controls
+  const show = _lbImgs.length > 1;
+  if (counter){ counter.style.display = show ? '' : 'none'; counter.textContent = (_lbIdx + 1) + ' / ' + _lbImgs.length; }
+  if (prevBtn) prevBtn.style.display = show ? '' : 'none';
+  if (nextBtn) nextBtn.style.display = show ? '' : 'none';
+}
+
+function lbPrev(e){
+  if (e) e.stopPropagation();
+  if (!_lbImgs.length) return;
+  _lbIdx = (_lbIdx - 1 + _lbImgs.length) % _lbImgs.length;
+  _lbRender();
+}
+
+function lbNext(e){
+  if (e) e.stopPropagation();
+  if (!_lbImgs.length) return;
+  _lbIdx = (_lbIdx + 1) % _lbImgs.length;
+  _lbRender();
+}
+
+function closeLightbox(){
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+  _lbImgs = []; _lbIdx = 0;
+}
+
+// Keyboard: Esc=close, ←/→=prev/next
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('lightbox');
+  if (!lb || lb.style.display !== 'flex') return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowLeft') lbPrev();
+  else if (e.key === 'ArrowRight') lbNext();
+});
+
+// Public entry — called from every onclick. Routes through hash so Back works
+// and the URL is shareable (e.g. /#profile/tesla-optimus).
+function openProfile(id){
+  if(!ROBOTS.find(x=>x.id===id)) return; // Unknown robot — fail silently
+  goPage('profile', {id: id});
+}
+
+// Internal renderer — called by _renderPage when the route resolves to a profile.
+// Populates all the profile DOM nodes. Don't call this directly from onclicks;
+// use openProfile() so the URL stays in sync.
+/* ===== Profile tabs + Prices / Pictures / Videos (added) ===== */
+function pptab(btn){var pp=btn.getAttribute('data-pp');btn.parentNode.querySelectorAll('.ptab').forEach(function(t){t.classList.remove('on');});btn.classList.add('on');document.querySelectorAll('#page-profile .ppanel').forEach(function(p){p.classList.remove('on');});var el=document.getElementById(pp);if(el)el.classList.add('on');}
+var _FX=null,_CUR='USD',_CURS=['USD','AUD','GBP','EUR','CAD','INR'],_SYM={USD:'$',AUD:'A$',GBP:'\u00a3',EUR:'\u20ac',CAD:'C$',INR:'\u20b9'};
+function _loadFX(){if(_FX)return Promise.resolve();return fetch('https://open.er-api.com/v6/latest/USD').then(function(r){return r.json();}).then(function(d){if(d&&d.rates)_FX=d.rates;}).catch(function(){_FX=null;});}
+function _conv(p,f){if(!_FX||!_FX[f]||!_FX[_CUR])return{sym:_SYM[f]||'',val:p};return{sym:_SYM[_CUR]||'',val:(p/_FX[f])*_FX[_CUR]};}
+function _fmtP(p,f){if(p==null||isNaN(p))return '\u2014';var c=_conv(p,f);var v=c.val>=100?Math.round(c.val):c.val.toFixed(2);return c.sym+Number(v).toLocaleString();}
+function _setCur(c){_CUR=c;if(currentProfile)renderProfilePrices(currentProfile);}
+function _esc(x){return (x==null?'':(''+x)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function _ytId(u){if(!u)return '';u=String(u).trim();if(/^[A-Za-z0-9_-]{11}$/.test(u))return u;var m=u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);return m?m[1]:'';}
+var _priceCells=[];
+function renderProfilePrices(r){var host=document.getElementById('profile-prices');if(!host)return;
+  var prices=Array.isArray(r.prices)?r.prices.filter(function(p){return p&&(p.url||p.price!=null);}):[];
+  if(!prices.length){host.innerHTML='<div class="pp-empty">No prices listed yet. <span style="color:var(--mut)">Prices appear here as we verify them store by store.</span></div>';return;}
+  var variants=[],regions=[];prices.forEach(function(p){var v=p.variant||'Standard';if(variants.indexOf(v)<0)variants.push(v);if(regions.indexOf(p.region)<0)regions.push(p.region);});
+  _priceCells=[];
+  var opts=_CURS.map(function(c){return '<option '+(c===_CUR?'selected':'')+'>'+c+'</option>';}).join('');
+  var h='<div class="pb"><div class="pb-head"><h3>Prices</h3><div class="pb-cur">Currency <select onchange="_setCur(this.value)">'+opts+'</select></div></div>';
+  regions.forEach(function(reg){var rows=prices.filter(function(p){return p.region===reg;}),stores=[];rows.forEach(function(p){if(stores.indexOf(p.store)<0)stores.push(p.store);});
+    h+='<div class="pb-region"><h4>'+_esc(reg)+'</h4><table class="pb-grid"><tr><th class="s">Store</th>';
+    variants.forEach(function(v){h+='<th>'+_esc(v)+'</th>';});h+='</tr>';
+    stores.forEach(function(st){h+='<tr><td class="pb-store"><span class="'+(String(st).indexOf('amazon')>=0?'amz':'')+'">'+_esc(st)+'</span></td>';
+      variants.forEach(function(v){var c=rows.find(function(p){return p.store===st&&(p.variant||'Standard')===v;});
+        if(c){var ci=_priceCells.length;_priceCells.push({store:st,region:reg,variant:v,price:c.price,currency:c.currency||'USD',url:c.url,listings:c.listings,name:r.name});
+          h+='<td><button class="pb-price" data-ci="'+ci+'">'+_fmtP(c.price,c.currency||'USD')+'</button></td>';}
+        else h+='<td class="pb-empty">\u2014</td>';});
+      h+='</tr>';});
+    h+='</table></div>';});
+  h+='<div class="pb-note">Prices are guidance only, may exclude tax/shipping and can be outdated \u2014 check the store for the final price. As an Amazon Associate and via partner stores, myrobot.shop may earn a commission on qualifying purchases. This never affects our specs, scoring or rankings.</div></div>';
+  host.innerHTML=h;
+  host.querySelectorAll('.pb-price').forEach(function(b){b.addEventListener('click',function(){_openPm(_priceCells[+b.getAttribute('data-ci')]);});});}
+function _openPm(d){if(!d)return;var L=(d.listings&&d.listings.length)?d.listings:[{title:d.name,price:d.price,url:d.url}];
+  var rows=L.map(function(l){return '<div class="pm-row"><div class="pm-thumb"></div><div class="t">'+_esc(l.title||d.name)+'</div><div class="p">'+_fmtP(l.price,d.currency)+'</div><a class="pm-go" href="'+_esc(l.url||d.url)+'" target="_blank" rel="sponsored nofollow noopener">GO TO STORE</a></div>';}).join('');
+  document.getElementById('pmBody').innerHTML='<div class="pm-h"><div><h3>'+_esc(d.name)+'</h3><div class="sub">'+_esc(d.store)+' \u00b7 '+_esc(d.region)+' \u00b7 '+_esc(d.variant)+'</div></div><button class="pm-x" onclick="_closePm()">\u00d7</button></div><div class="pm-note">Listed prices may exclude tax, shipping or customs and might be outdated. Refer to the store for the final price and condition.</div>'+rows;
+  document.getElementById('pmBack').classList.add('on');}
+function _closePm(){var b=document.getElementById('pmBack');if(b)b.classList.remove('on');}
+function renderProfilePictures(r){var host=document.getElementById('profile-pictures');if(!host)return;
+  var imgs=[];if(r.img&&r.img.trim())imgs.push(r.img);(Array.isArray(r.gallery)?r.gallery:[]).forEach(function(u){if(u&&imgs.indexOf(u)<0)imgs.push(u);});
+  if(!imgs.length){host.innerHTML='<div class="pp-empty">No additional images yet.</div>';return;}
+  host.innerHTML='<div class="pgal">'+imgs.map(function(u,i){return '<div class="pshot" data-i="'+i+'"><img src="'+cldTransform(u,'thumb')+'" alt="" onerror="this.parentElement.style.display=\'none\'"></div>';}).join('')+'</div>';
+  host.querySelectorAll('.pshot').forEach(function(el){el.addEventListener('click',function(){openLightbox(imgs[+el.getAttribute('data-i')],r.name||'',imgs);});});}
+function renderProfileVideos(r){var host=document.getElementById('profile-videos');if(!host)return;
+  var vids=Array.isArray(r.videos)?r.videos.slice():[];
+  if(!vids.length){if(r.video)vids.push({url:r.video,source:'manufacturer'});if(r.video2)vids.push({url:r.video2,source:'manufacturer'});}
+  vids=vids.filter(function(v){return _ytId(v.url);});
+  if(!vids.length){host.innerHTML='<div class="pp-empty">No videos yet.</div>';return;}
+  host.innerHTML='<div class="pvgrid">'+vids.map(function(v,i){var id=_ytId(v.url);var badge=v.source==='tobo'?'<span class="pvsrc tobo">Tobo</span>':'<span class="pvsrc man">Manufacturer</span>';
+    return '<div class="pvcard" id="pvc'+i+'"><div class="pvthumb" data-vi="'+i+'" data-yid="'+id+'" style="background-image:url(https://i.ytimg.com/vi/'+id+'/hqdefault.jpg)"><div class="pvplay"></div></div><div class="pvmeta"><span class="pvt">'+_esc(v.title||r.name)+'</span>'+badge+'</div></div>';}).join('')+'</div>';
+  host.querySelectorAll('.pvthumb').forEach(function(el){el.addEventListener('click',function(){_playVid(+el.getAttribute('data-vi'),el.getAttribute('data-yid'));});});}
+function _playVid(i,id){var card=document.getElementById('pvc'+i);if(!card)return;var meta=card.querySelector('.pvmeta');
+  card.innerHTML='<div style="position:relative;padding-bottom:56.25%;height:0;background:#000"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0&autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>'+(meta?meta.outerHTML:'');}
+
+function _connShort(r){return [r.wifi?'Wi-Fi':null,r.bluetooth?'BT':null,(r.cellular&&r.cellular!=='No'&&r.cellular!==false)?(typeof r.cellular==='string'?r.cellular:'Cell'):null].filter(Boolean).join(' \u00b7 ')||null;}
+function bandTiles(r){
+  var c=((r.cat||'')+' '+(r.sub||'')).toLowerCase();function h(x){return c.indexOf(x)>=0;}
+  function t(l,v,u){return {l:l,v:v,u:u||''};}var P;
+  if(h('mower'))P=[t('Navigation',r.navigation||(r.rtk?'RTK-GNSS':null),''),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Docking',(r.auto_charge||r.auto_dock)?'Auto-dock':null,''),t('Cut Width',r.cutting_width_mm,'mm'),t('Connectivity',_connShort(r),'')];
+  else if(h('humanoid')||h('biped'))P=[t('Height',r.height_mm,'mm'),t('DOF',r.dof,''),t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('Weight',r.weight_kg||r.weight,'kg')];
+  else if(h('drone')||h('uav')||h('aerial'))P=[t('Flight',r.max_flight_time||r.flight_time_min,'min'),t('Range',r.max_range||r.range_km,'km'),t('Camera',r.camera_mp,'MP'),t('Speed',r.max_speed||r.speed_ms,'m/s'),t('Weight',r.weight_kg||r.weight,'kg')];
+  else if(h('vacuum')||h('mop'))P=[t('Suction',r.suction_pa,'Pa'),t('Battery',r.battery_life_typical,'min'),t('Navigation',r.navigation||(r.lidar?'LiDAR':null),''),t('Dustbin',r.dustbin_ml,'ml'),t('Noise',r.noise_db,'dB')];
+  else if(h('quadruped')||h('legged'))P=[t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.run_speed_ms||r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg,'kg'),t('Runtime',r.battery_life_typical,'min'),t('DOF',r.dof,'')];
+  else if(h('cobot')||h('manipulator'))P=[t('Payload',r.payload_kg||r.payload,'kg'),t('Reach',r.reach_mm||r.reach,'mm'),t('DOF',r.dof,''),t('Repeatability',r.repeatability,'mm'),t('Speed',r.speed_ms||r.speed,'m/s')];
+  else if(h('aquatic')||h('underwater')||h('rov')||h('auv')||h('usv'))P=[t('Max Depth',r.max_depth_m||r.depth_rating_m,'m'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Endurance',r.endurance_hours,'h'),t('Payload',r.payload_kg||r.payload,'kg'),t('Weight',r.weight_kg,'kg')];
+  else if(h('surgical')||h('medical'))P=[t('Arms',r.arms||r.arm_count,''),t('Instr. DOF',r.instrument_dof,''),t('Incision',r.incision_size_mm,'mm'),t('Setup',r.setup_time_min,'min'),t('Weight',r.weight_kg,'kg')];
+  else if(h('agri')||h('farm')||h('tractor')||h('harvest'))P=[t('Coverage',r.coverage_ha_day,'ha/d'),t('Width',r.working_width_m,'m'),t('Speed',r.operating_speed||r.speed,'m/s'),t('GPS',r.gps_accuracy_cm,'cm'),t('Weight',r.weight_kg,'kg')];
+  else P=[];
+  var U=[t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('DOF',r.dof,''),t('Connectivity',_connShort(r),''),t('Year',r.year?(''+r.year):null,''),t('Origin',r.origin||r.country,''),t('Status',r.status,'')];
+  var out=[],seen={};function fmt(v){return (typeof v==='number')?v.toLocaleString():v;}
+  function isNumLike(v){return typeof v==='number'||(typeof v==='string'&&/^[\d.,]+$/.test(v.trim()));}
+  function addList(L){for(var i=0;i<L.length&&out.length<5;i++){var x=L[i];if(x&&x.v!=null&&x.v!==''&&x.v!=='\u2014'&&!seen[x.l]){seen[x.l]=1;out.push({l:x.l,v:fmt(x.v),u:isNumLike(x.v)?x.u:''});}}}
+  addList(P);addList(U);return out;
+}
+function renderRailPrices(r){
+  var host=document.getElementById('profile-rail-prices');if(!host)return;
+  var prices=Array.isArray(r.prices)?r.prices.filter(function(p){return p&&(p.url||p.price!=null);}):[];
+  if(!prices.length){host.style.display='none';host.innerHTML='';return;}
+  host.style.display='';
+  var top=prices.slice().sort(function(a,b){return (a.price==null?1e12:a.price)-(b.price==null?1e12:b.price);}).slice(0,3);
+  var rows=top.map(function(p){return '<a class="rp-row" href="'+_esc(p.url||'#')+'" target="_blank" rel="sponsored nofollow noopener"><span class="rp-store">'+_esc(p.store||'Store')+'</span><span class="rp-price">'+_fmtP(p.price,p.currency||'USD')+'</span></a>';}).join('');
+  host.innerHTML='<div class="rp-head">$ PRICES</div>'+rows+'<button class="rp-all" onclick="_gotoPricesTab()">Show all prices &rarr;</button>';
+}
+function _gotoPricesTab(){var t=document.querySelector('#page-profile .ptab[data-pp="pp-prices"]');if(t)t.click();window.scrollTo({top:0,behavior:'smooth'});}
+
+function _toggleDesc(){var d=document.getElementById('profile-tagline'),b=document.getElementById('profile-readmore');if(!d||!b)return;var e=d.classList.toggle('expanded');b.textContent=e?'Read less':'Read more';}
+var STATS_API='/api/views';
+function _vKey(){return 'mrs_viewed_'+new Date().toISOString().slice(0,10);}
+function _trackView(id){
+  if(!id)return;
+  var viewed=[];try{var raw=localStorage.getItem(_vKey());viewed=raw?JSON.parse(raw):[];}catch(e){viewed=[];}
+  var first=viewed.indexOf(id)<0;
+  var url=first?STATS_API:(STATS_API+'?id='+encodeURIComponent(id));
+  var opts=first?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id,action:'view'})}:{};
+  fetch(url,opts).then(function(r){return r.json();}).then(function(d){
+    if(first){try{viewed.push(id);localStorage.setItem(_vKey(),JSON.stringify(viewed));}catch(e){}}
+    var s=(d&&d.views!=null)?d:((d&&d[id])||{views:0,fans:0,trend:0});
+    _renderStats(id,s);
+  }).catch(function(){});
+}
+function _renderStats(id,s){
+  if(typeof currentProfile==='undefined'||!currentProfile||currentProfile.id!==id)return;
+  var THRESH=50;
+  var hits=document.getElementById('profile-hits'),fanc=document.getElementById('profile-fancount'),fanbtn=document.getElementById('profile-fan');
+  if(fanc)fanc.textContent=' '+((s.fans||0).toLocaleString())+' ';
+  if(hits){
+    if((s.views||0)>=THRESH){
+      var t=s.trend||0,arrow=t>=0?'\u25B2':'\u25BC',cls=t>=0?'tu':'td';
+      hits.style.display='inline-flex';
+      hits.innerHTML='<span class="'+cls+'">'+arrow+' '+Math.abs(t)+'%</span> \u00b7 '+(s.views||0).toLocaleString()+' views';
+    }else{hits.style.display='none';}
+  }
+  if(fanbtn){
+    var faned=false;try{faned=localStorage.getItem('mrs_fan_'+id)==='1';}catch(e){}
+    fanbtn.classList.toggle('faned',faned);
+    var lbl=fanbtn.querySelector('.fan-label');if(lbl)lbl.textContent=faned?'Fan':'Become a fan';
+  }
+}
+function _toggleFan(){
+  if(typeof currentProfile==='undefined'||!currentProfile)return;var id=currentProfile.id;
+  var faned=false;try{faned=localStorage.getItem('mrs_fan_'+id)==='1';}catch(e){}
+  var action=faned?'unfan':'fan';
+  try{localStorage.setItem('mrs_fan_'+id,faned?'0':'1');}catch(e){}
+  var fc=document.getElementById('profile-fancount');
+  if(fc){var cur=parseInt((fc.textContent||'0').replace(/[^0-9]/g,''))||0;fc.textContent=' '+Math.max(0,cur+(faned?-1:1)).toLocaleString()+' ';}
+  var fanbtn=document.getElementById('profile-fan');
+  if(fanbtn){fanbtn.classList.toggle('faned',!faned);var lbl=fanbtn.querySelector('.fan-label');if(lbl)lbl.textContent=!faned?'Fan':'Become a fan';}
+  fetch(STATS_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id,action:action})}).then(function(r){return r.json();}).then(function(s){_renderStats(id,s);}).catch(function(){});
+}
+function _renderProfile(id){
+  const r=ROBOTS.find(x=>x.id===id);
+  if(!r)return;
+  currentProfile=r;
+  document.title=r.name+' by '+r.brand+' — specs, price & videos | myrobot.shop';
+  (function(){
+    var cc=document.getElementById('profile-crumb-cat');
+    cc.textContent=r.cat;
+    cc.style.cursor='pointer';
+    cc.onclick=function(){ goPage('db', {cat:r.cat}); };
+  })();
+  document.getElementById('profile-crumb-name').textContent=r.name;
+  const figEl = document.getElementById('profile-fig');
+  const thumbsEl = document.getElementById('profile-gallery-thumbs');
+  // Collect all images: main image first, then up to 5 gallery images
+  const galleryImgs = Array.isArray(r.gallery) ? r.gallery.filter(u => u && String(u).trim()) : [];
+  const allImgs = [];
+  if (r.img && r.img.trim()) allImgs.push(r.img);
+  for (const u of galleryImgs){ if (!allImgs.includes(u)) allImgs.push(u); }
+  if (allImgs.length === 0) allImgs.push(MASCOT_URL);
+
+  // Helper: render main image at given URL
+  function setMainImg(src){
+    figEl.style.cursor = 'zoom-in';
+    figEl.onclick = () => openLightbox(src, r.name||'', allImgs);
+    const isMascot = src === MASCOT_URL;
+    const display = cldTransform(src, 'main');
+    figEl.innerHTML = `<img src="${display}" alt="${r.name||''}" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain'">${r.badge?`<div class="gallery-badge">${r.badge}</div>`:''}`;
+  }
+
+  setMainImg(allImgs[0]);
+
+  // Render thumbnails only if we have more than 1 image — otherwise the row would be empty
+  if (allImgs.length > 1){
+    thumbsEl.style.display = '';
+    thumbsEl.innerHTML = allImgs.map((url, i) => `
+      <div class="thumb ${i === 0 ? 'active' : ''}" data-img="${url.replace(/"/g, '&quot;')}">
+        <img src="${cldTransform(url, 'thumb')}" alt="" onerror="this.parentElement.style.display='none'">
+      </div>
+    `).join('');
+    // Wire click handlers
+    thumbsEl.querySelectorAll('.thumb').forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        thumbsEl.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+        setMainImg(thumb.getAttribute('data-img'));
+      });
+    });
+  } else {
+    thumbsEl.style.display = 'none';
+    thumbsEl.innerHTML = '';
+  }
+  document.getElementById('profile-brand').textContent=r.brand;
+  (function(){var sw=document.getElementById('profile-sub');if(sw){sw.textContent=r.sub||'';document.getElementById('profile-sub-wrap').style.display=r.sub?'':'none';}})();
+  document.getElementById('profile-year-badge').textContent=r.year?(r.year+' MODEL'):'';
+  document.getElementById('profile-year-badge').style.display=r.year?'':'none';
+  document.getElementById('profile-name').textContent=r.name;
+  document.getElementById('profile-tagline').textContent=r.desc;
+  (function(){var d=document.getElementById('profile-tagline'),b=document.getElementById('profile-readmore');if(d&&b){d.classList.remove('expanded');b.textContent='Read more';requestAnimationFrame(function(){b.style.display=(d.scrollHeight>d.clientHeight+2)?'inline-block':'none';});}})();
+  // --- Videos: top manufacturer video (r.video) + bottom review video (r.video2) ---
+  (function(){
+    function ytId(u){ if(!u) return ''; u=String(u).trim();
+      if(/^[A-Za-z0-9_-]{11}$/.test(u)) return u;
+      var m=u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);
+      return m?m[1]:''; }
+    function mount(elId, blkId, url){
+      var vEl=document.getElementById(elId), blk=document.getElementById(blkId);
+      if(!vEl||!blk) return;
+      var id=ytId(url);
+      if(id){ blk.style.display='';
+        vEl.innerHTML='<div style="position:relative;padding-bottom:56.25%;height:0;border-radius:10px;overflow:hidden;background:#000"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>';
+      } else { blk.style.display='none'; vEl.innerHTML=''; }
+    }
+    mount('profile-video','profile-video-block',r.video);
+    mount('profile-video2','profile-video2-block',r.video2);
+  })();
+  // Reviews: only show stars + count when there are REAL user reviews (no fake scores).
+  (function(){
+    var _rv=(window.REVIEWS&&window.REVIEWS[r.id])?window.REVIEWS[r.id]:[];
+    var realCount=_rv.length;
+    var avg=realCount?(_rv.reduce(function(s,x){return s+(Number(x.rating)||0);},0)/realCount):0;
+    var starsEl=document.getElementById('profile-stars');
+    var ratingEl=document.getElementById('profile-rating');
+    var revEl=document.getElementById('profile-reviews');
+    if(realCount>0){
+      starsEl.textContent='★'.repeat(Math.round(avg))+'☆'.repeat(5-Math.round(avg));
+      ratingEl.textContent=(Math.round(avg*10)/10);
+      revEl.textContent=realCount+(realCount===1?' review':' reviews');
+    } else {
+      // No real reviews yet — honest empty state, never a fabricated score
+      starsEl.textContent='';
+      ratingEl.textContent='';
+      revEl.innerHTML='<span style="color:var(--mut);font-size:12px">No reviews yet</span>';
+    }
+    // Auto "Trending" badge — appears if this robot is in the live top-100 by search interest.
+    // Reads window.TRENDING (data/trending.json, refreshed daily). Fully automatic: in/out of
+    // the top 100 → badge added/removed on its own. Links to the Discover/Trending page.
+    var wrap=document.getElementById('profile-trending-wrap');
+    if(wrap){
+      wrap.innerHTML='';
+      try{
+        var T=(window.TRENDING&&window.TRENDING.scores)?window.TRENDING.scores:null;
+        if(T){
+          // rank this robot among all tracked scores
+          var ranked=Object.keys(T).sort(function(a,b){return T[b]-T[a];});
+          var rank=ranked.indexOf(r.id);
+          if(rank>=0 && rank<100){
+            wrap.innerHTML='<span class="trending-badge" onclick="goPage(\'rankings\')" title="In the top 100 most-searched robots right now">🔥 Trending<span class="trending-rank">#'+(rank+1)+'</span></span>';
+          }
+        }
+      }catch(e){}
+    }
+  })();
+  document.getElementById('profile-price').innerHTML=priceStars(r);
+  var _pb=document.getElementById('profile-buy'); if(_pb){ _pb.innerHTML=''; }
+  // New tabbed content (prices grid / pictures / videos) + reset to first tab
+  (function(){ var tabs=document.querySelectorAll('#page-profile .ptab'); tabs.forEach(function(t,i){ t.classList.toggle('on', i===0); }); document.querySelectorAll('#page-profile .ppanel').forEach(function(p,i){ p.classList.toggle('on', i===0); }); })();
+  renderProfilePrices(r); renderProfilePictures(r); renderProfileVideos(r);
+  renderRailPrices(r);
+  (function(){var ct=document.getElementById('profile-cmp-text');if(ct)ct.textContent='Compare '+r.name+' against other robots side by side.';})();
+  _trackView(r.id);
+  _loadFX().then(function(){ if(currentProfile===r){ renderProfilePrices(r); renderRailPrices(r); } });
+  document.getElementById('profile-price-note').textContent=(priceTier(r)==null?'Pricing to be confirmed \u00b7 request a quote':'Relative price level within '+(r.cat||'its category')+' \u00b7 request a quote');
+  // Last verified — set expectations honestly. Colour-coded by age.
+  const verifyEl = document.getElementById('profile-verified');
+  if (verifyEl){
+    if (r.last_verified){
+      const v = new Date(r.last_verified);
+      const months = (Date.now() - v.getTime()) / (1000 * 60 * 60 * 24 * 30);
+      const dateStr = v.toLocaleDateString('en-US', {month: 'long', year: 'numeric'});
+      let icon = '✓', color = 'var(--mut)';
+      if (months > 12){ icon = '⚠️'; color = '#d97706'; }
+      else if (months > 6){ icon = '◷'; color = 'var(--mut)'; }
+      verifyEl.style.color = color;
+      verifyEl.innerHTML = `${icon} Last verified: ${dateStr}${months > 12 ? ' <span style="margin-left:6px">— data may be out of date</span>' : ''}`;
+      verifyEl.style.display = '';
+    } else {
+      verifyEl.style.display = 'none';
+    }
+  }
+  // Quick specs — 4 rows × 3 cols = 12 cells. Pull from canonical field names, fall back to alternates.
+  const dims = (r.height_mm && r.width_mm && r.depth_mm) ? `${r.height_mm}×${r.width_mm}×${r.depth_mm}` : '—';
+  const dimsUnit = (r.height_mm && r.width_mm && r.depth_mm) ? 'mm' : '';
+  const connectivity = [
+    r.wifi ? 'Wi-Fi' : null,
+    r.bluetooth ? 'BT' : null,
+    r.cellular && r.cellular !== 'No' && r.cellular !== false ? (typeof r.cellular === 'string' ? r.cellular : 'Cell') : null
+  ].filter(Boolean).join(' · ') || '—';
+  const payloadVal = r.payload_kg || r.payload;
+  const speedVal = r.speed_ms || r.speed;
+  // Hero BATTERY cell = capacity (Wh / Ah / mAh), not runtime
+  let batteryVal = '—', batteryUnit = '';
+  if (r.battery_wh) { batteryVal = r.battery_wh.toLocaleString(); batteryUnit = 'Wh'; }
+  else if (r.battery_ah) { batteryVal = r.battery_ah; batteryUnit = 'Ah'; }
+  else if (r.battery_capacity) { batteryVal = r.battery_capacity; batteryUnit = ''; }
+  // Units only attach to numeric values (text like "Up to 30 kg support" already carries its own)
+  const isNum = v => typeof v === 'number' || (typeof v === 'string' && /^[\d.,]+$/.test(v.trim()));
+  const weightVal = r.weight_kg || r.weight;
+  const specs=[
+    {l:'CATEGORY',v:r.cat||'—',u:''},
+    {l:'STATUS',v:r.status||'—',u:''},
+    {l:'ORIGIN',v:r.origin||r.country||'—',u:''},
+    {l:'PAYLOAD',v:payloadVal||'—',u:isNum(payloadVal)?'kg':''},
+    {l:'BATTERY',v:batteryVal,u:batteryUnit},
+    {l:'SPEED',v:speedVal||'—',u:isNum(speedVal)?'m/s':''},
+    {l:'DIMENSIONS',v:dims,u:dimsUnit},
+    {l:'WEIGHT',v:weightVal||'—',u:isNum(weightVal)?'kg':''},
+    {l:'YEAR',v:r.year||'—',u:''},
+    {l:'CONNECTIVITY',v:connectivity,u:''},
+    {l:'OS',v:r.os||'—',u:''},
+    {l:'WARRANTY',v:r.warranty_months||'—',u:r.warranty_months?'mo':''},
+  ].filter(s => s.v !== '—' && s.v !== '' && s.v != null);
+  document.getElementById('profile-quick-specs').innerHTML=bandTiles(r).map(s=>'<div class="bt"><div class="bt-v">'+s.v+(s.u?'<span class="bt-u">'+s.u+'</span>':'')+'</div><div class="bt-l">'+s.l+'</div></div>').join('');
+  // (Performance Scores removed — placeholder values, not real spec data)
+  // Specs table
+  document.getElementById('profile-specs').innerHTML = renderSpecsGSM(r);
+  // Reviews
+  (function(){
+    var list=document.getElementById('profile-reviews-list');
+    if(!list) return;
+    var _rv=(window.REVIEWS&&window.REVIEWS[r.id])?window.REVIEWS[r.id]:[];
+    var writeBtn='<div style="margin-top:14px"><a onclick="openReviewFor(\''+r.id+'\')" style="display:inline-block;background:var(--acc);color:#fff;padding:8px 16px;border-radius:7px;cursor:pointer;font-weight:600;font-size:13px">✍ Write a review</a></div>';
+    if(!_rv.length){
+      list.innerHTML='<div style="color:var(--mut);font-size:13px;padding:6px 0">No reviews yet. '
+        +'<a onclick="openReviewFor(\''+r.id+'\')" style="color:var(--acc);cursor:pointer;font-weight:600">Be the first to write one →</a></div>';
+      return;
+    }
+    function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]);});}
+    function initials(n){n=(n||'?').trim();var p=n.split(/\s+/);return((p[0]||'')[0]||'?').toUpperCase()+((p[1]||'')[0]||'').toUpperCase();}
+    list.innerHTML=_rv.slice().sort(function(a,b){return new Date(b.created||0)-new Date(a.created||0);}).map(function(rv){
+      var st=Math.max(0,Math.min(5,Math.round(Number(rv.rating)||0)));
+      var role=rv.role?'<div class="reviewer-role">'+esc(rv.role)+'</div>':'';
+      var when=rv.created?'<div class="reviewer-role" style="opacity:.7">'+new Date(rv.created).toLocaleDateString('en-AU',{month:'short',year:'numeric'})+'</div>':'';
+      return '<div class="review"><div class="review-top"><div class="reviewer">'
+        +'<div class="avatar">'+initials(rv.name)+'</div>'
+        +'<div><div class="reviewer-name">'+esc(rv.name||'Anonymous')+'</div>'+role+when+'</div></div>'
+        +'<div class="review-stars">'+'★'.repeat(st)+'☆'.repeat(5-st)+'</div></div>'
+        +'<div class="review-text">'+esc(rv.text||rv.body||'')+'</div></div>';
+    }).join('')+writeBtn;
+  })();
+  // Similar — brand siblings first (most related), then same category / shared tags
+  const _rt=r.tags||[];
+  const sameBrand=ROBOTS.filter(x=>x.id!==r.id&&x.brand&&x.brand===r.brand);
+  const byCat=ROBOTS.filter(x=>x.id!==r.id&&x.brand!==r.brand&&(x.cat===r.cat||(x.tags||[]).some(t=>_rt.includes(t))));
+  const sim=sameBrand.concat(byCat).slice(0,4);
+  try{ renderProfileNews(r); }catch(e){}
+  document.getElementById('profile-similar').innerHTML=sim.map(s=>{
+    const imgHtml = (s.img && s.img.trim())
+      ? `<img src="${s.img}" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:7px;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain';this.style.background='#fff'">`
+      : `<img src="${MASCOT_URL}" alt="" style="width:100%;height:100%;object-fit:contain;border-radius:7px;display:block;background:#fff">`;
+    return `<div class="similar-item" onclick="openProfile('${s.id}')"><div class="similar-icon" style="overflow:hidden">${imgHtml}</div><div class="similar-info"><div class="similar-name">${s.name||''}</div><div class="similar-sub">${s.brand||''} · ${s.sub||''}</div></div><div class="similar-price">${s.price>0?'$'+s.price.toLocaleString():'POA'}</div></div>`;
+  }).join('');
+  // VS card — pick the most sensible head-to-head opponent
+  const other=pickVsOpponent(r);
+  const _vsCard=document.querySelector('.vs-card');
+  if(other){
+    window._vsPair=[r.id, other.id];
+    document.getElementById('profile-vs').textContent=r.name+' vs '+other.name;
+    if(_vsCard) _vsCard.style.display='';
+  } else {
+    window._vsPair=null;
+    if(_vsCard) _vsCard.style.display='none';
+  }
+  // Note: page activation is handled by _renderPage — don't call goPage here or we'd loop.
+}
+
+function addToCompareFromProfile(){
+  if(!currentProfile)return;
+  addRobotToCompare(currentProfile.id);
+  goPage('compare');
+}
+
+// ════════════ COMPARE ════════════
+// Pick the best head-to-head opponent: same sub-type first, then a rival brand, then closest price/score.
+function pickVsOpponent(r){
+  var pool=ROBOTS.filter(function(x){return x.id!==r.id && x.cat===r.cat;});
+  if(!pool.length) return null;
+  var rp=(typeof r.price==='number'&&r.price>0)?r.price:null;
+  function rank(x){
+    var sub=(x.sub&&x.sub===r.sub)?0:1;
+    var rival=(x.brand&&x.brand!==r.brand)?0:1;
+    var dist;
+    if(rp&&typeof x.price==='number'&&x.price>0){ dist=Math.abs(x.price-rp); }
+    else { dist=1e9+Math.abs((x.score||0)-(r.score||0)); }
+    return [sub,rival,dist];
+  }
+  return pool.slice().sort(function(a,b){
+    var ra=rank(a),rb=rank(b);
+    return (ra[0]-rb[0])||(ra[1]-rb[1])||(ra[2]-rb[2]);
+  })[0];
+}
+// "Compare side by side" — load BOTH robots and open a shareable compare link.
+function openVsCompare(){
+  if(window._vsPair && window._vsPair.length===2){ goPage('compare',{ids:window._vsPair}); }
+  else { goPage('compare'); }
+}
+// Load a specific set of robot ids into the compare slots (deep links + VS button).
+function loadCompareIds(ids){
+  compareSlots=[null,null,null,null];
+  (ids||[]).slice(0,4).forEach(function(id){
+    if(compareSlots.some(function(s){return s&&s.id===id;})) return;
+    var r=ROBOTS.find(function(x){return x.id===id;});
+    if(r){ var ei=compareSlots.findIndex(function(s){return s===null;}); if(ei>=0) compareSlots[ei]=r; }
+  });
+  saveCompare();
+}
+// Keep the URL in sync with the current comparison so it is shareable (only while on compare page).
+function syncCompareHash(){
+  try{
+    if(parseHash().page!=='compare') return;
+    var ids=compareSlots.filter(Boolean).map(function(r){return r.id;});
+    var hsh = ids.length ? ('compare/'+ids.map(encodeURIComponent).join('+')) : 'compare';
+    if(location.hash !== '#'+hsh){ history.replaceState(null,'','#'+hsh); }
+  }catch(e){}
+}
+function addRobotToCompare(id){
+  if(compareSlots.some(s=>s&&s.id===id))return;
+  const ei=compareSlots.findIndex(s=>s===null);
+  if(ei>=0)compareSlots[ei]=ROBOTS.find(r=>r.id===id);
+}
+
+function openSlot(i){activeSlot=i;document.getElementById('slot-label').textContent=`(slot ${i+1})`;}
+function clearCompare(){compareSlots=[null,null,null,null];if(document.getElementById('cslot-0')){renderCompare();}refreshCompareUI();}
+function removeSlot(i){compareSlots[i]=null;renderCompare();renderCompareTray();}
+
+// ===== Floating compare tray (grid checkbox UX) =====
+const CMP_KEY='mrshop_compare_v1';
+function saveCompare(){try{localStorage.setItem(CMP_KEY,JSON.stringify(compareSlots.filter(Boolean).map(function(r){return r.id;})));}catch(e){}}
+function loadCompare(){try{const ids=JSON.parse(localStorage.getItem(CMP_KEY)||'[]');compareSlots=[null,null,null,null];ids.slice(0,4).forEach(function(id,k){const r=ROBOTS.find(function(x){return x.id===id;});if(r)compareSlots[k]=r;});}catch(e){}}
+function renderCompareTray(){
+  saveCompare();
+  if(typeof syncCompareHash==='function')syncCompareHash();
+  let tray=document.getElementById('compare-tray');
+  if(!tray){tray=document.createElement('div');tray.id='compare-tray';document.body.appendChild(tray);}
+  const sel=compareSlots.filter(Boolean);
+  if(!sel.length){tray.style.display='none';tray.innerHTML='';return;}
+  let slots=sel.map(function(r){
+    const src=r.img||MASCOT_URL; const nm=(r.name||'').replace(/"/g,'');
+    return '<div class="ct-thumb" title="'+nm+'"><img src="'+src+'" onerror="this.src=\''+MASCOT_URL+'\'"><span class="ct-x" onclick="toggleCompare(\''+r.id+'\')">\u2715</span></div>';
+  }).join('');
+  for(let k=sel.length;k<4;k++){slots+='<div class="ct-empty">+</div>';}
+  tray.style.display='flex';
+  tray.innerHTML='<div class="ct-label">Compare</div><div class="ct-thumbs">'+slots+'</div><div class="ct-actions"><button class="ct-clear" onclick="clearCompare()">Clear</button><button class="ct-go" onclick="goPage(\'compare\')">Compare All ('+sel.length+') \u2192</button></div>';
+}
+function refreshCompareUI(){
+  renderCompareTray();
+  document.querySelectorAll('.cmp-check').forEach(function(cb){cb.checked=compareSlots.some(function(sl){return sl&&sl.id===cb.dataset.id;});});
+}
+function toggleCompare(id,ev){
+  if(ev&&ev.stopPropagation)ev.stopPropagation();
+  const i=compareSlots.findIndex(function(sl){return sl&&sl.id===id;});
+  if(i>=0){compareSlots[i]=null;}
+  else{
+    const ei=compareSlots.findIndex(function(sl){return sl===null;});
+    if(ei<0){alert('You can compare up to 4 robots at once \u2014 remove one first.');if(ev&&ev.target)ev.target.checked=false;return;}
+    compareSlots[ei]=ROBOTS.find(function(r){return r.id===id;})||null;
+  }
+  refreshCompareUI();
+}
+
+// Robot selector grid for Compare page. Filterable by search.
+// When query is empty, show only top 50 by score so the grid doesn't dump 1100+ items.
+function renderRobotSelector(query){
+  const q = (query || '').trim().toLowerCase();
+  let list;
+  if (q){
+    list = ROBOTS.filter(r => {
+      const text = `${r.brand||''} ${r.name||''} ${r.cat||''} ${r.sub||''}`.toLowerCase();
+      return text.includes(q);
+    });
+  } else {
+    // No search: show top 50 highest-scored as a sensible default
+    list = [...ROBOTS].sort((a, b) => (b.score||0) - (a.score||0)).slice(0, 50);
+  }
+  const grid = document.getElementById('rs-grid');
+  const countEl = document.getElementById('rs-count');
+  if (countEl) countEl.textContent = q ? `${list.length} matching` : `Top 50 (search to see all ${ROBOTS.length.toLocaleString()})`;
+  if (!grid) return;
+  if (list.length === 0){
+    grid.innerHTML = `<div style="grid-column:1/-1;padding:30px 20px;text-align:center;color:var(--mut);font-size:13px">No robots match "<em>${escapeHtml(q)}</em>"</div>`;
+    return;
+  }
+  grid.innerHTML = list.map(r => {
+    const id = r.id||'';
+    const brand = r.brand||'';
+    const name = r.name||'(unnamed)';
+    const score = r.score||0;
+    const isSelected = compareSlots.some(s => s && s.id === r.id);
+    const thumb = r.img
+      ? `<img src="${r.img}" alt="" loading="lazy" style="max-height:48px;max-width:88%;object-fit:contain" onerror="this.outerHTML='<span style=\\'font-size:26px\\'>'+robotFig({fig:'🤖'})+'</span>'">`
+      : `<span style="font-size:26px">${robotFig(r)}</span>`;
+    return `<div class="rs-item${isSelected?' selected':''}" onclick="selectForSlot('${id}')"><div style="height:52px;display:flex;align-items:center;justify-content:center;margin-bottom:5px">${thumb}</div><div class="rs-brand">${escapeHtml(brand)}</div><div class="rs-name">${escapeHtml(name)}</div><div class="rs-score">${score}</div></div>`;
+  }).join('');
+}
+
+function filterRobotSelector(q){
+  renderRobotSelector(q);
+}
+
+function selectForSlot(id){
+  const r=ROBOTS.find(x=>x.id===id);
+  if(!r)return;
+  const existing=compareSlots.findIndex(s=>s&&s.id===id);
+  if(existing>=0){removeSlot(existing);return;}
+  const ei=compareSlots.findIndex(s=>s===null);
+  if(ei>=0){compareSlots[ei]=r;}
+  else{compareSlots[activeSlot]=r;}
+  renderCompare();
+  renderCompareTray();
+}
+
+function renderCompare(){
+  // Re-render the grid (uses current search query)
+  const q = (document.getElementById('rs-search') || {}).value || '';
+  renderRobotSelector(q);
+  // Slots — defensive
+  for(let i=0;i<4;i++){
+    const slot=document.getElementById('cslot-'+i);const r=compareSlots[i];
+    if(r){
+      const tags=Array.isArray(r.tags)?r.tags:[];
+      slot.className='compare-slot filled';slot.onclick=null;
+      slot.innerHTML=`<div class="slot-brand">${r.brand||''}</div><div class="slot-name">${compareThumb(r)}${r.name||''}</div><div>${tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join(' ')}</div><span class="slot-remove" onclick="event.stopPropagation();removeSlot(${i})">✕ Remove</span>`;
+    } else {
+      slot.className='compare-slot';slot.onclick=()=>openSlot(i);
+      slot.innerHTML=`<div class="slot-plus">+</div><div class="slot-placeholder">Robot ${i+1}</div>`;
+    }
+  }
+  // Compare action button — show when 2+ robots are selected
+  const active=compareSlots.filter(Boolean);
+  const btnWrap=document.getElementById('compare-action');
+  if(btnWrap){
+    if(active.length>=2){
+      btnWrap.style.display='flex';
+      btnWrap.innerHTML=`<button class="btn btn-primary" style="padding:12px 28px;font-size:14px" onclick="scrollToCompareTable()">📊 Compare ${active.length} Robot${active.length>1?'s':''} →</button>`;
+    } else {
+      btnWrap.style.display='flex';
+      btnWrap.innerHTML=`<div style="color:var(--mut);font-size:12px;font-style:italic">Pick at least 2 robots to compare · ${active.length} selected</div>`;
+    }
+  }
+  // Comparison table
+  const wrap=document.getElementById('compare-table');
+  if(active.length<2){wrap.innerHTML='';return;}
+  // Defensive value helpers
+  // Mirror the EXACT Full Specifications table: collect the same rows the
+  // profile renders, for each robot, then merge — so Compare and the profile
+  // pages can never drift apart.
+  const ps=r=>priceStarsTxt(r);
+  const cols=active.length;
+  const thCells=active.map(function(r){return '<th>'+compareThumb(r)+(r.name||'(unnamed)')+'</th>';}).join('');
+  const sv=function(t){return String(t==null?'':t);};
+  const overview=[
+    {label:'Category',fn:r=>r.cat||'—'},
+    {label:'Subcategory',fn:r=>r.sub||'—'},
+    {label:'Origin',fn:r=>r.origin||'—'},
+    {label:'Year',fn:r=>r.year||'—'},
+    {label:'Expert Score',fn:r=>r.score||'—'},
+    {label:'User Rating',fn:r=>r.rating?r.rating+'★':'—'},
+    {label:'Price',fn:r=>ps(r)}
+  ];
+  const perRobot=active.map(function(r){try{return getSpecRows(r);}catch(e){return [];}});
+  const maps=perRobot.map(function(rows){var m={};rows.forEach(function(x){m[x.section+'||'+x.label]=x.value;});return m;});
+  const order=[]; const seen=new Set();
+  perRobot.forEach(function(rows){rows.forEach(function(x){var k=x.section+'||'+x.label; if(!seen.has(k)){seen.add(k); order.push({section:x.section,label:x.label,key:k});}});});
+  let bodyRows='<tr class="cat-row"><td colspan="'+(cols+1)+'">OVERVIEW</td></tr>';
+  overview.forEach(function(o){
+    var tds=active.map(function(r){return '<td>'+sv(o.fn(r))+'</td>';}).join('');
+    bodyRows+='<tr><td>'+o.label+'</td>'+tds+'</tr>';
+  });
+  let curSection=null;
+  order.forEach(function(o){
+    if(o.section!==curSection){curSection=o.section; bodyRows+='<tr class="cat-row"><td colspan="'+(cols+1)+'">'+sv(curSection||'SPECIFICATIONS')+'</td></tr>';}
+    var tds=maps.map(function(m){return '<td>'+sv(m[o.key]!==undefined?m[o.key]:'—')+'</td>';}).join('');
+    bodyRows+='<tr><td>'+o.label+'</td>'+tds+'</tr>';
+  });
+  wrap.innerHTML=`<div class="compare-table-wrap" id="compare-table-rendered"><table class="compare-table"><thead><tr><th>Specification</th>${thCells}</tr></thead><tbody>${bodyRows}</tbody></table></div>`;
+}
+
+function scrollToCompareTable(){
+  const el=document.getElementById('compare-table-rendered');
+  if(el){
+    el.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+
+// ════════════ RANKINGS ════════════
+function filterRankings(cat,el){
+  document.querySelectorAll('#ranking-tabs .tab').forEach(function(t){t.classList.remove('active');});
+  if(el)el.classList.add('active');
+  renderRankings(cat);
+}
+var RANK_MODE='trending', RANK_CAT='all';
+function setRankMode(mode,el){
+  RANK_MODE=mode;
+  document.querySelectorAll('#ranking-mode-tabs .tab').forEach(function(t){t.classList.remove('active');});
+  if(el)el.classList.add('active');
+  renderRankings(RANK_CAT);
+}
+function renderRankings(cat){
+  if (!cat) cat = 'all';
+  RANK_CAT = cat;
+  var list = cat==='all' ? ROBOTS.slice() : ROBOTS.filter(function(r){return r.cat===cat;});
+  var trend = (window.TRENDING && window.TRENDING.scores) ? window.TRENDING.scores : null;
+
+  // Sort + choose the right-hand signal per mode
+  var signalLabel, signalFn;
+  if (RANK_MODE==='latest') {
+    list.sort(function(a,b){return (robotSortDate(b))-(robotSortDate(a));});
+    signalLabel='Launched';
+    signalFn=function(r){ return r.released ? fmtLaunch(r.released) : (r.year||'—'); };
+  } else if (RANK_MODE==='available') {
+    list = list.filter(function(r){return /active|available|released|shipping|production/i.test(r.status||'');});
+    list.sort(function(a,b){
+      var pa=(a.price&&a.price>0)?a.price:1e12, pb=(b.price&&b.price>0)?b.price:1e12;
+      return robotBuzz(b).buzz-robotBuzz(a).buzz;
+    });
+    signalLabel='Status';
+    signalFn=function(r){ return 'Available'; };
+  } else { // trending
+    list = list.map(function(r){
+      var b=robotBuzz(r);
+      var t=(trend && trend[r.id]!=null) ? trend[r.id] : null;
+      var k = (t!=null) ? (10000 + t*100 + b.buzz) : (b.buzz*2 + (r.score||0));
+      return {r:r,k:k,t:t,d:b.d};
+    }).sort(function(a,b){return b.k-a.k || b.d-a.d;}).map(function(x){x.r._t=x.t;return x.r;});
+    signalLabel='Interest';
+    signalFn=function(r){ return (r._t!=null) ? r._t+'/100' : 'Hot'; };
+  }
+
+  var ranks=['','',''];  // neutral — no gold/silver/bronze "winner" medals; these are factual lists, not a contest
+  var el = document.getElementById('rankings-list');
+  if(!el) return;
+  try {
+    el.innerHTML = list.slice(0,100).map(function(r,i){
+    var tags=Array.isArray(r.tags)?r.tags:[];
+    var sub=r.sub||r.cat||'';
+    return '<div class="rank-item" onclick="openProfile(\''+r.id+'\')">'+
+      '<div class="rank-num '+(ranks[i]||'')+'">'+(i+1)+'</div>'+
+      '<div class="rank-icon" style="overflow:hidden;background:#fff">'+(r.img?'<img src="'+r.img+'" alt="'+esc(r.name)+'" style="width:100%;height:100%;object-fit:cover;border-radius:9px" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'">':'<img src="'+MASCOT_URL+'" alt="'+esc(r.name)+'" style="width:100%;height:100%;object-fit:contain;border-radius:9px">')+'</div>'+
+      '<div class="rank-info">'+
+        '<div class="rank-brand">'+esc(r.brand||'')+'</div>'+
+        '<div class="rank-name">'+esc(r.name||'')+'</div>'+
+        '<div class="rank-cat">'+esc(sub)+' · '+(r.year||'')+'</div>'+
+        '<div class="rank-pills">'+tags.slice(0,3).map(function(t){return '<span class="pill">'+esc(t)+'</span>';}).join('')+'</div>'+
+      '</div>'+
+      '<div class="rank-score-wrap">'+
+        '<div class="rank-score">'+signalFn(r)+'</div>'+
+        '<div class="rank-score-lbl">'+signalLabel+'</div>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+  } catch(err) {
+    console.error('renderRankings error:', err);
+    el.innerHTML = '<div style="padding:40px;text-align:center;color:var(--mut)">Could not load this list. <a onclick="goPage(\'db\')" style="color:var(--acc);cursor:pointer">Browse all robots →</a></div>';
+  }
+}
+// format a launch date like "Mar 2026"
+function fmtLaunch(v){
+  var m=String(v).match(/^(\d{4})[-/]?(\d{1,2})?/);
+  if(!m)return String(v);
+  var mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  return (m[2]?mo[parseInt(m[2])-1]+' ':'')+m[1];
+}
+
+// ════════════ FINDER ════════════
+const FINDER_CATS=[
+  {id:'all',label:'All Robots',icon:'🤖'},
+  {id:'Aerospace',label:'Aerospace',icon:'🚀'},
+  {id:'Agricultural',label:'Agriculture',icon:'🌾'},
+  {id:'AGV/AMR',label:'AGV/AMR',icon:'🤖'},
+  {id:'Aquatic',label:'Aquatic',icon:'🐟'},
+  {id:'Autonomous Vehicles',label:'Vehicles',icon:'🚗'},
+  {id:'Consumer',label:'Consumer',icon:'🏠'},
+  {id:'Delivery',label:'Delivery',icon:'📬'},
+  {id:'Disaster Response',label:'Disaster',icon:'🚨'},
+  {id:'Drones',label:'Drones',icon:'🚁'},
+  {id:'Educational',label:'Education',icon:'🎓'},
+  {id:'Entertainment',label:'Entertainment',icon:'🎭'},
+  {id:'Exoskeletons',label:'Exoskeletons',icon:'🦿'},
+  {id:'Humanoid',label:'Humanoid',icon:'🧍'},
+  {id:'Industrial',label:'Industrial',icon:'🦾'},
+  {id:'Mecha',label:'Mecha',icon:'🦾'},
+  {id:'Medical',label:'Medical',icon:'🏥'},
+  {id:'Military',label:'Military',icon:'🛡️'},
+  {id:'Quadruped',label:'Quadruped',icon:'🐕'},
+  {id:'Research',label:'Research',icon:'🔬'},
+  {id:'Service',label:'Service',icon:'📦'},
+  {id:'Social',label:'Social',icon:'💬'},
+  {id:'Telepresence',label:'Telepresence',icon:'📹'},
+];
+
+
+// ─── FINDER SCHEMA SYSTEM (GSMArena-style filters per category) ───
+// Each entry defines what filter fields a category gets. Schemas grouped by section.
+// Field types: 'range' (dual slider), 'multi' (multi-select dropdown), 'cbgroup' (checkbox group), 'select' (single dropdown)
+
+// Common field DEFINITIONS — re-used across categories. Each has: label, type, optional unit, min/max for ranges, field on robot record.
+const FF = {
+  // General
+  brand: {label:'Brand', type:'multi', field:'brand'},
+  year: {label:'Year', type:'range', field:'year', min:2000, max:2026, unit:''},
+  price: {label:'Price', type:'range', field:'price', min:0, max:200000, unit:'$', step:100, fmt:'price'},
+  status: {label:'Availability', type:'cbgroup', options:[
+    {val:'active', label:'Available', match:r=>/(active|available|released|shipping|production)/i.test(r.status||'')},
+    {val:'coming', label:'Coming Soon / In Development', match:r=>/(coming|pilot|pre-order|announced|development|prototype|concept|testing)/i.test(r.status||'')},
+    {val:'discontinued', label:'Retired / Discontinued', match:r=>/(discontinued|retired|superseded|decommissioned|lost)/i.test(r.status||'')},
+  ]},
+  // Body
+  weight: {label:'Weight', type:'range', field:'weight_kg', min:0, max:500, unit:'kg', step:0.1},
+  height: {label:'Height', type:'range', field:'height_mm', min:0, max:2500, unit:'mm', step:10},
+  ip_rating: {label:'IP Rating', type:'select', field:'ip_rating', auto:true},  // auto-populate from data
+  // Performance
+  payload: {label:'Payload', type:'range', field:'payload_kg', min:0, max:1000, unit:'kg', step:0.5},
+  speed: {label:'Max Speed', type:'range', field:'speed_ms', min:0, max:50, unit:'m/s', step:0.1},
+  dof: {label:'DOF (Degrees of Freedom)', type:'range', field:'dof', min:0, max:40, unit:''},
+  reach: {label:'Reach', type:'range', field:'reach_mm', min:0, max:5000, unit:'mm', step:10},
+  // Battery
+  battery_life: {label:'Battery Life', type:'range', field:'battery_life', min:0, max:600, unit:'min', step:5},
+  // Sensors
+  sensors: {label:'Sensors', type:'cbgroup', options:[
+    {val:'lidar', label:'LiDAR', match:r=>r.lidar},
+    {val:'depth_sensing', label:'Depth', match:r=>r.depth_sensing},
+    {val:'imu', label:'IMU', match:r=>r.imu},
+    {val:'touch_sensing', label:'Touch', match:r=>r.touch_sensing},
+    {val:'cameras', label:'Cameras', match:r=>!!r.cameras && (typeof r.cameras !== 'number' || r.cameras > 0)},
+  ]},
+  // Connectivity / Platform
+  connectivity: {label:'Connectivity', type:'cbgroup', options:[
+    {val:'wifi', label:'Wi-Fi', match:r=>r.wifi},
+    {val:'bluetooth', label:'Bluetooth', match:r=>r.bluetooth},
+    {val:'cellular', label:'Cellular', match:r=>r.cellular && r.cellular !== 'No'},
+    {val:'ros', label:'ROS', match:r=>r.ros},
+    {val:'sdk', label:'SDK', match:r=>r.sdk},
+  ]},
+  os: {label:'Operating System', type:'select', field:'os', auto:true},
+  // Drone-specific
+  flight_time: {label:'Flight Time', type:'range', field:'flight_time_minutes', min:0, max:120, unit:'min'},
+  camera_res: {label:'Camera', type:'select', field:'camera_resolution', auto:true},
+  // Education
+  age_range: {label:'Age Range', type:'select', field:'age_range', auto:true},
+  // Score
+  score: {label:'Min Score', type:'range', field:'score', min:0, max:100, unit:'/100'},
+  // Sub-type (TYPE) — auto-populated from the sub field within the selected category
+  sub_type: {label:'Type', type:'cbgroup_auto', field:'sub'},
+  // Medical-specific
+  fda_certified: {label:'Certifications', type:'cbgroup', options:[
+    {val:'fda', label:'FDA cleared', match:r=>r.fda_cleared || r.fda_approved || /fda/i.test(r.certifications||'') || /FDA[\s-]?(cleared|approved|authoriz)/i.test(r.desc||'')},
+    {val:'ce', label:'CE marked', match:r=>r.ce || /ce[\s-]?mark/i.test(r.certifications||'')},
+    {val:'fcc', label:'FCC', match:r=>r.fcc},
+    {val:'rohs', label:'RoHS', match:r=>r.rohs},
+  ]},
+  // Origin (country)
+  origin: {label:'Origin', type:'select', field:'origin', auto:true},
+};
+
+// Per-category sections + which FF entries to include
+const CATEGORY_SCHEMA = {
+  'Humanoid': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
+    {title:'Body', fields:['weight','height']},
+    {title:'Performance', fields:['payload','speed','dof','battery_life']},
+    {title:'Sensors & AI', fields:['sensors','connectivity']},
+  ],
+  'Industrial': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
+    {title:'Performance', fields:['payload','reach','dof','speed']},
+    {title:'Body & Environment', fields:['weight','ip_rating']},
+    {title:'Platform', fields:['connectivity','os']},
+  ],
+  'Consumer': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status']},
+    {title:'Body', fields:['weight','height']},
+    {title:'Battery & Features', fields:['battery_life','sensors']},
+    {title:'Smart Features', fields:['connectivity']},
+  ],
+  'Drones': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
+    {title:'Performance', fields:['battery_life','speed','weight']},
+    {title:'Camera & Sensors', fields:['sensors','connectivity']},
+  ],
+  'Educational': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status']},
+    {title:'Features', fields:['connectivity','sensors']},
+  ],
+  'Medical': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
+    {title:'Certifications', fields:['fda_certified']},
+    {title:'Performance', fields:['weight','payload']},
+    {title:'Platform', fields:['connectivity']},
+  ],
+  'Agricultural': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
+    {title:'Performance', fields:['weight','payload','speed']},
+    {title:'Body & Environment', fields:['ip_rating']},
+    {title:'Features', fields:['sensors','connectivity']},
+  ],
+  'Military': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
+    {title:'Performance', fields:['weight','payload','speed']},
+    {title:'Body & Environment', fields:['ip_rating']},
+    {title:'Sensors', fields:['sensors','connectivity']},
+  ],
+  'Service': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status','origin']},
+    {title:'Body', fields:['weight','height']},
+    {title:'Battery & Features', fields:['battery_life','sensors']},
+    {title:'Platform', fields:['connectivity']},
+  ],
+  // Generic schema for other categories
+  '_default': [
+    {title:'General', fields:['brand','sub_type','year']},
+    {title:'Pricing & Availability', fields:['price','status']},
+    {title:'Body', fields:['weight','height']},
+    {title:'Features', fields:['connectivity','sensors']},
+  ],
+};
+
+// State for filter form
+const FILTER_STATE = {};  // {fieldKey: value}
+const SELECTED_BRANDS = new Set();
+const SELECTED_CB = {};  // {sectionKey: Set of selected option vals}
+
+function buildFinderTabs(){
+  document.getElementById('finder-tabs').innerHTML=FINDER_CATS.map(function(c){
+    var cnt=c.id==='all'?ROBOTS.length:ROBOTS.filter(function(r){return r.cat===c.id;}).length;
+    return '<div class="ftab'+(c.id===finderCat?' active':'')+'" onclick="setFinderCat(\''+c.id+'\',this)">'+c.label+'<span class="fcnt">'+cnt+'</span></div>';
+  }).join('');
+  // Update meta line
+  const meta = document.getElementById('finder-band-meta');
+  if (meta) meta.textContent = `${FINDER_CATS.length - 1} categories · ${ROBOTS.length} robots · Live filters`;
+}
+
+function setFinderCat(cat,el){
+  finderCat=cat;
+  document.querySelectorAll('.ftab').forEach(function(t){t.classList.remove('active');});
+  if(el)el.classList.add('active');
+  // Clear filter state when changing categories (different schema)
+  Object.keys(FILTER_STATE).forEach(k => delete FILTER_STATE[k]);
+  SELECTED_BRANDS.clear();
+  Object.keys(SELECTED_CB).forEach(k => delete SELECTED_CB[k]);
+  buildFinderFP();
+  hideFinderResults();
+}
+
+function resetFinderState(){}
+
+function getPool(){
+  return finderCat==='all'?ROBOTS:ROBOTS.filter(function(r){return r.cat===finderCat;});
+}
+
+// Get the schema for the current category, or fall back to default
+function getSchema(){
+  return CATEGORY_SCHEMA[finderCat] || CATEGORY_SCHEMA['_default'];
+}
+
+// Get the actual displayed range for a slider — used by both renderRangeSlider and renderActivePills
+// so they agree on whether the user has moved the handles.
+function getSliderRange(def){
+  // Price uses fixed 0-200000 (manual cap), everything else uses 5th-95th percentile from data
+  if (def.field === 'price') return [def.min, def.max];
+  return computeFieldRange(def.field, def.min, def.max);
+}
+
+// Compute reasonable min/max for a numeric field using 5th–95th percentile
+// to avoid one outlier stretching the slider scale. Outliers are still filterable
+// (slider goes to the actual max), but the default range is sensible.
+// Cache computed ranges so we scan the data once per field, not on every form rebuild.
+var _fieldRangeCache = {};
+function computeFieldRange(field, fallbackMin, fallbackMax){
+  const pool = getPool();
+  // cache key includes the current category pool so per-category ranges stay correct
+  const ckey = (typeof finderCat!=='undefined'?finderCat:'all') + '|' + field;
+  if (_fieldRangeCache[ckey]) return _fieldRangeCache[ckey];
+  const values = [];
+  for (const r of pool){
+    const v = parseFloat(r[field]);
+    if (!isNaN(v) && v > 0) values.push(v);
+  }
+  if (values.length === 0){ _fieldRangeCache[ckey]=[fallbackMin, fallbackMax]; return _fieldRangeCache[ckey]; }
+  values.sort((a, b) => a - b);
+  let out;
+  if (field === 'year') {
+    out = [Math.floor(values[0]), Math.ceil(values[values.length - 1])];
+  } else {
+    const p5 = values[Math.max(0, Math.floor(values.length * 0.05))];
+    const p95 = values[Math.min(values.length - 1, Math.ceil(values.length * 0.95))];
+    const lo = Math.max(0, Math.floor(p5));
+    const hi = Math.ceil(p95);
+    out = [lo, hi > lo ? hi : lo + 1];
+  }
+  _fieldRangeCache[ckey] = out;
+  return out;
+}
+
+// Format a numeric value for display
+function fmtVal(v, fmtType, unit){
+  if (fmtType === 'price') return v >= 1000 ? '$' + (v/1000).toFixed(v%1000===0?0:1) + 'k' : '$' + v;
+  return (unit ? v + (unit === '/100' ? '' : '') : v) + (unit && unit !== '/100' ? unit : (unit==='/100'?unit:''));
+}
+
+// Render a dual-handle range slider for a numeric field
+function renderRangeSlider(key, def){
+  const [dataMin, dataMax] = getSliderRange(def);
+  const stateKey = 'rng_' + def.field;
+  const state = FILTER_STATE[stateKey] || {lo: dataMin, hi: dataMax};
+  FILTER_STATE[stateKey] = state;
+  const step = def.step || 1;
+  const lo = state.lo, hi = state.hi;
+  const pctLo = ((lo - dataMin) / (dataMax - dataMin)) * 100;
+  const pctHi = ((hi - dataMin) / (dataMax - dataMin)) * 100;
+  return `
+    <div class="fsc-field" data-rs="${def.field}" data-min="${dataMin}" data-max="${dataMax}">
+      <div class="fsc-label">
+        <span>${def.label}</span>
+        <span class="fsc-label-val">${fmtVal(lo, def.fmt, def.unit)} – ${fmtVal(hi, def.fmt, def.unit)}</span>
+      </div>
+      <div class="range-slider">
+        <div class="range-track"><div class="range-track-fill" style="left:${pctLo}%;width:${pctHi - pctLo}%"></div></div>
+        <input type="range" min="${dataMin}" max="${dataMax}" step="${step}" value="${lo}" oninput="onRangeChange('${def.field}', 'lo', this.value)">
+        <input type="range" min="${dataMin}" max="${dataMax}" step="${step}" value="${hi}" oninput="onRangeChange('${def.field}', 'hi', this.value)">
+      </div>
+    </div>
+  `;
+}
+
+function onRangeChange(field, which, val){
+  const state = FILTER_STATE['rng_' + field];
+  if (!state) return;
+  val = parseFloat(val);
+  if (which === 'lo'){
+    state.lo = Math.min(val, state.hi);
+  } else {
+    state.hi = Math.max(val, state.lo);
+  }
+  // Re-render this one slider
+  const el = document.querySelector(`[data-rs="${field}"]`);
+  if (!el) return;
+  const def = Object.values(FF).find(d => d.field === field);
+  const dataMin = parseFloat(el.dataset.min);
+  const dataMax = parseFloat(el.dataset.max);
+  const pctLo = ((state.lo - dataMin) / (dataMax - dataMin)) * 100;
+  const pctHi = ((state.hi - dataMin) / (dataMax - dataMin)) * 100;
+  el.querySelector('.fsc-label-val').textContent = `${fmtVal(state.lo, def.fmt, def.unit)} – ${fmtVal(state.hi, def.fmt, def.unit)}`;
+  el.querySelector('.range-track-fill').style.left = pctLo + '%';
+  el.querySelector('.range-track-fill').style.width = (pctHi - pctLo) + '%';
+  renderActivePills();
+  updateFinderCount();
+}
+
+// Render a multi-select dropdown with search (for brands)
+function renderMultiSelect(key, def){
+  const pool = getPool();
+  const items = {};
+  for (const r of pool){
+    const v = r[def.field];
+    if (v) items[v] = (items[v] || 0) + 1;
+  }
+  const sortedItems = Object.entries(items).sort((a, b) => b[1] - a[1]);
+  const selectedCount = key === 'brand' ? SELECTED_BRANDS.size : 0;
+  const btnLabel = selectedCount > 0 ? `${selectedCount} selected` : `All ${def.label.toLowerCase()}s`;
+  return `
+    <div class="fsc-field">
+      <div class="fsc-label"><span>${def.label}</span><span class="fsc-label-val">${sortedItems.length} available</span></div>
+      <div class="ms-dd" data-ms="${key}">
+        <button class="ms-dd-btn" onclick="toggleMsDd('${key}', event)">${btnLabel} <span class="ms-dd-btn-arrow">▼</span></button>
+        <div class="ms-dd-panel" id="ms-panel-${key}">
+          <div class="ms-dd-search"><input type="text" placeholder="Search..." oninput="filterMsDd('${key}', this.value)"></div>
+          <div class="ms-dd-list" id="ms-list-${key}">
+            ${sortedItems.map(([item, cnt]) => `
+              <label class="ms-dd-opt" data-name="${item.toLowerCase()}">
+                <input type="checkbox" data-val="${item.replace(/"/g, '&quot;')}" onchange="onMsCbChange('${key}', this)" ${SELECTED_BRANDS.has(item) ? 'checked' : ''}>
+                <span class="ms-dd-opt-label">${item}</span>
+                <span class="ms-dd-opt-count">${cnt}</span>
+              </label>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function toggleMsDd(key, evt){
+  evt.stopPropagation();
+  const panel = document.getElementById('ms-panel-' + key);
+  if (!panel) return;
+  // Close any other open
+  document.querySelectorAll('.ms-dd-panel.open').forEach(p => { if (p !== panel) p.classList.remove('open'); });
+  panel.classList.toggle('open');
+}
+
+function filterMsDd(key, q){
+  const list = document.getElementById('ms-list-' + key);
+  if (!list) return;
+  const lower = q.toLowerCase();
+  list.querySelectorAll('.ms-dd-opt').forEach(opt => {
+    opt.style.display = opt.dataset.name.includes(lower) ? '' : 'none';
+  });
+}
+
+function onMsCbChange(key, cb){
+  const val = cb.dataset.val;
+  if (cb.checked) SELECTED_BRANDS.add(val);
+  else SELECTED_BRANDS.delete(val);
+  // Update button label
+  const btn = document.querySelector(`[data-ms="${key}"] .ms-dd-btn`);
+  if (btn){
+    const arrow = btn.querySelector('.ms-dd-btn-arrow').outerHTML;
+    const lbl = SELECTED_BRANDS.size > 0 ? `${SELECTED_BRANDS.size} selected` : `All brands`;
+    btn.innerHTML = lbl + ' ' + arrow;
+  }
+  renderActivePills();
+  updateFinderCount();
+}
+
+// Render a checkbox group (sensors, connectivity, status)
+function renderCbGroup(key, def){
+  const pool = getPool();
+  if (!SELECTED_CB[key]) SELECTED_CB[key] = new Set();
+  return `
+    <div class="fsc-field">
+      <div class="fsc-label"><span>${def.label}</span></div>
+      <div class="fsc-cb-group">
+        ${def.options.map(o => {
+          const count = pool.filter(o.match).length;
+          return `
+            <label class="fsc-cb">
+              <input type="checkbox" data-cb-key="${key}" data-val="${o.val}" onchange="onCbChange('${key}', this)" ${SELECTED_CB[key].has(o.val) ? 'checked' : ''}>
+              <span>${o.label}</span>
+              <span class="fsc-cb-count">${count}</span>
+            </label>
+          `;
+        }).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function onCbChange(key, cb){
+  if (!SELECTED_CB[key]) SELECTED_CB[key] = new Set();
+  if (cb.checked) SELECTED_CB[key].add(cb.dataset.val);
+  else SELECTED_CB[key].delete(cb.dataset.val);
+  renderActivePills();
+  updateFinderCount();
+}
+
+// Render a checkbox group automatically derived from data (e.g. sub-types for current category).
+// Only shows top 15 by count + "more" expand link.
+// IMPORTANT: For sub_type, only renders when a specific category is selected — on "All Robots"
+// the list would be a 100+ item mess of every sub-type across every category.
+const SUB_FILTER_EXPANDED = {};
+function renderCbGroupAuto(key, def){
+  // Sub-type filter is meaningless across all categories — hide on All Robots tab
+  if (def.field === 'sub' && finderCat === 'all') return '';
+  // Only renders if there are 2+ unique values (otherwise pointless filter)
+  const pool = getPool();
+  const items = {};
+  for (const r of pool){
+    const v = r[def.field];
+    if (v && v.trim && v.trim()) items[v] = (items[v] || 0) + 1;
+  }
+  const sortedItems = Object.entries(items).sort((a, b) => b[1] - a[1]);
+  if (sortedItems.length < 2) return '';
+  if (!SELECTED_CB[key]) SELECTED_CB[key] = new Set();
+  const expanded = SUB_FILTER_EXPANDED[key] === true;
+  const limit = 8;
+  const visible = expanded ? sortedItems : sortedItems.slice(0, limit);
+  const hidden = sortedItems.length - visible.length;
+  const html = `
+    <div class="fsc-field">
+      <div class="fsc-label"><span>${def.label}</span><span class="fsc-label-val">${sortedItems.length} options</span></div>
+      <div class="fsc-cb-group" id="cbga-${key}">
+        ${visible.map(([item, cnt]) => `
+          <label class="fsc-cb">
+            <input type="checkbox" data-cb-key="${key}" data-val="${item.replace(/"/g, '&quot;')}" onchange="onCbChange('${key}', this)" ${SELECTED_CB[key].has(item) ? 'checked' : ''}>
+            <span>${escapeHtml(item)}</span>
+            <span class="fsc-cb-count">${cnt}</span>
+          </label>
+        `).join('')}
+      </div>
+      ${hidden > 0 ? `<div onclick="toggleSubFilterExpand('${key}')" style="font-size:11px;color:var(--acc);font-weight:600;cursor:pointer;padding:4px 7px;margin-top:2px">+ See ${hidden} more</div>` : (expanded && sortedItems.length > limit ? `<div onclick="toggleSubFilterExpand('${key}')" style="font-size:11px;color:var(--mut);font-weight:600;cursor:pointer;padding:4px 7px;margin-top:2px">− Show less</div>` : '')}
+    </div>
+  `;
+  return html;
+}
+function toggleSubFilterExpand(key){
+  SUB_FILTER_EXPANDED[key] = !SUB_FILTER_EXPANDED[key];
+  buildFinderFP();
+}
+
+// Render a single-select dropdown (auto-populated from data)
+function renderSelect(key, def){
+  const pool = getPool();
+  const items = {};
+  for (const r of pool){
+    const v = r[def.field];
+    if (v) items[v] = (items[v] || 0) + 1;
+  }
+  const sortedItems = Object.entries(items).sort((a, b) => b[1] - a[1]).slice(0, 30);
+  if (sortedItems.length === 0) return '';  // Hide if no data
+  const stateKey = 'sel_' + def.field;
+  return `
+    <div class="fsc-field">
+      <div class="fsc-label"><span>${def.label}</span></div>
+      <select class="fsel" onchange="FILTER_STATE['${stateKey}']=this.value;renderActivePills();updateFinderCount()" style="width:100%;padding:7px 9px;border:1px solid var(--bdr2);border-radius:6px;font-size:11px;font-family:inherit;background:#fff;appearance:none;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:right 8px center;padding-right:24px">
+        <option value="">Any</option>
+        ${sortedItems.map(([item, cnt]) => `<option value="${item.replace(/"/g, '&quot;')}" ${FILTER_STATE[stateKey]===item?'selected':''}>${item} (${cnt})</option>`).join('')}
+      </select>
+    </div>
+  `;
+}
+
+// Master form renderer
+function buildFinderFP(){
+  const schema = getSchema();
+  let html = '';
+  // Active filter pills (rendered ABOVE the form so user always sees what's active)
+  html += '<div id="finder-active-pills" class="fatags"></div>';
+  html += '<div class="finder-grid">';
+  for (const section of schema){
+    html += `<div class="fsc">`;
+    html += `<div class="fsc-title">${section.title}</div>`;
+    for (const fieldKey of section.fields){
+      const def = FF[fieldKey];
+      if (!def) continue;
+      if (def.type === 'range') html += renderRangeSlider(fieldKey, def);
+      else if (def.type === 'multi') html += renderMultiSelect(fieldKey, def);
+      else if (def.type === 'cbgroup') html += renderCbGroup(fieldKey, def);
+      else if (def.type === 'cbgroup_auto') html += renderCbGroupAuto(fieldKey, def);
+      else if (def.type === 'select') html += renderSelect(fieldKey, def);
+    }
+    html += `</div>`;
+  }
+  html += '</div>';
+  document.getElementById('finder-fp').innerHTML = html;
+  document.getElementById('finder-bottom').style.display = '';
+  renderActivePills();
+  updateFinderCount();
+}
+
+// Build the list of currently-active filter pills.
+// Each pill has a click handler that clears that one filter.
+function renderActivePills(){
+  const el = document.getElementById('finder-active-pills');
+  if (!el) return;
+  const pills = [];
+  const schema = getSchema();
+  // Range pills: only if user moved them away from defaults
+  for (const section of schema){
+    for (const fk of section.fields){
+      const def = FF[fk];
+      if (!def) continue;
+      if (def.type === 'range'){
+        const st = FILTER_STATE['rng_' + def.field];
+        if (!st) continue;
+        const [dataMin, dataMax] = getSliderRange(def);
+        // Only show pill if user moved either handle away from data extents
+        if (st.lo > dataMin || st.hi < dataMax){
+          pills.push({
+            label: `${def.label}: ${fmtVal(st.lo, def.fmt, def.unit)}–${fmtVal(st.hi, def.fmt, def.unit)}`,
+            clearAction: `clearRange('${def.field}')`
+          });
+        }
+      } else if (def.type === 'cbgroup'){
+        const sel = SELECTED_CB[fk];
+        if (!sel || sel.size === 0) continue;
+        sel.forEach(v => {
+          const opt = def.options.find(o => o.val === v);
+          if (opt) pills.push({label: opt.label, clearAction: `clearCbOpt('${fk}', '${v}')`});
+        });
+      } else if (def.type === 'cbgroup_auto'){
+        const sel = SELECTED_CB[fk];
+        if (!sel || sel.size === 0) continue;
+        sel.forEach(v => {
+          pills.push({label: v, clearAction: `clearCbOpt('${fk}', '${v.replace(/'/g, "\\'")}')`});
+        });
+      } else if (def.type === 'select'){
+        const val = FILTER_STATE['sel_' + def.field];
+        if (val) pills.push({label: `${def.label}: ${val}`, clearAction: `clearSel('${def.field}')`});
+      }
+    }
+  }
+  // Brand pills
+  SELECTED_BRANDS.forEach(b => {
+    pills.push({label: b, clearAction: `clearBrand('${b.replace(/'/g, "\\'")}')`});
+  });
+  el.innerHTML = pills.map(p => `<span class="fatag" onclick="${p.clearAction}">${escapeHtml(p.label)} ✕</span>`).join('');
+}
+
+function escapeHtml(s){
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function clearRange(field){
+  delete FILTER_STATE['rng_' + field];
+  buildFinderFP();
+}
+
+function clearCbOpt(key, val){
+  if (SELECTED_CB[key]) SELECTED_CB[key].delete(val);
+  // Re-render just the form to refresh checkboxes
+  buildFinderFP();
+}
+
+function clearSel(field){
+  delete FILTER_STATE['sel_' + field];
+  buildFinderFP();
+}
+
+function clearBrand(brand){
+  SELECTED_BRANDS.delete(brand);
+  buildFinderFP();
+}
+
+// Close ms-dd dropdowns when clicking outside
+document.addEventListener('click', e => {
+  if (!e.target.closest('.ms-dd')){
+    document.querySelectorAll('.ms-dd-panel.open').forEach(p => p.classList.remove('open'));
+  }
+});
+
+function hideFinderResults(){
+  const rs = document.getElementById('finder-results-section');
+  if (rs) rs.style.display = 'none';
+}
+
+function getVal(id){var el=document.getElementById(id);return el?el.value:'';}
+function getNum(id){var v=parseFloat(getVal(id));return isNaN(v)?null:v;}
+
+function clearFFC(cls){document.querySelectorAll(cls).forEach(function(el){el.checked=false;});renderFinder();}
+function clearFRange(prefix){
+  var mn=document.getElementById(prefix+'-min');var mx=document.getElementById(prefix+'-max');
+  if(mn)mn.value='';if(mx)mx.value='';renderFinder();
+}
+function resetFinder(){
+  // Clear schema-based state
+  Object.keys(FILTER_STATE).forEach(k => delete FILTER_STATE[k]);
+  SELECTED_BRANDS.clear();
+  Object.keys(SELECTED_CB).forEach(k => delete SELECTED_CB[k]);
+  buildFinderFP();
+  hideFinderResults();
+}
+
+function getFinderFiltered(){
+  const pool = getPool();
+  const schema = getSchema();
+  // Build active filter list from schema + state
+  return pool.filter(r => {
+    // Iterate fields in the schema
+    for (const section of schema){
+      for (const fk of section.fields){
+        const def = FF[fk];
+        if (!def) continue;
+        if (def.type === 'range'){
+          const st = FILTER_STATE['rng_' + def.field];
+          if (!st) continue;
+          const v = parseFloat(r[def.field]);
+          if (!isNaN(v) && v > 0){
+            // Handles parked at the slider's extents are open-ended:
+            // hi at max means "and above", lo at min means "and below"
+            const [sMin, sMax] = getSliderRange(def);
+            if (st.lo > sMin && v < st.lo) return false;
+            if (st.hi < sMax && v > st.hi) return false;
+          }
+        } else if (def.type === 'multi'){
+          // brand is the only multi for now
+          if (SELECTED_BRANDS.size > 0 && !SELECTED_BRANDS.has(r[def.field])) return false;
+        } else if (def.type === 'cbgroup'){
+          const sel = SELECTED_CB[fk];
+          if (!sel || sel.size === 0) continue;
+          // Match if robot matches AT LEAST ONE of the selected options
+          const anyMatch = def.options.some(o => sel.has(o.val) && o.match(r));
+          if (!anyMatch) return false;
+        } else if (def.type === 'cbgroup_auto'){
+          const sel = SELECTED_CB[fk];
+          if (!sel || sel.size === 0) continue;
+          // Match if robot's field value is in the selected set
+          if (!sel.has(r[def.field])) return false;
+        } else if (def.type === 'select'){
+          const val = FILTER_STATE['sel_' + def.field];
+          if (!val) continue;
+          if (r[def.field] !== val) return false;
+        }
+      }
+    }
+    return true;
+  });
+}
+
+function renderFinder(){
+  var sort=document.getElementById('finder-sort')?document.getElementById('finder-sort').value:'score';
+  var list=getFinderFiltered();
+  list=[...list].sort(function(a,b){
+    return sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):(robotSortKey(b)-robotSortKey(a)||a.name.localeCompare(b.name));
+  });
+  var countEl=document.getElementById('finder-count');
+  if(countEl)countEl.textContent=list.length;
+  var tagsEl=document.getElementById('finder-atags');
+  if(tagsEl){
+    var tags=[];
+    if(finderCat!=='all')tags.push(finderCat);
+    document.querySelectorAll('.fb:checked,.ff:checked,.fst:checked,.fsub:checked').forEach(function(el){tags.push(el.dataset.val||el.value);});
+    tagsEl.innerHTML=tags.slice(0,6).map(function(t){return '<div class="fatag">'+t+' ✕</div>';}).join('');
+  }
+  var c=document.getElementById('finder-results');
+  if(!c)return;
+  if(!list.length){c.innerHTML='<div class="no-results"><h3>No robots match</h3><p>Try removing some filters</p></div>';return;}
+  var ranks=['gold','silver','bronze'];
+  if(finderView==='list'){
+    const ranks=['gold','silver','bronze'];
+    c.innerHTML='<div class="frlist">'+list.map(function(r,i){
+      var sp=[];
+      if(r.payload)sp.push('<span class="fspec-pill"><b>Payload</b> '+r.payload+'kg</span>');
+      if(r.weight_kg)sp.push('<span class="fspec-pill"><b>Weight</b> '+r.weight_kg+'kg</span>');
+      if(r.speed)sp.push('<span class="fspec-pill"><b>Speed</b> '+r.speed+'m/s</span>');
+      if(r.battery_life)sp.push('<span class="fspec-pill"><b>Battery</b> '+r.battery_life+'min</span>');
+      if(r.dof)sp.push('<span class="fspec-pill"><b>DOF</b> '+r.dof+'</span>');
+      if(r.ip_rating)sp.push('<span class="fspec-pill"><b>IP</b> '+r.ip_rating+'</span>');
+      if(r.cpu)sp.push('<span class="fspec-pill"><b>CPU</b> '+r.cpu+'</span>');
+      if(r.ros)sp.push('<span class="fspec-pill fsp-yes">ROS</span>');
+      if(r.sdk)sp.push('<span class="fspec-pill fsp-yes">SDK</span>');
+      if(r.lidar)sp.push('<span class="fspec-pill fsp-yes">LiDAR</span>');
+      if(r.wifi)sp.push('<span class="fspec-pill fsp-yes">WiFi</span>');
+      var thumb=r.img?'<div class="frrow-thumb"><img src="'+r.img+'" alt="" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'"></div>':'<div class="frrow-thumb"><img src="'+MASCOT_URL+'" alt="" style="object-fit:contain"></div>';
+      return '<div class="frrow gsm" onclick="openProfile(&apos;'+r.id+'&apos;)"><div class="frrow-left"><div class="frrow-num '+(ranks[i]||'')+'">'+( i+1)+'</div>'+thumb+'<div class="frrow-info"><div class="frrow-brand">'+r.brand+'</div><div class="frrow-name">'+r.name+'</div><div class="frrow-meta"><span class="frrow-cat">'+r.cat+'</span>'+(r.year?' &middot; '+r.year:'')+(r.sub?' &middot; <span style="color:var(--mut)">'+r.sub+'</span>':'')+'</div><div class="frrow-specs">'+sp.join('')+'</div><div class="frrow-tags">'+r.tags.slice(0,4).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')+'</div></div></div><div class="frrow-right"><div class="frrow-price">'+priceStars(r)+'</div><div class="frrow-score">'+r.score+'<span style="font-size:9px;opacity:.6">/100</span></div><div class="frrow-stars">'+'&#9733;'.repeat(Math.round(r.rating||0))+'</div><div class="frrow-actions"><button class="fra" onclick="event.stopPropagation();addRobotToCompare(&apos;'+r.id+'&apos;);goPage(&apos;compare&apos;)">Compare</button><button class="fra p" onclick="event.stopPropagation();openProfile(&apos;'+r.id+'&apos;)">→ View</button></div></div></div>';
+    }).join('')+'</div>';
+  } else {
+    c.innerHTML='<div class="frgrid">'+list.map(function(r,i){
+      return '<div class="frgc" onclick="openProfile(\''+r.id+'\')">'
+        +'<div class="frgci" style="background:#fff">'+(r.img?'<img src="'+r.img+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:0" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'">':'<img src="'+MASCOT_URL+'" alt="'+r.name+'" style="width:100%;height:100%;object-fit:contain;position:absolute;inset:0">')+'<div style="position:absolute;top:4px;left:4px;width:15px;height:15px;border-radius:50%;background:var(--txt);color:#fff;font-size:8px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">'+(i+1)+'</div></div>'
+        +'<div class="frgcb"><div class="frgcbrand">'+r.brand+'</div><div class="frgcname">'+r.name+'</div><div class="frgcsub">'+r.sub+'</div><div class="frgcfoot"><div class="frgcprice">'+priceStars(r)+'</div><div class="frgcscore">'+r.score+'</div></div></div>'
+      +'</div>';
+    }).join('')+'</div>';
+  }
+}
+
+function setFinderView(v){
+  finderView=v;
+  document.getElementById('fvl').className='fvbtn'+(v==='list'?' active':'');
+  document.getElementById('fvg').className='fvbtn'+(v==='grid'?' active':'');
+  renderFinder();
+}
+
+
+// ════════════ MANUFACTURERS ════════════
+function renderManufacturers(){
+  const byBrand={};
+  ROBOTS.forEach(function(r){
+    if(!byBrand[r.brand])byBrand[r.brand]={brand:r.brand,robots:[],cats:new Set(),topScore:0,fig:r.fig,img:''};
+    byBrand[r.brand].robots.push(r);byBrand[r.brand].cats.add(r.cat);
+    if((r.score||0)>byBrand[r.brand].topScore)byBrand[r.brand].topScore=r.score||0;
+    if(!byBrand[r.brand].img&&r.img)byBrand[r.brand].img=r.img;
+  });
+  const sorted=Object.values(byBrand).sort(function(a,b){return b.robots.length-a.robots.length;});
+  document.getElementById('mfr-list').innerHTML='<div class="brand-grid">'+sorted.map(function(m){
+    const avail=m.robots.filter(function(r){return (r.status||'').toLowerCase().match(/active|available/);}).length;
+    const bn=m.brand.replace(/'/g,'');
+    const thumb=m.img?('<img src="'+m.img+'" style="width:100%;height:100%;object-fit:cover;border-radius:12px" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\';this.style.background=\'#fff\'">'):('<img src="'+MASCOT_URL+'" style="width:100%;height:100%;object-fit:contain;border-radius:12px;background:#fff">');
+    return '<div class="brand-card" onclick="searchBrand(&apos;'+bn+'&apos;)"><div class="brand-card-logo">'+thumb+'</div><div class="brand-card-name">'+m.brand+'</div><div class="brand-card-cat">'+[...m.cats].slice(0,2).join(' &middot; ')+'</div><div class="brand-card-stats"><div><div class="brand-stat-num">'+m.robots.length+'</div><div class="brand-stat-lbl">Robots</div></div><div><div class="brand-stat-num" style="color:var(--acc)">'+m.topScore+'</div><div class="brand-stat-lbl">Top Score</div></div><div><div class="brand-stat-num" style="color:#16a34a">'+avail+'</div><div class="brand-stat-lbl">Active</div></div></div><button class="brand-card-btn" onclick="event.stopPropagation();searchBrand(&apos;'+bn+'&apos;)">View All</button></div>';
+  }).join('')+'</div>';
+}
+function setStars(n){
+  selectedStars=n;
+  document.querySelectorAll('.star-btn').forEach((el,i)=>{el.classList.toggle('active',i<n);});
+}
+function populateReviewSelect(){
+  const sel=document.getElementById('review-robot-select');
+  if(sel&&sel.options.length<=1){
+    ROBOTS.forEach(r=>{const o=document.createElement('option');o.value=r.id;o.textContent=`${r.brand} ${r.name}`;sel.appendChild(o);});
+  }
+}
+function openReviewFor(id){ window.REVIEW_TARGET=id||null; goPage('submit-review'); }
+function setupReviewForm(){
+  var row=document.getElementById('review-robot-row');
+  var fixed=document.getElementById('review-robot-fixed');
+  var fixedName=document.getElementById('review-robot-fixed-name');
+  var sel=document.getElementById('review-robot-select');
+  var tgt=window.REVIEW_TARGET;
+  if(tgt){
+    var rb=(window.ROBOTS||[]).filter(function(x){return x.id===tgt;})[0];
+    if(sel) sel.value=tgt;
+    if(fixedName) fixedName.textContent=rb?((rb.brand?rb.brand+' ':'')+rb.name):tgt;
+    if(row) row.style.display='none';
+    if(fixed) fixed.style.display='';
+  } else {
+    if(row) row.style.display='';
+    if(fixed) fixed.style.display='none';
+    if(sel) sel.selectedIndex=0;
+  }
+}
+
+// ════════════ VIDEOS (YouTube RSS) ════════════
+// Channel: @MYROBOTSHOP
+const YT_CHANNEL_ID = 'UCB6SnhND4A3b_QGetSqPYcA';
+const YT_FEED_URL = `https://www.youtube.com/feeds/videos.xml?channel_id=${YT_CHANNEL_ID}`;
+const YT_CACHE_KEY = 'mrsh_yt_cache';
+const YT_CACHE_TTL = 60 * 60 * 1000;  // 1 hour
+
+// CORS proxies in order of preference. If one fails, try the next.
+// Public proxies are sometimes flakey; falling back gives us resilience.
+const CORS_PROXIES = [
+  url => `https://corsproxy.io/?url=${encodeURIComponent(url)}`,
+  url => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`,
+];
+
+// Parse a YouTube RSS XML string into an array of video objects.
+function parseYouTubeFeed(xmlText){
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(xmlText, 'text/xml');
+  const entries = doc.querySelectorAll('entry');
+  const videos = [];
+  entries.forEach(entry => {
+    const id = (entry.querySelector('videoId') || entry.getElementsByTagNameNS('http://www.youtube.com/xml/schemas/2015', 'videoId')[0] || {}).textContent;
+    const title = (entry.querySelector('title') || {}).textContent || '';
+    const published = (entry.querySelector('published') || {}).textContent || '';
+    // description is in media:description namespace
+    const mediaGroup = entry.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'group')[0];
+    let description = '';
+    let thumb = '';
+    if (mediaGroup){
+      const desc = mediaGroup.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'description')[0];
+      if (desc) description = desc.textContent || '';
+      const thumbEl = mediaGroup.getElementsByTagNameNS('http://search.yahoo.com/mrss/', 'thumbnail')[0];
+      if (thumbEl) thumb = thumbEl.getAttribute('url') || '';
+    }
+    if (id){
+      videos.push({
+        id,
+        title,
+        description: description.slice(0, 220),
+        published,
+        thumb: thumb || `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+        url: `https://www.youtube.com/watch?v=${id}`
+      });
+    }
+  });
+  return videos;
+}
+
+// Format a published date into a relative or absolute string
+function fmtPubDate(iso){
+  if (!iso) return '';
+  const d = new Date(iso);
+  if (isNaN(d)) return '';
+  const days = Math.floor((Date.now() - d.getTime()) / (1000 * 60 * 60 * 24));
+  if (days === 0) return 'Today';
+  if (days === 1) return 'Yesterday';
+  if (days < 7) return `${days} days ago`;
+  if (days < 30) return `${Math.floor(days/7)} week${Math.floor(days/7)>1?'s':''} ago`;
+  return d.toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'});
+}
+
+// Try to fetch via proxies in order. Returns parsed videos or throws.
+async function fetchYouTubeVideos(){
+  let lastErr;
+  for (const proxy of CORS_PROXIES){
+    try {
+      const resp = await fetch(proxy(YT_FEED_URL), {cache: 'no-store'});
+      if (!resp.ok) { lastErr = new Error('Proxy returned ' + resp.status); continue; }
+      const text = await resp.text();
+      if (!text || !text.includes('<entry')) { lastErr = new Error('Invalid feed content'); continue; }
+      const videos = parseYouTubeFeed(text);
+      if (videos.length === 0) { lastErr = new Error('No videos parsed'); continue; }
+      return videos;
+    } catch (e) {
+      lastErr = e;
+    }
+  }
+  throw lastErr || new Error('All proxies failed');
+}
+
+(function(){
+  function bindNL(){
+    var forms=document.querySelectorAll('.nl-form');
+    Array.prototype.forEach.call(forms,function(f){
+      if(f.dataset.bound)return; f.dataset.bound='1';
+      f.addEventListener('submit',function(e){e.preventDefault();
+        var body=new URLSearchParams(new FormData(f)).toString();
+        var m=f.parentElement.querySelector('.nl-msg');
+        fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body})
+          .then(function(){f.style.display='none';if(m)m.style.display='block';})
+          .catch(function(){if(m){m.style.display='block';m.style.color='var(--org)';m.textContent='Something went wrong, please try again.';}});
+      });
+    });
+  }
+  if(document.readyState!=='loading')bindNL();else document.addEventListener('DOMContentLoaded',bindNL);
+})();
+let NEWS_ALL=null;
+function fetchNewsJson(){
+  var RAW='https://raw.githubusercontent.com/myrobot42/myrobot-shop/main/data/news.json';
+  return fetch(RAW,{cache:'no-store'}).then(function(r){if(r.ok)return r;throw new Error('raw '+r.status);})
+    .catch(function(){return fetch('data/news.json',{cache:'no-store'});});
+}
+function loadNewsOnce(cb){
+  if(NEWS_ALL){cb(NEWS_ALL);return;}
+  fetchNewsJson().then(function(r){return r.ok?r.json():{};}).then(function(d){NEWS_ALL=(d&&d.items)?d.items:(Array.isArray(d)?d:[]);cb(NEWS_ALL);}).catch(function(){NEWS_ALL=[];cb([]);});
+}
+function renderProfileNews(r){
+  var titleEl=document.getElementById('profile-news-title');
+  var box=document.getElementById('profile-news');
+  if(!box||!titleEl) return;
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function fdate(iso){if(!iso)return'';var d=new Date(iso);if(isNaN(d))return'';return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});}
+  loadNewsOnce(function(items){
+    var terms=[(r.brand||'').toLowerCase(),(r.name||'').toLowerCase()].filter(function(t){return t&&t.length>2;});
+    var matched=(items||[]).filter(function(it){var hay=((it.title||'')+' '+(it.summary||'')).toLowerCase();return terms.some(function(t){return hay.indexOf(t)>=0;});}).slice(0,4);
+    if(!matched.length){titleEl.style.display='none';box.style.display='none';box.innerHTML='';return;}
+    titleEl.textContent=(r.brand||r.name)+' in the News';
+    titleEl.style.display='';box.style.display='';
+    box.innerHTML=matched.map(function(it){
+      var thumb=it.image
+        ? '<div class="similar-icon" style="overflow:hidden"><img src="'+esc(it.image)+'" style="width:100%;height:100%;object-fit:cover;border-radius:7px"></div>'
+        : '<div class="similar-icon" style="display:flex;align-items:center;justify-content:center;font-size:16px">📰</div>';
+      return '<a class="similar-item" href="'+esc(it.url)+'" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">'+thumb+'<div class="similar-info"><div class="similar-name" style="font-size:12px;line-height:1.3;white-space:normal">'+esc(it.title)+'</div><div class="similar-sub">'+esc(it.source||'')+(it.published?' · '+fdate(it.published):'')+'</div></div></a>';
+    }).join('');
+  });
+}
+function renderNewsSidebar(){
+  var sb=document.getElementById('news-sidebar'); if(!sb) return;
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  // ---- Brand box (top brands by robot count) ----
+  var counts={};
+  ROBOTS.forEach(function(r){ if(r.brand) counts[r.brand]=(counts[r.brand]||0)+1; });
+  var brands=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];}).slice(0,30);
+  var brandHtml='<div class="news-sb-box"><div class="news-sb-head">BRANDS</div><div class="news-sb-brands">'
+    +brands.map(function(b){var bn=b.replace(/'/g,'');return '<a class="news-sb-brand" onclick="searchBrand(&apos;'+esc(bn)+'&apos;)">'+esc(b)+'</a>';}).join('')
+    +'</div><a class="news-sb-all" onclick="goPage(&apos;manufacturers&apos;)">All brands &rarr;</a></div>';
+  sb.innerHTML=brandHtml
+    +'<div class="news-sb-box"><div class="news-sb-head">TOP 10 BY DAILY INTEREST</div>'
+    +'<div id="news-sb-top10" class="news-sb-top10"><div style="color:var(--mut);font-size:12px;padding:10px 12px">Loading&hellip;</div></div></div>';
+  // ---- Top 10 from trending.json scores ----
+  fetch('data/trending.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){
+    var el=document.getElementById('news-sb-top10'); if(!el) return;
+    var scores=(d&&d.scores)?d.scores:{};
+    var ranked=Object.keys(scores).map(function(id){return {id:id,score:scores[id]};})
+      .sort(function(a,b){return b.score-a.score;}).slice(0,10);
+    if(!ranked.length){ el.innerHTML='<div style="color:var(--mut);font-size:12px;padding:10px 12px">No trending data yet.</div>'; return; }
+    var byId={}; ROBOTS.forEach(function(r){byId[r.id]=r;});
+    el.innerHTML=ranked.map(function(it,i){
+      var r=byId[it.id];
+      var label=r?((r.brand?r.brand+' ':'')+(r.name||'')):it.id;
+      return '<a class="news-sb-rank" onclick="openProfile(&apos;'+esc(it.id)+'&apos;)">'
+        +'<span class="news-sb-num">'+(i+1)+'</span>'
+        +'<span class="news-sb-rlabel">'+esc(label)+'</span>'
+        +'<span class="news-sb-hits">'+it.score+'</span></a>';
+    }).join('');
+  }).catch(function(){ var el=document.getElementById('news-sb-top10'); if(el) el.innerHTML='<div style="color:var(--mut);font-size:12px;padding:10px 12px">Unavailable.</div>'; });
+}
+
+function renderNews(){
+  renderNewsSidebar();
+  var layout=document.getElementById('news-layout');
+  var list=document.getElementById('news-list-items');
+  if(!layout||!list) return;
+  var COLORS=['var(--acc)','var(--org)','var(--grn)','var(--purple)'];
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function fdate(iso){if(!iso)return'';var d=new Date(iso);if(isNaN(d))return'';return d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});}
+  layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">Loading latest robotics news…</div>';
+  list.innerHTML='';
+  fetchNewsJson()
+    .then(function(r){if(!r.ok)throw new Error('news.json '+r.status);return r.json();})
+    .then(function(d){
+      var items=d.items||[]; window.NEWS_ITEMS=items;
+      if(!items.length){layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">No news yet — the feed will populate shortly.</div>';return;}
+      var feat=items[0], right=items.slice(1,4), rest=items.slice(4,16);
+      var fImg=feat.image
+        ? '<div class="news-img featured" style="background:url(\''+esc(feat.image)+'\') center/cover;background-size:cover"><div class="news-cat">'+esc(feat.source)+'</div></div>'
+        : '<div class="news-img featured"><div class="news-img-label" style="font-size:22px;padding:0 20px;text-align:center;line-height:1.25;word-break:break-word">'+esc((feat.source||'NEWS').toUpperCase())+'</div><div class="news-cat">'+esc(feat.source)+'</div></div>';
+      var featHtml='<a class="news-card featured" onclick="openNewsItem(0)" style="text-decoration:none;color:inherit;cursor:pointer">'+fImg+'<div class="news-body"><div class="news-title featured">'+esc(feat.title)+'</div><div class="news-meta">'+fdate(feat.published)+(feat.source?' · '+esc(feat.source):'')+'</div></div></a>';
+      var rightHtml='<div style="display:flex;flex-direction:column;gap:14px">'+right.map(function(it,i){
+        return '<a class="news-card" onclick="openNewsItem('+(1+i)+')" style="text-decoration:none;color:inherit;cursor:pointer"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:'+COLORS[i%COLORS.length]+';letter-spacing:.5px;margin-bottom:5px">'+esc((it.source||'').toUpperCase())+'</div><div class="news-title">'+esc(it.title)+'</div><div class="news-meta" style="margin-top:7px">'+fdate(it.published)+'</div></div></a>';
+      }).join('')+'</div>';
+      layout.innerHTML=featHtml+rightHtml;
+      list.innerHTML=rest.map(function(it,i){
+        var thumb=it.image
+          ? '<div class="nli-thumb" style="background-image:url(\''+esc(it.image)+'\')"></div>'
+          : '<div class="nli-thumb nli-thumb-ph"><span>'+esc((it.source||'NEWS').toUpperCase())+'</span></div>';
+        return '<a class="news-list-item" onclick="openNewsItem('+(4+i)+')" style="display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:inherit;cursor:pointer">'+thumb+'<div style="flex:1;min-width:0"><div class="nli-cat" style="color:'+COLORS[i%COLORS.length]+'">'+esc((it.source||'').toUpperCase())+'</div><div class="nli-title">'+esc(it.title)+'</div><div class="nli-meta">'+fdate(it.published)+'</div></div></a>';
+      }).join('');
+    })
+    .catch(function(e){console.error('news load failed',e);layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">News feed unavailable right now.</div>';});
+}
+
+async function renderVideos(){
+  const loading = document.getElementById('videos-loading');
+  const error = document.getElementById('videos-error');
+  const grid = document.getElementById('videos-grid');
+  if (!loading || !error || !grid) return;
+  const MAX_VIDEOS = 12;
+  // Try cache first — accept stale cache if fetch fails (better than empty page)
+  let videos = null;
+  let cachedFallback = null;
+  try {
+    const cached = JSON.parse(localStorage.getItem(YT_CACHE_KEY) || 'null');
+    if (cached && Array.isArray(cached.v) && cached.v.length){
+      cachedFallback = cached.v;
+      if (cached.t && Date.now() - cached.t < YT_CACHE_TTL){
+        videos = cached.v;
+      }
+    }
+  } catch(e) {}
+  // If no fresh cache, fetch (falls back to stale cache on error)
+  if (!videos){
+    try {
+      videos = await fetchYouTubeVideos();
+      localStorage.setItem(YT_CACHE_KEY, JSON.stringify({t: Date.now(), v: videos}));
+    } catch (e) {
+      console.error('YouTube fetch failed:', e);
+      if (cachedFallback){
+        // Use stale cache rather than show error — videos are still useful
+        videos = cachedFallback;
+      } else {
+        loading.style.display = 'none';
+        error.style.display = 'block';
+        grid.style.display = 'none';
+        return;
+      }
+    }
+  }
+  // Cap at MAX_VIDEOS for a clean, performant grid
+  videos = videos.slice(0, MAX_VIDEOS);
+  // Store globally so click handlers can look up titles
+  window._VIDEOS_BY_ID = {};
+  videos.forEach(v => { window._VIDEOS_BY_ID[v.id] = v; });
+  // Render
+  loading.style.display = 'none';
+  error.style.display = 'none';
+  grid.style.display = 'grid';
+  grid.innerHTML = videos.map(v => `
+    <div class="video-card" onclick="openVideoModal('${v.id}')" style="background:#fff;border:1px solid var(--bdr);border-radius:10px;overflow:hidden;cursor:pointer;transition:all .15s;display:flex;flex-direction:column" onmouseover="this.style.borderColor='var(--acc)';this.style.boxShadow='0 4px 14px rgba(0,102,255,.08)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.boxShadow='none'">
+      <div style="position:relative;width:100%;padding-bottom:56.25%;background:#000;overflow:hidden">
+        <img src="${v.thumb}" alt="${escapeHtml(v.title)}" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover" loading="lazy">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0);transition:background .15s;pointer-events:none">
+          <div style="width:56px;height:56px;background:rgba(255,0,0,.9);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:transform .15s">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7L8 5z"/></svg>
+          </div>
+        </div>
+      </div>
+      <div style="padding:12px 14px;flex:1;display:flex;flex-direction:column">
+        <div style="font-weight:600;font-size:13px;line-height:1.4;margin-bottom:6px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden">${escapeHtml(v.title)}</div>
+        <div style="font-size:11px;color:var(--mut);margin-top:auto">${fmtPubDate(v.published)}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function openVideoModal(videoId){
+  const v = (window._VIDEOS_BY_ID || {})[videoId];
+  const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('video-modal-iframe');
+  const titleEl = document.getElementById('video-modal-title');
+  const ytLink = document.getElementById('video-modal-yt-link');
+  if (!modal) return;
+  iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+  titleEl.textContent = (v && v.title) || '';
+  ytLink.href = `https://www.youtube.com/watch?v=${videoId}`;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVideoModal(evt){
+  if (evt && evt.target !== evt.currentTarget && evt.type === 'click') return;
+  const modal = document.getElementById('video-modal');
+  const iframe = document.getElementById('video-modal-iframe');
+  if (!modal) return;
+  iframe.src = '';  // Stop the video
+  modal.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+// Close modal on Escape key
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape'){
+    const m = document.getElementById('video-modal');
+    if (m && m.style.display !== 'none') closeVideoModal();
+  }
+});
+
+// ════════════ INIT ════════════
+renderHome();
+</script>
+
+<script>
+// ════ AFFILIATE + VIDEO + ADS ════
+function openAffiliate(robotId){
+  var r=ROBOTS.find(function(x){return x.id===robotId;});
+  if(!r)return;
+  if(r.affiliate_url||r.buy_url){window.open(r.affiliate_url||r.buy_url,'_blank');return;}
+  window.open('https://www.amazon.com/s?k='+encodeURIComponent(amzQuery(r))+'&tag=myrobotshop-20','_blank');
+}
+function isVideoUrl(url){
+  if(!url)return false;
+  return url.indexOf('youtube.com')>=0||url.indexOf('youtu.be')>=0||url.indexOf('vimeo.com')>=0||url.slice(-4)==='.mp4'||url.slice(-5)==='.webm';
+}
+function setAd(slot,url,text,sub){
+  var el=document.getElementById('ad-slot-'+slot);
+  if(!el)return;
+  el.style.display='block';
+  el.onclick=function(){window.open(url,'_blank');};
+  var t=el.querySelector('.ad-banner-text');
+  var s=el.querySelector('.ad-banner-sub');
+  if(t)t.textContent=text||'Sponsored';
+  if(s)s.textContent=sub||'Advertisement';
+}
+
+
+// ════ FINDER SEARCH CONTROL ════
+function showFinderEmpty(){
+  hideFinderResults();
+  updateFinderCount();
+}
+
+function updateFinderCount(){
+  var list=getFinderFiltered();
+  var bc = document.getElementById('finder-bottom-count');
+  if(bc) bc.textContent = list.length;
+  var sb = document.getElementById('finder-show-btn');
+  if(sb) sb.disabled = list.length === 0;
+  // Also update the in-results count if visible
+  var cl = document.getElementById('finder-count');
+  if(cl) cl.textContent = list.length;
+}
+
+function runFinderSearch(){
+  var rs=document.getElementById('finder-results-section');
+  if(rs) rs.style.display='block';
+  renderFinder();
+  setTimeout(function(){rs && rs.scrollIntoView({behavior:'smooth',block:'start'});},50);
+}
+</script>
+
+<div id="lightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;background:#fff;z-index:9999;align-items:center;justify-content:center;padding:48px;cursor:zoom-out">
+  <img id="lightbox-img" src="" alt="" style="max-width:100%;max-height:100%;object-fit:contain;border-radius:8px">
+  <button id="lightbox-prev" onclick="lbPrev(event)" aria-label="Previous image" style="display:none;position:absolute;left:24px;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:1px solid #e5e7eb;background:#fff;color:#111;font-size:28px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center">‹</button>
+  <button id="lightbox-next" onclick="lbNext(event)" aria-label="Next image" style="display:none;position:absolute;right:24px;top:50%;transform:translateY(-50%);width:56px;height:56px;border-radius:50%;border:1px solid #e5e7eb;background:#fff;color:#111;font-size:28px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.08);display:flex;align-items:center;justify-content:center">›</button>
+  <div id="lightbox-counter" style="display:none;position:absolute;bottom:24px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.7);color:#fff;padding:6px 14px;border-radius:16px;font-size:13px;font-family:system-ui,sans-serif">1 / 1</div>
+  <div onclick="event.stopPropagation();closeLightbox()" aria-label="Close" style="position:absolute;top:18px;right:24px;color:#111;font-size:26px;font-weight:300;cursor:pointer;line-height:1;width:40px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#f3f4f6;border:1px solid #e5e7eb">×</div>
+</div>
+<!-- ════════════════════════════════════════════════════════════════
+     ROBOT CONCIERGE — live integration for myrobot.shop
+     Paste this whole block just before </body> in index.html.
+     It builds its robot digest from the page's own ROBOTS array,
+     opens real robot pages via openProfile(), and adds an "Ask AI" nav option.
+     ════════════════════════════════════════════════════════════════ -->
+<div id="rc-root">
+<style>
+  #rc-root{--rc-bg:#0f1115;--rc-panel:#171a21;--rc-line:#272b35;--rc-txt:#e6e8ec;--rc-mut:#8b909c;--rc-acc:#3b82f6;--rc-acc2:#60a5fa;--rc-user:#1e2530;font-family:ui-sans-serif,system-ui,-apple-system,sans-serif}
+  #rc-root *{box-sizing:border-box}
+  /* Friendly mascot launcher — round robot avatar that floats */
+  #rc-launch{position:fixed;bottom:24px;right:24px;z-index:99998;width:72px;height:72px;border-radius:50%;cursor:pointer;background:#fff;border:3px solid var(--rc-acc);box-shadow:0 6px 24px rgba(59,130,246,.4);transition:transform .2s,box-shadow .2s;animation:rc-bob 3s ease-in-out infinite;padding:0;overflow:visible;display:block}
+  #rc-launch:hover{transform:scale(1.1) translateY(-4px);box-shadow:0 10px 32px rgba(59,130,246,.5);animation:none}
+  #rc-launch img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block}
+  #rc-launch .rc-pulse{position:absolute;inset:-6px;border-radius:50%;border:3px solid rgba(59,130,246,.3);animation:rc-ping 2s cubic-bezier(0,0,.2,1) infinite;pointer-events:none}
+  #rc-launch .rc-badge{position:absolute;top:-4px;right:-4px;background:var(--rc-acc);color:#fff;border-radius:10px;padding:2px 7px;font-size:9px;font-weight:800;letter-spacing:.5px;box-shadow:0 2px 6px rgba(59,130,246,.5)}
+  #rc-launch .rc-tip{position:absolute;right:84px;top:50%;transform:translateY(-50%);background:#22c55e;color:#fff;font-size:12px;font-weight:700;padding:6px 11px;border-radius:14px;white-space:nowrap;box-shadow:0 3px 12px rgba(34,197,94,.4);opacity:0;animation:rc-tip-in .4s ease .8s forwards;pointer-events:none}
+  #rc-launch .rc-tip::after{content:'';position:absolute;right:-5px;top:50%;transform:translateY(-50%);border-left:6px solid #22c55e;border-top:5px solid transparent;border-bottom:5px solid transparent}
+  #rc-launch.rc-hide{display:none}
+  @keyframes rc-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  @keyframes rc-ping{0%{transform:scale(1);opacity:.7}75%,100%{transform:scale(1.5);opacity:0}}
+  @keyframes rc-tip-in{from{opacity:0;transform:translateY(-50%) translateX(6px)}to{opacity:1;transform:translateY(-50%) translateX(0)}}
+  #rc-panel{position:fixed;bottom:22px;right:22px;z-index:99999;width:420px;max-width:calc(100vw - 28px);height:640px;max-height:calc(100vh - 44px);background:var(--rc-bg);border:1px solid var(--rc-line);border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,.5);display:none;flex-direction:column;overflow:hidden}
+  #rc-panel.rc-open{display:flex}
+  #rc-panel.rc-fullpage{position:relative;bottom:auto;right:auto;width:100%;max-width:860px;height:78vh;margin:0 auto;display:flex}
+  .rc-head{display:flex;align-items:center;gap:11px;padding:15px 16px;border-bottom:1px solid var(--rc-line);background:linear-gradient(180deg,var(--rc-panel),var(--rc-bg))}
+  .rc-avatar{width:38px;height:38px;border-radius:11px;background:#fff;border:1px solid var(--rc-line);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative}
+  .rc-avatar svg{width:22px;height:22px;color:#fff}
+  .rc-avatar::after{content:'';position:absolute;bottom:-1px;right:-1px;width:11px;height:11px;border-radius:50%;background:#22c55e;border:2px solid var(--rc-bg)}
+  .rc-head-txt{flex:1;min-width:0}
+  .rc-head-name{font-size:14px;font-weight:700;color:var(--rc-txt);letter-spacing:-.01em}
+  .rc-head-sub{font-size:11px;color:var(--rc-mut);margin-top:1px}
+  .rc-head-btn{background:none;border:none;color:var(--rc-mut);cursor:pointer;padding:6px;border-radius:7px;display:flex}
+  .rc-head-btn:hover{background:var(--rc-panel);color:var(--rc-txt)}.rc-head-btn svg{width:17px;height:17px}
+  .rc-msgs{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:14px;scroll-behavior:smooth}
+  .rc-msgs::-webkit-scrollbar{width:7px}.rc-msgs::-webkit-scrollbar-thumb{background:var(--rc-line);border-radius:4px}
+  .rc-msg{display:flex;gap:9px;max-width:100%;animation:rc-in .25s ease}
+  @keyframes rc-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .rc-msg-ai .rc-bubble{background:var(--rc-panel);border:1px solid var(--rc-line);color:var(--rc-txt)}
+  .rc-msg-user{flex-direction:row-reverse}
+  .rc-msg-user .rc-bubble{background:var(--rc-user);color:var(--rc-txt);border:1px solid var(--rc-line)}
+  .rc-mini-av{width:26px;height:26px;border-radius:8px;flex-shrink:0;background:#fff;border:1px solid var(--rc-line);overflow:hidden;display:flex;align-items:center;justify-content:center}
+  .rc-mini-av img{width:100%;height:100%;object-fit:cover}
+  .rc-mini-av svg{width:15px;height:15px;color:#fff}
+  .rc-bubble{padding:11px 13px;border-radius:13px;font-size:13.5px;line-height:1.55;word-wrap:break-word;overflow-wrap:break-word}
+  .rc-bubble p{margin:0 0 8px}.rc-bubble p:last-child{margin:0}.rc-bubble strong{font-weight:650;color:#fff}
+  .rc-bubble ul{margin:6px 0;padding-left:18px}.rc-bubble li{margin:3px 0}
+  .rc-bubble a{color:var(--rc-acc2);text-decoration:none}.rc-bubble a:hover{text-decoration:underline}
+  .rc-robots{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+  .rc-rcard{display:flex;align-items:center;gap:11px;background:var(--rc-bg);border:1px solid var(--rc-line);border-radius:11px;padding:9px 11px;cursor:pointer;transition:border-color .15s,transform .1s;text-decoration:none}
+  .rc-rcard:hover{border-color:var(--rc-acc);transform:translateX(2px)}
+  .rc-rcard-img{width:46px;height:46px;border-radius:8px;object-fit:contain;background:#fff;flex-shrink:0}
+  .rc-rcard-img.rc-ph{display:flex;align-items:center;justify-content:center;font-size:22px}
+  .rc-rcard-body{flex:1;min-width:0}
+  .rc-rcard-brand{font-size:10.5px;color:var(--rc-mut);text-transform:uppercase;letter-spacing:.04em}
+  .rc-rcard-name{font-size:13px;font-weight:650;color:var(--rc-txt);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .rc-rcard-meta{font-size:11px;color:var(--rc-mut);margin-top:1px}
+  .rc-rcard-score{font-size:11px;font-weight:700;color:#fff;background:var(--rc-acc);border-radius:5px;padding:2px 6px;flex-shrink:0}
+  .rc-typing{display:flex;gap:4px;padding:13px}
+  .rc-typing span{width:7px;height:7px;border-radius:50%;background:var(--rc-mut);animation:rc-bounce 1.3s infinite}
+  .rc-typing span:nth-child(2){animation-delay:.2s}.rc-typing span:nth-child(3){animation-delay:.4s}
+  @keyframes rc-bounce{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-5px);opacity:1}}
+  .rc-suggest{display:flex;flex-wrap:wrap;gap:7px;margin-top:11px}
+  .rc-chip{background:var(--rc-panel);border:1px solid var(--rc-line);color:var(--rc-acc2);font-size:12px;padding:7px 11px;border-radius:9px;cursor:pointer;transition:all .15s}
+  .rc-chip:hover{border-color:var(--rc-acc);background:var(--rc-user)}
+  .rc-input-wrap{padding:12px 14px;border-top:1px solid var(--rc-line);background:var(--rc-panel)}
+  .rc-input-row{display:flex;gap:9px;align-items:flex-end;background:var(--rc-bg);border:1px solid var(--rc-line);border-radius:12px;padding:7px 8px 7px 13px;transition:border-color .15s}
+  .rc-input-row:focus-within{border-color:var(--rc-acc)}
+  .rc-input{flex:1;background:none;border:none;color:var(--rc-txt);font-size:13.5px;font-family:inherit;resize:none;outline:none;max-height:110px;line-height:1.5;padding:5px 0}
+  .rc-input::placeholder{color:var(--rc-mut)}
+  .rc-send{background:var(--rc-acc);border:none;border-radius:9px;width:34px;height:34px;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .15s}
+  .rc-send:hover{background:var(--rc-acc2)}.rc-send:disabled{opacity:.4;cursor:default}.rc-send svg{width:17px;height:17px;color:#fff}
+  .rc-foot{font-size:10.5px;color:var(--rc-mut);text-align:center;margin-top:8px}
+  @media(max-width:480px){#rc-panel{width:100vw;height:100vh;max-height:100vh;bottom:0;right:0;border-radius:0}}
+</style>
+
+<button id="rc-launch" onclick="rcToggle(true)" title="Ask Tobo · Robot Expert" aria-label="Ask Tobo">
+  <span class="rc-pulse"></span>
+  <span class="rc-badge">AI</span>
+  <span class="rc-tip">Ask me!</span>
+  <img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt="Tobo">
+</button>
+
+<div id="rc-panel">
+  <div class="rc-head">
+    <div class="rc-avatar"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt="" style="width:100%;height:100%;border-radius:11px;object-fit:cover"></div>
+    <div class="rc-head-txt">
+      <div class="rc-head-name" id="rc-name">Tobo · Robot Expert</div>
+      <div class="rc-head-sub">Knows every robot in the database</div>
+    </div>
+    <button class="rc-head-btn" onclick="rcReset()" title="New chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8m0-5v5h5"/></svg></button>
+    <button class="rc-head-btn rc-close-btn" onclick="rcToggle(false)" title="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="rc-msgs" id="rc-msgs"></div>
+  <div class="rc-input-wrap">
+    <div class="rc-input-row">
+      <textarea class="rc-input" id="rc-input" rows="1" placeholder="Recommend a robot, compare two, or ask anything…" oninput="rcGrow(this)" onkeydown="rcKey(event)"></textarea>
+      <button class="rc-send" id="rc-send" onclick="rcSend()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="rc-foot">AI can make mistakes · verify specs on the robot's page</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  let history=[], busy=false;
+
+  // Build the AI digest LIVE from the page's own ROBOTS array (no baked-in copy → always current)
+  function buildDigest(){
+    const R = (window.ROBOTS && window.ROBOTS.length) ? window.ROBOTS : [];
+    return R.map(function(r){
+      var m=[];
+      if(r.year)m.push(r.year);
+      if(r.price&&r.price>0)m.push('$'+r.price); else if(r.price_band)m.push(r.price_band);
+      if(r.height_mm)m.push(r.height_mm+'mm');
+      if(r.weight_kg)m.push(r.weight_kg+'kg');
+      if(r.payload_kg)m.push(r.payload_kg+'kg-payload');
+      if(r.dof)m.push(r.dof+'DoF');
+      if(r.speed_ms)m.push(r.speed_ms+'m/s');
+      if(r.status)m.push(r.status);
+      if(r.origin||r.made_in)m.push(r.origin||r.made_in);
+      if(r.score)m.push('score:'+r.score);
+      return r.id+'|'+r.name+'|'+r.brand+'|'+r.cat+(m.length?' ['+m.join(', ')+']':'')+(r.use_cases&&r.use_cases.length?' — uses: '+r.use_cases.slice(0,3).join('; '):'');
+    }).join('\n');
+  }
+
+  function systemPrompt(){
+    var R=(window.ROBOTS||[]); var cats=[...new Set(R.map(function(r){return r.cat;}))].sort();
+    var brands=[...new Set(R.map(function(r){return r.brand;}))];
+    return "You are Tobo, the friendly robot expert for myrobot.shop, the world's most complete robot database ("+R.length+" robots, "+brands.length+" brands, "+cats.length+" categories). You are knowledgeable, precise, and genuinely helpful — like a seasoned robotics analyst who knows every machine in the catalog.\n\n"+
+    "YOUR JOB (all of these):\n1. RECOMMEND robots based on need, budget, use case, environment.\n2. ANSWER questions about any specific robot — specs, capabilities.\n3. COMPARE robots head-to-head.\n4. EXPLAIN robotics concepts plainly.\n\n"+
+    "CATEGORIES: "+cats.join(', ')+".\n\n"+
+    "HOW TO USE DATA:\n- Below is a digest of EVERY robot (one per line): id|name|brand|category [specs] — uses.\n- Reason across the whole digest to shortlist and recommend.\n- When you reference specific robots, cite them with this EXACT format: [[robot:EXACT-ID]] — copy the id verbatim from the digest (the part before the first | on that robot's line). Example: [[robot:pudu-bellabot-2020]].\n- NEVER write markdown links like [Name](url) for robots. NEVER link to myrobot.shop. ONLY use the [[robot:id]] tag — the site turns it into a clickable card automatically.\n- Put the [[robot:id]] tag on its own line right after you mention that robot. Don't repeat the specs in text; the card shows them.\n- Don't invent specs not shown; for deep detail, point the user to the robot's page.\n\n"+
+    "STYLE:\n- Concise, scannable. Lead with the answer. Short paragraphs, tight bullets.\n- When recommending, give 2-5 options each with a one-line reason and a [[robot:id]] tag.\n- Never fabricate robots, specs, or prices. If unsure, say so. Be warm but expert; no filler, no 'as an AI'.\n\n"+
+    "ROBOT DIGEST ("+R.length+" robots):\n"+buildDigest();
+  }
+
+  var $=function(id){return document.getElementById(id);};
+  var msgsEl=function(){return $('rc-msgs');};
+
+  window.rcToggle=function(open){
+    $('rc-panel').classList.toggle('rc-open',open);
+    $('rc-launch').classList.toggle('rc-hide',open);
+    if(open&&history.length===0)greet();
+    if(open)setTimeout(function(){$('rc-input').focus();},100);
+  };
+  window.rcReset=function(){history=[];msgsEl().innerHTML='';greet();};
+
+  function greet(){
+    var n=(window.ROBOTS||[]).length||'all the';
+    addAI("Hi — I'm Tobo, your robot expert. I know every one of the "+(typeof n==='number'?n.toLocaleString():n)+" robots in the database. I can recommend the right machine for your needs, compare options, or dig into any robot's details.\n\nWhat are you looking for?");
+    addSuggestions(['Best humanoid under $20k','Warehouse picking robots','Compare Unitree G1 vs H1','Newest robots in 2026','Robot vacuum recommendations']);
+  }
+
+  window.rcGrow=function(el){el.style.height='auto';el.style.height=Math.min(el.scrollHeight,110)+'px';};
+  window.rcKey=function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();rcSend();}};
+
+  function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+  function renderContent(text){
+    var ids=[];
+    var body=text.replace(/\[\[robot:([a-z0-9\-_]+)\]\]/gi,function(m,id){ids.push(id);return '';});
+    // The AI sometimes emits markdown links to robots instead of [[robot:id]] tags.
+    // Catch a run of myrobot.shop links (brand/name/meta/score) and turn the NAME into a card.
+    // Strategy: find groups of consecutive [text](myrobot.shop...) lines; use the text that
+    // best matches a real robot to create a card, drop the rest.
+    body=body.replace(/(?:\[[^\]]+\]\((?:https?:\/\/)?(?:www\.)?myrobot\.shop[^)]*\)\s*){2,}/gi,function(block){
+      // pull all the link texts
+      var texts=[]; block.replace(/\[([^\]]+)\]\(/g,function(m,t){texts.push(t);return m;});
+      // try each text as a robot lookup; first match becomes the card
+      for(var i=0;i<texts.length;i++){
+        var r=robotById(texts[i]);
+        if(r){ ids.push(r.id); return ''; }
+      }
+      return ''; // no match → just remove the junk links
+    });
+    // Strip any remaining single myrobot.shop markdown links (keep link text only)
+    body=body.replace(/\[([^\]]+)\]\((?:https?:\/\/)?(?:www\.)?myrobot\.shop[^)]*\)/gi,'$1');
+    body=esc(body).replace(/\*\*(.+?)\*\*/g,'<strong>$1</strong>')
+      .replace(/\[([^\]]+)\]\((https?:[^)]+)\)/g,'<a href="$2" target="_blank">$1</a>')
+      .replace(/^[-•]\s+(.+)$/gm,'<li>$1</li>')
+      .replace(/(<li>[\s\S]*<\/li>)/,function(m){return '<ul>'+m.replace(/\n/g,'')+'</ul>';})
+      .split(/\n\n+/).map(function(p){return p.indexOf('<ul>')>=0?p:'<p>'+p.replace(/\n/g,'<br>')+'</p>';}).join('');
+    return {body:body, ids:[...new Set(ids)]};
+  }
+
+  function robotById(id){
+    var R=window.ROBOTS||[];
+    if(!R.length) return null;
+    var want=String(id||'').toLowerCase().trim();
+    // 1. exact id
+    var hit=R.find(function(x){return x.id===id;});
+    if(hit) return hit;
+    // 2. case-insensitive id
+    hit=R.find(function(x){return String(x.id).toLowerCase()===want;});
+    if(hit) return hit;
+    // 3. id starts-with / contains (AI sometimes drops the year suffix, e.g. "pudu-bellabot")
+    hit=R.find(function(x){var xi=String(x.id).toLowerCase();return xi.indexOf(want)===0||want.indexOf(xi)===0;});
+    if(hit) return hit;
+    // 4. match by slugified name (AI may pass "bellabot" or "pudu-bellabot")
+    var slug=want.replace(/[^a-z0-9]+/g,'');
+    hit=R.find(function(x){
+      var ns=String(x.name).toLowerCase().replace(/[^a-z0-9]+/g,'');
+      var bs=String(x.brand).toLowerCase().replace(/[^a-z0-9]+/g,'');
+      return ns===slug || (bs+ns).indexOf(slug)>=0 || slug.indexOf(ns)>=0 && ns.length>3;
+    });
+    return hit||null;
+  }
+
+  function robotCardHTML(id){
+    var r=robotById(id); if(!r) return '';
+    var meta=[];
+    if(r.price&&r.price>0)meta.push('$'+r.price.toLocaleString()); else if(r.price_band)meta.push(r.price_band);
+    if(r.year)meta.push(r.year);
+    if(r.height_mm)meta.push((r.height_mm/10).toFixed(0)+'cm');
+    var img=r.img||null;
+    var imgHTML=img?'<img class="rc-rcard-img" src="'+esc(img)+'" alt="" onerror="this.outerHTML=\'<div class=&quot;rc-rcard-img rc-ph&quot;>🤖</div>\'">':'<div class="rc-rcard-img rc-ph">🤖</div>';
+    return '<a class="rc-rcard" href="#" onclick="rcOpenRobot(\''+id+'\');return false;">'+imgHTML+
+      '<div class="rc-rcard-body"><div class="rc-rcard-brand">'+esc(r.brand)+'</div><div class="rc-rcard-name">'+esc(r.name)+'</div><div class="rc-rcard-meta">'+esc(r.cat)+(meta.length?' · '+meta.join(' · '):'')+'</div></div>'+
+      (r.score?'<span class="rc-rcard-score">'+r.score+'</span>':'')+'</a>';
+  }
+
+  // Open a robot using the SITE's own function
+  window.rcOpenRobot=function(id){
+    if(typeof window.openProfile==='function'){ window.openProfile(id); rcToggle(false); }
+    else if(typeof window.goPage==='function'){ window.goPage('profile',{id:id}); rcToggle(false); }
+    else { window.location.hash='robot-'+id; }
+  };
+
+  function addAI(text){
+    var rc=renderContent(text);
+    var cards=rc.ids.length?'<div class="rc-robots">'+rc.ids.map(robotCardHTML).join('')+'</div>':'';
+    var el=document.createElement('div'); el.className='rc-msg rc-msg-ai';
+    el.innerHTML='<div class="rc-mini-av"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt=""></div><div class="rc-bubble">'+rc.body+cards+'</div>';
+    msgsEl().appendChild(el); scrollDown();
+  }
+  function addUser(text){var el=document.createElement('div');el.className='rc-msg rc-msg-user';el.innerHTML='<div class="rc-bubble">'+esc(text)+'</div>';msgsEl().appendChild(el);scrollDown();}
+  function addSuggestions(arr){var el=document.createElement('div');el.className='rc-suggest';el.innerHTML=arr.map(function(s){return '<button class="rc-chip" onclick="rcAsk('+JSON.stringify(s).replace(/"/g,'&quot;')+')">'+esc(s)+'</button>';}).join('');msgsEl().appendChild(el);scrollDown();}
+  function typing(on){var t=$('rc-typing-el');if(on&&!t){var el=document.createElement('div');el.className='rc-msg rc-msg-ai';el.id='rc-typing-el';el.innerHTML='<div class="rc-mini-av"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt=""></div><div class="rc-bubble"><div class="rc-typing"><span></span><span></span><span></span></div></div>';msgsEl().appendChild(el);scrollDown();}else if(!on&&t){t.remove();}}
+  function scrollDown(){var m=msgsEl();m.scrollTop=m.scrollHeight;}
+  window.rcAsk=function(q){$('rc-input').value=q;rcSend();};
+
+  window.rcSend=async function(){
+    var inp=$('rc-input'); var text=inp.value.trim(); if(!text||busy)return;
+    inp.value='';rcGrow(inp);
+    document.querySelectorAll('.rc-suggest').forEach(function(e){e.remove();});
+    addUser(text); history.push({role:'user',content:text});
+    busy=true;$('rc-send').disabled=true;typing(true);
+    try{
+      var resp=await fetch('/api/chat',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1024,system:systemPrompt(),messages:history.slice(-10)})
+      });
+      var data=await resp.json();
+      if(data.error){ throw new Error(data.error.message||data.error); }
+      var reply=(data.content||[]).filter(function(b){return b.type==='text';}).map(function(b){return b.text;}).join('\n').trim()||"Sorry — I couldn't generate a response. Try rephrasing?";
+      typing(false);addAI(reply);history.push({role:'assistant',content:reply});
+    }catch(err){typing(false);addAI("I hit a connection problem. Please try again in a moment.");console.error('Concierge error:',err);}
+    finally{busy=false;$('rc-send').disabled=false;$('rc-input').focus();}
+  };
+
+  // ── Full-page mode: when the site navigates to the AI page, mount the panel inline ──
+  window.rcMountFullpage=function(){
+    var mount=document.getElementById('rc-fullpage-mount'); if(!mount)return;
+    var panel=$('rc-panel');
+    panel.classList.add('rc-fullpage','rc-open');
+    var cb=panel.querySelector('.rc-close-btn'); if(cb){ cb.style.display=''; cb.setAttribute('onclick',"goPage('home')"); cb.title='Close'; }
+    mount.appendChild(panel);
+    $('rc-launch').classList.add('rc-hide');
+    if(history.length===0)greet();
+  };
+  window.rcUnmountFullpage=function(){
+    var panel=$('rc-panel'); if(!panel.classList.contains('rc-fullpage'))return;
+    panel.classList.remove('rc-fullpage','rc-open');
+    var cb=panel.querySelector('.rc-close-btn'); if(cb)cb.style.display='';
+    document.getElementById('rc-root').appendChild(panel);
+    $('rc-launch').classList.remove('rc-hide');
+  };
+})();
+</script>
+</div>
+
+
+<!-- ===== Netlify Identity (accounts for reviews) ===== -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+(function(){
+  function authBtn(){ return document.getElementById('nav-auth-btn'); }
+  function refreshAuthBtn(){
+    var b=authBtn(); if(!b||!window.netlifyIdentity) return;
+    var u=netlifyIdentity.currentUser();
+    if(u){
+      var nm=(u.user_metadata&&u.user_metadata.full_name)||(u.email?u.email.split('@')[0]:'Account');
+      b.textContent=nm;
+    } else { b.textContent='Sign in'; }
+  }
+  window.authButtonClick=function(){
+    if(window.netlifyIdentity) netlifyIdentity.open();
+  };
+  if(window.netlifyIdentity){
+    netlifyIdentity.on('init', refreshAuthBtn);
+    netlifyIdentity.on('login', function(){ refreshAuthBtn(); netlifyIdentity.close(); });
+    netlifyIdentity.on('logout', refreshAuthBtn);
+    netlifyIdentity.init();
+  }
+
+  // lightweight client-side profanity pre-check (server function is authoritative)
+  var WORDS=/\b(fuck|shit|bitch|bastard|asshole|arsehole|ass|dick|piss|prick|wank|wanker|bollocks?|cock|pussy|slut|whore|jackass|dipshit|bullshit|motherfucker|twat|knob|tit|tits|nigger|nigga|faggot|fag|retard|spic|chink|kike|cunt|anal|cum|damn|hell|crap|arse|bugger|bloody)\b/i;
+  var TIGHT=['fuck','shit','bitch','asshole','arsehole','motherfucker','nigger','faggot','pussy','bullshit'];
+  function norm(s){return String(s||'').toLowerCase()
+    .replace(/[0@]/g,'o').replace(/[1!]/g,'i').replace(/3/g,'e').replace(/4/g,'a').replace(/5/g,'s').replace(/7/g,'t')
+    .replace(/(.)\1+/g,'$1');}
+  function looksProfane(s){
+    var n=norm(s);
+    if(WORDS.test(n)) return true;
+    var toks=n.split(/\s+/);
+    for(var i=0;i<toks.length;i++){
+      var t=toks[i].replace(/[^a-z]/g,''); if(t.length<3) continue;
+      for(var j=0;j<TIGHT.length;j++) if(t.indexOf(TIGHT[j])>=0) return true;
+    }
+    return false;
+  }
+
+  window.submitReview=async function(){
+    var u=window.netlifyIdentity&&netlifyIdentity.currentUser();
+    if(!u){ alert('Please sign in to post a review.'); if(window.netlifyIdentity) netlifyIdentity.open(); return; }
+    var sel=document.getElementById('review-robot-select');
+    var robot_id=sel?sel.value:'';
+    var robot_name=(sel&&sel.selectedIndex>0)?sel.options[sel.selectedIndex].textContent:'';
+    var rating=document.querySelectorAll('#stars-select .star-btn.active').length;
+    var name=(document.getElementById('review-name')||{}).value||'';
+    var role=(document.getElementById('review-role')||{}).value||'';
+    var text=(document.getElementById('review-text')||{}).value||'';
+    if(!robot_id){ alert('Please choose a robot.'); return; }
+    if(!(rating>=1&&rating<=5)){ alert('Please pick a star rating.'); return; }
+    if(text.trim().length<10){ alert('Please write at least a sentence (10+ characters).'); return; }
+    if(looksProfane(text)||looksProfane(name)||looksProfane(role)){ alert('Please remove inappropriate language before submitting.'); return; }
+    var btn=document.querySelector('#page-submit-review .submit-btn');
+    var orig=btn?btn.textContent:''; if(btn){ btn.disabled=true; btn.textContent='Submitting...'; }
+    try{
+      var token=await u.jwt();
+      var res=await fetch('/.netlify/functions/submit-review',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},
+        body:JSON.stringify({robot_id:robot_id,robot_name:robot_name,rating:rating,name:name,role:role,text:text})
+      });
+      var data={}; try{ data=await res.json(); }catch(e){}
+      if(res.ok){
+        alert(data.message||'Thanks! Your review is pending moderation.');
+        ['review-name','review-role','review-text'].forEach(function(id){var el=document.getElementById(id);if(el)el.value='';});
+        if(typeof setStars==='function') setStars(0);
+        if(sel) sel.selectedIndex=0;
+      } else {
+        alert(data.error||'Could not submit your review. Please try again.');
+      }
+    }catch(e){
+      alert('Network error - please try again.');
+    } finally {
+      if(btn){ btn.disabled=false; btn.textContent=orig; }
+    }
+  };
+})();
+</script>
+
+<!-- ===== On-site news reader ===== -->
+<div id="news-modal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.55);padding:20px;overflow:auto" onclick="if(event.target===this)closeNewsItem()">
+  <div style="max-width:720px;margin:40px auto;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.3)">
+    <img id="news-modal-img" alt="" style="width:100%;max-height:430px;object-fit:contain;display:none;background:#f0f1f3"><div id="news-modal-imgph" style="height:180px;background:var(--bg3);display:none;align-items:center;justify-content:center"></div>
+    <div style="padding:24px 26px">
+      <div id="news-modal-cat" style="font-size:11px;font-weight:700;letter-spacing:.5px;color:var(--acc);margin-bottom:8px"></div>
+      <div id="news-modal-title" style="font-size:22px;font-weight:800;line-height:1.25;margin-bottom:8px;color:var(--txt)"></div>
+      <div id="news-modal-meta" style="font-size:12px;color:var(--mut);margin-bottom:16px"></div>
+      <div id="news-modal-summary" style="font-size:15px;line-height:1.7;color:var(--txt);margin-bottom:22px"></div>
+      <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+        <a id="news-modal-link" href="#" target="_blank" rel="noopener" style="display:inline-block;background:var(--acc);color:#fff;padding:10px 18px;border-radius:8px;font-weight:700;font-size:13px;text-decoration:none">Read full story →</a>
+        <button onclick="closeNewsItem()" style="background:var(--bg3);border:1px solid var(--bdr);color:var(--txt);padding:10px 16px;border-radius:8px;font-size:13px;cursor:pointer">Close</button>
+      </div>
+      <div style="margin-top:13px"><a href="https://google.com/preferences/source?q=myrobot.shop" target="_blank" rel="noopener" title="Add myrobot.shop as a preferred source on Google" style="display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--bdr2);border-radius:8px;padding:8px 13px;font-size:12px;color:var(--mut);text-decoration:none;font-weight:600;line-height:1"><svg width="15" height="15" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>Add <span style="color:var(--txt);margin:0 3px">myrobot.shop</span> as a preferred source on Google</a></div>
+      <div id="news-modal-related"></div>
+    </div>
+  </div>
+</div>
+<script>
+function openNewsItem(i){
+  var it=(window.NEWS_ITEMS||[])[i]; if(!it) return;
+  var img=document.getElementById('news-modal-img');
+  var imgph=document.getElementById('news-modal-imgph');
+  if(it.image){ img.src=it.image; img.style.display='block'; if(imgph){imgph.style.display='none';} }
+  else { img.removeAttribute('src'); img.style.display='none'; if(imgph){imgph.style.display='flex'; imgph.innerHTML='<div style="font-family:\'Space Mono\',monospace;font-size:26px;font-weight:800;color:var(--bdr2);text-align:center;padding:0 24px;line-height:1.2;word-break:break-word">'+String(it.source||'NEWS').toUpperCase()+'</div>';} }
+  document.getElementById('news-modal-cat').textContent=String(it.source||'').toUpperCase();
+  document.getElementById('news-modal-title').textContent=it.title||'';
+  var d=it.published?new Date(it.published):null;
+  var ds=(d&&!isNaN(d))?d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'}):'';
+  document.getElementById('news-modal-meta').textContent=ds+(it.source?(ds?' · ':'')+it.source:'');
+  document.getElementById('news-modal-summary').textContent=it.summary||'';
+  var link=document.getElementById('news-modal-link');
+  if(it.url){ link.href=it.url; link.style.display=''; link.textContent='Read full story at '+(it.source||'source')+' →'; }
+  else { link.style.display='none'; }
+  (function(){
+    var rel=document.getElementById('news-modal-related'); if(!rel) return;
+    function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+    var all=window.NEWS_ITEMS||[]; var others=[];
+    for(var k=0;k<all.length&&others.length<4;k++){ if(k!==i) others.push({it:all[k],idx:k}); }
+    if(!others.length){ rel.innerHTML=''; }
+    else {
+      rel.innerHTML='<div class="nm-related"><div class="nm-related-h">MORE ROBOTICS NEWS</div>'+others.map(function(o){
+        var th=o.it.image?('background-image:url(\''+String(o.it.image).replace(/'/g,"%27")+'\')'):'';
+        return '<div class="nm-rel-item" onclick="openNewsItem('+o.idx+')"><div class="nm-rel-thumb" style="'+th+'"></div><div><div class="nm-rel-src">'+e(o.it.source||'')+'</div><div class="nm-rel-tt">'+e(o.it.title||'')+'</div></div></div>';
+      }).join('')+'</div>';
+    }
+  })();
+  document.getElementById('news-modal').style.display='block';
+  document.body.style.overflow='hidden';
+}
+function closeNewsItem(){ var m=document.getElementById('news-modal'); if(m) m.style.display='none'; document.body.style.overflow=''; }
+document.addEventListener('keydown',function(e){ if(e.key==='Escape') closeNewsItem(); });
+
+</script>
+</body>
+</html>
