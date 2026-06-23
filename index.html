@@ -774,7 +774,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 /* ---- profile tabs + prices/pictures/videos ---- */
 .ptabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}
-.ptab{font-size:13px;font-weight:700;color:var(--acc);padding:9px 16px;cursor:pointer;border:1.5px solid var(--acc);background:#fff;font-family:inherit;border-radius:9px}
+.ptab{flex:1 1 auto;text-align:center;font-size:13px;font-weight:700;color:var(--acc);padding:9px 16px;cursor:pointer;border:1.5px solid var(--acc);background:#fff;font-family:inherit;border-radius:9px}
 .ptab:hover{background:#eff5ff}
 .ptab.on{color:#fff;background:var(--acc);box-shadow:0 2px 8px rgba(0,102,255,.22)}
 .ppanel{display:none}.ppanel.on{display:block;margin-top:22px}
@@ -811,7 +811,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .rail-layout{display:grid;grid-template-columns:300px 1fr;gap:24px;align-items:start}
 .rail-layout .rail{display:flex;flex-direction:column;gap:16px;padding-top:24px}
 .rail-layout .main-col{min-width:0}
-.robot-band{display:grid;grid-template-columns:300px 1fr;background:linear-gradient(120deg,#0050d8,#0066ff 60%,#2b82ff);border-radius:16px 16px 0 0;overflow:hidden;color:#fff}
+.band-wrap{background:linear-gradient(125deg,#1560e3 0%,#0a50da 45%,#063fae 100%);border-radius:16px;overflow:hidden;margin-bottom:16px}
+.robot-band{display:grid;grid-template-columns:300px 1fr;background:transparent;overflow:hidden;color:#fff}
 .robot-band .band-img{position:relative;background:rgba(255,255,255,.10);min-height:300px;display:flex;align-items:center;justify-content:center;cursor:zoom-in;padding:18px}
 .robot-band .band-img img{max-width:100%;max-height:280px;object-fit:contain}
 .band-info{padding:26px 28px;display:flex;flex-direction:column;gap:9px}
@@ -821,13 +822,13 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .band-brand{font-size:14px;opacity:.93;font-weight:600}
 .band-desc{font-size:13.5px;line-height:1.6;opacity:.96;margin-top:2px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
 .band-trending{margin-top:4px}
-.band-tiles{display:grid;grid-template-columns:repeat(5,1fr);background:linear-gradient(110deg,#1c63e0 0%,#0c4ac4 50%,#06379e 100%);border-radius:0 0 16px 16px;overflow:hidden;margin-bottom:18px}
+.band-tiles{display:grid;grid-template-columns:repeat(5,1fr);background:transparent;border-top:1px solid rgba(255,255,255,.16);overflow:hidden}
 .band-tiles .bt{padding:16px 10px;text-align:center;color:#fff;border-right:1px solid rgba(255,255,255,.16)}
 .band-tiles .bt:last-child{border-right:none}
 .band-tiles .bt-v{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:18px;font-weight:800;line-height:1.1}
 .band-tiles .bt-u{font-size:11px;opacity:.8;margin-left:2px;font-weight:600}
 .band-tiles .bt-l{font-size:10px;letter-spacing:.6px;text-transform:uppercase;opacity:.82;margin-top:5px;font-weight:600}
-.band-thumbs{margin:-4px 0 16px}
+.band-thumbs{display:none!important}
 .rail-prices{border:1px solid var(--bdr);border-radius:12px;overflow:hidden}
 .rail-prices .rp-head{background:var(--bg2);padding:11px 14px;font-size:11px;font-weight:800;letter-spacing:.5px;color:var(--mut);border-bottom:1px solid var(--bdr)}
 .rail-prices .rp-row{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-bottom:1px solid #f0f1f3;text-decoration:none;color:var(--txt)}
@@ -1120,6 +1121,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="rail-prices" id="profile-rail-prices" style="display:none"></div>
     </div>
     <div class="main-col">
+      <div class="band-wrap">
       <div class="robot-band">
         <div class="band-img" id="profile-fig"><div class="gallery-badge" id="profile-badge">HOT</div></div>
         <div class="band-info">
@@ -1130,6 +1132,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         </div>
       </div>
       <div class="band-tiles" id="profile-quick-specs"></div>
+      </div>
       <div class="gallery-thumbs band-thumbs" id="profile-gallery-thumbs" style="display:none"></div>
       <div class="ptabs">
         <button class="ptab on" data-pp="pp-specs" onclick="pptab(this)">Specs</button>
