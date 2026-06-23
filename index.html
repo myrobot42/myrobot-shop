@@ -891,6 +891,25 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .nm-rel-src{font-size:10px;color:var(--acc);font-weight:700;text-transform:uppercase;letter-spacing:.3px;margin-bottom:2px}
 @media(max-width:600px){#news-modal{padding:10px!important}#news-modal>div{margin:10px auto!important}#news-modal-img{max-height:300px!important}#news-modal-title{font-size:19px!important}}
 </style>
+<style id="home-newsfirst-css">
+.home-shell{display:grid;grid-template-columns:minmax(330px,38%) 1fr;gap:34px;align-items:start}
+.home-finder{min-width:0;display:flex;flex-direction:column;gap:24px}
+.home-hero-h1{font-family:'Space Mono','Courier New',monospace;font-size:30px;font-weight:800;line-height:1.12;letter-spacing:-1px;margin:0 0 12px;color:var(--txt)}
+.home-hero-h1 em{color:var(--acc);font-style:normal}
+.home-hero-stats{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0;font-size:12px;color:var(--mut)}
+.home-hero-stats b{color:var(--txt);font-weight:700}
+.home-news{min-width:0}
+.hnf-card{display:block;border:1px solid var(--bdr);border-radius:12px;overflow:hidden;cursor:pointer;text-decoration:none;color:inherit;background:#fff;transition:border-color .15s}
+.hnf-card:hover{border-color:var(--acc)}
+.hnf-img{height:230px;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;background-color:var(--bg3)}
+.hnf-img-ph{display:flex;align-items:center;justify-content:center}
+.hnf-phlabel{font-family:'Space Mono','Courier New',monospace;font-size:22px;font-weight:800;color:var(--bdr2);text-align:center;padding:0 20px;line-height:1.2;word-break:break-word}
+.hnf-src{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);color:var(--acc);font-size:10px;font-weight:700;letter-spacing:.4px;padding:4px 9px;border-radius:20px;text-transform:uppercase}
+.hnf-body{padding:14px 16px}
+.hnf-title{font-size:18px;font-weight:700;line-height:1.3;color:var(--txt)}
+.hnf-meta{font-size:12px;color:var(--mut);margin-top:7px}
+@media(max-width:900px){.home-shell{grid-template-columns:1fr;gap:26px}.home-hero-h1{font-size:34px}}
+</style>
 </head>
 <body>
 <nav>
@@ -928,32 +947,52 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <!-- HOME -->
 <div id="page-home" class="page active">
   <div class="top-bar"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_60/v1777366404/output_17_t74qys.jpg" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:6px;border-radius:50%;background:#fff"> World's #1 Robot Database — <span id="home-top-count">1,600+</span> robots catalogued and growing daily</div>
-  <div class="hero">
-    <div class="hero-inner">
-      <div class="hero-left">
-        <div class="hero-tag"><div class="hero-tag-dot"></div>World's #1 Robot Database</div>
-        <h1>Find & Compare<br><em>Every Robot</em><br>Ever Built.</h1>
-        <p class="hero-sub">Specs, reviews, comparisons and news for industrial, consumer, medical and service robots — all in one place.</p>
-        <div class="search-wrap">
-          <input class="search-input" type="text" id="hero-search" placeholder="Search by robot name, brand or function..." onkeydown="if(event.key==='Enter')heroSearch()">
-          <button class="search-btn" onclick="heroSearch()">Search</button>
-        </div>
-        <div class="brand-tags" id="brand-tags-home"></div>
-      </div>
-      <div class="hero-right">
-        <div class="hero-stat"><div class="hsi" style="overflow:hidden;background:#fff"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_120/v1777366404/output_17_t74qys.jpg" alt="" style="width:100%;height:100%;object-fit:contain"></div><div><div class="hst-num" id="home-hero-count">—</div><div class="hst-lbl">Robots catalogued</div></div></div>
-        <div class="hero-stat"><div class="hsi">🏭</div><div><div class="hst-num" id="home-mfr-count">—</div><div class="hst-lbl">Manufacturers listed</div></div></div>
-        <div class="hero-stat"><div class="hsi">🤖</div><div><div class="hst-num" id="hero-robot-count">—</div><div class="hst-lbl">Categories</div></div></div>
-      </div>
-    </div>
-  </div>
+  <div class="section"><div class="mw">
+    <div class="home-shell">
 
-  <div class="section">
-    <div class="mw">
-      <div class="sec-header"><div class="sec-title">Explore Robot Categories</div><span class="sec-link" onclick="goPage('db')">View all →</span></div>
-      <div class="cat-pills" id="home-cat-pills"></div>
+      <div class="home-finder">
+        <div class="home-hero-col">
+          <div class="hero-tag"><div class="hero-tag-dot"></div>World's #1 Robot Database</div>
+          <h1 class="home-hero-h1">Find &amp; Compare<br><em>Every Robot</em><br>Ever Built.</h1>
+          <p class="hero-sub">Specs, reviews, comparisons and news for industrial, consumer, medical and service robots — all in one place.</p>
+          <div class="search-wrap">
+            <input class="search-input" type="text" id="hero-search" placeholder="Search by robot name, brand or function..." onkeydown="if(event.key==='Enter')heroSearch()">
+            <button class="search-btn" onclick="heroSearch()">Search</button>
+          </div>
+          <div class="home-hero-stats"><span><b id="home-hero-count">—</b> robots</span><span><b id="home-mfr-count">—</b> brands</span><span><b id="hero-robot-count">—</b> categories</span></div>
+          <div class="brand-tags" id="brand-tags-home"></div>
+        </div>
+
+        <div class="home-finder-sec">
+          <div class="sec-header"><div class="sec-title">Explore Categories</div><span class="sec-link" onclick="goPage('db')">All →</span></div>
+          <div class="cat-pills" id="home-cat-pills"></div>
+        </div>
+
+        <div class="home-finder-sec">
+          <div class="sec-header"><div class="sec-title">🆕 Latest Robots</div></div>
+          <div class="chart-list" id="home-latest"></div>
+        </div>
+
+        <div class="home-finder-sec">
+          <div class="sec-header"><div class="sec-title">🔥 Trending Now</div></div>
+          <div class="chart-list" id="home-trending"></div>
+        </div>
+
+        <div class="home-finder-sec">
+          <div class="sec-header"><div class="sec-title">🛒 Available Now</div></div>
+          <div class="chart-list" id="home-available"></div>
+        </div>
+      </div>
+
+      <div class="home-news">
+        <div class="sec-header"><div class="sec-title">📰 Latest Robotics News</div><span class="sec-link" onclick="goPage('news')">View all →</span></div>
+        <div class="home-news-feat" id="home-news-layout"></div>
+        <div class="news-list-items" id="home-news-list" style="margin-top:14px"></div>
+      </div>
+
     </div>
-  </div>
+  </div></div>
+
   <div class="divider"></div>
   <div class="section">
     <div class="mw">
@@ -970,25 +1009,6 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         </div>
         <button class="btn-cb" onclick="goPage('compare')">Launch Comparison Tool →</button>
       </div>
-    </div>
-  </div>
-  <div class="section">
-    <div class="mw">
-      <div class="home-cols">
-        <div class="home-col">
-          <div class="sec-header"><div class="sec-title">🔥 Trending Now</div></div>
-          <div class="chart-list" id="home-trending"></div>
-        </div>
-        <div class="home-col">
-          <div class="sec-header"><div class="sec-title">🆕 Latest Robots</div></div>
-          <div class="chart-list" id="home-latest"></div>
-        </div>
-        <div class="home-col">
-          <div class="sec-header"><div class="sec-title">🛒 Available Now</div></div>
-          <div class="chart-list" id="home-available"></div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:18px"><span class="sec-link" onclick="goPage('rankings')" style="cursor:pointer">Discover all robots →</span></div>
     </div>
   </div>
   <section style="background:linear-gradient(135deg,var(--acc-l),var(--bg2));border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)">
@@ -1579,6 +1599,42 @@ function robotBuzz(r){
   if(yr>2026) buzz-=100;
   return {buzz:buzz, d:d};
 }
+function _timeAgo(iso){
+  if(!iso) return '';
+  var d=new Date(iso); if(isNaN(d)) return '';
+  var sec=Math.floor((Date.now()-d.getTime())/1000);
+  if(sec<60) return 'just now';
+  var m=Math.floor(sec/60); if(m<60) return m+' min'+(m>1?'s':'')+' ago';
+  var h=Math.floor(m/60); if(h<24) return h+' hour'+(h>1?'s':'')+' ago';
+  var dy=Math.floor(h/24); if(dy<7) return dy+' day'+(dy>1?'s':'')+' ago';
+  return d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric'});
+}
+function renderHomeNews(){
+  var feat=document.getElementById('home-news-layout');
+  var list=document.getElementById('home-news-list');
+  if(!feat||!list) return;
+  var COLORS=['var(--acc)','var(--org)','var(--grn)','var(--purple)'];
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  feat.innerHTML='<div style="color:var(--mut);font-size:13px;padding:14px 0">Loading latest robotics news…</div>';
+  list.innerHTML='';
+  fetchNewsJson().then(function(r){return r.ok?r.json():{};}).then(function(d){
+    var items=(d&&d.items)?d.items:(Array.isArray(d)?d:[]);
+    window.NEWS_ITEMS=items;
+    if(!items.length){feat.innerHTML='<div style="color:var(--mut);font-size:13px;padding:14px 0">No news yet — the feed will populate shortly.</div>';return;}
+    var f=items[0];
+    var fImg=f.image
+      ? '<div class="hnf-img" style="background-image:url(\''+esc(f.image)+'\')"><span class="hnf-src">'+esc(f.source||'')+'</span></div>'
+      : '<div class="hnf-img hnf-img-ph"><span class="hnf-phlabel">'+esc((f.source||'NEWS').toUpperCase())+'</span><span class="hnf-src">'+esc(f.source||'')+'</span></div>';
+    feat.innerHTML='<a class="hnf-card" onclick="openNewsItem(0)">'+fImg+'<div class="hnf-body"><div class="hnf-title">'+esc(f.title)+'</div><div class="hnf-meta">'+_timeAgo(f.published)+(f.source?' · '+esc(f.source):'')+'</div></div></a>';
+    var rest=items.slice(1,13);
+    list.innerHTML=rest.map(function(it,idx){
+      var thumb=it.image
+        ? '<div class="nli-thumb" style="background-image:url(\''+esc(it.image)+'\')"></div>'
+        : '<div class="nli-thumb nli-thumb-ph"><span>'+esc((it.source||'NEWS').toUpperCase())+'</span></div>';
+      return '<a class="news-list-item" onclick="openNewsItem('+(1+idx)+')" style="display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:inherit;cursor:pointer">'+thumb+'<div style="flex:1;min-width:0"><div class="nli-cat" style="color:'+COLORS[idx%COLORS.length]+'">'+esc((it.source||'').toUpperCase())+'</div><div class="nli-title">'+esc(it.title)+'</div><div class="nli-meta">'+_timeAgo(it.published)+'</div></div></a>';
+    }).join('');
+  }).catch(function(e){console.error('home news load failed',e);feat.innerHTML='<div style="color:var(--mut);font-size:13px;padding:14px 0">News feed unavailable right now.</div>';});
+}
 function renderHome(){
   // Live counts
   const total=ROBOTS.length;
@@ -1660,6 +1716,7 @@ function renderHome(){
   var te=document.getElementById('home-trending'); if(te) te.innerHTML=trendList.map(chartRow).join('');
   var le=document.getElementById('home-latest'); if(le) le.innerHTML=latestList.map(chartRow).join('');
   var ae=document.getElementById('home-available'); if(ae) ae.innerHTML=availList.map(chartRow).join('');
+  renderHomeNews();
 }
 
 function heroSearch(){
