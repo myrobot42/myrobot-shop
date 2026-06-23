@@ -822,6 +822,10 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .band-brand{font-size:14px;opacity:.93;font-weight:600}
 .band-desc{font-size:13.5px;line-height:1.6;opacity:.96;margin-top:2px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
 .band-trending{margin-top:4px}
+.band-trending-inline{display:inline-flex;align-items:center}
+.band-readmore{display:inline-block;margin-top:7px;font-size:12.5px;font-weight:700;color:#fff;text-decoration:underline;cursor:pointer;opacity:.92}
+.band-readmore:hover{opacity:1}
+.band-desc.expanded{-webkit-line-clamp:unset;display:block;overflow:visible}
 .band-tiles{display:grid;grid-template-columns:repeat(5,1fr);background:transparent;border-top:1px solid rgba(255,255,255,.16);overflow:hidden}
 .band-tiles .bt{padding:16px 10px;text-align:center;color:#fff;border-right:1px solid rgba(255,255,255,.16)}
 .band-tiles .bt:last-child{border-right:none}
@@ -1125,10 +1129,10 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="robot-band">
         <div class="band-img" id="profile-fig"><div class="gallery-badge" id="profile-badge">HOT</div></div>
         <div class="band-info">
-          <div class="band-top"><span class="band-name" id="profile-name"></span><span class="badge badge-hot2" id="profile-year-badge"></span></div>
+          <div class="band-top"><span class="band-name" id="profile-name"></span><span class="badge badge-hot2" id="profile-year-badge"></span><span id="profile-trending-wrap" class="band-trending-inline"></span></div>
           <div class="band-brand"><span id="profile-brand"></span><span id="profile-sub-wrap" style="display:none"> &middot; <span id="profile-sub"></span></span></div>
           <div class="band-desc" id="profile-tagline"></div>
-          <div class="band-trending" id="profile-trending-wrap"></div>
+          <span class="band-readmore" id="profile-readmore" style="display:none" onclick="_toggleDesc()">Read more</span>
         </div>
       </div>
       <div class="band-tiles" id="profile-quick-specs"></div>
@@ -3471,6 +3475,7 @@ function renderRailPrices(r){
 }
 function _gotoPricesTab(){var t=document.querySelector('#page-profile .ptab[data-pp="pp-prices"]');if(t)t.click();window.scrollTo({top:0,behavior:'smooth'});}
 
+function _toggleDesc(){var d=document.getElementById('profile-tagline'),b=document.getElementById('profile-readmore');if(!d||!b)return;var e=d.classList.toggle('expanded');b.textContent=e?'Read less':'Read more';}
 function _renderProfile(id){
   const r=ROBOTS.find(x=>x.id===id);
   if(!r)return;
@@ -3529,6 +3534,7 @@ function _renderProfile(id){
   document.getElementById('profile-year-badge').style.display=r.year?'':'none';
   document.getElementById('profile-name').textContent=r.name;
   document.getElementById('profile-tagline').textContent=r.desc;
+  (function(){var d=document.getElementById('profile-tagline'),b=document.getElementById('profile-readmore');if(d&&b){d.classList.remove('expanded');b.textContent='Read more';requestAnimationFrame(function(){b.style.display=(d.scrollHeight>d.clientHeight+2)?'inline-block':'none';});}})();
   // --- Videos: top manufacturer video (r.video) + bottom review video (r.video2) ---
   (function(){
     function ytId(u){ if(!u) return ''; u=String(u).trim();
