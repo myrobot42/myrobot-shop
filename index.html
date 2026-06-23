@@ -771,6 +771,41 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .frrow-price{font-size:13px;font-weight:800}.frrow-score{font-size:22px;font-weight:900;color:var(--acc);line-height:1}
 .frrow-stars{font-size:11px;color:#f59e0b}.frrow-actions{display:flex;gap:4px;margin-top:3px}
 
+
+/* ---- profile tabs + prices/pictures/videos ---- */
+.ptabs{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 0}
+.ptab{font-size:13px;font-weight:700;color:var(--acc);padding:9px 16px;cursor:pointer;border:1.5px solid var(--acc);background:#fff;font-family:inherit;border-radius:9px}
+.ptab:hover{background:#eff5ff}
+.ptab.on{color:#fff;background:var(--acc);box-shadow:0 2px 8px rgba(0,102,255,.22)}
+.ppanel{display:none}.ppanel.on{display:block}
+.pp-empty{border:1px dashed var(--bdr);border-radius:12px;padding:26px;text-align:center;color:var(--mut);font-size:14px}
+.pb{border:1px solid var(--bdr);border-radius:14px;overflow:hidden}
+.pb-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 18px;background:var(--bg2);border-bottom:1px solid var(--bdr);flex-wrap:wrap}.pb-head h3{margin:0;font-size:15px;font-weight:800}
+.pb-cur{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--mut)}.pb-cur select{font-family:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--bdr);border-radius:7px;background:#fff}
+.pb-region{padding:4px 18px 12px}.pb-region h4{margin:14px 0 4px;font-size:12px;font-weight:800;border-bottom:1px solid var(--bdr);padding-bottom:6px}
+.pb-grid{width:100%;border-collapse:collapse;font-size:13px}.pb-grid th{font-weight:700;color:var(--mut);text-align:right;padding:6px 10px;font-size:10px;text-transform:uppercase}.pb-grid th.s{text-align:left}
+.pb-grid td{padding:8px 10px;border-top:1px solid #f0f1f3;text-align:right}
+.pb-store{display:flex;align-items:center;gap:7px;text-align:left;font-weight:600;white-space:nowrap}.pb-store .amz{color:#ff9900;font-weight:800}
+.pb-price{color:#cc0c0c;font-weight:800;cursor:pointer;white-space:nowrap;border:none;background:none;font-family:inherit;font-size:13px;padding:2px 5px;border-radius:5px}.pb-price:hover{background:#fff3e0;text-decoration:underline}
+.pb-empty{color:#cbd0d6}.pb-note{padding:11px 18px;font-size:11px;color:var(--mut);background:var(--bg2);border-top:1px solid var(--bdr);line-height:1.5}
+.pgal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pshot{aspect-ratio:1/1;background:var(--bg2);border:1px solid var(--bdr);border-radius:12px;overflow:hidden;cursor:zoom-in;display:flex;align-items:center;justify-content:center}
+.pshot img{width:100%;height:100%;object-fit:contain}
+.pvgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pvcard{border:1px solid var(--bdr);border-radius:12px;overflow:hidden;background:#000}
+.pvthumb{position:relative;aspect-ratio:16/9;background:#0a0a0a center/cover no-repeat;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.pvplay{width:54px;height:38px;background:rgba(220,12,12,.92);border-radius:10px;position:relative;z-index:2}
+.pvplay::after{content:'';position:absolute;top:9px;left:21px;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent}
+.pvmeta{display:flex;align-items:center;gap:8px;padding:9px 11px;background:#fff}.pvmeta .pvt{font-size:12.5px;font-weight:600;flex:1;color:var(--txt)}
+.pvsrc{font-size:9px;font-weight:800;letter-spacing:.4px;text-transform:uppercase;padding:3px 7px;border-radius:20px;white-space:nowrap}.pvsrc.man{background:#eef2f7;color:#475569}.pvsrc.tobo{background:#ede9fe;color:#5b21b6}
+.pm-back{position:fixed;inset:0;background:rgba(17,24,39,.55);display:none;align-items:center;justify-content:center;padding:18px;z-index:9999}.pm-back.on{display:flex}
+.pm{background:#fff;border-radius:14px;max-width:560px;width:100%;max-height:82vh;overflow:auto}
+.pm-h{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:18px 20px 10px}.pm-h h3{margin:0;font-size:16px}.pm-h .sub{font-size:12px;color:var(--mut);margin-top:3px}
+.pm-x{border:none;background:none;font-size:22px;cursor:pointer;color:var(--mut)}.pm-note{font-size:11px;color:var(--mut);padding:0 20px 12px;line-height:1.5}
+.pm-row{display:flex;align-items:center;gap:14px;padding:12px 20px;border-top:1px solid #f0f1f3}.pm-thumb{width:46px;height:46px;background:var(--bg2);border-radius:6px;flex-shrink:0}
+.pm-row .t{flex:1;font-size:13px;line-height:1.35}.pm-row .p{font-weight:800;white-space:nowrap}
+.pm-go{background:#cc0c0c;color:#fff;text-decoration:none;font-size:11px;font-weight:800;padding:9px 14px;border-radius:7px;white-space:nowrap}
+@media(max-width:720px){.pgal{grid-template-columns:repeat(2,1fr)}.pvgrid{grid-template-columns:1fr}}
 </style>
 <style>
 .news-shell{display:flex;gap:24px;align-items:flex-start}
@@ -1050,10 +1085,18 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
           <div id="profile-verified" style="margin-top:10px;font-size:11px;color:var(--mut);display:none"></div>
         </div>
       </div>
-      <div class="section-block" id="profile-video-block"><div class="block-title">Video</div><div id="profile-video"></div></div>
-      <div class="section-block"><div class="block-title">Full Specifications</div><table class="specs-table" id="profile-specs"></table></div>
-      <div class="section-block"><div class="block-title">User Reviews</div><div class="review-list" id="profile-reviews-list"></div></div>
-      <div class="section-block" id="profile-video2-block"><div class="block-title">Video</div><div id="profile-video2"></div></div>
+      <div class="ptabs">
+        <button class="ptab on" data-pp="pp-specs" onclick="pptab(this)">Specs</button>
+        <button class="ptab" data-pp="pp-pics" onclick="pptab(this)">Pictures</button>
+        <button class="ptab" data-pp="pp-videos" onclick="pptab(this)">Videos</button>
+        <button class="ptab" data-pp="pp-prices" onclick="pptab(this)">Prices</button>
+        <button class="ptab" data-pp="pp-reviews" onclick="pptab(this)">Reviews</button>
+      </div>
+      <div id="pp-specs" class="ppanel on"><div class="section-block"><div class="block-title">Full Specifications</div><table class="specs-table" id="profile-specs"></table></div></div>
+      <div id="pp-pics" class="ppanel"><div class="section-block"><div class="block-title">Pictures</div><div id="profile-pictures"></div></div></div>
+      <div id="pp-videos" class="ppanel"><div class="section-block"><div class="block-title">Videos</div><div id="profile-videos"></div></div></div>
+      <div id="pp-prices" class="ppanel"><div class="section-block"><div class="block-title">Prices</div><div id="profile-prices"></div></div></div>
+      <div id="pp-reviews" class="ppanel"><div class="section-block"><div class="block-title">User Reviews</div><div class="review-list" id="profile-reviews-list"></div></div></div>
     </div>
     <div class="sidebar">
       <div class="price-card"><div class="price-label">PRICE LEVEL</div><div class="price-main" id="profile-price"></div><div class="price-note" id="profile-price-note"></div><div id="profile-buy"></div><button class="btn-full primary">Request a Quote →</button><button class="btn-full outline" onclick="addToCompareFromProfile()">Add to Compare</button><div class="price-features"><div class="pf"><div class="pf-check">✓</div>12-month warranty included</div><div class="pf"><div class="pf-check">✓</div>Dedicated support team</div><div class="pf"><div class="pf-check">✓</div>SDK & training package</div></div></div>
@@ -1065,6 +1108,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     </div>
   </div>
 </div>
+
+<div class="pm-back" id="pmBack" onclick="if(event.target===this)_closePm()"><div class="pm" id="pmBody"></div></div>
 
 <!-- COMPARE -->
 <div id="page-compare" class="page">
@@ -1904,7 +1949,7 @@ function renderDb(){
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
         <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
-        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${priceStars(r)}</span><span style="padding:2px 7px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800">${r.score}</span></div>${affiliateBtn(r,'card')}</div>
+        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${priceStars(r)}</span><span style="padding:2px 7px;background:var(--acc);color:#fff;border-radius:4px;font-size:10px;font-weight:800">${r.score}</span></div></div>
       </div>`).join('')}</div>`;
   }
   renderCompareTray();
@@ -3294,6 +3339,57 @@ function openProfile(id){
 // Internal renderer — called by _renderPage when the route resolves to a profile.
 // Populates all the profile DOM nodes. Don't call this directly from onclicks;
 // use openProfile() so the URL stays in sync.
+/* ===== Profile tabs + Prices / Pictures / Videos (added) ===== */
+function pptab(btn){var pp=btn.getAttribute('data-pp');btn.parentNode.querySelectorAll('.ptab').forEach(function(t){t.classList.remove('on');});btn.classList.add('on');document.querySelectorAll('#page-profile .ppanel').forEach(function(p){p.classList.remove('on');});var el=document.getElementById(pp);if(el)el.classList.add('on');}
+var _FX=null,_CUR='USD',_CURS=['USD','AUD','GBP','EUR','CAD','INR'],_SYM={USD:'$',AUD:'A$',GBP:'\u00a3',EUR:'\u20ac',CAD:'C$',INR:'\u20b9'};
+function _loadFX(){if(_FX)return Promise.resolve();return fetch('https://open.er-api.com/v6/latest/USD').then(function(r){return r.json();}).then(function(d){if(d&&d.rates)_FX=d.rates;}).catch(function(){_FX=null;});}
+function _conv(p,f){if(!_FX||!_FX[f]||!_FX[_CUR])return{sym:_SYM[f]||'',val:p};return{sym:_SYM[_CUR]||'',val:(p/_FX[f])*_FX[_CUR]};}
+function _fmtP(p,f){if(p==null||isNaN(p))return '\u2014';var c=_conv(p,f);var v=c.val>=100?Math.round(c.val):c.val.toFixed(2);return c.sym+Number(v).toLocaleString();}
+function _setCur(c){_CUR=c;if(currentProfile)renderProfilePrices(currentProfile);}
+function _esc(x){return (x==null?'':(''+x)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
+function _ytId(u){if(!u)return '';u=String(u).trim();if(/^[A-Za-z0-9_-]{11}$/.test(u))return u;var m=u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/);return m?m[1]:'';}
+var _priceCells=[];
+function renderProfilePrices(r){var host=document.getElementById('profile-prices');if(!host)return;
+  var prices=Array.isArray(r.prices)?r.prices.filter(function(p){return p&&(p.url||p.price!=null);}):[];
+  if(!prices.length){host.innerHTML='<div class="pp-empty">No prices listed yet. <span style="color:var(--mut)">Prices appear here as we verify them store by store.</span></div>';return;}
+  var variants=[],regions=[];prices.forEach(function(p){var v=p.variant||'Standard';if(variants.indexOf(v)<0)variants.push(v);if(regions.indexOf(p.region)<0)regions.push(p.region);});
+  _priceCells=[];
+  var opts=_CURS.map(function(c){return '<option '+(c===_CUR?'selected':'')+'>'+c+'</option>';}).join('');
+  var h='<div class="pb"><div class="pb-head"><h3>Prices</h3><div class="pb-cur">Currency <select onchange="_setCur(this.value)">'+opts+'</select></div></div>';
+  regions.forEach(function(reg){var rows=prices.filter(function(p){return p.region===reg;}),stores=[];rows.forEach(function(p){if(stores.indexOf(p.store)<0)stores.push(p.store);});
+    h+='<div class="pb-region"><h4>'+_esc(reg)+'</h4><table class="pb-grid"><tr><th class="s">Store</th>';
+    variants.forEach(function(v){h+='<th>'+_esc(v)+'</th>';});h+='</tr>';
+    stores.forEach(function(st){h+='<tr><td class="pb-store"><span class="'+(String(st).indexOf('amazon')>=0?'amz':'')+'">'+_esc(st)+'</span></td>';
+      variants.forEach(function(v){var c=rows.find(function(p){return p.store===st&&(p.variant||'Standard')===v;});
+        if(c){var ci=_priceCells.length;_priceCells.push({store:st,region:reg,variant:v,price:c.price,currency:c.currency||'USD',url:c.url,listings:c.listings,name:r.name});
+          h+='<td><button class="pb-price" data-ci="'+ci+'">'+_fmtP(c.price,c.currency||'USD')+'</button></td>';}
+        else h+='<td class="pb-empty">\u2014</td>';});
+      h+='</tr>';});
+    h+='</table></div>';});
+  h+='<div class="pb-note">Prices are guidance only, may exclude tax/shipping and can be outdated \u2014 check the store for the final price. As an Amazon Associate and via partner stores, myrobot.shop may earn a commission on qualifying purchases. This never affects our specs, scoring or rankings.</div></div>';
+  host.innerHTML=h;
+  host.querySelectorAll('.pb-price').forEach(function(b){b.addEventListener('click',function(){_openPm(_priceCells[+b.getAttribute('data-ci')]);});});}
+function _openPm(d){if(!d)return;var L=(d.listings&&d.listings.length)?d.listings:[{title:d.name,price:d.price,url:d.url}];
+  var rows=L.map(function(l){return '<div class="pm-row"><div class="pm-thumb"></div><div class="t">'+_esc(l.title||d.name)+'</div><div class="p">'+_fmtP(l.price,d.currency)+'</div><a class="pm-go" href="'+_esc(l.url||d.url)+'" target="_blank" rel="sponsored nofollow noopener">GO TO STORE</a></div>';}).join('');
+  document.getElementById('pmBody').innerHTML='<div class="pm-h"><div><h3>'+_esc(d.name)+'</h3><div class="sub">'+_esc(d.store)+' \u00b7 '+_esc(d.region)+' \u00b7 '+_esc(d.variant)+'</div></div><button class="pm-x" onclick="_closePm()">\u00d7</button></div><div class="pm-note">Listed prices may exclude tax, shipping or customs and might be outdated. Refer to the store for the final price and condition.</div>'+rows;
+  document.getElementById('pmBack').classList.add('on');}
+function _closePm(){var b=document.getElementById('pmBack');if(b)b.classList.remove('on');}
+function renderProfilePictures(r){var host=document.getElementById('profile-pictures');if(!host)return;
+  var imgs=[];if(r.img&&r.img.trim())imgs.push(r.img);(Array.isArray(r.gallery)?r.gallery:[]).forEach(function(u){if(u&&imgs.indexOf(u)<0)imgs.push(u);});
+  if(!imgs.length){host.innerHTML='<div class="pp-empty">No additional images yet.</div>';return;}
+  host.innerHTML='<div class="pgal">'+imgs.map(function(u,i){return '<div class="pshot" data-i="'+i+'"><img src="'+cldTransform(u,'thumb')+'" alt="" onerror="this.parentElement.style.display=\'none\'"></div>';}).join('')+'</div>';
+  host.querySelectorAll('.pshot').forEach(function(el){el.addEventListener('click',function(){openLightbox(imgs[+el.getAttribute('data-i')],r.name||'',imgs);});});}
+function renderProfileVideos(r){var host=document.getElementById('profile-videos');if(!host)return;
+  var vids=Array.isArray(r.videos)?r.videos.slice():[];
+  if(!vids.length){if(r.video)vids.push({url:r.video,source:'manufacturer'});if(r.video2)vids.push({url:r.video2,source:'manufacturer'});}
+  vids=vids.filter(function(v){return _ytId(v.url);});
+  if(!vids.length){host.innerHTML='<div class="pp-empty">No videos yet.</div>';return;}
+  host.innerHTML='<div class="pvgrid">'+vids.map(function(v,i){var id=_ytId(v.url);var badge=v.source==='tobo'?'<span class="pvsrc tobo">Tobo</span>':'<span class="pvsrc man">Manufacturer</span>';
+    return '<div class="pvcard" id="pvc'+i+'"><div class="pvthumb" data-vi="'+i+'" data-yid="'+id+'" style="background-image:url(https://i.ytimg.com/vi/'+id+'/hqdefault.jpg)"><div class="pvplay"></div></div><div class="pvmeta"><span class="pvt">'+_esc(v.title||r.name)+'</span>'+badge+'</div></div>';}).join('')+'</div>';
+  host.querySelectorAll('.pvthumb').forEach(function(el){el.addEventListener('click',function(){_playVid(+el.getAttribute('data-vi'),el.getAttribute('data-yid'));});});}
+function _playVid(i,id){var card=document.getElementById('pvc'+i);if(!card)return;var meta=card.querySelector('.pvmeta');
+  card.innerHTML='<div style="position:relative;padding-bottom:56.25%;height:0;background:#000"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0&autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>'+(meta?meta.outerHTML:'');}
+
 function _renderProfile(id){
   const r=ROBOTS.find(x=>x.id===id);
   if(!r)return;
@@ -3406,7 +3502,11 @@ function _renderProfile(id){
     }
   })();
   document.getElementById('profile-price').innerHTML=priceStars(r);
-  var _pb=document.getElementById('profile-buy'); if(_pb){ var _a=affiliateLink(r); _pb.innerHTML=_a?(affiliateBtn(r,'lg')+'<div class="aff-disclosure">As an Amazon Associate, myrobot.shop earns from qualifying purchases.</div>'):''; }
+  var _pb=document.getElementById('profile-buy'); if(_pb){ _pb.innerHTML=''; }
+  // New tabbed content (prices grid / pictures / videos) + reset to first tab
+  (function(){ var tabs=document.querySelectorAll('#page-profile .ptab'); tabs.forEach(function(t,i){ t.classList.toggle('on', i===0); }); document.querySelectorAll('#page-profile .ppanel').forEach(function(p,i){ p.classList.toggle('on', i===0); }); })();
+  renderProfilePrices(r); renderProfilePictures(r); renderProfileVideos(r);
+  _loadFX().then(function(){ if(currentProfile===r) renderProfilePrices(r); });
   document.getElementById('profile-price-note').textContent=(priceTier(r)==null?'Pricing to be confirmed \u00b7 request a quote':'Relative price level within '+(r.cat||'its category')+' \u00b7 request a quote');
   // Last verified — set expectations honestly. Colour-coded by age.
   const verifyEl = document.getElementById('profile-verified');
@@ -4477,7 +4577,7 @@ function renderFinder(){
       if(r.lidar)sp.push('<span class="fspec-pill fsp-yes">LiDAR</span>');
       if(r.wifi)sp.push('<span class="fspec-pill fsp-yes">WiFi</span>');
       var thumb=r.img?'<div class="frrow-thumb"><img src="'+r.img+'" alt="" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'"></div>':'<div class="frrow-thumb"><img src="'+MASCOT_URL+'" alt="" style="object-fit:contain"></div>';
-      return '<div class="frrow gsm" onclick="openProfile(&apos;'+r.id+'&apos;)"><div class="frrow-left"><div class="frrow-num '+(ranks[i]||'')+'">'+( i+1)+'</div>'+thumb+'<div class="frrow-info"><div class="frrow-brand">'+r.brand+'</div><div class="frrow-name">'+r.name+'</div><div class="frrow-meta"><span class="frrow-cat">'+r.cat+'</span>'+(r.year?' &middot; '+r.year:'')+(r.sub?' &middot; <span style="color:var(--mut)">'+r.sub+'</span>':'')+'</div><div class="frrow-specs">'+sp.join('')+'</div><div class="frrow-tags">'+r.tags.slice(0,4).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')+'</div></div></div><div class="frrow-right"><div class="frrow-price">'+priceStars(r)+'</div><div class="frrow-score">'+r.score+'<span style="font-size:9px;opacity:.6">/100</span></div><div class="frrow-stars">'+'&#9733;'.repeat(Math.round(r.rating||0))+'</div><div class="frrow-actions">'+affiliateBtn(r)+'<button class="fra" onclick="event.stopPropagation();addRobotToCompare(&apos;'+r.id+'&apos;);goPage(&apos;compare&apos;)">Compare</button><button class="fra p" onclick="event.stopPropagation();openProfile(&apos;'+r.id+'&apos;)">→ View</button></div></div></div>';
+      return '<div class="frrow gsm" onclick="openProfile(&apos;'+r.id+'&apos;)"><div class="frrow-left"><div class="frrow-num '+(ranks[i]||'')+'">'+( i+1)+'</div>'+thumb+'<div class="frrow-info"><div class="frrow-brand">'+r.brand+'</div><div class="frrow-name">'+r.name+'</div><div class="frrow-meta"><span class="frrow-cat">'+r.cat+'</span>'+(r.year?' &middot; '+r.year:'')+(r.sub?' &middot; <span style="color:var(--mut)">'+r.sub+'</span>':'')+'</div><div class="frrow-specs">'+sp.join('')+'</div><div class="frrow-tags">'+r.tags.slice(0,4).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')+'</div></div></div><div class="frrow-right"><div class="frrow-price">'+priceStars(r)+'</div><div class="frrow-score">'+r.score+'<span style="font-size:9px;opacity:.6">/100</span></div><div class="frrow-stars">'+'&#9733;'.repeat(Math.round(r.rating||0))+'</div><div class="frrow-actions"><button class="fra" onclick="event.stopPropagation();addRobotToCompare(&apos;'+r.id+'&apos;);goPage(&apos;compare&apos;)">Compare</button><button class="fra p" onclick="event.stopPropagation();openProfile(&apos;'+r.id+'&apos;)">→ View</button></div></div></div>';
     }).join('')+'</div>';
   } else {
     c.innerHTML='<div class="frgrid">'+list.map(function(r,i){
