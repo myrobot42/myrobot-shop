@@ -809,7 +809,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 /* ---- left-rail blue-band profile ---- */
 .rail-layout{display:grid;grid-template-columns:300px 1fr;gap:24px;align-items:start}
-.rail-layout .rail{display:flex;flex-direction:column;gap:16px}
+.rail-layout .rail{display:flex;flex-direction:column;gap:16px;padding-top:24px}
 .rail-layout .main-col{min-width:0}
 .robot-band{display:grid;grid-template-columns:300px 1fr;background:linear-gradient(120deg,#0050d8,#0066ff 60%,#2b82ff);border-radius:16px 16px 0 0;overflow:hidden;color:#fff}
 .robot-band .band-img{position:relative;background:rgba(255,255,255,.10);min-height:300px;display:flex;align-items:center;justify-content:center;cursor:zoom-in;padding:18px}
@@ -819,10 +819,10 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .band-name{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:30px;font-weight:800;letter-spacing:-.5px;line-height:1.1}
 .band-top .badge{background:rgba(255,255,255,.20);color:#fff}
 .band-brand{font-size:14px;opacity:.93;font-weight:600}
-.band-desc{font-size:13.5px;line-height:1.6;opacity:.96;margin-top:2px}
+.band-desc{font-size:13.5px;line-height:1.6;opacity:.96;margin-top:2px;display:-webkit-box;-webkit-line-clamp:5;-webkit-box-orient:vertical;overflow:hidden}
 .band-trending{margin-top:4px}
-.band-tiles{display:grid;grid-template-columns:repeat(5,1fr);background:#0a4fd0;border-radius:0 0 16px 16px;overflow:hidden;margin-bottom:18px}
-.band-tiles .bt{padding:16px 10px;text-align:center;color:#fff;border-right:1px solid rgba(255,255,255,.12)}
+.band-tiles{display:grid;grid-template-columns:repeat(5,1fr);background:linear-gradient(120deg,#0a4fd0,#0a52da 55%,#1162f5);border-radius:0 0 16px 16px;overflow:hidden;margin-bottom:18px}
+.band-tiles .bt{padding:16px 10px;text-align:center;color:#fff;border-right:1px solid rgba(255,255,255,.14);background:linear-gradient(180deg,rgba(0,0,0,.13) 0%,rgba(255,255,255,.07) 100%)}
 .band-tiles .bt:last-child{border-right:none}
 .band-tiles .bt-v{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:18px;font-weight:800;line-height:1.1}
 .band-tiles .bt-u{font-size:11px;opacity:.8;margin-left:2px;font-weight:600}
