@@ -109,16 +109,52 @@ function metaDesc(r){
   return d.length>158 ? d.slice(0,155).trim()+'…' : d;
 }
 
+function ytId(u){ if(!u) return ''; u=String(u).trim(); if(/^[A-Za-z0-9_-]{11}$/.test(u)) return u; const m=u.match(/(?:youtube\.com\/(?:watch\?v=|embed\/|shorts\/)|youtu\.be\/)([A-Za-z0-9_-]{11})/); return m?m[1]:''; }
+function allImages(r){ const a=[]; if(has(r.img))a.push(r.img); (Array.isArray(r.gallery)?r.gallery:[]).forEach(u=>{ if(has(u)&&!a.includes(u))a.push(u); }); return a; }
+function videoList(r){ let v=Array.isArray(r.videos)?r.videos.slice():[]; if(!v.length){ if(has(r.video))v.push({url:r.video,source:'manufacturer'}); if(has(r.video2))v.push({url:r.video2,source:'manufacturer'}); } return v.map(x=>({title:x.title,source:x.source,id:ytId(x.url)})).filter(x=>x.id); }
+
 function jsonld(r){
-  const img=r.img||MASCOT;
+  const imgs=allImages(r); if(!imgs.length) imgs.push(MASCOT);
   const o={"@context":"https://schema.org","@type":"Product","name":r.name,"brand":{"@type":"Brand","name":r.brand},
-    "description":metaDesc(r),"url":`${SITE}/r/${r.id}.html`,"image":img,"category":r.cat};
-  /* offers/aggregateRating intentionally omitted: prices show as tiers (not numbers) and reviews
-     aren't real yet — marking them up would breach Google's visible-content policy. Add in Phase 2. */
+    "description":metaDesc(r),"url":`${SITE}/r/${r.id}.html`,"image":imgs,"category":r.cat};
+  /* Real per-store prices now exist for some robots — expose USD as AggregateOffer (matches the
+     visible Prices table). Reviews still omitted until they're real. */
+  const usd=(Array.isArray(r.prices)?r.prices:[]).filter(p=>p&&p.price!=null&&(p.currency||'USD')==='USD').map(p=>Number(p.price)).filter(x=>!isNaN(x));
+  if(usd.length){ o.offers={"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":Math.min(...usd),"highPrice":Math.max(...usd),"offerCount":usd.length,"availability":"https://schema.org/InStock"}; }
   return JSON.stringify(o);
 }
 
-const CSS = `*{box-sizing:border-box}body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;max-width:760px;margin:0 auto;padding:24px 20px 60px;color:#111827;line-height:1.55}a{color:#0066ff}.crumb{font-size:13px;color:#6b7280;margin-bottom:18px}.crumb a{text-decoration:none}img.hero{max-width:340px;width:100%;display:block;margin:0 0 18px;border:1px solid #e5e7eb;border-radius:14px;background:#fff;object-fit:contain;max-height:340px}h1{font-size:28px;margin:0 0 4px;line-height:1.15}.sub{color:#6b7280;font-weight:600;margin:0 0 16px;font-size:15px}.lead{font-size:15px;color:#374151;margin:0 0 18px}.price{font-size:15px;margin:0 0 16px}.price .stars{color:#16a34a;letter-spacing:2px;font-size:18px;vertical-align:middle}.cta{display:inline-block;background:#0066ff;color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:9px;margin:4px 8px 4px 0}.aff{display:inline-block;background:#ff9900;color:#111;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:9px;margin:4px 0}h2{font-size:18px;margin:30px 0 10px;border-bottom:2px solid #f0f2f5;padding-bottom:6px}table{border-collapse:collapse;width:100%}td{padding:9px 10px;border-bottom:1px solid #eef0f3;font-size:14px;vertical-align:top}td:first-child{color:#6b7280;width:42%}.rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.rel a{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:7px 13px;font-size:13px;text-decoration:none;color:#111827}.disc{color:#9ca3af;font-size:11px;margin-top:10px}footer{margin-top:36px;padding-top:18px;border-top:1px solid #e5e7eb;font-size:13px;color:#6b7280}footer a{text-decoration:none}`;
+function pricesHtml(r){
+  const prices=Array.isArray(r.prices)?r.prices.filter(p=>p&&(p.url||p.price!=null)):[];
+  if(!prices.length) return '';
+  const sym={USD:'$',AUD:'A$',GBP:'£',EUR:'€',CAD:'C$',INR:'₹'};
+  const rowsH=prices.map(p=>{
+    const price=(p.price!=null)?((sym[p.currency]||'')+Number(p.price).toLocaleString()):'—';
+    const storeTxt=esc(p.store||'Store');
+    const storeCell=p.url?`<a href="${attr(p.url)}" target="_blank" rel="sponsored nofollow noopener">${storeTxt}</a>`:storeTxt;
+    return `<tr><td>${esc(p.region||'')}</td><td>${storeCell}</td><td>${esc(p.variant||'Standard')}</td><td class="pcur">${esc(price)}</td></tr>`;
+  }).join('');
+  return `<h2>${esc(r.name)} — prices</h2><table class="ptable"><tbody><tr><td><b>Region</b></td><td><b>Store</b></td><td><b>Variant</b></td><td><b>Price</b></td></tr>${rowsH}</tbody></table><div class="disc">Prices are indicative and may exclude tax/shipping — check the store for the final price. As an Amazon Associate and via partner stores, myrobot.shop may earn a commission on qualifying purchases.</div>`;
+}
+
+function picturesHtml(r){
+  const imgs=allImages(r);
+  if(imgs.length<2) return '';
+  return `<h2>${esc(r.name)} — pictures</h2><div class="gal">${imgs.map((u,i)=>`<img src="${attr(u)}" alt="${attr(r.name)} — image ${i+1}" loading="lazy">`).join('')}</div>`;
+}
+
+function videosHtml(r){
+  const vids=videoList(r);
+  if(!vids.length) return '';
+  return `<h2>${esc(r.name)} — videos</h2><div class="vids">${vids.map(v=>{
+    const thumb=`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`;
+    const watch=`https://www.youtube.com/watch?v=${v.id}`;
+    const label=v.title||`${r.name} video`;
+    return `<a class="vid" href="${attr(watch)}" target="_blank" rel="noopener"><img src="${attr(thumb)}" alt="${attr(label)}" loading="lazy"><span>${esc(label)}${v.source==='tobo'?' · Tobo':''}</span></a>`;
+  }).join('')}</div>`;
+}
+
+const CSS = `*{box-sizing:border-box}body{font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;max-width:760px;margin:0 auto;padding:24px 20px 60px;color:#111827;line-height:1.55}a{color:#0066ff}.crumb{font-size:13px;color:#6b7280;margin-bottom:18px}.crumb a{text-decoration:none}img.hero{max-width:340px;width:100%;display:block;margin:0 0 18px;border:1px solid #e5e7eb;border-radius:14px;background:#fff;object-fit:contain;max-height:340px}h1{font-size:28px;margin:0 0 4px;line-height:1.15}.sub{color:#6b7280;font-weight:600;margin:0 0 16px;font-size:15px}.lead{font-size:15px;color:#374151;margin:0 0 18px}.price{font-size:15px;margin:0 0 16px}.price .stars{color:#16a34a;letter-spacing:2px;font-size:18px;vertical-align:middle}.cta{display:inline-block;background:#0066ff;color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:9px;margin:4px 8px 4px 0}.aff{display:inline-block;background:#ff9900;color:#111;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:9px;margin:4px 0}h2{font-size:18px;margin:30px 0 10px;border-bottom:2px solid #f0f2f5;padding-bottom:6px}table{border-collapse:collapse;width:100%}td{padding:9px 10px;border-bottom:1px solid #eef0f3;font-size:14px;vertical-align:top}td:first-child{color:#6b7280;width:42%}.rel{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}.rel a{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:7px 13px;font-size:13px;text-decoration:none;color:#111827}.disc{color:#9ca3af;font-size:11px;margin-top:10px}footer{margin-top:36px;padding-top:18px;border-top:1px solid #e5e7eb;font-size:13px;color:#6b7280}footer a{text-decoration:none}.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:6px 0}.gal img{width:100%;height:auto;border:1px solid #e5e7eb;border-radius:10px;background:#fff;object-fit:contain;aspect-ratio:1/1}.vids{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:6px 0}.vids .vid{display:block;text-decoration:none;color:#111827;border:1px solid #e5e7eb;border-radius:10px;overflow:hidden}.vids .vid img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}.vids .vid span{display:block;padding:8px 10px;font-size:13px;font-weight:600}.ptable td:first-child{width:auto}.pcur{color:#16a34a;font-weight:700;white-space:nowrap}@media(max-width:520px){.gal{grid-template-columns:repeat(2,1fr)}.vids{grid-template-columns:1fr}}`;
 
 function page(r){
   const img=r.img||MASCOT;
@@ -151,7 +187,7 @@ ${priceTier(r)!=null?`<p class="price">Price level: <span class="stars">${priceS
 <a class="cta" href="/#profile/${attr(r.id)}">View full interactive profile, comparisons &amp; videos →</a>
 ${aff?`<a class="aff" href="${attr(aff.url)}" target="_blank" rel="sponsored nofollow noopener">${esc(aff.label)} →</a><div class="disc">As an Amazon Associate, myrobot.shop earns from qualifying purchases.</div>`:''}
 <h2>${esc(r.name)} — full specifications</h2>
-<table><tbody>${rows.map(([l,v])=>`<tr><td>${esc(l)}</td><td>${esc(v)}</td></tr>`).join('')}</tbody></table>
+<table><tbody>${rows.map(([l,v])=>`<tr><td>${esc(l)}</td><td>${esc(v)}</td></tr>`).join('')}</tbody></table>\n${pricesHtml(r)}\n${picturesHtml(r)}\n${videosHtml(r)}
 ${rel.length?`<h2>Similar ${esc(r.cat||'robots')}</h2><div class="rel">${rel.map(x=>`<a href="/r/${attr(x.id)}.html">${esc(x.name)}</a>`).join('')}</div>`:''}
 <footer>${esc(r.name)} is one of ${ROBOTS.length.toLocaleString()} robots catalogued on <a href="/">myrobot.shop</a> — the world's largest robot database. <a href="/#methodology">How we source our data</a>.</footer>
 </body></html>`;
