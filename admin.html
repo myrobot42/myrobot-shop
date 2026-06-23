@@ -311,8 +311,6 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
     <div class="modal-section">IMAGES &amp; VIDEO</div>
     <div class="modal-grid">
       <div class="modal-field full"><div class="modal-label">Main Image URL</div><input class="modal-input" id="edit-img" type="text" placeholder="https://upload.wikimedia.org/..."></div>
-      <div class="modal-field full"><div class="modal-label">Video URL &mdash; official manufacturer video (YouTube)</div><input class="modal-input" id="edit-video" type="text" placeholder="https://www.youtube.com/watch?v=..."></div>
-      <div class="modal-field full"><div class="modal-label">Video URL &mdash; second video (bottom of page)</div><input class="modal-input" id="edit-video2" type="text" placeholder="https://www.youtube.com/watch?v=..."></div>
     </div>
 
     <div class="modal-section">AFFILIATE / BUY LINK</div>
@@ -320,6 +318,33 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="modal-field full"><div class="modal-label">Buy URL &mdash; exact product page (optional)</div><input class="modal-input" id="edit-buy-url" type="text" placeholder="https://www.amazon.com/dp/...  (leave blank = auto search link)"></div>
       <div class="modal-field full"><div style="font-size:11px;color:#888;line-height:1.5;margin-top:-4px">Paste the exact Amazon product page for high-traffic robots (Roborock, Roomba, Dreame, eufy&hellip;) to lift conversions &mdash; the affiliate tag is added automatically for Amazon links. Leave blank and the site falls back to an automatic Amazon search link. For DJI, paste your approved Awin/Webgains product link here once approved.</div></div>
       <div class="modal-field full"><label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;margin-top:2px"><input type="checkbox" id="edit-buy-hide" style="width:16px;height:16px"> <span>Not sold on Amazon &mdash; hide the &ldquo;Check price&rdquo; button for this robot</span></label></div>
+    </div>
+
+    <div class="modal-section">PRICES (multi-region grid)</div>
+    <div class="modal-grid">
+      <div class="modal-field full">
+        <div style="font-size:11px;color:#888;line-height:1.5;margin-bottom:6px">One row per store/region. <strong>Only regions with a row show a price</strong> &mdash; an Australian visitor won't see a US-only price, so no broken links. Paste the clean Amazon product URL (https://www.amazon.com/dp/ASIN); the affiliate tag is added automatically.</div>
+        <div id="edit-prices-rows"></div>
+        <button type="button" class="tbl-action" onclick="addPriceRow()">+ Add price row</button>
+      </div>
+    </div>
+
+    <div class="modal-section">GALLERY IMAGES</div>
+    <div class="modal-grid">
+      <div class="modal-field full">
+        <div style="font-size:11px;color:#888;line-height:1.5;margin-bottom:6px">Extra images for the Pictures tab (official press shots, angles, colours). The Main Image above shows first automatically.</div>
+        <div id="edit-gallery-rows"></div>
+        <button type="button" class="tbl-action" onclick="addGalleryRow()">+ Add image</button>
+      </div>
+    </div>
+
+    <div class="modal-section">VIDEOS</div>
+    <div class="modal-grid">
+      <div class="modal-field full">
+        <div style="font-size:11px;color:#888;line-height:1.5;margin-bottom:6px">YouTube videos for the Videos tab. Tag each as <strong>Manufacturer</strong> or <strong>Tobo</strong> (your own content). Paste the normal YouTube link.</div>
+        <div id="edit-videos-rows"></div>
+        <button type="button" class="tbl-action" onclick="addVideoRow()">+ Add video</button>
+      </div>
     </div>
 
     <div class="modal-section">KEY SPECS</div>
@@ -3269,6 +3294,38 @@ function deleteRobot(id) {
 
 let editingRobotId = null;
 
+function _attrEsc(v){return (v==null?'':(''+v)).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
+var PRICE_REGIONS=['United States','United Kingdom','Europe','Canada','Australia','India'];
+var PRICE_CURS=['USD','GBP','EUR','CAD','AUD','INR'];
+function priceRowHtml(d){d=d||{};
+  var reg=PRICE_REGIONS.map(function(x){return '<option'+(d.region===x?' selected':'')+'>'+x+'</option>';}).join('');
+  var cur=PRICE_CURS.map(function(x){return '<option'+(d.currency===x?' selected':'')+'>'+x+'</option>';}).join('');
+  return '<div class="prow" style="display:flex;gap:6px;margin-bottom:6px;flex-wrap:wrap;align-items:center">'+
+    '<select class="modal-select prow-region" style="flex:1;min-width:120px">'+reg+'</select>'+
+    '<input class="modal-input prow-store" placeholder="amazon.com" value="'+_attrEsc(d.store)+'" style="flex:1;min-width:100px">'+
+    '<input class="modal-input prow-variant" placeholder="Standard" value="'+_attrEsc(d.variant)+'" style="flex:1;min-width:90px">'+
+    '<select class="modal-select prow-currency" style="width:78px">'+cur+'</select>'+
+    '<input class="modal-input prow-price" type="number" step="0.01" placeholder="0.00" value="'+(d.price!=null?d.price:'')+'" style="width:88px">'+
+    '<input class="modal-input prow-url" placeholder="https://www.amazon.com/dp/ASIN" value="'+_attrEsc(d.url)+'" style="flex:2;min-width:150px">'+
+    '<button type="button" class="tbl-action del" onclick="this.parentNode.remove()">&times;</button></div>';}
+function addPriceRow(d){document.getElementById('edit-prices-rows').insertAdjacentHTML('beforeend',priceRowHtml(d));}
+function collectPrices(){var out=[];document.querySelectorAll('#edit-prices-rows .prow').forEach(function(row){
+  var price=parseFloat(row.querySelector('.prow-price').value);var url=row.querySelector('.prow-url').value.trim();
+  if(!url && isNaN(price)) return;
+  out.push({region:row.querySelector('.prow-region').value,store:row.querySelector('.prow-store').value.trim()||'amazon.com',
+    variant:row.querySelector('.prow-variant').value.trim()||'Standard',currency:row.querySelector('.prow-currency').value,
+    price:isNaN(price)?null:price,url:url});});return out;}
+function galleryRowHtml(u){return '<div class="grow" style="display:flex;gap:6px;margin-bottom:6px"><input class="modal-input grow-url" placeholder="https://...image.jpg" value="'+_attrEsc(u)+'" style="flex:1"><button type="button" class="tbl-action del" onclick="this.parentNode.remove()">&times;</button></div>';}
+function addGalleryRow(u){document.getElementById('edit-gallery-rows').insertAdjacentHTML('beforeend',galleryRowHtml(u));}
+function collectGallery(){var out=[];document.querySelectorAll('#edit-gallery-rows .grow-url').forEach(function(i){var v=i.value.trim();if(v)out.push(v);});return out;}
+function videoRowHtml(d){d=d||{};
+  var src=['manufacturer','tobo'].map(function(x){return '<option value="'+x+'"'+(d.source===x?' selected':'')+'>'+(x==='tobo'?'Tobo':'Manufacturer')+'</option>';}).join('');
+  return '<div class="vrow" style="display:flex;gap:6px;margin-bottom:6px;flex-wrap:wrap"><input class="modal-input vrow-url" placeholder="https://www.youtube.com/watch?v=..." value="'+_attrEsc(d.url)+'" style="flex:2;min-width:150px"><select class="modal-select vrow-source" style="width:128px">'+src+'</select><input class="modal-input vrow-title" placeholder="Title (optional)" value="'+_attrEsc(d.title)+'" style="flex:1;min-width:110px"><button type="button" class="tbl-action del" onclick="this.parentNode.remove()">&times;</button></div>';}
+function addVideoRow(d){document.getElementById('edit-videos-rows').insertAdjacentHTML('beforeend',videoRowHtml(d));}
+function collectVideos(){var out=[];document.querySelectorAll('#edit-videos-rows .vrow').forEach(function(row){
+  var url=row.querySelector('.vrow-url').value.trim();if(!url)return;
+  out.push({url:url,source:row.querySelector('.vrow-source').value,title:row.querySelector('.vrow-title').value.trim()});});return out;}
+
 function editRobotPrompt(id) {
   const r = ROBOTS.find(x => x.id === id);
   if (!r) return;
@@ -3291,8 +3348,15 @@ function editRobotPrompt(id) {
   document.getElementById('edit-highlights').value = (r.highlights||[]).join(', ');
   // Images & video
   document.getElementById('edit-img').value = r.img || '';
-  document.getElementById('edit-video').value = r.video || '';
-  document.getElementById('edit-video2').value = r.video2 || '';
+  // Prices / Gallery / Videos
+  document.getElementById('edit-prices-rows').innerHTML = '';
+  (r.prices||[]).forEach(addPriceRow);
+  document.getElementById('edit-gallery-rows').innerHTML = '';
+  (r.gallery||[]).forEach(addGalleryRow);
+  document.getElementById('edit-videos-rows').innerHTML = '';
+  var _vids = r.videos;
+  if (!_vids || !_vids.length) { _vids = []; if (r.video) _vids.push({url:r.video,source:'manufacturer',title:''}); if (r.video2) _vids.push({url:r.video2,source:'manufacturer',title:''}); }
+  _vids.forEach(addVideoRow);
   document.getElementById('edit-buy-url').value = r.buy_url || '';
   document.getElementById('edit-buy-hide').checked = !!r.buy_hide;
   // Specs
@@ -3342,10 +3406,14 @@ function saveEditModal() {
   // Image & video
   const img = document.getElementById('edit-img').value.trim();
   r.img = img.startsWith('http') ? img : '';
-  const video = document.getElementById('edit-video').value.trim();
-  if (video) r.video = video; else delete r.video;
-  const video2 = document.getElementById('edit-video2').value.trim();
-  if (video2) r.video2 = video2; else delete r.video2;
+  // Prices / Gallery / Videos
+  const _prices = collectPrices(); if (_prices.length) r.prices = _prices; else delete r.prices;
+  const _gallery = collectGallery(); if (_gallery.length) r.gallery = _gallery; else delete r.gallery;
+  const _videos = collectVideos(); if (_videos.length) r.videos = _videos; else delete r.videos;
+  // keep legacy video/video2 in sync (first two manufacturer videos) so the current site keeps working
+  const _man = _videos.filter(function(v){return v.source !== 'tobo';});
+  if (_man[0]) r.video = _man[0].url; else delete r.video;
+  if (_man[1]) r.video2 = _man[1].url; else delete r.video2;
   const buyUrl = document.getElementById('edit-buy-url').value.trim();
   if (buyUrl) r.buy_url = buyUrl; else delete r.buy_url;
   if (document.getElementById('edit-buy-hide').checked) r.buy_hide = true; else delete r.buy_hide;
