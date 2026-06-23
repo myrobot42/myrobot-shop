@@ -892,23 +892,31 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 @media(max-width:600px){#news-modal{padding:10px!important}#news-modal>div{margin:10px auto!important}#news-modal-img{max-height:300px!important}#news-modal-title{font-size:19px!important}}
 </style>
 <style id="home-newsfirst-css">
-.home-shell{display:grid;grid-template-columns:minmax(330px,38%) 1fr;gap:34px;align-items:start}
-.home-finder{min-width:0;display:flex;flex-direction:column;gap:24px}
+.home-shell{display:grid;grid-template-columns:minmax(320px,36%) 1fr;gap:42px;align-items:start}
+.home-finder{min-width:0;display:flex;flex-direction:column;gap:30px}
 .home-hero-h1{font-family:'Space Mono','Courier New',monospace;font-size:30px;font-weight:800;line-height:1.12;letter-spacing:-1px;margin:0 0 12px;color:var(--txt)}
 .home-hero-h1 em{color:var(--acc);font-style:normal}
 .home-hero-stats{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0;font-size:12px;color:var(--mut)}
 .home-hero-stats b{color:var(--txt);font-weight:700}
 .home-news{min-width:0}
-.hnf-card{display:block;border:1px solid var(--bdr);border-radius:12px;overflow:hidden;cursor:pointer;text-decoration:none;color:inherit;background:#fff;transition:border-color .15s}
+.hnf-card{display:block;border:1px solid var(--bdr);border-radius:12px;overflow:hidden;cursor:pointer;text-decoration:none;color:inherit;background:#fff;transition:border-color .15s;margin-bottom:16px}
 .hnf-card:hover{border-color:var(--acc)}
-.hnf-img{height:230px;background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;background-color:var(--bg3)}
-.hnf-img-ph{display:flex;align-items:center;justify-content:center}
-.hnf-phlabel{font-family:'Space Mono','Courier New',monospace;font-size:22px;font-weight:800;color:var(--bdr2);text-align:center;padding:0 20px;line-height:1.2;word-break:break-word}
-.hnf-src{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.92);color:var(--acc);font-size:10px;font-weight:700;letter-spacing:.4px;padding:4px 9px;border-radius:20px;text-transform:uppercase}
-.hnf-body{padding:14px 16px}
-.hnf-title{font-size:18px;font-weight:700;line-height:1.3;color:var(--txt)}
-.hnf-meta{font-size:12px;color:var(--mut);margin-top:7px}
+.hnf-img{height:300px;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:var(--bg3);position:relative;display:flex;align-items:flex-end}
+.hnf-overlay{position:relative;width:100%;padding:48px 20px 18px;background:linear-gradient(to top,rgba(0,0,0,.82),rgba(0,0,0,.32) 55%,transparent)}
+.hnf-title{color:#fff;font-size:23px;font-weight:800;line-height:1.22}
+.hnf-meta{color:rgba(255,255,255,.88);font-size:12px;margin-top:8px;font-weight:600;text-transform:uppercase;letter-spacing:.4px}
+.hnf-phlabel{position:absolute;top:46%;left:0;right:0;transform:translateY(-50%);font-family:'Space Mono','Courier New',monospace;font-size:24px;font-weight:800;color:var(--bdr2);text-align:center;padding:0 20px;line-height:1.2;word-break:break-word}
+.hnews-list{display:flex;flex-direction:column;gap:14px}
+.hnews-card{display:flex;border:1px solid var(--bdr);border-radius:12px;overflow:hidden;background:#fff;cursor:pointer;text-decoration:none;color:inherit;transition:border-color .15s}
+.hnews-card:hover{border-color:var(--acc)}
+.hnews-img{width:230px;flex-shrink:0;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:var(--bg3);min-height:160px}
+.hnews-img-ph{display:flex;align-items:center;justify-content:center;font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:800;color:var(--bdr2);text-align:center;padding:0 10px;letter-spacing:.4px}
+.hnews-body{padding:16px 18px;flex:1;min-width:0;display:flex;flex-direction:column}
+.hnews-title{font-size:18px;font-weight:700;line-height:1.3;color:var(--txt)}
+.hnews-sum{font-size:13.5px;color:var(--mut);line-height:1.55;margin-top:8px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.hnews-meta{margin-top:auto;padding-top:12px;font-size:11px;color:var(--mut);display:flex;gap:14px;align-items:center;text-transform:uppercase;letter-spacing:.4px;font-weight:600}
 @media(max-width:900px){.home-shell{grid-template-columns:1fr;gap:26px}.home-hero-h1{font-size:34px}}
+@media(max-width:600px){.hnews-img{width:116px;min-height:120px}.hnews-title{font-size:15px}.hnews-sum{display:none}.hnf-img{height:220px}.hnf-title{font-size:19px}}
 </style>
 </head>
 <body>
@@ -978,10 +986,6 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
           <div class="chart-list" id="home-trending"></div>
         </div>
 
-        <div class="home-finder-sec">
-          <div class="sec-header"><div class="sec-title">🛒 Available Now</div></div>
-          <div class="chart-list" id="home-available"></div>
-        </div>
       </div>
 
       <div class="home-news">
@@ -1621,17 +1625,22 @@ function renderHomeNews(){
     var items=(d&&d.items)?d.items:(Array.isArray(d)?d:[]);
     window.NEWS_ITEMS=items;
     if(!items.length){feat.innerHTML='<div style="color:var(--mut);font-size:13px;padding:14px 0">No news yet — the feed will populate shortly.</div>';return;}
+    function cleanSum(x){ x=String(x==null?'':x).replace(/\s*\|\s*Credit:.*$/i,'').replace(/\s+/g,' ').trim(); return x.length>190?x.slice(0,187).trim()+'…':x; }
     var f=items[0];
-    var fImg=f.image
-      ? '<div class="hnf-img" style="background-image:url(\''+esc(f.image)+'\')"><span class="hnf-src">'+esc(f.source||'')+'</span></div>'
-      : '<div class="hnf-img hnf-img-ph"><span class="hnf-phlabel">'+esc((f.source||'NEWS').toUpperCase())+'</span><span class="hnf-src">'+esc(f.source||'')+'</span></div>';
-    feat.innerHTML='<a class="hnf-card" onclick="openNewsItem(0)">'+fImg+'<div class="hnf-body"><div class="hnf-title">'+esc(f.title)+'</div><div class="hnf-meta">'+_timeAgo(f.published)+(f.source?' · '+esc(f.source):'')+'</div></div></a>';
-    var rest=items.slice(1,13);
+    var fOverlay='<div class="hnf-overlay"><div class="hnf-title">'+esc(f.title)+'</div><div class="hnf-meta">'+_timeAgo(f.published)+(f.source?' · '+esc(f.source):'')+'</div></div>';
+    var fInner=f.image
+      ? '<div class="hnf-img" style="background-image:url(\''+esc(f.image)+'\')">'+fOverlay+'</div>'
+      : '<div class="hnf-img"><span class="hnf-phlabel">'+esc((f.source||'NEWS').toUpperCase())+'</span>'+fOverlay+'</div>';
+    feat.innerHTML='<a class="hnf-card" onclick="openNewsItem(0)">'+fInner+'</a>';
+    var rest=items.slice(1,11);
+    list.className='hnews-list'; list.removeAttribute('style');
     list.innerHTML=rest.map(function(it,idx){
-      var thumb=it.image
-        ? '<div class="nli-thumb" style="background-image:url(\''+esc(it.image)+'\')"></div>'
-        : '<div class="nli-thumb nli-thumb-ph"><span>'+esc((it.source||'NEWS').toUpperCase())+'</span></div>';
-      return '<a class="news-list-item" onclick="openNewsItem('+(1+idx)+')" style="display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:inherit;cursor:pointer">'+thumb+'<div style="flex:1;min-width:0"><div class="nli-cat" style="color:'+COLORS[idx%COLORS.length]+'">'+esc((it.source||'').toUpperCase())+'</div><div class="nli-title">'+esc(it.title)+'</div><div class="nli-meta">'+_timeAgo(it.published)+'</div></div></a>';
+      var img=it.image
+        ? '<div class="hnews-img" style="background-image:url(\''+esc(it.image)+'\')"></div>'
+        : '<div class="hnews-img hnews-img-ph">'+esc((it.source||'NEWS').toUpperCase())+'</div>';
+      var sm=cleanSum(it.summary);
+      var sum=sm?'<div class="hnews-sum">'+esc(sm)+'</div>':'';
+      return '<a class="hnews-card" onclick="openNewsItem('+(1+idx)+')">'+img+'<div class="hnews-body"><div class="hnews-title">'+esc(it.title)+'</div>'+sum+'<div class="hnews-meta"><span>'+_timeAgo(it.published)+'</span>'+(it.source?'<span>'+esc(it.source)+'</span>':'')+'</div></div></a>';
     }).join('');
   }).catch(function(e){console.error('home news load failed',e);feat.innerHTML='<div style="color:var(--mut);font-size:13px;padding:14px 0">News feed unavailable right now.</div>';});
 }
@@ -1646,22 +1655,22 @@ function renderHome(){
   // Category pills — alphabetical, with live counts
   const catPills=document.getElementById('home-cat-pills');
   if(catPills){
-    catPills.innerHTML=ALL_CATS.map(c=>{
-      const count=ROBOTS.filter(r=>r.cat===c).length;
-      return `<span class="cat-pill" onclick="filterCat('${c}')">${c}<span class="cat-pill-count">${count}</span></span>`;
-    }).join('');
+    const catCounts={};
+    for(const r of ROBOTS){if(r.cat)catCounts[r.cat]=(catCounts[r.cat]||0)+1;}
+    const topCats=Object.entries(catCounts).sort((a,b)=>b[1]-a[1]).slice(0,12);
+    let chtml=topCats.map(function(e){return `<span class="cat-pill" onclick="filterCat('${e[0].replace(/'/g,"\\'")}')">${e[0]}<span class="cat-pill-count">${e[1]}</span></span>`;}).join('');
+    chtml+=`<span class="cat-pill" style="background:var(--acc-l);color:var(--acc);border-color:var(--acc);font-weight:600" onclick="goPage('db')">See all →</span>`;
+    catPills.innerHTML=chtml;
   }
   // Brand tags — top 50 by robot count, then "See all" link to brands page
   const btHome=document.getElementById('brand-tags-home');
   if(btHome){
     const brandCounts={};
     for(const r of ROBOTS){if(r.brand)brandCounts[r.brand]=(brandCounts[r.brand]||0)+1;}
-    const topBrands=Object.entries(brandCounts).sort((a,b)=>b[1]-a[1]).slice(0,50).map(e=>e[0]);
+    const topBrands=Object.entries(brandCounts).sort((a,b)=>b[1]-a[1]).slice(0,12).map(e=>e[0]);
     const totalBrands=Object.keys(brandCounts).length;
     let html=topBrands.map(b=>`<span class="btag" onclick="searchBrand('${b.replace(/'/g,"\\'")}')">${b}</span>`).join('');
-    if(totalBrands>50){
-      html+=`<span class="btag" style="background:var(--acc-l);color:var(--acc);border-color:var(--acc);font-weight:600" onclick="goPage('manufacturers')">See all ${totalBrands} brands →</span>`;
-    }
+    html+=`<span class="btag" style="background:var(--acc-l);color:var(--acc);border-color:var(--acc);font-weight:600" onclick="goPage('manufacturers')">All ${totalBrands} brands →</span>`;
     btHome.innerHTML=html;
   }
   // Featured robots — surface the NEWEST, most in-demand robots people search for.
