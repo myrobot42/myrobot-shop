@@ -806,6 +806,47 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .pm-row .t{flex:1;font-size:13px;line-height:1.35}.pm-row .p{font-weight:800;white-space:nowrap}
 .pm-go{background:#cc0c0c;color:#fff;text-decoration:none;font-size:11px;font-weight:800;padding:9px 14px;border-radius:7px;white-space:nowrap}
 @media(max-width:720px){.pgal{grid-template-columns:repeat(2,1fr)}.pvgrid{grid-template-columns:1fr}}
+
+/* ---- left-rail blue-band profile ---- */
+.rail-layout{display:grid;grid-template-columns:300px 1fr;gap:24px;align-items:start}
+.rail-layout .rail{display:flex;flex-direction:column;gap:16px}
+.rail-layout .main-col{min-width:0}
+.robot-band{display:grid;grid-template-columns:300px 1fr;background:linear-gradient(120deg,#0050d8,#0066ff 60%,#2b82ff);border-radius:16px 16px 0 0;overflow:hidden;color:#fff}
+.robot-band .band-img{position:relative;background:rgba(255,255,255,.10);min-height:300px;display:flex;align-items:center;justify-content:center;cursor:zoom-in;padding:18px}
+.robot-band .band-img img{max-width:100%;max-height:280px;object-fit:contain}
+.band-info{padding:26px 28px;display:flex;flex-direction:column;gap:9px}
+.band-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.band-name{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:30px;font-weight:800;letter-spacing:-.5px;line-height:1.1}
+.band-top .badge{background:rgba(255,255,255,.20);color:#fff}
+.band-brand{font-size:14px;opacity:.93;font-weight:600}
+.band-desc{font-size:13.5px;line-height:1.6;opacity:.96;margin-top:2px}
+.band-trending{margin-top:4px}
+.band-tiles{display:grid;grid-template-columns:repeat(5,1fr);background:#0a4fd0;border-radius:0 0 16px 16px;overflow:hidden;margin-bottom:18px}
+.band-tiles .bt{padding:16px 10px;text-align:center;color:#fff;border-right:1px solid rgba(255,255,255,.12)}
+.band-tiles .bt:last-child{border-right:none}
+.band-tiles .bt-v{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:18px;font-weight:800;line-height:1.1}
+.band-tiles .bt-u{font-size:11px;opacity:.8;margin-left:2px;font-weight:600}
+.band-tiles .bt-l{font-size:10px;letter-spacing:.6px;text-transform:uppercase;opacity:.82;margin-top:5px;font-weight:600}
+.band-thumbs{margin:-4px 0 16px}
+.rail-prices{border:1px solid var(--bdr);border-radius:12px;overflow:hidden}
+.rail-prices .rp-head{background:var(--bg2);padding:11px 14px;font-size:11px;font-weight:800;letter-spacing:.5px;color:var(--mut);border-bottom:1px solid var(--bdr)}
+.rail-prices .rp-row{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;border-bottom:1px solid #f0f1f3;text-decoration:none;color:var(--txt)}
+.rail-prices .rp-row:hover{background:#fafbfc}
+.rail-prices .rp-store{font-size:13px;font-weight:600}
+.rail-prices .rp-price{font-size:13px;font-weight:800;color:#cc0c0c}
+.rail-prices .rp-all{display:block;width:100%;text-align:left;padding:11px 14px;border:none;background:none;color:var(--acc);font-weight:700;font-size:12.5px;cursor:pointer;font-family:inherit}
+.rail-prices .rp-all:hover{text-decoration:underline}
+.cmp-cta{text-align:center;padding:18px}
+@media(max-width:900px){
+  .rail-layout{grid-template-columns:1fr}
+  .rail-layout .rail{order:2}
+  .rail-layout .main-col{order:1}
+  .robot-band{grid-template-columns:1fr}
+  .robot-band .band-img{min-height:200px}
+  .band-name{font-size:24px}
+  .band-tiles{grid-template-columns:repeat(2,1fr)}
+  .band-tiles .bt:nth-child(2n){border-right:none}
+}
 </style>
 <style>
 .news-shell{display:flex;gap:24px;align-items:flex-start}
@@ -851,6 +892,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <a id="nav-videos" onclick="goPage('videos')">Videos</a>
       <a id="nav-questions" href="/questions/">Questions</a>
       <a id="nav-manufacturers" onclick="goPage('manufacturers')">Brands</a>
+      <a id="nav-deals" onclick="goPage('db')">Deals</a>
       <a id="nav-ai" onclick="goPage('ai')" style="color:var(--acc);font-weight:600">✦ Ask AI</a>
     </div>
     <div class="nav-right">
@@ -1068,43 +1110,48 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <!-- PROFILE -->
 <div id="page-profile" class="page">
   <div class="breadcrumb"><div class="breadcrumb-inner"><span onclick="goPage('home')">Home</span> › <span onclick="goPage('db')">Database</span> › <span id="profile-crumb-cat"></span> › <span id="profile-crumb-name"></span></div></div>
-  <div class="profile-layout">
+  <div class="profile-layout rail-layout">
+    <div class="rail">
+      <div class="vs-card" onclick="openVsCompare()"><div class="vs-label">POPULAR COMPARISON</div><div class="vs-names" id="profile-vs"></div><button class="btn-vs">Compare side by side &rarr;</button></div>
+      <div class="sidebar-title">Similar Robots</div>
+      <div class="similar-list" id="profile-similar"></div>
+      <div class="sidebar-title" id="profile-news-title" style="display:none">In the News</div>
+      <div class="similar-list" id="profile-news" style="display:none;margin-bottom:18px"></div>
+      <div class="rail-prices" id="profile-rail-prices" style="display:none"></div>
+    </div>
     <div class="main-col">
-      <div class="robot-header">
-        <div class="gallery-wrap">
-          <div class="gallery-main" id="profile-fig" style="overflow:hidden;padding:0"><div class="gallery-badge" id="profile-badge">HOT</div></div>
-          <div class="gallery-thumbs" id="profile-gallery-thumbs"></div>
-        </div>
-        <div class="title-block">
-          <div class="brand-row"><span class="brand-name" id="profile-brand"></span><span class="badge badge-hot2" id="profile-year-badge"></span><span class="badge badge-top2">TOP RATED</span></div>
-          <div class="robot-title" id="profile-name"></div>
-          <div class="robot-tagline" id="profile-tagline"></div>
-          <div class="rating-row" id="profile-rating-row"><span class="stars-lg" id="profile-stars"></span><span class="rating-num" id="profile-rating"></span><span class="rating-count" id="profile-reviews"></span><div class="overall-score" id="profile-trending-wrap"></div></div>
-          <div class="quick-specs" id="profile-quick-specs"></div>
-          <div class="action-row"><button class="btn-action primary">Get a Quote →</button><button class="btn-action secondary" onclick="addToCompareFromProfile()">+ Compare</button><button class="btn-action ghost">+ Watchlist</button></div>
-          <div id="profile-verified" style="margin-top:10px;font-size:11px;color:var(--mut);display:none"></div>
+      <div class="robot-band">
+        <div class="band-img" id="profile-fig"><div class="gallery-badge" id="profile-badge">HOT</div></div>
+        <div class="band-info">
+          <div class="band-top"><span class="band-name" id="profile-name"></span><span class="badge badge-hot2" id="profile-year-badge"></span></div>
+          <div class="band-brand"><span id="profile-brand"></span><span id="profile-sub-wrap" style="display:none"> &middot; <span id="profile-sub"></span></span></div>
+          <div class="band-desc" id="profile-tagline"></div>
+          <div class="band-trending" id="profile-trending-wrap"></div>
         </div>
       </div>
+      <div class="band-tiles" id="profile-quick-specs"></div>
+      <div class="gallery-thumbs band-thumbs" id="profile-gallery-thumbs" style="display:none"></div>
       <div class="ptabs">
         <button class="ptab on" data-pp="pp-specs" onclick="pptab(this)">Specs</button>
         <button class="ptab" data-pp="pp-pics" onclick="pptab(this)">Pictures</button>
         <button class="ptab" data-pp="pp-videos" onclick="pptab(this)">Videos</button>
         <button class="ptab" data-pp="pp-prices" onclick="pptab(this)">Prices</button>
         <button class="ptab" data-pp="pp-reviews" onclick="pptab(this)">Reviews</button>
+        <button class="ptab" data-pp="pp-compare" onclick="pptab(this)">Compare</button>
       </div>
       <div id="pp-specs" class="ppanel on"><div class="section-block"><div class="block-title">Full Specifications</div><table class="specs-table" id="profile-specs"></table></div></div>
       <div id="pp-pics" class="ppanel"><div class="section-block"><div class="block-title">Pictures</div><div id="profile-pictures"></div></div></div>
       <div id="pp-videos" class="ppanel"><div class="section-block"><div class="block-title">Videos</div><div id="profile-videos"></div></div></div>
       <div id="pp-prices" class="ppanel"><div class="section-block"><div class="block-title">Prices</div><div id="profile-prices"></div></div></div>
       <div id="pp-reviews" class="ppanel"><div class="section-block"><div class="block-title">User Reviews</div><div class="review-list" id="profile-reviews-list"></div></div></div>
-    </div>
-    <div class="sidebar">
-      <div class="price-card"><div class="price-label">PRICE LEVEL</div><div class="price-main" id="profile-price"></div><div class="price-note" id="profile-price-note"></div><div id="profile-buy"></div><button class="btn-full primary">Request a Quote →</button><button class="btn-full outline" onclick="addToCompareFromProfile()">Add to Compare</button><div class="price-features"><div class="pf"><div class="pf-check">✓</div>12-month warranty included</div><div class="pf"><div class="pf-check">✓</div>Dedicated support team</div><div class="pf"><div class="pf-check">✓</div>SDK & training package</div></div></div>
-      <div class="vs-card" onclick="openVsCompare()"><div class="vs-label">POPULAR COMPARISON</div><div class="vs-names" id="profile-vs"></div><button class="btn-vs">Compare side by side →</button></div>
-      <div class="sidebar-title" id="profile-news-title" style="display:none">In the News</div>
-      <div class="similar-list" id="profile-news" style="display:none;margin-bottom:18px"></div>
-      <div class="sidebar-title">Similar Robots</div>
-      <div class="similar-list" id="profile-similar"></div>
+      <div id="pp-compare" class="ppanel"><div class="section-block"><div class="block-title">Compare</div><div class="cmp-cta"><p id="profile-cmp-text" style="color:var(--mut);font-size:13px;margin-bottom:14px"></p><button class="btn-action primary" onclick="addToCompareFromProfile();goPage('compare')">Add to comparison tool &rarr;</button></div></div></div>
+      <span id="profile-price" style="display:none"></span>
+      <span id="profile-price-note" style="display:none"></span>
+      <span id="profile-buy" style="display:none"></span>
+      <span id="profile-stars" style="display:none"></span>
+      <span id="profile-rating" style="display:none"></span>
+      <span id="profile-reviews" style="display:none"></span>
+      <span id="profile-verified" style="display:none"></span>
     </div>
   </div>
 </div>
@@ -3390,6 +3437,37 @@ function renderProfileVideos(r){var host=document.getElementById('profile-videos
 function _playVid(i,id){var card=document.getElementById('pvc'+i);if(!card)return;var meta=card.querySelector('.pvmeta');
   card.innerHTML='<div style="position:relative;padding-bottom:56.25%;height:0;background:#000"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0&autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>'+(meta?meta.outerHTML:'');}
 
+function _connShort(r){return [r.wifi?'Wi-Fi':null,r.bluetooth?'BT':null,(r.cellular&&r.cellular!=='No'&&r.cellular!==false)?(typeof r.cellular==='string'?r.cellular:'Cell'):null].filter(Boolean).join(' \u00b7 ')||null;}
+function bandTiles(r){
+  var c=((r.cat||'')+' '+(r.sub||'')).toLowerCase();function h(x){return c.indexOf(x)>=0;}
+  function t(l,v,u){return {l:l,v:v,u:u||''};}var P;
+  if(h('mower'))P=[t('Navigation',r.navigation||(r.rtk?'RTK-GNSS':null),''),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Docking',(r.auto_charge||r.auto_dock)?'Auto-dock':null,''),t('Cut Width',r.cutting_width_mm,'mm'),t('Connectivity',_connShort(r),'')];
+  else if(h('humanoid')||h('biped'))P=[t('Height',r.height_mm,'mm'),t('DOF',r.dof,''),t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('Weight',r.weight_kg||r.weight,'kg')];
+  else if(h('drone')||h('uav')||h('aerial'))P=[t('Flight',r.max_flight_time||r.flight_time_min,'min'),t('Range',r.max_range||r.range_km,'km'),t('Camera',r.camera_mp,'MP'),t('Speed',r.max_speed||r.speed_ms,'m/s'),t('Weight',r.weight_kg||r.weight,'kg')];
+  else if(h('vacuum')||h('mop'))P=[t('Suction',r.suction_pa,'Pa'),t('Battery',r.battery_life_typical,'min'),t('Navigation',r.navigation||(r.lidar?'LiDAR':null),''),t('Dustbin',r.dustbin_ml,'ml'),t('Noise',r.noise_db,'dB')];
+  else if(h('quadruped')||h('legged'))P=[t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.run_speed_ms||r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg,'kg'),t('Runtime',r.battery_life_typical,'min'),t('DOF',r.dof,'')];
+  else if(h('cobot')||h('manipulator'))P=[t('Payload',r.payload_kg||r.payload,'kg'),t('Reach',r.reach_mm||r.reach,'mm'),t('DOF',r.dof,''),t('Repeatability',r.repeatability,'mm'),t('Speed',r.speed_ms||r.speed,'m/s')];
+  else if(h('aquatic')||h('underwater')||h('rov')||h('auv')||h('usv'))P=[t('Max Depth',r.max_depth_m||r.depth_rating_m,'m'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Endurance',r.endurance_hours,'h'),t('Payload',r.payload_kg||r.payload,'kg'),t('Weight',r.weight_kg,'kg')];
+  else if(h('surgical')||h('medical'))P=[t('Arms',r.arms||r.arm_count,''),t('Instr. DOF',r.instrument_dof,''),t('Incision',r.incision_size_mm,'mm'),t('Setup',r.setup_time_min,'min'),t('Weight',r.weight_kg,'kg')];
+  else if(h('agri')||h('farm')||h('tractor')||h('harvest'))P=[t('Coverage',r.coverage_ha_day,'ha/d'),t('Width',r.working_width_m,'m'),t('Speed',r.operating_speed||r.speed,'m/s'),t('GPS',r.gps_accuracy_cm,'cm'),t('Weight',r.weight_kg,'kg')];
+  else P=[];
+  var U=[t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('DOF',r.dof,''),t('Connectivity',_connShort(r),''),t('Year',r.year?(''+r.year):null,''),t('Origin',r.origin||r.country,''),t('Status',r.status,'')];
+  var out=[],seen={};function fmt(v){return (typeof v==='number')?v.toLocaleString():v;}
+  function isNumLike(v){return typeof v==='number'||(typeof v==='string'&&/^[\d.,]+$/.test(v.trim()));}
+  function addList(L){for(var i=0;i<L.length&&out.length<5;i++){var x=L[i];if(x&&x.v!=null&&x.v!==''&&x.v!=='\u2014'&&!seen[x.l]){seen[x.l]=1;out.push({l:x.l,v:fmt(x.v),u:isNumLike(x.v)?x.u:''});}}}
+  addList(P);addList(U);return out;
+}
+function renderRailPrices(r){
+  var host=document.getElementById('profile-rail-prices');if(!host)return;
+  var prices=Array.isArray(r.prices)?r.prices.filter(function(p){return p&&(p.url||p.price!=null);}):[];
+  if(!prices.length){host.style.display='none';host.innerHTML='';return;}
+  host.style.display='';
+  var top=prices.slice().sort(function(a,b){return (a.price==null?1e12:a.price)-(b.price==null?1e12:b.price);}).slice(0,3);
+  var rows=top.map(function(p){return '<a class="rp-row" href="'+_esc(p.url||'#')+'" target="_blank" rel="sponsored nofollow noopener"><span class="rp-store">'+_esc(p.store||'Store')+'</span><span class="rp-price">'+_fmtP(p.price,p.currency||'USD')+'</span></a>';}).join('');
+  host.innerHTML='<div class="rp-head">$ PRICES</div>'+rows+'<button class="rp-all" onclick="_gotoPricesTab()">Show all prices &rarr;</button>';
+}
+function _gotoPricesTab(){var t=document.querySelector('#page-profile .ptab[data-pp="pp-prices"]');if(t)t.click();window.scrollTo({top:0,behavior:'smooth'});}
+
 function _renderProfile(id){
   const r=ROBOTS.find(x=>x.id===id);
   if(!r)return;
@@ -3443,6 +3521,7 @@ function _renderProfile(id){
     thumbsEl.innerHTML = '';
   }
   document.getElementById('profile-brand').textContent=r.brand;
+  (function(){var sw=document.getElementById('profile-sub');if(sw){sw.textContent=r.sub||'';document.getElementById('profile-sub-wrap').style.display=r.sub?'':'none';}})();
   document.getElementById('profile-year-badge').textContent=r.year?(r.year+' MODEL'):'';
   document.getElementById('profile-year-badge').style.display=r.year?'':'none';
   document.getElementById('profile-name').textContent=r.name;
@@ -3506,7 +3585,9 @@ function _renderProfile(id){
   // New tabbed content (prices grid / pictures / videos) + reset to first tab
   (function(){ var tabs=document.querySelectorAll('#page-profile .ptab'); tabs.forEach(function(t,i){ t.classList.toggle('on', i===0); }); document.querySelectorAll('#page-profile .ppanel').forEach(function(p,i){ p.classList.toggle('on', i===0); }); })();
   renderProfilePrices(r); renderProfilePictures(r); renderProfileVideos(r);
-  _loadFX().then(function(){ if(currentProfile===r) renderProfilePrices(r); });
+  renderRailPrices(r);
+  (function(){var ct=document.getElementById('profile-cmp-text');if(ct)ct.textContent='Compare '+r.name+' against other robots side by side.';})();
+  _loadFX().then(function(){ if(currentProfile===r){ renderProfilePrices(r); renderRailPrices(r); } });
   document.getElementById('profile-price-note').textContent=(priceTier(r)==null?'Pricing to be confirmed \u00b7 request a quote':'Relative price level within '+(r.cat||'its category')+' \u00b7 request a quote');
   // Last verified — set expectations honestly. Colour-coded by age.
   const verifyEl = document.getElementById('profile-verified');
@@ -3557,7 +3638,7 @@ function _renderProfile(id){
     {l:'OS',v:r.os||'—',u:''},
     {l:'WARRANTY',v:r.warranty_months||'—',u:r.warranty_months?'mo':''},
   ].filter(s => s.v !== '—' && s.v !== '' && s.v != null);
-  document.getElementById('profile-quick-specs').innerHTML=specs.map(s=>`<div class="qs"><div class="qs-label">${s.l}</div><div class="qs-val">${s.v}<span class="qs-unit"> ${s.u}</span></div></div>`).join('');
+  document.getElementById('profile-quick-specs').innerHTML=bandTiles(r).map(s=>'<div class="bt"><div class="bt-v">'+s.v+(s.u?'<span class="bt-u">'+s.u+'</span>':'')+'</div><div class="bt-l">'+s.l+'</div></div>').join('');
   // (Performance Scores removed — placeholder values, not real spec data)
   // Specs table
   document.getElementById('profile-specs').innerHTML = renderSpecsGSM(r);
