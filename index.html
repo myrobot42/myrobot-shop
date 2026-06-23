@@ -825,6 +825,14 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .band-trending-inline{display:inline-flex;align-items:center}
 .band-readmore{display:inline-block;margin-top:7px;font-size:12.5px;font-weight:700;color:#fff;text-decoration:underline;cursor:pointer;opacity:.92}
 .band-readmore:hover{opacity:1}
+.band-stats{display:flex;align-items:center;gap:12px;margin-top:8px;flex-wrap:wrap}
+.bstat-hits{font-size:13px;font-weight:700;opacity:.96;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.bstat-hits .tu{color:#8affad}.bstat-hits .td{color:#ffb3b3}
+.bstat-fan{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);color:#fff;font-family:inherit;font-size:12px;font-weight:700;padding:6px 12px;border-radius:20px;cursor:pointer}
+.bstat-fan:hover{background:rgba(255,255,255,.26)}
+.bstat-fan.faned{background:#fff;color:#e0245e;border-color:#fff}
+.bstat-fan .heart{font-size:14px;line-height:1}
+.bstat-fan #profile-fancount{font-variant-numeric:tabular-nums}
 .band-desc.expanded{-webkit-line-clamp:unset;display:block;overflow:visible}
 .band-tiles{display:grid;grid-template-columns:repeat(5,1fr);background:transparent;border-top:1px solid rgba(255,255,255,.16);overflow:hidden}
 .band-tiles .bt{padding:16px 10px;text-align:center;color:#fff;border-right:1px solid rgba(255,255,255,.16)}
@@ -1131,6 +1139,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         <div class="band-info">
           <div class="band-top"><span class="band-name" id="profile-name"></span><span class="badge badge-hot2" id="profile-year-badge"></span><span id="profile-trending-wrap" class="band-trending-inline"></span></div>
           <div class="band-brand"><span id="profile-brand"></span><span id="profile-sub-wrap" style="display:none"> &middot; <span id="profile-sub"></span></span></div>
+          <div class="band-stats" id="profile-stats"><span class="bstat-hits" id="profile-hits" style="display:none"></span><button class="bstat-fan" id="profile-fan" type="button" onclick="_toggleFan()"><span class="heart">&hearts;</span><span id="profile-fancount">0</span><span class="fan-label">Become a fan</span></button></div>
           <div class="band-desc" id="profile-tagline"></div>
           <span class="band-readmore" id="profile-readmore" style="display:none" onclick="_toggleDesc()">Read more</span>
         </div>
@@ -3476,6 +3485,49 @@ function renderRailPrices(r){
 function _gotoPricesTab(){var t=document.querySelector('#page-profile .ptab[data-pp="pp-prices"]');if(t)t.click();window.scrollTo({top:0,behavior:'smooth'});}
 
 function _toggleDesc(){var d=document.getElementById('profile-tagline'),b=document.getElementById('profile-readmore');if(!d||!b)return;var e=d.classList.toggle('expanded');b.textContent=e?'Read less':'Read more';}
+var STATS_API='/api/views';
+function _vKey(){return 'mrs_viewed_'+new Date().toISOString().slice(0,10);}
+function _trackView(id){
+  if(!id)return;
+  var viewed=[];try{var raw=localStorage.getItem(_vKey());viewed=raw?JSON.parse(raw):[];}catch(e){viewed=[];}
+  var first=viewed.indexOf(id)<0;
+  var url=first?STATS_API:(STATS_API+'?id='+encodeURIComponent(id));
+  var opts=first?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id,action:'view'})}:{};
+  fetch(url,opts).then(function(r){return r.json();}).then(function(d){
+    if(first){try{viewed.push(id);localStorage.setItem(_vKey(),JSON.stringify(viewed));}catch(e){}}
+    var s=(d&&d.views!=null)?d:((d&&d[id])||{views:0,fans:0,trend:0});
+    _renderStats(id,s);
+  }).catch(function(){});
+}
+function _renderStats(id,s){
+  if(typeof currentProfile==='undefined'||!currentProfile||currentProfile.id!==id)return;
+  var THRESH=50;
+  var hits=document.getElementById('profile-hits'),fanc=document.getElementById('profile-fancount'),fanbtn=document.getElementById('profile-fan');
+  if(fanc)fanc.textContent=' '+((s.fans||0).toLocaleString())+' ';
+  if(hits){
+    if((s.views||0)>=THRESH){
+      var t=s.trend||0,arrow=t>=0?'\u25B2':'\u25BC',cls=t>=0?'tu':'td';
+      hits.style.display='inline-flex';
+      hits.innerHTML='<span class="'+cls+'">'+arrow+' '+Math.abs(t)+'%</span> \u00b7 '+(s.views||0).toLocaleString()+' views';
+    }else{hits.style.display='none';}
+  }
+  if(fanbtn){
+    var faned=false;try{faned=localStorage.getItem('mrs_fan_'+id)==='1';}catch(e){}
+    fanbtn.classList.toggle('faned',faned);
+    var lbl=fanbtn.querySelector('.fan-label');if(lbl)lbl.textContent=faned?'Fan':'Become a fan';
+  }
+}
+function _toggleFan(){
+  if(typeof currentProfile==='undefined'||!currentProfile)return;var id=currentProfile.id;
+  var faned=false;try{faned=localStorage.getItem('mrs_fan_'+id)==='1';}catch(e){}
+  var action=faned?'unfan':'fan';
+  try{localStorage.setItem('mrs_fan_'+id,faned?'0':'1');}catch(e){}
+  var fc=document.getElementById('profile-fancount');
+  if(fc){var cur=parseInt((fc.textContent||'0').replace(/[^0-9]/g,''))||0;fc.textContent=' '+Math.max(0,cur+(faned?-1:1)).toLocaleString()+' ';}
+  var fanbtn=document.getElementById('profile-fan');
+  if(fanbtn){fanbtn.classList.toggle('faned',!faned);var lbl=fanbtn.querySelector('.fan-label');if(lbl)lbl.textContent=!faned?'Fan':'Become a fan';}
+  fetch(STATS_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:id,action:action})}).then(function(r){return r.json();}).then(function(s){_renderStats(id,s);}).catch(function(){});
+}
 function _renderProfile(id){
   const r=ROBOTS.find(x=>x.id===id);
   if(!r)return;
@@ -3596,6 +3648,7 @@ function _renderProfile(id){
   renderProfilePrices(r); renderProfilePictures(r); renderProfileVideos(r);
   renderRailPrices(r);
   (function(){var ct=document.getElementById('profile-cmp-text');if(ct)ct.textContent='Compare '+r.name+' against other robots side by side.';})();
+  _trackView(r.id);
   _loadFX().then(function(){ if(currentProfile===r){ renderProfilePrices(r); renderRailPrices(r); } });
   document.getElementById('profile-price-note').textContent=(priceTier(r)==null?'Pricing to be confirmed \u00b7 request a quote':'Relative price level within '+(r.cat||'its category')+' \u00b7 request a quote');
   // Last verified — set expectations honestly. Colour-coded by age.
