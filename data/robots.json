@@ -3849,7 +3849,8 @@
     "website": "https://www.unitree.com",
     "payload": 8,
     "speed": 1,
-    "battery": 180
+    "battery": 180,
+    "actuator_type": "Unitree proprietary joint motors"
   },
   {
     "id": "unitree-scout",
@@ -3953,7 +3954,8 @@
     "website": "https://www.unitree.com",
     "payload": 25,
     "speed": 1.8,
-    "battery": 720
+    "battery": 720,
+    "actuator_type": "Unitree proprietary joint motors"
   },
   {
     "id": "boston-dynamics-atlas-hd",
@@ -8945,7 +8947,8 @@
     "website": "https://www.1x.tech",
     "payload": 15,
     "speed": 1.2,
-    "battery": 240
+    "battery": 240,
+    "actuator_type": "Electric (tendon-driven)"
   },
   {
     "id": "sanctuary-ai-phoenix-gen-7",
@@ -34027,7 +34030,8 @@
     "video": "https://youtu.be/IPukuYb9xWw",
     "payload": 5,
     "speed": 0.5,
-    "battery": 240
+    "battery": 240,
+    "actuator_type": "Electric servo"
   },
   {
     "id": "kepler-forerunner-k1",
@@ -34120,7 +34124,8 @@
     "released": "2023",
     "dof": 40,
     "website": "https://www.gotokepler.com",
-    "battery": 480
+    "battery": 480,
+    "actuator_type": "Electric"
   },
   {
     "id": "iron-ox-angus",
@@ -47200,7 +47205,8 @@
       "https://oss-cn-beijing.galbot.com/online/portal/video/tech6.png"
     ],
     "speed": 1.2,
-    "battery": 120
+    "battery": 120,
+    "actuator_type": "Electric"
   },
   {
     "id": "galbot-galbot-g1-wheeled-bionic-robot",
@@ -47312,7 +47318,8 @@
     ],
     "payload": 20,
     "speed": 1.2,
-    "battery": 480
+    "battery": 480,
+    "actuator_type": "Electric"
   },
   {
     "id": "mentee-robotics-menteebot",
@@ -47377,7 +47384,8 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/683fd82159a40f9452fab00f_V3_02.png"
     ],
     "video": "https://youtu.be/sZPqfes6Gk8",
-    "payload": 25
+    "payload": 25,
+    "actuator_type": "Electric"
   },
   {
     "id": "mentee-robotics-menteebot-v3-1",
@@ -47436,7 +47444,8 @@
     "released": 2025,
     "payload": 25,
     "battery": 270,
-    "battery_life": 270
+    "battery_life": 270,
+    "actuator_type": "Electric"
   },
   {
     "id": "mentee-robotics-menteebot-v3-0",
@@ -47500,7 +47509,8 @@
     ],
     "payload": 25,
     "battery": 240,
-    "battery_life": 240
+    "battery_life": 240,
+    "actuator_type": "Electric"
   },
   {
     "id": "mentee-robotics-menteebot-v3-0-v3-1",
@@ -47540,7 +47550,8 @@
     "made_in": "Israel",
     "os": "Mentee AI",
     "ai_model": "VLM-driven task understanding (Sim2Real learning)",
-    "website": "https://www.menteebot.com"
+    "website": "https://www.menteebot.com",
+    "actuator_type": "Electric"
   },
   {
     "id": "rainbow-robotics-hubo",
@@ -47714,7 +47725,8 @@
     ],
     "website": "https://www.clonerobotics.com",
     "video": "https://youtu.be/C6u08rIa8o4",
-    "battery": 480
+    "battery": 480,
+    "actuator_type": "Myofiber artificial muscles (fluidic)"
   },
   {
     "id": "clone-robotics-neoclone",
@@ -48331,7 +48343,9 @@
     ],
     "os": "KaihongOS (HarmonyOS)",
     "speed_ms": 1.28,
-    "speed": 1.28
+    "speed": 1.28,
+    "actuator_type": "Electric (self-developed torque servos)",
+    "hand_type": "Modular (dexterous / gripper / claw)"
   },
   {
     "id": "rainbow-robotics-amr-serving-robot",
@@ -49177,7 +49191,9 @@
     ],
     "payload": 10,
     "speed": 1.28,
-    "battery": 240
+    "battery": 240,
+    "actuator_type": "Electric (self-developed torque servos)",
+    "hand_type": "Modular (dexterous / gripper / claw)"
   },
   {
     "id": "leju-robotics-kuavo-5",
@@ -49241,7 +49257,9 @@
     ],
     "payload": 10,
     "speed": 1.28,
-    "battery": 480
+    "battery": 480,
+    "actuator_type": "Electric (self-developed torque servos)",
+    "hand_type": "Modular (dexterous / gripper / claw)"
   },
   {
     "id": "leju-robotics-aelos-pro",
@@ -49450,7 +49468,9 @@
     "website": "https://www.lejurobot.com",
     "payload": 20,
     "speed": 1.28,
-    "battery": 240
+    "battery": 240,
+    "actuator_type": "Electric (self-developed torque servos)",
+    "hand_type": "Modular (dexterous / gripper / claw)"
   },
   {
     "id": "leju-robotics-kuavo-5-5-w",
@@ -49517,7 +49537,8 @@
     ],
     "speed": 1.28,
     "battery": 120,
-    "battery_life": 120
+    "battery_life": 120,
+    "hand_type": "Modular (dexterous / gripper / claw)"
   },
   {
     "id": "leju-robotics-kuavo-my",
@@ -49569,7 +49590,9 @@
     "made_in": "China",
     "speed_ms": 1.28,
     "website": "https://www.lejurobot.com",
-    "speed": 1.28
+    "speed": 1.28,
+    "actuator_type": "Electric (self-developed torque servos)",
+    "hand_type": "Modular (dexterous / gripper / claw)"
   },
   {
     "id": "agibot-omnihand-pro-2025",
@@ -49908,7 +49931,8 @@
     "video2": "https://youtu.be/WrSpfnEtzPA",
     "payload": 5,
     "speed": 1,
-    "battery": 480
+    "battery": 480,
+    "hand_type": "Force-controlled dexterous hand"
   },
   {
     "id": "agibot-g1",
@@ -50021,7 +50045,8 @@
     "os": "WorkGPT / GO-1",
     "released": 2025,
     "website": "https://www.agibot.com",
-    "video": "https://youtu.be/yGcjdVv91XA"
+    "video": "https://youtu.be/yGcjdVv91XA",
+    "actuator_type": "Electric (integrated joint modules)"
   },
   {
     "id": "agibot-x2",
@@ -50086,7 +50111,8 @@
     ],
     "video": "https://youtu.be/kBGNvPq0Iyg",
     "speed": 1.5,
-    "battery": 360
+    "battery": 360,
+    "actuator_type": "Electric (integrated joint modules)"
   },
   {
     "id": "agibot-x1",
@@ -50265,7 +50291,8 @@
     "speed_ms": 1.5,
     "ros": true,
     "speed": 1.5,
-    "battery": 120
+    "battery": 120,
+    "actuator_type": "Electric (integrated joint modules)"
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
@@ -50318,7 +50345,8 @@
     "website": "https://www.gotokepler.com",
     "payload": 20,
     "speed": 1.4,
-    "battery": 480
+    "battery": 480,
+    "actuator_type": "Electric"
   },
   {
     "id": "engineered-arts-ameca-generation-3",
@@ -50381,7 +50409,8 @@
     "website": "https://www.engineeredarts.co.uk",
     "gallery": [
       "https://cdn.prod.website-files.com/67ea6793adf74f7d3087e4e4/697d473cd1b6d7e7f6931a58_697d468ee6eb94e0b4011db5_ameca-robot-review-2026.png"
-    ]
+    ],
+    "actuator_type": "Electric servo"
   },
   {
     "id": "kepler-robotics-forerunner-s1",
@@ -50438,7 +50467,8 @@
     "os": "Kepler OS",
     "payload": 18,
     "battery": 480,
-    "battery_life": 480
+    "battery_life": 480,
+    "actuator_type": "Electric"
   },
   {
     "id": "engineered-arts-quinn",
@@ -50542,7 +50572,8 @@
       "https://media.engineeredarts.com/wp-content/uploads/2025/09/Ami-Desktop-Social-Humanoid-Robot-Eye-Mounted-UHD-Cameras-Engineered-Arts.webp"
     ],
     "os": "Tritium / Engineered Arts",
-    "video": "https://youtu.be/oN3Y_iKmgZA"
+    "video": "https://youtu.be/oN3Y_iKmgZA",
+    "actuator_type": "Electric servo"
   },
   {
     "id": "engineered-arts-robothespian",
@@ -50660,7 +50691,8 @@
     ],
     "os": "Engineered Arts",
     "video": "https://youtu.be/fM1xme3-42w",
-    "video2": "https://youtu.be/PAMYPjySY9g"
+    "video2": "https://youtu.be/PAMYPjySY9g",
+    "actuator_type": "Electric servo"
   },
   {
     "id": "engineered-arts-ameca-desktop",
@@ -50713,7 +50745,8 @@
     ],
     "made_in": "UK",
     "website": "https://www.engineeredarts.co.uk",
-    "video": "https://youtu.be/k8Ku6IDHLqU"
+    "video": "https://youtu.be/k8Ku6IDHLqU",
+    "actuator_type": "Electric servo"
   },
   {
     "id": "engineered-arts-ami",
@@ -50772,7 +50805,8 @@
       "https://media.engineeredarts.com/wp-content/uploads/2025/09/Ami-Desktop-Social-Humanoid-Robot-White-Shell-Natural-Skin-Happy-Expression-Engineered-Arts.webp",
       "https://media.engineeredarts.com/wp-content/uploads/2025/09/Ami-Desktop-Social-Humanoid-Robot-Black-Shell-Natural-Skin-Happy-Expression-Engineered-Arts.webp"
     ],
-    "os": "Tritium / Engineered Arts"
+    "os": "Tritium / Engineered Arts",
+    "actuator_type": "Electric servo"
   },
   {
     "id": "milrem-robotics-type-x-rcv",
@@ -53124,7 +53158,8 @@
     ],
     "video": "https://youtu.be/DJk1v21ugcU",
     "speed": 1,
-    "battery": 240
+    "battery": 240,
+    "actuator_type": "Electric"
   },
   {
     "id": "neura-robotics-neura-quadruped-robot",
@@ -58606,7 +58641,8 @@
     "website": "https://www.unitree.com",
     "video": "https://youtu.be/eUdBIFkMh-M",
     "speed": 1.5,
-    "battery": 150
+    "battery": 150,
+    "actuator_type": "Unitree proprietary joint motors"
   },
   {
     "id": "unitree-r1",
@@ -58663,7 +58699,8 @@
     "battery_life_typical": 60,
     "website": "https://www.unitree.com",
     "video": "https://youtu.be/v1Q4Su54iho",
-    "battery": 60
+    "battery": 60,
+    "actuator_type": "Unitree proprietary joint motors"
   },
   {
     "id": "dji-zenmuse-l2",
@@ -60949,7 +60986,8 @@
     "shell_material": "Soft-touch companion design (GR-3 platform)",
     "battery_life": 180,
     "hot_swap": true,
-    "battery": 180
+    "battery": 180,
+    "actuator_type": "Fourier Smart Actuator (FSA)"
   },
   {
     "id": "milrem-robotics-mifik-autonomy-kit",
@@ -61277,7 +61315,8 @@
     "speed_ms": 1.28,
     "actuator_type": "Blade-leg bipedal design, self-developed actuators",
     "website": "https://www.lejurobot.com",
-    "speed": 1.28
+    "speed": 1.28,
+    "hand_type": "Modular (dexterous / gripper / claw)"
   },
   {
     "id": "mentee-robotics-menteebot-base-model-",
@@ -71620,7 +71659,8 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1745145679/robots/wo81jwznhr3adqxef4ju.jpg"
     ],
     "video": "https://youtu.be/hBHCTluboMQ",
-    "battery": 240
+    "battery": 240,
+    "actuator_type": "Electric servo"
   },
   {
     "id": "realbotix-harmony-ai-2",
@@ -71719,7 +71759,8 @@
       "https://imageio.forbes.com/blogs-images/andreamorris/files/2018/09/Harmony-Forbes-1200x676.jpg?format=jpg&height=600&width=1200&fit=bounds",
       "https://ca-times.brightspotcdn.com/dims4/default/3d9e4c7/2147483647/strip/true/crop/2000x1125+0+0/resize/1440x810!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0b%2Fe4%2F3df654ae5a6ac542136e700f05ac%2Fla-fi-sex-robot-harmony-pictures-20170925-028"
     ],
-    "battery": 120
+    "battery": 120,
+    "actuator_type": "Electric servo"
   },
   {
     "id": "realbotix-henry-3",
@@ -71819,7 +71860,8 @@
       "https://metro.co.uk/wp-content/uploads/2018/12/sei_42989535-ca03.jpg?quality=90&strip=all&zoom=1&resize=480%2C600",
       "https://starobserver.com.au/wp-content/uploads/2021/06/henry.jpg"
     ],
-    "battery": 120
+    "battery": 120,
+    "actuator_type": "Electric servo"
   },
   {
     "id": "realbotix-solana-4",
@@ -71924,7 +71966,8 @@
       "https://www.infobae.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-wordpress-client-uploads%2Finfobae-wp%2Fwp-content%2Fuploads%2F2018%2F04%2F16132113%2FRobots-sexuales-1.jpg?auth=3b092ef65211d8e7d4ac45b93a866d65a8491a412c6bdfd57f3ec61ecca9729a&smart=true&width=1200&height=675&quality=85"
     ],
     "speed": 0.8,
-    "battery": 360
+    "battery": 360,
+    "actuator_type": "Electric servo"
   },
   {
     "id": "realbotix-aria-enterprise-5",
@@ -72022,7 +72065,8 @@
     ],
     "perf": false,
     "origin": "USA",
-    "battery": 480
+    "battery": 480,
+    "actuator_type": "Electric servo"
   },
   {
     "id": "realbotix-harmony-x-6",
@@ -72117,7 +72161,8 @@
     ],
     "perf": false,
     "origin": "USA",
-    "battery": 180
+    "battery": 180,
+    "actuator_type": "Electric servo"
   },
   {
     "id": "humanoid-005",
@@ -82052,7 +82097,8 @@
     "reach_mm": 650,
     "payload": 80,
     "speed": 1.9,
-    "battery": 120
+    "battery": 120,
+    "actuator_type": "Electric (integrated joint modules)"
   },
   {
     "id": "agibot-a2-2025",
@@ -82211,7 +82257,8 @@
       "Next-gen Expedition humanoid (Aug 2025): industrial work, martial-arts agility demos, 10-hour endurance"
     ],
     "manufacturer_url": "https://www.agibot.com",
-    "battery": 600
+    "battery": 600,
+    "actuator_type": "Electric (integrated joint modules)"
   },
   {
     "id": "ubtech-walker-s1-2024",
@@ -82579,7 +82626,8 @@
     "video": "https://youtu.be/SGR-FTNeMAI",
     "payload": 100,
     "speed": 1.4,
-    "battery": 420
+    "battery": 420,
+    "actuator_type": "Electric"
   },
   {
     "id": "neura-mipa-gen3-2026",
@@ -107365,7 +107413,10 @@
     "battery_life": 240,
     "bluetooth": true,
     "video": "https://youtu.be/KNEvrJdqUN0",
-    "battery": 240
+    "battery": 240,
+    "actuator_type": "Electric (integrated joint modules)",
+    "payload": 2,
+    "payload_kg": 2
   },
   {
     "id": "agibot-a2-max-2025",
@@ -107420,7 +107471,8 @@
       "https://plain-eeur-prod-public.komododecks.com/202606/23/le7jPgVASwYju8Is3mBv/image.jpg",
       "https://unibot.ru/upload/iblock/ac8/86c7lu3r8a9r3aey7pp95s6m5p6220kt.jpg"
     ],
-    "payload": 40
+    "payload": 40,
+    "actuator_type": "Electric (integrated joint modules + linear-actuator legs)"
   },
   {
     "id": "eufy-omni-s1-pro",
@@ -119461,7 +119513,8 @@
     "rating": 4,
     "released": "2025-02-01",
     "speed": 3.5,
-    "battery": 120
+    "battery": 120,
+    "actuator_type": "Fourier Smart Actuator (FSA)"
   },
   {
     "id": "westinghouse-elektro",
@@ -122122,9 +122175,9 @@
     "year": 2025,
     "origin": "China",
     "made_in": "China (Beijing)",
-    "status": "Development",
-    "score": 81,
-    "rating": 4.3,
+    "status": "Active",
+    "score": 75,
+    "rating": 4,
     "price": "POA",
     "img": "",
     "desc": "Hobbs W1 is a wheeled service humanoid from Beijing startup Noetix Robotics, pitched as a front-desk 'all-rounder' for reception, guidance and customer support. Its signature is a female-styled bionic head with 32 active (plus 8 passive) degrees of freedom that can reproduce over 200 human micro-expressions, with facial skin moulded from platinum silicone for lifelike texture. Beyond a pretty face, it carries two 5-DoF arms with dexterous 6-DoF hands for gestures, handovers and light tasks, an interactive chest screen, and a self-driving base using laser SLAM with 360 obstacle avoidance and infrared auto-recharging. Onboard compute pairs an Intel J1900 CPU with dual 6-TOPS NPUs for local emotion recognition and conversation. It debuted at the 2025 World Robot Conference in Beijing.",
@@ -122170,7 +122223,8 @@
     ],
     "manufacturer_url": "https://noetixrobotics.com/en/hobbs-w1",
     "website": "https://noetixrobotics.com/en/hobbs-w1",
-    "fig": "🤖"
+    "fig": "🤖",
+    "actuator_type": "Electric servo"
   },
   {
     "id": "aheadform-elf-xuan-2",
