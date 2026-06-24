@@ -3441,7 +3441,7 @@
     "score": 75,
     "rating": 4,
     "price": 16000,
-    "desc": "Compact humanoid robot designed for home and educational use with intuitive control and affordable pricing.",
+    "desc": "Unitree's breakthrough budget humanoid — a compact 1.27 m, 35 kg bipedal robot that brought full humanoid capability to a $16,000 price point. With 23 degrees of freedom, force-controlled joints and an open Python/C++/ROS 2 SDK, the G1 became the default platform for researchers, educators and developers, and is capable of dynamic full-body motion including a standing jump taller than itself.",
     "highlights": [
       "Compact design",
       "Affordable price",
@@ -3537,7 +3537,8 @@
     "speed": 0.8,
     "battery": 120,
     "hand_dof": 7,
-    "actuator_type": "Unitree brushless force-control joints (PMSM)"
+    "actuator_type": "Unitree brushless force-control joints (PMSM)",
+    "battery_life_typical": 120
   },
   {
     "id": "unitree-avatar",
@@ -81199,7 +81200,7 @@
       "Dark Brown"
     ],
     "ip_rating": "IP44 (body), IP68 (hands)",
-    "speed_ms": 6.2,
+    "speed_ms": 1.4,
     "payload_kg": 25,
     "payload_peak": 70,
     "dof": 75,
@@ -81246,8 +81247,9 @@
       "https://media.licdn.com/dms/image/v2/D4E10AQFwFffGhxKLxw/videocover-high/B4EZotdOSvHoA0-/0/1761699239481?e=2147483647&v=beta&t=tN4dPkjthUBinFhABB1D1LNp3-jYVUsj0A9Mlajk-_g"
     ],
     "payload": 25,
-    "speed": 6.2,
-    "battery": 240
+    "speed": 1.4,
+    "battery": 240,
+    "run_speed_ms": 6.2
   },
   {
     "id": "agibot-a1-2023",
