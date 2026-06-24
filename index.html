@@ -3200,9 +3200,9 @@ function buildSpecTable(r) {
     if (r.touch_sensing && r.touch_sensing !== 'none') sensorsList.push('Tactile sensing');
     if (r.thermal_camera) sensorsList.push('Thermal camera');
     if (r.barometer) sensorsList.push('Barometer');
-    if (r.accelerometer !== false) sensorsList.push('Accelerometer');
-    if (r.gyroscope !== false) sensorsList.push('Gyroscope');
-    if (r.compass !== false) sensorsList.push('Compass/magnetometer');
+    if (r.accelerometer) sensorsList.push('Accelerometer');
+    if (r.gyroscope) sensorsList.push('Gyroscope');
+    if (r.compass) sensorsList.push('Compass/magnetometer');
     if (r.proximity_sensor) sensorsList.push('Proximity sensor');
     if (r.color_sensor) sensorsList.push('Colour sensor');
     if (r.gas_sensor) sensorsList.push('Gas/chemical sensor');
