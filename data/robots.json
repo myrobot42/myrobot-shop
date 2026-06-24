@@ -98,7 +98,7 @@
     "height_mm": 1300,
     "weight_kg": 77,
     "battery_life": 240,
-    "speed_ms": 0.83,
+    "speed_ms": 2,
     "dof": 36,
     "cameras": "Multiple RGB cameras and depth cameras",
     "lidar": true,
@@ -168,8 +168,12 @@
     "video": "https://www.youtube.com/watch?v=mHP1WGlw5Wk",
     "video2": "https://www.youtube.com/watch?v=nzflxCHT4vw",
     "website": "https://www.ubtrobot.com",
-    "speed": 0.83,
-    "battery": 240
+    "speed": 2,
+    "battery": 240,
+    "hand_dof": 11,
+    "actuator_type": "UBTECH high-torque servo modules",
+    "payload": 15,
+    "payload_kg": 15
   },
   {
     "id": "unknown-roadrunner",
@@ -7746,7 +7750,9 @@
     "website": "https://www.agilityrobotics.com",
     "payload": 15,
     "speed": 1.5,
-    "battery": 240
+    "battery": 240,
+    "actuator_type": "Electric",
+    "hand_type": "Modular gripper / suction end-effector"
   },
   {
     "id": "digit-v4",
@@ -7859,7 +7865,9 @@
     "video": "https://youtu.be/6HHdpQNN4Xg",
     "payload": 12,
     "speed": 1.2,
-    "battery": 180
+    "battery": 180,
+    "actuator_type": "Electric",
+    "hand_type": "Modular gripper / suction end-effector"
   },
   {
     "id": "digit-v3",
@@ -7958,7 +7966,8 @@
     ],
     "payload": 8,
     "speed": 0.8,
-    "battery": 120
+    "battery": 120,
+    "actuator_type": "Electric"
   },
   {
     "id": "cassie-blue",
@@ -8167,7 +8176,8 @@
     ],
     "payload": 5,
     "speed": 0.6,
-    "battery": 90
+    "battery": 90,
+    "actuator_type": "Electric"
   },
   {
     "id": "digit-v1",
@@ -8277,7 +8287,8 @@
     ],
     "payload": 3,
     "speed": 0.4,
-    "battery": 60
+    "battery": 60,
+    "actuator_type": "Electric"
   },
   {
     "id": "cassie-original",
@@ -8824,7 +8835,8 @@
     "video": "https://youtu.be/wwwuCtsR9yo",
     "payload": 25,
     "speed": 1.4,
-    "battery": 4
+    "battery": 4,
+    "actuator_type": "Electric linear + rotary (Apptronik bespoke)"
   },
   {
     "id": "1x-eve-01",
@@ -9049,7 +9061,9 @@
     "website": "https://www.sanctuary.ai",
     "payload": 25,
     "speed": 1.2,
-    "battery": 8
+    "battery": 8,
+    "hand_dof": 21,
+    "actuator_type": "Hydraulic (miniaturized valves)"
   },
   {
     "id": "sanctuary-ai-phoenix-gen-6",
@@ -9156,7 +9170,8 @@
     "website": "https://www.sanctuary.ai",
     "payload": 20,
     "speed": 1,
-    "battery": 6
+    "battery": 6,
+    "actuator_type": "Hydraulic"
   },
   {
     "id": "sanctuary-ai-phoenix-pilot",
@@ -9258,7 +9273,8 @@
     "website": "https://www.sanctuary.ai",
     "payload": 30,
     "speed": 1.5,
-    "battery": 10
+    "battery": 10,
+    "actuator_type": "Hydraulic"
   },
   {
     "id": "ubtech-walker-x",
@@ -32915,7 +32931,8 @@
     "video": "https://youtu.be/BvFxD-8AhJA",
     "payload": 50,
     "speed": 1.4,
-    "battery": 60
+    "battery": 60,
+    "hand_dof": 11
   },
   {
     "id": "carbon-robotics-laserweeder",
@@ -72213,7 +72230,8 @@
     "video": "https://youtu.be/uJOA5IDaL5g",
     "payload": 25,
     "speed": 1.5,
-    "battery": 240
+    "battery": 240,
+    "actuator_type": "Electric linear + rotary (Apptronik bespoke)"
   },
   {
     "id": "wr-bruce",
