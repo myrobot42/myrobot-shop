@@ -97,7 +97,7 @@
     "released": "2023",
     "height_mm": 1300,
     "weight_kg": 77,
-    "battery_life": "4 hours",
+    "battery_life": 240,
     "speed_ms": 0.83,
     "dof": 36,
     "cameras": "Multiple RGB cameras and depth cameras",
@@ -167,7 +167,9 @@
     ],
     "video": "https://www.youtube.com/watch?v=mHP1WGlw5Wk",
     "video2": "https://www.youtube.com/watch?v=nzflxCHT4vw",
-    "website": "https://www.ubtrobot.com"
+    "website": "https://www.ubtrobot.com",
+    "speed": 0.83,
+    "battery": 240
   },
   {
     "id": "unknown-roadrunner",
@@ -192,7 +194,7 @@
     "perf": false,
     "year": 2026,
     "origin": "USA",
-    "status": "Prototype",
+    "status": "Active",
     "height_mm": 1700,
     "weight_kg": 15,
     "speed_ms": 3.6,
@@ -215,7 +217,8 @@
       "https://www.yankodesign.com/images/design_news/2026/03/rais-roadrunner-wheeled-robot-can-roll-and-walk-with-effortless-precision/RAI-Institute-Roadrunner-Robot-1.jpg",
       "https://images.techeblog.com/wp-content/uploads/2026/03/27095508/rai-institute-roadrunner-robot-test.jpg",
       "https://www.digitaltrends.com/tachyon/2026/03/roadrunner-robot.jpg?fit=2500%2C1700"
-    ]
+    ],
+    "speed": 3.6
   },
   {
     "id": "noble-machines-noble-machines-humanoids",
@@ -277,7 +280,9 @@
       "Steep inclines",
       "Outdoor worksites"
     ],
-    "website": "https://www.noblemachines.ai"
+    "website": "https://www.noblemachines.ai",
+    "payload": 27,
+    "battery": 300
   },
   {
     "id": "rivr-formerly-swiss-mile-rivr-quadruped",
@@ -385,7 +390,9 @@
       "https://drivesncontrols.com/wp-content/uploads/2025/06/Hexagon-AEON-humanoid-2.jpg",
       "https://blogs.nvidia.com/wp-content/uploads/2025/06/hexagon-1280x680-1.jpg",
       "https://www.therobotreport.com/wp-content/uploads/2026/04/AEON-hexagon-featured.jpg"
-    ]
+    ],
+    "payload": 15,
+    "speed": 2.39
   },
   {
     "id": "lucid-bots-lavo-ai",
@@ -502,7 +509,8 @@
       "https://www.lg.com/content/dam/channel/wcms/global/newsroom/news/home-appliance-solution/lg-electronics-presents-lg-cloid-home-robot-to-demonstrate-zero-labor-home-at-ces-2026/LG%20CLOiD%20Image%203.jpg",
       "https://mma.prnewswire.com/media/2853958/Image_2_LG_CLOiD.jpg?p=facebook",
       "https://i.pcmag.com/imagery/articles/048zXISRoliNt7AEc8x99Ne-1..v1767643760.jpg"
-    ]
+    ],
+    "battery": 240
   },
   {
     "id": "vention-rapid-operator-ai",
@@ -3550,7 +3558,7 @@
     "npu_tops": 40,
     "battery_type": "Li-ion",
     "battery_wh": 864,
-    "battery_life": "1-2 hours",
+    "battery_life": 90,
     "charge_time": "90 minutes",
     "charge_power_w": 400,
     "charge_type": "DC charging",
@@ -3613,7 +3621,10 @@
     "dof": 29,
     "joint_torque_nm": 360,
     "website": "https://www.unitree.com",
-    "video": "https://youtu.be/GtPs_ygfaEA"
+    "video": "https://youtu.be/GtPs_ygfaEA",
+    "payload": 30,
+    "speed": 1.5,
+    "battery": 90
   },
   {
     "id": "unitree-g1",
@@ -3664,7 +3675,7 @@
     "npu_tops": 20,
     "battery_type": "Li-ion",
     "battery_wh": 432,
-    "battery_life": "2-4 hours",
+    "battery_life": 120,
     "charge_time": "60 minutes",
     "charge_power_w": 200,
     "charge_type": "DC charging",
@@ -3725,7 +3736,10 @@
     "dof": 23,
     "joint_torque_nm": 120,
     "website": "https://www.unitree.com",
-    "video": "https://youtu.be/GzX1qOIO1bE"
+    "video": "https://youtu.be/GzX1qOIO1bE",
+    "payload": 5,
+    "speed": 0.8,
+    "battery": 120
   },
   {
     "id": "unitree-avatar",
@@ -3776,7 +3790,7 @@
     "npu_tops": 80,
     "battery_type": "Li-ion",
     "battery_wh": 600,
-    "battery_life": "3-6 hours",
+    "battery_life": 180,
     "charge_time": "90 minutes",
     "charge_power_w": 300,
     "charge_type": "USB-C PD",
@@ -3825,7 +3839,10 @@
     "payload_kg": 8,
     "dof": 25,
     "joint_torque_nm": 200,
-    "website": "https://www.unitree.com"
+    "website": "https://www.unitree.com",
+    "payload": 8,
+    "speed": 1,
+    "battery": 180
   },
   {
     "id": "unitree-scout",
@@ -3876,7 +3893,7 @@
     "npu_tops": 50,
     "battery_type": "Military Li-ion",
     "battery_wh": 960,
-    "battery_life": "12-24 hours",
+    "battery_life": 720,
     "charge_time": "150 minutes",
     "charge_power_w": 400,
     "charge_type": "Military connector",
@@ -3926,7 +3943,10 @@
     "payload_kg": 25,
     "dof": 30,
     "joint_torque_nm": 350,
-    "website": "https://www.unitree.com"
+    "website": "https://www.unitree.com",
+    "payload": 25,
+    "speed": 1.8,
+    "battery": 720
   },
   {
     "id": "boston-dynamics-atlas-hd",
@@ -3979,7 +3999,7 @@
     "npu_tops": 100,
     "battery_type": "Lithium-ion",
     "battery_wh": 4200,
-    "battery_life": "2 hours",
+    "battery_life": 120,
     "charge_time": "3 hours",
     "charge_power_w": 1400,
     "charge_type": "DC fast charge",
@@ -4038,7 +4058,10 @@
     "joint_torque_nm": 500,
     "website": "https://bostondynamics.com",
     "video": "https://youtu.be/tF4DML7FIWk",
-    "video2": "https://youtu.be/-e1_QhJ1EhQ"
+    "video2": "https://youtu.be/-e1_QhJ1EhQ",
+    "payload": 15,
+    "speed": 3,
+    "battery": 120
   },
   {
     "id": "boston-dynamics-petman",
@@ -4140,7 +4163,9 @@
     "dof": 24,
     "joint_torque_nm": 200,
     "website": "https://bostondynamics.com",
-    "video": "https://youtu.be/mclbVTIYG8E"
+    "video": "https://youtu.be/mclbVTIYG8E",
+    "payload": 5,
+    "speed": 1.3
   },
   {
     "id": "boston-dynamics-atlas-darpa",
@@ -4193,7 +4218,7 @@
     "npu_tops": null,
     "battery_type": "Lithium-ion",
     "battery_wh": 3600,
-    "battery_life": "1 hour",
+    "battery_life": 60,
     "charge_time": "4 hours",
     "charge_power_w": 900,
     "charge_type": "DC",
@@ -4247,7 +4272,10 @@
       "https://spectrum.ieee.org/media-library/image.jpg?id=25573050&width=2000&height=1500&coordinates=44%2C0%2C44%2C0",
       "https://spectrum.ieee.org/media-library/image.jpg?id=25573014&width=1000&quality=85",
       "https://www.darpa.mil/sites/default/files/styles/wide_816/public/DRC_BACK_619_316.jpg?itok=YFtCsi0I"
-    ]
+    ],
+    "payload": 20,
+    "speed": 1.5,
+    "battery": 60
   },
   {
     "id": "boston-dynamics-handle-humanoid",
@@ -4300,7 +4328,7 @@
     "npu_tops": null,
     "battery_type": "Lithium-ion",
     "battery_wh": 2400,
-    "battery_life": "2 hours",
+    "battery_life": 120,
     "charge_time": "3 hours",
     "charge_power_w": 800,
     "charge_type": "DC",
@@ -4352,7 +4380,10 @@
     "dof": 20,
     "joint_torque_nm": 250,
     "website": "https://bostondynamics.com",
-    "video": "https://youtu.be/5iV_hB08Uns"
+    "video": "https://youtu.be/5iV_hB08Uns",
+    "payload": 30,
+    "speed": 4,
+    "battery": 120
   },
   {
     "id": "figure-01-gen1",
@@ -4410,7 +4441,7 @@
     "npu_tops": 100,
     "battery_type": "Li-ion",
     "battery_wh": 2400,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "charge_time": "4 hours",
     "charge_power_w": 600,
     "charge_type": "DC fast charge",
@@ -4462,7 +4493,10 @@
       "https://www.therobotreport.com/wp-content/uploads/2023/10/Figure01-walking-featured.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68286959d0ea56c1f71138bc_Figure%2001_04.jpg"
     ],
-    "website": "https://www.figure.ai"
+    "website": "https://www.figure.ai",
+    "payload": 20,
+    "speed": 1.5,
+    "battery": 480
   },
   {
     "id": "figure-02-commercial",
@@ -4522,7 +4556,7 @@
     "npu_tops": 200,
     "battery_type": "Li-ion phosphate",
     "battery_wh": 3000,
-    "battery_life": "12 hours",
+    "battery_life": 720,
     "charge_time": "3 hours",
     "charge_power_w": 1000,
     "charge_type": "Ultra-fast DC",
@@ -4578,7 +4612,10 @@
     "payload_kg": 25,
     "reach_mm": 850,
     "dof": 48,
-    "website": "https://www.figure.ai"
+    "website": "https://www.figure.ai",
+    "payload": 25,
+    "speed": 2,
+    "battery": 720
   },
   {
     "id": "ur3e",
@@ -7652,7 +7689,7 @@
     "npu_tops": 275,
     "battery_type": "Li-ion",
     "battery_wh": 2400,
-    "battery_life": "4-6 hours",
+    "battery_life": 240,
     "charge_time": "2 hours",
     "charge_power_w": 1200,
     "charge_type": "DC fast charge",
@@ -7698,7 +7735,10 @@
     "speed_ms": 1.5,
     "payload_kg": 15,
     "reach_mm": 900,
-    "website": "https://www.agilityrobotics.com"
+    "website": "https://www.agilityrobotics.com",
+    "payload": 15,
+    "speed": 1.5,
+    "battery": 240
   },
   {
     "id": "digit-v4",
@@ -7756,7 +7796,7 @@
     "npu_tops": 32,
     "battery_type": "Li-ion",
     "battery_wh": 2000,
-    "battery_life": "3-5 hours",
+    "battery_life": 180,
     "charge_time": "2.5 hours",
     "charge_power_w": 800,
     "charge_type": "DC charge",
@@ -7808,7 +7848,10 @@
       "https://cdn.prod.website-files.com/6980c63561bbbeb67b4b7ab5/698e37032f70483f27893dfb_698e0489298374ac8baec244_68475a7b41dc3c124423209f_digit-working.jpeg",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1741935922/robots/q9h8gpjfuyeijl0xs6yq.jpg"
     ],
-    "video": "https://youtu.be/6HHdpQNN4Xg"
+    "video": "https://youtu.be/6HHdpQNN4Xg",
+    "payload": 12,
+    "speed": 1.2,
+    "battery": 180
   },
   {
     "id": "digit-v3",
@@ -7858,7 +7901,7 @@
     "npu_tops": null,
     "battery_type": "Li-ion",
     "battery_wh": 1500,
-    "battery_life": "2-3 hours",
+    "battery_life": 120,
     "charge_time": "3 hours",
     "charge_power_w": 500,
     "charge_type": "AC adapter",
@@ -7904,7 +7947,10 @@
     "website": "https://www.agilityrobotics.com",
     "gallery": [
       "https://salestechstar.com/wp-content/uploads/2022/04/Agility-Robotics-Raises-_150M-Series-B-Led-by-DCVC-and-Playground-Global-to-Accelerate-Blended-Human-Robot-Workplaces-1536x868.jpg"
-    ]
+    ],
+    "payload": 8,
+    "speed": 0.8,
+    "battery": 120
   },
   {
     "id": "cassie-blue",
@@ -7958,7 +8004,7 @@
     "npu_tops": null,
     "battery_type": "Li-Po",
     "battery_wh": 480,
-    "battery_life": "1-2 hours",
+    "battery_life": 60,
     "charge_time": "1.5 hours",
     "charge_power_w": 320,
     "charge_type": "DC adapter",
@@ -8009,7 +8055,10 @@
       "https://p.turbosquid.com/ts-thumb/VQ/3SfmkZ/tC/twoleggedcassierobotblue3dsmodel005/jpg/1709256700/1920x1080/fit_q87/8e257e3f356df965d329aceca5184d96ca95402f/twoleggedcassierobotblue3dsmodel005.jpg",
       "https://p.turbosquid.com/ts-thumb/VQ/3SfmkZ/c4/twoleggedcassierobotblue3dsmodel007/jpg/1709256707/1920x1080/fit_q87/f35041e4d69430fbdf2646b0f1a8e9dda8691e71/twoleggedcassierobotblue3dsmodel007.jpg"
     ],
-    "website": "https://www.agilityrobotics.com"
+    "website": "https://www.agilityrobotics.com",
+    "payload": 5,
+    "speed": 3,
+    "battery": 60
   },
   {
     "id": "digit-v2",
@@ -8060,7 +8109,7 @@
     "npu_tops": null,
     "battery_type": "Li-ion",
     "battery_wh": 1200,
-    "battery_life": "1.5-2.5 hours",
+    "battery_life": 90,
     "charge_time": "4 hours",
     "charge_power_w": 300,
     "charge_type": "AC adapter",
@@ -8107,7 +8156,10 @@
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/23/yLjUMmAjm0N1e8NQ4AKw/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/23/1rEEop5b3qAVAhMVgOEh/image.jpg"
-    ]
+    ],
+    "payload": 5,
+    "speed": 0.6,
+    "battery": 90
   },
   {
     "id": "digit-v1",
@@ -8164,7 +8216,7 @@
     "npu_tops": null,
     "battery_type": "Li-ion",
     "battery_wh": 960,
-    "battery_life": "1-1.5 hours",
+    "battery_life": 60,
     "charge_time": "5 hours",
     "charge_power_w": 192,
     "charge_type": "AC adapter",
@@ -8214,7 +8266,10 @@
       "https://preview.free3d.com/img/2019/09/2202386772896253009/wvq8tyz6.jpg",
       "https://preview.free3d.com/img/2019/09/2202386772896253009/csrghx7t.jpg",
       "https://preview.free3d.com/img/2019/09/2202386772896253009/tee64js0.jpg"
-    ]
+    ],
+    "payload": 3,
+    "speed": 0.4,
+    "battery": 60
   },
   {
     "id": "cassie-original",
@@ -8264,7 +8319,7 @@
     "npu_tops": null,
     "battery_type": "Li-Po",
     "battery_wh": 384,
-    "battery_life": "0.5-1 hour",
+    "battery_life": 30,
     "charge_time": "2 hours",
     "charge_power_w": 192,
     "charge_type": "DC adapter",
@@ -8306,7 +8361,10 @@
     "origin": "USA",
     "speed_ms": 2.5,
     "payload_kg": 2,
-    "website": "https://www.agilityrobotics.com"
+    "website": "https://www.agilityrobotics.com",
+    "payload": 2,
+    "speed": 2.5,
+    "battery": 30
   },
   {
     "id": "tesla-optimus-gen1",
@@ -8363,7 +8421,7 @@
     "npu_tops": 144,
     "battery_type": "lithium-ion",
     "battery_wh": 2300,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "charge_time": "4 hours",
     "charge_power_w": 750,
     "charge_type": "proprietary",
@@ -8417,7 +8475,10 @@
     "payload_kg": 20,
     "reach_mm": 900,
     "website": "https://www.tesla.com/optimus",
-    "video": "https://youtu.be/XiQkeWOFwmk"
+    "video": "https://youtu.be/XiQkeWOFwmk",
+    "payload": 20,
+    "speed": 8,
+    "battery": 480
   },
   {
     "id": "tesla-optimus-gen2",
@@ -8475,7 +8536,7 @@
     "npu_tops": 288,
     "battery_type": "lithium-ion",
     "battery_wh": 2500,
-    "battery_life": "10 hours",
+    "battery_life": 600,
     "charge_time": "3 hours",
     "charge_power_w": 1000,
     "charge_type": "proprietary",
@@ -8532,7 +8593,10 @@
     "payload_kg": 25,
     "reach_mm": 920,
     "website": "https://www.tesla.com/optimus",
-    "video": "https://youtu.be/cpraXaw7dyc"
+    "video": "https://youtu.be/cpraXaw7dyc",
+    "payload": 25,
+    "speed": 10,
+    "battery": 600
   },
   {
     "id": "tesla-optimus-workplace",
@@ -8746,7 +8810,10 @@
       "https://cdn.prod.website-files.com/646de3abb3e62d339f089e28/64e85b8f946301eb2f67c538_pedistal.jpg",
       "https://cdn.prod.website-files.com/646de3abb3e62d339f089e28/64e4b213b2bf6c4dcba870c0_Robot%20only%20w%20Amazon%20Boxs%2001-p-3200.png"
     ],
-    "video": "https://youtu.be/wwwuCtsR9yo"
+    "video": "https://youtu.be/wwwuCtsR9yo",
+    "payload": 25,
+    "speed": 1.4,
+    "battery": 4
   },
   {
     "id": "1x-eve-01",
@@ -8797,7 +8864,7 @@
     "npu_tops": 275,
     "battery_type": "Li-ion",
     "battery_wh": 2400,
-    "battery_life": "4-6 hours",
+    "battery_life": 240,
     "charge_time": "3 hours",
     "charge_power_w": 800,
     "charge_type": "AC adapter",
@@ -8852,7 +8919,10 @@
       "https://cdn.sanity.io/images/7p2whiua/production/4e93ca5f1ce3bcf172943ad007de58c00f3df026-2048x1536.jpg",
       "https://www.therobotreport.com/wp-content/uploads/2024/01/1X-EVE-logistics.jpg"
     ],
-    "website": "https://www.1x.tech"
+    "website": "https://www.1x.tech",
+    "payload": 15,
+    "speed": 1.2,
+    "battery": 240
   },
   {
     "id": "sanctuary-ai-phoenix-gen-7",
@@ -8965,7 +9035,10 @@
       "https://www.canadianmanufacturing.com/wp-content/uploads/2024/04/Sanctuary_AI_Sanctuary_AI_Unveils_the_Next_Generation_of_AI_Robo.jpg",
       "https://kommodo.ai/i/Jjf7MpAb19uB7LhxwaNl"
     ],
-    "website": "https://www.sanctuary.ai"
+    "website": "https://www.sanctuary.ai",
+    "payload": 25,
+    "speed": 1.2,
+    "battery": 8
   },
   {
     "id": "sanctuary-ai-phoenix-gen-6",
@@ -9069,7 +9142,10 @@
     "speed_ms": 1,
     "payload_kg": 20,
     "reach_mm": 800,
-    "website": "https://www.sanctuary.ai"
+    "website": "https://www.sanctuary.ai",
+    "payload": 20,
+    "speed": 1,
+    "battery": 6
   },
   {
     "id": "sanctuary-ai-phoenix-pilot",
@@ -9168,7 +9244,10 @@
     "speed_ms": 1.5,
     "payload_kg": 30,
     "reach_mm": 900,
-    "website": "https://www.sanctuary.ai"
+    "website": "https://www.sanctuary.ai",
+    "payload": 30,
+    "speed": 1.5,
+    "battery": 10
   },
   {
     "id": "ubtech-walker-x",
@@ -9293,7 +9372,10 @@
     ],
     "website": "https://www.ubtrobot.com",
     "video": "https://youtu.be/4ZL3LgdKNbw",
-    "video2": "https://youtu.be/akyhaNtPlWk"
+    "video2": "https://youtu.be/akyhaNtPlWk",
+    "payload": 5,
+    "speed": 3.6,
+    "battery": 4
   },
   {
     "id": "ubtech-walker-pro",
@@ -9394,7 +9476,10 @@
     "speed_ms": 4.5,
     "payload_kg": 8,
     "dof": 45,
-    "website": "https://www.ubtrobot.com"
+    "website": "https://www.ubtrobot.com",
+    "payload": 8,
+    "speed": 4.5,
+    "battery": 6
   },
   {
     "id": "ubtech-walker-lite",
@@ -9489,7 +9574,10 @@
     "speed_ms": 2,
     "payload_kg": 1,
     "dof": 20,
-    "website": "https://www.ubtrobot.com"
+    "website": "https://www.ubtrobot.com",
+    "payload": 1,
+    "speed": 2,
+    "battery": 2
   },
   {
     "id": "ubtech-walker-max",
@@ -9586,7 +9674,10 @@
     "speed_ms": 2.5,
     "payload_kg": 15,
     "dof": 50,
-    "website": "https://www.ubtrobot.com"
+    "website": "https://www.ubtrobot.com",
+    "payload": 15,
+    "speed": 2.5,
+    "battery": 8
   },
   {
     "id": "ubtech-walker-mini",
@@ -9689,7 +9780,10 @@
     "speed_ms": 1.8,
     "payload_kg": 0.5,
     "dof": 18,
-    "website": "https://www.ubtrobot.com"
+    "website": "https://www.ubtrobot.com",
+    "payload": 0.5,
+    "speed": 1.8,
+    "battery": 2
   },
   {
     "id": "ubtech-walker-home",
@@ -9788,7 +9882,10 @@
     "speed_ms": 3.2,
     "payload_kg": 4,
     "dof": 38,
-    "website": "https://www.ubtrobot.com"
+    "website": "https://www.ubtrobot.com",
+    "payload": 4,
+    "speed": 3.2,
+    "battery": 5
   },
   {
     "id": "narwal-freo-x-ultra",
@@ -32804,7 +32901,10 @@
     "actuator_type": "Fourier Smart Actuator (FSA) series, parallel joint configuration",
     "made_in": "China",
     "website": "https://www.fftai.com",
-    "video": "https://youtu.be/BvFxD-8AhJA"
+    "video": "https://youtu.be/BvFxD-8AhJA",
+    "payload": 50,
+    "speed": 1.4,
+    "battery": 60
   },
   {
     "id": "carbon-robotics-laserweeder",
@@ -33839,7 +33939,7 @@
     "npu_tops": 275,
     "battery_type": "Li-ion",
     "battery_wh": 2400,
-    "battery_life": "4-6 hours",
+    "battery_life": 240,
     "charge_time": "3 hours",
     "charge_power_w": 800,
     "charge_type": "AC adapter",
@@ -33896,7 +33996,10 @@
     "speed_ms": 0.5,
     "payload_kg": 5,
     "website": "https://www.engineeredarts.co.uk",
-    "video": "https://youtu.be/IPukuYb9xWw"
+    "video": "https://youtu.be/IPukuYb9xWw",
+    "payload": 5,
+    "speed": 0.5,
+    "battery": 240
   },
   {
     "id": "kepler-forerunner-k1",
@@ -33944,7 +34047,7 @@
     "npu_tops": 45,
     "battery_type": "Li-ion",
     "battery_wh": 2400,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "charge_time": "3 hours",
     "charge_power_w": 150,
     "charge_type": "USB-C PD",
@@ -33988,7 +34091,8 @@
     "origin": "China",
     "released": "2023",
     "dof": 40,
-    "website": "https://www.gotokepler.com"
+    "website": "https://www.gotokepler.com",
+    "battery": 480
   },
   {
     "id": "iron-ox-angus",
@@ -40454,7 +40558,8 @@
       "https://www.robotshop.com/cdn/shop/files/rm65-75-3_149576d5-c1b7-4a7f-9ff8-3249acbeea98.webp?v=1726672494&width=1024",
       "https://www.robotshop.com/cdn/shop/files/rm65-75-4_5356d0b4-9f04-430b-a844-6ef0fedf6ff6.webp?v=1726672494&width=1024",
       "https://www.robotshop.com/cdn/shop/files/rm65-75-1_fd7f1beb-873b-437d-accb-dceb99e814b4.webp?v=1726672931&width=1024"
-    ]
+    ],
+    "payload": 5
   },
   {
     "id": "realman-robotics-realman-rm65-series",
@@ -40526,7 +40631,9 @@
       "https://www.robotshop.com/cdn/shop/files/rm65-75-1.webp?v=1726670267&width=1024",
       "https://www.robotshop.com/cdn/shop/files/robotic-arm-rm65-6-dof-5kg-payload-standard-img2.webp?v=1752471750&width=1024"
     ],
-    "website": "https://www.realman-robotics.com"
+    "website": "https://www.realman-robotics.com",
+    "payload": 5,
+    "speed": 2
   },
   {
     "id": "yeedi-yeedi-s14-plus",
@@ -47049,7 +47156,7 @@
     "year": 2023,
     "status": "Active",
     "released": 2024,
-    "battery_life": "2-4 hours",
+    "battery_life": 120,
     "charge_time": "3-4 hours",
     "speed_ms": 1.2,
     "cameras": "Multiple RGB cameras for vision and navigation",
@@ -47063,7 +47170,9 @@
     "gallery": [
       "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iKr6GYTWUD.o/v0/-1x-1.webp",
       "https://oss-cn-beijing.galbot.com/online/portal/video/tech6.png"
-    ]
+    ],
+    "speed": 1.2,
+    "battery": 120
   },
   {
     "id": "galbot-galbot-g1-wheeled-bionic-robot",
@@ -47151,7 +47260,7 @@
     "height_mm": 1800,
     "weight_kg": 85,
     "payload_kg": 20,
-    "battery_life": "8-12 hours",
+    "battery_life": 480,
     "speed_ms": 1.2,
     "cameras": "Multiple RGB cameras for 360° vision",
     "lidar": true,
@@ -47172,7 +47281,10 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1778218147/robots/galbot-s1-by-galbot-robotics/qmywcgxovd34chsjokqv.webp",
       "https://galbot.oss-cn-beijing.aliyuncs.com/online/portal/img/s1/s1-phone-section4-1.png",
       "https://galbot.oss-cn-beijing.aliyuncs.com/online/portal/img/s1/s1-phone-section3-2.jpg"
-    ]
+    ],
+    "payload": 20,
+    "speed": 1.2,
+    "battery": 480
   },
   {
     "id": "mentee-robotics-menteebot",
@@ -47236,7 +47348,8 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6863b58b6df8277cdc4a1ff7_V3_Hero.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/683fd82159a40f9452fab00f_V3_02.png"
     ],
-    "video": "https://youtu.be/sZPqfes6Gk8"
+    "video": "https://youtu.be/sZPqfes6Gk8",
+    "payload": 25
   },
   {
     "id": "mentee-robotics-menteebot-v3-1",
@@ -47292,7 +47405,10 @@
     "battery_life_typical": 270,
     "website": "https://www.menteebot.com",
     "os": "Mentee AI",
-    "released": 2025
+    "released": 2025,
+    "payload": 25,
+    "battery": 270,
+    "battery_life": 270
   },
   {
     "id": "mentee-robotics-menteebot-v3-0",
@@ -47353,7 +47469,10 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6863b58b6df8277cdc4a1ff7_V3_Hero.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/683fd821bf204be116065ff4_V3_01.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/683fd82159a40f9452fab00f_V3_02.png"
-    ]
+    ],
+    "payload": 25,
+    "battery": 240,
+    "battery_life": 240
   },
   {
     "id": "mentee-robotics-menteebot-v3-0-v3-1",
@@ -47553,7 +47672,7 @@
     ],
     "manufacturer_url": "https://www.clonerobotics.com",
     "weight_kg": 85,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
@@ -47566,7 +47685,8 @@
       "https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2024/12/Clone-Alpha-Android-by-Clone-Robotics-1024x576.jpg"
     ],
     "website": "https://www.clonerobotics.com",
-    "video": "https://youtu.be/C6u08rIa8o4"
+    "video": "https://youtu.be/C6u08rIa8o4",
+    "battery": 480
   },
   {
     "id": "clone-robotics-neoclone",
@@ -47764,7 +47884,7 @@
     "manufacturer_url": "https://clonerobotics.com",
     "height_mm": 1830,
     "weight_kg": 35,
-    "battery_life": "2-4 hours",
+    "battery_life": 120,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Multiple RGB cameras for vision and navigation",
@@ -47788,7 +47908,8 @@
       "https://clonerobotics.com/_ipx/f_webp&q_95&s_3840x2160/assets/img/android/diy.png",
       "https://clonerobotics.com/_ipx/f_webp&q_80&s_3840x2160/assets/img/home/welcome_poster.jpg"
     ],
-    "video": "https://youtu.be/C6u08rIa8o4"
+    "video": "https://youtu.be/C6u08rIa8o4",
+    "battery": 120
   },
   {
     "id": "rainbow-robotics-hubo-2-plus",
@@ -48037,7 +48158,7 @@
     "width_mm": 590,
     "depth_mm": 300,
     "speed_ms": 0.4,
-    "battery_life": "1 hour",
+    "battery_life": 60,
     "os": "Rainbow Robotics",
     "wifi": true,
     "bluetooth": false,
@@ -48054,7 +48175,9 @@
       "https://is2-ssl.mzstatic.com/image/thumb/Purple5/v4/b0/db/df/b0dbdfe7-2589-43b0-f98c-f0aca21fdee0/source/512x512bb.jpg"
     ],
     "website": "https://www.rainbow-robotics.com",
-    "video": "https://youtu.be/r2pKEVTddy4"
+    "video": "https://youtu.be/r2pKEVTddy4",
+    "speed": 0.4,
+    "battery": 60
   },
   {
     "id": "leju-robotics-roban",
@@ -48179,7 +48302,8 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68279475c1fe61fed513436e_KUAVO%203.0_04.png"
     ],
     "os": "KaihongOS (HarmonyOS)",
-    "speed_ms": 1.28
+    "speed_ms": 1.28,
+    "speed": 1.28
   },
   {
     "id": "rainbow-robotics-amr-serving-robot",
@@ -49001,7 +49125,7 @@
     "dof": 40,
     "speed_ms": 1.28,
     "payload_kg": 10,
-    "battery_life": "4-6 hours",
+    "battery_life": 240,
     "charge_time": "2 hours",
     "ros": true,
     "cameras": "Multiple RGB cameras and depth cameras",
@@ -49022,7 +49146,10 @@
     "website": "https://www.lejurobot.com",
     "gallery": [
       "https://mikekalil.com/wp-content/uploads/2025/10/leju-robotics-kuavo-5-5w-bipedal-wheeled-humanoid-robot.png"
-    ]
+    ],
+    "payload": 10,
+    "speed": 1.28,
+    "battery": 240
   },
   {
     "id": "leju-robotics-kuavo-5",
@@ -49055,7 +49182,7 @@
     "dof": 42,
     "speed_ms": 1.28,
     "payload_kg": 10,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "ros": true,
     "cameras": "RGB-D cameras for perception and navigation",
     "lidar": true,
@@ -49083,7 +49210,10 @@
     "gallery": [
       "https://mikekalil.com/wp-content/uploads/2025/10/leju-robotics-kuavo-5-5w-bipedal-wheeled-humanoid-robot.png",
       "https://sc04.alicdn.com/kf/He9bfe11da3d84cbcbf74248f357a15eec.png"
-    ]
+    ],
+    "payload": 10,
+    "speed": 1.28,
+    "battery": 480
   },
   {
     "id": "leju-robotics-aelos-pro",
@@ -49262,7 +49392,7 @@
     "dof": 14,
     "speed_ms": 1.28,
     "payload_kg": 20,
-    "battery_life": "4-6 hours",
+    "battery_life": 240,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
@@ -49289,7 +49419,10 @@
     "storage_gb": 128,
     "ai_model": "Custom neural networks for perception and navigation",
     "made_in": "China",
-    "website": "https://www.lejurobot.com"
+    "website": "https://www.lejurobot.com",
+    "payload": 20,
+    "speed": 1.28,
+    "battery": 240
   },
   {
     "id": "leju-robotics-kuavo-5-5-w",
@@ -49353,7 +49486,10 @@
     "speed_ms": 1.28,
     "gallery": [
       "https://mikekalil.com/wp-content/uploads/2025/10/leju-robotics-kuavo-5-5w-bipedal-wheeled-humanoid-robot.png"
-    ]
+    ],
+    "speed": 1.28,
+    "battery": 120,
+    "battery_life": 120
   },
   {
     "id": "leju-robotics-kuavo-my",
@@ -49404,7 +49540,8 @@
     ],
     "made_in": "China",
     "speed_ms": 1.28,
-    "website": "https://www.lejurobot.com"
+    "website": "https://www.lejurobot.com",
+    "speed": 1.28
   },
   {
     "id": "agibot-omnihand-pro-2025",
@@ -49708,7 +49845,7 @@
     "released": 2025,
     "height_mm": 1650,
     "weight_kg": 60,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "dof": 14,
     "chipset": "NVIDIA Jetson Thor",
     "wifi": true,
@@ -49740,7 +49877,10 @@
     "actuator_type": "Wheeled humanoid, dual arms (sub-millimetre operation precision)",
     "website": "https://www.agibot.com",
     "video": "https://youtu.be/PPlnLFLJWZ4",
-    "video2": "https://youtu.be/WrSpfnEtzPA"
+    "video2": "https://youtu.be/WrSpfnEtzPA",
+    "payload": 5,
+    "speed": 1,
+    "battery": 480
   },
   {
     "id": "agibot-g1",
@@ -49916,7 +50056,9 @@
     "learning_methods": [
       "Reinforcement learning (NVIDIA Isaac Gym sim-to-real)"
     ],
-    "video": "https://youtu.be/kBGNvPq0Iyg"
+    "video": "https://youtu.be/kBGNvPq0Iyg",
+    "speed": 1.5,
+    "battery": 360
   },
   {
     "id": "agibot-x1",
@@ -50090,10 +50232,12 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1764329184/robots/agibot-a2-lite-by-agibot/adivu5l1bdfqiqzqm8xv.jpg?cache=604800"
     ],
     "os": "WorkGPT / GO-1",
-    "battery_life": "2-4 hours",
+    "battery_life": 120,
     "charge_time": "2 hours",
     "speed_ms": 1.5,
-    "ros": true
+    "ros": true,
+    "speed": 1.5,
+    "battery": 120
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
@@ -50129,7 +50273,7 @@
       "Industrial / commercial humanoid tasks",
       "Research"
     ],
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "speed_ms": 1.4,
     "payload_kg": 20,
     "cameras": "Multiple RGB cameras for vision and navigation",
@@ -50143,7 +50287,10 @@
     "manufacturer_url": "https://www.kepleruniverse.com",
     "made_in": "China",
     "os": "Kepler OS",
-    "website": "https://www.gotokepler.com"
+    "website": "https://www.gotokepler.com",
+    "payload": 20,
+    "speed": 1.4,
+    "battery": 480
   },
   {
     "id": "engineered-arts-ameca-generation-3",
@@ -50260,7 +50407,10 @@
     "natural_language_commands": true,
     "battery_life_typical": 480,
     "website": "https://www.gotokepler.com",
-    "os": "Kepler OS"
+    "os": "Kepler OS",
+    "payload": 18,
+    "battery": 480,
+    "battery_life": 480
   },
   {
     "id": "engineered-arts-quinn",
@@ -52467,7 +52617,8 @@
     "learning_methods": [
       "Multimodal full-perception interaction"
     ],
-    "hand_type": "Dexterous hands"
+    "hand_type": "Dexterous hands",
+    "battery": 180
   },
   {
     "id": "fourier-intelligence-gr-2",
@@ -52554,7 +52705,10 @@
       "Lead-through programming"
     ],
     "api": true,
-    "frame_material": "Enclosed bodywork, integrated concealed cabling"
+    "frame_material": "Enclosed bodywork, integrated concealed cabling",
+    "payload": 3,
+    "speed": 1.8,
+    "battery": 120
   },
   {
     "id": "neura-robotics-mipa",
@@ -52925,7 +53079,7 @@
     "weight_kg": 35,
     "ai_model": "Cognitive AI with multimodal perception",
     "lidar": true,
-    "battery_life": "4-6 hours",
+    "battery_life": 240,
     "charge_time": "2-3 hours",
     "cpu": "NVIDIA Jetson",
     "os": "AURA / Neuraverse",
@@ -52940,7 +53094,9 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1771154781/robots/4ne-1-mini-by-neura-robotics/uxvdth3v0mbui8wroum5.webp?cache=604800",
       "https://static.wixstatic.com/media/5440f3_efd2fc257f424542ace006957740bc07~mv2.png/v1/fill/w_320,h_320,q_90,enc_avif,quality_auto/5440f3_efd2fc257f424542ace006957740bc07~mv2.png"
     ],
-    "video": "https://youtu.be/DJk1v21ugcU"
+    "video": "https://youtu.be/DJk1v21ugcU",
+    "speed": 1,
+    "battery": 240
   },
   {
     "id": "neura-robotics-neura-quadruped-robot",
@@ -58420,7 +58576,9 @@
     "os": "Unitree",
     "released": "2025-10-01",
     "website": "https://www.unitree.com",
-    "video": "https://youtu.be/eUdBIFkMh-M"
+    "video": "https://youtu.be/eUdBIFkMh-M",
+    "speed": 1.5,
+    "battery": 150
   },
   {
     "id": "unitree-r1",
@@ -58476,7 +58634,8 @@
     "os": "Unitree",
     "battery_life_typical": 60,
     "website": "https://www.unitree.com",
-    "video": "https://youtu.be/v1Q4Su54iho"
+    "video": "https://youtu.be/v1Q4Su54iho",
+    "battery": 60
   },
   {
     "id": "dji-zenmuse-l2",
@@ -60761,7 +60920,8 @@
     "released": 2025,
     "shell_material": "Soft-touch companion design (GR-3 platform)",
     "battery_life": 180,
-    "hot_swap": true
+    "hot_swap": true,
+    "battery": 180
   },
   {
     "id": "milrem-robotics-mifik-autonomy-kit",
@@ -61088,7 +61248,8 @@
     "made_in": "China",
     "speed_ms": 1.28,
     "actuator_type": "Blade-leg bipedal design, self-developed actuators",
-    "website": "https://www.lejurobot.com"
+    "website": "https://www.lejurobot.com",
+    "speed": 1.28
   },
   {
     "id": "mentee-robotics-menteebot-base-model-",
@@ -71380,7 +71541,7 @@
     "npu_tops": 275,
     "battery_type": "Li-ion",
     "battery_wh": 300,
-    "battery_life": "4-6 hours",
+    "battery_life": 240,
     "charge_time": "3 hours",
     "charge_power_w": 120,
     "charge_type": "Wired",
@@ -71430,7 +71591,8 @@
       "https://cdn.sanity.io/images/1bn41c1s/production/2608a6d7d45b8af7245831954888f34d4c2bbde3-2314x1268.png?w=1440&fm=webp&q=100",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1745145679/robots/wo81jwznhr3adqxef4ju.jpg"
     ],
-    "video": "https://youtu.be/hBHCTluboMQ"
+    "video": "https://youtu.be/hBHCTluboMQ",
+    "battery": 240
   },
   {
     "id": "realbotix-harmony-ai-2",
@@ -71483,7 +71645,7 @@
     "npu_tops": 3,
     "battery_type": "Li-ion",
     "battery_wh": 50,
-    "battery_life": "2-3 hours",
+    "battery_life": 120,
     "charge_time": "2 hours",
     "charge_power_w": 30,
     "charge_type": "Wired",
@@ -71528,7 +71690,8 @@
       "https://www.roboticgizmos.com/wp-content/uploads/2017/12/11/harmony.jpg",
       "https://imageio.forbes.com/blogs-images/andreamorris/files/2018/09/Harmony-Forbes-1200x676.jpg?format=jpg&height=600&width=1200&fit=bounds",
       "https://ca-times.brightspotcdn.com/dims4/default/3d9e4c7/2147483647/strip/true/crop/2000x1125+0+0/resize/1440x810!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0b%2Fe4%2F3df654ae5a6ac542136e700f05ac%2Fla-fi-sex-robot-harmony-pictures-20170925-028"
-    ]
+    ],
+    "battery": 120
   },
   {
     "id": "realbotix-henry-3",
@@ -71581,7 +71744,7 @@
     "npu_tops": 3,
     "battery_type": "Li-ion",
     "battery_wh": 50,
-    "battery_life": "2-3 hours",
+    "battery_life": 120,
     "charge_time": "2 hours",
     "charge_power_w": 30,
     "charge_type": "Wired",
@@ -71627,7 +71790,8 @@
       "https://i.ytimg.com/vi/3DFWSTlKqzQ/mqdefault.jpg",
       "https://metro.co.uk/wp-content/uploads/2018/12/sei_42989535-ca03.jpg?quality=90&strip=all&zoom=1&resize=480%2C600",
       "https://starobserver.com.au/wp-content/uploads/2021/06/henry.jpg"
-    ]
+    ],
+    "battery": 120
   },
   {
     "id": "realbotix-solana-4",
@@ -71680,7 +71844,7 @@
     "npu_tops": 275,
     "battery_type": "Li-ion",
     "battery_wh": 400,
-    "battery_life": "6-8 hours",
+    "battery_life": 360,
     "charge_time": "4 hours",
     "charge_power_w": 150,
     "charge_type": "Wired",
@@ -71730,7 +71894,9 @@
     "gallery": [
       "https://i.ytimg.com/vi/gO9KrOhJ5NM/maxresdefault.jpg",
       "https://www.infobae.com/resizer/v2/https%3A%2F%2Fs3.amazonaws.com%2Farc-wordpress-client-uploads%2Finfobae-wp%2Fwp-content%2Fuploads%2F2018%2F04%2F16132113%2FRobots-sexuales-1.jpg?auth=3b092ef65211d8e7d4ac45b93a866d65a8491a412c6bdfd57f3ec61ecca9729a&smart=true&width=1200&height=675&quality=85"
-    ]
+    ],
+    "speed": 0.8,
+    "battery": 360
   },
   {
     "id": "realbotix-aria-enterprise-5",
@@ -71781,7 +71947,7 @@
     "npu_tops": 275,
     "battery_type": "Li-ion",
     "battery_wh": 350,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "charge_time": "3 hours",
     "charge_power_w": 150,
     "charge_type": "Wired",
@@ -71827,7 +71993,8 @@
       "Customer service"
     ],
     "perf": false,
-    "origin": "USA"
+    "origin": "USA",
+    "battery": 480
   },
   {
     "id": "realbotix-harmony-x-6",
@@ -71879,7 +72046,7 @@
     "npu_tops": 12,
     "battery_type": "Li-ion",
     "battery_wh": 60,
-    "battery_life": "3-4 hours",
+    "battery_life": 180,
     "charge_time": "2 hours",
     "charge_power_w": 45,
     "charge_type": "Wired",
@@ -71921,7 +72088,8 @@
       "Elderly care"
     ],
     "perf": false,
-    "origin": "USA"
+    "origin": "USA",
+    "battery": 180
   },
   {
     "id": "humanoid-005",
@@ -71973,7 +72141,7 @@
     "npu_tops": 275,
     "battery_type": "Li-Ion",
     "battery_wh": 1600,
-    "battery_life": "240 min",
+    "battery_life": 240,
     "charge_time": "90 min",
     "charge_power_w": 1067,
     "charge_type": "Hot-swap",
@@ -72031,7 +72199,10 @@
       "https://www.therobotreport.com/wp-content/uploads/2025/02/apptronik-kitting.jpg",
       "https://humanoidroboticstechnology.com/wp-content/uploads/2024/09/apptronik-apollo-banner-1.jpg"
     ],
-    "video": "https://youtu.be/uJOA5IDaL5g"
+    "video": "https://youtu.be/uJOA5IDaL5g",
+    "payload": 25,
+    "speed": 1.5,
+    "battery": 240
   },
   {
     "id": "wr-bruce",
@@ -72137,7 +72308,10 @@
       "https://www.techeblog.com/wp-content/uploads/2022/12/bruce-bipedal-robot-humanoid.jpg"
     ],
     "video": "https://youtu.be/6cUPrM4_JW8",
-    "video2": "https://youtu.be/u0-brfavzAs"
+    "video2": "https://youtu.be/u0-brfavzAs",
+    "payload": 0.5,
+    "speed": 1.2,
+    "battery": 60
   },
   {
     "id": "wr-bear-actuator-humanoid",
@@ -72235,7 +72409,10 @@
     "origin": "USA",
     "dof": 28,
     "speed_ms": 1,
-    "payload_kg": 2
+    "payload_kg": 2,
+    "payload": 2,
+    "speed": 1,
+    "battery": 90
   },
   {
     "id": "wr-bruce-x",
@@ -72335,7 +72512,10 @@
     "origin": "USA",
     "dof": 12,
     "speed_ms": 1.5,
-    "payload_kg": 0.8
+    "payload_kg": 0.8,
+    "payload": 0.8,
+    "speed": 1.5,
+    "battery": 75
   },
   {
     "id": "wr-bear-mini-humanoid",
@@ -72432,7 +72612,10 @@
     "origin": "USA",
     "dof": 20,
     "speed_ms": 0.6,
-    "payload_kg": 0.3
+    "payload_kg": 0.3,
+    "payload": 0.3,
+    "speed": 0.6,
+    "battery": 45
   },
   {
     "id": "wr-panda-humanoid",
@@ -72532,7 +72715,10 @@
     "origin": "USA",
     "dof": 32,
     "speed_ms": 1.2,
-    "payload_kg": 5
+    "payload_kg": 5,
+    "payload": 5,
+    "speed": 1.2,
+    "battery": 120
   },
   {
     "id": "wr-bruce-arms",
@@ -72630,7 +72816,10 @@
     "origin": "USA",
     "dof": 18,
     "speed_ms": 1.2,
-    "payload_kg": 1
+    "payload_kg": 1,
+    "payload": 1,
+    "speed": 1.2,
+    "battery": 60
   },
   {
     "id": "wr-bear-upper-body",
@@ -72728,7 +72917,8 @@
     "perf": false,
     "origin": "USA",
     "dof": 14,
-    "payload_kg": 3
+    "payload_kg": 3,
+    "payload": 3
   },
   {
     "id": "husqvarna-automower-430x",
@@ -81415,7 +81605,10 @@
     "pilot_customers": [
       "BMW Spartanburg"
     ],
-    "website": "https://www.figure.ai"
+    "website": "https://www.figure.ai",
+    "payload": 25,
+    "speed": 1.2,
+    "battery": 300
   },
   {
     "id": "tesla-optimus-gen3-2026",
@@ -81489,7 +81682,10 @@
     "speed_ms": 1.7,
     "gallery": [
       "https://i.ytimg.com/vi/vtmYs8zDK74/maxresdefault.jpg"
-    ]
+    ],
+    "payload": 20,
+    "speed": 1.7,
+    "battery": 480
   },
   {
     "id": "boston-dynamics-atlas-hydraulic-2013",
@@ -81655,7 +81851,10 @@
     ],
     "warranty_months": 12,
     "website": "https://bostondynamics.com",
-    "video": "https://youtu.be/29ECwExc-_M"
+    "video": "https://youtu.be/29ECwExc-_M",
+    "payload": 50,
+    "speed": 2.5,
+    "battery": 240
   },
   {
     "id": "1x-neo-2025",
@@ -81754,7 +81953,10 @@
       "https://www.therobotreport.com/wp-content/uploads/2025/02/NEO-Gamma_Breakfast-featured.jpg",
       "https://www.1x.tech/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fqka6yvsc%2Fproduction%2Fc1a93f30beb4c513da832bcd886db94419e06be2-4096x2731.webp%3Fq%3D100%26fit%3Dmax%26auto%3Dformat&w=3840&q=100",
       "https://media.licdn.com/dms/image/v2/D4E10AQFwFffGhxKLxw/videocover-high/B4EZotdOSvHoA0-/0/1761699239481?e=2147483647&v=beta&t=tN4dPkjthUBinFhABB1D1LNp3-jYVUsj0A9Mlajk-_g"
-    ]
+    ],
+    "payload": 25,
+    "speed": 6.2,
+    "battery": 240
   },
   {
     "id": "agibot-a1-2023",
@@ -81817,7 +82019,10 @@
     "lidar": true,
     "ros": true,
     "manufacturer_url": "https://www.agibot.com",
-    "reach_mm": 650
+    "reach_mm": 650,
+    "payload": 80,
+    "speed": 1.9,
+    "battery": 120
   },
   {
     "id": "agibot-a2-2025",
@@ -81913,7 +82118,10 @@
     ],
     "speed_ms": 1.5,
     "payload_kg": 30,
-    "video": "https://youtu.be/hZ3naA_5010"
+    "video": "https://youtu.be/hZ3naA_5010",
+    "payload": 30,
+    "speed": 1.5,
+    "battery": 120
   },
   {
     "id": "agibot-a3-2025",
@@ -81972,7 +82180,8 @@
     "use_cases": [
       "Next-gen Expedition humanoid (Aug 2025): industrial work, martial-arts agility demos, 10-hour endurance"
     ],
-    "manufacturer_url": "https://www.agibot.com"
+    "manufacturer_url": "https://www.agibot.com",
+    "battery": 600
   },
   {
     "id": "ubtech-walker-s1-2024",
@@ -82050,7 +82259,8 @@
       "https://owebsite-cdn.ubtrobot.com/resources/image/2025/07/01/693097556971589.png"
     ],
     "video": "https://youtu.be/UBbk18oZbTc",
-    "video2": "https://youtu.be/UHe1zSQwep0"
+    "video2": "https://youtu.be/UHe1zSQwep0",
+    "battery": 240
   },
   {
     "id": "ubtech-alpha-1e-2018",
@@ -82111,7 +82321,8 @@
       "https://owebsite-cdn.ubtrobot.com/en/uploadfiles/zwimg205.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkaz4L7IOt0LO_PtiDQbR3w7rdogj_OdpXmw&s"
     ],
-    "video": "https://youtu.be/yEdjPgTWpYs"
+    "video": "https://youtu.be/yEdjPgTWpYs",
+    "battery": 60
   },
   {
     "id": "xpeng-iron-2025",
@@ -82182,7 +82393,8 @@
     ],
     "website": "https://www.xpeng.com",
     "os": "XPENG Turing",
-    "released": 2025
+    "released": 2025,
+    "battery": 360
   },
   {
     "id": "kepler-k2-2024",
@@ -82246,7 +82458,9 @@
     ],
     "website": "https://www.gotokepler.com",
     "os": "Kepler OS",
-    "npu_tops": 100
+    "npu_tops": 100,
+    "payload": 30,
+    "battery": 480
   },
   {
     "id": "neura-4ne1-2024",
@@ -82281,7 +82495,7 @@
     "status": "Active",
     "height_mm": 1800,
     "weight_kg": 80,
-    "battery_life": "6-8 hours",
+    "battery_life": 420,
     "origin": "Germany",
     "cameras": "Multi-camera RGB-D",
     "ai_model": "Cognitive AI (NVIDIA Isaac GR00T)",
@@ -82332,7 +82546,10 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68361b022988c070e0d39e30_4NE-1_01.jpg",
       "https://humanoidroboticstechnology.com/wp-content/uploads/2024/10/4NE-1_humanoid_robot.jpg"
     ],
-    "video": "https://youtu.be/SGR-FTNeMAI"
+    "video": "https://youtu.be/SGR-FTNeMAI",
+    "payload": 100,
+    "speed": 1.4,
+    "battery": 420
   },
   {
     "id": "neura-mipa-gen3-2026",
@@ -82532,7 +82749,10 @@
       "https://cdn.sanity.io/images/7p2whiua/production/a8d670d821e783d231286ae470aa54839b111b28-1200x1000.jpg",
       "https://pal-robotics.com/wp-content/uploads/2024/03/TIAGo-descripcion-especificas-tecnicas.webp",
       "https://robots.ros.org/assets/img/robots/tiago/tiago_image.jpg"
-    ]
+    ],
+    "payload": 3,
+    "speed": 1,
+    "battery": 480
   },
   {
     "id": "pal-talos-2017",
@@ -82603,7 +82823,9 @@
       "https://pal-robotics.com/wp-content/uploads/2024/04/TALOS_datasheets-rayos-583x1024.webp",
       "https://pal-robotics.com/wp-content/uploads/2024/04/TALOS-wbc-2-2048x1329.webp",
       "https://cdn.sanity.io/images/7p2whiua/production/8f11a8b9cd0d82907aee57af4f7d0d52f663d70a-2048x1536.jpg"
-    ]
+    ],
+    "payload": 6,
+    "battery": 180
   },
   {
     "id": "xiaomi-cyberone-2022",
@@ -82669,7 +82891,8 @@
       "https://i02.appmifile.com/462_operatorx_operatorx_uploadTiptapImage/11/08/2022/bae36bca5c0ba22bc548eb39b6356433.jpg",
       "https://techcrunch.com/wp-content/uploads/2022/08/it-2s4I1X-1660231787.jpeg",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1764856219/robots/cyberone-by-xiaomi-robotics-lab/atzfnkavgb4wcldzfaez.jpg?cache=604800"
-    ]
+    ],
+    "battery": 150
   },
   {
     "id": "robotera-star1-2024",
@@ -82732,7 +82955,9 @@
       "https://humanoidroboticstechnology.com/wp-content/uploads/2024/10/Robot-Era-Tests-STAR-1-Humanoid-Robot-in-the-Gobi-Desert-740x554.png",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6836105ab0758f56adba4dae_Star%201_Hero.png",
       "https://cdn1.vogel.de/0VaCYCkmYsZg617gIOv7bNGSiAw=/fit-in/800x0/p7i.vogel.de/wcms/36/46/36460281fabf253e390fa24013ef1d4d/0121379211v1.jpeg"
-    ]
+    ],
+    "speed": 3.6,
+    "battery": 150
   },
   {
     "id": "robotera-l7-2025",
@@ -82792,7 +83017,8 @@
       "https://www.ghostysky.com/wp-content/uploads/2025/11/GH_Robotera_l7_2.jpg",
       "https://www.ghostysky.com/wp-content/uploads/2025/11/GH_Robotera_l7_3.jpg",
       "https://static.wixstatic.com/media/81fcea_d0d13b253b91466b9a6874986a483a38~mv2.png/v1/fill/w_252,h_252,q_90,enc_avif,quality_auto/81fcea_d0d13b253b91466b9a6874986a483a38~mv2.png"
-    ]
+    ],
+    "battery": 180
   },
   {
     "id": "astribot-s1-2024",
@@ -82859,7 +83085,10 @@
       "https://p.turbosquid.com/ts-thumb/fe/BoSPHA/L5/a7/png/1769545900/1920x1080/fit_q87/2f5cff7578e3199d9acc20b8a1c01e133d8c0fd6/a7.jpg",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1769896306/robots/astribot-s1-by-stardust-intelligence/urojqyzsxlrpuf1g5kd2.webp?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1769896306/robots/astribot-s1-by-stardust-intelligence/ukhmu0hsxdoxrpxfppwq.webp?cache=604800"
-    ]
+    ],
+    "payload": 10,
+    "speed": 1,
+    "battery": 240
   },
   {
     "id": "engineai-em02-2024",
@@ -82917,7 +83146,8 @@
     ],
     "website": "https://www.engineai.com.cn",
     "os": "EngineAI",
-    "released": 2024
+    "released": 2024,
+    "battery": 150
   },
   {
     "id": "deep-robotics-dr01-2024",
@@ -83022,7 +83252,8 @@
     ],
     "website": "https://www.noetix.com.cn",
     "os": "Noetix",
-    "released": 2024
+    "released": 2024,
+    "battery": 90
   },
   {
     "id": "promobot-v4-2018",
