@@ -83318,7 +83318,9 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68603422f4f9f3cec6e5dd1b_Promobot_Hero.png",
       "https://www.integritas.mx/web/image/product.image/81/image_1024/PROMOBOT%20V%204.0?unique=af12d95",
       "https://www.integritas.mx/web/image/product.image/82/image_1024/PROMOBOT%20V%204.0?unique=af12d95"
-    ]
+    ],
+    "speed": 1.5,
+    "battery": 1080
   },
   {
     "id": "fauna-sprout-2025",
@@ -83378,7 +83380,8 @@
       "https://media.wired.com/photos/697800b9ee055fe90a430227/master/w_1600%2Cc_limit/Sprout%2520Dancing.jpg",
       "https://platform.theverge.com/wp-content/uploads/sites/2/2026/01/fauna_sprout_3.jpg?quality=90&strip=all&crop=0,0,100,100",
       "https://humanoid.guide/wp-content/uploads/2026/02/sprout-robot.jpg"
-    ]
+    ],
+    "battery": 180
   },
   {
     "id": "toyota-tro-2017",
@@ -83473,7 +83476,7 @@
     ],
     "perf": false,
     "year": 2000,
-    "status": "Discontinued",
+    "status": "Active",
     "height_mm": 1300,
     "weight_kg": 50,
     "battery_life": 60,
@@ -83506,7 +83509,9 @@
       "https://spectrum.ieee.org/media-library/a-white-humanoid-robot-with-a-black-helmet-stands-facing-the-camera.jpg?id=29706175&width=2000&height=1500&coordinates=0%2C54%2C0%2C55",
       "https://robohub.org/wp-content/uploads/2012/06/asimo_11_01.jpg",
       "https://spectrum.ieee.org/media-library/asimo.jpg?id=25565993&width=600&quality=85"
-    ]
+    ],
+    "speed": 2.5,
+    "battery": 60
   },
   {
     "id": "softbank-pepper-2014",
@@ -83538,7 +83543,7 @@
     ],
     "perf": false,
     "year": 2014,
-    "status": "Discontinued",
+    "status": "Active",
     "height_mm": 1200,
     "weight_kg": 28,
     "battery_life": 720,
@@ -83578,7 +83583,9 @@
       "https://us.softbankrobotics.com/hubfs/SBR_Pepper-Hero_FullRobot.png",
       "https://us.softbankrobotics.com/hs-fs/hubfs/SBR_Pepper-photo-01.jpg?width=630&height=630&name=SBR_Pepper-photo-01.jpg",
       "https://www.robotlab.com/hs-fs/hubfs/Pepper-PF-1.png?width=700&name=Pepper-PF-1.png"
-    ]
+    ],
+    "speed": 1,
+    "battery": 720
   },
   {
     "id": "softbank-nao-2008",
@@ -83656,7 +83663,9 @@
       "https://lookingglassxr.com/wp-content/uploads/2025/01/Robots-_-Humanoids-_-Quadrupeds-_-Overview-12_27_2024-Sheet1-1-20.png",
       "https://media.jalis.pro/images/75f804b1-143f-417b-84c6-987b429bba4d_large.webp",
       "https://static.wixstatic.com/media/4eb8e1_997da6681acd44938e4a3ef334440aa1~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
-    ]
+    ],
+    "speed": 0.1,
+    "battery": 90
   },
   {
     "id": "starship-delivery-robot-gen5-2018",
@@ -107323,9 +107332,10 @@
       "https://www.robotsinternational.com/pub/media/catalog/product/a/g/agibot-a2-ultra-2.jpg",
       "https://www.robotsinternational.com/pub/media/catalog/product/a/g/agibot-a2-ultra-4.jpg"
     ],
-    "battery_life": "8-12 hours",
+    "battery_life": 240,
     "bluetooth": true,
-    "video": "https://youtu.be/KNEvrJdqUN0"
+    "video": "https://youtu.be/KNEvrJdqUN0",
+    "battery": 240
   },
   {
     "id": "agibot-a2-max-2025",
@@ -107379,7 +107389,8 @@
       "https://plain-eeur-prod-public.komododecks.com/202606/23/frWcFwnjtLohuq5g6Xxj/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/23/le7jPgVASwYju8Is3mBv/image.jpg",
       "https://unibot.ru/upload/iblock/ac8/86c7lu3r8a9r3aey7pp95s6m5p6220kt.jpg"
-    ]
+    ],
+    "payload": 40
   },
   {
     "id": "eufy-omni-s1-pro",
@@ -117780,7 +117791,8 @@
       "Embodied-AI training & data collection"
     ],
     "made_in": "China",
-    "website": "https://www.deeprobotics.cn"
+    "website": "https://www.deeprobotics.cn",
+    "speed": 1.6
   },
   {
     "cat": "Humanoid",
@@ -117825,7 +117837,9 @@
     ],
     "made_in": "China",
     "website": "https://www.pndbotics.com",
-    "released": "2025-01-01"
+    "released": "2025-01-01",
+    "speed": 1.7,
+    "battery": 180
   },
   {
     "cat": "Humanoid",
@@ -117891,7 +117905,8 @@
       "Imitation learning",
       "Sim-to-real"
     ],
-    "price_note": "(~88,000 yuan)"
+    "price_note": "(~88,000 yuan)",
+    "speed": 2
   },
   {
     "cat": "Humanoid",
@@ -117950,7 +117965,9 @@
     "ai_model": "End-to-end neural network (RL + imitation learning) — first humanoid with natural human-like gait",
     "ros": true,
     "sdk": "Open developer stack",
-    "price_note": "($20,000-30,000)"
+    "price_note": "($20,000-30,000)",
+    "payload": 15,
+    "speed": 2
   },
   {
     "cat": "Humanoid",
@@ -117997,7 +118014,8 @@
       "Industrial, commercial & research humanoid (expandable to 50 DoF)"
     ],
     "made_in": "China",
-    "website": "https://www.magiclab.top"
+    "website": "https://www.magiclab.top",
+    "speed": 2.5
   },
   {
     "cat": "Humanoid",
@@ -118841,7 +118859,8 @@
       "Industrial heavy-work humanoid (announced)"
     ],
     "made_in": "China",
-    "website": "https://www.engineai.com.cn"
+    "website": "https://www.engineai.com.cn",
+    "speed": 3
   },
   {
     "perf": false,
@@ -118882,7 +118901,9 @@
       "Labor automation humanoid (UK; announced target specs)"
     ],
     "made_in": "UK",
-    "website": "https://thehumanoid.ai"
+    "website": "https://thehumanoid.ai",
+    "payload": 15,
+    "battery": 240
   },
   {
     "perf": false,
@@ -118978,7 +118999,7 @@
     "max_motor_torque": "150 N·m (250 N·m top tier)",
     "battery_life": 120,
     "battery_capacity": "9,500 mAh",
-    "battery": "9,500 mAh; ~2 h (Lite/EDU), ~1.5 h (Super); charger 58.8V/10A; drawer-type module",
+    "battery": 120,
     "end_effector": "Parallel two-finger gripper (1 DoF) standard; optional five-finger dexterous hand (6 DoF), self-developed two-finger (1 DoF) or three-finger dexterous hand (4 DoF)",
     "controller": "Handheld remote; optional handheld emergency stop",
     "compute": "Remote control RK3588 (8-16G); Perception NVIDIA Orin NX 157TOPS (EDU/Super); optional computing backpack AGX Orin 275TOPS",
@@ -119050,7 +119071,9 @@
       "https://www.dobot.nu/wp-content/webp-express/webp-images/uploads/2025/08/LimX-Oli-img-008.jpg.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/688b85bcec1bfd2709f260e8_Oli_Hero.webp",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1761621791/robots/oli-by-limx-dynamics/jrg8tfe6hdyetrahoj02.webp"
-    ]
+    ],
+    "payload": 3,
+    "speed": 1.4
   },
   {
     "id": "limx-dynamics-tron-1",
@@ -119298,7 +119321,7 @@
     "max_motor_torque": "200 N·m",
     "battery_life": 240,
     "battery_capacity": "10,000 mAh",
-    "battery": "Drawer-style hot-swap module; direct charge or hot-swap; ~1 h charge; 110-220V in, 58.8V/10A out",
+    "battery": 240,
     "end_effector": "Palm-shaped hand (standard); optional fist-shaped or dexterous 5-finger hand (6 DoF)",
     "controller": "Handheld remote (with charging cable)",
     "compute": "Motion control RK3588/16G/256G · Perception RK3588/8G/32G",
@@ -119369,7 +119392,9 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1774603625/robots/luna-by-limx-dynamics/qygvjaridwx9ymhpzlea.webp?cache=604800",
       "https://i0.wp.com/technode.com/wp-content/uploads/2026/05/LimX-Luna.png?fit=1220%2C738&ssl=1",
       "https://limx-video.oss-cn-beijing.aliyuncs.com/limx-website/products/luna/luna-6-4.png"
-    ]
+    ],
+    "payload": 3,
+    "speed": 1.4
   },
   {
     "id": "fourier-n1",
@@ -119404,7 +119429,9 @@
     "tags": [],
     "score": 75,
     "rating": 4,
-    "released": "2025-02-01"
+    "released": "2025-02-01",
+    "speed": 3.5,
+    "battery": 120
   },
   {
     "id": "westinghouse-elektro",
@@ -120167,7 +120194,8 @@
     "tags": [],
     "score": 75,
     "rating": 4,
-    "released": "2026-04-01"
+    "released": "2026-04-01",
+    "battery": 90
   },
   {
     "id": "persona-ai-humanoid",
@@ -120213,7 +120241,7 @@
     "lidar": true,
     "imu": true,
     "battery_wh": 2300,
-    "battery_life": "~2 hours",
+    "battery_life": 120,
     "learning_methods": [
       "Imitation learning",
       "Reinforcement learning"
@@ -120249,7 +120277,10 @@
     "compute_note": "1500 TOPS AI module (Intel i9 + GPU, 16GB VRAM); 7.7x standard edge compute",
     "workstation_range": "Adapts to 700–1000mm workstation heights",
     "demonstrated_tasks": "100+ tasks incl. soldering, meal prep, document delivery, delicate-component handling",
-    "launch_event": "Unveiled Nagoya, Japan; global mass production from June 2025"
+    "launch_event": "Unveiled Nagoya, Japan; global mass production from June 2025",
+    "payload": 5,
+    "speed": 1.5,
+    "battery": 120
   },
   {
     "cat": "Humanoid",
@@ -120273,7 +120304,7 @@
     "lidar": true,
     "lidar_model": "Robosense Airy 3D LiDAR",
     "imu": true,
-    "battery_life": "~2 hours",
+    "battery_life": 120,
     "ros": true,
     "sdk": "Embodied AI Set: URDF models + open-source training framework",
     "api": true,
@@ -120305,7 +120336,10 @@
     "battery_note": "Quick-swap battery, ~2 hr runtime",
     "ai_model": "ROM-1 (100M params, 24Hz end-to-end)",
     "embodied_ai_set": "Optional: high-precision URDF models, open-source training framework, multi-modal data tools",
-    "ip_rating": "IP68 (Atom line)"
+    "ip_rating": "IP68 (Atom line)",
+    "payload": 5,
+    "speed": 1.5,
+    "battery": 120
   },
   {
     "cat": "Research",
@@ -120425,7 +120459,7 @@
     "cameras": "RGBD depth camera",
     "imu": "9-axis IMU",
     "mic_array": true,
-    "battery_life": "40–80 min by edition",
+    "battery_life": 40,
     "os": "ROS2",
     "sdk": "Secondary development; Isaac Sim models; Booster GYM 2.0",
     "ros": true,
@@ -120451,7 +120485,9 @@
     ],
     "made_in": "China",
     "website": "https://www.boosterobotics.com",
-    "desc": "Booster Robotics' compact entry-level humanoid: ~95 cm, 19.5 kg, 22 DoF (6-DoF legs, 4-DoF arms). RoboCup 2025 KidSize champion, powered by Booster GYM 2.0 for stable agile bipedal motion. Sold in compute tiers (48/117/200 TOPS — Geek/EDU/Pro) on NVIDIA Jetson, ROS2-compatible with Isaac Sim models. From the Tsinghua Robot Control Lab team; from $4,999. Companion to the larger T1."
+    "desc": "Booster Robotics' compact entry-level humanoid: ~95 cm, 19.5 kg, 22 DoF (6-DoF legs, 4-DoF arms). RoboCup 2025 KidSize champion, powered by Booster GYM 2.0 for stable agile bipedal motion. Sold in compute tiers (48/117/200 TOPS — Geek/EDU/Pro) on NVIDIA Jetson, ROS2-compatible with Isaac Sim models. From the Tsinghua Robot Control Lab team; from $4,999. Companion to the larger T1.",
+    "speed": 0.4,
+    "battery": 40
   },
   {
     "cat": "Humanoid",
@@ -120470,7 +120506,7 @@
     "speed_ms": 1.2,
     "reach_mm": 450,
     "repeatability_mm": 0.05,
-    "battery_life": "Up to 8 hours",
+    "battery_life": 480,
     "cpu": "NVIDIA Jetson Orin Nano SUPER 8GB (40 TOPS) main + Jetson Nano",
     "ai_chip": "32-40 TOPS",
     "cameras": "3D machine vision + 2D vision",
@@ -120516,7 +120552,10 @@
       "https://industrialsupplygroups.com/wp-content/uploads/2025/08/G6F6d50JoBDfJ3ZK-original-1200x900.png",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/e/l/elephant-robotics-mercury-x1.jpg"
     ],
-    "video": "https://youtu.be/Vt93d2GqyB4"
+    "video": "https://youtu.be/Vt93d2GqyB4",
+    "payload": 1,
+    "speed": 1.2,
+    "battery": 480
   },
   {
     "cat": "Humanoid",
@@ -120575,7 +120614,8 @@
       "https://www.robotshop.com/cdn/shop/files/5f7d818d_2o3a8369.webp?v=1767981949&width=1024"
     ],
     "video": "https://youtu.be/qmS_d0bbmCs",
-    "video2": "https://youtu.be/Xb-Lbf9AM3g"
+    "video2": "https://youtu.be/Xb-Lbf9AM3g",
+    "payload": 1
   },
   {
     "cat": "Industrial",
@@ -120768,7 +120808,7 @@
     "weight_kg": 60,
     "dof": 52,
     "ai_chip": "550 TOPS",
-    "battery_life": "4+ hours",
+    "battery_life": 240,
     "hand_type": "Five-fingered precision bionic dexterous hands; high-dynamic force control",
     "cpu": "Edge computing modules",
     "cameras": "Vision suite",
@@ -120805,7 +120845,8 @@
     "demonstrated_tasks": "Stand, walk, run, jump; sort clothes, assemble table lamp, change bulbs, twist screws",
     "manufacturer_full": "Lingbao CASBOT (Beijing Zhongke Huiling Robotics), founded Aug 2023",
     "deployment": "Deployed in Lenovo intelligent-manufacturing factory (Sept 2024); Lenovo Venture Capital backing",
-    "unveiled": "CES 2025 / 13 Nov 2024"
+    "unveiled": "CES 2025 / 13 Nov 2024",
+    "battery": 240
   },
   {
     "cat": "Humanoid",
@@ -120880,7 +120921,8 @@
     "desc": "A wheeled humanoid combining a lift-adjustable upper body with dual 7-DoF arms (10 kg payload) on a differential-drive base. Runs CASBOT Embodied Brain 2.0 for VLA control and perception fusion on an Intel i9 + RTX 4060 industrial PC, with RGB-D cameras and waist-mounted 360° LiDAR. Built for warehouse, retail and light-industrial manipulation.",
     "arm_config": "Dual 7-DoF arms + vertical lift column",
     "lidar_model": "Waist-mounted 360 degree LiDAR",
-    "note": "Wheeled humanoid for warehouse/retail/light-industrial manipulation"
+    "note": "Wheeled humanoid for warehouse/retail/light-industrial manipulation",
+    "payload": 10
   },
   {
     "cat": "Humanoid",
@@ -120894,7 +120936,7 @@
     "price": "POA",
     "dof": 34,
     "payload_kg": 10,
-    "battery_life": "8 hours",
+    "battery_life": 480,
     "hand_type": "Dual 7-DoF arms",
     "ai_model": "DexVerse Sim2Real embodied-intelligence engine (large-scale synthetic 3D training data)",
     "learning_methods": [
@@ -120923,7 +120965,9 @@
     "desc": "DexForce's second-generation wheeled humanoid: 34 powered joints, dual 7-DoF arms lifting up to 10 kg, and ~8-hour runtime. Built on DexForce's DexVerse Sim2Real engine, which generates large-scale synthetic 3D training data for robust real-world manipulation. Shenzhen-based, founded 2021, backed by Lenovo Capital.",
     "arm_config": "Dual 7-DoF arms on wheeled base",
     "manufacturer_full": "DexForce (Shenzhen, founded 2021; Lenovo Capital-backed)",
-    "note": "Second-generation wheeled humanoid; DexVerse engine generates synthetic training data for robust manipulation"
+    "note": "Second-generation wheeled humanoid; DexVerse engine generates synthetic training data for robust manipulation",
+    "payload": 10,
+    "battery": 480
   },
   {
     "cat": "Humanoid",
@@ -121888,9 +121932,9 @@
     "year": 2026,
     "origin": "China",
     "made_in": "China (Shenzhen)",
-    "status": "Development",
-    "score": 84,
-    "rating": 4.5,
+    "status": "Active",
+    "score": 75,
+    "rating": 4,
     "price": "POA",
     "img": "",
     "desc": "TORA-ONE is a wheeled humanoid robot from Shenzhen-based PaXini Tech, a tactile-sensing specialist backed by a 100-million-yuan strategic investment from BYD. Built around PaXini's 6D Hall-array tactile technology, it carries roughly 1,956 tactile sensors (7,824 channels) alongside five RGB monocular cameras, two depth cameras, fisheye vision and LiDAR with laser SLAM. With an adjustable height of 1.46-1.86 m, 47 degrees of freedom (21 in the body, 26 across its four-fingered bionic hands), plus or minus 0.05 mm arm-positioning accuracy and up to 8 kg per arm, it targets precision assembly, logistics, healthcare and service tasks. TORA-ONE debuted at CES 2026 demonstrating autonomous workflows from ice-cream making to pallet handling, and runs about eight hours per charge.",
@@ -121930,7 +121974,8 @@
     ],
     "manufacturer_url": "https://www.paxini.com/",
     "website": "https://www.paxini.com/",
-    "fig": "🤖"
+    "fig": "🤖",
+    "battery": 480
   },
   {
     "id": "ubtech-u1-pro",
@@ -121941,9 +121986,9 @@
     "year": 2026,
     "origin": "China",
     "made_in": "China",
-    "status": "Pre-order",
-    "score": 83,
-    "rating": 4.4,
+    "status": "Active",
+    "score": 75,
+    "rating": 4,
     "price": 30000,
     "currency": "USD",
     "img": "",
@@ -121983,7 +122028,8 @@
     ],
     "manufacturer_url": "https://www.ubtrobot.com/en/",
     "website": "https://www.ubtrobot.com/en/",
-    "fig": "🤖"
+    "fig": "🤖",
+    "battery": 180
   },
   {
     "id": "droidup-moya",
