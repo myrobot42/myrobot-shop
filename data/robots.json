@@ -3624,7 +3624,8 @@
     "video": "https://youtu.be/GtPs_ygfaEA",
     "payload": 30,
     "speed": 1.5,
-    "battery": 90
+    "battery": 90,
+    "actuator_type": "Unitree proprietary high-torque joint motors"
   },
   {
     "id": "unitree-g1",
@@ -3666,13 +3667,13 @@
       "Black"
     ],
     "os": "Linux",
-    "chipset": "ARM SoC",
+    "chipset": "NVIDIA Jetson Orin NX (EDU)",
     "cpu": "ARM Cortex-A76",
     "ram_gb": 8,
     "ram_type": "LPDDR4X",
     "storage_gb": 128,
     "storage_type": "eMMC",
-    "npu_tops": 20,
+    "npu_tops": 100,
     "battery_type": "Li-ion",
     "battery_wh": 432,
     "battery_life": 120,
@@ -3739,7 +3740,9 @@
     "video": "https://youtu.be/GzX1qOIO1bE",
     "payload": 5,
     "speed": 0.8,
-    "battery": 120
+    "battery": 120,
+    "hand_dof": 7,
+    "actuator_type": "Unitree brushless force-control joints (PMSM)"
   },
   {
     "id": "unitree-avatar",
@@ -4061,7 +4064,8 @@
     "video2": "https://youtu.be/-e1_QhJ1EhQ",
     "payload": 15,
     "speed": 3,
-    "battery": 120
+    "battery": 120,
+    "actuator_type": "Hydraulic"
   },
   {
     "id": "boston-dynamics-petman",
@@ -4275,7 +4279,8 @@
     ],
     "payload": 20,
     "speed": 1.5,
-    "battery": 60
+    "battery": 60,
+    "actuator_type": "Hydraulic"
   },
   {
     "id": "boston-dynamics-handle-humanoid",
@@ -4496,7 +4501,8 @@
     "website": "https://www.figure.ai",
     "payload": 20,
     "speed": 1.5,
-    "battery": 480
+    "battery": 480,
+    "actuator_type": "Custom electromechanical"
   },
   {
     "id": "figure-02-commercial",
@@ -4547,7 +4553,7 @@
       "Silver"
     ],
     "os": "Figure OS 2.0",
-    "chipset": "Figure Neural Chip v2",
+    "chipset": "Dual NVIDIA GPU (onboard)",
     "cpu": "Custom ARM64",
     "ram_gb": 64,
     "ram_type": "LPDDR5X",
@@ -4615,7 +4621,9 @@
     "website": "https://www.figure.ai",
     "payload": 25,
     "speed": 2,
-    "battery": 720
+    "battery": 720,
+    "hand_dof": 16,
+    "actuator_type": "Custom electromechanical"
   },
   {
     "id": "ur3e",
@@ -8412,7 +8420,7 @@
       "black"
     ],
     "os": "Tesla Bot OS",
-    "chipset": "Tesla FSD Computer",
+    "chipset": "Tesla FSD computer",
     "cpu": "Custom ARM",
     "ram_gb": 32,
     "ram_type": "LPDDR5",
@@ -8478,7 +8486,8 @@
     "video": "https://youtu.be/XiQkeWOFwmk",
     "payload": 20,
     "speed": 8,
-    "battery": 480
+    "battery": 480,
+    "actuator_type": "Tesla custom electric (rotary + linear)"
   },
   {
     "id": "tesla-optimus-gen2",
@@ -8527,7 +8536,7 @@
       "gray"
     ],
     "os": "Tesla Bot OS 2.0",
-    "chipset": "Tesla FSD Computer v2",
+    "chipset": "Tesla FSD computer",
     "cpu": "Custom ARM Cortex-X4",
     "ram_gb": 64,
     "ram_type": "LPDDR5X",
@@ -8596,7 +8605,9 @@
     "video": "https://youtu.be/cpraXaw7dyc",
     "payload": 25,
     "speed": 10,
-    "battery": 600
+    "battery": 600,
+    "hand_dof": 11,
+    "actuator_type": "Tesla custom (14 rotary + 14 linear, planetary roller screw)"
   },
   {
     "id": "tesla-optimus-workplace",
@@ -81854,7 +81865,8 @@
     "video": "https://youtu.be/29ECwExc-_M",
     "payload": 50,
     "speed": 2.5,
-    "battery": 240
+    "battery": 240,
+    "hand_dof": 7
   },
   {
     "id": "1x-neo-2025",
