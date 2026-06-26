@@ -117128,11 +117128,11 @@
     "id": "deep-robotics-dr01",
     "name": "DR01 (Dr.01)",
     "brand": "DEEP Robotics",
-    "sub": "General-purpose Humanoid",
+    "sub": "Locomotion Humanoid",
     "year": 2024,
     "origin": "China",
-    "status": "Active",
-    "desc": "The DEEP Robotics DR01 is the quadruped specialist's first full-size humanoid, demonstrating stable dynamic walking and running; it extends DEEP Robotics' locomotion expertise from legged dogs to bipeds.",
+    "status": "Development",
+    "desc": "The DR01 is DEEP Robotics' first humanoid, positioned as an 'embodied intelligence explorer' from the Hangzhou company best known for its industrial quadrupeds (Lite3, X20, X30). Standing about 1.7 m and weighing ~80 kg, the DR01 is a locomotion-focused biped with 12 degrees of freedom driven by DEEP's self-developed lightweight J60 and high-power J100 joints. It walks at over 1.6 m/s, clears 18 cm steps and 25-degree slopes, and uses a fusion-perception stack of environmental sensors to stay balanced on slippery or uneven ground and recover after slips or shoves. Through AI and big-data training it can autonomously acquire new locomotion skills. Aimed at research and industrial use, the DR01 is a development/research platform (its all-weather IP66 successor, the DR02, is a separate, newer model).",
     "tags": [
       "humanoid",
       "DEEP Robotics",
@@ -117141,7 +117141,7 @@
       "locomotion"
     ],
     "fig": "🤖",
-    "score": 75,
+    "score": 80,
     "rating": 4,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999213/myrobot/uqq2xufevndk0nv2vzrh.png",
     "gallery": [
@@ -117154,13 +117154,22 @@
     "speed_ms": 1.6,
     "max_step_height_mm": 180,
     "max_incline_deg": 25,
-    "actuator_type": "Proprietary J60 lightweight + J100 high-torque joints",
+    "actuator_type": "Self-developed J60 / J100 joints",
     "use_cases": [
-      "Embodied-AI training & data collection"
+      "Research",
+      "Locomotion research",
+      "Industrial inspection",
+      "All-terrain navigation"
     ],
     "made_in": "China",
     "website": "https://www.deeprobotics.cn",
-    "speed": 1.6
+    "speed": 1.6,
+    "dof": 12,
+    "fall_recovery": true,
+    "stair_climbing": true,
+    "wifi": "Wi-Fi",
+    "imu": true,
+    "ai_model": "Fusion perception + adaptive learning"
   },
   {
     "cat": "Humanoid",
@@ -117345,11 +117354,11 @@
     "id": "magiclab-magicbot-z1",
     "name": "MagicBot Z1",
     "brand": "MagicLab",
-    "sub": "Full-size Humanoid",
+    "sub": "Compact Agile Humanoid",
     "year": 2025,
     "origin": "China",
-    "status": "Active",
-    "desc": "MagicLab's MagicBot (Z1) is a full-size humanoid built for industrial and commercial tasks, shown handling tools and demonstrating dexterous manipulation; part of China's rapidly growing humanoid cohort.",
+    "status": "Development",
+    "desc": "The MagicBot Z1 is MagicLab's compact, high-agility bipedal humanoid, unveiled in July 2025 and shown again at CES 2026. At about 1.4 m (136.9 cm) and 40 kg it has a human-child footprint that slips through tight indoor spaces, with 24 degrees of freedom in the standard build expandable to ~50 when fitted with optional sensors, arms and the 11-DOF MagicHand S01 (which adds five-fingered grasping up to ~3-5 kg per arm). In-house high-torque joints exceed 130 N·m with up to 320 degrees of travel, giving it acrobatic agility — fast motion, deep back-bends, and fall/prone recovery under disturbance. A 360-degree sensor suite (3D LiDAR, depth and binocular fisheye cameras, head tactile sensing) feeds a VLN navigation stack, with Wi-Fi 6 / Bluetooth 5.2, an 8-core CPU and a quick-release 10,000 mAh battery good for ~2 hours. MagicLab markets it as an open, developer-friendly platform for research, education and dynamic applications; its full-size sibling MagicBot Gen1/G1 targets industry. No public price.",
     "tags": [
       "humanoid",
       "MagicLab",
@@ -117358,7 +117367,7 @@
       "manipulation"
     ],
     "fig": "🤖",
-    "score": 75,
+    "score": 82,
     "rating": 4,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999233/myrobot/et22qrzwbfflrdhcw94j.jpg",
     "gallery": [
@@ -117367,7 +117376,7 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68d8d3ec261c2c4fd41580af_Z1_Hero.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68d8d3f7261fdf55b0d8447a_Z1_14.webp"
     ],
-    "height_mm": 1369,
+    "height_mm": 1400,
     "width_mm": 422,
     "depth_mm": 200,
     "weight_kg": 40,
@@ -117378,15 +117387,28 @@
     "lidar": "3D LiDAR",
     "cameras": "Depth cameras + binocular fisheye vision",
     "hand_type": "Optional MagicHand S01 dexterous hand (11 DoF, tactile)",
-    "frame_material": "High-strength aluminium alloy + engineering plastics",
+    "frame_material": "Aluminum alloy + engineering plastics",
     "use_cases": [
-      "Industrial, commercial & research humanoid (expandable to 50 DoF)"
+      "Research",
+      "Education",
+      "Entertainment & performance",
+      "Developer platform"
     ],
     "made_in": "China",
     "website": "https://www.magiclab.top",
     "speed": 2.5,
-    "actuator_type": "Electric",
-    "video": "https://youtu.be/XGfSCtQzaKw"
+    "actuator_type": "In-house high-torque smart joints (320° range)",
+    "video": "https://youtu.be/XGfSCtQzaKw",
+    "battery_capacity_mah": 10000,
+    "battery_life_typical": 120,
+    "hot_swap": true,
+    "fall_recovery": true,
+    "wifi": "Wi-Fi 6",
+    "bluetooth": "Bluetooth 5.2",
+    "chipset": "8-core CPU",
+    "depth_sensing": "Depth + binocular fisheye cameras",
+    "imu": true,
+    "ai_model": "IL/RL locomotion + multimodal dialogue (VLN navigation)"
   },
   {
     "cat": "Humanoid",
@@ -121320,24 +121342,25 @@
     "origin": "Vietnam",
     "made_in": "Vietnam (Hanoi)",
     "status": "Development",
-    "score": 80,
-    "rating": 4.3,
+    "score": 79,
+    "rating": 4,
     "price": "POA",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2gsOPLBM3ddji9cMyCS6h08-eQSnqG0wcUEuXJ_azIQ&s=10",
-    "desc": "The VR-H3 is the third-generation industrial humanoid from VinRobotics, the robotics arm of Vietnamese conglomerate Vingroup. Standing 1.78 m and weighing 75 kg, it uses 31 smart actuators with rotary joints to replicate human movement, and carries two hot-swappable batteries that can each be swapped individually without powering the robot down. Designed as a factory 'assistant' for material transport, visual inspection and assembly support, it runs on two onboard edge computers and lifts roughly 6-8 kg. It was shown at ICRA 2026 and remains in active development ahead of commercial deployment, initially across VinFast factories.",
+    "desc": "The VR-H3 is the third-generation humanoid robot from VinRobotics, a technology subsidiary of Vietnam's Vingroup conglomerate (the VinFast EV parent), founded in November 2024. Debuted at ICRA 2026 in Vienna and COMPUTEX Taipei 2026, it is an industrial humanoid built for factory and operational work — material handling, object transport and assembly — with a rated payload of roughly 6-8 kg and a walking pace near 1.5 m/s. It carries more than 31 actuators and two onboard edge computers for low-latency, on-board perception and control, and was demonstrated being teleoperated via motion-capture built into a VR headset. VinRobotics says it developed all core technology in-house: the mechanical structure, electrical/electronic architecture, power and battery-management systems, and full-body AI control. The VR-H3 represents Vietnam's serious entry into a humanoid race usually framed as US-versus-China, and remains in development toward commercialization, with selected foundational tech to be open-sourced.",
     "announced": "2026",
     "height_mm": 1780,
-    "weight_kg": 75,
+    "weight_kg": 80,
     "weight": 75,
     "payload_kg": 8,
     "payload": 8,
     "battery_count": 2,
     "hot_swap": true,
-    "actuator_type": "Smart servo actuators (rotary joints)",
+    "actuator_type": "In-house smart servo actuators",
     "use_cases": [
-      "Material transport",
-      "Visual inspection",
-      "Assembly support"
+      "Material handling",
+      "Assembly",
+      "Industrial automation",
+      "Hazardous-environment work"
     ],
     "tags": [
       "humanoid",
@@ -121359,7 +121382,11 @@
       "https://img.originofbots.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1770845398/robots/vr-h3-by-vinrobotics/k6aodem0yimtxsxmwcl4.webp?cache=604800"
     ],
     "video": "https://youtu.be/kWcqeuO-utY",
-    "video2": "https://youtu.be/AIRifsVKtyc"
+    "video2": "https://youtu.be/AIRifsVKtyc",
+    "dof": 31,
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "imu": true
   },
   {
     "id": "direct-drive-d1",
