@@ -57,7 +57,7 @@
     "name": "Walker S2",
     "brand": "UBTECH",
     "cat": "Humanoid",
-    "sub": "Service Humanoid",
+    "sub": "Industrial Humanoid",
     "tags": [
       "bipedal",
       "compact",
@@ -70,10 +70,10 @@
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780732930/myrobot/wbexsfwck5mxrrudu63r.jpg",
-    "score": 75,
+    "score": 87,
     "rating": 4,
-    "price": 0,
-    "desc": "Humanoid robot with 1000 units built, over 500 delivered and working in various applications",
+    "price": 160000,
+    "desc": "The UBTech Walker S2 is a full-size industrial humanoid (about 1.76 m, 70 kg, 52 degrees of freedom) and the headline successor to UBTech's factory-deployed Walker S line, which works on NIO and BYD assembly lines. Its standout feature is a world-first autonomous battery-swap system: the robot walks to a docking station and swaps its own depleted pack for a charged one in about three minutes using dual-battery dynamic balancing, enabling near 24/7 operation. A high-torque waist (±162° rotation) and fourth-generation bionic hands give sub-millimetre manipulation and up to 15 kg dual-arm payload across a ~1.8 m workspace. It runs UBTech's ROSA 2.0 stack on Ubuntu with the Co-Agent and BrainNet 2.0 dual-loop AI system for task planning, semantic VSLAM navigation and exception handling, fusing dual-RGB stereo vision, six-axis force sensing and IMU on x86 + NVIDIA Jetson Orin compute. Walker S2 entered mass production in late 2025, making it one of the first humanoids to reach genuine series production.",
     "highlights": [
       "Compact design",
       "Household tasks",
@@ -91,27 +91,28 @@
       "Autonomy": 70,
       "Durability": 75
     },
-    "year": 2023,
+    "year": 2025,
     "origin": "China",
     "status": "Active",
     "released": "2023",
-    "height_mm": 1300,
-    "weight_kg": 77,
+    "height_mm": 1760,
+    "weight_kg": 70,
     "battery_life": 240,
     "speed_ms": 2,
-    "dof": 36,
+    "dof": 52,
     "cameras": "Multiple RGB cameras and depth cameras",
     "lidar": true,
     "imu": true,
-    "depth_sensing": true,
+    "depth_sensing": "Dual-RGB stereo vision",
     "wifi": true,
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Service robotics",
-      "Research",
-      "Commercial applications",
-      "Healthcare assistance"
+      "Factory assembly",
+      "Quality inspection",
+      "Material handling",
+      "Logistics",
+      "Industrial automation"
     ],
     "manufacturer_url": "https://www.ubtrobot.com/",
     "width_mm": 550,
@@ -124,8 +125,8 @@
     "colors": [
       "White"
     ],
-    "os": "Walker OS Lite",
-    "chipset": "Qualcomm QRB5165",
+    "os": "Ubuntu + ROSA 2.0",
+    "chipset": "x86 + NVIDIA Jetson Orin",
     "cpu": "ARM Cortex-A77",
     "ram_gb": 16,
     "ram_type": "LPDDR5",
@@ -139,10 +140,10 @@
     "charge_type": "DC",
     "wireless_charging": false,
     "auto_charge": true,
-    "hot_swap": false,
+    "hot_swap": true,
     "quick_release": false,
     "cycle_life": 800,
-    "ai_model": "Walker AI 2.5",
+    "ai_model": "Co-Agent / BrainNet 2.0",
     "ai_model_type": "Neural Network",
     "learning_methods": [
       "Machine Learning"
@@ -171,9 +172,16 @@
     "speed": 2,
     "battery": 240,
     "hand_dof": 11,
-    "actuator_type": "UBTECH high-torque servo modules",
+    "actuator_type": "Electric servo (force-controlled)",
     "payload": 15,
-    "payload_kg": 15
+    "payload_kg": 15,
+    "bimanual": true,
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "waist_dof": 2,
+    "head_dof": 2,
+    "battery_life_typical": 120,
+    "force_sensing": true
   },
   {
     "id": "rivr-formerly-swiss-mile-rivr-quadruped",
@@ -58217,10 +58225,10 @@
     ],
     "fig": "🤖",
     "img": "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6883b6faf5b8b86f27ae850b_aparobot-unitree-g1.webp",
-    "score": 75,
+    "score": 84,
     "rating": 4,
-    "price": 4900,
-    "desc": "The Unitree R1 (2025) is billed as the cheapest humanoid ever at under US$6,000 - a 127 cm, 25 kg, 26-DOF robot using a multimodal LLM, binocular cameras and a four-mic array, with swappable batteries (~1 hour), an 8-core+GPU compute base and an educational variant with NVIDIA Jetson Orin and Python/ROS control.",
+    "price": 5900,
+    "desc": "The Unitree R1 is billed as the most affordable capable humanoid ever from a major manufacturer, unveiled in July 2025 from about US$4,900 (R1 Air) / $5,900 (standard) — a fraction of the company's $16,000 G1. The child-sized 1.23 m, ~25 kg robot packs 26 joint modules (6 per leg, 5 per arm, 2 waist, 2 head) driven by low-inertia permanent-magnet synchronous motors, giving it striking agility: it runs, cartwheels, does handstands and spin-kicks and recovers from falls autonomously. A backpack compute module runs Unitree's UnifoLM multimodal large language model on-device for voice and image interaction, with a Linux SDK and ROS 2 interfaces on the EDU variant. A quick-release battery gives roughly one hour of mixed activity. Named a TIME Best Invention of 2025, the R1 began phased global deliveries in April 2026, including a landmark retail launch on AliExpress.",
     "highlights": [
       "$5,900 cheapest",
       "Compact",
@@ -58228,15 +58236,19 @@
       "Entry research"
     ],
     "perf": false,
-    "year": 2024,
+    "year": 2025,
     "origin": "China",
     "status": "Active",
     "released": "2025-07-29",
-    "height_mm": 1210,
+    "height_mm": 1230,
     "weight_kg": 25,
     "dof": 26,
     "use_cases": [
-      "Entry-level developer humanoid (launched 2025 from US$5,900)"
+      "Research",
+      "Education",
+      "STEM learning",
+      "Entertainment & performance",
+      "Developer platform"
     ],
     "cameras": "Multiple cameras for computer vision",
     "imu": true,
@@ -58259,7 +58271,18 @@
     "website": "https://www.unitree.com",
     "video": "https://youtu.be/v1Q4Su54iho",
     "battery": 60,
-    "actuator_type": "Unitree proprietary joint motors"
+    "actuator_type": "Permanent-magnet synchronous motors",
+    "run_speed_ms": 2.5,
+    "hot_swap": true,
+    "fall_recovery": true,
+    "ai_model": "UnifoLM (multimodal LLM)",
+    "natural_language_commands": true,
+    "chipset": "8-core CPU + GPU",
+    "ros": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ]
   },
   {
     "id": "dji-zenmuse-l2",
