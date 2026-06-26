@@ -111635,11 +111635,11 @@
     "id": "wandercraft-eve",
     "name": "Eve",
     "brand": "Wandercraft",
-    "sub": "Self-balancing Personal Exoskeleton",
+    "sub": "Personal Exoskeleton",
     "year": 2025,
     "origin": "France",
     "status": "Development",
-    "desc": "Wandercraft’s personal-use exoskeleton, bringing self-balancing hands-free walking into daily life. In clinical trials and being industrialized with Renault Group.",
+    "desc": "Eve is Wandercraft's personal exoskeleton — billed as the world's first self-balancing exoskeleton for personal use that works hands-free, without crutches or a walker. Built by the Paris-based robotics firm (founded 2012, 30+ patents) on the same proven platform as its FDA-cleared Atalante X rehabilitation system, Eve has a fully powered lower body with 12 actuated degrees of freedom across the hips, knees and ankles, using AI-driven dynamic balance to let people with severe mobility impairments — such as spinal cord injuries or MS — stand and walk in everyday settings. Users typically need about five training sessions. Unveiled as a prototype in 2023, Eve entered clinical trials in 2025 (including at the James J. Peters VA Medical Center and the Kessler Institute) and was carried in the 2024 Paris Olympic torch relay; commercial availability is targeted for around 2026, backed by a strategic partnership with Renault Group.",
     "tags": [
       "exoskeleton",
       "self-balancing",
@@ -111649,23 +111649,30 @@
       "Eve"
     ],
     "fig": "🤖",
-    "score": 75,
+    "score": 83,
     "rating": 4,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999195/myrobot/vwi2ysalm9ow3yqxt6gs.avif",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/09/Z5QE1zkYY1ttx9IHIyNh/image.jpg",
       "https://cdn.prod.website-files.com/622f44804ae66481b4e5532d/67ebb6d1a80200eb17bb1d00_K%C3%A9vin_olympics_HD_Landscape-p-2000.jpg"
     ],
-    "actuator_type": "Self-balancing powered lower-body exoskeleton",
+    "actuator_type": "Electric (powered hip-knee-ankle)",
     "use_cases": [
-      "Personal hands-free mobility (clinical trials; Renault manufacturing partnership)"
+      "Personal mobility",
+      "Walking assistance",
+      "Spinal cord injury support",
+      "Home & community mobility",
+      "Hands-free standing & walking"
     ],
     "made_in": "France",
     "website": "https://en.wandercraft.eu",
     "exo_type": "Powered self-balancing (personal)",
     "body_region": "Full lower body",
     "powered": true,
-    "control_method": "Self-balancing (personal successor to Atalante)"
+    "control_method": "Self-balancing (personal successor to Atalante)",
+    "dof": 12,
+    "self_balancing": true,
+    "hands_free": true
   },
   {
     "cat": "Exoskeletons",
