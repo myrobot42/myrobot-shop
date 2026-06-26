@@ -117391,15 +117391,15 @@
   {
     "cat": "Humanoid",
     "perf": false,
-    "price": "POA",
+    "price": 7999,
     "id": "weave-robotics-isaac",
     "name": "Isaac",
     "brand": "Weave Robotics",
-    "sub": "Home Humanoid",
-    "year": 2025,
+    "sub": "Home Robot",
+    "year": 2026,
     "origin": "USA",
     "status": "Active",
-    "desc": "Isaac (Weave Robotics) is a home-focused humanoid designed for household chores like tidying and laundry, combining autonomy with teleoperated assistance and a subscription model; pre-orders opened in 2024-2025 for a 2026 launch.",
+    "desc": "Isaac is the home robot from Weave Robotics, a California startup founded by two ex-Apple engineers (YC-backed) on a mission to take housework off people's hands. Its first shipping product, Isaac 0 (from February 2026), is a deliberately pared-down stationary version: a fixed carbon-fibre torso with a 4-DOF neck, two 6-DOF arms and simple grippers (~19 DOF total) that folds a typical load of laundry in 30-90 minutes. It runs on a standard 600 W / 120 V outlet with dual-band Wi-Fi and Ethernet, and blends on-board autonomy with 'Remote Op' — a Weave specialist briefly teleoperates the arms for 5-10 seconds when the robot hits a tricky garment, feeding data back to improve the models weekly. Priced at US$7,999 (or $450/month) with a two-year warranty, Isaac 0 is the first step toward Weave's fuller mobile home humanoid, Isaac (~$59,000), which remains in development.",
     "tags": [
       "humanoid",
       "home",
@@ -117409,7 +117409,7 @@
       "teleoperation"
     ],
     "fig": "🤖",
-    "score": 75,
+    "score": 78,
     "rating": 4,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999234/myrobot/tjygmbxzgkeedxceoi5o.webp",
     "gallery": [
@@ -117418,11 +117418,19 @@
     ],
     "actuator_type": "Teleoperation + learned autonomy",
     "use_cases": [
-      "Home chores: laundry folding, tidying (preorder, 2026 deliveries)"
+      "Laundry folding",
+      "Home assistance"
     ],
     "made_in": "USA",
     "website": "https://www.weaverobots.com",
-    "video": "https://youtu.be/ck_r-v-M3ug"
+    "video": "https://youtu.be/ck_r-v-M3ug",
+    "dof": 19,
+    "frame_material": "Carbon fiber",
+    "bimanual": true,
+    "power_consumption_w": 600,
+    "wifi": "Wi-Fi (dual-band 2.4/5 GHz)",
+    "ethernet": "Yes",
+    "warranty_months": 24
   },
   {
     "cat": "Research",
@@ -118786,29 +118794,32 @@
     "torque_nm": 96,
     "battery_life": 120,
     "hot_swap": true,
-    "frame_material": "Aluminium alloy + engineering plastics",
+    "frame_material": "Aluminum alloy + engineering plastics",
     "max_incline_deg": 20,
     "max_step_height_mm": 200,
-    "sdk": "Fully open-source: BOM, CAD drawings, assembly SOP & control software on GitHub",
+    "sdk": true,
     "use_cases": [
-      "Open-source humanoid R&D platform (Nexus ecosystem)",
-      "1,000+ hours outdoor-tested: slopes, stairs, fall recovery"
+      "Research",
+      "Education",
+      "Developer platform",
+      "Locomotion research",
+      "Embodied AI"
     ],
     "made_in": "China",
-    "website": "https://www.fftai.com",
-    "desc": "China’s first fully open-source, engineering-verified humanoid robot. 1,000+ hours of outdoor testing: 15–20° slopes, 20 cm stairs, fall recovery.",
+    "website": "https://fourier-grx-n1.github.io/",
+    "desc": "The Fourier N1 (Nexus-01) is billed as the first fully open-source humanoid robot, launched by Shanghai-based Fourier Intelligence in April 2025 along with its complete bill of materials, CAD/STEP drawings, assembly instructions and control software on GitHub. The compact 1.3 m, 38 kg platform has 23 degrees of freedom (excluding hands) in an aluminium-alloy and engineering-plastic frame, driven by Fourier's self-developed FSA 2.0 integrated actuators delivering up to 96 N·m peak joint torque and a top running speed of 3.5 m/s. A back-mounted swappable battery gives 2+ hours of continuous operation. In validation it logged over 1,000 hours of outdoor testing — climbing 15-20° slopes and 20 cm stairs and recovering from falls. As the founding project of Fourier's 'Nexus' open-source ecosystem, the N1 is aimed at researchers, educators and developers as a low-barrier platform for embodied-AI and locomotion R&D.",
     "ros": true,
     "learning_methods": [
       "Open-source RL training stack"
     ],
     "fig": "🤖",
     "tags": [],
-    "score": 75,
+    "score": 83,
     "rating": 4,
     "released": "2025-02-01",
     "speed": 3.5,
     "battery": 120,
-    "actuator_type": "Fourier Smart Actuator (FSA)",
+    "actuator_type": "Fourier FSA 2.0 integrated actuators",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/24/EqTV2TLQTaasb8Tuyygj/image.jpg",
     "gallery": [
       "https://www.futura-sciences.com/en/wp-content/uploads/2025/10/Fourier-N1.jpeg",
@@ -118816,7 +118827,15 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYUmzdXq1kVimqkK_YYtAt5yPg3w_iUyDsedNtx3w_-M-kv-9DuO6bTgVq&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS54tYIyA_-KRdl4YrfR7b9O0jz5PPAnl7ioqvlea4N0R23aa16ZzXalRqy&s=10"
     ],
-    "video": "https://youtu.be/b94_W7JiR-8"
+    "video": "https://youtu.be/b94_W7JiR-8",
+    "sub": "Open-Source Humanoid",
+    "origin": "China",
+    "price": "POA",
+    "run_speed_ms": 3.5,
+    "battery_life_typical": 120,
+    "stair_climbing": true,
+    "fall_recovery": true,
+    "ai_open_source": true
   },
   {
     "id": "westinghouse-elektro",
@@ -121480,13 +121499,13 @@
     "year": 2026,
     "origin": "China",
     "made_in": "China",
-    "status": "Active",
-    "score": 75,
+    "status": "Pre-order",
+    "score": 79,
     "rating": 4,
-    "price": 30000,
+    "price": "POA",
     "currency": "USD",
     "img": "",
-    "desc": "The U1 Pro is the first robot under UBTECH's consumer 'UWORLD' brand, billed as a full-size ultra-bionic humanoid built for emotional companionship rather than industrial labour. It ships in male (183 cm) and female (168 cm) variants with 88 degrees of freedom, lifelike silicone skin and hair, and an on-device, locally encrypted 'Memory-Emotional AI Model' that reads tone, facial expression and speaking rate to gauge mood and adapt its responses. Physical ability is deliberately limited to flat-floor walking, sitting and standing - it is built for presence and conversation, not chores. UBTECH opened JD.com pre-sales in June 2026 (reportedly 2,000+ reservations in the first week) ahead of a June 30 launch, with a reported price around US$30,000.",
+    "desc": "The UBTech U1 Pro is the first product under UWORLD, UBTech's new consumer sub-brand, billed as the world's first full-size ultra-bionic humanoid built for emotional companionship rather than physical labour. Shipping in male (183 cm / 42 kg) and female (168 cm / 35.2 kg) variants, both with 88 degrees of freedom, it wraps a humanoid frame in lifelike silicone skin with realistic hair, expressive facial actuators and camera-tracking eyes. An on-board emotion-aware AI reads mood from facial expression, tone and speech rhythm and adapts its conversation, with all personal memory stored locally and encrypted; owners can customise appearance and personality over time. Capabilities are deliberately narrow — it can stand, sit and walk on flat indoor surfaces but is not built for stairs, rough terrain, chores, or custom programming. Pre-orders opened on JD.com in June 2026 (passing 2,000+ reservations within days) ahead of a June 30 launch, with deliveries due by September; pricing is reported around US$30,000.",
     "announced": "June 2026",
     "height_mm": 1830,
     "dof": 88,
@@ -121495,18 +121514,18 @@
     "battery_life_heavy": 120,
     "shell_material": "Silicone skin",
     "wifi": "Wi-Fi",
-    "ai_model": "Memory-Emotional AI Model",
+    "ai_model": "Emotion-aware companion AI (local encrypted memory)",
     "ai_inference_local": true,
     "emotion_detection": true,
     "variants": [
-      "Male (183 cm)",
-      "Female (168 cm)"
+      "Male (183 cm / 42 kg)",
+      "Female (168 cm / 35.2 kg)"
     ],
     "use_cases": [
       "Emotional companionship",
-      "Personalized conversation",
-      "Reception",
-      "Social demonstration"
+      "Conversation",
+      "Home companion",
+      "Social interaction"
     ],
     "tags": [
       "humanoid",
@@ -121524,7 +121543,11 @@
     "website": "https://www.ubtrobot.com/en/",
     "fig": "🤖",
     "battery": 180,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "weight_kg": 42,
+    "bionic_face": true,
+    "facial_recognition": true,
+    "natural_language_commands": true
   },
   {
     "id": "droidup-moya",
