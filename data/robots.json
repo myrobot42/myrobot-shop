@@ -120373,8 +120373,8 @@
     "sub": "Professional Humanoid",
     "year": 2026,
     "origin": "USA",
-    "status": "Announced",
-    "price": "POA",
+    "status": "Active",
+    "price": 34990,
     "tags": [
       "humanoid",
       "Faraday Future",
@@ -120382,16 +120382,19 @@
       "professional"
     ],
     "fig": "🤖",
-    "score": 75,
+    "score": 80,
     "rating": 4,
     "use_cases": [
-      "Adaptable assistance",
-      "Natural interaction",
-      "Dynamic task support"
+      "Reception",
+      "Event hosting",
+      "Guided services",
+      "Factory tasks",
+      "Warehouse handling",
+      "Hazardous-environment operations"
     ],
     "made_in": "USA",
     "website": "https://www.ff.com",
-    "desc": "A full-size professional humanoid from Faraday Future's new robotics subsidiary, opened for sales and paid pre-order at the 2026 NADA Show in Las Vegas (first deliveries targeted end of Feb 2026). One of three embodied-AI products launched alongside the FF Master humanoid and FX Aegis quadruped, as Faraday Future pivots from EVs to robotics.",
+    "desc": "The FF Futurist is a full-size professional humanoid from Faraday Future's robotics subsidiary (FF EAI-Robotics), launched in early 2026 as the EV maker's pivot into embodied AI and billed as a candidate to be the first US humanoid in mass production. The 2026 'All-New Futurist' revision stands about 1.73 m and weighs roughly 55 kg, with 31 degrees of freedom (excluding hands), 320 N·m peak knee torque, a top running speed near 11 mph and a 1,152 Wh dual-battery system giving up to six hours of runtime with auto-charging. It runs a VLA + World Model 'brain' on NVIDIA's Sonic motion-control system (Jetson Thor on the Ultra), supports up to 50 languages, and targets reception, guided-service, and light industrial roles. Pricing starts around $34,990.",
     "manufacturer_full": "Faraday Future (FF) robotics subsidiary",
     "launch_event": "Opened for sales/paid pre-order at 2026 NADA Show, Las Vegas; first deliveries targeted end Feb 2026",
     "product_line": "One of three embodied-AI products (with FF Master humanoid + FX Aegis quadruped)",
@@ -120403,35 +120406,50 @@
       "https://genesis-cdn.ff.com/ff-robot/original/ff-futurist-rear-right-45.jpg",
       "https://genesis-cdn.ff.com/ff-robot/original/ff-futurist-front-45.jpg"
     ],
-    "video": "https://youtu.be/HXaOYV4Je48"
+    "video": "https://youtu.be/HXaOYV4Je48",
+    "height_mm": 1730,
+    "weight_kg": 55,
+    "dof": 31,
+    "leg_torque_nm": 320,
+    "run_speed_ms": 4.9,
+    "battery_wh": 1152,
+    "battery_life": 360,
+    "battery_life_typical": 360,
+    "actuator_type": "Electric",
+    "auto_charge": true,
+    "chipset": "NVIDIA Sonic motion control (Jetson Thor on Ultra)",
+    "languages": "Up to 50"
   },
   {
     "cat": "Quadruped",
     "id": "faraday-fx-aegis",
     "name": "FX Aegis",
     "brand": "Faraday Future",
-    "sub": "Bionic Quadruped",
+    "sub": "Security Quadruped",
     "year": 2026,
     "origin": "USA",
-    "status": "Announced",
-    "price": "POA",
+    "status": "Active",
+    "price": 2499,
     "tags": [
       "quadruped",
       "Faraday Future",
       "FX Aegis",
       "bionic"
     ],
-    "fig": "🐕",
-    "score": 75,
+    "fig": "🤖",
+    "score": 78,
     "rating": 4,
     "use_cases": [
-      "Inspection",
-      "Security",
-      "Embodied AI"
+      "Security patrol",
+      "Companionship",
+      "Industrial inspection",
+      "Emergency response",
+      "Asset inventory",
+      "Small-item delivery"
     ],
     "made_in": "USA",
     "website": "https://www.ff.com",
-    "desc": "A bionic quadruped robot in Faraday Future's first wave of embodied-AI products (NADA Show, Feb 2026), launched alongside the FF Futurist and FF Master humanoids. Part of FF's pivot into humanoid and bionic robotics.",
+    "desc": "The FX Aegis is a professional embodied-AI quadruped from Faraday Future, part of its first wave of robots launched at the 2026 NADA Show and designed for security and companionship. It offers autonomous patrol and follow-me operation, peak joint torque of 48 N·m, can clear obstacles around 13 inches and climb 40-degree slopes, and supports Wi-Fi and 5G. The platform is modular — an optional four-wheeled version is available, and it can be expanded with LiDAR, depth cameras, robotic arms and security plug-ins. It became one of the first FF robots to clear full US FCC compliance certification, with pricing starting around $2,499.",
     "manufacturer_full": "Faraday Future (FF) robotics subsidiary",
     "launch_event": "Unveiled at 2026 NADA Show, Las Vegas (Feb 2026)",
     "product_line": "Bionic quadruped in FF first embodied-AI wave (with FF Futurist + FF Master humanoids)",
@@ -120444,7 +120462,13 @@
       "https://genesis-cdn.ff.com/ff-robot/fx-aegis-1-default.jpg",
       "https://genesis-cdn.ff.com/ff-robot/fx-aegis-wheels-2-default.jpg"
     ],
-    "video": "https://youtu.be/Nk8Wqo9AQsU"
+    "video": "https://youtu.be/Nk8Wqo9AQsU",
+    "torque_nm": 48,
+    "max_step_height_mm": 330,
+    "max_incline_deg": 40,
+    "wifi": "Wi-Fi",
+    "cellular": "5G",
+    "fcc": true
   },
   {
     "cat": "Industrial",
