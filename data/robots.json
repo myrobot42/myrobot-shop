@@ -47213,7 +47213,7 @@
     "name": "Clone Alpha Android",
     "brand": "Clone Robotics",
     "cat": "Humanoid",
-    "sub": "General Purpose Humanoid",
+    "sub": "Musculoskeletal Android",
     "tags": [
       "clone robotics",
       "general",
@@ -47224,25 +47224,28 @@
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999114/myrobot/ecnkyog3hapfu1u0cvyw.jpg",
-    "score": 75,
+    "score": 80,
     "rating": 4,
-    "price": 0,
-    "desc": "Clone Alpha is Clone Robotics' musculoskeletal home android (a limited run of 279), driven by water-actuated Myofiber artificial muscles on a synthetic human skeleton. (Record of the Clone Alpha android - see also the Protoclone development record.)",
+    "price": "POA",
+    "desc": "Clone Alpha is a musculoskeletal android for the home from Clone Robotics, a startup operating out of the US (Bay Area) and Poland. Instead of conventional electric actuators, it is animated by Clone's proprietary 'Myofiber' artificial muscles — synthetic musculotendon units, water/hydraulically powered, attached to anatomically correct points on a polymer skeleton modelled on all 206 human bones. Each ~3 g fibre responds in under 50 ms, contracts over 30% and produces ~1 kg of force, with the full android using more than 1,000 fibres for fluid, human-like motion. An NVIDIA Jetson Thor processes a suite of depth cameras under Clone's 'Cybernet' foundation model (language, vision and motor control), with skills taught via its 'Telekinesis' training platform — pre-loaded abilities include memorising home layouts, folding laundry, vacuuming, pouring drinks and making sandwiches. Clone is releasing a limited first run of 279 units in its Alpha Edition; pricing is unannounced (likened to a 'limited-edition supercar') and many hardware specs remain unpublished as it is a development-stage platform.",
     "highlights": [],
     "perf": false,
-    "origin": "Poland",
-    "year": 2024,
-    "status": "Active",
+    "origin": "USA / Poland",
+    "year": 2025,
+    "status": "Development",
     "height_mm": 1800,
     "dof": 200,
     "os": "Cybernet",
     "chipset": "NVIDIA Jetson Thor",
     "depth_sensing": true,
     "imu": true,
-    "cameras": "4 depth cameras",
+    "cameras": "4x depth cameras",
     "use_cases": [
-      "Home android",
-      "Biomimetic humanoid research"
+      "Home companion",
+      "Household chores",
+      "Laundry",
+      "Meal preparation",
+      "Research"
     ],
     "manufacturer_url": "https://www.clonerobotics.com",
     "weight_kg": 85,
@@ -47261,7 +47264,10 @@
     "website": "https://www.clonerobotics.com",
     "video": "https://youtu.be/C6u08rIa8o4",
     "battery": 480,
-    "actuator_type": "Myofiber artificial muscles (fluidic)"
+    "actuator_type": "Myofiber water-powered artificial muscle",
+    "shell_material": "Synthetic skin over polymer skeleton (206 bones)",
+    "ai_model": "Cybernet (language + vision + motor foundation model)",
+    "natural_language_commands": true
   },
   {
     "id": "clone-robotics-neoclone",
@@ -117300,12 +117306,12 @@
     "id": "limx-dynamics-cl-1",
     "name": "CL-1",
     "brand": "LimX Dynamics",
-    "sub": "General-purpose Humanoid",
+    "sub": "Bipedal Humanoid",
     "year": 2024,
     "origin": "China",
-    "status": "Active",
-    "height_mm": 1650,
-    "desc": "The LimX Dynamics CL-1 is a full-size (~1.65 m) general-purpose humanoid notable for real-time terrain perception and dynamic stair climbing, developed alongside LimX's TRON 1 point-foot biped as a robot-learning platform.",
+    "status": "Development",
+    "height_mm": 1600,
+    "desc": "The CL-1 is the flagship bipedal humanoid from LimX Dynamics, a Shenzhen embodied-AI robotics startup founded in 2022 and backed by $30M+ in funding. Launched in December 2023, the CL-1 became known as one of the few humanoids capable of dynamic stair-climbing using real-time terrain perception, thanks to a closed-loop system that fuses perception, gait planning, locomotion control and hardware data to adjust its motion proactively. Standing roughly 1.6 m on a 20+ DOF skeleton, it can walk over stairs, slopes and mixed indoor/outdoor terrain, recover from disturbances, and — in later demos — squat, lift and carry heavy loads up to ~80 cm placement height. Originally a pure bipedal research platform without functional hands, the CL-1 targets smart manufacturing, logistics, inspection and R&D, and is the foundation for LimX's newer, hand-equipped Oli / CL-3 generation. It remains a development/research platform (prototype pricing around US$40,000).",
     "tags": [
       "humanoid",
       "LimX Dynamics",
@@ -117314,7 +117320,7 @@
       "dynamic locomotion"
     ],
     "fig": "🤖",
-    "score": 75,
+    "score": 81,
     "rating": 4,
     "feature": "Real-time terrain perception; dynamic stair climbing",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999208/myrobot/akl4tcm8y8j31jqpjeai.png",
@@ -117325,12 +117331,20 @@
       "https://www.therobotreport.com/wp-content/uploads/2023/12/5-LimX-Dynamics-Humanoid-Robot-CL-1-featured.jpg"
     ],
     "lidar": "Vision + LiDAR real-time terrain perception",
-    "actuator_type": "Hollow direct-drive motors, dynamic whole-body control",
+    "actuator_type": "Direct-drive / QDD joints",
     "use_cases": [
-      "Research demonstrator: dynamic stair climbing, heavy-load handling (succeeded by LimX Oli; detailed specs never published)"
+      "Research",
+      "Logistics",
+      "Industrial inspection",
+      "Smart manufacturing"
     ],
     "made_in": "China",
-    "website": "https://www.limxdynamics.com"
+    "website": "https://www.limxdynamics.com",
+    "dof": 20,
+    "stair_climbing": true,
+    "fall_recovery": true,
+    "imu": true,
+    "ai_model": "Closed-loop real-time perception + gait planning"
   },
   {
     "cat": "Humanoid",
@@ -117385,16 +117399,16 @@
   {
     "cat": "Humanoid",
     "perf": false,
-    "price": "POA",
+    "price": 120000,
     "id": "pndbotics-adam",
     "name": "Adam",
     "brand": "PNDbotics",
-    "sub": "Full-size Humanoid",
+    "sub": "Full-Size Humanoid",
     "year": 2024,
     "origin": "China",
-    "status": "Active",
+    "status": "Development",
     "height_mm": 1600,
-    "desc": "PNDbotics Adam is a full-size (~1.6 m) humanoid with a high degree-of-freedom body and expressive motion, shown performing music and dance demos and targeted at research and interactive applications.",
+    "desc": "Adam is the flagship full-size humanoid from Beijing-based PNDbotics, a full-stack developer of modular humanoid platforms (project started June 2023). Standing about 1.6 m and weighing ~60 kg, Adam is driven by 25 proprietary PND quasi-direct-drive (QDD) force-controlled actuators delivering up to ~360 N·m of leg torque, and is notable as one of the first humanoids with a biomimetic pelvis for more natural, stable gait. An Intel i7 (NUC) plus PND Robot Control Unit runs a deep-reinforcement-learning and imitation-learning stack trained in NVIDIA Isaac Gym with sim-to-real transfer, giving human-like walking, terrain traversal and disturbance recovery. Its modular, standardized architecture (with an open SDK) lets developers swap actuators, end-effectors and compute. Adam has had a high-profile demo run — playing keytar live at the VOYAGEX music festival, synced dancing at WAIC 2025, and completing the 100 m obstacle race at the 2025 World Humanoid Robot Games as the only full-size humanoid to finish. Prototype pricing is around US$120,000; sibling variants include Adam Lite, Adam-U (data-collection) and Adam SP.",
     "tags": [
       "humanoid",
       "PNDbotics",
@@ -117403,7 +117417,7 @@
       "research"
     ],
     "fig": "🤖",
-    "score": 75,
+    "score": 81,
     "rating": 4,
     "feature": "High-DOF expressive full body",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999215/myrobot/ghwtrvs6nupngwmms7ze.png",
@@ -117415,20 +117429,28 @@
     "weight_kg": 60,
     "dof": 25,
     "torque_nm": 340,
-    "speed_ms": 1.7,
+    "speed_ms": 1.5,
     "battery_life": 180,
     "cpu": "Intel i7 NUC + PND real-time control unit",
-    "actuator_type": "25 quasi-direct-drive (QDD) force-controlled actuators",
-    "sdk": "Open-source SDK, NVIDIA Isaac Gym DRL training",
+    "actuator_type": "PND quasi-direct-drive (QDD) force-controlled",
+    "sdk": true,
     "use_cases": [
-      "Embodied-AI research & development"
+      "Research",
+      "Locomotion research",
+      "Developer platform",
+      "Events & performance"
     ],
     "made_in": "China",
     "website": "https://www.pndbotics.com",
     "released": "2025-01-01",
     "speed": 1.7,
     "battery": 180,
-    "video": "https://youtu.be/Ua8Jzjidosc"
+    "video": "https://youtu.be/Ua8Jzjidosc",
+    "leg_torque_nm": 360,
+    "chipset": "Intel i7 (NUC) + PND RCU",
+    "battery_life_typical": 180,
+    "imu": true,
+    "ai_model": "Deep RL + imitation learning (NVIDIA Isaac Gym sim-to-real)"
   },
   {
     "cat": "Humanoid",
