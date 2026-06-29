@@ -127,6 +127,17 @@ h1 em{color:var(--acc);font-style:normal}
 .rc-info{padding:12px}
 .rc-brand{font-size:9px;font-weight:700;color:var(--mut);letter-spacing:.8px;margin-bottom:3px}
 .rc-name{font-family:'Space Mono','Courier New',monospace;font-size:13px;font-weight:800;margin-bottom:7px}
+.rc-year{font-size:10px;color:var(--mut);font-weight:700;letter-spacing:.5px;margin:-4px 0 8px}
+.db-hero{position:relative;border-radius:14px;overflow:hidden;margin:0 0 16px;min-height:178px;background:var(--card,#f1f1f3);display:flex;align-items:flex-end;cursor:pointer;border:1px solid var(--bdr)}
+.db-hero-img{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .45s ease}
+.db-hero:hover .db-hero-img{transform:scale(1.04)}
+.db-hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.74) 0%,rgba(0,0,0,.4) 48%,rgba(0,0,0,0) 82%)}
+.db-hero-body{position:relative;padding:20px 22px;color:#fff;z-index:2}
+.db-hero-kicker{font-size:10px;font-weight:800;letter-spacing:1.5px;opacity:.85;text-transform:uppercase}
+.db-hero-title{font-family:'Space Mono','Courier New',monospace;font-size:24px;font-weight:800;margin:4px 0 3px;line-height:1.1}
+.db-hero-sub{font-size:12px;font-weight:700;opacity:.92}
+.db-hero-tag{position:absolute;top:14px;right:14px;z-index:2;background:rgba(255,255,255,.2);backdrop-filter:blur(4px);color:#fff;font-size:10px;font-weight:800;letter-spacing:.5px;padding:5px 11px;border-radius:20px}
+@media(max-width:600px){.db-hero{min-height:138px}.db-hero-title{font-size:19px}}
 .rc-specs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px}
 .pill{padding:2px 7px;background:var(--bg2);border:1px solid var(--bdr);border-radius:4px;font-size:10px;color:var(--mut);font-weight:500}
 .rc-footer{display:flex;justify-content:space-between;align-items:center;padding-top:9px;border-top:1px solid var(--bdr)}
@@ -946,7 +957,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <!-- AI ASSISTANT PAGE -->
 <div id="page-ai" class="page">
   <div style="max-width:880px;margin:0 auto;padding:28px 16px 10px">
-    <h1 style="font-size:24px;font-weight:800;margin:0 0 6px">Ask Tobo</h1>
+    <h1 style="font-size:24px;font-weight:800;margin:0 0 6px">Ask Tubu</h1>
     <p style="color:var(--mut);font-size:14px;margin:0 0 20px">Your AI guide to every robot in the database — get recommendations, compare models, or ask anything.</p>
   </div>
   <div id="rc-fullpage-mount" style="max-width:880px;margin:0 auto 50px;padding:0 16px"></div>
@@ -1140,6 +1151,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     </div>
     <div class="results-col">
       <div class="active-filters-row" id="db-active-filters"></div>
+      <div id="db-hero" style="display:none"></div>
       <div id="db-results"></div>
     </div>
   </div>
@@ -1692,6 +1704,7 @@ function renderHome(){
       <div class="rc-info">
         <div class="rc-brand">${brand}</div>
         <div class="rc-name">${name}</div>
+        ${r.year?`<div class="rc-year">${r.year}</div>`:''}
         <div class="rc-specs">${tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div>
         <div class="rc-footer">
           <div class="rc-rating"><span class="stars">${'★'.repeat(Math.round(rating))}</span><span style="margin-left:3px">${rating} (${reviews})</span></div>
@@ -2032,6 +2045,53 @@ function getDbFiltered(){
   });
 }
 
+// ===== Category / Brand hero banner (most-popular robot) =====
+var _heroLb=null,_heroLbDone=false,_heroTrend=null,_heroTok=0;
+function _hEsc(s){return (s==null?'':String(s)).replace(/[&<>"]/g,function(c){return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c];});}
+function _heroEnsureData(cb){
+  var need=2,fire=function(){need--;if(need<=0)cb();};
+  if(_heroLbDone){fire();}else{
+    fetch('/api/views?leaderboard=1').then(function(r){return r.json();}).then(function(d){_heroLb=d||{};_heroLbDone=true;fire();}).catch(function(){_heroLb={};_heroLbDone=true;fire();});
+  }
+  if(_heroTrend){fire();}else{
+    fetch('/data/trending.json?t='+Date.now()).then(function(r){return r.json();}).then(function(d){_heroTrend=(d&&d.scores)||{};fire();}).catch(function(){_heroTrend={};fire();});
+  }
+}
+function _heroSeed(type,val){
+  var pool=ROBOTS.filter(function(r){return r.img&&(type==='cat'?r.cat===val:r.brand===val);});
+  if(!pool.length)return null;
+  var tr=_heroTrend||{};
+  pool.sort(function(a,b){var ta=tr[a.id]||0,tb=tr[b.id]||0;if(tb!==ta)return tb-ta;return (b.year||0)-(a.year||0);});
+  return pool[0];
+}
+function renderDbHero(){
+  var host=document.getElementById('db-hero');if(!host)return;
+  var selCats=[].slice.call(document.querySelectorAll('#db-cat-filters [data-cat]:checked')).map(function(e){return e.dataset.cat;});
+  var selBrands=[].slice.call(document.querySelectorAll('#db-brand-filters [data-brand]:checked')).map(function(e){return e.dataset.brand;});
+  var type=null,val=null;
+  if(selBrands.length===1){type='brand';val=selBrands[0];}
+  else if(selCats.length===1&&selBrands.length===0){type='cat';val=selCats[0];}
+  if(!type){host.style.display='none';host.innerHTML='';return;}
+  var tok=++_heroTok;
+  _heroEnsureData(function(){
+    if(tok!==_heroTok)return; // selection changed while loading — bail
+    var lb=_heroLb||{},bucket=(type==='cat'?lb.cats:lb.brands)||{};
+    var win=bucket[val],src='views';
+    if(!win||!win.img){win=_heroSeed(type,val);src='seed';}
+    if(!win){host.style.display='none';host.innerHTML='';return;}
+    var tag=(src==='views'&&(win.views||0)>=50)?('\u25B2 '+(win.views).toLocaleString()+' views'):'\uD83D\uDD25 Trending';
+    var title=_hEsc(val)+(type==='cat'?' Robots':'');
+    host.style.display='flex';
+    host.onclick=function(){openProfile(win.id);};
+    host.innerHTML=
+      '<div class="db-hero-img" style="background-image:url(\''+(win.img||MASCOT_URL)+'\')"></div>'+
+      '<div class="db-hero-shade"></div>'+
+      '<div class="db-hero-tag">'+tag+'</div>'+
+      '<div class="db-hero-body"><div class="db-hero-kicker">'+(type==='cat'?'Category':'Brand')+'</div>'+
+      '<div class="db-hero-title">'+title+'</div>'+
+      '<div class="db-hero-sub">Most popular: '+_hEsc(win.name)+' \u2192</div></div>';
+  });
+}
 function renderDb(){
   // Faceted search: re-render sidebar counts so they reflect current filter combination
   // (these are cheap and necessary — counts should always match the visible result set)
@@ -2046,6 +2106,7 @@ function renderDb(){
   document.querySelectorAll('[data-cat]:checked').forEach(el=>tags.push(el.dataset.cat));
   document.querySelectorAll('[data-brand]:checked').forEach(el=>tags.push(el.dataset.brand));
   document.getElementById('db-active-filters').innerHTML=tags.map(t=>`<div class="filter-tag">${t}</div>`).join('');
+  renderDbHero();
   const ranks=['gold','silver','bronze'];
   const c=document.getElementById('db-results');
   if(!list.length){c.innerHTML='<div class="no-results"><h3>No robots found</h3><p>Try adjusting your search or filters</p></div>';return;}
@@ -2078,7 +2139,7 @@ function renderDb(){
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
         <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
-        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div><div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${priceStars(r)}</span></div></div>
+        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${priceStars(r)}</span></div></div>
       </div>`).join('')}</div>`;
   }
   renderCompareTray();
@@ -3513,7 +3574,7 @@ function renderProfileVideos(r){var host=document.getElementById('profile-videos
   if(!vids.length){if(r.video)vids.push({url:r.video,source:'manufacturer'});if(r.video2)vids.push({url:r.video2,source:'manufacturer'});}
   vids=vids.filter(function(v){return _ytId(v.url);});
   if(!vids.length){host.innerHTML='<div class="pp-empty">No videos yet.</div>';return;}
-  host.innerHTML='<div class="pvgrid">'+vids.map(function(v,i){var id=_ytId(v.url);var badge=v.source==='tobo'?'<span class="pvsrc tobo">Tobo</span>':'<span class="pvsrc man">Manufacturer</span>';
+  host.innerHTML='<div class="pvgrid">'+vids.map(function(v,i){var id=_ytId(v.url);var badge=v.source==='tobo'?'<span class="pvsrc tobo">Tubu</span>':'<span class="pvsrc man">Manufacturer</span>';
     return '<div class="pvcard" id="pvc'+i+'"><div class="pvthumb" data-vi="'+i+'" data-yid="'+id+'" style="background-image:url(https://i.ytimg.com/vi/'+id+'/hqdefault.jpg)"><div class="pvplay"></div></div><div class="pvmeta"><span class="pvt">'+_esc(v.title||r.name)+'</span>'+badge+'</div></div>';}).join('')+'</div>';
   host.querySelectorAll('.pvthumb').forEach(function(el){el.addEventListener('click',function(){_playVid(+el.getAttribute('data-vi'),el.getAttribute('data-yid'));});});}
 function _playVid(i,id){var card=document.getElementById('pvc'+i);if(!card)return;var meta=card.querySelector('.pvmeta');
@@ -5275,18 +5336,18 @@ function runFinderSearch(){
   @media(max-width:480px){#rc-panel{width:100vw;height:100vh;max-height:100vh;bottom:0;right:0;border-radius:0}}
 </style>
 
-<button id="rc-launch" onclick="rcToggle(true)" title="Ask Tobo · Robot Expert" aria-label="Ask Tobo">
+<button id="rc-launch" onclick="rcToggle(true)" title="Ask Tubu · Robot Expert" aria-label="Ask Tubu">
   <span class="rc-pulse"></span>
   <span class="rc-badge">AI</span>
   <span class="rc-tip">Ask me!</span>
-  <img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt="Tobo">
+  <img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt="Tubu">
 </button>
 
 <div id="rc-panel">
   <div class="rc-head">
     <div class="rc-avatar"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto/v1777366404/output_17_t74qys.jpg" alt="" style="width:100%;height:100%;border-radius:11px;object-fit:cover"></div>
     <div class="rc-head-txt">
-      <div class="rc-head-name" id="rc-name">Tobo · Robot Expert</div>
+      <div class="rc-head-name" id="rc-name">Tubu · Robot Expert</div>
       <div class="rc-head-sub">Knows every robot in the database</div>
     </div>
     <button class="rc-head-btn" onclick="rcReset()" title="New chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12a9 9 0 1 0 3-6.7L3 8m0-5v5h5"/></svg></button>
@@ -5328,7 +5389,7 @@ function runFinderSearch(){
   function systemPrompt(){
     var R=(window.ROBOTS||[]); var cats=[...new Set(R.map(function(r){return r.cat;}))].sort();
     var brands=[...new Set(R.map(function(r){return r.brand;}))];
-    return "You are Tobo, the friendly robot expert for myrobot.shop, the world's most complete robot database ("+R.length+" robots, "+brands.length+" brands, "+cats.length+" categories). You are knowledgeable, precise, and genuinely helpful — like a seasoned robotics analyst who knows every machine in the catalog.\n\n"+
+    return "You are Tubu, the friendly robot expert for myrobot.shop, the world's most complete robot database ("+R.length+" robots, "+brands.length+" brands, "+cats.length+" categories). You are knowledgeable, precise, and genuinely helpful — like a seasoned robotics analyst who knows every machine in the catalog.\n\n"+
     "YOUR JOB (all of these):\n1. RECOMMEND robots based on need, budget, use case, environment.\n2. ANSWER questions about any specific robot — specs, capabilities.\n3. COMPARE robots head-to-head.\n4. EXPLAIN robotics concepts plainly.\n\n"+
     "CATEGORIES: "+cats.join(', ')+".\n\n"+
     "HOW TO USE DATA:\n- Below is a digest of EVERY robot (one per line): id|name|brand|category [specs] — uses.\n- Reason across the whole digest to shortlist and recommend.\n- When you reference specific robots, cite them with this EXACT format: [[robot:EXACT-ID]] — copy the id verbatim from the digest (the part before the first | on that robot's line). Example: [[robot:pudu-bellabot-2020]].\n- NEVER write markdown links like [Name](url) for robots. NEVER link to myrobot.shop. ONLY use the [[robot:id]] tag — the site turns it into a clickable card automatically.\n- Put the [[robot:id]] tag on its own line right after you mention that robot. Don't repeat the specs in text; the card shows them.\n- Don't invent specs not shown; for deep detail, point the user to the robot's page.\n\n"+
@@ -5349,7 +5410,7 @@ function runFinderSearch(){
 
   function greet(){
     var n=(window.ROBOTS||[]).length||'all the';
-    addAI("Hi — I'm Tobo, your robot expert. I know every one of the "+(typeof n==='number'?n.toLocaleString():n)+" robots in the database. I can recommend the right machine for your needs, compare options, or dig into any robot's details.\n\nWhat are you looking for?");
+    addAI("Hi — I'm Tubu, your robot expert. I know every one of the "+(typeof n==='number'?n.toLocaleString():n)+" robots in the database. I can recommend the right machine for your needs, compare options, or dig into any robot's details.\n\nWhat are you looking for?");
     addSuggestions(['Best humanoid under $20k','Warehouse picking robots','Compare Unitree G1 vs H1','Newest robots in 2026','Robot vacuum recommendations']);
   }
 
