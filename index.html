@@ -4829,7 +4829,6 @@ function getFinderFiltered(){
   const schema = getSchema();
   // Build active filter list from schema + state
   return pool.filter(r => {
-    if (typeof catnavActive==='function' && catnavActive() && !catnavMatch(r)) return false;
     // Iterate fields in the schema
     for (const section of schema){
       for (const fk of section.fields){
@@ -5164,10 +5163,22 @@ function renderCatMenu(elId){
     +'<div class="cm-grouplabel"><span>BY MANUFACTURER</span></div><div class="cm-grid">'+brHtml+'</div>';
 }
 
-// ── Sidebar multi-select (works like the Database filter; page-aware) ──
+// ── Sidebar multi-select (Database-style). Finder drives its own per-category filter engine. ──
 var CATNAV={cats:{},brands:{}};
-function catnavHas(kind,v){return !!(kind==='brand'?CATNAV.brands:CATNAV.cats)[v];}
-function catnavActive(){return Object.keys(CATNAV.cats).length>0||Object.keys(CATNAV.brands).length>0;}
+function catnavPage(){ var el=document.querySelector('.page.active'); return el?el.id.replace('page-',''):''; }
+function catnavHas(kind,v){
+  if(catnavPage()==='finder'){
+    if(kind==='brand') return (typeof SELECTED_BRANDS!=='undefined')&&SELECTED_BRANDS.has(v);
+    return (typeof finderCat!=='undefined')&&finderCat===v;
+  }
+  return !!(kind==='brand'?CATNAV.brands:CATNAV.cats)[v];
+}
+function catnavActive(){
+  if(catnavPage()==='finder'){
+    return (typeof finderCat!=='undefined'&&finderCat!=='all')||(typeof SELECTED_BRANDS!=='undefined'&&SELECTED_BRANDS.size>0);
+  }
+  return Object.keys(CATNAV.cats).length>0||Object.keys(CATNAV.brands).length>0;
+}
 function catnavMatch(r){
   var cats=Object.keys(CATNAV.cats),brands=Object.keys(CATNAV.brands);
   var okc=!cats.length||cats.indexOf(r.cat)>=0;
@@ -5180,24 +5191,41 @@ function catnavMenuId(){
   return ({'page-compare':'compare-menu','page-finder':'finder-menu','page-videos':'videos-menu','page-news':'news-filter-bar'})[el.id]||'';
 }
 function catnavToggle(kind,v){
-  var bag=kind==='brand'?CATNAV.brands:CATNAV.cats;
-  if(bag[v])delete bag[v];else bag[v]=1;
+  var p=catnavPage();
+  if(p==='finder'){
+    if(kind==='cat'){
+      if((typeof finderCat!=='undefined')&&finderCat===v){ try{setFinderCat('all',null);}catch(e){} }
+      else { try{setFinderCat(v,null);}catch(e){} }
+    } else {
+      try{ if(SELECTED_BRANDS.has(v))SELECTED_BRANDS.delete(v); else SELECTED_BRANDS.add(v); }catch(e){}
+      try{buildFinderFP();}catch(e){}
+      try{ if(document.getElementById('finder-results-section').classList.contains('visible'))renderFinder(); }catch(e){}
+    }
+  } else {
+    var bag=kind==='brand'?CATNAV.brands:CATNAV.cats;
+    if(bag[v])delete bag[v];else bag[v]=1;
+    catnavApply();
+  }
   var mid=catnavMenuId(); if(mid)renderCatMenu(mid);
-  catnavApply();
 }
 function catnavClear(){
-  CATNAV.cats={};CATNAV.brands={};
+  var p=catnavPage();
+  if(p==='finder'){
+    try{ if(typeof FILTER_STATE!=='undefined')Object.keys(FILTER_STATE).forEach(function(k){delete FILTER_STATE[k];}); }catch(e){}
+    try{ SELECTED_BRANDS.clear(); }catch(e){}
+    try{ if(typeof SELECTED_CB!=='undefined')Object.keys(SELECTED_CB).forEach(function(k){delete SELECTED_CB[k];}); }catch(e){}
+    try{ setFinderCat('all',null); }catch(e){}
+  } else {
+    CATNAV.cats={};CATNAV.brands={}; catnavApply();
+  }
   var mid=catnavMenuId(); if(mid)renderCatMenu(mid);
-  catnavApply();
 }
 function catnavApply(){
-  var el=document.querySelector('.page.active'); var p=el?el.id.replace('page-',''):'';
+  var p=catnavPage();
   if(p==='compare'){ var i=document.getElementById('rs-search'); try{renderRobotSelector(i?i.value:'');}catch(e){} }
-  else if(p==='finder'){ if(catnavActive())finderCat='all'; var rs=document.getElementById('finder-results-section'); if(rs)rs.classList.add('visible'); try{renderFinder();}catch(e){} }
   else if(p==='news'){ try{paintNews();}catch(e){} }
   else if(p==='videos'){ try{renderVideos();}catch(e){} }
-}
-var NEWS_PER_PAGE=18;
+}var NEWS_PER_PAGE=18;
 var newsLoaded=1;
 function paintNews(){
   renderCatMenu('news-filter-bar');
