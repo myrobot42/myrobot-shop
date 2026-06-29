@@ -253,15 +253,14 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .active-filters-row:empty{display:none;margin:0;min-height:0}
 .news-filter-bar{margin-bottom:16px}
 .catmenu{margin-bottom:18px;max-width:1200px;margin-left:auto;margin-right:auto}
-.cm-grouplabel{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin:0 0 8px}
-.cm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:5px;margin-bottom:16px}
+.catnav-shell{display:flex;gap:24px;max-width:1200px;margin:0 auto;padding:18px 22px;align-items:flex-start}
+.catnav-side{width:236px;flex-shrink:0;align-self:flex-start}
+.catnav-main{flex:1;min-width:0}
+.catnav-side .cm-grid,.cm-2col .cm-grid{grid-template-columns:1fr 1fr}
+@media(max-width:900px){.catnav-shell{flex-direction:column}.catnav-side{width:100%}}
+.cm-grouplabel{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin:0 0 9px}
+.cm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px;margin-bottom:16px}
 .cm-grid:last-child{margin-bottom:0}
-.cm-opt{display:flex;justify-content:space-between;align-items:center;gap:5px;cursor:pointer;padding:6px 10px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg2);transition:border-color .12s,background .12s;min-width:0}
-.cm-opt:hover{border-color:var(--acc);background:var(--acc-l)}
-.cm-opt-label{font-size:11px;color:var(--txt);font-weight:500;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.cm-opt-count{font-size:9.5px;color:var(--mut);flex-shrink:0}
-.cm-opt:hover .cm-opt-label{color:var(--acc)}
-.cm-opt:hover .cm-opt-count{color:var(--acc)}
 .hf-opt{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg2);font-size:11px;font-weight:500;color:var(--txt);cursor:pointer;transition:border-color .12s,background .12s}
 .hf-opt:hover{border-color:var(--acc)}
 .hf-opt.on{border-color:var(--acc);background:var(--accbg,#ede9fe);color:var(--acc);font-weight:700}
@@ -1205,8 +1204,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- COMPARE -->
 <div id="page-compare" class="page">
-  <div class="compare-page">
-    <div class="catmenu" id="compare-menu"></div>
+  <div class="catnav-shell">
+    <aside class="catnav-side" id="compare-menu"></aside>
+    <div class="catnav-main"><div class="compare-page">
     <div style="margin-bottom:20px"><div class="page-title">Robot Comparison Tool</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Select up to 4 robots to compare specs side by side</p></div>
     <div class="compare-slots" id="compare-slots">
   <div class="compare-slot" id="cslot-0" onclick="openSlot(0)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 1</div></div>
@@ -1223,7 +1223,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     </div>
     <div id="compare-table"></div>
     <div class="cta-row"><button class="btn btn-ghost" onclick="clearCompare()">Clear All</button><button class="btn btn-primary" onclick="goPage('db')">Browse More Robots</button></div>
-  </div>
+  </div></div></div>
 </div>
 
 <!-- RANKINGS -->
@@ -1253,7 +1253,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <div id="page-news" class="page">
   <div class="news-page">
     <div style="margin-bottom:22px"><div class="page-title">Robotics News</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Latest industry news, product launches and expert analysis</p></div>
-    <div class="news-shell"><aside class="news-sidebar" id="news-sidebar"></aside><div class="news-main"><div class="news-filter-bar" id="news-filter-bar"></div><div class="news-layout" id="news-layout"></div>
+    <div class="news-shell"><aside class="news-sidebar"><div class="cm-2col" id="news-filter-bar" style="margin-bottom:18px"></div><div id="news-sidebar"></div></aside><div class="news-main"><div class="news-layout" id="news-layout"></div>
     <div class="news-list-items" id="news-list-items"></div><div id="news-pager" class="news-pager"></div></div></div>
     <div class="news-signup" style="margin-top:34px;padding:30px 26px;border:1px solid var(--bdr);border-radius:14px;background:linear-gradient(135deg,var(--acc-l),var(--bg2));text-align:center">
       <div style="font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:19px;color:var(--txt);margin-bottom:6px">Get the robotics briefing</div>
@@ -1271,8 +1271,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- VIDEOS -->
 <div id="page-videos" class="page">
-  <div class="videos-page" style="max-width:1200px;margin:0 auto;padding:24px 20px">
-    <div class="catmenu" id="videos-menu"></div>
+  <div class="catnav-shell">
+    <aside class="catnav-side" id="videos-menu"></aside>
+    <div class="catnav-main"><div class="videos-page" style="padding:24px 20px">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:12px">
       <div>
         <div class="page-title">Robot Videos</div>
@@ -1305,7 +1306,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <a href="https://www.youtube.com/@MYROBOTSHOP" target="_blank" rel="noopener" style="color:var(--acc);font-weight:600;text-decoration:none">Visit @MYROBOTSHOP on YouTube →</a>
     </div>
     <div id="videos-grid" style="display:none;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px"></div>
-  </div>
+  </div></div></div>
 </div>
 
 <!-- Video Modal (embed player) -->
@@ -1327,8 +1328,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     <p id="finder-band-meta">All categories · Live filters</p>
     <div class="cat-wrap" style="display:none"><div class="ftabs" id="finder-tabs"></div></div>
   </div>
-  <div class="catmenu" id="finder-menu" style="padding:0 22px"></div>
-  <div class="finder-body">
+  <div class="catnav-shell">
+    <aside class="catnav-side" id="finder-menu"></aside>
+    <div class="catnav-main"><div class="finder-body">
     <div id="finder-fp"></div>
     <div class="finder-bottom" id="finder-bottom" style="display:none">
       <button class="finder-reset-btn" onclick="resetFinder()">Reset filters</button>
@@ -1354,7 +1356,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       </div>
       <div id="finder-results"></div>
     </div>
-  </div>
+  </div></div></div>
 </div>
 
 <!-- MANUFACTURERS -->
@@ -5137,8 +5139,8 @@ function renderCatMenu(elId){
   var cats=Object.keys(cc).sort();
   var bc={}; ROBOTS.forEach(function(r){if(r.brand)bc[r.brand]=(bc[r.brand]||0)+1;});
   var brands=Object.keys(bc).sort(function(x,y){return bc[y]-bc[x];}).slice(0,20);
-  var catHtml=cats.map(function(c){return '<div class="cm-opt" title="'+e(c)+'" onclick="goPage(\'db\',{cat:\''+a(c)+'\'})"><span class="cm-opt-label">'+e(c)+'</span><span class="cm-opt-count">'+cc[c]+'</span></div>';}).join('');
-  var brHtml=brands.map(function(b){return '<div class="cm-opt" title="'+e(b)+'" onclick="searchBrand(\''+a(b)+'\')"><span class="cm-opt-label">'+e(b)+'</span><span class="cm-opt-count">'+bc[b]+'</span></div>';}).join('');
+  var catHtml=cats.map(function(c){return '<div class="filter-opt" title="'+e(c)+'" onclick="goPage(\'db\',{cat:\''+a(c)+'\'})"><span class="filter-opt-label">'+e(c)+'</span><span class="filter-opt-count">'+cc[c]+'</span></div>';}).join('');
+  var brHtml=brands.map(function(b){return '<div class="filter-opt" title="'+e(b)+'" onclick="searchBrand(\''+a(b)+'\')"><span class="filter-opt-label">'+e(b)+'</span><span class="filter-opt-count">'+bc[b]+'</span></div>';}).join('');
   bar.innerHTML='<div class="cm-grouplabel">BROWSE BY CATEGORY</div><div class="cm-grid">'+catHtml+'</div>'
     +'<div class="cm-grouplabel">BY MANUFACTURER</div><div class="cm-grid">'+brHtml+'</div>';
 }
