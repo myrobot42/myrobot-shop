@@ -253,6 +253,15 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .active-filters-row:empty{display:none;margin:0;min-height:0}
 .news-filter-bar{margin-bottom:16px}
 .catmenu{margin-bottom:18px;max-width:1200px;margin-left:auto;margin-right:auto}
+.cm-grouplabel{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin:0 0 8px}
+.cm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:5px;margin-bottom:16px}
+.cm-grid:last-child{margin-bottom:0}
+.cm-opt{display:flex;justify-content:space-between;align-items:center;gap:5px;cursor:pointer;padding:6px 10px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg2);transition:border-color .12s,background .12s;min-width:0}
+.cm-opt:hover{border-color:var(--acc);background:var(--acc-l)}
+.cm-opt-label{font-size:11px;color:var(--txt);font-weight:500;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cm-opt-count{font-size:9.5px;color:var(--mut);flex-shrink:0}
+.cm-opt:hover .cm-opt-label{color:var(--acc)}
+.cm-opt:hover .cm-opt-count{color:var(--acc)}
 .hf-opt{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg2);font-size:11px;font-weight:500;color:var(--txt);cursor:pointer;transition:border-color .12s,background .12s}
 .hf-opt:hover{border-color:var(--acc)}
 .hf-opt.on{border-color:var(--acc);background:var(--accbg,#ede9fe);color:var(--acc);font-weight:700}
@@ -264,6 +273,12 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .pagination{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:22px}
 .page-btn{width:32px;height:32px;border-radius:6px;border:1px solid var(--bdr);background:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--mut);display:flex;align-items:center;justify-content:center}
 .page-btn.active{background:var(--acc);color:#fff;border-color:var(--acc)}
+.news-pager{display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:26px}
+.news-loadmore{padding:10px 26px;border:1px solid var(--bdr2);border-radius:8px;background:#fff;font-size:13px;font-weight:600;color:var(--txt);cursor:pointer;font-family:inherit;transition:all .15s}
+.news-loadmore:hover{border-color:var(--acc);color:var(--acc);background:var(--acc-l)}
+.news-pages{display:flex;align-items:center;gap:5px;flex-wrap:wrap;justify-content:center}
+.news-pages .page-btn{width:auto;min-width:32px;padding:0 8px}
+.news-pages .page-dots{color:var(--mut);font-size:12px;padding:0 2px}
 
 /* ── PROFILE ── */
 .breadcrumb{padding:10px 0;font-size:12px;color:var(--mut);border-bottom:1px solid var(--bdr);background:var(--bg2)}
@@ -1056,36 +1071,6 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="nl-msg" style="margin-top:13px;font-size:13px;color:var(--grn);display:none">Thanks &mdash; you&rsquo;re on the list!</div>
     </div>
   </section>
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand"><span class="logo-bracket">[</span>myrobot<span class="logo-acc">.shop</span><span class="logo-bracket">]</span></div>
-        <p class="footer-desc">The world's most comprehensive robot database.</p>
-        <div class="social-row">
-          <a href="https://www.youtube.com/@MYROBOTSHOP" target="_blank" rel="noopener" class="social-icon youtube" title="YouTube">
-            <svg viewBox="0 0 28 20" fill="none"><path d="M27.41 3.13a3.51 3.51 0 0 0-2.47-2.49C22.75 0 14 0 14 0S5.25 0 3.06.64A3.51 3.51 0 0 0 .59 3.13 36.6 36.6 0 0 0 0 10a36.6 36.6 0 0 0 .59 6.87 3.51 3.51 0 0 0 2.47 2.49C5.25 20 14 20 14 20s8.75 0 10.94-.64a3.51 3.51 0 0 0 2.47-2.49A36.6 36.6 0 0 0 28 10a36.6 36.6 0 0 0-.59-6.87Z" fill="currentColor"/><path d="M11.2 14.29 18.46 10 11.2 5.71v8.58Z" fill="#ff0000"/></svg>
-          </a>
-          <a href="https://x.com/myrobot_shop" target="_blank" rel="noopener" class="social-icon x" title="X (Twitter)">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          </a>
-          <a href="https://www.facebook.com/MyRobotShopOfficial" target="_blank" rel="noopener" class="social-icon facebook" title="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/myrobotshop" target="_blank" rel="noopener" class="social-icon instagram" title="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-        </div>
-        <a href="mailto:email@myrobot.shop" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:12px;color:var(--mut);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--acc)'" onmouseout="this.style.color='var(--mut)'">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          email@myrobot.shop
-        </a>
-      </div>
-      <div class="footer-col"><h4>DATABASE</h4><a onclick="goPage('db')">All Robots</a><a onclick="goPage('db')">New Releases</a><a onclick="goPage('rankings')">Trending</a><a onclick="goPage('manufacturers')">By Brand</a></div>
-      <div class="footer-col"><h4>TOOLS</h4><a onclick="goPage('compare')">Compare</a><a onclick="goPage('finder')">Robot Finder</a><a onclick="goPage('news')">News</a><a onclick="goPage('videos')">Videos</a><a onclick="openReviewFor()">Reviews</a><a href="/questions/">Questions</a></div>
-      <div class="footer-col"><h4>COMPANY</h4><a onclick="goPage('methodology')">How We Source Data</a><a onclick="goPage('methodology')">About</a><a>Advertise</a><a href="mailto:email@myrobot.shop">Contact</a><a>Privacy</a></div>
-    </div>
-  </footer>
-  <div class="footer-bottom"><div class="footer-bottom-inner"><span>© 2026 myrobot.shop — All rights reserved</span><span class="footer-aff">As an Amazon Associate, myrobot.shop earns from qualifying purchases. Links marked “Check price” may be affiliate links — if you buy through them we may earn a commission at no extra cost to you.</span></div></div>
 </div>
 
 <!-- DATABASE -->
@@ -1157,8 +1142,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <button class="reset-btn" onclick="resetDb()">Reset All</button>
     </div>
     <div class="results-col">
-      <div class="active-filters-row" id="db-active-filters"></div>
       <div id="db-hero" class="db-hero" style="display:none"></div>
+      <div class="active-filters-row" id="db-active-filters"></div>
       <div id="db-results"></div>
     </div>
   </div>
@@ -1269,7 +1254,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   <div class="news-page">
     <div style="margin-bottom:22px"><div class="page-title">Robotics News</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Latest industry news, product launches and expert analysis</p></div>
     <div class="news-shell"><aside class="news-sidebar" id="news-sidebar"></aside><div class="news-main"><div class="news-filter-bar" id="news-filter-bar"></div><div class="news-layout" id="news-layout"></div>
-    <div class="news-list-items" id="news-list-items"></div></div></div>
+    <div class="news-list-items" id="news-list-items"></div><div id="news-pager" class="news-pager"></div></div></div>
     <div class="news-signup" style="margin-top:34px;padding:30px 26px;border:1px solid var(--bdr);border-radius:14px;background:linear-gradient(135deg,var(--acc-l),var(--bg2));text-align:center">
       <div style="font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:19px;color:var(--txt);margin-bottom:6px">Get the robotics briefing</div>
       <div style="color:var(--mut);font-size:13.5px;margin-bottom:16px">The latest launches, reviews and breakthroughs &mdash; in your inbox. No spam.</div>
@@ -1426,6 +1411,39 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <div id="page-submit-review" class="page">
   <div class="submit-page"><div class="submit-card"><div class="submit-title">Write a Review</div><div class="submit-sub">Share your experience to help others make the right decision.</div><div class="form-group-full" id="review-robot-row"><label class="form-label">Robot *</label><select class="form-select" id="review-robot-select"><option value="">Select a robot...</option></select></div><div class="form-group-full" id="review-robot-fixed" style="display:none"><label class="form-label">Robot</label><div id="review-robot-fixed-name" style="font-weight:700;font-size:15px;padding:6px 0"></div></div><div class="form-group-full"><label class="form-label">Your Rating *</label><div class="stars-select" id="stars-select"><span class="star-btn" onclick="setStars(1)">★</span><span class="star-btn" onclick="setStars(2)">★</span><span class="star-btn" onclick="setStars(3)">★</span><span class="star-btn" onclick="setStars(4)">★</span><span class="star-btn" onclick="setStars(5)">★</span></div></div><div class="form-row"><div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" id="review-name" placeholder="e.g. James K."></div><div class="form-group"><label class="form-label">Your Role</label><input class="form-input" type="text" id="review-role" placeholder="e.g. Robotics Engineer, Toyota"></div></div><div class="form-group-full"><label class="form-label">Review *</label><textarea class="form-textarea" id="review-text" style="min-height:120px" placeholder="Share your experience — pros, cons, use case, how long you've used it..."></textarea></div><div style="margin-top:20px;display:flex;gap:12px;align-items:center"><button class="submit-btn" onclick="submitReview()">Submit Review →</button><span style="font-size:11px;color:var(--mut)">Reviews moderated within 24 hours</span></div></div></div>
 </div>
+
+<!-- GLOBAL FOOTER (shown on every page) -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand"><span class="logo-bracket">[</span>myrobot<span class="logo-acc">.shop</span><span class="logo-bracket">]</span></div>
+        <p class="footer-desc">The world's most comprehensive robot database.</p>
+        <div class="social-row">
+          <a href="https://www.youtube.com/@MYROBOTSHOP" target="_blank" rel="noopener" class="social-icon youtube" title="YouTube">
+            <svg viewBox="0 0 28 20" fill="none"><path d="M27.41 3.13a3.51 3.51 0 0 0-2.47-2.49C22.75 0 14 0 14 0S5.25 0 3.06.64A3.51 3.51 0 0 0 .59 3.13 36.6 36.6 0 0 0 0 10a36.6 36.6 0 0 0 .59 6.87 3.51 3.51 0 0 0 2.47 2.49C5.25 20 14 20 14 20s8.75 0 10.94-.64a3.51 3.51 0 0 0 2.47-2.49A36.6 36.6 0 0 0 28 10a36.6 36.6 0 0 0-.59-6.87Z" fill="currentColor"/><path d="M11.2 14.29 18.46 10 11.2 5.71v8.58Z" fill="#ff0000"/></svg>
+          </a>
+          <a href="https://x.com/myrobot_shop" target="_blank" rel="noopener" class="social-icon x" title="X (Twitter)">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/MyRobotShopOfficial" target="_blank" rel="noopener" class="social-icon facebook" title="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/myrobotshop" target="_blank" rel="noopener" class="social-icon instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+        <a href="mailto:email@myrobot.shop" style="display:inline-flex;align-items:center;gap:6px;margin-top:14px;font-size:12px;color:var(--mut);text-decoration:none;transition:color .15s" onmouseover="this.style.color='var(--acc)'" onmouseout="this.style.color='var(--mut)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          email@myrobot.shop
+        </a>
+      </div>
+      <div class="footer-col"><h4>DATABASE</h4><a onclick="goPage('db')">All Robots</a><a onclick="goPage('db')">New Releases</a><a onclick="goPage('rankings')">Trending</a><a onclick="goPage('manufacturers')">By Brand</a></div>
+      <div class="footer-col"><h4>TOOLS</h4><a onclick="goPage('compare')">Compare</a><a onclick="goPage('finder')">Robot Finder</a><a onclick="goPage('news')">News</a><a onclick="goPage('videos')">Videos</a><a onclick="openReviewFor()">Reviews</a><a href="/questions/">Questions</a></div>
+      <div class="footer-col"><h4>COMPANY</h4><a onclick="goPage('methodology')">How We Source Data</a><a onclick="goPage('methodology')">About</a><a>Advertise</a><a href="mailto:email@myrobot.shop">Contact</a><a>Privacy</a></div>
+    </div>
+  </footer>
+  <div class="footer-bottom"><div class="footer-bottom-inner"><span>© 2026 myrobot.shop — All rights reserved</span><span class="footer-aff">As an Amazon Associate, myrobot.shop earns from qualifying purchases. Links marked “Check price” may be affiliate links — if you buy through them we may earn a commission at no extra cost to you.</span></div></div>
+
 <script>
 
 // ════════════ ROBOT DATABASE ════════════
@@ -5115,28 +5133,48 @@ function renderCatMenu(elId){
   if(!bar)return;
   function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function a(s){return e(s).replace(/'/g,'&#39;');}
-  var cats=Array.from(new Set(ROBOTS.map(function(r){return r.cat;}).filter(Boolean))).sort();
+  var cc={}; ROBOTS.forEach(function(r){if(r.cat)cc[r.cat]=(cc[r.cat]||0)+1;});
+  var cats=Object.keys(cc).sort();
   var bc={}; ROBOTS.forEach(function(r){if(r.brand)bc[r.brand]=(bc[r.brand]||0)+1;});
   var brands=Object.keys(bc).sort(function(x,y){return bc[y]-bc[x];}).slice(0,20);
-  var catHtml=cats.map(function(c){return '<div class="hf-opt" title="'+e(c)+'" onclick="goPage(\'db\',{cat:\''+a(c)+'\'})">'+e(c)+'</div>';}).join('');
-  var brHtml=brands.map(function(b){return '<div class="hf-opt" title="'+e(b)+'" onclick="searchBrand(\''+a(b)+'\')">'+e(b)+'</div>';}).join('');
-  bar.innerHTML='<div class="hf-grouplabel">BROWSE BY CATEGORY</div><div class="hf-row">'+catHtml+'</div>'
-    +'<div class="hf-grouplabel">BY MANUFACTURER</div><div class="hf-row">'+brHtml+'</div>';
+  var catHtml=cats.map(function(c){return '<div class="cm-opt" title="'+e(c)+'" onclick="goPage(\'db\',{cat:\''+a(c)+'\'})"><span class="cm-opt-label">'+e(c)+'</span><span class="cm-opt-count">'+cc[c]+'</span></div>';}).join('');
+  var brHtml=brands.map(function(b){return '<div class="cm-opt" title="'+e(b)+'" onclick="searchBrand(\''+a(b)+'\')"><span class="cm-opt-label">'+e(b)+'</span><span class="cm-opt-count">'+bc[b]+'</span></div>';}).join('');
+  bar.innerHTML='<div class="cm-grouplabel">BROWSE BY CATEGORY</div><div class="cm-grid">'+catHtml+'</div>'
+    +'<div class="cm-grouplabel">BY MANUFACTURER</div><div class="cm-grid">'+brHtml+'</div>';
 }
+var NEWS_PER_PAGE=18;
+var newsLoaded=1;
 function paintNews(){
   renderCatMenu('news-filter-bar');
+  newsLoaded=1;
   var items=window.NEWS_ITEMS||[];
   var view=[]; for(var i=0;i<items.length;i++){ view.push({it:items[i],idx:i}); }
+  window._NEWS_VIEW=view;
   _renderNewsList(view);
 }
+function newsLoadMore(){
+  var view=window._NEWS_VIEW||[]; var rest=view.slice(4);
+  var pages=Math.max(1,Math.ceil(rest.length/NEWS_PER_PAGE));
+  if(newsLoaded<pages) newsLoaded++;
+  _renderNewsList(view);
+}
+function newsGotoPage(p){
+  var view=window._NEWS_VIEW||[]; var rest=view.slice(4);
+  var pages=Math.max(1,Math.ceil(rest.length/NEWS_PER_PAGE));
+  newsLoaded=Math.min(Math.max(1,p),pages);
+  _renderNewsList(view);
+  var list=document.getElementById('news-list-items');
+  if(list){ try{ list.scrollIntoView({behavior:'smooth',block:'start'}); }catch(e){} }
+}
 function _renderNewsList(view){
-  var layout=document.getElementById('news-layout'); var list=document.getElementById('news-list-items');
+  window._NEWS_VIEW=view;
+  var layout=document.getElementById('news-layout'); var list=document.getElementById('news-list-items'); var pager=document.getElementById('news-pager');
   if(!layout||!list) return;
   var COLORS=['var(--acc)','var(--org)','var(--grn)','var(--purple)'];
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function fdate(iso){if(!iso)return'';var d=new Date(iso);if(isNaN(d))return'';return d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});}
-  if(!view.length){layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">No news matches that filter.</div>';list.innerHTML='';return;}
-  var feat=view[0].it, featIdx=view[0].idx, right=view.slice(1,4), rest=view.slice(4,16);
+  if(!view.length){layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">No news matches that filter.</div>';list.innerHTML='';if(pager)pager.innerHTML='';return;}
+  var feat=view[0].it, featIdx=view[0].idx, right=view.slice(1,4), rest=view.slice(4);
   var fImg=feat.image
     ? '<div class="news-img featured" style="background:url(\''+esc(feat.image)+'\') center/cover;background-size:cover"><div class="news-cat">'+esc(feat.source)+'</div></div>'
     : '<div class="news-img featured"><div class="news-img-label" style="font-size:22px;padding:0 20px;text-align:center;line-height:1.25;word-break:break-word">'+esc((feat.source||'NEWS').toUpperCase())+'</div><div class="news-cat">'+esc(feat.source)+'</div></div>';
@@ -5145,14 +5183,36 @@ function _renderNewsList(view){
     return '<a class="news-card" onclick="openNewsItem('+o.idx+')" style="text-decoration:none;color:inherit;cursor:pointer"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:'+COLORS[i%COLORS.length]+';letter-spacing:.5px;margin-bottom:5px">'+esc((it.source||'').toUpperCase())+'</div><div class="news-title">'+esc(it.title)+'</div><div class="news-meta" style="margin-top:7px">'+fdate(it.published)+'</div></div></a>';
   }).join('')+'</div>';
   layout.innerHTML=featHtml+rightHtml;
-  list.innerHTML=rest.map(function(o,i){var it=o.it;
+  var pages=Math.max(1,Math.ceil(rest.length/NEWS_PER_PAGE));
+  if(newsLoaded>pages) newsLoaded=pages;
+  if(newsLoaded<1) newsLoaded=1;
+  var shown=Math.min(newsLoaded*NEWS_PER_PAGE, rest.length);
+  var visible=rest.slice(0,shown);
+  list.innerHTML=visible.map(function(o,i){var it=o.it;
     var thumb=it.image
       ? '<div class="nli-thumb" style="background-image:url(\''+esc(it.image)+'\')"></div>'
       : '<div class="nli-thumb nli-thumb-ph"><span>'+esc((it.source||'NEWS').toUpperCase())+'</span></div>';
     return '<a class="news-list-item" onclick="openNewsItem('+o.idx+')" style="display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:inherit;cursor:pointer">'+thumb+'<div style="flex:1;min-width:0"><div class="nli-cat" style="color:'+COLORS[i%COLORS.length]+'">'+esc((it.source||'').toUpperCase())+'</div><div class="nli-title">'+esc(it.title)+'</div><div class="nli-meta">'+fdate(it.published)+'</div></div></a>';
   }).join('');
+  if(pager){
+    if(rest.length<=NEWS_PER_PAGE){ pager.innerHTML=''; }
+    else {
+      var html='';
+      if(shown<rest.length){ html+='<button class="news-loadmore" onclick="newsLoadMore()">Load more news ('+(rest.length-shown)+' more)</button>'; }
+      function btn(n){return '<button class="page-btn'+(n===newsLoaded?' active':'')+'" onclick="newsGotoPage('+n+')">'+n+'</button>';}
+      var pb='';
+      if(pages<=12){ for(var n=1;n<=pages;n++) pb+=btn(n); }
+      else {
+        var set={}; set[1]=1; set[pages]=1; set[newsLoaded]=1;
+        if(newsLoaded-1>=1)set[newsLoaded-1]=1; if(newsLoaded+1<=pages)set[newsLoaded+1]=1;
+        var keys=Object.keys(set).map(Number).sort(function(a,b){return a-b;}); var prev=0;
+        keys.forEach(function(n){ if(prev && n-prev>1) pb+='<span class="page-dots">\u2026</span>'; pb+=btn(n); prev=n; });
+      }
+      html+='<div class="news-pages">'+pb+'</div>';
+      pager.innerHTML=html;
+    }
+  }
 }
-
 async function renderVideos(){
   const loading = document.getElementById('videos-loading');
   const error = document.getElementById('videos-error');
