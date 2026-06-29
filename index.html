@@ -207,12 +207,14 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .filter-section{margin-bottom:18px}
 .filter-title{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin-bottom:9px;display:flex;justify-content:space-between;align-items:center}
 .filter-clear{font-size:10px;color:var(--acc);cursor:pointer;font-weight:600}
-.filter-options{display:flex;flex-direction:column;gap:5px}
-.filter-opt{display:flex;align-items:center;gap:7px;cursor:pointer;padding:4px 7px;border-radius:5px;transition:background .1s}
-.filter-opt:hover{background:var(--bg2)}
-.filter-opt input[type=checkbox]{accent-color:var(--acc);width:12px;height:12px;cursor:pointer}
-.filter-opt-label{font-size:12px;color:var(--txt);font-weight:500;flex:1}
-.filter-opt-count{font-size:10px;color:var(--mut)}
+.filter-options{display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.filter-opt{display:flex;justify-content:space-between;align-items:center;gap:5px;cursor:pointer;padding:5px 8px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg2);transition:border-color .12s,background .12s;min-width:0}
+.filter-opt:hover{border-color:var(--acc)}
+.filter-opt input[type=checkbox]{display:none}
+.filter-opt-label{font-size:10.5px;color:var(--txt);font-weight:500;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.filter-opt-count{font-size:9.5px;color:var(--mut);flex-shrink:0}
+.filter-opt:has(input:checked){border-color:var(--acc);background:var(--accbg,#ede9fe)}
+.filter-opt:has(input:checked) .filter-opt-label{color:var(--acc);font-weight:700}
 .filter-divider{height:1px;background:var(--bdr);margin:14px 0}
 .apply-btn{width:100%;padding:8px;background:var(--acc);color:#fff;border:none;border-radius:6px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit}
 .reset-btn{width:100%;padding:7px;background:transparent;color:var(--mut);border:1px solid var(--bdr);border-radius:6px;font-size:12px;cursor:pointer;font-family:inherit;margin-top:5px}
@@ -1118,31 +1120,21 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="filter-section">
         <div class="filter-title">PRICE RANGE</div>
         <div class="filter-options">
-          <label class="filter-opt"><input type="checkbox" data-price="u1k" onchange="renderDb()"><span class="filter-opt-label">Under $1,000</span></label>
-          <label class="filter-opt"><input type="checkbox" data-price="u20k" onchange="renderDb()"><span class="filter-opt-label">$1K – $20K</span></label>
-          <label class="filter-opt"><input type="checkbox" data-price="u100k" onchange="renderDb()"><span class="filter-opt-label">$20K – $100K</span></label>
-          <label class="filter-opt"><input type="checkbox" data-price="u500k" onchange="renderDb()"><span class="filter-opt-label">$100K – $500K</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="u1k" onchange="renderDb()"><span class="filter-opt-label">&lt; $1K</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="u20k" onchange="renderDb()"><span class="filter-opt-label">$1K–20K</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="u100k" onchange="renderDb()"><span class="filter-opt-label">$20K–100K</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="u500k" onchange="renderDb()"><span class="filter-opt-label">$100K–500K</span></label>
           <label class="filter-opt"><input type="checkbox" data-price="over500k" onchange="renderDb()"><span class="filter-opt-label">$500K+</span></label>
-          <label class="filter-opt"><input type="checkbox" data-price="poa" onchange="renderDb()"><span class="filter-opt-label">POA / Fleet pricing</span></label>
-        </div>
-      </div>
-      <div class="filter-divider"></div>
-      <div class="filter-section">
-        <div class="filter-title">FEATURES</div>
-        <div class="filter-options">
-          <label class="filter-opt"><input type="checkbox" data-feat="arm" onchange="renderDb()"><span class="filter-opt-label">🦾 Has Robotic Arm</span></label>
-          <label class="filter-opt"><input type="checkbox" data-feat="ai" onchange="renderDb()"><span class="filter-opt-label">AI / Computer Vision</span></label>
-          <label class="filter-opt"><input type="checkbox" data-feat="ros" onchange="renderDb()"><span class="filter-opt-label">ROS Compatible</span></label>
-          <label class="filter-opt"><input type="checkbox" data-feat="sdk" onchange="renderDb()"><span class="filter-opt-label">SDK Available</span></label>
+          <label class="filter-opt"><input type="checkbox" data-price="poa" onchange="renderDb()"><span class="filter-opt-label">POA</span></label>
         </div>
       </div>
       <div class="filter-divider"></div>
       <div class="filter-section">
         <div class="filter-title">AVAILABILITY</div>
         <div class="filter-options">
-          <label class="filter-opt"><input type="checkbox" data-status="Available" onchange="renderDb()"><span class="filter-opt-label">Available now</span></label>
-          <label class="filter-opt"><input type="checkbox" data-status="Limited" onchange="renderDb()"><span class="filter-opt-label">Limited release</span></label>
-          <label class="filter-opt"><input type="checkbox" data-status="Pilot" onchange="renderDb()"><span class="filter-opt-label">Pilot / Coming soon</span></label>
+          <label class="filter-opt"><input type="checkbox" data-status="Available" onchange="renderDb()"><span class="filter-opt-label">Available</span></label>
+          <label class="filter-opt"><input type="checkbox" data-status="Limited" onchange="renderDb()"><span class="filter-opt-label">Limited</span></label>
+          <label class="filter-opt"><input type="checkbox" data-status="Pilot" onchange="renderDb()"><span class="filter-opt-label">Coming soon</span></label>
         </div>
       </div>
       <div class="filter-divider"></div>
@@ -1763,7 +1755,7 @@ function buildDbFilters(){
   if(catF && !catF.dataset.built){
     catF.dataset.built='1';
     const cats=[...new Set(ROBOTS.map(r=>r.cat).filter(Boolean))].sort();
-    catF.innerHTML=cats.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
+    catF.innerHTML=cats.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label" title="${c}">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
     renderSubcatFilter();  // initial render: hidden (no cat selected)
     renderBrandFilter();   // initial render: all brands
   }
@@ -1883,7 +1875,7 @@ function renderBrandFilter(){
   const hiddenCount = sortedBrands.length - visibleBrands.length;
 
   const html = visibleBrands.map(b =>
-    `<label class="filter-opt"><input type="checkbox" data-brand="${b}" onchange="renderDb()" ${selBrands.has(b)?'checked':''}><span class="filter-opt-label">${b}</span><span class="filter-opt-count">${brandCounts[b]||0}</span></label>`
+    `<label class="filter-opt"><input type="checkbox" data-brand="${b}" onchange="renderDb()" ${selBrands.has(b)?'checked':''}><span class="filter-opt-label" title="${b}">${b}</span><span class="filter-opt-count">${brandCounts[b]||0}</span></label>`
   ).join('');
 
   // Add expand/collapse toggle if there are more brands than we're showing
@@ -1968,7 +1960,7 @@ function renderSubcatFilter(){
   const hidden = ordered.length - visible.length;
 
   const html = visible.map(s =>
-    `<label class="filter-opt"><input type="checkbox" data-sub="${escapeAttr(s)}" onchange="renderDb()" ${selSubs.has(s)?'checked':''}><span class="filter-opt-label">${s}</span><span class="filter-opt-count">${subCounts[s]||0}</span></label>`
+    `<label class="filter-opt"><input type="checkbox" data-sub="${escapeAttr(s)}" onchange="renderDb()" ${selSubs.has(s)?'checked':''}><span class="filter-opt-label" title="${s}">${s}</span><span class="filter-opt-count">${subCounts[s]||0}</span></label>`
   ).join('');
   let toggle = '';
   if (hidden > 0){
