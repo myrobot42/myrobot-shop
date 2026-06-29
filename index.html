@@ -10,8 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-C (finder list+grid = db, compare = db cards) -->
-<meta name="mrs-build" content="build-C">
+<!-- BUILD-TAG: build-D (brands filter by selected category) -->
+<meta name="mrs-build" content="build-D">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -5149,8 +5149,11 @@ function renderCatMenu(elId){
   function a(s){return e(s).replace(/'/g,'&#39;');}
   var cc={}; ROBOTS.forEach(function(r){if(r.cat)cc[r.cat]=(cc[r.cat]||0)+1;});
   var cats=Object.keys(cc).sort();
-  var bc={}; ROBOTS.forEach(function(r){if(r.brand)bc[r.brand]=(bc[r.brand]||0)+1;});
+  var selCats=catnavSelectedCats();
+  var brandPool=selCats.length?ROBOTS.filter(function(r){return selCats.indexOf(r.cat)>=0;}):ROBOTS;
+  var bc={}; brandPool.forEach(function(r){if(r.brand)bc[r.brand]=(bc[r.brand]||0)+1;});
   var brands=Object.keys(bc).sort(function(x,y){return bc[y]-bc[x];}).slice(0,20);
+  catnavSelectedBrands().forEach(function(b){if(brands.indexOf(b)<0){brands.unshift(b);if(bc[b]===undefined)bc[b]=0;}});
   function box(label,count,kind){
     var on=catnavHas(kind,label)?' active':'';
     return '<div class="filter-opt'+on+'" title="'+e(label)+'" onclick="catnavToggle(\''+kind+'\',\''+a(label)+'\')"><span class="filter-opt-label">'+e(label)+'</span><span class="filter-opt-count">'+count+'</span></div>';
@@ -5165,6 +5168,14 @@ function renderCatMenu(elId){
 // ── Sidebar multi-select (Database-style). Finder drives its own per-category filter engine. ──
 var CATNAV={cats:{},brands:{}};
 function catnavPage(){ var el=document.querySelector('.page.active'); return el?el.id.replace('page-',''):''; }
+function catnavSelectedCats(){
+  if(catnavPage()==='finder') return (typeof finderCat!=='undefined'&&finderCat!=='all')?[finderCat]:[];
+  return Object.keys(CATNAV.cats);
+}
+function catnavSelectedBrands(){
+  if(catnavPage()==='finder') return (typeof SELECTED_BRANDS!=='undefined')?Array.from(SELECTED_BRANDS):[];
+  return Object.keys(CATNAV.brands);
+}
 function catnavHas(kind,v){
   if(catnavPage()==='finder'){
     if(kind==='brand') return (typeof SELECTED_BRANDS!=='undefined')&&SELECTED_BRANDS.has(v);
