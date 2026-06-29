@@ -457,7 +457,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .finder-fp{background:transparent;padding:0}
 
 /* Filter section grid + cards */
-.finder-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:20px}
+.finder-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-bottom:20px}
 .fsc{background:#fff;border:1px solid var(--bdr);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:14px}
 .fsc-title{font-size:11px;font-weight:700;letter-spacing:.6px;color:var(--mut);text-transform:uppercase;margin-bottom:2px;padding-bottom:8px;border-bottom:1px solid var(--bdr)}
 .fsc-field{display:flex;flex-direction:column;gap:6px}
@@ -1329,7 +1329,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   <div class="finder-band">
     <h1>Robot Finder</h1>
     <p id="finder-band-meta">All categories · Live filters</p>
-    <div class="cat-wrap"><div class="ftabs" id="finder-tabs"></div></div>
+    <div class="cat-wrap" style="display:none"><div class="ftabs" id="finder-tabs"></div></div>
   </div>
   <div class="finder-body">
     <div id="finder-fp"></div>
@@ -4660,6 +4660,7 @@ function buildFinderFP(){
     for (const fieldKey of section.fields){
       const def = FF[fieldKey];
       if (!def) continue;
+      if (fieldKey === 'brand') continue;
       if (def.type === 'range') html += renderRangeSlider(fieldKey, def);
       else if (def.type === 'multi') html += renderMultiSelect(fieldKey, def);
       else if (def.type === 'cbgroup') html += renderCbGroup(fieldKey, def);
