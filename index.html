@@ -251,6 +251,12 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .no-results h3{font-size:17px;font-weight:700;margin-bottom:7px;color:var(--txt)}
 .active-filters-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;min-height:20px}
 .active-filters-row:empty{display:none;margin:0;min-height:0}
+.news-filter-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.hf-opt{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg2);font-size:11px;font-weight:500;color:var(--txt);cursor:pointer;transition:border-color .12s,background .12s}
+.hf-opt:hover{border-color:var(--acc)}
+.hf-opt.on{border-color:var(--acc);background:var(--accbg,#ede9fe);color:var(--acc);font-weight:700}
+.hf-c{font-size:9.5px;color:var(--mut)}
+.hf-opt.on .hf-c{color:var(--acc)}
 .filter-tag{display:flex;align-items:center;gap:4px;padding:3px 9px;background:var(--acc-l);border:1px solid rgba(0,102,255,.2);border-radius:20px;font-size:10px;color:var(--acc);font-weight:600}
 .pagination{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:22px}
 .page-btn{width:32px;height:32px;border-radius:6px;border:1px solid var(--bdr);background:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--mut);display:flex;align-items:center;justify-content:center}
@@ -1258,7 +1264,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <div id="page-news" class="page">
   <div class="news-page">
     <div style="margin-bottom:22px"><div class="page-title">Robotics News</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Latest industry news, product launches and expert analysis</p></div>
-    <div class="news-shell"><aside class="news-sidebar" id="news-sidebar"></aside><div class="news-main"><div class="news-layout" id="news-layout"></div>
+    <div class="news-shell"><aside class="news-sidebar" id="news-sidebar"></aside><div class="news-main"><div class="news-filter-bar" id="news-filter-bar"></div><div class="news-layout" id="news-layout"></div>
     <div class="news-list-items" id="news-list-items"></div></div></div>
     <div class="news-signup" style="margin-top:34px;padding:30px 26px;border:1px solid var(--bdr);border-radius:14px;background:linear-gradient(135deg,var(--acc-l),var(--bg2));text-align:center">
       <div style="font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:19px;color:var(--txt);margin-bottom:6px">Get the robotics briefing</div>
@@ -5088,35 +5094,50 @@ function renderNewsSidebar(){
 function renderNews(){
   renderNewsSidebar();
   var layout=document.getElementById('news-layout');
-  var list=document.getElementById('news-list-items');
+  if(!layout) return;
+  layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">Loading latest robotics news\u2026</div>';
+  var list=document.getElementById('news-list-items'); if(list) list.innerHTML='';
+  fetchNewsJson()
+    .then(function(r){if(!r.ok)throw new Error('news.json '+r.status);return r.json();})
+    .then(function(d){ window.NEWS_ITEMS=d.items||[]; paintNews(); })
+    .catch(function(e){console.error('news load failed',e);layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">News feed unavailable right now.</div>';});
+}
+var newsSourceSel = new Set();
+function toggleNewsSource(s){ if(newsSourceSel.has(s)) newsSourceSel.delete(s); else newsSourceSel.add(s); paintNews(); }
+function paintNews(){
+  var items=window.NEWS_ITEMS||[];
+  function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  var bar=document.getElementById('news-filter-bar');
+  if(bar){
+    var cnt={}; items.forEach(function(it){if(it.source)cnt[it.source]=(cnt[it.source]||0)+1;});
+    var srcs=Object.keys(cnt).sort(function(a,b){return cnt[b]-cnt[a];});
+    bar.innerHTML=srcs.map(function(s){var on=newsSourceSel.has(s);return '<div class="hf-opt'+(on?' on':'')+'" title="'+e(s)+'" onclick="toggleNewsSource(\''+e(s)+'\')">'+e(s)+' <span class="hf-c">'+cnt[s]+'</span></div>';}).join('');
+  }
+  var view=[]; for(var i=0;i<items.length;i++){ if(!newsSourceSel.size||newsSourceSel.has(items[i].source)) view.push({it:items[i],idx:i}); }
+  _renderNewsList(view);
+}
+function _renderNewsList(view){
+  var layout=document.getElementById('news-layout'); var list=document.getElementById('news-list-items');
   if(!layout||!list) return;
   var COLORS=['var(--acc)','var(--org)','var(--grn)','var(--purple)'];
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function fdate(iso){if(!iso)return'';var d=new Date(iso);if(isNaN(d))return'';return d.toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});}
-  layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">Loading latest robotics news…</div>';
-  list.innerHTML='';
-  fetchNewsJson()
-    .then(function(r){if(!r.ok)throw new Error('news.json '+r.status);return r.json();})
-    .then(function(d){
-      var items=d.items||[]; window.NEWS_ITEMS=items;
-      if(!items.length){layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">No news yet — the feed will populate shortly.</div>';return;}
-      var feat=items[0], right=items.slice(1,4), rest=items.slice(4,16);
-      var fImg=feat.image
-        ? '<div class="news-img featured" style="background:url(\''+esc(feat.image)+'\') center/cover;background-size:cover"><div class="news-cat">'+esc(feat.source)+'</div></div>'
-        : '<div class="news-img featured"><div class="news-img-label" style="font-size:22px;padding:0 20px;text-align:center;line-height:1.25;word-break:break-word">'+esc((feat.source||'NEWS').toUpperCase())+'</div><div class="news-cat">'+esc(feat.source)+'</div></div>';
-      var featHtml='<a class="news-card featured" onclick="openNewsItem(0)" style="text-decoration:none;color:inherit;cursor:pointer">'+fImg+'<div class="news-body"><div class="news-title featured">'+esc(feat.title)+'</div><div class="news-meta">'+fdate(feat.published)+(feat.source?' · '+esc(feat.source):'')+'</div></div></a>';
-      var rightHtml='<div style="display:flex;flex-direction:column;gap:14px">'+right.map(function(it,i){
-        return '<a class="news-card" onclick="openNewsItem('+(1+i)+')" style="text-decoration:none;color:inherit;cursor:pointer"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:'+COLORS[i%COLORS.length]+';letter-spacing:.5px;margin-bottom:5px">'+esc((it.source||'').toUpperCase())+'</div><div class="news-title">'+esc(it.title)+'</div><div class="news-meta" style="margin-top:7px">'+fdate(it.published)+'</div></div></a>';
-      }).join('')+'</div>';
-      layout.innerHTML=featHtml+rightHtml;
-      list.innerHTML=rest.map(function(it,i){
-        var thumb=it.image
-          ? '<div class="nli-thumb" style="background-image:url(\''+esc(it.image)+'\')"></div>'
-          : '<div class="nli-thumb nli-thumb-ph"><span>'+esc((it.source||'NEWS').toUpperCase())+'</span></div>';
-        return '<a class="news-list-item" onclick="openNewsItem('+(4+i)+')" style="display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:inherit;cursor:pointer">'+thumb+'<div style="flex:1;min-width:0"><div class="nli-cat" style="color:'+COLORS[i%COLORS.length]+'">'+esc((it.source||'').toUpperCase())+'</div><div class="nli-title">'+esc(it.title)+'</div><div class="nli-meta">'+fdate(it.published)+'</div></div></a>';
-      }).join('');
-    })
-    .catch(function(e){console.error('news load failed',e);layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">News feed unavailable right now.</div>';});
+  if(!view.length){layout.innerHTML='<div style="grid-column:span 3;color:var(--mut);font-size:13px;padding:20px 0">No news matches that filter.</div>';list.innerHTML='';return;}
+  var feat=view[0].it, featIdx=view[0].idx, right=view.slice(1,4), rest=view.slice(4,16);
+  var fImg=feat.image
+    ? '<div class="news-img featured" style="background:url(\''+esc(feat.image)+'\') center/cover;background-size:cover"><div class="news-cat">'+esc(feat.source)+'</div></div>'
+    : '<div class="news-img featured"><div class="news-img-label" style="font-size:22px;padding:0 20px;text-align:center;line-height:1.25;word-break:break-word">'+esc((feat.source||'NEWS').toUpperCase())+'</div><div class="news-cat">'+esc(feat.source)+'</div></div>';
+  var featHtml='<a class="news-card featured" onclick="openNewsItem('+featIdx+')" style="text-decoration:none;color:inherit;cursor:pointer">'+fImg+'<div class="news-body"><div class="news-title featured">'+esc(feat.title)+'</div><div class="news-meta">'+fdate(feat.published)+(feat.source?' \u00b7 '+esc(feat.source):'')+'</div></div></a>';
+  var rightHtml='<div style="display:flex;flex-direction:column;gap:14px">'+right.map(function(o,i){var it=o.it;
+    return '<a class="news-card" onclick="openNewsItem('+o.idx+')" style="text-decoration:none;color:inherit;cursor:pointer"><div class="news-body" style="padding:14px"><div style="font-size:9px;font-weight:700;color:'+COLORS[i%COLORS.length]+';letter-spacing:.5px;margin-bottom:5px">'+esc((it.source||'').toUpperCase())+'</div><div class="news-title">'+esc(it.title)+'</div><div class="news-meta" style="margin-top:7px">'+fdate(it.published)+'</div></div></a>';
+  }).join('')+'</div>';
+  layout.innerHTML=featHtml+rightHtml;
+  list.innerHTML=rest.map(function(o,i){var it=o.it;
+    var thumb=it.image
+      ? '<div class="nli-thumb" style="background-image:url(\''+esc(it.image)+'\')"></div>'
+      : '<div class="nli-thumb nli-thumb-ph"><span>'+esc((it.source||'NEWS').toUpperCase())+'</span></div>';
+    return '<a class="news-list-item" onclick="openNewsItem('+o.idx+')" style="display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:inherit;cursor:pointer">'+thumb+'<div style="flex:1;min-width:0"><div class="nli-cat" style="color:'+COLORS[i%COLORS.length]+'">'+esc((it.source||'').toUpperCase())+'</div><div class="nli-title">'+esc(it.title)+'</div><div class="nli-meta">'+fdate(it.published)+'</div></div></a>';
+  }).join('');
 }
 
 async function renderVideos(){
