@@ -241,7 +241,10 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .rr-btn{padding:4px 10px;border-radius:5px;font-size:10px;font-weight:600;cursor:pointer;font-family:inherit;border:1px solid var(--bdr);background:#fff;color:var(--mut);transition:all .15s}
 .rr-btn:hover{border-color:var(--acc);color:var(--acc)}
 .rr-btn.primary{background:var(--acc);color:#fff;border-color:var(--acc)}
-.grid-view{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px}
+.grid-view{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:1000px){.grid-view{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:720px){.grid-view{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:460px){.grid-view{grid-template-columns:1fr}}
 .no-results{text-align:center;padding:50px 20px;color:var(--mut)}
 .no-results h3{font-size:17px;font-weight:700;margin-bottom:7px;color:var(--txt)}
 .active-filters-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;min-height:20px}
@@ -2131,7 +2134,7 @@ function renderDb(){
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
         <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
-        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${priceStars(r)}</span></div></div>
+        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${(typeof r.price==='number')?('$'+r.price.toLocaleString()):(r.price||'')}</span></div></div>
       </div>`).join('')}</div>`;
   }
   renderCompareTray();
