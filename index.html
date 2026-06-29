@@ -10,6 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
+<!-- BUILD-TAG: build-C (finder list+grid = db, compare = db cards) -->
+<meta name="mrs-build" content="build-C">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -403,7 +405,9 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .slot-remove{font-size:10px;color:var(--red);cursor:pointer;font-weight:600;align-self:flex-end;margin-top:auto}
 .robot-selector{background:#fff;border:1px solid var(--bdr);border-radius:12px;padding:18px;margin-bottom:18px}
 .rs-title{font-family:'Space Mono','Courier New',monospace;font-size:14px;font-weight:700;margin-bottom:12px}
-.rs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}
+.rs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.rs-card.selected{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc) inset}
+.rs-card .rs-tick{position:absolute;top:7px;right:7px;width:20px;height:20px;border-radius:50%;background:var(--acc);color:#fff;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2}
 .rs-item{border:1px solid var(--bdr);border-radius:9px;padding:10px 9px;cursor:pointer;transition:all .15s;background:#fff;text-align:center}
 .rs-item:hover,.rs-item.selected{border-color:var(--acc);background:var(--acc-l)}
 .rs-brand{font-size:8px;font-weight:700;color:var(--mut);letter-spacing:.7px;margin-bottom:2px}
@@ -1360,8 +1364,8 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
             <option value="newest" selected>Newest</option>
           </select>
           <div class="fvbtns">
-            <button class="fvbtn active" id="fvl" onclick="setFinderView('list')">☰</button>
-            <button class="fvbtn" id="fvg" onclick="setFinderView('grid')">⊞</button>
+            <button class="fvbtn" id="fvl" onclick="setFinderView('list')">☰</button>
+            <button class="fvbtn active" id="fvg" onclick="setFinderView('grid')">⊞</button>
           </div>
         </div>
       </div>
@@ -1467,7 +1471,7 @@ function mascotImg(r, sz){ const s = sz||'100%'; return `<img src="${MASCOT_URL}
 let ALL_BRANDS=[]; // populated after robots.json loads
 window.ROBOTS = ROBOTS;
 // ════════════ GLOBALS ════════════
-let dbView='grid', finderView='list', compareSlots=[null,null,null,null], activeSlot=0, currentProfile=null, finderCat='all';
+let dbView='grid', finderView='grid', compareSlots=[null,null,null,null], activeSlot=0, currentProfile=null, finderCat='all';
 const ALL_CATS=['Aerospace','Agricultural','AGV/AMR','Aquatic','Autonomous Vehicles','Consumer','Delivery','Disaster Response','Drones','Educational','Entertainment','Exoskeletons','Humanoid','Industrial','Medical','Military','Quadruped','Research','Service','Social','Telepresence'];
 
 // Load robots.json then refresh whatever page is currently showing
@@ -4060,12 +4064,11 @@ function renderRobotSelector(query){
     const id = r.id||'';
     const brand = r.brand||'';
     const name = r.name||'(unnamed)';
-    const score = r.score||0;
     const isSelected = compareSlots.some(s => s && s.id === r.id);
-    const thumb = r.img
-      ? `<img src="${r.img}" alt="" loading="lazy" style="max-height:48px;max-width:88%;object-fit:contain" onerror="this.outerHTML='<span style=\\'font-size:26px\\'>'+robotFig({fig:'🤖'})+'</span>'">`
-      : `<span style="font-size:26px">${robotFig(r)}</span>`;
-    return `<div class="rs-item${isSelected?' selected':''}" onclick="selectForSlot('${id}')"><div style="height:52px;display:flex;align-items:center;justify-content:center;margin-bottom:5px">${thumb}</div><div class="rs-brand">${escapeHtml(brand)}</div><div class="rs-name">${escapeHtml(name)}</div><div class="rs-score">${score}</div></div>`;
+    const img = r.img
+      ? `<img src="${r.img}" alt="${escapeHtml(name)}" loading="lazy" onerror="this.src='${MASCOT_URL}'">`
+      : `<img src="${MASCOT_URL}" alt="${escapeHtml(name)}">`;
+    return `<div class="robot-card rs-card${isSelected?' selected':''}" onclick="selectForSlot('${id}')"><div class="rc-img">${img}${isSelected?'<div class="rs-tick">\u2713</div>':''}</div><div class="rc-info"><div class="rc-brand">${escapeHtml(brand)}</div><div class="rc-name">${escapeHtml(name)}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${(r.tags||[]).slice(0,2).map(t=>`<span class="pill">${escapeHtml(t)}</span>`).join('')}</div></div></div>`;
   }).join('');
 }
 
@@ -4871,6 +4874,16 @@ function getFinderFiltered(){
   });
 }
 
+function robotRowHTML(r,i,ranks){
+  ranks=ranks||['gold','silver','bronze'];
+  return `<div class="robot-row" onclick="openProfile('${r.id}')">`
+    + `<div class="rr-rank ${ranks[i]||''}">${i+1}</div>`
+    + `<div class="rr-icon">${r.img?`<img src="${r.img}" alt="${r.name}" style="width:48px;height:48px;object-fit:cover;border-radius:9px;display:block" onerror="this.src='${MASCOT_URL}';this.style.objectFit='contain';this.style.background='#fff'">`:`<img src="${MASCOT_URL}" style="width:48px;height:48px;object-fit:contain;border-radius:9px;display:block;background:#fff">`}</div>`
+    + `<div class="rr-info"><div class="rr-brand">${r.brand} \u00b7 ${r.year}</div><div class="rr-name">${r.name}</div><div class="rr-pills">${(r.tags||[]).slice(0,3).map(t=>`<span class="pill">${t}</span>`).join('')}${r.status&&r.status!=='Available'?`<span class="pill" style="color:var(--org)">${r.status}</span>`:''}</div></div>`
+    + `<div class="rr-specs-row">${r.payload?`<div class="rr-spec"><div class="rr-spec-val">${r.payload}kg</div><div class="rr-spec-lbl">Payload</div></div>`:''}${r.battery?`<div class="rr-spec"><div class="rr-spec-val">${r.battery}m</div><div class="rr-spec-lbl">Battery</div></div>`:''}${r.speed?`<div class="rr-spec"><div class="rr-spec-val">${r.speed}m/s</div><div class="rr-spec-lbl">Speed</div></div>`:''}${r.dof?`<div class="rr-spec"><div class="rr-spec-val">${r.dof}</div><div class="rr-spec-lbl">DOF</div></div>`:''}</div>`
+    + `<div class="rr-right"><div class="rr-price">${priceStars(r)}</div><div class="rr-rating">${'\u2605'.repeat(Math.round(r.rating||0))}</div><div class="rr-actions"><label class="rr-cmp" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label><button class="rr-btn primary" onclick="event.stopPropagation();openProfile('${r.id}')">View \u2192</button></div></div>`
+    + `</div>`;
+}
 function robotCardHTML(r,i){
   return `<div class="robot-card" onclick="openProfile('${r.id}')">`
     + `<div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>`
@@ -4897,23 +4910,7 @@ function renderFinder(){
   if(!list.length){c.innerHTML='<div class="no-results"><h3>No robots match</h3><p>Try removing some filters</p></div>';return;}
   var ranks=['gold','silver','bronze'];
   if(finderView==='list'){
-    const ranks=['gold','silver','bronze'];
-    c.innerHTML='<div class="frlist">'+list.map(function(r,i){
-      var sp=[];
-      if(r.payload)sp.push('<span class="fspec-pill"><b>Payload</b> '+r.payload+'kg</span>');
-      if(r.weight_kg)sp.push('<span class="fspec-pill"><b>Weight</b> '+r.weight_kg+'kg</span>');
-      if(r.speed)sp.push('<span class="fspec-pill"><b>Speed</b> '+r.speed+'m/s</span>');
-      if(r.battery_life)sp.push('<span class="fspec-pill"><b>Battery</b> '+r.battery_life+'min</span>');
-      if(r.dof)sp.push('<span class="fspec-pill"><b>DOF</b> '+r.dof+'</span>');
-      if(r.ip_rating)sp.push('<span class="fspec-pill"><b>IP</b> '+r.ip_rating+'</span>');
-      if(r.cpu)sp.push('<span class="fspec-pill"><b>CPU</b> '+r.cpu+'</span>');
-      if(r.ros)sp.push('<span class="fspec-pill fsp-yes">ROS</span>');
-      if(r.sdk)sp.push('<span class="fspec-pill fsp-yes">SDK</span>');
-      if(r.lidar)sp.push('<span class="fspec-pill fsp-yes">LiDAR</span>');
-      if(r.wifi)sp.push('<span class="fspec-pill fsp-yes">WiFi</span>');
-      var thumb=r.img?'<div class="frrow-thumb"><img src="'+r.img+'" alt="" onerror="this.src=\''+MASCOT_URL+'\';this.style.objectFit=\'contain\'"></div>':'<div class="frrow-thumb"><img src="'+MASCOT_URL+'" alt="" style="object-fit:contain"></div>';
-      return '<div class="frrow gsm" onclick="openProfile(&apos;'+r.id+'&apos;)"><div class="frrow-left"><div class="frrow-num '+(ranks[i]||'')+'">'+( i+1)+'</div>'+thumb+'<div class="frrow-info"><div class="frrow-brand">'+r.brand+'</div><div class="frrow-name">'+r.name+'</div><div class="frrow-meta"><span class="frrow-cat">'+r.cat+'</span>'+(r.year?' &middot; '+r.year:'')+(r.sub?' &middot; <span style="color:var(--mut)">'+r.sub+'</span>':'')+'</div><div class="frrow-specs">'+sp.join('')+'</div><div class="frrow-tags">'+r.tags.slice(0,4).map(function(t){return '<span class="pill">'+t+'</span>';}).join('')+'</div></div></div><div class="frrow-right"><div class="frrow-price">'+priceStars(r)+'</div><div class="frrow-stars">'+'&#9733;'.repeat(Math.round(r.rating||0))+'</div><div class="frrow-actions"><button class="fra" onclick="event.stopPropagation();addRobotToCompare(&apos;'+r.id+'&apos;);goPage(&apos;compare&apos;)">Compare</button><button class="fra p" onclick="event.stopPropagation();openProfile(&apos;'+r.id+'&apos;)">→ View</button></div></div></div>';
-    }).join('')+'</div>';
+    c.innerHTML='<div class="robot-list">'+list.map(function(r,i){return robotRowHTML(r,i,ranks);}).join('')+'</div>';
   } else {
     c.innerHTML='<div class="grid-view">'+list.map(function(r,i){return robotCardHTML(r,i);}).join('')+'</div>';
   }
