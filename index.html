@@ -253,11 +253,13 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .active-filters-row:empty{display:none;margin:0;min-height:0}
 .news-filter-bar{margin-bottom:16px}
 .catmenu{margin-bottom:18px;max-width:1200px;margin-left:auto;margin-right:auto}
-.catnav-shell{display:flex;gap:24px;max-width:1200px;margin:0 auto;padding:18px 22px;align-items:flex-start}
-.catnav-side{width:236px;flex-shrink:0;align-self:flex-start}
-.catnav-main{flex:1;min-width:0}
+.catnav-shell{display:grid;grid-template-columns:320px 1fr;max-width:1200px;margin:0 auto}
+.catnav-side{padding:18px 14px;border-right:1px solid var(--bdr);background:#fff}
+.catnav-main{padding:18px 22px;min-width:0}
 .catnav-side .cm-grid,.cm-2col .cm-grid{grid-template-columns:1fr 1fr}
-@media(max-width:900px){.catnav-shell{flex-direction:column}.catnav-side{width:100%}}
+.catnav-side .cm-grid:last-child{margin-bottom:16px}
+.catnav-side .news-sb-box{border:none;background:transparent;border-radius:0;margin:0 0 6px;overflow:visible}
+@media(max-width:900px){.catnav-shell{grid-template-columns:1fr}.catnav-side{border-right:none;border-bottom:1px solid var(--bdr)}}
 .cm-grouplabel{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin:0 0 9px}
 .cm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px;margin-bottom:16px}
 .cm-grid:last-child{margin-bottom:0}
@@ -1251,10 +1253,13 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- NEWS -->
 <div id="page-news" class="page">
-  <div class="news-page">
+  <div class="catnav-shell">
+    <aside class="catnav-side"><div id="news-filter-bar" style="margin-bottom:16px"></div><div id="news-sidebar"></div></aside>
+    <div class="catnav-main">
     <div style="margin-bottom:22px"><div class="page-title">Robotics News</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Latest industry news, product launches and expert analysis</p></div>
-    <div class="news-shell"><aside class="news-sidebar"><div class="cm-2col" id="news-filter-bar" style="margin-bottom:18px"></div><div id="news-sidebar"></div></aside><div class="news-main"><div class="news-layout" id="news-layout"></div>
-    <div class="news-list-items" id="news-list-items"></div><div id="news-pager" class="news-pager"></div></div></div>
+    <div id="news-active" style="margin-bottom:6px"></div>
+    <div class="news-layout" id="news-layout"></div>
+    <div class="news-list-items" id="news-list-items"></div><div id="news-pager" class="news-pager"></div>
     <div class="news-signup" style="margin-top:34px;padding:30px 26px;border:1px solid var(--bdr);border-radius:14px;background:linear-gradient(135deg,var(--acc-l),var(--bg2));text-align:center">
       <div style="font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:19px;color:var(--txt);margin-bottom:6px">Get the robotics briefing</div>
       <div style="color:var(--mut);font-size:13.5px;margin-bottom:16px">The latest launches, reviews and breakthroughs &mdash; in your inbox. No spam.</div>
@@ -1266,7 +1271,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       </form>
       <div class="nl-msg" style="margin-top:13px;font-size:13px;color:var(--grn);display:none">Thanks &mdash; you&rsquo;re on the list!</div>
     </div>
-  </div>
+    </div></div>
 </div>
 
 <!-- VIDEOS -->
@@ -1297,6 +1302,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         </a>
       </div>
     </div>
+    <div id="videos-active" style="margin-bottom:6px"></div>
     <div id="videos-loading" style="text-align:center;padding:50px 20px;color:var(--mut)">
       <div style="font-size:32px;margin-bottom:8px">📺</div>
       <div style="font-size:14px">Loading latest videos…</div>
@@ -5135,25 +5141,73 @@ function renderCatMenu(elId){
   if(!bar)return;
   function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function a(s){return e(s).replace(/'/g,'&#39;');}
+  var pg=({'compare-menu':'compare','finder-menu':'finder','videos-menu':'videos','news-filter-bar':'news'})[elId]||'db';
+  function catClick(c){var v="'"+a(c)+"'";
+    if(pg==='finder')return 'finderNavCat('+v+')';
+    if(pg==='compare')return 'catnavCompare('+v+')';
+    if(pg==='news')return 'newsNavFilter('+v+')';
+    if(pg==='videos')return 'videoNavFilter('+v+')';
+    return "goPage('db',{cat:"+v+"})";}
+  function brandClick(b){var v="'"+a(b)+"'";
+    if(pg==='finder')return 'finderNavBrand('+v+')';
+    if(pg==='compare')return 'catnavCompare('+v+')';
+    if(pg==='news')return 'newsNavFilter('+v+')';
+    if(pg==='videos')return 'videoNavFilter('+v+')';
+    return 'searchBrand('+v+')';}
   var cc={}; ROBOTS.forEach(function(r){if(r.cat)cc[r.cat]=(cc[r.cat]||0)+1;});
   var cats=Object.keys(cc).sort();
   var bc={}; ROBOTS.forEach(function(r){if(r.brand)bc[r.brand]=(bc[r.brand]||0)+1;});
   var brands=Object.keys(bc).sort(function(x,y){return bc[y]-bc[x];}).slice(0,20);
-  var catHtml=cats.map(function(c){return '<div class="filter-opt" title="'+e(c)+'" onclick="goPage(\'db\',{cat:\''+a(c)+'\'})"><span class="filter-opt-label">'+e(c)+'</span><span class="filter-opt-count">'+cc[c]+'</span></div>';}).join('');
-  var brHtml=brands.map(function(b){return '<div class="filter-opt" title="'+e(b)+'" onclick="searchBrand(\''+a(b)+'\')"><span class="filter-opt-label">'+e(b)+'</span><span class="filter-opt-count">'+bc[b]+'</span></div>';}).join('');
+  var catHtml=cats.map(function(c){return '<div class="filter-opt" title="'+e(c)+'" onclick="'+catClick(c)+'"><span class="filter-opt-label">'+e(c)+'</span><span class="filter-opt-count">'+cc[c]+'</span></div>';}).join('');
+  var brHtml=brands.map(function(b){return '<div class="filter-opt" title="'+e(b)+'" onclick="'+brandClick(b)+'"><span class="filter-opt-label">'+e(b)+'</span><span class="filter-opt-count">'+bc[b]+'</span></div>';}).join('');
   bar.innerHTML='<div class="cm-grouplabel">BROWSE BY CATEGORY</div><div class="cm-grid">'+catHtml+'</div>'
     +'<div class="cm-grouplabel">BY MANUFACTURER</div><div class="cm-grid">'+brHtml+'</div>';
 }
+function catnavCompare(term){
+  var i=document.getElementById('rs-search'); if(i)i.value=term;
+  try{renderRobotSelector(term);}catch(e){}
+  var rs=document.querySelector('.robot-selector'); if(rs){try{rs.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){}}
+}
+function finderNavCat(c){
+  try{setFinderCat(c,null);}catch(e){}
+  try{document.querySelectorAll('.ftab').forEach(function(t){t.classList.toggle('active', t.textContent.indexOf(c)===0);});}catch(e){}
+  try{runFinderSearch();}catch(e){}
+}
+function finderNavBrand(b){
+  try{setFinderCat('all',null);}catch(e){}
+  try{SELECTED_BRANDS.clear();SELECTED_BRANDS.add(b);}catch(e){}
+  try{buildFinderFP();}catch(e){}
+  try{runFinderSearch();}catch(e){}
+}
+function videoNavFilter(term){
+  window.videoNavTerm=(String(window.videoNavTerm||'').toLowerCase()===String(term).toLowerCase())?'':term;
+  try{renderVideos();}catch(e){}
+}
+function videoNavClear(){ window.videoNavTerm=''; try{renderVideos();}catch(e){} }
 var NEWS_PER_PAGE=18;
 var newsLoaded=1;
 function paintNews(){
   renderCatMenu('news-filter-bar');
   newsLoaded=1;
   var items=window.NEWS_ITEMS||[];
-  var view=[]; for(var i=0;i<items.length;i++){ view.push({it:items[i],idx:i}); }
+  var t=(window.newsNavTerm||'').toLowerCase();
+  var view=[];
+  for(var i=0;i<items.length;i++){
+    var it=items[i];
+    if(t){ var hay=((it.title||'')+' '+(it.summary||'')+' '+(it.source||'')).toLowerCase(); if(hay.indexOf(t)<0) continue; }
+    view.push({it:it,idx:i});
+  }
+  var act=document.getElementById('news-active');
+  if(act){ act.innerHTML = window.newsNavTerm ? '<span class="filter-tag" style="cursor:pointer" onclick="newsNavClear()">Filter: '+String(window.newsNavTerm).replace(/[&<>"]/g,'')+' \u00d7</span>' : ''; }
   window._NEWS_VIEW=view;
   _renderNewsList(view);
 }
+function newsNavFilter(term){
+  window.newsNavTerm=(String(window.newsNavTerm||'').toLowerCase()===String(term).toLowerCase())?'':term;
+  paintNews();
+  var ml=document.getElementById('news-layout'); if(ml){try{ml.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){}}
+}
+function newsNavClear(){ window.newsNavTerm=''; paintNews(); }
 function newsLoadMore(){
   var view=window._NEWS_VIEW||[]; var rest=view.slice(4);
   var pages=Math.max(1,Math.ceil(rest.length/NEWS_PER_PAGE));
@@ -5251,6 +5305,11 @@ async function renderVideos(){
       }
     }
   }
+  // Sidebar page-filter (category/brand) before capping
+  var _vt=(window.videoNavTerm||'').toLowerCase();
+  var _vact=document.getElementById('videos-active');
+  if(_vact) _vact.innerHTML = window.videoNavTerm ? '<span class="filter-tag" style="cursor:pointer" onclick="videoNavClear()">Filter: '+escapeHtml(window.videoNavTerm)+' \u00d7</span>' : '';
+  if(_vt){ videos = videos.filter(function(v){ return ((v.title||'')+' '+(v.channel||'')).toLowerCase().indexOf(_vt)>=0; }); }
   // Cap at MAX_VIDEOS for a clean, performant grid
   videos = videos.slice(0, MAX_VIDEOS);
   // Store globally so click handlers can look up titles
@@ -5260,6 +5319,7 @@ async function renderVideos(){
   loading.style.display = 'none';
   error.style.display = 'none';
   grid.style.display = 'grid';
+  if(videos.length===0){ grid.style.display='block'; grid.innerHTML='<div style="padding:30px 20px;text-align:center;color:var(--mut);font-size:13px">No videos match this filter. <a onclick="videoNavClear()" style="color:var(--acc);cursor:pointer">Clear</a></div>'; return; }
   grid.innerHTML = videos.map(v => `
     <div class="video-card" onclick="openVideoModal('${v.id}')" style="background:#fff;border:1px solid var(--bdr);border-radius:10px;overflow:hidden;cursor:pointer;transition:all .15s;display:flex;flex-direction:column" onmouseover="this.style.borderColor='var(--acc)';this.style.boxShadow='0 4px 14px rgba(0,102,255,.08)'" onmouseout="this.style.borderColor='var(--bdr)';this.style.boxShadow='none'">
       <div style="position:relative;width:100%;padding-bottom:56.25%;background:#000;overflow:hidden">
