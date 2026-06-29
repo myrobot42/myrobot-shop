@@ -251,12 +251,15 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .no-results h3{font-size:17px;font-weight:700;margin-bottom:7px;color:var(--txt)}
 .active-filters-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;min-height:20px}
 .active-filters-row:empty{display:none;margin:0;min-height:0}
-.news-filter-bar{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.news-filter-bar{margin-bottom:16px}
+.catmenu{margin-bottom:18px;max-width:1200px;margin-left:auto;margin-right:auto}
 .hf-opt{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;border:1px solid var(--bdr);border-radius:6px;background:var(--bg2);font-size:11px;font-weight:500;color:var(--txt);cursor:pointer;transition:border-color .12s,background .12s}
 .hf-opt:hover{border-color:var(--acc)}
 .hf-opt.on{border-color:var(--acc);background:var(--accbg,#ede9fe);color:var(--acc);font-weight:700}
 .hf-c{font-size:9.5px;color:var(--mut)}
 .hf-opt.on .hf-c{color:var(--acc)}
+.hf-grouplabel{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin:0 0 6px}
+.hf-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .filter-tag{display:flex;align-items:center;gap:4px;padding:3px 9px;background:var(--acc-l);border:1px solid rgba(0,102,255,.2);border-radius:20px;font-size:10px;color:var(--acc);font-weight:600}
 .pagination{display:flex;align-items:center;justify-content:center;gap:5px;margin-top:22px}
 .page-btn{width:32px;height:32px;border-radius:6px;border:1px solid var(--bdr);background:#fff;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;color:var(--mut);display:flex;align-items:center;justify-content:center}
@@ -1218,6 +1221,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <!-- COMPARE -->
 <div id="page-compare" class="page">
   <div class="compare-page">
+    <div class="catmenu" id="compare-menu"></div>
     <div style="margin-bottom:20px"><div class="page-title">Robot Comparison Tool</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Select up to 4 robots to compare specs side by side</p></div>
     <div class="compare-slots" id="compare-slots">
   <div class="compare-slot" id="cslot-0" onclick="openSlot(0)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 1</div></div>
@@ -1283,6 +1287,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <!-- VIDEOS -->
 <div id="page-videos" class="page">
   <div class="videos-page" style="max-width:1200px;margin:0 auto;padding:24px 20px">
+    <div class="catmenu" id="videos-menu"></div>
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:12px">
       <div>
         <div class="page-title">Robot Videos</div>
@@ -1337,6 +1342,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     <p id="finder-band-meta">All categories · Live filters</p>
     <div class="cat-wrap" style="display:none"><div class="ftabs" id="finder-tabs"></div></div>
   </div>
+  <div class="catmenu" id="finder-menu" style="padding:0 22px"></div>
   <div class="finder-body">
     <div id="finder-fp"></div>
     <div class="finder-bottom" id="finder-bottom" style="display:none">
@@ -1541,11 +1547,11 @@ function _renderPage(p, opts){
   window.scrollTo(0,0);
   if(p==='home'){renderHome();}
   if(p==='db'){ if(opts.cat){ _pendingDbCat = opts.cat; } buildDbFilters();renderDb();}
-  if(p==='compare'){ if(opts.ids&&opts.ids.length){ loadCompareIds(opts.ids); if(typeof refreshCompareUI==='function')refreshCompareUI(); } renderCompare(); if(typeof syncCompareHash==='function')syncCompareHash(); }
+  if(p==='compare'){ if(opts.ids&&opts.ids.length){ loadCompareIds(opts.ids); if(typeof refreshCompareUI==='function')refreshCompareUI(); } renderCompare(); if(typeof syncCompareHash==='function')syncCompareHash(); renderCatMenu('compare-menu'); }
   if(p==='rankings'){renderRankings('all');}
-  if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();}
+  if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();renderCatMenu('finder-menu');}
   if(p==='manufacturers'){renderManufacturers();}
-  if(p==='videos'){renderVideos();}
+  if(p==='videos'){renderVideos();renderCatMenu('videos-menu');}
   if(p==='news'){renderNews();}
   if(p==='submit-review'){populateReviewSelect();setupReviewForm();}
   if(p==='profile' && opts.id){
@@ -5104,16 +5110,23 @@ function renderNews(){
 }
 var newsSourceSel = new Set();
 function toggleNewsSource(s){ if(newsSourceSel.has(s)) newsSourceSel.delete(s); else newsSourceSel.add(s); paintNews(); }
-function paintNews(){
-  var items=window.NEWS_ITEMS||[];
+function renderCatMenu(elId){
+  var bar=document.getElementById(elId);
+  if(!bar)return;
   function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-  var bar=document.getElementById('news-filter-bar');
-  if(bar){
-    var cnt={}; items.forEach(function(it){if(it.source)cnt[it.source]=(cnt[it.source]||0)+1;});
-    var srcs=Object.keys(cnt).sort(function(a,b){return cnt[b]-cnt[a];});
-    bar.innerHTML=srcs.map(function(s){var on=newsSourceSel.has(s);return '<div class="hf-opt'+(on?' on':'')+'" title="'+e(s)+'" onclick="toggleNewsSource(\''+e(s)+'\')">'+e(s)+' <span class="hf-c">'+cnt[s]+'</span></div>';}).join('');
-  }
-  var view=[]; for(var i=0;i<items.length;i++){ if(!newsSourceSel.size||newsSourceSel.has(items[i].source)) view.push({it:items[i],idx:i}); }
+  function a(s){return e(s).replace(/'/g,'&#39;');}
+  var cats=Array.from(new Set(ROBOTS.map(function(r){return r.cat;}).filter(Boolean))).sort();
+  var bc={}; ROBOTS.forEach(function(r){if(r.brand)bc[r.brand]=(bc[r.brand]||0)+1;});
+  var brands=Object.keys(bc).sort(function(x,y){return bc[y]-bc[x];}).slice(0,20);
+  var catHtml=cats.map(function(c){return '<div class="hf-opt" title="'+e(c)+'" onclick="goPage(\'db\',{cat:\''+a(c)+'\'})">'+e(c)+'</div>';}).join('');
+  var brHtml=brands.map(function(b){return '<div class="hf-opt" title="'+e(b)+'" onclick="searchBrand(\''+a(b)+'\')">'+e(b)+'</div>';}).join('');
+  bar.innerHTML='<div class="hf-grouplabel">BROWSE BY CATEGORY</div><div class="hf-row">'+catHtml+'</div>'
+    +'<div class="hf-grouplabel">BY MANUFACTURER</div><div class="hf-row">'+brHtml+'</div>';
+}
+function paintNews(){
+  renderCatMenu('news-filter-bar');
+  var items=window.NEWS_ITEMS||[];
+  var view=[]; for(var i=0;i<items.length;i++){ view.push({it:items[i],idx:i}); }
   _renderNewsList(view);
 }
 function _renderNewsList(view){
