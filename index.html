@@ -202,7 +202,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .view-btn{padding:6px 11px;font-size:11px;cursor:pointer;border:none;font-family:inherit;background:#fff;color:var(--mut);font-weight:500}
 .view-btn.active{background:var(--txt);color:#fff}
 .sort-sel{padding:7px 10px;border:1px solid var(--bdr2);border-radius:6px;font-size:12px;color:var(--txt);background:#fff;cursor:pointer;font-family:inherit;appearance:none;padding-right:22px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' stroke='%236b7280' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
-.db-wrap{display:grid;grid-template-columns:220px 1fr;max-width:1400px;margin:0 auto;padding-bottom:40px}
+.db-wrap{display:grid;grid-template-columns:320px 1fr;max-width:1200px;margin:0 auto;padding-bottom:40px}
 .filters{padding:18px 14px;border-right:1px solid var(--bdr);background:#fff}
 .filter-section{margin-bottom:18px}
 .filter-title{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin-bottom:9px;display:flex;justify-content:space-between;align-items:center}
@@ -2134,7 +2134,7 @@ function renderDb(){
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
         <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
-        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div><div class="rc-footer"><span style="font-size:11px;font-weight:800">${(typeof r.price==='number')?('$'+r.price.toLocaleString()):(r.price||'')}</span></div></div>
+        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>
       </div>`).join('')}</div>`;
   }
   renderCompareTray();
