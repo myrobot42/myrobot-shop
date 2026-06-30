@@ -123842,5 +123842,937 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4
+  },
+  {
+    "id": "aerovironment-teodor-evo",
+    "name": "tEODor EVO",
+    "brand": "AeroVironment",
+    "cat": "Military",
+    "sub": "Heavy-Duty EOD Robot",
+    "year": 2019,
+    "origin": "Germany",
+    "made_in": "Germany (Telerob, Ostfildern)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Latest evolution of the heavy-duty tEODor (telerob Explosive Ordnance Disposal and observation robot), originally built by Telerob of Germany and now part of AeroVironment. A rugged tracked EOD platform with automatic tool-change capability for identifying and disarming IEDs, booby traps and unexploded ordnance in buildings, vehicles and confined areas. More than 450 of the tEODor family serve in 41 countries, trusted by 20 NATO nations.",
+    "also_known_as": "Telerob tEODor",
+    "weight_kg": 375,
+    "length_mm": 1300,
+    "width_mm": 685,
+    "height_mm": 1240,
+    "speed": 0.83,
+    "speed_ms": 0.83,
+    "stair_climbing": true,
+    "tool_changer": true,
+    "terrain": [
+      "Urban",
+      "Stairs",
+      "Buildings",
+      "Vehicles"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "EOD",
+      "IEDD",
+      "CBRN/HazMat",
+      "Observation"
+    ],
+    "deploy_method": [
+      "EOD service vehicle"
+    ],
+    "autonomy_level": 1,
+    "cbrn_protection": true,
+    "export_control": "EU dual-use / German export control",
+    "customers": [
+      "Bundeswehr (Germany)",
+      "Spanish Army",
+      "Australia",
+      "20 NATO nations (450+ units / 41 countries)"
+    ],
+    "tags": [
+      "military",
+      "eod",
+      "ugv",
+      "tracked",
+      "heavy-duty",
+      "aerovironment",
+      "telerob",
+      "teodor",
+      "iedd",
+      "active"
+    ],
+    "website": "https://www.avinc.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "aerovironment-telemax-evo-plus",
+    "name": "telemax EVO Plus",
+    "brand": "AeroVironment",
+    "cat": "Military",
+    "sub": "EOD / CBRNE Robot",
+    "year": 2020,
+    "origin": "Germany",
+    "made_in": "Germany (Telerob, Ostfildern)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "The largest, most powerful telemax variant — a four-tracked EOD/CBRNE robot with individually articulating tracks and auto-leveling for stairs, gaps and steep gradients (up to 45°/100%). Its 6-axis manipulator with Tool Center Point control gives human-like dexterity and reaches over 2.4 m, while a double payload bay and automatic tool exchange let operators carry multiple tools or disruptors downrange in a single run.",
+    "also_known_as": "Telerob telemax",
+    "max_incline_deg": 45,
+    "stair_climbing": true,
+    "reach_mm": 2400,
+    "dof": 6,
+    "tool_changer": true,
+    "speed": 1.11,
+    "speed_ms": 1.11,
+    "terrain": [
+      "Urban",
+      "Stairs",
+      "Confined spaces",
+      "Public transport"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "EOD",
+      "HazMat",
+      "CBRNE",
+      "High-risk law enforcement"
+    ],
+    "deploy_method": [
+      "SUV / vehicle transported"
+    ],
+    "autonomy_level": 1,
+    "cbrn_protection": true,
+    "export_control": "EU dual-use / German export control",
+    "customers": [
+      "Germany (Federal Police)",
+      "international EOD & police units"
+    ],
+    "tags": [
+      "military",
+      "eod",
+      "cbrne",
+      "ugv",
+      "tracked",
+      "aerovironment",
+      "telerob",
+      "telemax",
+      "manipulator",
+      "active"
+    ],
+    "website": "https://www.avinc.com/solution/telemax-evo-plus/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "northrop-remotec-andros-f6b",
+    "name": "ANDROS F6B",
+    "brand": "Northrop Grumman",
+    "cat": "Military",
+    "sub": "Heavy-Duty EOD Robot",
+    "year": 2012,
+    "origin": "USA",
+    "made_in": "USA (Northrop Grumman Remotec)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Versatile heavy-duty tracked EOD/HAZMAT/SWAT robot from Northrop Grumman's Remotec division, with patented articulating tracks for climbing stairs and traversing ditches and rough terrain. Carries a manipulator arm and four cameras with on-screen position feedback. The retrofittable Talisman digital radio gives documented non-line-of-sight control out to roughly 1.2 miles deep within concrete and steel structures.",
+    "weight_kg": 220,
+    "length_mm": 1321,
+    "width_mm": 737,
+    "height_mm": 1435,
+    "payload": 11,
+    "payload_kg": 11,
+    "stair_climbing": true,
+    "cameras": "4 cameras with arm/gripper position feedback",
+    "thermal_camera": true,
+    "communication_range_km": 1.9,
+    "autonomous": false,
+    "role": [
+      "EOD",
+      "HazMat",
+      "SWAT",
+      "Recon"
+    ],
+    "deploy_method": [
+      "Vehicle transported"
+    ],
+    "autonomy_level": 1,
+    "cbrn_protection": true,
+    "export_control": "ITAR (USML Cat XI)",
+    "customers": [
+      "US military (all services)",
+      "law enforcement worldwide"
+    ],
+    "tags": [
+      "military",
+      "eod",
+      "ugv",
+      "tracked",
+      "northrop-grumman",
+      "remotec",
+      "andros",
+      "f6b",
+      "swat",
+      "active"
+    ],
+    "website": "https://www.northropgrumman.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "northrop-remotec-andros-mark-v-a1",
+    "name": "ANDROS Mark V-A1",
+    "brand": "Northrop Grumman",
+    "cat": "Military",
+    "sub": "Large EOD Robot (RONS)",
+    "year": 2009,
+    "origin": "USA",
+    "made_in": "USA (Northrop Grumman Remotec)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Large, highly stable ANDROS variant used as the US military's Remote Ordnance Neutralization System (RONS) for the most demanding hazardous-duty operations. Its variable-speed manipulator lifts up to 100 lb and offers dual-sided quick-change accessory mounts, while a sealed weather-resistant enclosure and articulating tracks let it work in harsh environments and cross ditches and obstacles.",
+    "also_known_as": "RONS",
+    "weight_kg": 358,
+    "payload": 45,
+    "payload_kg": 45,
+    "stair_climbing": true,
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "EOD",
+      "RONS",
+      "HazMat",
+      "Heavy render-safe"
+    ],
+    "deploy_method": [
+      "Vehicle transported"
+    ],
+    "autonomy_level": 1,
+    "cbrn_protection": true,
+    "export_control": "ITAR (USML Cat XI)",
+    "customers": [
+      "US Army",
+      "US Navy",
+      "US Air Force",
+      "US Marine Corps"
+    ],
+    "tags": [
+      "military",
+      "eod",
+      "rons",
+      "ugv",
+      "tracked",
+      "northrop-grumman",
+      "remotec",
+      "andros",
+      "mark-v",
+      "active"
+    ],
+    "website": "https://www.northropgrumman.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "qinetiq-maars",
+    "name": "MAARS",
+    "brand": "QinetiQ",
+    "cat": "Military",
+    "sub": "Armed Robotic System",
+    "year": 2008,
+    "origin": "USA",
+    "made_in": "USA (QinetiQ North America)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Modular Advanced Armed Robotic System — a tracked weaponized UGV derived from the TALON lineage, designed for reconnaissance, surveillance and target acquisition with a remotely operated weapon station. Can mount an M240B 7.62 mm machine gun or a 40 mm grenade launcher alongside non-lethal options (laser dazzler, audio deterrent, tear gas), with safety interlocks keeping a human in the firing loop.",
+    "armament": "M240B 7.62mm MG or 40mm grenade launcher; non-lethal options",
+    "weight_kg": 166,
+    "stair_climbing": false,
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Direct fire support",
+      "Force protection",
+      "ISR",
+      "Checkpoint security"
+    ],
+    "deploy_method": [
+      "Vehicle transported"
+    ],
+    "autonomy_level": 1,
+    "export_control": "ITAR (USML Cat XI)",
+    "customers": [
+      "US forces (evaluation / deployments)"
+    ],
+    "tags": [
+      "military",
+      "armed-ugv",
+      "ugv",
+      "tracked",
+      "qinetiq",
+      "maars",
+      "rws",
+      "fire-support",
+      "active"
+    ],
+    "website": "https://www.qinetiq.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "kalashnikov-uran-9",
+    "name": "Uran-9",
+    "brand": "Kalashnikov Concern",
+    "cat": "Military",
+    "sub": "Unmanned Ground Combat Vehicle",
+    "year": 2019,
+    "origin": "Russia",
+    "made_in": "Russia (JSC 766 UPTK / Kalashnikov Concern)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Tracked unmanned ground combat vehicle for remote reconnaissance and fire support of infantry, unveiled at Army-2016 and entering Russian service in 2019. Roughly 10 tonnes, 5.12 m long, with a 35 km/h road speed and a remotely operated turret carrying a 30 mm 2A72 autocannon, coaxial 7.62 mm MG, four 9M120 Ataka ATGMs and six Shmel-M thermobaric rockets. Combat-tested in Syria, where reports highlighted control-link dropouts and inability to fire on the move, limiting effective control range to about 3 km.",
+    "armament": "30mm 2A72 autocannon, 7.62mm coax MG, 4x 9M120 Ataka ATGM, 6x Shmel-M; optional Igla SAM / Kornet-M",
+    "weight_kg": 10000,
+    "length_mm": 5120,
+    "width_mm": 2530,
+    "height_mm": 2500,
+    "speed": 9.72,
+    "speed_ms": 9.72,
+    "terrain": [
+      "Cross-country",
+      "Roads",
+      "All-terrain"
+    ],
+    "cameras": "EO/IR + thermal, laser rangefinder; auto detect/track (6km day / 3km night)",
+    "thermal_camera": true,
+    "communication_range_km": 3,
+    "battery_type": "Diesel-electric",
+    "autonomous": true,
+    "role": [
+      "Direct fire support",
+      "Anti-armor",
+      "Recon",
+      "Counter-terrorism"
+    ],
+    "deploy_method": [
+      "Transport tractor + mobile command post"
+    ],
+    "autonomy_level": 2,
+    "export_control": "Russian export (Rosoboronexport)",
+    "customers": [
+      "Russian Armed Forces"
+    ],
+    "tags": [
+      "military",
+      "ucgv",
+      "ugv",
+      "tracked",
+      "kalashnikov",
+      "uran-9",
+      "combat",
+      "autocannon",
+      "russia",
+      "active"
+    ],
+    "website": "https://kalashnikovgroup.ru/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "kalashnikov-uran-6",
+    "name": "Uran-6",
+    "brand": "Kalashnikov Concern",
+    "cat": "Military",
+    "sub": "Demining UGV",
+    "year": 2016,
+    "origin": "Russia",
+    "made_in": "Russia (JSC 766 UPTK)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Light tracked robotic mine-clearance system weighing up to six tonnes, designed to breach minefields and conduct area demining while keeping sappers away from direct contact with ordnance. Fitted with interchangeable mine-clearing implements (rollers, flails, ploughs) and operated by remote control. Used by Russian engineering units for explosive-remnant clearance.",
+    "weight_kg": 6000,
+    "terrain": [
+      "Minefields",
+      "Cross-country",
+      "Rubble"
+    ],
+    "autonomous": false,
+    "role": [
+      "Demining",
+      "Minefield breaching",
+      "Engineer support"
+    ],
+    "deploy_method": [
+      "Vehicle transported"
+    ],
+    "autonomy_level": 1,
+    "export_control": "Russian export (Rosoboronexport)",
+    "customers": [
+      "Russian Armed Forces"
+    ],
+    "tags": [
+      "military",
+      "demining",
+      "ugv",
+      "tracked",
+      "kalashnikov",
+      "uran-6",
+      "engineer",
+      "russia",
+      "active"
+    ],
+    "website": "https://kalashnikovgroup.ru/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "izhevsk-platform-m",
+    "name": "Platform-M",
+    "brand": "Izhevsk Radio Plant",
+    "cat": "Military",
+    "sub": "Tracked Combat UGV",
+    "year": 2014,
+    "origin": "Russia",
+    "made_in": "Russia (Izhevsk Radio Plant)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Compact tracked combat robot of around 800 kg, armed with a 7.62 mm machine gun and rocket-propelled grenade launchers for reconnaissance, patrol and fire support. Issued for experimental operation to Russian Navy coastal troops in Kaliningrad and Kamchatka, it can be operated by remote control to engage stationary and moving targets.",
+    "armament": "7.62mm MG + 4x RPG-26 grenade launchers",
+    "weight_kg": 800,
+    "terrain": [
+      "Cross-country",
+      "Urban",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Fire support",
+      "Recon",
+      "Patrol",
+      "Force protection"
+    ],
+    "deploy_method": [
+      "Vehicle transported"
+    ],
+    "autonomy_level": 2,
+    "export_control": "Russian export control",
+    "customers": [
+      "Russian Navy coastal troops"
+    ],
+    "tags": [
+      "military",
+      "combat-ugv",
+      "ugv",
+      "tracked",
+      "izhevsk",
+      "platform-m",
+      "russia",
+      "active"
+    ],
+    "website": "",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "android-technics-marker",
+    "name": "Marker",
+    "brand": "Android Technics",
+    "cat": "Military",
+    "sub": "Robotic Combat Testbed",
+    "year": 2020,
+    "origin": "Russia",
+    "made_in": "Russia (Android Technics / Advanced Research Foundation)",
+    "status": "Development",
+    "price": "POA",
+    "img": "",
+    "desc": "Modular experimental UGV developed by Android Technics and Russia's Advanced Research Foundation as a testbed for autonomy, machine vision and swarming. Built in tracked and wheeled configurations with a modular payload bay that can mount machine guns, anti-tank missiles (Kornet) or loitering-munition launchers, it is used to mature group-control and autonomous-navigation technologies for future Russian combat robots.",
+    "armament": "Modular: MGs, Kornet ATGM, loitering-munition launchers",
+    "terrain": [
+      "Cross-country",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "lidar": true,
+    "autonomous": true,
+    "role": [
+      "Autonomy testbed",
+      "Fire support",
+      "Recon",
+      "Swarming"
+    ],
+    "deploy_method": [
+      "Vehicle transported"
+    ],
+    "autonomy_level": 3,
+    "export_control": "Russian export control",
+    "customers": [
+      "Russian MoD (experimental)"
+    ],
+    "tags": [
+      "military",
+      "ugv",
+      "testbed",
+      "modular",
+      "android-technics",
+      "marker",
+      "autonomy",
+      "swarm",
+      "russia",
+      "development"
+    ],
+    "website": "",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "norinco-sharp-claw-1",
+    "name": "Sharp Claw 1",
+    "brand": "NORINCO",
+    "cat": "Military",
+    "sub": "Lightweight Scout UGV",
+    "year": 2014,
+    "origin": "China",
+    "made_in": "China (NORINCO)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Small lightweight (~120 kg) tracked scout-and-strike UGV designed for anti-terror, patrol and urban-battle missions, able to climb stairs and clear buildings and tunnels. Armed with a 7.62 mm machine gun (effective to ~500 m) and a sensor package for all-round surveillance, controlled by radio to ~800 m. Designed to be carried in the cargo bay of the larger Sharp Claw 2; confirmed in PLA service and reportedly deployed to the Tibetan border with India.",
+    "armament": "7.62mm machine gun (eff. ~500m)",
+    "weight_kg": 120,
+    "speed": 2.5,
+    "speed_ms": 2.5,
+    "stair_climbing": true,
+    "communication_range_km": 0.8,
+    "terrain": [
+      "Urban",
+      "Stairs",
+      "Tunnels",
+      "Buildings"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Recon",
+      "Fire support",
+      "Building / tunnel clearance"
+    ],
+    "deploy_method": [
+      "Carried by Sharp Claw 2",
+      "Vehicle transported"
+    ],
+    "autonomy_level": 1,
+    "export_control": "Chinese export control",
+    "customers": [
+      "PLA (incl. Tibet border region)"
+    ],
+    "tags": [
+      "military",
+      "scout",
+      "combat-ugv",
+      "ugv",
+      "tracked",
+      "norinco",
+      "sharp-claw",
+      "china",
+      "active"
+    ],
+    "website": "",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "norinco-sharp-claw-2",
+    "name": "Sharp Claw 2",
+    "brand": "NORINCO",
+    "cat": "Military",
+    "sub": "Autonomous Carrier UGV (6x6)",
+    "year": 2018,
+    "origin": "China",
+    "made_in": "China (NORINCO)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Larger 6x6 electrically-powered UGV with a combat weight up to 1,000 kg and a 50 km range over a four-hour period, able to carry and deploy the smaller Sharp Claw 1 to extend operational reach. Features independent suspension for high cross-country mobility (climbs 0.35 m obstacles, 30% gradients), a 7.62 mm machine gun and a mast-mounted surveillance package, plus autonomous path-tracking on a digital map.",
+    "armament": "7.62mm machine gun; mast-mounted sensor package",
+    "weight_kg": 1000,
+    "range_km": 50,
+    "max_incline_deg": 17,
+    "terrain": [
+      "Cross-country",
+      "Urban",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "battery_type": "Electric",
+    "endurance_hours": 4,
+    "autonomous": true,
+    "role": [
+      "Recon",
+      "Fire support",
+      "Carrier for Sharp Claw 1",
+      "Surveillance"
+    ],
+    "deploy_method": [
+      "Self-deploying / trailer transported"
+    ],
+    "autonomy_level": 3,
+    "export_control": "Chinese export control",
+    "customers": [
+      "PLA / export market"
+    ],
+    "tags": [
+      "military",
+      "combat-ugv",
+      "ugv",
+      "6x6",
+      "electric",
+      "norinco",
+      "sharp-claw-2",
+      "autonomous",
+      "china",
+      "active"
+    ],
+    "website": "",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "norinco-sharp-claw-vu-t2",
+    "name": "Sharp Claw VU-T2",
+    "brand": "NORINCO",
+    "cat": "Military",
+    "sub": "Tracked Combat UGV",
+    "year": 2026,
+    "origin": "China",
+    "made_in": "China (NORINCO)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "announced": "2026 (UMEX)",
+    "desc": "Compact multi-role tracked combat UGV unveiled by NORINCO at UMEX 2026, designed for combat support, reconnaissance and direct engagement under remote control or in coordination with crewed platforms. The shown configuration mounts a 12.7 mm machine gun module and a BA-5 missile launcher, with a multi-sensor perception architecture fusing LiDAR, EO cameras, radar and inertial navigation with digital maps for semi-autonomous navigation and target detection.",
+    "armament": "12.7mm machine gun module + BA-5 missile launcher",
+    "terrain": [
+      "Cross-country",
+      "Urban",
+      "All-terrain"
+    ],
+    "cameras": "EO cameras + radar; sensor fusion",
+    "thermal_camera": true,
+    "lidar": true,
+    "imu": true,
+    "autonomous": true,
+    "role": [
+      "Combat support",
+      "Recon",
+      "Direct fire engagement"
+    ],
+    "deploy_method": [
+      "Vehicle transported"
+    ],
+    "autonomy_level": 3,
+    "export_control": "Chinese export control",
+    "customers": [
+      "PLA / export market"
+    ],
+    "tags": [
+      "military",
+      "combat-ugv",
+      "ugv",
+      "tracked",
+      "norinco",
+      "sharp-claw",
+      "vu-t2",
+      "lidar",
+      "china",
+      "active"
+    ],
+    "website": "",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "devdroid-droid-tw-12-7",
+    "name": "Droid TW 12.7",
+    "brand": "DevDroid",
+    "cat": "Military",
+    "sub": "Reconnaissance & Strike UGV",
+    "year": 2025,
+    "origin": "Ukraine",
+    "made_in": "Ukraine (DevDroid)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Compact Ukrainian tracked reconnaissance-and-strike UGV mounting a remotely operated turret with a 12.7 mm M2 Browning heavy machine gun. Top speed about 7 km/h and operational range up to 25 km, with an AI-assisted fire-control package that stabilises the weapon, tracks targets and computes ballistic solutions while a human keeps the trigger decision. In December 2025 a Droid TW 12.7 destroyed a Russian MT-LB armoured carrier near Kostyantynivka — the first documented case of a Ukrainian ground robot killing an enemy armoured vehicle — and another reportedly held a position for 45 days.",
+    "armament": "12.7mm M2 Browning HMG on remote weapon station",
+    "speed": 1.94,
+    "speed_ms": 1.94,
+    "range_km": 25,
+    "terrain": [
+      "Cross-country",
+      "Roads",
+      "Mud",
+      "All-terrain"
+    ],
+    "cameras": "Thermal imaging sight + EO",
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Direct fire support",
+      "Recon",
+      "Position holding",
+      "Assault"
+    ],
+    "deploy_method": [
+      "Self-deploying / vehicle transported"
+    ],
+    "autonomy_level": 2,
+    "jamming_resistant": true,
+    "encryption": "Digital radio (MikroTik); mesh / LTE / Starlink options",
+    "export_control": "Ukrainian MoD (wartime use)",
+    "customers": [
+      "Ukrainian Armed Forces (3rd & 5th Assault Brigades)"
+    ],
+    "tags": [
+      "military",
+      "combat-ugv",
+      "ugv",
+      "tracked",
+      "devdroid",
+      "droid-tw",
+      "12.7mm",
+      "ukraine",
+      "frontline",
+      "active"
+    ],
+    "website": "https://devdroid.tech/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "devdroid-droid-nw-40",
+    "name": "Droid NW 40",
+    "brand": "DevDroid",
+    "cat": "Military",
+    "sub": "Grenade-Launcher Strike UGV",
+    "year": 2025,
+    "origin": "Ukraine",
+    "made_in": "Ukraine (DevDroid)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Reconnaissance-and-strike UGV from DevDroid adapted to carry a 40 mm automatic grenade launcher (Mk-19 or AGL-53) on a remote weapon station for high-risk fire-support missions without exposing personnel. It passed Ukrainian Ministry of Defence codification and received a NATO stock number, clearing it for official supply to Ukraine's Security and Defence Forces.",
+    "armament": "40mm automatic grenade launcher (Mk-19 / AGL-53)",
+    "terrain": [
+      "Cross-country",
+      "Roads",
+      "Mud",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Fire support",
+      "Recon",
+      "Strike"
+    ],
+    "deploy_method": [
+      "Self-deploying / vehicle transported"
+    ],
+    "autonomy_level": 2,
+    "jamming_resistant": true,
+    "export_control": "Ukrainian MoD (NATO-codified)",
+    "customers": [
+      "Ukrainian Security & Defence Forces"
+    ],
+    "tags": [
+      "military",
+      "combat-ugv",
+      "ugv",
+      "tracked",
+      "devdroid",
+      "droid-nw-40",
+      "grenade-launcher",
+      "ukraine",
+      "active"
+    ],
+    "website": "https://devdroid.tech/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "roboneers-ironclad",
+    "name": "Ironclad",
+    "brand": "Roboneers",
+    "cat": "Military",
+    "sub": "Armored Combat UGV",
+    "year": 2023,
+    "origin": "Ukraine",
+    "made_in": "Ukraine (Roboneers)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Armored combat UGV from Roboneers — whose roots trace to the 2014 volunteer-built ShaBlya remote weapon turret — designed for assault operations and fire support on the front line. Carries a stabilised remote weapon station (commonly a 7.62 mm machine gun) on a protected wheeled/tracked chassis, letting operators suppress positions and support advancing infantry from cover.",
+    "armament": "ShaBlya remote weapon station (7.62mm MG)",
+    "terrain": [
+      "Cross-country",
+      "Roads",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Assault support",
+      "Direct fire support",
+      "Recon"
+    ],
+    "deploy_method": [
+      "Self-deploying / vehicle transported"
+    ],
+    "autonomy_level": 2,
+    "export_control": "Ukrainian MoD (wartime use)",
+    "customers": [
+      "Ukrainian Armed Forces"
+    ],
+    "tags": [
+      "military",
+      "combat-ugv",
+      "ugv",
+      "armored",
+      "roboneers",
+      "ironclad",
+      "shablya",
+      "ukraine",
+      "active"
+    ],
+    "website": "https://roboneers.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "uut-lyut",
+    "name": "Lyut",
+    "brand": "Ukrainian Unmanned Technologies",
+    "cat": "Military",
+    "sub": "Combat UGV",
+    "year": 2024,
+    "origin": "Ukraine",
+    "made_in": "Ukraine (Ukrainian Unmanned Technologies)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Machine-gun-armed combat UGV produced by Ukrainian Unmanned Technologies, whose work traces back to 2016 volunteer development in the ATO zone. Built for remote fire support and position defence on the front line and fielded alongside the company's Ravlyk logistics platform within Ukraine's fast-iterating UGV ecosystem.",
+    "armament": "Remote weapon station (machine gun)",
+    "terrain": [
+      "Cross-country",
+      "Roads",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Direct fire support",
+      "Position defence",
+      "Recon"
+    ],
+    "deploy_method": [
+      "Self-deploying / vehicle transported"
+    ],
+    "autonomy_level": 2,
+    "export_control": "Ukrainian MoD (wartime use)",
+    "customers": [
+      "Ukrainian Armed Forces"
+    ],
+    "tags": [
+      "military",
+      "combat-ugv",
+      "ugv",
+      "uut",
+      "lyut",
+      "ukraine",
+      "frontline",
+      "active"
+    ],
+    "website": "",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "tencore-termit",
+    "name": "TERMIT",
+    "brand": "Tencore",
+    "cat": "Military",
+    "sub": "Multifunctional Tracked UGV",
+    "year": 2025,
+    "origin": "Ukraine",
+    "made_in": "Ukraine (Tencore)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Multifunctional tracked support UGV codified by Ukraine's Ministry of Defence in June 2025, able to carry up to 300 kg across rough terrain, slopes, obstacles and trenches. Its low tracked profile suits routes where wheeled supply vehicles are too visible, and it reconfigures for medical evacuation, logistics resupply, mine-laying and equipment transport for front-line units.",
+    "payload": 300,
+    "payload_kg": 300,
+    "terrain": [
+      "Cross-country",
+      "Mud",
+      "Trenches",
+      "Slopes"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Logistics",
+      "CasEvac",
+      "Mine-laying",
+      "Transport"
+    ],
+    "deploy_method": [
+      "Self-deploying"
+    ],
+    "autonomy_level": 2,
+    "export_control": "Ukrainian MoD (wartime use)",
+    "customers": [
+      "Ukrainian Armed Forces"
+    ],
+    "tags": [
+      "military",
+      "ugv",
+      "tracked",
+      "tencore",
+      "termit",
+      "logistics",
+      "casevac",
+      "ukraine",
+      "active"
+    ],
+    "website": "",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
   }
 ]
