@@ -53371,30 +53371,25 @@
     "id": "qinetiq-talon-v",
     "name": "TALON V",
     "brand": "QinetiQ",
-    "cat": "Disaster Response",
-    "sub": "EOD/Bomb Disposal Robot",
+    "cat": "Military",
+    "sub": "EOD Tracked Robot",
     "tags": [
-      "EOD",
-      "CBRN",
-      "HAZMAT",
-      "4000-units",
-      "police",
       "military",
-      "IOP-first",
-      "modular",
-      "heavy-lift",
-      "cbrn",
-      "2024-launch",
-      "6th-gen",
-      "modernized",
-      "16-IO"
+      "eod",
+      "ugv",
+      "tracked",
+      "qinetiq",
+      "foster-miller",
+      "talon",
+      "iop",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781687211/myrobot/xzfpskawl6o5bjestyf7.jpg",
     "score": 75,
     "rating": 4,
-    "price": 160000,
-    "desc": "QinetiQ's TALON V is the modernised sixth-generation of the world-renowned TALON family, with 4,000+ units delivered. An IOP-first, modular tracked EOD/CBRN robot with heavy-lift manipulator, 16 I/O ports, HD and thermal cameras and JAUS interoperability, it performs bomb disposal, CBRN/HazMat reconnaissance, surveillance and comms-relay missions.",
+    "price": "POA",
+    "desc": "Fifth-generation TALON — a rugged, lightweight tracked robot in continuous military service since 2000, when it was first used in Bosnia for grenade disposal. TALON V was the first man-portable robot to complete the US Army's TARDEC Interoperability Profile (IOP). Configurable with more than 60 mission packages for EOD, reconnaissance, CBRNE and communications, controlled over RF or fibre-optic link. More than 4,000 TALONs operate with the US and allied forces.",
     "highlights": [
       "4,000+ delivered",
       "World-renowned EOD",
@@ -53416,17 +53411,17 @@
       "Autonomy": 70,
       "Durability": 75
     },
-    "year": 2023,
+    "year": 2014,
     "origin": "USA",
     "status": "Active",
-    "height_mm": 635,
-    "width_mm": 610,
+    "height_mm": 279,
+    "width_mm": 572,
     "depth_mm": 762,
     "weight_kg": 52,
-    "speed_ms": 1.34,
+    "speed_ms": 1.83,
     "payload_kg": 45,
-    "battery_life": "1-4 hours",
-    "cameras": "Day/night camera with zoom and thermal imaging capability",
+    "battery_life": 240,
+    "cameras": "Up to 7 cameras",
     "use_cases": [
       "EOD",
       "Reconnaissance",
@@ -53436,28 +53431,52 @@
     ],
     "wifi": true,
     "bluetooth": true,
-    "made_in": "USA",
+    "made_in": "USA (QinetiQ North America / Foster-Miller)",
     "role": [
-      "EOD / IEDD",
-      "CBRN / HazMat reconnaissance",
-      "Surveillance & comms relay"
+      "EOD",
+      "ISR",
+      "CBRNE",
+      "SWAT support"
     ],
-    "autonomy_level": 2,
+    "autonomy_level": 1,
     "communication_range_km": 1,
     "cbrn_protection": true,
     "mil_spec": true,
-    "export_control": "ITAR (USA)",
+    "export_control": "ITAR (USML Cat XI)",
     "customers": [
-      "US Army (4,000+ delivered)",
-      "Police & military EOD units"
+      "US Army",
+      "US Navy",
+      "Australia",
+      "Czech Republic",
+      "Poland",
+      "Iraq",
+      "Pakistan"
     ],
-    "website": "https://www.qinetiq.com",
+    "website": "https://www.qinetiq.com/",
     "gallery": [
       "https://i.ytimg.com/vi/rf7zj_L214Y/maxresdefault.jpg",
       "https://pbs.twimg.com/media/F4YxEMRWsAAVyfn.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyi6k-VvhFk4eZ9bkWgkXjNFO-jAFjjfmllQyR-rV4qWiyoOeTPfhMTZY&s=10"
     ],
-    "video": "https://youtu.be/rf7zj_L214Y"
+    "video": "https://youtu.be/rf7zj_L214Y",
+    "length_mm": 864,
+    "payload": 45,
+    "speed": 1.83,
+    "reach_mm": 2100,
+    "dof": 6,
+    "terrain": [
+      "Urban",
+      "Stairs",
+      "Mud",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "battery_life_typical": 240,
+    "endurance_hours": 4,
+    "autonomous": false,
+    "deploy_method": [
+      "Man-transportable"
+    ]
   },
   {
     "id": "roboteam-rt-7-rocu-",
@@ -63009,24 +63028,27 @@
   {
     "id": "teledyne-flir-packbot-525",
     "name": "PackBot 525",
-    "brand": "Teledyne FLIR Defense",
+    "brand": "Teledyne FLIR",
     "cat": "Military",
-    "sub": "EOD/Tactical UGV",
+    "sub": "EOD / Multi-Mission Robot",
     "tags": [
-      "teledyne flir defense",
-      "eod",
-      "tactical",
-      "ugv",
       "military",
-      "payload 20kg",
-      "2020"
+      "eod",
+      "ugv",
+      "tracked",
+      "teledyne-flir",
+      "packbot",
+      "counter-ied",
+      "cbrn",
+      "man-portable",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781218298/myrobot/pphigkvpisessnkpxg3w.webp",
     "score": 75,
     "rating": 4,
-    "price": 0,
-    "desc": "The PackBot 525 is the upgraded generation of FLIR's man-transportable EOD robot, adding HD cameras, a laser rangefinder, optional in-situ charging and advanced accessory ports while keeping the 20 kg-lift manipulator and sub-two-minute deployment. Deliveries include 127 units to the German Army.",
+    "price": "POA",
+    "desc": "Latest generation of the battle-proven, man-transportable PackBot tracked UGV. Deploys in under two minutes, climbs stairs and rubble, and performs EOD, ISR, CBRN detection and HazMat handling. The 525 adds HD cameras, improved illumination, a laser rangefinder and optional in-situ charging. Over 3,000 PackBots have been fielded across 57 countries; in 2022 Teledyne FLIR delivered 127 PackBot 525s to the German Army for the counter-IED role.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -63035,16 +63057,16 @@
       "Durability": 75
     },
     "origin": "USA",
-    "year": 2020,
+    "year": 2022,
     "status": "Active",
     "released": "2020",
     "weight_kg": 13,
-    "battery_life": "4-8 hours",
-    "speed_ms": 1.6,
+    "battery_life": 240,
+    "speed_ms": 2.58,
     "payload_kg": 20,
     "wifi": true,
     "bluetooth": true,
-    "cameras": "Multiple HD cameras with pan/tilt/zoom, thermal imaging, night vision",
+    "cameras": "HD EO suite + LWIR thermal + laser rangefinder",
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
@@ -63055,28 +63077,31 @@
     ],
     "manufacturer_url": "https://www.flir.com",
     "product_url": "https://www.flir.com/products/packbot-525/",
-    "made_in": "USA",
+    "made_in": "USA (Teledyne FLIR Defense)",
     "os": "uPoint MRC",
     "autonomy_level": 1,
     "mil_spec": true,
-    "export_control": "ITAR (USA)",
+    "export_control": "ITAR (USML Cat XI)",
     "deploy_method": [
-      "Man-transportable"
+      "Man-transportable",
+      "Vehicle stowed"
     ],
     "manipulator_arms": 1,
     "payload": 20,
     "role": [
-      "EOD / IED disposal",
-      "Reconnaissance",
-      "CBRN / HazMat",
-      "SWAT support"
+      "EOD",
+      "ISR",
+      "CBRN detection",
+      "HazMat",
+      "Route clearance"
     ],
     "comms": [
       "MPU5 Wave Relay MANET"
     ],
     "customers": [
-      "US military",
-      "German Army (127 units)"
+      "US DoD",
+      "German Army (127 units, 2022)",
+      "57 nations"
     ],
     "thermal": true,
     "gallery": [
@@ -63085,7 +63110,33 @@
       "https://defense.flir.com/globalassets/defense/images/product-lync-images/firstlook_thumb.png",
       "https://www.elp-gmbh.com/wp-content/uploads/packbot_verwendung_2.png"
     ],
-    "video": "https://youtu.be/1H3cMRoiTt8"
+    "video": "https://youtu.be/1H3cMRoiTt8",
+    "also_known_as": "MTRS / iRobot 510 successor",
+    "length_mm": 686,
+    "width_mm": 406,
+    "height_mm": 178,
+    "ip_rating": "IP67",
+    "operating_temp_min": -29,
+    "operating_temp_max": 60,
+    "speed": 2.58,
+    "max_incline_deg": 43,
+    "stair_climbing": true,
+    "reach_mm": 1870,
+    "dof": 5,
+    "terrain": [
+      "Urban",
+      "Stairs",
+      "Rubble",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "battery_type": "2x / 4x BB-2590 Li-ion",
+    "battery_life_typical": 240,
+    "endurance_hours": 4,
+    "autonomous": false,
+    "cbrn_protection": true,
+    "jamming_resistant": false,
+    "website": "https://www.flir.com/products/packbot-525/"
   },
   {
     "id": "teledyne-flir-packbot-510",
@@ -63173,22 +63224,24 @@
     "name": "Centaur",
     "brand": "Teledyne FLIR",
     "cat": "Military",
-    "sub": "EOD / Bomb Disposal",
+    "sub": "Medium EOD UGV (MTRS Inc II)",
     "tags": [
-      "teledyne flir",
-      "eod",
-      "bomb",
-      "disposal",
       "military",
-      "payload 23kg",
-      "2019"
+      "eod",
+      "ugv",
+      "tracked",
+      "teledyne-flir",
+      "centaur",
+      "mtrs",
+      "counter-ied",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781218303/myrobot/udroulle6p19h6brlt77.webp",
     "score": 75,
     "rating": 4,
-    "price": 0,
-    "desc": "The Teledyne FLIR Centaur is a ~73 kg medium UGV chosen by the US Army as its MTRS Increment II solution, with over 1,800 ordered across the Army, Navy, Air Force and Marines. Its EO/IR camera suite and manipulator arm (reaching over 6 ft) let EOD teams defeat IEDs, UXO and landmines at standoff, and modular payloads add CBRN detection.",
+    "price": "POA",
+    "desc": "Medium-sized tracked EOD UGV selected as the US Army's Man Transportable Robotic System Increment II (MTRS Inc II). Provides standoff detection, confirmation, identification and disposal of landmines, UXO and IEDs, with an EO/IR day-night camera suite and a dexterous manipulator arm reaching over six feet. The most widely produced US tactical UGV since the Gulf Wars — over 1,800 ordered across the Army, Navy, Air Force and Marine Corps.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -63197,18 +63250,18 @@
       "Durability": 75
     },
     "origin": "USA",
-    "year": 2019,
+    "year": 2018,
     "status": "Active",
     "released": "2019",
     "height_mm": 1219,
     "width_mm": 610,
     "depth_mm": 813,
-    "weight_kg": 73,
-    "battery_life": "4-6 hours",
-    "speed_ms": 1.3,
-    "payload_kg": 23,
-    "reach_mm": 1829,
-    "cameras": "Pan-tilt-zoom EO/IR cameras, gripper camera",
+    "weight_kg": 74.3,
+    "battery_life": 480,
+    "speed_ms": 1.11,
+    "payload_kg": 14.5,
+    "reach_mm": 1850,
+    "cameras": "EO/IR day-night suite (person detection 300m night / 600m day)",
     "imu": true,
     "use_cases": [
       "Bomb disposal",
@@ -63217,22 +63270,25 @@
     ],
     "manufacturer_url": "https://www.flir.com/products/centaur/",
     "product_url": "https://www.flir.com/products/centaur/",
-    "made_in": "USA",
+    "made_in": "USA (Elkridge, Maryland)",
     "os": "uPoint MRC",
     "autonomy_level": 1,
     "mil_spec": true,
-    "export_control": "ITAR (USA)",
+    "export_control": "ITAR (USML Cat XI)",
     "deploy_method": [
-      "Man-transportable"
+      "Man-transportable",
+      "Vehicle stowed"
     ],
     "manipulator_arms": 1,
     "role": [
-      "EOD / IED disposal",
-      "CBRN detection",
-      "Reconnaissance"
+      "EOD",
+      "UXO clearance",
+      "Route proving",
+      "Recon",
+      "CasEvac assist"
     ],
     "customers": [
-      "US Army (MTRS Inc II)",
+      "US Army",
       "US Navy",
       "US Air Force",
       "US Marine Corps"
@@ -63244,7 +63300,26 @@
       "https://defense.flir.com/globalassets/news/news-center/government--defense/flir-centaur-mtrs-inc-ii62.jpg",
       "https://defense.flir.com/globalassets/news/news-center/government--defense/20-0458-uis-centaur_ordinance_disposal_app_shot2.jpg"
     ],
-    "video": "https://youtu.be/XeajJxXhXwQ"
+    "video": "https://youtu.be/XeajJxXhXwQ",
+    "also_known_as": "MTRS Inc II",
+    "payload": 14.5,
+    "speed": 1.11,
+    "max_incline_deg": 30,
+    "stair_climbing": true,
+    "dof": 5,
+    "terrain": [
+      "Urban",
+      "Stairs",
+      "Cross-country",
+      "Rubble"
+    ],
+    "thermal_camera": true,
+    "battery_life_typical": 480,
+    "endurance_hours": 8,
+    "communication_range_km": 0.8,
+    "autonomous": false,
+    "cbrn_protection": true,
+    "website": "https://www.flir.com/"
   },
   {
     "id": "teledyne-flir-firstlook-110",
@@ -63473,21 +63548,23 @@
     "name": "Kobra 725",
     "brand": "Teledyne FLIR",
     "cat": "Military",
-    "sub": "Other Military",
+    "sub": "Heavy-Lift EOD Robot",
     "tags": [
-      "teledyne flir",
-      "other",
       "military",
-      "payload 150kg",
-      "7 dof",
-      "2019"
+      "eod",
+      "heavy-lift",
+      "ugv",
+      "tracked",
+      "teledyne-flir",
+      "kobra",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781218314/myrobot/m9whmntu4ashqv4yewjz.webp",
     "score": 75,
     "rating": 4,
-    "price": 0,
-    "desc": "The Teledyne FLIR Kobra 725 is a heavy-payload UGV with a high-strength manipulator arm for lifting heavy loads, an HD PTZ camera mast and stair-climbing mobility. IOP-compliant and highly modular, it integrates EOD, CBRN, breaching, mine-clearance, X-ray and LIDAR accessories for the most demanding disposal tasks.",
+    "price": "POA",
+    "desc": "Large, powerful tracked EOD robot built for heavy-lift bomb-disposal and render-safe tasks where smaller platforms lack the strength or reach. Its high-torque manipulator can lift heavy ordnance and vehicle-borne IED components, while a modular payload architecture supports disruptors, CBRN sensors and HazMat tools. Used by military and law-enforcement EOD teams for the most demanding callouts.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -63500,7 +63577,7 @@
     "status": "Active",
     "released": "2019",
     "weight_kg": 159,
-    "payload_kg": 150,
+    "payload_kg": 145,
     "reach_mm": 3505,
     "speed_ms": 1.34,
     "battery_life": "4-6 hours",
@@ -63519,25 +63596,24 @@
     ],
     "manufacturer_url": "https://www.teledyneflir.com/",
     "dof": 7,
-    "made_in": "USA",
+    "made_in": "USA (Teledyne FLIR Defense)",
     "os": "uPoint MRC",
     "autonomy_level": 1,
     "mil_spec": true,
-    "export_control": "ITAR (USA)",
+    "export_control": "ITAR (USML Cat XI)",
     "deploy_method": [
-      "Man-transportable"
+      "Vehicle transported"
     ],
     "manipulator_arms": 1,
-    "payload": 150,
+    "payload": 145,
     "role": [
       "Heavy EOD",
-      "CBRN / HazMat",
-      "Breaching",
-      "Mine clearance"
+      "VBIED render-safe",
+      "HazMat",
+      "CBRN"
     ],
     "customers": [
-      "US military",
-      "Allied forces"
+      "US military & law-enforcement EOD teams"
     ],
     "thermal": true,
     "gallery": [
@@ -63547,7 +63623,18 @@
       "https://i.ytimg.com/vi/KBV7Y0y1qSQ/maxresdefault.jpg",
       "https://esdh.com.au/wp-content/uploads/2025/08/kobra-725-lift.webp"
     ],
-    "video": "https://youtu.be/JS9R8dhErk8"
+    "video": "https://youtu.be/JS9R8dhErk8",
+    "stair_climbing": true,
+    "terrain": [
+      "Urban",
+      "Stairs",
+      "Rubble",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "cbrn_protection": true,
+    "website": "https://www.flir.com/"
   },
   {
     "id": "teledyne-flir-siras-drone",
@@ -115338,18 +115425,21 @@
     "id": "rheinmetall-mission-master-sp",
     "name": "Mission Master SP",
     "brand": "Rheinmetall",
-    "sub": "Unmanned Ground Vehicle (UGV)",
-    "year": 2021,
-    "origin": "Germany",
+    "sub": "Autonomous UGV (8x8)",
+    "year": 2018,
+    "origin": "Canada / Germany",
     "status": "Active",
-    "desc": "The Rheinmetall Mission Master SP is a wheeled autonomous UGV optimised for stealth, modularity and network integration, used for reconnaissance, light resupply and close support to infantry, with swappable mission modules (cargo, surveillance, CASEVAC).",
+    "desc": "Low-profile 8x8 all-electric autonomous UGV (Silent Partner) built for forward and last-mile resupply, silent watch and carriage of section sensors or weapon systems. Weighs 1,134 kg, carries up to 1,000 kg (300 kg amphibious) and reaches 40 km/h, using Rheinmetall's PATH autonomy kit for follow-me, teleoperation and supervised autonomy. Networked with Rheinmetall's soldier system and C2 software; selected for trials by Japan's JGSDF and several NATO armies.",
     "tags": [
       "military",
-      "UGV",
-      "Rheinmetall",
-      "Mission Master",
-      "wheeled",
-      "reconnaissance"
+      "ugv",
+      "8x8",
+      "electric",
+      "rheinmetall",
+      "mission-master",
+      "logistics",
+      "path-autonomy",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
@@ -115361,15 +115451,52 @@
       "https://esut.de/wp-content/uploads/2024/03/Mission-SP-mit-Fieldranger-RCWS_Rheinmetall.jpg"
     ],
     "video": "https://youtu.be/tNYsne9qnHY",
-    "payload_kg": 600,
+    "payload_kg": 1000,
     "actuator_type": "Electric 8x8 drivetrain (silent watch capable)",
     "use_cases": [
       "Cargo transport",
       "Casualty evacuation",
       "Surveillance"
     ],
-    "made_in": "Germany/Canada",
-    "website": "https://www.rheinmetall.com"
+    "made_in": "Canada (Rheinmetall Canada)",
+    "website": "https://www.rheinmetall.com/en/products/uncrewed-vehicles/uncrewed-ground-systems/mission-master-a-ugs",
+    "also_known_as": "Silent Partner",
+    "weight_kg": 1134,
+    "payload": 1000,
+    "speed": 11.11,
+    "speed_ms": 11.11,
+    "terrain": [
+      "Cross-country",
+      "Mud",
+      "Snow",
+      "Amphibious"
+    ],
+    "cameras": "EO/IR, 360° ring camera",
+    "thermal_camera": true,
+    "lidar": true,
+    "battery_type": "Electric Li-ion",
+    "autonomous": true,
+    "role": [
+      "Logistics",
+      "Silent watch",
+      "Recon",
+      "Fire support",
+      "CasEvac"
+    ],
+    "deploy_method": [
+      "CH-47",
+      "CH-53",
+      "C-130"
+    ],
+    "autonomy_level": 3,
+    "encryption": "Encrypted C2 datalink",
+    "export_control": "Canadian / German export control",
+    "customers": [
+      "UK",
+      "Netherlands",
+      "Austria",
+      "Japan (JGSDF trials)"
+    ]
   },
   {
     "cat": "Military",
@@ -115465,18 +115592,22 @@
     "id": "textron-ripsaw-m5",
     "name": "Ripsaw M5",
     "brand": "Textron Systems",
-    "sub": "Robotic Combat Vehicle",
-    "year": 2020,
+    "sub": "Robotic Combat Vehicle (RCV-M)",
+    "year": 2019,
     "origin": "USA",
     "status": "Active",
-    "desc": "The Textron Ripsaw M5 is a tracked Robotic Combat Vehicle developed for the US Army RCV program, a high-mobility uncrewed platform designed to carry sensors, weapons and other payloads ahead of crewed formations.",
+    "desc": "Fifth-generation Ripsaw — a tracked Robotic Combat Vehicle developed by Team Ripsaw (Textron Systems, Howe & Howe and Teledyne FLIR) for the US Army's RCV-Medium effort. Hybrid diesel-electric drivetrain, flat open architecture and configurable armour, with a 10.5-tonne combat weight, ~3,600 kg payload and 65 km/h top speed. Can mount a Kongsberg MCT-30 turret (30/40 mm Bushmaster), carry the R80D SkyRaider UAS and uses the SUMIT 360° EO/IR perception suite.",
     "tags": [
       "military",
-      "RCV",
-      "Textron",
-      "Ripsaw",
+      "rcv",
+      "ugv",
       "tracked",
-      "robotic combat"
+      "textron",
+      "howe-howe",
+      "ripsaw",
+      "m5",
+      "combat",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
@@ -115491,17 +115622,47 @@
     ],
     "weight_kg": 10500,
     "payload_kg": 3628,
-    "speed_ms": 18,
+    "speed_ms": 18.06,
     "depth_mm": 5944,
     "width_mm": 2667,
     "height_mm": 1511,
     "actuator_type": "Hybrid diesel-electric drivetrain, tracked",
-    "cameras": "FLIR 360° EO/IR sensor suite",
+    "cameras": "SUMIT 360° EO/IR perception suite",
     "use_cases": [
       "Robotic combat vehicle (US Army RCV-M candidate)"
     ],
-    "made_in": "USA",
-    "video": "https://youtu.be/oYqAf-3Oe4o"
+    "made_in": "USA (Textron Systems / Howe & Howe)",
+    "video": "https://youtu.be/oYqAf-3Oe4o",
+    "length_mm": 5944,
+    "payload": 3628,
+    "speed": 18.06,
+    "terrain": [
+      "Cross-country",
+      "All-terrain",
+      "Paved"
+    ],
+    "thermal_camera": true,
+    "lidar": true,
+    "autonomous": true,
+    "role": [
+      "Direct fire support",
+      "ISR",
+      "Route clearance",
+      "Force protection",
+      "Logistics"
+    ],
+    "deploy_method": [
+      "C-130 transportable",
+      "Heavy transport"
+    ],
+    "autonomy_level": 3,
+    "jamming_resistant": true,
+    "encryption": "Hardened wireless C2 link",
+    "export_control": "ITAR (USML Cat VII)",
+    "customers": [
+      "US Army (RCV-M trials)"
+    ],
+    "website": "https://www.textronsystems.com/products/ripsaw-m5"
   },
   {
     "cat": "Military",
@@ -115597,19 +115758,21 @@
     "id": "roboteam-probot",
     "name": "PROBOT",
     "brand": "Roboteam",
-    "sub": "Logistics Unmanned Ground Vehicle",
-    "year": 2020,
+    "sub": "Logistics UGV",
+    "year": 2018,
     "origin": "Israel",
     "status": "Active",
     "payload_kg": 750,
-    "desc": "The Roboteam PROBOT is a compact wheeled logistics UGV that carries up to ~750 kg of supplies or casualties for dismounted units, with autonomous follow-me and waypoint navigation.",
+    "desc": "Compact wheeled logistics UGV able to carry around 750 kg of supplies or evacuate casualties while following a squad autonomously or under teleoperation. Built with an open architecture for mission modules including ISR masts, RWS and CBRN sensors, and integrated with Roboteam's control suite shared across its robot family.",
     "tags": [
       "military",
-      "UGV",
-      "Roboteam",
-      "PROBOT",
+      "ugv",
+      "wheeled",
+      "roboteam",
+      "probot",
       "logistics",
-      "follow-me"
+      "casevac",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
@@ -115622,22 +115785,36 @@
       "https://www.overtdefense.com/wp-content/uploads/2020/10/head-1024x453.jpg"
     ],
     "role": [
-      "Tracked/wheeled logistics UGV"
+      "Logistics",
+      "CasEvac",
+      "ISR",
+      "Squad support"
     ],
     "endurance_hours": 8,
     "deploy_method": [
-      "8x8 wheeled"
+      "Vehicle transport"
     ],
     "mil_spec": true,
-    "autonomy_level": "Teleoperated + follow-me",
+    "autonomy_level": 3,
     "customers": [
-      "Multiple militaries"
+      "Israel",
+      "international defense customers"
     ],
     "use_cases": [
       "Cargo transport (up to 750 kg), casualty evac, ISR"
     ],
-    "made_in": "Israel",
-    "video": "https://youtu.be/XLVl4eI6UvE?list=PLOkNEhZgmoqfnvJwieGz0ez2zC6AQdXt5"
+    "made_in": "Israel (Roboteam)",
+    "video": "https://youtu.be/XLVl4eI6UvE?list=PLOkNEhZgmoqfnvJwieGz0ez2zC6AQdXt5",
+    "payload": 750,
+    "terrain": [
+      "Cross-country",
+      "Mud",
+      "Urban"
+    ],
+    "thermal_camera": true,
+    "autonomous": true,
+    "export_control": "Israeli MoD (DECA) export control",
+    "website": "https://www.roboteam.com/"
   },
   {
     "cat": "AGV/AMR",
@@ -123080,6 +123257,588 @@
       "Performance analytics & coaching"
     ],
     "desc": "The Acemate Tennis Robot (model S10) is billed as the world's first AI tennis robot built for real rally play — a TIME Best Invention of 2025 that began shipping in early 2026 after a multi-million-dollar Kickstarter. Unlike static ball machines that just feed balls, the Acemate moves around the court on four omnidirectional Mecanum wheels at up to 5 m/s, tracking shots with dual 4K binocular cameras and reacting in just 0.15 seconds to catch your return in its net and rally back with spin, slices and lobs (up to ~80 mph and 8 m high). A swappable 6,700 mAh battery gives about three hours of play and holds up to 80-130 balls. Its companion app (V2.0) offers 40+ structured drills, 20 programmable target zones, real-time shot heat maps, ITN-aligned assessments, AI coaching tips and Apple Watch biofeedback sync. Priced from US$2,499 (Basic Kit) / $2,899 (Premium), it created a new category of mobile AI training partners.",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "qinetiq-dragon-runner-20",
+    "name": "Dragon Runner 20",
+    "brand": "QinetiQ",
+    "cat": "Military",
+    "sub": "Man-Portable Recon / EOD Robot",
+    "year": 2012,
+    "origin": "USA / UK",
+    "made_in": "USA / UK (QinetiQ)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Compact, rugged man-portable tracked robot carried in a backpack and deployable in seconds for reconnaissance, inspection and light EOD in confined spaces. The DR20 can be fitted with a manipulator arm; its smaller sibling, the throwable DR10, provides immediate situational awareness. Widely used by NATO EOD and dismounted units, including extensive UK service.",
+    "weight_kg": 10,
+    "payload": 4.5,
+    "payload_kg": 4.5,
+    "stair_climbing": true,
+    "terrain": [
+      "Urban",
+      "Stairs",
+      "Confined spaces"
+    ],
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Recon",
+      "Inspection",
+      "Light EOD"
+    ],
+    "deploy_method": [
+      "Man-portable (backpack)"
+    ],
+    "autonomy_level": 1,
+    "export_control": "ITAR (USML Cat XI)",
+    "customers": [
+      "UK MOD",
+      "US forces",
+      "NATO EOD units"
+    ],
+    "tags": [
+      "military",
+      "recon",
+      "eod",
+      "ugv",
+      "tracked",
+      "qinetiq",
+      "dragon-runner",
+      "man-portable",
+      "active"
+    ],
+    "website": "https://www.qinetiq.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "milrem-themis",
+    "name": "THeMIS",
+    "brand": "Milrem Robotics",
+    "cat": "Military",
+    "sub": "Tracked Hybrid Modular UGV",
+    "year": 2019,
+    "origin": "Estonia",
+    "made_in": "Estonia (Milrem Robotics)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Tracked Hybrid Modular Infantry System — a diesel-electric hybrid UGV with an open-architecture mission bay that reconfigures from transport to casevac, EOD or weapons-carrier. Combat weight 1,697 kg with a 750 kg rated payload (up to 1,200 kg max), 20 km/h top speed, and a 10 km control range. Acquired by 20 nations (8 NATO members), combat-proven in Ukraine for logistics and casualty evacuation and previously deployed in Mali under Operation Barkhane; 40 units ordered by the UAE in 2024.",
+    "also_known_as": "Tracked Hybrid Modular Infantry System",
+    "weight_kg": 1697,
+    "payload": 750,
+    "payload_kg": 750,
+    "payload_peak": 1200,
+    "speed": 5.56,
+    "speed_ms": 5.56,
+    "max_incline_deg": 31,
+    "swim_depth_m": 0.6,
+    "terrain": [
+      "Cross-country",
+      "Mud",
+      "Snow",
+      "Desert",
+      "Arctic"
+    ],
+    "cameras": "EO/IR, 360° situational awareness",
+    "thermal_camera": true,
+    "lidar": true,
+    "battery_type": "Hybrid diesel-electric (Li-ion pack)",
+    "battery_life": 90,
+    "battery_life_typical": 90,
+    "endurance_hours": 15,
+    "communication_range_km": 10,
+    "autonomous": true,
+    "role": [
+      "Logistics",
+      "CasEvac",
+      "Fire support",
+      "EOD",
+      "ISR"
+    ],
+    "deploy_method": [
+      "Air-transportable (C-130)",
+      "Vehicle"
+    ],
+    "autonomy_level": 3,
+    "encryption": "Encrypted C2 datalink",
+    "export_control": "EU dual-use / national export control",
+    "customers": [
+      "Estonia",
+      "France",
+      "Germany",
+      "Netherlands",
+      "Norway",
+      "Spain",
+      "UK",
+      "US",
+      "Ukraine",
+      "UAE (40 units)"
+    ],
+    "tags": [
+      "military",
+      "ugv",
+      "tracked",
+      "hybrid",
+      "milrem",
+      "themis",
+      "casevac",
+      "logistics",
+      "nato",
+      "active"
+    ],
+    "website": "https://milremrobotics.com/themis-family/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "milrem-type-x-rcv",
+    "name": "Type-X RCV",
+    "brand": "Milrem Robotics",
+    "cat": "Military",
+    "sub": "Robotic Combat Vehicle",
+    "year": 2020,
+    "origin": "Estonia",
+    "made_in": "Estonia (Milrem Robotics)",
+    "status": "Development",
+    "price": "POA",
+    "img": "",
+    "desc": "Tracked robotic combat vehicle designed to act as a wingman for infantry fighting vehicles, providing equal-to-or-better firepower and mobility at a fraction of the cost and risk. Around 12 tonnes combat weight, it can mount turreted automatic cannon in the 25–50 mm class and is built around Milrem's intelligent functions and autonomy suite for supervised manoeuvre.",
+    "weight_kg": 12000,
+    "speed": 22.2,
+    "speed_ms": 22.2,
+    "terrain": [
+      "Cross-country",
+      "Mud",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "lidar": true,
+    "autonomous": true,
+    "role": [
+      "Direct fire support",
+      "IFV wingman",
+      "ISR"
+    ],
+    "deploy_method": [
+      "Vehicle / heavy transport"
+    ],
+    "autonomy_level": 3,
+    "encryption": "Encrypted C2 datalink",
+    "export_control": "EU dual-use / national export control",
+    "customers": [
+      "Development / trials (NATO interest)"
+    ],
+    "tags": [
+      "military",
+      "rcv",
+      "ugv",
+      "tracked",
+      "milrem",
+      "type-x",
+      "combat",
+      "cannon",
+      "development"
+    ],
+    "website": "https://milremrobotics.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "rheinmetall-mission-master-cxt",
+    "name": "Mission Master CXT",
+    "brand": "Rheinmetall",
+    "cat": "Military",
+    "sub": "Hybrid Amphibious UGV (4x4)",
+    "year": 2021,
+    "origin": "Canada / Germany",
+    "made_in": "Canada (Rheinmetall Canada)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Rugged 4x4 diesel-electric hybrid UGV built for extreme terrain, carrying its full 1,000 kg payload with advanced amphibious capability. Combines a diesel engine with a silent electric motor for a 450 km total range (including 50 km battery-only), and is internally transportable by CH-47, CH-53 and C-130 aircraft. Shares the Mission Master autonomy and C2 suite with the rest of the family.",
+    "payload": 1000,
+    "payload_kg": 1000,
+    "range_km": 450,
+    "terrain": [
+      "Extreme terrain",
+      "Mud",
+      "Snow",
+      "Amphibious"
+    ],
+    "cameras": "EO/IR, 360°",
+    "thermal_camera": true,
+    "lidar": true,
+    "battery_type": "Hybrid diesel-electric (Li-ion)",
+    "autonomous": true,
+    "role": [
+      "Heavy logistics",
+      "Fire support",
+      "Recon",
+      "CasEvac"
+    ],
+    "deploy_method": [
+      "CH-47",
+      "CH-53",
+      "C-130"
+    ],
+    "autonomy_level": 3,
+    "encryption": "Encrypted C2 datalink",
+    "export_control": "Canadian / German export control",
+    "customers": [
+      "NATO trials / evaluation"
+    ],
+    "tags": [
+      "military",
+      "ugv",
+      "4x4",
+      "hybrid",
+      "amphibious",
+      "rheinmetall",
+      "mission-master",
+      "cxt",
+      "active"
+    ],
+    "website": "https://www.rheinmetall.com/en/products/uncrewed-vehicles/uncrewed-ground-systems/mission-master-a-ugs",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "rheinmetall-mission-master-xt",
+    "name": "Mission Master XT",
+    "brand": "Rheinmetall",
+    "cat": "Military",
+    "sub": "Heavy A-UGV (4x4)",
+    "year": 2021,
+    "origin": "Canada / Germany",
+    "made_in": "Canada (Rheinmetall Canada)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Rugged 4x4 high-mobility A-UGV based on the Zeal Motor Fat Truck platform, carrying up to 1,000 kg without compromising amphibious capability and offering a 750 km range. Integrated Li-ion batteries give around six hours of silent-watch endurance, and the design follows NATO STANAGs and US MIL-STD-6017 for battle-management interoperability. Can be parachute-delivered and underslung by CH-53/CH-47, with built-in cyber and electronic-warfare resilience.",
+    "payload": 1000,
+    "payload_kg": 1000,
+    "range_km": 750,
+    "terrain": [
+      "Extreme terrain",
+      "Mud",
+      "Snow",
+      "Amphibious"
+    ],
+    "cameras": "EO/IR, 360°; 3D LiDAR + radar",
+    "thermal_camera": true,
+    "lidar": true,
+    "battery_type": "Hybrid (Li-ion silent watch)",
+    "endurance_hours": 6,
+    "autonomous": true,
+    "role": [
+      "Heavy logistics",
+      "Fire support",
+      "Airborne resupply",
+      "Recon"
+    ],
+    "deploy_method": [
+      "CH-47",
+      "CH-53",
+      "C-130",
+      "Parachute"
+    ],
+    "autonomy_level": 3,
+    "jamming_resistant": true,
+    "encryption": "Encrypted C2 datalink",
+    "mil_spec": "NATO STANAG / US MIL-STD-6017",
+    "export_control": "Canadian / German export control",
+    "customers": [
+      "NATO trials / evaluation"
+    ],
+    "tags": [
+      "military",
+      "ugv",
+      "4x4",
+      "hybrid",
+      "amphibious",
+      "rheinmetall",
+      "mission-master",
+      "xt",
+      "airborne",
+      "active"
+    ],
+    "website": "https://www.rheinmetall.com/en/products/uncrewed-vehicles/uncrewed-ground-systems/mission-master-a-ugs",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "hdt-hunter-wolf",
+    "name": "Hunter WOLF",
+    "brand": "HDT Global",
+    "cat": "Military",
+    "sub": "Squad Multipurpose UGV (6x6)",
+    "year": 2020,
+    "origin": "USA",
+    "made_in": "USA (HDT Global)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Rugged 6x6 hybrid-electric squad support UGV (Wheeled Offload Logistics Follower) built to carry heavy loads, evacuate casualties and mount a remote weapon station for overwatch. Fielded by US Army units including the 101st Airborne Division, where it has been operated with a remotely-controlled .50-calibre machine gun during combat training. Designed for last-tactical-mile resupply and dismounted-squad support in GPS-degraded environments.",
+    "payload": 454,
+    "payload_kg": 454,
+    "terrain": [
+      "Cross-country",
+      "Mud",
+      "Mountains",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "autonomous": true,
+    "role": [
+      "Logistics",
+      "CasEvac",
+      "Overwatch / RWS",
+      "Squad support"
+    ],
+    "deploy_method": [
+      "Vehicle / air transport"
+    ],
+    "autonomy_level": 3,
+    "export_control": "ITAR (USML Cat XI)",
+    "customers": [
+      "US Army (incl. 101st Airborne Division)"
+    ],
+    "tags": [
+      "military",
+      "ugv",
+      "6x6",
+      "hybrid",
+      "hdt-global",
+      "hunter-wolf",
+      "logistics",
+      "casevac",
+      "rws",
+      "active"
+    ],
+    "website": "https://www.hdtglobal.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "gd-mutt-s-met",
+    "name": "MUTT 8x8 (S-MET)",
+    "brand": "General Dynamics Land Systems",
+    "cat": "Military",
+    "sub": "Squad Multipurpose Equipment Transport",
+    "year": 2020,
+    "origin": "USA",
+    "made_in": "USA (General Dynamics Land Systems)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "8x8 Multi-Utility Tactical Transport selected as the US Army's Squad Multipurpose Equipment Transport (S-MET) program of record. Carries roughly 1,000 lb (454 kg) of a dismounted squad's load, lightening soldiers' burden, and provides 3 kW (stationary) / 6 kW (moving) of exportable power to recharge radios and batteries. Operates in tethered follow-me, teleoperation and waypoint modes.",
+    "also_known_as": "S-MET Increment I",
+    "payload": 454,
+    "payload_kg": 454,
+    "terrain": [
+      "Cross-country",
+      "Mud",
+      "All-terrain"
+    ],
+    "autonomous": true,
+    "role": [
+      "Squad logistics",
+      "Exportable power",
+      "CasEvac"
+    ],
+    "deploy_method": [
+      "Vehicle / air transport"
+    ],
+    "autonomy_level": 3,
+    "export_control": "ITAR (USML Cat XI)",
+    "customers": [
+      "US Army (program of record)"
+    ],
+    "tags": [
+      "military",
+      "ugv",
+      "8x8",
+      "general-dynamics",
+      "mutt",
+      "s-met",
+      "logistics",
+      "exportable-power",
+      "active"
+    ],
+    "website": "https://www.gdls.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "roboteam-mtgr",
+    "name": "MTGR",
+    "brand": "Roboteam",
+    "cat": "Military",
+    "sub": "Micro Tactical Ground Robot",
+    "year": 2014,
+    "origin": "Israel",
+    "made_in": "Israel (Roboteam)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Micro Tactical Ground Robot — a man-portable (~9 kg) tracked robot that fits in a backpack and deploys in seconds for reconnaissance, tunnel and building clearance, and light EOD. Climbs stairs, carries day/night cameras and modular payloads, and is operated from a rugged tablet controller. In service with the US and Israeli forces among others.",
+    "weight_kg": 9,
+    "payload": 10,
+    "payload_kg": 10,
+    "stair_climbing": true,
+    "terrain": [
+      "Urban",
+      "Stairs",
+      "Tunnels",
+      "Confined spaces"
+    ],
+    "cameras": "Day/night camera suite",
+    "thermal_camera": true,
+    "autonomous": false,
+    "role": [
+      "Recon",
+      "Building / tunnel clearance",
+      "Light EOD"
+    ],
+    "deploy_method": [
+      "Man-portable (backpack)"
+    ],
+    "autonomy_level": 1,
+    "export_control": "Israeli MoD (DECA) export control",
+    "customers": [
+      "US forces",
+      "Israel",
+      "international"
+    ],
+    "tags": [
+      "military",
+      "recon",
+      "micro-ugv",
+      "tracked",
+      "roboteam",
+      "mtgr",
+      "man-portable",
+      "eod",
+      "active"
+    ],
+    "website": "https://www.roboteam.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "hanwha-arion-smet",
+    "name": "Arion-SMET",
+    "brand": "Hanwha Aerospace",
+    "cat": "Military",
+    "sub": "Multipurpose UGV (6x6)",
+    "year": 2023,
+    "origin": "South Korea",
+    "made_in": "South Korea (Hanwha Aerospace)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "6x6 multipurpose unmanned ground vehicle for transport, reconnaissance, surveillance and casualty evacuation, with autonomous follow-me, remote control and waypoint navigation plus voice/gesture command features. Hanwha's Arion-SMET took part in a US Army Foreign Comparative Testing (FCT) program, demonstrating logistics and squad-support roles for international evaluation.",
+    "payload": 550,
+    "payload_kg": 550,
+    "terrain": [
+      "Cross-country",
+      "Mud",
+      "Mountains"
+    ],
+    "thermal_camera": true,
+    "autonomous": true,
+    "role": [
+      "Logistics",
+      "ISR",
+      "CasEvac",
+      "Fire support"
+    ],
+    "deploy_method": [
+      "Vehicle / air transport"
+    ],
+    "autonomy_level": 3,
+    "export_control": "DAPA (Korea) export control",
+    "customers": [
+      "South Korea",
+      "US Army (Foreign Comparative Testing)"
+    ],
+    "tags": [
+      "military",
+      "ugv",
+      "6x6",
+      "hanwha",
+      "arion-smet",
+      "logistics",
+      "casevac",
+      "active"
+    ],
+    "website": "https://www.hanwhaaerospace.com/",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "iai-rex-mk-ii",
+    "name": "REX MK II",
+    "brand": "Israel Aerospace Industries",
+    "cat": "Military",
+    "sub": "Infantry Support UGV",
+    "year": 2019,
+    "origin": "Israel",
+    "made_in": "Israel (IAI / ELTA Systems)",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "desc": "Wheeled infantry combat-support UGV from IAI's ELTA division, designed to accompany dismounted troops carrying gear, ammunition and water, evacuate casualties and act as a mobile sensor and weapons platform. Operated by remote control or follow-me autonomy and integrated with battle-management systems for networked operations.",
+    "payload": 500,
+    "payload_kg": 500,
+    "terrain": [
+      "Cross-country",
+      "Urban",
+      "All-terrain"
+    ],
+    "thermal_camera": true,
+    "autonomous": true,
+    "role": [
+      "Infantry support",
+      "Logistics",
+      "CasEvac",
+      "ISR",
+      "Weapons platform"
+    ],
+    "deploy_method": [
+      "Vehicle transport"
+    ],
+    "autonomy_level": 3,
+    "export_control": "Israeli MoD (DECA) export control",
+    "customers": [
+      "Israel",
+      "international evaluation"
+    ],
+    "tags": [
+      "military",
+      "ugv",
+      "wheeled",
+      "iai",
+      "elta",
+      "rex",
+      "infantry-support",
+      "active"
+    ],
+    "website": "https://www.iai.co.il/",
     "fig": "🤖",
     "score": 75,
     "rating": 4
