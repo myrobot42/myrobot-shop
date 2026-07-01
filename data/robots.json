@@ -47609,20 +47609,27 @@
     "imu": true,
     "cameras": "Stereo",
     "use_cases": [
-      "Humanoid research",
-      "Bipedal locomotion R&D",
-      "Education"
+      "Advanced robotics research",
+      "Bipedal locomotion research",
+      "HRI research"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com",
-    "made_in": "South Korea",
+    "made_in": "South Korea (KAIST / Rainbow Robotics)",
     "announced": "2012",
     "arm_dof": 7,
     "fingers": 5,
     "bimanual": true,
     "stair_climbing": true,
-    "website": "https://www.rainbow-robotics.com",
+    "website": "https://www.rainbow-robotics.com/",
     "os": "Rainbow Robotics",
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric (straight-leg walking)",
+    "hand_type": "Adaptive five-finger hands",
+    "deployed_at": [
+      "MIT",
+      "Google",
+      "research institutions worldwide"
+    ],
+    "manufacturer_history": "HUBO 2 — one of the first commercialised humanoid research platforms; developed at KAIST, manufactured by Rainbow Robotics; known for straight-leg walking."
   },
   {
     "id": "rainbow-robotics-rb-y1-bimanual-mobile-manipulator",
@@ -60729,21 +60736,25 @@
     "origin": "China",
     "year": 2025,
     "status": "Active",
-    "height_mm": 1650,
+    "height_mm": 1340,
     "weight_kg": 60,
     "dof": 55,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
-    "cameras": "RGB-D",
+    "cameras": "RGB + structured-light (facial recognition, dynamic tracking)",
     "lidar": true,
     "imu": true,
-    "depth_sensing": true,
+    "depth_sensing": "Structured light",
     "use_cases": [
-      "Interactive companion variant of GR-3 (~US$85,000)"
+      "Companionship / care",
+      "Eldercare",
+      "Healthcare & rehab",
+      "Education",
+      "Public-venue guide"
     ],
     "manufacturer_url": "https://www.fftai.com",
-    "made_in": "China",
+    "made_in": "China (Fourier / Fourier Intelligence, Shanghai)",
     "announced": "2025",
     "arm_dof": 7,
     "hand_dof": 12,
@@ -60753,14 +60764,26 @@
     "speech_synthesis": true,
     "natural_language_commands": true,
     "battery_life_typical": 180,
-    "website": "https://www.fftai.com",
+    "website": "https://www.fourierintelligence.com/",
     "os": "Fourier",
     "released": 2025,
     "shell_material": "Soft-touch companion design (GR-3 platform)",
     "battery_life": 180,
     "hot_swap": true,
     "battery": 180,
-    "actuator_type": "Fourier Smart Actuator (FSA)"
+    "actuator_type": "High-performance electric actuators; redesigned whole-body structure",
+    "hand_type": "12-DOF dexterous hands (soft, safe-handling)",
+    "touch_sensing": "31 pressure sensors (full-body touch, graded response)",
+    "microphones": "4-mic array (echo cancellation, beamforming, wake)",
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "quick_release": true,
+    "llm_model": "Large-model reasoning (integrated)",
+    "learning_methods": [
+      "Imitation Learning",
+      "Reinforcement Learning"
+    ],
+    "manufacturer_history": "Fourier's first 'Care-Bot', part of the GRx series; unveiled Aug 2025, shown at CES 2026. Soft-touch exterior with animated facial interface."
   },
   {
     "id": "milrem-robotics-mifik-autonomy-kit",
@@ -122670,15 +122693,15 @@
     "sub": "Bionic Companion Humanoid",
     "year": 2026,
     "origin": "China",
-    "made_in": "China",
-    "status": "Pre-order",
-    "score": 79,
+    "made_in": "China (UBTECH)",
+    "status": "Active",
+    "score": 75,
     "rating": 4,
     "price": "POA",
     "currency": "USD",
     "img": "",
     "desc": "The UBTech U1 Pro is the first product under UWORLD, UBTech's new consumer sub-brand, billed as the world's first full-size ultra-bionic humanoid built for emotional companionship rather than physical labour. Shipping in male (183 cm / 42 kg) and female (168 cm / 35.2 kg) variants, both with 88 degrees of freedom, it wraps a humanoid frame in lifelike silicone skin with realistic hair, expressive facial actuators and camera-tracking eyes. An on-board emotion-aware AI reads mood from facial expression, tone and speech rhythm and adapts its conversation, with all personal memory stored locally and encrypted; owners can customise appearance and personality over time. Capabilities are deliberately narrow — it can stand, sit and walk on flat indoor surfaces but is not built for stairs, rough terrain, chores, or custom programming. Pre-orders opened on JD.com in June 2026 (passing 2,000+ reservations within days) ahead of a June 30 launch, with deliveries due by September; pricing is reported around US$30,000.",
-    "announced": "June 2026",
+    "announced": "2026",
     "height_mm": 1830,
     "dof": 88,
     "battery_life": 240,
@@ -122686,7 +122709,7 @@
     "battery_life_heavy": 120,
     "shell_material": "Silicone skin",
     "wifi": "Wi-Fi",
-    "ai_model": "Emotion-aware companion AI (local encrypted memory)",
+    "ai_model": "Emotional-growth large model",
     "ai_inference_local": true,
     "emotion_detection": true,
     "variants": [
@@ -122694,10 +122717,11 @@
       "Female (168 cm / 35.2 kg)"
     ],
     "use_cases": [
-      "Emotional companionship",
-      "Conversation",
-      "Home companion",
-      "Social interaction"
+      "Reception / guided interaction",
+      "Education",
+      "Social demonstration",
+      "Embodied-AI research",
+      "Personalized service"
     ],
     "tags": [
       "humanoid",
@@ -122712,14 +122736,15 @@
       "china"
     ],
     "manufacturer_url": "https://www.ubtrobot.com/en/",
-    "website": "https://www.ubtrobot.com/en/",
+    "website": "https://www.ubtrobot.com/",
     "fig": "🤖",
     "battery": 180,
     "actuator_type": "Electric",
     "weight_kg": 42,
     "bionic_face": true,
     "facial_recognition": true,
-    "natural_language_commands": true
+    "natural_language_commands": true,
+    "manufacturer_history": "U1 Series — human-centred humanoid with locally-encrypted memory and appearance customisation; UBTECH's 2026 consumer-facing line."
   },
   {
     "id": "droidup-moya",
