@@ -10,8 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-E (multi-category: robots can appear in multiple categories via cats[]) -->
-<meta name="mrs-build" content="build-D">
+<!-- BUILD-TAG: build-F (questions page: in-app catnav sidebar CATEGORY + MANUFACTURER filtering) -->
+<meta name="mrs-build" content="build-F">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -262,6 +262,16 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .catnav-side .cm-grid:last-child{margin-bottom:16px}
 .catnav-side .news-sb-box{border:none;background:transparent;border-radius:0;margin:0 0 6px;overflow:visible}
 @media(max-width:900px){.catnav-shell{grid-template-columns:1fr}.catnav-side{border-right:none;border-bottom:1px solid var(--bdr)}}
+.q-scope{font-size:12px;color:var(--mut);margin:0 0 14px}
+.q-catgroup{font-family:'Space Mono','Courier New',monospace;font-size:12px;font-weight:700;color:#111;margin:22px 0 10px;text-transform:uppercase;letter-spacing:.04em}
+.qa{border:1px solid var(--bdr);border-radius:10px;margin-bottom:10px;background:#fff;overflow:hidden}
+.qa summary{cursor:pointer;padding:14px 16px;font-weight:600;font-size:14px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;color:#111}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::after{content:'+';font-size:18px;color:var(--acc);flex-shrink:0;line-height:1}
+.qa[open] summary::after{content:'\2013'}
+.qa-a{padding:0 16px 16px;font-size:13.5px;line-height:1.65;color:var(--mut);white-space:pre-line}
+.qa-brand{display:inline-block;font-size:10.5px;color:var(--acc);border:1px solid var(--bdr);border-radius:4px;padding:1px 6px;margin-left:8px;vertical-align:middle;font-weight:600}
+.q-empty{padding:34px 20px;text-align:center;color:var(--mut);background:#fff;border:1px dashed var(--bdr);border-radius:10px;font-size:13.5px}
 .cm-grouplabel{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin:0 0 9px;display:flex;justify-content:space-between;align-items:center}
 .filter-opt.active{border-color:var(--acc);background:var(--accbg,#ede9fe)}
 .filter-opt.active .filter-opt-label{color:var(--acc);font-weight:700}
@@ -984,7 +994,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <a id="nav-rankings" onclick="goPage('rankings')">Discover</a>
       <a id="nav-news" onclick="goPage('news')">News</a>
       <a id="nav-videos" onclick="goPage('videos')">Videos</a>
-      <a id="nav-questions" href="/questions/">Questions</a>
+      <a id="nav-questions" onclick="goPage('questions')">Questions</a>
       <a id="nav-manufacturers" onclick="goPage('manufacturers')">Brands</a>
       <a id="nav-deals" onclick="goPage('db')">Deals</a>
       <a id="nav-ai" onclick="goPage('ai')" style="color:var(--acc);font-weight:600">✦ Ask AI</a>
@@ -1336,6 +1346,19 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   </div>
 </div>
 
+<!-- QUESTIONS -->
+<div id="page-questions" class="page">
+  <div class="catnav-shell">
+    <aside class="catnav-side" id="questions-menu"></aside>
+    <div class="catnav-main"><div class="questions-page" style="padding:24px 20px">
+      <div class="page-title">Robot Questions &amp; Answers</div>
+      <p style="color:var(--mut);font-size:13px;margin-top:5px;margin-bottom:14px">Honest, no-hype answers to the questions people ask most. Pick a category — and a manufacturer — to narrow down.</p>
+      <div id="questions-scope" class="q-scope"></div>
+      <div id="questions-body"></div>
+    </div></div>
+  </div>
+</div>
+
 <!-- FINDER -->
 <div id="page-finder" class="page">
   <div class="finder-band">
@@ -1455,7 +1478,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         </a>
       </div>
       <div class="footer-col"><h4>DATABASE</h4><a onclick="goPage('db')">All Robots</a><a onclick="goPage('db')">New Releases</a><a onclick="goPage('rankings')">Trending</a><a onclick="goPage('manufacturers')">By Brand</a></div>
-      <div class="footer-col"><h4>TOOLS</h4><a onclick="goPage('compare')">Compare</a><a onclick="goPage('finder')">Robot Finder</a><a onclick="goPage('news')">News</a><a onclick="goPage('videos')">Videos</a><a onclick="openReviewFor()">Reviews</a><a href="/questions/">Questions</a></div>
+      <div class="footer-col"><h4>TOOLS</h4><a onclick="goPage('compare')">Compare</a><a onclick="goPage('finder')">Robot Finder</a><a onclick="goPage('news')">News</a><a onclick="goPage('videos')">Videos</a><a onclick="openReviewFor()">Reviews</a><a onclick="goPage('questions')">Questions</a></div>
       <div class="footer-col"><h4>COMPANY</h4><a onclick="goPage('methodology')">How We Source Data</a><a onclick="goPage('methodology')">About</a><a>Advertise</a><a href="mailto:email@myrobot.shop">Contact</a><a>Privacy</a></div>
     </div>
   </footer>
@@ -1591,6 +1614,7 @@ function _renderPage(p, opts){
   if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();renderCatMenu('finder-menu');}
   if(p==='manufacturers'){renderManufacturers();}
   if(p==='videos'){renderVideos();renderCatMenu('videos-menu');}
+  if(p==='questions'){renderQuestions();renderCatMenu('questions-menu');}
   if(p==='news'){renderNews();}
   if(p==='submit-review'){populateReviewSelect();setupReviewForm();}
   if(p==='profile' && opts.id){
@@ -5169,6 +5193,59 @@ function renderCatMenu(elId){
     +'<div class="cm-grouplabel"><span>BY MANUFACTURER</span></div><div class="cm-grid">'+brHtml+'</div>';
 }
 
+/* ---- Questions page — reuses the catnav sidebar (CATEGORY + MANUFACTURER) ---- */
+var QUESTIONS_FLAT=null;
+function loadQuestionsData(cb){
+  if(QUESTIONS_FLAT!==null){ if(cb)cb(); return; }
+  fetch('data/questions.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(j){
+    var flat=[]; var cats=(j&&j.categories)||{};
+    Object.keys(cats).forEach(function(k){
+      var g=cats[k]||{};
+      (g.questions||[]).forEach(function(q){
+        if(!q||!q.q||!q.a)return;
+        var brs=q.brands||(q.brand?[q.brand]:[]);
+        flat.push({cat:g.maps_to_cat||'',category_name:g.category_name||k,cslug:k,slug:q.slug||'',q:q.q,a:q.a,brands:brs});
+      });
+    });
+    QUESTIONS_FLAT=flat; if(cb)cb();
+  }).catch(function(){ QUESTIONS_FLAT=[]; if(cb)cb(); });
+}
+function questionsMatch(q){
+  var cats=Object.keys(CATNAV.cats),brands=Object.keys(CATNAV.brands);
+  var okc=!cats.length||cats.indexOf(q.cat)>=0;
+  var okb=!brands.length||(q.brands&&q.brands.some(function(b){return brands.indexOf(b)>=0;}));
+  return okc&&okb;
+}
+function renderQuestions(){
+  var body=document.getElementById('questions-body'); if(!body)return;
+  var scope=document.getElementById('questions-scope');
+  if(QUESTIONS_FLAT===null){ body.innerHTML='<p style="color:var(--mut)">Loading questions…</p>'; loadQuestionsData(renderQuestions); return; }
+  function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  var selCats=Object.keys(CATNAV.cats),selBr=Object.keys(CATNAV.brands);
+  var list=QUESTIONS_FLAT.filter(questionsMatch);
+  if(scope){
+    var parts=[];
+    if(selCats.length)parts.push(selCats.join(', '));
+    if(selBr.length)parts.push(selBr.join(', '));
+    scope.textContent=parts.length?('Showing: '+parts.join(' · ')+'  ('+list.length+')'):(QUESTIONS_FLAT.length+' questions across all categories');
+  }
+  if(!list.length){
+    var msg=(selCats.length||selBr.length)?'No questions here yet for this selection — we\u2019re adding Q&A for every category and brand.':'No questions available yet.';
+    body.innerHTML='<div class="q-empty">'+msg+'<br><br><a class="cta" onclick="goPage(\'db\')">Browse the database →</a></div>';
+    return;
+  }
+  var groups={},order=[];
+  list.forEach(function(q){ var g=q.category_name||q.cat||'Other'; if(!groups[g]){groups[g]=[];order.push(g);} groups[g].push(q); });
+  var html=order.map(function(g){
+    var items=groups[g].map(function(q){
+      var badge=(q.brands&&q.brands.length)?'<span class="qa-brand">'+e(q.brands[0])+'</span>':'';
+      return '<details class="qa"><summary><span>'+e(q.q)+badge+'</span></summary><div class="qa-a">'+e(q.a)+'</div></details>';
+    }).join('');
+    return '<div class="q-catgroup">'+e(g)+'</div>'+items;
+  }).join('');
+  body.innerHTML=html;
+}
+
 // ── Sidebar multi-select (Database-style). Finder drives its own per-category filter engine. ──
 var CATNAV={cats:{},brands:{}};
 function catnavPage(){ var el=document.querySelector('.page.active'); return el?el.id.replace('page-',''):''; }
@@ -5202,7 +5279,7 @@ function catnavMatch(r){
 function catnavTerms(){return Object.keys(CATNAV.cats).concat(Object.keys(CATNAV.brands));}
 function catnavMenuId(){
   var el=document.querySelector('.page.active'); if(!el)return '';
-  return ({'page-compare':'compare-menu','page-finder':'finder-menu','page-videos':'videos-menu','page-news':'news-filter-bar'})[el.id]||'';
+  return ({'page-compare':'compare-menu','page-finder':'finder-menu','page-videos':'videos-menu','page-news':'news-filter-bar','page-questions':'questions-menu'})[el.id]||'';
 }
 function catnavToggle(kind,v){
   var p=catnavPage();
@@ -5239,6 +5316,7 @@ function catnavApply(){
   if(p==='compare'){ var i=document.getElementById('rs-search'); try{renderRobotSelector(i?i.value:'');}catch(e){} }
   else if(p==='news'){ try{paintNews();}catch(e){} }
   else if(p==='videos'){ try{renderVideos();}catch(e){} }
+  else if(p==='questions'){ try{renderQuestions();}catch(e){} }
 }var NEWS_PER_PAGE=18;
 var newsLoaded=1;
 function paintNews(){
