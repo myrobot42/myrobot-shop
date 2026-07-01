@@ -124214,7 +124214,7 @@
       "Heavy render-safe"
     ],
     "deploy_method": [
-      "Vehicle transported"
+      "EOD response vehicle"
     ],
     "autonomy_level": 1,
     "cbrn_protection": true,
@@ -124240,7 +124240,26 @@
     "website": "https://www.northropgrumman.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "instrument_dof": 7,
+    "reach_mm": 1930,
+    "cameras": "Color pan/tilt surveillance cam (216:1 zoom, 26x optical/12x digital, image-stabilized), stationary arm cam (40:1, 10x optical/4x digital), 24in camera extender",
+    "communication_range_km": 1.9,
+    "hand_type": "7-DOF gripper (interchangeable sensor/tool/weapon mounts)",
+    "tool_changer": true,
+    "audio": "Two-way weatherproof mic + speaker",
+    "power_source": "Battery-electric",
+    "sensors_list": [
+      "EO surveillance cameras",
+      "Arm camera",
+      "Optional IR lens",
+      "80W halogen light"
+    ],
+    "use_cases": [
+      "Render-safe / bomb disposal",
+      "HazMat handling",
+      "Heavy EOD"
+    ]
   },
   {
     "id": "qinetiq-maars",
@@ -124303,7 +124322,7 @@
     "price": "POA",
     "img": "",
     "desc": "Tracked unmanned ground combat vehicle for remote reconnaissance and fire support of infantry, unveiled at Army-2016 and entering Russian service in 2019. Roughly 10 tonnes, 5.12 m long, with a 35 km/h road speed and a remotely operated turret carrying a 30 mm 2A72 autocannon, coaxial 7.62 mm MG, four 9M120 Ataka ATGMs and six Shmel-M thermobaric rockets. Combat-tested in Syria, where reports highlighted control-link dropouts and inability to fire on the move, limiting effective control range to about 3 km.",
-    "armament": "30mm 2A72 autocannon, 7.62mm coax MG, 4x 9M120 Ataka ATGM, 6x Shmel-M; optional Igla SAM / Kornet-M",
+    "armament": "30 mm 2A72 autocannon (350–400 rpm), 7.62 mm PKTM coax MG, 4x 9M120 Ataka ATGM, 6x Shmel-M; optional Igla/Strela SAM",
     "weight_kg": 10000,
     "length_mm": 5120,
     "width_mm": 2530,
@@ -124315,7 +124334,7 @@
       "Roads",
       "All-terrain"
     ],
-    "cameras": "EO/IR + thermal, laser rangefinder; auto detect/track (6km day / 3km night)",
+    "cameras": "EO/IR with laser rangefinder & FCS; auto target detection (tanks 6 km day / 3 km night)",
     "thermal_camera": true,
     "communication_range_km": 3,
     "battery_type": "Diesel-electric",
@@ -124349,7 +124368,19 @@
     "website": "https://kalashnikovgroup.ru/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2016 (Army-2016)",
+    "propulsion": "Tracked, diesel-electric",
+    "power_source": "Diesel-electric",
+    "imu": true,
+    "laser_warning_receiver": true,
+    "smoke_screen": true,
+    "navigation": "Remote control + column autonomy; mobile command post",
+    "deployed_at": [
+      "Syria (combat trials)",
+      "Ukraine"
+    ],
+    "manufacturer_history": "Developed by JSC 766 UPTK, now Kalashnikov Concern; marketed internationally by Rosoboronexport."
   },
   {
     "id": "kalashnikov-uran-6",
@@ -124359,7 +124390,7 @@
     "sub": "Demining UGV",
     "year": 2016,
     "origin": "Russia",
-    "made_in": "Russia (JSC 766 UPTK)",
+    "made_in": "Russia (JSC 766 UPTK / Kalashnikov Concern)",
     "status": "Active",
     "price": "POA",
     "img": "",
@@ -124367,8 +124398,8 @@
     "weight_kg": 6000,
     "terrain": [
       "Minefields",
-      "Cross-country",
-      "Rubble"
+      "Rubble",
+      "Cross-country"
     ],
     "autonomous": false,
     "role": [
@@ -124398,7 +124429,26 @@
     "website": "https://kalashnikovgroup.ru/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked, remote-controlled",
+    "power_source": "Diesel",
+    "end_effectors_compatible": [
+      "Mine-clearing roller",
+      "Flail",
+      "Plough/dozer blade"
+    ],
+    "communication_range_km": 1,
+    "cameras": "Multi-camera operator suite",
+    "blast_rating": "Designed to survive anti-personnel & light anti-tank mine detonations",
+    "use_cases": [
+      "Area demining",
+      "Minefield breaching",
+      "Route clearance",
+      "Post-conflict EOR clearance"
+    ],
+    "deployed_at": [
+      "Russian Armed Forces engineering units"
+    ]
   },
   {
     "id": "izhevsk-platform-m",
@@ -124413,7 +124463,7 @@
     "price": "POA",
     "img": "",
     "desc": "Compact tracked combat robot of around 800 kg, armed with a 7.62 mm machine gun and rocket-propelled grenade launchers for reconnaissance, patrol and fire support. Issued for experimental operation to Russian Navy coastal troops in Kaliningrad and Kamchatka, it can be operated by remote control to engage stationary and moving targets.",
-    "armament": "7.62mm MG + 4x RPG-26 grenade launchers",
+    "armament": "7.62 mm MG + 4x RPG-26 grenade launchers",
     "weight_kg": 800,
     "terrain": [
       "Cross-country",
@@ -124449,7 +124499,19 @@
     "website": "",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked",
+    "power_source": "Battery-electric",
+    "cameras": "EO/IR targeting suite",
+    "use_cases": [
+      "Fire support",
+      "Recon",
+      "Patrol",
+      "Force protection"
+    ],
+    "deployed_at": [
+      "Russian Navy coastal troops (Kaliningrad, Kamchatka)"
+    ]
   },
   {
     "id": "android-technics-marker",
@@ -124536,7 +124598,7 @@
       "Building / tunnel clearance"
     ],
     "deploy_method": [
-      "Carried by Sharp Claw 2",
+      "Carried in Sharp Claw 2 cargo bay",
       "Vehicle transported"
     ],
     "autonomy_level": 1,
@@ -124555,10 +124617,20 @@
       "china",
       "active"
     ],
-    "website": "",
+    "website": "https://www.norincogroup.com.cn/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked",
+    "power_source": "Battery-electric",
+    "cameras": "Day/night EO surveillance package",
+    "imu": true,
+    "navigation": "Remote control; can be carried & deployed by Sharp Claw 2",
+    "use_cases": [
+      "Building & tunnel clearance",
+      "Urban recon",
+      "Anti-terror fire support"
+    ]
   },
   {
     "id": "norinco-sharp-claw-2",
@@ -124612,10 +124684,21 @@
       "china",
       "active"
     ],
-    "website": "",
+    "website": "https://www.norincogroup.com.cn/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "6x6 electric",
+    "power_source": "Battery-electric",
+    "max_step_height_mm": 350,
+    "cameras": "Mast-mounted surveillance package (EO/IR)",
+    "imu": true,
+    "navigation": "Autonomous path-tracking on digital map; remote control",
+    "use_cases": [
+      "Recon",
+      "Fire support",
+      "Carrier/mothership for Sharp Claw 1"
+    ]
   },
   {
     "id": "norinco-sharp-claw-vu-t2",
@@ -124667,10 +124750,24 @@
       "china",
       "active"
     ],
-    "website": "",
+    "website": "https://www.norincogroup.com.cn/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked",
+    "power_source": "Battery-electric",
+    "navigation": "Semi-autonomous: LiDAR + EO + radar + INS sensor fusion with digital maps",
+    "sensors_list": [
+      "LiDAR",
+      "EO cameras",
+      "Radar",
+      "Inertial navigation (INS)"
+    ],
+    "use_cases": [
+      "Combat support",
+      "Recon",
+      "Direct fire engagement"
+    ]
   },
   {
     "id": "devdroid-droid-tw-12-7",
@@ -124695,7 +124792,7 @@
       "Mud",
       "All-terrain"
     ],
-    "cameras": "Thermal imaging sight + EO",
+    "cameras": "Thermal + EO gun sight; AI-assisted fire control (stabilisation, tracking, ballistic solution)",
     "thermal_camera": true,
     "autonomous": false,
     "role": [
@@ -124709,7 +124806,7 @@
     ],
     "autonomy_level": 2,
     "jamming_resistant": true,
-    "encryption": "Digital radio (MikroTik); mesh / LTE / Starlink options",
+    "encryption": "Digital radio (MikroTik); mesh / LTE / Starlink resilient links",
     "export_control": "Ukrainian MoD (wartime use)",
     "customers": [
       "Ukrainian Armed Forces (3rd & 5th Assault Brigades)"
@@ -124729,7 +124826,19 @@
     "website": "https://devdroid.tech/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked, electric",
+    "power_source": "Battery-electric",
+    "ai_model": "AI-assisted fire-control system",
+    "use_cases": [
+      "Armoured-vehicle strike",
+      "Position holding",
+      "Direct fire support",
+      "Assault"
+    ],
+    "deployed_at": [
+      "Ukrainian Armed Forces (Kostyantynivka sector)"
+    ]
   },
   {
     "id": "devdroid-droid-nw-40",
@@ -124781,7 +124890,16 @@
     "website": "https://devdroid.tech/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked, electric",
+    "power_source": "Battery-electric",
+    "cameras": "Thermal + EO sight",
+    "encryption": "Digital radio; mesh / LTE / Starlink options",
+    "use_cases": [
+      "Grenade-launcher fire support",
+      "Recon",
+      "Strike"
+    ]
   },
   {
     "id": "roboneers-ironclad",
@@ -124796,7 +124914,7 @@
     "price": "POA",
     "img": "",
     "desc": "Armored combat UGV from Roboneers — whose roots trace to the 2014 volunteer-built ShaBlya remote weapon turret — designed for assault operations and fire support on the front line. Carries a stabilised remote weapon station (commonly a 7.62 mm machine gun) on a protected wheeled/tracked chassis, letting operators suppress positions and support advancing infantry from cover.",
-    "armament": "ShaBlya remote weapon station (7.62mm MG)",
+    "armament": "ShaBlya M2 remote weapon station (7.62 mm MG; stabilised)",
     "terrain": [
       "Cross-country",
       "Roads",
@@ -124831,7 +124949,16 @@
     "website": "https://roboneers.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Wheeled/tracked, electric",
+    "power_source": "Battery-electric",
+    "cameras": "Stabilised EO/IR turret sight",
+    "use_cases": [
+      "Assault support",
+      "Fire support",
+      "Recon"
+    ],
+    "manufacturer_history": "Roboneers' remote-turret work traces to the 2014 volunteer-built ShaBlya station."
   },
   {
     "id": "uut-lyut",
@@ -124880,7 +125007,15 @@
     "website": "",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Electric",
+    "power_source": "Battery-electric",
+    "use_cases": [
+      "Direct fire support",
+      "Position defence",
+      "Recon"
+    ],
+    "manufacturer_history": "Traces to 2016 volunteer development in the ATO zone; fielded alongside the Ravlyk logistics UGV."
   },
   {
     "id": "tencore-termit",
@@ -124898,10 +125033,10 @@
     "payload": 300,
     "payload_kg": 300,
     "terrain": [
-      "Cross-country",
       "Mud",
       "Trenches",
-      "Slopes"
+      "Slopes",
+      "Cross-country"
     ],
     "thermal_camera": true,
     "autonomous": false,
@@ -124933,7 +125068,17 @@
     "website": "",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked, electric",
+    "power_source": "Battery-electric",
+    "cameras": "EO/IR driving & observation cameras",
+    "use_cases": [
+      "Logistics resupply",
+      "CasEvac",
+      "Remote mine-laying",
+      "Equipment transport"
+    ],
+    "released": "2025 (MoD codified June 2025)"
   },
   {
     "id": "drdo-daksh",
