@@ -123488,29 +123488,32 @@
     "year": 2026,
     "origin": "China",
     "status": "Active",
-    "score": 88,
+    "score": 75,
     "price": "POA",
     "height_mm": 1690,
     "leg_length_mm": 950,
     "dof": 55,
     "torque_nm": 400,
-    "actuator_type": "Self-developed integrated electric joint modules",
-    "cooling": "Liquid circulation cooling",
+    "actuator_type": "Electric servo (liquid-cooled)",
+    "cooling": "Liquid cooling (water-cooled motors; smartphone-derived thermal management)",
     "run_speed_ms": 7,
     "speed": 7,
     "autonomous": true,
     "tags": [
       "humanoid",
+      "lightning",
+      "honor",
       "bipedal",
       "high-speed",
       "running",
-      "honor",
+      "liquid-cooling",
+      "magicos",
       "beijing-marathon",
+      "record-breaking",
       "china",
-      "autonomous",
-      "record-breaking"
+      "active"
     ],
-    "desc": "Lightning (闪电) is a high-speed bipedal humanoid built by Chinese smartphone maker Honor, which stunned the robotics world by winning the 2026 Beijing E-Town Humanoid Half-Marathon. Running the 21.1 km course autonomously in 50 minutes 26 seconds, it became the first humanoid to beat the human half-marathon world record (57:20); a remote-controlled Lightning finished even faster at 48:19. Standing 169 cm with an unusually long 0.95 m effective leg length and roughly 55 bionic joints concentrated in the lower body, it pairs self-developed joint modules producing up to 400 N·m of peak torque with a liquid-cooling system adapted from Honor's smartphones to shed the heat of sustained running. Its mecha-style aerodynamic body draws clear design inspiration from Agility Robotics' Cassie. Honor entered ten teams and swept all three podium places in its first-ever robotics competition.",
+    "desc": "Lightning (闪电) is a high-speed bipedal humanoid from Chinese smartphone maker Honor that stunned the field by winning the 2026 Beijing E-Town Humanoid Robot Half Marathon on 19 April 2026 — completing the 21.1 km course autonomously in a net 50:26, faster than the human half-marathon world record of 57:20 (a second, remote-controlled Lightning ran 48:19). Standing 169 cm with a cool mecha-style red chassis, it uses joints rated to 400 N·m and a smartphone-derived liquid-cooling system (water-cooled motors) for sustained high-output running. Perception fuses multiple sensors including Hesai JT-series 360° LiDAR, and its brain is Honor's on-device MagicOS model paired with the YOYO agent, offering both fully-autonomous-navigation and remote-control variants. Honor built it in under a year by repurposing its phone supply chain (image-stabilisation, attitude and gyro algorithms for balance; BMS and SoC compute). It is a flagship locomotion showcase rather than a general-purpose worker.",
     "fig": "🤖",
     "rating": 4,
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/30/AW3cky5i2Ck6nh5qNnjI/image.png",
@@ -123520,7 +123523,29 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKpsYvLMbjinAX76HaBjeFwMVYZzYtT4O21Q&s",
       "https://stuff.co.za/wp-content/uploads/2026/04/Honor-Lightning.png"
     ],
-    "video": "https://youtu.be/8fNUgniwKYo"
+    "video": "https://youtu.be/8fNUgniwKYo",
+    "announced": "2026-04",
+    "fall_recovery": true,
+    "os": "MagicOS (on-device model + YOYO agent)",
+    "ai_model": "MagicOS on-device model + YOYO intelligent agent",
+    "natural_language_commands": true,
+    "lidar": true,
+    "lidar_model": "Hesai JT series (360°)",
+    "variants": [
+      "Autonomous navigation",
+      "Remote control"
+    ],
+    "awards": [
+      "2026 Beijing E-Town Humanoid Robot Half Marathon — Champion (net 50:26, beat human world record)"
+    ],
+    "use_cases": [
+      "High-speed locomotion R&D",
+      "Software-development platform",
+      "Technology demonstration",
+      "Athletic / marathon demonstration"
+    ],
+    "made_in": "China (Honor, Shenzhen)",
+    "manufacturer_history": "Honor (荣耀), Shenzhen — former Huawei sub-brand, independent since 2020. Entered robotics via its 'Alpha Strategy' (MWC Barcelona, Mar 2025); Lightning developed in <1 year by a 2,600+ team using phone-supply-chain partners (Lingyi iTech, Lens/Lansheng, AAC Technologies, Huake Lengxin liquid-cooling pumps). Honor is also planning a quadruped 'Anzai' and a 'Luban' dexterous hand."
   },
   {
     "id": "honor-yuanqi-zai-2026",
@@ -123531,20 +123556,48 @@
     "year": 2026,
     "origin": "China",
     "status": "Active",
-    "score": 79,
+    "score": 75,
     "price": "POA",
     "actuator_type": "Electric",
     "tags": [
       "humanoid",
-      "service",
+      "yuanqi-zai",
+      "spirit-kid",
       "honor",
-      "beijing-marathon",
+      "companion",
+      "retail",
+      "social",
+      "compact",
       "china",
-      "compact"
+      "active"
     ],
-    "desc": "Yuanqi Zai (元气仔) is a compact, service-oriented humanoid from Chinese smartphone maker Honor. Alongside Honor's record-breaking Lightning racer, it was among the company's entries at the 2026 Beijing E-Town Humanoid Half-Marathon, where Honor fielded ten teams and took the top podium positions. Where Lightning is purpose-built for speed, Yuanqi Zai reflects Honor's broader push — part of its $10 billion 'Alpha Plan' AI investment — to bring consumer- and service-focused humanoids to market.",
+    "desc": "Yuanqi Zai (元气仔, 'Spirit Kid') is Honor's compact consumer-facing humanoid — the product it actually intends to commercialise, versus its flagship Lightning racer. At 136.9 cm with a friendly silver design, it is built for human-robot interaction and companionship, with Honor planning to deploy it across ~5,000 of its own retail stores as an in-store greeter and shopping guide. It ran the 2026 Beijing E-Town Humanoid Half Marathon alongside Lightning and took the event's Best Gait Award. Perception uses an ORBBEC Gemini 330 binocular 3D camera with the MX6800 depth engine for reliable indoor/outdoor depth sensing; AAC Technologies supplied its head and legs.",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "cats": [
+      "Humanoid",
+      "Social"
+    ],
+    "also_known_as": "Spirit Kid / Energetic Boy",
+    "announced": "2026-04",
+    "height_mm": 1369,
+    "colors": [
+      "Silver"
+    ],
+    "cameras": "ORBBEC Gemini 330 binocular 3D camera",
+    "depth_sensing": "Active-passive fusion (ORBBEC MX6800 depth engine)",
+    "natural_language_commands": true,
+    "awards": [
+      "2026 Beijing E-Town Humanoid Robot Half Marathon — Best Gait Award"
+    ],
+    "use_cases": [
+      "In-store retail guidance",
+      "Companionship",
+      "Human-robot interaction",
+      "Home"
+    ],
+    "made_in": "China (Honor, Shenzhen)",
+    "manufacturer_history": "Honor's mass-market humanoid, unveiled alongside Lightning in April 2026; commercialisation anchored in Honor's own retail channel (~5,000 stores). Built on Honor's phone supply chain (AAC Technologies: head + legs)."
   },
   {
     "id": "tiangong-ultra-2025",
