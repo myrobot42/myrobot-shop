@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-D (brands filter by selected category) -->
+<!-- BUILD-TAG: build-E (multi-category: robots can appear in multiple categories via cats[]) -->
 <meta name="mrs-build" content="build-D">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
@@ -1473,6 +1473,10 @@ window.ROBOTS = ROBOTS;
 // ════════════ GLOBALS ════════════
 let dbView='grid', finderView='grid', compareSlots=[null,null,null,null], activeSlot=0, currentProfile=null, finderCat='all';
 const ALL_CATS=['Aerospace','Agricultural','AGV/AMR','Aquatic','Autonomous Vehicles','Consumer','Delivery','Disaster Response','Drones','Educational','Entertainment','Exoskeletons','Humanoid','Industrial','Medical','Military','Quadruped','Research','Service','Social','Telepresence'];
+// ── Multi-category support: a robot may belong to several categories via r.cats[] (falls back to single r.cat) ──
+function rCats(r){ return (r&&Array.isArray(r.cats)&&r.cats.length)?r.cats:(r&&r.cat?[r.cat]:[]); }
+function rInCat(r,c){ return rCats(r).indexOf(c)>=0; }
+function rCatsOverlap(a,b){ var ca=rCats(a); return rCats(b).some(function(c){return ca.indexOf(c)>=0;}); }
 
 // Load robots.json then refresh whatever page is currently showing
 let ROBOTS_LOADED = false;
@@ -1655,7 +1659,7 @@ function robotBuzz(r){
   var yr = Math.floor(d/10000);
   var buzz = (yr-2018)*10;
   if(_hotBrands.indexOf(r.brand)>=0) buzz+=40;
-  if(r.cat==='Humanoid') buzz+=15;
+  if(rInCat(r,'Humanoid')) buzz+=15;
   if(r.img) buzz+=8;
   if(yr>2026) buzz-=100;
   return {buzz:buzz, d:d};
@@ -1807,8 +1811,8 @@ function buildDbFilters(){
   const catF=document.getElementById('db-cat-filters');
   if(catF && !catF.dataset.built){
     catF.dataset.built='1';
-    const cats=[...new Set(ROBOTS.map(r=>r.cat).filter(Boolean))].sort();
-    catF.innerHTML=cats.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label" title="${c}">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>r.cat===c).length}</span></label>`).join('');
+    const cats=[...new Set(ROBOTS.flatMap(rCats).filter(Boolean))].sort();
+    catF.innerHTML=cats.map(c=>`<label class="filter-opt"><input type="checkbox" data-cat="${c}" onchange="onCatChange()"><span class="filter-opt-label" title="${c}">${c}</span><span class="filter-opt-count">${ROBOTS.filter(r=>rInCat(r,c)).length}</span></label>`).join('');
     renderSubcatFilter();  // initial render: hidden (no cat selected)
     renderBrandFilter();   // initial render: all brands
   }
@@ -1863,7 +1867,7 @@ function renderBrandFilter(){
   }else{
     const brandSet=new Set();
     for(const r of ROBOTS){
-      if(selCats.includes(r.cat)&&r.brand)brandSet.add(r.brand);
+      if(selCats.some(function(c){return rInCat(r,c);})&&r.brand)brandSet.add(r.brand);
     }
     relevantBrands=ALL_BRANDS.filter(b=>brandSet.has(b));
   }
@@ -1877,7 +1881,7 @@ function renderBrandFilter(){
   const _selStatus = [...document.querySelectorAll('[data-status]:checked')].map(el => el.dataset.status);
   function _matchesAllExceptBrand(r){
     if (_q && !((r.name||'').toLowerCase().includes(_q) || (r.brand||'').toLowerCase().includes(_q) || (r.tags||[]).some(t => (t||'').toLowerCase().includes(_q)) || (r.cat||'').toLowerCase().includes(_q))) return false;
-    if (selCats.length && !selCats.includes(r.cat)) return false;
+    if (selCats.length && !selCats.some(function(c){return rInCat(r,c);})) return false;
     if (_selSubs.length && !_selSubs.includes(r.sub)) return false;
     if (_selStatus.length && !_selStatus.includes(r.status)) return false;
     if (_selFeat.length && !_selFeat.every(f => (f==='arm'&&r.arm)||(f==='ai'&&r.ai)||(f==='ros'&&r.ros)||(f==='sdk'&&r.sdk))) return false;
@@ -1970,7 +1974,7 @@ function renderSubcatFilter(){
   const _selFeat2 = [...document.querySelectorAll('[data-feat]:checked')].map(el => el.dataset.feat);
   const _selStatus2 = [...document.querySelectorAll('[data-status]:checked')].map(el => el.dataset.status);
   function _matchesAllExceptSub(r){
-    if (r.cat !== cat) return false;
+    if (!rInCat(r,cat)) return false;
     if (_q2 && !((r.name||'').toLowerCase().includes(_q2) || (r.brand||'').toLowerCase().includes(_q2) || (r.tags||[]).some(t => (t||'').toLowerCase().includes(_q2)) || (r.cat||'').toLowerCase().includes(_q2))) return false;
     if (_selBrands2.length && !_selBrands2.includes(r.brand)) return false;
     if (_selStatus2.length && !_selStatus2.includes(r.status)) return false;
@@ -2069,7 +2073,7 @@ function getDbFiltered(){
   const selStatus=[...document.querySelectorAll('[data-status]:checked')].map(el=>el.dataset.status);
   return ROBOTS.filter(r=>{
     if(q&&!r.name.toLowerCase().includes(q)&&!r.brand.toLowerCase().includes(q)&&!r.tags.some(t=>t.toLowerCase().includes(q))&&!r.cat.toLowerCase().includes(q))return false;
-    if(selCats.length&&!selCats.includes(r.cat))return false;
+    if(selCats.length&&!selCats.some(function(c){return rInCat(r,c);}))return false;
     if(selSubs.length&&!selSubs.includes(r.sub))return false;
     if(selBrands.length&&!selBrands.includes(r.brand))return false;
     if(selStatus.length&&!selStatus.includes(r.status))return false;
@@ -2103,7 +2107,7 @@ function _heroEnsureData(cb){
   }
 }
 function _heroSeed(type,val){
-  var pool=ROBOTS.filter(function(r){return r.img&&(type==='cat'?r.cat===val:r.brand===val);});
+  var pool=ROBOTS.filter(function(r){return r.img&&(type==='cat'?rInCat(r,val):r.brand===val);});
   if(!pool.length)return null;
   var tr=_heroTrend||{};
   pool.sort(function(a,b){var ta=tr[a.id]||0,tb=tr[b.id]||0;if(tb!==ta)return tb-ta;return (b.year||0)-(a.year||0);});
@@ -2358,7 +2362,7 @@ function affiliateLink(r){
   var direct=false;
   for(var k in AFFILIATE.brands){ if(brand.indexOf(k)>=0 && AFFILIATE.brands[k].type==='direct'){ direct=true; } }
   if(direct) return null; /* brand program needs explicit product link; dormant until buy_url set */
-  if(AFFILIATE.buyableCats.indexOf(r.cat)>=0){
+  if(rCats(r).some(function(c){return AFFILIATE.buyableCats.indexOf(c)>=0;})){
     var q=encodeURIComponent(amzQuery(r));
     return {url:'https://'+AFFILIATE.amazon.domain+'/s?k='+q+'&tag='+AFFILIATE.amazon.tag,label:'Check price on Amazon',retailer:'Amazon'};
   }
@@ -3918,7 +3922,7 @@ function _renderProfile(id){
   // Similar — brand siblings first (most related), then same category / shared tags
   const _rt=r.tags||[];
   const sameBrand=ROBOTS.filter(x=>x.id!==r.id&&x.brand&&x.brand===r.brand);
-  const byCat=ROBOTS.filter(x=>x.id!==r.id&&x.brand!==r.brand&&(x.cat===r.cat||(x.tags||[]).some(t=>_rt.includes(t))));
+  const byCat=ROBOTS.filter(x=>x.id!==r.id&&x.brand!==r.brand&&(rCatsOverlap(x,r)||(x.tags||[]).some(t=>_rt.includes(t))));
   const sim=sameBrand.concat(byCat).slice(0,4);
   try{ renderProfileNews(r); }catch(e){}
   document.getElementById('profile-similar').innerHTML=sim.map(s=>{
@@ -3950,7 +3954,7 @@ function addToCompareFromProfile(){
 // ════════════ COMPARE ════════════
 // Pick the best head-to-head opponent: same sub-type first, then a rival brand, then closest price/score.
 function pickVsOpponent(r){
-  var pool=ROBOTS.filter(function(x){return x.id!==r.id && x.cat===r.cat;});
+  var pool=ROBOTS.filter(function(x){return x.id!==r.id && rCatsOverlap(x,r);});
   if(!pool.length) return null;
   var rp=(typeof r.price==='number'&&r.price>0)?r.price:null;
   function rank(x){
@@ -4176,7 +4180,7 @@ function setRankMode(mode,el){
 function renderRankings(cat){
   if (!cat) cat = 'all';
   RANK_CAT = cat;
-  var list = cat==='all' ? ROBOTS.slice() : ROBOTS.filter(function(r){return r.cat===cat;});
+  var list = cat==='all' ? ROBOTS.slice() : ROBOTS.filter(function(r){return rInCat(r,cat);});
   var trend = (window.TRENDING && window.TRENDING.scores) ? window.TRENDING.scores : null;
 
   // Sort + choose the right-hand signal per mode
@@ -4408,7 +4412,7 @@ const SELECTED_CB = {};  // {sectionKey: Set of selected option vals}
 
 function buildFinderTabs(){
   document.getElementById('finder-tabs').innerHTML=FINDER_CATS.map(function(c){
-    var cnt=c.id==='all'?ROBOTS.length:ROBOTS.filter(function(r){return r.cat===c.id;}).length;
+    var cnt=c.id==='all'?ROBOTS.length:ROBOTS.filter(function(r){return rInCat(r,c.id);}).length;
     return '<div class="ftab'+(c.id===finderCat?' active':'')+'" onclick="setFinderCat(\''+c.id+'\',this)">'+c.label+'<span class="fcnt">'+cnt+'</span></div>';
   }).join('');
   // Update meta line
@@ -4431,7 +4435,7 @@ function setFinderCat(cat,el){
 function resetFinderState(){}
 
 function getPool(){
-  return finderCat==='all'?ROBOTS:ROBOTS.filter(function(r){return r.cat===finderCat;});
+  return finderCat==='all'?ROBOTS:ROBOTS.filter(function(r){return rInCat(r,finderCat);});
 }
 
 // Get the schema for the current category, or fall back to default
@@ -5147,10 +5151,10 @@ function renderCatMenu(elId){
   if(!bar)return;
   function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
   function a(s){return e(s).replace(/'/g,'&#39;');}
-  var cc={}; ROBOTS.forEach(function(r){if(r.cat)cc[r.cat]=(cc[r.cat]||0)+1;});
+  var cc={}; ROBOTS.forEach(function(r){rCats(r).forEach(function(c){if(c)cc[c]=(cc[c]||0)+1;});});
   var cats=Object.keys(cc).sort();
   var selCats=catnavSelectedCats();
-  var brandPool=selCats.length?ROBOTS.filter(function(r){return selCats.indexOf(r.cat)>=0;}):ROBOTS;
+  var brandPool=selCats.length?ROBOTS.filter(function(r){return selCats.some(function(c){return rInCat(r,c);});}):ROBOTS;
   var bc={}; brandPool.forEach(function(r){if(r.brand)bc[r.brand]=(bc[r.brand]||0)+1;});
   var brands=Object.keys(bc).sort(function(x,y){return bc[y]-bc[x];}).slice(0,20);
   catnavSelectedBrands().forEach(function(b){if(brands.indexOf(b)<0){brands.unshift(b);if(bc[b]===undefined)bc[b]=0;}});
@@ -5191,7 +5195,7 @@ function catnavActive(){
 }
 function catnavMatch(r){
   var cats=Object.keys(CATNAV.cats),brands=Object.keys(CATNAV.brands);
-  var okc=!cats.length||cats.indexOf(r.cat)>=0;
+  var okc=!cats.length||cats.some(function(c){return rInCat(r,c);});
   var okb=!brands.length||brands.indexOf(r.brand)>=0;
   return okc&&okb;
 }
