@@ -126271,27 +126271,28 @@
     "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/01/GdaQahMhfocl9pNnzr7Z/image.png",
-    "desc": "The fifth-generation model in Japan's landmark HRP humanoid series from AIST, introduced in 2018 as a much stronger, more autonomous R&D platform for heavy labour and hazardous work. In demonstrations HRP-5P autonomously locates, lifts and carries large drywall panels and operates power tools. Led by Fumio Kanehiro's team, it targets practical humanoid use in construction and industry.",
+    "desc": "The fifth-generation HRP humanoid, unveiled by AIST in 2018 as the strongest and most autonomous of the series — explicitly built to autonomously perform heavy labour and work in hazardous environments. Standing 182 cm and weighing 101 kg, it uses electric actuation with high-power, wide-range joints. In its signature demo, HRP-5P locates, lifts and carries a full gypsum drywall panel and fastens it with a power tool entirely on its own, combining environmental measurement, object recognition, whole-body motion planning and task-execution management. It is intended as an R&D platform for practical construction and industrial humanoids.",
     "height_mm": 1820,
     "weight_kg": 101,
     "dof": 37,
-    "actuator_type": "Electric",
+    "actuator_type": "Electric, high-power wide-range joints",
     "autonomous": true,
     "cameras": "Vision + environment perception suite",
     "use_cases": [
-      "Construction (drywall handling)",
-      "Power-tool operation",
-      "Heavy labor",
-      "Hazardous environments"
+      "Autonomous heavy labour",
+      "Construction (drywall install)",
+      "Hazardous-environment work",
+      "Industrial-humanoid R&D"
     ],
     "tags": [
       "humanoid",
       "hrp-5p",
       "aist",
-      "hrp-series",
       "research",
       "construction",
       "heavy-labor",
+      "autonomous",
+      "2018",
       "japan",
       "active"
     ],
@@ -126306,7 +126307,15 @@
       "https://www.aist.go.jp/Portals/0/resource_images/aist_e/latest_research/2018/20181116/fig4.jpg",
       "https://www.aist.go.jp/Portals/0/resource_images/aist_e/latest_research/2018/20181116/fig4.jpg"
     ],
-    "video": "https://youtu.be/fMwiZXxo9Qg"
+    "video": "https://youtu.be/fMwiZXxo9Qg",
+    "cats": [
+      "Humanoid",
+      "Industrial"
+    ],
+    "can_use_tools": true,
+    "autonomy_level": "Semi-autonomous task execution",
+    "bimanual": true,
+    "manufacturer_history": "Developed by AIST's humanoid research group (Fumio Kanehiro, Kenji Kaneko, Ken Sakaguchi), 2018; latest in the HRP series after HRP-2/3/4/4C."
   },
   {
     "id": "aist-hrp-2",
@@ -126316,20 +126325,21 @@
     "sub": "Research Humanoid",
     "year": 2002,
     "origin": "Japan",
-    "made_in": "Japan (AIST / Kawada)",
+    "made_in": "Japan (AIST / Kawada Industries)",
     "status": "Discontinued",
     "price": "POA",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO7N_GT9VAbnrTnagEs3UO0EmFLh8kv2YKQHSo4tTVNyNgyiYaaVHKnih7&s=10",
-    "desc": "An influential early-2000s Japanese research humanoid from the AIST-led HRP (Humanoid Robotics Project), industrialised with Kawada and Yaskawa. Roughly 1.54 m and 58 kg with 30 degrees of freedom, HRP-2 could walk on uneven ground, lie down and get back up, and became a widely used platform for bipedal locomotion and whole-body motion research. Its distinctive 'Promet' styling was designed by Yutaka Izubuchi.",
+    "desc": "The second-generation robot in Japan's national Humanoid Robotics Project, jointly developed by AIST and Kawada Industries and announced in 2002. At 154 cm and 58 kg (with battery), HRP-2 uses 30 motors across legs, arms, head and waist and is famous for being able to lie down and stand back up (from front or back), crawl through tight spaces, walk narrow paths and cooperate with a human to lift heavy objects. Its striking exterior was styled by anime mecha designer Yutaka Izubuchi, and its cantilever hip lets it cross its legs like walking on a balance beam. Around 20 units were built and it became a widely used research platform; a modified HRP-2Kai competed in the DARPA Robotics Challenge.",
     "also_known_as": "Promet",
     "height_mm": 1540,
     "weight_kg": 58,
     "dof": 30,
-    "actuator_type": "Electric (harmonic drive)",
+    "actuator_type": "Brushed DC motors with harmonic drives (1/160); knee ~150 W",
     "fall_recovery": true,
     "use_cases": [
-      "Bipedal locomotion research",
-      "Whole-body motion research"
+      "Bipedal-locomotion research",
+      "Human-robot cooperation",
+      "Disaster-response research (HRP-2Kai)"
     ],
     "tags": [
       "humanoid",
@@ -126337,10 +126347,11 @@
       "promet",
       "aist",
       "kawada",
-      "hrp-series",
       "research",
+      "bipedal",
+      "izubuchi",
+      "2002",
       "japan",
-      "historical",
       "discontinued"
     ],
     "website": "https://www.aist.go.jp/",
@@ -126352,7 +126363,14 @@
       "https://www.uisdc.com/wp-content/uploads/2026/04/robot-img-HRP-2-Promet.webp",
       "https://cdn.sanity.io/images/7p2whiua/production/c45e6ba326be80e84de5e399026b8071cb934955-2048x1536.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJesZcRw4c_ZWHlAtit_JnNfs8GDz4yUx9IerLwylZn8no8jidNIJGkjQ&s=10"
-    ]
+    ],
+    "leg_dof": 12,
+    "arm_dof": 14,
+    "neck_dof": 2,
+    "waist_dof": 2,
+    "frame_material": "Cast magnesium alloy (cantilever hip structure)",
+    "bimanual": true,
+    "manufacturer_history": "Second generation of the AIST/Kawada HRP series (METI/NEDO project); exterior by Yutaka Izubuchi; ~20 units built; HRP-2Kai variant modified for the DARPA Robotics Challenge (laser range finder + 4 CCD cameras, extended limbs)."
   },
   {
     "id": "kawada-nextage",
@@ -126366,27 +126384,28 @@
     "status": "Active",
     "price": "POA",
     "img": "https://cdn.sanity.io/images/7p2whiua/production/2f36326ff2d7e5cd3a92c2c7a0d053757fb1afa4-500x500.jpg",
-    "desc": "A dual-arm, human-collaborative industrial humanoid from Kawada Robotics designed to work alongside people on assembly and light-manufacturing lines. NEXTAGE combines a head, torso and two multi-jointed arms with head- and hand-mounted cameras for vision-guided tasks like parts assembly, kitting and inspection, and is widely deployed in Japanese electronics and precision manufacturing.",
+    "desc": "A dual-arm humanoid cobot from Kawada Robotics designed to work safely alongside people on manufacturing lines. Every axis uses low-power actuators under 80 W so it can operate fenceless, and electromagnetic brakes between arm and shoulder keep the arms from dropping if power is lost. Each compact hand integrates cameras, lighting and a tool changer, and an integrated image-recognition system lets NEXTAGE identify its surroundings and work objects in 3D. Status is shown via bright LED indicators. The open version, NEXTAGE OPEN, runs ROS on OpenRTM-aist for research, and the platform has been continuously improved over a decade in payload, speed and vision.",
     "dof": 15,
     "arm_dof": 12,
     "head_dof": 2,
-    "actuator_type": "Electric",
-    "cameras": "Head cameras + hand cameras (vision-guided)",
+    "actuator_type": "Low-power actuators (<80 W per axis, fenceless-safe)",
+    "cameras": "Head stereo cameras + hand cameras (with lighting)",
     "bimanual": true,
     "use_cases": [
-      "Assembly",
-      "Kitting",
-      "Inspection",
-      "Light manufacturing"
+      "Assembly & manufacturing",
+      "Human-robot collaboration",
+      "Pick-and-place",
+      "Research platform"
     ],
     "tags": [
       "humanoid",
       "nextage",
       "kawada",
+      "cobot",
       "dual-arm",
       "industrial",
-      "collaborative",
-      "assembly",
+      "fenceless",
+      "ros",
       "japan",
       "active"
     ],
@@ -126397,7 +126416,17 @@
     "gallery": [
       "https://cdn.sanity.io/images/7p2whiua/production/ae0eb79710cd4a6e00dae6b4e133cef06ba8469f-2048x1536.jpg"
     ],
-    "video": "https://youtu.be/xcTYcvJtNsU"
+    "video": "https://youtu.be/xcTYcvJtNsU",
+    "cats": [
+      "Humanoid",
+      "Industrial"
+    ],
+    "vision_system": "Integrated 3D image recognition (environment & object ID)",
+    "end_effector_type": "Tool changer (interchangeable end effectors)",
+    "safety_features": "Fenceless operation; electromagnetic arm brakes; LED status lights",
+    "os": "ROS / OpenRTM-aist (NEXTAGE OPEN)",
+    "ros": true,
+    "manufacturer_history": "Kawada Robotics (KTI Kawada Group); introduced 2009 as a fenceless dual-arm cobot, continuously upgraded for a decade+."
   },
   {
     "id": "tosy-topio",
