@@ -113299,7 +113299,7 @@
   {
     "cat": "Humanoid",
     "perf": false,
-    "price": "POA",
+    "price": 250000,
     "id": "iit-icub",
     "name": "iCub",
     "brand": "IIT (Istituto Italiano di Tecnologia)",
@@ -113308,14 +113308,19 @@
     "origin": "Italy",
     "status": "Active",
     "height_mm": 1040,
-    "desc": "iCub is an open-source child-sized (~104 cm) humanoid research platform from the Italian Institute of Technology, with ~53 DOF, rich tactile skin and vision, used worldwide to study embodied cognition, manipulation and human-robot interaction.",
+    "desc": "An open-source, child-size humanoid testbed for embodied-cognition and AI research, designed by the EU-funded RobotCub Consortium (2004–2009) and built by the Italian Institute of Technology in Genoa. About 104 cm and 22 kg, iCub has 53 actuated degrees of freedom — 7 per arm, 9 per hand (across 19 underactuated joints), 6 per leg, plus torso, neck and eyes — and a rich sensor suite: stereo camera eyes, microphones, IMU, joint force/torque sensors and a capacitive tactile skin of ~2,000 sensing points. It runs Debian Linux with the YARP middleware and is fully open-source under GPL. Roughly 30 iCubs are in labs worldwide; a jet-powered flying variant (iRonCub) has even been explored.",
     "tags": [
-      "research",
       "humanoid",
-      "iCub",
-      "IIT",
-      "embodied cognition",
-      "open source"
+      "icub",
+      "iit",
+      "research",
+      "open-source",
+      "child-size",
+      "embodied-cognition",
+      "yarp",
+      "tactile-skin",
+      "italy",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
@@ -113329,18 +113334,40 @@
     "video": "https://youtu.be/Fb_R6IDDU4A",
     "weight_kg": 33,
     "dof": 53,
-    "cameras": "2x stereo cameras (eyes) + whole-body tactile skin",
+    "cameras": "Stereo cameras (swivel-mounted 'eyes')",
     "sdk": "YARP middleware (open source)",
-    "actuator_type": "Electric motors",
+    "actuator_type": "Kollmorgen RBE brushless motors + harmonic drives; cable drives; SEA in knee/ankle; tendon-driven hands",
     "use_cases": [
-      "Cognitive & developmental robotics research"
+      "Embodied-cognition research",
+      "Manipulation & grasping",
+      "Developmental robotics",
+      "HRI research"
     ],
-    "made_in": "Italy",
+    "made_in": "Italy (IIT, Genoa)",
     "website": "https://icub.iit.it",
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "arm_dof": 14,
+    "leg_dof": 12,
+    "hand_dof": 18,
+    "neck_dof": 3,
+    "waist_dof": 3,
+    "fingers": 5,
+    "frame_material": "Ergal aluminium alloy, steel and plastic",
+    "imu": true,
+    "force_sensing": true,
+    "touch_sensing": "Capacitive tactile skin",
+    "touch_sensors_count": 2000,
+    "microphones": "Stereo (head-mounted)",
+    "chipset": "Onboard Intel Core 2 Duo + PC104 (CAN-bus to motor/sensor boards); off-board 30–40-core cluster",
+    "os": "Debian Linux (onboard)",
+    "ros": true,
+    "ai_open_source": true,
+    "power_source": "Umbilical (power + Gigabit Ethernet); battery backpack on 2.5+",
+    "currency": "EUR",
+    "manufacturer_history": "RobotCub Consortium (EU FP6, €8.5M, 2004–2010), coordinated by Giulio Sandini & Giorgio Metta at IIT; first release 2008. Software middleware YARP ('Yet Another Robot Platform')."
   },
   {
     "cat": "Research",
@@ -126481,13 +126508,13 @@
     "status": "Discontinued",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/01/ODodUahMAdTzz5t2ASOS/image.png",
-    "desc": "Honda's experimental disaster-response humanoid, revealed in 2017 as a successor concept to ASIMO aimed at hazardous environments rather than the home. Roughly 1.68 m and 85 kg, the slim E2-DR could climb vertical ladders, walk over rubble and debris, traverse pipes and squeeze through narrow gaps, with weather resistance for rain and dust. It served as an R&D platform demonstrating rugged bipedal mobility for search-and-rescue.",
+    "desc": "Honda R&D's experimental disaster-response and plant-inspection humanoid, revealed at IROS 2017 as a more rugged, practical successor direction to ASIMO after the Fukushima disaster. At 1.68 m and 85 kg (including a 1,000-Wh lithium-ion battery good for ~90 minutes), E2-DR is only 25 cm 'thick', letting it turn sideways and squeeze through 30 cm gaps common in factories. It has 33 degrees of freedom (8 per arm, 6 per leg, plus torso, hands and head) and can rotate its torso 180° to reverse its knees for climbing steep stairs and ladders. It was designed to walk rough terrain, climb, and inspect hazardous industrial environments.",
     "height_mm": 1680,
     "weight_kg": 85,
-    "actuator_type": "Electric",
+    "actuator_type": "Electric servo",
     "stair_climbing": true,
     "ip_rating": "Rain/dust resistant",
-    "cameras": "3D + IR sensing for perception",
+    "cameras": "Stereo vision + 3D environmental sensing",
     "terrain": [
       "Rubble",
       "Ladders",
@@ -126496,18 +126523,20 @@
     ],
     "use_cases": [
       "Disaster response",
-      "Search & rescue",
-      "Ladder climbing",
-      "Debris traversal"
+      "Industrial plant inspection",
+      "Rough-terrain locomotion",
+      "Ladder & stair climbing"
     ],
     "tags": [
       "humanoid",
       "e2-dr",
       "honda",
       "disaster-response",
-      "search-rescue",
+      "inspection",
       "bipedal",
-      "ladder-climbing",
+      "stair-climbing",
+      "prototype",
+      "2017",
       "japan",
       "discontinued"
     ],
@@ -126521,7 +126550,23 @@
       "https://www.roboticgizmos.com/wp-content/uploads/2017/10/04/Honda-E2-DR-1280x720.jpg",
       "https://www.clarin.com/2017/10/05/HkaDAhm3W_340x340.jpg",
       "https://i.blogs.es/661b27/robot-honda/450_1000.jpg"
-    ]
+    ],
+    "cats": [
+      "Humanoid",
+      "Disaster Response"
+    ],
+    "dof": 33,
+    "arm_dof": 16,
+    "leg_dof": 12,
+    "waist_dof": 2,
+    "depth_mm": 250,
+    "bimanual": true,
+    "battery_type": "Lithium-ion",
+    "battery_wh": 1000,
+    "battery_life": 90,
+    "battery_life_typical": 90,
+    "imu": true,
+    "manufacturer_history": "Honda R&D experimental prototype; presented at IROS 2017 ('Development of Experimental Legged Robot for Inspection and Disaster Response in Plants'), building on post-Fukushima humanoid research."
   },
   {
     "id": "k-scale-kbot-2025",
