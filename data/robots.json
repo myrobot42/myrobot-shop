@@ -120400,15 +120400,28 @@
     "brand": "MIT AI Lab",
     "cat": "Humanoid",
     "year": 1993,
-    "status": "Active",
-    "desc": "MIT’s upper-torso humanoid (1993–2003) built on the thesis that human-like intelligence requires a human-like body. Cog learned eye-hand coordination, object tracking and social cueing, seeding the embodied-AI movement and the humanoid wave that followed.",
-    "actuator_type": "Upper-torso humanoid: head, trunk, two arms",
+    "status": "Discontinued",
+    "desc": "An influential upper-torso humanoid built from 1993 in Rodney Brooks' lab at the MIT Artificial Intelligence Laboratory to explore embodied cognition — the theory that human-like intelligence requires a human-like body. Cog began as a 14-DOF torso with one arm and grew to two six-DOF arms, a seven-DOF head and a three-joint torso (~22 DOF), with visual, auditory, vestibular, kinesthetic and tactile senses. Its series-elastic arms were deliberately safe to touch. It demonstrated reaching, smooth-pursuit tracking, saccades, vergence, imitation (nodding/shaking) and joint attention. Alumni of the project include Cynthia Breazeal, Brian Scassellati and Aaron Edsinger.",
+    "actuator_type": "Series Elastic Actuators (safe human interaction)",
     "use_cases": [
-      "Embodied cognition research"
+      "Embodied-cognition research",
+      "Developmental robotics",
+      "HRI research"
     ],
-    "made_in": "USA",
+    "made_in": "USA (MIT Artificial Intelligence Laboratory)",
     "fig": "🤖",
-    "tags": [],
+    "tags": [
+      "humanoid",
+      "cog",
+      "mit",
+      "research",
+      "historical",
+      "embodied-cognition",
+      "upper-torso",
+      "sea",
+      "rodney-brooks",
+      "discontinued"
+    ],
     "score": 75,
     "rating": 4,
     "website": "https://www.csail.mit.edu",
@@ -120428,7 +120441,23 @@
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "dof": 22,
+    "arm_dof": 12,
+    "head_dof": 7,
+    "waist_dof": 3,
+    "cameras": "Stereo cameras (narrow + wide FOV per eye)",
+    "force_sensing": true,
+    "touch_sensing": "Tactile sensing",
+    "sensors_list": [
+      "Stereo vision",
+      "Auditory",
+      "Vestibular",
+      "Kinesthetic",
+      "Tactile"
+    ],
+    "bimanual": true,
+    "manufacturer_history": "Cog project led by Rodney Brooks (1993–2003); contributors incl. Cynthia Breazeal (Kismet), Brian Scassellati (Yale), Aaron Edsinger (Meka/Hello Robot). Now in the MIT Museum."
   },
   {
     "id": "cmu-dante-ii",
@@ -122235,29 +122264,35 @@
     "status": "Active",
     "height_mm": 1580,
     "weight_kg": 43,
-    "dof": 42,
+    "dof": 44,
     "sensors": "Cameras, gyroscope, accelerometer, 6-axis force sensors",
     "frame_material": "Silicone face/hands, plastic exterior, metal frame",
     "tags": [
       "humanoid",
-      "AIST",
-      "HRP-4C",
-      "Miim",
+      "hrp-4c",
+      "miim",
+      "aist",
+      "entertainment",
       "gynoid",
-      "Japan"
+      "vocaloid",
+      "fashion",
+      "2009",
+      "japan",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "Entertainment",
-      "HRI research",
+      "Entertainment & performance",
       "Fashion shows",
-      "Singing/dancing demos"
+      "Singing / dance",
+      "Human-like gait research",
+      "Device evaluation (human simulator)"
     ],
-    "made_in": "Japan",
+    "made_in": "Japan (AIST)",
     "website": "",
-    "desc": "Nicknamed 'Miim', HRP-4C is a 158 cm humanoid 'gynoid' from Japan's AIST (2009) with a realistic female face and 42 DoF. Built to average Japanese female body dimensions, it walks, sings (via Vocaloid) and models on catwalks — an early icon of expressive entertainment humanoids.",
+    "desc": "Nicknamed 'Miim', HRP-4C is a feminine-looking biped humanoid unveiled by Japan's AIST in March 2009, built to the proportions of an average young Japanese woman (from the 1997–98 body-dimension database). At 158 cm and 43 kg (with battery), it uses ~44 degrees of freedom — 8 of them dedicated to facial expressions — plus speech recognition and ambient-sound recognition, and can sing using the Vocaloid synthesizer. Running on the OpenRTM-aist / OpenHRP3 platform, Miim became famous for fashion-show catwalks, dance performances and singing demonstrations, and later for 'super-realistic' human-like walking.",
     "dof_note": "30 body + 8 face + facial expressions",
     "note": "AIST gynoid \"Miim\"; built to average Japanese female dimensions; sings (Vocaloid), models on catwalks",
     "actuator_type": "Electric servo",
@@ -122269,7 +122304,16 @@
       "https://static.designboom.com/cms/images/erica/---robot/robot03.jpg",
       "https://www.hobby-wave.com/wp-content/uploads/2017/10/03-239.jpg"
     ],
-    "video": "https://youtu.be/A27hGiMatWs"
+    "video": "https://youtu.be/A27hGiMatWs",
+    "cats": [
+      "Humanoid",
+      "Entertainment"
+    ],
+    "head_dof": 8,
+    "shell_material": "Silicone-skinned realistic face",
+    "voice_interaction": "Speech recognition + ambient-sound recognition; Vocaloid singing",
+    "os": "OpenRTP (OpenRTM-aist, OpenHRP3)",
+    "manufacturer_history": "Developed by AIST; publicly demonstrated 16 Mar 2009, with gait upgrades shown 2010–2011."
   },
   {
     "cat": "Humanoid",
@@ -122279,29 +122323,33 @@
     "sub": "Teleoperated android",
     "year": 2010,
     "origin": "Japan",
-    "status": "Research",
+    "status": "Active",
     "dof": 12,
-    "actuator_type": "Pneumatic actuators",
-    "frame_material": "Silicone skin, real human hair, FRP skull",
+    "actuator_type": "Pneumatic (facial + upper body)",
+    "frame_material": "Fibre-reinforced-plastic skull; metal & plastic internal frame",
     "tags": [
+      "humanoid",
+      "geminoid-f",
+      "ishiguro",
+      "atr",
       "android",
-      "Geminoid",
-      "Ishiguro",
       "teleoperated",
-      "lifelike",
-      "Japan"
+      "silicone-skin",
+      "hri",
+      "2010",
+      "japan"
     ],
-    "fig": "👩",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
       "Human-robot interaction research",
-      "Theatre",
-      "Telepresence research"
+      "Presence / teleoperation research",
+      "Theatre & performance"
     ],
-    "made_in": "Japan",
+    "made_in": "Japan (ATR / Osaka University / Kokoro)",
     "website": "",
-    "desc": "A teleoperated android copy of a real woman, built by Kokoro and Hiroshi Ishiguro (ATR/Osaka University, 2010). Pneumatically actuated with silicone skin and real human hair, Geminoid F autonomously breathes and blinks and mirrors a remote operator's expressions — a landmark in uncanny-realistic HRI research.",
+    "desc": "A female-appearance teleoperated android unveiled in 2010 by Hiroshi Ishiguro (ATR / Osaka University) with animatronics firm Kokoro, following the male Geminoid HI-1 (2006). Modelled on a real woman, Geminoid F has silicone-rubber skin, real human hair and a fibre-reinforced-plastic skull over a metal-and-plastic frame. Pneumatic actuators drive its facial structure; it performs breathing and blinking autonomously and is otherwise teleoperated to study human-robot interaction, presence and the 'uncanny valley'. It has appeared on stage in theatre productions.",
     "control": "Teleoperated (mirrors remote operator); autonomous breathing + blinking",
     "note": "Kokoro + Hiroshi Ishiguro (ATR/Osaka Univ); copy of a real woman; landmark uncanny-realism HRI",
     "img": "https://cdn.sanity.io/images/7p2whiua/production/fb8e6372fd8cf116677bd50f96311bd17c5c391b-2048x1536.jpg",
@@ -122311,7 +122359,10 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwasOavyMnshUqdVP18iF3ZUqkz5Ng4OytIddgplmikLQSA-aZGX9_jlg&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKphbVZSyd-3qHXgeQqMg21IqZuNxpJIRndl3vOKXoxtE0rlmgPlx9Bk&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6PrwNt8EZX3ruxWa_FW0gRK2NAxbDGUXOtj_BKSzNTH-2FKzZflOB-I0W&s=10"
-    ]
+    ],
+    "shell_material": "Silicone rubber skin with real human hair",
+    "emotional_expression": true,
+    "manufacturer_history": "Hiroshi Ishiguro Laboratory (ATR) with Kokoro; sibling to Geminoid HI-1 (2006)."
   },
   {
     "cat": "Research",
@@ -122550,23 +122601,28 @@
     "cameras": "Vision (face/emotion recognition)",
     "tags": [
       "humanoid",
-      "Nadine",
-      "NTU",
+      "nadine",
+      "ntu",
       "social",
-      "lifelike",
-      "receptionist"
+      "gynoid",
+      "conversational",
+      "receptionist",
+      "memory",
+      "singapore",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "Social companion research",
-      "Receptionist",
+      "Receptionist / customer service",
+      "Eldercare & social support",
+      "Companionship",
       "HRI research"
     ],
-    "made_in": "Singapore",
+    "made_in": "Japan (Kokoro) / Singapore (NTU)",
     "website": "",
-    "desc": "A lifelike social humanoid from NTU Singapore (Nadia Thalmann), modeled on her creator. Nadine has soft silicone skin, recognizes faces and emotions, remembers past conversations and expresses moods — deployed as a receptionist and used to study long-term human-robot social interaction.",
+    "desc": "A gynoid social humanoid modelled on Prof. Nadia Magnenat Thalmann, with hardware built by Kokoro (Japan) in 2013 and software developed at NTU Singapore (and later the University of Geneva / MIRALab). Nadine has natural-looking skin, hair and hands and 27 degrees of freedom for facial expression and upper-body gesture. Socially intelligent, she makes eye contact, greets people, recognises those she has met before, remembers past conversations, answers autonomously in several languages, and simulates emotion and personality. She served a pilot 'internship' as an AIA Singapore customer-service receptionist in 2019.",
     "sensors": "Cameras (face + emotion recognition), microphones",
     "note": "NTU Singapore (Nadia Thalmann); remembers past conversations; deployed as receptionist",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/19/mItx8iU1dseORSmdWJ1j/image.jpg",
@@ -122582,7 +122638,15 @@
     "cats": [
       "Humanoid",
       "Social"
-    ]
+    ],
+    "hand_type": "Realistic articulated hands",
+    "shell_material": "Silicone skin with natural hair",
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "emotional_expression": true,
+    "natural_language_commands": true,
+    "languages_spoken": "Multiple",
+    "manufacturer_history": "Hardware by Kokoro (2013); social-AI software by NTU Singapore (Prof. Nadia Magnenat Thalmann), continued at University of Geneva / MIRALab."
   },
   {
     "cat": "Social",
