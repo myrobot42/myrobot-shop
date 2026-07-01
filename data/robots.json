@@ -115458,52 +115458,68 @@
       "https://esut.de/wp-content/uploads/2024/03/Mission-SP-mit-Fieldranger-RCWS_Rheinmetall.jpg"
     ],
     "video": "https://youtu.be/tNYsne9qnHY",
-    "payload_kg": 1000,
+    "payload_kg": 600,
     "actuator_type": "Electric 8x8 drivetrain (silent watch capable)",
     "use_cases": [
-      "Cargo transport",
-      "Casualty evacuation",
-      "Surveillance"
+      "Silent forward resupply",
+      "Silent watch",
+      "Armed reconnaissance"
     ],
     "made_in": "Canada (Rheinmetall Canada)",
     "website": "https://www.rheinmetall.com/en/products/uncrewed-vehicles/uncrewed-ground-systems/mission-master-a-ugs",
     "also_known_as": "Silent Partner",
-    "weight_kg": 1134,
-    "payload": 1000,
-    "speed": 11.11,
-    "speed_ms": 11.11,
+    "weight_kg": 1100,
+    "payload": 600,
+    "speed": 8.33,
+    "speed_ms": 8.33,
     "terrain": [
       "Cross-country",
-      "Mud",
+      "Amphibious",
       "Snow",
-      "Amphibious"
+      "Sand",
+      "Forest"
     ],
-    "cameras": "EO/IR, 360° ring camera",
+    "cameras": "360° camera suite + LiDAR + radar",
     "thermal_camera": true,
     "lidar": true,
-    "battery_type": "Electric Li-ion",
+    "battery_type": "Lithium-ion",
     "autonomous": true,
     "role": [
       "Logistics",
-      "Silent watch",
-      "Recon",
+      "Surveillance",
+      "CasEvac",
       "Fire support",
-      "CasEvac"
+      "CBRN detection",
+      "Comms relay"
     ],
     "deploy_method": [
-      "CH-47",
-      "CH-53",
-      "C-130"
+      "Vehicle transported",
+      "Air-transportable"
     ],
     "autonomy_level": 3,
     "encryption": "Encrypted C2 datalink",
     "export_control": "Canadian / German export control",
     "customers": [
-      "UK",
-      "Netherlands",
-      "Austria",
-      "Japan (JGSDF trials)"
-    ]
+      "UK MoD (Robotic Platoon Vehicles)",
+      "Japan GSDF (trials)",
+      "Netherlands"
+    ],
+    "announced": "2018",
+    "length_mm": 2950,
+    "width_mm": 1550,
+    "height_mm": 1330,
+    "ground_clearance_mm": 240,
+    "payload_peak": 600,
+    "max_incline_deg": 40,
+    "battery_life": 480,
+    "battery_life_typical": 480,
+    "endurance_hours": 8,
+    "power_source": "All-electric (central electric motor)",
+    "propulsion": "8x8 battery-electric",
+    "amphibious": true,
+    "os": "Rheinmetall PATH A-Kit",
+    "imu": true,
+    "navigation": "Follow-me, convoy, waypoint (PATH A-Kit)"
   },
   {
     "cat": "Military",
@@ -115634,11 +115650,11 @@
     "width_mm": 2667,
     "height_mm": 1511,
     "actuator_type": "Hybrid diesel-electric drivetrain, tracked",
-    "cameras": "SUMIT 360° EO/IR perception suite",
+    "cameras": "SUMIT 360 EO/IR composite (360° situational awareness)",
     "use_cases": [
       "Robotic combat vehicle (US Army RCV-M candidate)"
     ],
-    "made_in": "USA (Textron Systems / Howe & Howe)",
+    "made_in": "USA (Textron Systems / Howe & Howe — Team Lynx)",
     "video": "https://youtu.be/oYqAf-3Oe4o",
     "length_mm": 5944,
     "payload": 3628,
@@ -115652,24 +115668,30 @@
     "lidar": true,
     "autonomous": true,
     "role": [
-      "Direct fire support",
+      "Robotic Combat Vehicle (RCV)",
       "ISR",
-      "Route clearance",
-      "Force protection",
-      "Logistics"
+      "Direct fire support",
+      "Wingman/breach"
     ],
     "deploy_method": [
-      "C-130 transportable",
-      "Heavy transport"
+      "Vehicle transported"
     ],
     "autonomy_level": 3,
     "jamming_resistant": true,
     "encryption": "Hardened wireless C2 link",
     "export_control": "ITAR (USML Cat VII)",
     "customers": [
-      "US Army (RCV-M trials)"
+      "US Army (RCV program)"
     ],
-    "website": "https://www.textronsystems.com/products/ripsaw-m5"
+    "website": "https://www.textronsystems.com/products/ripsaw-m5",
+    "announced": "2019",
+    "propulsion": "Tracked diesel-electric",
+    "ai_model": "Open-architecture AI object detection/identification",
+    "sensors_list": [
+      "SUMIT 360 EO/IR",
+      "Tethered R80D SkyRaider UAS",
+      "AI object detection"
+    ]
   },
   {
     "cat": "Military",
@@ -115795,11 +115817,11 @@
       "Logistics",
       "CasEvac",
       "ISR",
-      "Squad support"
+      "Force protection"
     ],
     "endurance_hours": 8,
     "deploy_method": [
-      "Vehicle transport"
+      "Self-deploying / vehicle transported"
     ],
     "mil_spec": true,
     "autonomy_level": 3,
@@ -115808,7 +115830,9 @@
       "international defense customers"
     ],
     "use_cases": [
-      "Cargo transport (up to 750 kg), casualty evac, ISR"
+      "Squad resupply",
+      "Casualty extraction",
+      "Perimeter ISR"
     ],
     "made_in": "Israel (Roboteam)",
     "video": "https://youtu.be/XLVl4eI6UvE?list=PLOkNEhZgmoqfnvJwieGz0ez2zC6AQdXt5",
@@ -115821,7 +115845,12 @@
     "thermal_camera": true,
     "autonomous": true,
     "export_control": "Israeli MoD (DECA) export control",
-    "website": "https://www.roboteam.com/"
+    "website": "https://robo-team.com/",
+    "power_source": "Hybrid-electric",
+    "propulsion": "8x8 wheeled",
+    "cameras": "360° day/night camera suite",
+    "navigation": "Follow-me, waypoint, autonomous return; ROS-based",
+    "ros": true
   },
   {
     "cat": "AGV/AMR",
@@ -123295,12 +123324,12 @@
     "sub": "Man-Portable Recon / EOD Robot",
     "year": 2012,
     "origin": "USA / UK",
-    "made_in": "USA / UK (QinetiQ)",
+    "made_in": "USA (QinetiQ North America)",
     "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "Compact, rugged man-portable tracked robot carried in a backpack and deployable in seconds for reconnaissance, inspection and light EOD in confined spaces. The DR20 can be fitted with a manipulator arm; its smaller sibling, the throwable DR10, provides immediate situational awareness. Widely used by NATO EOD and dismounted units, including extensive UK service.",
-    "weight_kg": 10,
+    "weight_kg": 9,
     "payload": 4.5,
     "payload_kg": 4.5,
     "stair_climbing": true,
@@ -123312,19 +123341,21 @@
     "thermal_camera": true,
     "autonomous": false,
     "role": [
-      "Recon",
+      "Recon (SUGV)",
+      "EOD/IED disarm",
       "Inspection",
-      "Light EOD"
+      "Checkpoint/perimeter security"
     ],
     "deploy_method": [
-      "Man-portable (backpack)"
+      "Man-portable (backpack)",
+      "Throwable (from 3-storey / over vehicles)"
     ],
     "autonomy_level": 1,
     "export_control": "ITAR (USML Cat XI)",
     "customers": [
-      "UK MOD",
-      "US forces",
-      "NATO EOD units"
+      "US Marine Corps",
+      "UK MoD (~100 units, Afghanistan)",
+      "US law enforcement (SWAT)"
     ],
     "tags": [
       "military",
@@ -123337,10 +123368,30 @@
       "man-portable",
       "active"
     ],
-    "website": "https://www.qinetiq.com/",
+    "website": "https://www.qinetiq.com/en-us/what-we-do/services-and-products/dragon-runner-small-and-compact-robot",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2008",
+    "length_mm": 380,
+    "speed": 2.2,
+    "speed_ms": 2.2,
+    "power_source": "Military batteries",
+    "propulsion": "4-wheel drive (field-transformable)",
+    "cameras": "Front tilting day camera + motion/sound sensors (detect to ~9 m)",
+    "hand_type": "Optional snap-on manipulator arm",
+    "sensors_list": [
+      "Tilting EO camera",
+      "Microphone",
+      "Motion sensors"
+    ],
+    "communication_range_km": 0.65,
+    "use_cases": [
+      "Urban reconnaissance",
+      "Under-vehicle inspection",
+      "Sewer/drainpipe recon",
+      "Hostage barricade recon"
+    ]
   },
   {
     "id": "milrem-themis",
@@ -123494,26 +123545,29 @@
     "payload_kg": 1000,
     "range_km": 450,
     "terrain": [
-      "Extreme terrain",
-      "Mud",
+      "Cross-country",
+      "Amphibious",
+      "Ice",
       "Snow",
-      "Amphibious"
+      "Sand",
+      "Mountain"
     ],
-    "cameras": "EO/IR, 360°",
+    "cameras": "360° camera suite + LiDAR + radar",
     "thermal_camera": true,
     "lidar": true,
-    "battery_type": "Hybrid diesel-electric (Li-ion)",
+    "battery_type": "Lithium-ion",
     "autonomous": true,
     "role": [
-      "Heavy logistics",
+      "Logistics",
       "Fire support",
-      "Recon",
+      "Counter-UAS",
+      "Surveillance",
       "CasEvac"
     ],
     "deploy_method": [
-      "CH-47",
-      "CH-53",
-      "C-130"
+      "Internal load CH-47 / CH-53 / C-130",
+      "NATO A-frame tow",
+      "Sea/rail"
     ],
     "autonomy_level": 3,
     "encryption": "Encrypted C2 datalink",
@@ -123535,7 +123589,20 @@
     "website": "https://www.rheinmetall.com/en/products/uncrewed-vehicles/uncrewed-ground-systems/mission-master-a-ugs",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2022",
+    "speed": 11.1,
+    "speed_ms": 11.1,
+    "battery_life": 360,
+    "battery_life_typical": 360,
+    "power_source": "Hybrid diesel-electric",
+    "propulsion": "Hybrid (diesel engine + silent electric motor)",
+    "operating_temp_min": -40,
+    "amphibious": true,
+    "os": "Rheinmetall PATH A-Kit",
+    "imu": true,
+    "navigation": "Follow-me, convoy, waypoint (PATH A-Kit); wolfpack multi-UGV control",
+    "armament": "Optional Fieldranger Multi RWS w/ twin M134D Minigun (counter-UAS + fire support)"
   },
   {
     "id": "rheinmetall-mission-master-xt",
@@ -123554,33 +123621,36 @@
     "payload_kg": 1000,
     "range_km": 750,
     "terrain": [
-      "Extreme terrain",
-      "Mud",
+      "Cross-country",
+      "Amphibious",
+      "Ice",
       "Snow",
-      "Amphibious"
+      "Sand",
+      "Rocky",
+      "Mountain"
     ],
-    "cameras": "EO/IR, 360°; 3D LiDAR + radar",
+    "cameras": "360° awareness: LiDAR, radar, cameras + ultrasonic proximity",
     "thermal_camera": true,
     "lidar": true,
-    "battery_type": "Hybrid (Li-ion silent watch)",
+    "battery_type": "Lithium-ion (silent watch)",
     "endurance_hours": 6,
     "autonomous": true,
     "role": [
-      "Heavy logistics",
+      "Logistics",
       "Fire support",
-      "Airborne resupply",
-      "Recon"
+      "Surveillance",
+      "CasEvac",
+      "CBRN detection",
+      "Comms relay"
     ],
     "deploy_method": [
-      "CH-47",
-      "CH-53",
-      "C-130",
-      "Parachute"
+      "Parachute air-drop",
+      "Vehicle transported"
     ],
     "autonomy_level": 3,
     "jamming_resistant": true,
     "encryption": "Encrypted C2 datalink",
-    "mil_spec": "NATO STANAG / US MIL-STD-6017",
+    "mil_spec": "NATO STANAGs; US MIL-STD-6017 (VMF/JVMF)",
     "export_control": "Canadian / German export control",
     "customers": [
       "NATO trials / evaluation"
@@ -123600,7 +123670,21 @@
     "website": "https://www.rheinmetall.com/en/products/uncrewed-vehicles/uncrewed-ground-systems/mission-master-a-ugs",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2021",
+    "weight_kg": 2217,
+    "speed": 11.1,
+    "speed_ms": 11.1,
+    "max_incline_deg": 35,
+    "battery_life": 360,
+    "battery_life_typical": 360,
+    "power_source": "Diesel engine + Li-ion silent-watch battery",
+    "propulsion": "4x4 diesel (Zeal Motor Fat Truck platform)",
+    "amphibious": true,
+    "os": "Rheinmetall PATH A-Kit",
+    "imu": true,
+    "navigation": "Follow-me, convoy, waypoint (PATH A-Kit)",
+    "armament": "Modular fire-support: twin-M134 Minigun RCWS, Spike NLOS, Fieldranger, loitering-UAS module"
   },
   {
     "id": "hdt-hunter-wolf",
@@ -123615,29 +123699,37 @@
     "price": "POA",
     "img": "",
     "desc": "Rugged 6x6 hybrid-electric squad support UGV (Wheeled Offload Logistics Follower) built to carry heavy loads, evacuate casualties and mount a remote weapon station for overwatch. Fielded by US Army units including the 101st Airborne Division, where it has been operated with a remotely-controlled .50-calibre machine gun during combat training. Designed for last-tactical-mile resupply and dismounted-squad support in GPS-degraded environments.",
-    "payload": 454,
-    "payload_kg": 454,
+    "payload": 1270,
+    "payload_kg": 1270,
     "terrain": [
-      "Cross-country",
-      "Mud",
-      "Mountains",
-      "All-terrain"
+      "Narrow trails",
+      "Steep slopes",
+      "Dense jungle",
+      "Water fording 610 mm"
     ],
     "thermal_camera": true,
     "autonomous": true,
     "role": [
       "Logistics",
-      "CasEvac",
-      "Overwatch / RWS",
-      "Squad support"
+      "CasEvac (4 litters)",
+      "ISR",
+      "Armed overwatch",
+      "Power export"
     ],
     "deploy_method": [
-      "Vehicle / air transport"
+      "UH-60 sling load",
+      "Internal V-22",
+      "3x in CH-47",
+      "8x in C-130"
     ],
-    "autonomy_level": 3,
+    "autonomy_level": 2,
     "export_control": "ITAR (USML Cat XI)",
     "customers": [
-      "US Army (incl. 101st Airborne Division)"
+      "US Army (3rd BCT, 10th Mountain)",
+      "US Marine Corps",
+      "SOCOM",
+      "Australian Defence Force",
+      "Ukrainian Army"
     ],
     "tags": [
       "military",
@@ -123651,10 +123743,23 @@
       "rws",
       "active"
     ],
-    "website": "https://www.hdtglobal.com/",
+    "website": "https://www.hdtrobotics.com/products/hunter-wolf/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2017",
+    "weight_kg": 1633,
+    "speed": 4.5,
+    "speed_ms": 4.5,
+    "range_km": 322,
+    "endurance_hours": 72,
+    "max_incline_deg": 31,
+    "power_source": "Hybrid diesel/JP-8 electric; 20 kW generator (15 kW export)",
+    "propulsion": "6x6 diesel-electric hybrid",
+    "os": "ROS-compatible modular architecture",
+    "ros": true,
+    "cameras": "EO/IR; optional EchoShield radar",
+    "armament": "Remote weapon station up to 30 mm autocannon (live-fire tested); M2 .50 cal option"
   },
   {
     "id": "gd-mutt-s-met",
@@ -123679,17 +123784,18 @@
     ],
     "autonomous": true,
     "role": [
-      "Squad logistics",
-      "Exportable power",
-      "CasEvac"
+      "Squad logistics (S-MET)",
+      "Power generation",
+      "CasEvac",
+      "ISR carrier"
     ],
     "deploy_method": [
-      "Vehicle / air transport"
+      "Self-deploying / vehicle transported"
     ],
-    "autonomy_level": 3,
+    "autonomy_level": 2,
     "export_control": "ITAR (USML Cat XI)",
     "customers": [
-      "US Army (program of record)"
+      "US Army (S-MET Program of Record, Increment I)"
     ],
     "tags": [
       "military",
@@ -123705,7 +123811,15 @@
     "website": "https://www.gdls.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2019",
+    "power_source": "Diesel-electric hybrid; exportable power (3 kW stationary / 1 kW moving)",
+    "propulsion": "8x8 wheeled",
+    "navigation": "Leader-follower, tele-operation, waypoint",
+    "use_cases": [
+      "Dismounted squad resupply",
+      "Battery recharge / power export"
+    ]
   },
   {
     "id": "roboteam-mtgr",
@@ -123781,25 +123895,25 @@
     "payload_kg": 550,
     "terrain": [
       "Cross-country",
-      "Mud",
-      "Mountains"
+      "Paved (43 km/h)",
+      "Unpaved (22 km/h)"
     ],
     "thermal_camera": true,
     "autonomous": true,
     "role": [
-      "Logistics",
-      "ISR",
+      "Ammunition transport",
       "CasEvac",
-      "Fire support"
+      "Recon/surveillance",
+      "Close combat support"
     ],
     "deploy_method": [
-      "Vehicle / air transport"
+      "Self-deploying / vehicle transported"
     ],
     "autonomy_level": 3,
     "export_control": "DAPA (Korea) export control",
     "customers": [
-      "South Korea",
-      "US Army (Foreign Comparative Testing)"
+      "ROK Army",
+      "US Army & USMC (Foreign Comparative Test, Hawaii 2023)"
     ],
     "tags": [
       "military",
@@ -123811,10 +123925,23 @@
       "casevac",
       "active"
     ],
-    "website": "https://www.hanwhaaerospace.com/",
+    "website": "https://www.hanwha.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2019",
+    "weight_kg": 2000,
+    "speed": 11.9,
+    "speed_ms": 11.9,
+    "range_km": 100,
+    "battery_type": "Battery-electric",
+    "power_source": "Fully electric",
+    "propulsion": "6x6 all-electric",
+    "os": "HAEMOS (Hanwha robotic/autonomous systems)",
+    "ai_model": "DNN-based perception + RCWS targeting",
+    "cameras": "EO/IR ISR suite; gunshot source localization",
+    "armament": "DNN RCWS — 5.56 mm extendable to 7.62 mm MG; gunshot localization + return fire",
+    "navigation": "Autonomous off-road, tether-follow, autonomous homing on comms loss, MUM-T"
   },
   {
     "id": "iai-rex-mk-ii",
@@ -123829,8 +123956,8 @@
     "price": "POA",
     "img": "",
     "desc": "Wheeled infantry combat-support UGV from IAI's ELTA division, designed to accompany dismounted troops carrying gear, ammunition and water, evacuate casualties and act as a mobile sensor and weapons platform. Operated by remote control or follow-me autonomy and integrated with battle-management systems for networked operations.",
-    "payload": 500,
-    "payload_kg": 500,
+    "payload": 1300,
+    "payload_kg": 1300,
     "terrain": [
       "Cross-country",
       "Urban",
@@ -123839,20 +123966,21 @@
     "thermal_camera": true,
     "autonomous": true,
     "role": [
-      "Infantry support",
       "Logistics",
-      "CasEvac",
+      "Fire support",
       "ISR",
-      "Weapons platform"
+      "CasEvac",
+      "MUM-T"
     ],
     "deploy_method": [
-      "Vehicle transport"
+      "2x inside a single V-22 Osprey",
+      "Vehicle transported"
     ],
     "autonomy_level": 3,
     "export_control": "Israeli MoD (DECA) export control",
     "customers": [
-      "Israel",
-      "international evaluation"
+      "UK Ministry of Defence",
+      "several international customers"
     ],
     "tags": [
       "military",
@@ -123867,7 +123995,13 @@
     "website": "https://www.iai.co.il/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "announced": "2021",
+    "power_source": "Hybrid-electric",
+    "propulsion": "All-wheel drive hybrid-electric",
+    "cameras": "EO/IR ISR suite",
+    "armament": "RCWS — 7.62 mm MG and .50 cal (12.7 mm) HMG",
+    "navigation": "Fully autonomous with C2, or remote operation; MUM-T (demo'd with BAE Systems)"
   },
   {
     "id": "aerovironment-teodor-evo",
