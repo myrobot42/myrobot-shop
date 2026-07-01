@@ -10,8 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-F (questions page: in-app catnav sidebar CATEGORY + MANUFACTURER filtering) -->
-<meta name="mrs-build" content="build-F">
+<!-- BUILD-TAG: build-G (events calendar page: Region + Type sidebar; Discover nav -> Events) -->
+<meta name="mrs-build" content="build-G">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -272,6 +272,16 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .qa-a{padding:0 16px 16px;font-size:13.5px;line-height:1.65;color:var(--mut);white-space:pre-line}
 .qa-brand{display:inline-block;font-size:10.5px;color:var(--acc);border:1px solid var(--bdr);border-radius:4px;padding:1px 6px;margin-left:8px;vertical-align:middle;font-weight:600}
 .q-empty{padding:34px 20px;text-align:center;color:var(--mut);background:#fff;border:1px dashed var(--bdr);border-radius:10px;font-size:13.5px}
+.ev-card{display:flex;gap:14px;border:1px solid var(--bdr);border-radius:10px;background:#fff;padding:14px 16px;margin-bottom:10px}
+.ev-date{flex-shrink:0;width:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--acc);color:#fff;border-radius:8px;padding:8px 0}
+.ev-mon{font-family:'Space Mono','Courier New',monospace;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.ev-day{font-size:20px;font-weight:800;line-height:1.1}
+.ev-info{min-width:0;flex:1}
+.ev-name{font-weight:700;font-size:14.5px;color:#111;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ev-type{font-size:10.5px;font-weight:600;color:var(--acc);border:1px solid var(--bdr);border-radius:4px;padding:1px 6px}
+.ev-meta{font-size:12.5px;color:var(--mut);margin-top:3px}
+.ev-desc{font-size:13px;line-height:1.55;color:var(--mut);margin-top:7px}
+.ev-link{display:inline-block;margin-top:8px;font-size:12.5px;font-weight:600;color:var(--acc);text-decoration:none}
 .cm-grouplabel{font-size:10px;font-weight:700;letter-spacing:.8px;color:var(--mut);margin:0 0 9px;display:flex;justify-content:space-between;align-items:center}
 .filter-opt.active{border-color:var(--acc);background:var(--accbg,#ede9fe)}
 .filter-opt.active .filter-opt-label{color:var(--acc);font-weight:700}
@@ -991,7 +1001,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <a id="nav-db" onclick="goPage('db')">Database</a>
       <a id="nav-finder" onclick="goPage('finder')">Finder</a>
       <a id="nav-compare" onclick="goPage('compare')">Compare</a>
-      <a id="nav-rankings" onclick="goPage('rankings')">Discover</a>
+      <a id="nav-events" onclick="goPage('events')">Events</a>
       <a id="nav-news" onclick="goPage('news')">News</a>
       <a id="nav-videos" onclick="goPage('videos')">Videos</a>
       <a id="nav-questions" onclick="goPage('questions')">Questions</a>
@@ -1359,6 +1369,19 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   </div>
 </div>
 
+<!-- EVENTS -->
+<div id="page-events" class="page">
+  <div class="catnav-shell">
+    <aside class="catnav-side" id="events-menu"></aside>
+    <div class="catnav-main"><div class="events-page" style="padding:24px 20px">
+      <div class="page-title">Robotics &amp; Tech Events</div>
+      <p style="color:var(--mut);font-size:13px;margin-top:5px;margin-bottom:14px">A calendar of the world's major robotics and tech shows, expos and conferences. Filter by region or type — past events drop off automatically.</p>
+      <div id="events-scope" class="q-scope"></div>
+      <div id="events-body"></div>
+    </div></div>
+  </div>
+</div>
+
 <!-- FINDER -->
 <div id="page-finder" class="page">
   <div class="finder-band">
@@ -1615,6 +1638,7 @@ function _renderPage(p, opts){
   if(p==='manufacturers'){renderManufacturers();}
   if(p==='videos'){renderVideos();renderCatMenu('videos-menu');}
   if(p==='questions'){renderQuestions();renderCatMenu('questions-menu');}
+  if(p==='events'){renderEvents();renderEventsMenu('events-menu');}
   if(p==='news'){renderNews();}
   if(p==='submit-review'){populateReviewSelect();setupReviewForm();}
   if(p==='profile' && opts.id){
@@ -5242,6 +5266,99 @@ function renderQuestions(){
       return '<details class="qa"><summary><span>'+e(q.q)+badge+'</span></summary><div class="qa-a">'+e(q.a)+'</div></details>';
     }).join('');
     return '<div class="q-catgroup">'+e(g)+'</div>'+items;
+  }).join('');
+  body.innerHTML=html;
+}
+
+/* ---- Events page — robotics & tech shows calendar (Region + Type sidebar) ---- */
+var EVENTS_DATA=null, EVENTNAV={regions:{},types:{}};
+function loadEventsData(cb){
+  if(EVENTS_DATA!==null){ if(cb)cb(); return; }
+  fetch('data/events.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(j){
+    EVENTS_DATA=(j&&j.events)?j.events:(Array.isArray(j)?j:[]); if(cb)cb();
+  }).catch(function(){ EVENTS_DATA=[]; if(cb)cb(); });
+}
+function evToday(){ var d=new Date(); d.setHours(0,0,0,0); return d; }
+function evParse(s){ var p=String(s||'').split('-'); return p.length>=3?new Date(+p[0],+p[1]-1,+p[2]):null; }
+function evUpcoming(ev){ var end=evParse(ev.end||ev.start); return end?end>=evToday():false; }
+function eventMatch(ev){
+  var rs=Object.keys(EVENTNAV.regions),ts=Object.keys(EVENTNAV.types);
+  var okr=!rs.length||rs.indexOf(ev.region)>=0;
+  var okt=!ts.length||ts.indexOf(ev.type)>=0;
+  return okr&&okt;
+}
+function eventsActive(){ return Object.keys(EVENTNAV.regions).length>0||Object.keys(EVENTNAV.types).length>0; }
+function renderEventsMenu(elId){
+  var bar=document.getElementById(elId); if(!bar)return;
+  if(EVENTS_DATA===null){ loadEventsData(function(){renderEventsMenu(elId);}); return; }
+  function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  function a(s){return e(s).replace(/'/g,'&#39;');}
+  var up=EVENTS_DATA.filter(evUpcoming);
+  var selR=Object.keys(EVENTNAV.regions),selT=Object.keys(EVENTNAV.types);
+  var rc={}; up.forEach(function(ev){ if(selT.length&&selT.indexOf(ev.type)<0)return; if(ev.region)rc[ev.region]=(rc[ev.region]||0)+1; });
+  var tc={}; up.forEach(function(ev){ if(selR.length&&selR.indexOf(ev.region)<0)return; if(ev.type)tc[ev.type]=(tc[ev.type]||0)+1; });
+  var regions=Object.keys(rc).sort(function(x,y){return rc[y]-rc[x];});
+  selR.forEach(function(r){if(regions.indexOf(r)<0){regions.unshift(r);if(rc[r]===undefined)rc[r]=0;}});
+  var types=Object.keys(tc).sort(function(x,y){return tc[y]-tc[x];});
+  selT.forEach(function(t){if(types.indexOf(t)<0){types.unshift(t);if(tc[t]===undefined)tc[t]=0;}});
+  function box(label,count,kind){
+    var on=(kind==='region'?EVENTNAV.regions:EVENTNAV.types)[label]?' active':'';
+    return '<div class="filter-opt'+on+'" title="'+e(label)+'" onclick="eventsToggle(\''+kind+'\',\''+a(label)+'\')"><span class="filter-opt-label">'+e(label)+'</span><span class="filter-opt-count">'+count+'</span></div>';
+  }
+  var clear=eventsActive()?'<span class="cm-clear" onclick="eventsClear()">Clear all</span>':'';
+  bar.innerHTML='<div class="cm-grouplabel"><span>BY REGION</span>'+clear+'</div><div class="cm-grid">'+regions.map(function(r){return box(r,rc[r],'region');}).join('')+'</div>'
+    +'<div class="cm-grouplabel"><span>BY TYPE</span></div><div class="cm-grid">'+types.map(function(t){return box(t,tc[t],'type');}).join('')+'</div>';
+}
+function eventsToggle(kind,v){
+  var bag=kind==='region'?EVENTNAV.regions:EVENTNAV.types;
+  if(bag[v])delete bag[v];else bag[v]=1;
+  renderEventsMenu('events-menu'); renderEvents();
+}
+function eventsClear(){ EVENTNAV.regions={};EVENTNAV.types={}; renderEventsMenu('events-menu'); renderEvents(); }
+function evFmtRange(ev){
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var s=evParse(ev.start),en=evParse(ev.end||ev.start);
+  if(!s)return '';
+  if(ev.tentative) return MON[s.getMonth()]+' '+s.getFullYear()+' (dates TBC)';
+  var y=s.getFullYear();
+  if(!en||en.getTime()===s.getTime()) return MON[s.getMonth()]+' '+s.getDate()+', '+y;
+  if(s.getMonth()===en.getMonth()) return MON[s.getMonth()]+' '+s.getDate()+'\u2013'+en.getDate()+', '+y;
+  return MON[s.getMonth()]+' '+s.getDate()+' \u2013 '+MON[en.getMonth()]+' '+en.getDate()+', '+(en.getFullYear());
+}
+function renderEvents(){
+  var body=document.getElementById('events-body'); if(!body)return;
+  var scope=document.getElementById('events-scope');
+  if(EVENTS_DATA===null){ body.innerHTML='<p style="color:var(--mut)">Loading events…</p>'; loadEventsData(renderEvents); return; }
+  function e(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+  var MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  var MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  var list=EVENTS_DATA.filter(evUpcoming).filter(eventMatch).sort(function(x,y){var a=evParse(x.start),b=evParse(y.start);return (a?a.getTime():0)-(b?b.getTime():0);});
+  var selR=Object.keys(EVENTNAV.regions),selT=Object.keys(EVENTNAV.types);
+  if(scope){
+    var parts=[]; if(selR.length)parts.push(selR.join(', ')); if(selT.length)parts.push(selT.join(', '));
+    scope.textContent=parts.length?('Showing: '+parts.join(' · ')+'  ('+list.length+')'):(list.length+' upcoming events');
+  }
+  if(!list.length){
+    body.innerHTML='<div class="q-empty">No upcoming events match this filter yet — try clearing the filters, or check back as we add more.</div>';
+    return;
+  }
+  var groups={},order=[];
+  list.forEach(function(ev){ var s=evParse(ev.start); var key=s?(s.getFullYear()+'-'+s.getMonth()):'x'; if(!groups[key]){groups[key]=[];order.push(key);} groups[key].push(ev); });
+  var html=order.map(function(key){
+    var kp=key.split('-'); var label=(kp[0]!=='x')?(MONTHS[+kp[1]]+' '+kp[0]):'Upcoming';
+    var cards=groups[key].map(function(ev){
+      var s=evParse(ev.start);
+      var chip=s?('<span class="ev-mon">'+MON[s.getMonth()]+'</span><span class="ev-day">'+(ev.tentative?'\u2022':s.getDate())+'</span>'):'';
+      var link=ev.url?('<a class="ev-link" href="'+e(ev.url)+'" target="_blank" rel="noopener">Website \u2192</a>'):'';
+      var loc=[ev.city,ev.country].filter(Boolean).map(e).join(', ');
+      return '<div class="ev-card">'
+        +'<div class="ev-date">'+chip+'</div>'
+        +'<div class="ev-info"><div class="ev-name">'+e(ev.name)+(ev.type?' <span class="ev-type">'+e(ev.type)+'</span>':'')+'</div>'
+        +'<div class="ev-meta">'+e(evFmtRange(ev))+(loc?' \u00b7 '+loc:'')+(ev.region?' \u00b7 '+e(ev.region):'')+'</div>'
+        +(ev.desc?'<div class="ev-desc">'+e(ev.desc)+'</div>':'')
+        +link+'</div></div>';
+    }).join('');
+    return '<div class="q-catgroup">'+e(label)+'</div>'+cards;
   }).join('');
   body.innerHTML=html;
 }
