@@ -125118,7 +125118,7 @@
     ],
     "autonomy_level": 1,
     "cbrn_protection": true,
-    "jamming_resistant": false,
+    "jamming_resistant": true,
     "export_control": "Indian MoD / DRDO",
     "customers": [
       "Indian Army (20 ordered + follow-on)",
@@ -125140,7 +125140,29 @@
     "website": "https://www.drdo.gov.in/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Wheeled, battery-electric",
+    "power_source": "Battery-electric (motorised, ~90% indigenous)",
+    "cameras": "Multiple pan/tilt/zoom cameras + portable X-ray",
+    "hand_type": "Gripper manipulator arm (lift & scan)",
+    "tool_changer": true,
+    "encryption": "Wireless 500 m / fibre-optic 100 m control link",
+    "sensors_list": [
+      "Portable X-ray",
+      "RADMAC NBC survey unit",
+      "Cameras",
+      "RF jammer"
+    ],
+    "variants": [
+      "Daksh",
+      "Daksh Mini",
+      "Daksh Scout"
+    ],
+    "use_cases": [
+      "IED location & render-safe",
+      "Door breaching",
+      "NBC contamination survey"
+    ]
   },
   {
     "id": "drdo-daksh-mini",
@@ -125187,7 +125209,14 @@
     "website": "https://www.drdo.gov.in/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Wheeled, battery-electric",
+    "power_source": "Battery-electric",
+    "cameras": "Pan/tilt cameras",
+    "use_cases": [
+      "Confined-space EOD (aircraft, trains, buses)",
+      "IED render-safe"
+    ]
   },
   {
     "id": "drdo-daksh-scout",
@@ -125231,7 +125260,14 @@
     "website": "https://www.drdo.gov.in/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Wheeled, battery-electric",
+    "power_source": "Battery-electric",
+    "use_cases": [
+      "Rapid recon",
+      "Surveillance",
+      "EOD team support"
+    ]
   },
   {
     "id": "eca-cameleon-e",
@@ -125285,7 +125321,18 @@
     "website": "https://www.ecagroup.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked",
+    "power_source": "Battery-electric",
+    "cameras": "Day/night ISR cameras + onboard X-ray; 5 m audio microphone",
+    "hand_type": "6-axis manipulator (1.5 m vertical / 1.2 m horizontal reach, ~8 kg lift)",
+    "tool_changer": true,
+    "encryption": "200 m fibre-optic drum + radio (optional relay & jammer)",
+    "use_cases": [
+      "IEDD render-safe",
+      "CBRN reconnaissance",
+      "ISR"
+    ]
   },
   {
     "id": "eca-cobra-mk2-e",
@@ -125331,7 +125378,14 @@
     "website": "https://www.ecagroup.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked",
+    "power_source": "Battery-electric",
+    "cameras": "Day/night EO cameras",
+    "use_cases": [
+      "Confined-space EOD/IEDD",
+      "Rapid render-safe"
+    ]
   },
   {
     "id": "northrop-cutlass",
@@ -125380,7 +125434,18 @@
     "website": "https://www.northropgrumman.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked",
+    "power_source": "Battery-electric",
+    "instrument_dof": 9,
+    "hand_type": "9-axis high-dexterity manipulator",
+    "cameras": "Multiple onboard cameras (high-quality video to ~1 km)",
+    "tool_changer": true,
+    "use_cases": [
+      "EOD/IEDD render-safe",
+      "CBRN reconnaissance"
+    ],
+    "manufacturer_history": "Descends from the Wheelbarrow bomb-disposal lineage; built in the UK."
   },
   {
     "id": "mti-milos",
@@ -125436,7 +125501,17 @@
     "website": "",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked, battery-electric",
+    "power_source": "Battery-electric",
+    "cameras": "CCD day camera + low-light camera + thermal imager + laser rangefinder",
+    "imu": true,
+    "navigation": "Remote control; 360° traverse RWS",
+    "use_cases": [
+      "Armed reconnaissance",
+      "Fire support",
+      "Anti-armor (ATGM module)"
+    ]
   },
   {
     "id": "mti-milos-l",
@@ -125492,7 +125567,15 @@
     "website": "",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked, battery-electric",
+    "power_source": "Battery-electric",
+    "cameras": "Camera-based navigation suite",
+    "use_cases": [
+      "Logistics pack-mule",
+      "Casualty extraction sled",
+      "Engineer/EOD support"
+    ]
   },
   {
     "id": "havelsan-barkan",
@@ -125538,7 +125621,17 @@
     "website": "https://www.havelsan.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked/wheeled",
+    "power_source": "Battery-electric",
+    "cameras": "Electro-optical ISR sensors",
+    "navigation": "Autonomous + remote; multiple data links",
+    "use_cases": [
+      "Armed ISR",
+      "Close protection",
+      "Armed reconnaissance"
+    ],
+    "manufacturer_history": "Part of Havelsan's 'digital troops' concept; BARKAN family inducted into Turkish service in 2023."
   },
   {
     "id": "havelsan-barkan-3",
@@ -125592,7 +125685,18 @@
     "website": "https://www.havelsan.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked/wheeled",
+    "power_source": "Battery-electric",
+    "cameras": "Front-driving + ground-facing cameras",
+    "ai_model": "ADVENT-AI decision layer (AI-enabled swarming, 8+ units)",
+    "navigation": "AI swarm; MUM-T with Baha/Bozbey UAVs",
+    "use_cases": [
+      "Direct fire support",
+      "Recon",
+      "Target acquisition",
+      "Swarming"
+    ]
   },
   {
     "id": "ghost-robotics-vision-60",
@@ -125602,7 +125706,7 @@
     "sub": "Q-UGV Security Robot",
     "year": 2020,
     "origin": "USA",
-    "made_in": "USA (Ghost Robotics)",
+    "made_in": "USA (Ghost Robotics, Philadelphia PA)",
     "status": "Active",
     "price": "POA",
     "img": "",
@@ -125621,7 +125725,7 @@
     "ip_rating": "IP67",
     "operating_temp": "-40 to 55 °C",
     "stair_climbing": true,
-    "cameras": "5 surround color cameras",
+    "cameras": "5x RGB surround cameras + 4x depth; optional thermal & LiDAR",
     "thermal_camera": true,
     "autonomous": true,
     "role": [
@@ -125630,7 +125734,7 @@
       "ISR",
       "CBRNE recon"
     ],
-    "endurance_hours": 3,
+    "endurance_hours": 3.15,
     "communication_range_km": 10,
     "mil_spec": "MIL-STD-1913 rails; IP67",
     "deploy_method": [
@@ -125658,7 +125762,45 @@
     "website": "https://www.ghostrobotics.io/vision-60",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "ground_clearance_mm": 419,
+    "run_speed": 2.2,
+    "run_speed_ms": 2.2,
+    "range_km": 10,
+    "chipset": "NVIDIA Jetson (Xavier)",
+    "os": "Ghost OS + Mission Control (web C2)",
+    "wifi": "Wi-Fi 2.4/5.8 GHz",
+    "cellular": "4G/LTE",
+    "ethernet": "Managed GigE switch (supports 5G, SDR, SATCOM, Silvus, Persistent, Rajant)",
+    "depth_sensing": "4x Intel RealSense ToF depth sensors",
+    "lidar": true,
+    "navigation": "3D LiDAR SLAM; GPS-denied capable; point-and-click waypoint",
+    "ai_model": "Deep-learning object detection (API); blind-mode biomimetic control core",
+    "imu": true,
+    "wireless_charging": true,
+    "quick_release": true,
+    "fall_recovery": true,
+    "gait_modes": [
+      "Walk",
+      "Fast-walk",
+      "Run",
+      "Sprint",
+      "Crawl",
+      "Self-right",
+      "Inverted"
+    ],
+    "actuator_type": "3-DOF quick-change leg pods (proximal motors)",
+    "frame_material": "Aluminium & composites",
+    "mounting": [
+      "MIL-STD-1913 rails",
+      "T-slots",
+      "M5 tapped holes"
+    ],
+    "deployed_at": [
+      "US Air Force — Tyndall AFB, 325th Security Forces Squadron",
+      "US DHS (southern border trials)",
+      "JGSDF (earthquake response)"
+    ]
   },
   {
     "id": "shark-robotics-colossus",
@@ -125767,7 +125909,16 @@
     "website": "https://www.milaniongroup.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked",
+    "power_source": "Diesel/hybrid",
+    "use_cases": [
+      "ISR",
+      "Fire support",
+      "Logistics",
+      "CasEvac",
+      "Counter-mobility / mine-laying"
+    ]
   },
   {
     "id": "hyundai-rotem-hr-sherpa",
@@ -125814,7 +125965,16 @@
     "website": "https://www.hyundai-rotem.co.kr/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "6x6 wheeled, electric",
+    "power_source": "Battery-electric",
+    "navigation": "Autonomous follow + remote control; MUM-T",
+    "use_cases": [
+      "Recon/surveillance",
+      "Supply transport",
+      "CasEvac",
+      "Fire support"
+    ]
   },
   {
     "id": "eca-cameleon-lg-e",
@@ -125861,6 +126021,14 @@
     "website": "https://www.ecagroup.com/",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "propulsion": "Tracked",
+    "power_source": "Battery-electric",
+    "cameras": "Day/night EO cameras",
+    "use_cases": [
+      "Light EOD/IEDD",
+      "Reconnaissance",
+      "ISR"
+    ]
   }
 ]
