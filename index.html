@@ -10,8 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-L (finder + compare/events/questions/videos: content top-aligned with menu, top gap removed) -->
-<meta name="mrs-build" content="build-L">
+<!-- BUILD-TAG: build-M (uniform: title band added to compare/events/questions/videos/news so all browse pages match Finder/Database, sidebar starts at same position) -->
+<meta name="mrs-build" content="build-M">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -1235,10 +1235,11 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- COMPARE -->
 <div id="page-compare" class="page">
+  <div class="finder-band"><h1>Robot Comparison Tool</h1><p>Select up to 4 robots to compare specs side by side</p></div>
   <div class="catnav-shell">
     <aside class="catnav-side" id="compare-menu"></aside>
     <div class="catnav-main"><div class="compare-page">
-    <div style="margin-bottom:20px"><div class="page-title">Robot Comparison Tool</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Select up to 4 robots to compare specs side by side</p></div>
+    
     <div class="compare-slots" id="compare-slots">
   <div class="compare-slot" id="cslot-0" onclick="openSlot(0)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 1</div></div>
   <div class="compare-slot" id="cslot-1" onclick="openSlot(1)"><div class="slot-plus">+</div><div class="slot-placeholder">Robot 2</div></div>
@@ -1282,10 +1283,11 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- NEWS -->
 <div id="page-news" class="page">
+  <div class="finder-band"><h1>Robotics News</h1><p>Latest industry news, product launches and expert analysis</p></div>
   <div class="catnav-shell">
     <aside class="catnav-side"><div id="news-filter-bar" style="margin-bottom:16px"></div><div id="news-sidebar"></div></aside>
     <div class="catnav-main">
-    <div style="margin-bottom:22px"><div class="page-title">Robotics News</div><p style="color:var(--mut);font-size:13px;margin-top:5px">Latest industry news, product launches and expert analysis</p></div>
+    
     <div id="news-active" style="margin-bottom:6px"></div>
     <div class="news-layout" id="news-layout"></div>
     <div class="news-list-items" id="news-list-items"></div><div id="news-pager" class="news-pager"></div>
@@ -1305,13 +1307,13 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- VIDEOS -->
 <div id="page-videos" class="page">
+  <div class="finder-band"><h1>Robot Videos</h1><p>Latest videos, reviews, and news from @MYROBOTSHOP</p></div>
   <div class="catnav-shell">
     <aside class="catnav-side" id="videos-menu"></aside>
     <div class="catnav-main"><div class="videos-page" style="padding:6px 20px 24px">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:12px">
       <div>
-        <div class="page-title">Robot Videos</div>
-        <p style="color:var(--mut);font-size:13px;margin-top:5px">Latest videos, reviews, and news from <strong>@MYROBOTSHOP</strong></p>
+        
       </div>
       <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
         <div class="social-row social-row-lg" style="margin-top:0">
@@ -1358,11 +1360,11 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- QUESTIONS -->
 <div id="page-questions" class="page">
+  <div class="finder-band"><h1>Robot Questions &amp; Answers</h1><p>Honest, no-hype answers to the questions people ask most</p></div>
   <div class="catnav-shell">
     <aside class="catnav-side" id="questions-menu"></aside>
     <div class="catnav-main"><div class="questions-page" style="padding:6px 20px 24px">
-      <div class="page-title">Robot Questions &amp; Answers</div>
-      <p style="color:var(--mut);font-size:13px;margin-top:5px;margin-bottom:14px">Honest, no-hype answers to the questions people ask most. Pick a category — and a manufacturer — to narrow down.</p>
+      
       <div id="questions-scope" class="q-scope"></div>
       <div id="questions-body"></div>
     </div></div>
@@ -1371,11 +1373,11 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- EVENTS -->
 <div id="page-events" class="page">
+  <div class="finder-band"><h1>Robotics &amp; Tech Events</h1><p>Major robotics and tech shows, expos and conferences</p></div>
   <div class="catnav-shell">
     <aside class="catnav-side" id="events-menu"></aside>
     <div class="catnav-main"><div class="events-page" style="padding:6px 20px 24px">
-      <div class="page-title">Robotics &amp; Tech Events</div>
-      <p style="color:var(--mut);font-size:13px;margin-top:5px;margin-bottom:14px">A calendar of the world's major robotics and tech shows, expos and conferences. Filter by region or type — past events drop off automatically.</p>
+      
       <div id="events-scope" class="q-scope"></div>
       <div id="events-body"></div>
     </div></div>
