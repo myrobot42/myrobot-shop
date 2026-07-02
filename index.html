@@ -10,8 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-G (events calendar page: Region + Type sidebar; Discover nav -> Events) -->
-<meta name="mrs-build" content="build-G">
+<!-- BUILD-TAG: build-H (sidebar theme unified to Database: CATEGORY/MANUFACTURER, REGION/TYPE; removed redundant News brands cloud) -->
+<meta name="mrs-build" content="build-H">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -5152,15 +5152,8 @@ function renderProfileNews(r){
 function renderNewsSidebar(){
   var sb=document.getElementById('news-sidebar'); if(!sb) return;
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
-  // ---- Brand box (top brands by robot count) ----
-  var counts={};
-  ROBOTS.forEach(function(r){ if(r.brand) counts[r.brand]=(counts[r.brand]||0)+1; });
-  var brands=Object.keys(counts).sort(function(a,b){return counts[b]-counts[a];}).slice(0,30);
-  var brandHtml='<div class="news-sb-box"><div class="news-sb-head">BRANDS</div><div class="news-sb-brands">'
-    +brands.map(function(b){var bn=b.replace(/'/g,'');return '<a class="news-sb-brand" onclick="searchBrand(&apos;'+esc(bn)+'&apos;)">'+esc(b)+'</a>';}).join('')
-    +'</div><a class="news-sb-all" onclick="goPage(&apos;manufacturers&apos;)">All brands &rarr;</a></div>';
-  sb.innerHTML=brandHtml
-    +'<div class="news-sb-box"><div class="news-sb-head">TOP 10 BY DAILY INTEREST</div>'
+  // Brands are covered by the MANUFACTURER filter above (uniform with other pages). Keep Top-10 daily interest.
+  sb.innerHTML='<div class="news-sb-box"><div class="news-sb-head">TOP 10 BY DAILY INTEREST</div>'
     +'<div id="news-sb-top10" class="news-sb-top10"><div style="color:var(--mut);font-size:12px;padding:10px 12px">Loading&hellip;</div></div></div>';
   // ---- Top 10 from trending.json scores ----
   fetch('data/trending.json',{cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(d){
@@ -5213,8 +5206,8 @@ function renderCatMenu(elId){
   var catHtml=cats.map(function(c){return box(c,cc[c],'cat');}).join('');
   var brHtml=brands.map(function(b){return box(b,bc[b],'brand');}).join('');
   var clear=catnavActive()?'<span class="cm-clear" onclick="catnavClear()">Clear all</span>':'';
-  bar.innerHTML='<div class="cm-grouplabel"><span>BROWSE BY CATEGORY</span>'+clear+'</div><div class="cm-grid">'+catHtml+'</div>'
-    +'<div class="cm-grouplabel"><span>BY MANUFACTURER</span></div><div class="cm-grid">'+brHtml+'</div>';
+  bar.innerHTML='<div class="cm-grouplabel"><span>CATEGORY</span>'+clear+'</div><div class="cm-grid">'+catHtml+'</div>'
+    +'<div class="cm-grouplabel"><span>MANUFACTURER</span></div><div class="cm-grid">'+brHtml+'</div>';
 }
 
 /* ---- Questions page — reuses the catnav sidebar (CATEGORY + MANUFACTURER) ---- */
@@ -5306,8 +5299,8 @@ function renderEventsMenu(elId){
     return '<div class="filter-opt'+on+'" title="'+e(label)+'" onclick="eventsToggle(\''+kind+'\',\''+a(label)+'\')"><span class="filter-opt-label">'+e(label)+'</span><span class="filter-opt-count">'+count+'</span></div>';
   }
   var clear=eventsActive()?'<span class="cm-clear" onclick="eventsClear()">Clear all</span>':'';
-  bar.innerHTML='<div class="cm-grouplabel"><span>BY REGION</span>'+clear+'</div><div class="cm-grid">'+regions.map(function(r){return box(r,rc[r],'region');}).join('')+'</div>'
-    +'<div class="cm-grouplabel"><span>BY TYPE</span></div><div class="cm-grid">'+types.map(function(t){return box(t,tc[t],'type');}).join('')+'</div>';
+  bar.innerHTML='<div class="cm-grouplabel"><span>REGION</span>'+clear+'</div><div class="cm-grid">'+regions.map(function(r){return box(r,rc[r],'region');}).join('')+'</div>'
+    +'<div class="cm-grouplabel"><span>TYPE</span></div><div class="cm-grid">'+types.map(function(t){return box(t,tc[t],'type');}).join('')+'</div>';
 }
 function eventsToggle(kind,v){
   var bag=kind==='region'?EVENTNAV.regions:EVENTNAV.types;
