@@ -10,8 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-H (sidebar theme unified to Database: CATEGORY/MANUFACTURER, REGION/TYPE; removed redundant News brands cloud) -->
-<meta name="mrs-build" content="build-H">
+<!-- BUILD-TAG: build-L (finder + compare/events/questions/videos: content top-aligned with menu, top gap removed) -->
+<meta name="mrs-build" content="build-L">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -413,7 +413,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .similar-price{font-size:11px;font-weight:700;color:var(--acc)}
 
 /* ── COMPARE ── */
-.compare-page{max-width:1100px;margin:0 auto;padding:28px 36px 50px}
+.compare-page{max-width:1100px;margin:0 auto;padding:6px 36px 50px}
 .compare-slots{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px;width:100%}
 .compare-slot{border:2px dashed var(--bdr2);border-radius:10px;padding:12px;text-align:center;cursor:pointer;transition:all .15s;background:#fff;min-height:90px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px}
 .compare-slot.filled{border:2px solid var(--acc);cursor:default;text-align:left;align-items:flex-start}
@@ -506,7 +506,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .ftab.active{color:var(--acc);border-color:var(--acc);background:var(--acc-l)}
 .fcnt{font-size:10px;color:var(--mut);font-weight:600;background:var(--bg2);padding:1px 6px;border-radius:9px}
 .ftab.active .fcnt{background:var(--acc-l);color:var(--acc)}
-.finder-body{display:block;max-width:1100px;margin:0 auto;padding:24px 20px 100px}
+.finder-body{display:block;max-width:1100px;margin:0 auto;padding:0 20px 100px}
 .finder-fp{background:transparent;padding:0}
 
 /* Filter section grid + cards */
@@ -1307,7 +1307,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <div id="page-videos" class="page">
   <div class="catnav-shell">
     <aside class="catnav-side" id="videos-menu"></aside>
-    <div class="catnav-main"><div class="videos-page" style="padding:24px 20px">
+    <div class="catnav-main"><div class="videos-page" style="padding:6px 20px 24px">
     <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:20px;flex-wrap:wrap;gap:12px">
       <div>
         <div class="page-title">Robot Videos</div>
@@ -1360,7 +1360,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <div id="page-questions" class="page">
   <div class="catnav-shell">
     <aside class="catnav-side" id="questions-menu"></aside>
-    <div class="catnav-main"><div class="questions-page" style="padding:24px 20px">
+    <div class="catnav-main"><div class="questions-page" style="padding:6px 20px 24px">
       <div class="page-title">Robot Questions &amp; Answers</div>
       <p style="color:var(--mut);font-size:13px;margin-top:5px;margin-bottom:14px">Honest, no-hype answers to the questions people ask most. Pick a category — and a manufacturer — to narrow down.</p>
       <div id="questions-scope" class="q-scope"></div>
@@ -1373,7 +1373,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 <div id="page-events" class="page">
   <div class="catnav-shell">
     <aside class="catnav-side" id="events-menu"></aside>
-    <div class="catnav-main"><div class="events-page" style="padding:24px 20px">
+    <div class="catnav-main"><div class="events-page" style="padding:6px 20px 24px">
       <div class="page-title">Robotics &amp; Tech Events</div>
       <p style="color:var(--mut);font-size:13px;margin-top:5px;margin-bottom:14px">A calendar of the world's major robotics and tech shows, expos and conferences. Filter by region or type — past events drop off automatically.</p>
       <div id="events-scope" class="q-scope"></div>
