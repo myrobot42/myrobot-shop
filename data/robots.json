@@ -127447,7 +127447,7 @@
       "Alexa",
       "Google Assistant"
     ],
-    "app": "MOVAhome (iOS/Android)",
+    "app": "MOVAhome",
     "currency": "USD",
     "diameter_mm": 350,
     "max_threshold_height_mm": 80,
@@ -127470,7 +127470,14 @@
     "multi_zone": true,
     "no_go_zones": true,
     "app_companion": "MOVAhome",
-    "warranty_months": 36
+    "warranty_months": 36,
+    "wifi": true,
+    "self_cleaning": true,
+    "dock_dry_type": "Hot air",
+    "carpet_boost": true,
+    "side_brushes": 1,
+    "pet_mode": true,
+    "mapping": true
   },
   {
     "id": "mova-v50-ultra-complete",
@@ -127531,7 +127538,12 @@
     "carpet_detection": true,
     "carpet_mop_lift": true,
     "app_companion": "MOVAhome",
-    "warranty_months": 36
+    "warranty_months": 36,
+    "wifi": true,
+    "self_cleaning": true,
+    "dock_dry_type": "Hot air",
+    "carpet_boost": true,
+    "mapping": true
   },
   {
     "id": "mova-p50-pro-ultra",
@@ -127586,7 +127598,12 @@
     "auto_refill": true,
     "auto_charge": true,
     "app_companion": "MOVAhome",
-    "warranty_months": 36
+    "warranty_months": 36,
+    "wifi": true,
+    "self_cleaning": true,
+    "dock_dry_type": "Warm air",
+    "carpet_boost": true,
+    "mapping": true
   },
   {
     "id": "mova-p50-ultra",
@@ -127629,7 +127646,10 @@
     "auto_charge": true,
     "edge_cleaning": true,
     "app_companion": "MOVAhome",
-    "warranty_months": 36
+    "warranty_months": 36,
+    "wifi": true,
+    "self_cleaning": true,
+    "mapping": true
   },
   {
     "id": "mova-p10-pro-ultra",
@@ -127678,7 +127698,12 @@
     "self_refill_water": true,
     "auto_charge": true,
     "app_companion": "MOVAhome",
-    "warranty_months": 36
+    "warranty_months": 36,
+    "wifi": true,
+    "self_cleaning": true,
+    "dock_dry_type": "Hot air",
+    "carpet_boost": true,
+    "mapping": true
   },
   {
     "id": "mova-e40-ultra",
@@ -127718,7 +127743,10 @@
     "auto_mop_dry": true,
     "self_refill_water": true,
     "app_companion": "MOVAhome",
-    "warranty_months": 36
+    "warranty_months": 36,
+    "wifi": true,
+    "self_cleaning": true,
+    "mapping": true
   },
   {
     "id": "eureka-j15-ultra",
@@ -127765,7 +127793,7 @@
       "Tray self-clean",
       "Auto clean-water fill"
     ],
-    "app": "Eureka (iOS/Android)",
+    "app": "Eureka",
     "battery_type": "Li-ion",
     "width_mm": 355,
     "depth_mm": 354,
@@ -127785,7 +127813,13 @@
     "self_refill_water": true,
     "auto_refill": true,
     "auto_charge": true,
-    "app_companion": "Eureka"
+    "app_companion": "Eureka",
+    "wifi": true,
+    "self_cleaning": true,
+    "dock_dry_type": "Hot air",
+    "carpet_boost": true,
+    "side_brushes": 1,
+    "mapping": true
   },
   {
     "id": "eureka-j15-pro-ultra",
@@ -127832,7 +127866,7 @@
       "Dirty-water handling"
     ],
     "manufacturer_history": "Eureka — founded 1909 in Detroit; over a century of vacuum manufacturing.",
-    "app": "Eureka (iOS/Android)",
+    "app": "Eureka",
     "battery_type": "Li-ion",
     "dustbin_ml": 3000,
     "water_tank_ml": 4000,
@@ -127846,7 +127880,13 @@
     "self_refill_water": true,
     "auto_refill": true,
     "auto_charge": true,
-    "app_companion": "Eureka"
+    "app_companion": "Eureka",
+    "wifi": true,
+    "self_cleaning": true,
+    "dock_dry_type": "Hot air",
+    "carpet_boost": true,
+    "side_brushes": 1,
+    "mapping": true
   },
   {
     "id": "switchbot-k20-plus-pro",
@@ -127890,7 +127930,9 @@
     "lidar": true,
     "ai_obstacle_avoidance": true,
     "auto_empty": true,
-    "app_companion": "SwitchBot"
+    "app_companion": "SwitchBot",
+    "wifi": true,
+    "mapping": true
   },
   {
     "id": "switchbot-s20-pro",
@@ -127927,7 +127969,10 @@
     "lidar": true,
     "auto_empty": true,
     "self_refill_water": true,
-    "app_companion": "SwitchBot"
+    "app_companion": "SwitchBot",
+    "wifi": true,
+    "self_cleaning": true,
+    "mapping": true
   },
   {
     "id": "switchbot-k10-plus-pro",
@@ -127982,7 +128027,10 @@
     "no_go_zones": true,
     "virtual_walls": true,
     "matter_support": true,
-    "app_companion": "SwitchBot"
+    "app_companion": "SwitchBot",
+    "wifi": true,
+    "mapping": true,
+    "side_brushes": 1
   },
   {
     "id": "switchbot-k10-plus-pro-combo",
@@ -128024,7 +128072,9 @@
     "auto_empty": true,
     "auto_empty_capacity_days": 70,
     "matter_support": true,
-    "app_companion": "SwitchBot"
+    "app_companion": "SwitchBot",
+    "wifi": true,
+    "mapping": true
   },
   {
     "id": "tapo-rv30-max-plus",
@@ -128066,14 +128116,18 @@
       "Alexa",
       "Google Assistant"
     ],
-    "app": "Tapo (3D whole-home view)",
+    "app": "Tapo",
     "lidar": true,
     "ai_obstacle_avoidance": true,
     "auto_empty": true,
     "auto_empty_capacity_days": 60,
     "max_threshold_height_mm": 22,
     "multi_floor_mapping": true,
-    "app_companion": "Tapo"
+    "app_companion": "Tapo",
+    "wifi": true,
+    "mapping": true,
+    "side_brushes": 1,
+    "carpet_boost": true
   },
   {
     "id": "ecovacs-deebot-t80s-omni",
@@ -128116,7 +128170,11 @@
     "auto_mop_dry": true,
     "self_refill_water": true,
     "auto_refill": true,
-    "app_companion": "ECOVACS Home"
+    "app_companion": "ECOVACS Home",
+    "wifi": true,
+    "self_cleaning": true,
+    "dock_dry_type": "Hot air",
+    "mapping": true
   },
   {
     "id": "narwal-freo-pro",
@@ -128148,7 +128206,11 @@
     "app": "Narwal Freo",
     "auto_mop_wash": true,
     "auto_mop_dry": true,
-    "app_companion": "Narwal Freo"
+    "app_companion": "Narwal Freo",
+    "wifi": true,
+    "self_cleaning": true,
+    "dock_dry_type": "Hot air",
+    "mapping": true
   },
   {
     "id": "aiper-scuba-v3-ai-vision",
