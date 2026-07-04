@@ -127402,26 +127402,38 @@
     "origin": "China",
     "made_in": "China",
     "status": "Active",
-    "price": "POA",
+    "price": 1499,
     "img": "",
     "suction_pa": 28000,
-    "navigation": "Retractable LiDAR + AI obstacle recognition",
+    "navigation": "Retractable DToF LiDAR + dual-laser 3D structured light + RGB AI + side-edge laser",
     "desc": "MOVA's flagship robot vacuum with 28,000 Pa suction, anti-tangle DuoBrush dual rollers, HydroForce 12-nozzle real-time mop washing, a 25.6 cm MaxiReach extending roller mop, and StepMaster 2.0 chassis that climbs 80 mm thresholds. All-in-one dock self-empties, hot-washes and hot-air dries.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "mova",
-      "z60",
-      "flagship",
-      "lidar",
-      "anti-tangle",
-      "self-empty",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "mop_pressure_pa": 4100,
+    "dimensions": "350 × 350 × 96 mm (119.6 mm LiDAR raised)",
+    "height_mm": 96,
+    "dock_dimensions": "463 × 390 × 545 mm",
+    "climb_mm": 80,
+    "battery_life": 220,
+    "battery_life_typical": 220,
+    "charge_time_min": 240,
+    "motor": "TurboForce 9",
+    "anti_tangle": "TroboWave DuoBrush (dual counter-rotating rollers)",
+    "mop_type": "Extending roller mop, HydroForce 12-nozzle real-time wash",
+    "carpet_handling": "AutoShield (mop retract + moisture shield + chassis lift)",
+    "dock_functions": [
+      "Auto-empty (bagged, ~100 days)",
+      "80°C hot-water roller wash",
+      "Hot-air dry",
+      "Dual-solution refill",
+      "UV sterilization"
+    ],
+    "water_system": "Dual-solution (general cleaner + pet deodorizer)",
+    "voice_assistant": "Onboard 'Hey MOVA' + Alexa + Google",
+    "app": "MOVAhome (iOS/Android)",
+    "currency": "USD"
   },
   {
     "id": "mova-v50-ultra-complete",
@@ -127437,20 +127449,23 @@
     "img": "",
     "suction_pa": 24000,
     "desc": "Carpet-focused MOVA flagship with 24,000 Pa suction, 6 cm obstacle crossing, dual spinning mop pads at 8 N pressure, auto mop-detaching for carpets, retracting LiDAR navigation and a self-cleaning dock.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "mova",
-      "v50",
-      "carpet",
-      "lidar",
-      "self-empty",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "climb_mm": 60,
+    "mop_type": "Dual spinning pads, 8 N pressure",
+    "mop_wash": "80°C hot-water self-clean + hot-air dry",
+    "navigation": "Retracting LiDAR (FlexiRise), fits under 95 mm furniture",
+    "anti_tangle": "DuoBrush",
+    "dock_functions": [
+      "Auto-empty",
+      "80°C hot wash",
+      "Hot-air dry",
+      "Auto refill"
+    ],
+    "voice_assistant": "Alexa + Google",
+    "app": "MOVAhome"
   },
   {
     "id": "mova-p50-pro-ultra",
@@ -127466,18 +127481,22 @@
     "img": "",
     "suction_pa": 19000,
     "desc": "Popular mid-premium MOVA with 19,000 Pa suction, an extending side brush and mop for edge-to-edge cleaning, anti-tangle main brush, dirt detection, obstacle avoidance and auto dock maintenance.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "mova",
-      "p50-pro",
-      "edge-cleaning",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "battery_life": 170,
+    "battery_life_typical": 170,
+    "charge_time_min": 210,
+    "navigation": "LiDAR + AI obstacle cameras",
+    "side_brush": "Extending (lifts 10 mm)",
+    "mop_wash": "Hot-water wash, JetSprayBoard Self-Clean 3.5, 45°C warm-air dry",
+    "dock_functions": [
+      "Auto-empty (~75 days)",
+      "Hot-water mop wash",
+      "Warm-air dry (45°C)"
+    ],
+    "app": "MOVAhome"
   },
   {
     "id": "mova-p50-ultra",
@@ -127493,18 +127512,17 @@
     "img": "",
     "suction_pa": 19000,
     "desc": "MOVA P50 Ultra with 19,000 Pa suction, CleanLift system, edge-to-edge cleaning, dirt detection, obstacle avoidance and hands-free auto dock maintenance.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "mova",
-      "p50",
-      "cleanlift",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "mop_type": "Flexible mop with edge/corner cleaning",
+    "mop_wash": "75°C mop + washboard auto-clean",
+    "dock_functions": [
+      "Auto-empty & refill",
+      "75°C mop/washboard wash"
+    ],
+    "app": "MOVAhome"
   },
   {
     "id": "mova-p10-pro-ultra",
@@ -127519,18 +127537,21 @@
     "price": "POA",
     "img": "",
     "desc": "Value-oriented MOVA flagship-feature vacuum-mop with high suction, carpet-boost, mop-lift to keep carpets dry, and a self-emptying/washing dock at a lower price point.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "mova",
-      "p10-pro",
-      "value",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "suction_pa": 13000,
+    "mop_type": "Dual spinning extendable mop",
+    "mop_lift_mm": 10.5,
+    "mop_wash": "60°C hot-water auto wash + hot-air dry",
+    "obstacle_avoidance": "360°",
+    "dock_functions": [
+      "Auto-empty",
+      "Hot-water mop wash",
+      "Hot-air dry"
+    ],
+    "app": "MOVAhome"
   },
   {
     "id": "mova-e40-ultra",
@@ -127545,19 +127566,16 @@
     "price": "POA",
     "img": "",
     "desc": "Best-value MOVA self-emptying robot vacuum-mop with dual spinning mop pads, mop-lift for carpets and automated dock functionality, delivering premium-style automation at a budget price.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "mova",
-      "e40",
-      "budget",
-      "self-empty",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "mop_type": "Dual spinning mop pads with mop-lift for carpets",
+    "dock_functions": [
+      "Auto-empty",
+      "Mop wash & dry"
+    ],
+    "app": "MOVAhome"
   },
   {
     "id": "eureka-j15-ultra",
@@ -127572,21 +127590,30 @@
     "price": "POA",
     "img": "",
     "suction_pa": 19000,
-    "navigation": "LiDAR",
+    "navigation": "LDS laser + single-laser & RGB camera obstacle avoidance",
     "desc": "Eureka's 2025 flagship all-in-one robot vacuum-mop with 19,000 Pa suction, ScrubExtend extending mop technology and FlexiRazor anti-tangle brush, plus a multifunction self-maintaining dock.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "eureka",
-      "j15-ultra",
-      "flagship",
-      "anti-tangle",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "battery_mah": 5200,
+    "dimensions": "354 × 355 × 110 mm",
+    "dock_dimensions": "395 × 458 × 468 mm",
+    "dustbin_l": 3,
+    "water_tank_l": 4,
+    "dirty_tank_l": 3.4,
+    "mop_type": "ScrubExtend swing-arm (98.95% edge coverage), 7 N pressure",
+    "mop_lift_mm": 12,
+    "anti_tangle": "FlexiRazor (400 strokes/min, 4 mm vibration, 99% reduction)",
+    "ai_system": "IntelliView AI (wet/dry classification)",
+    "dock_functions": [
+      "Auto-empty",
+      "Heated mop wash",
+      "Hot-air dry",
+      "Tray self-clean",
+      "Auto clean-water fill"
+    ],
+    "app": "Eureka (iOS/Android)"
   },
   {
     "id": "eureka-j15-pro-ultra",
@@ -127601,18 +127628,31 @@
     "price": "POA",
     "img": "",
     "desc": "Eureka J15 Pro Ultra all-in-one robot vacuum and mop with strong suction, IntelliView AI obstacle avoidance and an auto-empty, mop-washing and drying station.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "eureka",
-      "j15-pro",
-      "ai-avoidance",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "suction_pa": 16200,
+    "battery_mah": 5200,
+    "battery_life": 240,
+    "battery_life_typical": 240,
+    "noise_db": 62,
+    "dustbin_l": 3,
+    "water_tank_l": 4,
+    "dirty_tank_l": 3.4,
+    "navigation": "LiDAR + camera (recognizes 150+ object types, LED headlights)",
+    "mop_type": "ScrubExtend swing-arm + roller, tray scraper",
+    "anti_tangle": "FlexiRazor (SGS-certified)",
+    "dock_functions": [
+      "8-in-1: auto-empty",
+      "Hot mop wash",
+      "Hot-air dry",
+      "Tray self-clean",
+      "Auto refill",
+      "Dirty-water handling"
+    ],
+    "manufacturer_history": "Eureka — founded 1909 in Detroit; over a century of vacuum manufacturing.",
+    "app": "Eureka (iOS/Android)"
   },
   {
     "id": "switchbot-k20-plus-pro",
@@ -127626,22 +127666,19 @@
     "status": "Active",
     "price": "POA",
     "img": "",
-    "navigation": "D-ToF LiDAR + dual laser",
+    "navigation": "D-ToF LiDAR + dual-laser detection",
     "desc": "A 'multitasking' mini robot vacuum unveiled at CES 2025: beyond cleaning, its FusionPlatform modular base can carry up to 8 kg to deliver items, mount an air purifier, or act as a mobile security camera. D-ToF LiDAR navigation and SwitchBot ecosystem integration.",
-    "tags": [
-      "robot-vacuum",
-      "switchbot",
-      "k20-pro",
-      "multitasking",
-      "modular",
-      "lidar",
-      "smart-home",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "payload": 8,
+    "payload_kg": 8,
+    "modular_platform": "FusionPlatform — carries up to 8 kg; swaps between vacuum, air purifier and security-camera roles",
+    "obstacle_avoidance": "3D + LiDAR",
+    "voice_assistant": "Alexa + Google + Siri Shortcuts + SwitchBot ecosystem",
+    "app": "SwitchBot",
+    "announced": "2025-01 (CES 2025)"
   },
   {
     "id": "switchbot-s20-pro",
@@ -127656,18 +127693,17 @@
     "price": "POA",
     "img": "",
     "desc": "CES 2025 successor to the S10 Pro, a full-size robot vacuum-mop with an auto-empty and water-management station, improving suction and mopping over the previous generation.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "switchbot",
-      "s20-pro",
-      "self-empty",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "dock_functions": [
+      "Auto-empty",
+      "Water management station"
+    ],
+    "navigation": "LiDAR",
+    "announced": "2025-01 (CES 2025)",
+    "manufacturer_history": "Successor to the SwitchBot S10 Pro station-based vacuum-mop."
   },
   {
     "id": "switchbot-k10-plus-pro",
@@ -127682,22 +127718,25 @@
     "price": 149.99,
     "currency": "USD",
     "img": "",
-    "navigation": "LDS laser",
+    "navigation": "LiDAR SLAM + PSD sensors (maps up to 10 floors)",
     "desc": "One of the world's smallest robot vacuums with a 4 L auto-empty base (empties ~4x/year), anti-tangle brush, LDS laser navigation, quiet 45 dB operation and Matter support — designed for pet-friendly homes and tight corners.",
-    "tags": [
-      "robot-vacuum",
-      "switchbot",
-      "k10-pro",
-      "mini",
-      "compact",
-      "matter",
-      "self-empty",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "suction_pa": 3000,
+    "height_mm": 92,
+    "dimensions": "248 × 248 × 92 mm",
+    "battery_mah": 3200,
+    "battery_life": 150,
+    "battery_life_typical": 150,
+    "coverage_sqm": 225,
+    "dustbin": "4 L auto-empty station (~70 days)",
+    "noise_db": 45,
+    "anti_tangle": "Multi-surface rubber+bristle brush",
+    "suction_modes": "Quiet / Standard / Strong / Max",
+    "voice_assistant": "Alexa / Siri / Matter (Hub 2 required)",
+    "app": "SwitchBot"
   },
   {
     "id": "switchbot-k10-plus-pro-combo",
@@ -127712,19 +127751,15 @@
     "price": "POA",
     "img": "",
     "desc": "Pairs the compact K10+ Pro robot vacuum with a lightweight cordless stick vacuum in one system, self-emptying up to 70 days, with Matter support and Alexa/Google/Apple Home compatibility.",
-    "tags": [
-      "robot-vacuum",
-      "switchbot",
-      "k10-pro-combo",
-      "cordless",
-      "combo",
-      "matter",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "dimensions": "248 × 248 × 92 mm (robot)",
+    "dustbin": "3 L station, self-empty up to 70 days",
+    "includes": "K10+ Pro robot + lightweight cordless stick vacuum",
+    "voice_assistant": "Alexa / Google / Apple Home / Matter",
+    "app": "SwitchBot"
   },
   {
     "id": "tapo-rv30-max-plus",
@@ -127739,22 +127774,21 @@
     "price": "POA",
     "img": "",
     "suction_pa": 5300,
-    "navigation": "LiDAR",
+    "navigation": "360° LiDAR radar, Tapo IQ+ Smart Cleaning, 15-min fast mapping, multi-level maps",
     "desc": "TP-Link Tapo LiDAR robot vacuum and mop with up to 5,300 Pa suction, 97%+ dust pickup, a self-emptying dock, customizable cleaning and Alexa/Google Home support.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "tapo",
-      "tp-link",
-      "rv30-max",
-      "lidar",
-      "self-empty",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "dock_functions": [
+      "Auto-empty",
+      "3 L sealed dust bag (~2 months)"
+    ],
+    "climb_mm": 22,
+    "water_tank_ml": 300,
+    "dust_pickup": "97%+",
+    "voice_assistant": "Alexa + Google",
+    "app": "Tapo (3D whole-home view)"
   },
   {
     "id": "ecovacs-deebot-t80s-omni",
@@ -127769,20 +127803,19 @@
     "price": "POA",
     "img": "",
     "desc": "Updated OMNI-series Deebot with stronger suction, roller-style self-washing mop, improved edge cleaning and enhanced dock automation over the original T80 Omni.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "ecovacs",
-      "deebot",
-      "t80s",
-      "roller-mop",
-      "omni",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "mop_type": "Roller-style self-washing mop",
+    "dock_functions": [
+      "OMNI: auto-empty",
+      "Roller wash",
+      "Hot-air dry",
+      "Auto refill"
+    ],
+    "manufacturer_history": "Updated OMNI-series Deebot, improving suction, roller mopping and edge cleaning over the T80 Omni.",
+    "app": "ECOVACS Home"
   },
   {
     "id": "narwal-freo-pro",
@@ -127797,18 +127830,13 @@
     "price": "POA",
     "img": "",
     "desc": "Narwal Freo-series robot vacuum and mop pairing strong suction with Narwal's self-washing, self-drying triangular mopping and dirt-sensing dust-detection cleaning.",
-    "tags": [
-      "robot-vacuum",
-      "mop",
-      "narwal",
-      "freo-pro",
-      "self-wash",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "mop_type": "Self-washing, self-drying mopping",
+    "dust_detection": "DirtSense",
+    "app": "Narwal Freo"
   },
   {
     "id": "aiper-scuba-v3-ai-vision",
@@ -127827,20 +127855,24 @@
     "price": "POA",
     "img": "",
     "desc": "Aiper's flagship cordless pool robot with a front-facing AI camera (VisionPath navigation + dToF) that recognizes 20+ debris types, JetAssist horizontal waterline cleaning, dual brushes at 4,800 GPH suction, MicroMesh multi-layer filtration and a wireless charging dock. From the world's #1-selling pool-robot brand.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "aiper",
-      "scuba-v3",
-      "cordless",
-      "ai-vision",
-      "waterline",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "suction_gph": 4800,
+    "battery_life": 150,
+    "battery_life_typical": 150,
+    "battery_life_eco": 210,
+    "weight_kg": 8.2,
+    "charge_time_min": 270,
+    "filtration": "3.5 L MicroMesh multi-layer, 3 µm",
+    "coverage_sqft": 1600,
+    "navigation": "VisionPath AI camera + dToF; AI Patrol (debris-first, ~40% faster); Navium 7-day autonomous scheduling",
+    "cleaning_zones": "Floor, walls, waterline (JetAssist)",
+    "mobility": "Caterpillar treads; dual LED headlights for night cleaning; 4 scrubbing brushes",
+    "dock": "Wireless charging + Smart Surface Parking",
+    "cordless": true,
+    "app": "Aiper"
   },
   {
     "id": "aiper-scuba-s3",
@@ -127859,19 +127891,14 @@
     "price": "POA",
     "img": "",
     "desc": "Cordless robotic pool cleaner covering floor, walls and waterline with smart path navigation, aimed at small-to-medium inground and above-ground pools.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "aiper",
-      "scuba-s3",
-      "cordless",
-      "waterline",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "cleaning_zones": "Floor, walls, waterline",
+    "navigation": "Smart path navigation",
+    "cordless": true,
+    "app": "Aiper"
   },
   {
     "id": "beatbot-aquasense-2",
@@ -127891,19 +127918,24 @@
     "currency": "USD",
     "img": "",
     "desc": "Cordless pool robot with full floor, wall and waterline cleaning, smart path optimization, 16 onboard sensors, dual-pass waterline scrubbing and 5,500 GPH suction — a step below the AquaSense 2 Ultra.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "beatbot",
-      "aquasense-2",
-      "cordless",
-      "waterline",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "suction_gph": 5500,
+    "motor": "200 W brushless motor-pump (4-motor / 4-brush)",
+    "battery_mah": 10000,
+    "battery_life": 240,
+    "battery_life_typical": 240,
+    "battery_life_walls": 210,
+    "coverage_sqft": 3230,
+    "filtration": "2 L, 150 µm",
+    "navigation": "SonicSense + CleverNav, 16 sensors (2 ultrasonic), 4-core CPU; S-path floor / N-path walls",
+    "cleaning_zones": "Floor, walls, waterline (dual-pass)",
+    "dock": "Wireless charging",
+    "cordless": true,
+    "warranty_years": 3,
+    "app": "Beatbot"
   },
   {
     "id": "beatbot-sora-70",
@@ -127922,19 +127954,15 @@
     "price": "POA",
     "img": "",
     "desc": "Flagship of Beatbot's cordless Sora line, adding a water-surface Skimming Mode, long runtime, large coverage and clearly-specified multi-layer filtration, backed by a 3-year warranty.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "beatbot",
-      "sora-70",
-      "cordless",
-      "surface-mode",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 10.4,
+    "cleaning_zones": "Floor, walls, waterline + water-surface Skimming Mode (buoyancy chambers)",
+    "cordless": true,
+    "warranty_years": 3,
+    "app": "Beatbot"
   },
   {
     "id": "beatbot-sora-30",
@@ -127953,19 +127981,16 @@
     "price": "POA",
     "img": "",
     "desc": "iF DESIGN AWARD 2026-winning cordless pool cleaner in Beatbot's Sora range, focused on effortless seasonal cleaning with strong filtration and simple operation.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "beatbot",
-      "sora-30",
-      "cordless",
-      "if-design",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "cleaning_zones": "Floor & walls",
+    "cordless": true,
+    "awards": [
+      "iF DESIGN AWARD 2026"
+    ],
+    "app": "Beatbot"
   },
   {
     "id": "beatbot-iskim-ultra",
@@ -127984,19 +128009,15 @@
     "price": "POA",
     "img": "",
     "desc": "Solar-assisted robotic pool surface skimmer with smart navigation, improved edge performance and added water-care features — the premium tier of Beatbot's iSkim skimmer line.",
-    "tags": [
-      "pool-skimmer",
-      "aquatic",
-      "beatbot",
-      "iskim-ultra",
-      "solar",
-      "surface",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "type": "Robotic pool surface skimmer",
+    "power_source": "Solar-assisted",
+    "navigation": "Smart navigation with edge optimization",
+    "cordless": true,
+    "app": "Beatbot"
   },
   {
     "id": "wybot-c2-vision",
@@ -128015,20 +128036,18 @@
     "price": "POA",
     "img": "",
     "desc": "AI-powered cordless pool robot with a built-in camera for debris detection and smart route planning, cleaning floor, walls and waterline at ~3,592 GPH; runs ~3 hours covering 2,152 sq ft, in a lighter, easier-to-carry body.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "wybot",
-      "c2-vision",
-      "cordless",
-      "ai-camera",
-      "waterline",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "suction_gph": 3592,
+    "battery_life": 180,
+    "battery_life_typical": 180,
+    "coverage_sqft": 2152,
+    "navigation": "AI camera debris detection + smart route planning",
+    "cleaning_zones": "Floor, walls, waterline",
+    "cordless": true,
+    "app": "WYBOT"
   },
   {
     "id": "wybot-f1",
@@ -128047,19 +128066,14 @@
     "price": "POA",
     "img": "",
     "desc": "Fast-moving cordless pool robot whose impeller drive lets it scoot quickly around the pool floor and walls (notably loud in operation as a result).",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "wybot",
-      "f1",
-      "cordless",
-      "fast",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "drive": "Impeller propulsion (fast, notably loud)",
+    "cleaning_zones": "Floor & walls",
+    "cordless": true,
+    "app": "WYBOT"
   },
   {
     "id": "dolphin-premier",
@@ -128078,20 +128092,16 @@
     "price": "POA",
     "img": "",
     "desc": "Corded commercial-grade Dolphin pool robot with dual scrubbing motors, Multi-Media/NanoFiltration, active waterline cleaning, a weekly smart timer and a 3-year warranty — a frequent top pick for inground pools.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "dolphin",
-      "maytronics",
-      "premier",
-      "corded",
-      "waterline",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "drive": "Corded, dual scrubbing motors",
+    "filtration": "Multi-Media / NanoFiltration cartridges",
+    "cleaning_zones": "Floor, walls, waterline",
+    "scheduling": "Weekly smart timer",
+    "warranty_years": 3,
+    "cordless": false
   },
   {
     "id": "dolphin-sigma",
@@ -128110,20 +128120,15 @@
     "price": "POA",
     "img": "",
     "desc": "Premium Dolphin robotic pool cleaner with dual drive motors, gyroscope navigation, oversized filtration and 360° waterline scrubbing for large inground pools.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "dolphin",
-      "maytronics",
-      "sigma",
-      "corded",
-      "gyro",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "drive": "Corded, tri-motor system",
+    "navigation": "Gyroscope navigation",
+    "filtration": "Oversized cartridge filtration",
+    "cleaning_zones": "Floor, walls, 360° waterline",
+    "cordless": false
   },
   {
     "id": "polaris-freedom",
@@ -128139,22 +128144,19 @@
     "origin": "USA",
     "made_in": "USA",
     "status": "Active",
-    "price": "POA",
+    "price": 1300,
     "img": "",
     "desc": "Cordless robotic pool cleaner from Polaris offering floor, wall and waterline cleaning with app control, part of Polaris's Freedom / VRX iQ+ robotic range.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "polaris",
-      "freedom",
-      "cordless",
-      "waterline",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "battery_life": 150,
+    "battery_life_typical": 150,
+    "cleaning_zones": "Floor, walls, waterline",
+    "cordless": true,
+    "app": "Polaris iQ",
+    "currency": "USD"
   },
   {
     "id": "ofuzzi-cyber-1200-pro",
@@ -128173,20 +128175,13 @@
     "price": "POA",
     "img": "",
     "desc": "Affordable cordless pool robot that excels at vacuuming leaves and debris from the pool floor (floor-only; does not climb walls), with solid runtime for the price.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "ofuzzi",
-      "cyber-1200-pro",
-      "cordless",
-      "floor",
-      "budget",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "cleaning_zones": "Floor only (no wall climbing)",
+    "strength": "Leaf & large-debris pickup",
+    "cordless": true
   },
   {
     "id": "winny-clear-uv",
@@ -128205,19 +128200,13 @@
     "price": "POA",
     "img": "",
     "desc": "Cordless pool robot notable as one of the first with a built-in UV-C lamp to help sanitize water while it cleans the pool floor and walls.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "winny",
-      "clear-uv",
-      "cordless",
-      "uv-c",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "cleaning_zones": "Floor & walls",
+    "water_care": "Built-in UV-C sanitizing lamp",
+    "cordless": true
   },
   {
     "id": "airrobo-pc10",
@@ -128236,19 +128225,13 @@
     "price": "POA",
     "img": "",
     "desc": "Budget-friendly mid-range cordless robotic pool cleaner focused on affordable automated floor cleaning for small-to-medium pools.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "airrobo",
-      "pc10",
-      "cordless",
-      "budget",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "cleaning_zones": "Floor",
+    "pool_size": "Small-to-medium",
+    "cordless": true
   },
   {
     "id": "polaris-vrx-iq-plus",
@@ -128267,20 +128250,14 @@
     "price": "POA",
     "img": "",
     "desc": "Corded 4WD robotic in-ground pool cleaner with the Polaris iQ app for scheduling and control, Vortex Vacuum debris pickup, active waterline scrubbing and tangle-free swivel cable.",
-    "tags": [
-      "pool-cleaner",
-      "aquatic",
-      "polaris",
-      "vrx-iq",
-      "corded",
-      "4wd",
-      "waterline",
-      "app",
-      "consumer",
-      "active"
-    ],
+    "tags": [],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "drive": "Corded 4WD",
+    "navigation": "Vortex Vacuum with tangle-free swivel cable",
+    "cleaning_zones": "Floor, walls, waterline",
+    "cordless": false,
+    "app": "Polaris iQ"
   }
 ]
