@@ -10,8 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-M (uniform: title band added to compare/events/questions/videos/news so all browse pages match Finder/Database, sidebar starts at same position) -->
-<meta name="mrs-build" content="build-M">
+<!-- BUILD-TAG: build-N (database search now token-based: brand + model multi-word queries match, e.g. "MOVA Z60") -->
+<meta name="mrs-build" content="build-N">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -2122,7 +2122,7 @@ function getDbFiltered(){
   const selFeat=[...document.querySelectorAll('[data-feat]:checked')].map(el=>el.dataset.feat);
   const selStatus=[...document.querySelectorAll('[data-status]:checked')].map(el=>el.dataset.status);
   return ROBOTS.filter(r=>{
-    if(q&&!r.name.toLowerCase().includes(q)&&!r.brand.toLowerCase().includes(q)&&!r.tags.some(t=>t.toLowerCase().includes(q))&&!r.cat.toLowerCase().includes(q))return false;
+    if(q){var _blob=(r.name+" "+r.brand+" "+r.cat+" "+(r.sub||"")+" "+((r.tags||[]).join(" "))).toLowerCase();if(!q.split(/\s+/).filter(Boolean).every(function(t){return _blob.indexOf(t)>=0;}))return false;}
     if(selCats.length&&!selCats.some(function(c){return rInCat(r,c);}))return false;
     if(selSubs.length&&!selSubs.includes(r.sub))return false;
     if(selBrands.length&&!selBrands.includes(r.brand))return false;
