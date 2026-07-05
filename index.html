@@ -10,8 +10,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-N (database search now token-based: brand + model multi-word queries match, e.g. "MOVA Z60") -->
-<meta name="mrs-build" content="build-N">
+<!-- BUILD-TAG: build-O (hero nav tile shows short label via _navShort; full nav still in specs) -->
+<meta name="mrs-build" content="build-O">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -3695,13 +3695,23 @@ function _playVid(i,id){var card=document.getElementById('pvc'+i);if(!card)retur
   card.innerHTML='<div style="position:relative;padding-bottom:56.25%;height:0;background:#000"><iframe src="https://www.youtube.com/embed/'+id+'?rel=0&autoplay=1" style="position:absolute;top:0;left:0;width:100%;height:100%;border:0" allow="accelerometer;autoplay;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe></div>'+(meta?meta.outerHTML:'');}
 
 function _connShort(r){return [r.wifi?'Wi-Fi':null,r.bluetooth?'BT':null,(r.cellular&&r.cellular!=='No'&&r.cellular!==false)?(typeof r.cellular==='string'?r.cellular:'Cell'):null].filter(Boolean).join(' \u00b7 ')||null;}
+function _navShort(r){
+  var n=r.navigation||(r.lidar?'LiDAR':(r.vision_navigation?'AI camera':''));
+  if(!n) return null; n=String(n); var low=n.toLowerCase();
+  if(low.indexOf('lidar')>=0) return (low.indexOf('camera')>=0||low.indexOf('rgb')>=0||low.indexOf(' ai')>=0||r.ai_obstacle_avoidance)?'LiDAR + AI':'LiDAR';
+  if(low.indexOf('camera')>=0||low.indexOf('rgb')>=0||low.indexOf('vision')>=0) return 'AI camera';
+  if(low.indexOf('gyro')>=0) return 'Gyroscope';
+  if(low.indexOf('radar')>=0) return 'Radar';
+  var s=n.split(/\s*[+,(\u2013\u2014]/)[0].trim();
+  return s.length>18?s.slice(0,16).trim()+'\u2026':s;
+}
 function bandTiles(r){
   var c=((r.cat||'')+' '+(r.sub||'')).toLowerCase();function h(x){return c.indexOf(x)>=0;}
   function t(l,v,u){return {l:l,v:v,u:u||''};}var P;
   if(h('mower'))P=[t('Navigation',r.navigation||(r.rtk?'RTK-GNSS':null),''),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Docking',(r.auto_charge||r.auto_dock)?'Auto-dock':null,''),t('Cut Width',r.cutting_width_mm,'mm'),t('Connectivity',_connShort(r),'')];
   else if(h('humanoid')||h('biped'))P=[t('Height',r.height_mm,'mm'),t('DOF',r.dof,''),t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('Weight',r.weight_kg||r.weight,'kg')];
   else if(h('drone')||h('uav')||h('aerial'))P=[t('Flight',r.max_flight_time||r.flight_time_min,'min'),t('Range',r.max_range||r.range_km,'km'),t('Camera',r.camera_mp,'MP'),t('Speed',r.max_speed||r.speed_ms,'m/s'),t('Weight',r.weight_kg||r.weight,'kg')];
-  else if(h('vacuum')||h('mop'))P=[t('Suction',r.suction_pa,'Pa'),t('Battery',r.battery_life_typical,'min'),t('Navigation',r.navigation||(r.lidar?'LiDAR':null),''),t('Dustbin',r.dustbin_ml,'ml'),t('Noise',r.noise_db,'dB')];
+  else if(h('vacuum')||h('mop'))P=[t('Suction',r.suction_pa,'Pa'),t('Battery',r.battery_life_typical,'min'),t('Navigation',_navShort(r),''),t('Dustbin',r.dustbin_ml,'ml'),t('Noise',r.noise_db,'dB')];
   else if(h('quadruped')||h('legged'))P=[t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.run_speed_ms||r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg,'kg'),t('Runtime',r.battery_life_typical,'min'),t('DOF',r.dof,'')];
   else if(h('cobot')||h('manipulator'))P=[t('Payload',r.payload_kg||r.payload,'kg'),t('Reach',r.reach_mm||r.reach,'mm'),t('DOF',r.dof,''),t('Repeatability',r.repeatability,'mm'),t('Speed',r.speed_ms||r.speed,'m/s')];
   else if(h('aquatic')||h('underwater')||h('rov')||h('auv')||h('usv'))P=[t('Max Depth',r.max_depth_m||r.depth_rating_m,'m'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Endurance',r.endurance_hours,'h'),t('Payload',r.payload_kg||r.payload,'kg'),t('Weight',r.weight_kg,'kg')];
