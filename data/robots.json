@@ -132307,26 +132307,20 @@
     "sub": "Autonomous Passenger eVTOL",
     "year": 2022,
     "origin": "USA",
-    "status": "Prototype",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "Boeing-backed Wisk's self-flying four-seat air taxi — the first candidate for autonomous, uncrewed passenger eVTOL flight in the US, with human supervisors on the ground.",
-    "tags": [
-      "drone",
-      "evtol",
-      "wisk",
-      "gen-6",
-      "autonomous",
-      "air-taxi",
-      "prototype"
-    ],
+    "tags": [],
     "autonomous": true,
     "use_cases": [
       "Autonomous air taxi"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "max_speed": "~220 km/h (120 kt cruise)",
+    "max_range": "~144 km (90 mi)"
   },
   {
     "id": "beta-alia",
@@ -132336,19 +132330,11 @@
     "sub": "Electric Aircraft / eVTOL",
     "year": 2023,
     "origin": "USA",
-    "status": "Prototype",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "BETA's electric aircraft family (CTOL CX300 and VTOL A250): a clean-sheet design with real cross-country flight campaigns, cargo/medical launch customers like UPS and United Therapeutics, and a growing charging network.",
-    "tags": [
-      "drone",
-      "evtol",
-      "beta",
-      "alia",
-      "electric-aircraft",
-      "cargo",
-      "prototype"
-    ],
+    "tags": [],
     "use_cases": [
       "Cargo",
       "Medical logistics",
@@ -132356,7 +132342,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "max_range": "Up to 463 km (250 nmi design)"
   },
   {
     "id": "vertical-vx4",
@@ -132397,26 +132384,20 @@
     "sub": "Ducted-Fan eVTOL",
     "year": 2024,
     "origin": "Germany",
-    "status": "Retired",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "The 36-ducted-fan seven-seat eVTOL jet that pursued regional electric flight — a landmark program that flew full-scale demonstrators before Lilium's insolvency ended operations in 2025.",
-    "tags": [
-      "drone",
-      "evtol",
-      "lilium",
-      "jet",
-      "ducted-fan",
-      "germany",
-      "historic"
-    ],
+    "tags": [],
     "motor_count": 36,
     "use_cases": [
       "Regional air mobility (historic)"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "max_range": "~250 km (design)",
+    "max_speed": "280 km/h (design)"
   },
   {
     "id": "xpeng-aeroht-x2",
@@ -132461,15 +132442,7 @@
     "price": "POA",
     "img": "",
     "desc": "DJI's first delivery drone: carries 30 kg (dual-battery) or 40 kg (single-battery) up to 16 km loaded, at 20 m/s, with a 20 m winch system, dual radar + vision sensing and O3 transmission — bringing DJI reliability to heavy-lift logistics.",
-    "tags": [
-      "drone",
-      "dji",
-      "flycart-30",
-      "delivery",
-      "heavy-lift",
-      "winch",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 30,
     "max_speed": "20 m/s",
     "max_range": "16 km loaded / 28 km empty",
@@ -132480,7 +132453,17 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 65,
+    "max_flight_time": 29,
+    "max_altitude": "6,000 m",
+    "ip_rating": "IP55",
+    "operating_temp_min": -20,
+    "operating_temp_max": 45,
+    "transmission": "DJI O3 (20 km) + 4G enhanced",
+    "return_to_home": true,
+    "motor_count": 8,
+    "frame_type": "4-axis coaxial octocopter"
   },
   {
     "id": "elroy-air-chaparral",
@@ -132587,16 +132570,7 @@
     "price": "POA",
     "img": "",
     "desc": "The definitive armed drone: turboprop hunter-killer with ~27-hour endurance, 1,850 km range, 482 km/h top speed and 1,700 kg of payload across seven hardpoints — the backbone of US and allied remote airpower.",
-    "tags": [
-      "drone",
-      "military",
-      "general-atomics",
-      "mq-9",
-      "reaper",
-      "male",
-      "combat",
-      "active"
-    ],
+    "tags": [],
     "cats": [
       "Drones",
       "Military"
@@ -132616,7 +132590,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "max_altitude": "15,240 m (50,000 ft)",
+    "width_mm": 20116
   },
   {
     "id": "ga-mq-1-predator",
@@ -132626,19 +132602,11 @@
     "sub": "MALE UAV",
     "year": 1995,
     "origin": "USA",
-    "status": "Retired",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "The drone that started the era: the original Predator flew ISR over the Balkans in 1995, was armed with Hellfires after 2001, and retired from USAF service in 2018 after redefining modern warfare.",
-    "tags": [
-      "drone",
-      "military",
-      "general-atomics",
-      "mq-1",
-      "predator",
-      "male",
-      "historic"
-    ],
+    "tags": [],
     "cats": [
       "Drones",
       "Military"
@@ -132655,7 +132623,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "max_range": "1,240 km",
+    "width_mm": 14800,
+    "max_altitude": "7,620 m"
   },
   {
     "id": "baykar-bayraktar-tb2",
@@ -132669,15 +132640,7 @@
     "price": "POA",
     "img": "",
     "desc": "The drone that changed 2020s conflicts: Turkey's TB2 with ~27-hour endurance, 150 kg of smart micro-munitions and a combat record from Syria to Ukraine that made it a global export phenomenon (30+ countries).",
-    "tags": [
-      "drone",
-      "military",
-      "baykar",
-      "bayraktar",
-      "tb2",
-      "combat",
-      "active"
-    ],
+    "tags": [],
     "cats": [
       "Drones",
       "Military"
@@ -132695,7 +132658,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "width_mm": 12000,
+    "max_altitude": "8,230 m",
+    "communication_range_km": 300
   },
   {
     "id": "baykar-akinci",
@@ -132709,15 +132675,7 @@
     "price": "POA",
     "img": "",
     "desc": "Baykar's heavy flagship: twin-turboprop 6-tonne class UCAV carrying 1,500 kg of ordnance including cruise missiles, with satellite control, AESA radar options and 24-hour endurance.",
-    "tags": [
-      "drone",
-      "military",
-      "baykar",
-      "akinci",
-      "hale",
-      "combat",
-      "active"
-    ],
+    "tags": [],
     "cats": [
       "Drones",
       "Military"
@@ -132735,7 +132693,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "width_mm": 20000,
+    "max_altitude": "12,192 m (40,000 ft)"
   },
   {
     "id": "northrop-rq-4-global-hawk",
@@ -132749,16 +132709,7 @@
     "price": "POA",
     "img": "",
     "desc": "Strategic high-altitude surveillance: the jet-powered Global Hawk loiters above 18 km for 32+ hours, surveying 100,000 km² a day — the U-2's unmanned successor for wide-area ISR.",
-    "tags": [
-      "drone",
-      "military",
-      "northrop-grumman",
-      "rq-4",
-      "global-hawk",
-      "hale",
-      "isr",
-      "active"
-    ],
+    "tags": [],
     "cats": [
       "Drones",
       "Military"
@@ -132776,7 +132727,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "width_mm": 39900,
+    "max_altitude": "18,288 m (60,000 ft)",
+    "max_range": "22,780 km"
   },
   {
     "id": "insitu-scaneagle",
@@ -132790,16 +132744,7 @@
     "price": "POA",
     "img": "",
     "desc": "The catapult-launched, SkyHook-recovered small UAV that pioneered runway-independent tactical ISR — 22 kg, 24+ hour endurance, tens of thousands of combat hours with navies and militaries worldwide.",
-    "tags": [
-      "drone",
-      "military",
-      "boeing",
-      "insitu",
-      "scaneagle",
-      "tactical",
-      "isr",
-      "active"
-    ],
+    "tags": [],
     "cats": [
       "Drones",
       "Military"
@@ -132816,7 +132761,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "width_mm": 3110,
+    "max_altitude": "5,950 m"
   },
   {
     "id": "av-switchblade-600",
@@ -132866,15 +132813,7 @@
     "price": "POA",
     "img": "",
     "desc": "Runway-independent Group 3 VTOL fixed-wing UAS: 14+ hours endurance with a 13.6 kg multi-sensor payload, selected for the US Army's FTUAS program to replace the Shadow.",
-    "tags": [
-      "drone",
-      "military",
-      "aerovironment",
-      "jump-20",
-      "vtol",
-      "isr",
-      "active"
-    ],
+    "tags": [],
     "cats": [
       "Drones",
       "Military"
@@ -132889,7 +132828,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 97.5
   },
   {
     "id": "kratos-xq-58-valkyrie",
@@ -132899,20 +132839,11 @@
     "sub": "Loyal Wingman UCAV",
     "year": 2019,
     "origin": "USA",
-    "status": "Prototype",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "Low-cost attritable jet wingman: rail-launched, runway-independent, high-subsonic (~Mach 0.72) stealthy UCAV serving as the testbed for USAF/Marine collaborative combat aircraft and AI-piloted flight.",
-    "tags": [
-      "drone",
-      "military",
-      "kratos",
-      "xq-58",
-      "valkyrie",
-      "loyal-wingman",
-      "cca",
-      "prototype"
-    ],
+    "tags": [],
     "cats": [
       "Drones",
       "Military"
@@ -132926,7 +132857,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "width_mm": 8200,
+    "max_range": "~5,560 km (3,000 nmi)"
   },
   {
     "id": "northrop-x-47b",
@@ -132936,19 +132869,11 @@
     "sub": "Carrier Demonstration UCAV",
     "year": 2011,
     "origin": "USA",
-    "status": "Retired",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "History-maker: the tailless stealth demonstrator that performed the first autonomous carrier catapult launch and arrested landing (2013) and first autonomous aerial refueling of a drone (2015).",
-    "tags": [
-      "drone",
-      "military",
-      "northrop-grumman",
-      "x-47b",
-      "carrier",
-      "stealth",
-      "historic"
-    ],
+    "tags": [],
     "cats": [
       "Drones",
       "Military"
@@ -132962,7 +132887,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "width_mm": 18900
   },
   {
     "id": "boeing-mq-25-stingray",
@@ -133151,14 +133077,7 @@
     "price": "POA",
     "img": "",
     "desc": "Sony's professional drone for Alpha mirrorless cameras: the smallest drone that can carry an Alpha body, hitting 90 km/h with obstacle-sensing stereo cameras and Sony's own flight-control ecosystem.",
-    "tags": [
-      "drone",
-      "sony",
-      "airpeak-s1",
-      "cinema",
-      "professional",
-      "active"
-    ],
+    "tags": [],
     "weight_kg": 3.1,
     "max_speed": "90 km/h",
     "cameras": "Carries Sony Alpha mirrorless",
@@ -133170,7 +133089,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "max_flight_time": 22
   },
   {
     "id": "fimi-x8-pro",
