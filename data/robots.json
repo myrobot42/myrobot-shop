@@ -130652,15 +130652,7 @@
     "price": "POA",
     "img": "",
     "desc": "FANUC's highest-payload cobot: 30 kg capacity extending collaborative automation into heavy machine tending and palletizing territory previously requiring caged industrial arms.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "fanuc",
-      "crx-30ia",
-      "6-axis",
-      "heavy-payload",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 30,
     "dof": 6,
     "ce": true,
@@ -130671,7 +130663,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "reach_mm": 1756,
+    "repeatability": 0.05
   },
   {
     "id": "kuka-lbr-iisy-3-r760",
@@ -131080,15 +131074,7 @@
     "price": "POA",
     "img": "",
     "desc": "Dobot's mid-range CR-series cobot: 10 kg payload with graphical programming and drag-to-teach, part of one of China's largest cobot lineups spanning 3–20 kg.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "dobot",
-      "cr10",
-      "6-axis",
-      "china",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 10,
     "dof": 6,
     "ce": true,
@@ -131100,7 +131086,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "reach_mm": 1525
   },
   {
     "id": "dobot-nova-5",
@@ -131258,19 +131245,10 @@
     "year": 2023,
     "origin": "USA",
     "status": "Active",
-    "price": "POA",
+    "price": 37000,
     "img": "",
     "desc": "US-built cobot undercutting incumbents: 18 kg payload, 1,300 mm reach, AI-driven no-code programming, offered at roughly half the price of comparable arms including via RaaS subscription.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "standard-bots",
-      "ro1",
-      "6-axis",
-      "usa",
-      "ai",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 18,
     "reach_mm": 1300,
     "dof": 6,
@@ -131281,7 +131259,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "repeatability": 0.025
   },
   {
     "id": "kinova-gen3",
@@ -131715,18 +131694,10 @@
     "year": 2023,
     "origin": "China",
     "status": "Active",
-    "price": 1399,
+    "price": 1299,
     "img": "",
     "desc": "Consumer robot dog with musculoskeletal proprietary joints giving lifelike, springy motion — crowdfunded at about US$1,399 as one of the most agile petbots in its price class.",
-    "tags": [
-      "quadruped",
-      "hengbot",
-      "sirius",
-      "consumer",
-      "companion",
-      "china",
-      "active"
-    ],
+    "tags": [],
     "use_cases": [
       "Companion",
       "Entertainment",
@@ -131734,7 +131705,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 1,
+    "dof": 14,
+    "cameras": "8MP camera + dual-mic array"
   },
   {
     "id": "petoi-bittle",
@@ -131748,15 +131722,7 @@
     "price": "POA",
     "img": "",
     "desc": "Palm-sized open-source robot dog (~290 g) built on the OpenCat framework — Arduino/Raspberry Pi programmable, back-flipping, and hugely popular in STEM education and maker communities.",
-    "tags": [
-      "quadruped",
-      "petoi",
-      "bittle",
-      "mini",
-      "education",
-      "open-source",
-      "active"
-    ],
+    "tags": [],
     "weight_kg": 0.29,
     "ros": true,
     "use_cases": [
@@ -131766,7 +131732,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "dof": 9
   },
   {
     "id": "petoi-bittle-x",
@@ -131780,16 +131747,7 @@
     "price": "POA",
     "img": "",
     "desc": "Voice-controlled evolution of the Bittle with onboard AI voice commands, GPT integration options and the same OpenCat open-source foundation for coding education.",
-    "tags": [
-      "quadruped",
-      "petoi",
-      "bittle-x",
-      "mini",
-      "education",
-      "voice",
-      "open-source",
-      "active"
-    ],
+    "tags": [],
     "voice_assistant": [
       "Onboard voice commands"
     ],
@@ -131800,7 +131758,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "dof": 9
   },
   {
     "id": "kawasaki-corleo",
