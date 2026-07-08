@@ -130469,15 +130469,7 @@
     "price": "POA",
     "img": "",
     "desc": "UR's fastest cobot ever (Automate 2025): 15 kg payload (17.5 kg wrist-down for palletizing), 1,300 mm reach and a 5 m/s TCP speed for up to 30% faster pick-and-place cycles. IP65, PolyScope X software, and NVIDIA-powered UR AI Accelerator support.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "universal-robots",
-      "ur15",
-      "6-axis",
-      "high-speed",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 15,
     "reach_mm": 1300,
     "dof": 6,
@@ -130493,7 +130485,9 @@
     "warranty_months": 12,
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "speed_ms": 5,
+    "speed": "5 m/s TCP"
   },
   {
     "id": "universal-robots-ur7e",
@@ -130507,15 +130501,7 @@
     "price": "POA",
     "img": "",
     "desc": "The renamed and upgraded UR5e: payload boosted 2.5 kg to 7.5 kg with the same 850 mm reach and e-Series versatility — same trusted platform, more power, full compatibility with existing tooling.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "universal-robots",
-      "ur7e",
-      "6-axis",
-      "e-series",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 7.5,
     "reach_mm": 850,
     "dof": 6,
@@ -130531,7 +130517,11 @@
     "warranty_months": 12,
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 20.6,
+    "ip_rating": "IP54",
+    "operating_temp_min": 0,
+    "operating_temp_max": 50
   },
   {
     "id": "universal-robots-ur12e",
@@ -130545,15 +130535,7 @@
     "price": "POA",
     "img": "",
     "desc": "The renamed UR10e reflecting its true 12.5 kg payload, with 1,300 mm reach — UR's most popular mid-size cobot for palletizing, machine tending and welding, now with a clearer name.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "universal-robots",
-      "ur12e",
-      "6-axis",
-      "e-series",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 12.5,
     "reach_mm": 1300,
     "dof": 6,
@@ -130568,7 +130550,11 @@
     "warranty_months": 12,
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 33.5,
+    "ip_rating": "IP54",
+    "operating_temp_min": 0,
+    "operating_temp_max": 50
   },
   {
     "id": "fanuc-crx-5ia",
@@ -130582,14 +130568,7 @@
     "price": "POA",
     "img": "",
     "desc": "Smallest of FANUC's CRX cobot family: 5 kg payload, 994 mm reach, tablet-based drag-and-drop programming and FANUC's '8 years zero maintenance' reliability claim.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "fanuc",
-      "crx-5ia",
-      "6-axis",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 5,
     "reach_mm": 994,
     "dof": 6,
@@ -130601,7 +130580,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "ip_rating": "IP67"
   },
   {
     "id": "fanuc-crx-10ia",
@@ -130615,14 +130595,7 @@
     "price": "POA",
     "img": "",
     "desc": "The original CRX cobot: 10 kg payload, 1,249 mm reach, IP67 wrist, tablet programming, and FANUC industrial reliability in a collaborative package.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "fanuc",
-      "crx-10ia",
-      "6-axis",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 10,
     "reach_mm": 1249,
     "dof": 6,
@@ -130634,7 +130607,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 40,
+    "repeatability": 0.04,
+    "ip_rating": "IP67"
   },
   {
     "id": "fanuc-crx-20ia-l",
@@ -130648,15 +130624,7 @@
     "price": "POA",
     "img": "",
     "desc": "Long-reach CRX cobot: 20 kg payload with 1,418 mm reach for heavier machine-tending and palletizing tasks while keeping the CRX line's no-maintenance design.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "fanuc",
-      "crx-20ia",
-      "6-axis",
-      "long-reach",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 20,
     "reach_mm": 1418,
     "dof": 6,
@@ -130668,7 +130636,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "repeatability": 0.04,
+    "ip_rating": "IP67"
   },
   {
     "id": "fanuc-crx-30ia",
@@ -130748,15 +130718,7 @@
     "price": "POA",
     "img": "",
     "desc": "KUKA's pioneering sensitive cobot: 7 axes with joint-torque sensors in every axis for force-controlled assembly, 14 kg payload and 820 mm reach — the reference platform for sensitive robotics research and production.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "kuka",
-      "lbr-iiwa",
-      "7-axis",
-      "torque-sensing",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 14,
     "reach_mm": 820,
     "dof": 7,
@@ -130769,7 +130731,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 29.9,
+    "repeatability": 0.1
   },
   {
     "id": "abb-gofa-5",
@@ -130783,14 +130747,7 @@
     "price": "POA",
     "img": "",
     "desc": "ABB's GoFa cobot family starter: 5 kg payload, 950 mm reach, joint torque sensing in every axis, lead-through programming and Wizard easy-programming blocks.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "abb",
-      "gofa-5",
-      "6-axis",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 5,
     "reach_mm": 950,
     "dof": 6,
@@ -130802,7 +130759,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "repeatability": 0.05,
+    "speed_ms": 2.2,
+    "speed": "2.2 m/s TCP"
   },
   {
     "id": "abb-gofa-10",
@@ -130850,15 +130810,7 @@
     "price": "POA",
     "img": "",
     "desc": "ABB's industrial-speed cobot: up to 5 m/s TCP speed with a 4 kg payload and 580 mm reach, using a safety laser scanner to blend full industrial speed with human-safe collaboration.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "abb",
-      "swifti",
-      "6-axis",
-      "high-speed",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 4,
     "reach_mm": 580,
     "dof": 6,
@@ -130870,7 +130822,10 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "repeatability": 0.01,
+    "speed_ms": 5,
+    "speed": "5 m/s TCP"
   },
   {
     "id": "abb-powa",
@@ -130916,15 +130871,7 @@
     "price": "POA",
     "img": "",
     "desc": "Comau's dual-mode robot: runs as a full 6 m/s industrial arm when the cell is clear and switches to collaborative speed when humans approach — 5 kg payload, 809 mm reach, 0.03 mm repeatability.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "comau",
-      "racer-5",
-      "6-axis",
-      "dual-mode",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 5,
     "reach_mm": 809,
     "dof": 6,
@@ -130937,7 +130884,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "speed_ms": 6,
+    "speed": "6 m/s TCP (industrial mode)"
   },
   {
     "id": "epson-ls6-b",
@@ -130951,14 +130900,7 @@
     "price": "POA",
     "img": "",
     "desc": "Epson's best-selling SCARA class: 6 kg payload with 600/700 mm arm options, high-speed cycle times and compact footprint — from the world's #1 SCARA robot manufacturer.",
-    "tags": [
-      "scara",
-      "industrial",
-      "epson",
-      "ls6",
-      "high-speed",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 6,
     "dof": 4,
     "ce": true,
@@ -130969,7 +130911,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "repeatability": 0.02
   },
   {
     "id": "denso-cobotta",
@@ -130983,15 +130926,7 @@
     "price": "POA",
     "img": "",
     "desc": "Denso's ultra-compact tabletop cobot: 0.5 kg payload and 342 mm reach in a 4 kg portable body — designed for labs, education and light benchtop automation.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "denso",
-      "cobotta",
-      "compact",
-      "tabletop",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 0.5,
     "reach_mm": 342,
     "dof": 6,
@@ -131004,7 +130939,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "repeatability": 0.05
   },
   {
     "id": "denso-cobotta-pro-900",
@@ -131051,14 +130987,7 @@
     "price": "POA",
     "img": "",
     "desc": "Mitsubishi Electric's cobot: 5 kg payload, 910 mm reach, direct teaching by hand-guiding and visual programming — industrial MELFA DNA in a collaborative arm.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "mitsubishi",
-      "melfa-assista",
-      "6-axis",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 5,
     "reach_mm": 910,
     "dof": 6,
@@ -131070,7 +130999,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "repeatability": 0.03
   },
   {
     "id": "nachi-cz10",
@@ -131219,15 +131149,7 @@
     "price": "POA",
     "img": "",
     "desc": "igus' polymer cobot: motion-plastics construction brings the arm to 8.2 kg total weight and a disruptive low price, with 2 kg payload and 664 mm reach for education and light automation.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "igus",
-      "rebel",
-      "plastic",
-      "low-cost",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 2,
     "reach_mm": 664,
     "dof": 6,
@@ -131240,7 +131162,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "repeatability": 1
   },
   {
     "id": "mecademic-meca500",
@@ -131254,15 +131177,7 @@
     "price": "POA",
     "img": "",
     "desc": "The world's smallest and most precise six-axis industrial arm: 0.5 kg payload, 330 mm reach and ±0.005 mm repeatability — palm-sized precision for micro-assembly, testing and photonics.",
-    "tags": [
-      "industrial",
-      "mecademic",
-      "meca500",
-      "micro",
-      "precision",
-      "6-axis",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 0.5,
     "reach_mm": 330,
     "dof": 6,
@@ -131275,7 +131190,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 4.6
   },
   {
     "id": "ufactory-xarm-6",
@@ -131289,16 +131205,7 @@
     "price": "POA",
     "img": "",
     "desc": "UFACTORY's accessible 6-axis arm: 5 kg payload, 700 mm reach, Python/ROS control at a research-friendly price — widely used in labs, startups and AI-manipulation research.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "ufactory",
-      "xarm-6",
-      "6-axis",
-      "research",
-      "china",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 5,
     "reach_mm": 700,
     "dof": 6,
@@ -131311,7 +131218,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 12.2,
+    "repeatability": 0.1
   },
   {
     "id": "ufactory-lite-6",
@@ -131325,16 +131234,7 @@
     "price": "POA",
     "img": "",
     "desc": "Ultra-compact UFACTORY arm: 0.6 kg payload, 440 mm reach, 8.7 kg total weight — a desktop 6-axis for education, prototyping and embodied-AI experiments.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "ufactory",
-      "lite-6",
-      "compact",
-      "education",
-      "china",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 0.6,
     "reach_mm": 440,
     "dof": 6,
@@ -131346,7 +131246,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 8.7
   },
   {
     "id": "standard-bots-ro1",
@@ -131394,15 +131295,7 @@
     "price": "POA",
     "img": "",
     "desc": "Kinova's flagship research manipulator: 7 DoF, 4 kg payload, 902 mm reach with integrated 2D/3D vision and full ROS support — a standard platform in academic manipulation research.",
-    "tags": [
-      "industrial",
-      "research",
-      "kinova",
-      "gen3",
-      "7-axis",
-      "vision",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 4,
     "reach_mm": 902,
     "dof": 7,
@@ -131415,7 +131308,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 8.2
   },
   {
     "id": "productive-robotics-ob7",
@@ -131429,16 +131323,7 @@
     "price": "POA",
     "img": "",
     "desc": "American-made 7-axis cobot taught purely by demonstration — no programming — with 5 kg payload and 1,000 mm reach; the extra axis lets it reach around obstructions like a human arm.",
-    "tags": [
-      "cobot",
-      "industrial",
-      "productive-robotics",
-      "ob7",
-      "7-axis",
-      "no-code",
-      "usa",
-      "active"
-    ],
+    "tags": [],
     "payload_kg": 5,
     "reach_mm": 1000,
     "dof": 7,
@@ -131450,7 +131335,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "repeatability": 0.1
   },
   {
     "id": "yaskawa-hc20dtp",
