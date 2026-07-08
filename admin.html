@@ -3486,6 +3486,27 @@ async function callBulkMerge(changes, reason){
 }
 
 // Split a large changes payload into batches within the server's caps.
+
+// ── AUTO-DEPLOY: fire a Netlify Build Hook after successful data merges ──
+// bulk-merge commits use [skip ci] (no build per commit), so nothing publishes
+// until a deploy runs. This triggers one automatically after each merge batch.
+function triggerNetlifyBuild(reason){
+  let hook = localStorage.getItem('mrsh_build_hook') || '';
+  if (hook === 'skip') return;
+  if (!hook){
+    hook = (prompt('AUTO-DEPLOY SETUP (one-time)\n\nPaste your Netlify Build Hook URL so imports publish automatically.\n\nGet it: Netlify \u2192 Site configuration \u2192 Build & deploy \u2192 Build hooks \u2192 Add build hook (name: admin-import, branch: main) \u2192 copy URL.\n\nLeave blank to skip (manual Trigger deploy as before).') || '').trim();
+    localStorage.setItem('mrsh_build_hook', hook || 'skip');
+    if (!hook){ addMsg('Auto-deploy skipped \u2014 set it later by running localStorage.removeItem(\'mrsh_build_hook\') and importing again.', 'system'); return; }
+  }
+  if (!/^https:\/\/api\.netlify\.com\/build_hooks\//.test(hook)){
+    addMsg('\u26a0\ufe0f Build hook URL looks wrong (should start with https://api.netlify.com/build_hooks/) \u2014 auto-deploy skipped. Fix: localStorage.removeItem(\'mrsh_build_hook\')', 'error');
+    return;
+  }
+  fetch(hook, { method: 'POST', mode: 'no-cors', body: '' })
+    .then(() => { addMsg('\ud83d\ude80 Netlify build triggered \u2014 changes live in ~1\u20132 min.', 'system'); addLog('info', 'Netlify build hook fired (' + (reason || 'merge') + ')'); })
+    .catch(e => addMsg('\u26a0\ufe0f Build hook failed: ' + e.message, 'error'));
+}
+
 async function callBulkMergeChunked(changes, reason, chunkSize){
   const MAX_DELETES = 100;
   const MAX_UPSERTS = 500;
@@ -3511,6 +3532,7 @@ async function callBulkMergeChunked(changes, reason, chunkSize){
     totals.total = r.total;
     totals.batches++;
   }
+  if ((totals.added + totals.updated + totals.deleted) > 0) triggerNetlifyBuild(reason);
   return totals;
 }
 
