@@ -131385,16 +131385,7 @@
     "price": "POA",
     "img": "",
     "desc": "Unitree's 2025 flagship 'Stellar Explorer': 37 kg with hot-swappable dual 9,000 mAh batteries, carrying 25 kg continuously (100 kg standing) at up to 5 m/s, climbing 30 cm steps and 45° slopes, with front + rear LiDAR, IP56 body, Wi-Fi 6 and 20 km unloaded range.",
-    "tags": [
-      "quadruped",
-      "unitree",
-      "a2",
-      "industrial",
-      "inspection",
-      "lidar",
-      "hot-swap",
-      "active"
-    ],
+    "tags": [],
     "weight_kg": 37,
     "payload_kg": 25,
     "payload": "25 kg walking / 100 kg standing",
@@ -131414,7 +131405,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "charge_time_min": 60,
+    "bluetooth": true
   },
   {
     "id": "unitree-a2-w",
@@ -131462,15 +131455,7 @@
     "price": "POA",
     "img": "",
     "desc": "Wheels-on-feet version of the popular Go2, blending rolling speed on smooth ground with legged climbing — same 4D LiDAR perception and app/SDK ecosystem as the standard Go2.",
-    "tags": [
-      "quadruped",
-      "unitree",
-      "go2-w",
-      "wheeled-legged",
-      "consumer",
-      "lidar",
-      "active"
-    ],
+    "tags": [],
     "lidar": true,
     "use_cases": [
       "Research",
@@ -131479,7 +131464,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "speed_ms": 2.5,
+    "speed": "2.5 m/s (wheeled)"
   },
   {
     "id": "unitree-aliengo",
@@ -131579,16 +131566,7 @@
     "price": 61200,
     "img": "",
     "desc": "The world's first industrial wheeled-legged quadruped: 33 kg, 15 kg payload, 5 m/s lab speed (3 m/s operating), IP66, 96-line LiDAR with omnidirectional avoidance, 25 cm continuous stairs, 80 cm single obstacles and −20 to 55°C endurance — built for power-line inspection, mining and disaster response. M20 Pro from US$61,200.",
-    "tags": [
-      "quadruped",
-      "deep-robotics",
-      "lynx-m20",
-      "wheeled-legged",
-      "industrial",
-      "ip66",
-      "lidar",
-      "active"
-    ],
+    "tags": [],
     "weight_kg": 33,
     "payload_kg": 15,
     "payload": "15 kg",
@@ -131607,7 +131585,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "charge_time_min": 90
   },
   {
     "id": "magiclab-magicdog",
@@ -131621,15 +131600,7 @@
     "price": "POA",
     "img": "",
     "desc": "MagicLab's agile consumer-and-education quadruped — a Go2-class robot dog with AI interaction, gymnastic locomotion demos and an SDK for developers, from the Chinese embodied-AI startup also building humanoids.",
-    "tags": [
-      "quadruped",
-      "magiclab",
-      "magicdog",
-      "consumer",
-      "education",
-      "china",
-      "active"
-    ],
+    "tags": [],
     "use_cases": [
       "Education",
       "Research",
@@ -131637,7 +131608,20 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 15.8,
+    "dof": 13,
+    "speed_ms": 3,
+    "speed": "3.0 m/s",
+    "payload_kg": 5,
+    "payload": "5 kg (max 10 kg)",
+    "max_threshold_height_mm": 150,
+    "battery_life_typical": 150,
+    "lidar": true,
+    "cameras": "4K head camera + depth + wide-angle",
+    "wifi": true,
+    "bluetooth": true,
+    "ros": true
   },
   {
     "id": "magiclab-magicdog-w",
@@ -131651,14 +131635,7 @@
     "price": "POA",
     "img": "",
     "desc": "Wheeled-legged version of the MagicDog, adding hub-motor wheels for fast rolling travel while keeping legged obstacle negotiation.",
-    "tags": [
-      "quadruped",
-      "magiclab",
-      "magicdog-w",
-      "wheeled-legged",
-      "china",
-      "active"
-    ],
+    "tags": [],
     "use_cases": [
       "Research",
       "Inspection",
@@ -131666,7 +131643,14 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "speed_ms": 3,
+    "speed": "3.0 m/s",
+    "payload_kg": 10,
+    "payload": "10 kg",
+    "max_threshold_height_mm": 600,
+    "battery_life_typical": 240,
+    "ros": true
   },
   {
     "id": "limx-w1",
@@ -131680,14 +131664,7 @@
     "price": "POA",
     "img": "",
     "desc": "LimX Dynamics' wheeled-legged quadruped that skates, stands on two wheels and climbs stairs — a locomotion-research showcase from the Shenzhen startup also known for its TRON 1 biped.",
-    "tags": [
-      "quadruped",
-      "limx",
-      "w1",
-      "wheeled-legged",
-      "china",
-      "active"
-    ],
+    "tags": [],
     "use_cases": [
       "Locomotion research",
       "Inspection",
@@ -131695,7 +131672,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "speed_ms": 10,
+    "speed": "10 m/s (wheeled)",
+    "payload_kg": 15,
+    "payload": "15 kg"
   },
   {
     "id": "tencent-max",
@@ -131887,18 +131868,11 @@
     "sub": "Developer Quadruped",
     "year": 2021,
     "origin": "China",
-    "status": "Retired",
+    "status": "Active",
     "price": 1540,
     "img": "",
     "desc": "Xiaomi's first robot dog: an open developer platform priced at just 9,999 RMB (~US$1,540) with NVIDIA Jetson Xavier NX brain and 3.2 m/s top speed — the machine that kicked off China's cheap-quadruped race.",
-    "tags": [
-      "quadruped",
-      "xiaomi",
-      "cyberdog",
-      "developer",
-      "open-platform",
-      "historic"
-    ],
+    "tags": [],
     "speed_ms": 3.2,
     "speed": "3.2 m/s",
     "use_cases": [
@@ -131908,7 +131882,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "chipset": "NVIDIA Jetson Xavier NX"
   },
   {
     "id": "sony-aibo-ers-1000",
@@ -131922,15 +131897,7 @@
     "price": 2899,
     "img": "",
     "desc": "Sony's beloved aibo reborn: the 2018 ERS-1000 with OLED eyes, 22 actuated axes, cloud-linked AI personality that develops uniquely with its owner, and fish-eye + SLAM cameras. ~US$2,899.",
-    "tags": [
-      "quadruped",
-      "sony",
-      "aibo",
-      "ers-1000",
-      "companion",
-      "ai",
-      "active"
-    ],
+    "tags": [],
     "cameras": "Fish-eye front + SLAM rear",
     "use_cases": [
       "Companionship",
@@ -131938,7 +131905,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 2.2,
+    "dof": 22
   },
   {
     "id": "sony-aibo-ers-7",
@@ -132294,6 +132263,46 @@
     "use_cases": [
       "Legged research (historic)",
       "Inspection trials"
+    ],
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "magiclab-magicdog-y1",
+    "name": "MagicDog Y1",
+    "brand": "MagicLab",
+    "cat": "Quadruped",
+    "sub": "Industrial Quadruped",
+    "year": 2025,
+    "origin": "China",
+    "status": "Active",
+    "price": "POA",
+    "img": "",
+    "payload_kg": 45,
+    "payload": "45 kg dynamic / 150 kg standing",
+    "speed_ms": 6,
+    "speed": "6 m/s",
+    "max_threshold_height_mm": 600,
+    "ip_rating": "IP67",
+    "lidar": true,
+    "cameras": "2 depth + 2 optical",
+    "hot_swap": true,
+    "desc": "MagicLab's industrial flagship quadruped: IP67 aviation-grade body carrying 45 kg dynamically (150 kg standing) at up to 6 m/s, climbing 60 cm obstacles, 25 cm stairs and 45° slopes, with 3D LiDAR + dual depth + dual optical perception, centimeter positioning, hot-swap batteries and modular payload expansion for inspection and logistics.",
+    "tags": [
+      "quadruped",
+      "magiclab",
+      "magicdog-y1",
+      "industrial",
+      "ip67",
+      "heavy-payload",
+      "china",
+      "active"
+    ],
+    "use_cases": [
+      "Industrial inspection",
+      "Logistics",
+      "Disaster response"
     ],
     "fig": "🤖",
     "score": 75,
