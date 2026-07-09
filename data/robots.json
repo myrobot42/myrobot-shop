@@ -114207,7 +114207,7 @@
     "battery_life_heavy": 240,
     "operating_temp_min": -20,
     "operating_temp_max": 55,
-    "cpu": "Intel Core i5/i7 + optional Jetson Orin NX",
+    "cpu": "Intel Core i5 (control) / i7 (development)",
     "wifi": "Yes",
     "cellular": "5G",
     "lidar": true,
@@ -114222,7 +114222,18 @@
       "Industrial inspection",
       "R&D"
     ],
-    "manufacturer_url": "https://shop.unitree.com/products/unitree-b2-w"
+    "manufacturer_url": "https://shop.unitree.com/products/unitree-b2-w",
+    "jump_height_mm": 1600,
+    "actuator_type": "Unitree QDD joint motors (360 N·m) + 12-inch pneumatic wheels (50 N·m)",
+    "torque_nm": 360,
+    "range_km": 20,
+    "npu": "Optional NVIDIA Jetson Orin NX (up to 3 modules)",
+    "lidar_model": "32-channel (C32 variant)",
+    "imu": true,
+    "fall_recovery": true,
+    "autonomous": true,
+    "ros": true,
+    "sdk": true
   },
   {
     "cat": "Quadruped",
@@ -114235,7 +114246,7 @@
     "origin": "China",
     "status": "Active",
     "price": 65000,
-    "payload_kg": 40,
+    "payload_kg": 20,
     "battery_life": 240,
     "ip_rating": "IP67",
     "desc": "DEEP Robotics' flagship IP67-rated inspection quadruped for harsh, GPS-denied environments such as utility tunnels and substations. Adds higher perception density, longer endurance and all-weather operation over the X20, with multi-LiDAR SLAM, RGB/thermal imaging and auto-charge docks for round-the-clock patrols.",
@@ -114285,7 +114296,33 @@
       "Security",
       "Surveying"
     ],
-    "manufacturer_url": "https://www.deeprobotics.cn/en/"
+    "manufacturer_url": "https://www.deeprobotics.cn/en/",
+    "max_incline_deg": 45,
+    "payload": 20,
+    "range_km": 10,
+    "navigation": "Multi-LiDAR SLAM",
+    "mapping": true,
+    "obstacle_avoidance": "Dynamic (AI perception + LiDAR)",
+    "lidar_model": "4x 3D LiDAR",
+    "cameras": "Wide-angle + RGB/thermal",
+    "thermal_camera": true,
+    "depth_sensing": "Depth camera",
+    "gps": true,
+    "rtk": true,
+    "imu": true,
+    "cellular": "5G",
+    "ethernet": "Yes",
+    "usb_ports": "USB / CAN interfaces",
+    "ros": true,
+    "ros_version": "ROS / ROS 2",
+    "sdk": true,
+    "terrain": [
+      "Stairs",
+      "Gravel",
+      "Snow",
+      "Standing water",
+      "Tunnels"
+    ]
   },
   {
     "cat": "Quadruped",
@@ -114401,7 +114438,7 @@
     "battery_life_typical": 180,
     "battery_life_heavy": 120,
     "max_step_height_mm": 200,
-    "max_incline_deg": 35,
+    "max_incline_deg": 30,
     "stair_climbing": true,
     "lidar": true,
     "auto_charge": true,
@@ -114410,9 +114447,35 @@
       "Substation inspection",
       "Cable-tunnel patrol",
       "Hazard detection",
-      "Public safety"
+      "Public safety",
+      "Mining"
     ],
-    "manufacturer_url": "https://www.deeprobotics.cn/en/"
+    "manufacturer_url": "https://www.deeprobotics.cn/en/",
+    "range_km": 15,
+    "navigation": "Multi-LiDAR SLAM",
+    "mapping": true,
+    "obstacle_avoidance": "Dynamic (AI perception + LiDAR)",
+    "depth_sensing": "Depth camera",
+    "cameras": "Panoramic + depth cameras",
+    "thermal_camera": true,
+    "gas_sensor": true,
+    "gps": true,
+    "rtk": true,
+    "imu": true,
+    "cellular": "5G",
+    "ethernet": "Yes",
+    "usb_ports": "USB / CAN interfaces",
+    "ros": true,
+    "ros_version": "ROS / ROS 2",
+    "sdk": true,
+    "terrain": [
+      "Grass",
+      "Sand",
+      "Snow",
+      "Gravel",
+      "Standing water",
+      "Stairs"
+    ]
   },
   {
     "cat": "Quadruped",
@@ -131631,9 +131694,9 @@
     ],
     "weight_kg": 20,
     "use_cases": [
-      "Locomotion research",
-      "SLAM",
-      "Education"
+      "Research",
+      "Education",
+      "Inspection pilots"
     ],
     "fig": "🤖",
     "score": 75,
@@ -131661,7 +131724,23 @@
     "depth_sensing": "Stereo depth",
     "ros": true,
     "os": "Ubuntu / ROS",
-    "manufacturer_url": "https://shop.unitree.com/"
+    "manufacturer_url": "https://shop.unitree.com/",
+    "battery_voltage": "25.2V (29.4V charge)",
+    "charge_power_w": 353,
+    "quick_release": true,
+    "actuator_type": "Electric (Unitree QDD joint motors)",
+    "imu": true,
+    "fall_recovery": true,
+    "folded_dimensions": "600 x 310 x 150 mm",
+    "gait_modes": [
+      "Walk",
+      "Side-step",
+      "In-place turn",
+      "Roll",
+      "Stair climb"
+    ],
+    "ros_version": "ROS",
+    "sdk": true
   },
   {
     "id": "unitree-laikago",
