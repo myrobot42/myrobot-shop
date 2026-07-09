@@ -129673,7 +129673,8 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "height_mm": 1780
   },
   {
     "id": "kawasaki-kaleido-x",
@@ -129770,7 +129771,17 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "height_mm": 940,
+    "weight_kg": 12,
+    "dof": 21,
+    "speed_ms": 0.5,
+    "speed": "0.5 m/s",
+    "battery_life_typical": 150,
+    "cameras": "Structured-light depth camera",
+    "imu": true,
+    "hot_swap": true,
+    "chipset": "6 TOPS onboard (NVIDIA Jetson Orin on EDU tiers)"
   },
   {
     "id": "robotera-q5",
@@ -129801,7 +129812,15 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "height_mm": 1650,
+    "weight_kg": 70,
+    "hand_dof": 11,
+    "payload_kg": 10,
+    "payload": "10 kg per arm",
+    "battery_life_typical": 240,
+    "lidar": true,
+    "cameras": "Stereo vision + LiDAR fusion"
   },
   {
     "id": "hisense-harley",
@@ -130425,7 +130444,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "height_mm": 510,
+    "weight_kg": 3.5,
+    "actuator_type": "Dynamixel XM430 smart actuators",
+    "chipset": "Intel NUC i3"
   },
   {
     "id": "aheadform-origin",
