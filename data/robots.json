@@ -114336,7 +114336,7 @@
     "status": "Active",
     "price": "POA",
     "weight_kg": 12.2,
-    "payload_kg": 4.5,
+    "payload_kg": 5,
     "desc": "A compact, affordable quadruped aimed at universities and labs for locomotion, SLAM and reinforcement-learning research. Ships in Basic, Venture, Pro and LiDAR builds with ROS2-ready interfaces and open SDKs for rapid prototyping.",
     "tags": [
       "quadruped",
@@ -114364,14 +114364,14 @@
     "standing_height_mm": 445,
     "dof": 12,
     "leg_dof": 3,
-    "payload": 4.5,
+    "payload": 5,
     "max_incline_deg": 40,
     "max_step_height_mm": 180,
     "stair_climbing": true,
     "battery_life": 120,
     "battery_life_typical": 120,
     "ros": true,
-    "ros_version": "ROS 2",
+    "ros_version": "ROS 1 (Noetic) + ROS 2 (Foxy)",
     "sdk": true,
     "lidar": true,
     "imu": true,
@@ -114385,9 +114385,40 @@
       "University research",
       "Robotics education",
       "Developer prototyping",
-      "Light inspection"
+      "SLAM / RL research"
     ],
-    "manufacturer_url": "https://www.deeprobotics.cn/en/"
+    "manufacturer_url": "https://www.deeprobotics.cn/en/",
+    "speed_ms": 2.5,
+    "speed": 2.5,
+    "payload_peak": 7.5,
+    "fall_recovery": true,
+    "jump_height_mm": 300,
+    "actuator_type": "High-torque QDD joint modules (+50% torque density)",
+    "control_freq_hz": 1000,
+    "chipset": "RK3588 (motion host) + NVIDIA Jetson Xavier NX (perception, Pro/LiDAR)",
+    "cpu": "RK3588 ARM (8-core)",
+    "npu": "NVIDIA Jetson Xavier NX",
+    "range_km": 5,
+    "hot_swap": true,
+    "cameras": "Intel RealSense D435i depth (Pro)",
+    "depth_sensing": "Intel RealSense D435i",
+    "lidar_model": "Optional Livox / Leishen (LiDAR variant)",
+    "obstacle_avoidance": "Forward obstacle avoidance (Pro)",
+    "mapping": true,
+    "navigation": "LiDAR SLAM (LiDAR variant)",
+    "learning_methods": [
+      "Reinforcement Learning",
+      "Sim-to-Real"
+    ],
+    "sim_platform": "Isaac Gym / MuJoCo / URDF",
+    "os": "Ubuntu 20.04",
+    "sdk_langs": [
+      "C++",
+      "Python"
+    ],
+    "ethernet": "2x Ethernet",
+    "usb_ports": "USB 3.0",
+    "estop": "Soft e-stop (roll/pitch limit, overtemp, fall-down protection)"
   },
   {
     "cat": "Quadruped",
@@ -131824,13 +131855,25 @@
     "lidar_model": "96-line LiDAR (360°×90° FOV)",
     "obstacle_avoidance": "Omnidirectional",
     "auto_charge": true,
-    "terrain": "Mountains, wetlands, rubble, tunnels",
+    "terrain": [
+      "Mountains",
+      "Wetlands",
+      "Rubble",
+      "Tunnels",
+      "Pipelines"
+    ],
     "variants": [
       "M20",
       "M20 Pro",
       "M20S"
     ],
-    "manufacturer_url": "https://www.deeprobotics.cn/en/index/lynx.html"
+    "manufacturer_url": "https://www.deeprobotics.cn/en/index/lynx.html",
+    "run_speed_ms": 5,
+    "run_speed": 5,
+    "min_clearance_mm": 500,
+    "navigation": "Autonomous (LiDAR terrain recognition)",
+    "mapping": true,
+    "imu": true
   },
   {
     "id": "deep-robotics-lynx-m20",
@@ -132327,7 +132370,7 @@
     "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "The explosion-proof member of the ANYmal family, certified for hazardous (Ex) zones such as oil, gas and chemical plants. Built on the ANYmal D platform with an Ex-rated sealed housing, it performs fully autonomous inspection in potentially explosive atmospheres where other legged robots cannot operate.",
+    "desc": "The explosion-proof member of the ANYmal family, certified for hazardous (Ex) zones such as oil, gas and chemical plants. Built on the ANYmal D platform with an Ex-rated sealed housing, it performs fully autonomous inspection in potentially explosive atmospheres where other legged robots cannot operate. Shares the D platform's dual-Intel compute, 360° LiDAR navigation and pan-tilt inspection payload.",
     "tags": [
       "quadruped",
       "anybotics",
@@ -132342,30 +132385,57 @@
     "use_cases": [
       "Autonomous inspection in explosive atmospheres",
       "Oil & gas",
-      "Chemical plants"
+      "Chemical plants",
+      "Refineries"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "made_in": "Switzerland",
-    "weight_kg": 75,
+    "weight_kg": 53,
     "dof": 12,
     "leg_dof": 3,
     "payload_kg": 10,
     "payload": 10,
     "ip_rating": "IP67",
     "stair_climbing": true,
-    "max_step_height_mm": 250,
+    "max_step_height_mm": 350,
     "lidar_range_m": 100,
-    "cameras": "6 depth cameras, 2 tele-operation cameras, 20x optical zoom",
+    "cameras": "6 depth + 2 tele-op + 4K 20x optical zoom (pan-tilt)",
     "imu": true,
     "autonomous": true,
     "os": "ROS",
     "ros": true,
     "other_certs": [
-      "ATEX/IECEx Ex-certified (hazardous zone)"
+      "ATEX/IECEx Ex-certified (hazardous zone)",
+      "UN 38.3 (battery)"
     ],
-    "manufacturer_url": "https://www.anybotics.com/"
+    "manufacturer_url": "https://www.anybotics.com/",
+    "actuator_type": "ANYdrive series-elastic actuators (torque-controlled)",
+    "operating_temp_min": -10,
+    "operating_temp_max": 50,
+    "max_incline_deg": 30,
+    "fall_recovery": true,
+    "chipset": "2x Intel Core i7 (6-core, 8th gen)",
+    "ram_gb": 16,
+    "storage_gb": 480,
+    "storage_type": "SSD (2x 240GB)",
+    "battery_type": "Swappable Li-ion (UN 38.3 certified)",
+    "battery_wh": 932,
+    "battery_life": 90,
+    "battery_life_typical": 90,
+    "battery_life_heavy": 90,
+    "charge_time": 180,
+    "charge_time_fast": 100,
+    "hot_swap": true,
+    "depth_sensing": "6 depth cameras (2m range)",
+    "thermal_camera": true,
+    "force_sensing": true,
+    "mapping": true,
+    "wifi": "Wi-Fi 802.11ac (2.4/5 GHz)",
+    "cellular": "4G LTE (optional)",
+    "sdk": true,
+    "api": "gRPC-based ANYmal API"
   },
   {
     "id": "boston-dynamics-littledog",
@@ -132700,8 +132770,9 @@
     ],
     "weight_kg": 30,
     "use_cases": [
-      "Legged research (historic)",
-      "Inspection trials"
+      "Legged-locomotion research",
+      "Autonomous inspection",
+      "Manipulation research"
     ],
     "fig": "🤖",
     "score": 75,
@@ -132731,9 +132802,17 @@
     "ros": true,
     "gait_modes": [
       "Walk",
-      "Trot"
+      "Trot",
+      "Stair-climb"
     ],
-    "manufacturer_url": "https://www.anybotics.com/"
+    "manufacturer_url": "https://www.anybotics.com/",
+    "chipset": "Multiple onboard Intel NUC PCs",
+    "force_sensing": true,
+    "touch_sensing": "Tactile foot sensors",
+    "mapping": true,
+    "autonomous": true,
+    "sdk": true,
+    "api": "ANYmal Research API"
   },
   {
     "id": "magiclab-magicdog-y1",
