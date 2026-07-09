@@ -106363,13 +106363,13 @@
     "name": "Alpha UV+",
     "brand": "Viomi",
     "cat": "Consumer",
-    "sub": "Robot Vacuum & Mop",
+    "sub": "Robot Vacuum & Mop with Self-Empty",
     "year": 2021,
     "origin": "China",
     "made_in": "China",
     "status": "Active",
     "score": 75,
-    "desc": "A self-emptying vacuum-and-mop robot in Viomi's Xiaomi-ecosystem Alpha line (also sold as Alpha S9 UV), adding a UV sterilisation lamp to disinfect floors as it cleans. A Japanese Nidec brushless motor delivers 2,700 Pa suction, an auto dirt-disposal dock with a 3 L bag gives up to ~30 days hands-free, and an AI Y-shaped mopping pattern simulates manual scrubbing. LiDAR navigation with 12 sensor types maps up to five floors, controlled through the Mi Home app.",
+    "desc": "A self-emptying vacuum-and-mop robot in Viomi's Xiaomi-ecosystem Alpha line (also sold as Viomi S9 UV / Alpha S9 UV), adding a UV sterilisation lamp to disinfect floors as it cleans. A Japanese Nidec brushless motor delivers 2,700 Pa suction, an auto dirt-disposal dock with a 3 L bag gives up to ~30 days hands-free, and an AI Y-shaped mopping pattern simulates manual scrubbing. LDS LiDAR navigation with a 12-sensor suite maps up to five floors, controlled through the Mi Home app.",
     "price": 399,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734450/myrobot/gk1ivxpywq6x1af7lwxj.jpg",
     "tags": [
@@ -106432,7 +106432,8 @@
     "auto_charge": true,
     "wifi": "Wi-Fi (2.4 GHz)",
     "ota": true,
-    "warranty_months": 12
+    "warranty_months": 12,
+    "video": "https://youtu.be/spFTBuXUSQM"
   },
   {
     "id": "ilife-a10s",
@@ -108282,16 +108283,16 @@
   },
   {
     "id": "aiper-orca-3000",
-    "name": "Orca 3000",
+    "name": "Orca 2000",
     "brand": "Aiper",
     "cat": "Consumer",
     "sub": "Robotic Pool Cleaner",
     "year": 2024,
     "origin": "China",
     "made_in": "China",
-    "status": "Active",
+    "status": "active",
     "score": 75,
-    "desc": "The Orca 3000 is a robotic pool cleaner from Aiper that autonomously scrubs and vacuums pool floors, walls and waterline, filtering debris without a hose or pump connection.",
+    "desc": "A corded robotic pool cleaner in Aiper's Orca line for in-ground pools, positioned as a high-value wall-climbing cleaner. A 200 W triple-axis drive motor with 4-wheel drive and dual PVC roller brushes scrubs and vacuums the floor, walls and up to the waterline, cleaning pools up to ~2,153 sq ft in about two hours. A 60 ft tangle-free floating cord with a built-in swivel prevents entanglement, and a dedicated RF remote gives stable manual steering (rather than unreliable outdoor Wi-Fi/Bluetooth). Multi-layer filtration ships with 100/200/400-micron filter bags to target different debris sizes.",
     "price": 599,
     "img": "",
     "tags": [
@@ -108309,12 +108310,36 @@
     "use_cases": [
       "Automated pool cleaning",
       "Floor & wall scrubbing",
-      "Debris filtering"
+      "Debris filtering",
+      "Floor, wall and waterline cleaning",
+      "In-ground pools up to ~2,153 sq ft"
     ],
-    "perf": false,
+    "perf": {
+      "Mobility": 70,
+      "Dexterity": 70,
+      "Autonomy": 70,
+      "Durability": 70
+    },
     "fig": "🤖",
     "rating": 4,
-    "website": "https://www.aiper.com"
+    "website": "https://www.aiper.com",
+    "highlights": [],
+    "navigation": "Intelligent auto-swerve (touch & reverse), 4-wheel drive",
+    "brush_type": "Dual PVC roller brushes",
+    "filter": "Multi-layer basket (100 / 200 / 400 micron bags)",
+    "suction_modes": [
+      "Floor",
+      "Wall",
+      "Waterline"
+    ],
+    "cycle_time_s": 7200,
+    "power_consumption_w": 200,
+    "power_source": "Corded (60 ft tangle-free floating cable with swivel)",
+    "remote": true,
+    "wifi": "No",
+    "app": "None (RF remote control)",
+    "auto_charge": false,
+    "warranty_months": 24
   },
   {
     "id": "yeedi-cube-pro",
