@@ -130372,16 +130372,16 @@
       "Aquatic"
     ],
     "sub": "Robotic Pool Skimmer",
-    "year": 2025,
+    "year": 2024,
     "origin": "China",
     "made_in": "China",
     "status": "Active",
     "price": "POA",
     "img": "",
-    "navigation": "Smart surface path + edge detection",
+    "navigation": "Ultrasonic wall detection + Sunseeker path planning",
     "autonomous": true,
     "app_companion": "Aiper",
-    "desc": "Solar-assisted robotic pool surface skimmer that autonomously collects floating leaves, pollen and debris before they sink, with smart edge-following navigation and app control.",
+    "desc": "A cordless, solar-powered robotic pool skimmer that glides across the water surface collecting floating leaves, pollen, insects and other debris into a 5 L top-load basket. Twin brushless paddle-wheel motors drive it while ultrasonic detectors recognise and avoid pool walls for edge-to-edge coverage, and Aiper's Sunseeker algorithm steers it toward sunlight to recharge. Dual charging (solar plus DC adapter) keeps it running up to ~12 hours per charge, and the Aiper app adds remote piloting, battery and water-temperature monitoring, and OTA updates.",
     "tags": [
       "pool-skimmer",
       "aquatic",
@@ -130394,7 +130394,34 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "shell_material": "UV-resistant ASA",
+    "dustbin_ml": 5000,
+    "obstacle_avoidance": "Ultrasonic detection",
+    "suction_modes": [
+      "Automatic",
+      "Remote pilot"
+    ],
+    "power_source": "Solar + rechargeable battery (dual charging)",
+    "battery_type": "Li-ion (solar-charged)",
+    "battery_life": 720,
+    "battery_life_typical": 720,
+    "auto_charge": true,
+    "app": "Aiper",
+    "wifi": "Yes",
+    "bluetooth": "Yes",
+    "ota": true,
+    "sensors_list": [
+      "Ultrasonic detectors",
+      "Water temperature sensor"
+    ],
+    "warranty_months": 12,
+    "use_cases": [
+      "Pool surface skimming",
+      "Standard, saltwater and natural pools",
+      "In-ground and above-ground pools"
+    ],
+    "manufacturer_url": "https://aiper.com/us/aiper-surfer-s1"
   },
   {
     "id": "pudu-d9",
