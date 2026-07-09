@@ -124382,13 +124382,13 @@
     "name": "Tiangong 3.0 (天工 3.0)",
     "brand": "Beijing Humanoid Robot Innovation Center",
     "cat": "Humanoid",
-    "sub": "Full-Size Humanoid",
+    "sub": "Full-Size General-Purpose Humanoid",
     "year": 2026,
     "origin": "China",
     "status": "Active",
-    "score": 84,
+    "score": 75,
     "price": "POA",
-    "actuator_type": "Electric",
+    "actuator_type": "High-torque integrated joints",
     "ai_open_source": true,
     "tags": [
       "humanoid",
@@ -124400,7 +124400,7 @@
       "open-source",
       "platform"
     ],
-    "desc": "Tiangong 3.0 (天工 3.0, 'Tien Kung 3.0') is the next-generation general-purpose humanoid platform from the Beijing Humanoid Robot Innovation Center, unveiled in February 2026 as a successor to the marathon-winning Tiangong line. Like its predecessors it is offered as an open platform, and teams of 'secondary developers' fielded customised Tiangong 3.0 robots at the 2026 Beijing Humanoid Half-Marathon, building their own algorithms on top of the shared hardware.",
+    "desc": "The next-generation full-size humanoid from Beijing's X-Humanoid (state-backed national innovation center), unveiled 10 February 2026 with mass delivery slated for H2 2026. Where earlier Tiangong models (including marathon-winning Tiangong Ultra) chased endurance and speed, 3.0 pivots to embodied intelligence and industrial utility — billed as the first full-size humanoid with touch-interactive, high-dynamic whole-body control. It runs the WISE KAIWU (Huisi Kaiwu) platform on D-Robotics' Xuri S600 chip, and demonstrated a one-handed vault over a 1 m block plus fine tasks like turning small knobs. Much of the stack is open-sourced: design blueprints, the Pelican-VL vision-language model and the RoboMIND dataset.",
     "fig": "🤖",
     "rating": 4,
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/04/jLQ5k4fGP5Wd6aKOMvv1/image.jpg",
@@ -124410,7 +124410,47 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc6Ixe77JsZ2EIZfQIRAWCMsytuvvqdcKJVIj9ha6E74x_mHbKuY4NLY0&s=10",
       "https://imagecn.gasgoo.com/moblogo/News/UEditor/image/20260609/6391659252362622824546422.gif"
     ],
-    "video": "https://youtu.be/AEs2wX5Uy2w"
+    "video": "https://youtu.be/AEs2wX5Uy2w",
+    "made_in": "China",
+    "height_mm": 1690,
+    "weight_kg": 62,
+    "dof": 43,
+    "chipset": "D-Robotics Xuri S600 (embodied intelligence)",
+    "os": "WISE KAIWU / Huisi Kaiwu embodied-intelligence platform",
+    "ai_model": "WISE KAIWU + Pelican-VL (VLM)",
+    "protocols": [
+      "ROS2",
+      "MQTT",
+      "TCP/IP"
+    ],
+    "open_source": true,
+    "cameras": "RGB + stereo cameras",
+    "lidar": true,
+    "imu": true,
+    "force_sensing": true,
+    "sensors_list": [
+      "RGB cameras",
+      "Stereo cameras",
+      "LiDAR",
+      "Ultrasonic rangefinder",
+      "High-precision IMU",
+      "Gyroscope",
+      "Six-axis force/torque sensors"
+    ],
+    "frame_material": "Aluminium-composite",
+    "power_source": "Pure electric drive",
+    "variants": [
+      "Tiangong 3.0",
+      "Tiangong 3.0 Lite"
+    ],
+    "use_cases": [
+      "Industrial manufacturing",
+      "Commercial services",
+      "Disaster response / hazardous environments",
+      "Warehouse logistics",
+      "Multi-robot collaboration"
+    ],
+    "manufacturer_url": "https://www.x-humanoid.com/"
   },
   {
     "id": "booster-robotics-t2",
@@ -131143,19 +131183,20 @@
     "name": "Ginger",
     "brand": "Dataa Robotics",
     "cat": "Humanoid",
-    "sub": "Cloud Service Humanoid",
-    "year": 2025,
+    "sub": "Cloud-AI Service Humanoid (wheeled base)",
+    "year": 2019,
     "origin": "China",
     "status": "Active",
     "price": "POA",
     "img": "",
     "ai_cloud_required": true,
     "use_cases": [
-      "Customer service",
-      "Reception",
-      "Education"
+      "Reception and guidance",
+      "Elderly care and healthcare",
+      "Education and research",
+      "Retail and hospitality"
     ],
-    "desc": "Cloud-brained bipedal service humanoid (from the CloudMinds/Dataa Robotics lineage) that offloads AI to the cloud for reception, customer service and education roles.",
+    "desc": "A cloud-connected humanoid service robot from Dataa Robotics (formerly CloudMinds), first shown as the XR-1 at MWC 2019 and a 2020 Red Star Design Award winner. Its intelligence runs largely in the HARIX cloud brain over 5G, giving image, object, posture, face and emotion recognition, multilingual multi-round dialogue and cloud-scheduled multi-robot collaboration. Thirty-four smart compliant actuators drive expressive gestures and visually-guided grasping with eye-hand coordination, while a three-wheeled omnidirectional base with self-balancing and cloud SLAM/VSLAM handles autonomous navigation. Used for reception, guidance, elderly care, education and retail.",
     "tags": [
       "humanoid",
       "dataa",
@@ -131168,7 +131209,30 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "height_mm": 1580,
+    "weight_kg": 62,
+    "dof": 34,
+    "actuator_type": "Smart Compliant Actuators (SCA)",
+    "speed_ms": 1,
+    "speed": 1,
+    "chassis": "Three-wheeled omnidirectional (universal wheels)",
+    "bimanual": true,
+    "cameras": "2D/3D cameras",
+    "lidar": true,
+    "imu": true,
+    "force_sensing": true,
+    "microphones": 1,
+    "navigation": "Cloud SLAM / VSLAM",
+    "mapping": true,
+    "obstacle_avoidance": "Autonomous (multi-sensor)",
+    "ai_model": "HARIX cloud brain (5G cloud AI)",
+    "facial_recognition": true,
+    "natural_language_commands": true,
+    "cellular": "5G",
+    "display_face": "Chest interactive touchscreen",
+    "manufacturer_url": "https://www.dataarobotics.com/en/product-44.html"
   },
   {
     "id": "boardwalk-alex",
