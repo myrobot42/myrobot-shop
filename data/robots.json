@@ -107220,7 +107220,7 @@
     "made_in": "China",
     "status": "Active",
     "score": 75,
-    "desc": "The AquaSense Pro is a robotic pool cleaner from Beatbot that autonomously scrubs and vacuums pool floors, walls and waterline, filtering debris without a hose or pump connection.",
+    "desc": "Beatbot's flagship cordless robotic pool cleaner and the world's first 5-in-1 unit — clarification, surface, waterline, floor and walls — driven by nine motors and a quad-core 1.8 GHz Cortex-A7 processor running Beatbot OS. A brushless main-pump motor delivers up to 5,500 GPH suction for wall climbing, with 2x2 independent roller brushes and intelligent path optimisation. A 10,400 mAh battery gives up to 9.5 hours of surface cleaning or 5 hours of floor cleaning, and it returns and parks itself at the surface for easy retrieval. Certified to IP68 with 15+ certifications.",
     "price": 1999,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734468/myrobot/frxdezobktrr86wlaegm.png",
     "tags": [
@@ -107234,9 +107234,9 @@
     "released": "2024",
     "wall_climbing": true,
     "waterline_cleaning": true,
-    "ip_rating": "IPX8",
-    "battery_life_typical": 300,
-    "manufacturer_url": "https://www.beatbot.com",
+    "ip_rating": "IP68",
+    "battery_life_typical": 570,
+    "manufacturer_url": "https://beatbot.com/products/aquasense-pro",
     "fig": "🤖",
     "rating": 4,
     "gallery": [
@@ -107248,12 +107248,39 @@
     ],
     "autonomous": true,
     "use_cases": [
-      "Automated pool cleaning",
-      "Floor & wall scrubbing",
-      "Debris filtering"
+      "In-ground and above-ground pool cleaning",
+      "Surface skimming",
+      "Waterline and wall scrubbing",
+      "Water clarification"
     ],
     "perf": false,
-    "video": "https://youtu.be/_07R5l4W0xg"
+    "video": "https://youtu.be/_07R5l4W0xg",
+    "navigation": "Intelligent path optimisation + ultrasonic",
+    "obstacle_avoidance": "Ultrasonic obstacle detection",
+    "mapping": true,
+    "cpu": "Quad-core Cortex-A7 1.8 GHz (Beatbot OS)",
+    "brush_type": "2x2 independent roller brushes",
+    "filter": "Dual-layer basket filter",
+    "suction_modes": [
+      "Quick",
+      "Standard",
+      "Pro",
+      "ECO",
+      "Custom"
+    ],
+    "battery_type": "Li-ion (10400 mAh)",
+    "battery_life": 570,
+    "battery_life_heavy": 300,
+    "wireless_charging": true,
+    "auto_charge": true,
+    "display": "LED display",
+    "app": "Beatbot",
+    "wifi": "Yes",
+    "bluetooth": "Yes",
+    "ota": true,
+    "self_cleaning": false,
+    "power_source": "Cordless rechargeable battery",
+    "warranty_months": 24
   },
   {
     "id": "winbot-w2-omni",
@@ -129960,7 +129987,7 @@
       "Aquatic"
     ],
     "sub": "Robotic Pool Cleaner",
-    "year": 2025,
+    "year": 2020,
     "origin": "Israel",
     "made_in": "Israel",
     "status": "Active",
@@ -129968,9 +129995,9 @@
     "img": "",
     "waterline_cleaning": false,
     "wall_climbing": true,
-    "filter": "Oversized filter basket",
+    "filter": "Top-access MaxBin cartridge (NanoFilter optional)",
     "warranty_months": 24,
-    "desc": "Best-value Dolphin: cleans floors and walls of above-ground and inground pools with an easy-to-clean oversized basket, a programmable power supply and a 2-hour cleaning cycle.",
+    "desc": "A high-value corded robotic pool cleaner from Maytronics' Dolphin line, cleaning floors and climbing walls (no waterline). Guided by SmartNav 2.0 pool mapping and driven by efficient 24 V DC motors, it filters over 4,000 GPH through a top-access MaxBin cartridge (optionally upgraded with NanoFilters), and its HyperBrush scrubs twice as fast as standard Dolphin brushes on HyperGrip rubber tracks. Runs independently of the pool pump with a weekly timer for daily automation. The 2025 Max-Series redesign added a larger Gen-2 MaxBin.",
     "tags": [
       "pool-cleaner",
       "aquatic",
@@ -129984,7 +130011,24 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "weight_kg": 6.4,
+    "navigation": "SmartNav 2.0 pool mapping",
+    "brush_type": "HyperBrush active scrubbing (2x speed)",
+    "actuator_type": "24V DC motors, HyperGrip rubber tracks",
+    "suction_modes": [
+      "Floor + wall"
+    ],
+    "cycle_time_s": 7200,
+    "power_source": "Corded (36–50 ft PowerFlex cable, independent of pump)",
+    "wifi": "No",
+    "app": "None (weekly timer / button)",
+    "surface_finish": "All pool surfaces (vinyl, fiberglass, tile, concrete)",
+    "use_cases": [
+      "In-ground and above-ground pools up to ~33 ft",
+      "Floor and wall cleaning"
+    ],
+    "manufacturer_url": "https://www.maytronics.com/en-us/store/residential-pools/best-value-cleaners/dolphin-cayman/99996135-SPL.html"
   },
   {
     "id": "hayward-aquavac-650",
