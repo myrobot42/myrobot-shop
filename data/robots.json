@@ -114158,14 +114158,14 @@
     "id": "unitree-b2-w",
     "name": "B2-W",
     "brand": "Unitree",
-    "sub": "Wheeled-leg Quadruped",
+    "sub": "Wheeled-Legged Industrial Quadruped",
     "year": 2024,
     "origin": "China",
     "status": "Active",
-    "price": "POA",
-    "weight_kg": 60,
+    "price": 100000,
+    "weight_kg": 75,
     "payload_kg": 40,
-    "desc": "The Unitree B2-W is a wheeled-leg variant of the B2, adding powered wheels at the feet for fast, smooth rolling on flat terrain while retaining legged ability to climb and traverse obstacles - notable for agile hybrid locomotion demos.",
+    "desc": "The wheeled variant of Unitree's flagship B2 industrial quadruped, adding driven wheels for 6 m/s rolling speed on flat ground while retaining legged stair-climbing and rough-terrain ability. Built for logistics, security patrol and inspection, with heavy payload, long endurance and 5G/Wi-Fi connectivity.",
     "tags": [
       "quadruped",
       "Unitree",
@@ -114184,7 +114184,45 @@
       "https://www.robotshop.com/cdn/shop/files/unitree-b2-w-wheeled-robotic-dog-img2_1200x1200.webp?v=1758192026",
       "https://cdn.robotshop.com/media/u/unt/rb-unt-151/img/unitree-b2-w-wheeled-robotic-dog-w-nav-kit-desc1.webp"
     ],
-    "website": "https://www.unitree.com"
+    "website": "https://www.unitree.com",
+    "made_in": "China",
+    "body_length_mm": 1098,
+    "width_mm": 450,
+    "standing_height_mm": 745,
+    "dof": 12,
+    "leg_dof": 3,
+    "speed_ms": 6,
+    "speed": 6,
+    "run_speed_ms": 5.56,
+    "run_speed": 5.56,
+    "payload": 40,
+    "payload_peak": 120,
+    "max_incline_deg": 45,
+    "max_step_height_mm": 250,
+    "stair_climbing": true,
+    "battery_wh": 2250,
+    "battery_ah": 45,
+    "battery_life": 300,
+    "battery_life_typical": 300,
+    "battery_life_heavy": 240,
+    "operating_temp_min": -20,
+    "operating_temp_max": 55,
+    "cpu": "Intel Core i5/i7 + optional Jetson Orin NX",
+    "wifi": "Yes",
+    "cellular": "5G",
+    "lidar": true,
+    "variants": [
+      "B2-W",
+      "B2-W (C32, 32-ch LiDAR)"
+    ],
+    "currency": "USD",
+    "use_cases": [
+      "Logistics automation",
+      "Security patrol",
+      "Industrial inspection",
+      "R&D"
+    ],
+    "manufacturer_url": "https://shop.unitree.com/products/unitree-b2-w"
   },
   {
     "cat": "Quadruped",
@@ -114196,11 +114234,11 @@
     "year": 2023,
     "origin": "China",
     "status": "Active",
-    "price": "POA",
+    "price": 65000,
     "payload_kg": 40,
     "battery_life": 240,
     "ip_rating": "IP67",
-    "desc": "The DEEP Robotics X30 is a heavy-duty industrial quadruped with up to 40 kg payload, IP67 protection, operation from -20°C to 55°C and 3-4 h battery, with optional autonomous patrol software. Used in power-plant, mining and construction inspection; positioned as a lower-cost Spot rival.",
+    "desc": "DEEP Robotics' flagship IP67-rated inspection quadruped for harsh, GPS-denied environments such as utility tunnels and substations. Adds higher perception density, longer endurance and all-weather operation over the X20, with multi-LiDAR SLAM, RGB/thermal imaging and auto-charge docks for round-the-clock patrols.",
     "tags": [
       "quadruped",
       "DEEP Robotics",
@@ -114220,7 +114258,34 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/687f56cfb50be6eb102e9e0f_X30_04.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/687f56d0cc985fb117903362_X30_07.webp"
     ],
-    "video": "https://youtu.be/zxGwOEYYFVo"
+    "video": "https://youtu.be/zxGwOEYYFVo",
+    "made_in": "China",
+    "body_length_mm": 1000,
+    "width_mm": 695,
+    "standing_height_mm": 470,
+    "weight_kg": 56,
+    "speed_ms": 4,
+    "speed": 4,
+    "operating_temp_min": -20,
+    "operating_temp_max": 55,
+    "battery_life_typical": 240,
+    "max_step_height_mm": 200,
+    "stair_climbing": true,
+    "lidar": true,
+    "auto_charge": true,
+    "hot_swap": true,
+    "currency": "USD",
+    "variants": [
+      "X30",
+      "X30 Pro"
+    ],
+    "use_cases": [
+      "Utility-tunnel inspection",
+      "Substation patrol",
+      "Security",
+      "Surveying"
+    ],
+    "manufacturer_url": "https://www.deeprobotics.cn/en/"
   },
   {
     "cat": "Quadruped",
@@ -114228,14 +114293,14 @@
     "id": "deep-robotics-lite3",
     "name": "Lite3",
     "brand": "DEEP Robotics",
-    "sub": "Research Quadruped",
+    "sub": "Research / Education Quadruped",
     "year": 2022,
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "weight_kg": 11,
-    "payload_kg": 5,
-    "desc": "The DEEP Robotics Lite3 is an affordable, lightweight (~11 kg) quadruped for locomotion and AI research, carrying up to ~5 kg, popular with universities in Asia and Europe; offers good SDK support for robot-learning work.",
+    "weight_kg": 12.2,
+    "payload_kg": 4.5,
+    "desc": "A compact, affordable quadruped aimed at universities and labs for locomotion, SLAM and reinforcement-learning research. Ships in Basic, Venture, Pro and LiDAR builds with ROS2-ready interfaces and open SDKs for rapid prototyping.",
     "tags": [
       "quadruped",
       "DEEP Robotics",
@@ -114255,7 +114320,37 @@
       "https://www.deeprobotics.cn/public/static/robot/demo/p444.jpg",
       "https://www.deeprobotics.cn/public/static/robot/demo/p555.jpg"
     ],
-    "video": "https://youtu.be/NNkxlKLMoMM"
+    "video": "https://youtu.be/NNkxlKLMoMM",
+    "made_in": "China",
+    "body_length_mm": 610,
+    "width_mm": 370,
+    "standing_height_mm": 445,
+    "dof": 12,
+    "leg_dof": 3,
+    "payload": 4.5,
+    "max_incline_deg": 40,
+    "max_step_height_mm": 180,
+    "stair_climbing": true,
+    "battery_life": 120,
+    "battery_life_typical": 120,
+    "ros": true,
+    "ros_version": "ROS 2",
+    "sdk": true,
+    "lidar": true,
+    "imu": true,
+    "variants": [
+      "Basic",
+      "Venture",
+      "Pro",
+      "LiDAR"
+    ],
+    "use_cases": [
+      "University research",
+      "Robotics education",
+      "Developer prototyping",
+      "Light inspection"
+    ],
+    "manufacturer_url": "https://www.deeprobotics.cn/en/"
   },
   {
     "cat": "Quadruped",
@@ -114270,7 +114365,7 @@
     "price": "POA",
     "payload_kg": 20,
     "ip_rating": "IP66",
-    "desc": "The DEEP Robotics X20 is an industrial inspection quadruped predecessor to the X30, with all-terrain mobility, thermal/gas sensor payloads and autonomous patrol for substations, tunnels and plants.",
+    "desc": "An IP66-rated industrial quadruped for all-weather autonomous inspection and public-safety patrol in substations, cable tunnels and hazardous sites. Configurable with sirens, beacons, dual-spectrum gimbals and two-way audio, with multi-LiDAR SLAM and auto-charge docks for continuous duty.",
     "tags": [
       "quadruped",
       "DEEP Robotics",
@@ -114291,7 +114386,33 @@
       "https://www.deeprobotics.cn/public/static/robot/demo/p55.jpg"
     ],
     "video": "https://youtu.be/1lHOVpJuSt0?list=PLy9YHJvMnjO3dLGNRuZE8Vnetdc8x3PO1",
-    "video2": "https://youtu.be/Qozjbn0nE-I"
+    "video2": "https://youtu.be/Qozjbn0nE-I",
+    "made_in": "China",
+    "body_length_mm": 950,
+    "width_mm": 470,
+    "standing_height_mm": 700,
+    "weight_kg": 53,
+    "payload": 20,
+    "speed_ms": 4,
+    "speed": 4,
+    "operating_temp_min": -20,
+    "operating_temp_max": 55,
+    "battery_life": 180,
+    "battery_life_typical": 180,
+    "battery_life_heavy": 120,
+    "max_step_height_mm": 200,
+    "max_incline_deg": 35,
+    "stair_climbing": true,
+    "lidar": true,
+    "auto_charge": true,
+    "hot_swap": true,
+    "use_cases": [
+      "Substation inspection",
+      "Cable-tunnel patrol",
+      "Hazard detection",
+      "Public safety"
+    ],
+    "manufacturer_url": "https://www.deeprobotics.cn/en/"
   },
   {
     "cat": "Quadruped",
@@ -114299,12 +114420,12 @@
     "id": "weilan-alphadog",
     "name": "AlphaDog",
     "brand": "Weilan",
-    "sub": "Security Quadruped",
+    "sub": "Consumer / Companion Robot Dog",
     "year": 2021,
     "origin": "China",
     "status": "Active",
-    "price": "POA",
-    "desc": "The Weilan AlphaDog is a quadruped built for security patrols, with integrated surveillance cameras, alert systems and 5G connectivity for autonomous monitoring; also marketed in consumer/companion variants.",
+    "price": 2400,
+    "desc": "A consumer-focused 5G robot dog from Nanjing-based Weilan Intelligent Technology, marketed as the fastest robodog on the market at around 15 km/h. Full-metal legs and reinforcement-learning-based control let it adjust stride and height to terrain, climb stairs and recover balance. Sold in consumer C-Series and larger enterprise E-Series inspection variants.",
     "tags": [
       "quadruped",
       "Weilan",
@@ -114318,7 +114439,9 @@
     "rating": 4,
     "speed_ms": 4.2,
     "use_cases": [
-      "Consumer quadruped companion (up to ~15 km/h)"
+      "Companion robot",
+      "Guide for visually impaired (planned)",
+      "Industrial inspection (E-Series)"
     ],
     "made_in": "China",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/30/qtDpX8a8b2hUOSRwgNx5/image.jpg",
@@ -114329,7 +114452,24 @@
       "https://newseu.cgtn.com/news/2021-04-10/China-s-robo-dogs-Is-the-AlphaDog-the-ulti-mutt-pet--Zk5ouQ902c/img/89cf1c1a4f01407abf12652cc20105e6/89cf1c1a4f01407abf12652cc20105e6.jpeg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeQ6QrUhDZeQOZqBr6B_lDLWYQgH_h4nGHwCF9wi5u5AvzYey1wbCXGtxU&s=10"
     ],
-    "video": "https://youtu.be/qVcZGxS2kKU"
+    "video": "https://youtu.be/qVcZGxS2kKU",
+    "dof": 12,
+    "leg_dof": 3,
+    "speed": 4.2,
+    "run_speed_ms": 4.2,
+    "run_speed": 4.2,
+    "frame_material": "Metal",
+    "cellular": "5G",
+    "stair_climbing": true,
+    "learning_methods": [
+      "Reinforcement Learning"
+    ],
+    "currency": "USD",
+    "variants": [
+      "C-Series (C100)",
+      "E-Series (E400L enterprise)"
+    ],
+    "manufacturer_url": "https://www.weilan.com/en/"
   },
   {
     "cat": "Quadruped",
@@ -131475,13 +131615,13 @@
     "name": "Aliengo",
     "brand": "Unitree",
     "cat": "Quadruped",
-    "sub": "Research Quadruped",
+    "sub": "Research / Inspection Quadruped (legacy)",
     "year": 2019,
     "origin": "China",
-    "status": "Retired",
+    "status": "Discontinued",
     "price": "POA",
     "img": "",
-    "desc": "Unitree's early industrial-research quadruped that established the company internationally — a ~21 kg platform for locomotion and perception research, predecessor to the B and Go series.",
+    "desc": "A mid-sized, fully electric 12-DoF quadruped from Unitree for research, education and controlled inspection, sitting between the compact A1 and the industrial B-series. Pairs dual depth cameras and VIO with a swappable 317 Wh battery and developer interfaces (dual Gigabit Ethernet, USB 3.0, ROS/Ubuntu).",
     "tags": [
       "quadruped",
       "unitree",
@@ -131489,7 +131629,7 @@
       "research",
       "historic"
     ],
-    "weight_kg": 21.5,
+    "weight_kg": 20,
     "use_cases": [
       "Locomotion research",
       "SLAM",
@@ -131497,20 +131637,44 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "body_length_mm": 650,
+    "width_mm": 310,
+    "standing_height_mm": 600,
+    "dof": 12,
+    "leg_dof": 3,
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "payload_kg": 13,
+    "payload": 13,
+    "max_incline_deg": 25,
+    "stair_climbing": true,
+    "battery_type": "Li-ion (317 Wh swappable)",
+    "battery_wh": 317,
+    "battery_life": 180,
+    "battery_life_typical": 180,
+    "hot_swap": true,
+    "ethernet": "2x Gigabit",
+    "usb_ports": "2x USB 3.0",
+    "cameras": "Dual depth cameras + VIO",
+    "depth_sensing": "Stereo depth",
+    "ros": true,
+    "os": "Ubuntu / ROS",
+    "manufacturer_url": "https://shop.unitree.com/"
   },
   {
     "id": "unitree-laikago",
     "name": "Laikago",
     "brand": "Unitree",
     "cat": "Quadruped",
-    "sub": "Research Quadruped",
+    "sub": "Research Quadruped (legacy)",
     "year": 2017,
     "origin": "China",
-    "status": "Retired",
+    "status": "Discontinued",
     "price": "POA",
     "img": "",
-    "desc": "Unitree's first commercial quadruped — the 22 kg robot that launched the company in 2017 and helped kick off the affordable robot-dog era outside Boston Dynamics.",
+    "desc": "Unitree's first commercial quadruped, launched in 2017 and named after Laika, the first dog in space. A 12-DoF electric platform driven by Unitree's own motors, it established the company's low-cost robot-dog lineage and was the predecessor to the A1 and Aliengo.",
     "tags": [
       "quadruped",
       "unitree",
@@ -131521,24 +131685,32 @@
     "weight_kg": 22,
     "use_cases": [
       "Research",
-      "Development"
+      "Education",
+      "Entertainment"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "dof": 12,
+    "leg_dof": 3,
+    "payload_kg": 5,
+    "payload": 5,
+    "actuator_type": "Electric (Unitree motors)",
+    "manufacturer_url": "https://www.unitree.com/"
   },
   {
     "id": "deep-robotics-lynx",
-    "name": "Lynx",
+    "name": "Lynx (LYNX M20)",
     "brand": "DEEP Robotics",
     "cat": "Quadruped",
     "sub": "Wheeled-Legged Quadruped",
-    "year": 2024,
+    "year": 2025,
     "origin": "China",
     "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "DEEP Robotics' agile wheeled-legged all-terrain robot — hub-motor wheels on legs let it skate, jump, climb stairs and cross rubble, going viral for parkour-style descents over rough terrain.",
+    "desc": "Billed as the world's first industrial-grade wheeled-legged quadruped, the LYNX M20 fuses rolling speed with legged agility for power inspection, emergency response, logistics and exploration across mountains, wetlands and rubble. Hyper-flexible joints let it switch posture modes to cross pipelines, tunnels and stairs.",
     "tags": [
       "quadruped",
       "deep-robotics",
@@ -131548,13 +131720,38 @@
       "active"
     ],
     "use_cases": [
-      "All-terrain mobility",
-      "Research",
-      "Inspection"
+      "Power inspection",
+      "Emergency response",
+      "Logistics",
+      "Scientific exploration"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "body_length_mm": 800,
+    "width_mm": 500,
+    "standing_height_mm": 600,
+    "weight_kg": 33,
+    "payload_kg": 15,
+    "payload": 15,
+    "speed_ms": 5,
+    "speed": 5,
+    "battery_life": 150,
+    "battery_life_typical": 150,
+    "max_step_height_mm": 250,
+    "stair_climbing": true,
+    "lidar": true,
+    "lidar_model": "96-line LiDAR (360°×90° FOV)",
+    "obstacle_avoidance": "Omnidirectional",
+    "auto_charge": true,
+    "terrain": "Mountains, wetlands, rubble, tunnels",
+    "variants": [
+      "M20",
+      "M20 Pro",
+      "M20S"
+    ],
+    "manufacturer_url": "https://www.deeprobotics.cn/en/index/lynx.html"
   },
   {
     "id": "deep-robotics-lynx-m20",
@@ -131685,13 +131882,13 @@
     "name": "Max",
     "brand": "Tencent Robotics X",
     "cat": "Quadruped",
-    "sub": "Wheeled-Legged Quadruped",
+    "sub": "Multimode Wheel-Legged Quadruped",
     "year": 2021,
     "origin": "China",
-    "status": "Research",
+    "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "Tencent's Robotics X lab quadruped with wheels on its knees — Max can trot on legs, drive on wheels, and famously performed flips and pile-walking, demonstrating multimodal locomotion research.",
+    "desc": "Tencent Robotics X Lab's multimode quadruped, first shown in 2021 and optimised in 2022. A hybrid leg-wheel design lets it walk, run, jump and climb like a dog, then glide on wheels embedded in its leg joints. Driven by Tencent's proprietary low-latency 'keen nervous system' control, it performs backward somersaults, two-leg balancing and learns new gaits within hours, with terrain recognition accurate to under 2 cm.",
     "tags": [
       "quadruped",
       "tencent",
@@ -131702,11 +131899,30 @@
     ],
     "use_cases": [
       "Locomotion research",
-      "Multimodal mobility"
+      "Dynamic-motion research"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "weight_kg": 14,
+    "dof": 12,
+    "leg_dof": 3,
+    "actuator_type": "Electric (3 per leg) with wheels on leg joints",
+    "cameras": "RGB + terrain-recognition sensors",
+    "fall_recovery": true,
+    "os": "Tencent proprietary real-time control",
+    "gait_modes": [
+      "Walk",
+      "Run",
+      "Jump",
+      "Wheel-glide"
+    ],
+    "variants": [
+      "Max (2021)",
+      "Max Gen 2 (2022)"
+    ],
+    "manufacturer_url": "https://roboticsx.tencent.com/"
   },
   {
     "id": "hengbot-sirius",
@@ -131763,39 +131979,66 @@
     "name": "Bittle X",
     "brand": "Petoi",
     "cat": "Quadruped",
-    "sub": "Palm-Sized Robot Dog",
+    "sub": "Educational / Hobby Quadruped",
     "year": 2023,
-    "origin": "China",
+    "origin": "USA",
     "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "Voice-controlled evolution of the Bittle with onboard AI voice commands, GPT integration options and the same OpenCat open-source foundation for coding education.",
+    "desc": "An open-source, palm-sized programmable robot dog built on Petoi's OpenCat framework. Powered by an ESP32 controller with 9 servo-driven joints, it walks, trots and does tricks, and is programmable via block-based coding, Arduino/C++ or a Python API. A Raspberry Pi can be mounted for advanced AI and vision projects.",
     "tags": [],
     "voice_assistant": [
       "Onboard voice commands"
     ],
     "use_cases": [
       "STEM education",
-      "AI learning",
-      "Maker projects"
+      "Robotics learning",
+      "AI/coding projects",
+      "Hobby"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "dof": 9
+    "dof": 9,
+    "made_in": "China",
+    "body_length_mm": 190,
+    "width_mm": 153,
+    "height_mm": 107,
+    "weight_kg": 0.31,
+    "frame_material": "Plastic",
+    "chipset": "ESP32-WROOM-32D",
+    "cpu": "ESP32-WROOM-32D (520K SRAM, 16MB flash)",
+    "imu": true,
+    "imu_axes": 6,
+    "bluetooth": "Yes",
+    "wifi": "Yes",
+    "battery_type": "Li-ion (7.4V 1000mAh)",
+    "battery_wh": 7.4,
+    "battery_life": 60,
+    "battery_life_typical": 60,
+    "charge_time": 90,
+    "os": "OpenCat",
+    "sdk": true,
+    "open_source": true,
+    "programming_langs": [
+      "Block-based (Petoi Coding Blocks)",
+      "Arduino/C++",
+      "Python (OpenCat API)"
+    ],
+    "manufacturer_url": "https://www.petoi.com/"
   },
   {
     "id": "kawasaki-corleo",
     "name": "CORLEO",
     "brand": "Kawasaki",
     "cat": "Quadruped",
-    "sub": "Rideable Quadruped Concept",
+    "sub": "Rideable Quadruped (concept)",
     "year": 2025,
     "origin": "Japan",
-    "status": "Concept",
+    "status": "Development",
     "price": "POA",
     "img": "",
-    "desc": "Kawasaki's viral hydrogen-powered rideable quadruped concept unveiled for Expo 2025 Osaka — a four-legged 'robotic horse' the rider steers with body weight, envisioned for off-road personal mobility in 2050.",
+    "desc": "A hydrogen-powered, rideable robotic-horse concept unveiled at Expo 2025 Osaka, blending Kawasaki's motorcycle DNA with legged robotics. Four independently articulating legs with slip-resistant split rubber hooves are driven by electricity from a compact 150cc hydrogen engine; the rider steers by shifting weight and using handlebars. The Expo prototype can stand and adjust posture — dynamic footage is CGI — with a market vision decades out.",
     "tags": [
       "quadruped",
       "kawasaki",
@@ -131805,25 +132048,31 @@
       "concept"
     ],
     "use_cases": [
-      "Personal mobility concept",
-      "Off-road riding"
+      "Off-road personal mobility (concept)"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "Japan",
+    "announced": "2025-04-04",
+    "power_source": "150cc hydrogen engine (generates electricity)",
+    "fuel": "Hydrogen",
+    "frame_material": "Carbon fibre",
+    "terrain": "Off-road (grass, gravel, rock)",
+    "manufacturer_url": "https://www.khi.co.jp/expo2025/concept01/index_en.html"
   },
   {
     "id": "kawasaki-bex",
     "name": "Bex",
     "brand": "Kawasaki",
     "cat": "Quadruped",
-    "sub": "Rideable Quadruped",
+    "sub": "Rideable Quadruped (concept)",
     "year": 2022,
     "origin": "Japan",
-    "status": "Concept",
+    "status": "Development",
     "price": "POA",
     "img": "",
-    "desc": "Kawasaki's ibex-inspired rideable quadruped from its Kaleido program — walks on four legs, kneels to drive on wheels, and carries a 100 kg human or cargo payload.",
+    "desc": "A rideable, goat-inspired quadruped unveiled at the 2022 International Robot Exhibition in Tokyo, part of Kawasaki's Robust Humanoid Platform (RHP) initiative — the same program behind the Kaleido humanoid. Bex walks on four legs or rolls on retractable knee wheels, has a modular upper body, and is aimed at cargo carrying on farms and construction sites.",
     "tags": [
       "quadruped",
       "kawasaki",
@@ -131833,14 +132082,20 @@
       "concept"
     ],
     "payload_kg": 100,
-    "payload": "100 kg (rider or cargo)",
+    "payload": 100,
     "use_cases": [
-      "Personal mobility",
-      "Cargo transport demo"
+      "Cargo carrying",
+      "Farms",
+      "Construction sites",
+      "Rideable mobility demo"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "Japan",
+    "actuator_type": "Electric",
+    "terrain": "Mixed terrain (legs or wheels)",
+    "manufacturer_url": "https://kawasakirobotics.com/"
   },
   {
     "id": "xiaomi-cyberdog",
@@ -131896,13 +132151,13 @@
     "name": "AIBO ERS-7",
     "brand": "Sony",
     "cat": "Quadruped",
-    "sub": "Companion Robot Dog",
+    "sub": "Companion / Entertainment Robot Dog",
     "year": 2003,
     "origin": "Japan",
-    "status": "Retired",
-    "price": "POA",
+    "status": "Discontinued",
+    "price": 1599,
     "img": "",
-    "desc": "The most advanced of the original AIBO line (1999–2006): ERS-7 with 64-bit RISC processor, face recognition, Wi-Fi and the AIBO MIND software — an icon of consumer robotics history.",
+    "desc": "The third and final generation of Sony's original AIBO line and the first the company explicitly called a 'robot dog'. Featuring the Illume-Face LED array, capacitive touch sensors and MIND software with self-charging, face recognition and name memory, it was widely adopted in academic research and served as the RoboCup Standard Platform League robot from 2004 to 2008.",
     "tags": [
       "quadruped",
       "sony",
@@ -131911,14 +132166,40 @@
       "companion",
       "historic"
     ],
-    "wifi": true,
+    "wifi": "IEEE 802.11b",
     "use_cases": [
-      "Companionship",
-      "RoboCup (historic)"
+      "Companion robot",
+      "Entertainment",
+      "Academic research",
+      "RoboCup Standard Platform League"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "Japan",
+    "width_mm": 180,
+    "height_mm": 278,
+    "depth_mm": 319,
+    "weight_kg": 1.65,
+    "dof": 20,
+    "head_dof": 3,
+    "leg_dof": 3,
+    "cpu": "64-bit RISC",
+    "cpu_freq_ghz": 0.576,
+    "cameras": "350,000-pixel CMOS",
+    "camera_resolution": "350K px",
+    "battery_life": 90,
+    "battery_life_typical": 90,
+    "charge_time": 150,
+    "power_consumption_w": 7,
+    "os": "Aperios (OPEN-R)",
+    "currency": "USD",
+    "facial_recognition": true,
+    "variants": [
+      "ERS-7 (MIND)",
+      "ERS-7M2",
+      "ERS-7M3"
+    ]
   },
   {
     "id": "anybotics-anymal-c",
@@ -131961,13 +132242,13 @@
     "name": "ANYmal X",
     "brand": "ANYbotics",
     "cat": "Quadruped",
-    "sub": "Ex-Certified Inspection Quadruped",
+    "sub": "Explosion-Proof Inspection Quadruped",
     "year": 2023,
     "origin": "Switzerland",
     "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "The world's first Ex-certified (ATEX/IECEx Zone 1) legged robot — an explosion-proof ANYmal engineered for autonomous inspection inside hazardous oil, gas and chemical environments.",
+    "desc": "The explosion-proof member of the ANYmal family, certified for hazardous (Ex) zones such as oil, gas and chemical plants. Built on the ANYmal D platform with an Ex-rated sealed housing, it performs fully autonomous inspection in potentially explosive atmospheres where other legged robots cannot operate.",
     "tags": [
       "quadruped",
       "anybotics",
@@ -131980,26 +132261,45 @@
     "lidar": true,
     "auto_charge": true,
     "use_cases": [
-      "Hazardous-area inspection",
+      "Autonomous inspection in explosive atmospheres",
       "Oil & gas",
       "Chemical plants"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "Switzerland",
+    "weight_kg": 75,
+    "dof": 12,
+    "leg_dof": 3,
+    "payload_kg": 10,
+    "payload": 10,
+    "ip_rating": "IP67",
+    "stair_climbing": true,
+    "max_step_height_mm": 250,
+    "lidar_range_m": 100,
+    "cameras": "6 depth cameras, 2 tele-operation cameras, 20x optical zoom",
+    "imu": true,
+    "autonomous": true,
+    "os": "ROS",
+    "ros": true,
+    "other_certs": [
+      "ATEX/IECEx Ex-certified (hazardous zone)"
+    ],
+    "manufacturer_url": "https://www.anybotics.com/"
   },
   {
     "id": "boston-dynamics-littledog",
     "name": "LittleDog",
     "brand": "Boston Dynamics",
     "cat": "Quadruped",
-    "sub": "Research Quadruped",
-    "year": 2005,
+    "sub": "Research Quadruped (legacy)",
+    "year": 2010,
     "origin": "USA",
-    "status": "Retired",
+    "status": "Discontinued",
     "price": "POA",
     "img": "",
-    "desc": "DARPA's Learning Locomotion platform: a ~3 kg quadruped distributed to six universities (MIT, Stanford, CMU...) to develop rough-terrain walking algorithms — foundational to modern legged robotics.",
+    "desc": "A small DARPA-funded research quadruped built by Boston Dynamics as a standard testbed platform for other institutions studying rough-terrain locomotion and machine learning. Each of its four legs is driven by three electric motors, with an onboard PC handling sensing, control and communications.",
     "tags": [
       "quadruped",
       "boston-dynamics",
@@ -132010,24 +132310,34 @@
     ],
     "weight_kg": 3,
     "use_cases": [
-      "Locomotion research (historic)"
+      "Rough-terrain locomotion research",
+      "Machine-learning testbed"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "USA",
+    "dof": 12,
+    "leg_dof": 3,
+    "actuator_type": "Electric (3 motors per leg)",
+    "battery_type": "Lithium polymer",
+    "battery_life": 30,
+    "battery_life_typical": 30,
+    "api": "Boston Dynamics Robot API",
+    "imu": true
   },
   {
     "id": "boston-dynamics-wildcat",
     "name": "WildCat",
     "brand": "Boston Dynamics",
     "cat": "Quadruped",
-    "sub": "High-Speed Research Quadruped",
+    "sub": "Research Quadruped (legacy)",
     "year": 2013,
     "origin": "USA",
-    "status": "Retired",
+    "status": "Discontinued",
     "price": "POA",
     "img": "",
-    "desc": "The fastest untethered quadruped of its era: gasoline-powered WildCat galloped and bounded at ~32 km/h on flat ground, evolving the tethered Cheetah's record-setting gaits into free running.",
+    "desc": "The untethered, free-roaming successor to Cheetah, developed under DARPA's M3 program. Powered by an onboard methanol combustion engine driving hydraulic actuators, WildCat bounded and galloped outdoors at up to 25.7 km/h — the fastest untethered legged robot of its era.",
     "tags": [
       "quadruped",
       "boston-dynamics",
@@ -132036,27 +132346,38 @@
       "darpa",
       "historic"
     ],
-    "speed_ms": 8.8,
-    "speed": "~32 km/h (8.8 m/s)",
+    "speed_ms": 7.1,
+    "speed": 7.1,
     "use_cases": [
       "High-speed locomotion research (historic)"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "USA",
+    "weight_kg": 154,
+    "run_speed_ms": 7.1,
+    "run_speed": 7.1,
+    "actuator_type": "Hydraulic (methanol combustion engine)",
+    "power_source": "Onboard methanol combustion engine",
+    "gait_modes": [
+      "Bound",
+      "Gallop"
+    ],
+    "terrain": "Outdoor flat ground"
   },
   {
     "id": "boston-dynamics-cheetah",
     "name": "Cheetah",
     "brand": "Boston Dynamics",
     "cat": "Quadruped",
-    "sub": "Speed-Record Research Quadruped",
-    "year": 2012,
+    "sub": "Research Quadruped (legacy)",
+    "year": 2011,
     "origin": "USA",
-    "status": "Retired",
+    "status": "Discontinued",
     "price": "POA",
     "img": "",
-    "desc": "Set the legged-robot land-speed record: 45.5 km/h on a treadmill in 2012, beating Usain Bolt's peak sprint speed — the DARPA M3 program testbed that led to WildCat.",
+    "desc": "A DARPA-funded (Maximum Mobility and Manipulation program) research quadruped that set the legged-robot land-speed record, hitting 45 km/h on a laboratory treadmill. Tethered and boom-stabilised, with an articulated spine that flexed each stride to extend its gallop. Its untethered successor was WildCat.",
     "tags": [
       "quadruped",
       "boston-dynamics",
@@ -132065,27 +132386,37 @@
       "darpa",
       "historic"
     ],
-    "speed_ms": 12.6,
-    "speed": "45.5 km/h (treadmill record)",
+    "speed_ms": 12.5,
+    "speed": 12.5,
     "use_cases": [
       "Speed research (historic)"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "USA",
+    "run_speed_ms": 12.5,
+    "run_speed": 12.5,
+    "actuator_type": "Hydraulic (off-board pump)",
+    "power_source": "Off-board hydraulic pump (tethered)",
+    "gait_modes": [
+      "Gallop",
+      "Bound"
+    ],
+    "terrain": "Treadmill (laboratory)"
   },
   {
     "id": "boston-dynamics-ls3",
     "name": "LS3",
     "brand": "Boston Dynamics",
     "cat": "Quadruped",
-    "sub": "Military Cargo Quadruped",
+    "sub": "Military Pack Quadruped (legacy)",
     "year": 2012,
     "origin": "USA",
-    "status": "Retired",
+    "status": "Discontinued",
     "price": "POA",
     "img": "",
-    "desc": "The Legged Squad Support System: a ~570 kg BigDog successor built for DARPA and the US Marines to haul 180 kg of squad gear 32 km over rough terrain — shelved in 2015 mainly for being too loud.",
+    "desc": "The Legged Squad Support System (also called AlphaDog), a militarised, ruggedised evolution of BigDog developed with DARPA and the US Marine Corps. Designed as a robotic pack mule to carry gear alongside soldiers over rough terrain, it could haul 181 kg for 32 km, follow a human leader and respond to voice commands, though the program was ultimately shelved.",
     "tags": [
       "quadruped",
       "boston-dynamics",
@@ -132097,26 +132428,37 @@
     ],
     "weight_kg": 570,
     "payload_kg": 181,
-    "payload": "181 kg (400 lb)",
+    "payload": 181,
     "use_cases": [
-      "Military logistics (historic)"
+      "Military logistics (pack mule)",
+      "Squad support"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "USA",
+    "dof": 12,
+    "leg_dof": 3,
+    "actuator_type": "Hydraulic (gas/diesel engine)",
+    "power_source": "Internal combustion engine",
+    "lidar": true,
+    "gait_modes": [
+      "Walk",
+      "Follow-the-leader"
+    ]
   },
   {
     "id": "iit-hyq",
     "name": "HyQ",
     "brand": "IIT (Italian Institute of Technology)",
     "cat": "Quadruped",
-    "sub": "Hydraulic Research Quadruped",
+    "sub": "Research Quadruped (legacy)",
     "year": 2011,
     "origin": "Italy",
-    "status": "Retired",
+    "status": "Discontinued",
     "price": "POA",
     "img": "",
-    "desc": "IIT's pioneering hydraulically-actuated quadruped — one of Europe's foundational legged platforms, developing torque-controlled hydraulic locomotion over a decade of research.",
+    "desc": "The Italian Institute of Technology's pioneering hydraulically-actuated, torque-controlled research quadruped, developed by the Dynamic Legged Systems lab. Built to study fast, versatile and robust locomotion, HyQ demonstrated dynamic trotting, jumping and rough-terrain walking and seeded the later HyQReal platform.",
     "tags": [
       "quadruped",
       "iit",
@@ -132126,24 +132468,35 @@
       "historic"
     ],
     "use_cases": [
-      "Hydraulic locomotion research (historic)"
+      "Dynamic locomotion research"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "Italy",
+    "body_length_mm": 1000,
+    "weight_kg": 80,
+    "dof": 12,
+    "leg_dof": 3,
+    "actuator_type": "Hydraulic + electric hybrid (torque-controlled)",
+    "gait_modes": [
+      "Walk",
+      "Trot"
+    ],
+    "manufacturer_url": "https://dls.iit.it/"
   },
   {
     "id": "iit-hyqreal",
     "name": "HyQReal",
     "brand": "IIT (Italian Institute of Technology)",
     "cat": "Quadruped",
-    "sub": "Heavy Hydraulic Quadruped",
+    "sub": "Research Quadruped",
     "year": 2019,
     "origin": "Italy",
-    "status": "Research",
+    "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "IIT's 130 kg ruggedized hydraulic quadruped, famous for towing a 3.3-tonne passenger airplane — built to demonstrate real-world strength for disaster-response applications.",
+    "desc": "IIT's larger, ruggedised electro-hydraulic quadruped, protected by an aluminium roll cage and a Kevlar, glass-fibre and plastic skin with high-traction rubber feet. Powered by a 48 V battery driving four electric motors coupled to four hydraulic pumps, it famously demonstrated its power by pulling a Piaggio P180 Avanti passenger aircraft.",
     "tags": [
       "quadruped",
       "iit",
@@ -132152,14 +132505,25 @@
       "strength",
       "research"
     ],
-    "weight_kg": 130,
+    "weight_kg": 140,
     "use_cases": [
-      "Disaster response research",
-      "Heavy traction demos"
+      "Dynamic locomotion research",
+      "Heavy-payload legged research"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "Italy",
+    "body_length_mm": 1350,
+    "standing_height_mm": 900,
+    "dof": 12,
+    "leg_dof": 3,
+    "actuator_type": "Electro-hydraulic (4 electric motors driving 4 hydraulic pumps)",
+    "battery_voltage": "48V",
+    "frame_material": "Aluminium roll cage",
+    "shell_material": "Kevlar, glass fibre, plastic",
+    "cameras": "Dual onboard computers (vision + control)",
+    "manufacturer_url": "https://dls.iit.it/hyqreal"
   },
   {
     "id": "odri-solo-12",
@@ -132201,10 +132565,10 @@
     "sub": "Open-Source Research Quadruped",
     "year": 2019,
     "origin": "USA",
-    "status": "Retired",
+    "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "Stanford Student Robotics' open-source quadruped that set a record vertical jump agility for its size on a <US$3,000 budget — plans published free, spawning countless student builds.",
+    "desc": "An open-source, quasi-direct-drive quadruped from Stanford Student Robotics, designed as an accessible platform for legged-robot research. Presented at ICRA 2019, it holds a record for vertical jumping agility — jumping roughly twice as high as prior quadrupeds — while costing under $3,000 to build with only hand tools.",
     "tags": [
       "quadruped",
       "stanford",
@@ -132214,25 +132578,39 @@
       "historic"
     ],
     "use_cases": [
-      "Student research",
-      "Open-source builds (historic)"
+      "Legged-locomotion research",
+      "Robotics education"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "USA",
+    "weight_kg": 5,
+    "dof": 8,
+    "leg_dof": 2,
+    "actuator_type": "Quasi-direct-drive (belt transmission)",
+    "controller": "Teensy 3.5 + ODrive",
+    "open_source": true,
+    "github_url": "https://github.com/Nate711/StanfordDoggoProject",
+    "gait_modes": [
+      "Walk",
+      "Trot",
+      "Pronk",
+      "Jump"
+    ]
   },
   {
     "id": "anybotics-anymal-b",
     "name": "ANYmal B",
     "brand": "ANYbotics",
     "cat": "Quadruped",
-    "sub": "Research Quadruped",
+    "sub": "Research / Inspection Quadruped",
     "year": 2016,
     "origin": "Switzerland",
-    "status": "Retired",
+    "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "The ETH Zurich research generation of ANYmal that ANYbotics spun out from — a ~30 kg torque-controlled quadruped used across European research projects before the industrial C generation.",
+    "desc": "The research-generation ANYmal, developed at ETH Zurich's Robotic Systems Lab and commercialised by ANYbotics. Driven by torque-controllable ANYdrive series-elastic actuators, it walks, trots, climbs stairs and recovers from falls, and served as the foundation for the later industrial ANYmal C/D/X inspection systems.",
     "tags": [
       "quadruped",
       "anybotics",
@@ -132248,7 +132626,35 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "Switzerland",
+    "body_length_mm": 1100,
+    "width_mm": 500,
+    "standing_height_mm": 610,
+    "height_mm": 610,
+    "dof": 12,
+    "leg_dof": 3,
+    "speed_ms": 1.6,
+    "speed": 1.6,
+    "payload_kg": 10,
+    "payload": 10,
+    "actuator_type": "ANYdrive series-elastic actuators (torque-controlled)",
+    "stair_climbing": true,
+    "max_step_height_mm": 250,
+    "fall_recovery": true,
+    "battery_wh": 650,
+    "battery_life": 120,
+    "battery_life_typical": 120,
+    "power_consumption_w": 280,
+    "lidar": true,
+    "imu": true,
+    "os": "ROS",
+    "ros": true,
+    "gait_modes": [
+      "Walk",
+      "Trot"
+    ],
+    "manufacturer_url": "https://www.anybotics.com/"
   },
   {
     "id": "magiclab-magicdog-y1",
