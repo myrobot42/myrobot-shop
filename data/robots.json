@@ -106892,7 +106892,7 @@
     "made_in": "China",
     "status": "Active",
     "score": 75,
-    "desc": "The Seagull Pro is a robotic pool cleaner from Aiper that autonomously scrubs and vacuums pool floors, walls and waterline, filtering debris without a hose or pump connection.",
+    "desc": "Aiper's flagship cordless robotic pool cleaner (model ZT6002) and a CES 2023 Innovation Award honoree. The first cordless pool robot with a quad-motor system — two motors for suction and two for the brushes — plus top-mounted water jets that let it climb and scrub walls and the waterline. WavePath navigation plans systematic coverage of floor, walls and waterline for in-ground pools up to ~1,600 sq ft.",
     "price": 699,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734466/myrobot/pwpnm5q4jhzt5herib2t.jpg",
     "tags": [
@@ -106904,7 +106904,7 @@
     "announced": "2023",
     "released": "2023",
     "battery_life_typical": 150,
-    "manufacturer_url": "https://www.aiper.com",
+    "manufacturer_url": "https://aiper.com/us/aiper-seagull-series/aiper-seagull-pro",
     "fig": "🤖",
     "rating": 4,
     "gallery": [
@@ -106916,14 +106916,33 @@
     ],
     "autonomous": true,
     "use_cases": [
-      "Automated pool cleaning",
-      "Floor & wall scrubbing",
-      "Debris filtering"
+      "In-ground pool cleaning (floor, walls, waterline)"
     ],
     "perf": false,
     "website": "https://www.aiper.com",
     "video": "https://youtu.be/cyJ4KABr2Vk",
-    "video2": "https://youtu.be/YYEXWbSq2ho"
+    "video2": "https://youtu.be/YYEXWbSq2ho",
+    "height_mm": 406,
+    "width_mm": 406,
+    "depth_mm": 280,
+    "weight_kg": 9.5,
+    "navigation": "WavePath path planning",
+    "brush_type": "Dual PVC roller brushes",
+    "filter": "Top-access filter basket (cartridge)",
+    "suction_modes": [
+      "Floor",
+      "Wall",
+      "Auto"
+    ],
+    "battery_type": "Li-ion (7800 mAh)",
+    "battery_life": 150,
+    "charge_time": 90,
+    "power_consumption_w": 200,
+    "auto_charge": false,
+    "cliff_sensors": 1,
+    "app": "None (top dial control)",
+    "wifi": "No",
+    "warranty_months": 24
   },
   {
     "id": "dreame-z1-pro-pool",
@@ -107073,12 +107092,12 @@
     "brand": "Ecovacs",
     "cat": "Consumer",
     "sub": "Window Cleaning Robot",
-    "year": 2025,
+    "year": 2024,
     "origin": "China",
     "made_in": "China",
     "status": "Active",
     "score": 75,
-    "desc": "The Winbot Mini is a window-cleaning robot from Ecovacs that adheres to glass and autonomously cleans windows and smooth vertical surfaces.",
+    "desc": "Ecovacs' compact window-cleaning robot, designed to be smaller and easier to handle than full-size window bots. Uses dual nozzles with an ultrasonic water-spray system, intelligent path planning and three cleaning modes, held to the glass by a suction fan with a 9-stage protection system and anti-slip safeguards for safe cleaning of framed and frameless glass.",
     "price": 399,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734471/myrobot/smkabqu6vqz9jish7ae3.jpg",
     "tags": [
@@ -107091,7 +107110,7 @@
     ],
     "announced": "2025",
     "released": "2025",
-    "manufacturer_url": "https://www.ecovacs.com",
+    "manufacturer_url": "https://www.ecovacs.com/",
     "fig": "🤖",
     "rating": 4,
     "gallery": [
@@ -107103,12 +107122,19 @@
     ],
     "autonomous": true,
     "use_cases": [
-      "Automated window cleaning",
-      "Glass surface cleaning"
+      "Interior and exterior window cleaning",
+      "Glass, tile, mirrors"
     ],
     "perf": false,
     "video": "https://youtu.be/GH8qkf0EWME",
-    "website": "https://www.ecovacs.com"
+    "website": "https://www.ecovacs.com",
+    "navigation": "Intelligent path planning",
+    "suction_modes": [
+      "3 cleaning modes"
+    ],
+    "estop": "9-stage protection system + anti-slip",
+    "cliff_sensors": 4,
+    "app": "ECOVACS Home"
   },
   {
     "id": "agibot-a2-ultra",
@@ -107911,7 +107937,7 @@
     "made_in": "China",
     "status": "Active",
     "score": 75,
-    "desc": "The Seagull 2000 is a robotic pool cleaner from Aiper that autonomously scrubs and vacuums pool floors, walls and waterline, filtering debris without a hose or pump connection.",
+    "desc": "A mid-range cordless robotic pool cleaner in Aiper's Seagull line, adding wall-climbing to the floor-cleaning of the entry Seagull models. Uses a dual-motor drive with WavePath-style path planning and a rechargeable battery, cleaning pool floors and walls without a cord or booster pump. Automatically parks near the pool edge when the battery runs low.",
     "price": 399,
     "img": "",
     "tags": [
@@ -107924,17 +107950,27 @@
     "announced": "2023",
     "released": "2023",
     "battery_life_typical": 90,
-    "manufacturer_url": "https://www.aiper.com",
+    "manufacturer_url": "https://aiper.com/",
     "autonomous": true,
     "use_cases": [
-      "Automated pool cleaning",
-      "Floor & wall scrubbing",
-      "Debris filtering"
+      "Above-ground and in-ground pool cleaning (floor + walls)"
     ],
     "perf": false,
     "fig": "🤖",
     "rating": 4,
-    "website": "https://www.aiper.com"
+    "website": "https://www.aiper.com",
+    "navigation": "Systematic path planning",
+    "brush_type": "Roller brush",
+    "filter": "Filter basket",
+    "suction_modes": [
+      "Floor",
+      "Floor + wall"
+    ],
+    "battery_type": "Li-ion (rechargeable)",
+    "auto_charge": false,
+    "app": "None (button control)",
+    "wifi": "No",
+    "warranty_months": 24
   },
   {
     "id": "aiper-orca-3000",
@@ -119307,11 +119343,11 @@
     "name": "Grillbot",
     "brand": "Grillbot",
     "sub": "Grill Cleaning Robot",
-    "year": 2020,
+    "year": 2014,
     "origin": "USA",
     "status": "Active",
     "price_band": "Budget",
-    "desc": "Grillbot is an automatic grill-cleaning robot with three motorised brushes and a CPU-timed cleaning cycle that scrubs barbecue grates hands-free while the grill is warm.",
+    "desc": "A hand-sized automatic grill-cleaning robot that scrubs a barbecue grill at the push of a button. Three independent motors drive spinning brushes (available in brass, nylon or steel) inside a heat-resistant shell, moving in a random spin-stop-restart pattern for even coverage. An LCD timer offers 10, 20 or 30-minute cycles, and it runs on hot or cold grills. Powered by a rechargeable lithium-ion battery.",
     "tags": [
       "consumer",
       "grill cleaner",
@@ -119326,9 +119362,9 @@
     "actuator_type": "3 motors driving 3 replaceable cleaning brushes",
     "battery_type": "Rechargeable Li-ion",
     "use_cases": [
-      "Automatic BBQ grill cleaning"
+      "Automatic barbecue grill cleaning"
     ],
-    "made_in": "USA",
+    "made_in": "China",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781560887/myrobot/cq0p1hm58swtr3zi1oxp.jpg",
     "gallery": [
       "https://m.media-amazon.com/images/I/61rQcK-vO6L.jpg",
@@ -119337,7 +119373,19 @@
       "https://m.media-amazon.com/images/I/91MVZgbCfFL.png",
       "https://preview.redd.it/how-lazy-can-you-get-for-400-a-robotic-grill-brush-the-v0-mvg2oj0gu5sc1.jpeg?auto=webp&s=582dd065f5423c07879a5520054748774ad4b27a"
     ],
-    "video": "https://youtu.be/BGFmOJ_7oBo"
+    "video": "https://youtu.be/BGFmOJ_7oBo",
+    "weight_kg": 0.9,
+    "shape": "Round",
+    "brush_type": "3x replaceable brushes (brass / nylon / steel)",
+    "suction_modes": [
+      "10 min",
+      "20 min",
+      "30 min"
+    ],
+    "operating_temp_max": 120,
+    "display": "LCD timer",
+    "autonomous": true,
+    "manufacturer_url": "https://grillbots.com/"
   },
   {
     "cat": "Consumer",
@@ -119348,9 +119396,9 @@
     "sub": "Garden Weeding Robot",
     "year": 2019,
     "origin": "USA",
-    "status": "Active",
+    "status": "Discontinued",
     "price_band": "Mid-range",
-    "desc": "Tertill (Franklin Robotics) is a solar-powered weeding robot that lives in a garden bed year-round, patrolling daily and using a string trimmer to cut down small weeds while sensing and avoiding established plants.",
+    "desc": "The first robotic weeder for home gardens, created by Roomba co-inventor Joe Jones at Franklin Robotics (later Tertill Corp) in North Billerica, Massachusetts. This solar-powered, weatherproof disc lives in the garden from spring to fall, using capacitive bumper sensors to tell tall plants from short weeds and a spinning nylon string trimmer to cut weeds at the base. Four-wheel drive with extreme camber wheels handles soil, sand and mulch; a physical garden border replaces any perimeter wire or GPS.",
     "tags": [
       "consumer",
       "garden",
@@ -119369,12 +119417,32 @@
       "https://static.designboom.com/wp-content/uploads/2017/05/franklin-robotics-tertill-designboom-600.jpg"
     ],
     "weight_kg": 1.1,
-    "battery_type": "Solar-powered",
+    "battery_type": "Li-ion (solar-charged)",
     "use_cases": [
-      "Autonomous garden weeding (string trimmer, weatherproof)"
+      "Home garden weeding (up to ~200 sq ft)",
+      "Vegetable and flower beds"
     ],
     "made_in": "USA",
-    "website": "https://tertill.com"
+    "website": "https://tertill.com",
+    "diameter_mm": 203,
+    "height_mm": 114,
+    "shape": "Round (disc)",
+    "power_source": "Solar (self-charging Li-ion)",
+    "battery_life": 120,
+    "battery_life_typical": 120,
+    "actuator_type": "4-wheel drive, extreme camber wheels",
+    "sensors_list": [
+      "Capacitive bump sensors",
+      "Inertial sensing",
+      "Under-body weed sensors"
+    ],
+    "bluetooth": "Yes (stuck alerts)",
+    "coverage_ha_day": 0.002,
+    "autonomous": true,
+    "obstacle_avoidance": "Bump-and-go + garden border",
+    "price": 349,
+    "currency": "USD",
+    "manufacturer_url": "https://tertill.com/"
   },
   {
     "id": "anduril-ghost-suas",
@@ -120614,11 +120682,13 @@
     "brand": "Tomy",
     "cat": "Consumer",
     "year": 1984,
-    "status": "Active",
-    "desc": "Tomy’s flagship 1980s home robot: programmable via its built-in cassette deck, remote-controlled, with a serving tray, digital clock and speech playback. The Omnibot line defined the era’s dream of the household robot butler.",
-    "actuator_type": "Wheeled drive, cassette-tape program storage",
+    "status": "Discontinued",
+    "desc": "An iconic 1980s programmable home robot from Japanese toymaker Tomy. Using a built-in cassette-tape deck, Omnibot could record and play back sequences of movements and speech, letting owners program it to roll around, speak and serve drinks from its front tray. It featured a wheeled base, remote control and a built-in clock/alarm, and became one of the most recognisable consumer robots of the personal-robot craze.",
+    "actuator_type": "Wheeled drive base",
     "use_cases": [
-      "Home entertainment & novelty serving"
+      "Home entertainment",
+      "Programmable toy robot",
+      "Drink serving (tray)"
     ],
     "made_in": "Japan",
     "fig": "🤖",
@@ -120631,6 +120701,21 @@
       "https://image.invaluable.com/housePhotos/Lawsons/83/764883/H0669-L362756986_original.JPG",
       "https://framemark.vam.ac.uk/collections/2023NH6844/full/735,/0/default.jpg",
       "https://lh5.googleusercontent.com/proxy/49vyf8EuV0nugP6Z3ckDik0l7ThTrzbDReYx1JLRbkh2ljuMVYIMqhX1PVJa9bcv9UBJkiT-7tZqkaMbn5RR0awpr6RuU63k_w8gGUVbrmuDYnxNdJmi3g"
+    ],
+    "sub": "Programmable Home Robot (vintage)",
+    "origin": "Japan",
+    "height_mm": 380,
+    "shape": "Humanoid-style on wheeled base",
+    "display": "Clock / alarm",
+    "battery_type": "Battery powered",
+    "os": "Cassette-tape program memory",
+    "sensors_list": [
+      "Remote control receiver"
+    ],
+    "variants": [
+      "Omnibot",
+      "Omnibot 2000",
+      "Omnibot 5402"
     ]
   },
   {
@@ -129534,15 +129619,15 @@
       "Aquatic"
     ],
     "sub": "Robotic Pool Cleaner",
-    "year": 2025,
+    "year": 2021,
     "origin": "USA",
     "made_in": "USA",
-    "status": "Active",
+    "status": "Discontinued",
     "price": "POA",
     "img": "",
     "waterline_cleaning": true,
     "wall_climbing": true,
-    "desc": "Pentair's flagship Prowler robotic cleaner for large inground pools, with strong scrubbing of floor, walls and waterline and a programmable cycle.",
+    "desc": "A corded robotic in-ground pool cleaner in Pentair's Prowler family that scrubs and vacuums floors, coves, walls and up to the tile/waterline. Uses two brushes with an active brush spinning twice as fast for extra scrubbing power, a top-access filter basket with customizable filtration, and self-programming smart navigation. Runs independently of the pool's pump (no booster needed) and is Bluetooth-enabled. Superseded by the Wi-Fi 930W.",
     "tags": [
       "pool-cleaner",
       "aquatic",
@@ -129555,7 +129640,24 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "navigation": "Self-programming smart scan",
+    "brush_type": "Dual active scrubbing brushes",
+    "filter": "Top-access basket (customizable filtration)",
+    "suction_modes": [
+      "Floor only (1h)",
+      "Floor + wall + waterline (2h)"
+    ],
+    "cycle_time_s": 7200,
+    "bluetooth": "Yes",
+    "wifi": "No",
+    "power_source": "Corded (60 ft swivel cable, independent of pump)",
+    "surface_finish": "Tile, plaster, vinyl",
+    "warranty_months": 24,
+    "use_cases": [
+      "In-ground pool cleaning (floor, walls, waterline)"
+    ],
+    "manufacturer_url": "https://www.pentair.com/en-us/pool-spa/products/cleaners.html"
   },
   {
     "id": "dolphin-m600",
@@ -129607,7 +129709,7 @@
       "Aquatic"
     ],
     "sub": "Robotic Pool Cleaner",
-    "year": 2025,
+    "year": 2021,
     "origin": "USA",
     "made_in": "USA",
     "status": "Active",
@@ -129615,7 +129717,7 @@
     "img": "",
     "waterline_cleaning": false,
     "wall_climbing": true,
-    "desc": "Pentair Prowler robotic cleaner for inground pools, scrubbing floors and walls with an easy top-load cartridge filter and programmable cleaning cycles.",
+    "desc": "The above-ground member of Pentair's Prowler robotic pool-cleaner family. A corded, plug-and-play cleaner that scrubs and vacuums the floor and cove of above-ground pools with a top-access filter basket, running independently of the pool's filtration system. Self-programming navigation and an included caddy make it a drop-in-and-go cleaner.",
     "tags": [
       "pool-cleaner",
       "aquatic",
@@ -129627,7 +129729,20 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "navigation": "Self-programming smart scan",
+    "brush_type": "Scrubbing brush",
+    "filter": "Top-access filter basket",
+    "suction_modes": [
+      "Floor cleaning"
+    ],
+    "power_source": "Corded (swivel cable, independent of pump)",
+    "wifi": "No",
+    "warranty_months": 24,
+    "use_cases": [
+      "Above-ground pool cleaning (floor + cove)"
+    ],
+    "manufacturer_url": "https://www.pentair.com/en-us/pool-spa/products/cleaners.html"
   },
   {
     "id": "mamibot-w120-t",
@@ -129635,15 +129750,15 @@
     "brand": "Mamibot",
     "cat": "Consumer",
     "sub": "Window Cleaning Robot",
-    "year": 2025,
-    "origin": "China",
+    "year": 2020,
+    "origin": "Estonia",
     "made_in": "China",
     "status": "Active",
     "price": "POA",
     "img": "",
-    "navigation": "Path-planning with edge detection",
+    "navigation": "AI path planning (Z / N / Z-to-N)",
     "app_companion": "Mamibot",
-    "desc": "Affordable window-cleaning robot with vacuum adhesion, spray-and-wipe pads, remote/app control and a safety rope for indoor and outdoor glass.",
+    "desc": "A corded automatic window-cleaning robot in Mamibot's iGLASSBOT W120 family. Adheres to glass with a suction fan (up to 3,000 Pa) and cleans framed or frameless glass, mirrors, tiles and smooth walls, wet or dry, using AI path planning in Z, N or Z-to-N patterns. Includes edge detection, a backup battery and safety rope for power-loss protection, and returns to its start point when done. Controlled by one-touch button, remote or the iGLASSBOT app.",
     "tags": [
       "window-cleaner",
       "mamibot",
@@ -129655,7 +129770,30 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "height_mm": 85,
+    "width_mm": 250,
+    "depth_mm": 250,
+    "weight_kg": 1.45,
+    "suction_pa": 3000,
+    "suction_modes": [
+      "Standard",
+      "Deep clean (2x pass)"
+    ],
+    "noise_db": 65,
+    "charge_time": 60,
+    "estop": "Edge detection + backup battery + safety rope",
+    "app": "iGLASSBOT",
+    "wifi": "No",
+    "warranty_months": 12,
+    "use_cases": [
+      "Interior/exterior windows",
+      "High-rise glass",
+      "Mirrors",
+      "Tiles",
+      "Smooth walls"
+    ],
+    "manufacturer_url": "https://www.mamibot.com/"
   },
   {
     "id": "eufy-auto-empty-c10",
