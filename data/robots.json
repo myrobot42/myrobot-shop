@@ -131128,18 +131128,18 @@
     "name": "Harley (哈利)",
     "brand": "Hisense",
     "cat": "Humanoid",
-    "sub": "Commercial Service Humanoid",
+    "sub": "Service Humanoid",
     "year": 2026,
     "origin": "China",
-    "status": "Active",
+    "status": "Development",
     "price": "POA",
     "img": "",
     "use_cases": [
-      "Greeting",
-      "Guided sales",
-      "Hospitality"
+      "Customer engagement",
+      "Reception",
+      "Exhibitions / on-site interaction"
     ],
-    "desc": "Appliance giant Hisense's first commercial humanoid, unveiled at CES 2026: it performs, guides visitors and pitches products, rolling out first in Hisense stores then hotels, venues and tourism sites.",
+    "desc": "Hisense's first humanoid service robot, debuted at CES 2026 as part of the company's full-scenario smart-home showcase (alongside the R1/A2 humanoid and the Beta home-companion robot). Harley has 31 degrees of freedom, giving it lifelike gestures and interactions aimed at on-site customer engagement. As a new debut, Hisense has not yet published detailed hardware specifications.",
     "tags": [
       "humanoid",
       "hisense",
@@ -131151,7 +131151,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "dof": 31,
+    "natural_language_commands": true,
+    "manufacturer_url": "https://www.hisense.com/"
   },
   {
     "id": "haier-hea",
@@ -131509,17 +131513,19 @@
     "name": "Mornine",
     "brand": "Chery",
     "cat": "Humanoid",
-    "sub": "Service Humanoid",
+    "sub": "Full-Size Service Humanoid",
     "year": 2025,
     "origin": "China",
     "status": "Active",
-    "price": "POA",
+    "price": 41860,
     "img": "",
     "use_cases": [
-      "Auto showroom service",
-      "Hospitality"
+      "Sales and reception",
+      "Customer service",
+      "Training / demonstration",
+      "Healthcare assistance"
     ],
-    "desc": "Chinese carmaker Chery's service humanoid, developed to work in auto showrooms and retail/hospitality settings as a brand-facing assistant.",
+    "desc": "A full-size service humanoid from AiMOGA, the robotics subsidiary Chery established in early 2025. The Mornine M1 went on commercial sale in April 2026 via JD.com at RMB 285,800 (~$41,860), one of the first humanoids sold direct to the public online. It stands 167 cm, weighs 70 kg and has 40 degrees of freedom (excluding its dexterous hands), walking up to 1 m/s on a 0.7 kWh battery good for about two hours. Built for sales, reception and training, it supports dual-arm coordinated tasks, speaks 10+ languages, integrates conversational AI (including ChatGPT), and can even autonomously open car doors — reflecting its origins pitched at automotive dealerships, where it first deployed in Malaysia in March 2025.",
     "tags": [
       "humanoid",
       "chery",
@@ -131531,7 +131537,38 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "height_mm": 1670,
+    "weight_kg": 70,
+    "dof": 40,
+    "speed_ms": 1,
+    "speed": 1,
+    "payload_kg": 1.5,
+    "payload": 1.5,
+    "battery_wh": 700,
+    "battery_life": 120,
+    "battery_life_typical": 120,
+    "charge_time": 120,
+    "hand_type": "Dexterous hands",
+    "bimanual": true,
+    "cameras": "2x depth + 1x wide-angle",
+    "depth_sensing": "2x depth cameras",
+    "lidar": true,
+    "sensors_list": [
+      "3D LiDAR",
+      "2x depth cameras",
+      "Wide-angle camera",
+      "4x ultrasonic sensors"
+    ],
+    "navigation": "3D LiDAR + depth (mapping, obstacle avoidance)",
+    "mapping": true,
+    "ai_model": "Conversational AI (ChatGPT integration)",
+    "natural_language_commands": true,
+    "languages": "10+",
+    "teleoperation": "VR remote control",
+    "currency": "USD",
+    "manufacturer_url": "https://www.aimoga.com/"
   },
   {
     "id": "orionstar-andi",
