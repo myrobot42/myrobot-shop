@@ -114395,11 +114395,11 @@
     "id": "lg-q9",
     "name": "Q9 (CLOi AI Agent)",
     "brand": "LG",
-    "sub": "Home AI Companion Robot",
+    "sub": "Home AI-Agent Companion (wheeled)",
     "year": 2025,
     "origin": "South Korea",
-    "status": "Active",
-    "desc": "LG's Q9 is a two-legged-wheeled home AI agent (part of the CLOi line) that moves around the home, recognises faces and emotions, and uses generative AI (integrating large language models) to manage smart-home routines and provide companionship.",
+    "status": "Development",
+    "desc": "LG's 'Self-Driving AI Home Hub' — a cute companion robot that rolls around the house on two gyroscopic one-wheeled legs, balancing itself while it moves. With bright expressive eyes, cameras, a microphone array and generative-AI voice conversation, Q9 acts as a mobile personal assistant and the physical face of LG's ThinQ smart home: it greets and chats with the family, reports on overnight energy use, sleep and temperature, delivers weather and reminders, and relays commands to LG appliances. LG frames it around 'Affectionate Intelligence' — AI meant to understand and empathize with users — and offers it on a subscription model. It's the forerunner to LG's CLOiD home humanoid (CES 2026).",
     "tags": [
       "social",
       "companion",
@@ -114419,14 +114419,29 @@
       "https://www.red-dot.org/fileadmin/_processed_/a/6/csm_35-05940-2025PD.1211174_CO_fdbd42afad.jpg",
       "https://ifdalivestorage.blob.core.windows.net/user-uploads/8309/mid-size/698352/4840328f-3c9d-4b72-b9be-0be63924aaa6/698352-lg_smarhome_ai_agent_q9_05.png"
     ],
-    "display_face": "Expressive face display",
+    "display_face": "Bright expressive eyes",
     "actuator_type": "Two-wheeled self-balancing drive",
     "use_cases": [
-      "AI home agent: voice assistant, smart-home hub, patrol (announced CES 2025)"
+      "Home companion",
+      "Smart-home control",
+      "Home monitoring (sleep / energy / temp)",
+      "Reminders and personal assistant"
     ],
     "made_in": "South Korea",
     "website": "https://www.lg.com",
-    "price_band": "$"
+    "price_band": "$",
+    "chassis": "Two gyroscopic one-wheeled legs (self-balancing)",
+    "display": "Expressive display face",
+    "cameras": "Cameras",
+    "microphones": "Microphone array",
+    "ai_model": "LG Affectionate Intelligence + generative AI (LLM)",
+    "natural_language_commands": true,
+    "voice_control": "Conversational voice agent",
+    "smart_home": "LG ThinQ / ThinQ ON ecosystem",
+    "autonomous": "Autonomous home navigation (self-driving)",
+    "emotion_detection": true,
+    "subscription": true,
+    "manufacturer_url": "https://www.lg.com/"
   },
   {
     "cat": "Social",
@@ -114598,15 +114613,15 @@
   {
     "cat": "Social",
     "perf": false,
-    "price": "POA",
+    "price": 1499,
     "id": "tombot-jennie",
     "name": "Jennie",
     "brand": "Tombot",
-    "sub": "Therapeutic Companion Pet",
+    "sub": "Robotic Companion Dog (support)",
     "year": 2024,
     "origin": "USA",
     "status": "Active",
-    "desc": "Jennie (Tombot) is a hyper-realistic robotic puppy designed as a therapeutic companion for people with dementia, anxiety or in elder care - it responds to touch and voice with lifelike movements and sounds, providing comfort without the demands of a live pet.",
+    "desc": "A hyper-realistic robotic Labrador puppy from Tombot, created after founder Tom Stevens had to rehome his mother's dog when she developed Alzheimer's. Designed with Jim Henson's Creature Shop, Jennie has soft realistic fur and lifelike head, eyebrow and tail motion driven by nine servo motors, with capacitive touch sensors across its body that trigger puppy-like reactions based on where and how it's touched, and authentic sounds recorded from 8–10-week-old Labradors. A microphone array lets it understand simple commands (tell it to 'speak' and it barks). Deliberately screen-free and low-tech, it's aimed at comfort for people with dementia, anxiety or sensory-processing needs; Tombot returned to CES 2026 positioning Jennie as an FDA-regulated robotic pet for clinical and long-term-care use, with 7,500+ preorders.",
     "tags": [
       "social",
       "companion pet",
@@ -114627,13 +114642,25 @@
       "https://www.cnet.com/a/img/resize/0ba9ce3e8d8f636ca4828b5b3d26f340933fe0fa/hub/2020/01/07/5736f7cd-d59a-498e-9123-615e8a956bc8/ces-2020-tombot-jennie-6109.jpg?auto=webp&fit=crop&height=675&width=1200"
     ],
     "use_cases": [
-      "Emotional-support companion (realistic Labrador puppy)",
-      "Dementia & senior care"
+      "Dementia / Alzheimer's companionship",
+      "Anxiety / mental-health support",
+      "Senior and long-term care"
     ],
     "made_in": "USA",
     "website": "https://tombot.com",
     "price_band": "$",
-    "video": "https://youtu.be/-u_1ODfpPKQ"
+    "video": "https://youtu.be/-u_1ODfpPKQ",
+    "actuator_type": "9 servo motors (head, eyebrow, tail)",
+    "touch_sensing": "Capacitive touch sensors (body-wide, location + intensity)",
+    "microphones": "Microphone array",
+    "speech": "Authentic Labrador puppy sounds",
+    "natural_language_commands": true,
+    "shell_material": "Soft realistic fur",
+    "design": "Jim Henson's Creature Shop",
+    "app": "Tombot app (settings, rename, OTA updates)",
+    "fda_regulated": true,
+    "currency": "USD",
+    "manufacturer_url": "https://www.tombot.com/"
   },
   {
     "cat": "Social",
