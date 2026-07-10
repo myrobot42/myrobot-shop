@@ -118042,11 +118042,11 @@
     "id": "avidbots-neo",
     "name": "Neo",
     "brand": "Avidbots",
-    "sub": "Autonomous Floor-scrubbing Robot",
+    "sub": "Autonomous Floor-Scrubbing Robot",
     "year": 2021,
     "origin": "Canada",
     "status": "Active",
-    "desc": "The Avidbots Neo is a fully-autonomous floor-scrubbing robot for large commercial spaces (airports, malls, warehouses), self-navigating and self-cleaning with detailed cleaning reports; the Neo 2 added improved autonomy and analytics.",
+    "desc": "The flagship of Avidbots (Kitchener, Ontario) and one of the most widely deployed autonomous floor-scrubbing robots — used across airports, warehouses (DHL, DSV) and malls, where it reportedly removes up to 80% of manual cleaning labour hours. Powered by Avidbots Autonomy, Neo maps and cleans a site on its own with dynamic path planning, real-time obstacle avoidance and 360-degree visibility from a market-leading sensor suite, no operator required. It offers a 24 in or 32 in cleaning path with disc or cylindrical heads, a ~132 L (35 gal) solution tank, coverage up to ~3,900 m2/hr, and up to six hours of run time per AGM battery — extendable by simply swapping batteries. It accepts standard low-foaming floor detergents.",
     "tags": [
       "service",
       "cleaning",
@@ -118065,23 +118065,43 @@
     "lidar": "3D LiDAR + depth cameras",
     "battery_life": 360,
     "use_cases": [
-      "Autonomous commercial floor scrubbing"
+      "Airports",
+      "Warehouses / logistics",
+      "Malls and large facilities"
     ],
     "made_in": "Canada",
-    "website": "https://avidbots.com"
+    "website": "https://avidbots.com",
+    "cleaning_path": "24 in or 32 in (610 / 810 mm)",
+    "head_type": "Disc or cylindrical",
+    "solution_tank_l": 132,
+    "coverage": "Up to 3,900 m2/hr (42,000 sq ft/hr)",
+    "battery_type": "AGM (swappable)",
+    "hot_swap": true,
+    "ai_model": "Avidbots Autonomy (dynamic planning)",
+    "navigation": "Autonomous mapping, 360 sensor suite",
+    "obstacle_avoidance": true,
+    "sensors_list": [
+      "360 sensor suite (LiDAR + cameras)"
+    ],
+    "autonomous": true,
+    "deployed_at": [
+      "DHL / DSV warehouses",
+      "Airports"
+    ],
+    "manufacturer_url": "https://avidbots.com/"
   },
   {
     "cat": "Service",
     "perf": false,
-    "price": "POA",
+    "price": 85077,
     "id": "tennant-t7amr",
     "name": "T7AMR",
     "brand": "Tennant Company",
-    "sub": "Robotic Floor Scrubber",
+    "sub": "Autonomous Ride-On Floor Scrubber (AMR)",
     "year": 2020,
     "origin": "USA",
     "status": "Active",
-    "desc": "The Tennant T7AMR is a robotic floor-scrubbing machine (BrainOS-powered) that autonomously scrubs hard floors in retail, warehouse and institutional settings while still usable as a manual ride/walk-behind scrubber.",
+    "desc": "Tennant Company's autonomous ride-on robotic floor scrubber, built on its T7 micro-rider and made self-driving by Brain Corp's vision-based BrainOS platform (learn-and-repeat routes with real-world obstacle avoidance). It cleans a 650 mm (26 in) path with two 0.45 kW brush motors at 225 rpm and up to 86 kg of down-pressure to lift embedded grime, fed by equal 110 L solution and recovery tanks for theoretical productivity up to 4,250 m2/hr. The 24 V machine runs ~4 hours on lead-acid (up to 6.5 hours on lithium-ion, or a 9.2 kWh Li-Ion pack), cleans as quietly as 70 dBA for daytime use, and uses ec-H2O NanoClean to cut water and detergent. It measures 1650 x 850 x 1450 mm, weighs ~492 kg, and reports fleet KPIs weekly.",
     "tags": [
       "service",
       "cleaning",
@@ -118104,10 +118124,33 @@
     "os": "BrainOS autonomous navigation",
     "lidar": "LiDAR + 2D/3D cameras",
     "use_cases": [
-      "Autonomous industrial floor scrubbing"
+      "Retail",
+      "Warehouses",
+      "Airports / transit hubs",
+      "Hospitals / high-traffic"
     ],
     "made_in": "USA",
-    "website": "https://www.tennantco.com"
+    "website": "https://www.tennantco.com",
+    "cleaning_path_mm": 650,
+    "coverage": "Up to 4,250 m2/hr (theoretical, manual)",
+    "brush_motors": 2,
+    "brush_power": "0.45 kW each",
+    "brush_rpm": 225,
+    "brush_pressure": "Up to 86 kg (190 lb)",
+    "solution_tank_l": 110,
+    "recovery_tank_l": 110,
+    "voltage": 24,
+    "battery_life": 240,
+    "battery_type": "Lead-acid (4h) / Li-ion (up to 6.5h) / 9.2 kWh",
+    "ai_model": "BrainOS (Brain Corp, vision AI)",
+    "navigation": "Vision-based, learn-and-repeat",
+    "obstacle_avoidance": true,
+    "dimensions": "1650 x 850 x 1450 mm",
+    "weight_kg": 492,
+    "noise": "As low as 70 dBA",
+    "eco_tech": "ec-H2O NanoClean (reduced water/chemical)",
+    "currency": "USD",
+    "manufacturer_url": "https://www.tennantco.com/"
   },
   {
     "cat": "Service",
