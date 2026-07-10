@@ -118861,12 +118861,12 @@
     "id": "wonder-workshop-cue",
     "name": "Cue",
     "brand": "Wonder Workshop",
-    "sub": "Coding Robot",
+    "sub": "Coding Robot (block-to-text)",
     "year": 2018,
     "origin": "USA",
-    "status": "Active",
+    "status": "Discontinued",
     "price_band": "Mid-range",
-    "desc": "Wonder Workshop Cue is an upgraded sibling of Dash for older students, with witty AI \"avatars\", text/block coding and JavaScript support to bridge from beginner to more advanced programming.",
+    "desc": "An award-winning coding robot from Wonder Workshop (makers of Dash & Dot), built to carry students from block-based code into state-machine and text-based programming. Aimed at ages 11+, Cue ('Coding Utility Engine') has four selectable 'hero' avatar personalities with enhanced conversational AI and witty text-message-style chat. The wheeled robot moves expressively with RGB LED lights and a speaker, sensing its surroundings with IR proximity/distance sensors, microphones and an accelerometer, and connects over Bluetooth LE to the Wonder and Cue apps. Students program it in the block-based Wonder language and in JavaScript/Blockly. No longer produced, but still supported by Wonder Workshop.",
     "tags": [
       "educational",
       "STEM",
@@ -118878,15 +118878,17 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "bluetooth": true,
+    "bluetooth": "Bluetooth LE (tablet / phone app)",
     "programming": [
       "Blockly",
       "JavaScript"
     ],
     "use_cases": [
-      "Middle-school coding education"
+      "Coding education (block-to-text transition)",
+      "Computer science",
+      "STEM"
     ],
-    "made_in": "USA",
+    "made_in": "China",
     "website": "https://www.makewonder.com",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781868113/myrobot/pdix3z7wmnozmgeydwyp.png",
     "gallery": [
@@ -118896,7 +118898,32 @@
       "https://store-images.s-microsoft.com/image/apps.45634.14060759127330099.4c0aa904-e0d0-4f1e-8096-7035d162e816.f9e2d949-63b2-435a-b67e-b8b70bdf5d16",
       "https://gethacking.com/cdn/shop/products/rOLP39wtRZyC3seVfxsL_cue_hero_mobile_2x-d2297b112fac60e1b6763a09f1988e90.png?v=1616200166&width=990"
     ],
-    "video": "https://youtu.be/VKRt9LFhs1A"
+    "video": "https://youtu.be/VKRt9LFhs1A",
+    "age_range": "11+ years",
+    "grade_level": "Middle / high school",
+    "also_known_as": "Coding Utility Engine",
+    "chassis": "2 wheels (mobile)",
+    "actuators": "2 drive motors + head movement",
+    "sensors_list": [
+      "IR proximity sensors",
+      "Distance sensors",
+      "Microphones",
+      "Accelerometer / gyro",
+      "Wheel encoders"
+    ],
+    "display": "RGB LED lights",
+    "ai_model": "4 avatar personalities (enhanced conversational AI)",
+    "natural_language_commands": true,
+    "programming_langs": [
+      "Wonder (block-based)",
+      "JavaScript",
+      "Blockly"
+    ],
+    "programming_interface": "Wonder + JavaScript apps (tablet / phone)",
+    "accessories": "Blaster, connector brackets",
+    "price": 200,
+    "currency": "USD",
+    "manufacturer_url": "https://makewonder.com/robots/cue/"
   },
   {
     "cat": "Educational",
@@ -121359,10 +121386,12 @@
     "cat": "Educational",
     "year": 1983,
     "status": "Active",
-    "desc": "One of the first mass-produced personal robots, from Golden, Colorado. The transparent-domed RB5X featured sonar, bump sensors, an optional arm and voice, and could \"learn\" from its environment — sold to homes and schools at the height of the 1980s robot craze.",
-    "cpu": "National Semiconductor INS8073",
+    "desc": "A cylindrical, R2-D2-esque personal robot from RB Robot Corporation (Golden, Colorado; founded by Joe Bosworth in 1982) — one of the earliest commercial autonomous mobile robots and among the most durable personal robots of the 1980s (still manufactured today by RB Robotics). Under a clear domed top, RB5X runs a National INS8073 microprocessor with on-chip TinyBASIC and 8K of memory (expandable to 16K), programmable in TinyBASIC or Savvy and downloadable from any home computer over its (dual) RS-232 interface. It rolls at ~4 in/sec on two drive wheels and two casters, sensing the world with eight perimeter bump panels, a photodiode and a Polaroid sonar rangefinder (10 in to 35 ft). It learns from experience, finds its own charging nest when low, and offers an optional five-axis arm (lifts ~1 lb) and voice synthesizer. Sold in Germany as 'Toby'.",
+    "cpu": "National INS8073 (TinyBASIC on-chip)",
     "use_cases": [
-      "Personal & educational robotics"
+      "Home / personal robot",
+      "Robotics education and experimentation",
+      "Interactive games"
     ],
     "made_in": "USA",
     "fig": "🤖",
@@ -121377,7 +121406,33 @@
       "https://www.theoldrobots.com/images102/RB5X-w1.JPG",
       "https://cyberneticzoo.com/wp-content/uploads/2015/10/number2-x640-640x707.jpg"
     ],
-    "sub": "Programmable Personal Robot"
+    "sub": "Personal / Educational Mobile Robot",
+    "origin": "USA",
+    "diameter_mm": 330,
+    "height_mm": 584,
+    "weight_kg": 10.9,
+    "ram": "8K (expandable to 16K)",
+    "chassis": "2 drive wheels + 2 casters",
+    "speed_ms": 0.1,
+    "speed": 0.1,
+    "arm": "Optional 5-axis arm/gripper (~1 lb lift)",
+    "speech": "Optional voice/sound synthesizer",
+    "sensors_list": [
+      "8 bump panels (tactile)",
+      "Photodiode (light)",
+      "Polaroid sonar (10in-35ft)",
+      "Sonic transducer"
+    ],
+    "programming_langs": [
+      "TinyBASIC",
+      "Savvy"
+    ],
+    "programming_interface": "RS-232 (dual), download from home computer",
+    "auto_charge": true,
+    "display": "4 flashing LEDs",
+    "modular": true,
+    "also_known_as": "Toby (West Germany)",
+    "manufacturer_url": "https://www.rbrobotics.com/"
   },
   {
     "id": "tomy-armatron",
