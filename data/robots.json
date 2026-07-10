@@ -124480,13 +124480,13 @@
     "name": "T2",
     "brand": "Booster Robotics",
     "cat": "Humanoid",
-    "sub": "Full-Size Humanoid",
+    "sub": "Developer / Research Humanoid",
     "year": 2026,
     "origin": "China",
     "status": "Active",
-    "score": 80,
+    "score": 75,
     "price": "POA",
-    "actuator_type": "Electric",
+    "actuator_type": "Custom hollow-axis motors, dual-encoder, full-force-controlled",
     "autonomous": true,
     "tags": [
       "humanoid",
@@ -124496,9 +124496,48 @@
       "china",
       "running"
     ],
-    "desc": "The Booster T2 is a humanoid robot from Booster Robotics, a Chinese developer known for accessible, sport-capable bipeds. The T2 competed in the autonomous category of the 2026 Beijing E-Town Humanoid Half-Marathon. It follows the company's earlier T1 platform, which is popular with research and education teams and in robot-football competitions.",
+    "desc": "The successor to Booster Robotics' RoboCup-winning T1, the T2 is a ~1.2 m developer humanoid aimed at labs, universities and competitive robotics. It keeps the T1's full-force-controlled architecture — custom hollow-axis joint motors with dual encoders and hybrid torque/velocity/position control (up to 130 N·m) — across 23 base DOF (6 per leg, 4 per arm, 1 waist, 2 head), expandable toward 41 with dexterous-hand configurations. Dual compute (14-core Intel i7-1370P plus NVIDIA Jetson AGX Orin 32 GB, ~200 TOPS) drives onboard AI, with an Intel RealSense RGB-D camera, 3D LiDAR, 9-axis IMU and mic array for perception. Fully open-source SDK with ROS2 and Isaac Sim / MuJoCo / Webots support.",
     "fig": "🤖",
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "height_mm": 1200,
+    "weight_kg": 30,
+    "dof": 23,
+    "leg_dof": 6,
+    "arm_dof": 4,
+    "waist_dof": 1,
+    "head_dof": 2,
+    "torque_nm": 130,
+    "cpu": "Intel i7-1370P (14-core)",
+    "chipset": "Intel i7-1370P + NVIDIA Jetson AGX Orin 32GB",
+    "npu_tops": 200,
+    "cameras": "Intel RealSense RGB-D",
+    "depth_sensing": "Intel RealSense",
+    "lidar": true,
+    "imu": true,
+    "imu_axes": 9,
+    "battery_life": 60,
+    "battery_life_typical": 60,
+    "os": "ROS2",
+    "ros": true,
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "sim_platform": "Isaac Sim / MuJoCo / Webots",
+    "learning_methods": [
+      "Reinforcement Learning",
+      "Imitation Learning"
+    ],
+    "llm_model": "Edge LLM (on-device)",
+    "use_cases": [
+      "Robotics research",
+      "Education / STEM",
+      "RoboCup soccer",
+      "Embodied AI and HRI"
+    ],
+    "manufacturer_url": "https://www.booster.tech/"
   },
   {
     "id": "yobotics-xingzhe-taishan",
@@ -131512,17 +131551,19 @@
     "name": "Bot Handy",
     "brand": "Samsung",
     "cat": "Humanoid",
-    "sub": "Household Manipulation Humanoid",
-    "year": 2025,
+    "sub": "Household Assistant Robot (concept)",
+    "year": 2021,
     "origin": "South Korea",
-    "status": "Prototype",
+    "status": "Development",
     "price": "POA",
     "img": "",
     "use_cases": [
-      "Household chores",
-      "Object manipulation"
+      "Laundry pickup",
+      "Dishwasher loading",
+      "Table setting",
+      "Pouring drinks"
     ],
-    "desc": "Samsung's household-manipulation humanoid concept with a single arm and AI vision to recognize and handle objects — pour drinks, load dishwashers, tidy up — part of Samsung's home-robotics research.",
+    "desc": "A household-assistant robot concept from Samsung Research, first shown at CES 2021 and upgraded at CES 2022. Bot Handy pairs a wheeled mobile base with a tall, slim body and a single highly-articulated arm that pivots at shoulder, elbow and wrist, ending in a clamp-like hand. Cameras in its head and hand feed AI object recognition that distinguishes materials and weights so it can apply the right grip force — letting it pick up laundry, load dishwashers, set tables and pour drinks. A digital face with expressive eyes handles interaction, and mobility plus elevation extend its working reach in 3D space. Shown as a development concept rather than a shipping product.",
     "tags": [
       "humanoid",
       "samsung",
@@ -131534,7 +131575,16 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "South Korea",
+    "chassis": "Wheeled mobile base (with elevation)",
+    "hand_type": "Clamp / claw end-effector (shoulder-elbow-wrist arm)",
+    "cameras": "Head- and hand-mounted cameras",
+    "force_sensing": true,
+    "ai_model": "AI object recognition + force control (material/weight-aware grasping)",
+    "display_face": "Digital expressive eyes",
+    "natural_language_commands": true,
+    "manufacturer_url": "https://research.samsung.com/robotics"
   },
   {
     "id": "deep-robotics-dr02",
