@@ -120976,13 +120976,13 @@
     "cat": "Humanoid",
     "year": 1973,
     "status": "Discontinued",
-    "desc": "The world's first full-scale anthropomorphic (humanoid) robot, completed at Waseda University in 1973 under Prof. Ichiro Kato — the 'father of Japanese robotics research'. WABOT-1 integrated a limb-control system, a vision system and a conversation system: it walked with a quasi-dynamic bipedal gait on flat ground, used a pair of camera 'eyes' to measure distance and direction to objects, gripped and carried objects with human-like hands, and held rudimentary spoken conversations in Japanese — the first time walking, grasping and dialog were combined in one platform.",
+    "desc": "Completed in 1973 at Tokyo's Waseda University under Professor Ichiro Kato (the 'father of Japanese robotics'), WABOT-1 is widely recognised as the world's first full-scale anthropomorphic robot. It integrated three pioneering systems: a limb-control system driving hydraulic artificial limbs, a vision system with artificial eyes that measured distance and direction to objects, and a conversation system with artificial ears and mouth that let it communicate in simple Japanese. It walked (slowly, on flat ground) with a bipedal gait and gripped and carried objects using tactile-sensor hands — abilities researchers estimated as roughly the mental faculty of a 1.5-year-old child. The starting point of Waseda's 50-year humanoid legacy.",
     "actuator_type": "Hydraulic drive",
     "use_cases": [
-      "Robotics research (historical)",
-      "Museum / heritage"
+      "Historic research milestone",
+      "Pioneering bipedal walking + vision + speech"
     ],
-    "made_in": "Japan (Waseda University, Tokyo)",
+    "made_in": "Japan",
     "fig": "🤖",
     "tags": [
       "humanoid",
@@ -121005,10 +121005,16 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8Szi2MiFvMQHYn4f9OpoWczwvyjCa2ZqXb4rYIkJY8qskcePigMR0_4Fa&s=10"
     ],
     "video": "https://youtu.be/n0oL1sHAKwE",
-    "cameras": "Stereo camera 'eyes' (distance/direction measurement)",
-    "hand_type": "Anthropomorphic multi-finger grippers",
+    "cameras": "Artificial eyes (distance/direction)",
+    "hand_type": "Tactile-sensor hands (grip & transport)",
     "voice_interaction": "Japanese conversation system (early speech recognition + synthesis)",
-    "manufacturer_history": "Waseda WABOT project began 1970 (four labs), led by Prof. Ichiro Kato; WABOT-1 unveiled 1973."
+    "manufacturer_history": "Waseda WABOT project began 1970 (four labs), led by Prof. Ichiro Kato; WABOT-1 unveiled 1973.",
+    "sub": "Historic Full-Scale Humanoid (world's first)",
+    "origin": "Japan",
+    "touch_sensing": "Tactile sensors (hands)",
+    "natural_language_commands": true,
+    "languages": "Japanese",
+    "manufacturer_url": "https://www.waseda.jp/top/en/"
   },
   {
     "id": "waseda-wabot-2",
@@ -127687,25 +127693,25 @@
     "name": "TOPIO",
     "brand": "TOSY",
     "cat": "Humanoid",
-    "sub": "Entertainment Humanoid (Table Tennis)",
+    "sub": "Ping-Pong-Playing Humanoid",
     "year": 2005,
     "origin": "Vietnam",
-    "made_in": "Vietnam (TOSY)",
+    "made_in": "Vietnam",
     "status": "Discontinued",
     "price": "POA",
     "img": "",
-    "desc": "A bipedal humanoid built by Vietnamese firm TOSY to play table tennis against people, revealed at the 2007 Tokyo International Robot Exhibition and iterated through versions 1.0–3.0. Standing around 1.88 m, TOPIO used high-speed stereo vision to track the ball and neural-network learning to improve its returns, becoming one of the most recognisable demonstration humanoids of its era.",
+    "desc": "TOPIO ('TOSY Ping Pong Playing Robot') is a bipedal humanoid built by Vietnamese firm TOSY to play table tennis against a human, developed from 2005 and famously demonstrated at Tokyo's IREX in 2007. Its carbon-fibre-composite frame allows fast, flexible motion, and it tracks the ball's trajectory and spin with multiple high-speed cameras feeding an artificial neural network that lets it learn and improve as it plays. The flagship TOPIO 3.0 stands 1.88 m and weighs 120 kg with 32 DoF (up from 20 DoF hydraulic in 1.0 and 28 DoF in 2.0). More a showcase of real-time vision and dynamic bipedal control than a product.",
     "also_known_as": "TOSY Ping Pong Playing Robot",
     "height_mm": 1880,
     "weight_kg": 120,
-    "cameras": "High-speed stereo vision (ball tracking)",
+    "cameras": "Multiple high-speed cameras (ball tracking)",
     "learning_methods": [
       "Neural networks"
     ],
     "use_cases": [
-      "Table-tennis demonstration",
-      "Entertainment",
-      "Exhibition"
+      "Table tennis vs humans",
+      "Exhibition / entertainment",
+      "Dynamic-motion + vision research"
     ],
     "tags": [
       "humanoid",
@@ -127727,7 +127733,17 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYkTijI3H4u82VQJLKhsx8v0sDBoVCoweFG2D9NBeCRQViPvkiJh0W5toj&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcq-swDe-8R8wRcqeHY9nTrKh5TKH2NhHIPHr6JkaD1MHvP_49se1D6acI&s=10",
       "https://i0.wp.com/www.nationalreview.com/wp-content/uploads/2015/04/robots_05_0-2.jpg?resize=300%2C300&ssl=1"
-    ]
+    ],
+    "dof": 32,
+    "actuator_type": "Electric (3.0); hydraulic (original 1.0)",
+    "frame_material": "Carbon-fibre composite",
+    "ai_model": "Artificial neural network (learns while playing)",
+    "variants": [
+      "TOPIO 1.0 (20 DoF, hydraulic)",
+      "TOPIO 2.0 (28 DoF)",
+      "TOPIO 3.0 (32 DoF)"
+    ],
+    "manufacturer_url": "https://en.wikipedia.org/wiki/TOPIO"
   },
   {
     "id": "honda-e2-dr",
