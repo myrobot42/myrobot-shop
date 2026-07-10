@@ -114057,11 +114057,11 @@
     "id": "kuka-robocoaster",
     "name": "RoboCoaster",
     "brand": "KUKA",
-    "sub": "Robotic Ride System",
+    "sub": "Robotic-Arm Amusement Ride",
     "year": 2015,
     "origin": "Germany",
     "status": "Active",
-    "desc": "The KUKA RoboCoaster is an industrial-robot-based amusement ride that straps guests into a giant articulated arm for programmable motion sequences - used in attractions worldwide (e.g. Harry Potter and the Forbidden Journey-style ride systems and Robocoaster G2 dark rides).",
+    "desc": "A passenger-carrying amusement ride built from a KUKA industrial robot arm — the concept was invented by Gino De-Gol (RoboCoaster Ltd, England) and realised with KUKA in 2001 from the adapted KR500 robot, debuting in 2002 with ten units sold to Legoland Denmark. A gondola of two to four seats is mounted to the wrist of a 6-axis arm, giving riders full six-degrees-of-freedom motion (360-degree pitch, yaw and roll well beyond a normal hexapod motion base) at up to ~2 g. Riders pick their own intensity from level 1 (gentle single-axis rotation) to level 5 (wild, inverted), and multiple stored motion profiles can be swapped at the press of a button. KUKA's certified passenger robots (KR 600 R2830 for up to 3 riders, KR 700 R2510 for up to 4) are TUV-certified to EN 13814 with redundant PLe brakes and optical encoders sampling arm position every 32 ms. Deployed in theme parks, VR motion simulators (RoboSim 4-D) and dark rides worldwide, including Epcot's 'Sum of All Thrills'.",
     "tags": [
       "entertainment",
       "ride",
@@ -114073,10 +114073,13 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "payload_kg": 500,
-    "actuator_type": "Based on KUKA KR 500 6-axis industrial arm",
+    "payload_kg": 600,
+    "actuator_type": "6-axis industrial robot (KR-series servo)",
     "use_cases": [
-      "Passenger-carrying ride arm (theme parks & attractions)"
+      "Theme parks",
+      "VR motion simulators",
+      "Dark rides",
+      "Science centres / FECs"
     ],
     "made_in": "Germany",
     "website": "https://www.kuka.com",
@@ -114087,7 +114090,30 @@
       "https://www.kuka.com/-/media/kuka-corporate/images/industries/entertainment/amusementrides/kuka_robot_amusementrides.jpg?rev=-1&w=767&hash=A2B8C6061E16FDE33DCF349F47874F51",
       "https://upload.wikimedia.org/wikipedia/commons/c/c5/Robocoaster.jpg"
     ],
-    "video": "https://youtu.be/ck8y1sl97BY"
+    "video": "https://youtu.be/ck8y1sl97BY",
+    "reach_mm": 2830,
+    "dof": 6,
+    "passengers": "2-4 (by variant)",
+    "max_g": 2,
+    "intensity_levels": "5 (gentle to wild/inverted)",
+    "motion_profiles": "Multiple stored programs (button-select)",
+    "safety_rating": "TUV-certified, EN 13814, CSEI-compliant",
+    "estop": "Redundant / dual brakes (PLe)",
+    "controller": "PC-based KR C (Windows)",
+    "programming_interface": "KUKA.ready2_animate (Maya / simulation import)",
+    "encoder": "Optical (position sampled every 32 ms)",
+    "variants": [
+      "G1 (stationary 2-seat)",
+      "G2 (track-mounted 4-seat)",
+      "G3 (concept)",
+      "RoboSim 4-D (VR)"
+    ],
+    "deployed_at": [
+      "Legoland Denmark",
+      "Epcot (Sum of All Thrills)"
+    ],
+    "based_on": "KUKA KR500 industrial robot",
+    "manufacturer_url": "https://www.kuka.com/en-us/industries/other-industries/entertainment-industry/amusement-rides"
   },
   {
     "cat": "Entertainment",
