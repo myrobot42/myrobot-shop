@@ -118640,12 +118640,12 @@
     "id": "vex-iq",
     "name": "VEX IQ",
     "brand": "VEX Robotics",
-    "sub": "STEM Robotics Kit",
+    "sub": "STEM Robotics Platform (snap-together)",
     "year": 2019,
     "origin": "USA",
     "status": "Active",
     "price_band": "Premium",
-    "desc": "VEX IQ is a snap-together plastic robotics platform for elementary and middle school, central to the VEX IQ competition; programmable in VEXcode (blocks or Python) and widely adopted in school robotics leagues.",
+    "desc": "A tool-less, snap-together robotics platform from VEX Robotics for grades 4–8, widely used in classrooms and the VEX IQ Robotics Competition. At its core is the IQ Robot Brain with a colour screen and twelve Smart Ports that auto-detect and interchangeably drive Smart Motors (each with a built-in processor, quadrature encoder and current monitor) and sensors — Optical (colour/light/gesture), laser Distance, Touch LED and Bumper — with a 6-axis gyro/accelerometer built into the 2nd-gen Brain. A game-controller-style handheld drives it wirelessly over VEXnet/Bluetooth. Students program in VEXcode IQ using Blocks, Python or C++ across browser, Windows, Mac and ChromeOS, with automatic firmware updates via VEXos.",
     "tags": [
       "educational",
       "STEM",
@@ -118661,7 +118661,9 @@
       "VEXcode (Blocks, Python)"
     ],
     "use_cases": [
-      "Classroom robotics & VEX IQ competitions"
+      "Middle-school STEM education",
+      "Coding (Blocks/Python/C++)",
+      "VEX IQ competition"
     ],
     "made_in": "USA",
     "website": "https://www.vexrobotics.com",
@@ -118672,7 +118674,37 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUOEOmhLqIqbzpPRRAqSKv4aOhPTde9kv1Yg3SHqGjgvQobxQuaqc9Sxiv&s=10",
       "https://d2nmr6p48f8xwg.cloudfront.net/content_pictures/pictures/000/001/929/11462977429272b5d3619e071a34509a2beec718Vex-Iq-Robot-Pesho-Bot-With-Two-Lifting-Mechanisms-Fllcasts.png"
     ],
-    "video": "https://youtu.be/avbzTvIgOEs"
+    "video": "https://youtu.be/avbzTvIgOEs",
+    "age_range": "8-14 years",
+    "grade_level": "Grades 4-8",
+    "cpu": "IQ Robot Brain (12 Smart Ports)",
+    "display": "Colour screen",
+    "actuators": "Smart Motors (encoder + current monitor)",
+    "sensors_list": [
+      "Optical (colour/light/gesture)",
+      "Distance (laser ToF)",
+      "Touch LED",
+      "Bumper switch",
+      "6-axis gyro/accel (Brain, 2nd gen)"
+    ],
+    "imu": true,
+    "storage": "MicroSD slot",
+    "bluetooth": "5.0 (2nd gen)",
+    "wireless": "VEXnet + Bluetooth",
+    "controller": "Handheld (2 joysticks + buttons)",
+    "battery_type": "Li-ion (2000mAh NiMH on 1st gen)",
+    "os": "VEXos",
+    "programming_langs": [
+      "Blocks",
+      "Python",
+      "C++"
+    ],
+    "programming_interface": "VEXcode IQ (browser / Win / Mac / ChromeOS)",
+    "competition_legal": [
+      "VEX IQ Robotics Competition (VIQRC)"
+    ],
+    "assembly": "Snap-together, tool-less",
+    "manufacturer_url": "https://www.vexrobotics.com/iq"
   },
   {
     "cat": "Educational",
@@ -118680,12 +118712,12 @@
     "id": "vex-go",
     "name": "VEX GO",
     "brand": "VEX Robotics",
-    "sub": "STEM Robotics Kit",
+    "sub": "STEM Construction Robotics Kit",
     "year": 2021,
     "origin": "USA",
     "status": "Active",
     "price_band": "Mid-range",
-    "desc": "VEX GO is an affordable elementary STEM kit with colourful snap-together parts, a code-able brain, motors and sensors, designed for hands-on early-grades robotics and engineering lessons.",
+    "desc": "An affordable snap-together STEM construction system from VEX Robotics aimed at ages 7–11, designed so young students can tinker, make mistakes and try again. The education kit packs 296 structural and motion components with a GO Robot Brain, three motors, three electromagnets, an eye (optical) sensor, an LED bumper switch, a rechargeable battery and storage cases. Kids code it with block-based VEXcode GO (Scratch-style) right in the browser at codeGO.vex.com — no installation — on tablets, Chromebooks, Macs or PCs, supported by VEX STEM Labs cross-curriculum lesson plans spanning language arts, math, coding and engineering.",
     "tags": [
       "educational",
       "STEM",
@@ -118701,7 +118733,9 @@
       "VEXcode GO (block-based)"
     ],
     "use_cases": [
-      "Elementary STEM education kit"
+      "Elementary STEM education",
+      "Intro coding",
+      "Engineering exploration"
     ],
     "made_in": "USA",
     "website": "https://www.vexrobotics.com",
@@ -118712,7 +118746,25 @@
       "https://kb.vex.com/hc/article_attachments/5014148647060",
       "https://kb.vex.com/hc/article_attachments/5014126473876"
     ],
-    "video": "https://youtu.be/hAHQpznnzZE"
+    "video": "https://youtu.be/hAHQpznnzZE",
+    "age_range": "7-11 years",
+    "grade_level": "Grades 2-5",
+    "pieces": 296,
+    "cpu": "VEX GO Robot Brain",
+    "actuators": "3 motors + 3 electromagnets",
+    "sensors_list": [
+      "Eye / optical sensor",
+      "LED bumper switch"
+    ],
+    "programming_langs": [
+      "Scratch (block-based)",
+      "VEXcode GO"
+    ],
+    "programming_interface": "Block-based (VEXcode GO, browser)",
+    "battery_type": "Rechargeable Li-ion",
+    "curriculum": "VEX STEM Labs (language arts, math, coding, engineering)",
+    "assembly": "Snap-together, tool-less",
+    "manufacturer_url": "https://www.vexrobotics.com/go"
   },
   {
     "cat": "Educational",
