@@ -133373,13 +133373,13 @@
     "name": "PoWa",
     "brand": "ABB Robotics",
     "cat": "Industrial",
-    "sub": "Fast-Deployment Cobot",
+    "sub": "High-Speed Collaborative Robot (family)",
     "year": 2025,
     "origin": "Switzerland",
     "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "ABB's 2025 fast-deployment cobot line designed for first-time automation users — unboxed to productive in under an hour, with simplified programming aimed at SMEs.",
+    "desc": "ABB's high-speed collaborative-robot family, launched first for the Chinese market in July 2025 (built at ABB's Shanghai Mega Factory) and globally in 2026. PoWa - a name meant to evoke 'power' - closes the gap between light traditional cobots and rigid industrial robots, delivering industrial-grade speed and payload in a compact, fenceless package. The family spans six payload categories from 7 kg to 30 kg with a best-in-class top speed of up to 5.8 m/s and, ABB says, the longest reach and highest arm load in its class (7-10 kg on the lower arm / Axis 3, easing tool and cable mounting for arc welding). It runs ABB's OmniCore controller with built-in Power-and-Force Limiting and Speed-and-Separation Monitoring for safe shared workspaces, carries IP65/IP67 protection and ISO Class 4/5 cleanroom compatibility, and can be unboxed and running in about 60 minutes via no-code Wizard programming, arm-side buttons and plug-and-play tooling (RobotStudio / AppStudio).",
     "tags": [
       "cobot",
       "industrial",
@@ -133392,13 +133392,38 @@
     "dof": 6,
     "ce": true,
     "use_cases": [
-      "Machine tending",
+      "High-speed machine tending",
       "Palletizing",
-      "SME automation"
+      "Screwdriving",
+      "Arc welding",
+      "Material handling / inspection"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "payload_kg": 30,
+    "payload": 30,
+    "payload_range": "7-30 kg (6 categories)",
+    "axes": 6,
+    "speed_ms": 5.8,
+    "speed": 5.8,
+    "arm_load": "7-10 kg on Axis 3 (lower arm)",
+    "force_sensing": true,
+    "controller": "OmniCore",
+    "ip_rating": "IP65 / IP67",
+    "cleanroom": "ISO Class 4/5 compatible",
+    "safety_rating": "PFL + SSM (SafeMove), fenceless, certified",
+    "programming_interface": "No-code Wizard + arm-side buttons; RobotStudio / AppStudio",
+    "deploy_time": "~60 minutes",
+    "collaborative": true,
+    "plug_and_play": true,
+    "variants": [
+      "PoWa10 (10 kg)",
+      "PoWa13 (13 kg)",
+      "up to 30 kg (6 categories)"
+    ],
+    "manufacturer_url": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/powa"
   },
   {
     "id": "comau-racer-5-cobot",
