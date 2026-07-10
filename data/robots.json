@@ -131184,18 +131184,20 @@
     "name": "Hea",
     "brand": "Haier",
     "cat": "Humanoid",
-    "sub": "Wheeled Service Humanoid",
+    "sub": "Home Humanoid (wheeled)",
     "year": 2026,
     "origin": "China",
-    "status": "Active",
+    "status": "Development",
     "price": "POA",
     "img": "",
     "dof": 44,
     "use_cases": [
-      "Home service",
-      "Hospitality"
+      "Domestic help",
+      "Cooking and cleaning",
+      "Laundry (ironing, folding)",
+      "Operating smart home appliances"
     ],
-    "desc": "Haier's home/service humanoid, a customized version of RobotEra's Q5 with a compact waist and 44 DoF for dexterous household and service tasks.",
+    "desc": "Haier's home humanoid robot, developed as an advanced domestic helper that integrates with and operates the company's smart home appliances. It is a ~165 cm wheeled humanoid with 44 degrees of freedom and dexterous hands, designed to handle a wide range of chores — from cooking and cleaning to complex laundry tasks like ironing and folding — leveraging Haier's appliance ecosystem.",
     "tags": [
       "humanoid",
       "haier",
@@ -131207,7 +131209,13 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "height_mm": 1650,
+    "chassis": "Wheeled",
+    "hand_type": "Dexterous hands",
+    "bimanual": true,
+    "manufacturer_url": "https://www.haier.com/"
   },
   {
     "id": "prosper-alfie",
@@ -132063,17 +132071,19 @@
     "name": "Origin",
     "brand": "AheadForm",
     "cat": "Humanoid",
-    "sub": "Expressive Humanoid Head",
+    "sub": "Bionic Humanoid Head",
     "year": 2025,
     "origin": "China",
     "status": "Active",
     "price": "POA",
     "img": "",
     "use_cases": [
-      "HRI research",
-      "Expressive interaction"
+      "Embodied AI / HRI research",
+      "Luxury retail reception",
+      "Telepresence",
+      "Healthcare companionship"
     ],
-    "desc": "AheadForm's hyper-expressive humanoid, using many facial actuators to produce lifelike micro-expressions and eye movement for human-robot-interaction research and companion applications.",
+    "desc": "A hyper-realistic bionic humanoid head from Chinese firm AheadForm, built to give AI a physically expressive face rather than a screen. The Origin F1 packs around 25 micromotors driving the eyes, mouth and facial muscles for lifelike expressions, blinking, nodding and speech-synced motion, under multi-layer soft skin (platinum-cure silicone or medical-grade TPE over compliant foam) that hides all mechanical edges. RGB cameras sit in the pupils, with built-in microphones and speakers, and the system pairs self-supervised algorithms with LLMs/VLMs for real-time perception, eye contact, intention parsing and emotionally expressive conversation. Aimed at HRI research, luxury reception, telepresence and companionship.",
     "tags": [
       "humanoid",
       "aheadform",
@@ -132086,7 +132096,17 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "actuator_type": "~25 micromotors (facial + eye actuation)",
+    "shell_material": "Bionic silicone / medical-grade TPE over compliant foam",
+    "display_face": "Hyper-realistic bionic face (blink, nod, expressions, eye contact)",
+    "cameras": "RGB cameras (in pupils)",
+    "microphones": 1,
+    "facial_recognition": true,
+    "ai_model": "Self-supervised + LLM/VLM (ASR, computer vision, generative AI)",
+    "natural_language_commands": true,
+    "manufacturer_url": "https://www.aheadform.com/"
   },
   {
     "id": "universal-robots-ur15",
