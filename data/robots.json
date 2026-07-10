@@ -116727,11 +116727,11 @@
     "id": "qinetiq-titan",
     "name": "Titan",
     "brand": "QinetiQ",
-    "sub": "Modular Unmanned Ground Vehicle",
+    "sub": "Modular Hybrid UGV (dismounted support)",
     "year": 2020,
     "origin": "USA",
-    "status": "Active",
-    "desc": "Titan (QinetiQ North America with Milrem) is a modular tracked UGV providing \"lighten-the-load\" support for dismounted units - a reconfigurable platform that mounts different superstructures for transport, reconnaissance and rescue missions.",
+    "status": "Development",
+    "desc": "A fully modular hybrid unmanned ground vehicle jointly developed by QinetiQ North America and Estonia's Milrem Robotics, built to 'lighten the load' for dismounted troops. Titan pairs Milrem's THeMIS (Tracked Hybrid Modular Infantry System) mobility base - two tracked drive modules linked by a mission payload frame - with QinetiQ's Tactical Robot Controller (a pocket 6.5-inch controller) and Robotic Applique Kit for autonomy, night-vision/thermal cameras and comms, operable in manned or unmanned modes at line-of-sight ranges over 800 m. It measures about 2.0 x 2.1 x 1.0 m with a curb weight near 907 kg and carries up to ~680 kg (with a 2,000 lb pull force). Its diesel-electric hybrid drive gives ~100 km range / up to 72 h endurance, or a run-silent all-electric mode good for 20+ km over ~2 hours. Its open architecture accepts modules for logistics/resupply, CASEVAC litters, earth-moving, route clearance, CBRN/RSTA and remote weapon stations. It contended in the US Army SMET and UK Dstl Last-Mile Resupply programs.",
     "tags": [
       "military",
       "UGV",
@@ -116752,12 +116752,41 @@
     ],
     "actuator_type": "Modular tracked UGV (THeMIS-based)",
     "use_cases": [
-      "Cargo transport",
+      "Dismounted resupply",
+      "Casualty evacuation",
       "Route clearance",
-      "ISR"
+      "ISR / RSTA",
+      "CBRN reconnaissance"
     ],
-    "made_in": "USA/Estonia",
-    "website": "https://www.qinetiq.com"
+    "made_in": "USA",
+    "website": "https://www.qinetiq.com",
+    "dimensions": "2007 x 2108 x 1016 mm",
+    "payload_bay": "1829 x 1219 mm",
+    "weight_kg": 907,
+    "payload_kg": 680,
+    "payload": 680,
+    "pull_force": "907 kgf (2000 lb)",
+    "drive": "Tracked (2 drive modules, THeMIS base)",
+    "propulsion": "Diesel-electric hybrid (10 kW JP8 generator + AGM/Li-ion)",
+    "range_km": 100,
+    "range_electric_km": 20,
+    "endurance": "72 h hybrid / 2 h silent",
+    "silent_mode": true,
+    "architecture": "Open modular (3rd-party payloads)",
+    "control": "QinetiQ TRC + RAK; manned or unmanned",
+    "comms_range": "LOS >800 m",
+    "cameras": "Day/night, IR, thermal (optional)",
+    "mission_modules": [
+      "Logistics / resupply",
+      "CASEVAC litter",
+      "Earth-moving blade/bucket",
+      "Route clearance",
+      "CBRN / RSTA",
+      "Remote weapon station"
+    ],
+    "partners": "QinetiQ NA + Milrem (THeMIS)",
+    "program": "US Army SMET; UK Dstl Last-Mile Resupply",
+    "manufacturer_url": "https://www.qinetiq.com/en/what-we-do/services-and-products/titan-modular-unmanned-ground-vehicle"
   },
   {
     "cat": "Military",
@@ -116946,11 +116975,11 @@
     "id": "general-dynamics-trx",
     "name": "TRX (Tracked Robot 10-ton)",
     "brand": "General Dynamics Land Systems",
-    "sub": "Robotic Combat Vehicle",
+    "sub": "Tracked UGV / Robotic Combat Vehicle (10-ton)",
     "year": 2022,
     "origin": "USA",
-    "status": "Active",
-    "desc": "The General Dynamics TRX is a hybrid-electric tracked uncrewed platform (evolved from the MUTT family) configurable for logistics, breaching, counter-UAS, indirect fire and other payloads in support of mechanised formations.",
+    "status": "Development",
+    "desc": "General Dynamics Land Systems' medium-class tracked unmanned ground vehicle, unveiled at AUSA 2021 and entered as GDLS's contender in the US Army's Robotic Combat Vehicle (RCV) program. As its name suggests, the TRX is designed around a 10-ton class: roughly a 5-ton curb weight plus up to a 5-ton payload on a flat modular deck. Because there's no crew to armour, it uses lightweight materials and a hybrid-electric drive that lowers its thermal signature, enables near-silent running and powers onboard electronics, while keeping pace with fast Armoured Brigade Combat Teams. Its open, payload-agnostic architecture lets the Army swap mission modules quickly, and it's built for manned-unmanned teaming as a 'wingman' to crewed vehicles. Derived from GDLS's MUTT program, published mission roles include tactical resupply, counter-UAS/short-range air defence, obstacle breaching, indirect fire, electronic warfare and ISR; a SHORAD variant can autonomously launch and recover small UAS.",
     "tags": [
       "military",
       "RCV",
@@ -116970,14 +116999,42 @@
       "https://www.gdls.com/wp-content/uploads/2025/12/TRX-Breacher-1536x1120.webp"
     ],
     "video": "https://youtu.be/rYou6eRbX-k",
-    "payload": "Payload capacity ~equal to vehicle weight (10-ton class)",
+    "payload": 4536,
     "actuator_type": "Hybrid-electric tracked drivetrain",
     "use_cases": [
-      "Robotic combat vehicle",
-      "Counter-drone & fires platforms"
+      "Autonomous resupply",
+      "Reconnaissance / ISR",
+      "Air defence (C-UAS)",
+      "Breaching / route clearance",
+      "Electronic warfare"
     ],
     "made_in": "USA",
-    "website": "https://www.gdls.com"
+    "website": "https://www.gdls.com",
+    "weight_kg": 9072,
+    "curb_weight": "~5 tons",
+    "payload_kg": 4536,
+    "drive": "Tracked",
+    "propulsion": "Hybrid-electric (silent running, low thermal signature)",
+    "frame_material": "Lightweight materials (unarmoured)",
+    "architecture": "Modular open architecture (payload-agnostic deck)",
+    "teaming": "Manned-unmanned teaming (MUM-T) wingman",
+    "uas": "Autonomous launch/recovery of small UAS (SHORAD variant)",
+    "mission_modules": [
+      "Tactical resupply",
+      "C-UAS / SHORAD",
+      "Obstacle breaching",
+      "Indirect fire",
+      "Electronic warfare",
+      "ISR"
+    ],
+    "lineage": "Derived from GDLS MUTT",
+    "program": "US Army RCV (selected; prototypes)",
+    "variants": [
+      "TRX (base)",
+      "TRX SHORAD (C-UAS)"
+    ],
+    "autonomous": "Remote / autonomous operation",
+    "manufacturer_url": "https://www.gdls.com/"
   },
   {
     "cat": "Military",
