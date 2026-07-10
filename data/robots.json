@@ -122730,37 +122730,50 @@
     "id": "casbot-se",
     "name": "CASBOT SE",
     "brand": "CASBOT",
-    "sub": "Athletic Humanoid",
+    "sub": "Full-Size Bipedal Humanoid (racing variant)",
     "year": 2025,
     "origin": "China",
     "status": "Active",
     "price": "POA",
     "dof": 52,
-    "actuator_type": "High-strength metal + reinforced ultra-thin hollow-cavity structure (low weight, impact resistance for speed)",
+    "actuator_type": "Self-developed integrated joint modules (quick-release)",
     "tags": [
       "humanoid",
       "CASBOT",
       "athletic",
       "running"
     ],
-    "fig": "🏃",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "Athletic demonstration",
-      "Industrial",
-      "Commercial"
+      "Robot half-marathon / racing",
+      "Locomotion and endurance demonstration"
     ],
     "made_in": "China",
     "website": "https://www.casbot.com",
-    "desc": "An agility-focused variant of CASBOT 01, redesigned with a shorter frame for higher speed and maneuverability. Built to compete alongside human runners in Beijing's world-first robot half-marathon (April 2025), using a high-strength metal hollow-cavity structure for low weight and impact resistance.",
+    "desc": "A racing-optimised variant of CASBOT 01 from Beijing's Lingbao CASBOT (Beijing Zhongke Huiling Robotics, founded August 2023), built to run in the world's first robot half-marathon in Beijing (April 2025, ~21 km). The SE keeps the CASBOT 01 platform — a high-strength metal skeleton with ultra-thin hollow-cavity reinforcement, self-developed integrated quick-release joint modules with 2 kHz real-time force control, 52 DoF and a 550 TOPS embodied-intelligence compute stack (hierarchical end-to-end + reinforcement learning) — but is redesigned with a shorter, lighter frame for speed and agility, with the complex hands and visual-recognition system stripped out for the race.",
     "note": "Agility-focused variant of CASBOT 01 with shorter frame for higher speed/maneuverability; built for Beijing robot half-marathon (April 2025)",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/04/XZvp82AXhxTWguBq24GH/image.jpg",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202607/04/sAhnzNEp1layngWbNGcV/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202607/04/gVCFkpzk67Q5KDWymVeV/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202607/04/RLaJAauvsRc3Vwxe9EzX/image.jpg"
-    ]
+    ],
+    "head_dof": 2,
+    "npu_tops": 550,
+    "control_freq_hz": 2000,
+    "frame_material": "High-strength metal + ultra-thin hollow-cavity",
+    "battery_life": 240,
+    "battery_life_typical": 240,
+    "imu": true,
+    "force_sensing": true,
+    "ai_model": "Embodied intelligence (hierarchical end-to-end + RL)",
+    "learning_methods": [
+      "Reinforcement Learning",
+      "Hierarchical end-to-end"
+    ],
+    "manufacturer_url": "https://www.casbot.com/"
   },
   {
     "cat": "Humanoid",
@@ -124648,11 +124661,11 @@
     "name": "Xingzhe Taishan (行者泰山)",
     "brand": "Yobotics",
     "cat": "Humanoid",
-    "sub": "Full-Size Humanoid",
+    "sub": "Bipedal Humanoid",
     "year": 2025,
     "origin": "China",
     "status": "Active",
-    "score": 78,
+    "score": 75,
     "price": "POA",
     "height_mm": 1380,
     "actuator_type": "Electric",
@@ -124666,7 +124679,7 @@
       "china",
       "running"
     ],
-    "desc": "Xingzhe Taishan (行者泰山) is a 1.38 m humanoid robot developed by Yobotics and fielded by Shandong's Taishan Team. It first drew attention at the 2025 World Humanoid Robot Games, where it kept running even after losing an arm. For the 2026 Beijing Humanoid Half-Marathon the team trained it at marathon intensity — running a half-marathon every day from March — and added a liquid-cooling system and reinforced materials to combat overheating and mechanical fatigue over the 21 km course.",
+    "desc": "A bipedal humanoid robot developed by Yobotics in Jinan, China. Xingzhe Taishan took first place in the 100-meter exhibition race at the 2025 World Humanoid Robot Games, and demonstrated strong balance and disturbance recovery — staying upright even when pushed or kicked. Yobotics also develops quadruped robots deployed across several fields. Detailed hardware specifications have not been publicly disclosed.",
     "fig": "🤖",
     "rating": 4,
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/OfV8kkbmOwn6HMlJM8uL/image.jpg",
@@ -124674,7 +124687,15 @@
       "https://plain-eeur-prod-public.komododecks.com/202607/03/lT00UDXk1VdvwMgCUUge/image.jpg",
       "https://pbs.twimg.com/amplify_video_thumb/1968353382646906881/img/5ACCCEOK0Sc12lJT.jpg",
       "https://scontent.flyp2-1.fna.fbcdn.net/v/t39.30808-6/532645502_764241752631851_5611875468791682760_n.jpg?stp=dst-jpg_tt6&cstp=mx649x464&ctp=s649x464&_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=UaEjUwDftHcQ7kNvwHVs1xs&_nc_oc=AdqbYn8ZOjbFT7DEJW-3Y7eBw55tOd0g31ySMn9iGJ7mR2Rmi66acZa18e1Dwn_wFsk&_nc_zt=23&_nc_ht=scontent.flyp2-1.fna&_nc_gid=JIBJU86SXMLR0aNemGETIA&_nc_ss=7a289&oh=00_AQAl2Ez8zzzhx-5QcLxUqbm6jX4UJw1b9rwMRfsyqofvBg&oe=6A4DB6D0"
-    ]
+    ],
+    "made_in": "China",
+    "fall_recovery": true,
+    "use_cases": [
+      "Competitive racing / exhibition",
+      "Locomotion and balance demonstration",
+      "Research"
+    ],
+    "manufacturer_url": "https://www.yobotics.cn/"
   },
   {
     "id": "kinetix-ai-kai-2026",
