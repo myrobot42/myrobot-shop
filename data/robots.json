@@ -128217,22 +128217,22 @@
       "Humanoid",
       "Service"
     ],
-    "sub": "Wheeled Mobile-Manipulator Humanoid",
+    "sub": "Wheeled Mobile Manipulator",
     "year": 2024,
     "origin": "USA",
     "made_in": "USA",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/04/6E3eQpFsQORAcYv6WE4k/image.jpg",
-    "desc": "A pragmatic wheeled humanoid from Reflex Robotics built for repetitive physical work in warehouses and factories. Rather than risky bipedal locomotion, Reflex mounts a humanoid torso and two strong arms on a stable wheeled base with a low centre of gravity, giving it long runtime and reliable balance in tight aisles and around pallets. It combines remote human teleoperation today with AI development for the future, aiming to make automation cheaper and more accessible. Its team includes former Boston Dynamics engineers.",
+    "desc": "A practical wheeled humanoid from New York's Reflex Robotics (founded 2022 by alumni of Boston Dynamics, Tesla, Oculus and ASML; backed by Khosla Ventures). Rather than legs, Reflex mounts a humanoid torso with two high-strength arms and a sensor head on a compact wheeled base under 2 ft x 2 ft that turns in place, with a telescoping 'spine' that adjusts height from floor level to high shelves. Each arm lifts 25+ lbs (over twice human strength) for 50+ lbs combined, and a 180-degree articulated neck with multiple RGB cameras aids manipulation. It runs human-in-the-loop teleoperation from up to 3,000 miles away over Wi-Fi (one operator can run several robots), with 16+ hours of battery, and learns from demonstrations toward autonomy. In pilots with GXO Logistics.",
     "actuator_type": "Electric",
     "mobility": "Wheeled base (low centre of gravity)",
     "bimanual": true,
     "use_cases": [
-      "Warehouse material handling",
-      "Factory repetitive tasks",
-      "Logistics",
-      "Case lifting"
+      "Warehouse picking / sorting / tote transfer",
+      "Palletizing",
+      "Manufacturing parts handling",
+      "3PL fulfillment"
     ],
     "manufacturer_history": "US startup; team includes former Boston Dynamics engineers. Teleoperation-first with AI autonomy roadmap.",
     "tags": [
@@ -128257,7 +128257,22 @@
       "https://image.mux.com/bSTUCSwfgBD4c96NHM01jvmgTx8t3OirzokdTEXH7Z1Y/thumbnail.webp?time=0",
       "https://image.mux.com/aWwI02dxncxiVnlB42nzktdNdVaT8Ie701cZNIuGJSLfo/thumbnail.webp?time=0"
     ],
-    "video": "https://youtu.be/Hbi4A3U5VTg"
+    "video": "https://youtu.be/Hbi4A3U5VTg",
+    "chassis": "Wheeled base (<2 ft x 2 ft, zero-radius) + telescoping spine",
+    "payload_kg": 22.7,
+    "payload": 22.7,
+    "hand_type": "Dual arms (25+ lbs each) + grippers",
+    "cameras": "Multiple RGB + 180-degree articulated neck",
+    "teleoperation": "Human-in-the-loop, up to 3,000 miles (Wi-Fi)",
+    "battery_life": 960,
+    "battery_life_typical": 960,
+    "learning_methods": [
+      "Imitation Learning (from demonstrations)"
+    ],
+    "pilot_customers": [
+      "GXO Logistics"
+    ],
+    "manufacturer_url": "https://www.reflexrobotics.com/"
   },
   {
     "id": "hexagon-aeon",
@@ -131118,21 +131133,24 @@
     "name": "Lingxi X2-N",
     "brand": "AGIBOT",
     "cat": "Humanoid",
-    "sub": "Bipedal / Wheeled Hybrid Humanoid",
+    "sub": "Hybrid Bipedal-Wheel Humanoid",
     "year": 2025,
     "origin": "China",
     "status": "Active",
     "price": "POA",
     "img": "",
-    "height_mm": 1300,
-    "weight_kg": 34,
+    "height_mm": 1310,
+    "weight_kg": 35,
     "dof": 28,
     "use_cases": [
-      "Research",
-      "Service",
-      "Locomotion"
+      "Logistics / warehouse",
+      "Search and rescue",
+      "Security patrol",
+      "Healthcare / elder care",
+      "Research and education",
+      "Entertainment"
     ],
-    "desc": "AgiBot's hybrid that dynamically switches between bipedal walking and wheeled locomotion; ~130 cm, 34 kg, 28 DoF, with an impact-resistant shell and the Go-1 embodied-AI model for emotionally-aware interaction.",
+    "desc": "A hybrid-mobility variant of AGIBOT's compact Lingxi X2 (AGIBOT / Zhiyuan Robotics, Shanghai; the world's #1 humanoid producer by 2025 shipments), debuted at CES 2026 with a Tai Chi demonstration. The X2-N transforms its feet into wheels to switch between bipedal walking and wheeled rolling, using proprioceptive feedback — joint torque, pressure sensors and gyros rather than cameras — to adapt in real time, climb stairs and traverse ramps with light loads. It shares the X2 chassis (~1.31 m, ~35 kg, ~28 DoF) with AGIBOT's Xyber-Edge 'cerebellum' controller and Xyber-DCU decision unit, and is programmable through the ROS2-based AimDK_X2 framework in Python or C++.",
     "tags": [
       "humanoid",
       "agibot",
@@ -131145,7 +131163,32 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "chassis": "Hybrid bipedal + foot-wheel (transformable)",
+    "stair_climbing": true,
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "battery_wh": 500,
+    "battery_life": 120,
+    "battery_life_typical": 120,
+    "actuator_type": "AGIBOT Xyber integrated joints (Powerflow)",
+    "imu": true,
+    "force_sensing": true,
+    "sensors_list": [
+      "Joint torque sensors",
+      "Pressure sensors",
+      "Gyros (proprioceptive)"
+    ],
+    "os": "AimDK_X2 (ROS2)",
+    "ros": true,
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "ai_model": "WorkGPT (multimodal)",
+    "manufacturer_url": "https://www.agibot.com/products/X2"
   },
   {
     "id": "noetix-bumi",
