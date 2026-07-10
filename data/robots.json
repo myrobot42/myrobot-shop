@@ -119843,12 +119843,12 @@
     "id": "techman-tm25s",
     "name": "TM25S",
     "brand": "Techman Robot",
-    "sub": "Collaborative Robot Arm",
+    "sub": "Heavy-Duty AI Cobot (6-axis)",
     "year": 2024,
     "origin": "Taiwan",
     "status": "Active",
     "payload_kg": 25,
-    "desc": "The Techman TM25S is a 25 kg-payload cobot with integrated vision and software for digital twins, visual inspection, welding and palletizing - extending Techman's vision-standard approach to heavier tasks.",
+    "desc": "The heavy-duty flagship of Techman Robot's AI Cobot S series (Techman is a Quanta subsidiary and Omron partner). The TM25S handles a 25 kg payload across a 1,902 mm reach at TCP speeds up to 5.2 m/s, with a built-in wrist force-torque sensor and best-in-class +/-0.03 mm repeatability. It runs ~25% faster than its predecessor (6th-axis joint speed up from 225 to 450 degrees/s, cutting cycle time ~25%). Like all Techman cobots it ships with an integrated 5 MP smart-vision camera and illumination ring on the flange plus TM AI+ software for object detection, barcode reading and visual positioning — no external vision controller needed. Up to 31 TUV-certified safety functions (ISO 10218-1, ISO 13849-1 PL d Cat. 3; UL/CSA/CE) let it work fence-free, and it's programmed via the graphical, flow-based TMflow (with a Script node for C# power users). Built for high-volume pick-and-place, machine tending, packaging, palletizing and automotive assembly.",
     "tags": [
       "industrial",
       "cobot",
@@ -119868,7 +119868,31 @@
       "https://robotics.omron.com/wp-content/uploads/2025/12/OMRON-TM25S-FT.webp?w=381",
       "https://cdn.robodk.com/robot/img/TM25S-robot.png",
       "https://www.bitecnic.com/web/image/product.product/137/image_1024/Techman%20Robot%20TM25S%20%28--%29?unique=ee5326f"
-    ]
+    ],
+    "made_in": "Taiwan",
+    "payload": 25,
+    "reach_mm": 1902,
+    "axes": 6,
+    "speed_ms": 5.2,
+    "speed": 5.2,
+    "repeatability": 0.03,
+    "joint_speed": "450 deg/s (6th axis)",
+    "force_sensing": true,
+    "cameras": "Integrated 5MP smart vision (flange) + illumination ring",
+    "vision_system": true,
+    "ai_model": "TM AI+ (object detection, barcode, visual positioning)",
+    "safety_functions": 31,
+    "safety_rating": "ISO 10218-1, ISO 13849-1 (PL d, Cat.3); TUV, UL/CSA/CE",
+    "programming_interface": "TMflow (flow-based) + hand-guiding + Script (C#)",
+    "collaborative": true,
+    "use_cases": [
+      "High-volume pick-and-place",
+      "Machine tending",
+      "Packaging / palletizing",
+      "Automotive assembly",
+      "Semiconductor"
+    ],
+    "manufacturer_url": "https://www.tm-robot.com/en/tm25s/"
   },
   {
     "cat": "Industrial",
@@ -119878,12 +119902,12 @@
     "id": "abb-gofa-12",
     "name": "GoFa 12",
     "brand": "ABB",
-    "sub": "Collaborative Robot Arm",
+    "sub": "Collaborative Robot (6-axis cobot)",
     "year": 2023,
     "origin": "Switzerland",
     "status": "Active",
     "payload_kg": 12,
-    "desc": "The ABB GoFa 12 is a higher-payload (12 kg) member of ABB's GoFa collaborative family, designed for material handling, machine tending and palletizing alongside human workers without safety fencing in many applications.",
+    "desc": "The heavy-duty member of ABB's GoFa (CRB 15000) collaborative-robot family — model CRB 15000-12/1.27 — with a 12 kg payload and 1,270 mm reach in a compact footprint. Like its GoFa siblings it puts integrated torque and position sensors in all six joints for power-and-force limiting, bringing the arm to an immediate stop on contact so it can work fence-free beside people (SafeMove, PL d Cat. 3). It runs a maximum TCP speed of 2.2 m/s with best-in-class 0.02 mm repeatability, is powered by ABB's OmniCore controller, and is set up via lead-through (grab-anywhere) motion, Wizard easy programming and the FlexPendant, with RobotStudio offline programming matching reality to ~99%. An optional Ultra Accuracy feature adds 0.03 mm path / 0.1 mm absolute accuracy for gluing, sealing, laser welding and cutting.",
     "tags": [
       "industrial",
       "cobot",
@@ -119902,7 +119926,35 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8lfkq7ePKFe9xKO7nsNQ7b6vUK60MvoNX3WJrun7sJw&s",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWaMXi4tspUG2IWPCfnek6ASTSMiBzRhgKCuazWh7WAg&s=10"
     ],
-    "video": "https://youtu.be/_4qBGoqFGyA"
+    "video": "https://youtu.be/_4qBGoqFGyA",
+    "made_in": "Sweden",
+    "payload": 12,
+    "reach_mm": 1270,
+    "axes": 6,
+    "speed_ms": 2.2,
+    "speed": 2.2,
+    "repeatability": 0.02,
+    "force_sensing": true,
+    "controller": "OmniCore",
+    "ip_rating": "IP54 (IP67 option)",
+    "safety_rating": "SafeMove, PL d Cat. 3",
+    "programming_interface": "Lead-through + Wizard + FlexPendant; RobotStudio offline",
+    "mounting": "Any orientation (floor / wall)",
+    "ultra_accuracy": "Optional (0.03 mm path, 0.1 mm absolute)",
+    "collaborative": true,
+    "variants": [
+      "GoFa 5 (5kg/950mm)",
+      "GoFa 10 (10kg/1520mm)",
+      "GoFa 12 (12kg/1270mm)"
+    ],
+    "use_cases": [
+      "Machine tending",
+      "Welding",
+      "Palletizing",
+      "Assembly / screwdriving",
+      "Material handling / packaging"
+    ],
+    "manufacturer_url": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa"
   },
   {
     "cat": "Industrial",
