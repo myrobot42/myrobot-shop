@@ -50364,7 +50364,7 @@
     "name": "RoboThespian",
     "brand": "Engineered Arts",
     "cat": "Humanoid",
-    "sub": "Personal Assistant",
+    "sub": "Interactive Theatrical Humanoid",
     "tags": [
       "engineered arts",
       "personal",
@@ -50378,7 +50378,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Engineered Arts' RoboThespian is a life-size interactive humanoid robot built for visitor attractions, science centres and education. Highly expressive through gestures, speech and projected facial animation, and remotely operable for telepresence, it has been one of the most widely deployed entertainment/education humanoids worldwide.",
+    "desc": "The pioneering 'robot actor' from England's Engineered Arts (founded 2004), first built in 2005 and now installed at 250+ venues worldwide including NASA Kennedy Space Center and museums. RoboThespian is a life-size (1.75 m, 33 kg) interactive humanoid designed for public display: an aluminium chassis and PET body shell house an actuated upper body, arms, hands, head and jaw driven by Festo pneumatic actuators plus brushed DC motors across 26 DoF (30+ axes). LCD-screen eyes, RGB cheeks and a synchronised jaw bring expression; it speaks 30+ languages with 90 TTS voices, and runs Engineered Arts' Tritium software (Gentoo/Ubuntu) with scripted, API and TinMan telepresence control. It performed in the stage play 'Spillikin' and hosted the 2015 NatGeo film Robots 3D.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -50387,20 +50387,22 @@
       "Durability": 75
     },
     "year": 2005,
-    "origin": "UK",
+    "origin": "United Kingdom",
     "status": "Active",
     "released": "2005",
     "height_mm": 1750,
     "weight_kg": 33,
-    "dof": 30,
+    "dof": 26,
     "use_cases": [
-      "Visitor attractions & museums",
-      "Education & outreach",
-      "Research & HRI"
+      "Live stage performance / theatre",
+      "Museums and exhibitions",
+      "Education",
+      "Telepresence",
+      "Corporate events"
     ],
-    "manufacturer_url": "https://www.engineeredarts.co.uk",
-    "made_in": "UK",
-    "os": "Engineered Arts",
+    "manufacturer_url": "https://engineeredarts.com/robot/robothespian/",
+    "made_in": "United Kingdom",
+    "os": "Tritium (Gentoo / Ubuntu Linux)",
     "gallery": [
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-humanoide-mouvements-et-depacement-autonome-robothespian-engineered-arts-1-1.webp",
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-humanoide-mouvements-et-depacement-autonome-robothespian-engineered-arts-5.jpg",
@@ -50412,6 +50414,26 @@
     "cats": [
       "Humanoid",
       "Service"
+    ],
+    "actuator_type": "Festo pneumatic actuators + brushed DC motors",
+    "frame_material": "Aluminium alloy",
+    "shell_material": "PET plastic",
+    "display_face": "2 LCD-screen eyes + RGB cheeks + servo jaw",
+    "cameras": "Cameras + IR depth sensors (gesture/pose)",
+    "languages": "30+ (90 TTS voices)",
+    "natural_language_commands": true,
+    "cpu": "Intel dual-core + external Core i7 control unit",
+    "display": "19-inch touchscreen console",
+    "teleoperation": "TinMan telepresence",
+    "sdk": true,
+    "operating_temp_min": 10,
+    "operating_temp_max": 30,
+    "power_source": "Mains 100-250V + compressed air 6 bar (pneumatic)",
+    "variants": [
+      "RT1",
+      "RT2",
+      "RT3",
+      "RT4"
     ]
   },
   {
@@ -132141,7 +132163,7 @@
     "name": "OP3",
     "brand": "ROBOTIS",
     "cat": "Humanoid",
-    "sub": "Miniature Open-Platform Humanoid",
+    "sub": "Miniature Open-Source Humanoid",
     "year": 2025,
     "origin": "South Korea",
     "status": "Active",
@@ -132149,11 +132171,11 @@
     "img": "",
     "dof": 20,
     "use_cases": [
-      "Education",
-      "Research",
-      "RoboCup"
+      "Robotics education",
+      "University research (vision, motion control)",
+      "RoboCup humanoid league"
     ],
-    "desc": "ROBOTIS' compact open-platform humanoid (DARwIn-OP successor) with Dynamixel smart actuators, widely used in education, research and RoboCup competition.",
+    "desc": "An affordable, fully open-source miniature humanoid research/education platform from ROBOTIS — the successor to the widely-used DARwIn-OP / OP2. It has 20 DYNAMIXEL XM430 actuator modules (6-DoF legs x2, 3-DoF arms x2, 2-DoF neck) with current-based control on a 4.5 Mbps bus, an OpenCR (ARM Cortex-M7) real-time controller, and an Intel NUC Core i3 with 8 GB DDR4 and an M.2 SSD for onboard compute. A 9-axis IMU (gyro/accel/magnetometer), a Logitech C920 HD camera, dual mics and a speaker handle perception. The 2025 re-release is built ground-up for ROS2, and the 1,800 mAh LiPo can be hot-swapped by plugging in external power before removal (~30 min runtime). Popular in the RoboCup humanoid leagues.",
     "tags": [
       "humanoid",
       "robotis",
@@ -132169,8 +132191,35 @@
     "rating": 4,
     "height_mm": 510,
     "weight_kg": 3.5,
-    "actuator_type": "Dynamixel XM430 smart actuators",
-    "chipset": "Intel NUC i3"
+    "actuator_type": "DYNAMIXEL XM430 (current-based control)",
+    "chipset": "Intel NUC i3",
+    "made_in": "South Korea",
+    "leg_dof": 6,
+    "arm_dof": 3,
+    "neck_dof": 2,
+    "cpu": "Intel Core i3 (NUC)",
+    "ram_gb": 8,
+    "ram_type": "DDR4",
+    "storage_gb": 128,
+    "storage_type": "M.2 SSD",
+    "rtos": "OpenCR (ARM Cortex-M7)",
+    "os": "ROS 2 (Linux)",
+    "ros": true,
+    "imu": true,
+    "imu_axes": 9,
+    "cameras": "Logitech C920 HD",
+    "microphones": 2,
+    "battery_type": "LiPo (1800 mAh)",
+    "battery_life": 30,
+    "battery_life_typical": 30,
+    "hot_swap": true,
+    "wifi": "Wi-Fi 6",
+    "wifi_bands": "2.4/5 GHz",
+    "bluetooth": "5",
+    "ethernet": "Gigabit",
+    "open_source": true,
+    "sdk": true,
+    "manufacturer_url": "https://en.robotis.com/model/page.php?co_id=prd_op3"
   },
   {
     "id": "aheadform-origin",
