@@ -114096,11 +114096,11 @@
     "id": "macco-robotics-kime",
     "name": "Kime",
     "brand": "Macco Robotics",
-    "sub": "Robotic Beverage Kiosk",
+    "sub": "Robotic Bartender (dual-arm kiosk)",
     "year": 2019,
     "origin": "Spain",
     "status": "Active",
-    "desc": "Kime by Macco Robotics is a robotic beverage-and-food kiosk that autonomously pours beers and serves drinks/snacks at high throughput, deployed in stadiums, transport hubs and events as automated hospitality entertainment.",
+    "desc": "A humanoid robotic bartender/barista from Spain's Macco Robotics (Seville). Kime stands about two meters tall with dual articulating arms that pour a beer in under 8 seconds and mix a cocktail in around 30 — up to ~120 drinks an hour across beers, cocktails, juices and soft drinks. It engages customers by touchscreen (and mobile-app ordering) in their preferred language, takes cashless payments, and wears an antimicrobial, food-grade shell with automated cleaning routines. Built for 'plug-and-play' integration with existing bar equipment and offered with swappable beverage modules and custom branding, it's aimed at bars, restaurants, events and promotional activations. The current v5 was demonstrated in Seville hospitality trials in 2026.",
     "tags": [
       "entertainment",
       "hospitality",
@@ -114118,7 +114118,30 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/683617b4e5bc056965592add_Kime_Hero.png",
       "https://lookingglassxr.com/wp-content/uploads/2025/01/Robots-_-Humanoids-_-Quadrupeds-_-Overview-12_27_2024-Sheet1-1-18.png"
     ],
-    "video": "https://youtu.be/RSMGZAbL20I"
+    "video": "https://youtu.be/RSMGZAbL20I",
+    "made_in": "Spain",
+    "height_mm": 2000,
+    "arms": 2,
+    "bimanual": true,
+    "throughput": "~120 drinks/hour (beer <8s, cocktail ~30s)",
+    "shell_material": "Antimicrobial, food-grade exterior",
+    "display": "Touchscreen",
+    "app": "Mobile ordering + payment",
+    "languages": "Multilingual",
+    "payment_integration": true,
+    "self_cleaning": true,
+    "modular": true,
+    "drinks": "Cocktails, beer, juices, soft drinks",
+    "variants": [
+      "Kime v5 (current)"
+    ],
+    "use_cases": [
+      "Bars and restaurants",
+      "Events / entertainment venues",
+      "Retail assistance",
+      "Promotional activations"
+    ],
+    "manufacturer_url": "https://maccorobotics.com/"
   },
   {
     "cat": "Entertainment",
@@ -114127,11 +114150,11 @@
     "id": "cecilia-ai-bartender",
     "name": "Cecilia",
     "brand": "Cecilia.ai",
-    "sub": "Interactive Robotic Bartender",
+    "sub": "Interactive Robotic Bartender (kiosk)",
     "year": 2021,
     "origin": "Israel",
     "status": "Active",
-    "desc": "Cecilia.ai is an interactive robotic bartender - a screen-faced AI persona with a robotic cocktail-mixing arm that chats with guests, takes orders by voice and mixes drinks, used at events, casinos and venues as conversational hospitality entertainment.",
+    "desc": "Billed as the world's first interactive robotic bartender, Cecilia.ai (from Israel's GKI hospitality-tech group) is an arcade-console-sized kiosk about seven feet tall, fronted by a large touchscreen showing a 3D-animated female bartender who chats, tells jokes, recommends drinks and displays promos when idle. Guests order by voice (contactless) or touchscreen; conversational AI with voice recognition — scripted plus machine learning — keeps the banter going, in up to 40 languages. Behind the screen, an articulating arm dispenses precisely measured pours from 12 ingredient containers (~70 L total) to make up to 120 cocktails an hour, delivered through a slot. It can't garnish or make ice, but adds brandable side LEDs (disco mode included), cashless payment, and a business-intelligence dashboard of popular drinks and peak times. Seen at stadiums, airport and VIP lounges, cruises and events.",
     "tags": [
       "entertainment",
       "bartender",
@@ -114151,7 +114174,31 @@
       "https://media.nbcmiami.com/2022/02/14619819700-1080pnbcstations.jpg?quality=85&strip=all&resize=1200%2C675",
       "https://nocamels.com/wp-content/uploads/2021/09/Cecilia.ai-The-Robotic-Bartender-credit-Cecilia.ai_-768x769.jpg"
     ],
-    "video": "https://youtu.be/Zsy69XlAcoM"
+    "video": "https://youtu.be/Zsy69XlAcoM",
+    "made_in": "Israel",
+    "height_mm": 2130,
+    "form_factor": "Arcade-console kiosk",
+    "display": "Large integrated touchscreen (3D animated avatar)",
+    "display_face": "3D animated CGI avatar (emotes)",
+    "arms": 1,
+    "ingredient_containers": 12,
+    "capacity_l": 70,
+    "throughput": "120 cocktails/hour",
+    "ai_model": "Conversational AI + voice recognition (scripted + ML)",
+    "natural_language_commands": true,
+    "voice_control": "Contactless voice ordering",
+    "languages": "Up to 40",
+    "payment_integration": true,
+    "analytics": "Business-intelligence dashboard (popular drinks, peak times)",
+    "leds": "Brandable side LEDs (disco mode)",
+    "contactless": true,
+    "use_cases": [
+      "Stadiums / large events",
+      "Airport & VIP lounges",
+      "Cruises",
+      "Hospitality education"
+    ],
+    "manufacturer_url": "https://cecilia.ai/"
   },
   {
     "cat": "Humanoid",
