@@ -113806,11 +113806,11 @@
     "id": "pollen-robotics-reachy-2",
     "name": "Reachy 2",
     "brand": "Pollen Robotics",
-    "sub": "Open-source Humanoid Research Platform",
+    "sub": "Bimanual Mobile Manipulator (open-source)",
     "year": 2024,
     "origin": "France",
     "status": "Active",
-    "desc": "Reachy 2 (Pollen Robotics, now part of Hugging Face) is an open-source humanoid research robot with two 7-DOF bio-inspired arms, an expressive head and a mobile base option, designed for manipulation, teleoperation and embodied-AI research.",
+    "desc": "A fully open-source bimanual humanoid from France's Pollen Robotics (acquired by Hugging Face in April 2025), launched October 2024 as a body for embodied-AI research. Reachy 2 stands 136–166 cm, weighs 50 kg, and pairs two 7-DoF bio-inspired arms — built on Pollen's Orbita 2D/3D compliant joints — each lifting ~3 kg through a parallel torque-controlled gripper. An expressive head (asymmetric eyes and antennas) plus stereo RGB, an Orbbec RGB-D and a ToF sensor give rich perception, and a three-omniwheel mobile base with RPLIDAR S2 handles navigation. VR teleoperation runs at ~125 ms glass-to-glass latency; the platform is ROS2-based with a Python SDK, LeRobot and MuJoCo/Gazebo support, and ships in single/dual-arm and stationary/mobile configurations. 100+ deployed across 20 countries.",
     "tags": [
       "research",
       "humanoid",
@@ -113824,12 +113824,14 @@
     "rating": 4,
     "arm_dof": 7,
     "payload_kg": 3,
-    "cameras": "Stereo vision head + depth camera",
+    "cameras": "2x IMX296 global-shutter RGB (stereo) + Orbbec Gemini 336 RGB-D + Luxonis OAK ToF",
     "ros": true,
-    "sdk": "Open-source Python SDK, VR teleoperation",
+    "sdk": true,
     "use_cases": [
-      "AI & teleoperation research",
-      "Embodied AI development"
+      "Embodied AI research",
+      "Human-robot interaction",
+      "Telepresence",
+      "Healthcare and retail"
     ],
     "made_in": "France",
     "website": "https://www.pollen-robotics.com",
@@ -113844,7 +113846,34 @@
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "height_mm": 1660,
+    "weight_kg": 50,
+    "payload": 3,
+    "actuator_type": "Orbita 2D/3D bio-inspired compliant joints (maxon motors)",
+    "hand_type": "Parallel torque-controlled gripper",
+    "bimanual": true,
+    "chassis": "Mobile base — 3 omniwheels",
+    "depth_sensing": "RGB-D + ToF",
+    "lidar": true,
+    "lidar_model": "RPLIDAR S2",
+    "imu": true,
+    "display_face": "Expressive head (asymmetric eyes + antennas)",
+    "teleoperation": "VR (~125 ms latency) + robot-to-robot",
+    "os": "ROS 2 (Foxy)",
+    "sdk_langs": [
+      "Python"
+    ],
+    "sim_platform": "Gazebo / MuJoCo (LeRobot)",
+    "open_source": true,
+    "ota": true,
+    "variants": [
+      "Single arm",
+      "Dual arm",
+      "Stationary base",
+      "Mobile base"
+    ],
+    "manufacturer_url": "https://www.pollen-robotics.com/reachy/"
   },
   {
     "cat": "Research",
@@ -118827,12 +118856,12 @@
     "id": "booster-robotics-t1",
     "name": "T1",
     "brand": "Booster Robotics",
-    "sub": "Research Humanoid",
+    "sub": "Developer / Research Humanoid",
     "year": 2024,
     "origin": "China",
     "status": "Active",
-    "height_mm": 1180,
-    "desc": "The Booster Robotics T1 is a compact (~1.2 m, ~30 kg) research/education humanoid with 23-41 DOF and a fall-resilient design. The championship model of the 2025 RoboCup \"AdultSize\" soccer league, used by 50+ top robotics teams and institutes; developer-friendly SDK.",
+    "height_mm": 1200,
+    "desc": "Booster Robotics' compact open-source developer humanoid and the model that won the 2025 RoboCup 'AdultSize' soccer league, adopted by 50+ teams and labs (Purdue, UC Berkeley, CMU, Tsinghua). Standing about 1.2 m and weighing 30 kg, it has 23 base DOF (6 per leg, 4 per arm, 1 waist, 2 head) driven by custom hollow-axis motors with dual encoders and full-force (torque/velocity/position) control up to 130 N·m. Dual compute — a 14-core Intel i7-1370P plus NVIDIA Jetson AGX Orin 32 GB (~200 TOPS) — runs onboard AI, with an Intel RealSense RGB-D camera, 3D LiDAR, 9-axis IMU and mic array. Fully open SDK on ROS2 with Isaac Sim / MuJoCo / Webots support and up to ~2 h walking per charge.",
     "tags": [
       "humanoid",
       "research",
@@ -118855,11 +118884,43 @@
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-humanoide-open-source-avancee-developpeurs-chercheurs-t1-booster-robotics-6"
     ],
     "use_cases": [
-      "RoboCup soccer & research humanoid (impact-resistant, self-righting)"
+      "RoboCup soccer",
+      "Locomotion research",
+      "Education / STEM",
+      "Embodied AI"
     ],
     "made_in": "China",
     "website": "https://www.boosterobotics.com",
-    "actuator_type": "Electric"
+    "actuator_type": "Custom hollow-axis motors, dual-encoder, full-force-controlled",
+    "leg_dof": 6,
+    "arm_dof": 4,
+    "waist_dof": 1,
+    "head_dof": 2,
+    "torque_nm": 130,
+    "cpu": "Intel i7-1370P (14-core)",
+    "chipset": "Intel i7-1370P + NVIDIA Jetson AGX Orin 32GB",
+    "npu_tops": 200,
+    "cameras": "Intel RealSense RGB-D",
+    "depth_sensing": "Intel RealSense",
+    "lidar": true,
+    "imu": true,
+    "imu_axes": 9,
+    "battery_life": 120,
+    "battery_life_typical": 120,
+    "os": "ROS2",
+    "ros": true,
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "sim_platform": "Isaac Sim / MuJoCo / Webots",
+    "learning_methods": [
+      "Reinforcement Learning",
+      "Imitation Learning"
+    ],
+    "llm_model": "Edge LLM (on-device)",
+    "manufacturer_url": "https://www.booster.tech/"
   },
   {
     "cat": "Humanoid",
