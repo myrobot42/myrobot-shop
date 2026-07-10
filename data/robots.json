@@ -131222,17 +131222,20 @@
     "name": "Alfie",
     "brand": "Prosper Robotics",
     "cat": "Humanoid",
-    "sub": "Home Humanoid",
+    "sub": "Wheeled Home / Butler Robot",
     "year": 2025,
     "origin": "United Kingdom",
-    "status": "Prototype",
-    "price": "POA",
+    "status": "Development",
+    "price": 15000,
     "img": "",
     "use_cases": [
-      "Household chores",
-      "Home assistance"
+      "Cleaning surfaces and floors",
+      "Dishwasher loading",
+      "Laundry (sort / fold)",
+      "Trash, bed-making, plant care",
+      "Simple meal prep"
     ],
-    "desc": "UK startup Prosper Robotics' home humanoid designed for domestic chores, aiming to bring a capable general-purpose helper into the household.",
+    "desc": "A general-purpose home 'butler' robot from London's Prosper Robotics, founded in 2021 by ex-OpenAI engineer Shariq Hashme (with prototyping in Shenzhen). Alfie stands about 1.7 m and weighs over 100 kg, riding a wheeled base with two arms and pincher hands — legs were dropped as unnecessarily complex, with lifts used for stairs. It cleans surfaces and floors, rinses and loads dishes, takes out trash, sorts and folds laundry, makes beds and waters plants, and swaps between 50–100 modular tool attachments (mops, suction cups, task-specific gloves). Early units are human-in-the-loop via VR teleoperation (moving toward autonomy as data accumulates), can self-plug-in via a retractable cord, and are reviewed through a time-lapse app. Targeted at roughly $15,000 plus a monthly subscription.",
     "tags": [
       "humanoid",
       "prosper",
@@ -131244,24 +131247,40 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "United Kingdom",
+    "height_mm": 1700,
+    "weight_kg": 100,
+    "chassis": "Wheeled",
+    "bimanual": true,
+    "hand_type": "Two arms, pincher hands + modular toolbox (50-100 attachments)",
+    "teleoperation": "VR human-in-the-loop (moving to partial autonomy)",
+    "power_source": "Battery + self-plug-in retractable cord",
+    "ai_model": "Teleoperation-to-autonomy learning (data flywheel)",
+    "app": "Time-lapse activity review",
+    "currency": "USD",
+    "pricing_model": "Purchase + monthly subscription",
+    "manufacturer_url": "https://prosperrobotics.com/"
   },
   {
     "id": "sunday-robotics-memo",
     "name": "Memo",
     "brand": "Sunday Robotics",
     "cat": "Humanoid",
-    "sub": "Home Humanoid",
+    "sub": "Wheeled Home Humanoid",
     "year": 2026,
     "origin": "USA",
-    "status": "Prototype",
+    "status": "Development",
     "price": "POA",
     "img": "",
     "use_cases": [
-      "Household chores",
-      "Home assistance"
+      "Clearing / wiping tables",
+      "Loading the dishwasher",
+      "Folding laundry",
+      "Tidying",
+      "Espresso preparation"
     ],
-    "desc": "US startup Sunday Robotics' consumer home humanoid, focused on learning everyday household tasks for domestic assistance.",
+    "desc": "A household humanoid from Sunday Robotics (founded by Tony Zhao and Cheng Chi; a $1.15B valuation reached March 2026), announced November 2025. Memo is a ~1.7 m wheeled robot with a torso, two multi-DoF arms and dual grippers, able to reach from floor level to about 2.1 m. Rather than chasing a bipedal form, Sunday prioritises safety and stability for busy family homes, and trains Memo's embodied AI on millions of real home routines so it can reliably handle chores like clearing tables, loading the dishwasher, folding laundry, tidying and even espresso preparation.",
     "tags": [
       "humanoid",
       "sunday-robotics",
@@ -131273,7 +131292,17 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "USA",
+    "height_mm": 1700,
+    "chassis": "Wheeled",
+    "bimanual": true,
+    "hand_type": "Dual grippers",
+    "ai_model": "Embodied AI (trained on millions of real home routines)",
+    "learning_methods": [
+      "Imitation Learning"
+    ],
+    "manufacturer_url": "https://www.sundayrobotics.com/"
   },
   {
     "id": "oversonic-robee",
@@ -131881,17 +131910,19 @@
     "name": "Elf",
     "brand": "BXI Robotics",
     "cat": "Humanoid",
-    "sub": "Humanoid Platform",
+    "sub": "Full-Size Bipedal Humanoid (research)",
     "year": 2025,
     "origin": "China",
     "status": "Active",
     "price": "POA",
     "img": "",
     "use_cases": [
-      "Research",
-      "Development"
+      "Sim-to-real deployment",
+      "Locomotion / algorithm research",
+      "Embodied AI development",
+      "OEM humanoid platform"
     ],
-    "desc": "Humanoid platform from BXI Robotics, showcased at CES 2026 among China's humanoid 'reserve force' of emerging developers.",
+    "desc": "An open-source, human-sized bipedal humanoid from Shanghai's BXI Robotics, aimed at sim-to-real deployment and locomotion-algorithm research. The Elf stands 1.45 m and weighs just 32 kg, making it easy to carry, with 25 degrees of freedom (6 per leg, 5 per arm, 3 in the waist). Legs use hip z/y/x, knee and dual-axis ankle joints with up to 150 N·m per joint, driven by BXI's in-house lightweight joint motors. It supports both teleoperation and autonomy modes and integrates BXI's multi-finger dexterous hands, and BXI offers it as a turnkey/OEM platform. A newer Elf 3 revision raises the count to 31 DOF.",
     "tags": [
       "humanoid",
       "bxi",
@@ -131902,7 +131933,21 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "height_mm": 1450,
+    "weight_kg": 32,
+    "dof": 25,
+    "leg_dof": 6,
+    "arm_dof": 5,
+    "waist_dof": 3,
+    "torque_nm": 150,
+    "actuator_type": "BXI in-house lightweight joint motors",
+    "hand_type": "Multi-finger dexterous hands (optional)",
+    "bimanual": true,
+    "open_source": true,
+    "teleoperation": "Twin-arm teleoperation + autonomy modes",
+    "manufacturer_url": "https://bxirobotics.com/"
   },
   {
     "id": "joyin-bumblebee",
