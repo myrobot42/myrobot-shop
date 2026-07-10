@@ -119998,13 +119998,13 @@
     "name": "Ghost (Anduril sUAS)",
     "brand": "Anduril Industries",
     "cat": "Drones",
-    "sub": "Autonomous sUAS (Military)",
+    "sub": "Portable VTOL sUAS (ISR)",
     "year": 2021,
     "origin": "USA",
     "status": "Active",
     "price": "POA",
     "perf": false,
-    "desc": "The Anduril Ghost is a modular autonomous small unmanned aircraft system for reconnaissance and ISR, powered by Anduril's Lattice AI for autonomous mission execution; used by defense and security customers. (Distinct from Ghost Robotics quadrupeds.)",
+    "desc": "Anduril's first drone: a soldier-portable, single-rotor helicopter-style VTOL small UAS built for quiet, modular ISR, targeting and force protection at the tactical edge. Running at low rotor speed for a near-silent acoustic signature, the ~17 kg Ghost 4 carries modular payloads — a Trillium EO/IR gimbal plus optional SIGINT, EW and radar — swappable in seconds, and is driven by Anduril's Lattice AI core (~3.2 TOPS) that enables full autonomy, sub-one-hour operator training, swarming and automatic 'battlefield handover' between aircraft for persistent coverage. Sold in pairs and packable in a backpack or Pelican case, two Ghosts give one operator round-the-clock ISR. The upgraded Ghost-X (2023) adds dual batteries, a tandem-rotor layout, vision-based GPS-denied navigation and far greater payload.",
     "tags": [
       "drone",
       "Anduril",
@@ -120019,10 +120019,40 @@
     "battery_life": 100,
     "actuator_type": "Single-rotor modular sUAS",
     "use_cases": [
-      "ISR & expeditionary missions (Lattice AI integration)"
+      "ISR",
+      "Targeting",
+      "Force protection",
+      "Maritime ISR"
     ],
     "made_in": "USA",
-    "website": "https://www.anduril.com"
+    "website": "https://www.anduril.com",
+    "form_factor": "Single-rotor helicopter-style VTOL",
+    "weight_kg": 16.8,
+    "max_takeoff_weight_kg": 19,
+    "payload_kg": 4.5,
+    "max_speed_kmh": 137,
+    "range_km": 12,
+    "flight_time": 55,
+    "battery_type": "21700 Li-ion (hydrogen fuel-cell option)",
+    "ai_model": "Lattice OS (AI autonomy)",
+    "npu_tops": 3.2,
+    "cameras": "Trillium EO/IR gimbal (quick-swap)",
+    "payloads": [
+      "EO/IR",
+      "SIGINT",
+      "Electronic warfare",
+      "Radar (modular)"
+    ],
+    "swarm": "Multi-Ghost teaming + battlefield handover",
+    "autonomous": "Fully autonomous (Lattice); <1 hr training",
+    "acoustic": "Near-silent signature",
+    "portability": "Backpack / Pelican case (sold in pairs)",
+    "operator": "US DoD, UK MoD",
+    "variants": [
+      "Ghost 4",
+      "Ghost-X (dual-battery, tandem-rotor, 25 kg MTOW, 75 min, GPS-denied)"
+    ],
+    "manufacturer_url": "https://www.anduril.com/ghost"
   },
   {
     "id": "intuitive-ion-bronchoscopy",
@@ -135246,13 +135276,13 @@
     "name": "MQ-25 Stingray",
     "brand": "Boeing",
     "cat": "Drones",
-    "sub": "Carrier Aerial Tanker UAV",
+    "sub": "Carrier-Based Aerial-Refueling UAV",
     "year": 2021,
     "origin": "USA",
-    "status": "Prototype",
+    "status": "Development",
     "price": "POA",
     "img": "",
-    "desc": "The US Navy's first operational carrier drone: an unmanned aerial refueling tanker that will extend the strike range of F/A-18s and F-35Cs, with the T1 demonstrator already refueling jets in flight.",
+    "desc": "The U.S. Navy's first carrier-based unmanned aircraft — a Boeing-built autonomous aerial-refueling tanker drone whose primary job is to offload fuel to F/A-18 Super Hornets (via a wing-mounted buddy refueling store), freeing fighters from the tanking role, with a secondary ISR mission through a retractable EO/IR sensor turret. It has a ~75 ft (22.9 m) wingspan, a Rolls-Royce AE 3007N turbofan fed by a low-observable top-mounted flush inlet, and flies fully autonomously (taxi, take-off, maneuver, land) under the MD-5 Ground Control Station. A T1 demonstrator first flew in 2019 and the production-representative MQ-25A made its maiden flight in 2026; the Navy plans 76 aircraft with IOC targeted for 2026.",
     "tags": [
       "drone",
       "military",
@@ -135267,15 +135297,30 @@
       "Drones",
       "Military"
     ],
-    "role": "Carrier-based aerial refueling",
+    "role": "Aerial refueling (buddy store) + secondary ISR",
     "mil_spec": true,
     "use_cases": [
-      "Aerial refueling",
-      "Carrier ISR"
+      "Carrier aerial refueling",
+      "Intelligence, surveillance, reconnaissance",
+      "Future: strike / multi-mission"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "USA",
+    "form_factor": "Fixed-wing (low-observable), carrier-based",
+    "wingspan_m": 22.9,
+    "engine": "Rolls-Royce AE 3007N turbofan",
+    "cameras": "Retractable EO/IR sensor turret",
+    "autonomous": "Autonomous taxi / take-off / maneuver / land",
+    "control": "MD-5 Ground Control Station (UCA MCS)",
+    "stealth": "Low-observable (flush top inlet)",
+    "carrier_capable": true,
+    "payload": "Buddy refueling store (future weapons/sensors)",
+    "first_flight": "2019 (T1 demo); 2026 (production-representative)",
+    "units_planned": 76,
+    "operator": "US Navy",
+    "manufacturer_url": "https://www.boeing.com/defense/mq-25"
   },
   {
     "id": "boeing-mq-28-ghost-bat",
