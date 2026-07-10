@@ -134720,13 +134720,13 @@
     "name": "Black Swan",
     "brand": "Dronamics",
     "cat": "Drones",
-    "sub": "Cargo Drone Aircraft",
+    "sub": "Fixed-Wing Cargo Drone (MALE)",
     "year": 2023,
     "origin": "Bulgaria",
-    "status": "Prototype",
+    "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "Fixed-wing cargo drone flying 350 kg up to 2,500 km at a fraction of airfreight cost — the 'cargo dronesline' concept, licensed to operate across Europe and first flown in 2023.",
+    "desc": "The flagship of Dronamics — the world's first cargo drone airline (founded 2014 by the Rangelov brothers, Sofia/London). The Black Swan is a clean-sheet, remotely-piloted fixed-wing cargo aircraft about the size of a two-seat Cessna, carrying 350 kg (3.5 m3) up to 2,500 km at up to 200 km/h, and taking off from ~400 m unpaved strips. Built predominantly from carbon fibre and powered by a Rotax propeller engine on sustainable fuel (with hydrogen planned), it targets 'middle-mile' same-day cargo — up to 80% faster, 50% cheaper and 60% lower-emission than airfreight. It was the first large UAV to hold an EU drone-airline license (LUC) and carries IATA/ICAO codes; a defence ISR variant adds a Hensoldt PrecISR payload.",
     "tags": [
       "drone",
       "dronamics",
@@ -134739,11 +134739,35 @@
     "payload_kg": 350,
     "max_range": "2,500 km",
     "use_cases": [
-      "Same-day middle-mile freight"
+      "Middle-mile e-commerce cargo",
+      "Pharma and perishables",
+      "Spare parts / time-sensitive freight",
+      "Defense ISR"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "Bulgaria",
+    "form_factor": "Fixed-wing",
+    "wingspan_m": 16,
+    "length_m": 8,
+    "height_m": 4,
+    "cargo_volume_m3": 3.5,
+    "range_km": 2500,
+    "max_speed_kmh": 200,
+    "endurance": "24h+",
+    "frame_material": "Carbon fibre",
+    "engine": "Rotax propeller (SAF/biofuel; hydrogen planned)",
+    "takeoff_distance_m": 400,
+    "control": "Remotely piloted (ground control station)",
+    "autonomous": "Pre-planned flight, pilot-monitored",
+    "certification": "EU LUC drone-airline license; IATA/ICAO codes",
+    "variants": [
+      "Cargo",
+      "Defense ISR (Hensoldt PrecISR)",
+      "Quarter-scale (~4 m wingspan)"
+    ],
+    "manufacturer_url": "https://www.dronamics.com/theblackswan"
   },
   {
     "id": "a2z-rdst-longtail",
@@ -135431,13 +135455,13 @@
     "name": "Voliro T",
     "brand": "Voliro",
     "cat": "Drones",
-    "sub": "Omnidirectional Inspection Drone",
+    "sub": "Contact-Based NDT Inspection Drone (omnidirectional)",
     "year": 2023,
     "origin": "Switzerland",
     "status": "Active",
     "price": "POA",
     "img": "",
-    "desc": "Tilt-rotor omnidirectional drone that flies in any orientation and presses sensors against structures — performing contact ultrasonic thickness and coating measurements on tanks, flares and bridges at height.",
+    "desc": "A purpose-built industrial-inspection drone from Voliro (an ETH Zurich spin-off) that doesn't just fly and see — it touches. Thrust-vectoring tiltable rotors give true omnidirectional (6-DoF) freedom and up to ±90-degree tilt, letting it press against vertical walls, ceilings and curved surfaces with up to 30 N of stable force (plus several Nm of torque) to 'seat' non-destructive-testing sensors for reliable coupling. Assisted autonomy handles the approach-and-touch phase even in GPS-denied spaces like tanks and boilers. Six interchangeable NDT payloads — EMAT, ultrasonic thickness, dry-film coating, pulsed-eddy-current, lightning-protection and a flammable-gas sensor — cover most inspection jobs, with live A-Scan in the Voliro app, hot-swappable self-heating batteries, and a subscription business model.",
     "tags": [
       "drone",
       "voliro",
@@ -135449,13 +135473,40 @@
       "active"
     ],
     "use_cases": [
-      "Contact NDT inspection",
-      "Wall-thickness measurement",
-      "Flare/tank inspection"
+      "Wind-turbine and tank NDT",
+      "Pipes, bridges, boilers",
+      "Concrete structure testing",
+      "Energy / infrastructure / maritime / mining"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "Switzerland",
+    "form_factor": "Thrust-vectoring tiltable-rotor (6-DoF omnidirectional)",
+    "rotor_tilt": "up to +-90 degrees",
+    "contact_force_n": 30,
+    "gps_denied": true,
+    "autonomous": "Assisted autonomy (approach-and-touch)",
+    "ndt_payloads": 6,
+    "payloads": [
+      "EMAT (2-150mm)",
+      "Ultrasonic thickness (4-150mm)",
+      "Dry-film coating (0-1.5mm)",
+      "Pulsed eddy current",
+      "Lightning-protection probe",
+      "Flammable-gas (%LEL)"
+    ],
+    "cameras": "HD inspection camera",
+    "battery_type": "Hot-swappable, self-heating (to -10C), IATA-approved",
+    "hot_swap": true,
+    "operating_temp_min": -10,
+    "open_platform": true,
+    "api": true,
+    "app": "Voliro App (live A-Scan, diagnostics)",
+    "data_management": "Cloud + API",
+    "transport": "Rugged waterproof/crushproof case",
+    "business_model": "Subscription (hardware + maintenance + crash insurance)",
+    "manufacturer_url": "https://voliro.com/"
   },
   {
     "id": "dji-agras-t70",
