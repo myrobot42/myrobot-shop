@@ -121606,12 +121606,15 @@
     "brand": "MIT AI Lab",
     "cat": "Social",
     "year": 1998,
-    "status": "Active",
-    "desc": "Cynthia Breazeal’s expressive robot head — the founding work of social robotics. With ears, eyebrows, lips and eyes driven by 21 motors, Kismet read human tone and expression and responded with believable infant-like emotions, defining human-robot interaction as a field.",
+    "status": "Discontinued",
+    "desc": "A landmark of social robotics built in the late 1990s at MIT by Dr. Cynthia Breazeal as an experiment in affective computing — a robot head that could recognise and simulate emotion. Kismet perceives auditory, visual and proprioceptive social cues and responds with human-readable expressions (happiness, sadness, anger, fear, disgust, surprise, interest, calm, tiredness) through movements of its ears, eyebrows, eyelids, lips and jaw, plus expressive 'proto-speech' babble and tone of voice. Its active-vision system has four DoF (each eye pans independently, with a shared tilt), and the whole platform runs ~21 actuators fed by four cameras and three microphones across a network of computers. Funded by NTT and DARPA, Kismet now resides at the MIT Museum.",
     "dof": 21,
-    "cameras": "4 cameras (wide + foveal stereo) + microphones",
+    "cameras": "4 digital cameras (stereo active vision, 4-DoF)",
     "use_cases": [
-      "Social robotics & affective computing research"
+      "Social robotics research",
+      "Affective computing",
+      "Human-robot interaction",
+      "Museum exhibit (MIT Museum)"
     ],
     "made_in": "USA",
     "fig": "🤖",
@@ -121626,7 +121629,19 @@
       "https://cdn.sanity.io/images/7p2whiua/production/fb499b857e3bb625276a3ee644976fdcb0b8a7ac-2048x1536.jpg",
       "https://live.staticflickr.com/4016/4456487678_ac5f9084e2_b.jpg"
     ],
-    "img": "https://plain-eeur-prod-public.komododecks.com/202606/19/pnc1Qlejlrpi7d2X5u3K/image.jpg"
+    "img": "https://plain-eeur-prod-public.komododecks.com/202606/19/pnc1Qlejlrpi7d2X5u3K/image.jpg",
+    "sub": "Expressive Social Robot Head (research)",
+    "origin": "USA",
+    "actuator_type": "Servo motors (ears, eyebrows, eyelids, lips, jaw, eyes, neck)",
+    "microphones": 3,
+    "display_face": "Animatronic face (ears, eyebrows, eyelids, lips, jaw)",
+    "emotion_detection": true,
+    "natural_language_commands": true,
+    "speech": "Affective proto-speech (expressive babble)",
+    "ai_model": "Affective computing (emotion + motivation model)",
+    "funding": "NTT + DARPA",
+    "designer": "Cynthia Breazeal (MIT)",
+    "manufacturer_url": "https://www.media.mit.edu/"
   },
   {
     "id": "tiger-furby",
@@ -121634,18 +121649,20 @@
     "brand": "Tiger Electronics",
     "cat": "Social",
     "year": 1998,
-    "status": "Active",
-    "desc": "The 40-million-selling animatronic phenomenon. Furby blinked, wiggled and \"evolved\" from Furbish to English using sensors for light, touch, sound and orientation — for millions of kids, the first robot they ever owned.",
+    "status": "Discontinued",
+    "desc": "The 1998 Furby — an owl/hamster-like animatronic toy from Tiger Electronics (designed by Dave Hampton and Caleb Chung) that became a cultural phenomenon, selling over 40 million units in three years. About 11 inches tall in synthetic fur, it produced 300+ movement combinations — blinking eyes, wiggling ears, an opening beak and a rocking body — all from a single motor driven through a camshaft gear assembly, a clever cost-saving feat for its time. A 6502-class microprocessor with only 128 bytes of RAM ran everything. Light, sound and touch sensors (in a touch > sound > light hierarchy) plus a tilt sensor let it react to its environment, and an infrared port between its eyes let two Furbies 'talk'. It started out speaking only 'Furbish' (42 root words forming 300+ phrases) and appeared to 'learn' English through play — a simulated effect, not real machine learning.",
     "use_cases": [
-      "Interactive companion toy"
+      "Interactive companion toy",
+      "Entertainment",
+      "Early social-robotics milestone"
     ],
-    "made_in": "USA",
+    "made_in": "China",
     "fig": "🤖",
     "tags": [],
     "score": 75,
     "rating": 4,
     "price_band": "$",
-    "sub": "Companion Toy",
+    "sub": "Animatronic Companion Toy",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/30/HAgcSWNrVJOvwtAr30Zu/image.jpg",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/30/CdSxaHMNfcSK4fTyKU79/image.jpg",
@@ -121653,7 +121670,29 @@
       "https://plain-eeur-prod-public.komododecks.com/202606/30/7wbQ9H3uL79AMDNy0CNi/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/30/ZiQsDJvG0srDz7ru7I6X/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/30/HDZMQSJLFp7MdvnMHDdu/image.jpg"
-    ]
+    ],
+    "origin": "USA",
+    "height_mm": 280,
+    "actuator_type": "Single motor + camshaft (eyes, ears, beak, body)",
+    "cpu": "6502-class microprocessor",
+    "ram": "128 bytes",
+    "sensors_list": [
+      "Light sensor",
+      "Sound sensor (microphone)",
+      "Touch sensors (tummy / back / tongue)",
+      "Tilt sensor",
+      "Infrared (Furby-to-Furby)"
+    ],
+    "microphones": 1,
+    "ir_communication": "Infrared port (Furby-to-Furby)",
+    "speech": "Furbish (42 roots, 300+ phrases) + simulated English 'learning'",
+    "languages": "Sold in 14 languages",
+    "shell_material": "Synthetic faux fur + plastic",
+    "battery_type": "4x AA",
+    "designer": "Dave Hampton & Caleb Chung",
+    "price": 35,
+    "currency": "USD",
+    "manufacturer_url": "https://furby.hasbro.com/"
   },
   {
     "id": "lego-mindstorms-rcx",
