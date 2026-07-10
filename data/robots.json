@@ -121243,12 +121243,14 @@
     "brand": "Heathkit",
     "cat": "Educational",
     "year": 1982,
-    "status": "Active",
-    "desc": "The robot that taught a generation: Heathkit’s HERO 1 kit brought a Motorola 6808-powered robot with sonar ranging, light/sound sensors, speech synthesis and an optional arm into thousands of homes, schools and labs in the early-80s personal robot boom.",
-    "cpu": "Motorola 6808",
-    "actuator_type": "Wheeled base, optional gripper arm, speech synthesizer",
+    "status": "Discontinued",
+    "desc": "One of the earliest consumer/educational robots — the Heathkit Educational RObot (model ET-18), begun in 1979 and released in 1982, sold as a build-it-yourself kit ($1,500) or assembled ($2,500) with ~14,000+ units shipped. HERO 1 is a self-contained mobile robot on a Motorola 6808 8-bit CPU (1 MHz) with 4 KB RAM and 8 KB ROM, driven by seven stepper motors plus a DC drive motor across a three-wheel base whose head rotates 350 degrees to aim its sensors and optional arm. Onboard light, sound, ultrasonic-motion and Polaroid sonar sensors, an optical encoder and a real-time clock let it perceive its world; an optional five-axis arm/gripper and Votrax SC-01 speech synthesizer added manipulation and voice. Programmed in 6808 machine code via a 17-key hex keypad, a record/replay Teaching Pendant, or an IBM-PC ANDROTEXT compiler, with cassette-tape program storage. It even starred on TV's 'Mr. Wizard's World'.",
+    "cpu": "Motorola 6808 (8-bit) @ 1 MHz",
+    "actuator_type": "7 stepper motors + DC drive motor",
     "use_cases": [
-      "Robotics & electronics education"
+      "Robotics / electronics education",
+      "AI learning",
+      "Hobbyist / entertainment"
     ],
     "made_in": "USA",
     "fig": "🤖",
@@ -121263,7 +121265,40 @@
       "https://www.theoldrobots.com/images144/Heathkit_Robot_U01.JPG",
       "https://www.theoldrobots.com/images98/Hero_I-k9.JPG",
       "https://www.theoldrobots.com/images144/Heathkit_Robot_U02.JPG"
-    ]
+    ],
+    "sub": "Educational Mobile Robot (kit)",
+    "origin": "USA",
+    "height_mm": 508,
+    "diameter_mm": 457,
+    "weight_kg": 17.7,
+    "ram": "4 KB",
+    "storage": "8 KB ROM",
+    "chassis": "3 wheels (2 fixed + 1 steerable front drive)",
+    "head_rotation": "350 degrees",
+    "arm": "Optional 5-axis arm + gripper",
+    "speech": "Optional Votrax SC-01 speech synthesizer",
+    "sensors_list": [
+      "Light sensor",
+      "Sound sensor (200-5000 Hz)",
+      "Ultrasonic motion detector (15 ft)",
+      "Polaroid sonar (4in-8ft)",
+      "Optical encoder",
+      "Real-time clock"
+    ],
+    "display": "6x 7-segment LED",
+    "input": "17-key hex keypad + Teaching Pendant",
+    "programming_langs": [
+      "6808 machine code",
+      "ANDROTEXT (IBM PC)"
+    ],
+    "storage_io": "Cassette-tape I/O",
+    "battery_type": "4x gel-cell rechargeable",
+    "battery_life": 240,
+    "remote_control": "Optional RF transmitter",
+    "kit": true,
+    "price": 1500,
+    "currency": "USD",
+    "manufacturer_url": "https://www.heathkit.com/"
   },
   {
     "id": "rb-robot-rb5x",
@@ -121700,17 +121735,18 @@
     "brand": "LEGO",
     "cat": "Educational",
     "year": 1998,
-    "status": "Active",
-    "cpu": "Hitachi H8/300",
+    "status": "Discontinued",
+    "cpu": "Renesas H8/300 (H8/3292) @ 16 MHz",
     "programming": [
       "RCX Code",
       "NQC",
       "LeJOS (Java)"
     ],
-    "desc": "The yellow brick that started it all: LEGO’s original MINDSTORMS programmable brick (developed with MIT Media Lab) put motors, sensors and code into classrooms worldwide and ignited the FIRST LEGO League generation of engineers.",
+    "desc": "The brick that launched LEGO Mindstorms in September 1998 and effectively created the mass-market home-robotics kit. The RCX (Robotic Command eXplorer) grew out of a long LEGO / MIT Media Lab collaboration inspired by Seymour Papert's 'Mindstorms', and shipped as the heart of the Robotics Invention System (RIS 1.0, $199). The yellow programmable brick runs a Renesas H8/300 microcontroller (16 MHz) with 32 KB ROM and 32 KB RAM, exposing three sensor input ports and three 9V motor output ports plus an LCD. Programs are written on a PC (visual RCX Code, or community languages like NQC and leJOS Java) and beamed over infrared; two bricks can even talk to each other via IR. It anchored the first FIRST LEGO League season and built a huge hacker/education community before the line ended in 2022.",
     "use_cases": [
-      "STEM education",
-      "FIRST LEGO League"
+      "STEM / robotics education",
+      "FIRST LEGO League",
+      "Hobbyist robotics"
     ],
     "made_in": "Denmark",
     "fig": "🤖",
@@ -121724,7 +121760,35 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjmz-HN-nxL6U5J5BWqWM834UYwoyV2KaBieIk8F6OXUHztXyRATR3LzM&s=10",
       "https://orionrobots.co.uk/galleries/2010-01-19-the-lego-rcx-inside-and-out/lens8960751_1328563452-Lego-RCX-In-Use.jpg",
       "https://robotics.benedettelli.com/wp-content/uploads/2013/09/Biped_front_web.jpg"
-    ]
+    ],
+    "sub": "Programmable Robotics Brick (STEM kit)",
+    "origin": "Denmark",
+    "ram": "32 KB",
+    "storage": "32 KB ROM",
+    "motor_ports": 3,
+    "sensor_ports": 3,
+    "sensors_list": [
+      "2 touch sensors",
+      "1 light sensor (RIS kit)"
+    ],
+    "actuators": "2x 9V motors (RIS kit)",
+    "display": "LCD (battery, ports, program)",
+    "ir_communication": "Infrared (PC upload + brick-to-brick)",
+    "programming_langs": [
+      "RCX Code (visual)",
+      "NQC",
+      "leJOS (Java)"
+    ],
+    "programming_interface": "Visual blocks + text (PC via IR tower)",
+    "battery_type": "6x AA (or 9V adapter, v1.0)",
+    "age_range": "10+",
+    "competition_legal": [
+      "FIRST LEGO League"
+    ],
+    "collaboration": "MIT Media Lab",
+    "price": 199,
+    "currency": "USD",
+    "manufacturer_url": "https://www.lego.com/"
   },
   {
     "id": "sony-aibo-ers-110",
