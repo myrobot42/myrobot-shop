@@ -134684,23 +134684,51 @@
     "name": "ALIA",
     "brand": "BETA Technologies",
     "cat": "Drones",
-    "sub": "Electric Aircraft / eVTOL",
+    "sub": "Electric VTOL Utility Aircraft (eVTOL)",
     "year": 2023,
     "origin": "USA",
-    "status": "Prototype",
+    "status": "Development",
     "price": "POA",
     "img": "",
-    "desc": "BETA's electric aircraft family (CTOL CX300 and VTOL A250): a clean-sheet design with real cross-country flight campaigns, cargo/medical launch customers like UPS and United Therapeutics, and a growing charging network.",
+    "desc": "An all-electric utility aircraft from BETA Technologies (Burlington, Vermont; NYSE-listed 2025). The flagship ALIA A250 eVTOL uses four top-mounted lift rotors plus a single rear pusher motor and a 50 ft (15 m) arctic-tern-inspired wing to combine vertical take-off with efficient wing-borne cruise, carrying five passengers or cargo up to 250 nmi (460 km) at 170 mph, recharging in under an hour. Distributed electric propulsion provides fail-safe redundancy, and BETA claims ~$17 of electricity to fly 150 miles versus ~$700 in jet fuel. Sister model CX300 is a conventional-take-off (eCTOL) variant on the same airframe (~336 nmi range, Garmin G3000 avionics), and an unmanned hybrid MV250 is in development. Orders from UPS, Bristow, Air New Zealand, Metro Aviation and United Therapeutics.",
     "tags": [],
     "use_cases": [
-      "Cargo",
-      "Medical logistics",
-      "Passenger (planned)"
+      "Regional air taxi",
+      "Cargo / logistics",
+      "Medical (CASEVAC / medivac)",
+      "Military dispersed logistics"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "max_range": "Up to 463 km (250 nmi design)"
+    "max_range": "Up to 463 km (250 nmi design)",
+    "made_in": "USA",
+    "form_factor": "Fixed-wing eVTOL (4 lift rotors + 1 pusher)",
+    "wingspan_m": 15,
+    "motors": 5,
+    "seats": 5,
+    "payload_kg": 454,
+    "max_takeoff_weight_kg": 2720,
+    "range_km": 460,
+    "cruise_speed_kmh": 270,
+    "charge_time": 60,
+    "propulsion": "Distributed electric (DEP redundancy)",
+    "frame_material": "Carbon-fibre composite",
+    "avionics": "Garmin G3000 (CX300)",
+    "certification": "FAA (in process); USAF AFWERX Agility Prime",
+    "variants": [
+      "A250 (eVTOL)",
+      "CX300 (eCTOL, ~620 km)",
+      "MV250 (unmanned hybrid, 1,000+ nmi)"
+    ],
+    "operators": [
+      "UPS",
+      "Bristow",
+      "Air New Zealand",
+      "Metro Aviation",
+      "United Therapeutics"
+    ],
+    "manufacturer_url": "https://www.beta.team/aircraft"
   },
   {
     "id": "vertical-vx4",
@@ -134761,13 +134789,13 @@
     "name": "AeroHT X2",
     "brand": "XPeng AeroHT",
     "cat": "Drones",
-    "sub": "Two-Seat eVTOL",
+    "sub": "Manned eVTOL (2-seat multicopter)",
     "year": 2022,
     "origin": "China",
-    "status": "Prototype",
+    "status": "Development",
     "price": "POA",
     "img": "",
-    "desc": "XPeng's two-seat 'flying car' eVTOL that completed public flights in Dubai — carbon-fiber body, ~35-minute flight time, 130 km/h, part of AeroHT's roadmap toward a production land-air vehicle.",
+    "desc": "A two-seat manned electric vertical-take-off aircraft from XPeng AeroHT (the flying-car affiliate of Chinese automaker XPeng), publicly flown in Dubai in 2022. The Voyager X2 is a closed-cockpit octacopter — eight rotors in a distributed-electric layout for stability and fail-safe redundancy — built around a lightweight carbon-fibre structure. It weighs about 560 kg empty, cruises around 130 km/h at low altitude (up to ~1,000 m), and offers roughly 35 minutes of flight. Sensing combines LiDAR, radar and ultrasonics with AI obstacle avoidance, and safety features include multi-rotor redundancy and a ballistic parachute. It's an early step in XPeng AeroHT's push toward a road-and-air 'flying car'.",
     "tags": [
       "drone",
       "evtol",
@@ -134781,11 +134809,33 @@
     "max_speed": "130 km/h",
     "max_flight_time": 35,
     "use_cases": [
-      "Personal aerial mobility"
+      "Urban air mobility",
+      "Low-altitude city flights",
+      "Executive short-hop travel"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "form_factor": "Octacopter eVTOL (8 rotors)",
+    "motors": 8,
+    "seats": 2,
+    "weight_kg": 560,
+    "cruise_speed_kmh": 130,
+    "flight_time": 35,
+    "range_km": 75,
+    "service_ceiling_m": 1000,
+    "frame_material": "Carbon fibre",
+    "propulsion": "Distributed electric (8 rotors)",
+    "sensors_list": [
+      "LiDAR",
+      "Radar",
+      "Ultrasonic",
+      "AI obstacle avoidance"
+    ],
+    "safety": "Ballistic parachute + multi-rotor redundancy",
+    "autonomous": "Autonomous + manual flight",
+    "manufacturer_url": "https://www.xpeng.com/aeroht"
   },
   {
     "id": "dji-flycart-30",
