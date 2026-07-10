@@ -121206,18 +121206,48 @@
     "brand": "Unimation",
     "cat": "Industrial",
     "year": 1961,
-    "status": "Retired",
-    "desc": "The first industrial robot in history. Born from George Devol’s 1954 patent and Joseph Engelberger’s vision, Unimate went to work on a General Motors die-casting line in Trenton, New Jersey in 1961 — unloading hot metal parts no human wanted to touch. It launched the entire robotics industry.",
-    "actuator_type": "Hydraulic arm, magnetic-drum program memory",
+    "status": "Discontinued",
+    "desc": "The world's first industrial robot. Conceived by inventor George Devol (whose 1954 'Programmed Article Transfer' patent, US 2,988,237, coined 'Unimation') and commercialised with Joseph Engelberger through Unimation of Danbury, Connecticut, the first Unimate (Model 1900) was installed at General Motors' Inland Fisher Guide plant in New Jersey in December 1961 to lift hot die-cast metal and spot-weld auto bodies — dangerous work for people. The ~1,814 kg hydraulic manipulator ran a self-contained hydraulic supply and stored its sequence on a magnetic drum, programmed by physically leading the arm through positions (an early lead-through 'teach and replay'). It handled ~45 kg payloads (later models far more) with ~1 mm repeatability, and was inducted into the Robot Hall of Fame in 2003; the line later evolved into the PUMA and passed to Westinghouse then Staubli.",
+    "actuator_type": "Hydraulic (self-contained, ~6.9 MPa / 1000 psi)",
     "use_cases": [
-      "Die-casting handling & spot welding (GM production lines)"
+      "Die-casting handling",
+      "Spot welding",
+      "Machine loading",
+      "Material handling"
     ],
     "made_in": "USA",
     "fig": "🤖",
     "tags": [],
     "score": 75,
     "rating": 4,
-    "img": "https://plain-eeur-prod-public.komododecks.com/202606/23/nJryTz2AkHLHkSVn3Lkg/image.jpg"
+    "img": "https://plain-eeur-prod-public.komododecks.com/202606/23/nJryTz2AkHLHkSVn3Lkg/image.jpg",
+    "sub": "First Industrial Robot (hydraulic arm)",
+    "origin": "USA",
+    "weight_kg": 1814,
+    "payload_kg": 45,
+    "payload": 45,
+    "dof": 5,
+    "axes": 5,
+    "coordinate_system": "Polar / spherical",
+    "frame_material": "Steel base + aluminium arm",
+    "memory": "Magnetic drum (hundreds of steps)",
+    "controller": "Vacuum-tube digital (later transistor/CMOS)",
+    "programming": "Lead-through teach (point-to-point + continuous path)",
+    "sensors_list": [
+      "Digital optical encoders",
+      "Limit switches",
+      "Proximity sensors",
+      "Potentiometers"
+    ],
+    "repeatability": 1,
+    "price": 18000,
+    "currency": "USD",
+    "inventor": "George Devol + Joseph Engelberger",
+    "deployed_at": [
+      "GM Inland Fisher Guide Plant, NJ (1961)"
+    ],
+    "awards": "Robot Hall of Fame (2003)",
+    "manufacturer_url": "https://www.staubli.com/"
   },
   {
     "id": "sri-shakey",
@@ -121417,17 +121447,27 @@
     "brand": "Sankyo Seiki",
     "cat": "Industrial",
     "year": 1981,
-    "status": "Retired",
-    "desc": "The first commercial SCARA robot. Hiroshi Makino’s Selective Compliance Assembly Robot Arm concept (1978, Yamanashi University) reached factories in 1981 — rigid vertically, compliant horizontally, perfect for pick-and-place. SCARA remains a dominant assembly architecture today.",
-    "actuator_type": "4-axis SCARA configuration",
+    "status": "Discontinued",
+    "desc": "Sankyo Seiki's 'Skilam' was among the first commercial SCARA (Selective Compliance Assembly Robot Arm) robots, brought to market in 1981. The SCARA concept was devised by Professor Hiroshi Makino at Yamanashi University (first prototype 1978) and developed through a consortium of 13 Japanese companies; in 1981 members including Sankyo Seiki, Pentel and NEC launched the first commercial models. The four-axis architecture — two parallel revolute joints for horizontal (X-Y) compliance, a rigid prismatic Z axis, and a rotating wrist — is deliberately compliant in-plane yet stiff vertically, making it ideal for the high-speed 'peg-in-hole' insertion and pick-and-place work of electronics assembly, a perfect fit for Japan's 1980s consumer-electronics boom.",
+    "actuator_type": "Electric servo",
     "use_cases": [
-      "High-speed electronics assembly"
+      "Electronics assembly",
+      "High-speed pick-and-place",
+      "Peg-in-hole insertion"
     ],
     "made_in": "Japan",
     "fig": "🤖",
     "tags": [],
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "sub": "First Commercial SCARA Robot",
+    "origin": "Japan",
+    "dof": 4,
+    "axes": 4,
+    "configuration": "SCARA (2 revolute X-Y + prismatic Z + rotary wrist)",
+    "compliance": "Selective compliance (horizontal X-Y, rigid Z)",
+    "inventor": "Concept: Hiroshi Makino (Yamanashi University); 13-company consortium",
+    "manufacturer_url": "https://www.nidec.com/"
   },
   {
     "id": "heathkit-hero-1",
