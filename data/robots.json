@@ -114069,11 +114069,11 @@
     "id": "ex-robots-android",
     "name": "EX Robots Humanoid Android",
     "brand": "EX Robots",
-    "sub": "Hyper-realistic Android",
+    "sub": "Ultra-Realistic Android",
     "year": 2024,
     "origin": "China",
     "status": "Active",
-    "desc": "EX Robots (EX Future Technology, Dalian) builds hyper-realistic humanoid androids with silicone faces and many facial actuators for lifelike expressions, displayed in the company's humanoid museum and used for exhibitions and interactive entertainment.",
+    "desc": "A series of hyper-realistic humanoid androids from China's EX Robots (Dalian Tiasi Technology Development Co.), known for their lifelike human appearance. A mechanical metal body is wrapped in 3D-printed silicone skin over the face, hands and feet, and micro-motor actuators drive both the flexible joints and the facial 'muscles' to reproduce nuanced expressions, eye contact and gestures. Patented joint designs give an extensive range of motion. Control is via preset behaviour programs, smartphone/tablet apps and guided modes, with onboard cameras and microphones for perception and voice interaction. EX Robots is pioneering mass-production of customisable androids for service, entertainment, rescue and science-education roles.",
     "tags": [
       "entertainment",
       "android",
@@ -114096,7 +114096,22 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/683748da1d756ecb5f6829b2_Exrobot_02.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/683748d97e8cb9a5b90804ce_Exrobot_04.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/683748d927e2d9ca8b9c844f_Exrobot_05.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "actuator_type": "Micro-motor actuators (joints + facial muscles)",
+    "shell_material": "3D-printed silicone skin over metal body",
+    "display_face": "Silicone animatronic face (expressions + eye contact)",
+    "cameras": "Cameras + microphones",
+    "natural_language_commands": true,
+    "app": "Smartphone / tablet control + preset programs",
+    "use_cases": [
+      "Service and reception",
+      "Entertainment",
+      "Rescue operations",
+      "Science popularisation",
+      "Home / office assistance"
+    ],
+    "manufacturer_url": "https://www.ex-robots.com/"
   },
   {
     "cat": "Telepresence",
@@ -131448,17 +131463,18 @@
     "name": "Andi",
     "brand": "OrionStar",
     "cat": "Humanoid",
-    "sub": "Service Humanoid",
+    "sub": "Bipedal Service Humanoid",
     "year": 2025,
     "origin": "China",
-    "status": "Active",
+    "status": "Development",
     "price": "POA",
     "img": "",
     "use_cases": [
-      "Customer service",
-      "Commercial"
+      "Reception and guidance",
+      "Commercial service",
+      "Hospitality"
     ],
-    "desc": "OrionStar (Cheetah Mobile robotics spinoff) service-and-commercial humanoid built on the company's conversational-AI and service-robot experience.",
+    "desc": "A bipedal service humanoid in prototype development from OrionStar, the Beijing service-robotics company spun out of Cheetah Mobile (founded 2016, maker of the Lucki delivery robot and Greeting Mini). Andi is aimed at service and commercial applications and builds on OrionStar's established AI ecosystem — voice interaction, visual navigation and the OrionOS open platform. As a prototype, detailed hardware specifications have not yet been published.",
     "tags": [
       "humanoid",
       "orionstar",
@@ -131470,7 +131486,13 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "os": "OrionOS",
+    "ai_model": "OrionStar AI (voice interaction + visual navigation)",
+    "natural_language_commands": true,
+    "navigation": "Visual navigation (VSLAM)",
+    "manufacturer_url": "https://en.orionstar.com/"
   },
   {
     "id": "dataa-ginger",
@@ -131756,18 +131778,19 @@
     "name": "XMAN-R1",
     "brand": "KEENON Robotics",
     "cat": "Humanoid",
-    "sub": "Commercial Service Humanoid",
+    "sub": "Service Humanoid",
     "year": 2025,
     "origin": "China",
     "status": "Active",
     "price": "POA",
     "img": "",
     "use_cases": [
-      "Hospitality",
-      "Delivery",
-      "Service"
+      "Meal delivery and collection",
+      "Luggage handling",
+      "Room / washroom cleaning",
+      "Reception and order taking"
     ],
-    "desc": "KEENON Robotics' commercial service humanoid, extending the company's widely-deployed delivery/service-robot expertise (BellaBot-class fleets) into a humanoid form factor.",
+    "desc": "An embodied service humanoid unveiled by KEENON Robotics (a Shanghai commercial-service-robot leader since 2010) in March 2025. Built on KEENON's large-scale service-scenario data, XMAN-R1 uses multimodal fusion perception, spatial awareness and domain-specific knowledge graphs to understand high-level commands and carry out extended-range tasks — meal delivery and collection, luggage handling, room and washroom cleaning, and reception. A distinguishing feature is collaboration: via distributed multi-robot task coordination and swarm intelligence it works in sync with KEENON's other robots (DINERBOT, KLEENBOT, S100) for location-based teamwork. Its waist allows ~180-degree rotation for flexible manipulation.",
     "tags": [
       "humanoid",
       "keenon",
@@ -131779,7 +131802,15 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "made_in": "China",
+    "ai_model": "Multimodal fusion perception + domain knowledge graphs",
+    "natural_language_commands": true,
+    "fleet_management": true,
+    "cameras": "AI vision (object detection)",
+    "bimanual": true,
+    "hand_type": "Articulated hands",
+    "manufacturer_url": "https://www.keenon.com/"
   },
   {
     "id": "pal-robotics-kangaroo",
