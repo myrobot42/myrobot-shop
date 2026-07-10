@@ -114446,16 +114446,16 @@
   {
     "cat": "Social",
     "perf": false,
-    "price": "POA",
+    "price": 189,
     "id": "ropet-ai-pet",
     "name": "Ropet",
     "brand": "Ropet",
-    "sub": "AI Companion Pet",
+    "sub": "AI Companion Pet Robot",
     "year": 2025,
     "origin": "China",
     "status": "Active",
     "weight_kg": 0.6,
-    "desc": "Ropet is a fluffy AI companion pet (CES 2025) with expressive screen-eyes that recognises faces, gestures and emotions, reacts with joy/affection/hunger, and converses via large language models in 50+ languages. ~600 g, ~2 h runtime on a 30-min charge, wireless charging dock.",
+    "desc": "A furry, big-eyed AI companion pet from Mengyou Intelligence — the first product from a company founded by He Jiabin, former head of ByteDance's PICO Beijing ID design team — launched via Kickstarter in late 2024 and shown at CES 2025. Ropet loves being stroked and reacts to voice, touch and gestures with cute animated-eye expressions and sounds. Cameras, microphones and sensors give it facial recognition (it knows its owner and reacts to your expressions), a 'mood radar', and the ability to recognise foods and objects held up to its face (dangle a toy hotdog and hotdogs flash across its eyes). ChatGPT integration makes it optionally conversational in 50+ languages, and its interchangeable fur, faces, eye colours and accessories make each one customisable.",
     "tags": [
       "social",
       "companion pet",
@@ -114475,14 +114475,30 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGSkxeJBwglqc4LwQMHxL4Qw39d8FjF7iG6Z8D8x0bc4gimU7ZD7Ghih4&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLW5nJOmfXSeNqfp4aCHgtl8K0VNwa7nztW6ouJGHaDvcBUUz_IVS_5zlB&s=10"
     ],
-    "cameras": "Vision sensor for owner recognition",
+    "cameras": "Camera",
     "use_cases": [
-      "Palm-sized emotional companion (responds to touch, voice & warmth)"
+      "Companionship",
+      "Conversation",
+      "Emotional interaction / desk pet"
     ],
     "made_in": "China",
     "website": "https://www.ropet.ai",
     "price_band": "$",
-    "video": "https://youtu.be/EFfJ3H2WzW0"
+    "video": "https://youtu.be/EFfJ3H2WzW0",
+    "form_factor": "Furry desktop pet (interchangeable fur + face)",
+    "display_face": "Expressive animated eyes",
+    "microphones": "Microphone(s)",
+    "touch_sensing": "Touch-responsive (petting)",
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "object_recognition": true,
+    "gesture_control": true,
+    "ai_model": "ChatGPT integration (cloud LLM)",
+    "natural_language_commands": true,
+    "languages": "50+",
+    "customization": "Interchangeable fur / face, eye colours, accessories",
+    "currency": "USD",
+    "manufacturer_url": "https://www.ropet.com/"
   },
   {
     "cat": "Social",
@@ -114541,11 +114557,11 @@
     "id": "yukai-mirumi",
     "name": "Mirumi",
     "brand": "Yukai Engineering",
-    "sub": "Companion Creature Robot",
+    "sub": "Clip-On Companion Robot",
     "year": 2025,
     "origin": "Japan",
     "status": "Active",
-    "desc": "Mirumi (Yukai Engineering, CES 2025) is a small sloth-like companion robot that clings to bags or surfaces and reacts shyly when looked at or approached, designed purely to be endearing and reduce stress.",
+    "desc": "A palm-sized, furry companion robot from Tokyo's Yukai Engineering (the studio behind Qoobo and Nekojita FuFu), shown at CES 2025. Mirumi clips onto a bag handle or strap and does exactly one thing charmingly: it turns its single rotating head to 'peek' at nearby people. Using an internal IMU and a distance sensor, it scans its surroundings and, once it notices someone, fixes them with an innocent baby-like gaze — then acts bashful and hides its face, or gives a little bow when petted. Inspired by the warm feeling of catching a cute baby's eye in public, it has no voice or app; its whole purpose is to spark small moments of shared joy with strangers on a train or in a queue.",
     "tags": [
       "social",
       "companion",
@@ -114566,7 +114582,24 @@
       "https://static.designboom.com/wp-content/uploads/2025/12/mini-attachable-robot-mirumi-clings-bags-moves-head-designboom-500-1.jpg"
     ],
     "price_band": "$",
-    "video": "https://youtu.be/PEtshGcvtRk"
+    "video": "https://youtu.be/PEtshGcvtRk",
+    "made_in": "Japan",
+    "form_factor": "Palm-sized furry clip-on (bag strap)",
+    "actuator_type": "Rotating head (1 DoF)",
+    "sensors_list": [
+      "IMU (inertial)",
+      "Distance sensor"
+    ],
+    "imu": true,
+    "proximity_sensor": true,
+    "interaction": "Touch + motion reactive (peeks, eye contact, bashful hiding, bows; no voice)",
+    "shell_material": "Soft fur",
+    "use_cases": [
+      "Emotional companionship",
+      "Mood-lifting / shared joy",
+      "Portable charm companion"
+    ],
+    "manufacturer_url": "https://www.ux-xu.com/en/"
   },
   {
     "cat": "Social",
