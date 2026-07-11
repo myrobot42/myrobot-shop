@@ -16,7 +16,7 @@
 <link rel="dns-prefetch" href="https://i.ytimg.com">
 <link rel="manifest" href="/site.webmanifest">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-Q (spec renderer: expanded HAND & MANIPULATION movement+sensing fields, cobot END EFFECTOR gripper sensing) -->
+<!-- BUILD-TAG: build-Q (spec renderer: expanded HAND & MANIPULATION movement+sensing; all hand senses grouped in hand block; cobot END EFFECTOR gripper sensing) -->
 <meta name="mrs-build" content="build-Q">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,880+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
@@ -3454,9 +3454,10 @@ function buildSpecTable(r) {
   if (r.imu || r.imu_axes) html += row('IMU', r.imu_axes ? `${r.imu_axes}-axis` : 'Yes');
   if (r.thermal_camera !== undefined && !isDrone) html += row('Thermal camera', r.thermal_camera);
   // Audio specs moved to SOUND section
-  if (r.touch_sensing) html += row('Touch sensing', r.touch_sensing);
-  if (r.touch_sensors_count) html += row('Tactile sensors', r.touch_sensors_count);
-  if (r.force_sensing && !isHumanoid) html += row('Force/torque sensing', r.force_sensing);
+  // Touch/force sensing render inside HAND & MANIPULATION for hand-equipped robots; here only for others
+  if (r.touch_sensing && !(isHumanoid || r.hand_type)) html += row('Touch sensing', r.touch_sensing);
+  if (r.touch_sensors_count && !(isHumanoid || r.hand_type)) html += row('Tactile sensors', r.touch_sensors_count);
+  if (r.force_sensing && !(isHumanoid || r.hand_type)) html += row('Force/torque sensing', r.force_sensing);
 
   // ── HAND / GRIPPER (humanoid) ──
   if (isHumanoid || r.hand_type) {
@@ -3485,7 +3486,10 @@ function buildSpecTable(r) {
     if (r.can_use_tools !== undefined) html += row('Uses standard tools', r.can_use_tools);
     if (r.tool_changer !== undefined) html += row('Tool changer', r.tool_changer);
     if (r.dexterous_hand !== undefined) html += row('Dexterous hand', r.dexterous_hand, '', r.dexterous_hand_note || '');
-    // hand sensing (senses at the hand)
+    // hand sensing (all senses at the hand, grouped here)
+    if (r.touch_sensing && r.touch_sensing !== 'none') html += row('Tactile sensing', r.touch_sensing);
+    if (r.touch_sensors_count) html += row('Tactile sensors', r.touch_sensors_count);
+    if (r.force_sensing) html += row('Force/torque sensing', r.force_sensing);
     if (r.tactile_type) html += row('Tactile sensor type', r.tactile_type);
     if (r.tactile_resolution) html += row('Tactile resolution', r.tactile_resolution);
     if (r.fingertip_force_sensors !== undefined) html += row('Fingertip force sensors', r.fingertip_force_sensors);
