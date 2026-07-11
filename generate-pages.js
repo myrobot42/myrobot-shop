@@ -189,7 +189,7 @@ ${aff?`<a class="aff" href="${attr(aff.url)}" target="_blank" rel="sponsored nof
 <h2>${esc(r.name)} — full specifications</h2>
 <table><tbody>${rows.map(([l,v])=>`<tr><td>${esc(l)}</td><td>${esc(v)}</td></tr>`).join('')}</tbody></table>\n${pricesHtml(r)}\n${picturesHtml(r)}\n${videosHtml(r)}
 ${rel.length?`<h2>Similar ${esc(r.cat||'robots')}</h2><div class="rel">${rel.map(x=>`<a href="/r/${attr(x.id)}.html">${esc(x.name)}</a>`).join('')}</div>`:''}
-<footer>${esc(r.name)} is one of ${ROBOTS.length.toLocaleString()} robots catalogued on <a href="/">myrobot.shop</a> — the world's largest robot database. <a href="/#methodology">How we source our data</a>.</footer>
+<footer>${esc(r.name)} is one of thousands of robots catalogued on <a href="/">myrobot.shop</a> — the world's largest robot database. <a href="/#methodology">How we source our data</a>.</footer>
 </body></html>`;
 }
 
@@ -245,7 +245,7 @@ let qUrls=[];
 ${cat.intro?`<p class="lead">${esc(cat.intro)}</p>`:''}
 ${body}
 ${answerLinks(cat)}
-<footer>Browsing ${esc(cat.category_name)}? See all <a href="/questions/">robot questions</a> or explore the <a href="/">full database of ${ROBOTS.length.toLocaleString()} robots</a>. <a href="/#methodology">How we source our data</a>.</footer>
+<footer>Browsing ${esc(cat.category_name)}? See all <a href="/questions/">robot questions</a> or explore the <a href="/">full database of thousands of robots</a>. <a href="/#methodology">How we source our data</a>.</footer>
 </body></html>`;
     fs.writeFileSync(path.join(qdir,cslug+'.html'),html);
     qUrls.push(`<url><loc>${url}</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>`);
@@ -273,7 +273,7 @@ ${answerLinks(cat)}
 <h1>Robot questions &amp; answers</h1>
 <p class="lead">Honest, no-hype answers to the questions people ask most before buying or learning about robots — pick a category to dive in.</p>
 <div class="qlist">${cards}</div>
-<footer>Can't find your question? Explore the <a href="/">full database of ${ROBOTS.length.toLocaleString()} robots</a> or <a href="/#methodology">see how we source our data</a>.</footer>
+<footer>Can't find your question? Explore the <a href="/">full database of thousands of robots</a> or <a href="/#methodology">see how we source our data</a>.</footer>
 </body></html>`;
   fs.writeFileSync(path.join(qdir,'index.html'),hub);
   qUrls.push(`<url><loc>${SITE}/questions/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>`);
