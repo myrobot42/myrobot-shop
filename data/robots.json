@@ -3503,7 +3503,7 @@
     "lidar": false,
     "depth_sensing": true,
     "imu": "6-axis IMU",
-    "touch_sensing": false,
+    "touch_sensing": "33-point tactile (Dex3-1 tactile version, optional)",
     "wifi": "Wi-Fi 5",
     "bluetooth": "5.0",
     "ros": "ROS 2",
@@ -3546,7 +3546,21 @@
     "battery": 120,
     "hand_dof": 7,
     "actuator_type": "Unitree brushless force-control joints (PMSM)",
-    "battery_life_typical": 120
+    "battery_life_typical": 120,
+    "hand_type": "Dex3-1 three-finger force-control (optional)",
+    "fingers": 3,
+    "hand_actuation": "Micro-brushless force-control: 6 direct-drive joints + 1 gear-driven",
+    "hand_payload_kg": 0.5,
+    "hand_repeatability_mm": 2,
+    "hand_weight_g": 710,
+    "grip_types": [
+      "Pinch",
+      "Tripod"
+    ],
+    "touch_sensors_count": 33,
+    "tactile_type": "33 distributed tactile sensors (10–2500 g range)",
+    "fingertip_force_sensors": true,
+    "force_sensing": true
   },
   {
     "id": "unitree-avatar",
@@ -4321,7 +4335,7 @@
   {
     "id": "figure-02-commercial",
     "name": "Figure 02",
-    "brand": "Figure AI",
+    "brand": "Figure",
     "year": 2024,
     "status": "Active",
     "cat": "Humanoid",
@@ -4437,7 +4451,10 @@
     "speed": 2,
     "battery": 720,
     "hand_dof": 16,
-    "actuator_type": "Custom electromechanical"
+    "actuator_type": "Custom electromechanical",
+    "fingers": 5,
+    "hand_type": "Five-finger, human-equivalent strength",
+    "manipulation_level": "Human-like (16-DOF hands)"
   },
   {
     "id": "ur3e",
@@ -8445,7 +8462,12 @@
     "speed": 10,
     "battery": 600,
     "hand_dof": 11,
-    "actuator_type": "Tesla custom (14 rotary + 14 linear, planetary roller screw)"
+    "actuator_type": "Tesla custom (14 rotary + 14 linear, planetary roller screw)",
+    "fingers": 5,
+    "hand_type": "Five-finger, tendon-driven",
+    "hand_actuation": "Tendon-driven (metallic tendons)",
+    "tactile_type": "Fingertip tactile (all five fingers)",
+    "fingertip_force_sensors": true
   },
   {
     "id": "tesla-optimus-workplace",
@@ -8900,7 +8922,13 @@
     "battery": 8,
     "hand_dof": 21,
     "actuator_type": "Hydraulic (miniaturized valves)",
-    "video": "https://youtu.be/-HizP4UQvug"
+    "video": "https://youtu.be/-HizP4UQvug",
+    "fingers": 5,
+    "hand_type": "Five-finger dexterous (industry-leading)",
+    "manipulation_level": "Advanced — 21-DOF, demonstrated in-hand manipulation",
+    "tactile_type": "Proprietary tactile, ~5 mN sensitivity (near-human)",
+    "fingertip_force_sensors": true,
+    "force_sensing": true
   },
   {
     "id": "sanctuary-ai-phoenix-gen-6",
@@ -81347,7 +81375,7 @@
   {
     "id": "figure-03-2025",
     "name": "Figure 03",
-    "brand": "Figure AI",
+    "brand": "Figure",
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "tags": [
@@ -81434,7 +81462,13 @@
     "website": "https://www.figure.ai",
     "payload": 25,
     "speed": 1.2,
-    "battery": 300
+    "battery": 300,
+    "hand_type": "Five-finger, compliant soft-tip",
+    "tactile_type": "Proprietary fingertip tactile — 3 g (sub-gram) sensitivity",
+    "touch_sensing": "Proprietary fingertip tactile (3 g sensitivity)",
+    "fingertip_force_sensors": true,
+    "slip_detection": true,
+    "hand_camera": true
   },
   {
     "id": "tesla-optimus-gen3-2026",
@@ -81511,7 +81545,13 @@
     ],
     "payload": 20,
     "speed": 1.7,
-    "battery": 480
+    "battery": 480,
+    "hand_type": "Five-finger, tendon-driven (forearm-actuated)",
+    "hand_actuation": "Tendon-driven; 25 actuators per hand relocated into the forearm",
+    "manipulation_level": "Advanced (22-DOF, near-human dexterity)",
+    "tactile_type": "Capacitive fingertip force-feedback",
+    "touch_sensing": "Fingertip force-feedback tactile",
+    "fingertip_force_sensors": true
   },
   {
     "id": "boston-dynamics-atlas-electric-2024",
