@@ -49907,7 +49907,7 @@
       "https://www.agibot.com/public/static/index/en/images/G2/G2Two-img1.jpg"
     ],
     "made_in": "China",
-    "os": "WorkGPT / GO-1",
+    "os": "AimRT middleware + GO-1 / WorkGPT",
     "payload_kg": 5,
     "reach_mm": 650,
     "speed_ms": 1,
@@ -49920,7 +49920,15 @@
     "payload": 5,
     "speed": 1,
     "battery": 480,
-    "hand_type": "Force-controlled dexterous hand"
+    "hand_type": "Force-controlled dexterous hand",
+    "arm_dof": 7,
+    "ip_rating": "IP42",
+    "force_sensing": true,
+    "hot_swap": true,
+    "sdk": true,
+    "announced": "2025-10",
+    "ai_model_type": "Vision-Language-Latent-Action (ViLLA, GO-1)",
+    "navigation": "3D LiDAR + RGB-D 360° perception, omnidirectional chassis"
   },
   {
     "id": "agibot-g1",
@@ -81931,7 +81939,15 @@
     "video": "https://youtu.be/hZ3naA_5010",
     "payload": 30,
     "speed": 1.5,
-    "battery": 120
+    "battery": 120,
+    "leg_dof": 6,
+    "neck_dof": 2,
+    "os": "AimRT middleware (real-time comms) + WorkGPT",
+    "navigation": "HIMUS 3D-SLAM + VectorFlux planning (L4 autonomy)",
+    "autonomous": true,
+    "force_sensing": true,
+    "sdk": true,
+    "ai_open_source": false
   },
   {
     "id": "agibot-a3-2025",
@@ -107476,7 +107492,15 @@
     "battery": 240,
     "actuator_type": "Electric (integrated joint modules)",
     "payload": 2,
-    "payload_kg": 2
+    "payload_kg": 2,
+    "leg_dof": 6,
+    "neck_dof": 2,
+    "torque_nm": 270,
+    "manipulation_level": "Service dexterous (6-DOF hand)",
+    "autonomous": true,
+    "facial_recognition": true,
+    "speech_synthesis": true,
+    "warranty_months": 12
   },
   {
     "id": "agibot-a2-max-2025",
@@ -107504,7 +107528,7 @@
     "announced": "2024-08",
     "height_mm": 1750,
     "weight_kg": 85,
-    "dof": 40,
+    "dof": 67,
     "payload_kg": 40,
     "torque_nm": 450,
     "arm_dof": 7,
@@ -107520,7 +107544,7 @@
       "Heavy-duty industrial humanoid (Yuanzheng series)"
     ],
     "website": "https://www.agibot.com",
-    "os": "WorkGPT / GO-1",
+    "os": "AimRT middleware + GO-1 / WorkGPT",
     "released": 2025,
     "perf": false,
     "fig": "🤖",
@@ -107532,7 +107556,18 @@
       "https://unibot.ru/upload/iblock/ac8/86c7lu3r8a9r3aey7pp95s6m5p6220kt.jpg"
     ],
     "payload": 40,
-    "actuator_type": "Electric (integrated joint modules + linear-actuator legs)"
+    "actuator_type": "Electric (integrated joint modules + linear-actuator legs)",
+    "leg_dof": 6,
+    "waist_dof": 3,
+    "hand_dof": 12,
+    "dexterous_hand": true,
+    "manipulation_level": "Industrial dexterous (19-DOF hands, 12 active)",
+    "speed": 1,
+    "speed_ms": 1,
+    "ai_model_type": "Vision-Language-Latent-Action (ViLLA, GO-1)",
+    "navigation": "HIMUS 3D-SLAM + VectorFlux (L4 autonomy)",
+    "lidar_type": "3D",
+    "warranty_months": 12
   },
   {
     "id": "eufy-omni-s1-pro",
