@@ -119418,7 +119418,9 @@
       "Imitation Learning"
     ],
     "llm_model": "Edge LLM (on-device)",
-    "manufacturer_url": "https://www.booster.tech/"
+    "manufacturer_url": "https://www.booster.tech/",
+    "speed": 1.2,
+    "speed_ms": 1.2
   },
   {
     "cat": "Humanoid",
@@ -119639,7 +119641,11 @@
       "Sim-to-real"
     ],
     "price_note": "(~88,000 yuan)",
-    "speed": 2
+    "speed": 2,
+    "arm_dof": 5,
+    "leg_dof": 6,
+    "torque_nm": 300,
+    "chipset": "Intel N97 + NVIDIA Jetson Orin (dual-chip)"
   },
   {
     "cat": "Humanoid",
@@ -119692,7 +119698,7 @@
     "cameras": "Depth camera + multi-mic array + LiDAR 360° (Engine Sense)",
     "lidar": true,
     "imu": true,
-    "frame_material": "Aerospace-grade aluminum alloy (10-year design life)",
+    "frame_material": "Aluminum alloy",
     "battery_type": "10,000 mAh quick-swap",
     "hot_swap": true,
     "ai_model": "End-to-end neural network (RL + imitation learning) — first humanoid with natural human-like gait",
@@ -119700,7 +119706,9 @@
     "sdk": "Open developer stack",
     "price_note": "($20,000-30,000)",
     "payload": 15,
-    "speed": 2
+    "speed": 2,
+    "navigation": "Engine Sense — LiDAR-assisted 360° perception",
+    "design_life_years": 10
   },
   {
     "cat": "Humanoid",
