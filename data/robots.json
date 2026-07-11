@@ -53324,7 +53324,9 @@
     "video": "https://youtu.be/DJk1v21ugcU",
     "speed": 1,
     "battery": 240,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "touch_sensing": "Artificial skin",
+    "force_sensing": true
   },
   {
     "id": "neura-robotics-neura-quadruped-robot",
@@ -82433,7 +82435,7 @@
     "origin": "Germany",
     "cameras": "Multi-camera RGB-D",
     "ai_model": "Cognitive AI (NVIDIA Isaac GR00T)",
-    "wifi": true,
+    "wifi": "Wi-Fi 6",
     "bluetooth": true,
     "made_in": "Germany",
     "announced": "2024",
@@ -82484,7 +82486,14 @@
     "payload": 100,
     "speed": 1.4,
     "battery": 420,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "chipset": "NVIDIA Thor (Isaac GR00T)",
+    "hand_dof": 12,
+    "ros_version": "ROS 2",
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ]
   },
   {
     "id": "neura-mipa-gen3-2026",
