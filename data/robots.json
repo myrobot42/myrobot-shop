@@ -122191,7 +122191,7 @@
     "brand": "Honda",
     "cat": "Humanoid",
     "year": 1996,
-    "status": "Discontinued",
+    "status": "Active",
     "height_mm": 1820,
     "weight_kg": 210,
     "desc": "Unveiled in December 1996, Honda's P2 was the world's first self-regulating, wireless bipedal humanoid — a landmark that made global headlines and led directly to ASIMO. Standing 1.82 m and 210 kg, it carried its computer, motor drives, battery and radio inside its torso, letting it walk untethered at ~2 km/h, climb up and down stairs (using a six-axis foot force sensor and ZMP control), push carts and tighten bolts. It was recognised as an IEEE Milestone in April 2026.",
@@ -122230,7 +122230,10 @@
     "force_sensing": true,
     "bimanual": true,
     "power_source": "Onboard battery (fully wireless)",
-    "manufacturer_history": "Second of Honda's 'P' prototype series (program began 1986; P-series 1993); preceded the E-series and led to the ASIMO line. IEEE Milestone (2026)."
+    "manufacturer_history": "Second of Honda's 'P' prototype series (program began 1986; P-series 1993); preceded the E-series and led to the ASIMO line. IEEE Milestone (2026).",
+    "dof": 30,
+    "arm_dof": 7,
+    "leg_dof": 6
   },
   {
     "id": "honda-p3",
@@ -122238,7 +122241,7 @@
     "brand": "Honda",
     "cat": "Humanoid",
     "year": 1997,
-    "status": "Discontinued",
+    "status": "Active",
     "height_mm": 1600,
     "weight_kg": 130,
     "desc": "Completed in September 1997, Honda's P3 was the world's first fully self-contained (completely independent) bipedal humanoid walking robot. By revising materials and adopting distributed control, Honda shrank the earlier P2 to 1.6 m and 130 kg — closer to a size suited to human living spaces — while walking at ~2 km/h and climbing stairs. P3 was loaned to Japan's AIST in 1998, helping kick-start the national Humanoid Robotics Project, and was the final step before ASIMO.",
@@ -122276,7 +122279,11 @@
     "stair_climbing": true,
     "bimanual": true,
     "power_source": "Onboard battery (fully independent)",
-    "manufacturer_history": "Third Honda 'P' prototype; loaned to AIST in 1998 to seed Japan's Humanoid Robotics Project (HRP); immediate predecessor to ASIMO (2000)."
+    "manufacturer_history": "Third Honda 'P' prototype; loaned to AIST in 1998 to seed Japan's Humanoid Robotics Project (HRP); immediate predecessor to ASIMO (2000).",
+    "dof": 30,
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "force_sensing": true
   },
   {
     "id": "mit-kismet",
@@ -124165,7 +124172,12 @@
     "shell_material": "Silicone-skinned realistic face",
     "voice_interaction": "Speech recognition + ambient-sound recognition; Vocaloid singing",
     "os": "OpenRTP (OpenRTM-aist, OpenHRP3)",
-    "manufacturer_history": "Developed by AIST; publicly demonstrated 16 Mar 2009, with gait upgrades shown 2010–2011."
+    "manufacturer_history": "Developed by AIST; publicly demonstrated 16 Mar 2009, with gait upgrades shown 2010–2011.",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "neck_dof": 3,
+    "force_sensing": true,
+    "speech_synthesis": true
   },
   {
     "cat": "Humanoid",
@@ -128479,7 +128491,15 @@
     "can_use_tools": true,
     "autonomy_level": "Semi-autonomous task execution",
     "bimanual": true,
-    "manufacturer_history": "Developed by AIST's humanoid research group (Fumio Kanehiro, Kenji Kaneko, Ken Sakaguchi), 2018; latest in the HRP series after HRP-2/3/4/4C."
+    "manufacturer_history": "Developed by AIST's humanoid research group (Fumio Kanehiro, Kenji Kaneko, Ken Sakaguchi), 2018; latest in the HRP series after HRP-2/3/4/4C.",
+    "arm_dof": 8,
+    "leg_dof": 6,
+    "neck_dof": 2,
+    "waist_dof": 3,
+    "hand_dof": 2,
+    "payload": 13,
+    "payload_kg": 13,
+    "force_sensing": true
   },
   {
     "id": "aist-hrp-2",
@@ -128490,7 +128510,7 @@
     "year": 2002,
     "origin": "Japan",
     "made_in": "Japan (AIST / Kawada Industries)",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO7N_GT9VAbnrTnagEs3UO0EmFLh8kv2YKQHSo4tTVNyNgyiYaaVHKnih7&s=10",
     "desc": "The second-generation robot in Japan's national Humanoid Robotics Project, jointly developed by AIST and Kawada Industries and announced in 2002. At 154 cm and 58 kg (with battery), HRP-2 uses 30 motors across legs, arms, head and waist and is famous for being able to lie down and stand back up (from front or back), crawl through tight spaces, walk narrow paths and cooperate with a human to lift heavy objects. Its striking exterior was styled by anime mecha designer Yutaka Izubuchi, and its cantilever hip lets it cross its legs like walking on a balance beam. Around 20 units were built and it became a widely used research platform; a modified HRP-2Kai competed in the DARPA Robotics Challenge.",
@@ -128534,7 +128554,9 @@
     "waist_dof": 2,
     "frame_material": "Cast magnesium alloy (cantilever hip structure)",
     "bimanual": true,
-    "manufacturer_history": "Second generation of the AIST/Kawada HRP series (METI/NEDO project); exterior by Yutaka Izubuchi; ~20 units built; HRP-2Kai variant modified for the DARPA Robotics Challenge (laser range finder + 4 CCD cameras, extended limbs)."
+    "manufacturer_history": "Second generation of the AIST/Kawada HRP series (METI/NEDO project); exterior by Yutaka Izubuchi; ~20 units built; HRP-2Kai variant modified for the DARPA Robotics Challenge (laser range finder + 4 CCD cameras, extended limbs).",
+    "hand_dof": 2,
+    "force_sensing": true
   },
   {
     "id": "kawada-nextage",
