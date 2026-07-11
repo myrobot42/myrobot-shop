@@ -32978,7 +32978,8 @@
     "payload": 50,
     "speed": 1.4,
     "battery": 60,
-    "hand_dof": 11
+    "hand_dof": 11,
+    "leg_dof": 6
   },
   {
     "id": "carbon-robotics-laserweeder",
@@ -52779,7 +52780,15 @@
       "https://imagecn.gasgoo.com/moblogo/News/UEditor/image/20260107/6390338107196148807485411.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn1EpbxCynrTKps74oItBT_PvUUe_DYN6ay1UGSupdUXmWOvBlI3TcptA&s=10"
     ],
-    "video": "https://youtu.be/25ULRycszkA"
+    "video": "https://youtu.be/25ULRycszkA",
+    "leg_dof": 6,
+    "waist_dof": 3,
+    "payload": 3,
+    "payload_kg": 3,
+    "touch_sensors_count": 31,
+    "emotion_detection": true,
+    "manipulation_level": "Dexterous (12-DOF hands)",
+    "intended_setting": "Companionship / eldercare / rehabilitation"
   },
   {
     "id": "fourier-intelligence-gr-2",
@@ -52869,7 +52878,12 @@
     "frame_material": "Enclosed bodywork, integrated concealed cabling",
     "payload": 3,
     "speed": 1.8,
-    "battery": 120
+    "battery": 120,
+    "leg_dof": 6,
+    "waist_dof": 3,
+    "reach_mm": 1520,
+    "tactile_type": "6 array-type tactile sensors per hand (force + shape/material ID)",
+    "fingertip_force_sensors": true
   },
   {
     "id": "neura-robotics-mipa",
@@ -61270,7 +61284,11 @@
       "Imitation Learning",
       "Reinforcement Learning"
     ],
-    "manufacturer_history": "Fourier's first 'Care-Bot', part of the GRx series; unveiled Aug 2025, shown at CES 2026. Soft-touch exterior with animated facial interface."
+    "manufacturer_history": "Fourier's first 'Care-Bot', part of the GRx series; unveiled Aug 2025, shown at CES 2026. Soft-touch exterior with animated facial interface.",
+    "leg_dof": 6,
+    "waist_dof": 3,
+    "payload": 3,
+    "payload_kg": 3
   },
   {
     "id": "milrem-robotics-mifik-autonomy-kit",
