@@ -83472,7 +83472,12 @@
       "https://spectrum.ieee.org/media-library/asimo.jpg?id=25565993&width=600&quality=85"
     ],
     "speed": 2.5,
-    "battery": 60
+    "battery": 60,
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "neck_dof": 3,
+    "hand_dof": 13,
+    "force_sensing": true
   },
   {
     "id": "softbank-pepper-2014",
@@ -110414,7 +110419,10 @@
     "cats": [
       "Humanoid",
       "Aerospace"
-    ]
+    ],
+    "neck_dof": 3,
+    "waist_dof": 3,
+    "hand_actuation": "Tendon-driven"
   },
   {
     "id": "nasa-r5-valkyrie",
@@ -110511,7 +110519,12 @@
     "cats": [
       "Humanoid",
       "Aerospace"
-    ]
+    ],
+    "neck_dof": 3,
+    "waist_dof": 3,
+    "hot_swap": true,
+    "fingertip_force_sensors": true,
+    "tactile_type": "38 sensors per 3-finger hand"
   },
   {
     "id": "roscosmos-skybot-fedor",
