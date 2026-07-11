@@ -9,24 +9,31 @@
 <link rel="shortcut icon" href="https://res.cloudinary.com/djrojgec1/image/upload/c_fit,b_white,w_32,h_32,f_png,q_auto/v1777366404/output_17_t74qys.jpg">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0066ff">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+<link rel="dns-prefetch" href="https://i.ytimg.com">
+<link rel="manifest" href="/site.webmanifest">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-O (hero nav tile shows short label via _navShort; full nav still in specs) -->
-<meta name="mrs-build" content="build-O">
-<meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,600+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
+<!-- BUILD-TAG: build-P (SEO/UX audit: card anchors, lazy card imgs, preconnect, Organization schema, category pages, manifest, skip-link) -->
+<meta name="mrs-build" content="build-P">
+<meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,880+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
 <meta property="og:type" content="website">
 <meta property="og:title" content="myrobot.shop — World's #1 Robot Database">
-<meta property="og:description" content="Detailed specs, comparisons, rankings and videos for 1,600+ robots — humanoids, quadrupeds, industrial arms, drones, space robots and more.">
+<meta property="og:description" content="Detailed specs, comparisons, rankings and videos for 1,880+ robots — humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <meta property="og:url" content="https://myrobot.shop/">
 <meta property="og:image" content="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_1200/v1777366404/output_17_t74qys.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="myrobot.shop — World's #1 Robot Database">
-<meta name="twitter:description" content="Detailed specs, comparisons, rankings and videos for 1,600+ robots.">
+<meta name="twitter:description" content="Detailed specs, comparisons, rankings and videos for 1,880+ robots.">
 <meta name="twitter:image" content="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_1200/v1777366404/output_17_t74qys.jpg">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"myrobot.shop","url":"https://myrobot.shop/","description":"The world's largest robot database — specs, comparisons, rankings and videos.","potentialAction":{"@type":"SearchAction","target":"https://myrobot.shop/#db?q={search_term_string}","query-input":"required name=search_term_string"}}
 </script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"myrobot.shop","url":"https://myrobot.shop/","logo":"https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_512/v1777366404/output_17_t74qys.jpg","description":"The world's largest robot database — detailed specs, comparisons, rankings and videos for thousands of robots."}</script>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -43,6 +50,8 @@ h1,h2,h3{letter-spacing:-1px}
 .mw{max-width:1200px;margin:0 auto;width:100%;padding:0 40px}
 
 /* ── NAV ── */
+.skip-link{position:absolute;left:-9999px;top:0;z-index:1000;background:var(--acc);color:#fff;padding:10px 16px;border-radius:0 0 8px 0;font-weight:600;text-decoration:none}
+.skip-link:focus{left:0}
 nav{border-bottom:1px solid var(--bdr);background:#fff;position:sticky;top:0;z-index:200}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:0 22px 0 14px;height:56px}
 .logo{font-family:'Space Mono','Courier New',monospace;font-weight:700;font-size:16px;display:flex;align-items:center;gap:0;cursor:pointer;color:var(--txt);text-decoration:none;letter-spacing:-.5px}
@@ -101,7 +110,7 @@ h1 em{color:var(--acc);font-style:normal}
 .cat-count{font-size:10px;color:var(--mut);margin-top:2px}
 .divider{height:1px;background:var(--bdr)}
 .robots-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.robot-card{border:1px solid var(--bdr);border-radius:12px;overflow:hidden;cursor:pointer;transition:all .15s;background:#fff}
+.robot-card{border:1px solid var(--bdr);border-radius:12px;overflow:hidden;cursor:pointer;transition:all .15s;background:#fff;display:block;text-decoration:none;color:inherit}
 .robot-card:hover{border-color:var(--acc);box-shadow:0 4px 16px rgba(0,102,255,.07)}
 .cmp-badge{position:absolute;top:7px;right:7px;z-index:3;display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.93);border:1px solid var(--bdr);border-radius:6px;padding:3px 7px;font-size:10px;font-weight:700;color:var(--txt);cursor:pointer;backdrop-filter:blur(2px)}
 .cmp-badge input{cursor:pointer;margin:0;accent-color:var(--acc)}
@@ -993,6 +1002,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to content</a>
 <nav>
   <div class="nav-inner">
     <a class="logo" onclick="goPage('home')"><span class="logo-bracket">[</span>myrobot<span class="logo-acc">.shop</span><span class="logo-bracket">]</span></a>
@@ -1015,7 +1025,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
     </div>
   </div>
 </nav>
-
+<main id="main">
 <!-- AI ASSISTANT PAGE -->
 <div id="page-ai" class="page">
   <div style="max-width:880px;margin:0 auto;padding:28px 16px 10px">
@@ -1027,7 +1037,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 
 <!-- HOME -->
 <div id="page-home" class="page active">
-  <div class="top-bar"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_60/v1777366404/output_17_t74qys.jpg" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:6px;border-radius:50%;background:#fff"> World's #1 Robot Database — <span id="home-top-count">1,600+</span> robots catalogued and growing daily</div>
+  <div class="top-bar"><img src="https://res.cloudinary.com/djrojgec1/image/upload/f_auto,q_auto,w_60/v1777366404/output_17_t74qys.jpg" alt="" style="width:22px;height:22px;vertical-align:middle;margin-right:6px;border-radius:50%;background:#fff"> World's #1 Robot Database — <span id="home-top-count">1,880+</span> robots catalogued and growing daily</div>
   <div class="section"><div class="mw">
     <div class="home-shell">
 
@@ -1478,6 +1488,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   <div class="submit-page"><div class="submit-card"><div class="submit-title">Write a Review</div><div class="submit-sub">Share your experience to help others make the right decision.</div><div class="form-group-full" id="review-robot-row"><label class="form-label">Robot *</label><select class="form-select" id="review-robot-select"><option value="">Select a robot...</option></select></div><div class="form-group-full" id="review-robot-fixed" style="display:none"><label class="form-label">Robot</label><div id="review-robot-fixed-name" style="font-weight:700;font-size:15px;padding:6px 0"></div></div><div class="form-group-full"><label class="form-label">Your Rating *</label><div class="stars-select" id="stars-select"><span class="star-btn" onclick="setStars(1)">★</span><span class="star-btn" onclick="setStars(2)">★</span><span class="star-btn" onclick="setStars(3)">★</span><span class="star-btn" onclick="setStars(4)">★</span><span class="star-btn" onclick="setStars(5)">★</span></div></div><div class="form-row"><div class="form-group"><label class="form-label">Your Name</label><input class="form-input" type="text" id="review-name" placeholder="e.g. James K."></div><div class="form-group"><label class="form-label">Your Role</label><input class="form-input" type="text" id="review-role" placeholder="e.g. Robotics Engineer, Toyota"></div></div><div class="form-group-full"><label class="form-label">Review *</label><textarea class="form-textarea" id="review-text" style="min-height:120px" placeholder="Share your experience — pros, cons, use case, how long you've used it..."></textarea></div><div style="margin-top:20px;display:flex;gap:12px;align-items:center"><button class="submit-btn" onclick="submitReview()">Submit Review →</button><span style="font-size:11px;color:var(--mut)">Reviews moderated within 24 hours</span></div></div></div>
 </div>
 
+</main>
 <!-- GLOBAL FOOTER (shown on every page) -->
   <footer>
     <div class="footer-inner">
@@ -1651,7 +1662,7 @@ function _renderPage(p, opts){
   }
   // SEO/UX: per-page document titles (profile sets its own richer title)
   if(p!=='profile'){
-    var PT={home:"myrobot.shop — World's #1 Robot Database",db:"Robot Database — browse 1,600+ robots | myrobot.shop",finder:"Robot Finder | myrobot.shop",compare:"Compare Robots side by side | myrobot.shop",rankings:"Robot Rankings | myrobot.shop",news:"Robotics News | myrobot.shop",videos:"Robot Videos | myrobot.shop",manufacturers:"Robot Brands & Manufacturers | myrobot.shop",methodology:"How We Source Our Data | myrobot.shop"};
+    var PT={home:"myrobot.shop — World's #1 Robot Database",db:"Robot Database — browse 1,880+ robots | myrobot.shop",finder:"Robot Finder | myrobot.shop",compare:"Compare Robots side by side | myrobot.shop",rankings:"Robot Rankings | myrobot.shop",news:"Robotics News | myrobot.shop",videos:"Robot Videos | myrobot.shop",manufacturers:"Robot Brands & Manufacturers | myrobot.shop",methodology:"How We Source Our Data | myrobot.shop"};
     document.title=PT[p]||PT.home;
   }
 }
@@ -1799,8 +1810,8 @@ function renderHome(){
     const fig=robotFig(r);
     const id=r.id||'';
     return `
-    <div class="robot-card" onclick="openProfile('${id}')">
-      <div class="rc-img">${r.img?`<img src="${r.img}" alt="${name}" onerror="this.style.display='none';this.parentNode.querySelector('.rc-mascot').style.display='flex'">`:''}${r.badge?`<div class="rc-badge ${r.bc||''}">${r.badge}</div>`:''}<div class="rc-mascot" style="${r.img?'display:none;':'display:flex;'}position:absolute;inset:0;align-items:center;justify-content:center;background:#fff">${mascotImg(r,'80%')}</div></div>
+    <a class="robot-card" href="/r/${id}.html" onclick="openProfile('${id}');return false">
+      <div class="rc-img">${r.img?`<img src="${r.img}" alt="${name}" loading="lazy" onerror="this.style.display='none';this.parentNode.querySelector('.rc-mascot').style.display='flex'">`:''}${r.badge?`<div class="rc-badge ${r.bc||''}">${r.badge}</div>`:''}<div class="rc-mascot" style="${r.img?'display:none;':'display:flex;'}position:absolute;inset:0;align-items:center;justify-content:center;background:#fff">${mascotImg(r,'80%')}</div></div>
       <div class="rc-info">
         <div class="rc-brand">${brand}</div>
         <div class="rc-name">${name}</div>
@@ -1811,7 +1822,7 @@ function renderHome(){
           ${priceStars(r)}
         </div>
       </div>
-    </div>`;}).join('');
+    </a>`;}).join('');
   // ── Three homepage columns: Trending / Latest / Available (10 each, genuinely different) ──
   var _trendScores = (window.TRENDING && window.TRENDING.scores) ? window.TRENDING.scores : null;
   function chartRow(r){
@@ -2253,7 +2264,7 @@ function renderDb(){
   } else {
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
-        <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
+        <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" loading="lazy" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
         <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>
       </div>`).join('')}</div>`;
   }
@@ -4951,7 +4962,7 @@ function robotRowHTML(r,i,ranks){
 }
 function robotCardHTML(r,i){
   return `<div class="robot-card" onclick="openProfile('${r.id}')">`
-    + `<div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>`
+    + `<div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" loading="lazy" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>`
     + `<div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${(r.tags||[]).slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>`
     + `</div>`;
 }
