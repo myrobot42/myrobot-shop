@@ -36181,7 +36181,7 @@
     "name": "Joby S4 Hydrogen-Electric",
     "brand": "Joby Aviation",
     "cat": "Drones",
-    "sub": "Hybrid VTOL",
+    "sub": "Hydrogen-Electric eVTOL (technology demonstrator)",
     "tags": [
       "joby aviation",
       "hybrid",
@@ -36195,7 +36195,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Hydrogen-electric version of S4 demonstrator with H2Fly fuel cell system. Completed record 523-mile non-stop flight with 88 lb liquid hydrogen capacity. Range more than triple the battery version.",
+    "desc": "A hydrogen-electric version of Joby's S4 tilt-rotor air taxi, built to show that liquid hydrogen could unlock emissions-free regional flying without a runway. Joby converted a retired pre-production battery-electric S4 (prototype N542BJ) in a matter of weeks - keeping ~90% of the aircraft the same - by adding a Joby-built 40 kg liquid-hydrogen tank (cryogenic, ~22 K, vacuum-jacketed) and an H2FLY H2F-175 fuel-cell system that produces electricity, water and heat; the fuel cell powers the six tilting rotors while a small supplemental battery adds takeoff/landing power and is recharged in cruise. On 24 June 2024 it flew a record 523 miles (842 km) non-stop in 4h47m - believed to be the first forward flight of a liquid-hydrogen-powered VTOL - landing with 10% fuel remaining, and later reached 561 miles, with water vapor as the only emission. Internally nicknamed 'SHy4' (S4 + H2FLY's HY4), it reuses Joby's ElevateOS software, landing pads and operations model, and the program is backed by the USAF's Agility Prime.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -36205,7 +36205,7 @@
     },
     "origin": "USA",
     "year": 2023,
-    "status": "Active",
+    "status": "Prototype",
     "height_mm": 3050,
     "width_mm": 11582,
     "depth_mm": 6350,
@@ -36213,12 +36213,26 @@
     "speed_ms": 89,
     "payload_kg": 454,
     "use_cases": [
-      "Urban air mobility",
-      "Regional passenger transport",
-      "Air taxi services",
-      "Emergency medical transport"
+      "Emissions-free regional air mobility",
+      "Long-range eVTOL"
     ],
-    "manufacturer_url": "https://www.jobyaviation.com"
+    "manufacturer_url": "https://www.jobyaviation.com/",
+    "made_in": "USA",
+    "internal_name": "SHy4",
+    "config": "Tilt-rotor eVTOL (6 tilting rotors)",
+    "powertrain": "Liquid-hydrogen fuel cell + supplemental battery",
+    "fuel_cell": "H2FLY H2F-175",
+    "h2_tank": "40 kg liquid hydrogen (22 K, vacuum-jacketed)",
+    "range_km": 842,
+    "range_note": "523 mi record (Jun 2024); later 561 mi",
+    "flight_duration": "4h 47m",
+    "emissions": "Water vapor only",
+    "passengers": "Pilot + 4",
+    "base_airframe": "Converted S4 2.0 prototype (N542BJ)",
+    "shared_systems": "~90% shared with battery S4; ElevateOS, same pads/ops",
+    "partner": "H2FLY (Joby subsidiary)",
+    "program": "USAF Agility Prime",
+    "first_flight": "June 24, 2024 (first LH2 VTOL forward flight)"
   },
   {
     "id": "joby-aviation-joby-s4-jas4-1-",
@@ -58814,7 +58828,7 @@
     "name": "Zenmuse H30 Series",
     "brand": "DJI",
     "cat": "Drones",
-    "sub": "Survey / Mapping Drone",
+    "sub": "Multi-Sensor Gimbal Payload",
     "tags": [
       "dji",
       "survey",
@@ -58828,7 +58842,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Advanced multi-sensor gimbal with enhanced night vision, powerful infrared performance, and smart multi-scenario operations for enterprise applications",
+    "desc": "DJI Enterprise's flagship all-weather, multi-sensor gimbal payload (released May 2024), sold in two models: the H30 with four modules and the H30T which adds an infrared thermal camera for five. Together the modules cover a 48MP 1/1.3in wide-angle camera (24mm, 82.1-degree DFOV), a 40MP 1/1.8in zoom camera (34x optical / 400x digital), the H30T's 1280x1024 radiometric thermal camera (measuring -20 to 1600C), a laser rangefinder good to 3-3000m, and an NIR auxiliary light for night work. It shoots 4K/30fps, weighs ~920g, is IP54-rated, and adds Night Scene mode, UHR infrared, electronic dehazing, foreground stabilization, pre-recording, Click-to-Aim and AES-256 encryption. It mounts on the DJI Matrice 300, 350 and 400 RTK aircraft and integrates with DJI Pilot 2 and FlightHub 2 - a big step up from the H20 series - for public safety, powerline/energy inspection, search-and-rescue, forestry and firefighting.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -58846,21 +58860,37 @@
     "wifi": true,
     "bluetooth": true,
     "use_cases": [
-      "Search and rescue",
-      "Infrastructure inspection",
-      "Security surveillance",
-      "Fire detection",
-      "Wildlife monitoring",
-      "Industrial inspection"
+      "Public safety",
+      "Powerline / energy inspection",
+      "Search & rescue",
+      "Forestry / firefighting"
     ],
-    "manufacturer_url": "https://www.dji.com",
+    "manufacturer_url": "https://enterprise.dji.com/zenmuse-h30-series",
     "product_url": "https://www.dji.com/zenmuse-h30-series",
     "gallery": [
       "https://www.w3shopping.com/cdn/shop/files/DJI-Zenmuse-H30-Series-W3-Shopping-109360845.jpg?v=1719670466",
       "https://www.w3shopping.com/cdn/shop/files/DJI-Zenmuse-H30-Series-W3-Shopping-109360663.jpg?v=1719670459"
     ],
     "website": "https://www.dji.com",
-    "video": "https://youtu.be/a_ZEPqs_L-Y"
+    "video": "3840x2160@30fps",
+    "made_in": "China",
+    "type": "Camera payload (not standalone aircraft)",
+    "modules": "Wide + zoom + thermal (H30T) + laser rangefinder + NIR light",
+    "wide_camera": "48MP 1/1.3in CMOS, 24mm, 82.1 DFOV",
+    "zoom_camera": "40MP 1/1.8in CMOS, 34x optical / 400x digital",
+    "thermal_camera": "1280x1024, -20 to 1600C (H30T)",
+    "laser_rangefinder": "3-3000 m (+/-1 m >500 m)",
+    "nir_light": true,
+    "weight_g": 920,
+    "ip_rating": "IP54",
+    "night_mode": "Night Scene + NIR + UHR infrared",
+    "features": "Click-to-Aim, pre-recording, dehazing, foreground stabilization",
+    "encryption": "AES-256 + security code",
+    "compat": "Matrice 300 / 350 / 400 RTK",
+    "variants": [
+      "H30 (4 sensors)",
+      "H30T (5 sensors, thermal)"
+    ]
   },
   {
     "id": "dji-zenmuse-l3",
