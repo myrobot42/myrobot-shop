@@ -82633,7 +82633,8 @@
     "payload": 3,
     "speed": 1,
     "battery": 480,
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "force_sensing": true
   },
   {
     "id": "pal-talos-2017",
@@ -82706,7 +82707,11 @@
       "https://cdn.sanity.io/images/7p2whiua/production/8f11a8b9cd0d82907aee57af4f7d0d52f663d70a-2048x1536.jpg"
     ],
     "payload": 6,
-    "battery": 180
+    "battery": 180,
+    "neck_dof": 2,
+    "waist_dof": 2,
+    "speed": 0.83,
+    "speed_ms": 0.83
   },
   {
     "id": "xiaomi-cyberone-2022",
@@ -128320,7 +128325,9 @@
       "https://cdn.sanity.io/images/7p2whiua/production/6db9d3220b99dac689974d90df4f4f6677de8db3-2048x1536.jpg",
       "https://pal-robotics.com/wp-content/uploads/2026/03/Reem-c-Feature-Nav-2.webp"
     ],
-    "video": "https://youtu.be/4HZIDpNSKyc"
+    "video": "https://youtu.be/4HZIDpNSKyc",
+    "arm_dof": 7,
+    "neck_dof": 2
   },
   {
     "id": "aist-hrp-5p",
