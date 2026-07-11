@@ -36698,7 +36698,7 @@
     "name": "Wingcopter 178 Heavy Lift",
     "brand": "Wingcopter",
     "cat": "Drones",
-    "sub": "Heavy-Lift Drone",
+    "sub": "Heavy-Lift Tilt-Rotor eVTOL Delivery Drone",
     "tags": [
       "wingcopter",
       "heavy",
@@ -36713,7 +36713,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Heavy lift variant of the Wingcopter 178 designed for larger payload delivery missions",
+    "desc": "The heavy-lift version of Wingcopter's 178, reinforced with glass- and carbon-fibre layers and a more powerful propulsion system to carry heavier professional payloads and sensors while keeping high commonality with the base aircraft. Measuring 48 x 178 x 146 cm and weighing 8.4 kg empty (up to an 18 kg max takeoff weight with four batteries), it lifts up to 6 kg, flies up to ~120 minutes / 120 km (unladen) at up to 150 km/h, and in 2018 set a Guinness World Record for the fastest tilt-rotor aircraft at 240.6 km/h. It runs on 2-4 lithium-polymer packs with a rich sensor set (dual-GNSS, dual magnetometer, IMU, pitot, LiDAR altimeter, ADS-B) and triple-redundant telemetry (RC radio, 4G cellular and Iridium satellite), delivering by winch slow-drop or landing. It has flown high-profile humanitarian missions with DHL and UNICEF - vaccine and medical delivery in Vanuatu, Malawi and Tanzania.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -36735,23 +36735,38 @@
     "cameras": "HD camera for monitoring and navigation",
     "imu": true,
     "use_cases": [
-      "Medical delivery",
-      "Emergency supply delivery",
-      "Remote area logistics",
-      "Last-mile delivery"
+      "Medical / vaccine delivery",
+      "Humanitarian logistics",
+      "Professional sensor carriage"
     ],
-    "manufacturer_url": "https://wingcopter.com",
+    "manufacturer_url": "https://wingcopter.com/",
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/1/12/Wingcopter_178_HL_Delivery_.jpg?_=20200928193206"
     ],
-    "video": "https://youtu.be/7KhDvhOdg3Q"
+    "video": "https://youtu.be/7KhDvhOdg3Q",
+    "made_in": "Germany",
+    "config": "Tilt-rotor eVTOL (GFRP + CFRP reinforced)",
+    "dimensions": "48 x 178 x 146 cm (HxWxL)",
+    "wingspan_m": 1.78,
+    "weight_empty_kg": 8.4,
+    "mtow_kg": 18,
+    "payload": 6,
+    "flight_time": 120,
+    "range_km": 120,
+    "range_note": "120 km unladen; varies with payload",
+    "max_speed": "150 km/h (record 240.6 km/h, 2018)",
+    "battery": "Li-Po 22.2V / 16Ah (2-4x)",
+    "sensors": "Dual-GNSS, dual magnetometer, IMU, pitot, LiDAR altimeter; ADS-B",
+    "telemetry": "2x RC radio + 4G cellular + Iridium satellite",
+    "delivery": "Winch slow-drop or landing (two-way)",
+    "deployments": "DHL, UNICEF vaccine delivery (Vanuatu, Malawi, Tanzania)"
   },
   {
     "id": "wingcopter-wingcopter-178",
     "name": "Wingcopter 178",
     "brand": "Wingcopter",
     "cat": "Drones",
-    "sub": "Delivery Drone",
+    "sub": "Tilt-Rotor eVTOL Delivery Drone",
     "tags": [
       "wingcopter",
       "delivery",
@@ -36765,7 +36780,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "First mass-produced Wingcopter model, dimensions 178cm x 132cm x 52cm, capable of BVLOS flight with proprietary tiltrotor mechanism and winch delivery system",
+    "desc": "Wingcopter's first mass-produced delivery drone and the platform that established its patented tilt-rotor design, where the same propellers hover for vertical takeoff then tilt forward for efficient fixed-wing cruise (the '178' is its 178 cm wingspan). Roughly 178 x 132 x 52 cm, it carries up to 6 kg and flies about 100 km with a 2 kg payload at up to 150 km/h, operating beyond visual line of sight. It can deliver either by winching a package down for a slow-drop without landing, or by landing to enable two-way transport of medical samples and supplies. Widely used for last-mile medical delivery as well as mapping and surveying, it laid the groundwork for the later triple-drop Wingcopter 198.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -36787,13 +36802,23 @@
     "cameras": "HD camera for navigation and monitoring",
     "imu": true,
     "use_cases": [
-      "Medical delivery",
-      "Emergency supply delivery",
-      "Remote area logistics",
-      "Package delivery"
+      "Last-mile / medical delivery",
+      "Mapping",
+      "Surveying"
     ],
-    "manufacturer_url": "https://wingcopter.com",
-    "video": "https://youtu.be/YopXxHoclfY"
+    "manufacturer_url": "https://wingcopter.com/",
+    "video": "https://youtu.be/YopXxHoclfY",
+    "made_in": "Germany",
+    "config": "Tilt-rotor eVTOL (hover <-> fixed-wing)",
+    "wingspan_m": 1.78,
+    "dimensions": "178 x 132 x 52 cm",
+    "payload": 6,
+    "range_km": 100,
+    "range_note": "100 km with 2 kg payload",
+    "max_speed": "150 km/h",
+    "delivery": "Winch slow-drop or landing (two-way)",
+    "bvlos": true,
+    "operation": "Multicopter + fixed-wing modes"
   },
   {
     "id": "wingcopter-wingcopter-198",
