@@ -16,8 +16,8 @@
 <link rel="dns-prefetch" href="https://i.ytimg.com">
 <link rel="manifest" href="/site.webmanifest">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-P (SEO/UX audit: card anchors, lazy card imgs, preconnect, Organization schema, category pages, manifest, skip-link) -->
-<meta name="mrs-build" content="build-P">
+<!-- BUILD-TAG: build-Q (spec renderer: expanded HAND & MANIPULATION movement+sensing fields, cobot END EFFECTOR gripper sensing) -->
+<meta name="mrs-build" content="build-Q">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,880+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -2777,6 +2777,13 @@ function buildSpecTable(r) {
     if (r.ft_force_range_n) html += row('Force sensing range', r.ft_force_range_n);
     if (r.collision_sensitivity_n) html += row('Collision sensitivity', r.collision_sensitivity_n, 'N');
     if (r.skin_type) html += row('Skin type', r.skin_type);
+    if (r.grip_types) html += row('Grip types', Array.isArray(r.grip_types) ? r.grip_types.join(', ') : r.grip_types);
+    if (r.hand_close_time_s) html += row('Grip close time', r.hand_close_time_s, 's');
+    if (r.hand_repeatability_mm) html += row('Gripper repeatability', r.hand_repeatability_mm, 'mm');
+    if (r.tactile_type) html += row('Tactile sensor type', r.tactile_type);
+    if (r.fingertip_force_sensors !== undefined) html += row('Fingertip force sensors', r.fingertip_force_sensors);
+    if (r.slip_detection !== undefined) html += row('Slip detection', r.slip_detection);
+    if (r.hand_camera !== undefined) html += row('In-gripper camera', r.hand_camera);
     html += grp('INSTALLATION');
     if (r.mounting && r.mounting.length) html += row('Mounting options', Array.isArray(r.mounting) ? r.mounting.join(', ') : r.mounting);
     if (r.power_consumption_w) html += row('Power consumption', r.power_consumption_w, 'W');
@@ -3458,6 +3465,16 @@ function buildSpecTable(r) {
     if (r.fingers !== undefined) html += row('Fingers per hand', r.fingers);
     if (r.opposable_thumb !== undefined) html += row('Opposable thumb', r.opposable_thumb);
     if (r.hand_dof) html += row('Hand DOF (each)', r.hand_dof);
+    if (r.finger_dof) html += row('DOF per finger', r.finger_dof);
+    if (r.active_dof) html += row('Actuated DOF (each hand)', r.active_dof);
+    if (r.wrist_dof) html += row('Wrist DOF', r.wrist_dof);
+    if (r.hand_actuation) html += row('Hand actuation', r.hand_actuation);
+    if (r.hand_payload_kg) html += row('Hand payload', r.hand_payload_kg, 'kg');
+    if (r.fingertip_force_n) html += row('Fingertip force', r.fingertip_force_n, 'N');
+    if (r.grip_types) html += row('Grip types', Array.isArray(r.grip_types) ? r.grip_types.join(', ') : r.grip_types);
+    if (r.hand_close_time_s) html += row('Grip close time', r.hand_close_time_s, 's');
+    if (r.hand_repeatability_mm) html += row('Hand repeatability', r.hand_repeatability_mm, 'mm');
+    if (r.hand_weight_g) html += row('Hand weight', r.hand_weight_g, 'g');
     if (r.hand_interchangeable !== undefined) html += row('Interchangeable hands', r.hand_interchangeable);
     if (r.hand_variants && r.hand_variants.length) html += row('Hand variants', r.hand_variants.join(', '));
     if (r.grasp_force_n) html += row('Grip force', r.grasp_force_n, 'N');
@@ -3468,6 +3485,16 @@ function buildSpecTable(r) {
     if (r.can_use_tools !== undefined) html += row('Uses standard tools', r.can_use_tools);
     if (r.tool_changer !== undefined) html += row('Tool changer', r.tool_changer);
     if (r.dexterous_hand !== undefined) html += row('Dexterous hand', r.dexterous_hand, '', r.dexterous_hand_note || '');
+    // hand sensing (senses at the hand)
+    if (r.tactile_type) html += row('Tactile sensor type', r.tactile_type);
+    if (r.tactile_resolution) html += row('Tactile resolution', r.tactile_resolution);
+    if (r.fingertip_force_sensors !== undefined) html += row('Fingertip force sensors', r.fingertip_force_sensors);
+    if (r.ft_sensor_wrist !== undefined) html += row('Wrist F/T sensor', r.ft_sensor_wrist);
+    if (r.torque_sensing_finger !== undefined) html += row('Per-finger torque sensing', r.torque_sensing_finger);
+    if (r.slip_detection !== undefined) html += row('Slip detection', r.slip_detection);
+    if (r.proprioception !== undefined) html += row('Hand proprioception', r.proprioception);
+    if (r.temperature_sensing_hand !== undefined) html += row('Hand temperature sensing', r.temperature_sensing_hand);
+    if (r.hand_camera !== undefined) html += row('In-hand camera', r.hand_camera);
   }
 
   // ── BATTERY ──
