@@ -48257,7 +48257,7 @@
   {
     "id": "leju-robotics-kuavo-3-0",
     "name": "KUAVO 3.0",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "Research Humanoid",
     "tags": [
@@ -48312,7 +48312,17 @@
     "speed_ms": 1.28,
     "speed": 1.28,
     "actuator_type": "Electric (self-developed torque servos)",
-    "hand_type": "Modular (dexterous / gripper / claw)"
+    "hand_type": "Modular (dexterous / gripper / claw)",
+    "leg_dof": 6,
+    "torque_nm": 360,
+    "ai_model": "Huawei Pangu (embodied intelligence)",
+    "jump_height_mm": 200,
+    "payload": 3,
+    "payload_kg": 3,
+    "learning_methods": [
+      "Imitation Learning",
+      "Reinforcement Learning"
+    ]
   },
   {
     "id": "rainbow-robotics-amr-serving-robot",
@@ -49187,7 +49197,7 @@
   {
     "id": "leju-robotics-kuavo-5",
     "name": "KUAVO 5",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -49248,7 +49258,10 @@
     "speed": 1.28,
     "battery": 480,
     "actuator_type": "Electric (self-developed torque servos)",
-    "hand_type": "Modular (dexterous / gripper / claw)"
+    "hand_type": "Modular (dexterous / gripper / claw)",
+    "hand_interchangeable": true,
+    "torque_nm": 360,
+    "jump_height_mm": 200
   },
   {
     "id": "leju-robotics-aelos-pro",
@@ -49540,7 +49553,7 @@
   {
     "id": "leju-robotics-kuavo-my",
     "name": "KUAVO-MY",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "tags": [
@@ -49589,7 +49602,13 @@
     "website": "https://www.lejurobot.com",
     "speed": 1.28,
     "actuator_type": "Electric (self-developed torque servos)",
-    "hand_type": "Modular (dexterous / gripper / claw)"
+    "hand_type": "Modular (dexterous / gripper / claw)",
+    "arm_dof": 7,
+    "leg_dof": 7,
+    "hand_dof": 6,
+    "torque_nm": 360,
+    "ai_model": "Huawei Pangu (embodied intelligence)",
+    "jump_height_mm": 200
   },
   {
     "id": "agibot-omnihand-pro-2025",
@@ -61587,7 +61606,7 @@
   {
     "id": "leju-robotics-kuavo",
     "name": "KUAVO",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -61636,7 +61655,10 @@
       "https://plain-eeur-prod-public.komododecks.com/202607/04/On31rMSopu53mWr2EmWJ/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202607/04/pZEeJzLd26RaWwQA18TV/image.jpg"
     ],
-    "video": "https://youtu.be/tIuTn9iDvbQ"
+    "video": "https://youtu.be/tIuTn9iDvbQ",
+    "torque_nm": 360,
+    "ai_model": "Huawei Pangu (embodied intelligence)",
+    "jump_height_mm": 200
   },
   {
     "id": "mentee-robotics-menteebot-base-model-",
@@ -82272,7 +82294,7 @@
   {
     "id": "kepler-k2-2024",
     "name": "K2",
-    "brand": "Kepler Robotics",
+    "brand": "Kepler",
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "tags": [
@@ -82333,7 +82355,13 @@
     "os": "Kepler OS",
     "npu_tops": 100,
     "payload": 30,
-    "battery": 480
+    "battery": 480,
+    "hand_actuation": "Rope-driven (tendon)",
+    "touch_sensors_count": 96,
+    "tactile_type": "96-contact fingertip sensor array (per fingertip)",
+    "fingertip_force_sensors": true,
+    "battery_wh": 2330,
+    "manipulation_level": "Industrial dexterous (11-DOF rope-driven, 5-finger)"
   },
   {
     "id": "neura-4ne1-2024",
