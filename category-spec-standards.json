@@ -1,0 +1,1989 @@
+{
+  "_meta": {
+    "purpose": "LOCKED per-category spec menus for myrobot.shop. Every robot in a category fills this same menu; the renderer shows the fixed rows (\u2014 when blank).",
+    "how_to_use": [
+      "core[] = must-fill on every robot (never blank).",
+      "menu{} = the fixed, ordered spec-sheet rows for the category (grouped by section).",
+      "renders: true = buildSpecTable() already emits this category section; false = needs a renderer patch before category rows display; 'partial' = some rows via another section.",
+      "ALIAS RULE: when a menu lists payload_kg/speed_ms/run_speed_ms/reach \u2014 also write the alias (payload/speed/run_speed/reach). battery_life, charge_time, flight_time = MINUTES. Include both alias forms.",
+      "Only fields that buildSpecTable() renders are listed (per SCHEMA.md). Never include perf/score/img in enrichment batches."
+    ],
+    "built": "2026-07-11",
+    "categories": 22,
+    "renderer_todo_new_fields": [
+      "active_dof",
+      "finger_dof",
+      "fingertip_force_n",
+      "fingertip_force_sensors",
+      "ft_sensor_wrist",
+      "grip_types",
+      "hand_actuation",
+      "hand_camera",
+      "hand_close_time_s",
+      "hand_payload_kg",
+      "hand_repeatability_mm",
+      "hand_weight_g",
+      "proprioception",
+      "slip_detection",
+      "tactile_resolution",
+      "tactile_type",
+      "temperature_sensing_hand",
+      "torque_sensing_finger",
+      "wrist_dof"
+    ]
+  },
+  "universal_identity": [
+    "id",
+    "name",
+    "brand",
+    "cat",
+    "sub",
+    "year",
+    "origin",
+    "status",
+    "desc",
+    "tags",
+    "price",
+    "img"
+  ],
+  "categories": {
+    "Humanoid": {
+      "label": "Humanoid",
+      "renders_today": true,
+      "detection": "cat/sub contains 'humanoid' or 'biped'",
+      "core_required": [
+        "height_mm",
+        "weight_kg",
+        "dof",
+        "arm_dof",
+        "leg_dof",
+        "payload_kg",
+        "speed_ms",
+        "actuator_type",
+        "hand_type",
+        "hand_dof",
+        "fingers",
+        "grasp_force_n",
+        "touch_sensing",
+        "ai_model",
+        "battery_life"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "frame_material",
+          "ip_rating",
+          "operating_temp_min",
+          "operating_temp_max",
+          "shoulder_width_mm",
+          "arm_length_mm",
+          "leg_length_mm",
+          "display_face"
+        ],
+        "PERFORMANCE (locomotion)": [
+          "payload_kg",
+          "speed_ms",
+          "run_speed_ms",
+          "dof",
+          "arm_dof",
+          "leg_dof",
+          "waist_dof",
+          "head_dof",
+          "neck_dof",
+          "actuator_type",
+          "arm_torque_nm",
+          "max_step_height_mm",
+          "stair_climbing",
+          "fall_recovery"
+        ],
+        "HAND \u2014 MOVEMENT & KINEMATICS": [
+          "hand_type",
+          "hand_actuation",
+          "fingers",
+          "opposable_thumb",
+          "hand_dof",
+          "finger_dof",
+          "active_dof",
+          "wrist_dof",
+          "hand_payload_kg",
+          "grasp_force_n",
+          "fingertip_force_n",
+          "grip_types",
+          "min_object_size_mm",
+          "max_object_diameter_mm",
+          "hand_close_time_s",
+          "hand_repeatability_mm",
+          "hand_weight_g",
+          "hand_interchangeable",
+          "hand_variants",
+          "tool_changer",
+          "can_use_tools",
+          "bimanual",
+          "manipulation_level",
+          "dexterous_hand"
+        ],
+        "HAND \u2014 SENSING (senses at the hand)": [
+          "touch_sensing",
+          "touch_sensors_count",
+          "tactile_type",
+          "tactile_resolution",
+          "force_sensing",
+          "fingertip_force_sensors",
+          "ft_sensor_wrist",
+          "torque_sensing_finger",
+          "slip_detection",
+          "proprioception",
+          "temperature_sensing_hand",
+          "hand_camera"
+        ],
+        "COMPUTE & AI": [
+          "chipset",
+          "ram_gb",
+          "ai_model",
+          "ai_model_type",
+          "llm_model",
+          "learning_methods",
+          "task_generalisation",
+          "natural_language_commands"
+        ],
+        "SENSORS (body)": [
+          "cameras",
+          "depth_sensing",
+          "lidar",
+          "imu",
+          "thermal_camera"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time",
+          "hot_swap"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "bluetooth",
+          "ros",
+          "sdk",
+          "sdk_langs",
+          "ota"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 101,
+      "new_fields_in_menu": [
+        "active_dof",
+        "finger_dof",
+        "fingertip_force_n",
+        "fingertip_force_sensors",
+        "ft_sensor_wrist",
+        "grip_types",
+        "hand_actuation",
+        "hand_camera",
+        "hand_close_time_s",
+        "hand_payload_kg",
+        "hand_repeatability_mm",
+        "hand_weight_g",
+        "proprioception",
+        "slip_detection",
+        "tactile_resolution",
+        "tactile_type",
+        "temperature_sensing_hand",
+        "torque_sensing_finger",
+        "wrist_dof"
+      ],
+      "live": {
+        "robots": 249,
+        "avg_fields_now": 26.6
+      }
+    },
+    "Quadruped": {
+      "label": "Quadruped",
+      "renders_today": true,
+      "detection": "sub contains 'quadruped','dog','legged'",
+      "core_required": [
+        "weight_kg",
+        "payload_kg",
+        "speed_ms",
+        "run_speed_ms",
+        "max_step_height_mm",
+        "battery_life",
+        "actuator_type",
+        "ip_rating"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "body_length_mm",
+          "standing_height_mm",
+          "min_height_mm",
+          "ground_clearance_mm",
+          "weight_kg",
+          "ip_rating",
+          "operating_temp_min",
+          "operating_temp_max"
+        ],
+        "PERFORMANCE": [
+          "payload_kg",
+          "speed_ms",
+          "run_speed_ms",
+          "dof",
+          "gait_modes",
+          "stair_climbing",
+          "max_step_height_mm",
+          "max_incline_deg",
+          "actuator_type",
+          "fall_recovery"
+        ],
+        "ARM & GRIPPER \u2014 MOVEMENT (if equipped)": [
+          "arm_dof",
+          "reach_mm",
+          "end_effector_type",
+          "hand_type",
+          "fingers",
+          "hand_dof",
+          "gripper_force_n",
+          "grasp_force_n",
+          "grip_types",
+          "min_object_size_mm",
+          "max_object_diameter_mm",
+          "hand_close_time_s"
+        ],
+        "ARM & GRIPPER \u2014 SENSING (if equipped)": [
+          "force_sensing",
+          "touch_sensing",
+          "tactile_type",
+          "fingertip_force_sensors",
+          "slip_detection",
+          "ft_sensor_wrist",
+          "hand_camera"
+        ],
+        "COMPUTE & AI": [
+          "chipset",
+          "ai_model",
+          "learning_methods"
+        ],
+        "SENSORS": [
+          "cameras",
+          "depth_sensing",
+          "lidar",
+          "lidar_range_m",
+          "imu",
+          "thermal_camera"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time",
+          "hot_swap",
+          "auto_charge"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "bluetooth",
+          "ros",
+          "sdk"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 71,
+      "new_fields_in_menu": [
+        "fingertip_force_sensors",
+        "ft_sensor_wrist",
+        "grip_types",
+        "hand_camera",
+        "hand_close_time_s",
+        "slip_detection",
+        "tactile_type"
+      ],
+      "live": {
+        "robots": 70,
+        "avg_fields_now": 20.8
+      }
+    },
+    "Consumer": {
+      "label": "Consumer (Robot Vacuum / Mop)",
+      "renders_today": true,
+      "detection": "cat 'consumer' OR sub contains 'vacuum','floor','mop'",
+      "core_required": [
+        "suction_pa",
+        "dustbin_ml",
+        "water_tank_ml",
+        "navigation",
+        "auto_empty",
+        "battery_life",
+        "noise_db",
+        "ip_rating"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "shape",
+          "min_clearance_mm",
+          "max_step_height_mm"
+        ],
+        "CLEANING": [
+          "suction_pa",
+          "suction_modes",
+          "noise_db",
+          "dustbin_ml",
+          "water_tank_ml",
+          "mop",
+          "mop_type",
+          "filter",
+          "brush_type",
+          "carpet_boost"
+        ],
+        "DOCK STATION": [
+          "auto_empty",
+          "auto_empty_capacity_L",
+          "auto_refill",
+          "self_cleaning",
+          "dock_dry_type",
+          "dock_dry_time_min"
+        ],
+        "NAVIGATION & MAPPING": [
+          "navigation",
+          "lidar",
+          "obstacle_avoidance",
+          "mapping",
+          "multi_floor_maps",
+          "zone_cleaning",
+          "virtual_walls",
+          "cliff_sensors"
+        ],
+        "SMART FEATURES": [
+          "app",
+          "voice_control",
+          "ai_room_recognition",
+          "camera_live_view",
+          "matter_support",
+          "pet_mode"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time",
+          "auto_charge"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "wifi_bands"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 59,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 385,
+        "avg_fields_now": 30.4
+      }
+    },
+    "Industrial": {
+      "label": "Industrial / Cobot Arm",
+      "renders_today": true,
+      "detection": "cat 'industrial' OR sub contains 'cobot','arm','manipulator'",
+      "core_required": [
+        "payload_kg",
+        "reach_mm",
+        "dof",
+        "repeatability",
+        "speed_ms",
+        "mounting",
+        "power_consumption_w"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "weight_kg",
+          "ip_rating",
+          "axes_config",
+          "base_diameter_mm",
+          "hollow_wrist",
+          "rail_mountable",
+          "mobile_base_compatible"
+        ],
+        "PERFORMANCE": [
+          "payload_kg",
+          "payload_peak",
+          "reach_mm",
+          "dof",
+          "repeatability",
+          "speed_ms",
+          "position_accuracy_mm"
+        ],
+        "END EFFECTOR \u2014 GRIPPING & MOVEMENT": [
+          "end_effector_type",
+          "end_effectors_compatible",
+          "flange_standard",
+          "quick_change",
+          "tool_changer",
+          "gripper_stroke_mm",
+          "gripper_force_n",
+          "grip_types",
+          "hand_type",
+          "fingers",
+          "hand_dof",
+          "min_object_size_mm",
+          "max_object_diameter_mm",
+          "hand_close_time_s",
+          "hand_repeatability_mm"
+        ],
+        "END EFFECTOR \u2014 SENSING": [
+          "ft_sensor_type",
+          "ft_force_range_n",
+          "force_sensing",
+          "touch_sensing",
+          "touch_sensors_count",
+          "tactile_type",
+          "fingertip_force_sensors",
+          "slip_detection",
+          "collision_sensitivity_n",
+          "skin_type",
+          "hand_camera",
+          "proprioception"
+        ],
+        "INSTALLATION": [
+          "mounting",
+          "power_consumption_w",
+          "temp_range",
+          "controller",
+          "teach_pendant",
+          "programming"
+        ],
+        "CONNECTIVITY": [
+          "ethernet",
+          "industrial_protocols",
+          "ros",
+          "ros_version",
+          "sdk",
+          "sdk_langs",
+          "api"
+        ],
+        "SAFETY": [
+          "iso_certs",
+          "estop",
+          "collision_detection",
+          "safety_rating"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 73,
+      "new_fields_in_menu": [
+        "fingertip_force_sensors",
+        "grip_types",
+        "hand_camera",
+        "hand_close_time_s",
+        "hand_repeatability_mm",
+        "proprioception",
+        "slip_detection",
+        "tactile_type"
+      ],
+      "live": {
+        "robots": 266,
+        "avg_fields_now": 28.0
+      }
+    },
+    "Drones": {
+      "label": "Drones",
+      "renders_today": true,
+      "detection": "cat/sub contains 'drone','uav','aerial'",
+      "core_required": [
+        "weight_kg",
+        "max_flight_time",
+        "max_speed",
+        "max_altitude",
+        "max_range",
+        "camera_mp",
+        "gps",
+        "obstacle_sensing"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "weight_kg",
+          "frame_type",
+          "diagonal_mm",
+          "wingspan_mm",
+          "motor_count",
+          "propeller_size_inch",
+          "ip_rating"
+        ],
+        "FLIGHT PERFORMANCE": [
+          "max_flight_time",
+          "hover_time_min",
+          "max_speed",
+          "max_altitude",
+          "max_range",
+          "wind_resistance",
+          "noise_db"
+        ],
+        "CAMERA & IMAGING": [
+          "camera_mp",
+          "camera_zoom",
+          "video_res",
+          "video_fps",
+          "gimbal_axes",
+          "thermal",
+          "thermal_resolution"
+        ],
+        "NAVIGATION": [
+          "gps",
+          "rtk",
+          "obstacle_sensing",
+          "waypoint",
+          "autonomous",
+          "return_to_home",
+          "geofencing",
+          "faa_remote_id",
+          "transmission"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "bluetooth"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 51,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 186,
+        "avg_fields_now": 27.7
+      }
+    },
+    "Medical": {
+      "label": "Medical",
+      "renders_today": true,
+      "detection": "cat 'medical' OR sub contains 'surgical','ortho'",
+      "core_required": [
+        "fda_cleared",
+        "fda_class",
+        "ce_marked",
+        "surgical_type",
+        "arms",
+        "installed_base"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg"
+        ],
+        "REGULATORY": [
+          "fda_cleared",
+          "fda_class",
+          "ce_marked",
+          "countries_approved",
+          "iso_certs"
+        ],
+        "SURGICAL SPECS": [
+          "surgical_type",
+          "arms",
+          "instrument_dof",
+          "tremor_filtering",
+          "motion_scaling",
+          "haptic_feedback",
+          "incision_size_mm",
+          "vision",
+          "magnification",
+          "console_type",
+          "setup_time_min"
+        ],
+        "CLINICAL DATA": [
+          "ai_assist",
+          "installed_base",
+          "annual_procedures",
+          "procedures",
+          "training_cases_required",
+          "ehr_integration"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "ethernet"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 43,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 51,
+        "avg_fields_now": 31.9
+      }
+    },
+    "Agricultural": {
+      "label": "Agricultural",
+      "renders_today": true,
+      "detection": "cat 'agri' OR sub contains 'tractor','farm','harvest'",
+      "core_required": [
+        "coverage_ha_day",
+        "working_width_m",
+        "operating_speed",
+        "operation",
+        "treatment_type",
+        "rtk"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "length_mm",
+          "width_mm",
+          "height_mm",
+          "weight_kg",
+          "ip_rating"
+        ],
+        "FIELD PERFORMANCE": [
+          "coverage_ha_day",
+          "gps_accuracy_cm",
+          "working_width_m",
+          "operating_speed",
+          "max_slope_pct",
+          "night_operation"
+        ],
+        "TECHNOLOGY": [
+          "operation",
+          "computer_vision",
+          "plant_recognition",
+          "treatment_type",
+          "chemical_free",
+          "herbicide_reduction",
+          "fuel",
+          "tank_capacity_l",
+          "crop_types",
+          "rtk"
+        ],
+        "BATTERY / POWER": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "power_source"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "cellular",
+          "ros",
+          "sdk"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 44,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 48,
+        "avg_fields_now": 35.2
+      }
+    },
+    "Service": {
+      "label": "Service",
+      "renders_today": true,
+      "detection": "cat 'service' OR sub contains 'delivery','hospitality','inspection'",
+      "core_required": [
+        "speed_ms",
+        "payload_kg",
+        "battery_life",
+        "elevator_capable",
+        "fleet_management",
+        "daily_trips"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "noise_db"
+        ],
+        "MOBILITY": [
+          "speed_ms",
+          "turning_radius_mm",
+          "max_grade_pct",
+          "obstacle_height_mm",
+          "elevator_capable",
+          "multi_floor",
+          "outdoor_capable"
+        ],
+        "INTERACTION": [
+          "display",
+          "speech",
+          "languages",
+          "delivery_bays",
+          "uv_disinfection",
+          "face_recognition",
+          "fleet_management",
+          "daily_trips"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time",
+          "auto_charge"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "bluetooth",
+          "cellular"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 43,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 54,
+        "avg_fields_now": 35.6
+      }
+    },
+    "Delivery": {
+      "label": "Delivery (uses Service section)",
+      "renders_today": true,
+      "detection": "routes to SERVICE section (sub contains 'delivery')",
+      "core_required": [
+        "speed_ms",
+        "payload_kg",
+        "max_range",
+        "battery_life",
+        "autonomous",
+        "outdoor_capable"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "ip_rating"
+        ],
+        "MOBILITY": [
+          "speed_ms",
+          "max_grade_pct",
+          "max_range",
+          "outdoor_capable",
+          "obstacle_height_mm"
+        ],
+        "PAYLOAD & CARGO": [
+          "payload_kg",
+          "delivery_bays",
+          "cargo_capacity_kg"
+        ],
+        "AUTONOMY": [
+          "autonomous",
+          "navigation",
+          "obstacle_avoidance",
+          "fleet_management",
+          "daily_trips"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time",
+          "hot_swap"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "cellular",
+          "gps"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 41,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 59,
+        "avg_fields_now": 18.7
+      }
+    },
+    "Military": {
+      "label": "Military / Defence",
+      "renders_today": true,
+      "detection": "cat 'military' OR sub contains 'eod','defense','security'",
+      "core_required": [
+        "weight_kg",
+        "role",
+        "endurance_hours",
+        "communication_range_km",
+        "mil_spec",
+        "autonomy_level"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "length_mm",
+          "width_mm",
+          "height_mm",
+          "weight_kg",
+          "ip_rating",
+          "mil_spec"
+        ],
+        "MISSION": [
+          "role",
+          "endurance_hours",
+          "communication_range_km",
+          "deploy_method",
+          "blast_rating",
+          "cbrn_protection",
+          "autonomy_level"
+        ],
+        "PERFORMANCE": [
+          "speed_ms",
+          "payload_kg",
+          "max_incline_deg",
+          "terrain"
+        ],
+        "SENSORS": [
+          "cameras",
+          "thermal_camera",
+          "lidar",
+          "imu",
+          "gas_sensor"
+        ],
+        "COMMS & SECURITY": [
+          "encryption",
+          "jamming_resistant",
+          "export_control",
+          "wifi",
+          "cellular"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "hot_swap"
+        ],
+        "DEPLOYMENT": [
+          "customers",
+          "use_cases"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 48,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 68,
+        "avg_fields_now": 23.2
+      }
+    },
+    "Educational": {
+      "label": "Educational",
+      "renders_today": true,
+      "detection": "cat/sub contains 'edu' or 'stem'",
+      "core_required": [
+        "age_range",
+        "programming_interface",
+        "programming_langs",
+        "sensors",
+        "battery_life",
+        "price"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "colors"
+        ],
+        "EDUCATIONAL SPECS": [
+          "age_range",
+          "grade_level",
+          "curriculum",
+          "programming_interface",
+          "programming_langs",
+          "sensors",
+          "actuators",
+          "pieces",
+          "assembly_time_min",
+          "competition_legal",
+          "lesson_library",
+          "lms_integration"
+        ],
+        "COMPUTE": [
+          "chipset",
+          "cpu",
+          "controller"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "bluetooth",
+          "sdk_langs"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 42,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 79,
+        "avg_fields_now": 43.9
+      }
+    },
+    "Aerospace": {
+      "label": "Aerospace",
+      "renders_today": false,
+      "detection": "cat 'Aerospace' \u2014 NO section rendered yet",
+      "core_required": [
+        "target_body",
+        "mission_type",
+        "mission_status",
+        "launch_date",
+        "operating_agency",
+        "power_source"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "length_mm",
+          "width_mm",
+          "height_mm",
+          "wingspan_mm",
+          "weight_kg"
+        ],
+        "MISSION": [
+          "target_body",
+          "mission_type",
+          "mission_status",
+          "launch_date",
+          "arrival_date",
+          "launch_vehicle",
+          "operating_agency",
+          "mission_duration_planned_days",
+          "mission_cost_usd"
+        ],
+        "PAYLOAD & POWER": [
+          "power_source",
+          "payload_instruments",
+          "traverse_distance_km",
+          "data_returned_gb",
+          "arm_dof"
+        ],
+        "COMPUTE": [
+          "chipset",
+          "cpu",
+          "rtos"
+        ],
+        "COMMS": [
+          "communications_band",
+          "network_tech"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 39,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 70,
+        "avg_fields_now": 26.6
+      }
+    },
+    "Aquatic": {
+      "label": "Aquatic",
+      "renders_today": false,
+      "detection": "cat 'Aquatic' \u2014 NO section rendered yet",
+      "core_required": [
+        "max_depth_m",
+        "length_mm",
+        "endurance_hours",
+        "propulsion",
+        "speed_ms"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "length_mm",
+          "width_mm",
+          "height_mm",
+          "diameter_mm",
+          "weight_kg",
+          "frame_material",
+          "max_depth_m"
+        ],
+        "PERFORMANCE": [
+          "speed_ms",
+          "endurance_hours",
+          "range_km",
+          "propulsion",
+          "thruster_count",
+          "payload_kg",
+          "arm_count"
+        ],
+        "NAVIGATION": [
+          "inertial_navigation",
+          "dvl_integrated",
+          "acoustic_modem",
+          "autonomous",
+          "obstacle_avoidance"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life"
+        ],
+        "COMPUTE & AI": [
+          "os",
+          "ai_model"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 39,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 35,
+        "avg_fields_now": 24.3
+      }
+    },
+    "Autonomous Vehicles": {
+      "label": "Autonomous Vehicles",
+      "renders_today": false,
+      "detection": "cat 'Autonomous Vehicles' \u2014 NO section rendered yet",
+      "core_required": [
+        "autonomy_level",
+        "passengers",
+        "range_km",
+        "top_speed_kmh",
+        "battery_capacity_kwh",
+        "lidar_count"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "length_mm",
+          "width_mm",
+          "height_mm",
+          "weight_kg",
+          "passengers",
+          "cargo_capacity_kg"
+        ],
+        "PERFORMANCE": [
+          "autonomy_level",
+          "top_speed_kmh",
+          "range_km",
+          "battery_capacity_kwh"
+        ],
+        "SENSORS & AUTONOMY": [
+          "lidar_count",
+          "lidar_model",
+          "cameras",
+          "radar",
+          "autonomy_software",
+          "obstacle_avoidance",
+          "ota"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "cellular",
+          "gps"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 35,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 42,
+        "avg_fields_now": 19.0
+      }
+    },
+    "AGV/AMR": {
+      "label": "AGV/AMR",
+      "renders_today": false,
+      "detection": "cat 'AGV/AMR' \u2014 NO section rendered yet",
+      "core_required": [
+        "payload_kg",
+        "navigation",
+        "speed_ms",
+        "fleet_management",
+        "battery_life"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "length_mm",
+          "width_mm",
+          "height_mm",
+          "weight_kg",
+          "ip_rating"
+        ],
+        "PERFORMANCE": [
+          "payload_kg",
+          "speed_ms",
+          "navigation",
+          "turning_radius_mm",
+          "max_incline_deg"
+        ],
+        "FLEET & SAFETY": [
+          "fleet_management",
+          "safety_rating",
+          "vda_5050_compatible",
+          "collision_detection",
+          "estop"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time",
+          "auto_charge",
+          "hot_swap"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "ethernet",
+          "ros",
+          "sdk"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 40,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 50,
+        "avg_fields_now": 23.2
+      }
+    },
+    "Disaster Response": {
+      "label": "Disaster Response",
+      "renders_today": "partial",
+      "detection": "partly via MILITARY (sub 'eod'/'security')",
+      "core_required": [
+        "weight_kg",
+        "role",
+        "payload_kg",
+        "stair_climbing",
+        "endurance_hours",
+        "ip_rating"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "length_mm",
+          "width_mm",
+          "height_mm",
+          "weight_kg",
+          "ip_rating"
+        ],
+        "MISSION": [
+          "role",
+          "stair_climbing",
+          "max_incline_deg",
+          "payload_kg",
+          "cbrn_protection",
+          "endurance_hours"
+        ],
+        "MANIPULATION": [
+          "arm_dof",
+          "reach_mm",
+          "grasp_force_n"
+        ],
+        "SENSORS": [
+          "cameras",
+          "thermal_camera",
+          "lidar",
+          "gas_sensor",
+          "imu"
+        ],
+        "COMMS": [
+          "communication_range_km",
+          "encryption",
+          "wifi"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "hot_swap"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 41,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 43,
+        "avg_fields_now": 14.5
+      }
+    },
+    "Social": {
+      "label": "Social / Companion",
+      "renders_today": false,
+      "detection": "cat 'Social' \u2014 NO section rendered yet",
+      "core_required": [
+        "intended_setting",
+        "target_user",
+        "languages_spoken",
+        "facial_recognition",
+        "battery_life"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "colors",
+          "display_face"
+        ],
+        "INTERACTION": [
+          "intended_setting",
+          "target_user",
+          "facial_recognition",
+          "emotion_detection",
+          "gesture_control",
+          "languages_spoken",
+          "natural_language_commands"
+        ],
+        "AI": [
+          "ai_model",
+          "llm_model",
+          "ai_cloud_required",
+          "ai_inference_local"
+        ],
+        "SENSORS": [
+          "cameras",
+          "depth_sensing",
+          "imu",
+          "touch_sensing"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time",
+          "auto_charge"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "bluetooth"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 43,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 32,
+        "avg_fields_now": 22.8
+      }
+    },
+    "Telepresence": {
+      "label": "Telepresence",
+      "renders_today": false,
+      "detection": "cat 'Telepresence' \u2014 NO section rendered yet",
+      "core_required": [
+        "display_size_inch",
+        "speed_ms",
+        "battery_life",
+        "cameras",
+        "wifi"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "display_size_inch"
+        ],
+        "DISPLAY & AV": [
+          "display_type",
+          "display_resolution",
+          "cameras",
+          "camera_resolution",
+          "speaker_count",
+          "microphones",
+          "noise_cancellation"
+        ],
+        "MOBILITY": [
+          "speed_ms",
+          "max_grade_pct",
+          "obstacle_avoidance",
+          "auto_charge"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "wifi_bands",
+          "bluetooth",
+          "cellular"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 39,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 23,
+        "avg_fields_now": 24.4
+      }
+    },
+    "Entertainment": {
+      "label": "Entertainment",
+      "renders_today": false,
+      "detection": "cat 'Entertainment' \u2014 NO section rendered yet",
+      "core_required": [
+        "height_mm",
+        "weight_kg",
+        "dof",
+        "battery_life",
+        "use_cases"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "colors",
+          "display_face"
+        ],
+        "PERFORMANCE": [
+          "dof",
+          "speed_ms",
+          "actuator_type",
+          "bimanual"
+        ],
+        "SHOW & INTERACTION": [
+          "languages_spoken",
+          "facial_recognition",
+          "emotion_detection",
+          "gesture_control",
+          "speaker_count"
+        ],
+        "COMPUTE & AI": [
+          "chipset",
+          "ai_model",
+          "llm_model"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time"
+        ],
+        "CONNECTIVITY": [
+          "wifi",
+          "bluetooth"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 39,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 17,
+        "avg_fields_now": 22.9
+      }
+    },
+    "Exoskeletons": {
+      "label": "Exoskeletons",
+      "renders_today": false,
+      "detection": "cat 'Exoskeletons' \u2014 NO section rendered yet",
+      "core_required": [
+        "weight_kg",
+        "payload_kg",
+        "battery_life",
+        "use_cases",
+        "warranty_months"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "weight_kg",
+          "frame_material",
+          "operating_temp_min",
+          "operating_temp_max",
+          "colors"
+        ],
+        "ASSISTANCE": [
+          "payload_kg",
+          "dof",
+          "actuator_type",
+          "force_output_n",
+          "torque_nm"
+        ],
+        "SENSORS": [
+          "imu",
+          "force_sensing",
+          "emg_sensors"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "charge_time",
+          "hot_swap"
+        ],
+        "CERTIFICATION": [
+          "fda_cleared",
+          "ce_marked",
+          "iso_certs"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 37,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 19,
+        "avg_fields_now": 8.7
+      }
+    },
+    "Research": {
+      "label": "Research",
+      "renders_today": false,
+      "detection": "cat 'Research' \u2014 NO section rendered yet",
+      "core_required": [
+        "weight_kg",
+        "dof",
+        "ai_open_source",
+        "use_cases",
+        "manufacturer_url"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "frame_material"
+        ],
+        "PLATFORM": [
+          "chipset",
+          "os",
+          "ros",
+          "ros_version",
+          "sdk",
+          "sdk_langs",
+          "api"
+        ],
+        "PERFORMANCE": [
+          "dof",
+          "payload_kg",
+          "speed_ms",
+          "reach_mm",
+          "actuator_type"
+        ],
+        "AI & OPENNESS": [
+          "ai_model",
+          "ai_open_source",
+          "learning_methods"
+        ],
+        "SENSORS": [
+          "cameras",
+          "depth_sensing",
+          "lidar",
+          "imu",
+          "force_sensing"
+        ],
+        "BATTERY": [
+          "battery_type",
+          "battery_wh",
+          "battery_life"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 43,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 29,
+        "avg_fields_now": 7.9
+      }
+    },
+    "Mecha": {
+      "label": "Mecha",
+      "renders_today": false,
+      "detection": "cat 'Mecha' \u2014 NO section rendered yet",
+      "core_required": [
+        "height_mm",
+        "weight_kg",
+        "dof",
+        "payload_kg",
+        "actuator_type"
+      ],
+      "menu": {
+        "LAUNCH": [
+          "announced",
+          "released",
+          "made_in",
+          "regions",
+          "price",
+          "currency",
+          "warranty_months",
+          "manufacturer_url"
+        ],
+        "BODY": [
+          "height_mm",
+          "width_mm",
+          "depth_mm",
+          "weight_kg",
+          "frame_material"
+        ],
+        "PERFORMANCE": [
+          "dof",
+          "payload_kg",
+          "speed_ms",
+          "actuator_type",
+          "power_consumption_w"
+        ],
+        "COCKPIT / CONTROL": [
+          "passengers",
+          "controller",
+          "control_freq_hz"
+        ],
+        "COMPUTE": [
+          "chipset",
+          "cpu"
+        ],
+        "BATTERY / POWER": [
+          "battery_type",
+          "battery_wh",
+          "battery_life",
+          "power_source"
+        ],
+        "SAFETY & CERT": [
+          "ce",
+          "fcc",
+          "iso_certs",
+          "estop"
+        ],
+        "MISC": [
+          "use_cases",
+          "datasheet",
+          "website"
+        ]
+      },
+      "menu_field_count": 34,
+      "new_fields_in_menu": [],
+      "live": {
+        "robots": 5,
+        "avg_fields_now": 10.4
+      }
+    }
+  }
+}
