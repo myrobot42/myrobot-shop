@@ -47548,7 +47548,14 @@
       "https://www.rainbow-robotics.com/storage/app/public/plugin/product_info/30a2309b-97df-11ec-9874-6805cae14dd4/db/6c/20220228011251c64879817d6e0b22bfa37950c60307101639291d.png",
       "https://www.rainbow-robotics.com/storage/app/public/plugin/product_spec/d881ae53-97e0-11ec-9874-6805cae14dd4/63/71/20220915151239b32e057daa026b574094eb3ec08816ece595fa0d.png"
     ],
-    "video": "https://youtu.be/r2pKEVTddy4"
+    "video": "https://youtu.be/r2pKEVTddy4",
+    "leg_dof": 6,
+    "hand_dof": 5,
+    "neck_dof": 3,
+    "waist_dof": 1,
+    "force_sensing": true,
+    "speed": 0.35,
+    "speed_ms": 0.35
   },
   {
     "id": "clone-robotics-clone-torso",
@@ -47958,7 +47965,11 @@
       "Google",
       "research institutions worldwide"
     ],
-    "manufacturer_history": "HUBO 2 — one of the first commercialised humanoid research platforms; developed at KAIST, manufactured by Rainbow Robotics; known for straight-leg walking."
+    "manufacturer_history": "HUBO 2 — one of the first commercialised humanoid research platforms; developed at KAIST, manufactured by Rainbow Robotics; known for straight-leg walking.",
+    "leg_dof": 6,
+    "hand_dof": 5,
+    "neck_dof": 3,
+    "force_sensing": true
   },
   {
     "id": "rainbow-robotics-rb-y1-bimanual-mobile-manipulator",
@@ -48118,7 +48129,8 @@
       "https://www.rainbow-robotics.com/storage/app/public/plugin/product_spec/d881b044-97e0-11ec-9874-6805cae14dd4/5a/f1/20220915152131a30c89320c62a96df7748b550f17f05bbeeed479.png",
       "https://i.ytimg.com/vi/qYyNF0eNPxQ/sddefault.jpg",
       "https://www.rainbow-robotics.com/storage/app/public/plugin/product_info/30a231ce-97df-11ec-9874-6805cae14dd4/c2/d8/202302100939426fcc010316cd57971e90d68e32b6d464e52bd5b5.png"
-    ]
+    ],
+    "leg_dof": 6
   },
   {
     "id": "rainbow-robotics-hubo2",
@@ -48180,7 +48192,12 @@
     "video": "https://youtu.be/r2pKEVTddy4",
     "speed": 0.4,
     "battery": 60,
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "hand_dof": 5,
+    "neck_dof": 3,
+    "force_sensing": true
   },
   {
     "id": "leju-robotics-roban",
@@ -48470,7 +48487,7 @@
     "height_mm": 1750,
     "weight_kg": 80,
     "dof": 32,
-    "battery_life": "1 hour",
+    "battery_life": 240,
     "ros": true,
     "lidar": true,
     "imu": true,
@@ -48502,7 +48519,15 @@
     "cats": [
       "Humanoid",
       "Disaster Response"
-    ]
+    ],
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "hand_dof": 1,
+    "payload": 10,
+    "payload_kg": 10,
+    "speed": 0.5,
+    "speed_ms": 0.5,
+    "force_sensing": true
   },
   {
     "id": "rainbow-robotics-hubo-2",
@@ -48558,7 +48583,11 @@
       "https://is2-ssl.mzstatic.com/image/thumb/Purple5/v4/b0/db/df/b0dbdfe7-2589-43b0-f98c-f0aca21fdee0/source/512x512bb.jpg"
     ],
     "video": "https://youtu.be/r2pKEVTddy4",
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "leg_dof": 6,
+    "hand_dof": 5,
+    "neck_dof": 3,
+    "force_sensing": true
   },
   {
     "id": "rainbow-robotics-rb-y1",
