@@ -119437,7 +119437,7 @@
     "sub": "Bipedal Humanoid",
     "year": 2024,
     "origin": "China",
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1600,
     "desc": "The CL-1 is the flagship bipedal humanoid from LimX Dynamics, a Shenzhen embodied-AI robotics startup founded in 2022 and backed by $30M+ in funding. Launched in December 2023, the CL-1 became known as one of the few humanoids capable of dynamic stair-climbing using real-time terrain perception, thanks to a closed-loop system that fuses perception, gait planning, locomotion control and hardware data to adjust its motion proactively. Standing roughly 1.6 m on a 20+ DOF skeleton, it can walk over stairs, slopes and mixed indoor/outdoor terrain, recover from disturbances, and — in later demos — squat, lift and carry heavy loads up to ~80 cm placement height. Originally a pure bipedal research platform without functional hands, the CL-1 targets smart manufacturing, logistics, inspection and R&D, and is the foundation for LimX's newer, hand-equipped Oli / CL-3 generation. It remains a development/research platform (prototype pricing around US$40,000).",
     "tags": [
@@ -119448,7 +119448,7 @@
       "dynamic locomotion"
     ],
     "fig": "🤖",
-    "score": 81,
+    "score": 75,
     "rating": 4,
     "feature": "Real-time terrain perception; dynamic stair climbing",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999208/myrobot/akl4tcm8y8j31jqpjeai.png",
@@ -119473,7 +119473,10 @@
     "fall_recovery": true,
     "imu": true,
     "ai_model": "Closed-loop real-time perception + gait planning",
-    "video": "https://youtu.be/sihIDeJ4Hmk"
+    "video": "https://youtu.be/sihIDeJ4Hmk",
+    "leg_dof": 6,
+    "speed": 1.1,
+    "speed_ms": 1.1
   },
   {
     "cat": "Humanoid",
@@ -120956,7 +120959,7 @@
     "lidar": "Yes",
     "imu_axes": 6,
     "hand_type": "Parallel two-finger gripper (standard)",
-    "hand_interchangeable": "Yes",
+    "hand_interchangeable": true,
     "hand_variants": [
       "Parallel 2-finger (1 DoF)",
       "5-finger dexterous (6 DoF)",
@@ -121183,7 +121186,8 @@
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "auto_charge": true
   },
   {
     "id": "limx-dynamics-p1",
