@@ -37154,7 +37154,7 @@
     "name": "Percepto Base",
     "brand": "Percepto",
     "cat": "Drones",
-    "sub": "Drone-in-a-Box",
+    "sub": "Autonomous Drone Docking Station (drone-in-a-box)",
     "tags": [
       "percepto",
       "drone",
@@ -37167,7 +37167,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Ruggedized drone dock with IP65 ingress protection. Dimensions: 166cm(W) x 162cm(D) x 168cm(H), weight 162kg. Hurricane-resistant with one-door design for extreme weather performance. Provides autonomous 24/7 drone operations.",
+    "desc": "The industrial docking station at the heart of Percepto's drone-in-a-box system - the 'box' that lets a Percepto Air drone operate fully autonomously, 24/7/365. It shelters and charges the drone between missions and handles automatic data upload and pre-flight checks, with an on-board module guiding the drone's takeoff and return. Built for the harshest sites, it's waterproof and weatherproof (heavy rain, snow, high winds, dust) and tested to hurricane-force-5 winds, with an HVAC unit and weather station to keep the drone mission-ready in extreme conditions. It plugs into Percepto's AIM (Autonomous Inspection & Monitoring) platform for optimized visual-data management and AI analytics, and underpins Percepto's FAA BVLOS-approved remote operations across oil & gas, utilities, mining and heavy industry.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -37186,17 +37186,25 @@
     "wifi": true,
     "cellular": "4G/LTE",
     "use_cases": [
-      "Security patrol",
-      "Infrastructure inspection",
-      "Perimeter monitoring",
-      "Industrial surveillance",
-      "Critical asset protection"
+      "Autonomous industrial inspection base",
+      "Remote monitoring"
     ],
-    "manufacturer_url": "https://www.percepto.co",
+    "manufacturer_url": "https://percepto.co/drone-in-a-box/percepto-base/",
     "gallery": [
       "https://percepto.co/wp-content/uploads/2024/01/box-with-podium.webp",
       "https://percepto.co/wp-content/uploads/2024/01/large-Base_Good-quality-1.webp"
-    ]
+    ],
+    "made_in": "Israel",
+    "type": "Docking station (houses Percepto Air drones)",
+    "function": "Charge, shelter, data upload, pre-flight checks",
+    "weather_rating": "Waterproof/weatherproof; hurricane-5 winds; rain/snow/dust",
+    "climate_control": "HVAC unit + weather station",
+    "charging": "Automatic",
+    "data": "Auto secure upload to AIM cloud",
+    "platform": "Percepto AIM (Autonomous Inspection & Monitoring)",
+    "operation": "24/7/365 autonomous cycle",
+    "bvlos": "FAA BVLOS-approved operations",
+    "compatible_drones": "Percepto Air Max / Air Mobile"
   },
   {
     "id": "ageagle-ebee-tac",
@@ -37743,7 +37751,7 @@
     "name": "Percepto Air Max OGI",
     "brand": "Percepto",
     "cat": "Drones",
-    "sub": "Drone-in-a-Box",
+    "sub": "Autonomous Gas-Detection Inspection Drone",
     "tags": [
       "percepto",
       "drone",
@@ -37756,7 +37764,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "The only drone-in-a-box with integrated OGI camera for autonomous gas detection and emissions monitoring. EPA-approved for federal emissions inspections. Features AI-powered emission detection with real-time analysis and validated alerts delivered within hours.",
+    "desc": "Percepto's autonomous industrial inspection drone in its gas-detection configuration - billed as the only drone-in-a-box with an integrated OGI (Optical Gas Imaging) camera for spotting methane and other fugitive emissions. Alongside the OGI sensor it carries a 24MP RGB camera and a radiometric (FLIR) thermal camera, with an onboard Nvidia GPU running AI in real time so leaks can be flagged during the flight rather than after. It launches from and returns to the weatherproof Percepto Base, carries an FAA-compliant parachute and autonomous failsafes (low battery, GPS loss), is tested to hurricane-5 winds, and feeds all data into the Percepto AIM platform for analytics and reporting. Deployed at scale with operators such as Chevron (Permian Basin, Colorado), it earned EPA approval (Alternative Test Method MATM-14) for federal oil-and-gas methane emissions inspections in late 2025.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -37775,18 +37783,28 @@
     "lidar": true,
     "imu": true,
     "use_cases": [
-      "Gas leak detection",
-      "Emissions monitoring",
-      "Industrial inspections",
-      "Environmental compliance",
-      "Oil and gas facility monitoring",
-      "Chemical plant inspections"
+      "Methane / gas-leak detection",
+      "Oil & gas emissions compliance",
+      "Flare / pipeline inspection"
     ],
-    "manufacturer_url": "https://www.percepto.co",
+    "manufacturer_url": "https://percepto.co/drone-in-a-box/air-max-ogi/",
     "gallery": [
       "https://percepto.co/wp-content/uploads/2024/01/OGI_drone_new_616-1.webp",
       "https://percepto.co/wp-content/uploads/2024/01/OGI_drone_new_616-2.webp"
-    ]
+    ],
+    "made_in": "Israel",
+    "config": "Drone-in-a-box (docks in Percepto Base)",
+    "distinction": "Only drone-in-a-box with integrated OGI camera",
+    "payload": "OGI (gas imaging) + 24MP RGB + radiometric thermal",
+    "ogi": "Optical Gas Imaging (methane / emissions detection)",
+    "compute": "Onboard Nvidia GPU (real-time AI)",
+    "safety": "FAA-compliant parachute; autonomous failsafes",
+    "weather_rating": "Hurricane-5 winds; rain/snow/dust",
+    "bvlos": "FAA BVLOS-approved (nationwide)",
+    "platform": "Percepto AIM (AI analytics + reports)",
+    "certification": "EPA-approved for federal methane inspections (MATM-14, 2025)",
+    "customers": "Chevron (Permian, Colorado)",
+    "autonomous": true
   },
   {
     "id": "percepto-percepto-air-max",
