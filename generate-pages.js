@@ -27,6 +27,7 @@ const attr = s => esc(s).replace(/'/g,'&#39;');
 const has = v => v!==undefined && v!==null && v!=='' && v!==0 && !(Array.isArray(v)&&!v.length);
 function g(r, ...keys){ for(const k of keys){ if(has(r[k])) return r[k]; } return undefined; }
 function arr(v){ return Array.isArray(v) ? v.join(', ') : v; }
+function catSlug(c){ return String(c||'').toLowerCase().trim().replace(/&/g,' and ').replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,''); }
 
 /* ---- price tier (category-relative quintile, mirrors the app) ---- */
 const catPrices = {};
@@ -124,6 +125,13 @@ function jsonld(r){
   return JSON.stringify(o);
 }
 
+function breadcrumbLd(r){
+  const items=[{"@type":"ListItem","position":1,"name":"myrobot.shop","item":SITE+"/"}];
+  if(has(r.cat)) items.push({"@type":"ListItem","position":2,"name":r.cat,"item":`${SITE}/category/${catSlug(r.cat)}.html`});
+  items.push({"@type":"ListItem","position":items.length+1,"name":r.name,"item":`${SITE}/r/${r.id}.html`});
+  return JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":items});
+}
+
 function pricesHtml(r){
   const prices=Array.isArray(r.prices)?r.prices.filter(p=>p&&(p.url||p.price!=null)):[];
   if(!prices.length) return '';
@@ -176,10 +184,12 @@ function page(r){
 <meta property="og:image" content="${attr(img)}"><meta property="og:site_name" content="myrobot.shop">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${attr(title)}">
 <meta name="twitter:description" content="${attr(desc)}"><meta name="twitter:image" content="${attr(img)}">
+<link rel="preconnect" href="https://res.cloudinary.com" crossorigin><link rel="preconnect" href="https://i.ytimg.com">
 <script type="application/ld+json">${jsonld(r)}</script>
+<script type="application/ld+json">${breadcrumbLd(r)}</script>
 <style>${CSS}</style></head><body>
-<div class="crumb"><a href="/">myrobot.shop</a> › <a href="/#db/cat/${encodeURIComponent(r.cat||'')}">${esc(r.cat||'Robots')}</a> › ${esc(r.name)}</div>
-<img class="hero" src="${attr(img)}" alt="${attr(r.name)} robot" loading="lazy">
+<div class="crumb"><a href="/">myrobot.shop</a> › <a href="${has(r.cat)?`/category/${catSlug(r.cat)}.html`:'/'}">${esc(r.cat||'Robots')}</a> › ${esc(r.name)}</div>
+<img class="hero" src="${attr(img)}" alt="${attr(r.name)} robot" fetchpriority="high" decoding="async">
 <h1>${esc(r.name)}</h1>
 <p class="sub">${esc(subbits)}</p>
 ${has(r.desc)?`<p class="lead">${esc(r.desc)}</p>`:''}
@@ -280,11 +290,69 @@ ${answerLinks(cat)}
   console.log(`Generated ${slugs.length} question pages + hub (${qUrls.length} URLs)`);
 })();
 
+/* ---- category landing pages (SEO hubs, one per primary cat) ---- */
+let catUrls=[];
+(function buildCategories(){
+  const byCat={};
+  for(const r of ROBOTS){ if(!r.id||!has(r.cat)) continue; (byCat[r.cat]=byCat[r.cat]||[]).push(r); }
+  const cats=Object.keys(byCat).filter(c=>byCat[c].length>=3).sort();
+  if(!cats.length) return;
+  const cdir=path.join(OUT,'category'); fs.mkdirSync(cdir,{recursive:true});
+  const CATCSS=`.rel{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 4px}.rel a{display:inline-block;border:1px solid #e5e7eb;border-radius:999px;padding:7px 13px;font-size:13px;text-decoration:none;color:#111827}.rel a:hover{border-color:#0066ff;color:#0066ff}.catmeta{color:#6b7280;font-size:13px;margin:0 0 14px}`;
+  for(const cat of cats){
+    const list=byCat[cat].slice().sort((a,b)=>String(a.name).localeCompare(String(b.name)));
+    const slug=catSlug(cat);
+    const count=list.length;
+    const brands=[...new Set(list.map(r=>r.brand).filter(has))].slice(0,6);
+    const url=`${SITE}/category/${slug}.html`;
+    const title=`${cat} Robots — ${count} models compared | myrobot.shop`;
+    const desc=`Browse all ${count} ${cat.toLowerCase()} robots in the world's largest robot database. Compare specs, prices, availability and videos${brands.length?` — from ${brands.slice(0,4).join(', ')} and more`:''}.`.replace(/\s+/g,' ').slice(0,158);
+    const intro=`Every ${cat.toLowerCase()} robot we've catalogued — ${count} models and counting — with side-by-side specifications, price levels, availability and videos. ${brands.length?`Featured makers include ${brands.join(', ')}. `:''}Tap any robot for its full profile, or open the interactive explorer to filter and compare.`;
+    const itemList={"@context":"https://schema.org","@type":"CollectionPage","name":`${cat} Robots`,"url":url,"description":desc,
+      "mainEntity":{"@type":"ItemList","numberOfItems":count,"itemListElement":list.slice(0,100).map((r,i)=>({"@type":"ListItem","position":i+1,"url":`${SITE}/r/${r.id}.html`,"name":r.name}))}};
+    const crumbLd={"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"myrobot.shop","item":SITE+"/"},
+      {"@type":"ListItem","position":2,"name":cat+" Robots","item":url}]};
+    const links=list.map(r=>`<a href="/r/${attr(r.id)}.html">${esc(r.name)}</a>`).join('');
+    const html=`<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>${esc(title)}</title>
+<meta name="description" content="${attr(desc)}">
+<link rel="canonical" href="${url}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website"><meta property="og:title" content="${attr(title)}">
+<meta property="og:description" content="${attr(desc)}"><meta property="og:url" content="${url}">
+<meta property="og:site_name" content="myrobot.shop">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${attr(title)}">
+<meta name="twitter:description" content="${attr(desc)}">
+<link rel="preconnect" href="https://res.cloudinary.com" crossorigin>
+<script type="application/ld+json">${JSON.stringify(itemList)}</script>
+<script type="application/ld+json">${JSON.stringify(crumbLd)}</script>
+<style>${CSS}${CATCSS}</style></head><body>
+<div class="crumb"><a href="/">myrobot.shop</a> › ${esc(cat)} Robots</div>
+<h1>${esc(cat)} Robots</h1>
+<p class="catmeta">${count} models in the database</p>
+<p class="lead">${esc(intro)}</p>
+<a class="cta" href="/#db/cat/${encodeURIComponent(cat)}">Open the interactive ${esc(cat)} explorer — filter &amp; compare →</a>
+<h2>All ${count} ${esc(cat)} robots</h2>
+<div class="rel">${links}</div>
+<footer>${esc(cat)} robots are part of <a href="/">myrobot.shop</a> — the world's largest robot database, cataloguing thousands of robots across every category. <a href="/#methodology">How we source our data</a>.</footer>
+</body></html>`;
+    fs.writeFileSync(path.join(cdir,slug+'.html'),html);
+    catUrls.push(`<url><loc>${url}</loc><lastmod>${new Date().toISOString().slice(0,10)}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>`);
+  }
+  console.log(`Generated ${cats.length} category pages`);
+})();
+
 /* ---- sitemap ---- */
 const today=new Date().toISOString().slice(0,10);
 const urls=[`<url><loc>${SITE}/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>`]
-  .concat(ROBOTS.filter(r=>r.id).map(r=>`<url><loc>${SITE}/r/${r.id}.html</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>`))
+  .concat(catUrls)
+  .concat(ROBOTS.filter(r=>r.id).map(r=>{
+    const im=has(r.img)?`<image:image><image:loc>${esc(r.img)}</image:loc></image:image>`:'';
+    return `<url><loc>${SITE}/r/${r.id}.html</loc><lastmod>${today}</lastmod><changefreq>weekly</changefreq><priority>0.7</priority>${im}</url>`;
+  }))
   .concat(qUrls);
-fs.writeFileSync(path.join(OUT,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
+fs.writeFileSync(path.join(OUT,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${urls.join('\n')}\n</urlset>\n`);
 
-console.log(`Generated ${n} pages (${(bytes/1048576).toFixed(1)} MB total, avg ${Math.round(bytes/n)} bytes) + sitemap with ${urls.length} URLs`);
+console.log(`Generated ${n} robot pages + ${catUrls.length} category pages (${(bytes/1048576).toFixed(1)} MB) + sitemap with ${urls.length} URLs`);
