@@ -82318,7 +82318,11 @@
     "hand_type": "Dexterous 22-DOF hands (egg/wine-glass finesse)",
     "frame_material": "Bionic bone-muscle-skin with soft outer skin (tactile-sensing)",
     "touch_sensing": "Full-body soft-skin tactile sensors",
-    "manufacturer_history": "Unveiled at XPENG's 2025 AI Day; skin cut on-stage to prove no human inside. Mass production targeted late 2026."
+    "manufacturer_history": "Unveiled at XPENG's 2025 AI Day; skin cut on-stage to prove no human inside. Mass production targeted late 2026.",
+    "payload": 20,
+    "payload_kg": 20,
+    "fingertip_force_sensors": true,
+    "manipulation_level": "Advanced (22-DOF dexterous hands)"
   },
   {
     "id": "kepler-k2-2024",
@@ -83033,7 +83037,23 @@
     ],
     "payload": 10,
     "speed": 1,
-    "battery": 240
+    "battery": 240,
+    "repeatability": 0.1,
+    "waist_dof": 4,
+    "npu_tops": 270,
+    "chipset": "2x NVIDIA Jetson Orin AGX",
+    "force_sensing": true,
+    "touch_sensing": "Distributed tactile on manipulators",
+    "lidar": true,
+    "ros": true,
+    "ros_version": "ROS 2 Humble",
+    "sdk_langs": [
+      "Python"
+    ],
+    "learning_methods": [
+      "Imitation Learning"
+    ],
+    "manipulation_level": "High-speed precision (10 m/s end-effector, ±0.1 mm)"
   },
   {
     "id": "engineai-em02-2024",
