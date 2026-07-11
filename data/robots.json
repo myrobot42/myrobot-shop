@@ -36323,9 +36323,9 @@
   {
     "id": "sensefly-ebee-classic",
     "name": "eBee Classic",
-    "brand": "senseFly",
+    "brand": "AgEagle",
     "cat": "Drones",
-    "sub": "Survey / Mapping Drone",
+    "sub": "Fixed-Wing Mapping Drone (original eBee)",
     "tags": [
       "sensefly",
       "survey",
@@ -36340,7 +36340,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Ultra-light autonomous mini-drone for professional mapping, one of the lightest and safest drones on the market with integrated autopilot and wind resistance up to 45km/hr",
+    "desc": "The original eBee - senseFly's foam-airframe fixed-wing mapping drone that helped popularize professional drone surveying. Hand-launched and belly-landed with no need for a runway, the ~96 cm wingspan, ~0.69 kg aircraft flew up to 50 minutes and could map as much as 12 km2 in a single high-altitude flight at cruise speeds of 40-90 km/h, producing imagery down to a few centimeters per pixel. It carried a compact ~16MP RGB camera and flew autonomously via senseFly's eMotion planning software with a linear-landing approach and obstacle detection. A workhorse for land surveying, agriculture and GIS, it was later superseded by the modular eBee X line (now under AgEagle).",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -36350,7 +36350,7 @@
     },
     "year": 2012,
     "origin": "Switzerland",
-    "status": "Active",
+    "status": "Retired",
     "released": "2012",
     "width_mm": 960,
     "weight_kg": 0.69,
@@ -36361,20 +36361,29 @@
     "cameras": "Fixed RGB camera for aerial photography and mapping",
     "imu": true,
     "use_cases": [
-      "Aerial mapping",
-      "Surveying",
-      "Agriculture monitoring",
-      "Construction site monitoring",
-      "Environmental research"
+      "Land surveying",
+      "Agriculture mapping",
+      "GIS"
     ],
-    "manufacturer_url": "https://www.sensefly.com",
+    "manufacturer_url": "https://eaglenxt.com/products/drones/ebee-series/",
     "gallery": [
       "https://image.wevolver.com/eyJidWNrZXQiOiJ3ZXZvbHZlci1wcm9qZWN0LWltYWdlcyIsImtleSI6IjAubWo4NXBhZjM3Y2RlYmVlLTEwMjR4NzAyLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NzAwLCJoZWlnaHQiOjQwMCwiZml0IjoiY292ZXIifX19",
       "https://image.wevolver.com/eyJidWNrZXQiOiJ3ZXZvbHZlci1wcm9qZWN0LWltYWdlcyIsImtleSI6IjAuMXd6eXFiN2lmZHZTZW5zZUZseS1lQmVlLWRyb25lLnBuZyIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6NzAwLCJoZWlnaHQiOjQwMCwiZml0IjoiY292ZXIifX19",
       "https://image.wevolver.com/eyJidWNrZXQiOiJ3ZXZvbHZlci1wcm9qZWN0LWltYWdlcyIsImtleSI6IjAuMDN1aGxuMDZpc2YxMDM1NDgyN183ODI2MDEzNTUwOTQzOThfNzk5NzQzNjEzNzUyMjA0NzUyX24uanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo3MDAsImhlaWdodCI6NDAwLCJmaXQiOiJjb3ZlciJ9fX0="
     ],
     "website": "https://www.sensefly.com",
-    "video": "https://youtu.be/yybxZuuWX-Y"
+    "video": "https://youtu.be/yybxZuuWX-Y",
+    "made_in": "Switzerland",
+    "config": "Fixed-wing foam airframe (hand-launch, belly landing)",
+    "wingspan_m": 0.96,
+    "flight_time": 50,
+    "coverage": "Up to 12 km2 per flight",
+    "cruise_speed": "40-90 km/h",
+    "resolution": "Down to 1.5-3 cm/pixel",
+    "camera": "16MP RGB",
+    "software": "eMotion flight planning (autonomous)",
+    "landing": "Linear landing + obstacle detection",
+    "successor": "eBee X"
   },
   {
     "id": "sensefly-ebee-plus",
@@ -58861,7 +58870,7 @@
     "name": "Zenmuse P1",
     "brand": "DJI",
     "cat": "Drones",
-    "sub": "Survey / Mapping Drone",
+    "sub": "Full-Frame Photogrammetry Payload",
     "tags": [
       "dji",
       "survey",
@@ -58876,7 +58885,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Full-frame sensor photogrammetry camera with interchangeable fixed-focus lenses on 3-axis stabilized gimbal, designed for high-efficiency and accuracy mapping missions",
+    "desc": "DJI Enterprise's benchmark aerial-surveying payload, pairing a 45MP full-frame sensor (35.9x24mm, 4.4um pixels, 8192x5460 stills) with interchangeable DL-mount fixed lenses (24, 35 and 50mm F2.8) on a 3-axis stabilized gimbal. A global mechanical shutter (1/2000s) plus TimeSync 2.0 microsecond synchronization across camera, RTK, flight controller and gimbal let it hit 3 cm horizontal / 5 cm vertical accuracy without ground control points. It captures a photo every 0.7 s and covers up to 3 km2 per flight (7.5 km2 in a workday using Smart Oblique Capture, where the gimbal auto-rotates to grab only the angles reconstruction needs). The ~800 g unit mounts on the DJI Matrice 300/350/400 RTK and pairs with DJI Pilot 2 and DJI Terra for topographic mapping, cadastral survey, AEC and disaster-site modeling.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -58896,14 +58905,12 @@
     "imu": true,
     "dof": 3,
     "use_cases": [
-      "Aerial surveying",
-      "Mapping",
-      "Photogrammetry",
-      "Construction monitoring",
-      "Agriculture monitoring",
-      "Mining surveys"
+      "Topographic mapping",
+      "Cadastral survey",
+      "AEC / construction",
+      "Disaster-site modeling"
     ],
-    "manufacturer_url": "https://www.dji.com",
+    "manufacturer_url": "https://enterprise.dji.com/zenmuse-p1",
     "product_url": "https://www.dji.com/zenmuse-p1",
     "gallery": [
       "https://static.bhphoto.com/images/multiple_images/images500x500/1743517650_IMG_1998342.jpg",
@@ -58913,7 +58920,22 @@
       "https://static.bhphoto.com/images/multiple_images/images500x500/1743517650_IMG_1998346.jpg"
     ],
     "website": "https://www.dji.com",
-    "video": "https://youtu.be/HsdnkkuCtV8"
+    "video": "https://youtu.be/HsdnkkuCtV8",
+    "made_in": "China",
+    "type": "Camera payload (not standalone aircraft)",
+    "sensor": "45MP full-frame (35.9x24mm), 4.4um pixel",
+    "resolution": "8192x5460",
+    "lenses": "Interchangeable DL-mount: 24 / 35 / 50mm F2.8",
+    "gimbal": "3-axis stabilized (+/-0.01 deg)",
+    "shutter": "Global mechanical 1/2000s",
+    "sync": "TimeSync 2.0 (microsecond)",
+    "accuracy": "3 cm horizontal / 5 cm vertical (no GCPs, RTK)",
+    "coverage": "3 km2/flight (7.5 km2/workday, Smart Oblique)",
+    "capture_rate": "1 photo / 0.7 s",
+    "smart_oblique": "Auto gimbal rotation (Smart Oblique Capture)",
+    "weight_g": 800,
+    "compat": "Matrice 300 / 350 / 400 RTK",
+    "software": "DJI Terra + DJI Pilot 2"
   },
   {
     "id": "dji-zenmuse-h30-series",
