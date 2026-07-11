@@ -3428,7 +3428,10 @@
     "payload": 30,
     "speed": 1.5,
     "battery": 90,
-    "actuator_type": "Unitree proprietary high-torque joint motors"
+    "actuator_type": "Unitree proprietary high-torque joint motors",
+    "arm_dof": 4,
+    "leg_dof": 5,
+    "torque_nm": 360
   },
   {
     "id": "unitree-g1",
@@ -3560,7 +3563,10 @@
     "touch_sensors_count": 33,
     "tactile_type": "33 distributed tactile sensors (10–2500 g range)",
     "fingertip_force_sensors": true,
-    "force_sensing": true
+    "force_sensing": true,
+    "arm_dof": 5,
+    "leg_dof": 6,
+    "torque_nm": 90
   },
   {
     "id": "unitree-avatar",
@@ -8467,7 +8473,8 @@
     "hand_type": "Five-finger, tendon-driven",
     "hand_actuation": "Tendon-driven (metallic tendons)",
     "tactile_type": "Fingertip tactile (all five fingers)",
-    "fingertip_force_sensors": true
+    "fingertip_force_sensors": true,
+    "dof": 28
   },
   {
     "id": "tesla-optimus-workplace",
@@ -8583,7 +8590,10 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7pO9bnp6wuYsDeYDqA78x6DrF_br2Yh7OBVnIYvAGGoNtbiH8wSovJHA&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9M-r3Bu8gNmOchFCVV6eHhsHzV4XLHs2JvDAKJn0ng9t7QfZYH1WrJvc&s=10"
     ],
-    "video": "https://youtu.be/DrNcXgoFv20"
+    "video": "https://youtu.be/DrNcXgoFv20",
+    "dof": 28,
+    "speed": 2.2,
+    "speed_ms": 2.2
   },
   {
     "id": "apptronik-apollo-gen1",
@@ -58769,7 +58779,7 @@
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733773/myrobot/d00rup73myxdx0yefvbx.png",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 40900,
     "desc": "The Unitree H2 (2025) is Unitree's newer full-size general-purpose humanoid succeeding the H1, offered to research and commercial buyers at a fraction of Western humanoid prices (around US$30,000-40,000), continuing Unitree's push to make capable humanoids broadly affordable.",
     "highlights": [
       "H1 successor",
@@ -58780,8 +58790,8 @@
     "year": 2024,
     "origin": "China",
     "status": "Active",
-    "height_mm": 1800,
-    "dof": 43,
+    "height_mm": 1820,
+    "dof": 31,
     "chipset": "2070 TOPS AI chip",
     "cameras": "Multiple RGB cameras for vision and navigation",
     "imu": true,
@@ -58792,7 +58802,7 @@
       "Commercial development"
     ],
     "manufacturer_url": "https://www.unitree.com",
-    "weight_kg": 47,
+    "weight_kg": 70,
     "speed_ms": 1.5,
     "wifi": true,
     "bluetooth": true,
@@ -58814,7 +58824,11 @@
     "video": "https://youtu.be/eUdBIFkMh-M",
     "speed": 1.5,
     "battery": 150,
-    "actuator_type": "Unitree proprietary joint motors"
+    "actuator_type": "Unitree proprietary joint motors",
+    "npu_tops": 2070,
+    "bionic_face": true,
+    "ota": true,
+    "currency": "USD"
   },
   {
     "id": "unitree-r1",
@@ -58830,7 +58844,7 @@
     ],
     "fig": "🤖",
     "img": "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6883b6faf5b8b86f27ae850b_aparobot-unitree-g1.webp",
-    "score": 84,
+    "score": 75,
     "rating": 4,
     "price": 5900,
     "desc": "The Unitree R1 is billed as the most affordable capable humanoid ever from a major manufacturer, unveiled in July 2025 from about US$4,900 (R1 Air) / $5,900 (standard) — a fraction of the company's $16,000 G1. The child-sized 1.23 m, ~25 kg robot packs 26 joint modules (6 per leg, 5 per arm, 2 waist, 2 head) driven by low-inertia permanent-magnet synchronous motors, giving it striking agility: it runs, cartwheels, does handstands and spin-kicks and recovers from falls autonomously. A backpack compute module runs Unitree's UnifoLM multimodal large language model on-device for voice and image interaction, with a Linux SDK and ROS 2 interfaces on the EDU variant. A quick-release battery gives roughly one hour of mixed activity. Named a TIME Best Invention of 2025, the R1 began phased global deliveries in April 2026, including a landmark retail launch on AliExpress.",
@@ -58887,7 +58901,9 @@
     "sdk_langs": [
       "Python",
       "C++"
-    ]
+    ],
+    "speed": 2.5,
+    "speed_ms": 2.5
   },
   {
     "id": "dji-zenmuse-l2",
