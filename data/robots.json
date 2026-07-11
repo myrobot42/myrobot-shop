@@ -35623,7 +35623,7 @@
     "name": "Volocopter 2X",
     "brand": "Volocopter",
     "cat": "Drones",
-    "sub": "Hybrid VTOL",
+    "sub": "eVTOL Multicopter Air Taxi (2-seat)",
     "tags": [
       "volocopter",
       "hybrid",
@@ -35637,7 +35637,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Two-seat multicopter with 18 fixed-pitch propellers, carbon fiber construction, and ballistic parachute safety system",
+    "desc": "Volocopter's production-intent two-seat eVTOL multicopter, unveiled at AERO Friedrichshafen in 2017 as the successor to the VC200. Its signature look is 18 electrically driven rotors on a circular frame (~9.15 m across) above the cabin, powered by nine lithium-ion batteries. It carries two people at up to 100 km/h (cruising ~70 km/h) for about 27 km / 27 minutes, on a carbon-fibre fuselage with fixed skids, and can be flown by joystick or autonomously with a forgiving control system that holds altitude and position on its own. A whole-aircraft ballistic parachute and redundant distributed propulsion back its safety case. The 2X made high-profile public flights - including carrying Intel's CEO at CES 2018 and an early flight in Dubai - and served as the stepping stone to Volocopter's certified air taxi, the VoloCity.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -35647,7 +35647,7 @@
     },
     "year": 2017,
     "origin": "Germany",
-    "status": "Active",
+    "status": "Retired",
     "height_mm": 2280,
     "width_mm": 9200,
     "depth_mm": 9200,
@@ -35656,13 +35656,27 @@
     "speed_ms": 28,
     "payload_kg": 160,
     "use_cases": [
-      "Urban air mobility",
-      "Air taxi",
-      "Personal transportation",
-      "Emergency medical services"
+      "Urban air taxi (demonstrator)",
+      "City shuttle"
     ],
-    "manufacturer_url": "https://www.volocopter.com",
-    "video": "https://youtu.be/C6gClEFHF6U"
+    "manufacturer_url": "https://www.volocopter.com/",
+    "video": "https://youtu.be/C6gClEFHF6U",
+    "made_in": "Germany",
+    "config": "18-rotor multicopter",
+    "rotors": 18,
+    "passengers": 2,
+    "max_speed": "100 km/h (62 mph)",
+    "cruise_speed": "70 km/h (43 mph)",
+    "range_km": 27,
+    "flight_time": 27,
+    "battery_config": "9 lithium-ion batteries",
+    "frame_material": "Carbon-fibre composite",
+    "landing_gear": "Fixed skid",
+    "rotor_frame": "~9.15 m diameter",
+    "safety": "Whole-aircraft ballistic parachute; redundant DEP",
+    "controls": "Joystick (piloted) or autonomous",
+    "predecessor": "VC200",
+    "successor": "VoloCity"
   },
   {
     "id": "volocopter-voloregion",
@@ -35928,7 +35942,7 @@
     "name": "VoloDrone",
     "brand": "Volocopter",
     "cat": "Drones",
-    "sub": "Heavy-Lift Drone",
+    "sub": "Heavy-Lift Utility Cargo Drone (eVTOL)",
     "tags": [
       "volocopter",
       "heavy",
@@ -35943,7 +35957,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Unmanned, fully electric, heavy-lift utility drone capable of carrying payloads up to 200 kg over 40 km range. Features standardized rail attachment system for various cargo types including boxes, liquids, and equipment. Can be remotely piloted or flown in automated mode on pre-set routes.",
+    "desc": "Volocopter's unmanned, fully electric heavy-lift utility drone - the cargo cousin of its air taxis, first demonstrated in October 2019. It reuses the same 18-rotor multicopter platform (9.2 m rotor diameter, 2.3 m tall) and swappable lithium-ion batteries, but instead of a cabin it has a standardized rail attachment system between its landing gear that accepts a wide range of payloads - boxes, slings, nets, containers, sprayers or spreaders - sized for Euro-pallet loads. It lifts up to 200 kg over 40 km at up to 110 km/h (about 30 minutes of flight), flown remotely or autonomously on pre-set routes (with BVLOS work via Near Earth Autonomy). Aimed at logistics, agriculture (a crop-spraying variant was developed with John Deere), infrastructure and public services, it targets missions where ground transport struggles with access.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -35953,7 +35967,7 @@
     },
     "year": 2019,
     "origin": "Germany",
-    "status": "Active",
+    "status": "Development",
     "height_mm": 2300,
     "width_mm": 9200,
     "depth_mm": 9200,
@@ -35962,17 +35976,30 @@
     "speed_ms": 15,
     "payload_kg": 200,
     "use_cases": [
-      "Cargo delivery",
-      "Medical supply transport",
-      "Industrial logistics",
-      "Emergency response",
-      "Remote area delivery"
+      "Logistics / heavy cargo",
+      "Agriculture / crop spraying",
+      "Construction lifting / infrastructure"
     ],
-    "manufacturer_url": "https://www.volocopter.com",
+    "manufacturer_url": "https://www.volocopter.com/en/newsroom/volocopter-expands-into-utility-drone-business-with-heavy-lift-volodrone",
     "gallery": [
       "https://www.dbschenker.com/resource/image/1709884/4:3/919/690/9d5986c277e65ebbeeedcbb423b9ee8f/C3611217A5AB5C81DC097A2E6732D948/the-volodrone-3-.jpg"
     ],
-    "video": "https://youtu.be/2C5YDnR2EGw"
+    "video": "https://youtu.be/2C5YDnR2EGw",
+    "made_in": "Germany",
+    "config": "18-rotor multicopter",
+    "rotors": 18,
+    "payload": 200,
+    "range_km": 40,
+    "flight_time": 30,
+    "max_speed": "110 km/h (68 mph)",
+    "cruise_speed": "80 km/h (50 mph)",
+    "rotor_diameter": "9.2 m",
+    "height_m": 2.3,
+    "battery": "Swappable Li-ion (<5 min swap)",
+    "attachment": "Standardized rail system (Euro-pallet compatible)",
+    "payload_options": "Box, sling, net, container, sprayer, spreader",
+    "control": "Remote-piloted or autonomous (BVLOS w/ Near Earth)",
+    "partners": "John Deere (agriculture), DB Schenker"
   },
   {
     "id": "wingcopter-wingcopter-198-lidar-surveying",
