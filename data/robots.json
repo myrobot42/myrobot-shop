@@ -36019,7 +36019,7 @@
     "name": "Wingcopter 198 LiDAR Surveying",
     "brand": "Wingcopter",
     "cat": "Drones",
-    "sub": "Survey / Mapping Drone",
+    "sub": "Long-Range LiDAR Surveying eVTOL (tilt-rotor)",
     "tags": [
       "wingcopter",
       "survey",
@@ -36034,7 +36034,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Long-range BVLOS LiDAR surveying solution based on Wingcopter 198 platform. Can survey up to 60km (37 miles) of linear infrastructure in one mission. Equipped with superior laser scanning and camera systems for inspection of power lines, pipelines, railways and terrain mapping.",
+    "desc": "The long-range LiDAR-surveying configuration of Wingcopter's flagship 198 - the same patented tilt-rotor eVTOL used for delivery, re-purposed (from Feb 2025) with a high-end laser scanner and camera system to map linear infrastructure at scale. The tilt-rotor airframe (198 x 152 x 65 cm, 25 kg max takeoff weight, eight rotors of which four tilt, plus winglets) hovers to launch then cruises efficiently at 90 km/h, carrying a ~4.5 kg sensor payload up to 60 km of infrastructure in a single BVLOS mission. Its LiDAR offers a 100-degree field of view and up to a 2.4 MHz pulse rate, firing the beam in three directions (nadir, +10 and -10 degrees) for complete capture of vertical surfaces, canyons and power lines, yielding up to 570 points/m2 at 10 mm accuracy / 5 mm precision - covering 10.3 km2 (~2,500 acres) in about 42 minutes. Redundant flight controls (dual airspeed/heading/GNSS, eight motors and ESCs, two hot-swap smart batteries) and a 5,000 m ceiling suit it to inspecting power lines, pipelines, railways and roads and mapping hard-to-reach terrain.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -36049,24 +36049,36 @@
     "weight_kg": 6.5,
     "battery_life": "59 minutes",
     "speed_ms": 16.7,
-    "payload_kg": 1.2,
-    "lidar": true,
+    "payload_kg": 4.5,
+    "lidar": "100 FOV, up to 2.4 MHz, 3-direction beam; 570 pts/m2",
     "imu": true,
     "cameras": "High-resolution RGB camera for visual inspection",
     "wifi": true,
     "cellular": "4G LTE",
     "use_cases": [
-      "Power line inspection",
-      "Pipeline monitoring",
-      "Railway inspection",
-      "Terrain mapping",
-      "Infrastructure surveying",
-      "Linear asset inspection"
+      "Power-line / pipeline inspection",
+      "Railway / road survey",
+      "Terrain / vegetation mapping"
     ],
-    "manufacturer_url": "https://wingcopter.com",
+    "manufacturer_url": "https://wingcopter.com/surveying",
     "gallery": [
       "https://wingcopter.com/wp-content/uploads/2025/02/1_lidar_slide.png"
-    ]
+    ],
+    "made_in": "Germany",
+    "config": "Tilt-rotor eVTOL (8 rotors, 4 tiltable; winglets)",
+    "dimensions": "198 x 152 x 65 cm",
+    "wingspan_m": 1.98,
+    "mtow_kg": 25,
+    "payload": 4.5,
+    "range_km": 94,
+    "survey_range": "Up to 60 km linear per mission",
+    "max_speed": "90 km/h",
+    "lidar_accuracy": "10 mm accuracy / 5 mm precision",
+    "coverage": "10.3 km2 (~2,500 ac) in 42 min",
+    "max_altitude_m": 5000,
+    "redundancy": "Dual airspeed/heading/GNSS; 8 motors/ESCs, 2 batteries",
+    "battery": "Hot-swap smart Li-Ion (2x 814Wh)",
+    "bvlos": true
   },
   {
     "id": "sensefly-ebee",
@@ -37698,7 +37710,7 @@
     "name": "Percepto Sparrow (Legacy)",
     "brand": "Percepto",
     "cat": "Drones",
-    "sub": "Drone-in-a-Box",
+    "sub": "Autonomous Inspection Drone (drone-in-a-box, legacy)",
     "tags": [
       "percepto",
       "drone",
@@ -37712,7 +37724,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Original drone-in-a-box solution now rebranded as Air Max. Features built-in parachute safety system and autonomous flight decision-making capabilities for low battery and weather conditions.",
+    "desc": "Percepto's original autonomous drone-in-a-box - the first-generation industrial inspection drone (introduced around 2017) that launched the company's fully autonomous inspection-and-monitoring approach. It lived in a weatherproof base station, taking off on pre-programmed BVLOS missions to inspect and monitor industrial sites, carrying an HD RGB camera and a FLIR thermal imager, with data managed through Percepto's Core/AIM software. Deployed worldwide for perimeter security and asset inspection across mining, oil & gas and utilities, the Sparrow was upgraded and rebranded as the Percepto Air Max in 2021, so the 'Sparrow' name is now legacy.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -37722,7 +37734,7 @@
     },
     "year": 2016,
     "origin": "Israel",
-    "status": "Active",
+    "status": "Retired",
     "released": "2016",
     "battery_life": "30 minutes",
     "charge_time": "90 minutes",
@@ -37732,14 +37744,21 @@
     "wifi": true,
     "cellular": "4G LTE",
     "use_cases": [
+      "Perimeter security",
       "Industrial inspection",
-      "Security surveillance",
-      "Infrastructure monitoring",
-      "Perimeter patrol"
+      "Mining / oil & gas / utilities"
     ],
-    "manufacturer_url": "https://www.percepto.co",
+    "manufacturer_url": "https://percepto.co/",
     "weight_kg": 8.5,
-    "payload_kg": 1.5
+    "payload_kg": 1.5,
+    "made_in": "Israel",
+    "config": "Drone-in-a-box (docks in Percepto Base)",
+    "payload": "HD RGB + FLIR thermal",
+    "platform": "Percepto Core / AIM",
+    "autonomy": "Autonomous pre-programmed missions; BVLOS",
+    "weatherproof": true,
+    "introduced": "2017 (first Percepto drone-in-a-box)",
+    "successor": "Rebranded Percepto Air Max (2021)"
   },
   {
     "id": "proscenic-proscenic-x1",
