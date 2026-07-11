@@ -59075,7 +59075,7 @@
     "name": "Zenmuse L3",
     "brand": "DJI",
     "cat": "Drones",
-    "sub": "Survey / Mapping Drone",
+    "sub": "Long-Range Aerial LiDAR + RGB Payload",
     "tags": [
       "dji",
       "survey",
@@ -59090,7 +59090,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "High-accuracy aerial LiDAR system with dual 100MP RGB mapping cameras, high-precision POS system, and three-axis gimbal enabling daily coverage up to 100 km²",
+    "desc": "DJI Enterprise's first long-range, high-accuracy aerial LiDAR system (released November 2025), a major step up from the L2. Its self-developed 1535nm LiDAR reaches 950 m even on 10%-reflectivity targets while keeping strong penetration, with 5 mm ranging repeatability at 150 m and microsecond time synchronization. Improved vertical accuracy (3 cm at 120 m, 5 cm at 300 m, 10 cm at 500 m) supports 1:500, 1:1000 and 1:2000 mapping scales, and a 0.25 mrad beam divergence shrinks the laser spot to about one-fifth of the L2's to resolve fine objects like power lines and branches. Dual 100MP 4/3 CMOS RGB cameras with a mechanical shutter and up to 107-degree horizontal FOV deliver 3 cm GSD even at 300 m. Mounted on the Matrice 400 it covers up to 10 km2 per flight (100 km2 a day), capturing LiDAR and RGB together to generate DOM, DEM and more from a single flight, and integrates with the D-RTK 3 station, DJI Terra, DJI Modify and FlightHub 2.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -59099,22 +59099,19 @@
       "Durability": 75
     },
     "origin": "China",
-    "year": 2023,
+    "year": 2025,
     "status": "Active",
-    "released": "2023",
+    "released": "Nov 4, 2025",
     "weight_kg": 1.43,
-    "lidar": true,
+    "lidar": "1535nm long-range; 950 m @10% reflectivity",
     "imu": true,
     "cameras": "Dual 100MP RGB mapping cameras with mechanical shutter",
     "use_cases": [
-      "Aerial surveying",
-      "3D mapping",
-      "Infrastructure inspection",
-      "Mining surveying",
-      "Construction monitoring",
-      "Forestry management"
+      "Large-scale surveying",
+      "Power-line / corridor modeling",
+      "Geospatial mapping"
     ],
-    "manufacturer_url": "https://www.dji.com",
+    "manufacturer_url": "https://enterprise.dji.com/zenmuse-l3",
     "product_url": "https://enterprise.dji.com/zenmuse-l3",
     "height_mm": 199,
     "width_mm": 181,
@@ -59127,7 +59124,19 @@
       "https://www-cdn.djiits.com/cms/uploads/f8632f3c36430ac7de84c2e84ebe4629.png"
     ],
     "website": "https://www.dji.com",
-    "video": "https://youtu.be/j4JBzGddVgQ"
+    "video": "https://youtu.be/j4JBzGddVgQ",
+    "made_in": "China",
+    "type": "LiDAR mapping payload (not standalone aircraft)",
+    "ranging": "5 mm repeatability @150 m (1-sigma)",
+    "accuracy": "Vertical 3cm@120m / 5cm@300m / 10cm@500m",
+    "beam_divergence": "0.25 mrad (spot ~1/5 of L2)",
+    "rgb_camera": "Dual 100MP 4/3 CMOS, mechanical shutter, 107 HFOV",
+    "gsd": "3 cm at 300 m altitude",
+    "coverage": "10 km2/flight; up to 100 km2/day",
+    "mapping_scales": "1:500 / 1:1000 / 1:2000",
+    "outputs": "DOM, DEM (LiDAR + RGB, single flight)",
+    "compat": "Matrice 400 (+ D-RTK 3)",
+    "software": "DJI Terra, DJI Modify, FlightHub 2"
   },
   {
     "id": "dji-dji-matrice-30-series",
@@ -64117,7 +64126,7 @@
     "name": "SIRAS Drone",
     "brand": "Teledyne FLIR",
     "cat": "Drones",
-    "sub": "Enterprise / Inspection",
+    "sub": "Professional Thermal Inspection Drone",
     "tags": [
       "teledyne flir",
       "enterprise",
@@ -64131,7 +64140,7 @@
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "IP54-rated, thermal/visible imaging, 128x zoom, 640x512 thermal sensor, collision avoidance, no geofencing",
+    "desc": "Teledyne FLIR's affordable, easy-to-fly professional inspection drone, notable for having no restrictive geofencing and keeping all data local for security. Its quick-connect Vue TV128 payload pairs a 16MP visible camera with 128x zoom (20MP mapping mode) and a radiometric 640x512 FLIR Boson thermal camera (5x zoom, per-pixel temperature to about +/-5C), fused with FLIR's patented MSX technology that overlays visible-light edges onto thermal imagery. It takes off in under 60 seconds, flies up to 31 minutes on hot-swappable batteries (~45-minute charge, so three sets keep it flying continuously), and has radar-based front collision avoidance (to 30 m) plus ground detection and return-to-home. The IP54-rated, backpack-portable aircraft and its 1000-nit IP54 controller store imagery only on an onboard microSD card with no cloud connection or online profile, protecting the data chain of custody. It was designed and built with Coretronic (CIRC) in Taiwan with payload integration and QC in the USA, and targets industrial/utility inspection, firefighting, law enforcement and search & rescue.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -64153,14 +64162,12 @@
     "imu": true,
     "depth_sensing": true,
     "use_cases": [
-      "Thermal inspection",
-      "Search and rescue",
-      "Public safety",
-      "Industrial monitoring",
-      "Infrastructure inspection",
-      "Security surveillance"
+      "Industrial / utility inspection",
+      "Firefighting",
+      "Law enforcement",
+      "Search & rescue"
     ],
-    "manufacturer_url": "https://www.flir.com",
+    "manufacturer_url": "https://www.flir.com/products/siras/",
     "product_url": "https://www.flir.com/products/siras/",
     "gallery": [
       "https://mms.businesswire.com/media/20220906005214/en/1560713/4/TeledyneFLIR_SIRAS.jpg?download=1",
@@ -64169,7 +64176,21 @@
       "https://www.dronefly.com/cdn/shop/files/TeledyneFLIRSIRASReplacementRemoteController_4.webp?v=1757664079&width=1445",
       "https://rippingitoutdoors.com/cdn/shop/products/siras-drone-hero-angle.jpg?v=1677300922&width=1445"
     ],
-    "video": "https://youtu.be/bDP1W6qfh_E"
+    "video": "https://youtu.be/bDP1W6qfh_E",
+    "made_in": "Taiwan",
+    "config": "Quadcopter (quick-connect gimbal payload)",
+    "visible_camera": "16MP, 128x zoom (20MP mapping mode)",
+    "thermal_camera": "Radiometric FLIR Boson 640x512, 5x zoom, MSX",
+    "thermal_accuracy": "+/-5 C",
+    "payloads": "Vue TV128 / TV128+ (quick-connect)",
+    "flight_time": 31,
+    "deploy_time": "<60 s takeoff",
+    "battery": "Hot-swappable (~45 min charge)",
+    "obstacle_avoidance": "Front radar (30 m) + ground detection; RTH at 25%",
+    "ip_rating": "IP54 (drone + controller)",
+    "data_security": "No cloud / no geofencing; microSD only",
+    "controller": "IP54, 1000-nit screen",
+    "portability": "Backpack-portable"
   },
   {
     "id": "roborock-q7-l5-",
