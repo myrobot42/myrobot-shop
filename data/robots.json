@@ -47077,7 +47077,7 @@
   },
   {
     "id": "galbot-galbot-humanoid-robot",
-    "name": "Galbot Humanoid Robot",
+    "name": "Galbot Humanoid",
     "brand": "Galbot",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
@@ -47126,11 +47126,12 @@
     ],
     "speed": 1.2,
     "battery": 120,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "ai_model": "AstraBrain (brain-cerebellum-neural control)"
   },
   {
     "id": "galbot-galbot-g1-wheeled-bionic-robot",
-    "name": "Galbot G1 Wheeled Bionic Robot",
+    "name": "Galbot G1",
     "brand": "Galbot",
     "cat": "Humanoid",
     "sub": "Mobile Manipulator",
@@ -47160,8 +47161,8 @@
     "battery_life": "8 hours",
     "speed_ms": 1.5,
     "payload_kg": 10,
-    "dof": 14,
-    "reach_mm": 900,
+    "dof": 47,
+    "reach_mm": 2400,
     "ros": true,
     "cameras": "Multiple RGB cameras and depth cameras for navigation and manipulation",
     "lidar": true,
@@ -47188,7 +47189,11 @@
     "cats": [
       "Humanoid",
       "Industrial"
-    ]
+    ],
+    "arm_dof": 7,
+    "hand_dof": 12,
+    "bimanual": true,
+    "ai_model": "AstraBrain (brain-cerebellum-neural control)"
   },
   {
     "id": "galbot-galbot-s1",
@@ -47243,7 +47248,8 @@
     "payload": 20,
     "speed": 1.2,
     "battery": 480,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "ai_model": "AstraBrain (brain-cerebellum-neural control)"
   },
   {
     "id": "mentee-robotics-menteebot",
@@ -119627,12 +119633,12 @@
     "perf": false,
     "price": "POA",
     "id": "deep-robotics-dr01",
-    "name": "DR01 (Dr.01)",
+    "name": "DR01",
     "brand": "DEEP Robotics",
     "sub": "Locomotion Humanoid",
     "year": 2024,
     "origin": "China",
-    "status": "Development",
+    "status": "Active",
     "desc": "The DR01 is DEEP Robotics' first humanoid, positioned as an 'embodied intelligence explorer' from the Hangzhou company best known for its industrial quadrupeds (Lite3, X20, X30). Standing about 1.7 m and weighing ~80 kg, the DR01 is a locomotion-focused biped with 12 degrees of freedom driven by DEEP's self-developed lightweight J60 and high-power J100 joints. It walks at over 1.6 m/s, clears 18 cm steps and 25-degree slopes, and uses a fusion-perception stack of environmental sensors to stay balanced on slippery or uneven ground and recover after slips or shoves. Through AI and big-data training it can autonomously acquire new locomotion skills. Aimed at research and industrial use, the DR01 is a development/research platform (its all-weather IP66 successor, the DR02, is a separate, newer model).",
     "tags": [
       "humanoid",
@@ -119642,7 +119648,7 @@
       "locomotion"
     ],
     "fig": "🤖",
-    "score": 80,
+    "score": 75,
     "rating": 4,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999213/myrobot/uqq2xufevndk0nv2vzrh.png",
     "gallery": [
@@ -119670,7 +119676,8 @@
     "stair_climbing": true,
     "wifi": "Wi-Fi",
     "imu": true,
-    "ai_model": "Fusion perception + adaptive learning"
+    "ai_model": "Fusion perception + adaptive learning",
+    "lidar": true
   },
   {
     "cat": "Humanoid",
@@ -123614,7 +123621,7 @@
     "dof": 52,
     "ai_chip": "550 TOPS",
     "battery_life": 240,
-    "hand_type": "Five-fingered dexterous hand",
+    "hand_type": "Five-finger dexterous",
     "cpu": "Edge computing modules",
     "cameras": "Vision suite (RGB + depth)",
     "imu": true,
@@ -123715,7 +123722,8 @@
       "Reinforcement Learning",
       "Hierarchical end-to-end"
     ],
-    "manufacturer_url": "https://www.casbot.com/"
+    "manufacturer_url": "https://www.casbot.com/",
+    "fingers": 5
   },
   {
     "cat": "Humanoid",
@@ -123766,7 +123774,9 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/698866bc3781bbc1e55991f6_Casbot%20W1_Hero.webp",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREqpisavd2wQ7zthFTC4PsDqbNM0sB_FVfqfULNf4-dCbYlpYgIdqWkzkm&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtu26FDOstijjUDyxTM7f39zYZ7DNIusvOd32dNDAN2rCaOKFnz_0Q7urN&s=10"
-    ]
+    ],
+    "fingers": 5,
+    "ai_model_type": "VLA (Vision-Language-Action)"
   },
   {
     "cat": "Humanoid",
@@ -132191,13 +132201,13 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "height_mm": 1800,
+    "height_mm": 1900,
     "made_in": "Japan",
-    "weight_kg": 85,
+    "weight_kg": 99,
     "speed_ms": 1.1,
     "speed": 1.1,
     "actuator_type": "Direct-acting motors; reinforced waist/leg joints",
-    "frame_material": "Magnesium-alloy structure + 3D-printed resin panels",
+    "frame_material": "Magnesium alloy + 3D-printed resin panels",
     "power_source": "Onboard battery (untethered standalone)",
     "cameras": "Enhanced stereo cameras",
     "lidar": true,
@@ -132210,7 +132220,8 @@
     "learning_methods": [
       "Simulation-based learning"
     ],
-    "manufacturer_url": "https://kawasakirobotics.com/"
+    "manufacturer_url": "https://kawasakirobotics.com/",
+    "dof": 32
   },
   {
     "id": "kawasaki-kaleido-x",
@@ -132223,7 +132234,7 @@
     "status": "Active",
     "price": "POA",
     "img": "",
-    "actuator_type": "Encoder-integrated torque motors",
+    "actuator_type": "Electric servo",
     "use_cases": [
       "Heavy lifting",
       "Outdoor/industrial",
@@ -132241,7 +132252,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "height_mm": 1780,
+    "weight_kg": 85,
+    "dof": 32,
+    "frame_material": "Magnesium alloy"
   },
   {
     "id": "agibot-lingxi-x2-n",
@@ -133109,7 +133124,9 @@
     "battery_life": 420,
     "battery_life_typical": 420,
     "ota": true,
-    "manufacturer_url": "https://www.deeprobotics.cn/en/"
+    "manufacturer_url": "https://www.deeprobotics.cn/en/",
+    "chipset": "NVIDIA Jetson AGX Orin",
+    "arm_length_mm": 680
   },
   {
     "id": "ti5-t1",
