@@ -3676,7 +3676,9 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxP82O5zfaKLgn0jD7D3xTtDjn0j9eDJnfW_GGEwK-tXxd-oggXV_kZXw&s=10",
       "https://imageio.forbes.com/specials-images/imageserve/69405501bbfb2bd029b0a91b/A-screenshot-of-a-video-featuring-Unitree-G1--a-humanoid-robot-that-you-can-now-load/0x0.jpg?format=jpg&width=480"
     ],
-    "video": "https://youtu.be/24h4FTH7plY"
+    "video": "https://youtu.be/24h4FTH7plY",
+    "arm_dof": 5,
+    "leg_dof": 6
   },
   {
     "id": "unitree-scout",
@@ -3781,7 +3783,9 @@
     "payload": 25,
     "speed": 1.8,
     "battery": 720,
-    "actuator_type": "Unitree proprietary joint motors"
+    "actuator_type": "Unitree proprietary joint motors",
+    "arm_dof": 5,
+    "leg_dof": 6
   },
   {
     "id": "boston-dynamics-atlas-hd",
@@ -49063,7 +49067,7 @@
   {
     "id": "leju-robotics-aelos-1s",
     "name": "AELOS 1s",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "Companion Education",
     "tags": [
@@ -49135,12 +49139,14 @@
     "cats": [
       "Humanoid",
       "Educational"
-    ]
+    ],
+    "actuator_type": "Servo motors",
+    "app_companion": "AELOS app"
   },
   {
     "id": "leju-robotics-pando",
     "name": "PANDO",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "STEAM / Programming Education",
     "tags": [
@@ -49202,12 +49208,13 @@
     "cats": [
       "Humanoid",
       "Educational"
-    ]
+    ],
+    "actuator_type": "Servo motors"
   },
   {
     "id": "leju-robotics-kuavo-5-w",
     "name": "KUAVO 5-W",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -49261,7 +49268,12 @@
     "speed": 1.28,
     "battery": 240,
     "actuator_type": "Electric (self-developed torque servos)",
-    "hand_type": "Modular (dexterous / gripper / claw)"
+    "hand_type": "Modular (dexterous / gripper / claw)",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "torque_nm": 360,
+    "jump_height_mm": 200,
+    "ai_model": "Huawei Pangu (embodied intelligence)"
   },
   {
     "id": "leju-robotics-kuavo-5",
@@ -49413,7 +49425,7 @@
   {
     "id": "leju-robotics-aelos-lite",
     "name": "AELOS LITE",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "Educational Humanoid",
     "tags": [
@@ -49483,12 +49495,14 @@
     "cats": [
       "Humanoid",
       "Educational"
-    ]
+    ],
+    "actuator_type": "Servo motors",
+    "app_companion": "AELOS app"
   },
   {
     "id": "leju-robotics-kuavo-4pro",
     "name": "KUAVO 4Pro",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "Wheeled / Mobile Humanoid",
     "tags": [
@@ -49542,19 +49556,23 @@
     "cpu": "ARM Cortex-A78",
     "ram_gb": 8,
     "storage_gb": 128,
-    "ai_model": "Custom neural networks for perception and navigation",
+    "ai_model": "Huawei Pangu (embodied intelligence)",
     "made_in": "China",
     "website": "https://www.lejurobot.com",
     "payload": 20,
     "speed": 1.28,
     "battery": 240,
     "actuator_type": "Electric (self-developed torque servos)",
-    "hand_type": "Modular (dexterous / gripper / claw)"
+    "hand_type": "Modular (dexterous / gripper / claw)",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "torque_nm": 360,
+    "jump_height_mm": 200
   },
   {
     "id": "leju-robotics-kuavo-5-5-w",
     "name": "KUAVO 5/5-W",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "Research Humanoid",
     "tags": [
@@ -49617,7 +49635,11 @@
     "speed": 1.28,
     "battery": 120,
     "battery_life": 120,
-    "hand_type": "Modular (dexterous / gripper / claw)"
+    "hand_type": "Modular (dexterous / gripper / claw)",
+    "leg_dof": 6,
+    "torque_nm": 360,
+    "jump_height_mm": 200,
+    "ai_model": "Huawei Pangu (embodied intelligence)"
   },
   {
     "id": "leju-robotics-kuavo-my",
@@ -50086,7 +50108,7 @@
       "https://humanoid.guide/wp-content/uploads/2026/03/AgiBot-GO-1-Genie-Operator-1-Foundation-Model-Humanoid-Guide.webp"
     ],
     "made_in": "China",
-    "os": "AGIBOT",
+    "os": "AimRT middleware",
     "actuator_type": "Wheeled dual-arm platform",
     "ai_model": "Genie Operator-1 (GO-1) ViLLA foundation model",
     "website": "https://www.agibot.com",
@@ -50094,7 +50116,9 @@
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "arm_dof": 7,
+    "bimanual": true
   },
   {
     "id": "agibot-x2-ultra",
@@ -122934,7 +122958,9 @@
       "https://plain-eeur-prod-public.komododecks.com/202606/24/FFff3Z5pwmNxVOsXNonV/image.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRijdgGFosrWhGoVVO9dq6OkcsxsiT_Ra9TyTVuG_qO7qoZZUMBdg8G3PY&s=10",
       "https://plain-eeur-prod-public.komododecks.com/202606/24/KmRqrWnjPyay4NJECXDK/image.jpg"
-    ]
+    ],
+    "bimanual": true,
+    "os": "Linux"
   },
   {
     "id": "persona-ai-humanoid",
