@@ -7552,7 +7552,7 @@
     "ai_cloud_required": false,
     "ota": true,
     "cameras": "RGB-D stereo cameras",
-    "lidar": "Solid-state LiDAR",
+    "lidar": true,
     "depth_sensing": true,
     "imu": "6-axis IMU",
     "touch_sensing": "Force/torque sensors",
@@ -7593,7 +7593,10 @@
       "https://cdn.prod.website-files.com/68d6ca150ffa11fdc25d7575/698e0487862f6c968d491df9_69248ebe0a275215d37cd308_nrtl-final-cover.avif",
       "https://www.therobotreport.com/wp-content/uploads/2026/06/AgilityRobotics.031723-copy.jpg"
     ],
-    "video": "https://youtu.be/std5wteoa50"
+    "video": "https://youtu.be/std5wteoa50",
+    "dof": 28,
+    "arm_dof": 4,
+    "leg_dof": 6
   },
   {
     "id": "digit-v4",
@@ -7668,7 +7671,7 @@
     "ai_cloud_required": false,
     "ota": true,
     "cameras": "Stereo RGB cameras",
-    "lidar": "2D LiDAR",
+    "lidar": true,
     "depth_sensing": true,
     "imu": "6-axis IMU",
     "touch_sensing": "Force sensors",
@@ -7708,7 +7711,10 @@
     "speed": 1.2,
     "battery": 180,
     "actuator_type": "Electric",
-    "hand_type": "Modular gripper / suction end-effector"
+    "hand_type": "Modular gripper / suction end-effector",
+    "dof": 28,
+    "arm_dof": 4,
+    "leg_dof": 6
   },
   {
     "id": "digit-v3",
@@ -7917,7 +7923,9 @@
     "payload": 5,
     "speed": 3,
     "battery": 60,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "dof": 10,
+    "leg_dof": 5
   },
   {
     "id": "digit-v2",
@@ -8233,7 +8241,9 @@
       "https://img-cdn.inc.com/image/upload/f_webp,c_fit,w_1920,q_auto/images/panoramic/cassielegs-pano2_347785.jpg",
       "https://spectrum.ieee.org/media-library/cassie.jpg?id=25582492&width=1000&quality=85"
     ],
-    "video": "https://youtu.be/CVcfNBYBYqA"
+    "video": "https://youtu.be/CVcfNBYBYqA",
+    "dof": 10,
+    "leg_dof": 5
   },
   {
     "id": "tesla-optimus-gen1",
@@ -8635,7 +8645,7 @@
       "Gray"
     ],
     "os": "Apollo OS",
-    "chipset": "NVIDIA Jetson AGX Orin",
+    "chipset": "NVIDIA Jetson AGX Orin + Orin NX",
     "cpu": "ARM Cortex-A78AE",
     "ram_gb": 32,
     "ram_type": "LPDDR5",
@@ -8653,7 +8663,7 @@
     "hot_swap": true,
     "quick_release": true,
     "cycle_life": 2000,
-    "ai_model": "Apollo Intelligence",
+    "ai_model": "NVIDIA Project GR00T",
     "ai_model_type": "Transformer-based",
     "learning_methods": [
       "Reinforcement Learning",
@@ -8703,7 +8713,8 @@
     "payload": 25,
     "speed": 1.4,
     "battery": 4,
-    "actuator_type": "Electric linear + rotary (Apptronik bespoke)"
+    "actuator_type": "Electric linear + rotary (Apptronik bespoke)",
+    "dof": 71
   },
   {
     "id": "1x-eve-01",
@@ -50537,7 +50548,7 @@
   {
     "id": "kepler-robotics-forerunner-s1",
     "name": "Forerunner S1",
-    "brand": "Kepler Robotics",
+    "brand": "Kepler",
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "tags": [
@@ -50590,7 +50601,8 @@
     "payload": 18,
     "battery": 480,
     "battery_life": 480,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "hand_actuation": "Rope-driven (tendon)"
   },
   {
     "id": "engineered-arts-quinn",
@@ -72153,7 +72165,7 @@
       "Blue"
     ],
     "os": "Ubuntu Linux",
-    "chipset": "NVIDIA Orin",
+    "chipset": "NVIDIA Jetson AGX Orin + Orin NX",
     "cpu": "ARM Cortex-A78AE",
     "ram_gb": 32,
     "ram_type": "LPDDR5",
@@ -72171,7 +72183,7 @@
     "hot_swap": true,
     "quick_release": true,
     "cycle_life": null,
-    "ai_model": "Apptronik Cortex",
+    "ai_model": "NVIDIA Project GR00T",
     "ai_model_type": "Deep Learning",
     "learning_methods": [
       "Imitation Learning",
@@ -72211,7 +72223,7 @@
     "origin": "USA",
     "speed_ms": 1.5,
     "payload_kg": 25,
-    "dof": 32,
+    "dof": 71,
     "website": "https://apptronik.com",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/23/WeEmD0N4r0j4KnRZdsYY/image.jpg",
     "gallery": [
@@ -123114,7 +123126,11 @@
       "https://www.dobot-robots.com/media/upload/2025/06/atom/Max.png",
       "https://cdn.robotshop.com/media/d/dot/rbd-dot-106/img/dobot-atom-max-research-humanoid-robot-3-panel-02.webp",
       "https://cdn.robotshop.com/media/d/dot/rbd-dot-106/img/dobot-atom-max-research-humanoid-robot-3-panel-03.webp"
-    ]
+    ],
+    "hand_dof": 12,
+    "npu_tops": 1500,
+    "repeatability": 0.05,
+    "chipset": "Intel i9 + 16GB GPU"
   },
   {
     "cat": "Humanoid",
@@ -123176,7 +123192,10 @@
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "arm_dof": 7,
+    "head_dof": 2,
+    "ai_model": "ROM-1 (Robot Operator Model-1)"
   },
   {
     "cat": "Humanoid",
@@ -123233,7 +123252,10 @@
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "arm_dof": 7,
+    "head_dof": 2,
+    "ai_model": "ROM-1 (Robot Operator Model-1)"
   },
   {
     "cat": "Humanoid",
