@@ -83488,8 +83488,9 @@
       "https://humanoid.guide/wp-content/uploads/2026/02/sprout-robot.jpg"
     ],
     "battery": 180,
-    "actuator_type": "Electric",
-    "video": "https://youtu.be/pO9MEqs7H2s"
+    "actuator_type": "Compliant (low-torque)",
+    "video": "https://youtu.be/pO9MEqs7H2s",
+    "shell_material": "Soft compliant exterior"
   },
   {
     "id": "toyota-tro-2017",
@@ -123915,7 +123916,9 @@
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/d/e/dexforce.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6929b186a0270d0a1e899073_(15)%20W1%20Pro%20Humanoid%20by%20DexForce%20(%E8%B7%A8%E7%BB%B4%E6%99%BA%E8%83%BD%EF%BC%89%20-%20YouTube%20-%200_11.webp"
     ],
-    "video": "https://youtu.be/ddI4U6dlxxM"
+    "video": "https://youtu.be/ddI4U6dlxxM",
+    "arm_dof": 7,
+    "bimanual": true
   },
   {
     "cat": "Humanoid",
@@ -132650,7 +132653,7 @@
     "sub": "Wheeled Home Humanoid",
     "year": 2026,
     "origin": "USA",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "use_cases": [
@@ -133017,7 +133020,7 @@
     "sub": "Bipedal Service Humanoid",
     "year": 2025,
     "origin": "China",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "use_cases": [
@@ -133043,7 +133046,8 @@
     "ai_model": "OrionStar AI (voice interaction + visual navigation)",
     "natural_language_commands": true,
     "navigation": "Visual navigation (VSLAM)",
-    "manufacturer_url": "https://en.orionstar.com/"
+    "manufacturer_url": "https://en.orionstar.com/",
+    "speech_synthesis": true
   },
   {
     "id": "dataa-ginger",
@@ -133395,7 +133399,8 @@
     "cameras": "AI vision (object detection)",
     "bimanual": true,
     "hand_type": "Articulated hands",
-    "manufacturer_url": "https://www.keenon.com/"
+    "manufacturer_url": "https://www.keenon.com/",
+    "speech_synthesis": true
   },
   {
     "id": "pal-robotics-kangaroo",
