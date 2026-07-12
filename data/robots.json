@@ -8959,7 +8959,8 @@
     "manipulation_level": "Advanced — 21-DOF, demonstrated in-hand manipulation",
     "tactile_type": "Proprietary tactile, ~5 mN sensitivity (near-human)",
     "fingertip_force_sensors": true,
-    "force_sensing": true
+    "force_sensing": true,
+    "hand_actuation": "Miniaturized hydraulic"
   },
   {
     "id": "sanctuary-ai-phoenix-gen-6",
@@ -9026,7 +9027,7 @@
     "hot_swap": false,
     "quick_release": true,
     "cycle_life": 1800,
-    "ai_model": "Sanctuary Carbon v2",
+    "ai_model": "Carbon",
     "ai_model_type": "Multimodal AI",
     "learning_methods": [
       "Reinforcement Learning",
@@ -9061,16 +9062,18 @@
     "perf": false,
     "origin": "Canada",
     "speed_ms": 1,
-    "payload_kg": 20,
+    "payload_kg": 25,
     "reach_mm": 800,
     "website": "https://www.sanctuary.ai",
-    "payload": 20,
+    "payload": 25,
     "speed": 1,
     "battery": 6,
     "actuator_type": "Hydraulic",
     "gallery": [
       "https://sanctuary.ai/wp-content/uploads/2023/05/main-image-phoenix-annoucement-1.webp"
-    ]
+    ],
+    "hand_dof": 21,
+    "hand_actuation": "Miniaturized hydraulic"
   },
   {
     "id": "sanctuary-ai-phoenix-pilot",
@@ -9129,7 +9132,7 @@
     "hot_swap": true,
     "quick_release": true,
     "cycle_life": 2500,
-    "ai_model": "Sanctuary Carbon Research",
+    "ai_model": "Carbon",
     "ai_model_type": "Experimental Foundation Model",
     "learning_methods": [
       "Deep RL",
@@ -9167,13 +9170,15 @@
     "perf": false,
     "origin": "Canada",
     "speed_ms": 1.5,
-    "payload_kg": 30,
+    "payload_kg": 25,
     "reach_mm": 900,
     "website": "https://www.sanctuary.ai",
-    "payload": 30,
+    "payload": 25,
     "speed": 1.5,
     "battery": 10,
-    "actuator_type": "Hydraulic"
+    "actuator_type": "Hydraulic",
+    "hand_dof": 21,
+    "hand_actuation": "Miniaturized hydraulic"
   },
   {
     "id": "ubtech-walker-x",
@@ -71592,7 +71597,7 @@
     "depth_mm": 280,
     "weight_kg": 45,
     "frame_material": "Aluminum alloy",
-    "shell_material": "Silicone skin over ABS",
+    "shell_material": "Silicone",
     "ip_rating": "IP22",
     "operating_temp_min": 10,
     "operating_temp_max": 35,
@@ -71663,7 +71668,12 @@
     ],
     "video": "https://youtu.be/hBHCTluboMQ",
     "battery": 240,
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "dof": 44,
+    "head_dof": 17,
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "speech_synthesis": true
   },
   {
     "id": "realbotix-harmony-ai-2",
@@ -71697,7 +71707,7 @@
     "depth_mm": 250,
     "weight_kg": 8,
     "frame_material": "Aluminum",
-    "shell_material": "Platinum silicone",
+    "shell_material": "Silicone",
     "ip_rating": "IP20",
     "operating_temp_min": 15,
     "operating_temp_max": 35,
@@ -71763,7 +71773,12 @@
       "https://ca-times.brightspotcdn.com/dims4/default/3d9e4c7/2147483647/strip/true/crop/2000x1125+0+0/resize/1440x810!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F0b%2Fe4%2F3df654ae5a6ac542136e700f05ac%2Fla-fi-sex-robot-harmony-pictures-20170925-028"
     ],
     "battery": 120,
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "dof": 17,
+    "head_dof": 17,
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "speech_synthesis": true
   },
   {
     "id": "realbotix-henry-3",
@@ -71797,7 +71812,7 @@
     "depth_mm": 240,
     "weight_kg": 7.5,
     "frame_material": "Aluminum",
-    "shell_material": "Platinum silicone",
+    "shell_material": "Silicone",
     "ip_rating": "IP20",
     "operating_temp_min": 15,
     "operating_temp_max": 35,
@@ -71864,7 +71879,12 @@
       "https://starobserver.com.au/wp-content/uploads/2021/06/henry.jpg"
     ],
     "battery": 120,
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "dof": 17,
+    "head_dof": 17,
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "speech_synthesis": true
   },
   {
     "id": "realbotix-solana-4",
@@ -71898,7 +71918,7 @@
     "depth_mm": 290,
     "weight_kg": 48,
     "frame_material": "Titanium alloy",
-    "shell_material": "Platinum silicone",
+    "shell_material": "Silicone",
     "ip_rating": "IP22",
     "operating_temp_min": 10,
     "operating_temp_max": 40,
@@ -71970,7 +71990,12 @@
     ],
     "speed": 0.8,
     "battery": 360,
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "dof": 44,
+    "head_dof": 17,
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "speech_synthesis": true
   },
   {
     "id": "realbotix-aria-enterprise-5",
@@ -72003,7 +72028,7 @@
     "depth_mm": 280,
     "weight_kg": 46,
     "frame_material": "Aluminum alloy",
-    "shell_material": "Silicone skin over ABS",
+    "shell_material": "Silicone",
     "ip_rating": "IP32",
     "operating_temp_min": 5,
     "operating_temp_max": 40,
@@ -72069,7 +72094,12 @@
     "perf": false,
     "origin": "USA",
     "battery": 480,
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "dof": 44,
+    "head_dof": 17,
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "speech_synthesis": true
   },
   {
     "id": "realbotix-harmony-x-6",
@@ -72102,7 +72132,7 @@
     "depth_mm": 255,
     "weight_kg": 8.5,
     "frame_material": "Aluminum",
-    "shell_material": "Platinum silicone",
+    "shell_material": "Silicone",
     "ip_rating": "IP20",
     "operating_temp_min": 15,
     "operating_temp_max": 35,
@@ -72165,7 +72195,12 @@
     "perf": false,
     "origin": "USA",
     "battery": 180,
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "dof": 17,
+    "head_dof": 17,
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "speech_synthesis": true
   },
   {
     "id": "humanoid-005",
@@ -82977,7 +83012,7 @@
     "actuator_type": "Servo motor",
     "depth_sensing": true,
     "imu": true,
-    "ai_model": "Mi-AI",
+    "ai_model": "Mi-Sense",
     "voice_recognition": true,
     "emotion_detection": true,
     "facial_recognition": true,
@@ -82998,7 +83033,10 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1764856219/robots/cyberone-by-xiaomi-robotics-lab/atzfnkavgb4wcldzfaez.jpg?cache=604800"
     ],
     "battery": 150,
-    "video": "https://youtu.be/CJhneBJIfOk"
+    "video": "https://youtu.be/CJhneBJIfOk",
+    "payload": 1.5,
+    "payload_kg": 1.5,
+    "force_sensing": true
   },
   {
     "id": "robotera-star1-2024",
