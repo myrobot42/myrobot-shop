@@ -16,8 +16,8 @@
 <link rel="dns-prefetch" href="https://i.ytimg.com">
 <link rel="manifest" href="/site.webmanifest">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-Q (spec renderer: expanded HAND & MANIPULATION movement+sensing; all hand senses grouped in hand block; cobot END EFFECTOR gripper sensing) -->
-<meta name="mrs-build" content="build-Q">
+<!-- BUILD-TAG: build-R (FULL museum-grade humanoid spec table: every humanoid shows all 104 rows, "Info not found" for blanks, "Not applicable (wheeled base)" for leg specs on wheeled/hybrid, Locomotion row; includes build-Q hand renderer) -->
+<meta name="mrs-build" content="build-R">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,880+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -2311,6 +2311,84 @@ function grp(name) {
   return `<tr><td colspan="2" style="background:var(--bg2);font-size:13px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--txt);padding:18px 12px 8px;border-top:2px solid var(--bdr2);border-bottom:1px solid var(--bdr)">${name}</td></tr>`;
 }
 
+// ── FULL HUMANOID SPEC TABLE (museum-grade: every field always shown) ──
+// Renders the complete locked humanoid menu on EVERY humanoid, showing
+// "Info not found" for blanks and "Not applicable" for leg specs on wheeled
+// bases (with a Locomotion row calling out the base type). This guarantees a
+// consistent, complete table on every humanoid page regardless of data depth.
+var HUMANOID_MENU = [["LAUNCH", [["announced", "Announced", "", "text", 0], ["released", "Released", "", "text", 0], ["made_in", "Made in", "", "text", 0], ["regions", "Availability", "", "array", 0], ["price", "Price", "", "price", 0], ["warranty_months", "Warranty", "months", "num", 0], ["manufacturer_url", "Manufacturer", "", "url", 0]]], ["BODY", [["height_mm", "Height", "mm", "num", 0], ["width_mm", "Width", "mm", "num", 0], ["depth_mm", "Depth", "mm", "num", 0], ["weight_kg", "Weight", "kg", "num", 0], ["frame_material", "Frame / build", "", "text", 0], ["ip_rating", "Protection (IP)", "", "text", 0], ["operating_temp_min", "Operating temp (min)", "\u00b0C", "num", 0], ["operating_temp_max", "Operating temp (max)", "\u00b0C", "num", 0], ["shoulder_width_mm", "Shoulder width", "mm", "num", 0], ["arm_length_mm", "Arm length", "mm", "num", 0], ["leg_length_mm", "Leg length", "mm", "num", 1], ["display_face", "Face display", "", "text", 0]]], ["PERFORMANCE & MOBILITY", [["__locomotion", "Locomotion", "", "loco", 0], ["payload_kg", "Payload", "kg", "numA:payload", 0], ["speed_ms", "Max speed", "m/s", "numA:speed", 0], ["run_speed_ms", "Running speed", "m/s", "numA:run_speed", 1], ["turning_radius_mm", "Turning radius", "mm", "numW", 0], ["max_grade_pct", "Max grade / incline", "%", "numW", 0], ["dof", "Total DOF", "", "num", 0], ["arm_dof", "Arm DOF (each)", "", "num", 0], ["leg_dof", "Leg DOF (each)", "", "num", 1], ["waist_dof", "Waist DOF", "", "num", 0], ["head_dof", "Head DOF", "", "num", 0], ["neck_dof", "Neck DOF", "", "num", 0], ["actuator_type", "Actuator type", "", "text", 0], ["arm_torque_nm", "Peak joint torque", "N\u00b7m", "numA:torque_nm", 0], ["max_step_height_mm", "Max step height", "mm", "num", 1], ["stair_climbing", "Stair climbing", "", "bool", 1], ["fall_recovery", "Fall recovery", "", "bool", 1]]], ["HAND \u2014 MOVEMENT & KINEMATICS", [["hand_type", "Hand type", "", "text", 0], ["hand_actuation", "Hand actuation", "", "text", 0], ["fingers", "Fingers (per hand)", "", "num", 0], ["opposable_thumb", "Opposable thumb", "", "bool", 0], ["hand_dof", "Hand DOF (each)", "", "num", 0], ["finger_dof", "Finger DOF", "", "num", 0], ["active_dof", "Active DOF (hand)", "", "num", 0], ["wrist_dof", "Wrist DOF", "", "num", 0], ["hand_payload_kg", "Hand payload", "kg", "num", 0], ["grasp_force_n", "Grasp force", "N", "num", 0], ["fingertip_force_n", "Fingertip force", "N", "num", 0], ["grip_types", "Grip types", "", "array", 0], ["min_object_size_mm", "Min object size", "mm", "num", 0], ["max_object_diameter_mm", "Max object diameter", "mm", "num", 0], ["hand_close_time_s", "Hand close time", "s", "num", 0], ["hand_repeatability_mm", "Hand repeatability", "mm", "num", 0], ["hand_weight_g", "Hand weight", "g", "num", 0], ["hand_interchangeable", "Interchangeable hands", "", "bool", 0], ["hand_variants", "Hand variants", "", "array", 0], ["tool_changer", "Tool changer", "", "bool", 0], ["can_use_tools", "Can use tools", "", "bool", 0], ["bimanual", "Bimanual", "", "bool", 0], ["manipulation_level", "Manipulation level", "", "text", 0], ["dexterous_hand", "Dexterous hand", "", "bool", 0]]], ["HAND \u2014 SENSING", [["touch_sensing", "Tactile sensing", "", "text", 0], ["touch_sensors_count", "Tactile sensor count", "", "num", 0], ["tactile_type", "Tactile sensor type", "", "text", 0], ["tactile_resolution", "Tactile resolution", "", "text", 0], ["force_sensing", "Force/torque sensing", "", "bool", 0], ["fingertip_force_sensors", "Fingertip force sensors", "", "bool", 0], ["ft_sensor_wrist", "Wrist F/T sensor", "", "bool", 0], ["torque_sensing_finger", "Per-finger torque sensing", "", "bool", 0], ["slip_detection", "Slip detection", "", "bool", 0], ["proprioception", "Proprioception", "", "bool", 0], ["temperature_sensing_hand", "Hand temperature sensing", "", "bool", 0], ["hand_camera", "In-hand camera", "", "bool", 0]]], ["COMPUTE & AI", [["chipset", "Compute / chipset", "", "text", 0], ["ram_gb", "RAM", "GB", "num", 0], ["npu_tops", "AI performance", "TOPS", "num", 0], ["ai_model", "AI model", "", "text", 0], ["ai_model_type", "Model architecture", "", "text", 0], ["llm_model", "Integrated LLM", "", "text", 0], ["learning_methods", "Learning methods", "", "array", 0], ["task_generalisation", "Task generalisation", "", "text", 0], ["natural_language_commands", "Natural-language commands", "", "bool", 0]]], ["SENSORS (body)", [["cameras", "Cameras", "", "text", 0], ["depth_sensing", "Depth sensing", "", "text", 0], ["lidar", "LiDAR", "", "bool", 0], ["imu", "IMU", "", "bool", 0], ["thermal_camera", "Thermal camera", "", "bool", 0]]], ["BATTERY", [["battery_type", "Battery type", "", "text", 0], ["battery_wh", "Capacity", "Wh", "num", 0], ["battery_life", "Battery life", "min", "numA:battery_life_typical", 0], ["charge_time", "Charging (0\u2192100%)", "min", "numA:charge_time_min", 0], ["hot_swap", "Hot-swap battery", "", "bool", 0]]], ["CONNECTIVITY", [["wifi", "Wi-Fi", "", "text", 0], ["bluetooth", "Bluetooth", "", "text", 0], ["ros", "ROS compatible", "", "bool", 0], ["sdk", "SDK", "", "bool", 0], ["sdk_langs", "SDK languages", "", "array", 0], ["ota", "OTA updates", "", "bool", 0]]], ["SAFETY & CERTIFICATION", [["ce", "CE", "", "bool", 0], ["fcc", "FCC", "", "bool", 0], ["iso_certs", "ISO certifications", "", "array", 0], ["estop", "Emergency stop", "", "text", 0]]], ["MISC", [["use_cases", "Use cases", "", "array", 0], ["datasheet", "Datasheet", "", "url", 0], ["website", "Website", "", "url", 0]]]];
+function _hval(r, key, kind){
+  if (kind && kind.indexOf('numA:')===0){ var alt=kind.split(':')[1]; return (r[key]!=null?r[key]:r[alt]); }
+  return r[key];
+}
+function rowF(label, val, unit, kind, opts){
+  opts = opts || {};
+  var na = opts.na || 'Info not found';
+  var empty = (val===null || val===undefined || val==='' || (Array.isArray(val) && val.filter(Boolean).length===0));
+  var display, collectVal;
+  if (empty){ display = '<span style="color:var(--mut);font-style:italic">'+na+'</span>'; collectVal = na; unit=''; }
+  else if (val===true){ display='✓ Yes'; collectVal='Yes'; }
+  else if (val===false){ display='✗ No'; collectVal='No'; }
+  else if (Array.isArray(val)){ display=val.filter(Boolean).join(', '); collectVal=display; }
+  else { display=String(val); collectVal=String(val); }
+  var unitHtml = (unit && !empty) ? ' <span style="color:var(--mut);font-size:11px">'+unit+'</span>' : '';
+  if (unit && !empty) collectVal = collectVal+' '+unit;
+  if (typeof __SPEC_COLLECT!=='undefined' && __SPEC_COLLECT){ __SPEC_COLLECT.push({section:__SPEC_SECTION,label:label,value:collectVal}); }
+  return '<tr><td style="color:var(--mut);font-size:12px;padding:7px 12px;white-space:nowrap;width:42%">'+label+'</td><td style="font-size:12px;padding:7px 12px">'+display+unitHtml+'</td></tr>';
+}
+function buildHumanoidFullTable(r){
+  var subL = (r.sub||'').toLowerCase();
+  var dtxt = (((r.tags||[]).join(' '))+' '+(r.desc||'')).toLowerCase().replace(/cartwheel/g,'');
+  var hybrid = /hybrid|wheel-leg|bipedal-wheel|multi-modal|multi-form|variable wheel/.test(subL);
+  var subWheeled = /wheel|mobile manipulator|mobile base|semi-humanoid/.test(subL);
+  var genericSub = /service|social|household|companion|home|teleoperated|mobile/.test(subL) && !/biped|legged/.test(subL);
+  var descWheeled = /wheel|omnidirectional|holonomic/.test(dtxt) && !(r.leg_dof>0 || r.stair_climbing===true || r.run_speed_ms>0 || r.max_step_height_mm>0);
+  var pureWheeled = !hybrid && (r.wheeled===true || r.mobility==='wheeled' || subWheeled || (genericSub && descWheeled));
+  var wheeled = pureWheeled;            // pure wheeled base (no legs)
+  var hasWheels = hybrid || pureWheeled;
+  var html = '';
+  for (var s=0; s<HUMANOID_MENU.length; s++){
+    var section = HUMANOID_MENU[s][0], fields = HUMANOID_MENU[s][1];
+    html += grp(section);
+    for (var i=0; i<fields.length; i++){
+      var key=fields[i][0], label=fields[i][1], unit=fields[i][2], kind=fields[i][3], isLeg=fields[i][4];
+      // Locomotion synthetic row
+      if (kind==='loco'){
+        var loco = hybrid ? 'Hybrid — wheeled + legged' : (wheeled ? 'Wheeled base' : 'Bipedal (legged)');
+        html += rowF('Locomotion', loco, '', 'text');
+        continue;
+      }
+      // Wheel-only rows: show for wheeled, N/A for legged
+      if (kind==='numW'){
+        if (hasWheels) html += rowF(label, _hval(r,key,'num'), unit, 'num');
+        else html += rowF(label, null, '', 'num', {na:'Not applicable (legged)'});
+        continue;
+      }
+      // Leg-specific rows on a wheeled base → Not applicable
+      if (isLeg && wheeled && !hybrid){
+        html += rowF(label, null, '', kind, {na:'Not applicable (wheeled base)'});
+        continue;
+      }
+      var val = _hval(r, key, kind);
+      // price special-case
+      if (kind==='price'){
+        if (val==null || val===''){ html += rowF(label, null, '', 'text'); }
+        else if (typeof val==='number'){ html += rowF(label, '$'+val.toLocaleString(), '', 'text'); }
+        else { html += rowF(label, val, '', 'text'); }
+        continue;
+      }
+      if (kind==='url'){
+        if (val){ html += rowF(label, '<a href="'+val+'" target="_blank" rel="noopener" style="color:var(--acc)">Open →</a>', '', 'text'); }
+        else { html += rowF(label, null, '', 'text'); }
+        continue;
+      }
+      html += rowF(label, val, unit, kind);
+    }
+  }
+  return html;
+}
+
+
 // Collect the SAME rows buildSpecTable() renders, as structured data, for Compare.
 function getSpecRows(r){
   const prev=__SPEC_COLLECT, prevS=__SPEC_SECTION;
@@ -2498,6 +2576,9 @@ function buildSpecTable(r) {
   const isMilitary = cat.includes('military') || sub.includes('eod') || sub.includes('defense') || sub.includes('security');
   const isQuadruped = sub.includes('quadruped') || sub.includes('dog') || sub.includes('legged');
   const isEducational = cat.includes('edu') || sub.includes('edu') || sub.includes('stem');
+
+  // FULL museum-grade table for every humanoid (all rows always shown)
+  if (isHumanoid) return buildHumanoidFullTable(r);
 
   // ── NEW CATEGORY DETECTION (added via Phase B-display extension) ──
   const isAerospace = cat.includes('aerospace') || cat.includes('space') || sub.includes('rover') || sub.includes('lander') || sub.includes('orbiter') || sub.includes('satellite') || sub.includes('station arm') || sub.includes('free-flyer');
