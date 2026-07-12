@@ -8654,7 +8654,7 @@
     "npu_tops": 275,
     "battery_type": "Lithium-ion",
     "battery_wh": 2400,
-    "battery_life": 4,
+    "battery_life": 240,
     "charge_time": 2.5,
     "charge_power_w": 1000,
     "charge_type": "AC adapter",
@@ -8714,12 +8714,12 @@
     "speed": 1.4,
     "battery": 4,
     "actuator_type": "Electric linear + rotary (Apptronik bespoke)",
-    "dof": 71
+    "dof": 32
   },
   {
     "id": "1x-eve-01",
     "name": "EVE",
-    "brand": "1X Technologies",
+    "brand": "1X",
     "year": 2023,
     "status": "Active",
     "cat": "Humanoid",
@@ -8765,7 +8765,7 @@
     "npu_tops": 275,
     "battery_type": "Li-ion",
     "battery_wh": 2400,
-    "battery_life": 240,
+    "battery_life": 360,
     "charge_time": "3 hours",
     "charge_power_w": 800,
     "charge_type": "AC adapter",
@@ -8810,7 +8810,7 @@
     ],
     "perf": false,
     "origin": "Norway/USA",
-    "speed_ms": 1.2,
+    "speed_ms": 4,
     "payload_kg": 15,
     "reach_mm": 800,
     "dof": 42,
@@ -8822,9 +8822,10 @@
     ],
     "website": "https://www.1x.tech",
     "payload": 15,
-    "speed": 1.2,
+    "speed": 4,
     "battery": 240,
-    "actuator_type": "Electric (tendon-driven)"
+    "actuator_type": "Electric (tendon-driven)",
+    "run_speed_ms": 4
   },
   {
     "id": "sanctuary-ai-phoenix-gen-7",
@@ -47312,7 +47313,7 @@
     "bimanual": true,
     "can_use_tools": true,
     "ai_model": "Mentee end-to-end neural net",
-    "ai_model_type": "VLA (Sim2Real trained)",
+    "ai_model_type": "VLA (Real2Sim2Real)",
     "natural_language_commands": true,
     "voice_recognition": true,
     "speech_synthesis": true,
@@ -47329,7 +47330,9 @@
     "actuator_type": "Electric",
     "chipset": "2x NVIDIA Jetson Orin AGX",
     "hot_swap": true,
-    "force_sensing": true
+    "force_sensing": true,
+    "imu_axes": 9,
+    "battery_life": 240
   },
   {
     "id": "mentee-robotics-menteebot-v3-1",
@@ -47392,7 +47395,9 @@
     "actuator_type": "Electric",
     "video": "https://youtu.be/XqFk1Bd5BKg",
     "chipset": "2x NVIDIA Jetson Orin AGX",
-    "hot_swap": true
+    "hot_swap": true,
+    "imu_axes": 9,
+    "ai_model_type": "VLA (Real2Sim2Real)"
   },
   {
     "id": "mentee-robotics-menteebot-v3-0",
@@ -81854,7 +81859,7 @@
   {
     "id": "1x-neo-2025",
     "name": "NEO",
-    "brand": "1X Technologies",
+    "brand": "1X",
     "cat": "Humanoid",
     "sub": "Consumer Humanoid",
     "tags": [
@@ -81907,7 +81912,7 @@
     "payload_kg": 25,
     "payload_peak": 70,
     "dof": 75,
-    "actuator_type": "Tendon-drive",
+    "actuator_type": "Tendon-driven (soft, low-gear)",
     "stair_climbing": true,
     "fall_recovery": true,
     "hand_type": "Five-finger tendon-driven",
@@ -82235,7 +82240,7 @@
     "released": 2024,
     "dof": 43,
     "arm_dof": 7,
-    "actuator_type": "Servo motor",
+    "actuator_type": "Frameless torque motor + harmonic drive (dual encoder)",
     "torque_nm": 200,
     "fingers": 5,
     "bimanual": true,
@@ -82276,7 +82281,8 @@
     "ros": true,
     "ros_version": "ROS 2",
     "payload": 15,
-    "payload_kg": 15
+    "payload_kg": 15,
+    "reach_mm": 1800
   },
   {
     "id": "ubtech-alpha-1e-2018",
@@ -125148,8 +125154,8 @@
     "battery_life_typical": 180,
     "battery_life_heavy": 120,
     "shell_material": "Silicone skin",
-    "wifi": "Wi-Fi",
-    "ai_model": "Emotional-growth large model",
+    "wifi": true,
+    "ai_model": "Memory-Emotional AI Model (on-device)",
     "ai_inference_local": true,
     "emotion_detection": true,
     "variants": [
@@ -125189,7 +125195,8 @@
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/u/b/ubtech-walker-s1-back_1_1.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/u/b/ubtech-walker-s1_1_1.jpg"
     ],
-    "ros": true
+    "ros": true,
+    "speech_synthesis": true
   },
   {
     "id": "droidup-moya",
@@ -125566,8 +125573,11 @@
       "https://english.beijing.gov.cn/latest/photos/202504/W020250420440089770879.jpg",
       "https://media.wired.com/photos/68042cfea9780fa6584faff5/1:1/w_1606,h_1606,c_limit/Humanoid-Robot-Marathon-Business-2210967755.jpg"
     ],
-    "os": "Huisi Kaiwu (open-source platform)",
-    "frame_material": "Aluminum-composite"
+    "os": "Huisi Kaiwu embodied-intelligence platform",
+    "frame_material": "Aluminum-composite",
+    "dof": 42,
+    "leg_dof": 6,
+    "waist_dof": 1
   },
   {
     "id": "tiangong-3-2026",
@@ -125608,7 +125618,7 @@
     "weight_kg": 62,
     "dof": 43,
     "chipset": "D-Robotics Xuri S600 (embodied intelligence)",
-    "os": "Huisi Kaiwu (open-source platform)",
+    "os": "Huisi Kaiwu embodied-intelligence platform",
     "ai_model": "WISE KAIWU + Pelican-VL (VLM)",
     "protocols": [
       "ROS2",
@@ -125642,7 +125652,9 @@
       "Warehouse logistics",
       "Multi-robot collaboration"
     ],
-    "manufacturer_url": "https://www.x-humanoid.com/"
+    "manufacturer_url": "https://www.x-humanoid.com/",
+    "leg_dof": 6,
+    "waist_dof": 1
   },
   {
     "id": "booster-robotics-t2",
@@ -125807,7 +125819,7 @@
   {
     "id": "noetix-n2",
     "name": "N2",
-    "brand": "Noetix Robotics",
+    "brand": "Noetix",
     "cat": "Humanoid",
     "sub": "Compact Humanoid",
     "year": 2025,
@@ -125832,7 +125844,7 @@
     "run_speed_ms": 3.2,
     "actuator_type": "Electric, force-controlled (low-inertia limb design)",
     "fall_recovery": true,
-    "chipset": "NVIDIA Jetson Orin 8GB / RK3588s",
+    "chipset": "RK3588s",
     "npu_tops": 67,
     "depth_sensing": "Dual-camera 3D perception",
     "battery_voltage": "48V",
@@ -125886,7 +125898,9 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/682827f26963b45797acf092_N2_03.png"
     ],
     "video": "https://youtu.be/xPSY3HaT1eY",
-    "battery_ah": 7
+    "battery_ah": 7,
+    "ai_open_source": true,
+    "speech_synthesis": true
   },
   {
     "id": "agibot-lingxi-x2",
