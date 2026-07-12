@@ -3901,7 +3901,9 @@
     "payload": 15,
     "speed": 3,
     "battery": 120,
-    "actuator_type": "Hydraulic"
+    "actuator_type": "Hydraulic",
+    "arm_dof": 7,
+    "leg_dof": 6
   },
   {
     "id": "boston-dynamics-petman",
@@ -4117,7 +4119,9 @@
     "payload": 20,
     "speed": 1.5,
     "battery": 60,
-    "actuator_type": "Hydraulic"
+    "actuator_type": "Hydraulic",
+    "arm_dof": 6,
+    "leg_dof": 6
   },
   {
     "id": "boston-dynamics-handle-humanoid",
@@ -47669,7 +47673,7 @@
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999114/myrobot/ecnkyog3hapfu1u0cvyw.jpg",
-    "score": 80,
+    "score": 75,
     "rating": 4,
     "price": "POA",
     "desc": "Clone Alpha is a musculoskeletal android for the home from Clone Robotics, a startup operating out of the US (Bay Area) and Poland. Instead of conventional electric actuators, it is animated by Clone's proprietary 'Myofiber' artificial muscles — synthetic musculotendon units, water/hydraulically powered, attached to anatomically correct points on a polymer skeleton modelled on all 206 human bones. Each ~3 g fibre responds in under 50 ms, contracts over 30% and produces ~1 kg of force, with the full android using more than 1,000 fibres for fluid, human-like motion. An NVIDIA Jetson Thor processes a suite of depth cameras under Clone's 'Cybernet' foundation model (language, vision and motor control), with skills taught via its 'Telekinesis' training platform — pre-loaded abilities include memorising home layouts, folding laundry, vacuuming, pouring drinks and making sandwiches. Clone is releasing a limited first run of 279 units in its Alpha Edition; pricing is unannounced (likened to a 'limited-edition supercar') and many hardware specs remain unpublished as it is a development-stage platform.",
@@ -47677,7 +47681,7 @@
     "perf": false,
     "origin": "USA / Poland",
     "year": 2025,
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1800,
     "dof": 200,
     "os": "Cybernet",
@@ -47709,10 +47713,11 @@
     "website": "https://www.clonerobotics.com",
     "video": "https://youtu.be/C6u08rIa8o4",
     "battery": 480,
-    "actuator_type": "Myofiber water-powered artificial muscle",
+    "actuator_type": "Myofiber artificial muscle (hydraulic)",
     "shell_material": "Synthetic skin over polymer skeleton (206 bones)",
     "ai_model": "Cybernet (language + vision + motor foundation model)",
-    "natural_language_commands": true
+    "natural_language_commands": true,
+    "bimanual": true
   },
   {
     "id": "clone-robotics-neoclone",
@@ -47937,7 +47942,7 @@
     "depth_sensing": true,
     "made_in": "Poland",
     "announced": "2025",
-    "actuator_type": "279 Myofiber synthetic muscles, water-hydraulic",
+    "actuator_type": "Myofiber artificial muscle (hydraulic)",
     "frame_material": "206 polymer bones",
     "fingers": 5,
     "opposable_thumb": true,
@@ -48246,7 +48251,7 @@
   {
     "id": "leju-robotics-roban",
     "name": "ROBAN",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "Educational Humanoid",
     "tags": [
@@ -48313,7 +48318,9 @@
     "cats": [
       "Humanoid",
       "Educational"
-    ]
+    ],
+    "actuator_type": "Servo motors",
+    "app_companion": "Leju app"
   },
   {
     "id": "leju-robotics-kuavo-3-0",
@@ -49347,7 +49354,7 @@
   {
     "id": "leju-robotics-aelos-pro",
     "name": "AELOS PRO",
-    "brand": "Leju Robotics",
+    "brand": "Leju",
     "cat": "Humanoid",
     "sub": "Educational Humanoid",
     "tags": [
@@ -49420,7 +49427,9 @@
     "cats": [
       "Humanoid",
       "Educational"
-    ]
+    ],
+    "actuator_type": "Servo motors",
+    "app_companion": "AELOS app"
   },
   {
     "id": "leju-robotics-aelos-lite",
@@ -82029,7 +82038,7 @@
     "bimanual": true,
     "depth_sensing": true,
     "imu": true,
-    "ai_model": "AGIBOT Embodied AI (predecessor to GO-1)",
+    "ai_model": "GO-1 (Genie Operator-1)",
     "use_cases": [
       "First-gen AGIBOT humanoid (debut Aug 2023): vehicle inspection, bolt tightening demos"
     ],
@@ -82040,7 +82049,7 @@
       "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1b69o4c13sbtmlc7bi.png",
       "https://d39lxsrz40jt15.cloudfront.net/downloads/EDG2012/o_1iq7e3mdf1kebdcnmra8ppodfl.png"
     ],
-    "os": "WorkGPT / GO-1",
+    "os": "AimRT middleware",
     "speed_ms": 1.9,
     "payload_kg": 80,
     "lidar": true,
@@ -82050,7 +82059,8 @@
     "payload": 80,
     "speed": 1.9,
     "battery": 120,
-    "actuator_type": "Electric (integrated joint modules)"
+    "actuator_type": "Electric (integrated joint modules)",
+    "leg_dof": 6
   },
   {
     "id": "agibot-a2-2025",
@@ -83787,7 +83797,9 @@
     "ce": true,
     "fcc": true,
     "manufacturer_url": "https://www.aldebaran.com",
-    "video": "https://youtu.be/kr05reBxVRs"
+    "video": "https://youtu.be/kr05reBxVRs",
+    "arm_dof": 5,
+    "head_dof": 2
   },
   {
     "id": "softbank-nao-2008",
@@ -83918,7 +83930,10 @@
     "ce": true,
     "fcc": true,
     "manufacturer_url": "https://www.aldebaran.com",
-    "video": "https://youtu.be/RlAhM2lu1XE"
+    "video": "https://youtu.be/RlAhM2lu1XE",
+    "arm_dof": 5,
+    "leg_dof": 6,
+    "head_dof": 2
   },
   {
     "id": "starship-delivery-robot-gen5-2018",
