@@ -82666,7 +82666,9 @@
     "cats": [
       "Humanoid",
       "Service"
-    ]
+    ],
+    "touch_sensing": "Artificial skin",
+    "force_sensing": true
   },
   {
     "id": "hanson-sophia-2016",
@@ -114558,7 +114560,7 @@
     ],
     "made_in": "China",
     "actuator_type": "Micro-motor actuators (joints + facial muscles)",
-    "shell_material": "3D-printed silicone skin over metal body",
+    "shell_material": "Silicone skin",
     "display_face": "Silicone animatronic face (expressions + eye contact)",
     "cameras": "Cameras + microphones",
     "natural_language_commands": true,
@@ -114570,7 +114572,10 @@
       "Science popularisation",
       "Home / office assistance"
     ],
-    "manufacturer_url": "https://www.ex-robots.com/"
+    "manufacturer_url": "https://www.ex-robots.com/",
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "speech_synthesis": true
   },
   {
     "cat": "Telepresence",
@@ -120094,7 +120099,7 @@
     "sub": "Variable Wheel-Leg Humanoid",
     "year": 2024,
     "origin": "China",
-    "status": "Development",
+    "status": "Active",
     "desc": "The third-generation embodied-intelligence humanoid from Chinese automaker GAC (Guangzhou Automobile Group), unveiled December 2024. Its signature is an industry-first variable wheel-leg base that switches between a stable four-wheel mode (1.4 m tall, for stairs, slopes and obstacles) and an agile two-wheel mode (1.75 m tall, smaller footprint) — a design GAC says cuts energy use by over 80%. It has 38 DOF driven by in-house axial-flux joint motors (up to 1000 N·m) and coin-sized servo drives, an all-solid-state battery good for ~6 hours, GAC's pure-vision autonomous-driving algorithm plus FIGS-SLAM for centimetre positioning, and cloud multimodal AI for millisecond voice response. Pilot use began 2025 with small-scale production targeted for 2026.",
     "tags": [
       "humanoid",
@@ -124656,13 +124661,16 @@
       "Social"
     ],
     "hand_type": "Realistic articulated hands",
-    "shell_material": "Silicone skin with natural hair",
+    "shell_material": "Silicone skin + real hair",
     "facial_recognition": true,
     "emotion_detection": true,
     "emotional_expression": true,
     "natural_language_commands": true,
     "languages_spoken": "Multiple",
-    "manufacturer_history": "Hardware by Kokoro (2013); social-AI software by NTU Singapore (Prof. Nadia Magnenat Thalmann), continued at University of Geneva / MIRALab."
+    "manufacturer_history": "Hardware by Kokoro (2013); social-AI software by NTU Singapore (Prof. Nadia Magnenat Thalmann), continued at University of Geneva / MIRALab.",
+    "speech_synthesis": true,
+    "force_sensing": true,
+    "depth_sensing": true
   },
   {
     "cat": "Social",
@@ -125132,7 +125140,9 @@
       "https://ifdalivestorage.blob.core.windows.net/user-uploads/1141532/mid-size/681298/0b458fed-7b92-4c38-b7e4-cbe7c9c7e368/4.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68282887612691e199976bd1_TORA_04.png"
     ],
-    "video": "https://youtu.be/jwGz_x1xASI"
+    "video": "https://youtu.be/jwGz_x1xASI",
+    "touch_sensing": "Multi-dimensional tactile (PaXini DTactile)",
+    "fingertip_force_sensors": true
   },
   {
     "id": "ubtech-u1-pro",
@@ -125385,7 +125395,7 @@
   },
   {
     "id": "honor-lightning-2026",
-    "name": "Lightning (闪电)",
+    "name": "Lightning",
     "brand": "Honor",
     "cat": "Humanoid",
     "sub": "High-Speed Humanoid",
@@ -125398,8 +125408,8 @@
     "leg_length_mm": 950,
     "dof": 55,
     "torque_nm": 400,
-    "actuator_type": "Electric servo (liquid-cooled)",
-    "cooling": "Liquid cooling (water-cooled motors; smartphone-derived thermal management)",
+    "actuator_type": "Electric (self-developed joint modules)",
+    "cooling": "Liquid cooling",
     "run_speed_ms": 7,
     "speed": 7,
     "autonomous": true,
@@ -125430,8 +125440,8 @@
     "video": "https://youtu.be/8fNUgniwKYo",
     "announced": "2026-04",
     "fall_recovery": true,
-    "os": "MagicOS (on-device model + YOYO agent)",
-    "ai_model": "MagicOS on-device model + YOYO intelligent agent",
+    "os": "MagicOS",
+    "ai_model": "MagicOS on-device model + YOYO agent",
     "natural_language_commands": true,
     "lidar": true,
     "lidar_model": "Hesai JT series (360°)",
@@ -125998,7 +126008,7 @@
     "sub": "Household Humanoid (Wheeled)",
     "year": 2026,
     "origin": "China",
-    "status": "Pre-order",
+    "status": "Active",
     "price": 9999,
     "img": "https://cdn.shopify.com/s/files/1/0648/1569/4057/files/H1_1x_1.png?v=1767593476",
     "tags": [
@@ -128857,7 +128867,7 @@
     "year": 2017,
     "origin": "Japan",
     "made_in": "Japan (Honda R&D)",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/01/ODodUahMAdTzz5t2ASOS/image.png",
     "desc": "Honda R&D's experimental disaster-response and plant-inspection humanoid, revealed at IROS 2017 as a more rugged, practical successor direction to ASIMO after the Fukushima disaster. At 1.68 m and 85 kg (including a 1,000-Wh lithium-ion battery good for ~90 minutes), E2-DR is only 25 cm 'thick', letting it turn sideways and squeeze through 30 cm gaps common in factories. It has 33 degrees of freedom (8 per arm, 6 per leg, plus torso, hands and head) and can rotate its torso 180° to reverse its knees for climbing steep stairs and ladders. It was designed to walk rough terrain, climb, and inspect hazardous industrial environments.",
@@ -128908,8 +128918,8 @@
       "Disaster Response"
     ],
     "dof": 33,
-    "arm_dof": 16,
-    "leg_dof": 12,
+    "arm_dof": 8,
+    "leg_dof": 6,
     "waist_dof": 2,
     "depth_mm": 250,
     "bimanual": true,
@@ -129051,7 +129061,7 @@
     "year": 2025,
     "origin": "USA",
     "made_in": "USA (Nevada)",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/04/eUZmSGKtNq9MU5vJ8dyx/image.jpg",
     "desc": "A deliberately friendly, character-like companion humanoid from Nevada startup Cartwheel Robotics, which emerged from stealth in 2025. The ~76 cm prototype carries 50+ degrees of freedom for expressive gestures and lifelike locomotion, custom actuators, a hollow skeleton for cooling, and soft medical-grade silicone skin. With a large head, rounded eyes and slightly chubby, Casper-like styling, Yogi is designed to read as 'a presence you can feel' rather than a machine. Founder Scott LaValley previously led mechanical design on Boston Dynamics' early bipeds (PETMAN) and Disney's Project Kiwi (Baby Groot).",
