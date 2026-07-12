@@ -49992,7 +49992,10 @@
     ],
     "max_incline_deg": 30,
     "website": "https://www.agibot.com",
-    "video": "https://youtu.be/DzInhiBbpwo"
+    "video": "https://youtu.be/DzInhiBbpwo",
+    "speed": 3.7,
+    "max_step_height_mm": 350,
+    "range_km": 6
   },
   {
     "id": "agibot-g2",
@@ -105448,7 +105451,12 @@
     ],
     "website": "https://www.mi.com",
     "video": "https://youtu.be/cKks9YeX4k0",
-    "video2": "https://youtu.be/AEEQ6KHi7n4"
+    "video2": "https://youtu.be/AEEQ6KHi7n4",
+    "lidar": true,
+    "actuator_type": "CyberGear micro-actuators",
+    "touch_sensing": "Capacitive touch",
+    "battery_life": 90,
+    "speed": 1.6
   },
   {
     "id": "dreame-x50-ultra",
@@ -115374,7 +115382,7 @@
     "status": "Active",
     "price": 65000,
     "payload_kg": 20,
-    "battery_life": 240,
+    "battery_life": 180,
     "ip_rating": "IP67",
     "desc": "DEEP Robotics' flagship IP67-rated inspection quadruped for harsh, GPS-denied environments such as utility tunnels and substations. Adds higher perception density, longer endurance and all-weather operation over the X20, with multi-LiDAR SLAM, RGB/thermal imaging and auto-charge docks for round-the-clock patrols.",
     "tags": [
@@ -115449,7 +115457,9 @@
       "Snow",
       "Standing water",
       "Tunnels"
-    ]
+    ],
+    "dof": 12,
+    "length_mm": 1000
   },
   {
     "cat": "Quadruped",
@@ -115586,7 +115596,7 @@
     "body_length_mm": 950,
     "width_mm": 470,
     "standing_height_mm": 700,
-    "weight_kg": 53,
+    "weight_kg": 55,
     "payload": 20,
     "speed_ms": 4,
     "speed": 4,
@@ -115633,7 +115643,8 @@
       "Gravel",
       "Standing water",
       "Stairs"
-    ]
+    ],
+    "dof": 12
   },
   {
     "cat": "Quadruped",
@@ -122739,7 +122750,7 @@
     "weight_kg": 1.6,
     "dof": 18,
     "desc": "The first AIBO — Sony’s entertainment robot dog sold out its initial 3,000 Japanese units in 20 minutes in May 1999. With 18 joints, a camera nose and learned behaviors, ERS-110 created the consumer robot-companion category and remains a design icon.",
-    "cameras": "Color CCD camera + range sensor + touch sensors",
+    "cameras": "Color CCD camera",
     "use_cases": [
       "Entertainment robot companion"
     ],
@@ -122758,7 +122769,9 @@
     ],
     "sub": "Robot Dog",
     "video": "https://youtu.be/Zt8u-mTQioE",
-    "video2": "https://youtu.be/uuhatNuT708"
+    "video2": "https://youtu.be/uuhatNuT708",
+    "ai_model": "Behavior-based AI",
+    "speech": "Tonal sounds"
   },
   {
     "id": "nec-papero",
@@ -135388,7 +135401,7 @@
     "desc": "Xiaomi's first robot dog: an open developer platform priced at just 9,999 RMB (~US$1,540) with NVIDIA Jetson Xavier NX brain and 3.2 m/s top speed — the machine that kicked off China's cheap-quadruped race.",
     "tags": [],
     "speed_ms": 3.2,
-    "speed": "3.2 m/s",
+    "speed": 3.2,
     "use_cases": [
       "Development",
       "Research",
@@ -135397,7 +135410,10 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "chipset": "NVIDIA Jetson Xavier NX"
+    "chipset": "NVIDIA Jetson Xavier NX",
+    "dof": 12,
+    "weight_kg": 14.8,
+    "os": "Ubuntu 18.04 + ROS 2"
   },
   {
     "id": "sony-aibo-ers-1000",
@@ -135408,11 +135424,11 @@
     "year": 2018,
     "origin": "Japan",
     "status": "Active",
-    "price": 2899,
+    "price": 3000,
     "img": "",
     "desc": "Sony's beloved aibo reborn: the 2018 ERS-1000 with OLED eyes, 22 actuated axes, cloud-linked AI personality that develops uniquely with its owner, and fish-eye + SLAM cameras. ~US$2,899.",
     "tags": [],
-    "cameras": "Fish-eye front + SLAM rear",
+    "cameras": "Front camera + fisheye SLAM camera",
     "use_cases": [
       "Companionship",
       "Entertainment"
@@ -135421,7 +135437,14 @@
     "score": 75,
     "rating": 4,
     "weight_kg": 2.2,
-    "dof": 22
+    "dof": 22,
+    "battery_life": 120,
+    "ai_model": "Cloud AI (adaptive personality)",
+    "facial_recognition": true,
+    "auto_charge": true,
+    "imu": true,
+    "touch_sensing": "Capacitive (back, head, jaw)",
+    "display": "OLED eyes"
   },
   {
     "id": "sony-aibo-ers-7",
@@ -135431,7 +135454,7 @@
     "sub": "Companion / Entertainment Robot Dog",
     "year": 2003,
     "origin": "Japan",
-    "status": "Discontinued",
+    "status": "Active",
     "price": 1599,
     "img": "",
     "desc": "The third and final generation of Sony's original AIBO line and the first the company explicitly called a 'robot dog'. Featuring the Illume-Face LED array, capacitive touch sensors and MIND software with self-charging, face recognition and name memory, it was widely adopted in academic research and served as the RoboCup Standard Platform League robot from 2004 to 2008.",
@@ -135443,7 +135466,7 @@
       "companion",
       "historic"
     ],
-    "wifi": "IEEE 802.11b",
+    "wifi": true,
     "use_cases": [
       "Companion robot",
       "Entertainment",
@@ -135463,7 +135486,7 @@
     "leg_dof": 3,
     "cpu": "64-bit RISC",
     "cpu_freq_ghz": 0.576,
-    "cameras": "350,000-pixel CMOS",
+    "cameras": "350k-pixel camera",
     "camera_resolution": "350K px",
     "battery_life": 90,
     "battery_life_typical": 90,
@@ -135486,7 +135509,7 @@
     "sub": "Industrial Inspection Quadruped",
     "year": 2019,
     "origin": "Switzerland",
-    "status": "Retired",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "The quadruped that proved autonomous industrial inspection: ~50 kg, IP67, self-charging ANYmal C ran routine inspections on offshore platforms and plants worldwide before being succeeded by ANYmal D.",
@@ -135512,7 +135535,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "dof": 12,
+    "navigation": "360° LiDAR + depth-camera autonomy",
+    "battery_life": 180,
+    "chipset": "8th-gen Intel 6-core"
   },
   {
     "id": "anybotics-anymal-x",
@@ -135899,7 +135926,7 @@
     "weight_kg": 5,
     "dof": 8,
     "leg_dof": 2,
-    "actuator_type": "Quasi-direct-drive (belt transmission)",
+    "actuator_type": "Quasi-direct-drive",
     "controller": "Teensy 3.5 + ODrive",
     "open_source": true,
     "github_url": "https://github.com/Nate711/StanfordDoggoProject",
@@ -135908,7 +135935,8 @@
       "Trot",
       "Pronk",
       "Jump"
-    ]
+    ],
+    "ai_open_source": true
   },
   {
     "id": "anybotics-anymal-b",
