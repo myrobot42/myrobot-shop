@@ -50497,7 +50497,7 @@
     "status": "Active",
     "height_mm": 1870,
     "weight_kg": 50,
-    "dof": 51,
+    "dof": 61,
     "os": "Tritium / Engineered Arts",
     "wifi": true,
     "bluetooth": true,
@@ -50516,7 +50516,7 @@
     "released": "2025",
     "bionic_face": true,
     "display_face": false,
-    "head_dof": 24,
+    "head_dof": 17,
     "neck_dof": 3,
     "arm_dof": 7,
     "facial_recognition": true,
@@ -50525,12 +50525,14 @@
     "speech_synthesis": true,
     "natural_language_commands": true,
     "llm_model": "GPT-class integration",
-    "ai_model": "Tritium OS",
+    "ai_model": "Tritium (GPT / Claude / Gemini)",
     "website": "https://www.engineeredarts.co.uk",
     "gallery": [
       "https://cdn.prod.website-files.com/67ea6793adf74f7d3087e4e4/697d473cd1b6d7e7f6931a58_697d468ee6eb94e0b4011db5_ameca-robot-review-2026.png"
     ],
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "gesture_control": true,
+    "shell_material": "Grey rubber skin (face/hands)"
   },
   {
     "id": "kepler-robotics-forerunner-s1",
@@ -50635,7 +50637,10 @@
     "cats": [
       "Humanoid",
       "Service"
-    ]
+    ],
+    "speech_synthesis": true,
+    "display_face": "Animated screen face",
+    "facial_recognition": true
   },
   {
     "id": "engineered-arts-ami-and-azi-desktop",
@@ -50687,7 +50692,7 @@
     "natural_language_commands": true,
     "head_dof": 12,
     "neck_dof": 3,
-    "ai_model": "GPT-class LLM integration",
+    "ai_model": "Tritium",
     "website": "https://www.engineeredarts.co.uk",
     "gallery": [
       "https://media.engineeredarts.com/wp-content/uploads/2025/09/Azi-Desktop-Social-Humanoid-Robot-Black-Shell-Grey-Skin-Happy-Expression-Engineered-Arts.webp",
@@ -50774,7 +50779,10 @@
       "RT2",
       "RT3",
       "RT4"
-    ]
+    ],
+    "speech_synthesis": true,
+    "gesture_control": true,
+    "emotion_detection": true
   },
   {
     "id": "engineered-arts-mesmer",
@@ -50842,7 +50850,8 @@
     "os": "Engineered Arts",
     "video": "https://youtu.be/fM1xme3-42w",
     "video2": "https://youtu.be/PAMYPjySY9g",
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "shell_material": "Silicone skin"
   },
   {
     "id": "engineered-arts-ameca-desktop",
@@ -50896,7 +50905,13 @@
     "made_in": "UK",
     "website": "https://www.engineeredarts.co.uk",
     "video": "https://youtu.be/k8Ku6IDHLqU",
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "head_dof": 17,
+    "facial_recognition": true,
+    "emotion_detection": true,
+    "speech_synthesis": true,
+    "shell_material": "Grey rubber skin",
+    "ai_model": "Tritium"
   },
   {
     "id": "engineered-arts-ami",
@@ -50956,7 +50971,8 @@
       "https://media.engineeredarts.com/wp-content/uploads/2025/09/Ami-Desktop-Social-Humanoid-Robot-Black-Shell-Natural-Skin-Happy-Expression-Engineered-Arts.webp"
     ],
     "os": "Tritium / Engineered Arts",
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "ai_model": "Tritium (GPT / Claude / Gemini)"
   },
   {
     "id": "milrem-robotics-type-x-rcv",
@@ -82242,7 +82258,13 @@
     ],
     "video": "https://youtu.be/UBbk18oZbTc",
     "video2": "https://youtu.be/UHe1zSQwep0",
-    "battery": 240
+    "battery": 240,
+    "leg_dof": 6,
+    "force_sensing": true,
+    "ros": true,
+    "ros_version": "ROS 2",
+    "payload": 15,
+    "payload_kg": 15
   },
   {
     "id": "ubtech-alpha-1e-2018",
@@ -82285,8 +82307,8 @@
     "announced": "2018",
     "released": 2018,
     "dof": 16,
-    "actuator_type": "16 smart servo joints",
-    "app_companion": "UBTECH",
+    "actuator_type": "Servo",
+    "app_companion": "UBTECH app",
     "battery_life_typical": 60,
     "use_cases": [
       "Programmable home & education entertainment humanoid"
@@ -125144,7 +125166,8 @@
     "gallery": [
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/u/b/ubtech-walker-s1-back_1_1.jpg",
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/u/b/ubtech-walker-s1_1_1.jpg"
-    ]
+    ],
+    "ros": true
   },
   {
     "id": "droidup-moya",
