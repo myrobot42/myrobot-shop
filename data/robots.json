@@ -47723,7 +47723,7 @@
     "made_in": "Poland (Clone Robotics)",
     "announced": "2025",
     "height_mm": 1830,
-    "actuator_type": "Myofiber artificial muscles (hydraulic/water-powered musculotendon units)",
+    "actuator_type": "Myofiber artificial muscle (hydraulic)",
     "dof": 200,
     "fingers": 5,
     "opposable_thumb": true,
@@ -47742,7 +47742,8 @@
     "cooling": "Water-circulation (bio-inspired 'sweating')",
     "power_source": "500 W electric pump + Aquajet valves (pressurised hydraulic)",
     "hand_type": "Anatomically accurate musculoskeletal hands",
-    "manufacturer_history": "Successor to Clone's Protoclone/Alpha; Myofiber artificial-muscle tech pioneered 2021. First 279 units offered by reservation."
+    "manufacturer_history": "Successor to Clone's Protoclone/Alpha; Myofiber artificial-muscle tech pioneered 2021. First 279 units offered by reservation.",
+    "bimanual": true
   },
   {
     "id": "clone-robotics-protoclone-v1",
@@ -47803,7 +47804,9 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHJdCbvKwns_fhL6DJBq7kMa18L1Gu7kPissSWCJeBEwXtff-WqpHk1u4&s=10",
       "https://humanoid.guide/wp-content/uploads/2026/06/image-7.jpg"
     ],
-    "video": "https://youtu.be/H7dhwFcuUn0"
+    "video": "https://youtu.be/H7dhwFcuUn0",
+    "bimanual": true,
+    "manipulation_level": "Anatomical musculoskeletal"
   },
   {
     "id": "clone-robotics-clone-hand",
@@ -56889,12 +56892,14 @@
     "imu": true,
     "depth_sensing": true,
     "made_in": "Poland / USA",
-    "os": "Clone",
+    "os": "Cybernet",
     "website": "https://www.clonerobotics.com",
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "actuator_type": "Myofiber artificial muscle (hydraulic)",
+    "bimanual": true
   },
   {
     "id": "rainbow-robotics-milk-tea-barista",
@@ -82641,7 +82646,7 @@
     "made_in": "Hong Kong",
     "announced": "2016-02",
     "released": 2016,
-    "shell_material": "Frubber (patented silicone skin)",
+    "shell_material": "Frubber (patented skin)",
     "bionic_face": true,
     "display_face": false,
     "facial_recognition": true,
@@ -82650,7 +82655,7 @@
     "speech_synthesis": true,
     "conversational_ai": "Hanson AI / GPT integration",
     "natural_language_commands": true,
-    "head_dof": 12,
+    "head_dof": 32,
     "use_cases": [
       "Social interaction & media",
       "AI/HRI research",
@@ -123340,7 +123345,10 @@
     "video": "https://youtu.be/Vt93d2GqyB4",
     "payload": 1,
     "speed": 1.2,
-    "battery": 480
+    "battery": 480,
+    "npu_tops": 32,
+    "chipset": "NVIDIA Jetson Orin Nano SUPER 8GB",
+    "bimanual": true
   },
   {
     "cat": "Humanoid",
@@ -123400,7 +123408,11 @@
     ],
     "video": "https://youtu.be/qmS_d0bbmCs",
     "video2": "https://youtu.be/Xb-Lbf9AM3g",
-    "payload": 1
+    "payload": 1,
+    "npu_tops": 32,
+    "chipset": "NVIDIA Jetson Orin Nano SUPER 8GB",
+    "arm_dof": 7,
+    "bimanual": true
   },
   {
     "cat": "Industrial",
@@ -124630,8 +124642,8 @@
     "status": "Active",
     "dof": 25,
     "height_mm": 840,
-    "actuator_type": "Robotis Dynamixel servos (MX-28, MX-64)",
-    "frame_material": "3D-printed parts (fully fabricable/modifiable)",
+    "actuator_type": "Dynamixel MX servos",
+    "frame_material": "3D-printed PLA",
     "os": "Python / ROS",
     "ros": true,
     "api": true,
@@ -124677,7 +124689,12 @@
     "cats": [
       "Humanoid",
       "Educational"
-    ]
+    ],
+    "arm_dof": 4,
+    "leg_dof": 6,
+    "waist_dof": 5,
+    "head_dof": 2,
+    "ai_open_source": true
   },
   {
     "cat": "Educational",
@@ -129043,7 +129060,9 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7mlChgsY7E8Tyid7XI97vt8rfgKSBlq_kQbPLxO8JDhsce0pFlWOpOoWp&s=10",
       "https://www.roboticgizmos.com/wp-content/uploads/2018/01/12/ARMAR-6-Proactive-Robotic-Helper.gif"
     ],
-    "video": "https://youtu.be/AYWtBlE0z7c"
+    "video": "https://youtu.be/AYWtBlE0z7c",
+    "fingers": 5,
+    "hand_type": "Five-finger"
   },
   {
     "id": "dlr-rollin-justin",
@@ -132072,7 +132091,7 @@
     "dof": 42,
     "hand_dof": 11,
     "speed_ms": 2,
-    "speed": "2 m/s (7.2 km/h)",
+    "speed": 2,
     "payload_kg": 20,
     "payload": "20 kg",
     "cameras": "RGB + RGBD",
@@ -132097,7 +132116,18 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "hand_type": "PUDU DH11 (6 active + 5 passive)",
+    "torque_nm": 352,
+    "npu_tops": 275,
+    "chipset": "NVIDIA Orin + RK3588",
+    "lidar": true,
+    "force_sensing": true,
+    "touch_sensors_count": 1018,
+    "grasp_force_n": 30,
+    "stair_climbing": true
   },
   {
     "id": "pudu-d7",
