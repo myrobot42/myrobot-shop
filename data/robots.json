@@ -50096,7 +50096,7 @@
       "Entertainment"
     ],
     "manufacturer_url": "https://www.agibot.com",
-    "ai_model": "200 TOPS AI computing",
+    "ai_model": "GO-1 (Genie Operator-1) + ViLLA",
     "gallery": [
       "https://store.agibot.com/cdn/shop/files/2_11e1912e-424b-48c6-9f21-84c2bf742b19.png?v=1765524333&width=800",
       "https://store.agibot.com/cdn/shop/files/3_1106b757-4704-472f-9f6d-4dbae574df89.png?v=1765524332&width=800",
@@ -50108,7 +50108,18 @@
     "released": 2025,
     "website": "https://www.agibot.com",
     "video": "https://youtu.be/yGcjdVv91XA",
-    "actuator_type": "Electric (integrated joint modules)"
+    "actuator_type": "Electric (integrated joint modules)",
+    "npu_tops": 157,
+    "chipset": "2x RK3588 + NVIDIA Orin NX",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "neck_dof": 1,
+    "waist_dof": 3,
+    "lidar_type": "3D",
+    "touch_sensing": "Head touch sensor",
+    "battery_wh": 500,
+    "auto_charge": true,
+    "ota": true
   },
   {
     "id": "agibot-x2",
@@ -50174,7 +50185,14 @@
     "video": "https://youtu.be/kBGNvPq0Iyg",
     "speed": 1.5,
     "battery": 360,
-    "actuator_type": "Electric (integrated joint modules)"
+    "actuator_type": "Electric (integrated joint modules)",
+    "leg_dof": 6,
+    "neck_dof": 1,
+    "waist_dof": 3,
+    "torque_nm": 120,
+    "battery_wh": 500,
+    "chipset": "2x RK3588",
+    "ai_model_type": "ViLLA (Vision-Language-Locomotion-Action)"
   },
   {
     "id": "agibot-x1",
@@ -50239,13 +50257,18 @@
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "torque_nm": 200,
+    "actuator_type": "PowerFlow QDD (quasi-direct-drive)",
+    "hand_type": "OmniPicker adaptive gripper",
+    "hand_payload_kg": 0.5,
+    "ai_open_source": true
   },
   {
     "id": "agibot-a2-w",
     "name": "A2-W",
     "brand": "AGIBOT",
-    "cat": "Industrial",
+    "cat": "Humanoid",
     "sub": "Heavy Payload Arm",
     "tags": [
       "agibot",
@@ -50294,7 +50317,11 @@
     "weight_kg": 45,
     "warranty_months": 12,
     "actuator_type": "Wheeled base + dual arms",
-    "website": "https://www.agibot.com"
+    "website": "https://www.agibot.com",
+    "arm_dof": 7,
+    "bimanual": true,
+    "ai_model": "GO-1 (Genie Operator-1)",
+    "ai_model_type": "ViLLA"
   },
   {
     "id": "agibot-a2-lite",
@@ -50358,7 +50385,10 @@
     "ros": true,
     "speed": 1.5,
     "battery": 120,
-    "actuator_type": "Electric (integrated joint modules)"
+    "actuator_type": "Electric (integrated joint modules)",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "ai_model_type": "ViLLA (GO-1)"
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
@@ -82095,7 +82125,11 @@
     ],
     "manufacturer_url": "https://www.agibot.com",
     "battery": 600,
-    "actuator_type": "Electric (integrated joint modules)"
+    "actuator_type": "Electric (integrated joint modules)",
+    "leg_dof": 6,
+    "waist_dof": 3,
+    "neck_dof": 2,
+    "ai_model_type": "ViLLA (GO-1)"
   },
   {
     "id": "ubtech-walker-s1-2024",
@@ -82914,7 +82948,11 @@
       "https://cdn1.vogel.de/0VaCYCkmYsZg617gIOv7bNGSiAw=/fit-in/800x0/p7i.vogel.de/wcms/36/46/36460281fabf253e390fa24013ef1d4d/0121379211v1.jpeg"
     ],
     "speed": 3.6,
-    "battery": 150
+    "battery": 150,
+    "leg_dof": 6,
+    "hand_dof": 12,
+    "hand_type": "XHAND1 (direct-drive 5-finger)",
+    "ai_model_type": "Whole-body control"
   },
   {
     "id": "robotera-l7-2025",
@@ -82976,7 +83014,14 @@
       "https://static.wixstatic.com/media/81fcea_d0d13b253b91466b9a6874986a483a38~mv2.png/v1/fill/w_252,h_252,q_90,enc_avif,quality_auto/81fcea_d0d13b253b91466b9a6874986a483a38~mv2.png"
     ],
     "battery": 180,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "leg_dof": 6,
+    "hand_dof": 12,
+    "hand_type": "XHAND1 (direct-drive 5-finger)",
+    "speed": 4,
+    "speed_ms": 4,
+    "run_speed_ms": 4,
+    "lidar_type": "3D"
   },
   {
     "id": "astribot-s1-2024",
@@ -132258,7 +132303,11 @@
       "C++"
     ],
     "ai_model": "WorkGPT (multimodal)",
-    "manufacturer_url": "https://www.agibot.com/products/X2"
+    "manufacturer_url": "https://www.agibot.com/products/X2",
+    "arm_dof": 7,
+    "waist_dof": 3,
+    "neck_dof": 1,
+    "ai_model_type": "ViLLA (multimodal)"
   },
   {
     "id": "noetix-bumi",
@@ -132339,7 +132388,11 @@
     "payload": "10 kg per arm",
     "battery_life_typical": 240,
     "lidar": true,
-    "cameras": "Stereo vision + LiDAR fusion"
+    "cameras": "Stereo vision + LiDAR fusion",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "os": "ERA-42",
+    "ai_model_type": "Whole-body control"
   },
   {
     "id": "hisense-harley",
