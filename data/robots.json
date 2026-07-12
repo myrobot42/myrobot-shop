@@ -237,7 +237,9 @@
       "https://cdn.prod.website-files.com/678fa1df881122e8d132e8cf/67eaced417e0d8ce0480f0ef_PXL_20250317_163404058-min-p-800.avif",
       "https://cdn.prod.website-files.com/678fa1df881122e8d132e8cf%2F67e553619f389ce7ad372db2_RIVR_Stack_Scroll_C0099-poster-00001.jpg"
     ],
-    "video": "https://youtu.be/doohhmBSxK4"
+    "video": "https://youtu.be/doohhmBSxK4",
+    "actuator_type": "Wheel-legged hybrid",
+    "navigation": "Autonomous last-mile"
   },
   {
     "id": "lucid-bots-lavo-ai",
@@ -123847,7 +123849,11 @@
       "https://www.electromaker.io/uploads/images/projects/3419/story/medium/Elephant_Robotics_story_image_1698130037516904.jpg"
     ],
     "video": "https://youtu.be/v44SeGJPCcU",
-    "video2": "https://youtu.be/m0GbOW5Csg8"
+    "video2": "https://youtu.be/m0GbOW5Csg8",
+    "chipset": "Raspberry Pi",
+    "autonomous": true,
+    "touch_sensing": "Capacitive touch",
+    "facial_recognition": true
   },
   {
     "cat": "Humanoid",
@@ -134998,7 +135004,7 @@
     "payload_kg": 15,
     "payload": "15 kg",
     "speed_ms": 5,
-    "speed": "5 m/s lab / 3 m/s operating",
+    "speed": 5,
     "battery_life_typical": 150,
     "ip_rating": "IP66",
     "lidar": true,
@@ -135013,7 +135019,15 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "charge_time_min": 90
+    "charge_time_min": 90,
+    "max_incline_deg": 45,
+    "max_step_height_mm": 800,
+    "battery_life": 180,
+    "hot_swap": true,
+    "gps": true,
+    "lidar_type": "Dual 96-line",
+    "ota": true,
+    "length_mm": 820
   },
   {
     "id": "magiclab-magicdog",
@@ -135077,7 +135091,9 @@
     "payload": "10 kg",
     "max_threshold_height_mm": 600,
     "battery_life_typical": 240,
-    "ros": true
+    "ros": true,
+    "actuator_type": "Wheel-legged hybrid",
+    "lidar": true
   },
   {
     "id": "limx-w1",
@@ -135103,7 +135119,8 @@
     "speed_ms": 10,
     "speed": "10 m/s (wheeled)",
     "payload_kg": 15,
-    "payload": "15 kg"
+    "payload": "15 kg",
+    "actuator_type": "Wheel-legged hybrid"
   },
   {
     "id": "tencent-max",
@@ -135175,7 +135192,9 @@
     "rating": 4,
     "weight_kg": 1,
     "dof": 14,
-    "cameras": "8MP camera + dual-mic array"
+    "cameras": "8MP camera + dual-mic array",
+    "actuator_type": "Direct-drive (articulated spine)",
+    "made_in": "China"
   },
   {
     "id": "petoi-bittle",
@@ -135263,7 +135282,7 @@
     "sub": "Rideable Quadruped (concept)",
     "year": 2025,
     "origin": "Japan",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "A hydrogen-powered, rideable robotic-horse concept unveiled at Expo 2025 Osaka, blending Kawasaki's motorcycle DNA with legged robotics. Four independently articulating legs with slip-resistant split rubber hooves are driven by electricity from a compact 150cc hydrogen engine; the rider steers by shifting weight and using handlebars. The Expo prototype can stand and adjust posture — dynamic footage is CGI — with a market vision decades out.",
@@ -135283,11 +135302,16 @@
     "rating": 4,
     "made_in": "Japan",
     "announced": "2025-04-04",
-    "power_source": "150cc hydrogen engine (generates electricity)",
+    "power_source": "150cc hydrogen engine → per-leg electric drives",
     "fuel": "Hydrogen",
     "frame_material": "Carbon fibre",
     "terrain": "Off-road (grass, gravel, rock)",
-    "manufacturer_url": "https://www.khi.co.jp/expo2025/concept01/index_en.html"
+    "manufacturer_url": "https://www.khi.co.jp/expo2025/concept01/index_en.html",
+    "speed": 22,
+    "speed_ms": 22,
+    "actuator_type": "Electric (per-leg)",
+    "ai_model": "AI terrain navigation",
+    "display": "HUD instrument panel"
   },
   {
     "id": "kawasaki-bex",
@@ -135297,7 +135321,7 @@
     "sub": "Rideable Quadruped (concept)",
     "year": 2022,
     "origin": "Japan",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "A rideable, goat-inspired quadruped unveiled at the 2022 International Robot Exhibition in Tokyo, part of Kawasaki's Robust Humanoid Platform (RHP) initiative — the same program behind the Kaleido humanoid. Bex walks on four legs or rolls on retractable knee wheels, has a modular upper body, and is aimed at cargo carrying on farms and construction sites.",
@@ -135321,7 +135345,7 @@
     "score": 75,
     "rating": 4,
     "made_in": "Japan",
-    "actuator_type": "Electric",
+    "actuator_type": "Electric (legs + knee wheels)",
     "terrain": "Mixed terrain (legs or wheels)",
     "manufacturer_url": "https://kawasakirobotics.com/"
   },
@@ -135812,7 +135836,9 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "ai_open_source": true,
+    "actuator_type": "Quasi-direct-drive"
   },
   {
     "id": "stanford-doggo",
