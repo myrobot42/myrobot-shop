@@ -47639,7 +47639,7 @@
     "product_url": "https://www.clonerobotics.com/clone-torso",
     "made_in": "Poland",
     "announced": "2024",
-    "actuator_type": "Myofiber synthetic muscle",
+    "actuator_type": "Myofiber artificial muscle (hydraulic)",
     "fingers": 5,
     "opposable_thumb": true,
     "dexterous_hand": true,
@@ -53124,7 +53124,9 @@
     "cats": [
       "Humanoid",
       "Service"
-    ]
+    ],
+    "touch_sensing": "Artificial skin",
+    "force_sensing": true
   },
   {
     "id": "neura-robotics-mav",
@@ -83267,7 +83269,8 @@
     "os": "EngineAI",
     "released": 2024,
     "battery": 150,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "ai_open_source": true
   },
   {
     "id": "deep-robotics-dr01-2024",
@@ -96064,7 +96067,12 @@
     "cats": [
       "Humanoid",
       "Disaster Response"
-    ]
+    ],
+    "hand_dof": 19,
+    "hand_type": "Pisa/IIT SoftHand",
+    "payload": 10,
+    "payload_kg": 10,
+    "actuator_type": "Series-elastic (SEA)"
   },
   {
     "id": "iit-centauro-2018",
@@ -121491,7 +121499,9 @@
     "cats": [
       "Humanoid",
       "Research"
-    ]
+    ],
+    "leg_dof": 6,
+    "actuator_type": "Direct-drive"
   },
   {
     "id": "limx-dynamics-luna",
@@ -121832,9 +121842,9 @@
     "brand": "Waseda University",
     "cat": "Humanoid",
     "year": 1973,
-    "status": "Discontinued",
+    "status": "Active",
     "desc": "Completed in 1973 at Tokyo's Waseda University under Professor Ichiro Kato (the 'father of Japanese robotics'), WABOT-1 is widely recognised as the world's first full-scale anthropomorphic robot. It integrated three pioneering systems: a limb-control system driving hydraulic artificial limbs, a vision system with artificial eyes that measured distance and direction to objects, and a conversation system with artificial ears and mouth that let it communicate in simple Japanese. It walked (slowly, on flat ground) with a bipedal gait and gripped and carried objects using tactile-sensor hands — abilities researchers estimated as roughly the mental faculty of a 1.5-year-old child. The starting point of Waseda's 50-year humanoid legacy.",
-    "actuator_type": "Hydraulic drive",
+    "actuator_type": "Hydraulic",
     "use_cases": [
       "Historic research milestone",
       "Pioneering bipedal walking + vision + speech"
@@ -121871,7 +121881,8 @@
     "touch_sensing": "Tactile sensors (hands)",
     "natural_language_commands": true,
     "languages": "Japanese",
-    "manufacturer_url": "https://www.waseda.jp/top/en/"
+    "manufacturer_url": "https://www.waseda.jp/top/en/",
+    "speech_synthesis": true
   },
   {
     "id": "waseda-wabot-2",
@@ -121879,7 +121890,7 @@
     "brand": "Waseda University",
     "cat": "Humanoid",
     "year": 1984,
-    "status": "Discontinued",
+    "status": "Active",
     "desc": "The 1984 musician successor to WABOT-1 from Waseda University — a 50-degree-of-freedom humanoid that could read a printed musical score with its camera 'eye' and play an electronic keyboard with five-fingered hands, even keeping time with a human singer. It marked an early demonstration of dexterous, real-time artistic performance by a humanoid.",
     "cameras": "CCD camera (head) — reads musical scores",
     "use_cases": [
@@ -121903,7 +121914,7 @@
     ],
     "score": 75,
     "rating": 4,
-    "actuator_type": "Electric servo",
+    "actuator_type": "DC motors + harmonic drive",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/30/Cz87rI2dl83Ymz1kexFH/image.jpg",
     "gallery": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfhZFe665xrJNHSr3aFsku4ag7FLNKVGrZsRgXWsGl17FQN4r10-DeyAAP&s=10",
@@ -121922,7 +121933,9 @@
       "DC tachometer generators",
       "Rotary encoders"
     ],
-    "manufacturer_history": "Developed 1980–1984 at Waseda University (Prof. Ichiro Kato) as the natural evolution of WABOT-1; related musician robot WASUBOT performed with the NHK Symphony Orchestra in 1985."
+    "manufacturer_history": "Developed 1980–1984 at Waseda University (Prof. Ichiro Kato) as the natural evolution of WABOT-1; related musician robot WASUBOT performed with the NHK Symphony Orchestra in 1985.",
+    "hand_dof": 3,
+    "speech_synthesis": true
   },
   {
     "id": "stanford-cart",
@@ -125421,7 +125434,8 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1774189162/robots/origin-f1-by-aheadform/wriww71dk5yzd4sm5fix.webp",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1775649498/robots/elf-eridium-by-aheadform/jalp8impnkaeyxx1bjuk.webp"
     ],
-    "video": "https://youtu.be/17UVvnwSgGQ"
+    "video": "https://youtu.be/17UVvnwSgGQ",
+    "speech_synthesis": true
   },
   {
     "id": "honor-lightning-2026",
@@ -133491,7 +133505,7 @@
     "sub": "Ergonomics Research Humanoid",
     "year": 2025,
     "origin": "Italy",
-    "status": "Research",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "use_cases": [
@@ -133511,7 +133525,20 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "height_mm": 1500,
+    "weight_kg": 55.7,
+    "dof": 53,
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "payload": 10,
+    "payload_kg": 10,
+    "lidar": true,
+    "depth_sensing": true,
+    "force_sensing": true,
+    "chipset": "NVIDIA Jetson AGX Xavier + Intel i7 (11th gen)",
+    "display_face": "Flexible OLED 2K",
+    "actuator_type": "Series-elastic (SEA)"
   },
   {
     "id": "robotis-op3",
@@ -133616,7 +133643,9 @@
     "facial_recognition": true,
     "ai_model": "Self-supervised + LLM/VLM (ASR, computer vision, generative AI)",
     "natural_language_commands": true,
-    "manufacturer_url": "https://www.aheadform.com/"
+    "manufacturer_url": "https://www.aheadform.com/",
+    "emotion_detection": true,
+    "speech_synthesis": true
   },
   {
     "id": "universal-robots-ur15",
