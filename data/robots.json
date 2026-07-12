@@ -355,7 +355,8 @@
       "https://mma.prnewswire.com/media/2853958/Image_2_LG_CLOiD.jpg?p=facebook",
       "https://i.pcmag.com/imagery/articles/048zXISRoliNt7AEc8x99Ne-1..v1767643760.jpg"
     ],
-    "battery": 240
+    "battery": 240,
+    "ai_model": "LG Affectionate Intelligence"
   },
   {
     "id": "roborock-s8-pro-ultra",
@@ -50466,7 +50467,7 @@
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
     "name": "Kepler Forerunner D1",
-    "brand": "Kepler Robotics",
+    "brand": "Kepler",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
     "tags": [
@@ -50515,7 +50516,9 @@
     "payload": 20,
     "speed": 1.4,
     "battery": 480,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "ai_model": "Kepler Embodied AI",
+    "hand_actuation": "Rope-driven (tendon)"
   },
   {
     "id": "engineered-arts-ameca-generation-3",
@@ -114216,7 +114219,7 @@
     "height_mm": 1660,
     "weight_kg": 50,
     "payload": 3,
-    "actuator_type": "Orbita 2D/3D bio-inspired compliant joints (maxon motors)",
+    "actuator_type": "Orbita (multi-turn) actuators",
     "hand_type": "Parallel torque-controlled gripper",
     "bimanual": true,
     "chassis": "Mobile base — 3 omniwheels",
@@ -114239,7 +114242,8 @@
       "Stationary base",
       "Mobile base"
     ],
-    "manufacturer_url": "https://www.pollen-robotics.com/reachy/"
+    "manufacturer_url": "https://www.pollen-robotics.com/reachy/",
+    "ai_open_source": true
   },
   {
     "cat": "Research",
@@ -119810,7 +119814,7 @@
     "sub": "Full-Size Humanoid",
     "year": 2024,
     "origin": "China",
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1600,
     "desc": "Adam is the flagship full-size humanoid from Beijing-based PNDbotics, a full-stack developer of modular humanoid platforms (project started June 2023). Standing about 1.6 m and weighing ~60 kg, Adam is driven by 25 proprietary PND quasi-direct-drive (QDD) force-controlled actuators delivering up to ~360 N·m of leg torque, and is notable as one of the first humanoids with a biomimetic pelvis for more natural, stable gait. An Intel i7 (NUC) plus PND Robot Control Unit runs a deep-reinforcement-learning and imitation-learning stack trained in NVIDIA Isaac Gym with sim-to-real transfer, giving human-like walking, terrain traversal and disturbance recovery. Its modular, standardized architecture (with an open SDK) lets developers swap actuators, end-effectors and compute. Adam has had a high-profile demo run — playing keytar live at the VOYAGEX music festival, synced dancing at WAIC 2025, and completing the 100 m obstacle race at the 2025 World Humanoid Robot Games as the only full-size humanoid to finish. Prototype pricing is around US$120,000; sibling variants include Adam Lite, Adam-U (data-collection) and Adam SP.",
     "tags": [
@@ -119821,7 +119825,7 @@
       "research"
     ],
     "fig": "🤖",
-    "score": 81,
+    "score": 75,
     "rating": 4,
     "feature": "High-DOF expressive full body",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999215/myrobot/ghwtrvs6nupngwmms7ze.png",
@@ -119831,7 +119835,7 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68380ebbf7681b82ce06c479_Adam_01.jpg"
     ],
     "weight_kg": 60,
-    "dof": 25,
+    "dof": 41,
     "torque_nm": 340,
     "speed_ms": 1.5,
     "battery_life": 180,
@@ -119854,7 +119858,14 @@
     "chipset": "Intel i7 (NUC) + PND RCU",
     "battery_life_typical": 180,
     "imu": true,
-    "ai_model": "Deep RL + imitation learning (NVIDIA Isaac Gym sim-to-real)"
+    "ai_model": "Deep RL + imitation learning (NVIDIA Isaac Gym sim-to-real)",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "ai_open_source": true,
+    "learning_methods": [
+      "Reinforcement Learning",
+      "Imitation Learning"
+    ]
   },
   {
     "cat": "Humanoid",
@@ -120000,7 +120011,7 @@
     "sub": "Compact Agile Humanoid",
     "year": 2025,
     "origin": "China",
-    "status": "Development",
+    "status": "Active",
     "desc": "The MagicBot Z1 is MagicLab's compact, high-agility bipedal humanoid, unveiled in July 2025 and shown again at CES 2026. At about 1.4 m (136.9 cm) and 40 kg it has a human-child footprint that slips through tight indoor spaces, with 24 degrees of freedom in the standard build expandable to ~50 when fitted with optional sensors, arms and the 11-DOF MagicHand S01 (which adds five-fingered grasping up to ~3-5 kg per arm). In-house high-torque joints exceed 130 N·m with up to 320 degrees of travel, giving it acrobatic agility — fast motion, deep back-bends, and fall/prone recovery under disturbance. A 360-degree sensor suite (3D LiDAR, depth and binocular fisheye cameras, head tactile sensing) feeds a VLN navigation stack, with Wi-Fi 6 / Bluetooth 5.2, an 8-core CPU and a quick-release 10,000 mAh battery good for ~2 hours. MagicLab markets it as an open, developer-friendly platform for research, education and dynamic applications; its full-size sibling MagicBot Gen1/G1 targets industry. No public price.",
     "tags": [
       "humanoid",
@@ -120010,7 +120021,7 @@
       "manipulation"
     ],
     "fig": "🤖",
-    "score": 82,
+    "score": 75,
     "rating": 4,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999233/myrobot/et22qrzwbfflrdhcw94j.jpg",
     "gallery": [
@@ -120029,7 +120040,7 @@
     "max_step_height_mm": 150,
     "lidar": "3D LiDAR",
     "cameras": "Depth cameras + binocular fisheye vision",
-    "hand_type": "Optional MagicHand S01 dexterous hand (11 DoF, tactile)",
+    "hand_type": "MagicHand S01 (5-finger)",
     "frame_material": "Aluminum alloy + engineering plastics",
     "use_cases": [
       "Research",
@@ -120051,7 +120062,10 @@
     "chipset": "8-core CPU",
     "depth_sensing": "Depth + binocular fisheye cameras",
     "imu": true,
-    "ai_model": "IL/RL locomotion + multimodal dialogue (VLN navigation)"
+    "ai_model": "IL/RL locomotion + multimodal dialogue (VLN navigation)",
+    "hand_dof": 11,
+    "battery_life": 120,
+    "grasp_force_n": 50
   },
   {
     "cat": "Humanoid",
@@ -129109,7 +129123,11 @@
       "https://stuff.co.za/wp-content/uploads/2026/03/Foundation-Phantom-MK-1.png",
       "https://res.cloudinary.com/jerrick/image/upload/c_scale,f_jpg,q_auto/690ab9fffc03ae001ebacaaa.jpg"
     ],
-    "video": "https://youtu.be/Y0XgYSIFqWA"
+    "video": "https://youtu.be/Y0XgYSIFqWA",
+    "bimanual": true,
+    "learning_methods": [
+      "Imitation Learning"
+    ]
   },
   {
     "id": "cartwheel-yogi-2025",
@@ -129550,7 +129568,9 @@
       "https://robotics.hexagon.com/wp-content/uploads/2025/06/AEON_KeyVisual_10.png",
       "https://robotics.hexagon.com/wp-content/uploads/2025/06/AEON_KeyVisual_12-1536x864.png"
     ],
-    "video": "https://youtu.be/ytPGe63TtOg"
+    "video": "https://youtu.be/ytPGe63TtOg",
+    "arm_dof": 7,
+    "leg_dof": 6
   },
   {
     "id": "mova-z60-ultra-roller",
@@ -133366,9 +133386,10 @@
     "bimanual": true,
     "cpu": "YAOGUANG controller",
     "cameras": "5x Intel RealSense depth (360 degrees)",
-    "depth_sensing": "5x RealSense",
+    "depth_sensing": true,
     "lidar": true,
-    "manufacturer_url": "https://www.ti5robot.com/"
+    "manufacturer_url": "https://www.ti5robot.com/",
+    "torque_nm": 490
   },
   {
     "id": "bxi-elf",
