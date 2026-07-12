@@ -47346,7 +47346,8 @@
     "hot_swap": true,
     "force_sensing": true,
     "imu_axes": 9,
-    "battery_life": 240
+    "battery_life": 240,
+    "leg_dof": 6
   },
   {
     "id": "mentee-robotics-menteebot-v3-1",
@@ -50471,7 +50472,7 @@
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
-    "name": "Kepler Forerunner D1",
+    "name": "Forerunner D1",
     "brand": "Kepler",
     "cat": "Humanoid",
     "sub": "General Purpose Humanoid",
@@ -50521,9 +50522,13 @@
     "payload": 20,
     "speed": 1.4,
     "battery": 480,
-    "actuator_type": "Electric",
-    "ai_model": "Kepler Embodied AI",
-    "hand_actuation": "Rope-driven (tendon)"
+    "actuator_type": "Planetary roller screw + rotary",
+    "ai_model": "NEBULA",
+    "hand_actuation": "Rope-driven (tendon)",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "hand_dof": 12,
+    "npu_tops": 100
   },
   {
     "id": "engineered-arts-ameca-generation-3",
@@ -50635,7 +50640,7 @@
     "announced": "2025",
     "payload_kg": 18,
     "arm_dof": 7,
-    "hand_dof": 11,
+    "hand_dof": 12,
     "fingers": 5,
     "bimanual": true,
     "can_use_tools": true,
@@ -50647,8 +50652,11 @@
     "payload": 18,
     "battery": 480,
     "battery_life": 480,
-    "actuator_type": "Electric",
-    "hand_actuation": "Rope-driven (tendon)"
+    "actuator_type": "Planetary roller screw + rotary",
+    "hand_actuation": "Rope-driven (tendon)",
+    "leg_dof": 6,
+    "npu_tops": 100,
+    "ai_model": "NEBULA"
   },
   {
     "id": "engineered-arts-quinn",
@@ -82314,7 +82322,7 @@
     "released": 2024,
     "dof": 43,
     "arm_dof": 7,
-    "actuator_type": "Frameless torque motor + harmonic drive (dual encoder)",
+    "actuator_type": "Frameless torque motor + harmonic drive + dual encoder",
     "torque_nm": 200,
     "fingers": 5,
     "bimanual": true,
@@ -82333,11 +82341,10 @@
       "Quality inspection"
     ],
     "pilot_customers": [
-      "BYD",
-      "Geely",
-      "Foxconn",
       "NIO",
-      "Audi"
+      "BYD",
+      "Foxconn",
+      "Zeekr"
     ],
     "website": "https://www.ubtrobot.com",
     "os": "UBTECH",
@@ -82356,7 +82363,10 @@
     "ros_version": "ROS 2",
     "payload": 15,
     "payload_kg": 15,
-    "reach_mm": 1800
+    "reach_mm": 1800,
+    "speed": 0.83,
+    "speed_ms": 0.83,
+    "operating_temp_max": 40
   },
   {
     "id": "ubtech-alpha-1e-2018",
@@ -83437,7 +83447,8 @@
     "learning_methods": [
       "Deep Reinforcement Learning"
     ],
-    "manufacturer_history": "First-generation Noetix short humanoid, unveiled at WAIC 2024; predecessor to the N2."
+    "manufacturer_history": "First-generation Noetix short humanoid, unveiled at WAIC 2024; predecessor to the N2.",
+    "leg_dof": 6
   },
   {
     "id": "promobot-v4-2018",
@@ -119903,7 +119914,11 @@
     "learning_methods": [
       "Reinforcement Learning",
       "Imitation Learning"
-    ]
+    ],
+    "fingers": 5,
+    "hand_type": "Five-finger",
+    "payload": 5,
+    "payload_kg": 5
   },
   {
     "cat": "Humanoid",
@@ -123170,7 +123185,7 @@
     "payload": 5,
     "speed": 1.5,
     "battery": 120,
-    "actuator_type": "Electric",
+    "actuator_type": "Straight-knee walking drive",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/29/KEGs6ZCJIghErQmFBvrC/image.jpg",
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/DOBOT_Atom_PB1_12fd1dae.png",
@@ -125943,7 +125958,7 @@
   {
     "id": "noetix-n2",
     "name": "N2",
-    "brand": "Noetix",
+    "brand": "Noetix Robotics",
     "cat": "Humanoid",
     "sub": "Compact Humanoid",
     "year": 2025,
