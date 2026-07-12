@@ -115698,7 +115698,7 @@
     "price": "POA",
     "weight_kg": 50,
     "payload_kg": 20,
-    "ip_rating": "IP68",
+    "ip_rating": "IP54",
     "desc": "The Unitree B1 was Unitree's first industrial-grade quadruped with IP68 protection and ~20 kg payload, used for inspection in harsh environments. Superseded by the more capable B2.",
     "tags": [
       "quadruped",
@@ -115720,7 +115720,13 @@
     ],
     "video": "https://youtu.be/wSOlpth8FaE",
     "website": "https://www.unitree.com",
-    "video2": "https://youtu.be/exC9UKKehDw"
+    "video2": "https://youtu.be/exC9UKKehDw",
+    "dof": 12,
+    "length_mm": 1126,
+    "height_mm": 636,
+    "battery_voltage": "58.8V",
+    "speed": 1.5,
+    "speed_ms": 1.5
   },
   {
     "cat": "Aquatic",
@@ -124295,11 +124301,11 @@
     "sub": "Rough-terrain quadruped",
     "year": 2005,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "weight_kg": 110,
     "payload_kg": 150,
     "speed_ms": 1.6,
-    "actuator_type": "Hydraulic, gasoline-engine (go-kart engine driving hydraulic pump)",
+    "actuator_type": "Hydraulic (go-kart engine)",
     "sensors": "~50 sensors: joint position/force, LIDAR, stereo vision, gyroscope",
     "tags": [
       "quadruped",
@@ -124308,7 +124314,7 @@
       "DARPA",
       "classic"
     ],
-    "fig": "🐕",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
@@ -124318,7 +124324,7 @@
     "made_in": "USA",
     "website": "https://www.bostondynamics.com",
     "desc": "The hydraulically-actuated, gasoline-powered quadruped that put Boston Dynamics on the map (2005, DARPA-funded). BigDog could carry ~150 kg over rough terrain, ice and slopes, famously staying upright when kicked. Loud and never deployed, but its dynamic-balance research directly led to Spot and the modern quadruped industry.",
-    "length_mm": 1000,
+    "length_mm": 910,
     "height_mm": 760,
     "funding": "DARPA-funded (2005)",
     "note": "Stayed upright when kicked/on ice; loud, never fielded; led to Spot",
@@ -124329,7 +124335,11 @@
       "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bio-inspired_Big_Dog_quadruped_robot_is_being_developed_as_a_mule_that_can_traverse_difficult_terrain.tiff/lossy-page1-250px-Bio-inspired_Big_Dog_quadruped_robot_is_being_developed_as_a_mule_that_can_traverse_difficult_terrain.tiff.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/29/q6g67aN5fWTQygAAvvvt/image.jpg"
     ],
-    "video": "https://youtu.be/cNZPRsrwumQ"
+    "video": "https://youtu.be/cNZPRsrwumQ",
+    "dof": 12,
+    "max_incline_deg": 35,
+    "os": "QNX RTOS",
+    "lidar": true
   },
   {
     "cat": "Research",
@@ -134727,7 +134737,11 @@
     "score": 75,
     "rating": 4,
     "charge_time_min": 60,
-    "bluetooth": true
+    "bluetooth": true,
+    "dof": 12,
+    "max_step_height_mm": 300,
+    "max_incline_deg": 45,
+    "lidar_type": "Dual 3D"
   },
   {
     "id": "unitree-a2-w",
@@ -134761,7 +134775,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "dof": 12,
+    "ip_rating": "IP56",
+    "speed": 5,
+    "speed_ms": 5
   },
   {
     "id": "unitree-go2-w",
@@ -134786,7 +134804,9 @@
     "score": 75,
     "rating": 4,
     "speed_ms": 2.5,
-    "speed": "2.5 m/s (wheeled)"
+    "speed": "2.5 m/s (wheeled)",
+    "dof": 12,
+    "weight_kg": 15
   },
   {
     "id": "unitree-aliengo",
@@ -134865,7 +134885,7 @@
     "sub": "Research Quadruped (legacy)",
     "year": 2017,
     "origin": "China",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "Unitree's first commercial quadruped, launched in 2017 and named after Laika, the first dog in space. A 12-DoF electric platform driven by Unitree's own motors, it established the company's low-cost robot-dog lineage and was the predecessor to the A1 and Aliengo.",
@@ -134891,7 +134911,9 @@
     "payload_kg": 5,
     "payload": 5,
     "actuator_type": "Electric (Unitree motors)",
-    "manufacturer_url": "https://www.unitree.com/"
+    "manufacturer_url": "https://www.unitree.com/",
+    "speed": 0.8,
+    "speed_ms": 0.8
   },
   {
     "id": "deep-robotics-lynx",
@@ -135529,7 +135551,7 @@
     "sub": "Research Quadruped (legacy)",
     "year": 2010,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "A small DARPA-funded research quadruped built by Boston Dynamics as a standard testbed platform for other institutions studying rough-terrain locomotion and machine learning. Each of its four legs is driven by three electric motors, with an onboard PC handling sensing, control and communications.",
@@ -135552,8 +135574,8 @@
     "made_in": "USA",
     "dof": 12,
     "leg_dof": 3,
-    "actuator_type": "Electric (3 motors per leg)",
-    "battery_type": "Lithium polymer",
+    "actuator_type": "Electric (3 motors/leg)",
+    "battery_type": "Li-Po",
     "battery_life": 30,
     "battery_life_typical": 30,
     "api": "Boston Dynamics Robot API",
@@ -135567,7 +135589,7 @@
     "sub": "Research Quadruped (legacy)",
     "year": 2013,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "The untethered, free-roaming successor to Cheetah, developed under DARPA's M3 program. Powered by an onboard methanol combustion engine driving hydraulic actuators, WildCat bounded and galloped outdoors at up to 25.7 km/h — the fastest untethered legged robot of its era.",
@@ -135591,7 +135613,7 @@
     "weight_kg": 154,
     "run_speed_ms": 7.1,
     "run_speed": 7.1,
-    "actuator_type": "Hydraulic (methanol combustion engine)",
+    "actuator_type": "Hydraulic (IC engine)",
     "power_source": "Onboard methanol combustion engine",
     "gait_modes": [
       "Bound",
@@ -135607,7 +135629,7 @@
     "sub": "Research Quadruped (legacy)",
     "year": 2011,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "A DARPA-funded (Maximum Mobility and Manipulation program) research quadruped that set the legged-robot land-speed record, hitting 45 km/h on a laboratory treadmill. Tethered and boom-stabilised, with an articulated spine that flexed each stride to extend its gallop. Its untethered successor was WildCat.",
@@ -135630,7 +135652,7 @@
     "made_in": "USA",
     "run_speed_ms": 12.5,
     "run_speed": 12.5,
-    "actuator_type": "Hydraulic (off-board pump)",
+    "actuator_type": "Hydraulic (tethered)",
     "power_source": "Off-board hydraulic pump (tethered)",
     "gait_modes": [
       "Gallop",
@@ -135646,7 +135668,7 @@
     "sub": "Military Pack Quadruped (legacy)",
     "year": 2012,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "The Legged Squad Support System (also called AlphaDog), a militarised, ruggedised evolution of BigDog developed with DARPA and the US Marine Corps. Designed as a robotic pack mule to carry gear alongside soldiers over rough terrain, it could haul 181 kg for 32 km, follow a human leader and respond to voice commands, though the program was ultimately shelved.",
@@ -135672,13 +135694,15 @@
     "made_in": "USA",
     "dof": 12,
     "leg_dof": 3,
-    "actuator_type": "Hydraulic (gas/diesel engine)",
+    "actuator_type": "Hydraulic (IC engine)",
     "power_source": "Internal combustion engine",
     "lidar": true,
     "gait_modes": [
       "Walk",
       "Follow-the-leader"
-    ]
+    ],
+    "max_incline_deg": 35,
+    "gps": true
   },
   {
     "id": "iit-hyq",
