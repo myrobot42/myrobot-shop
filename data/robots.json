@@ -47301,7 +47301,7 @@
     "bimanual": true,
     "can_use_tools": true,
     "ai_model": "Mentee end-to-end neural net",
-    "ai_model_type": "Vision-Language-Action",
+    "ai_model_type": "VLA (Sim2Real trained)",
     "natural_language_commands": true,
     "voice_recognition": true,
     "speech_synthesis": true,
@@ -47315,7 +47315,10 @@
     ],
     "video": "https://youtu.be/sZPqfes6Gk8",
     "payload": 25,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "chipset": "2x NVIDIA Jetson Orin AGX",
+    "hot_swap": true,
+    "force_sensing": true
   },
   {
     "id": "mentee-robotics-menteebot-v3-1",
@@ -47376,7 +47379,9 @@
     "battery": 270,
     "battery_life": 270,
     "actuator_type": "Electric",
-    "video": "https://youtu.be/XqFk1Bd5BKg"
+    "video": "https://youtu.be/XqFk1Bd5BKg",
+    "chipset": "2x NVIDIA Jetson Orin AGX",
+    "hot_swap": true
   },
   {
     "id": "mentee-robotics-menteebot-v3-0",
@@ -47441,7 +47446,9 @@
     "payload": 25,
     "battery": 240,
     "battery_life": 240,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "chipset": "2x NVIDIA Jetson Orin AGX",
+    "hot_swap": true
   },
   {
     "id": "mentee-robotics-menteebot-v3-0-v3-1",
@@ -47489,7 +47496,15 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/683fd821bf204be116065ff4_V3_01.webp",
       "https://i.ytimg.com/vi/sZPqfes6Gk8/maxresdefault.jpg"
     ],
-    "video": "https://youtu.be/sZPqfes6Gk8"
+    "video": "https://youtu.be/sZPqfes6Gk8",
+    "chipset": "2x NVIDIA Jetson Orin AGX",
+    "payload": 25,
+    "payload_kg": 25,
+    "speed": 1.5,
+    "speed_ms": 1.5,
+    "hot_swap": true,
+    "ai_model_type": "VLA (Sim2Real trained)",
+    "force_sensing": true
   },
   {
     "id": "rainbow-robotics-hubo",
@@ -61772,7 +61787,15 @@
     "made_in": "Israel",
     "autonomous": true,
     "website": "https://www.menteebot.com",
-    "price_band": "$"
+    "price_band": "$",
+    "chipset": "2x NVIDIA Jetson Orin AGX",
+    "payload": 25,
+    "payload_kg": 25,
+    "speed": 1.5,
+    "speed_ms": 1.5,
+    "hot_swap": true,
+    "ai_model_type": "VLA (Sim2Real trained)",
+    "force_sensing": true
   },
   {
     "id": "st-ubli-mobile-robot-platform-pf3",
@@ -83288,7 +83311,7 @@
       "Embodied AI"
     ],
     "website": "https://www.noetixrobotics.com/",
-    "os": "Linux",
+    "os": "Linux (Rockchip RK3588)",
     "released": 2024,
     "battery": 90,
     "learning_methods": [
@@ -125443,7 +125466,7 @@
   },
   {
     "id": "tiangong-ultra-2025",
-    "name": "Tiangong Ultra (天工 Ultra)",
+    "name": "Tiangong Ultra",
     "brand": "Beijing Humanoid Robot Innovation Center",
     "cat": "Humanoid",
     "sub": "Full-Size Humanoid",
@@ -125497,11 +125520,13 @@
       "https://robot-atta-production.s3.amazonaws.com/uploads/post_image/image/1178/large_thumb_96073897-f375-4bba-80d3-c97e46259d08.jpg",
       "https://english.beijing.gov.cn/latest/photos/202504/W020250420440089770879.jpg",
       "https://media.wired.com/photos/68042cfea9780fa6584faff5/1:1/w_1606,h_1606,c_limit/Humanoid-Robot-Marathon-Business-2210967755.jpg"
-    ]
+    ],
+    "os": "Huisi Kaiwu (open-source platform)",
+    "frame_material": "Aluminum-composite"
   },
   {
     "id": "tiangong-3-2026",
-    "name": "Tiangong 3.0 (天工 3.0)",
+    "name": "Tiangong 3.0",
     "brand": "Beijing Humanoid Robot Innovation Center",
     "cat": "Humanoid",
     "sub": "Full-Size General-Purpose Humanoid",
@@ -125538,7 +125563,7 @@
     "weight_kg": 62,
     "dof": 43,
     "chipset": "D-Robotics Xuri S600 (embodied intelligence)",
-    "os": "WISE KAIWU / Huisi Kaiwu embodied-intelligence platform",
+    "os": "Huisi Kaiwu (open-source platform)",
     "ai_model": "WISE KAIWU + Pelican-VL (VLM)",
     "protocols": [
       "ROS2",
@@ -125559,7 +125584,7 @@
       "Gyroscope",
       "Six-axis force/torque sensors"
     ],
-    "frame_material": "Aluminium-composite",
+    "frame_material": "Aluminum-composite",
     "power_source": "Pure electric drive",
     "variants": [
       "Tiangong 3.0",
@@ -125790,8 +125815,8 @@
     "rating": 4,
     "width_mm": 470,
     "depth_mm": 290,
-    "leg_dof": 10,
-    "arm_dof": 8,
+    "leg_dof": 5,
+    "arm_dof": 4,
     "torque_nm": 150,
     "speed": 3.2,
     "speed_ms": 3.2,
@@ -125815,7 +125840,8 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/682827f16963b45797acf05e_N2_13.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/682827f26963b45797acf092_N2_03.png"
     ],
-    "video": "https://youtu.be/xPSY3HaT1eY"
+    "video": "https://youtu.be/xPSY3HaT1eY",
+    "battery_ah": 7
   },
   {
     "id": "agibot-lingxi-x2",
@@ -132394,7 +132420,8 @@
     "cameras": "Structured-light depth camera",
     "imu": true,
     "hot_swap": true,
-    "chipset": "6 TOPS onboard (NVIDIA Jetson Orin on EDU tiers)"
+    "chipset": "6 TOPS onboard (NVIDIA Jetson Orin on EDU tiers)",
+    "os": "Linux (Rockchip RK3588)"
   },
   {
     "id": "robotera-q5",
