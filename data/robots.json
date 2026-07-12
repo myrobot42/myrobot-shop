@@ -49929,7 +49929,10 @@
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Edu-4.png?v=1764049158&width=800"
     ],
     "website": "https://www.agibot.com",
-    "video": "https://youtu.be/3BKWJ90JS5E"
+    "video": "https://youtu.be/3BKWJ90JS5E",
+    "ip_rating": "IP54",
+    "max_step_height_mm": 350,
+    "range_km": 6
   },
   {
     "id": "agibot-d1-ultra",
@@ -57222,7 +57225,9 @@
       "https://store.agibot.com/cdn/shop/files/AgiBotD1Edu-4.png?v=1764049158&width=800"
     ],
     "website": "https://www.agibot.com",
-    "video": "https://youtu.be/3BKWJ90JS5E"
+    "video": "https://youtu.be/3BKWJ90JS5E",
+    "ip_rating": "IP54",
+    "ai_open_source": true
   },
   {
     "id": "neura-robotics-lara-8",
@@ -115685,7 +115690,8 @@
       "C-Series (C100)",
       "E-Series (E400L enterprise)"
     ],
-    "manufacturer_url": "https://www.weilan.com/en/"
+    "manufacturer_url": "https://www.weilan.com/en/",
+    "actuator_type": "Electric"
   },
   {
     "cat": "Quadruped",
@@ -124731,7 +124737,7 @@
     "status": "Active",
     "price": 499,
     "dof": 12,
-    "os": "Ubuntu + ROS / ROS2",
+    "os": "ROS 2",
     "cpu": "Raspberry Pi 4 / CM4 (+ ESP32 motor control)",
     "sensors": "Camera, IMU, optional LiDAR, OLED display",
     "ros": true,
@@ -124768,7 +124774,10 @@
       "https://mangdang.store/cdn/shop/files/02-1.jpg?v=1776241804&width=1200"
     ],
     "video": "https://youtu.be/c8nSKC9p8Ys",
-    "video2": "https://youtu.be/FRBh3URTuuI"
+    "video2": "https://youtu.be/FRBh3URTuuI",
+    "chipset": "Raspberry Pi 4",
+    "ai_open_source": true,
+    "weight_kg": 0.7
   },
   {
     "cat": "Humanoid",
@@ -135059,10 +135068,13 @@
     "max_threshold_height_mm": 150,
     "battery_life_typical": 150,
     "lidar": true,
-    "cameras": "4K head camera + depth + wide-angle",
+    "cameras": "Stereo + RealSense depth",
     "wifi": true,
     "bluetooth": true,
-    "ros": true
+    "ros": true,
+    "max_step_height_mm": 150,
+    "max_incline_deg": 40,
+    "ai_model": "On-device LLM voice interaction"
   },
   {
     "id": "magiclab-magicdog-w",
@@ -135219,7 +135231,17 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "dof": 9
+    "dof": 9,
+    "actuator_type": "9x servos",
+    "chipset": "NyBoard V1 (Arduino)",
+    "imu": true,
+    "ai_open_source": true,
+    "battery_life": 60,
+    "payload_kg": 0.45,
+    "sdk_langs": [
+      "C++",
+      "Python"
+    ]
   },
   {
     "id": "petoi-bittle-x",
@@ -135253,7 +135275,7 @@
     "height_mm": 107,
     "weight_kg": 0.31,
     "frame_material": "Plastic",
-    "chipset": "ESP32-WROOM-32D",
+    "chipset": "NyBoard V2 (Arduino)",
     "cpu": "ESP32-WROOM-32D (520K SRAM, 16MB flash)",
     "imu": true,
     "imu_axes": 6,
@@ -135272,7 +135294,10 @@
       "Arduino/C++",
       "Python (OpenCat API)"
     ],
-    "manufacturer_url": "https://www.petoi.com/"
+    "manufacturer_url": "https://www.petoi.com/",
+    "actuator_type": "9x P1S servos",
+    "ai_open_source": true,
+    "ros": true
   },
   {
     "id": "kawasaki-corleo",
@@ -135736,7 +135761,7 @@
     "sub": "Research Quadruped (legacy)",
     "year": 2011,
     "origin": "Italy",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "The Italian Institute of Technology's pioneering hydraulically-actuated, torque-controlled research quadruped, developed by the Dynamic Legged Systems lab. Built to study fast, versatile and robust locomotion, HyQ demonstrated dynamic trotting, jumping and rough-terrain walking and seeded the later HyQReal platform.",
@@ -135764,7 +135789,8 @@
       "Walk",
       "Trot"
     ],
-    "manufacturer_url": "https://dls.iit.it/"
+    "manufacturer_url": "https://dls.iit.it/",
+    "lidar": true
   },
   {
     "id": "iit-hyqreal",
@@ -135804,7 +135830,9 @@
     "frame_material": "Aluminium roll cage",
     "shell_material": "Kevlar, glass fibre, plastic",
     "cameras": "Dual onboard computers (vision + control)",
-    "manufacturer_url": "https://dls.iit.it/hyqreal"
+    "manufacturer_url": "https://dls.iit.it/hyqreal",
+    "length_mm": 1330,
+    "height_mm": 900
   },
   {
     "id": "odri-solo-12",
