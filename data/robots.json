@@ -121013,7 +121013,7 @@
     "perf": false,
     "price": "POA",
     "id": "humanoid-hmnd-01",
-    "name": "HMND 01 (Alpha Bipedal)",
+    "name": "HMND 01",
     "brand": "Humanoid",
     "cat": "Humanoid",
     "sub": "General-purpose Humanoid",
@@ -121021,7 +121021,7 @@
     "origin": "United Kingdom",
     "status": "Active",
     "height_mm": 1750,
-    "dof": 29,
+    "dof": 41,
     "payload_kg": 15,
     "desc": "HMND 01 is London-based startup Humanoid's first bipedal robot - a ~1.79 m general-purpose humanoid with 29 DOF and ~15 kg bimanual payload that achieved stable walking just 48 hours after final assembly (design-to-prototype in five months). Working with Bosch to scale production; 19,000+ pre-orders reported.",
     "tags": [
@@ -121632,11 +121632,11 @@
     "brand": "Westinghouse",
     "cat": "Humanoid",
     "year": 1939,
-    "status": "Discontinued",
+    "status": "Active",
     "height_mm": 2100,
     "weight_kg": 120,
     "desc": "One of the most famous early humanoid robots, built by J.M. Barnett and Westinghouse engineers in Mansfield, Ohio between 1937 and 1938 and unveiled at the 1939 New York World's Fair. Standing 2.1 m (7 ft) and 120 kg, Elektro had a steel gear-cam-motor skeleton under an aluminium skin, walked by voice command, spoke about 700 words via a 78-rpm record player, moved its head and arms, smoked cigarettes and blew up balloons. Its photoelectric 'eyes' could distinguish red from green light. In 1940 it was joined by the robot dog Sparko.",
-    "actuator_type": "Electric motors, relay logic, photoelectric sensors",
+    "actuator_type": "Electric motors + relays",
     "use_cases": [
       "World's Fair exhibition",
       "Museum / heritage"
@@ -121665,7 +121665,8 @@
     "cameras": "Photoelectric 'eyes' (distinguish red/green light)",
     "voice_interaction": "~700-word playback via 78-rpm record player; voice/relay command control",
     "power_source": "Tethered (relays and motors)",
-    "manufacturer_history": "Built 1937–1938 (lead engineer J.M. Barnett); star of the Westinghouse Pavilion at the 1939 NY World's Fair; survives at the Senator John Heinz History Center."
+    "manufacturer_history": "Built 1937–1938 (lead engineer J.M. Barnett); star of the Westinghouse Pavilion at the 1939 NY World's Fair; survives at the Senator John Heinz History Center.",
+    "speech_synthesis": true
   },
   {
     "id": "grey-walter-tortoises",
@@ -124348,7 +124349,7 @@
     "origin": "Japan",
     "status": "Active",
     "dof": 12,
-    "actuator_type": "Pneumatic (facial + upper body)",
+    "actuator_type": "Pneumatic",
     "frame_material": "Fibre-reinforced-plastic skull; metal & plastic internal frame",
     "tags": [
       "humanoid",
@@ -124383,9 +124384,10 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKphbVZSyd-3qHXgeQqMg21IqZuNxpJIRndl3vOKXoxtE0rlmgPlx9Bk&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6PrwNt8EZX3ruxWa_FW0gRK2NAxbDGUXOtj_BKSzNTH-2FKzZflOB-I0W&s=10"
     ],
-    "shell_material": "Silicone rubber skin with real human hair",
+    "shell_material": "Silicone rubber (skin) + FRP skull",
     "emotional_expression": true,
-    "manufacturer_history": "Hiroshi Ishiguro Laboratory (ATR) with Kokoro; sibling to Geminoid HI-1 (2006)."
+    "manufacturer_history": "Hiroshi Ishiguro Laboratory (ATR) with Kokoro; sibling to Geminoid HI-1 (2006).",
+    "speech_synthesis": true
   },
   {
     "cat": "Research",
@@ -128816,7 +128818,7 @@
     "year": 2005,
     "origin": "Vietnam",
     "made_in": "Vietnam",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "TOPIO ('TOSY Ping Pong Playing Robot') is a bipedal humanoid built by Vietnamese firm TOSY to play table tennis against a human, developed from 2005 and famously demonstrated at Tokyo's IREX in 2007. Its carbon-fibre-composite frame allows fast, flexible motion, and it tracks the ball's trajectory and spin with multiple high-speed cameras feeding an artificial neural network that lets it learn and improve as it plays. The flagship TOPIO 3.0 stands 1.88 m and weighs 120 kg with 32 DoF (up from 20 DoF hydraulic in 1.0 and 28 DoF in 2.0). More a showcase of real-time vision and dynamic bipedal control than a product.",
@@ -129246,7 +129248,7 @@
     "desc": "The first industrial humanoid from French exoskeleton pioneer Wandercraft — famously built in just 40 days by reusing the self-balancing, gait-planning and motorized-joint technology from its medical exoskeletons. Calvin-40 is a headless, voice-controlled bipedal robot (its cameras sit low on the body so it can see under equipment and between shelves) designed for strenuous, non-ergonomic factory work up to 22 hours a day. Its wrists accept interchangeable dexterous hands, grippers or suction cups. Developed with Renault Group, it trains in NVIDIA Isaac Sim with onboard Jetson compute and passed 1M+ steps of durability testing — the first humanoid deployed on a European assembly line.",
     "also_known_as": "Calvin",
     "height_mm": 1700,
-    "actuator_type": "Motorized joints with real-time self-balancing (exoskeleton-derived)",
+    "actuator_type": "Electric (self-balancing bipedal)",
     "cameras": "Low-mounted body cameras (headless design)",
     "end_effector_type": "Interchangeable: dexterous hands, grippers, or suction cups",
     "quick_change": true,
@@ -132868,7 +132870,7 @@
     "status": "Active",
     "price": "POA",
     "img": "",
-    "actuator_type": "Tendon-driven series-elastic 'muscle units' (M2/M3), antagonistic pairs, brushless DC",
+    "actuator_type": "Tendon-driven artificial muscles (series-elastic)",
     "use_cases": [
       "Telepresence / robotic avatar",
       "Musculoskeletal robotics research",
@@ -132898,7 +132900,8 @@
     "frame_material": "3D-printed polyamide (additive manufacturing)",
     "open_source": true,
     "teleoperation": "Full-body motion mapping (robotic avatar / 'Robody')",
-    "manufacturer_url": "https://www.devanthro.com/"
+    "manufacturer_url": "https://www.devanthro.com/",
+    "ai_open_source": true
   },
   {
     "id": "unix-ai-wanda",
@@ -133162,11 +133165,12 @@
     "payload": 10,
     "actuator_type": "Custom backdriveable actuators, cycloidal transmissions (~96% eff., up to 9 rad/s)",
     "bimanual": true,
-    "hand_type": "Interchangeable grippers (quick tool change on next gen)",
+    "hand_type": "PSYONIC Ability Hand (6-DOF, 5-finger)",
     "force_sensing": true,
     "cameras": "Vision system",
     "chassis": "Fixed / stable base (no legs)",
-    "manufacturer_url": "https://www.boardwalkrobotics.com/"
+    "manufacturer_url": "https://www.boardwalkrobotics.com/",
+    "fingers": 5
   },
   {
     "id": "samsung-bot-handy",
@@ -133176,7 +133180,7 @@
     "sub": "Household Assistant Robot (concept)",
     "year": 2021,
     "origin": "South Korea",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "use_cases": [
@@ -133203,7 +133207,7 @@
     "hand_type": "Clamp / claw end-effector (shoulder-elbow-wrist arm)",
     "cameras": "Head- and hand-mounted cameras",
     "force_sensing": true,
-    "ai_model": "AI object recognition + force control (material/weight-aware grasping)",
+    "ai_model": "Samsung AI",
     "display_face": "Digital expressive eyes",
     "natural_language_commands": true,
     "manufacturer_url": "https://research.samsung.com/robotics"
