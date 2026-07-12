@@ -104919,7 +104919,8 @@
     "cats": [
       "Humanoid",
       "Entertainment"
-    ]
+    ],
+    "speech": "Built-in speaker (preset sounds/phrases)"
   },
   {
     "id": "boston-dynamics-spot",
@@ -110846,6 +110847,13 @@
     "cats": [
       "Humanoid",
       "Aerospace"
+    ],
+    "os": "Linux RTOS",
+    "battery_life": 60,
+    "shoulder_width_mm": 480,
+    "can_use_tools": true,
+    "deployed_at": [
+      "ISS (Soyuz MS-14, 2019)"
     ]
   },
   {
@@ -110923,7 +110931,12 @@
     "cats": [
       "Humanoid",
       "Aerospace"
-    ]
+    ],
+    "languages": "Japanese",
+    "deployed_at": [
+      "ISS (2013)"
+    ],
+    "cameras": "Face-recognition camera"
   },
   {
     "id": "astroscale-elsa-d-2021",
@@ -114101,7 +114114,7 @@
     "price": 250000,
     "id": "iit-icub",
     "name": "iCub",
-    "brand": "IIT (Istituto Italiano di Tecnologia)",
+    "brand": "IIT",
     "sub": "Humanoid Research Platform",
     "year": 2018,
     "origin": "Italy",
@@ -114157,9 +114170,9 @@
     "frame_material": "Ergal aluminium alloy, steel and plastic",
     "imu": true,
     "force_sensing": true,
-    "touch_sensing": "Capacitive tactile skin",
+    "touch_sensing": "Distributed tactile skin",
     "touch_sensors_count": 2000,
-    "microphones": "Stereo (head-mounted)",
+    "microphones": "Microphone array",
     "chipset": "Onboard Intel Core 2 Duo + PC104 (CAN-bus to motor/sensor boards); off-board 30–40-core cluster",
     "os": "Debian Linux (onboard)",
     "ros": true,
@@ -122808,7 +122821,7 @@
     "brand": "Sony",
     "cat": "Humanoid",
     "year": 2003,
-    "status": "Discontinued",
+    "status": "Active",
     "height_mm": 580,
     "weight_kg": 7.3,
     "dof": 38,
@@ -122857,7 +122870,12 @@
     "fall_recovery": true,
     "facial_recognition": true,
     "os": "Sony OPEN-R architecture",
-    "manufacturer_history": "Developed by Sony's Intelligence Dynamics Laboratory; first sustained-running humanoid (Guinness 2005); project cancelled 2006."
+    "manufacturer_history": "Developed by Sony's Intelligence Dynamics Laboratory; first sustained-running humanoid (Guinness 2005); project cancelled 2006.",
+    "microphones": "7-mic array",
+    "cpu": "3x 64-bit RISC",
+    "speech_synthesis": true,
+    "force_sensing": true,
+    "battery_life": 60
   },
   {
     "id": "unitree-gd01",
@@ -126045,7 +126063,7 @@
   {
     "id": "agibot-lingxi-x2",
     "name": "Lingxi X2",
-    "brand": "AgiBot",
+    "brand": "AGIBOT",
     "cat": "Humanoid",
     "sub": "Compact Humanoid",
     "year": 2025,
@@ -126125,7 +126143,9 @@
       "https://en.channeliam.com/wp-content/uploads/2025/03/hq720-1.webp",
       "https://i0.wp.com/technode.com/wp-content/uploads/2025/03/peng-zhihui.png?fit=1370%2C875&ssl=1"
     ],
-    "video": "https://youtu.be/iyCjevFGLiA"
+    "video": "https://youtu.be/iyCjevFGLiA",
+    "arm_dof": 7,
+    "ai_model_type": "ViLLA (Vision-Language-Latent-Action)"
   },
   {
     "id": "switchbot-onero-h1",
@@ -133680,18 +133700,19 @@
     "imu": true,
     "imu_axes": 9,
     "cameras": "Logitech C920 HD",
-    "microphones": 2,
+    "microphones": "2-mic",
     "battery_type": "LiPo (1800 mAh)",
     "battery_life": 30,
     "battery_life_typical": 30,
     "hot_swap": true,
     "wifi": "Wi-Fi 6",
     "wifi_bands": "2.4/5 GHz",
-    "bluetooth": "5",
+    "bluetooth": "5.0",
     "ethernet": "Gigabit",
     "open_source": true,
     "sdk": true,
-    "manufacturer_url": "https://en.robotis.com/model/page.php?co_id=prd_op3"
+    "manufacturer_url": "https://en.robotis.com/model/page.php?co_id=prd_op3",
+    "ai_open_source": true
   },
   {
     "id": "aheadform-origin",
