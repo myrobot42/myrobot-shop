@@ -121733,12 +121733,12 @@
     ],
     "fig": "🤖",
     "tags": [],
-    "score": 83,
+    "score": 75,
     "rating": 4,
     "released": "2025-02-01",
     "speed": 3.5,
     "battery": 120,
-    "actuator_type": "Fourier FSA 2.0 integrated actuators",
+    "actuator_type": "FSA (Fourier Smart Actuator)",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/24/EqTV2TLQTaasb8Tuyygj/image.jpg",
     "gallery": [
       "https://www.futura-sciences.com/en/wp-content/uploads/2025/10/Fourier-N1.jpeg",
@@ -121754,7 +121754,8 @@
     "battery_life_typical": 120,
     "stair_climbing": true,
     "fall_recovery": true,
-    "ai_open_source": true
+    "ai_open_source": true,
+    "leg_dof": 6
   },
   {
     "id": "westinghouse-elektro",
@@ -123467,16 +123468,15 @@
     "head_dof": 2,
     "chipset": "NVIDIA Jetson Orin NX 8GB / AGX Orin",
     "npu_tops": 200,
-    "depth_sensing": "Stereo depth",
+    "depth_sensing": true,
     "imu_axes": 9,
     "touch_sensing": "Touch sensors",
-    "microphones": "Microphone array",
+    "microphones": "Mic array",
     "speaker_count": 1,
     "battery_life_typical": 80,
     "fall_recovery": true,
     "sdk_langs": [
-      "Python",
-      "C++"
+      "Python"
     ],
     "sim_platform": "Isaac Sim, MuJoCo, Webots",
     "llm_model": "Doubao (integrated)",
@@ -132741,7 +132741,7 @@
     "sub": "Home Humanoid (wheeled)",
     "year": 2026,
     "origin": "China",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "dof": 44,
@@ -132769,7 +132769,12 @@
     "chassis": "Wheeled",
     "hand_type": "Dexterous hands",
     "bimanual": true,
-    "manufacturer_url": "https://www.haier.com/"
+    "manufacturer_url": "https://www.haier.com/",
+    "os": "RobotEra ERA platform (Q5 derivative)",
+    "arm_dof": 7,
+    "payload_kg": 10,
+    "payload": 10,
+    "weight_kg": 70
   },
   {
     "id": "prosper-alfie",
@@ -133120,7 +133125,8 @@
     "usb_ports": "USB 3.0",
     "sdk": true,
     "ota": true,
-    "manufacturer_url": "https://www.unix-group.ai/"
+    "manufacturer_url": "https://www.unix-group.ai/",
+    "fingers": 2
   },
   {
     "id": "chery-mornine",
