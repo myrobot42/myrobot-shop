@@ -137164,7 +137164,7 @@
     "sub": "Autonomous Cargo VTOL (hybrid-electric)",
     "year": 2022,
     "origin": "USA",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "https://evtol.news/__media/Aircraft%20Directory%20Images%20Lift%20plus%20Cruise/Elroy%20Air%20Chapparral/Elroy-Air-hybrid-electric-VTOL-flying-USA.jpg",
     "desc": "An autonomous, hybrid-electric 'lift + cruise' VTOL cargo aircraft from San Francisco's Elroy Air, built to move freight to places without runways or airports. The Chaparral C1 carries 300-500 lb (136-227 kg) up to ~300 miles at roughly 125 knots, using twelve electric motors (eight for vertical lift, four for forward cruise) fed by a turbogenerator-battery architecture - a turbine tops up the batteries in flight, and the C1 was the world's first turbogenerator-hybrid hVTOL to fly (Nov 2023), completing its first point-to-point delivery in Dec 2025. Its full carbon-composite airframe rides fixed quadricycle gear that straddles a detachable modular cargo pod; the aircraft autonomously picks up and drops pods (express, heavy, humanitarian air-drop, climate-controlled/medical, ISR), creating a 'conveyor belt through the sky', and packs into a 40 ft container or C-130. It carries a backlog of ~1,500 preorders (~$3B) from FedEx, Bristow, LCI, AYR Logistics and the USAF, with Kratos as exclusive US manufacturer targeting 2026 production.",
@@ -137182,9 +137182,8 @@
     "autonomous": true,
     "powertrain": "Hybrid-electric",
     "use_cases": [
-      "Middle-mile cargo",
-      "Military resupply",
-      "Humanitarian aid / disaster response"
+      "Autonomous cargo logistics",
+      "Middle-mile delivery"
     ],
     "fig": "🤖",
     "score": 75,
@@ -137212,7 +137211,9 @@
       "https://upload.wikimedia.org/wikipedia/en/0/0c/Elroy_Air_Unmanned_Cargo_Aircraft.png",
       "https://p.turbosquid.com/ts-thumb/fS/dWJMEG/zu/0003/png/1754738811/1920x1080/fit_q87/01946053fa1700c124d7b269f3c1f0a464101960/0003.jpg"
     ],
-    "video": "https://youtu.be/fdEInnvptU8"
+    "video": "https://youtu.be/fdEInnvptU8",
+    "frame_type": "Hybrid-electric VTOL cargo",
+    "max_range_km": 480
   },
   {
     "id": "dronamics-black-swan",
@@ -137933,7 +137934,7 @@
     "sub": "Carrier-Based Aerial-Refueling UAV",
     "year": 2021,
     "origin": "USA",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/4tm3Hto0L1QtDALuYv3l/image.jpg",
     "desc": "The U.S. Navy's first carrier-based unmanned aircraft — a Boeing-built autonomous aerial-refueling tanker drone whose primary job is to offload fuel to F/A-18 Super Hornets (via a wing-mounted buddy refueling store), freeing fighters from the tanking role, with a secondary ISR mission through a retractable EO/IR sensor turret. It has a ~75 ft (22.9 m) wingspan, a Rolls-Royce AE 3007N turbofan fed by a low-observable top-mounted flush inlet, and flies fully autonomously (taxi, take-off, maneuver, land) under the MD-5 Ground Control Station. A T1 demonstrator first flew in 2019 and the production-representative MQ-25A made its maiden flight in 2026; the Navy plans 76 aircraft with IOC targeted for 2026.",
@@ -137954,9 +137955,8 @@
     "role": "Aerial refueling (buddy store) + secondary ISR",
     "mil_spec": true,
     "use_cases": [
-      "Carrier aerial refueling",
-      "Intelligence, surveillance, reconnaissance",
-      "Future: strike / multi-mission"
+      "Aerial refueling",
+      "ISR"
     ],
     "fig": "🤖",
     "score": 75,
@@ -137981,7 +137981,10 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1-unskbKRcfxTefAw8WW2uozEY-ol1g1O2IbMtr-MCvaSq7SyREnrsVw&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIzTBDcSRSIMXORN0E3QyG1A4kg8d6FIDnaRnCLsWcNR9kgH1zQaxCDeI&s=10"
     ],
-    "video": "https://youtu.be/q2uGkF2J1Y0"
+    "video": "https://youtu.be/q2uGkF2J1Y0",
+    "frame_type": "Carrier-based tanker UAV",
+    "autonomy_level": "Autonomous",
+    "regulatory_class": "Military (US Navy)"
   },
   {
     "id": "boeing-mq-28-ghost-bat",
@@ -137991,7 +137994,7 @@
     "sub": "Loyal Wingman UCAV",
     "year": 2021,
     "origin": "Australia",
-    "status": "Prototype",
+    "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/y7bFVwEEmkJr0OCO97Ao/image.jpg",
     "desc": "Australia's Boeing-built collaborative combat aircraft — the first military aircraft designed and built in Australia in over 50 years, flying AI-teaming missions alongside crewed fighters with a 3,700 km range.",
@@ -138013,8 +138016,10 @@
     "role": "Collaborative combat aircraft",
     "mil_spec": true,
     "use_cases": [
-      "Manned-unmanned teaming",
-      "ISR escort"
+      "ISR",
+      "Force reconnaissance",
+      "Electronic warfare",
+      "Manned-unmanned teaming"
     ],
     "fig": "🤖",
     "score": 75,
@@ -138025,17 +138030,26 @@
       "https://www.boeing.com/content/theboeingcompany/us/en/features/2026/06/mq-28-stealth-expands-mission-options-for-customers/_jcr_content/root/container/story_truncator/section/image.coreimg.jpeg/1780415308136/mq-28-stealth-image-1.jpeg",
       "https://www.twz.com/wp-content/uploads/2025/09/mq-28-ghost-bat-air-to-air-refueling.jpg"
     ],
-    "video": "https://youtu.be/Grx3d8LMoe8"
+    "video": "https://youtu.be/Grx3d8LMoe8",
+    "frame_type": "Stealth UCAV (loyal wingman / CCA)",
+    "length_mm": 11700,
+    "max_range_km": 3700,
+    "max_speed_kmh": 1100,
+    "autonomy_level": "Autonomous + manned-unmanned teaming",
+    "ai_model": "Boeing autonomous mission systems",
+    "frame_material": "Resin-infused composite (low-observable)",
+    "made_in": "Australia",
+    "regulatory_class": "Military UCAV"
   },
   {
     "id": "anduril-fury",
-    "name": "Fury",
-    "brand": "Anduril",
+    "name": "Fury (YFQ-44A)",
+    "brand": "Anduril Industries",
     "cat": "Drones",
     "sub": "Autonomous Fighter UCAV",
     "year": 2023,
     "origin": "USA",
-    "status": "Prototype",
+    "status": "Active",
     "price": "POA",
     "img": "https://img-new.cgtrader.com/items/6344163/8edb7b4271/anduril-yfq-44a-fury-the-next-generation-fighter-drone-3d-model-8edb7b4271.webp",
     "desc": "Anduril's high-performance autonomous air vehicle (selected as the USAF's YFQ-44A CCA candidate): a jet-powered fighter-class drone built around the Lattice autonomy stack for manned-unmanned teaming.",
@@ -138057,8 +138071,10 @@
     "mil_spec": true,
     "autonomous": true,
     "use_cases": [
-      "Air dominance teaming",
-      "Autonomy testbed"
+      "Reconnaissance",
+      "Electronic warfare",
+      "Escort",
+      "Air-defense support"
     ],
     "fig": "🤖",
     "score": 75,
@@ -138067,7 +138083,12 @@
       "https://cdn.sanity.io/images/61nocsj5/production/95521bb43bee815e62a783ab52ecca72358f20d3-3840x2160.png?rect=557,298,2770,1558&w=3840&h=2160&fit=min&auto=format",
       "https://www.twz.com/wp-content/uploads/2026/02/AIM-120-CCA-Fury.jpg?quality=85"
     ],
-    "video": "https://youtu.be/WQMrv_utQwo"
+    "video": "https://youtu.be/WQMrv_utQwo",
+    "frame_type": "Low-observable CCA (autonomous)",
+    "autonomy_level": "Autonomous (formation, route planning, threat detection)",
+    "ai_model": "Anduril Lattice",
+    "made_in": "USA",
+    "regulatory_class": "Military CCA"
   },
   {
     "id": "xag-p100-pro",
