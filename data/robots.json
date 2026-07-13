@@ -44896,7 +44896,7 @@
     "height_mm": 680,
     "weight_kg": 135,
     "speed_ms": 10,
-    "repeatability_mm": 0.02,
+    "repeatability_mm": 0.01,
     "cycle_time_s": 0.35,
     "protection_rating": "IP65",
     "operating_temp_range": "-10°C to +50°C",
@@ -44911,7 +44911,15 @@
       "https://cdn.robodk.com/robot/img/Staubli-TS2-100-FL-200-robot.png",
       "https://www.staubli.com/adobe/dynamicmedia/deliver/dm-aid--8a57d88a-816b-4bc2-861a-ddd876565c1f/ts2-100-he.jpg?quality=75&width=992&preferwebp=true"
     ],
-    "website": "https://www.staubli.com"
+    "website": "https://www.staubli.com",
+    "axes_config": "4-axis",
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9",
+    "programming": "VAL3",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "Floor / ceiling",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "st-ubli-ts2-80",
@@ -44952,7 +44960,7 @@
     "height_mm": 688,
     "weight_kg": 55,
     "speed_ms": 10,
-    "repeatability_mm": 0.025,
+    "repeatability_mm": 0.01,
     "warranty_months": 12,
     "protection_rating": "IP65",
     "product_url": "https://www.staubli.com/en-us/robotics/4-axis-scara-robots/ts2-scara-robot-series/ts2-80",
@@ -44966,7 +44974,15 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmNYEuL7EDYXsKGyXYLQMNzL9fjooFtyr9BpZFItQFmA&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMgO49qnU3G1AZlxKhr3V3Hc0ZQ6fAZAAImXlKgAt9lQ&s=10"
     ],
-    "website": "https://www.staubli.com"
+    "website": "https://www.staubli.com",
+    "axes_config": "4-axis",
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9",
+    "programming": "VAL3",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "Floor / ceiling",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "st-ubli-ts2-60",
@@ -45024,7 +45040,15 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1OI-SoakbHBIjlisgjPrGThOWuqlQz6ypl7Nzp33qCg&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStWYzSBwPQuxharxCVUIcc3lHhObUeah-_4eKtFLyu9A&s=10"
     ],
-    "website": "https://www.staubli.com"
+    "website": "https://www.staubli.com",
+    "axes_config": "4-axis",
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9",
+    "programming": "VAL3",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "Floor / ceiling",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "st-ubli-ts2-40",
@@ -45079,7 +45103,15 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYjP_dVQelec8-5kC0c016BJz76J85M6OQlObi2BOQbw&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCbnFSVknlujAhaRjAha9gwmtZdnJV3nxrqkkTWGa_2w&s=10"
     ],
-    "website": "https://www.staubli.com"
+    "website": "https://www.staubli.com",
+    "axes_config": "4-axis",
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9",
+    "programming": "VAL3",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "Floor / ceiling",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "st-ubli-tx2-200l",
@@ -45123,17 +45155,12 @@
     ],
     "warranty_months": 24,
     "manufacturer_url": "https://www.staubli.com",
-    "repeatability_mm": 0.04,
+    "repeatability_mm": 0.06,
     "ip_rating": "IP65",
     "operating_temp_min": 5,
-    "operating_temp_max": 45,
+    "operating_temp_max": 40,
     "power_consumption_w": 2200,
-    "mounting": [
-      "floor",
-      "ceiling",
-      "wall",
-      "angle"
-    ],
+    "mounting": "360° (floor/ceiling/wall)",
     "product_url": "https://www.staubli.com/en-us/robotics/industrial-robots/6-axis-industrial-robots/tx2-200",
     "made_in": "Switzerland",
     "os": "Staubli CS9",
@@ -45144,7 +45171,12 @@
       "https://www.industry-plaza.com/img/tx2-200-tx2-200l-6-axis-robot-016440131-product_zoom.jpg",
       "https://robotec.org/upload/iblock/1b1/50k0c0w2dxm2n1luqmrynu4d9ktigucn.png"
     ],
-    "website": "https://www.staubli.com"
+    "website": "https://www.staubli.com",
+    "axes_config": "6-axis",
+    "controller": "Stäubli CS9 HP",
+    "programming": "VAL3",
+    "safety_functions": "SIL3 / PLe modular",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)"
   },
   {
     "id": "st-ubli-tx2-160l",
@@ -45286,7 +45318,17 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_KL6qXOdoj0u4sI4lO3I-yEDNGUsN3Nx5Q5ygIuEew&s"
     ],
     "website": "https://www.staubli.com",
-    "video": "https://youtu.be/-GYQl3Dt68w"
+    "video": "https://youtu.be/-GYQl3Dt68w",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9 MP",
+    "programming": "VAL3",
+    "safety_functions": "SIL3 / PLe modular",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "360° (floor/ceiling/wall)",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "st-ubli-tx2-90xl",
@@ -45336,7 +45378,7 @@
     ],
     "warranty_months": 24,
     "manufacturer_url": "https://www.staubli.com",
-    "repeatability_mm": 0.02,
+    "repeatability_mm": 0.035,
     "protection_rating": "IP65",
     "made_in": "Switzerland",
     "os": "Staubli CS9",
@@ -45347,7 +45389,16 @@
       "https://s3.us-east-1.amazonaws.com/cn-qviro/TX2-90XL.jpg",
       "https://cdn.robodk.com/robot/img/Staubli-TX2-90XL-robot.png"
     ],
-    "website": "https://www.staubli.com"
+    "website": "https://www.staubli.com",
+    "axes_config": "6-axis",
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9 LP",
+    "programming": "VAL3",
+    "safety_functions": "SIL3 / PLe modular",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "360° (floor/ceiling/wall)",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "st-ubli-tx2-90",
@@ -45383,7 +45434,7 @@
     "dof": 6,
     "reach_mm": 1000,
     "speed_ms": 9.5,
-    "repeatability_mm": 0.02,
+    "repeatability_mm": 0.035,
     "protection_rating": "IP65",
     "operating_temp_range": "-10°C to +50°C",
     "use_cases": [
@@ -45406,7 +45457,16 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNXodcbhYiBPfwuYYv4DcDQaw1AGOmg22qazZ08i9_jMlJKFiA7em3acR3&s=10"
     ],
     "website": "https://www.staubli.com",
-    "video": "https://youtu.be/-hGJ1AVp4Lc"
+    "video": "https://youtu.be/-hGJ1AVp4Lc",
+    "axes_config": "6-axis",
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9 LP",
+    "programming": "VAL3",
+    "safety_functions": "SIL3 / PLe modular",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "360° (floor/ceiling/wall)",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "st-ubli-tx2-60l",
@@ -45464,7 +45524,17 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJLs2un4HI1GOj6XPLSZyi-0Ql8edv152KZOUwawoNaA&s=10",
       "https://www.automate.org/images/imgLibrary/RIA-p-TX2-60_Stericlean_300px1.jpg"
     ],
-    "website": "https://www.staubli.com"
+    "website": "https://www.staubli.com",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9 LP",
+    "programming": "VAL3",
+    "safety_functions": "SIL3 / PLe modular",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "360° (floor/ceiling/wall)",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "st-ubli-tx2-40",
@@ -45518,7 +45588,17 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmQr75Ykg_wx4X235MqR2hACefe8LJyUW3dwTyKV__2w&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4VLslM3bXeYuNba42mzTusZqjCMM_Eca6VIQCS1XQflkhxfXMXoik0VxQ&s=10"
     ],
-    "website": "https://www.staubli.com"
+    "website": "https://www.staubli.com",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9 LP",
+    "programming": "VAL3",
+    "safety_functions": "SIL3 / PLe modular",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "360° (floor/ceiling/wall)",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "staubli-tx2-200",
@@ -45562,7 +45642,7 @@
     "manufacturer_url": "https://www.staubli.com",
     "height_mm": 2609,
     "speed_ms": 10,
-    "repeatability_mm": 0.02,
+    "repeatability_mm": 0.06,
     "protection_rating": "IP65",
     "operating_temp_range": "-10°C to +50°C",
     "power_consumption": "6.5 kW",
@@ -45575,7 +45655,7 @@
       "J5: 270°/s",
       "J6: 450°/s"
     ],
-    "controller": "CS9",
+    "controller": "Stäubli CS9 HP",
     "programming_languages": [
       "VAL3+",
       "Python",
@@ -45590,7 +45670,15 @@
       "https://www.industry-plaza.com/img/tx2-200-tx2-200l-6-axis-robot-016440131-product_zoom.jpg",
       "https://robotec.org/upload/iblock/867/4ayan1et4id7jtp0jw4pkzw25080xq9d.png"
     ],
-    "website": "https://www.staubli.com"
+    "website": "https://www.staubli.com",
+    "axes_config": "6-axis",
+    "ip_rating": "IP65",
+    "programming": "VAL3",
+    "safety_functions": "SIL3 / PLe modular",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "360° (floor/ceiling/wall)",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "staubli-tx2-160",
@@ -45636,10 +45724,10 @@
     "width_mm": 380,
     "depth_mm": 380,
     "speed_ms": 10,
-    "repeatability_mm": 0.02,
+    "repeatability_mm": 0.05,
     "ip_rating": "IP65",
     "operating_temp_min": 5,
-    "operating_temp_max": 45,
+    "operating_temp_max": 40,
     "power_consumption_w": 2000,
     "warranty_months": 12,
     "product_url": "https://www.staubli.com/en-us/robotics/6-axis-industrial-robot/tx2-160-robot/",
@@ -45654,7 +45742,13 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnZZFFlY345SkkdlysTgC-kJB-lR8HJsoCjdnFq-NOeA&s=10"
     ],
     "website": "https://www.staubli.com",
-    "video": "https://youtu.be/-GYQl3Dt68w"
+    "video": "https://youtu.be/-GYQl3Dt68w",
+    "axes_config": "6-axis",
+    "controller": "Stäubli CS9 MP",
+    "programming": "VAL3",
+    "safety_functions": "SIL3 / PLe modular",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "360° (floor/ceiling/wall)"
   },
   {
     "id": "staubli-tx2-60",
@@ -45708,7 +45802,17 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYkEIp2gH4YNOa2FHAHg35b38WXtVPHHGTTqrm-8d9w&s=10"
     ],
     "website": "https://www.staubli.com",
-    "video": "https://youtu.be/PiKK4jAHPjo"
+    "video": "https://youtu.be/PiKK4jAHPjo",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP65",
+    "controller": "Stäubli CS9 LP",
+    "programming": "VAL3",
+    "safety_functions": "SIL3 / PLe modular",
+    "industrial_protocols": "Real-time Ethernet (EtherCAT/PROFINET/EtherNet-IP)",
+    "mounting": "360° (floor/ceiling/wall)",
+    "operating_temp_min": 5,
+    "operating_temp_max": 40
   },
   {
     "id": "swisslog-carrypick-kmp600",
