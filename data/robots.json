@@ -51826,18 +51826,16 @@
     "export_control": "EU dual-use",
     "powertrain": "Hybrid-electric (diesel generator)",
     "top_speed_kmh": 80,
-    "role": [
-      "Robotic combat vehicle",
-      "iMUGS programme"
-    ],
-    "autonomy_level": 3,
+    "role": "Multipurpose combat / recon UGV (tracked)",
+    "autonomy_level": "Teleop + autonomous waypoint",
     "gallery": [
       "https://milremrobotics.com/wp-content/uploads/2025/10/MRCV_Green_360_0033-1024x576.png",
       "https://milremrobotics.com/wp-content/uploads/2024/12/type-x-field-support.png",
       "https://milremrobotics.com/wp-content/uploads/2024/11/type-x-2.png"
     ],
     "video": "https://milremrobotics.com/wp-content/uploads/2024/12/typex_loop_min.mp4",
-    "website": "https://milremrobotics.com"
+    "website": "https://milremrobotics.com",
+    "thermal_camera": true
   },
   {
     "id": "milrem-robotics-vector-rcv",
@@ -118348,22 +118346,21 @@
       "https://www.aljundi.ae/wp-content/uploads/2024/02/OPTIO-X20-019-e1708493384256.jpg",
       "https://www.army-guide.com/eng/images/optio_x-20_dssdfsh11529332135.jpg"
     ],
-    "role": [
-      "Tracked combat & support UGV"
-    ],
+    "role": "Tracked combat-support UGV",
     "endurance_hours": 8,
     "deploy_method": [
       "Self-deploying tracked"
     ],
     "mil_spec": true,
-    "autonomy_level": "Teleoperated + waypoint autonomy",
+    "autonomy_level": "Teleop + autonomous",
     "customers": [
       "European defense forces"
     ],
     "use_cases": [
       "Remote weapon platform, ISR, cargo (20-tonne class tracked UGV)"
     ],
-    "made_in": "France"
+    "made_in": "France",
+    "thermal_camera": true
   },
   {
     "cat": "Military",
@@ -118481,14 +118478,12 @@
       "https://cdn.prod.website-files.com/685a80f356c82ad5ff0fa008/6a195cadcf2d3a2813e5f123_ARX-Robotics_11_11zon.webp",
       "https://cdn.prod.website-files.com/685a80f356c82ad5ff0fa008/6a195afd2af7527cb505a316_ARX-Robotics_01.webp"
     ],
-    "role": [
-      "Modular tracked support UGV"
-    ],
+    "role": "Modular tracked UGV (logistics / ISR)",
     "deploy_method": [
       "Tracked"
     ],
     "mil_spec": true,
-    "autonomy_level": "Teleoperated + assisted autonomy",
+    "autonomy_level": "Teleop + autonomous",
     "customers": [
       "European militaries"
     ],
@@ -128016,7 +128011,7 @@
     "sub": "Squad Multipurpose Equipment Transport",
     "year": 2020,
     "origin": "USA",
-    "made_in": "USA (General Dynamics Land Systems)",
+    "made_in": "USA",
     "status": "Active",
     "price": "POA",
     "img": "",
@@ -128030,16 +128025,11 @@
       "All-terrain"
     ],
     "autonomous": true,
-    "role": [
-      "Squad logistics (S-MET)",
-      "Power generation",
-      "CasEvac",
-      "ISR carrier"
-    ],
+    "role": "Squad logistics transport (robotic mule)",
     "deploy_method": [
       "Self-deploying / vehicle transported"
     ],
-    "autonomy_level": 2,
+    "autonomy_level": "Follow-me / teleop / autonomous waypoint",
     "export_control": "ITAR (USML Cat XI)",
     "customers": [
       "US Army (S-MET Program of Record, Increment I)"
@@ -128506,7 +128496,7 @@
     "sub": "Tracked Combat UGV",
     "year": 2014,
     "origin": "Russia",
-    "made_in": "Russia (Izhevsk Radio Plant)",
+    "made_in": "Russia",
     "status": "Active",
     "price": "POA",
     "img": "",
@@ -128520,12 +128510,7 @@
     ],
     "thermal_camera": true,
     "autonomous": false,
-    "role": [
-      "Fire support",
-      "Recon",
-      "Patrol",
-      "Force protection"
-    ],
+    "role": "Tracked combat-support UGV",
     "deploy_method": [
       "Vehicle transported"
     ],
@@ -128569,8 +128554,8 @@
     "sub": "Robotic Combat Testbed",
     "year": 2020,
     "origin": "Russia",
-    "made_in": "Russia (Android Technics / Advanced Research Foundation)",
-    "status": "Development",
+    "made_in": "Russia",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "desc": "Modular experimental UGV developed by Android Technics and Russia's Advanced Research Foundation as a testbed for autonomy, machine vision and swarming. Built in tracked and wheeled configurations with a modular payload bay that can mount machine guns, anti-tank missiles (Kornet) or loitering-munition launchers, it is used to mature group-control and autonomous-navigation technologies for future Russian combat robots.",
@@ -128582,16 +128567,11 @@
     "thermal_camera": true,
     "lidar": true,
     "autonomous": true,
-    "role": [
-      "Autonomy testbed",
-      "Fire support",
-      "Recon",
-      "Swarming"
-    ],
+    "role": "Multipurpose UGV platform",
     "deploy_method": [
       "Vehicle transported"
     ],
-    "autonomy_level": 3,
+    "autonomy_level": "Autonomous + teleop",
     "export_control": "Russian export control",
     "customers": [
       "Russian MoD (experimental)"
@@ -128916,7 +128896,7 @@
     "sub": "Grenade-Launcher Strike UGV",
     "year": 2025,
     "origin": "Ukraine",
-    "made_in": "Ukraine (DevDroid)",
+    "made_in": "Ukraine",
     "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/vZdswiVtU65ssFh0Pw13/image.png",
@@ -128930,11 +128910,7 @@
     ],
     "thermal_camera": true,
     "autonomous": false,
-    "role": [
-      "Fire support",
-      "Recon",
-      "Strike"
-    ],
+    "role": "Ground robot (logistics / support platform)",
     "deploy_method": [
       "Self-deploying / vehicle transported"
     ],
@@ -129103,7 +129079,7 @@
     "sub": "Multifunctional Tracked UGV",
     "year": 2025,
     "origin": "Ukraine",
-    "made_in": "Ukraine (Tencore)",
+    "made_in": "Ukraine",
     "status": "Active",
     "price": "POA",
     "img": "",
@@ -129118,12 +129094,7 @@
     ],
     "thermal_camera": true,
     "autonomous": false,
-    "role": [
-      "Logistics",
-      "CasEvac",
-      "Mine-laying",
-      "Transport"
-    ],
+    "role": "Tracked multipurpose UGV (logistics / casevac)",
     "deploy_method": [
       "Self-deploying"
     ],
@@ -129672,7 +129643,7 @@
     "sub": "Autonomous Armed UGV",
     "year": 2021,
     "origin": "Turkey",
-    "made_in": "Türkiye (Havelsan)",
+    "made_in": "Turkey",
     "status": "Active",
     "price": "POA",
     "img": "",
@@ -129680,16 +129651,11 @@
     "armament": "Remote weapon station (modular)",
     "thermal_camera": true,
     "autonomous": true,
-    "role": [
-      "Armed ISR",
-      "Close protection",
-      "Armed recon",
-      "Fire support"
-    ],
+    "role": "ISR / combat-support UGV (tracked)",
     "deploy_method": [
       "Vehicle transported"
     ],
-    "autonomy_level": 3,
+    "autonomy_level": "Teleop + autonomous",
     "export_control": "Turkish export control",
     "customers": [
       "Turkish Land Forces"
@@ -129967,7 +129933,7 @@
     "sub": "Multipurpose Wheeled UGV",
     "year": 2020,
     "origin": "South Korea",
-    "made_in": "South Korea (Hyundai Rotem)",
+    "made_in": "South Korea",
     "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/qqBQcLrb6JXGgGVkK0tk/image.png",
@@ -129975,17 +129941,11 @@
     "armament": "Optional remote weapon station",
     "thermal_camera": true,
     "autonomous": true,
-    "role": [
-      "Recon",
-      "Surveillance",
-      "Transport",
-      "CasEvac",
-      "Fire support"
-    ],
+    "role": "Multipurpose military UGV (6x6)",
     "deploy_method": [
       "Self-deploying / vehicle transported"
     ],
-    "autonomy_level": 2,
+    "autonomy_level": "Teleop + follow-me",
     "export_control": "Korean export control",
     "customers": [
       "Republic of Korea Army (evaluation)"
