@@ -95280,8 +95280,8 @@
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734288/myrobot/nuchyxkr0rsn80u3gny0.png",
-    "score": 87,
-    "rating": 4.5,
+    "score": 75,
+    "rating": 4,
     "price": "POA",
     "desc": "Subsea-resident sensor node providing persistent undersea surveillance. Deployed and periodically recharged by Dive-XL — eliminating need for ships or submarines to visit the deployment site. Forms a distributed undersea sensor network.",
     "highlights": [
@@ -95320,7 +95320,11 @@
     "width_mm": 800,
     "depth_mm": 1200,
     "os": "Anduril Lattice",
-    "warranty_months": 12
+    "warranty_months": 12,
+    "vehicle_mode": "Resident AUV (subsea sensing)",
+    "propulsion": "Electric thrusters",
+    "autonomy_level": "Autonomous",
+    "sonar": true
   },
   {
     "id": "boxfish-auv-2020",
@@ -116828,7 +116832,11 @@
     "autonomous": false,
     "water_type": "Salt & fresh",
     "launch_method": "Hand-launched",
-    "video": "https://youtu.be/3NwXSIP_1Ro"
+    "video": "https://youtu.be/3NwXSIP_1Ro",
+    "vehicle_mode": "Consumer ROV (omnidirectional)",
+    "depth_rating_m": 100,
+    "camera": "4K UHD",
+    "tether_type": "Tethered"
   },
   {
     "cat": "Aquatic",
@@ -116874,7 +116882,10 @@
     "gps_when_surfaced": true,
     "iridium_satcom": true,
     "water_type": "Ocean",
-    "launch_method": "Dockside launch"
+    "launch_method": "Dockside launch",
+    "vehicle_mode": "Uncrewed surface vehicle (USV)",
+    "propulsion": "Wind (wing sail) + solar",
+    "autonomy_level": "Autonomous (long-endurance)"
   },
   {
     "cat": "Aquatic",
@@ -116918,7 +116929,11 @@
     "inertial_navigation": true,
     "water_type": "Ocean",
     "launch_method": "Dockside launch",
-    "video": "https://youtu.be/4Vcnx4tNM8w"
+    "video": "https://youtu.be/4Vcnx4tNM8w",
+    "vehicle_mode": "Large USV (ocean mapping)",
+    "propulsion": "Wind + diesel-electric",
+    "sonar": "Multibeam bathymetry",
+    "autonomy_level": "Autonomous"
   },
   {
     "cat": "Aquatic",
@@ -116965,10 +116980,13 @@
     "thruster_count": 4,
     "max_depth_m": 305,
     "endurance_hours": 2,
-    "tether_type": "Neutrally buoyant",
+    "tether_type": "Tethered",
     "autonomous": false,
     "water_type": "Salt & fresh",
-    "launch_method": "Hand-launched"
+    "launch_method": "Hand-launched",
+    "vehicle_mode": "Professional inspection ROV",
+    "depth_rating_m": 305,
+    "camera": "4K"
   },
   {
     "cat": "Aquatic",
@@ -117015,7 +117033,11 @@
       "https://ibubble.camera/wp-content/uploads/2020/01/ZEB_3115_ret-ibubbleevoHome.png",
       "https://benthicscuba.ca/wp-content/uploads/2024/05/3-565x565-1.png"
     ],
-    "video": "https://youtu.be/HhPs3vMT8OA"
+    "video": "https://youtu.be/HhPs3vMT8OA",
+    "vehicle_mode": "Autonomous underwater camera drone (untethered)",
+    "depth_rating_m": 60,
+    "camera": "4K",
+    "control_mode": "Diver-following (autonomous)"
   },
   {
     "cat": "Aquatic",
@@ -117114,7 +117136,11 @@
       "https://s.alicdn.com/@sc04/kf/H1b2e952551cd42b9a35e5794b0f641ec8.png?avif=close&webp=close",
       "https://s.alicdn.com/@sc04/kf/Hb8e263581fd84a2a8b012c2f4222e202b.png?avif=close&webp=close"
     ],
-    "video": "https://youtu.be/5bkpJHOfiPY"
+    "video": "https://youtu.be/5bkpJHOfiPY",
+    "vehicle_mode": "Bionic fish drone (untethered)",
+    "depth_rating_m": 60,
+    "camera": "4K",
+    "propulsion": "Bionic tail fin"
   },
   {
     "cat": "Disaster Response",
