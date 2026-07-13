@@ -89275,7 +89275,7 @@
     "weight_kg": 1.6,
     "battery_life": 18,
     "origin": "USA",
-    "cameras": 2,
+    "cameras": "1080p + IR + night vision",
     "wifi": true,
     "bluetooth": true,
     "gallery": [
@@ -89289,20 +89289,26 @@
     "thermal": true,
     "made_in": "USA",
     "os": "BRINC",
-    "max_flight_time": 18,
+    "max_flight_time": 20,
     "max_range": 2,
     "battery_life_typical": 18,
-    "frame_type": "Indoor quadcopter (glass breaker)",
+    "frame_type": "Tactical quadcopter (ducted)",
     "motor_count": 4,
     "camera_mp": 12,
-    "video_res": "1080p",
+    "video_res": "1080p/60fps",
     "obstacle_sensing": "Indoor flight assist",
     "two_way_audio": true,
     "use_cases": [
       "Public safety",
       "Indoor tactical recon",
       "Barricade response"
-    ]
+    ],
+    "thermal_resolution": "FLIR Boson (640×512)",
+    "transmission_tech": "Encrypted (13 km LOS)",
+    "transmission_range_km": 13,
+    "payload_kg": 0.45,
+    "frame_material": "Carbon fiber + PA6 nylon",
+    "regulatory_class": "NDAA compliant"
   },
   {
     "id": "brinc-lemur-2-2024",
@@ -89334,7 +89340,7 @@
     "weight_kg": 1.6,
     "battery_life": 15,
     "origin": "USA",
-    "cameras": 2,
+    "cameras": "4K visual + FLIR thermal + night vision",
     "wifi": true,
     "bluetooth": true,
     "gallery": [
@@ -89345,14 +89351,14 @@
     "thermal": true,
     "made_in": "USA",
     "os": "BRINC",
-    "max_flight_time": 15,
+    "max_flight_time": 20,
     "max_range": 2,
     "battery_life_typical": 15,
-    "frame_type": "Indoor quadcopter (glass breaker)",
+    "frame_type": "Tactical quadcopter (ducted)",
     "motor_count": 4,
     "camera_mp": 12,
     "video_res": "4K",
-    "obstacle_sensing": "LiDAR + 10-sensor Autonomy Engine",
+    "obstacle_sensing": "Smart Speed (LiDAR 3D map)",
     "autonomous": true,
     "cellular": "4G LTE",
     "two_way_audio": true,
@@ -89362,7 +89368,13 @@
       "Indoor search & rescue",
       "HazMat recon"
     ],
-    "video": "https://youtu.be/3G2Bmhx-Chw"
+    "video": "https://youtu.be/3G2Bmhx-Chw",
+    "ip_rating": "IP24",
+    "thermal_resolution": "FLIR Lepton (160×120)",
+    "lidar": true,
+    "transmission_tech": "Encrypted digital (AES-256)",
+    "frame_material": "Carbon fiber + PA6 nylon (ducted)",
+    "regulatory_class": "NDAA compliant"
   },
   {
     "id": "brinc-responder-2024",
@@ -89395,17 +89407,17 @@
     "battery_life": 40,
     "ip_rating": "IP55",
     "origin": "USA",
-    "cameras": 3,
+    "cameras": "Dual visual + thermal",
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G LTE",
+    "cellular": "Integrated LTE",
     "gallery": [
       "https://brincdrones.com/wp-content/uploads/2024/05/Cameras2.jpg",
       "https://brincdrones.com/wp-content/uploads/2024/05/Comm2s-2048x868.jpg"
     ],
     "gps": true,
     "return_to_home": true,
-    "thermal": false,
+    "thermal": true,
     "made_in": "USA",
     "os": "BRINC",
     "autonomous": true,
@@ -89415,7 +89427,10 @@
       "Rapid 911 response",
       "Aerial overwatch"
     ],
-    "video": "https://youtu.be/_-DeC4cUEyU"
+    "video": "https://youtu.be/_-DeC4cUEyU",
+    "frame_type": "DFR quadcopter",
+    "transmission_tech": "Mesh networking",
+    "regulatory_class": "NDAA compliant"
   },
   {
     "id": "brinc-guardian-2026",
@@ -89452,7 +89467,7 @@
     "cameras": 4,
     "wifi": true,
     "bluetooth": true,
-    "cellular": "4G LTE",
+    "cellular": "Integrated LTE",
     "gallery": [
       "https://brincdrones.com/wp-content/themes/bdrones/assets/images/product-guardian/features-mob3.webp?v=2.05"
     ],
@@ -89467,7 +89482,9 @@
       "Drone as first responder",
       "Autonomous public-safety response"
     ],
-    "video": "https://youtu.be/IwxwjJFzfcE"
+    "video": "https://youtu.be/IwxwjJFzfcE",
+    "frame_type": "DFR quadcopter",
+    "regulatory_class": "NDAA compliant"
   },
   {
     "id": "anduril-ghost-x-2024",
@@ -90016,7 +90033,7 @@
     "weight_kg": 1.4,
     "battery_life": 30,
     "origin": "USA",
-    "cameras": 2,
+    "cameras": "Teledyne FLIR Hadron 640R (EO+IR)",
     "wifi": true,
     "bluetooth": true,
     "gallery": [
@@ -90036,8 +90053,8 @@
     "max_flight_time": 30,
     "max_range": 10,
     "battery_life_typical": 30,
-    "frame_type": "Quadcopter",
-    "thermal_resolution": "Teledyne FLIR Hadron",
+    "frame_type": "sUAS quadcopter",
+    "thermal_resolution": "Teledyne FLIR Hadron 640",
     "role": [
       "ISR",
       "Night reconnaissance",
@@ -90053,7 +90070,8 @@
       "Night ISR",
       "Short-range reconnaissance"
     ],
-    "video": "https://youtu.be/gDBcnL7JpXU"
+    "video": "https://youtu.be/gDBcnL7JpXU",
+    "regulatory_class": "Blue UAS / NDAA"
   },
   {
     "id": "teal-blackwidow-2025",
@@ -90103,10 +90121,10 @@
     "autonomous": true,
     "thermal": true,
     "os": "Teal (Red Cat)",
-    "max_flight_time": 30,
+    "max_flight_time": 40,
     "max_range": 5,
     "battery_life_typical": 30,
-    "frame_type": "Compact quadcopter",
+    "frame_type": "Short-range recon sUAS",
     "role": [
       "Short-range reconnaissance",
       "Squad-level ISR"
@@ -90120,7 +90138,8 @@
       "Squad-level reconnaissance",
       "Backpackable ISR"
     ],
-    "video": "https://youtu.be/1g7BkTPD7t0"
+    "video": "https://youtu.be/1g7BkTPD7t0",
+    "regulatory_class": "Blue UAS / NDAA"
   },
   {
     "id": "quantum-trinity-pro-2022",
@@ -90168,7 +90187,7 @@
     "speed_ms": 17,
     "max_range": 15,
     "battery_life_typical": 90,
-    "frame_type": "Fixed-wing VTOL (tail-sitter)",
+    "frame_type": "Fixed-wing VTOL",
     "camera_mp": 61,
     "rtk": true,
     "autonomous": true,
@@ -90183,7 +90202,12 @@
       "https://cdn11.bigcommerce.com/s-tofodjdhhj/images/stencil/960w/products/1707/2260/QS_Trinity_Pro_Flight_Mode_Back_View_MAY2023_4__16258.1729541365.png?c=1",
       "https://cdn11.bigcommerce.com/s-tofodjdhhj/images/stencil/1280x1280/products/1707/2254/QS_Trinity_Pro_Flight_Mode_Left_Side_MAY2023__41719.1729541146.png?c=1"
     ],
-    "video": "https://youtu.be/MFFIXy3POgU"
+    "video": "https://youtu.be/MFFIXy3POgU",
+    "max_range_km": 7.5,
+    "payload_types": "Sony RX1R II / MicaSense RedEdge-P / Altum PT / Qube 240 LiDAR",
+    "gnss_systems": "iBase GNSS (PPK)",
+    "mapping_software": "QBase",
+    "faa_remote_id": true
   },
   {
     "id": "quantum-vector-2023",
@@ -90242,7 +90266,9 @@
     "gallery": [
       "https://africadroneking.co.za/wp-content/uploads/2022/06/quantum-system-vector-600x338.webp"
     ],
-    "video": "https://youtu.be/TIB4Od_P4MQ"
+    "video": "https://youtu.be/TIB4Od_P4MQ",
+    "faa_remote_id": true,
+    "regulatory_class": "Dual-use ISR / mapping"
   },
   {
     "id": "wingtra-one-gen2-2021",
