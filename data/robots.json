@@ -55457,7 +55457,7 @@
     "speed_ms": 1.8,
     "payload_kg": 18,
     "lidar": true,
-    "cameras": 4,
+    "cameras": true,
     "imu": true,
     "depth_sensing": true,
     "wifi": true,
@@ -55467,14 +55467,18 @@
       "Urban last-mile"
     ],
     "manufacturer_url": "https://www.cocodelivery.com",
-    "autonomy_level": "Remote-piloted with assisted autonomy",
+    "autonomy_level": "Remote-piloted (human-guided)",
     "autonomous": false,
     "wheels": 4,
     "gps": true,
     "outdoor_capable": true,
     "os": "Coco",
     "made_in": "USA",
-    "fleet_management": true
+    "fleet_management": true,
+    "range_km": 3,
+    "indoor_outdoor": "Sidewalk",
+    "remote_monitoring": true,
+    "weather_rating": "Insulated cargo"
   },
   {
     "id": "coco-robotics-coco-1",
@@ -63467,13 +63471,16 @@
     "multi_floor": false,
     "os": "Ottonomy",
     "compute_platform": "Ottonomy Contextual AI",
-    "made_in": "USA / India",
+    "made_in": "USA",
     "fleet_management": true,
     "pilot_customers": [
       "Cincinnati/NKY Airport (CVG)",
       "Rome Fiumicino Airport (FCO)"
     ],
-    "video": "https://youtu.be/knYMcZfIA6Q"
+    "video": "https://youtu.be/knYMcZfIA6Q",
+    "navigation": "LiDAR + cameras",
+    "indoor_outdoor": "Indoor + outdoor",
+    "compartments": "Modular"
   },
   {
     "id": "ottonomy-io-ottobot-yeti",
@@ -63538,9 +63545,17 @@
     "outdoor_capable": true,
     "os": "Ottonomy",
     "compute_platform": "Ottonomy Contextual AI",
-    "made_in": "USA / India",
+    "made_in": "USA",
     "fleet_management": true,
-    "video": "https://youtu.be/DDBui8VGvs0"
+    "video": "https://youtu.be/DDBui8VGvs0",
+    "speed_kmh_max": 7,
+    "range_km": 10,
+    "navigation": "LiDAR + GPS + cameras",
+    "weather_rating": "IP65 all-weather",
+    "indoor_outdoor": "Indoor + outdoor",
+    "compartments": "Modular",
+    "handoff_method": "Auto dispenser / locker",
+    "ai_model": "Contextual AI 2.0"
   },
   {
     "id": "kiwibot-kiwibot-leap",
@@ -63861,7 +63876,7 @@
     "battery_life": "8 hours",
     "speed_ms": 1.5,
     "payload_kg": 9,
-    "cameras": 4,
+    "cameras": true,
     "lidar": true,
     "imu": true,
     "wifi": true,
@@ -63871,13 +63886,15 @@
       "Urban last-mile"
     ],
     "manufacturer_url": "https://www.cocorobotics.com",
-    "autonomy_level": "Teleoperated (remote pilot)",
+    "autonomy_level": "Remote-piloted (human-guided)",
     "autonomous": false,
     "wheels": 4,
     "gps": true,
     "outdoor_capable": true,
     "os": "Coco",
-    "made_in": "USA"
+    "made_in": "USA",
+    "indoor_outdoor": "Sidewalk",
+    "remote_monitoring": true
   },
   {
     "id": "righthand-robotics-rightcare",
@@ -85390,11 +85407,11 @@
     "battery_life": 540,
     "ip_rating": "IPX4",
     "origin": "USA",
-    "cameras": 4,
+    "cameras": true,
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
-    "autonomy_level": "Remote-piloted with assisted autonomy",
+    "autonomy_level": "Remote-piloted (human-guided)",
     "autonomous": false,
     "wheels": 4,
     "gps": true,
@@ -85405,7 +85422,9 @@
     "use_cases": [
       "Food delivery",
       "Urban last-mile"
-    ]
+    ],
+    "indoor_outdoor": "Sidewalk",
+    "remote_monitoring": true
   },
   {
     "id": "refraction-rev1-2020",
@@ -85443,7 +85462,7 @@
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
-    "autonomy_level": "L4 (teleoperation-supervised)",
+    "autonomy_level": "L4 + teleop",
     "autonomous": true,
     "payload_kg": 45,
     "payload": 45,
@@ -85467,7 +85486,10 @@
       "https://hips.hearstapps.com/hmg-prod/images/rev1-lunchrear3-1577240348.jpg?resize=980:*",
       "https://spectrum.ieee.org/media-library/refraction-ai-autonomous-vehicle-rev-1.jpg?id=25591613&width=300"
     ],
-    "video": "https://youtu.be/47WNq9u4QsY"
+    "video": "https://youtu.be/47WNq9u4QsY",
+    "navigation": "Cameras + radar",
+    "indoor_outdoor": "Bike lane",
+    "weather_rating": "All-weather (rain/snow)"
   },
   {
     "id": "tinymile-tinymile-2022",
@@ -119595,14 +119617,17 @@
     ],
     "made_in": "USA",
     "website": "https://cocodelivery.com",
-    "autonomy_level": "Remote-piloted + assisted autonomy",
+    "autonomy_level": "Remote-piloted (human-guided)",
     "payload_kg": 45,
     "outdoor_capable": true,
     "sidewalk_or_road": "Sidewalk",
     "fleet_management": true,
     "cellular": true,
     "remote_operation": true,
-    "locker_access": "Insulated cargo bay"
+    "locker_access": "Insulated cargo bay",
+    "indoor_outdoor": "Sidewalk",
+    "cameras": true,
+    "remote_monitoring": true
   },
   {
     "cat": "Delivery",
@@ -119627,14 +119652,14 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "cameras": "Camera + LiDAR sensor suite",
+    "cameras": true,
     "lidar": true,
     "use_cases": [
       "Sidewalk food & retail delivery (campuses, cities)"
     ],
     "made_in": "USA",
     "website": "https://www.avride.ai",
-    "autonomy_level": "Level 4 (in defined zones)",
+    "autonomy_level": "L4",
     "payload_kg": 20,
     "outdoor_capable": true,
     "sidewalk_or_road": "Sidewalk",
@@ -119650,7 +119675,10 @@
       "https://cdn.prod.website-files.com/650dd89f9d632d99c3f3ec7a/67825b46a57c03a93b73c7aa_mobile-robot-factory.webp",
       "https://miro.medium.com/v2/resize:fit:1400/1*yBcDK-DIjsglAJd3tbsdcA.jpeg",
       "https://miro.medium.com/v2/resize:fit:1400/1*5o2bg4ORZ489t-MpLZEupw.png"
-    ]
+    ],
+    "navigation": "LiDAR + cameras",
+    "indoor_outdoor": "Sidewalk",
+    "obstacle_detection": true
   },
   {
     "cat": "Delivery",
@@ -119681,7 +119709,7 @@
     ],
     "made_in": "USA",
     "website": "https://ottonomy.io",
-    "autonomy_level": "Level 4 (Contextual AI)",
+    "autonomy_level": "L4",
     "payload_kg": 70,
     "outdoor_capable": true,
     "sidewalk_or_road": "Sidewalk & indoor",
@@ -119696,7 +119724,10 @@
       "https://www.therobotreport.com/wp-content/uploads/2023/01/ottonomy-yeti-drop.jpg",
       "https://salestechstar.com/wp-content/uploads/2023/01/A-New-Era-of-Unmanned-Delivery-Ottobot-Yeti-is-Ready-for-Autonomous-Deliveries-for-Retailers-and-eCommerce.jpg"
     ],
-    "video": "https://youtu.be/DDBui8VGvs0"
+    "video": "https://youtu.be/DDBui8VGvs0",
+    "navigation": "LiDAR + GPS + cameras",
+    "indoor_outdoor": "Indoor + outdoor",
+    "lidar": true
   },
   {
     "cat": "Delivery",
@@ -119725,9 +119756,9 @@
       "Level-4 urban unmanned delivery vehicle (retail, logistics, vending)"
     ],
     "made_in": "China",
-    "autonomy_level": "Level 4",
+    "autonomy_level": "L4",
     "payload_kg": 200,
-    "cargo_volume_l": 2400,
+    "cargo_volume_l": 5000,
     "range_km": 100,
     "outdoor_capable": true,
     "sidewalk_or_road": "Road (low-speed)",
@@ -119741,7 +119772,12 @@
       "https://www.neolix.ai/image/products/x3/cases/x3_cold_chain.png",
       "https://www.neolix.ai/image/products/x3/cases/x3_cage-loading.png"
     ],
-    "video": "https://youtu.be/nos0GulTI3g"
+    "video": "https://youtu.be/nos0GulTI3g",
+    "navigation": "LiDAR + cameras",
+    "indoor_outdoor": "Road (low-speed ADV)",
+    "compartments": "Modular",
+    "obstacle_detection": true,
+    "lidar": true
   },
   {
     "cat": "Aerospace",
