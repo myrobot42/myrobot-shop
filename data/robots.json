@@ -282,7 +282,8 @@
     "manufacturer_url": "https://lucidbots.com",
     "made_in": "USA",
     "os": "Lucid Bots",
-    "autonomous": true
+    "autonomous": true,
+    "cleaning_function": "Autonomous surface / soft-wash cleaning"
   },
   {
     "id": "lg-electronics-cloid",
@@ -48543,7 +48544,8 @@
     "depth_sensing": true,
     "made_in": "South Korea",
     "os": "Rainbow Robotics",
-    "website": "https://www.rainbow-robotics.com"
+    "website": "https://www.rainbow-robotics.com",
+    "serving_capacity": "Automated beverage preparation"
   },
   {
     "id": "rainbow-robotics-fx-2",
@@ -62254,7 +62256,9 @@
     "made_in": "Estonia",
     "os": "Milrem",
     "autonomous": true,
-    "website": "https://milremrobotics.com"
+    "website": "https://milremrobotics.com",
+    "navigation": "Autonomous UGV (tracked)",
+    "outdoor_capable": true
   },
   {
     "id": "milrem-robotics-multiscope-city",
@@ -119492,14 +119496,16 @@
     "battery_ah": 30,
     "battery_life": 720,
     "charge_time": 120,
-    "lidar": "LiDAR SLAM + VSLAM+ navigation",
+    "lidar": true,
     "use_cases": [
       "Industrial material delivery",
       "Factory logistics"
     ],
     "made_in": "China",
     "website": "https://www.pudurobotics.com",
-    "video": "https://youtu.be/UpEVbS84ak8"
+    "video": "https://youtu.be/UpEVbS84ak8",
+    "navigation": "LiDAR SLAM",
+    "multi_floor": true
   },
   {
     "cat": "Service",
@@ -119602,7 +119608,11 @@
     ],
     "made_in": "China",
     "website": "https://www.pudurobotics.com",
-    "video": "https://youtu.be/2oTA4l-OREw"
+    "video": "https://youtu.be/2oTA4l-OREw",
+    "navigation": "LiDAR SLAM",
+    "multi_floor": true,
+    "elevator_capable": true,
+    "serving_capacity": "Bussing / delivery trays"
   },
   {
     "cat": "Service",
@@ -119645,7 +119655,10 @@
     "weight_kg": 35,
     "speed_ms": 0.8,
     "battery_life": 360,
-    "video": "https://youtu.be/nHcg64XRxks"
+    "video": "https://youtu.be/nHcg64XRxks",
+    "navigation": "LiDAR SLAM",
+    "cleaning_function": "Scrubbing + sweeping + dust-mopping",
+    "auto_charge": true
   },
   {
     "cat": "Service",
@@ -119685,7 +119698,10 @@
       "Commercial vacuum cleaning (up to 1,500 m² per charge)"
     ],
     "made_in": "Japan",
-    "website": "https://www.softbankrobotics.com"
+    "website": "https://www.softbankrobotics.com",
+    "navigation": "BrainOS (vision SLAM)",
+    "cleaning_function": "Commercial vacuum sweeping",
+    "auto_charge": true
   },
   {
     "cat": "Service",
@@ -119714,7 +119730,7 @@
     "gallery": [
       "https://www.therobotreport.com/wp-content/uploads/2019/03/avidbots-neo.jpg"
     ],
-    "lidar": "3D LiDAR + depth cameras",
+    "lidar": true,
     "battery_life": 360,
     "use_cases": [
       "Airports",
@@ -119730,7 +119746,7 @@
     "battery_type": "AGM (swappable)",
     "hot_swap": true,
     "ai_model": "Avidbots Autonomy (dynamic planning)",
-    "navigation": "Autonomous mapping, 360 sensor suite",
+    "navigation": "LiDAR SLAM",
     "obstacle_avoidance": true,
     "sensors_list": [
       "360 sensor suite (LiDAR + cameras)"
@@ -119740,7 +119756,10 @@
       "DHL / DSV warehouses",
       "Airports"
     ],
-    "manufacturer_url": "https://avidbots.com/"
+    "manufacturer_url": "https://avidbots.com/",
+    "slam": true,
+    "cleaning_function": "Autonomous floor scrubbing",
+    "auto_charge": true
   },
   {
     "cat": "Service",
@@ -119842,7 +119861,11 @@
       "License plate recognition"
     ],
     "made_in": "USA",
-    "website": "https://www.knightscope.com"
+    "website": "https://www.knightscope.com",
+    "navigation": "Autonomous (LiDAR + GPS)",
+    "outdoor_capable": true,
+    "social_role": "Security patrol",
+    "microphones": true
   },
   {
     "cat": "Service",
@@ -127614,7 +127637,10 @@
       "https://i0.wp.com/cdnbunny.ubergizmo.com/wp-content/uploads/2025/09/Acemate_at_IFA_2025.png",
       "https://cdn.open-pr.com/L/4/L430696242_g.jpg"
     ],
-    "video": "https://youtu.be/gpWOWgrGmd4"
+    "video": "https://youtu.be/gpWOWgrGmd4",
+    "navigation": "Vision tracking + follow",
+    "serving_capacity": "Tennis ball collection / feeding",
+    "made_in": "China"
   },
   {
     "id": "qinetiq-dragon-runner-20",
