@@ -36121,11 +36121,11 @@
     "battery_life": "59 minutes",
     "speed_ms": 16.7,
     "payload_kg": 4.5,
-    "lidar": "100 FOV, up to 2.4 MHz, 3-direction beam; 570 pts/m2",
+    "lidar": true,
     "imu": true,
     "cameras": "High-resolution RGB camera for visual inspection",
     "wifi": true,
-    "cellular": "4G LTE",
+    "cellular": "LTE/5G + satellite",
     "use_cases": [
       "Power-line / pipeline inspection",
       "Railway / road survey",
@@ -36149,7 +36149,14 @@
     "max_altitude_m": 5000,
     "redundancy": "Dual airspeed/heading/GNSS; 8 motors/ESCs, 2 batteries",
     "battery": "Hot-swap smart Li-Ion (2x 814Wh)",
-    "bvlos": true
+    "bvlos": true,
+    "frame_type": "eVTOL tilt-rotor (fixed-wing)",
+    "motor_count": 8,
+    "length_mm": 1980,
+    "max_range_km": 110,
+    "redundancy_motors": true,
+    "faa_remote_id": true,
+    "payload_types": "LiDAR surveying payload"
   },
   {
     "id": "sensefly-ebee",
@@ -36855,7 +36862,11 @@
     "sensors": "Dual-GNSS, dual magnetometer, IMU, pitot, LiDAR altimeter; ADS-B",
     "telemetry": "2x RC radio + 4G cellular + Iridium satellite",
     "delivery": "Winch slow-drop or landing (two-way)",
-    "deployments": "DHL, UNICEF vaccine delivery (Vanuatu, Malawi, Tanzania)"
+    "deployments": "DHL, UNICEF vaccine delivery (Vanuatu, Malawi, Tanzania)",
+    "frame_type": "eVTOL tilt-rotor (fixed-wing)",
+    "max_speed_kmh": 240,
+    "max_range_km": 110,
+    "drop_mechanism": "Winch slow-drop"
   },
   {
     "id": "wingcopter-wingcopter-178",
@@ -36888,7 +36899,7 @@
     "origin": "Germany",
     "status": "Active",
     "released": "2017",
-    "width_mm": 1780,
+    "width_mm": 1320,
     "depth_mm": 1320,
     "height_mm": 520,
     "weight_kg": 13,
@@ -36914,7 +36925,13 @@
     "max_speed": "150 km/h",
     "delivery": "Winch slow-drop or landing (two-way)",
     "bvlos": true,
-    "operation": "Multicopter + fixed-wing modes"
+    "operation": "Multicopter + fixed-wing modes",
+    "frame_type": "eVTOL tilt-rotor (fixed-wing)",
+    "length_mm": 1780,
+    "max_speed_kmh": 240,
+    "max_range_km": 110,
+    "drop_mechanism": "Winch slow-drop",
+    "cellular": "LTE"
   },
   {
     "id": "wingcopter-wingcopter-198",
@@ -36951,16 +36968,16 @@
     "weight_kg": 18,
     "battery_life": "45 minutes",
     "speed_ms": 22,
-    "payload_kg": 6,
+    "payload_kg": 5,
     "range_km": 94,
     "motors": 8,
     "propulsion": "Electric tilt-rotor",
     "vtol": true,
     "delivery_drops": 3,
-    "autonomy_level": "Level 4",
+    "autonomy_level": "L4 (target)",
     "cameras": "Multiple cameras for navigation and monitoring",
     "imu": true,
-    "cellular": "4G/LTE",
+    "cellular": "LTE/5G + satellite backup",
     "use_cases": [
       "Medical delivery",
       "E-commerce delivery",
@@ -36971,7 +36988,21 @@
     "gallery": [
       "https://wingcopter.com/wp-content/uploads/2025/02/1_lidar_slide.png"
     ],
-    "video": "https://youtu.be/P8U9CUtVR0Y"
+    "video": "https://youtu.be/P8U9CUtVR0Y",
+    "frame_type": "eVTOL tilt-rotor (fixed-wing)",
+    "motor_count": 8,
+    "length_mm": 1980,
+    "width_mm": 1520,
+    "height_mm": 650,
+    "max_range_km": 110,
+    "redundancy_motors": true,
+    "obstacle_sensing": "Detect-and-avoid (ADS-B/Flarm/Remote ID + visual AI)",
+    "faa_remote_id": true,
+    "precision_landing": true,
+    "drop_mechanism": "Triple-drop (3 packages)",
+    "hot_swap": true,
+    "made_in": "Germany",
+    "regulatory_class": "FAA type cert (in progress), EN9100"
   },
   {
     "id": "sensefly-ageagle-ebee-tac-public-safety",
@@ -37419,7 +37450,10 @@
     "platform": "Percepto AIM (Autonomous Inspection & Monitoring)",
     "operation": "24/7/365 autonomous cycle",
     "bvlos": "FAA BVLOS-approved operations",
-    "compatible_drones": "Percepto Air Max / Air Mobile"
+    "compatible_drones": "Percepto Air Max / Air Mobile",
+    "frame_type": "Autonomous base station (dock)",
+    "autonomous": true,
+    "ai_model": "Percepto AIM"
   },
   {
     "id": "ageagle-ebee-tac",
@@ -37875,7 +37909,7 @@
     },
     "year": 2016,
     "origin": "Israel",
-    "status": "Retired",
+    "status": "Active",
     "released": "2016",
     "battery_life": "30 minutes",
     "charge_time": "90 minutes",
@@ -37899,7 +37933,13 @@
     "autonomy": "Autonomous pre-programmed missions; BVLOS",
     "weatherproof": true,
     "introduced": "2017 (first Percepto drone-in-a-box)",
-    "successor": "Rebranded Percepto Air Max (2021)"
+    "successor": "Rebranded Percepto Air Max (2021)",
+    "frame_type": "Drone-in-a-box (quadcopter)",
+    "camera_mp": 24,
+    "thermal": true,
+    "autonomous": true,
+    "ai_model": "Percepto AIM",
+    "lifecycle_status": "Legacy (rebranded Air Max)"
   },
   {
     "id": "proscenic-proscenic-x1",
@@ -38011,7 +38051,16 @@
       "https://img1.wsimg.com/isteam/ip/3963308f-f340-4569-87f4-804dafe9d796/percepto-5.png/:/rs=w:1280",
       "https://img1.wsimg.com/isteam/ip/3963308f-f340-4569-87f4-804dafe9d796/percepto-box.png/:/rs=w:1280"
     ],
-    "video": "https://youtu.be/OSAViXfBpo0"
+    "video": "https://youtu.be/OSAViXfBpo0",
+    "frame_type": "Drone-in-a-box (compact)",
+    "camera_mp": 16,
+    "thermal": true,
+    "thermal_resolution": "FLIR",
+    "ip_rating": "IP55",
+    "autonomous": true,
+    "ai_model": "Percepto Core",
+    "regulatory_class": "BVLOS + parachute",
+    "made_in": "Israel"
   },
   {
     "id": "percepto-percepto-air-max-ogi",
@@ -38071,7 +38120,13 @@
     "platform": "Percepto AIM (AI analytics + reports)",
     "certification": "EPA-approved for federal methane inspections (MATM-14, 2025)",
     "customers": "Chevron (Permian, Colorado)",
-    "autonomous": true
+    "autonomous": true,
+    "frame_type": "Drone-in-a-box (quadcopter)",
+    "camera_mp": 24,
+    "thermal": true,
+    "ai_model": "Percepto AIM / Core",
+    "regulatory_class": "BVLOS + parachute",
+    "payload_types": "RGB 24MP / thermal / OGI gas detection"
   },
   {
     "id": "percepto-percepto-air-max",
@@ -38134,7 +38189,16 @@
     "bvlos": "FAA BVLOS-approved (nationwide)",
     "platform": "Percepto AIM (AI analytics + reports)",
     "lineage": "Rebranded from Percepto Sparrow (2021)",
-    "integrations": "IBM Maximo, SAP OSIsoft (API)"
+    "integrations": "IBM Maximo, SAP OSIsoft (API)",
+    "frame_type": "Drone-in-a-box (quadcopter)",
+    "camera_mp": 24,
+    "thermal": true,
+    "thermal_resolution": "Radiometric FLIR",
+    "obstacle_sensing": "Yes",
+    "autonomous": true,
+    "ai_model": "Percepto AIM / Core",
+    "regulatory_class": "BVLOS + FAA-compliant parachute",
+    "payload_types": "RGB 24MP / thermal / OGI gas"
   },
   {
     "id": "miele-scout-rx2",
