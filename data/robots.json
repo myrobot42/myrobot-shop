@@ -46054,9 +46054,9 @@
     "manufacturer_url": "https://www.hanwharobotics.com",
     "weight_kg": 33,
     "speed_ms": 2,
-    "repeatability_mm": 0.05,
+    "repeatability_mm": 0.1,
     "operating_temp_range": "-10°C to +50°C",
-    "ip_rating": "IP54",
+    "ip_rating": "IP66",
     "safety_features": [
       "Collision detection",
       "Force/torque sensing",
@@ -46087,7 +46087,15 @@
       "https://hanwharobotics.co.kr/uploads/product/202601/202601131707540002.png"
     ],
     "website": "https://www.hanwharobotics.com",
-    "video": "https://youtu.be/ceIIZ5tokcY"
+    "video": "https://youtu.be/ceIIZ5tokcY",
+    "axes_config": "6-axis",
+    "programming": "RODI (icon-based)",
+    "teach_pendant": "Tablet pendant",
+    "collision_detection": true,
+    "frame_material": "Cast aluminum",
+    "ce": true,
+    "industrial_protocols": "Modbus TCP, EtherNet/IP, PROFINET",
+    "mounting": "Any angle"
   },
   {
     "id": "hanwha-robotics-hcr-14",
@@ -46147,7 +46155,17 @@
       "https://cdn.robodk.com/robot/img/Hanwha-HCR-14-robot.png"
     ],
     "website": "https://www.hanwharobotics.com",
-    "video": "https://youtu.be/KTEGWyS7Qhw"
+    "video": "https://youtu.be/KTEGWyS7Qhw",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.1,
+    "ip_rating": "IP66",
+    "programming": "RODI (icon-based)",
+    "teach_pendant": "Tablet pendant",
+    "collision_detection": true,
+    "frame_material": "Cast aluminum",
+    "ce": true,
+    "industrial_protocols": "Modbus TCP, EtherNet/IP, PROFINET",
+    "mounting": "Any angle"
   },
   {
     "id": "hanwha-robotics-hcr-12a",
@@ -46189,8 +46207,8 @@
     "manufacturer_url": "https://www.hanwharobotics.com",
     "weight_kg": 33,
     "speed_ms": 1.5,
-    "repeatability_mm": 0.05,
-    "ip_rating": "IP54",
+    "repeatability_mm": 0.1,
+    "ip_rating": "IP66",
     "operating_temp_max": 50,
     "power_consumption_w": 500,
     "wifi": true,
@@ -46202,12 +46220,7 @@
       "ISO/TS 15066",
       "CE marking"
     ],
-    "mounting": [
-      "Floor",
-      "Ceiling",
-      "Wall",
-      "Table"
-    ],
+    "mounting": "Any angle",
     "made_in": "South Korea",
     "os": "Hanwha",
     "repeatability": 0.05,
@@ -46218,7 +46231,14 @@
       "https://hanwharobotics.co.kr/uploads/product/202601/202601081301450002.png"
     ],
     "website": "https://www.hanwharobotics.com",
-    "video": "https://youtu.be/1fR6erp-Vy4"
+    "video": "https://youtu.be/1fR6erp-Vy4",
+    "axes_config": "6-axis",
+    "programming": "RODI (icon-based)",
+    "teach_pendant": "Tablet pendant",
+    "collision_detection": true,
+    "frame_material": "Cast aluminum",
+    "ce": true,
+    "industrial_protocols": "Modbus TCP, EtherNet/IP, PROFINET"
   },
   {
     "id": "hanwha-robotics-hcr-5a",
@@ -46277,7 +46297,17 @@
       "https://hanwharobotics.co.kr/uploads/product/202601/202601071622460005.png"
     ],
     "website": "https://www.hanwharobotics.com",
-    "video": "https://youtu.be/GBzUEd6s0mo"
+    "video": "https://youtu.be/GBzUEd6s0mo",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.1,
+    "ip_rating": "IP66",
+    "programming": "RODI (icon-based)",
+    "teach_pendant": "Tablet pendant",
+    "collision_detection": true,
+    "frame_material": "Cast aluminum",
+    "ce": true,
+    "industrial_protocols": "Modbus TCP, EtherNet/IP, PROFINET",
+    "mounting": "Any angle"
   },
   {
     "id": "hanwha-robotics-hcr-3a",
@@ -46319,10 +46349,10 @@
     ],
     "manufacturer_url": "https://www.hanwharobotics.com",
     "height_mm": 470,
-    "repeatability_mm": 0.05,
+    "repeatability_mm": 0.1,
     "max_speed_ms": 1,
     "operating_temp_c": "0 to 45",
-    "ip_rating": "IP20",
+    "ip_rating": "IP66",
     "power_consumption_w": 150,
     "joints": 6,
     "installation": "table-mount",
@@ -46351,7 +46381,15 @@
       "https://img.directindustry.com/images_di/photo-g/4602341-19908333.jpg"
     ],
     "website": "https://www.hanwharobotics.com",
-    "video": "https://youtu.be/oGh4Y9nIKpM"
+    "video": "https://youtu.be/oGh4Y9nIKpM",
+    "axes_config": "6-axis",
+    "programming": "RODI (icon-based)",
+    "teach_pendant": "Tablet pendant",
+    "collision_detection": true,
+    "frame_material": "Cast aluminum",
+    "ce": true,
+    "industrial_protocols": "Modbus TCP, EtherNet/IP, PROFINET",
+    "mounting": "Any angle"
   },
   {
     "id": "swisslog-healthcare-hospital-agv-forklift",
@@ -48982,7 +49020,14 @@
       "https://uploads.unchainedrobotics.de/media/products/RB20_PB1_5e055009.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=384,quality=80/https://uploads.unchainedrobotics.de/media/products/RB3-1200_PB2_0ff74fa0.png"
     ],
-    "video": "https://youtu.be/5jLk5dFBU_E"
+    "video": "https://youtu.be/5jLk5dFBU_E",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.1,
+    "ip_rating": "IP54",
+    "collision_detection": true,
+    "teach_pendant": "Tablet pendant",
+    "controller": "Rainbow controller",
+    "mounting": "Any angle"
   },
   {
     "id": "rainbow-robotics-rb10-1300",
@@ -49024,7 +49069,7 @@
     "manufacturer_url": "https://www.rainbow-robotics.com",
     "weight_kg": 34,
     "speed_ms": 1.5,
-    "repeatability_mm": 0.03,
+    "repeatability_mm": 0.1,
     "operating_temp_range": "-10°C to 50°C",
     "protection_rating": "IP54",
     "warranty_months": 12,
@@ -49039,7 +49084,13 @@
       "https://rainbow-robotics.ch/fileadmin/user_upload/Rainbow_Robotics/RB10_1300.png",
       "https://static.wixstatic.com/media/d0c036_061b1aefa742427eb28d24e844cec6b7~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
     ],
-    "video": "https://youtu.be/PcG8xaAzUMI"
+    "video": "https://youtu.be/PcG8xaAzUMI",
+    "axes_config": "6-axis",
+    "ip_rating": "IP54",
+    "collision_detection": true,
+    "teach_pendant": "Tablet pendant",
+    "controller": "Rainbow controller",
+    "mounting": "Any angle"
   },
   {
     "id": "rainbow-robotics-rb5-850",
@@ -49099,7 +49150,14 @@
       "https://cdn.robodk.com/robot/img/RB5-850-robot.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=3840,quality=80/https://uploads.unchainedrobotics.de/media/file_upload/Rainbow_Content_3_10e5f54a.png"
     ],
-    "video": "https://youtu.be/Ns8GAXihGSg"
+    "video": "https://youtu.be/Ns8GAXihGSg",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.1,
+    "ip_rating": "IP54",
+    "collision_detection": true,
+    "teach_pendant": "Tablet pendant",
+    "controller": "Rainbow controller",
+    "mounting": "Any angle"
   },
   {
     "id": "rainbow-robotics-rb3-1200",
@@ -49144,7 +49202,7 @@
     "width_mm": 160,
     "depth_mm": 160,
     "speed_ms": 1,
-    "repeatability_mm": 0.03,
+    "repeatability_mm": 0.1,
     "ip_rating": "IP54",
     "operating_temp_min": 5,
     "operating_temp_max": 45,
@@ -49161,7 +49219,12 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=3840,quality=80/https://uploads.unchainedrobotics.de/media/file_upload/Rainbow_Content_3_10e5ee22.png",
       "https://rainbow-robotics.ch/fileadmin/user_upload/Rainbow_Robotics/RB3_1200.png"
     ],
-    "video": "https://youtu.be/5jLk5dFBU_E"
+    "video": "https://youtu.be/5jLk5dFBU_E",
+    "axes_config": "6-axis",
+    "collision_detection": true,
+    "teach_pendant": "Tablet pendant",
+    "controller": "Rainbow controller",
+    "mounting": "Any angle"
   },
   {
     "id": "rainbow-robotics-rb3-730",
@@ -49222,7 +49285,14 @@
       "https://uploads.unchainedrobotics.de/media/products/RB20_PB1_5e055009.png",
       "https://static.wixstatic.com/media/d0c036_fba1ff1b02504f3cbe97f51dedd86bf2~mv2.png/v1/fit/w_500,h_500,q_90/file.png"
     ],
-    "video": "https://youtu.be/iHQGzvWS-fE"
+    "video": "https://youtu.be/iHQGzvWS-fE",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.1,
+    "ip_rating": "IP54",
+    "collision_detection": true,
+    "teach_pendant": "Tablet pendant",
+    "controller": "Rainbow controller",
+    "mounting": "Any angle"
   },
   {
     "id": "leju-robotics-aelos-1s",
