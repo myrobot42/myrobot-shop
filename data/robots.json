@@ -113704,7 +113704,7 @@
     ],
     "made_in": "USA",
     "website": "https://eksobionics.com",
-    "exo_type": "Powered lower-limb (clinical)",
+    "exo_type": "Powered lower-limb rehab",
     "body_region": "Hips + knees",
     "powered": true,
     "control_method": "SmartAssist adaptive software, variable assistance",
@@ -113716,7 +113716,11 @@
     ],
     "fda_cleared": true,
     "ce": true,
-    "video": "https://youtu.be/YcJLtvki7hk"
+    "video": "https://youtu.be/YcJLtvki7hk",
+    "body_area": "Lower body",
+    "medical_clearance": "FDA cleared",
+    "gait_training": true,
+    "user_weight_max_kg": 100
   },
   {
     "cat": "Exoskeletons",
@@ -113755,7 +113759,7 @@
     ],
     "made_in": "USA",
     "website": "https://eksobionics.com",
-    "exo_type": "Powered lower-limb (modular)",
+    "exo_type": "Modular powered lower-limb",
     "body_region": "Hips + knees",
     "powered": true,
     "control_method": "Modular 5-piece, motion-intention sensing",
@@ -113764,7 +113768,9 @@
     ],
     "fda_cleared": true,
     "ce": true,
-    "video": "https://youtu.be/QdhFqemV_Yc"
+    "video": "https://youtu.be/QdhFqemV_Yc",
+    "body_area": "Lower body",
+    "gait_training": true
   },
   {
     "cat": "Exoskeletons",
@@ -113804,11 +113810,13 @@
     "made_in": "USA",
     "website": "https://eksobionics.com",
     "weight_kg": 3.6,
-    "exo_type": "Passive upper-body (industrial)",
+    "exo_type": "Passive shoulder support (industrial)",
     "body_region": "Shoulders + arms",
     "powered": false,
     "control_method": "Spring-tensioned arm support (no battery)",
-    "video": "https://youtu.be/fpSI0YYcAzQ"
+    "video": "https://youtu.be/fpSI0YYcAzQ",
+    "body_area": "Shoulder / upper body",
+    "assist_modes": "Passive tool-support"
   },
   {
     "cat": "Exoskeletons",
@@ -113848,7 +113856,7 @@
     "website": "https://golifeward.com",
     "speed_ms": 0.71,
     "weight_kg": 23.3,
-    "exo_type": "Powered lower-limb (personal)",
+    "exo_type": "Powered lower-limb (personal, SCI)",
     "body_region": "Hips + knees",
     "powered": true,
     "control_method": "Tilt-sensor gait initiation from center-of-gravity shifts (crutches required)",
@@ -113858,7 +113866,9 @@
       "Spinal cord injury"
     ],
     "fda_cleared": true,
-    "ce": true
+    "ce": true,
+    "body_area": "Lower body",
+    "medical_clearance": "FDA / CE"
   },
   {
     "cat": "Exoskeletons",
@@ -113896,7 +113906,7 @@
     ],
     "made_in": "Israel",
     "website": "https://golifeward.com",
-    "exo_type": "Soft exo-suit (clinical)",
+    "exo_type": "Soft exo-suit (gait rehab)",
     "body_region": "Ankle",
     "powered": true,
     "control_method": "Cable-driven plantarflexion/dorsiflexion assist",
@@ -113904,7 +113914,9 @@
       "Post-stroke gait deficit"
     ],
     "fda_cleared": true,
-    "ce": true
+    "ce": true,
+    "body_area": "Lower limb (ankle assist)",
+    "gait_training": true
   },
   {
     "cat": "Exoskeletons",
@@ -113937,7 +113949,7 @@
       "https://constancecare.pl/templates/yootheme/cache/d0/hal-galeria-03-d0ffda07.jpeg",
       "https://constancecare.pl/templates/yootheme/cache/7f/hal-galeria-02-7fbb4840.jpeg"
     ],
-    "actuator_type": "Electric, triggered by bioelectric signals (BES) from skin sensors",
+    "actuator_type": "Electric (EMG/bioelectric intention control)",
     "use_cases": [
       "Gait rehabilitation",
       "Strength augmentation",
@@ -113948,7 +113960,7 @@
     "height_mm": 1600,
     "weight_kg": 23,
     "battery_life": 160,
-    "exo_type": "Powered full-body / lower-limb (medical)",
+    "exo_type": "Powered lower-limb (bioelectric)",
     "body_region": "Hips + knees (lower limb)",
     "strength_amplification": "Up to 10x",
     "powered": true,
@@ -113961,7 +113973,10 @@
     "fda_cleared": true,
     "ce": true,
     "iso_13482": true,
-    "video": "https://youtu.be/o1QtwjW8iO4"
+    "video": "https://youtu.be/o1QtwjW8iO4",
+    "body_area": "Lower body (+ single-joint variants)",
+    "medical_clearance": "FDA / CE",
+    "gait_training": true
   },
   {
     "cat": "Exoskeletons",
@@ -113994,7 +114009,7 @@
     ],
     "payload": "Up to 30 kg lift compensation",
     "hot_swap": true,
-    "actuator_type": "Active electric back & hip support",
+    "actuator_type": "Electric (smart/connected)",
     "use_cases": [
       "Industrial lifting injury prevention (BMW, IKEA, DPD)"
     ],
@@ -114005,13 +114020,15 @@
     "ip_rating": "IP54",
     "frame_material": "Carbon fiber",
     "ota": true,
-    "exo_type": "Powered (industrial, connected)",
+    "exo_type": "Powered lower-back (industrial)",
     "body_region": "Lower back + legs",
     "assist_force": "Up to 30 kg (66 lb) per lift",
     "powered": true,
     "control_method": "Dual servo motors, AI-adaptive (Smart Safety Companion)",
     "don_doff_time": "Under 1 minute",
-    "video": "https://youtu.be/pzNAIBdsMOU"
+    "video": "https://youtu.be/pzNAIBdsMOU",
+    "body_area": "Lower back",
+    "lifting_assist_kg": 30
   },
   {
     "cat": "Exoskeletons",
@@ -114098,7 +114115,7 @@
     ],
     "made_in": "France",
     "website": "https://en.wandercraft.eu",
-    "exo_type": "Powered self-balancing (clinical)",
+    "exo_type": "Self-balancing powered (hands-free)",
     "body_region": "Full lower body",
     "powered": true,
     "control_method": "Self-balancing dynamic walking (hands-free, no crutches)",
@@ -114108,7 +114125,11 @@
       "Multiple sclerosis"
     ],
     "ce": true,
-    "video": "https://youtu.be/sGmLHYTJJTo"
+    "video": "https://youtu.be/sGmLHYTJJTo",
+    "body_area": "Full lower body",
+    "ce_marked": true,
+    "gait_training": true,
+    "fall_protection": true
   },
   {
     "cat": "Exoskeletons",
@@ -114318,13 +114339,13 @@
       "https://images.squarespace-cdn.com/content/v1/632130da8450453e9844aee3/69702b68-f342-4379-b15f-4178d691ca64/MyoPro+2%2B.jpg",
       "https://rebotics.co.uk/wp-content/uploads/2022/08/MyoPro-2-MYOMO-My-Own-Motion-Custom-Robotics-Arm-Brace-scaled.jpg"
     ],
-    "actuator_type": "EMG-controlled powered elbow-wrist-hand orthosis",
+    "actuator_type": "Myoelectric (surface EMG)",
     "use_cases": [
       "Restoring arm/hand reach and grasp"
     ],
     "made_in": "USA",
     "website": "https://myomo.com",
-    "exo_type": "Powered orthosis (medical)",
+    "exo_type": "Myoelectric upper-limb orthosis",
     "body_region": "Elbow + hand",
     "powered": true,
     "control_method": "EMG signals from the wearer’s own arm",
@@ -114335,7 +114356,8 @@
       "Spinal cord injury"
     ],
     "fda_cleared": true,
-    "video": "https://youtu.be/zu_SiBslKng"
+    "video": "https://youtu.be/zu_SiBslKng",
+    "body_area": "Arm / hand"
   },
   {
     "cat": "Exoskeletons",
@@ -122068,7 +122090,7 @@
   },
   {
     "id": "sarcos-guardian-xo-exo",
-    "name": "Guardian XO (full-body exoskeleton)",
+    "name": "Guardian XO (full-body exo)",
     "brand": "Sarcos",
     "cat": "Exoskeletons",
     "sub": "Full-body Industrial Exoskeleton",
@@ -122104,18 +122126,20 @@
     "payload_kg": 90,
     "hot_swap": true,
     "battery_life": 120,
-    "actuator_type": "Full-body powered exoskeleton, electric actuation",
+    "actuator_type": "Electric",
     "use_cases": [
       "Industrial heavy lifting — logistics, aviation, defense"
     ],
     "made_in": "USA",
     "website": "https://www.sarcos.com",
     "lift_support_kg": 90,
-    "exo_type": "Powered full-body (industrial)",
+    "exo_type": "Full-body powered (industrial)",
     "assist_force": "Up to 90 kg (200 lb)",
     "strength_amplification": "200:1",
     "powered": true,
-    "control_method": "Full-body force-reflective control"
+    "control_method": "Full-body force-reflective control",
+    "body_area": "Full body",
+    "lifting_assist_kg": 90
   },
   {
     "perf": false,
