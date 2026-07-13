@@ -120888,7 +120888,17 @@
     ],
     "website": "https://www.doosanrobotics.com",
     "video": "https://youtu.be/8mjXgPNZF3A",
-    "video2": "https://youtu.be/4L53wFnq6aM"
+    "video2": "https://youtu.be/4L53wFnq6aM",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "controller": "Doosan controller",
+    "teach_pendant": "Tablet",
+    "programming": "DART Studio (drag-teach)",
+    "collision_detection": true,
+    "ft_sensor": true,
+    "made_in": "South Korea",
+    "industrial_protocols": "Modbus TCP, PROFINET"
   },
   {
     "cat": "Consumer",
@@ -123960,12 +123970,7 @@
     "ros": true,
     "api": true,
     "sdk": "Python, C++, C#, JavaScript, myBlockly",
-    "programming": [
-      "myBlockly",
-      "Python",
-      "ROS",
-      "C++"
-    ],
+    "programming": "Python, Blockly, ROS",
     "tags": [
       "cobot",
       "Elephant Robotics",
@@ -123973,7 +123978,7 @@
       "education",
       "desktop"
     ],
-    "fig": "🦾",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
@@ -123997,7 +124002,10 @@
       "https://static.elephantrobotics.com/wp-content/uploads/2022/06/mycobot-280.png"
     ],
     "video": "https://youtu.be/QJOWMBcTgPo",
-    "video2": "https://youtu.be/2owbZGNfPWU"
+    "video2": "https://youtu.be/2owbZGNfPWU",
+    "chipset": "ESP32 + M5Stack / Raspberry Pi",
+    "axes_config": "6-axis",
+    "ai_open_source": true
   },
   {
     "cat": "Industrial",
@@ -124015,18 +124023,14 @@
     "ros": true,
     "api": true,
     "sdk": "Python, ROS, myBlockly",
-    "programming": [
-      "myBlockly",
-      "Python",
-      "ROS"
-    ],
+    "programming": "Python, Blockly, ROS",
     "tags": [
       "cobot",
       "Elephant Robotics",
       "myCobot",
       "education"
     ],
-    "fig": "🦾",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
@@ -124048,7 +124052,10 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQmbBjrcwmHk0aF6D2ivxQBWUxRjbuyELALfoMBdyDXxjc0AmnrLWP84xQ&s=10",
       "https://static.elephantrobotics.com/wp-content/uploads/2022/04/pic-3-2.png"
     ],
-    "video": "https://youtu.be/mdhDzIwS8ZE"
+    "video": "https://youtu.be/mdhDzIwS8ZE",
+    "chipset": "Raspberry Pi",
+    "axes_config": "6-axis",
+    "ai_open_source": true
   },
   {
     "cat": "Industrial",
@@ -124066,18 +124073,14 @@
     "ros": true,
     "api": true,
     "sdk": "Python, ROS",
-    "programming": [
-      "Python",
-      "ROS",
-      "myBlockly"
-    ],
+    "programming": "Python, Blockly, ROS",
     "tags": [
       "cobot",
       "Elephant Robotics",
       "mechArm",
       "education"
     ],
-    "fig": "🦾",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
@@ -124099,7 +124102,10 @@
       "https://static.elephantrobotics.com/wp-content/uploads/2022/05/pic-1-OK.png",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8ke-Elh_-rCLaVK8bjiDLAAuqQeg_VXMywkEY86Xd5woQgr7ayR7aeK4&s=10"
     ],
-    "video": "https://youtu.be/4R-NGdwlvtk"
+    "video": "https://youtu.be/4R-NGdwlvtk",
+    "chipset": "ESP32 / Raspberry Pi",
+    "axes_config": "6-axis",
+    "ai_open_source": true
   },
   {
     "cat": "Quadruped",
@@ -134141,7 +134147,7 @@
     "payload_kg": 15,
     "reach_mm": 1300,
     "dof": 6,
-    "ip_rating": "IP65",
+    "ip_rating": "IP54",
     "ce": true,
     "ros": true,
     "use_cases": [
@@ -134155,7 +134161,18 @@
     "score": 75,
     "rating": 4,
     "speed_ms": 5,
-    "speed": "5 m/s TCP"
+    "speed": "5 m/s TCP",
+    "weight_kg": 33.5,
+    "max_tcp_speed_ms": 5,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.04,
+    "controller": "PolyScope (OptiMove)",
+    "teach_pendant": "Tablet pendant",
+    "programming": "PolyScope + URScript/Python",
+    "collision_detection": true,
+    "safety_functions": "17 configurable",
+    "industrial_protocols": "Modbus TCP, PROFINET, EtherNet/IP",
+    "mounting": "Any angle"
   },
   {
     "id": "universal-robots-ur7e",
@@ -134189,7 +134206,16 @@
     "weight_kg": 20.6,
     "ip_rating": "IP54",
     "operating_temp_min": 0,
-    "operating_temp_max": 50
+    "operating_temp_max": 50,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "controller": "PolyScope (OptiMove)",
+    "teach_pendant": "Tablet pendant",
+    "programming": "PolyScope + URScript/Python",
+    "collision_detection": true,
+    "safety_functions": "17 configurable",
+    "industrial_protocols": "Modbus TCP, PROFINET, EtherNet/IP",
+    "mounting": "Any angle"
   },
   {
     "id": "universal-robots-ur12e",
@@ -134222,7 +134248,16 @@
     "weight_kg": 33.5,
     "ip_rating": "IP54",
     "operating_temp_min": 0,
-    "operating_temp_max": 50
+    "operating_temp_max": 50,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "controller": "PolyScope (OptiMove)",
+    "teach_pendant": "Tablet pendant",
+    "programming": "PolyScope + URScript/Python",
+    "collision_detection": true,
+    "safety_functions": "17 configurable",
+    "industrial_protocols": "Modbus TCP, PROFINET, EtherNet/IP",
+    "mounting": "Any angle"
   },
   {
     "id": "fanuc-crx-5ia",
@@ -134441,7 +134476,7 @@
   {
     "id": "abb-gofa-5",
     "name": "GoFa 5 (CRB 15000)",
-    "brand": "ABB Robotics",
+    "brand": "ABB",
     "cat": "Industrial",
     "sub": "Collaborative Robot Arm",
     "year": 2021,
@@ -134465,12 +134500,22 @@
     "rating": 4,
     "repeatability": 0.05,
     "speed_ms": 2.2,
-    "speed": "2.2 m/s TCP"
+    "speed": "2.2 m/s TCP",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP54",
+    "controller": "ABB OmniCore C30",
+    "teach_pendant": "FlexPendant",
+    "programming": "Wizard / RobotStudio / lead-through",
+    "collision_detection": true,
+    "ft_sensor": true,
+    "industrial_protocols": "PROFINET, EtherNet/IP, Modbus",
+    "mounting": "Any angle"
   },
   {
     "id": "abb-gofa-10",
     "name": "GoFa 10",
-    "brand": "ABB Robotics",
+    "brand": "ABB",
     "cat": "Industrial",
     "sub": "Collaborative Robot Arm",
     "year": 2023,
@@ -134499,12 +134544,22 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP54",
+    "controller": "ABB OmniCore C30",
+    "teach_pendant": "FlexPendant",
+    "programming": "Wizard / RobotStudio / lead-through",
+    "collision_detection": true,
+    "ft_sensor": true,
+    "industrial_protocols": "PROFINET, EtherNet/IP, Modbus",
+    "mounting": "Any angle"
   },
   {
     "id": "abb-swifti-crb-1100",
     "name": "SWIFTI CRB 1100",
-    "brand": "ABB Robotics",
+    "brand": "ABB",
     "cat": "Industrial",
     "sub": "Industrial-Speed Cobot",
     "year": 2021,
@@ -134528,7 +134583,17 @@
     "rating": 4,
     "repeatability": 0.01,
     "speed_ms": 5,
-    "speed": "5 m/s TCP"
+    "speed": "5 m/s TCP",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.01,
+    "ip_rating": "IP54",
+    "controller": "ABB OmniCore C30",
+    "teach_pendant": "FlexPendant",
+    "programming": "Wizard / RobotStudio / lead-through",
+    "collision_detection": true,
+    "ft_sensor": true,
+    "industrial_protocols": "PROFINET, EtherNet/IP, Modbus",
+    "mounting": "Any angle"
   },
   {
     "id": "abb-powa",
