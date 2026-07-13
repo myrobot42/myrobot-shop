@@ -63573,7 +63573,7 @@
     "weight_kg": 25,
     "battery_life": "8 hours",
     "speed_ms": 1.4,
-    "payload_kg": 9,
+    "payload_kg": 10,
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
@@ -63586,13 +63586,18 @@
       "Last-mile delivery"
     ],
     "manufacturer_url": "https://www.kiwibot.com",
-    "autonomy_level": "L4 in mapped zones",
+    "autonomy_level": "L4 (mapped zones)",
     "autonomous": true,
     "wheels": 4,
     "gps": true,
     "outdoor_capable": true,
     "os": "Kiwibot",
-    "made_in": "Colombia / USA"
+    "made_in": "Colombia",
+    "speed_kmh_max": 6,
+    "navigation": "LiDAR + stereo cameras",
+    "weather_rating": "IP54",
+    "teleoperation_fallback": true,
+    "indoor_outdoor": "Sidewalk"
   },
   {
     "id": "kiwibot-kiwibot-advertising",
@@ -63794,7 +63799,7 @@
     "weight_kg": 20.4,
     "battery_life": "8 hours",
     "speed_ms": 1.4,
-    "payload_kg": 4.5,
+    "payload_kg": 10,
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
@@ -63807,16 +63812,21 @@
       "Last-mile delivery"
     ],
     "manufacturer_url": "https://www.kiwibot.com",
-    "autonomy_level": "L4 in mapped zones",
+    "autonomy_level": "L4 (mapped zones)",
     "autonomous": true,
     "wheels": 4,
     "gps": true,
     "outdoor_capable": true,
     "os": "Kiwibot",
-    "made_in": "Colombia / USA",
+    "made_in": "Colombia",
     "gallery": [
       "https://thebogotapost.com/wp-content/uploads/2021/12/Kiwibot-1.jpeg"
-    ]
+    ],
+    "speed_kmh_max": 6,
+    "navigation": "LiDAR + stereo cameras",
+    "weather_rating": "IP54",
+    "teleoperation_fallback": true,
+    "indoor_outdoor": "Sidewalk"
   },
   {
     "id": "coco-robotics-coco-robot-gen-1-",
@@ -84778,7 +84788,7 @@
     "weight_kg": 680,
     "battery_life": 480,
     "origin": "USA",
-    "cameras": 12,
+    "cameras": true,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
@@ -84808,7 +84818,11 @@
       "https://media.drive.com.au/obj/tx_q:50,rs:auto:1920:1080:1/caradvice/private/547b6e7d2bdef1cbb9f85dbf8722f3ee"
     ],
     "website": "https://www.nuro.ai",
-    "video": "https://youtu.be/yFYljZc968I"
+    "video": "https://youtu.be/yFYljZc968I",
+    "navigation": "LiDAR + radar + cameras",
+    "temperature_control": true,
+    "compartments": 2,
+    "indoor_outdoor": "Road (low-speed)"
   },
   {
     "id": "nuro-r2-2020",
@@ -84908,10 +84922,10 @@
     "perf": false,
     "year": 2022,
     "status": "Active",
-    "weight_kg": 850,
+    "weight_kg": 680,
     "battery_life": 600,
     "origin": "USA",
-    "cameras": 12,
+    "cameras": true,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
@@ -84942,7 +84956,14 @@
       "https://thelastdriverlicenseholder.com/wp-content/uploads/2024/04/nuro-r3-06.jpeg?strip=info&w=1500"
     ],
     "website": "https://www.nuro.ai",
-    "video": "https://youtu.be/ytH4t8fsIzw"
+    "video": "https://youtu.be/ytH4t8fsIzw",
+    "speed_kmh_max": 72,
+    "navigation": "LiDAR + radar + thermal cameras",
+    "temperature_control": true,
+    "insulated": true,
+    "compartments": 2,
+    "indoor_outdoor": "Road (low-speed)",
+    "obstacle_detection": true
   },
   {
     "id": "serve-robotics-gen1-2021",
@@ -84975,12 +84996,12 @@
     "battery_life": 600,
     "ip_rating": "IPX5",
     "origin": "USA",
-    "cameras": 6,
+    "cameras": true,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
-    "autonomy_level": "L4 (remote assist)",
+    "autonomy_level": "L4",
     "autonomous": true,
     "payload_kg": 23,
     "payload": 23,
@@ -84999,7 +85020,13 @@
     "pilot_customers": [
       "Uber Eats"
     ],
-    "website": "https://www.serverobotics.com"
+    "website": "https://www.serverobotics.com",
+    "navigation": "LiDAR + cameras",
+    "weather_rating": "All-weather",
+    "teleoperation_fallback": true,
+    "remote_monitoring": true,
+    "indoor_outdoor": "Sidewalk",
+    "speed_kmh_max": 10
   },
   {
     "id": "serve-robotics-gen2-2023",
@@ -85033,12 +85060,12 @@
     "battery_life": 600,
     "ip_rating": "IPX5",
     "origin": "USA",
-    "cameras": 7,
+    "cameras": true,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
     "cellular": "5G",
-    "autonomy_level": "L4 (remote assist)",
+    "autonomy_level": "L4",
     "autonomous": true,
     "payload_kg": 23,
     "payload": 23,
@@ -85058,7 +85085,13 @@
       "Uber Eats",
       "7-Eleven"
     ],
-    "website": "https://www.serverobotics.com"
+    "website": "https://www.serverobotics.com",
+    "navigation": "LiDAR + cameras",
+    "weather_rating": "All-weather",
+    "teleoperation_fallback": true,
+    "remote_monitoring": true,
+    "indoor_outdoor": "Sidewalk",
+    "speed_kmh_max": 10
   },
   {
     "id": "serve-robotics-gen3-2025",
@@ -85087,11 +85120,11 @@
     "perf": false,
     "year": 2025,
     "status": "Active",
-    "weight_kg": 45,
+    "weight_kg": 73,
     "battery_life": 720,
     "ip_rating": "IPX5",
     "origin": "USA",
-    "cameras": 8,
+    "cameras": true,
     "lidar": true,
     "wifi": true,
     "bluetooth": true,
@@ -85101,7 +85134,7 @@
       "https://cdn.sanity.io/images/dh33lj7y/production/d965c0e43f529be01b651e53c51eefb7e8bda86c-7481x4990.jpg?rect=1246,0,4990,4990&w=1440&h=1440&max-h=3840&max-w=3840&q=85&auto=format",
       "https://image.mux.com/01ob2hs00AwqPMSEyTsQifp4CJgAuZvvSS6mf9Kjfr45k/thumbnail.webp?time=1"
     ],
-    "autonomy_level": "L4 (remote assist)",
+    "autonomy_level": "L4",
     "autonomous": true,
     "payload_kg": 23,
     "payload": 23,
@@ -85122,7 +85155,16 @@
     "pilot_customers": [
       "Uber Eats"
     ],
-    "website": "https://www.serverobotics.com"
+    "website": "https://www.serverobotics.com",
+    "navigation": "LiDAR + cameras",
+    "weather_rating": "All-weather",
+    "teleoperation_fallback": true,
+    "remote_monitoring": true,
+    "indoor_outdoor": "Sidewalk",
+    "speed_kmh_max": 11,
+    "height_mm": 1050,
+    "width_mm": 640,
+    "length_mm": 790
   },
   {
     "id": "kiwibot-5-2024",
@@ -85159,7 +85201,7 @@
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
-    "autonomy_level": "L4 in mapped zones",
+    "autonomy_level": "L4 (mapped zones)",
     "autonomous": true,
     "speed_ms": 1.6,
     "wheels": 4,
@@ -85169,12 +85211,18 @@
     "outdoor_capable": true,
     "os": "Kiwibot",
     "compute_platform": "Kiwibot AI (LiDAR + vision)",
-    "made_in": "Colombia / USA",
+    "made_in": "Colombia",
     "fleet_management": true,
     "use_cases": [
       "Campus & urban food delivery",
       "Last-mile delivery"
-    ]
+    ],
+    "speed_kmh_max": 6,
+    "navigation": "LiDAR + stereo cameras",
+    "weather_rating": "IP54",
+    "payload_kg": 10,
+    "teleoperation_fallback": true,
+    "indoor_outdoor": "Sidewalk"
   },
   {
     "id": "cartken-model-c-2024",
@@ -85279,13 +85327,13 @@
     "battery_life": 480,
     "ip_rating": "IPX4",
     "origin": "USA",
-    "cameras": 6,
+    "cameras": true,
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
-    "autonomy_level": "L4 (remote-operable when needed)",
+    "autonomy_level": "L4 (mapped)",
     "autonomous": true,
-    "payload_kg": 20,
+    "payload_kg": 10,
     "payload": 20,
     "cargo_volume_l": 30,
     "speed_ms": 1.6,
@@ -85295,7 +85343,7 @@
     "outdoor_capable": true,
     "os": "Cartken",
     "compute_platform": "Cartken AI (camera SLAM)",
-    "made_in": "USA (assembled by Magna, Michigan)",
+    "made_in": "USA (Magna)",
     "fleet_management": true,
     "use_cases": [
       "Food & grocery delivery",
@@ -85304,7 +85352,12 @@
     "pilot_customers": [
       "Uber Eats",
       "Grubhub"
-    ]
+    ],
+    "speed_kmh_max": 6,
+    "navigation": "Vision-only (6 cameras, no LiDAR)",
+    "operating_hours": 12,
+    "indoor_outdoor": "Indoor + outdoor",
+    "teleoperation_fallback": true
   },
   {
     "id": "coco-robotics-coco-2-2024",
@@ -85624,9 +85677,9 @@
       "https://clevon.com/wp-content/uploads/2022/10/CLEVON-1-Recycle-bin-application-2.webp",
       "https://clevon.com/wp-content/uploads/2022/10/CLEVON-1-Speed-camera-application-2.webp"
     ],
-    "autonomy_level": "L4 (teleoperation-supervised)",
+    "autonomy_level": "L4 + teleoperation",
     "autonomous": true,
-    "payload_kg": 100,
+    "payload_kg": 200,
     "payload": 100,
     "top_speed_kmh": 50,
     "powertrain": "Battery electric",
@@ -85640,7 +85693,13 @@
       "Retail & parcel delivery"
     ],
     "video": "https://youtu.be/rAXgQudlTFw",
-    "video2": "https://youtu.be/9w5phBVwRsY"
+    "video2": "https://youtu.be/9w5phBVwRsY",
+    "speed_kmh_max": 50,
+    "range_km": 96,
+    "navigation": "LiDAR + cameras",
+    "compartments": "Modular multi-compartment",
+    "indoor_outdoor": "Road",
+    "teleoperation_fallback": true
   },
   {
     "id": "meituan-meituan-rb1-2023",
