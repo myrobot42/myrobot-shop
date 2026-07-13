@@ -120730,7 +120730,12 @@
     "score": 75,
     "rating": 4,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734507/myrobot/ggrgls8h7zhfm5jnbpzi.webp",
-    "website": "https://www.tm-robot.com"
+    "website": "https://www.tm-robot.com",
+    "axes_config": "6-axis",
+    "collision_detection": true,
+    "programming": "TMflow (flowchart)",
+    "cameras": "Built-in smart vision",
+    "made_in": "Taiwan"
   },
   {
     "cat": "Industrial",
@@ -134442,7 +134447,15 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "axes_config": "6-axis",
+    "os": "iiQKA.OS",
+    "programming": "Drag-and-drop (built-in pendant)",
+    "ft_sensor": true,
+    "ft_sensor_type": "Joint torque sensing",
+    "collision_detection": true,
+    "ip_rating": "IP54",
+    "made_in": "Germany"
   },
   {
     "id": "kuka-lbr-iiwa-14-r820",
@@ -134471,7 +134484,19 @@
     "score": 75,
     "rating": 4,
     "weight_kg": 29.9,
-    "repeatability": 0.1
+    "repeatability": 0.1,
+    "axes_config": "7-axis",
+    "repeatability_mm": 0.15,
+    "ip_rating": "IP54",
+    "controller": "KUKA Sunrise Cabinet",
+    "ft_sensor": true,
+    "ft_sensor_type": "Joint torque sensors (all 7 axes)",
+    "collision_detection": true,
+    "programming": "KUKA Sunrise.OS",
+    "operating_temp_min": 5,
+    "operating_temp_max": 45,
+    "made_in": "Germany",
+    "mounting": "Floor / wall / ceiling"
   },
   {
     "id": "abb-gofa-5",
@@ -134733,7 +134758,14 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "repeatability": 0.05
+    "repeatability": 0.05,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "controller": "Built-in (all-in-one)",
+    "collision_detection": true,
+    "programming": "COBOTTA World / RC8",
+    "made_in": "Japan",
+    "mounting": "Portable"
   },
   {
     "id": "denso-cobotta-pro-900",
@@ -134766,7 +134798,13 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "collision_detection": true,
+    "ft_sensor": true,
+    "programming": "WINCAPS / drag-teach",
+    "made_in": "Japan"
   },
   {
     "id": "mitsubishi-melfa-assista",
@@ -134886,7 +134924,13 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "reach_mm": 1525
+    "reach_mm": 1525,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "collision_detection": true,
+    "programming": "DobotStudio Pro (drag-teach)",
+    "made_in": "China",
+    "mounting": "Any angle"
   },
   {
     "id": "dobot-nova-5",
@@ -134921,7 +134965,13 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "collision_detection": true,
+    "programming": "DobotStudio Pro",
+    "made_in": "China",
+    "mounting": "Any angle"
   },
   {
     "id": "igus-rebel",
@@ -135006,7 +135056,12 @@
     "score": 75,
     "rating": 4,
     "weight_kg": 12.2,
-    "repeatability": 0.1
+    "repeatability": 0.1,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.1,
+    "programming": "Python / C++ / ROS / ROS 2",
+    "ai_open_source": true,
+    "made_in": "China"
   },
   {
     "id": "ufactory-lite-6",
@@ -135033,7 +135088,12 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "weight_kg": 8.7
+    "weight_kg": 8.7,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.5,
+    "programming": "Python / Blockly / ROS",
+    "ai_open_source": true,
+    "made_in": "China"
   },
   {
     "id": "standard-bots-ro1",
@@ -135149,7 +135209,12 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "collision_detection": true,
+    "programming": "Smart Pendant",
+    "made_in": "Japan"
   },
   {
     "id": "unitree-a2",
