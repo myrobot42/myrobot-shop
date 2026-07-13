@@ -115094,7 +115094,13 @@
     ],
     "made_in": "USA",
     "video": "https://youtu.be/c3Cq0sy4TBs",
-    "video2": "https://youtu.be/TwL4xqBLUdo"
+    "video2": "https://youtu.be/TwL4xqBLUdo",
+    "platform_type": "Dual-arm mobile manipulator (ROS reference platform)",
+    "affiliated_institution": "Willow Garage",
+    "first_published": 2010,
+    "dof": 14,
+    "ros_version": "ROS",
+    "open_source": true
   },
   {
     "cat": "Humanoid",
@@ -123073,7 +123079,7 @@
     "tags": [],
     "score": 75,
     "rating": 4,
-    "platform_type": "Analog autonomous robot (vacuum-tube)",
+    "platform_type": "Earliest autonomous robots (Machina Speculatrix, phototaxis)",
     "research_areas": [
       "Cybernetics",
       "Autonomous behavior",
@@ -123084,7 +123090,10 @@
       "https://cyberneticzoo.com/wp-content/uploads/2009/09/ELSIE-Time-Life1950.JPG",
       "https://www.researchgate.net/profile/Owen-Holland-2/publication/9025611/figure/fig3/AS:394583923019788@1471087546986/A-labelled-diagram-of-Elsie-with-her-shell-removed_Q320.jpg",
       "https://cyberneticzoo.com/wp-content/uploads/2009/09/ElsieV1p1-1024x873.jpg"
-    ]
+    ],
+    "affiliated_institution": "Burden Neurological Institute",
+    "first_published": 1948,
+    "locomotion": "Wheeled (3-wheel)"
   },
   {
     "id": "bell-labs-theseus",
@@ -123103,11 +123112,13 @@
     "tags": [],
     "score": 75,
     "rating": 4,
-    "platform_type": "Electromechanical maze-solver",
+    "platform_type": "Maze-solving mechanical mouse (early machine learning)",
     "research_areas": [
       "Machine learning (first demonstration)",
       "Relay-circuit memory"
-    ]
+    ],
+    "affiliated_institution": "Bell Labs",
+    "first_published": 1950
   },
   {
     "id": "unimation-unimate",
@@ -123176,7 +123187,7 @@
     "tags": [],
     "score": 75,
     "rating": 4,
-    "platform_type": "Mobile reasoning robot",
+    "platform_type": "First AI reasoning mobile robot (A*/STRIPS)",
     "research_areas": [
       "AI planning (STRIPS)",
       "Computer vision",
@@ -123188,7 +123199,10 @@
       "https://www.sri.com/wp-content/uploads/2021/12/shakey-copy-1024x986.jpg",
       "https://www.sri.com/wp-content/uploads/2021/11/shakey-featured-1920x1080-1.jpg"
     ],
-    "video": "https://youtu.be/7bsEN8mwUB8"
+    "video": "https://youtu.be/7bsEN8mwUB8",
+    "affiliated_institution": "SRI International",
+    "first_published": 1969,
+    "locomotion": "Wheeled (differential)"
   },
   {
     "id": "waseda-wabot-1",
@@ -123308,7 +123322,7 @@
     "tags": [],
     "score": 75,
     "rating": 4,
-    "platform_type": "Autonomous vehicle research platform",
+    "platform_type": "Early autonomous vision-guided cart (stereo navigation)",
     "research_areas": [
       "Stereo vision",
       "Autonomous navigation",
@@ -123320,7 +123334,10 @@
       "https://cyberneticzoo.com/wp-content/uploads/StanfordCart-003.png",
       "https://www.nico-du-web.com/medias/photos/web/img-stanford-cart.jpg",
       "https://images.computerhistory.org/revonline/images/102670863p-03-02.jpg?w=600"
-    ]
+    ],
+    "affiliated_institution": "Stanford University",
+    "first_published": 1979,
+    "locomotion": "Wheeled"
   },
   {
     "id": "unimation-puma-560",
@@ -123580,7 +123597,7 @@
     "weight_kg": 1,
     "dof": 12,
     "desc": "Rodney Brooks’ six-legged insect robot that changed robotics philosophy: no world model, no central planner — just layered \"subsumption architecture\" behaviors that let a 1 kg machine scramble over rough terrain. Its DNA lives on in every behavior-based robot since.",
-    "actuator_type": "6 legs, 12 servos, subsumption architecture control",
+    "actuator_type": "12 servo motors",
     "use_cases": [
       "Behavior-based robotics research"
     ],
@@ -123590,7 +123607,7 @@
     "score": 75,
     "rating": 4,
     "website": "https://www.csail.mit.edu",
-    "platform_type": "Hexapod walking robot",
+    "platform_type": "Hexapod (subsumption architecture, Brooks)",
     "research_areas": [
       "Subsumption architecture",
       "Behavior-based robotics",
@@ -123602,7 +123619,10 @@
       "https://plain-eeur-prod-public.komododecks.com/202606/29/RB4p88pEt0nLTFBvSBTk/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/29/g59UoG4kkjg7Xe4DmsaC/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/29/TEipXt2NAO8OMWw2mSRp/image.jpg"
-    ]
+    ],
+    "affiliated_institution": "MIT AI Lab",
+    "first_published": 1989,
+    "locomotion": "6-legged"
   },
   {
     "id": "mit-cog",
@@ -125600,10 +125620,10 @@
     "sub": "Dynamic quadruped",
     "year": 2018,
     "origin": "USA",
-    "status": "Research",
+    "status": "Active",
     "weight_kg": 45,
     "speed_ms": 3,
-    "actuator_type": "Custom high-torque-density backdriveable electric motors (proprioceptive)",
+    "actuator_type": "Proprioceptive electric actuators",
     "sensors": "Proprioceptive (no external vision needed for locomotion)",
     "tags": [
       "quadruped",
@@ -125613,7 +125633,7 @@
       "research",
       "bio-inspired"
     ],
-    "fig": "🐆",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
@@ -125633,7 +125653,11 @@
       "https://www.cnet.com/a/img/resize/ce1bf823c6cc0979f8c624c17e91dd4764721f22/hub/2018/07/05/09043596-e041-47a7-9a61-d7f7af4fdd8a/cheetah3.jpg?auto=webp&fit=crop&height=675&width=1200",
       "https://s.abcnews.com/images/Technology/180706_abc_mit_robot_cheetah_hpMain_1x1_992.jpg"
     ],
-    "video": "https://youtu.be/QZ1DaQgg3lE"
+    "video": "https://youtu.be/QZ1DaQgg3lE",
+    "platform_type": "Quadruped research robot (blind locomotion, backflip)",
+    "affiliated_institution": "MIT",
+    "first_published": 2018,
+    "locomotion": "Quadruped"
   },
   {
     "cat": "Research",
@@ -125643,10 +125667,10 @@
     "sub": "Agile quadruped",
     "year": 2019,
     "origin": "USA",
-    "status": "Research",
+    "status": "Active",
     "weight_kg": 9,
     "speed_ms": 2.45,
-    "actuator_type": "Custom low-cost modular electric actuators (3 per leg)",
+    "actuator_type": "Modular proprioceptive actuators",
     "tags": [
       "quadruped",
       "MIT",
@@ -125655,7 +125679,7 @@
       "backflip",
       "research"
     ],
-    "fig": "🐆",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
@@ -125674,7 +125698,12 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/687f667f56af2f919a2b863f_Cheetah_03.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/687f667f50e9a3a33064dc44_Cheetah_04.webp"
     ],
-    "video": "https://youtu.be/UqwldNLHE9w"
+    "video": "https://youtu.be/UqwldNLHE9w",
+    "platform_type": "Small agile quadruped (first robot backflip)",
+    "affiliated_institution": "MIT",
+    "first_published": 2019,
+    "locomotion": "Quadruped",
+    "open_source": true
   },
   {
     "cat": "Humanoid",
@@ -125801,7 +125830,7 @@
     "sub": "Jumping robot",
     "year": 2016,
     "origin": "USA",
-    "status": "Research",
+    "status": "Active",
     "weight_kg": 0.1,
     "actuator_type": "Single motor + series-elastic leg (8.5cm)",
     "tags": [
@@ -125812,7 +125841,7 @@
       "bio-inspired",
       "agile"
     ],
-    "fig": "🦗",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
@@ -125829,7 +125858,11 @@
       "https://cdn.sanity.io/images/7p2whiua/production/fab62f747152310802ae64a6e56b92546e537af6-2048x1536.jpg",
       "https://news.berkeley.edu/wp-content/uploads/2019/05/SALTO-and-Campanile_BN.jpg"
     ],
-    "video": "https://youtu.be/qFmeHPVtK0o"
+    "video": "https://youtu.be/qFmeHPVtK0o",
+    "platform_type": "Monopod jumping robot (high vertical agility)",
+    "affiliated_institution": "UC Berkeley",
+    "first_published": 2016,
+    "locomotion": "Single-leg jumping"
   },
   {
     "cat": "Research",
@@ -125839,7 +125872,7 @@
     "sub": "Hexapod robot",
     "year": 2001,
     "origin": "USA",
-    "status": "Research",
+    "status": "Active",
     "dof": 6,
     "actuator_type": "Six C-shaped compliant rotating legs (1 motor each)",
     "sensors": "IMU, terrain sensors",
@@ -125851,7 +125884,7 @@
       "research",
       "all-terrain"
     ],
-    "fig": "🪲",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
@@ -125869,7 +125902,11 @@
       "https://i0.wp.com/makezine.com/wp-content/uploads/2015/04/RHex-BostonDynamics2.jpg?fit=1300%2C840&ssl=1",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeLVCnZ5mZl5Wcs03g1OBNn8vfpckjy8rBEQ&s"
     ],
-    "video": "https://youtu.be/ntlI-pDUxPE"
+    "video": "https://youtu.be/ntlI-pDUxPE",
+    "platform_type": "Hexapod running robot (compliant C-legs)",
+    "affiliated_institution": "University of Pennsylvania",
+    "first_published": 2001,
+    "locomotion": "6-legged (C-legs)"
   },
   {
     "cat": "Autonomous Vehicles",
