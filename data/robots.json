@@ -114583,12 +114583,12 @@
       "https://i.ytimg.com/vi/nxWDAM117WI/maxresdefault.jpg",
       "https://assets.robotsguide.com/images/7p2whiua/production/7ff3a5f0b8f47a4a4c2f9c95e6d24651c357e597-2048x1536.jpg?w=1400&auto=format"
     ],
-    "platform_type": "Mobile manipulator",
+    "platform_type": "Lightweight mobile manipulator (telescoping arm)",
     "ros": true,
     "ros_version": "ROS 2",
     "open_source": true,
     "modular": true,
-    "sdk": "Open Python SDK",
+    "sdk": "Python + ROS 2",
     "api": true,
     "payload_kg": 1.5,
     "research_areas": [
@@ -114597,7 +114597,8 @@
       "Assistive robotics"
     ],
     "simulation_support": "Gazebo, MuJoCo",
-    "video": "https://youtu.be/Ni4p8axgqHM"
+    "video": "https://youtu.be/Ni4p8axgqHM",
+    "made_in": "USA"
   },
   {
     "cat": "Research",
@@ -114646,7 +114647,13 @@
       "Research UGV platform"
     ],
     "website": "https://clearpathrobotics.com",
-    "video": "https://youtu.be/8yk0rrYMV3Q"
+    "video": "https://youtu.be/8yk0rrYMV3Q",
+    "platform_type": "Outdoor 4-wheel research UGV",
+    "ros_version": "ROS / ROS 2",
+    "open_source": true,
+    "sdk": "ROS drivers",
+    "simulation_support": "Gazebo",
+    "made_in": "Canada"
   },
   {
     "cat": "Research",
@@ -114692,7 +114699,13 @@
       "Research UGV platform"
     ],
     "website": "https://clearpathrobotics.com",
-    "video": "https://youtu.be/6SrEEsE8Vb8"
+    "video": "https://youtu.be/6SrEEsE8Vb8",
+    "platform_type": "Small fast outdoor UGV",
+    "ros_version": "ROS / ROS 2",
+    "open_source": true,
+    "sdk": "ROS drivers",
+    "simulation_support": "Gazebo",
+    "made_in": "Canada"
   },
   {
     "cat": "Research",
@@ -114734,7 +114747,10 @@
     ],
     "made_in": "Canada",
     "website": "https://clearpathrobotics.com",
-    "video": "https://youtu.be/ZJEKESMkOG0"
+    "video": "https://youtu.be/ZJEKESMkOG0",
+    "platform_type": "Indoor differential-drive UGV",
+    "ros_version": "ROS / ROS 2",
+    "open_source": true
   },
   {
     "cat": "Research",
@@ -114776,7 +114792,10 @@
     ],
     "made_in": "Canada",
     "website": "https://clearpathrobotics.com",
-    "video": "https://youtu.be/oBbd-sGcUj8"
+    "video": "https://youtu.be/oBbd-sGcUj8",
+    "platform_type": "Omnidirectional (mecanum) indoor platform",
+    "ros_version": "ROS / ROS 2",
+    "open_source": true
   },
   {
     "cat": "Research",
@@ -114823,7 +114842,10 @@
     ],
     "made_in": "Canada",
     "website": "https://clearpathrobotics.com",
-    "video": "https://youtu.be/ilkuWxcwzV8"
+    "video": "https://youtu.be/ilkuWxcwzV8",
+    "platform_type": "Large amphibious UGV",
+    "ros_version": "ROS / ROS 2",
+    "open_source": true
   },
   {
     "cat": "Research",
@@ -114867,7 +114889,12 @@
       "Robotics education",
       "ROS 2 development"
     ],
-    "website": "https://clearpathrobotics.com"
+    "website": "https://clearpathrobotics.com",
+    "platform_type": "ROS 2 education/research (iRobot Create 3 base)",
+    "ros_version": "ROS 2",
+    "open_source": true,
+    "sdk": "ROS 2",
+    "made_in": "Canada"
   },
   {
     "cat": "Research",
@@ -114917,7 +114944,12 @@
       "ROS development"
     ],
     "website": "https://www.robotis.us",
-    "video": "https://youtu.be/9OC3J53RUsk"
+    "video": "https://youtu.be/9OC3J53RUsk",
+    "platform_type": "ROS education platform (Burger/Waffle)",
+    "ros_version": "ROS / ROS 2",
+    "open_source": true,
+    "sdk": "ROS",
+    "made_in": "South Korea"
   },
   {
     "cat": "Research",
@@ -115002,16 +115034,18 @@
       "Mobile manipulation research"
     ],
     "made_in": "USA",
-    "platform_type": "Mobile manipulator",
+    "platform_type": "Mobile manipulator (7-DOF arm + base)",
     "open_source": true,
-    "sdk": "Fetch SDK",
+    "sdk": "ROS",
     "research_areas": [
       "Mobile manipulation",
       "Navigation",
       "Warehouse automation"
     ],
     "simulation_support": "Gazebo",
-    "video": "https://youtu.be/2blLpuHPVhc"
+    "video": "https://youtu.be/2blLpuHPVhc",
+    "dof": 7,
+    "ros_version": "ROS"
   },
   {
     "cat": "Research",
@@ -115301,7 +115335,11 @@
       "AMR reference & research platform"
     ],
     "made_in": "USA",
-    "website": "https://developer.nvidia.com/isaac/nova-carter"
+    "website": "https://developer.nvidia.com/isaac/nova-carter",
+    "platform_type": "Reference AMR (Isaac ROS)",
+    "ros_version": "ROS 2 / Isaac",
+    "sdk": "Isaac ROS",
+    "simulation_support": "Isaac Sim"
   },
   {
     "cat": "Entertainment",
