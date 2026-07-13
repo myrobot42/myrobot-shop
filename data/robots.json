@@ -110779,18 +110779,18 @@
     "sub": "Commercial Lunar Lander",
     "year": 2023,
     "origin": "Japan",
-    "score": 73,
+    "score": 75,
     "desc": "First commercial lunar landing attempt by a private Japanese company. Launched 11 December 2022, successfully reached lunar orbit, but crashed during landing attempt on 25 April 2023 due to an altitude sensor misreading caused by passing over the rim of Atlas Crater. Carried the UAE's Rashid rover and JAXA's transformable SORA-Q technology demonstrator (which was reflown on SLIM in 2024).",
     "price": "POA",
-    "status": "Lost",
+    "status": "Active",
     "announced": "2016",
     "released": "2023-04-25",
     "also_known_as": "M1, ispace Mission 1, Hakuto-R-1",
     "regions": [
       "Japan"
     ],
-    "operating_agency": "ispace, inc. (commercial)",
-    "made_in": "Japan (Tokyo)",
+    "operating_agency": "ispace",
+    "made_in": "Japan",
     "height_mm": 2300,
     "width_mm": 2600,
     "depth_mm": 2600,
@@ -110799,12 +110799,12 @@
     "operating_temp_min": -130,
     "operating_temp_max": 50,
     "rtos": "Custom ispace flight software",
-    "target_body": "Moon (Atlas Crater — intended)",
+    "target_body": "Moon",
     "mission_type": "Commercial lunar lander",
-    "mission_status": "Lost (crashed during landing attempt)",
+    "mission_status": "Lost on landing (2023)",
     "launch_date": "2022-12-11",
     "mission_end_date": "2023-04-25",
-    "launch_vehicle": "SpaceX Falcon 9",
+    "launch_vehicle": "Falcon 9",
     "mission_cost_usd": 90000000,
     "mission_duration_planned_days": 10,
     "communications_band": "S-band",
@@ -110815,7 +110815,7 @@
       "360° camera (Canadensys)",
       "Solid-state battery test (NGK Spark Plug)"
     ],
-    "power_source": "Solar array + Li-ion battery",
+    "power_source": "Solar",
     "battery_type": "Lithium-ion",
     "tags": [
       "moon",
@@ -110858,7 +110858,7 @@
     "regions": [
       "Japan"
     ],
-    "operating_agency": "ispace, inc. (commercial)",
+    "operating_agency": "ispace",
     "made_in": "Japan",
     "height_mm": 2300,
     "width_mm": 2600,
@@ -110868,12 +110868,12 @@
     "operating_temp_min": -130,
     "operating_temp_max": 50,
     "rtos": "Custom ispace flight software (updated post-M1)",
-    "target_body": "Moon (Mare Frigoris — intended)",
-    "mission_type": "Commercial lunar lander with micro-rover",
-    "mission_status": "Lost (laser rangefinder anomaly caused freefall)",
+    "target_body": "Moon",
+    "mission_type": "Commercial lunar lander (+ Tenacious micro-rover)",
+    "mission_status": "Lost on landing (2025)",
     "launch_date": "2025-01-15",
     "mission_end_date": "2025-06-05",
-    "launch_vehicle": "SpaceX Falcon 9 (shared with Blue Ghost)",
+    "launch_vehicle": "Falcon 9",
     "communications_band": "S-band",
     "payload_instruments": [
       "Tenacious micro-rover (ispace EU, 5 kg)",
@@ -110883,7 +110883,7 @@
       "Universal Multipurpose Module (UMM)",
       "Commemorative plate"
     ],
-    "power_source": "Solar array + Li-ion battery",
+    "power_source": "Solar",
     "battery_type": "Lithium-ion",
     "tags": [
       "moon",
@@ -111138,7 +111138,7 @@
     "sub": "Satellite Servicer",
     "year": 2019,
     "origin": "USA",
-    "score": 93,
+    "score": 75,
     "desc": "Mission Extension Vehicle 1. First commercial satellite servicing spacecraft in history. Successfully docked with Intelsat IS-901 on 25 February 2020 in geostationary graveyard orbit, providing 5 years of station-keeping and attitude control to extend the host satellite's operational life. Demonstrated that on-orbit life extension is commercially viable.",
     "price": "POA",
     "status": "Active",
@@ -111149,8 +111149,8 @@
       "USA",
       "Global GEO"
     ],
-    "operating_agency": "SpaceLogistics LLC (Northrop Grumman subsidiary)",
-    "made_in": "USA (Northrop Grumman)",
+    "operating_agency": "Northrop Grumman (SpaceLogistics)",
+    "made_in": "USA",
     "height_mm": 5000,
     "diameter_mm": 2300,
     "weight_kg": 2326,
@@ -111161,9 +111161,9 @@
     "payload_kg": 0,
     "dof": 0,
     "actuator_type": "Liquid apogee engine + hall-effect electric thrusters",
-    "target_body": "Geostationary orbit (Earth)",
-    "mission_type": "Satellite life-extension docking spacecraft",
-    "mission_status": "Active (docked to Intelsat IS-901)",
+    "target_body": "Earth orbit (GEO)",
+    "mission_type": "Satellite life-extension servicer",
+    "mission_status": "Active (docked Intelsat 901, 2020)",
     "launch_date": "2019-10-09",
     "arrival_date": "2020-02-25",
     "launch_vehicle": "Proton-M / Briz-M",
@@ -111174,7 +111174,7 @@
       "Forward and aft cameras",
       "LIDAR"
     ],
-    "power_source": "Solar array + Li-ion battery + hydrazine + Xenon",
+    "power_source": "Solar",
     "battery_type": "Lithium-ion",
     "tags": [
       "satellite-servicer",
@@ -111196,7 +111196,8 @@
       "https://www.eoportal.org/api/cms/documents/d/eoportal/mev1_2_auto7-jpeg",
       "https://www.eoportal.org/api/cms/documents/163813/6584772/Pi7_Image_MEV-1.jpg/f3edb1b5-7900-d72c-9e97-bdf35db2db5a?t=1666526805304",
       "https://www.eoportal.org/api/cms/documents/d/eoportal/mev1_2_auto5-jpeg"
-    ]
+    ],
+    "autonomy_level": "Autonomous rendezvous + docking"
   },
   {
     "id": "northrop-mev-2",
@@ -111217,7 +111218,7 @@
       "USA",
       "Global GEO"
     ],
-    "operating_agency": "SpaceLogistics LLC (Northrop Grumman subsidiary)",
+    "operating_agency": "Northrop Grumman (SpaceLogistics)",
     "made_in": "USA",
     "height_mm": 5000,
     "diameter_mm": 2300,
@@ -111227,9 +111228,9 @@
     "cpu_arch": "PowerPC 750",
     "rtos": "VxWorks",
     "actuator_type": "Liquid apogee engine + hall-effect electric thrusters",
-    "target_body": "Geostationary orbit (Earth)",
-    "mission_type": "Satellite life-extension docking spacecraft",
-    "mission_status": "Active (docked to Intelsat 10-02)",
+    "target_body": "Earth orbit (GEO)",
+    "mission_type": "Satellite life-extension servicer",
+    "mission_status": "Active (docked Intelsat 10-02, 2021)",
     "launch_date": "2020-08-15",
     "arrival_date": "2021-04-12",
     "launch_vehicle": "Ariane 5 ECA",
@@ -111240,7 +111241,7 @@
       "Forward/aft cameras",
       "LIDAR"
     ],
-    "power_source": "Solar array + Li-ion battery + hydrazine + Xenon",
+    "power_source": "Solar",
     "battery_type": "Lithium-ion",
     "tags": [
       "satellite-servicer",
@@ -111269,7 +111270,8 @@
       "https://www.eoportal.org/api/cms/documents/d/eoportal/mev1_2_auto7-jpeg",
       "https://www.eoportal.org/api/cms/documents/d/eoportal/mev1_2_auto5-jpeg",
       "https://www.eoportal.org/api/cms/documents/d/eoportal/mev1_2_auto2-jpeg"
-    ]
+    ],
+    "autonomy_level": "Autonomous rendezvous + docking"
   },
   {
     "id": "northrop-mrv-mission-robotic-vehicle",
@@ -111288,7 +111290,7 @@
     "regions": [
       "USA"
     ],
-    "operating_agency": "SpaceLogistics LLC (Northrop Grumman) + DARPA",
+    "operating_agency": "Northrop Grumman (SpaceLogistics)",
     "made_in": "USA",
     "chipset": "BAE Systems RAD750",
     "cpu_arch": "PowerPC 750",
@@ -111297,8 +111299,8 @@
     "payload_kg": 350,
     "dof": 7,
     "actuator_type": "Robotic arm with brushless DC motors + Hall-effect electric thrusters",
-    "target_body": "Geostationary orbit (Earth)",
-    "mission_type": "Robotic satellite servicer with manipulator arm",
+    "target_body": "Earth orbit (GEO)",
+    "mission_type": "Robotic servicer (installs Mission Extension Pods)",
     "mission_status": "Development",
     "launch_date": "2025-12",
     "launch_vehicle": "TBD (U.S. rocket)",
@@ -111310,7 +111312,7 @@
       "Tool changer",
       "Mission Extension Pod (MEP) deployment system"
     ],
-    "power_source": "Solar array + Li-ion battery + Xenon ion propulsion",
+    "power_source": "Solar",
     "battery_type": "Lithium-ion",
     "tags": [
       "satellite-servicer",
@@ -111335,11 +111337,13 @@
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780911768/myrobot/y9dvocdvbofipogfuqmn.jpg",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/08/RGB1dwfT6po8xKans6my/image.jpg"
-    ]
+    ],
+    "arm_dof": 7,
+    "autonomy_level": "Autonomous"
   },
   {
     "id": "northrop-mission-extension-pods",
-    "name": "Mission Extension Pods (MEPs)",
+    "name": "Mission Extension Pods (MEP)",
     "brand": "Northrop Grumman",
     "cat": "Aerospace",
     "sub": "Satellite Servicer",
@@ -111354,13 +111358,13 @@
     "regions": [
       "USA"
     ],
-    "operating_agency": "SpaceLogistics LLC (Northrop Grumman)",
+    "operating_agency": "Northrop Grumman (SpaceLogistics)",
     "made_in": "USA",
     "weight_kg": 400,
     "rtos": "Custom Northrop Grumman flight software",
     "actuator_type": "Electric propulsion (orbit control only)",
-    "target_body": "Geostationary orbit (Earth)",
-    "mission_type": "Detachable satellite life-extension pod",
+    "target_body": "Earth orbit (GEO)",
+    "mission_type": "Propulsion jetpack (installed by MRV)",
     "mission_status": "Development",
     "launch_date": "2025-12",
     "launch_vehicle": "TBD (with MRV)",
@@ -111370,7 +111374,7 @@
       "Attachment interface",
       "Telemetry"
     ],
-    "power_source": "Solar array + Li-ion battery + Xenon",
+    "power_source": "Solar",
     "battery_type": "Lithium-ion",
     "tags": [
       "satellite-servicer",
@@ -111409,7 +111413,7 @@
     "regions": [
       "USA"
     ],
-    "operating_agency": "NASA Goddard / Maxar Technologies",
+    "operating_agency": "NASA Goddard",
     "made_in": "USA",
     "weight_kg": 2200,
     "chipset": "BAE Systems RAD750",
@@ -111419,8 +111423,8 @@
     "payload_kg": 300,
     "dof": 14,
     "actuator_type": "Two 7-DOF robotic arms",
-    "target_body": "Low Earth orbit (Landsat 7)",
-    "mission_type": "Robotic satellite refueling demonstrator",
+    "target_body": "Earth orbit (LEO)",
+    "mission_type": "Satellite servicing / refueling demo",
     "mission_status": "Development (paused 2024)",
     "launch_date": "2026",
     "launch_vehicle": "TBD",
@@ -111433,7 +111437,7 @@
       "LIDAR for proximity ops",
       "Sample handling end effectors"
     ],
-    "power_source": "Solar array + Li-ion battery",
+    "power_source": "Solar",
     "battery_type": "Lithium-ion",
     "tags": [
       "satellite-servicer",
@@ -111465,7 +111469,9 @@
       "https://www.eoportal.org/ftp/satellite-missions/o/OSAM-1_040322/OSAM-1_Auto8.jpeg",
       "https://www.eoportal.org/ftp/satellite-missions/o/OSAM-1_040322/OSAM-1_Auto4.jpeg"
     ],
-    "video": "https://youtu.be/6OS2Gl-qOwc"
+    "video": "https://youtu.be/6OS2Gl-qOwc",
+    "arm_dof": 7,
+    "autonomy_level": "Teleoperated + autonomous"
   },
   {
     "id": "nasa-robonaut-2",
@@ -111913,14 +111919,14 @@
     "regions": [
       "Japan"
     ],
-    "operating_agency": "Astroscale Japan / JAXA",
+    "operating_agency": "Astroscale (JAXA CRD2)",
     "made_in": "Japan",
     "weight_kg": 150,
     "chipset": "Space-grade SoC",
     "rtos": "Custom Astroscale flight software",
-    "target_body": "Low Earth orbit (H-IIA upper stage, 600 km)",
-    "mission_type": "Debris characterization rendezvous (uncooperative target)",
-    "mission_status": "Active",
+    "target_body": "Earth orbit (LEO)",
+    "mission_type": "Debris inspection / rendezvous",
+    "mission_status": "Active (approached H-IIA upper stage, 2024)",
     "launch_date": "2024-02-18",
     "launch_vehicle": "Rocket Lab Electron",
     "communications_band": "S-band",
@@ -111962,7 +111968,8 @@
       "https://images.ctfassets.net/k5fy2axdrsqr/3am2HqOU09nHIW6JjeWnf6/c710d7929035a44073af9cfb0293f09e/adras-j-cg-1.jpg?q=80&fm=webp&w=1366",
       "https://images.ctfassets.net/k5fy2axdrsqr/7g7QvP7EbuYYsKg1Yp6Ufr/c82d99029a6bc09d626574ed85372bbc/adras-j-cg-3.jpg",
       "https://images.ctfassets.net/k5fy2axdrsqr/R5ikIYkSbYAqKkDQAEzsm/c54cb1d5ce217c8a684b2d14b7877a71/adras-j-cg-5.jpg?q=80&fm=webp&w=1366"
-    ]
+    ],
+    "autonomy_level": "Autonomous proximity ops"
   },
   {
     "id": "astroscale-elsa-m-2026",
@@ -111982,11 +111989,11 @@
       "UK",
       "Europe"
     ],
-    "operating_agency": "Astroscale UK / OneWeb / ESA",
-    "made_in": "UK / Japan",
+    "operating_agency": "Astroscale",
+    "made_in": "Japan / UK",
     "rtos": "Custom Astroscale flight software",
-    "target_body": "Low Earth orbit (OneWeb constellation)",
-    "mission_type": "Multi-target commercial debris remover",
+    "target_body": "Earth orbit (LEO)",
+    "mission_type": "Commercial debris removal",
     "mission_status": "Development (targeting 2026)",
     "launch_date": "2026",
     "mission_cost_usd": 16000000,
@@ -111997,7 +112004,7 @@
       "RPO sensors",
       "Cameras"
     ],
-    "power_source": "Solar array + Li-ion battery",
+    "power_source": "Solar",
     "battery_type": "Lithium-ion",
     "tags": [
       "debris-removal",
@@ -112025,7 +112032,8 @@
       "https://images.ctfassets.net/k5fy2axdrsqr/32zGviCDUoFp31y6Ub3dok/12423dd18cfdd850e5be9cd78bdc8abe/ELSA-d_005.png",
       "https://images.ctfassets.net/k5fy2axdrsqr/2lt9M8ZyJd40jiLnz2bBDx/859cfe6ff1d489491fd2868145f028ba/elsa-m_cg_3.jpg",
       "https://images.ctfassets.net/k5fy2axdrsqr/7vyYtlqODC05Tbuox98vKJ/fd2d609c91bd7bd15c53a7a1f8ed5569/elsa-m_cg_2.jpg"
-    ]
+    ],
+    "autonomy_level": "Autonomous rendezvous + magnetic capture"
   },
   {
     "id": "clearspace-1-2026",
@@ -112045,15 +112053,15 @@
       "Switzerland",
       "Europe"
     ],
-    "operating_agency": "ClearSpace SA / ESA",
+    "operating_agency": "ClearSpace / ESA",
     "made_in": "Switzerland",
     "weight_kg": 500,
     "rtos": "Custom ClearSpace flight software",
     "reach_mm": 1000,
     "dof": 4,
     "actuator_type": "Four-armed robotic capture system (clamping mechanism)",
-    "target_body": "Low Earth orbit (VESPA payload adapter, 800 km)",
-    "mission_type": "Active debris removal (robotic capture)",
+    "target_body": "Earth orbit (LEO)",
+    "mission_type": "Debris removal (multi-arm capture)",
     "mission_status": "Development (targeting 2026)",
     "launch_date": "2026",
     "launch_vehicle": "TBD",
@@ -112094,7 +112102,8 @@
       "https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2019/12/clearspace-1/21503850-1-eng-GB/ClearSpace-1_pillars.jpg",
       "https://i.ytimg.com/vi/Fflp39ZAVK0/mqdefault.jpg"
     ],
-    "video": "https://youtu.be/Fflp39ZAVK0"
+    "video": "https://youtu.be/Fflp39ZAVK0",
+    "autonomy_level": "Autonomous capture"
   },
   {
     "id": "autostore-b1",
