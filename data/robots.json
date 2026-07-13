@@ -52897,13 +52897,17 @@
       "Research platform"
     ],
     "manufacturer_url": "https://www.fourierrehab.com",
-    "made_in": "China / Singapore",
+    "made_in": "Singapore",
     "os": "Fourier",
     "gallery": [
       "https://exoskeletonreport.com/wp-content/uploads/2019/04/Fourier-Intelligence-X2-Exoskeleton-Small.png",
       "https://www.hanfeiyl.com/upload/202108/031132264463.png"
     ],
-    "website": "https://www.fftai.com"
+    "website": "https://www.fftai.com",
+    "exo_type": "Powered lower-limb rehab exoskeleton",
+    "body_area": "Lower body (hip + knee)",
+    "actuator_type": "Servo motors + strain-gauge torque sensing",
+    "gait_training": true
   },
   {
     "id": "fourier-intelligence-fourier-rehab-metamotus-galileo",
@@ -114060,7 +114064,7 @@
       "https://www.domusweb.it/content/dam/domusweb/en/speciali/modern-work/gallery/2023/the-apogee-is-a-lightweight-exoskeleton-for-heavy-workers/gallery/exoskeleton-domus-1.jpg.foto.rmedium.png"
     ],
     "payload": "Up to 30 kg lift compensation",
-    "actuator_type": "Active electric back support, walking assistance",
+    "actuator_type": "Electric (smart/connected)",
     "use_cases": [
       "Logistics, construction, nursing, baggage handling"
     ],
@@ -114068,12 +114072,14 @@
     "website": "https://germanbionic.com",
     "lift_support_kg": 30,
     "hot_swap": true,
-    "exo_type": "Powered (industrial, 6th gen)",
+    "exo_type": "Powered lower-back exoskeleton (industrial)",
     "body_region": "Lower back + legs",
     "assist_force": "Up to 30 kg (Ultra: 36 kg / 80 lb)",
     "powered": true,
     "control_method": "Dual-motor active support, AI-adaptive",
-    "video": "https://youtu.be/rrdEjP0xvhE"
+    "video": "https://youtu.be/rrdEjP0xvhE",
+    "body_area": "Lower back",
+    "lifting_assist_kg": 30
   },
   {
     "cat": "Exoskeletons",
@@ -114141,7 +114147,7 @@
     "sub": "Personal Exoskeleton",
     "year": 2025,
     "origin": "France",
-    "status": "Development",
+    "status": "Active",
     "desc": "Eve is Wandercraft's personal exoskeleton — billed as the world's first self-balancing exoskeleton for personal use that works hands-free, without crutches or a walker. Built by the Paris-based robotics firm (founded 2012, 30+ patents) on the same proven platform as its FDA-cleared Atalante X rehabilitation system, Eve has a fully powered lower body with 12 actuated degrees of freedom across the hips, knees and ankles, using AI-driven dynamic balance to let people with severe mobility impairments — such as spinal cord injuries or MS — stand and walk in everyday settings. Users typically need about five training sessions. Unveiled as a prototype in 2023, Eve entered clinical trials in 2025 (including at the James J. Peters VA Medical Center and the Kessler Institute) and was carried in the 2024 Paris Olympic torch relay; commercial availability is targeted for around 2026, backed by a strategic partnership with Renault Group.",
     "tags": [
       "exoskeleton",
@@ -114152,7 +114158,7 @@
       "Eve"
     ],
     "fig": "🤖",
-    "score": 83,
+    "score": 75,
     "rating": 4,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999195/myrobot/vwi2ysalm9ow3yqxt6gs.avif",
     "gallery": [
@@ -114169,13 +114175,15 @@
     ],
     "made_in": "France",
     "website": "https://en.wandercraft.eu",
-    "exo_type": "Powered self-balancing (personal)",
+    "exo_type": "Personal self-balancing powered exoskeleton",
     "body_region": "Full lower body",
     "powered": true,
     "control_method": "Self-balancing (personal successor to Atalante)",
     "dof": 12,
     "self_balancing": true,
-    "hands_free": true
+    "hands_free": true,
+    "body_area": "Full lower body",
+    "fall_protection": true
   },
   {
     "cat": "Exoskeletons",
@@ -114208,18 +114216,19 @@
       "https://car-images.bauersecure.com/wp-images/218961/hyundai-x-ble-02.jpg"
     ],
     "weight_kg": 1.9,
-    "actuator_type": "Passive carbon-composite torque module (2.9–3.7 kgf assist, no battery)",
+    "actuator_type": "Passive/spring module",
     "use_cases": [
       "Overhead industrial work"
     ],
     "made_in": "South Korea",
-    "exo_type": "Passive (industrial)",
+    "exo_type": "Shoulder-assist exoskeleton (industrial)",
     "body_region": "Shoulders",
     "powered": false,
     "control_method": "Passive torque module (no battery)",
     "assist_force": "Reduces shoulder load up to 60%",
     "website": "https://www.hyundai-robotics.com",
-    "video": "https://youtu.be/kPc84djU4pQ"
+    "video": "https://youtu.be/kPc84djU4pQ",
+    "body_area": "Shoulder"
   },
   {
     "cat": "Exoskeletons",
@@ -114252,17 +114261,19 @@
       "https://s3.us-east-1.amazonaws.com/cn-qviro/_productMain/912427/MATE-XT-4.0.webp"
     ],
     "weight_kg": 3,
-    "actuator_type": "Passive spring-based shoulder support (8 adjustment levels, no battery)",
+    "actuator_type": "Passive spring (no motor)",
     "use_cases": [
       "Overhead industrial & outdoor work (dust/UV/water resistant)"
     ],
     "made_in": "Italy",
     "website": "https://mate.comau.com",
-    "exo_type": "Passive (industrial, outdoor)",
+    "exo_type": "Passive shoulder exoskeleton (industrial)",
     "body_region": "Shoulders",
     "powered": false,
     "control_method": "Spring-based, 8 assist levels (no battery)",
-    "video": "https://youtu.be/3peRrsu82Lg"
+    "video": "https://youtu.be/3peRrsu82Lg",
+    "body_area": "Shoulder / upper arm",
+    "assist_modes": "Overhead / arm support"
   },
   {
     "cat": "Exoskeletons",
@@ -114296,17 +114307,19 @@
       "https://www.produktive.at/media/PROJEKTE/OBO_Paexo/PRODUKTIVE_Ottobock_Paexo_Shoulder_Exoskelett_FingerHaus_Copyright_Ottobock_KatharinaJaeger_S.jpg",
       "https://www.researchgate.net/publication/382030749/figure/fig1/AS:11431281429613034@1746712843243/The-Ottobock-Paexo-Shoulder-worn-a-front-a-and-back-b-view.tif"
     ],
-    "actuator_type": "Passive (mechanical spring support, no battery)",
+    "actuator_type": "Passive mechanical",
     "use_cases": [
       "Overhead assembly work"
     ],
     "made_in": "Germany",
     "website": "https://paexo.com",
-    "exo_type": "Passive (industrial)",
+    "exo_type": "Passive shoulder exoskeleton (industrial)",
     "body_region": "Shoulders",
     "powered": false,
     "control_method": "Mechanical weight transfer to hips (no battery)",
-    "video": "https://youtu.be/MlHV4_mMn9w"
+    "video": "https://youtu.be/MlHV4_mMn9w",
+    "body_area": "Shoulder",
+    "assist_modes": "Overhead work support"
   },
   {
     "cat": "Exoskeletons",
@@ -114388,20 +114401,21 @@
       "https://i.ytimg.com/vi/Khz5fQDGFtI/maxresdefault.jpg",
       "https://instagram.flyp2-1.fna.fbcdn.net/v/t51.82787-15/625703299_18308667670257228_3536476738949065768_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MjMxMjcxMjA5NzM4NzQ1MzQ5OA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6IkZFRUQueHBpZHMuMTQ0MC5zZHIucmVndWxhcl9waG90by5DMyJ9&_nc_ohc=Uat6gUtobEkQ7kNvwEOwKV5&_nc_oc=Ado1vd3_jlgo-ddSm2WM7LxAG76ePq5Ym4XAPsH8-klUDwPAoRdgIO6rtfevtl2KkaE&_nc_zt=23&_nc_ht=instagram.flyp2-1.fna&_nc_gid=HDVQf5zOSKTK7I9lrkXQNg&_nc_ss=7ba8c&oh=00_Af8EUEicdf6XvrV0l1nv_AOrv4xh3p9dp8qByP-lwFfVxA&oe=6A2D879A"
     ],
-    "actuator_type": "Pneumatic knee assistance (sensor-driven air actuation)",
+    "actuator_type": "Pneumatic textile",
     "use_cases": [
       "Knee support & mobility assistance"
     ],
     "made_in": "USA",
     "website": "https://www.roamrobotics.com",
-    "exo_type": "Powered pneumatic (mobility)",
+    "exo_type": "Lightweight powered knee exoskeleton",
     "body_region": "Knee",
     "powered": true,
     "control_method": "Sensor-driven pneumatic (air) actuation",
     "target_conditions": [
       "Knee osteoarthritis"
     ],
-    "video": "https://youtu.be/_lbkiQSiZTI"
+    "video": "https://youtu.be/_lbkiQSiZTI",
+    "body_area": "Knee"
   },
   {
     "cat": "Exoskeletons",
@@ -114433,18 +114447,19 @@
       "https://www.bioservo.com/assets/uploads/_t8/63434/Carbonhand-app-NEW-Crop.jpg",
       "https://mb.cision.com/Public/15771/4140419/85cdd9aa47e91367_800x800ar.jpg"
     ],
-    "actuator_type": "Soft robotic glove with artificial tendons & fingertip force sensors",
+    "actuator_type": "SEM (Soft Extra Muscle) tendon",
     "use_cases": [
       "Grip strengthening (medical rehab + industrial endurance)"
     ],
     "made_in": "Sweden",
     "website": "https://www.bioservo.com",
-    "exo_type": "Soft robotic glove",
+    "exo_type": "Soft grip-strengthening glove",
     "body_region": "Hand / grip",
     "assist_force": "Up to ~20% added grip force",
     "powered": true,
     "control_method": "Fingertip pressure sensors + artificial tendons (SEM technology)",
-    "video": "https://youtu.be/pl3BLWdH7YI"
+    "video": "https://youtu.be/pl3BLWdH7YI",
+    "body_area": "Hand"
   },
   {
     "cat": "Exoskeletons",
@@ -114481,8 +114496,8 @@
     "use_cases": [
       "Standing & walking rehab, supported physiotherapy"
     ],
-    "made_in": "New Zealand/UK",
-    "exo_type": "Self-supporting powered (clinical)",
+    "made_in": "New Zealand / UK",
+    "exo_type": "Self-supporting powered lower-limb (hands-free)",
     "body_region": "Full lower body",
     "powered": true,
     "control_method": "Joystick-controlled, self-supporting (no crutches)",
@@ -114491,7 +114506,10 @@
       "Paralysis"
     ],
     "website": "https://www.rexbionics.com",
-    "video": "https://youtu.be/cQKZL2hazNs"
+    "video": "https://youtu.be/cQKZL2hazNs",
+    "body_area": "Full lower body",
+    "gait_training": true,
+    "fall_protection": true
   },
   {
     "cat": "Research",
