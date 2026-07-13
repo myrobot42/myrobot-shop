@@ -93201,7 +93201,12 @@
     "use_cases": [
       "Ride-hailing (Uber)"
     ],
-    "manufacturer_history": "Spun out of Rimac (electric hypercar maker)"
+    "manufacturer_history": "Spun out of Rimac (electric hypercar maker)",
+    "vehicle_type": "Purpose-built 2-seater robotaxi",
+    "passengers": 2,
+    "drivetrain": "Electric",
+    "autonomy_software": "Mobileye Drive",
+    "hd_maps": true
   },
   {
     "id": "may-mobility-shuttle-2020",
@@ -93269,7 +93274,12 @@
       "Public transit",
       "First/last-mile"
     ],
-    "video": "https://youtu.be/e80ZAiE5gu8"
+    "video": "https://youtu.be/e80ZAiE5gu8",
+    "vehicle_type": "Autonomous shuttle (Toyota Sienna)",
+    "passengers": 5,
+    "autonomy_software": "May Mobility MPDM",
+    "drivetrain": "Hybrid",
+    "remote_supervision": true
   },
   {
     "id": "beep-shuttle-2019",
@@ -93334,7 +93344,12 @@
       "https://lakenona.com/wp-content/uploads/2024/04/20190918_NONA_0153-2000x1333-1-1024x682.jpg",
       "https://lakenona.com/wp-content/uploads/2024/04/20190918_NONA_0153-2000x1333-1-1024x682.jpg"
     ],
-    "video": "https://youtu.be/a6YEY6X_PYM"
+    "video": "https://youtu.be/a6YEY6X_PYM",
+    "vehicle_type": "Low-speed autonomous shuttle",
+    "passengers": 10,
+    "drivetrain": "Electric",
+    "operational_domain": "Fixed routes (campuses/communities)",
+    "remote_supervision": true
   },
   {
     "id": "aurora-driver-2022",
@@ -94591,10 +94606,13 @@
     "safety_driver": "No",
     "remote_operations": true,
     "os": "Nuro Driver",
-    "made_in": "USA (Arizona)",
+    "made_in": "USA",
     "use_cases": [
       "Ride-hailing (Uber)"
-    ]
+    ],
+    "vehicle_type": "Robotaxi (Lucid platform)",
+    "drivetrain": "Electric",
+    "autonomy_software": "Nuro Driver"
   },
   {
     "id": "blue-robotics-bluerov2-2016",
@@ -117748,7 +117766,7 @@
     "year": 2023,
     "origin": "USA",
     "status": "Active",
-    "autonomy_level": "SAE Level 4",
+    "autonomy_level": "L4",
     "desc": "May Mobility operates autonomous microtransit shuttles (Toyota Sienna platform) for on-demand and fixed-route public transit in several US cities, moving toward driver-out L4 operation in defined service zones.",
     "tags": [
       "autonomous vehicle",
@@ -117781,7 +117799,12 @@
       "https://mma.prnewswire.com/media/1512967/May_Mobility_autonomous_driving_kit.jpg?p=facebook",
       "https://images.ajc.com/resizer/v2/5FKS5CETENCMRKOSPJMV3TLVZY.jpg?auth=a5e1837bf5121e82b3c252cab98205a52078b8628aff7f08979edd32f0962d0c&width=3840&height=2160&smart=true"
     ],
-    "video": "https://youtu.be/zgKbv8S8qF0"
+    "video": "https://youtu.be/zgKbv8S8qF0",
+    "vehicle_type": "Autonomous shuttle (Toyota Sienna)",
+    "passengers": 5,
+    "autonomy_software": "May Mobility MPDM",
+    "drivetrain": "Hybrid",
+    "made_in": "USA"
   },
   {
     "cat": "Autonomous Vehicles",
@@ -125551,7 +125574,7 @@
     "sub": "Autonomous car",
     "year": 2005,
     "origin": "USA",
-    "status": "Discontinued",
+    "status": "Active",
     "sensors": "5 roof LIDAR, radar, stereo + mono vision, GPS/IMU",
     "base_vehicle": "VW Touareg R5",
     "tags": [
@@ -125562,12 +125585,12 @@
       "Stanford",
       "classic"
     ],
-    "fig": "🚗",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "Autonomous-driving research",
-      "DARPA Grand Challenge"
+      "DARPA Grand Challenge 2005 winner",
+      "Autonomous driving research"
     ],
     "made_in": "USA",
     "website": "",
@@ -125582,7 +125605,11 @@
       "https://media-cldnry.s-nbcnews.com/image/upload/t_social_share_1024x768_scale,f_auto,q_auto:best/msnbc/Components/Photos/051009/051009_ROBOTRACE_hmed.jpg",
       "https://cs.stanford.edu/group/roadrunner/images/graphics/junior-1.jpg",
       "https://cs.stanford.edu/group/roadrunner/images/graphics/junior-3.jpg"
-    ]
+    ],
+    "vehicle_type": "Modified VW Touareg (research AV)",
+    "autonomy_level": "Full autonomy (2005 research)",
+    "lidar_count": 5,
+    "autonomy_software": "Stanford Racing (Thrun et al.)"
   },
   {
     "cat": "Research",
