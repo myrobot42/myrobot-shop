@@ -104063,7 +104063,7 @@
     "origin": "Japan",
     "made_in": "Japan",
     "status": "Active",
-    "score": 78,
+    "score": 75,
     "desc": "Therapeutic robotic cushion with a moving tail. No face, no voice — just a tail that responds to touch like a cat. Designed for people who can't keep pets (apartments, allergies, eldercare). Won multiple design awards including Red Dot.",
     "price": 149,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734390/myrobot/j1pp4xeg5quwfmfsfdhb.jpg",
@@ -104086,7 +104086,7 @@
       "Husky Grey",
       "French Brown"
     ],
-    "social_role": "Therapeutic pet replacement",
+    "social_role": "Therapeutic tactile companion",
     "target_user": [
       "Elderly",
       "Apartment dwellers",
@@ -104129,7 +104129,10 @@
       "https://m.media-amazon.com/images/I/71GuZpRP7xL._AC_UF894,1000_QL80_.jpg"
     ],
     "video": "https://youtu.be/8oWoKuxAIQE",
-    "video2": "https://youtu.be/0ndFHX8JdAo"
+    "video2": "https://youtu.be/0ndFHX8JdAo",
+    "emotional_expression": "Tail movement",
+    "touch_sensing": true,
+    "face_display": "None (cushion)"
   },
   {
     "id": "hyodol",
@@ -115819,7 +115822,7 @@
       "https://plain-eeur-prod-public.komododecks.com/202606/21/SfD0ukcd7iBN89UDPrTY/image.jpg"
     ],
     "lidar": "Spatial LiDAR",
-    "cameras": "Onboard camera + 1080p dual-lens projector",
+    "cameras": "Cameras + projector",
     "wifi": true,
     "use_cases": [
       "Home companion",
@@ -115828,7 +115831,16 @@
     ],
     "price_band": "$",
     "video": "https://youtu.be/v0XdLGYaNMw",
-    "video2": "https://youtu.be/x2G6FkyVCEI"
+    "video2": "https://youtu.be/x2G6FkyVCEI",
+    "emotional_expression": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "ai_model": "Google Gemini",
+    "personalization_level": "High (learns behavior)",
+    "intended_setting": "Home",
+    "social_role": "Home assistant / companion",
+    "autonomous": true,
+    "made_in": "South Korea"
   },
   {
     "cat": "Social",
@@ -115840,7 +115852,7 @@
     "sub": "Home AI-Agent Companion (wheeled)",
     "year": 2025,
     "origin": "South Korea",
-    "status": "Development",
+    "status": "Active",
     "desc": "LG's 'Self-Driving AI Home Hub' — a cute companion robot that rolls around the house on two gyroscopic one-wheeled legs, balancing itself while it moves. With bright expressive eyes, cameras, a microphone array and generative-AI voice conversation, Q9 acts as a mobile personal assistant and the physical face of LG's ThinQ smart home: it greets and chats with the family, reports on overnight energy use, sleep and temperature, delivers weather and reminders, and relays commands to LG appliances. LG frames it around 'Affectionate Intelligence' — AI meant to understand and empathize with users — and offers it on a subscription model. It's the forerunner to LG's CLOiD home humanoid (CES 2026).",
     "tags": [
       "social",
@@ -115876,14 +115888,20 @@
     "display": "Expressive display face",
     "cameras": "Cameras",
     "microphones": "Microphone array",
-    "ai_model": "LG Affectionate Intelligence + generative AI (LLM)",
+    "ai_model": "Google Gemini",
     "natural_language_commands": true,
     "voice_control": "Conversational voice agent",
     "smart_home": "LG ThinQ / ThinQ ON ecosystem",
-    "autonomous": "Autonomous home navigation (self-driving)",
+    "autonomous": true,
     "emotion_detection": true,
     "subscription": true,
-    "manufacturer_url": "https://www.lg.com/"
+    "manufacturer_url": "https://www.lg.com/",
+    "face_display": "Screen (smile/wink)",
+    "emotional_expression": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "intended_setting": "Home",
+    "social_role": "Companion / mobile AI home hub"
   },
   {
     "cat": "Social",
@@ -115930,17 +115948,22 @@
     "form_factor": "Furry desktop pet (interchangeable fur + face)",
     "display_face": "Expressive animated eyes",
     "microphones": "Microphone(s)",
-    "touch_sensing": "Touch-responsive (petting)",
+    "touch_sensing": "Touch-responsive",
     "facial_recognition": true,
     "emotion_detection": true,
     "object_recognition": true,
     "gesture_control": true,
-    "ai_model": "ChatGPT integration (cloud LLM)",
+    "ai_model": "ChatGPT/LLM (cloud)",
     "natural_language_commands": true,
     "languages": "50+",
     "customization": "Interchangeable fur / face, eye colours, accessories",
     "currency": "USD",
-    "manufacturer_url": "https://www.ropet.com/"
+    "manufacturer_url": "https://www.ropet.com/",
+    "face_display": "Screen (expressive eyes)",
+    "emotional_expression": true,
+    "voice_recognition": true,
+    "local_processing": false,
+    "social_role": "Companion pet"
   },
   {
     "cat": "Social",
@@ -115990,7 +116013,16 @@
     ],
     "made_in": "Japan",
     "website": "https://www.casio.com/us/moflin",
-    "video": "https://youtu.be/nrLwgIj_OSo"
+    "video": "https://youtu.be/nrLwgIj_OSo",
+    "emotional_expression": true,
+    "emotional_recognition": true,
+    "personalization_level": "High (evolving personality)",
+    "voice_recognition": true,
+    "local_processing": true,
+    "touch_sensing": "Pat/hug tactile",
+    "intended_setting": "Home / eldercare",
+    "social_role": "Companion pet",
+    "target_user": "Adults / seniors"
   },
   {
     "cat": "Social",
@@ -116041,7 +116073,11 @@
       "Mood-lifting / shared joy",
       "Portable charm companion"
     ],
-    "manufacturer_url": "https://www.ux-xu.com/en/"
+    "manufacturer_url": "https://www.ux-xu.com/en/",
+    "emotional_expression": "Shy behaviour when noticed",
+    "touch_sensing": true,
+    "social_role": "Charm companion (clip-on)",
+    "target_user": "Adults"
   },
   {
     "cat": "Social",
@@ -116083,7 +116119,15 @@
       "Desktop AI companion"
     ],
     "website": "https://living.ai",
-    "video": "https://youtu.be/abqUMxj-1WI"
+    "video": "https://youtu.be/abqUMxj-1WI",
+    "face_display": "Animated screen face",
+    "emotional_expression": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "touch_sensing": true,
+    "autonomous": true,
+    "social_role": "Desktop AI companion",
+    "made_in": "China"
   },
   {
     "cat": "Social",
@@ -116126,7 +116170,7 @@
     "price_band": "$",
     "video": "https://youtu.be/-u_1ODfpPKQ",
     "actuator_type": "9 servo motors (head, eyebrow, tail)",
-    "touch_sensing": "Capacitive touch sensors (body-wide, location + intensity)",
+    "touch_sensing": true,
     "microphones": "Microphone array",
     "speech": "Authentic Labrador puppy sounds",
     "natural_language_commands": true,
@@ -116135,7 +116179,11 @@
     "app": "Tombot app (settings, rename, OTA updates)",
     "fda_regulated": true,
     "currency": "USD",
-    "manufacturer_url": "https://www.tombot.com/"
+    "manufacturer_url": "https://www.tombot.com/",
+    "emotional_expression": "Puppy behaviours",
+    "social_role": "Therapy pet (dementia/seniors)",
+    "target_user": "Seniors / dementia",
+    "intended_setting": "Eldercare / home"
   },
   {
     "cat": "Social",
@@ -116172,7 +116220,7 @@
     "weight_kg": 9.3,
     "speed_ms": 1,
     "charge_time": 60,
-    "cameras": "1080p periscope camera (extends to 1.07 m)",
+    "cameras": "Periscope camera",
     "display_face": "10.1-inch rotating touchscreen",
     "wifi": true,
     "use_cases": [
@@ -116182,7 +116230,14 @@
     ],
     "website": "https://www.amazon.com/astro",
     "price_band": "$",
-    "video": "https://youtu.be/mEw1itG40q8"
+    "video": "https://youtu.be/mEw1itG40q8",
+    "facial_recognition": true,
+    "ai_model": "Alexa",
+    "intended_setting": "Home",
+    "social_role": "Home monitoring / companion",
+    "autonomous": true,
+    "navigation": "SLAM",
+    "made_in": "USA"
   },
   {
     "cat": "Quadruped",
@@ -126141,7 +126196,7 @@
     "cameras": "Wide-angle stereo camera (120° FoV, tracks up to 10 people)",
     "mic_array": "Microphone array with sound localization (far-field to 5m)",
     "display": "Back-projected animated face (swappable translucent masks)",
-    "ai_model": "FurhatAI conversational platform; LLM-swappable NLU",
+    "ai_model": "Conversational AI / LLM",
     "voice_assistant": "120+ languages, 200+ voices (Azure/Amazon/ElevenLabs)",
     "ros": false,
     "api": true,
@@ -126156,7 +126211,7 @@
       "HRI",
       "back-projection"
     ],
-    "fig": "🗣️",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
@@ -126177,7 +126232,14 @@
       "https://cdn.prod.website-files.com/66b323f041094f01cd836ea9/68c2b64749bfa1a489b521fc_ledfurhat.png"
     ],
     "img": "https://cdn.prod.website-files.com/66b323f041094f01cd836ea9/681e824f10f250848c2ee989_Copy%20of%20Furhat_Front-White_01.jpg",
-    "video": "https://youtu.be/IyC5BlppLHk"
+    "video": "https://youtu.be/IyC5BlppLHk",
+    "face_display": "Back-projected animated face",
+    "emotional_expression": true,
+    "voice_recognition": true,
+    "speech_synthesis": true,
+    "languages": "40+",
+    "neck_dof": 3,
+    "social_role": "Conversational social robot (research/commercial)"
   },
   {
     "id": "vinrobotics-vr-h3",
