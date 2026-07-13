@@ -89756,7 +89756,7 @@
   },
   {
     "id": "zipline-platform-2-2024",
-    "name": "Platform 2",
+    "name": "Platform 2 (P2)",
     "brand": "Zipline",
     "cat": "Drones",
     "sub": "Delivery Drone",
@@ -89805,7 +89805,7 @@
     "speed_ms": 31,
     "max_range": 16,
     "battery_life_typical": 40,
-    "frame_type": "Hybrid VTOL with tethered delivery droid",
+    "frame_type": "Fixed-wing + droid (tethered delivery)",
     "autonomous": true,
     "use_cases": [
       "Precise home delivery",
@@ -89813,7 +89813,11 @@
       "Healthcare delivery"
     ],
     "website": "https://www.zipline.com",
-    "video": "https://youtu.be/airEzThGlx8"
+    "video": "https://youtu.be/airEzThGlx8",
+    "max_range_km": 16,
+    "obstacle_sensing": "Acoustic + onboard perception",
+    "precision_landing": true,
+    "regulatory_class": "BVLOS (FAA)"
   },
   {
     "id": "wing-hummingbird-2019",
@@ -89921,7 +89925,7 @@
     "return_to_home": true,
     "waypoint": true,
     "thermal": false,
-    "made_in": "USA / Switzerland",
+    "made_in": "USA",
     "os": "Matternet",
     "payload_kg": 2,
     "payload": 2,
@@ -89930,13 +89934,15 @@
     "speed_ms": 18,
     "max_range": 20,
     "battery_life_typical": 20,
-    "frame_type": "Quadcopter",
+    "frame_type": "Quadcopter (station-based)",
     "motor_count": 4,
     "use_cases": [
       "Medical / lab specimen delivery",
       "Healthcare logistics",
       "Urban parcel delivery"
-    ]
+    ],
+    "max_range_km": 20,
+    "regulatory_class": "BVLOS (FAA type cert)"
   },
   {
     "id": "amazon-prime-air-mk30-2024",
@@ -90936,14 +90942,16 @@
     "thermal": false,
     "made_in": "China",
     "os": "Antigravity",
-    "video_res": "8K 360",
-    "frame_type": "360-camera drone",
+    "video_res": "8K 360°",
+    "frame_type": "360° camera drone",
     "motor_count": 4,
     "use_cases": [
       "Immersive 360 aerial capture",
       "Reframe-in-post video"
     ],
-    "video": "https://youtu.be/1v5OxtYJzJQ"
+    "video": "https://youtu.be/1v5OxtYJzJQ",
+    "camera_mp": 50,
+    "obstacle_sensing": "Invisible-frame 360 capture"
   },
   {
     "id": "hoverair-x1-2023",
@@ -91758,7 +91766,7 @@
     "return_to_home": true,
     "waypoint": true,
     "thermal": false,
-    "made_in": "Israel / USA",
+    "made_in": "USA / Israel",
     "os": "Flytrex",
     "payload_kg": 2.5,
     "payload": 2.5,
@@ -91767,7 +91775,7 @@
     "speed_ms": 20,
     "max_range": 8,
     "battery_life_typical": 20,
-    "frame_type": "Quadcopter (tethered drop)",
+    "frame_type": "Hexacopter (tether delivery)",
     "motor_count": 6,
     "use_cases": [
       "Backyard food delivery",
@@ -91780,7 +91788,10 @@
       "https://res.cloudinary.com/djrojgec1/image/upload/v1780734234/myrobot/dssfsijnx9acxpukqhoh.jpg",
       "https://techcrunch.com/wp-content/uploads/2022/03/Flytrex_Drone.jpg",
       "https://substackcdn.com/image/fetch/$s_!2-2W!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F47414c1c-ae33-4be8-a7e2-4e944f40e031_1456x749.webp"
-    ]
+    ],
+    "max_range_km": 11,
+    "drop_mechanism": "Tether wire",
+    "regulatory_class": "BVLOS (FAA Part 135)"
   },
   {
     "id": "ehang-216s-2022",
@@ -120866,7 +120877,13 @@
       "https://d15shllkswkct0.cloudfront.net/wp-content/blogs.dir/1/files/2023/03/wing.png",
       "https://image.cnbcfm.com/api/v1/image/106138814-1568907369032wing-walgreens-photo-final.jpg?v=1568907434&w=1600&h=900"
     ],
-    "video": "https://youtu.be/d51c9CpSNqw"
+    "video": "https://youtu.be/d51c9CpSNqw",
+    "frame_type": "Fixed-wing hybrid VTOL",
+    "max_range_km": 12,
+    "max_speed_kmh": 110,
+    "autonomous": true,
+    "drop_mechanism": "Tether winch",
+    "regulatory_class": "BVLOS (FAA Part 135)"
   },
   {
     "cat": "Industrial",
@@ -137964,7 +137981,24 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "frame_type": "Foldable quadcopter",
+    "motor_count": 4,
+    "motor_type": "A50 (4100 W each)",
+    "weight_kg": 46,
+    "max_speed_ms": 13.8,
+    "max_altitude_m": 2000,
+    "ip_rating": "IPX6K",
+    "operating_temp_max": 40,
+    "camera_mp": 12,
+    "rtk_accuracy_cm": 10,
+    "obstacle_sensing": "4D radar + terrain-following",
+    "gnss_systems": "RTK GNSS",
+    "ai_model": "SuperX 4 Pro",
+    "made_in": "China",
+    "frame_material": "Glass + carbon-fiber composite",
+    "battery_wh": 960,
+    "mapping_software": "XAG One"
   },
   {
     "id": "hylio-ag-272",
