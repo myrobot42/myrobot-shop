@@ -41281,7 +41281,11 @@
       "https://www.mybotshop.de/media/image/product/7899/lg/realman-robotic-arm-rml63~3.jpg",
       "https://www.mybotshop.de/media/image/product/7899/lg/realman-robotic-arm-rml63~4.jpg"
     ],
-    "website": "https://www.realman-robotics.com"
+    "website": "https://www.realman-robotics.com",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "collision_detection": true,
+    "frame_material": "Integrated lightweight"
   },
   {
     "id": "realman-rmc-da-dual-arm",
@@ -41395,7 +41399,11 @@
       "https://www.unipos.net/wp-content/uploads/gen72-b_image1.jpg",
       "https://jp.images-monotaro.com/Monotaro3/pi/full/mono58676558-250802-02.jpg"
     ],
-    "website": "https://www.realman-robotics.com"
+    "website": "https://www.realman-robotics.com",
+    "axes_config": "7-axis",
+    "repeatability_mm": 0.05,
+    "collision_detection": true,
+    "frame_material": "Integrated lightweight"
   },
   {
     "id": "realman-rml63-6f",
@@ -43872,7 +43880,14 @@
       "https://revoluciontech.com/wp-content/uploads/2025/04/AUBO-IS35.png",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZLxEHEbiQGIRqrO65AVUmjxlG4BDaKdRAVJTlQEZGfw&s=10"
     ],
-    "video": "https://www.youtube.com/shorts/uTw6wLghIr4?feature=share"
+    "video": "https://www.youtube.com/shorts/uTw6wLghIr4?feature=share",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "controller": "AUBO CB",
+    "programming": "Drag-teach + graphical",
+    "collision_detection": true,
+    "mounting": "Any angle"
   },
   {
     "id": "aubo-aubo-is20l",
@@ -43913,17 +43928,12 @@
     ],
     "manufacturer_url": "https://www.aubo-cobot.com",
     "weight_kg": 68,
-    "repeatability_mm": 0.05,
+    "repeatability_mm": 0.03,
     "speed_ms": 3,
     "operating_temp_max": 45,
     "ip_rating": "IP54",
     "power_consumption_w": 500,
-    "mounting": [
-      "Floor",
-      "ceiling",
-      "wall",
-      "angle"
-    ],
+    "mounting": "Any angle",
     "safety_certification": [
       "ISO 10218",
       "ISO/TS 15066",
@@ -43954,7 +43964,11 @@
     "gallery": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMqdcUDEfXrQAVVGIigx-lhibJj2qozJKnF9I4oOGYKQ&s",
       "https://cdn.robodk.com/img/Machining.png"
-    ]
+    ],
+    "axes_config": "6-axis",
+    "controller": "AUBO CB",
+    "programming": "Drag-teach + graphical",
+    "collision_detection": true
   },
   {
     "id": "aubo-aubo-i20",
@@ -62246,7 +62260,14 @@
     "gallery": [
       "https://image.made-in-china.com/2f0j00nNEojIbaSmqs/Aubo-Robotics-AMR300-Collaborative-Robots-Mobile-Robots-Welding-Cobots-Best-Collaborative-Robots.jpg"
     ],
-    "website": "https://www.aubo-cobot.com"
+    "website": "https://www.aubo-cobot.com",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "controller": "AUBO CB",
+    "programming": "Drag-teach + graphical",
+    "collision_detection": true,
+    "mounting": "Any angle"
   },
   {
     "id": "realman-robotics-rm65-6f",
@@ -120668,7 +120689,19 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdbLk1dm3TGqK_cxUHgvVcjUs3sJn9PKeteHWJiXNKtv6cYfJKialXuLwV&s=10"
     ],
     "website": "https://www.fanuc.com",
-    "video": "https://youtu.be/uKxV8gAzYqk"
+    "video": "https://youtu.be/uKxV8gAzYqk",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "ip_rating": "IP67",
+    "controller": "FANUC R-30iB Mini Plus",
+    "teach_pendant": "Tablet (drag & drop)",
+    "programming": "Drag-and-drop + hand-guided teaching",
+    "ft_sensor": true,
+    "ft_sensor_type": "Built-in force sensing",
+    "collision_detection": true,
+    "mounting": "Floor / wall / ceiling",
+    "industrial_protocols": "EtherNet/IP, PROFINET, Modbus TCP",
+    "ce": true
   },
   {
     "cat": "Industrial",
@@ -134216,7 +134249,17 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "ip_rating": "IP67"
+    "ip_rating": "IP67",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.04,
+    "controller": "FANUC R-30iB Mini Plus",
+    "teach_pendant": "Tablet (drag & drop)",
+    "programming": "Drag-and-drop + hand-guided teaching",
+    "ft_sensor": true,
+    "ft_sensor_type": "Built-in force sensing",
+    "collision_detection": true,
+    "mounting": "Floor / wall / ceiling",
+    "industrial_protocols": "EtherNet/IP, PROFINET, Modbus TCP"
   },
   {
     "id": "fanuc-crx-10ia",
@@ -134245,7 +134288,17 @@
     "rating": 4,
     "weight_kg": 40,
     "repeatability": 0.04,
-    "ip_rating": "IP67"
+    "ip_rating": "IP67",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.04,
+    "controller": "FANUC R-30iB Mini Plus",
+    "teach_pendant": "Tablet (drag & drop)",
+    "programming": "Drag-and-drop + hand-guided teaching",
+    "ft_sensor": true,
+    "ft_sensor_type": "Built-in force sensing",
+    "collision_detection": true,
+    "mounting": "Floor / wall / ceiling",
+    "industrial_protocols": "EtherNet/IP, PROFINET, Modbus TCP"
   },
   {
     "id": "fanuc-crx-20ia-l",
@@ -134273,7 +134326,17 @@
     "score": 75,
     "rating": 4,
     "repeatability": 0.04,
-    "ip_rating": "IP67"
+    "ip_rating": "IP67",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "controller": "FANUC R-30iB Mini Plus",
+    "teach_pendant": "Tablet (drag & drop)",
+    "programming": "Drag-and-drop + hand-guided teaching",
+    "ft_sensor": true,
+    "ft_sensor_type": "Built-in force sensing",
+    "collision_detection": true,
+    "mounting": "Floor / wall / ceiling",
+    "industrial_protocols": "EtherNet/IP, PROFINET, Modbus TCP"
   },
   {
     "id": "fanuc-crx-30ia",
@@ -134300,7 +134363,18 @@
     "score": 75,
     "rating": 4,
     "reach_mm": 1756,
-    "repeatability": 0.05
+    "repeatability": 0.05,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "ip_rating": "IP67",
+    "controller": "FANUC R-30iB Mini Plus",
+    "teach_pendant": "Tablet (drag & drop)",
+    "programming": "Drag-and-drop + hand-guided teaching",
+    "ft_sensor": true,
+    "ft_sensor_type": "Built-in force sensing",
+    "collision_detection": true,
+    "mounting": "Floor / wall / ceiling",
+    "industrial_protocols": "EtherNet/IP, PROFINET, Modbus TCP"
   },
   {
     "id": "kuka-lbr-iisy-3-r760",
