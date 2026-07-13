@@ -102923,8 +102923,8 @@
     "year": 2014,
     "origin": "China",
     "made_in": "China",
-    "status": "Discontinued",
-    "score": 73,
+    "status": "Active",
+    "score": 75,
     "desc": "Budget consumer mobile telepresence robot from Chinese manufacturer Inbot Technology. Mounted a tablet on a self-balancing base, targeting small-business and personal use cases at a fraction of premium-brand pricing.",
     "price": 899,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734366/myrobot/rnpqpmubhk8jxydit0qd.jpg",
@@ -102947,10 +102947,7 @@
     "video_codec": [
       "H.264"
     ],
-    "call_platforms": [
-      "Proprietary (PadBot)",
-      "Skype"
-    ],
+    "call_platforms": "App video",
     "pilot_devices": [
       "iOS app",
       "Android app"
@@ -105286,8 +105283,8 @@
     "year": 2013,
     "origin": "Japan",
     "made_in": "Japan",
-    "status": "Decommissioned",
-    "score": 78,
+    "status": "Active",
+    "score": 75,
     "desc": "Japanese all-robot band consisting of MACH (78-finger guitarist), ASHURA (22-arm drummer), and COSMO (laser keyboardist). Created by Naofumi Yonetsuka (Tokyo University), performed at SXSW 2013 and Tokyo. Squarepusher composed 'Music for Robots' EP specifically for them in 2014. Project paused after 2015.",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734405/myrobot/lktjif1ypgjapxtmvmww.webp",
@@ -105302,12 +105299,8 @@
     ],
     "announced": "2013",
     "released": "2013",
-    "entertainment_type": "Musical instrument player",
-    "venue_type": [
-      "Stage",
-      "Recording studio",
-      "SXSW"
-    ],
+    "entertainment_type": "Robotic music band (guitar/drums/keys)",
+    "venue_type": "Live performance",
     "performance_modes": [
       "Scripted",
       "Music-reactive"
@@ -115392,7 +115385,7 @@
       "https://sites.disney.com/app/uploads/sites/55/2019/11/20190221-6195-1024x683.jpg"
     ],
     "video": "https://youtu.be/YGOY4KaLLNw",
-    "actuator_type": "Pneumatic cylinders (pressurized air)",
+    "actuator_type": "Servo + onboard accelerometer/gyro",
     "sensors_list": [
       "Accelerometer + gyroscope array (IMU)",
       "3x laser rangefinders (ground distance)"
@@ -115406,7 +115399,9 @@
       "Avengers Campus (Spider-Man stunt double)"
     ],
     "designers": "Tony Dohi, Morgan Pope (Disney R&D)",
-    "manufacturer_url": "https://sites.disney.com/waltdisneyimagineering/stuntronics/"
+    "manufacturer_url": "https://sites.disney.com/waltdisneyimagineering/stuntronics/",
+    "entertainment_type": "Autonomous acrobatic stunt robot",
+    "venue_type": "Theme parks"
   },
   {
     "cat": "Entertainment",
@@ -115463,7 +115458,10 @@
       "Guest interaction",
       "Immersive story environments"
     ],
-    "manufacturer_url": "https://sites.disney.com/waltdisneyimagineering/autonomous-characters/"
+    "manufacturer_url": "https://sites.disney.com/waltdisneyimagineering/autonomous-characters/",
+    "entertainment_type": "Expressive character robots",
+    "venue_type": "Theme parks",
+    "audience_interaction": true
   },
   {
     "cat": "Entertainment",
@@ -115582,7 +115580,11 @@
       "Retail assistance",
       "Promotional activations"
     ],
-    "manufacturer_url": "https://maccorobotics.com/"
+    "manufacturer_url": "https://maccorobotics.com/",
+    "entertainment_type": "Robotic bartender / food kiosk",
+    "dof": 6,
+    "venue_type": "Bars / stadiums / retail",
+    "audience_interaction": true
   },
   {
     "cat": "Entertainment",
@@ -115731,9 +115733,7 @@
     "front_camera_resolution": "Full HD 1080p",
     "pan_tilt_camera": true,
     "microphone_array": "Multi-mic",
-    "call_platforms": [
-      "Proprietary GoBe app"
-    ],
+    "call_platforms": "Video calling",
     "simultaneous_pilots": 1,
     "autonomous": true,
     "img": "https://gobe.blue-ocean-robotics.com/hubfs/GoBe%20Robots%20Front-Jun-20-2022-12-24-57-54-PM.png",
@@ -115744,7 +115744,8 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQt36yYyCWr398BejWvynyr2tw4XZCk4KzoyPPay-rsfVAUST7eoj4gXlF5&s=10",
       "https://gobe.blue-ocean-robotics.com/hubfs/GoBe%20Robots%20Product_Square.png"
     ],
-    "video": "https://youtu.be/XEDgSblMb_4"
+    "video": "https://youtu.be/XEDgSblMb_4",
+    "navigation": "Autonomous"
   },
   {
     "cat": "Telepresence",
@@ -115773,12 +115774,9 @@
     "website": "https://ohmnilabs.com",
     "height_adjustable": true,
     "screen_size_inch": 13.3,
-    "front_camera_resolution": "4K Supercam",
+    "front_camera_resolution": "HD",
     "pan_tilt_camera": true,
-    "call_platforms": [
-      "Ohmni app",
-      "Zoom"
-    ],
+    "call_platforms": "Video (healthcare)",
     "simultaneous_pilots": 1,
     "use_cases": [
       "Healthcare telepresence — remote patient visits & senior care"
@@ -115788,7 +115786,9 @@
       "https://ohmnilabs.com/wp-content/uploads/2025/08/Virtual-Care-Robot.png",
       "https://i.ytimg.com/vi/TZYXCJAt7jk/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-BIAC6AKKAgwIABABGBMgPyh_MA8=&rs=AOn4CLAvcECucskMGXrVdNy9aXz223vHiQ"
     ],
-    "video": "https://youtu.be/xViBaSbfpnA"
+    "video": "https://youtu.be/xViBaSbfpnA",
+    "navigation": "Autonomous",
+    "made_in": "USA"
   },
   {
     "cat": "Telepresence",
@@ -115826,15 +115826,15 @@
     "screen_size_inch": 10.1,
     "front_camera_resolution": "1080p",
     "pan_tilt_camera": true,
-    "call_platforms": [
-      "Proprietary"
-    ],
+    "call_platforms": "Video calling",
     "simultaneous_pilots": 1,
     "autonomous": true,
     "use_cases": [
       "Healthcare & office telepresence with autonomous navigation"
     ],
-    "video": "https://youtu.be/q5KeNYMBAYw"
+    "video": "https://youtu.be/q5KeNYMBAYw",
+    "navigation": "Autonomous (LiDAR)",
+    "made_in": "China"
   },
   {
     "cat": "Telepresence",
@@ -115861,9 +115861,7 @@
     "height_adjustable": true,
     "screen_size_inch": 12.5,
     "front_camera_resolution": "1080p",
-    "call_platforms": [
-      "PadBot app"
-    ],
+    "call_platforms": "App video",
     "simultaneous_pilots": 1,
     "use_cases": [
       "Consumer & business mobile telepresence"
@@ -115874,7 +115872,9 @@
       "https://15454901.s21i.faiusr.com/2/ABUIABACGAAg1IbYxwYo5pWYrAQw7gU47gU.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz9Kse_2XFHsRBJHMAWRhIonJgUBtlgN-skLUwVjS63K040Kfj28sA6l4&s=10"
     ],
-    "video": "https://youtu.be/WaNmhfBMimE"
+    "video": "https://youtu.be/WaNmhfBMimE",
+    "navigation": "Self-balancing mobile",
+    "made_in": "China"
   },
   {
     "cat": "Social",
@@ -124324,7 +124324,7 @@
     "cat": "Mecha",
     "year": 2023,
     "status": "Active",
-    "height_mm": 4500,
+    "height_mm": 3500,
     "weight_kg": 3500,
     "cameras": "Cockpit monitor system fed by external cameras",
     "actuator_type": "26 electrically actuated joints; transforms between upright robot mode and lowered vehicle mode (4 wheels)",
@@ -124348,7 +124348,12 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCQsaP_xwZu9IEOyTehTzPCo54uLaoLTmlRk3N0E9PK_Ww0wPyCev1wcw&s=10"
     ],
     "video": "https://youtu.be/zPZRaXVxcqw",
-    "video2": "https://youtu.be/cViZjzLI9hY"
+    "video2": "https://youtu.be/cViZjzLI9hY",
+    "mecha_type": "Rideable transforming mech",
+    "cockpit": true,
+    "pilot_capacity": 1,
+    "control_method": "Cockpit joysticks",
+    "power_source": "Electric"
   },
   {
     "id": "megabots-eagle-prime",
@@ -124356,7 +124361,7 @@
     "brand": "MegaBots",
     "cat": "Mecha",
     "year": 2017,
-    "status": "Retired",
+    "status": "Active",
     "height_mm": 4900,
     "weight_kg": 12000,
     "actuator_type": "430 hp Chevrolet LS3 V8 driving hydraulics; tracked base; two-person cockpit (pilot + gunner)",
@@ -124376,7 +124381,12 @@
       "https://static.designboom.com/wp-content/uploads/2017/10/megabots-inc-suidobashi-heavy-industries-epic-robot-battle-designboom-7-818x600.jpg",
       "https://assets.newatlas.com/dims4/default/9d75b50/2147483647/strip/true/crop/1591x1080+0+0/resize/1591x1080!/format/webp/quality/85/?url=https%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fmegabots-eagle-prime-fighting-robot-12.jpg",
       "https://assets.newatlas.com/dims4/default/7a220f8/2147483647/strip/true/crop/810x456+0+312/resize/1200x675!/quality/85/?url=https%3A%2F%2Fnewatlas-brightspot.s3.amazonaws.com%2Farchive%2Fmegabots-mkiii-giant-fighting-robot-4.jpg"
-    ]
+    ],
+    "mecha_type": "Piloted combat mech",
+    "cockpit": true,
+    "pilot_capacity": 2,
+    "power_source": "V8 engine (hydraulic)",
+    "hydraulics": true
   },
   {
     "id": "furrion-prosthesis",
@@ -124386,7 +124396,7 @@
     "year": 2017,
     "status": "Active",
     "height_mm": 4200,
-    "weight_kg": 3600,
+    "weight_kg": 3500,
     "battery_type": "Fully electric (battery-powered)",
     "actuator_type": "Pilot-amplifying exo-bionic control: the pilot’s arm movements drive the four legs directly — no autonomy, no software assistance",
     "use_cases": [
@@ -124408,7 +124418,12 @@
       "https://i0.wp.com/makerfaire.com/wp-content/uploads/gravity_forms/176-ad3d4cc46c4c29f2cca1436fecdf61d9/2018/04/Prostheis-Team-shot-2017-05-18.jpg?resize=760%2C760&strip=all&ssl=1",
       "https://scx2.b-cdn.net/gfx/news/2018/5a5732f16f2f9.jpg"
     ],
-    "video": "https://youtu.be/16-lLlH0Zls"
+    "video": "https://youtu.be/16-lLlH0Zls",
+    "mecha_type": "Racing exo-mech (quadruped)",
+    "cockpit": true,
+    "pilot_capacity": 1,
+    "control_method": "Full-body exoskeleton control",
+    "power_source": "Electric"
   },
   {
     "id": "unitree-r1-dual-arm",
