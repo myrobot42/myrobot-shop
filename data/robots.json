@@ -100506,7 +100506,7 @@
   },
   {
     "id": "minerva-ii-1a",
-    "name": "MINERVA-II-1A (Rover 1A / HIBOU)",
+    "name": "MINERVA-II-1A (Rover 1A)",
     "brand": "JAXA",
     "cat": "Aerospace",
     "sub": "Asteroid Hopper",
@@ -100539,7 +100539,7 @@
     "regions": [
       "Japan"
     ],
-    "operating_agency": "JAXA / University of Aizu",
+    "operating_agency": "JAXA (Hayabusa2)",
     "made_in": "Japan",
     "height_mm": 70,
     "diameter_mm": 180,
@@ -100547,9 +100547,9 @@
     "rtos": "Custom JAXA flight software",
     "dof": 1,
     "actuator_type": "Internal torquer / flywheel (no wheels)",
-    "target_body": "Asteroid 162173 Ryugu",
-    "mission_type": "Asteroid hopping rover (micro-gravity)",
-    "mission_status": "Decommissioned",
+    "target_body": "Asteroid Ryugu",
+    "mission_type": "Hopping micro-rover",
+    "mission_status": "Mission complete (2018, first asteroid rover)",
     "launch_date": "2014-12-03",
     "arrival_date": "2018-09-21",
     "mission_end_date": "2019-09",
@@ -100562,7 +100562,7 @@
       "Photodiodes",
       "Accelerometer"
     ],
-    "power_source": "Solar cells",
+    "power_source": "Solar",
     "website": "https://global.jaxa.jp/projects/sas/hayabusa2/",
     "os": "JAXA",
     "release_year": 2018,
@@ -100574,7 +100574,8 @@
     "gallery": [
       "https://hips.hearstapps.com/hmg-prod/images/jaxa-minerva-1537455010.jpg?resize=1400:*",
       "https://www.hayabusa2.jaxa.jp/en/topics/20180919e/img/fig3.jpg"
-    ]
+    ],
+    "locomotion": "Hopping (internal torquer)"
   },
   {
     "id": "minerva-ii-1b",
@@ -110272,9 +110273,9 @@
     "made_in": "China",
     "weight_kg": 1200,
     "frame_material": "Aluminum alloy",
-    "target_body": "Moon (far side, Von Kármán crater)",
-    "mission_type": "Far-side lander + rover deployer",
-    "mission_status": "Active (still operational as of 2026)",
+    "target_body": "Moon (far side)",
+    "mission_type": "Lander (+ Yutu-2 rover)",
+    "mission_status": "Active (first far-side landing, 2019)",
     "launch_date": "2018-12-07",
     "arrival_date": "2019-01-03",
     "launch_vehicle": "Long March 3B/E",
@@ -110286,7 +110287,7 @@
       "Lunar Lander Neutrons and Dosimetry (LND)",
       "Biological Experiment Payload (carried cotton seeds — first plant grown on Moon)"
     ],
-    "power_source": "Solar array + RTG (for night survival)",
+    "power_source": "Solar + radioisotope heater",
     "tags": [
       "casc",
       "planetary",
@@ -120101,7 +120102,13 @@
     "use_cases": [
       "Mars aerial scouting (72 flights, 2021-2024)"
     ],
-    "video": "https://youtu.be/qMbHE_VXI-8"
+    "video": "https://youtu.be/qMbHE_VXI-8",
+    "target_body": "Mars",
+    "mission_type": "Helicopter (rotorcraft scout)",
+    "mission_status": "Mission complete (2021–2024, 72 flights)",
+    "operating_agency": "NASA JPL",
+    "locomotion": "Coaxial counter-rotating rotors",
+    "power_source": "Solar + Li-ion"
   },
   {
     "cat": "Aerospace",
@@ -120135,7 +120142,18 @@
       "https://everydayastronaut.com/wp-content/uploads/2024/02/F9-IM1-Payloads-001.jpg"
     ],
     "website": "https://www.intuitivemachines.com",
-    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Intuitive_Machines%E2%80%99_Nova-C_lunar_lander_%28IM_00309%29_%28cropped%29.jpg/330px-Intuitive_Machines%E2%80%99_Nova-C_lunar_lander_%28IM_00309%29_%28cropped%29.jpg"
+    "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Intuitive_Machines%E2%80%99_Nova-C_lunar_lander_%28IM_00309%29_%28cropped%29.jpg/330px-Intuitive_Machines%E2%80%99_Nova-C_lunar_lander_%28IM_00309%29_%28cropped%29.jpg",
+    "target_body": "Moon",
+    "mission_type": "Lunar lander",
+    "mission_status": "Mission complete (2024)",
+    "launch_date": "2024-02-15",
+    "arrival_date": "2024-02-22",
+    "launch_vehicle": "Falcon 9",
+    "operating_agency": "Intuitive Machines / NASA CLPS",
+    "mission_duration_days": 14,
+    "power_source": "Solar + battery",
+    "payload_instruments": "SCALPSS, ROLSES, NDL LIDAR, ILO-X, LN-1",
+    "made_in": "USA"
   },
   {
     "cat": "Aerospace",
@@ -120183,7 +120201,13 @@
       "Microgravity research"
     ],
     "made_in": "USA",
-    "video": "https://youtu.be/i0OEF2cRa3E"
+    "video": "https://youtu.be/i0OEF2cRa3E",
+    "target_body": "Earth orbit (ISS)",
+    "mission_type": "Free-flying robots (Bumble/Honey/Queen)",
+    "operating_agency": "NASA Ames",
+    "locomotion": "Impeller/fan propulsion (6-DOF)",
+    "autonomy_level": "Autonomous",
+    "power_source": "Battery (auto-dock charge)"
   },
   {
     "cat": "Aerospace",
@@ -120226,7 +120250,12 @@
       "Lunar surface imaging (SLIM mission, 2024)"
     ],
     "made_in": "Japan",
-    "website": "https://global.jaxa.jp"
+    "website": "https://global.jaxa.jp",
+    "target_body": "Moon",
+    "mission_type": "Transformable mini-rover",
+    "operating_agency": "JAXA",
+    "locomotion": "Transformable sphere (2 hemispheres)",
+    "power_source": "Battery"
   },
   {
     "cat": "Aerospace",
@@ -120267,7 +120296,13 @@
     "made_in": "USA",
     "actuator_type": "4-wheel rover, solar powered",
     "autonomous": true,
-    "video": "https://youtu.be/8PaW5AY4cQg"
+    "video": "https://youtu.be/8PaW5AY4cQg",
+    "target_body": "Moon",
+    "mission_type": "Cooperative autonomous rovers (×3)",
+    "operating_agency": "NASA JPL",
+    "locomotion": "4-wheel drive",
+    "autonomy_level": "Fully autonomous (multi-robot swarm)",
+    "power_source": "Solar"
   },
   {
     "cat": "Aerospace",
@@ -120312,7 +120347,12 @@
       "ISS astronaut AI assistant (IBM Watson)"
     ],
     "made_in": "Germany",
-    "video": "https://youtu.be/ImFg_J_ge_k"
+    "video": "https://youtu.be/ImFg_J_ge_k",
+    "target_body": "Earth orbit (ISS)",
+    "mission_type": "AI crew-assistant free-flyer",
+    "operating_agency": "DLR / Airbus / ESA",
+    "ai_model": "IBM Watson",
+    "locomotion": "Fan-propelled free-flyer"
   },
   {
     "cat": "Aerospace",
@@ -120324,7 +120364,7 @@
     "sub": "Robotic Arm (Lunar Gateway)",
     "year": 2030,
     "origin": "Canada",
-    "status": "Announced",
+    "status": "Active",
     "desc": "Canadarm3 is Canada's AI-enabled robotic system for NASA's Lunar Gateway - a smart, largely autonomous arm (built by MDA) that will maintain, repair and inspect the Gateway station in lunar orbit without constant human control.",
     "tags": [
       "aerospace",
@@ -120354,7 +120394,13 @@
     ],
     "made_in": "Canada",
     "website": "https://www.asc-csa.gc.ca/eng/canadarm3/",
-    "video": "https://youtu.be/iFjElYdLt2E"
+    "video": "https://youtu.be/iFjElYdLt2E",
+    "target_body": "Lunar orbit (Gateway)",
+    "mission_type": "Robotic servicing arm",
+    "operating_agency": "CSA / MDA",
+    "arm_dof": 7,
+    "autonomy_level": "AI-enabled autonomous",
+    "power_source": "Solar (Gateway)"
   },
   {
     "cat": "Aerospace",
@@ -120397,8 +120443,13 @@
     "use_cases": [
       "ISS Russian segment external servicing"
     ],
-    "made_in": "Europe (ESA/Airbus)",
-    "video": "https://youtu.be/dahULS4-rFg"
+    "made_in": "Europe (Airbus)",
+    "video": "https://youtu.be/dahULS4-rFg",
+    "target_body": "Earth orbit (ISS)",
+    "mission_type": "Robotic arm (Russian segment)",
+    "operating_agency": "ESA / Roscosmos",
+    "arm_dof": 7,
+    "power_source": "ISS"
   },
   {
     "cat": "Educational",
