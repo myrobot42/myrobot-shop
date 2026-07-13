@@ -47290,7 +47290,12 @@
     "ota": true,
     "depth_sensing": true,
     "api": "VDA 5050; MQTT / ModBus / OPC UA for peripherals",
-    "video": "https://youtu.be/y7inwYFGGEs"
+    "video": "https://youtu.be/y7inwYFGGEs",
+    "navigation": "LiDAR SLAM",
+    "load_transfer_type": "Platform / fork",
+    "safety_scanner": true,
+    "wms_integration": "SynQ",
+    "made_in": "Germany"
   },
   {
     "id": "swisslog-intramove-amr-1500",
@@ -47350,7 +47355,12 @@
     "gallery": [
       "https://www.swisslog.com/-/media/swisslog/images/logistics-warehouse-distribution-automation/products-and-systems/transport/mobile-robotics-amr/swisslog-product-intramove-amr-for-pallets.jpg?rev=613378e43c9243b198680b77e0e96b1d&w=1900&hash=55CCEB94B88370A6F4293D0A1A3061DF",
       "https://globalsupplychainme.com/wp-content/uploads/Image-2-%E2%80%93-IntraMove-AMRs-provide-versatile-horizontal-transport-for-payloads-up-to-3000-kg-1024x576.jpg"
-    ]
+    ],
+    "navigation": "LiDAR SLAM",
+    "load_transfer_type": "Platform",
+    "safety_scanner": true,
+    "wms_integration": "SynQ",
+    "made_in": "Germany"
   },
   {
     "id": "swisslog-intramove-amr-600",
@@ -55217,7 +55227,10 @@
     "auto_charge": true,
     "ai_cloud_required": true,
     "ota": true,
-    "api": "Ocado IQ cloud"
+    "api": "Ocado IQ cloud",
+    "navigation": "LiDAR + vision SLAM",
+    "load_transfer_type": "Autonomous cart transport",
+    "made_in": "USA"
   },
   {
     "id": "6-river-systems-ocado-group-chuck-",
@@ -57376,7 +57389,11 @@
       "https://www.swisslog.com/-/media/swisslog/images/logistics-warehouse-distribution-automation/products-and-systems/storage-systems/mini-load-system/carrypick/carrypick-2023.jpg?rev=34364acb8fa44a5492ac6712a5556f85&w=1900&hash=9466EC0602292B6FC68D4376A72C80A0",
       "https://www.swisslog.com/-/media/swisslog/images/logistics-warehouse-distribution-automation/products-and-systems/storage-systems/mini-load-system/carrypick/swisslog-news-carrypick-next-generation.jpg?rev=641a8a7037c8405fac7da572b1b7ca25&w=1900&hash=1D691731BB6F80A1C6DD3FA029F8C449"
     ],
-    "video": "https://youtu.be/zxVx9ULAA68"
+    "video": "https://youtu.be/zxVx9ULAA68",
+    "navigation": "QR-code grid",
+    "load_transfer_type": "Mobile rack lift (goods-to-person)",
+    "wms_integration": "SynQ",
+    "made_in": "Germany"
   },
   {
     "id": "swisslog-healthcare-otsaw-swisslog-transcar-agv",
@@ -63929,7 +63946,10 @@
     "gallery": [
       "https://www.materialhandling247.com/images/article/Chuck-flex-slot.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/12/1boFiWxHQgviFIrqAixy/image.jpg"
-    ]
+    ],
+    "navigation": "LiDAR + vision SLAM",
+    "load_transfer_type": "Collaborative cart (goods-to-person)",
+    "made_in": "USA"
   },
   {
     "id": "geekplus-m-series-amr",
@@ -118279,21 +118299,23 @@
     "use_cases": [
       "Warehouse goods-to-person & sortation AMR fleet (GreyMatter software)"
     ],
-    "made_in": "USA/India",
+    "made_in": "USA / India",
     "website": "https://www.greyorange.com",
     "robot_type": "Goods-to-person AMR",
     "navigation_type": "Vision + LiDAR SLAM",
     "max_speed_ms": 1.7,
     "safety_lidar": true,
     "fleet_software": "GreyMatter",
-    "wms_integration": true,
+    "wms_integration": "GreyMatter",
     "dock_charging": true,
     "opportunity_charging": true,
     "multi_floor": false,
     "safety_certifications": [
       "CE"
     ],
-    "video": "https://youtu.be/Cc7WhVdujvk"
+    "video": "https://youtu.be/Cc7WhVdujvk",
+    "navigation": "Vision / LiDAR SLAM",
+    "load_transfer_type": "Goods-to-person (rack/cart)"
   },
   {
     "cat": "AGV/AMR",
@@ -118340,19 +118362,27 @@
     "safety_lidar": true,
     "bumper_safety": true,
     "fleet_software": "Seegrid Supervisor",
-    "wms_integration": true,
+    "wms_integration": "Fleet Central",
     "dock_charging": true,
     "safety_certifications": [
       "ANSI B56.5"
     ],
-    "video": "https://youtu.be/bmNWMiArQpE"
+    "video": "https://youtu.be/bmNWMiArQpE",
+    "tow_capacity_kg": 4536,
+    "speed_ms": 1.8,
+    "navigation": "Vision-guided (2D/3D LiDAR + stereo SLAM)",
+    "safety_scanner": true,
+    "safety_rating": "ANSI B56.5 / R15.08",
+    "opportunity_charging": true,
+    "load_transfer_type": "Tow (cart trains)",
+    "gradeability_pct": 2.5
   },
   {
     "cat": "AGV/AMR",
     "perf": false,
     "price": "POA",
     "id": "vecna-robotics-rpl",
-    "name": "Palion Pallet Truck (RPL)",
+    "name": "Vecna RPL (Robotic Pallet Lift)",
     "brand": "Vecna Robotics",
     "sub": "Autonomous Pallet Truck",
     "year": 2021,
@@ -118388,12 +118418,16 @@
     "safety_lidar": true,
     "bumper_safety": true,
     "fleet_software": "Pivotal",
-    "wms_integration": true,
+    "wms_integration": "Pivotal",
     "dock_charging": true,
     "safety_certifications": [
       "ANSI/ITSDF B56.5"
     ],
-    "video": "https://youtu.be/3dIU5Y4KMg8"
+    "video": "https://youtu.be/3dIU5Y4KMg8",
+    "speed_ms": 1.8,
+    "navigation": "LiDAR SLAM",
+    "load_transfer_type": "Fork (pallet)",
+    "safety_scanner": true
   },
   {
     "cat": "AGV/AMR",
@@ -118544,7 +118578,10 @@
     "safety_certifications": [
       "ANSI/ITSDF B56.5"
     ],
-    "video": "https://youtu.be/_JnahvMF-XM"
+    "video": "https://youtu.be/_JnahvMF-XM",
+    "navigation": "LiDAR + vision",
+    "load_transfer_type": "Fork (autonomous forklift, trailer unload)",
+    "safety_scanner": true
   },
   {
     "cat": "AGV/AMR",
@@ -118587,7 +118624,9 @@
     "fleet_software": "inVia Logic",
     "wms_integration": true,
     "dock_charging": true,
-    "video": "https://youtu.be/Qyf2lnm3lN4"
+    "video": "https://youtu.be/Qyf2lnm3lN4",
+    "navigation": "Vision",
+    "load_transfer_type": "Tote (goods-to-person, grabber arm)"
   },
   {
     "cat": "Medical",
