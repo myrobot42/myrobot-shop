@@ -31094,7 +31094,15 @@
       "https://store.clearpathrobotics.com/cdn/shop/products/FR3_image3_600x599.png?v=1663341441"
     ],
     "website": "https://franka.de",
-    "video": "https://youtu.be/lJz_mxw-Yn0"
+    "video": "https://youtu.be/lJz_mxw-Yn0",
+    "axes_config": "7-axis",
+    "repeatability_mm": 0.1,
+    "ft_sensor": true,
+    "ft_sensor_type": "Joint torque sensors (all 7 axes)",
+    "programming": "FCI (C++), Desk, ROS/ROS 2, MATLAB",
+    "collision_detection": true,
+    "made_in": "Germany",
+    "mounting": "Any angle"
   },
   {
     "id": "franka-fr3",
@@ -134704,7 +134712,12 @@
     "score": 75,
     "rating": 4,
     "speed_ms": 6,
-    "speed": "6 m/s TCP (industrial mode)"
+    "speed": "6 m/s TCP (industrial mode)",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "made_in": "Italy",
+    "collision_detection": true,
+    "controller": "Comau"
   },
   {
     "id": "epson-ls6-b",
@@ -134730,7 +134743,11 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "repeatability": 0.02
+    "repeatability": 0.02,
+    "axes_config": "4-axis (SCARA)",
+    "reach_mm": 700,
+    "repeatability_mm": 0.02,
+    "made_in": "Japan"
   },
   {
     "id": "denso-cobotta",
@@ -134831,7 +134848,12 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "repeatability": 0.03
+    "repeatability": 0.03,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "made_in": "Japan",
+    "collision_detection": true,
+    "programming": "RT VisualBox (visual)"
   },
   {
     "id": "nachi-cz10",
@@ -134864,7 +134886,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "made_in": "Japan",
+    "collision_detection": true
   },
   {
     "id": "hyundai-yl012",
@@ -134897,7 +134923,11 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "made_in": "South Korea",
+    "collision_detection": true
   },
   {
     "id": "dobot-cr10",
@@ -134999,7 +135029,13 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "repeatability": 1
+    "repeatability": 1,
+    "axes_config": "6-axis",
+    "repeatability_mm": 1,
+    "made_in": "Germany",
+    "frame_material": "Tribo-polymer (plastic)",
+    "programming": "iRC / ROS",
+    "collision_detection": true
   },
   {
     "id": "mecademic-meca500",
@@ -135027,7 +135063,13 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "weight_kg": 4.6
+    "weight_kg": 4.6,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.005,
+    "made_in": "Canada",
+    "industrial_protocols": "EtherCAT, EtherNet/IP, TCP/IP",
+    "programming": "Web interface / API",
+    "mounting": "Any angle"
   },
   {
     "id": "ufactory-xarm-6",
@@ -135119,7 +135161,12 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "repeatability": 0.025
+    "repeatability": 0.025,
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.025,
+    "made_in": "USA",
+    "programming": "No-code visual + Python",
+    "collision_detection": true
   },
   {
     "id": "kinova-gen3",
@@ -135138,7 +135185,7 @@
     "reach_mm": 902,
     "dof": 7,
     "ros": true,
-    "cameras": "Integrated 2D/3D vision module",
+    "cameras": "Optional 2D/3D vision module",
     "use_cases": [
       "Research",
       "Manipulation",
@@ -135147,7 +135194,13 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "weight_kg": 8.2
+    "weight_kg": 8.2,
+    "axes_config": "7-axis",
+    "ft_sensor": true,
+    "ft_sensor_type": "Integrated joint torque sensors",
+    "programming": "Kortex API (C++/Python/MATLAB/ROS 2)",
+    "collision_detection": true,
+    "made_in": "Canada"
   },
   {
     "id": "productive-robotics-ob7",
