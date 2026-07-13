@@ -117625,7 +117625,12 @@
     ],
     "made_in": "France",
     "website": "https://www.naio-technologies.com",
-    "video": "https://youtu.be/fW7UVHz9QYA"
+    "video": "https://youtu.be/fW7UVHz9QYA",
+    "operation": "Vegetable weeding (straddle robot)",
+    "rtk_gps": true,
+    "computer_vision": true,
+    "chemical_free": true,
+    "crop_types": "Vegetables (large-scale)"
   },
   {
     "cat": "Agricultural",
@@ -117654,7 +117659,7 @@
     "battery_life": 840,
     "recharge": "5-6 h",
     "ip_rating": "IP65",
-    "drivetrain": "4WD",
+    "drivetrain": "Electric",
     "autonomy": "Driver-optional",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781218468/myrobot/ynfqznhnaqelabxt1dom.png",
     "gallery": [
@@ -117662,7 +117667,12 @@
       "https://www.cnet.com/a/img/resize/d904cdd7b902fa4c4c7729581ea1b66e8ffef07a/hub/2022/12/01/5f438bf0-1d57-4fa0-8279-d01eeead1b71/monarch-tractor-line-mk-v.png?auto=webp&width=1200",
       "https://www.monarchtractor.com/hs-fs/hubfs/MT_Jan23_Trefethen-15-1.jpg?width=1440&name=MT_Jan23_Trefethen-15-1.jpg"
     ],
-    "video": "https://youtu.be/TFHr6ddydh0"
+    "video": "https://youtu.be/TFHr6ddydh0",
+    "operation": "Autonomous electric tractor",
+    "autonomous": true,
+    "computer_vision": true,
+    "engine_power_hp": 70,
+    "made_in": "USA"
   },
   {
     "cat": "Agricultural",
@@ -117697,13 +117707,17 @@
     "use_cases": [
       "24/7 crop scouting & targeted spraying"
     ],
-    "made_in": "Brazil/USA",
+    "made_in": "Brazil / USA",
     "website": "https://www.solinftec.com",
     "gallery": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg-b7rgQ3c3J00k4szhgIr-wAde1qU74FLPoW7aB2KpEXdvD_FYu3kjvk&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwjDPDn4C8GfmqyLFqmJyEm8fmhjbJdAfNu7132z_43jLk9CdkDnRi3JI&s=10",
       "https://www.solinftec.com/wp-content/uploads/2024/03/Solix-no-Canada.png"
-    ]
+    ],
+    "operation": "Crop scouting + targeted spraying",
+    "power_source": "Solar",
+    "computer_vision": true,
+    "plant_recognition": true
   },
   {
     "cat": "Agricultural",
@@ -117747,7 +117761,10 @@
     "plant_recognition": true,
     "computer_vision": true,
     "herbicide_reduction": "Up to 95%",
-    "video": "https://youtu.be/GoZ_qGy-1A4"
+    "video": "https://youtu.be/GoZ_qGy-1A4",
+    "operation": "Ultra-high-precision spraying (plant-by-plant)",
+    "treatment_type": "Targeted micro-dosing",
+    "herbicide_reduction_pct": 95
   },
   {
     "cat": "Agricultural",
@@ -117788,7 +117805,13 @@
       "https://farmdroid.com/wp-content/uploads/20230314_162721000_iOS-1.jpg",
       "https://www.therobotreport.com/wp-content/uploads/2024/10/farmdroid-featured.jpg"
     ],
-    "video": "https://youtu.be/ZIqguf1J-38"
+    "video": "https://youtu.be/ZIqguf1J-38",
+    "operation": "Seeding + mechanical weeding (GPS-guided)",
+    "power_source": "Solar",
+    "rtk_gps": true,
+    "gps_accuracy_cm": 1,
+    "chemical_free": true,
+    "made_in": "Denmark"
   },
   {
     "cat": "Agricultural",
@@ -117829,7 +117852,11 @@
     ],
     "made_in": "Spain",
     "website": "https://www.agrobot.com",
-    "video": "https://youtu.be/4Ody1SNv_pk"
+    "video": "https://youtu.be/4Ody1SNv_pk",
+    "operation": "Robotic strawberry harvesting (24 independent arms)",
+    "computer_vision": true,
+    "plant_recognition": true,
+    "crop_types": "Strawberries"
   },
   {
     "cat": "Agricultural",
@@ -117868,7 +117895,10 @@
     ],
     "made_in": "Netherlands",
     "website": "https://www.lely.com",
-    "video": "https://youtu.be/U9cLk2eeNoA"
+    "video": "https://youtu.be/U9cLk2eeNoA",
+    "operation": "Robotic milking (dairy, laser teat detection)",
+    "computer_vision": true,
+    "crop_types": "Dairy cows"
   },
   {
     "cat": "Autonomous Vehicles",
@@ -122281,7 +122311,7 @@
   },
   {
     "id": "john-deere-8r-autonomous-tractor",
-    "name": "8R Autonomous (driverless kit)",
+    "name": "8R Autonomous (driverless)",
     "brand": "John Deere",
     "cat": "Agricultural",
     "sub": "Autonomous Tractor",
@@ -122318,7 +122348,13 @@
     ],
     "made_in": "USA",
     "website": "https://www.deere.com",
-    "video": "https://youtu.be/QvFoRk4JsPc"
+    "video": "https://youtu.be/QvFoRk4JsPc",
+    "operation": "Autonomous tillage (driverless tractor)",
+    "computer_vision": true,
+    "rtk_gps": true,
+    "gps_accuracy_cm": 2,
+    "autonomous": true,
+    "engine_power_hp": 410
   },
   {
     "id": "sarcos-guardian-xo-exo",
