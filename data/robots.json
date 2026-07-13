@@ -55518,7 +55518,7 @@
     "payload_kg": 18,
     "wifi": true,
     "bluetooth": true,
-    "cameras": 4,
+    "cameras": true,
     "lidar": true,
     "imu": true,
     "depth_sensing": true,
@@ -55529,14 +55529,16 @@
     "manufacturer_url": "https://www.cocodelivery.com",
     "ip_rating": "IPX4",
     "cellular": "4G",
-    "autonomy_level": "Teleoperated (remote pilot)",
+    "autonomy_level": "Remote-piloted (human-guided)",
     "autonomous": false,
     "wheels": 4,
     "gps": true,
     "outdoor_capable": true,
     "os": "Coco",
     "made_in": "USA",
-    "fleet_management": true
+    "fleet_management": true,
+    "indoor_outdoor": "Sidewalk",
+    "remote_monitoring": true
   },
   {
     "id": "kiwibot-kiwibot-warehouse-robot",
@@ -85522,11 +85524,11 @@
     "battery_life": 480,
     "ip_rating": "IPX4",
     "origin": "Canada",
-    "cameras": 4,
+    "cameras": true,
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
-    "autonomy_level": "Teleoperated (remote pilot)",
+    "autonomy_level": "Remote-piloted (human-guided)",
     "autonomous": false,
     "wheels": 4,
     "gps": true,
@@ -85541,7 +85543,9 @@
       "https://www.activeloop.ai/static/8072db1deef183f28868c712d9c37fb7/1bb0e/delivery.webp",
       "https://pbs.twimg.com/media/Fq3Q0UZaQAEWyG8.jpg",
       "https://media.glassdoor.com/companyupdate/w900/3332622/tiny-mile-companyupdate-1681409278883.png?signature=24a074efe79e2222003c491ae27c609590aef8a96270aad9657e851bdb23b396"
-    ]
+    ],
+    "indoor_outdoor": "Sidewalk",
+    "remote_monitoring": true
   },
   {
     "id": "tortoise-tortoise-2020",
@@ -85574,11 +85578,11 @@
     "battery_life": 360,
     "ip_rating": "IPX4",
     "origin": "USA",
-    "cameras": 2,
+    "cameras": true,
     "wifi": true,
     "bluetooth": true,
     "cellular": "4G",
-    "autonomy_level": "Teleoperated / remotely managed",
+    "autonomy_level": "Remote-piloted",
     "autonomous": false,
     "wheels": 4,
     "gps": true,
@@ -85591,7 +85595,9 @@
     ],
     "pilot_customers": [
       "Walmart"
-    ]
+    ],
+    "indoor_outdoor": "Sidewalk",
+    "remote_monitoring": true
   },
   {
     "id": "avride-rover-2024",
@@ -85775,7 +85781,12 @@
     "use_cases": [
       "Food delivery",
       "Grocery & community delivery"
-    ]
+    ],
+    "payload_kg": 150,
+    "navigation": "LiDAR + cameras",
+    "indoor_outdoor": "Road/sidewalk",
+    "compartments": "Modular (food/grocery)",
+    "obstacle_detection": true
   },
   {
     "id": "jdcom-jd-x-2020",
@@ -85825,7 +85836,10 @@
     "use_cases": [
       "Parcel & e-commerce last-mile",
       "Community delivery"
-    ]
+    ],
+    "navigation": "LiDAR + cameras",
+    "indoor_outdoor": "Road (low-speed)",
+    "compartments": "Multi-parcel lockers"
   },
   {
     "id": "alibaba-cainiao-xiaomanlv-2020",
@@ -85883,7 +85897,11 @@
       "Campus & community delivery"
     ],
     "video": "https://youtu.be/9haxjo52cCA",
-    "video2": "https://youtu.be/X5KgKKDuWME"
+    "video2": "https://youtu.be/X5KgKKDuWME",
+    "payload_kg": 100,
+    "navigation": "LiDAR + cameras",
+    "indoor_outdoor": "Campus/community",
+    "compartments": "~50 parcels"
   },
   {
     "id": "pudu-bellabot-2020",
@@ -86936,7 +86954,7 @@
     "elevator_capable": true,
     "fleet_management": true,
     "speed_ms": 1.4,
-    "autonomy_level": "L4 (indoor SLAM)",
+    "autonomy_level": "L4 (indoor)",
     "payload_kg": 10,
     "payload": 10,
     "cargo_volume_l": 38,
@@ -86952,7 +86970,11 @@
     "gallery": [
       "https://autonomia.design/images/image01.png"
     ],
-    "video": "https://youtu.be/WwJJTZyjdvU"
+    "video": "https://youtu.be/WwJJTZyjdvU",
+    "navigation": "LiDAR + cameras (indoor SLAM)",
+    "indoor_outdoor": "Indoor (hotel/hospital)",
+    "compartments": "Secure bin",
+    "handoff_method": "PIN / app unlock"
   },
   {
     "id": "relay-relay-plus-2023",
@@ -86999,7 +87021,7 @@
     "elevator_capable": true,
     "fleet_management": true,
     "speed_ms": 1.4,
-    "autonomy_level": "L4 (indoor SLAM)",
+    "autonomy_level": "L4 (indoor)",
     "payload_kg": 18,
     "payload": 18,
     "cargo_volume_l": 57,
@@ -87011,7 +87033,10 @@
       "Hotel room service",
       "Hospital supply & specimen delivery",
       "Multi-item delivery"
-    ]
+    ],
+    "navigation": "LiDAR + cameras (indoor SLAM)",
+    "indoor_outdoor": "Indoor (hotel/hospital)",
+    "compartments": "Larger secure bin"
   },
   {
     "id": "ottobot-yeti-2-2024",
@@ -87231,7 +87256,7 @@
     "fleet_management": true,
     "made_in": "China",
     "speed_ms": 1,
-    "autonomy_level": "L4 (indoor SLAM)",
+    "autonomy_level": "L4 (indoor)",
     "payload_kg": 40,
     "payload": 40,
     "delivery_bays": 4,
@@ -87247,7 +87272,10 @@
       "https://ecdn6.globalso.com/upload/p/1681/image_product/2024-06/5-8.jpg",
       "https://ecdn6.globalso.com/upload/p/1681/image_product/2024-06/6-7.jpg"
     ],
-    "video": "https://youtu.be/QdrzZ-2FEf0"
+    "video": "https://youtu.be/QdrzZ-2FEf0",
+    "navigation": "LiDAR SLAM",
+    "indoor_outdoor": "Indoor",
+    "compartments": "Multi-tier tray"
   },
   {
     "id": "yogo-roboshuttle-2023",
@@ -87598,7 +87626,9 @@
     "use_cases": [
       "Logistics & parcel delivery",
       "Unmanned urban distribution"
-    ]
+    ],
+    "navigation": "LiDAR + cameras",
+    "indoor_outdoor": "Road (low-speed)"
   },
   {
     "id": "asylon-dronesentry-2020",
