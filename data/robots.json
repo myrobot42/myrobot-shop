@@ -42214,7 +42214,14 @@
       "https://atomem.com/wp-content/uploads/2021/01/Lens-2D.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202607/03/biL1mopk9NmEjse6z4nj/image.jpg",
       "https://www.tsmrobotics.com.my/wp-content/uploads/2021/06/161155969932961400.png"
-    ]
+    ],
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "end_effector_type": "Integrated JAKA Lens 2D vision",
+    "programming": "Drag-and-teach + graphical app",
+    "industrial_protocols": "TCP/IP, Modbus",
+    "collision_detection": true
   },
   {
     "id": "jaka-jaka-s12",
@@ -43123,7 +43130,14 @@
     "os": "JAKA",
     "repeatability": 0.02,
     "website": "https://www.jaka.com",
-    "video": "https://youtu.be/meR9C8xpDQk"
+    "video": "https://youtu.be/meR9C8xpDQk",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP54",
+    "flange_standard": "ISO 9409-1-50",
+    "programming": "Drag-and-teach + graphical app",
+    "industrial_protocols": "TCP/IP, Modbus",
+    "collision_detection": true
   },
   {
     "id": "jaka-jaka-mini-2",
@@ -43327,7 +43341,14 @@
       "https://5.imimg.com/data5/SELLER/Default/2024/10/457465626/QX/QA/WW/232022160/jaka-ai-5.jpg",
       "https://www.tsmrobotics.com.my/wp-content/uploads/2021/06/161482689102081500.png",
       "https://www.tsmrobotics.com.my/wp-content/uploads/2021/06/161156110575993400.png"
-    ]
+    ],
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.03,
+    "ip_rating": "IP54",
+    "flange_standard": "ISO 9409-1-50",
+    "programming": "Drag-and-teach + graphical app",
+    "industrial_protocols": "TCP/IP, Modbus",
+    "collision_detection": true
   },
   {
     "id": "jaka-jaka-ai-3",
@@ -43916,7 +43937,14 @@
       "https://robotindustries.com/web/image/product.template/1665/image_1024?unique=802491b",
       "https://www.robotindustries.com/web/image/product.image/151/image_1024/JAKA%20Ai%207%20Collaborative%20Robot?unique=fb14cda",
       "https://www.jaka.electra.md/images/2021/04/02/161155980700863400.png"
-    ]
+    ],
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP54",
+    "flange_standard": "ISO 9409-1-50",
+    "programming": "Drag-and-teach + graphical app",
+    "industrial_protocols": "TCP/IP, Modbus",
+    "collision_detection": true
   },
   {
     "id": "jaka-jaka-minicobo",
@@ -43946,10 +43974,10 @@
     "status": "Active",
     "released": "2019",
     "height_mm": 664,
-    "weight_kg": 12.9,
+    "weight_kg": 9.4,
     "payload_kg": 1,
     "dof": 6,
-    "reach_mm": 350,
+    "reach_mm": 580,
     "wifi": true,
     "bluetooth": true,
     "ros": true,
@@ -43970,7 +43998,15 @@
       "https://www.jaka.com/profile/upload/2024/01/03/JAKA-MiniCobo_20240103113409A184.jpg",
       "https://www.jaka.com/profile/upload/2023/12/14/400-815_20231214142819A001.png"
     ],
-    "video": "https://youtu.be/RX6DfhyCzEw"
+    "video": "https://youtu.be/RX6DfhyCzEw",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.1,
+    "ip_rating": "IP40",
+    "power_consumption_w": 150,
+    "controller": "JAKA MiniCab",
+    "ce": true,
+    "collision_detection": true,
+    "mounting": "Any angle"
   },
   {
     "id": "aubo-aubo-is35",
@@ -56278,9 +56314,9 @@
     "status": "Active",
     "released": "2019",
     "dof": 6,
-    "reach_mm": 350,
+    "reach_mm": 580,
     "payload_kg": 1,
-    "weight_kg": 12,
+    "weight_kg": 9.4,
     "use_cases": [
       "Pick-and-place",
       "Assembly",
@@ -56308,7 +56344,14 @@
       "https://www.jaka.com/profile/upload/2024/01/03/JAKA-MiniCobo_20240103113409A184.jpg",
       "https://www.jaka.com/profile/upload/2023/12/14/400-815_20231214142819A001.png"
     ],
-    "video": "https://youtu.be/RX6DfhyCzEw"
+    "video": "https://youtu.be/RX6DfhyCzEw",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.1,
+    "ip_rating": "IP40",
+    "controller": "JAKA MiniCab",
+    "ce": true,
+    "collision_detection": true,
+    "mounting": "Any angle"
   },
   {
     "id": "jaka-pro-16",
@@ -56707,7 +56750,15 @@
       "https://www.jaka.electra.md/images/2021/04/02/161155980700863400.png",
       "https://5.imimg.com/data5/SELLER/Default/2024/10/457464934/OI/OO/ER/232022160/jaka-ai-3.jpg"
     ],
-    "website": "https://www.jaka.com"
+    "website": "https://www.jaka.com",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP54",
+    "flange_standard": "ISO 9409-1-50",
+    "programming": "Drag-and-teach + graphical app",
+    "industrial_protocols": "TCP/IP, Modbus",
+    "collision_detection": true,
+    "mounting": "Any angle"
   },
   {
     "id": "jaka-zu-20",
@@ -56760,7 +56811,15 @@
       "https://i.ytimg.com/vi/cAdx_Yb2aP0/maxresdefault.jpg"
     ],
     "website": "https://www.jaka.com",
-    "video": "https://youtu.be/cAdx_Yb2aP0"
+    "video": "https://youtu.be/cAdx_Yb2aP0",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.05,
+    "ip_rating": "IP65",
+    "flange_standard": "ISO 9409-1-50",
+    "programming": "Drag-and-teach + graphical app",
+    "industrial_protocols": "TCP/IP, Modbus",
+    "collision_detection": true,
+    "mounting": "Any angle"
   },
   {
     "id": "jaka-zu-18",
@@ -57103,7 +57162,7 @@
     "year": 2020,
     "status": "Active",
     "released": "2020",
-    "weight_kg": 18,
+    "weight_kg": 23,
     "payload_kg": 5,
     "dof": 6,
     "reach_mm": 954,
@@ -57126,7 +57185,15 @@
       "https://cdn.robodk.com/robot/img/JAKA-Zu5-robot.png",
       "https://insularobotics.gr/wp-content/uploads/2022/06/photo4-1.png"
     ],
-    "website": "https://www.jaka.com"
+    "website": "https://www.jaka.com",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP54",
+    "flange_standard": "ISO 9409-1-50",
+    "programming": "Drag-and-teach + graphical app",
+    "industrial_protocols": "TCP/IP, Modbus",
+    "collision_detection": true,
+    "mounting": "Any angle"
   },
   {
     "id": "jaka-zu-3",
@@ -57155,7 +57222,7 @@
     "year": 2020,
     "status": "Active",
     "released": "2020",
-    "weight_kg": 12,
+    "weight_kg": 12.3,
     "payload_kg": 3,
     "dof": 6,
     "reach_mm": 626,
@@ -57177,7 +57244,16 @@
       "https://cdn11.bigcommerce.com/s-sgprcd6/images/stencil/608x608/products/9520/18059/8__38574.1703489112.jpg?c=2",
       "https://cdn11.bigcommerce.com/s-sgprcd6/images/stencil/608x608/products/9520/18062/6__18918.1703489113.jpg?c=2"
     ],
-    "website": "https://www.jaka.com"
+    "website": "https://www.jaka.com",
+    "axes_config": "6-axis",
+    "repeatability_mm": 0.02,
+    "ip_rating": "IP54",
+    "flange_standard": "ISO 9409-1-50",
+    "programming": "Drag-and-teach + graphical app",
+    "teach_pendant": "Tablet / app",
+    "industrial_protocols": "TCP/IP, Modbus",
+    "collision_detection": true,
+    "mounting": "Any angle"
   },
   {
     "id": "hanwha-robotics-agv-cobot-solution",
