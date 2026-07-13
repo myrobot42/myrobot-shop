@@ -96623,7 +96623,7 @@
     "weight_kg": 24,
     "battery_life": 300,
     "origin": "USA",
-    "cameras": 4,
+    "cameras": true,
     "wifi": true,
     "bluetooth": true,
     "gallery": [
@@ -96656,7 +96656,13 @@
       "CBRN detection",
       "Building & route clearance"
     ],
-    "video": "https://youtu.be/kV0GwG269xQ"
+    "video": "https://youtu.be/kV0GwG269xQ",
+    "mission_type": "EOD / reconnaissance",
+    "locomotion": "Tracked (+ articulated flippers)",
+    "stair_climbing": true,
+    "eod_capable": true,
+    "manipulator_dof": 4,
+    "deploy_method": "Man-portable"
   },
   {
     "id": "remotec-andros-f6b-2018",
@@ -96689,7 +96695,7 @@
     "weight_kg": 220,
     "battery_life": 300,
     "origin": "USA",
-    "cameras": 4,
+    "cameras": true,
     "wifi": true,
     "bluetooth": true,
     "made_in": "USA",
@@ -96716,7 +96722,12 @@
       "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/ANDROS_F6A.jpg/500px-ANDROS_F6A.jpg",
       "https://res.cloudinary.com/djrojgec1/image/upload/v1780734315/myrobot/fmokd7btvll2zbuvfsdc.jpg",
       "https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/1-andros-f6a.jpg"
-    ]
+    ],
+    "mission_type": "EOD",
+    "locomotion": "Tracked (articulated)",
+    "eod_capable": true,
+    "manipulator_dof": 6,
+    "disruptor": true
   },
   {
     "id": "remotec-titus-2022",
@@ -96749,7 +96760,7 @@
     "weight_kg": 25,
     "battery_life": 240,
     "origin": "USA",
-    "cameras": 3,
+    "cameras": true,
     "wifi": true,
     "bluetooth": true,
     "made_in": "USA",
@@ -96773,7 +96784,11 @@
     "gallery": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRJrfxzPHaw9Uf82nAwPGBoSYzU4VX3dK8767pXFX86tpWxIIxnH4PE8U&s=10"
     ],
-    "video": "https://youtu.be/peXLEuaWrV4"
+    "video": "https://youtu.be/peXLEuaWrV4",
+    "mission_type": "EOD (medium)",
+    "locomotion": "Tracked",
+    "eod_capable": true,
+    "manipulator_dof": 6
   },
   {
     "id": "icor-cobra-mk3-2018",
@@ -97149,7 +97164,7 @@
   {
     "id": "howe-thermite-rs3-2020",
     "name": "Thermite RS3",
-    "brand": "Howe & Howe Technologies",
+    "brand": "Howe & Howe",
     "cat": "Disaster Response",
     "sub": "Firefighting Robot",
     "tags": [
@@ -97211,7 +97226,9 @@
       "Pushing cars/debris",
       "High-volume suppression"
     ],
-    "video": "https://youtu.be/o1y_qA5o5ZM"
+    "video": "https://youtu.be/o1y_qA5o5ZM",
+    "mission_type": "Firefighting",
+    "locomotion": "Tracked"
   },
   {
     "id": "colossus-shark-robotics-2017",
@@ -97347,7 +97364,9 @@
       "Water-mist suppression"
     ],
     "video": "https://youtu.be/BNE5t3nt_3s?list=PLTkoR8-rSSuVtMgxG9beAsWaTs1Vbqbps",
-    "video2": "https://youtu.be/j4aCw8uKjtA?list=PLTkoR8-rSSuVtMgxG9beAsWaTs1Vbqbps"
+    "video2": "https://youtu.be/j4aCw8uKjtA?list=PLTkoR8-rSSuVtMgxG9beAsWaTs1Vbqbps",
+    "mission_type": "Firefighting (turbine water-mist)",
+    "locomotion": "Tracked"
   },
   {
     "id": "endeavor-110-firstlook-2014",
@@ -97692,7 +97711,7 @@
       "https://cache.getarchive.net/Prod/thumb/cdn2/L3Bob3RvLzIwMTQvMDcvMjMvYW4tbWstMi1tdHJzLXRhbG9uLXJvYm90LW1vdmVzLWEtc2ltdWxhdGVkLXByZXNzdXJlLTExNGEyYi0xMDI0LmpwZw%3D%3D/1024/683/jpg",
       "https://cache.getarchive.net/Prod/thumb/cdn2/L3Bob3RvLzIwMTQvMDcvMjMvYW4tbWstMi1tdHJzLXRhbG9uLXJvYm90LWlzLXV0aWxpemVkLXRvLXNoYWtlLWEtc2ltdWxhdGVkLTRmMjQyMC0xMDI0LmpwZw%3D%3D/1024/683/jpg"
     ],
-    "made_in": "USA",
+    "made_in": "UK / USA",
     "role": [
       "EOD / IEDD",
       "Reconnaissance",
@@ -97711,7 +97730,12 @@
       "Explosive ordnance disposal",
       "Remote inspection",
       "CBRN reconnaissance"
-    ]
+    ],
+    "mission_type": "EOD (military, Harris T7-based)",
+    "locomotion": "Tracked",
+    "eod_capable": true,
+    "manipulator_dof": 7,
+    "cbrn_detection": true
   },
   {
     "id": "endeavor-310-sugv-2019",
@@ -98028,7 +98052,9 @@
       "Wounded extraction",
       "Mobile cover / shielding"
     ],
-    "video": "https://youtu.be/ymWROnRXkEs"
+    "video": "https://youtu.be/ymWROnRXkEs",
+    "mission_type": "Firefighting / heavy hauling",
+    "locomotion": "Tracked"
   },
   {
     "id": "nasa-sojourner-1997",
@@ -117385,7 +117411,10 @@
     "gallery": [
       "https://www.cmu.edu/news/stories/archives/2015/march/images/snakebot-in-sand_400x267.jpg",
       "https://www.ri.cmu.edu/app/uploads/2017/02/Snake-robot.jpg"
-    ]
+    ],
+    "mission_type": "USAR (confined-space search)",
+    "locomotion": "Snake (articulated modules)",
+    "cameras": true
   },
   {
     "cat": "Disaster Response",
@@ -117443,7 +117472,10 @@
       "https://www.army-technology.com/wp-content/uploads/sites/3/2017/09/4-mine-clearance.jpg",
       "https://p.turbosquid.com/ts-thumb/gI/8fLB5x/xqBZxJzX/doking_prev01/jpg/1526567944/1920x1080/fit_q87/b9a2a8d25718ed18df7a1be05d2a40adea29abd9/doking_prev01.jpg"
     ],
-    "video": "https://youtu.be/3V1A4SKTYsU?list=PL9MV7dcXM_wPsqjeyGDSc08bo7ojvTYU-"
+    "video": "https://youtu.be/3V1A4SKTYsU?list=PL9MV7dcXM_wPsqjeyGDSc08bo7ojvTYU-",
+    "mission_type": "Demining (flail)",
+    "locomotion": "Tracked",
+    "cutting_tool": "Flail / tiller"
   },
   {
     "cat": "Disaster Response",
@@ -129135,7 +129167,7 @@
     "sub": "Recon & Handling ROV",
     "year": 2017,
     "origin": "India",
-    "made_in": "India (DRDO)",
+    "made_in": "India",
     "status": "Active",
     "price": "POA",
     "img": "",
@@ -129176,7 +129208,11 @@
       "Rapid recon",
       "Surveillance",
       "EOD team support"
-    ]
+    ],
+    "mission_type": "EOD / recon",
+    "locomotion": "Wheeled",
+    "eod_capable": true,
+    "cameras": true
   },
   {
     "id": "eca-cameleon-e",
