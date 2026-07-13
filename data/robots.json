@@ -85661,7 +85661,10 @@
       "https://www.cnet.com/a/img/resize/46f3f4eb8d1d1d0cf8d1b384078e40f8e9a47a87/hub/2025/12/02/6ac0438f-c6b5-4001-8184-265fed6103c8/vehicle-1.jpg?auto=webp&fit=crop&height=675&width=1200",
       "https://techcrunch.com/wp-content/uploads/2025/12/uber-avride-dallas.jpg",
       "https://cdn.prod.website-files.com/650dd89f9d632d99c3f3ec7a/67825cc3e6f5b3c094dd4d44_6c2256eb19d98254eee6b49d7f370f55_car-card.webp"
-    ]
+    ],
+    "vehicle_type": "Robotaxi",
+    "autonomy_software": "Avride",
+    "hd_maps": true
   },
   {
     "id": "clevon-clevon-1-2022",
@@ -92522,7 +92525,14 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThRBps4ilajnHKCZcrzomqks_sl85ToQRwzu1sBqVVjJQ5WV-oK4rNIYM&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjAaOT82OSrdl7u40feTL01TG9JWKy5mobOHWAQizRsiupMoWIt-03Z78&s=10"
     ],
-    "video": "https://youtu.be/I9nhKahJct8"
+    "video": "https://youtu.be/I9nhKahJct8",
+    "vehicle_type": "Robotaxi (Arcfox-based)",
+    "autonomy_software": "Apollo",
+    "lidar_count": 2,
+    "camera_count": 13,
+    "drivetrain": "Electric",
+    "hd_maps": true,
+    "remote_supervision": true
   },
   {
     "id": "baidu-apollo-go-rt6-2024",
@@ -92569,8 +92579,8 @@
     "operational_design_domain": "Geofenced urban (China)",
     "passenger_capacity": 4,
     "powertrain": "Battery electric",
-    "lidar_count": 5,
-    "compute_platform": "Baidu Apollo 6th-gen",
+    "lidar_count": 8,
+    "compute_platform": "Dual automotive-grade (1200 TOPS)",
     "operating_cities": [
       "Wuhan",
       "Beijing"
@@ -92585,7 +92595,17 @@
       "Ride-hailing",
       "Urban mobility"
     ],
-    "video": "https://youtu.be/V0-fKvpW_3E"
+    "video": "https://youtu.be/V0-fKvpW_3E",
+    "vehicle_type": "Purpose-built robotaxi",
+    "passengers": 4,
+    "top_speed_kmh": 135,
+    "camera_count": 12,
+    "radar_count": 6,
+    "ultrasonic_count": 12,
+    "autonomy_software": "Apollo ADFM",
+    "drivetrain": "Electric (3-min battery swap)",
+    "hd_maps": true,
+    "remote_supervision": true
   },
   {
     "id": "weride-robotaxi-gxr-2024",
@@ -92652,7 +92672,12 @@
       "Ride-hailing",
       "Urban mobility"
     ],
-    "video": "https://youtu.be/EVet3YgF9TA"
+    "video": "https://youtu.be/EVet3YgF9TA",
+    "vehicle_type": "Purpose-built robotaxi",
+    "autonomy_software": "WeRide One",
+    "hd_maps": true,
+    "remote_supervision": true,
+    "drivetrain": "Electric"
   },
   {
     "id": "weride-robobus-2022",
@@ -92716,7 +92741,12 @@
       "https://www.qimingvc.com/sites/default/files/news/WeRide%20and%20Renault%20Group%20launch%20their%20first%20autonomous%20Robobus%20trial%20in%20Spain.jpg",
       "https://media.automotiveworld.com/app/uploads/2026/05/26112908/weride-renault-group-autonomous-robobus-roland-garros-1024x682.jpg"
     ],
-    "video": "https://youtu.be/jnYSX68Ehuk"
+    "video": "https://youtu.be/jnYSX68Ehuk",
+    "vehicle_type": "Autonomous minibus",
+    "passengers": 12,
+    "autonomy_software": "WeRide One",
+    "hd_maps": true,
+    "drivetrain": "Electric"
   },
   {
     "id": "pony-ai-robotaxi-7-2024",
@@ -92784,7 +92814,12 @@
       "https://www.autonomousvehicleinternational.com/wp-content/uploads/2025/06/Image-2-e1749480359757-768x430.jpg",
       "https://storage.ghost.io/c/ae/5f/ae5fbe80-040d-4eb1-b10e-78008f5feb77/content/images/2026/03/20251031-214212-1.jpg"
     ],
-    "video": "https://youtu.be/sXBR_RKA6E4"
+    "video": "https://youtu.be/sXBR_RKA6E4",
+    "vehicle_type": "Robotaxi (Toyota-based)",
+    "autonomy_software": "Pony.ai (PonyWorld)",
+    "hd_maps": true,
+    "remote_supervision": true,
+    "drivetrain": "Electric/Hybrid"
   },
   {
     "id": "didi-roboride-2023",
@@ -92848,7 +92883,11 @@
       "https://iot-automotive.news/wp-content/uploads/2020/09/Didi_Robotaxi.jpg",
       "https://blogs.nvidia.com/wp-content/uploads/2021/05/280672_Volvo_Cars_teams_up_with_world_s_leading_mobility_technology_platform_DiDi-scaled.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDaLVxQX11Bu4FZKilFysU24ljuAnE51qY0jcVfj0OUhChpqDN0CEr0A0&s=10"
-    ]
+    ],
+    "vehicle_type": "Robotaxi",
+    "autonomy_software": "DiDi Autonomous Driving",
+    "hd_maps": true,
+    "remote_supervision": true
   },
   {
     "id": "saic-iv5-2024",
@@ -92904,7 +92943,10 @@
     "use_cases": [
       "Ride-hailing",
       "Urban mobility"
-    ]
+    ],
+    "vehicle_type": "Robotaxi",
+    "drivetrain": "Electric",
+    "hd_maps": true
   },
   {
     "id": "motional-ioniq-5-2023",
@@ -94469,7 +94511,7 @@
       "https://www.rivianwave.com/img/containers/article_images/r2/rivian-r2-launch-13.webp/5dddcbc605de3ea576f97d6bd4ff2fbc/rivian-r2-launch-13.webp"
     ],
     "vehicle_class": "Robotaxi (R2 platform, in-house L4)",
-    "autonomy_level": "L4 (in development)",
+    "autonomy_level": "L4 (planned)",
     "operational_design_domain": "Urban (planned)",
     "passenger_capacity": 5,
     "powertrain": "Battery electric (Rivian R2)",
@@ -94489,7 +94531,9 @@
       "Ride-hailing (Uber)",
       "Logistics"
     ],
-    "video": "https://youtu.be/1YV3fZaOQWA"
+    "video": "https://youtu.be/1YV3fZaOQWA",
+    "vehicle_type": "Robotaxi (SUV-based)",
+    "drivetrain": "Electric"
   },
   {
     "id": "lucid-midsize-robotaxi-2026",
@@ -117607,7 +117651,7 @@
     "year": 2022,
     "origin": "USA",
     "status": "Active",
-    "autonomy_level": "SAE Level 4",
+    "autonomy_level": "L4",
     "desc": "The Cruise Origin (GM) was a purpose-built, steering-wheel-free shared robotaxi. Development was wound down after GM ended Cruise's robotaxi program in 2024 - included here as a notable discontinued milestone in the robotaxi category.",
     "tags": [
       "autonomous vehicle",
@@ -117638,7 +117682,13 @@
       "https://global.honda/en/japan-mobility-show/2023/info/Cruise_Origin/images/main.jpg",
       "https://media.roadtoautonomy.com/wp-content/uploads/2022/12/cruise-origin.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXUxoJjF4LAwIKTMRWogmqEyZ_vKLbzSek8XwpsYkA9ugDu9xLhXmOKTE&s=10"
-    ]
+    ],
+    "vehicle_type": "Purpose-built shuttle (no steering wheel)",
+    "passengers": 6,
+    "drivetrain": "Electric",
+    "autonomy_software": "Cruise",
+    "made_in": "USA",
+    "lifecycle_status": "Discontinued (Cruise robotaxi wound down 2024)"
   },
   {
     "cat": "Autonomous Vehicles",
@@ -117681,7 +117731,11 @@
       "https://image.adt.media/1987786.webp?imageId=1987786&x=22.24&y=0.00&cropw=64.95&croph=100.00&width=960&height=548&format=jpg",
       "https://media.automotiveworld.com/app/uploads/2026/03/19093155/pony-ai-chenqi-robotaxi.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrXOzkLBls_WjU0xl97U1spqR-sjcaXKVytfsVfhV59ENfEbAGd3RILIk&s=10"
-    ]
+    ],
+    "vehicle_type": "Robotaxi (Toyota-based)",
+    "autonomy_software": "Pony.ai",
+    "hd_maps": true,
+    "remote_supervision": true
   },
   {
     "cat": "Autonomous Vehicles",
