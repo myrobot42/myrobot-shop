@@ -46980,7 +46980,12 @@
     "gallery": [
       "https://www.automatedwarehouseonline.com/wp-content/uploads/2024/04/T4-ConveyorRear.jpg",
       "https://www.automatedwarehouseonline.com/wp-content/uploads/2024/04/Aethon_T4_web.jpg"
-    ]
+    ],
+    "navigation": "Laser + pre-mapped facility",
+    "load_transfer_type": "Cart tow / bin",
+    "wms_integration": "Hospital systems",
+    "safety_scanner": true,
+    "made_in": "USA"
   },
   {
     "id": "aethon-tug-t2",
@@ -55128,9 +55133,9 @@
     "height_mm": 280,
     "width_mm": 750,
     "depth_mm": 550,
-    "weight_kg": 85,
-    "payload_kg": 500,
-    "speed_ms": 2,
+    "weight_kg": 170,
+    "payload_kg": 600,
+    "speed_ms": 1.5,
     "battery_life": "8-10 hours",
     "charge_time": "2-3 hours",
     "lidar": true,
@@ -55157,7 +55162,12 @@
       "https://www.geekplus.com/hubfs/P500R-top.svg",
       "https://www.geekplus.com/hubfs/Geek%20Plus%20Images%202020/ACCA%E5%B0%81%E9%9D%A2%E5%9B%BE.jpg"
     ],
-    "video": "https://youtu.be/PzvIswmVzIY"
+    "video": "https://youtu.be/PzvIswmVzIY",
+    "navigation": "Inertial + QR-code",
+    "load_transfer_type": "Rack/shelf lift (goods-to-person)",
+    "wms_integration": true,
+    "safety_scanner": true,
+    "made_in": "China"
   },
   {
     "id": "6-river-systems-ocado-group-porter",
@@ -55293,7 +55303,7 @@
     "year": 2023,
     "status": "Active",
     "released": "2023",
-    "payload_kg": 500,
+    "payload_kg": 275,
     "speed_ms": 1.8,
     "lidar": true,
     "cameras": "Multiple stereo cameras for navigation and obstacle detection",
@@ -55316,7 +55326,11 @@
     "gallery": [
       "https://automatizace.hw.cz/files/styles/full/public/story_automat/15111/locusmax4.png?itok=UCVXTeYs"
     ],
-    "website": "https://locusrobotics.com"
+    "website": "https://locusrobotics.com",
+    "navigation": "LiDAR + vision SLAM",
+    "load_transfer_type": "Cart/tote (heavy)",
+    "wms_integration": true,
+    "made_in": "USA"
   },
   {
     "id": "righthand-robotics-rightpick-previous-generations-",
@@ -63977,7 +63991,12 @@
       "https://www.geekplus.com/hs-fs/hubfs/Geekplus%20MP1000R.png?width=587&height=368&name=Geekplus%20MP1000R.png",
       "https://5868638.fs1.hubspotusercontent-na2.net/hubfs/5868638/NEW%20WEBSITE/HOME%20PAGE/intralogi(2).mp4/medium.jpg"
     ],
-    "video": "https://youtu.be/GoboNZ8lx80"
+    "video": "https://youtu.be/GoboNZ8lx80",
+    "navigation": "Laser SLAM",
+    "load_transfer_type": "Latent/tunnel lift",
+    "wms_integration": true,
+    "safety_scanner": true,
+    "made_in": "China"
   },
   {
     "id": "geekplus-rs-series-roboshuttle",
@@ -87316,7 +87335,12 @@
       "https://locusrobotics.com/wp-content/uploads/2023/09/vector-graphic.png"
     ],
     "website": "https://locusrobotics.com",
-    "video": "https://youtu.be/Cq7iTmQple4"
+    "video": "https://youtu.be/Cq7iTmQple4",
+    "navigation": "LiDAR + vision SLAM",
+    "load_transfer_type": "Tote (goods-to-person)",
+    "wms_integration": true,
+    "safety_scanner": true,
+    "made_in": "USA"
   },
   {
     "id": "fetch-freight500-2018",
@@ -87370,13 +87394,18 @@
       "Cross-docking",
       "Pallet recycling"
     ],
-    "payload_kg": 1265,
+    "payload_kg": 500,
     "gallery": [
       "https://cssi.com/wp-content/uploads/Fetch-Freight500-1500-AMR.jpg",
       "https://spectrum.ieee.org/media-library/freight.jpg?id=25582809&width=800&height=172&quality=85",
       "https://piedmontnational.com/wp-content/uploads/2020/11/Freight500.jpg"
     ],
-    "video": "https://youtu.be/MJoem4xGfkY"
+    "video": "https://youtu.be/MJoem4xGfkY",
+    "navigation": "Laser SLAM",
+    "safety_scanner": true,
+    "wms_integration": "FetchCore (cloud)",
+    "load_transfer_type": "Conveyor / pallet top",
+    "made_in": "USA"
   },
   {
     "id": "unity-drive-uda-2022",
@@ -118162,7 +118191,9 @@
     "fleet_size_max": 1000,
     "wms_integration": true,
     "opportunity_charging": true,
-    "video": "https://youtu.be/IRwyOPO6KR4"
+    "video": "https://youtu.be/IRwyOPO6KR4",
+    "navigation": "3D vision (QR floor + rack)",
+    "load_transfer_type": "Tote (climbs racks to 12 m)"
   },
   {
     "cat": "AGV/AMR",
@@ -118210,7 +118241,10 @@
     "wms_integration": true,
     "dock_charging": true,
     "fleet_size_max": 500,
-    "video": "https://youtu.be/s4P65Uw5vxw"
+    "video": "https://youtu.be/s4P65Uw5vxw",
+    "navigation": "QR + laser",
+    "load_transfer_type": "Tote/bin ACR (lifts to 10 m)",
+    "safety_scanner": true
   },
   {
     "cat": "AGV/AMR",
@@ -118413,7 +118447,13 @@
       "CE",
       "ISO 3691-4"
     ],
-    "video": "https://youtu.be/mpINKTR4HZQ"
+    "video": "https://youtu.be/mpINKTR4HZQ",
+    "speed_ms": 1.5,
+    "navigation": "SLAM + 3D vision (AI pallet detection)",
+    "safety_scanner": true,
+    "safety_pl": "PLd",
+    "vda_5050_compatible": true,
+    "load_transfer_type": "Fork (pallet jack)"
   },
   {
     "cat": "AGV/AMR",
@@ -118458,7 +118498,9 @@
     "fleet_software": "Amazon Robotics platform",
     "fleet_size_max": 1000,
     "dock_charging": true,
-    "opportunity_charging": true
+    "opportunity_charging": true,
+    "navigation": "Fiducial/QR grid",
+    "load_transfer_type": "Conveyor belt (parcel sortation)"
   },
   {
     "cat": "AGV/AMR",
