@@ -59667,7 +59667,7 @@
   },
   {
     "id": "dji-dji-matrice-30-series",
-    "name": "DJI Matrice 30 Series",
+    "name": "Matrice 30 Series",
     "brand": "DJI",
     "cat": "Drones",
     "sub": "Survey / Mapping Drone",
@@ -59725,7 +59725,20 @@
       "https://www.w3shopping.com/cdn/shop/files/DJI-M30T-Series-W3-Shopping-1684857829.jpg?v=1763483419"
     ],
     "website": "https://www.dji.com",
-    "video": "https://youtu.be/1ucIm6g9llg"
+    "video": "https://youtu.be/1ucIm6g9llg",
+    "max_flight_time": 41,
+    "transmission_tech": "OcuSync 3 Enterprise",
+    "transmission_range_km": 15,
+    "ip_rating": "IP55",
+    "operating_temp_min": -20,
+    "operating_temp_max": 50,
+    "gimbal_axes": 3,
+    "thermal": true,
+    "thermal_resolution": "640×512",
+    "obstacle_sensing": "Omnidirectional",
+    "return_to_home": true,
+    "rtk": true,
+    "gnss_systems": "GPS+Galileo+BeiDou"
   },
   {
     "id": "ur5",
@@ -65082,7 +65095,7 @@
   },
   {
     "id": "dji-dji-mavic-3-thermal-m3t-",
-    "name": "DJI Mavic 3 Thermal (M3T)",
+    "name": "Mavic 3 Thermal (M3T)",
     "brand": "DJI",
     "cat": "Drones",
     "sub": "Enterprise / Inspection",
@@ -65114,7 +65127,7 @@
     "height_mm": 96.3,
     "width_mm": 347.5,
     "depth_mm": 283,
-    "weight_kg": 0.899,
+    "weight_kg": 0.92,
     "battery_life": "45 minutes",
     "speed_ms": 19,
     "payload_kg": 0.6,
@@ -65139,11 +65152,24 @@
       "https://advexure.com/cdn/shop/products/DJI-Mavic-3-Thermal_6_1_600x.png?v=1709855706"
     ],
     "website": "https://www.dji.com",
-    "video": "https://youtu.be/R1lT-NatLMA"
+    "video": "https://youtu.be/R1lT-NatLMA",
+    "max_flight_time": 45,
+    "transmission_tech": "DJI O3 Enterprise",
+    "transmission_range_km": 15,
+    "camera_mp": 48,
+    "zoom": "56× hybrid",
+    "thermal": true,
+    "thermal_resolution": "640×512",
+    "gimbal_axes": 3,
+    "obstacle_sensing": "Omnidirectional",
+    "return_to_home": true,
+    "latency_ms": 200,
+    "faa_remote_id": true,
+    "gnss_systems": "GPS+Galileo+BeiDou"
   },
   {
     "id": "dji-dji-mavic-3-enterprise-m3e-",
-    "name": "DJI Mavic 3 Enterprise (M3E)",
+    "name": "Mavic 3 Enterprise (M3E)",
     "brand": "DJI",
     "cat": "Drones",
     "sub": "Enterprise / Inspection",
@@ -65197,7 +65223,24 @@
       "https://static.bhphoto.com/images/multiple_images/images500x500/1741791918_IMG_1851561.jpg",
       "https://static.bhphoto.com/images/multiple_images/images500x500/1764757492_IMG_1851562.jpg"
     ],
-    "website": "https://www.dji.com"
+    "website": "https://www.dji.com",
+    "max_flight_time": 45,
+    "transmission_tech": "DJI O3 Enterprise",
+    "transmission_range_km": 15,
+    "camera_mp": 20,
+    "zoom": "56× hybrid",
+    "gimbal_axes": 3,
+    "rtk": true,
+    "rtk_accuracy_cm": 1,
+    "obstacle_sensing": "Omnidirectional",
+    "obstacle_directions": "6-direction (fisheye + IR)",
+    "return_to_home": true,
+    "live_view_res": "1080p/30fps",
+    "latency_ms": 200,
+    "battery_wh": 77,
+    "mapping_software": "DJI Terra",
+    "faa_remote_id": true,
+    "gnss_systems": "GPS+Galileo+BeiDou"
   },
   {
     "id": "sphero-bolt-edu",
@@ -88977,7 +89020,7 @@
     "status": "Active",
     "weight_kg": 2,
     "battery_life": 35,
-    "ip_rating": "IP54",
+    "ip_rating": "IP55",
     "origin": "USA",
     "cameras": 7,
     "wifi": true,
@@ -88989,7 +89032,7 @@
     ],
     "gps": true,
     "return_to_home": true,
-    "obstacle_sensing": "360-degree AI (6 navigation cameras)",
+    "obstacle_sensing": "Omnidirectional AI (NightSense)",
     "waypoint": true,
     "thermal": true,
     "motor_count": 4,
@@ -89013,7 +89056,8 @@
       "Public safety"
     ],
     "website": "https://www.skydio.com",
-    "video": "https://youtu.be/R0YJ6rcJ5mk"
+    "video": "https://youtu.be/R0YJ6rcJ5mk",
+    "thermal_resolution": "640×512 (FLIR Boson+)"
   },
   {
     "id": "skydio-rcr-2023",
@@ -90362,7 +90406,7 @@
     "thermal": false,
     "made_in": "China",
     "os": "Holy Stone",
-    "max_flight_time": 23,
+    "max_flight_time": 26,
     "max_speed": 10,
     "speed_ms": 10,
     "max_range": 1,
@@ -90377,7 +90421,8 @@
       "Beginner aerial photography",
       "Hobby flying"
     ],
-    "video": "https://youtu.be/5386XoK5F-I"
+    "video": "https://youtu.be/5386XoK5F-I",
+    "gnss_systems": "GPS+GLONASS"
   },
   {
     "id": "holystone-hs900-2024",
@@ -90424,7 +90469,7 @@
     "thermal": false,
     "made_in": "China",
     "os": "Holy Stone",
-    "max_flight_time": 36,
+    "max_flight_time": 40,
     "max_speed": 12,
     "speed_ms": 12,
     "max_range": 4,
@@ -90440,7 +90485,8 @@
       "Beginner aerial photography",
       "Travel"
     ],
-    "video": "https://youtu.be/8FmJpL4Y5E8"
+    "video": "https://youtu.be/8FmJpL4Y5E8",
+    "gnss_systems": "GPS+GLONASS"
   },
   {
     "id": "ryze-tello-2018",
@@ -90794,7 +90840,7 @@
     "video_res": "2.7K",
     "gimbal_axes": 1,
     "obstacle_sensing": "Visual subject tracking (full prop guards)",
-    "frame_type": "Pocket selfie drone (prop guards)",
+    "frame_type": "Self-flying pocket drone",
     "motor_count": 4,
     "regulatory_class": "Sub-250 g",
     "use_cases": [
@@ -90856,10 +90902,10 @@
     "max_range": 0.4,
     "battery_life_typical": 16,
     "camera_mp": 48,
-    "video_res": "8K",
+    "video_res": "4K/8K",
     "gimbal_axes": 1,
     "obstacle_sensing": "Visual subject tracking (prop guards)",
-    "frame_type": "Pocket selfie drone (prop guards)",
+    "frame_type": "Self-flying pocket drone",
     "motor_count": 4,
     "regulatory_class": "Sub-250 g",
     "use_cases": [
@@ -136827,7 +136873,7 @@
     "payload_kg": 30,
     "max_speed": "20 m/s",
     "max_range": "16 km loaded / 28 km empty",
-    "obstacle_sensing": "Dual radar + binocular vision",
+    "obstacle_sensing": "Dual radar + vision",
     "use_cases": [
       "Cargo delivery",
       "Mountain/marine logistics"
@@ -136844,7 +136890,10 @@
     "transmission": "DJI O3 (20 km) + 4G enhanced",
     "return_to_home": true,
     "motor_count": 8,
-    "frame_type": "4-axis coaxial octocopter"
+    "frame_type": "Coaxial (8 rotors)",
+    "max_range_km": 28,
+    "transmission_tech": "DJI O3",
+    "transmission_range_km": 20
   },
   {
     "id": "elroy-air-chaparral",
@@ -137928,7 +137977,7 @@
   {
     "id": "hoverair-x1-pro-max",
     "name": "X1 Pro Max",
-    "brand": "HOVERAir",
+    "brand": "HoverAir",
     "cat": "Drones",
     "sub": "Self-Flying Camera Drone",
     "year": 2024,
@@ -137947,15 +137996,19 @@
       "active"
     ],
     "weight_kg": 0.192,
-    "video_res": "8K/30fps",
-    "camera_mp": 48,
+    "video_res": "8K",
+    "camera_mp": 50,
     "use_cases": [
       "Selfie/vlogging",
       "Sports tracking"
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "max_flight_time": 16,
+    "frame_type": "Self-flying pocket drone",
+    "obstacle_sensing": "Vision",
+    "return_to_home": true
   },
   {
     "id": "voliro-t",
