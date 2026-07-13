@@ -55700,7 +55700,10 @@
     "gallery": [
       "https://livhospital.b-cdn.net/wp-content/uploads/2026/03/31072158/Mar-2014_image_1.webp",
       "https://livhospital.b-cdn.net/wp-content/uploads/2026/03/31072209/Mar-2014_image_2.webp"
-    ]
+    ],
+    "system_type": "Multi-port robotic surgery (table-integrated)",
+    "surgical_specialty": "General / soft-tissue",
+    "arms": 6
   },
   {
     "id": "medrobotics-flex360-robotic-system",
@@ -118901,7 +118904,21 @@
     ],
     "made_in": "USA",
     "website": "https://www.intuitive.com",
-    "video": "https://youtu.be/MxIuOdny2cs"
+    "video": "https://youtu.be/MxIuOdny2cs",
+    "fda_cleared": true,
+    "fda_class": "Class II",
+    "system_type": "Multi-port robotic surgery",
+    "surgical_specialty": "Multi-specialty (uro/gyn/general/thoracic/colorectal)",
+    "console_type": "Surgeon console (dual-console capable)",
+    "arms": 4,
+    "instruments_available": "~70 wristed instruments",
+    "tremor_filtering": true,
+    "motion_scaling": true,
+    "haptic_feedback": true,
+    "3d_visualization": true,
+    "fluorescence_imaging": true,
+    "ai_assist": "Case Insights / My Intuitive / SimNow",
+    "first_approval_year": 2024
   },
   {
     "cat": "Medical",
@@ -118938,7 +118955,11 @@
     "surgical_type": "General/soft-tissue laparoscopic",
     "robotic_arms": 6,
     "fda_cleared": false,
-    "ai_assist": true
+    "ai_assist": true,
+    "system_type": "Multi-port robotic surgery (table-integrated)",
+    "surgical_specialty": "General / soft-tissue",
+    "arms": 6,
+    "console_type": "Surgeon console"
   },
   {
     "cat": "Medical",
@@ -118977,12 +118998,15 @@
     "use_cases": [
       "Collaborative laparoscopic surgery (works with existing instruments; FDA-cleared & CE-marked)"
     ],
-    "made_in": "France",
+    "made_in": "France / USA",
     "website": "https://www.moonsurgical.com",
     "surgical_type": "Laparoscopic assistance",
     "robotic_arms": 2,
     "fda_cleared": true,
-    "ce_marked": true
+    "ce_marked": true,
+    "system_type": "Collaborative surgical assistant",
+    "surgical_specialty": "Laparoscopy (instrument holding)",
+    "arms": 2
   },
   {
     "cat": "Medical",
@@ -119022,10 +119046,14 @@
     "use_cases": [
       "Robotic-guided spine surgery with StealthStation navigation & predictive analytics"
     ],
-    "made_in": "USA/Israel",
+    "made_in": "USA / Israel",
     "website": "https://www.medtronic.com",
     "surgical_type": "Spine surgery guidance",
-    "fda_cleared": true
+    "fda_cleared": true,
+    "system_type": "Spine surgical guidance",
+    "surgical_specialty": "Spine",
+    "ar_overlay": true,
+    "vision_system": "StealthStation navigation"
   },
   {
     "cat": "Medical",
@@ -119060,7 +119088,7 @@
     "use_cases": [
       "Digital laparoscopic surgery with reusable instruments"
     ],
-    "made_in": "USA/Italy",
+    "made_in": "USA / Italy",
     "img": "https://www.asensus.com/sites/default/files/styles/tabbed_section_image/public/2023-11/Senhance-System-10-Features-Open-Platform-Original.jpg?h=f4ff3d32&itok=vlsbiUPc",
     "gallery": [
       "https://www.medicaldevice-network.com/wp-content/uploads/sites/23/2023/02/Image-4-Senhance-Surgical-System.jpg",
@@ -119068,7 +119096,14 @@
       "https://www.nsmedicaldevices.com/wp-content/uploads/sites/2/2021/03/SenhanceArmsCloseUp-e1614954618805.jpg",
       "https://www.asensus.com/sites/default/files/styles/parallax_image/public/2023-11/CONSOLE_DETAIL_01_0123_surgeon_controller.jpg?itok=YBNHkJw3"
     ],
-    "video": "https://youtu.be/HdFs4fpV1ZY"
+    "video": "https://youtu.be/HdFs4fpV1ZY",
+    "fda_cleared": true,
+    "system_type": "Multi-port laparoscopic robot",
+    "surgical_specialty": "General / gyn / colorectal",
+    "console_type": "Open console + eye-tracking camera control",
+    "haptic_feedback": true,
+    "tremor_filtering": true,
+    "instruments_available": "Reusable (cost-per-use)"
   },
   {
     "cat": "Medical",
@@ -119112,7 +119147,10 @@
       "Robotic knee & hip replacement"
     ],
     "made_in": "USA",
-    "website": "https://www.smith-nephew.com"
+    "website": "https://www.smith-nephew.com",
+    "fda_cleared": true,
+    "system_type": "Handheld robotic surgery",
+    "surgical_specialty": "Orthopedic (partial/total knee)"
   },
   {
     "cat": "Medical",
@@ -119156,7 +119194,13 @@
       "Stereotactic radiosurgery (SRS/SBRT)"
     ],
     "made_in": "USA",
-    "website": "https://www.accuray.com"
+    "website": "https://www.accuray.com",
+    "fda_cleared": true,
+    "system_type": "Robotic radiosurgery",
+    "surgical_specialty": "Radiosurgery (tumor / SBRT)",
+    "arms": 1,
+    "arm_dof": 6,
+    "ai_assist": "Synchrony motion tracking"
   },
   {
     "cat": "Medical",
@@ -119198,7 +119242,11 @@
       "https://plain-eeur-prod-public.komododecks.com/202606/29/uNSy6idtLCBWQGaw4i7N/image.jpg",
       "https://ht-medicaldevices.com/wp-content/uploads/2025/03/Johnson-Johnson-robotic-platform.webp"
     ],
-    "video": "https://youtu.be/jiDZM4LHarE"
+    "video": "https://youtu.be/jiDZM4LHarE",
+    "fda_cleared": true,
+    "system_type": "Robotic bronchoscopy + ureteroscopy",
+    "surgical_specialty": "Pulmonology / urology",
+    "console_type": "Physician controller"
   },
   {
     "cat": "Service",
@@ -121945,7 +121993,13 @@
     ],
     "made_in": "USA",
     "website": "https://www.intuitive.com",
-    "video": "https://youtu.be/0ZaobUiJhCQ"
+    "video": "https://youtu.be/0ZaobUiJhCQ",
+    "fda_cleared": true,
+    "fda_class": "Class II",
+    "system_type": "Robotic bronchoscopy (flexible catheter)",
+    "surgical_specialty": "Pulmonology (peripheral lung biopsy)",
+    "vision_system": "Vision probe + fiber-optic shape sensing",
+    "first_approval_year": 2019
   },
   {
     "id": "john-deere-8r-autonomous-tractor",
