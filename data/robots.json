@@ -56513,20 +56513,20 @@
     "cat": "Industrial",
     "sub": "Collaborative Robot (Cobot)",
     "tags": [
-      "neura robotics",
-      "collaborative",
       "cobot",
-      "industrial",
-      "payload 10kg",
-      "6 dof",
-      "2023"
+      "neura",
+      "lara-10",
+      "6-axis",
+      "10kg",
+      "ip66",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733669/myrobot/zhawya3lrwztabo0srz8.png",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "NEURA Robotics' LARA 10 is a 6-axis collaborative robot (10 kg payload) in the LARA (Lightweight Agile Robotic Assistant) line, offering cost-effective cobot automation within NEURA's cognitive-robotics ecosystem.",
+    "desc": "The NEURA Robotics LARA 10 heads the LARA collaborative line — 10 kg payload across 1,000 mm reach while holding the family's ±0.02 mm repeatability, a precision figure that undercuts most 10 kg-class cobots. Joint torque sensors throughout drive a PL d Cat. 3 / SIL 2 safety architecture (safe position, speed, torque and I/O monitoring) for cage-free operation, and IP66 sealing suits dusty or wet industrial floors across 0–40 °C. Commissioning leans on ZeroG manual guidance, motion-path recording, flange-mounted programmable controls and a high-resolution teach pendant, with graphical programming and NEURA's pre-configured application library on top. The controller integrates over EtherNet/IP, PROFINET, Modbus TCP/RTU and RS-485 with 8 high-speed GPIO, and NEURA's in-house motors and encoders anchor the accuracy story.",
     "highlights": [],
     "perf": false,
     "origin": "Germany",
@@ -56539,11 +56539,12 @@
     "reach_mm": 1000,
     "ros": true,
     "use_cases": [
-      "Pick-and-place",
-      "Machine tending",
-      "Assembly"
+      "Assembly",
+      "Machine feeding",
+      "Handling",
+      "Packaging & palletizing"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com",
+    "manufacturer_url": "https://neura-robotics.com/products/lara/",
     "product_url": "https://www.neura-robotics.com/products/lara",
     "height_mm": 550,
     "warranty_months": 24,
@@ -56558,7 +56559,7 @@
     "cellular": "4G/5G optional",
     "width_mm": 150,
     "depth_mm": 150,
-    "made_in": "Germany",
+    "made_in": "Germany (Metzingen)",
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Lara_PBB_b19ef259.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Lara_PB_773b5b5b.png",
@@ -56567,7 +56568,57 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Lara_PBB_b19ef259.png"
     ],
     "website": "https://neura-robotics.com",
-    "video": "https://youtu.be/lWbtdoWNKnM"
+    "video": "https://youtu.be/lWbtdoWNKnM",
+    "regions": [
+      "Global"
+    ],
+    "axes_config": "6-axis articulated cobot",
+    "collaborative": true,
+    "payload": 10,
+    "repeatability_mm": 0.02,
+    "repeatability": 0.02,
+    "ip_rating": "IP66",
+    "operating_temp_min": "0",
+    "operating_temp_max": 40,
+    "actuator_type": "NEURA in-house motors with high-precision encoders; torque sensors in all joints",
+    "ft_sensor": "Joint torque sensors in every axis",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 / SIL 2",
+    "safety_functions": "Safe position/speed/torque monitoring; safe I/O; collision detection; ZeroG hand-guiding",
+    "controller": "NEURA LARA controller — EtherNet/IP, PROFINET, Modbus TCP/RTU, RS-485, 8 high-speed GPIO",
+    "teach_pendant": "Teach pendant with high-resolution display + flange-mounted programmable controls",
+    "programming": [
+      "Graphical visual programming",
+      "ZeroG hand-guided teaching",
+      "Motion-path recording",
+      "Pre-configured application library (palletizing, welding, ...)"
+    ],
+    "industrial_protocols": [
+      "EtherNet/IP",
+      "PROFINET",
+      "Modbus TCP",
+      "Modbus RTU",
+      "RS-485"
+    ],
+    "fieldbus": "EtherNet/IP / PROFINET / Modbus TCP-RTU / RS-485",
+    "plc_integration": true,
+    "digital_io": "8 high-speed GPIO (controller)",
+    "collision_detection": true,
+    "estop": "Pendant e-stop + safe I/O",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1"
+    ],
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any orientation"
+    ],
+    "datasheet": "https://neura-robotics.com/products/lara/",
+    "reach": 1000
   },
   {
     "id": "neura-robotics-lara-5",
@@ -56576,20 +56627,20 @@
     "cat": "Industrial",
     "sub": "Collaborative Robot (Cobot)",
     "tags": [
-      "neura robotics",
-      "collaborative",
       "cobot",
-      "industrial",
-      "payload 5kg",
-      "6 dof",
-      "2023"
+      "neura",
+      "lara-5",
+      "6-axis",
+      "5kg",
+      "ip66",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733670/myrobot/siwogl0brroqp680x6dj.png",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "NEURA Robotics' LARA 5 is a 6-axis collaborative robot (5 kg payload) in the LARA (Lightweight Agile Robotic Assistant) line, offering cost-effective cobot automation within NEURA's cognitive-robotics ecosystem.",
+    "desc": "The NEURA Robotics LARA 5 is the mid-compact model of the LARA collaborative family, pairing a 5 kg payload with the line's signature ±0.02 mm repeatability — industrial-robot precision in a cage-free collaborative package. Like its siblings it carries joint torque sensors throughout, a PL d Cat. 3 / SIL 2 safety architecture with safe position/speed/torque monitoring, and IP66 sealing for harsh environments over 0–40 °C. NEURA's own motors and high-precision encoders underpin the accuracy claim, and the operator experience centres on graphical visual programming, ZeroG hand-guiding, path recording and a ready-to-run application library. Connectivity spans EtherNet/IP, PROFINET, Modbus TCP/RTU and RS-485 with 8 high-speed GPIO. NEURA's published English one-pager omits the LARA 5's exact reach figure — logged as a manufacturer-outreach item rather than estimated.",
     "highlights": [],
     "perf": false,
     "origin": "Germany",
@@ -56601,11 +56652,12 @@
     "dof": 6,
     "reach_mm": 800,
     "use_cases": [
-      "Pick-and-place",
-      "Machine tending",
-      "Assembly"
+      "Assembly",
+      "Pick & place",
+      "Machine feeding",
+      "Packaging"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com",
+    "manufacturer_url": "https://neura-robotics.com/products/lara/",
     "height_mm": 1030,
     "ros": true,
     "wifi": true,
@@ -56621,7 +56673,7 @@
     "depth_sensing": true,
     "imu": true,
     "ai_model": "Integrated AI for cognitive robotics",
-    "made_in": "Germany",
+    "made_in": "Germany (Metzingen)",
     "os": "NEURA",
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Lara_PBB_ae070215.png",
@@ -56631,60 +56683,165 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Lara_PBB_ae070215.png"
     ],
     "website": "https://neura-robotics.com",
-    "video": "https://youtu.be/lWbtdoWNKnM"
+    "video": "https://youtu.be/lWbtdoWNKnM",
+    "regions": [
+      "Global"
+    ],
+    "axes_config": "6-axis articulated cobot",
+    "collaborative": true,
+    "payload": 5,
+    "repeatability": 0.02,
+    "ip_rating": "IP66",
+    "operating_temp_min": "0",
+    "operating_temp_max": 40,
+    "actuator_type": "NEURA in-house motors with high-precision encoders; torque sensors in all joints",
+    "ft_sensor": "Joint torque sensors in every axis",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 / SIL 2",
+    "safety_functions": "Safe position/speed/torque monitoring; safe I/O; collision detection; ZeroG hand-guiding",
+    "controller": "NEURA LARA controller — EtherNet/IP, PROFINET, Modbus TCP/RTU, RS-485, 8 high-speed GPIO",
+    "teach_pendant": "Teach pendant with high-resolution display + flange-mounted programmable controls",
+    "programming": [
+      "Graphical visual programming",
+      "ZeroG hand-guided teaching",
+      "Motion-path recording",
+      "Pre-configured application library (palletizing, welding, ...)"
+    ],
+    "industrial_protocols": [
+      "EtherNet/IP",
+      "PROFINET",
+      "Modbus TCP",
+      "Modbus RTU",
+      "RS-485"
+    ],
+    "fieldbus": "EtherNet/IP / PROFINET / Modbus TCP-RTU / RS-485",
+    "plc_integration": true,
+    "digital_io": "8 high-speed GPIO (controller)",
+    "collision_detection": true,
+    "estop": "Pendant e-stop + safe I/O",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1"
+    ],
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any orientation"
+    ],
+    "datasheet": "https://neura-robotics.com/products/lara/"
   },
   {
     "id": "neura-robotics-maira-m",
     "name": "MAiRA M",
     "brand": "NEURA Robotics",
     "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
+    "sub": "Cognitive Cobot Arm",
     "tags": [
-      "neura robotics",
-      "collaborative",
       "cobot",
-      "industrial",
-      "payload 12kg",
-      "7 dof",
-      "2023"
+      "neura",
+      "maira-m",
+      "7-axis",
+      "cognitive",
+      "15kg",
+      "3d-vision",
+      "voice",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733671/myrobot/ciandvjxrtn3nau2xocf.png",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "NEURA Robotics' MAiRA M is a mid-size MAiRA cognitive cobot - a sensitive, AI-enabled collaborative arm with integrated perception (vision, touch, voice) for cognitive automation and close human-robot collaboration.",
+    "desc": "The NEURA Robotics MAiRA M is the mid-size model of the world's first cognitive cobot family — a 7-axis arm rated 15 kg static (12–14 kg dynamic, speed-dependent) across 1,400 mm reach with ±0.01 mm repeatability, 4.5 m/s TCP speed and 360°/s joint speeds. Its cognitive stack is the differentiator: integrated 3D vision with AI object recognition and point clouds, a 360° microphone array for 3D voice commands, a 6-DoF force/torque sensor and NEURA's 6-DoF Smart Skin giving whole-arm contact sensing and fingertip-precise hand guiding. Deployment is no-code — programs build in minutes through the graphical interface, Smart Skin teaching or voice. The controller carries EtherCAT, Modbus, CAN bus, IO-Link and GPIO plus 3× compressed-air feed-through; the IP65 body works across 0–50 °C in any mounting orientation.",
     "highlights": [],
     "perf": false,
     "origin": "Germany",
     "year": 2023,
     "status": "Active",
     "released": "2023",
-    "payload_kg": 12,
+    "payload_kg": 15,
     "dof": 7,
     "reach_mm": 1400,
     "ros": true,
-    "cameras": "Integrated 3D camera for AI-based object recognition",
+    "cameras": "Integrated 3D vision sensor — AI object recognition with point-cloud generation",
     "depth_sensing": true,
     "use_cases": [
-      "Cognitive automation",
-      "Sensitive assembly",
-      "Human-robot collaboration"
+      "Machine tending",
+      "Quality assurance",
+      "Prototyping",
+      "Autonomous object handling"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com",
+    "manufacturer_url": "https://neura-robotics.com/products/MAiRA",
     "weight_kg": 37,
-    "speed_ms": 3,
+    "speed_ms": 4.5,
     "os": "AURA / NEURA",
     "wifi": true,
     "bluetooth": true,
     "imu": true,
     "warranty_months": 24,
     "product_url": "https://www.neura-robotics.com/maira-m",
-    "made_in": "Germany",
+    "made_in": "Germany (Metzingen)",
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/MAIRA_PB1_b14bcb19.png"
     ],
-    "website": "https://neura-robotics.com"
+    "website": "https://neura-robotics.com",
+    "regions": [
+      "Global"
+    ],
+    "axes_config": "7-axis cognitive collaborative arm",
+    "collaborative": true,
+    "payload": 15,
+    "payload_peak_kg": 15,
+    "reach": 1400,
+    "repeatability_mm": 0.01,
+    "repeatability": 0.01,
+    "max_tcp_speed_ms": 4.5,
+    "speed": 4.5,
+    "joint_speed_max_dps": 360,
+    "ip_rating": "IP65",
+    "operating_temp_min": "0",
+    "operating_temp_max": 50,
+    "ft_sensor": "6-DoF force/torque sensor + 6-DoF Smart Skin (whole-arm touch for hand guiding)",
+    "ft_force_range_n": "Dynamic payload 12–14 kg (speed-dependent); static rated 15 kg",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Smart Skin contact sensing; collision detection; safe monitored operation",
+    "microphones": "360° microphone array — 3D voice recognition",
+    "ai_model": "NEURA cognitive AI — sees, hears and feels; AI object recognition, voice command, autonomous handling",
+    "natural_language_commands": true,
+    "controller": "NEURA controller — EtherCAT, Modbus, CAN bus, IO-Link, GPIO + 3× compressed-air pass-through",
+    "teach_pendant": "Customizable HMI buttons + Smart Skin hand guiding; no-code graphical programming",
+    "programming": [
+      "No-code graphical programming (minutes to deploy)",
+      "Smart Skin hand-guided teaching",
+      "Voice commands"
+    ],
+    "industrial_protocols": [
+      "EtherCAT",
+      "Modbus",
+      "CAN bus",
+      "IO-Link"
+    ],
+    "fieldbus": "EtherCAT / Modbus / CAN bus / IO-Link",
+    "plc_integration": true,
+    "tool_io": "GPIO + 3× compressed-air feed-through to flange",
+    "collision_detection": true,
+    "estop": "Safe stop via Smart Skin contact + controller e-stop",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1"
+    ],
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any orientation"
+    ],
+    "datasheet": "https://neura-robotics.com/products/MAiRA"
   },
   {
     "id": "neura-robotics-4ne1-mini",
@@ -61359,20 +61516,20 @@
     "cat": "Industrial",
     "sub": "Collaborative Robot (Cobot)",
     "tags": [
-      "neura robotics",
-      "collaborative",
       "cobot",
-      "industrial",
-      "payload 8kg",
-      "6 dof",
-      "2023"
+      "neura",
+      "lara-8",
+      "6-axis",
+      "8kg",
+      "ip66",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733736/myrobot/w4vtrkncqkf9kbsbflop.png",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "NEURA Robotics' LARA 8 is a 6-axis collaborative robot (8 kg payload) in the LARA (Lightweight Agile Robotic Assistant) line, offering cost-effective cobot automation within NEURA's cognitive-robotics ecosystem.",
+    "desc": "The NEURA Robotics LARA 8 slots between the LARA 5 and LARA 10 with an 8 kg payload at the family's ±0.02 mm repeatability, targeting machine tending and handling work that outgrows 5 kg-class arms. It shares the LARA platform end to end: torque sensors in all six joints, PL d Cat. 3 / SIL 2 integrated safety with safe position/speed/torque monitoring for fenceless collaboration, IP66 protection across 0–40 °C, NEURA in-house motors with high-precision encoders, ZeroG hand-guided teaching, graphical programming with pre-built application packages, and a controller speaking EtherNet/IP, PROFINET, Modbus TCP/RTU and RS-485 with 8 high-speed GPIO. The exact reach figure for the LARA 8 isn't in NEURA's published English materials — flagged for manufacturer outreach.",
     "highlights": [],
     "perf": false,
     "origin": "Germany",
@@ -61384,11 +61541,12 @@
     "reach_mm": 1300,
     "ros": true,
     "use_cases": [
-      "Pick-and-place",
       "Machine tending",
+      "Handling",
+      "Palletizing (light)",
       "Assembly"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com",
+    "manufacturer_url": "https://neura-robotics.com/products/lara/",
     "weight_kg": 25,
     "speed_ms": 2,
     "wifi": true,
@@ -61396,7 +61554,7 @@
     "imu": true,
     "warranty_months": 24,
     "product_url": "https://www.neura-robotics.com/lara",
-    "made_in": "Germany",
+    "made_in": "Germany (Metzingen)",
     "os": "NEURA",
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Lara_PBB_79e4d1e8.png",
@@ -61405,7 +61563,56 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Lara_PBB_79e4d1e8.png"
     ],
     "website": "https://neura-robotics.com",
-    "video": "https://youtu.be/lWbtdoWNKnM"
+    "video": "https://youtu.be/lWbtdoWNKnM",
+    "regions": [
+      "Global"
+    ],
+    "axes_config": "6-axis articulated cobot",
+    "collaborative": true,
+    "payload": 8,
+    "repeatability_mm": 0.02,
+    "repeatability": 0.02,
+    "ip_rating": "IP66",
+    "operating_temp_min": "0",
+    "operating_temp_max": 40,
+    "actuator_type": "NEURA in-house motors with high-precision encoders; torque sensors in all joints",
+    "ft_sensor": "Joint torque sensors in every axis",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 / SIL 2",
+    "safety_functions": "Safe position/speed/torque monitoring; safe I/O; collision detection; ZeroG hand-guiding",
+    "controller": "NEURA LARA controller — EtherNet/IP, PROFINET, Modbus TCP/RTU, RS-485, 8 high-speed GPIO",
+    "teach_pendant": "Teach pendant with high-resolution display + flange-mounted programmable controls",
+    "programming": [
+      "Graphical visual programming",
+      "ZeroG hand-guided teaching",
+      "Motion-path recording",
+      "Pre-configured application library (palletizing, welding, ...)"
+    ],
+    "industrial_protocols": [
+      "EtherNet/IP",
+      "PROFINET",
+      "Modbus TCP",
+      "Modbus RTU",
+      "RS-485"
+    ],
+    "fieldbus": "EtherNet/IP / PROFINET / Modbus TCP-RTU / RS-485",
+    "plc_integration": true,
+    "digital_io": "8 high-speed GPIO (controller)",
+    "collision_detection": true,
+    "estop": "Pendant e-stop + safe I/O",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1"
+    ],
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any orientation"
+    ],
+    "datasheet": "https://neura-robotics.com/products/lara/"
   },
   {
     "id": "neura-robotics-lara-3",
@@ -61414,20 +61621,21 @@
     "cat": "Industrial",
     "sub": "Collaborative Robot (Cobot)",
     "tags": [
-      "neura robotics",
-      "collaborative",
       "cobot",
-      "industrial",
-      "payload 3kg",
-      "6 dof",
-      "2023"
+      "neura",
+      "lara-3",
+      "6-axis",
+      "3kg",
+      "ip66",
+      "pld",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733737/myrobot/ibpicq1ljjw7hsjsx32p.png",
     "score": 75,
     "rating": 4,
     "price": 15000,
-    "desc": "NEURA Robotics' LARA 3 is a 6-axis collaborative robot (3 kg payload) in the LARA (Lightweight Agile Robotic Assistant) line, offering cost-effective cobot automation within NEURA's cognitive-robotics ecosystem.",
+    "desc": "The NEURA Robotics LARA 3 is the compact entry to the German company's LARA cobot line — 3 kg payload across 590 mm reach at ±0.02 mm repeatability, aimed at precise assembly, handling and test processes in tight workspaces. Torque sensors in every joint feed an integrated safety concept rated PL d Cat. 3 / SIL 2 with safe position, speed and torque monitoring, enabling cage-free collaboration, while IP66 sealing (unusually high for a cobot) handles harsh, dusty or wet production environments across 0–40 °C. NEURA's in-house motors and high-precision encoders drive accuracy; programming runs through a graphical interface, ZeroG hand-guided teaching and motion-path recording, with pre-configured application packages for immediate deployment. The controller speaks EtherNet/IP, PROFINET, Modbus TCP/RTU and RS-485 with 8 high-speed GPIO.",
     "highlights": [],
     "perf": false,
     "origin": "Germany",
@@ -61440,11 +61648,12 @@
     "reach_mm": 590,
     "ros": true,
     "use_cases": [
-      "Pick-and-place",
-      "Machine tending",
-      "Assembly"
+      "Precision assembly",
+      "Small-part handling",
+      "Testing & inspection",
+      "Placement"
     ],
-    "manufacturer_url": "https://www.neura-robotics.com",
+    "manufacturer_url": "https://neura-robotics.com/products/lara/",
     "height_mm": 600,
     "speed_ms": 1.5,
     "warranty_months": 24,
@@ -61453,7 +61662,7 @@
     "cameras": "Integrated vision system",
     "imu": true,
     "product_url": "https://www.neura-robotics.com/lara",
-    "made_in": "Germany",
+    "made_in": "Germany (Metzingen)",
     "os": "NEURA",
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Lara_PBB_78ae68bd.png",
@@ -61462,7 +61671,57 @@
       "https://cdn.robodk.com/robot/img/Neura-LARA-3-robot.png"
     ],
     "website": "https://neura-robotics.com",
-    "video": "https://youtu.be/lWbtdoWNKnM"
+    "video": "https://youtu.be/lWbtdoWNKnM",
+    "regions": [
+      "Global"
+    ],
+    "axes_config": "6-axis articulated cobot",
+    "collaborative": true,
+    "payload": 3,
+    "repeatability_mm": 0.02,
+    "repeatability": 0.02,
+    "ip_rating": "IP66",
+    "operating_temp_min": "0",
+    "operating_temp_max": 40,
+    "actuator_type": "NEURA in-house motors with high-precision encoders; torque sensors in all joints",
+    "ft_sensor": "Joint torque sensors in every axis",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 / SIL 2",
+    "safety_functions": "Safe position/speed/torque monitoring; safe I/O; collision detection; ZeroG hand-guiding",
+    "controller": "NEURA LARA controller — EtherNet/IP, PROFINET, Modbus TCP/RTU, RS-485, 8 high-speed GPIO",
+    "teach_pendant": "Teach pendant with high-resolution display + flange-mounted programmable controls",
+    "programming": [
+      "Graphical visual programming",
+      "ZeroG hand-guided teaching",
+      "Motion-path recording",
+      "Pre-configured application library (palletizing, welding, ...)"
+    ],
+    "industrial_protocols": [
+      "EtherNet/IP",
+      "PROFINET",
+      "Modbus TCP",
+      "Modbus RTU",
+      "RS-485"
+    ],
+    "fieldbus": "EtherNet/IP / PROFINET / Modbus TCP-RTU / RS-485",
+    "plc_integration": true,
+    "digital_io": "8 high-speed GPIO (controller)",
+    "collision_detection": true,
+    "estop": "Pendant e-stop + safe I/O",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1"
+    ],
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any orientation"
+    ],
+    "datasheet": "https://neura-robotics.com/products/lara/",
+    "reach": 590
   },
   {
     "id": "agile-robots-distributed-by-franka-diana-7",
@@ -150833,6 +151092,192 @@
       "active"
     ],
     "desc": "The Hanwha HCR-5W is an ultra-lightweight, ultra-compact cobot specialised for welding — at roughly 10.9 kg it is light enough for a single worker to carry between weld stations, while lifting a class-leading 4.5 kg payload across a 625 mm working range. Hanwha pitches it at job shops and fabricators that need a weld cobot to move to the work rather than the reverse, with SIL functional-safety and UL certification alongside CE and ISO. It shares the HCR platform's direct teaching, collision detection and touch-pendant workflow. Joint-level ranges, speeds and repeatability for the 5W aren't yet in Hanwha's published English parameter sheet — logged as outreach items.",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "neura-robotics-maira-s",
+    "name": "MAiRA S",
+    "brand": "NEURA Robotics",
+    "cat": "Industrial",
+    "sub": "Cognitive Cobot Arm",
+    "origin": "Germany",
+    "made_in": "Germany (Metzingen)",
+    "status": "Active",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://neura-robotics.com/products/MAiRA",
+    "axes_config": "7-axis cognitive collaborative arm",
+    "dof": 7,
+    "collaborative": true,
+    "payload_kg": 18,
+    "payload": 18,
+    "payload_peak_kg": 18,
+    "reach_mm": 1100,
+    "reach": 1100,
+    "repeatability_mm": 0.01,
+    "repeatability": 0.01,
+    "max_tcp_speed_ms": 4.5,
+    "speed_ms": 4.5,
+    "speed": 4.5,
+    "joint_speed_max_dps": 360,
+    "ip_rating": "IP65",
+    "operating_temp_min": "0",
+    "operating_temp_max": 50,
+    "ft_sensor": "6-DoF force/torque sensor + 6-DoF Smart Skin (whole-arm touch for hand guiding)",
+    "ft_force_range_n": "Dynamic payload 15–18 kg (speed-dependent); static rated 18 kg",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Smart Skin contact sensing; collision detection; safe monitored operation",
+    "cameras": "Integrated 3D vision sensor — AI object recognition with point-cloud generation",
+    "depth_sensing": true,
+    "microphones": "360° microphone array — 3D voice recognition",
+    "ai_model": "NEURA cognitive AI — sees, hears and feels; AI object recognition, voice command, autonomous handling",
+    "natural_language_commands": true,
+    "controller": "NEURA controller — EtherCAT, Modbus, CAN bus, IO-Link, GPIO + 3× compressed-air pass-through",
+    "teach_pendant": "Customizable HMI buttons + Smart Skin hand guiding; no-code graphical programming",
+    "programming": [
+      "No-code graphical programming (minutes to deploy)",
+      "Smart Skin hand-guided teaching",
+      "Voice commands"
+    ],
+    "industrial_protocols": [
+      "EtherCAT",
+      "Modbus",
+      "CAN bus",
+      "IO-Link"
+    ],
+    "fieldbus": "EtherCAT / Modbus / CAN bus / IO-Link",
+    "plc_integration": true,
+    "tool_io": "GPIO + 3× compressed-air feed-through to flange",
+    "collision_detection": true,
+    "estop": "Safe stop via Smart Skin contact + controller e-stop",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1"
+    ],
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any orientation"
+    ],
+    "datasheet": "https://neura-robotics.com/products/MAiRA",
+    "use_cases": [
+      "High-speed machine tending",
+      "Quality inspection",
+      "Prototyping",
+      "Cognitive handling"
+    ],
+    "tags": [
+      "cobot",
+      "neura",
+      "maira-s",
+      "7-axis",
+      "cognitive",
+      "18kg",
+      "3d-vision",
+      "voice",
+      "new",
+      "active"
+    ],
+    "desc": "The NEURA Robotics MAiRA S is the highest-payload member of the MAiRA cognitive cobot family — 18 kg static rating (15–18 kg dynamic, speed-dependent) across 1,100 mm reach at a class-leading ±0.01 mm repeatability, with TCP speeds to 4.5 m/s and joint speeds to 360°/s. What separates MAiRA from conventional cobots is perception: an integrated 3D vision sensor with AI object recognition and point-cloud generation, a 360° microphone array for 3D voice commands, a 6-DoF force/torque sensor, and NEURA's 6-DoF Smart Skin for whole-arm touch sensing and precise hand guiding — the robot sees, hears and feels. Programming is no-code and takes minutes; connectivity spans EtherCAT, Modbus, CAN bus, IO-Link and GPIO with triple compressed-air pass-through to the flange. IP65-rated across 0–50 °C, mountable in any orientation.",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "neura-robotics-maira-l",
+    "name": "MAiRA L",
+    "brand": "NEURA Robotics",
+    "cat": "Industrial",
+    "sub": "Cognitive Cobot Arm",
+    "origin": "Germany",
+    "made_in": "Germany (Metzingen)",
+    "status": "Active",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://neura-robotics.com/products/MAiRA",
+    "axes_config": "7-axis cognitive collaborative arm",
+    "dof": 7,
+    "collaborative": true,
+    "payload_kg": 12,
+    "payload": 12,
+    "payload_peak_kg": 12,
+    "reach_mm": 1600,
+    "reach": 1600,
+    "repeatability_mm": 0.01,
+    "repeatability": 0.01,
+    "max_tcp_speed_ms": 4.5,
+    "speed_ms": 4.5,
+    "speed": 4.5,
+    "joint_speed_max_dps": 360,
+    "ip_rating": "IP65",
+    "operating_temp_min": "0",
+    "operating_temp_max": 50,
+    "ft_sensor": "6-DoF force/torque sensor + 6-DoF Smart Skin (whole-arm touch for hand guiding)",
+    "ft_force_range_n": "Dynamic payload 8–11 kg (speed-dependent); static rated 12 kg",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Smart Skin contact sensing; collision detection; safe monitored operation",
+    "cameras": "Integrated 3D vision sensor — AI object recognition with point-cloud generation",
+    "depth_sensing": true,
+    "microphones": "360° microphone array — 3D voice recognition",
+    "ai_model": "NEURA cognitive AI — sees, hears and feels; AI object recognition, voice command, autonomous handling",
+    "natural_language_commands": true,
+    "controller": "NEURA controller — EtherCAT, Modbus, CAN bus, IO-Link, GPIO + 3× compressed-air pass-through",
+    "teach_pendant": "Customizable HMI buttons + Smart Skin hand guiding; no-code graphical programming",
+    "programming": [
+      "No-code graphical programming (minutes to deploy)",
+      "Smart Skin hand-guided teaching",
+      "Voice commands"
+    ],
+    "industrial_protocols": [
+      "EtherCAT",
+      "Modbus",
+      "CAN bus",
+      "IO-Link"
+    ],
+    "fieldbus": "EtherCAT / Modbus / CAN bus / IO-Link",
+    "plc_integration": true,
+    "tool_io": "GPIO + 3× compressed-air feed-through to flange",
+    "collision_detection": true,
+    "estop": "Safe stop via Smart Skin contact + controller e-stop",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1"
+    ],
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any orientation"
+    ],
+    "datasheet": "https://neura-robotics.com/products/MAiRA",
+    "use_cases": [
+      "Long-reach machine tending",
+      "Automotive assembly",
+      "Electronics inspection",
+      "Large-envelope handling"
+    ],
+    "tags": [
+      "cobot",
+      "neura",
+      "maira-l",
+      "7-axis",
+      "cognitive",
+      "12kg",
+      "long-reach",
+      "3d-vision",
+      "new",
+      "active"
+    ],
+    "desc": "The NEURA Robotics MAiRA L is the long-reach model of the cognitive MAiRA line — 1,600 mm reach with a 12 kg static rating (8–11 kg dynamic, speed-dependent), holding the family's ±0.01 mm repeatability, 4.5 m/s TCP speed and 360°/s joint speeds across seven axes. The cognitive platform carries over intact: integrated 3D vision with AI object recognition and point-cloud generation, 360° microphone array for voice interaction, 6-DoF force/torque sensing, and the 6-DoF Smart Skin for whole-arm touch and hand-guided teaching. Its reach-precision combination suits automotive assembly, large-part tending and electronics inspection across wide envelopes. No-code programming deploys in minutes; connectivity spans EtherCAT, Modbus, CAN bus, IO-Link and GPIO with triple compressed-air pass-through. IP65, 0–50 °C, any-orientation mounting.",
     "fig": "🤖",
     "score": 75,
     "rating": 4
