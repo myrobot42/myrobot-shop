@@ -43711,26 +43711,26 @@
     "name": "Moonlight",
     "brand": "Flexiv",
     "cat": "Industrial",
-    "sub": "Heavy Payload Arm",
+    "sub": "Parallel Robot (Delta)",
     "tags": [
+      "parallel-robot",
+      "delta",
       "flexiv",
-      "heavy",
-      "payload",
-      "arm",
-      "industrial",
-      "payload 5kg",
-      "3 dof",
-      "2022"
+      "moonlight",
+      "force-control",
+      "ip65",
+      "first",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733392/myrobot/deubhe0pc67zlzd8u3ro.png",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Flexiv's Moonlight is part of the company's adaptive-robotics product range. (Detailed specifications for this record are limited and worth verifying against Flexiv.)",
+    "desc": "The Flexiv Moonlight is the world's first force-controlled parallel robot — a 3-DoF delta platform that fuses Flexiv's adaptive force sensing and control with the speed of a parallel kinematic structure. Working across a Ø1,200 mm × 400 mm envelope at 1.5 m/s TCP speed and 15 m/s² acceleration with ±0.05 mm ISO 9283 repeatability, it brings compliant, force-guided behaviour to a robot class traditionally limited to rigid position control — enabling adaptive loading/unloading and delicate high-speed handling with superior vibration rejection. The 38 kg, IP65-rated unit mounts horizontally, vertically or at any angle from a Ø206 mm base, and its hollow ISO 9409-1-50-4-M6 flange routes tooling and vision cabling internally. It shares Flexiv's ecosystem: the Hesper controller, Flexiv Elements visual programming, jogging/floating teach modes, the C++/Python RDK, and CE & ETL certification for safe human-robot interaction.",
     "highlights": [],
     "perf": false,
-    "origin": "China",
+    "origin": "USA / China",
     "year": 2022,
     "status": "Active",
     "released": "2022",
@@ -43739,28 +43739,89 @@
     "height_mm": 400,
     "payload_kg": 5,
     "use_cases": [
-      "Force-controlled assembly",
-      "Polishing & surface finishing",
-      "Adaptive manipulation"
+      "Adaptive loading & unloading",
+      "High-speed force-controlled pick & place",
+      "Vibration-sensitive precision handling"
     ],
-    "manufacturer_url": "https://www.flexiv.com",
+    "manufacturer_url": "https://www.flexiv.com/product/moonlight",
     "ros": true,
-    "weight_kg": 45,
-    "speed_ms": 3,
-    "repeatability_mm": 0.03,
+    "weight_kg": 38,
+    "speed_ms": 1.5,
+    "repeatability_mm": 0.05,
     "force_sensing_n": 0.1,
     "workspace_type": "cylindrical",
     "control_system": "force_control",
     "programming_interface": "visual_programming",
     "product_url": "https://www.flexiv.com/moonlight",
-    "made_in": "China / USA",
+    "made_in": "China",
     "os": "Flexiv",
     "gallery": [
       "https://media.theresanaiforthat.com/robot-media/moonlight-ylm2bcb.png",
       "https://media.theresanaiforthat.com/robot-media/moonlight-3xmf8x0.png",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-WcLD8BUMrgzSOz00mvIMklXFvr5ztYgkwaVSwGPSog&s=10"
     ],
-    "video": "https://youtu.be/MAMrfikdc4E"
+    "video": "https://youtu.be/MAMrfikdc4E",
+    "regions": [
+      "Global"
+    ],
+    "axes_config": "3-axis force-controlled parallel (delta) robot",
+    "collaborative": true,
+    "arm_weight_kg": 38,
+    "footprint_mm": 206,
+    "repeatability": 0.05,
+    "max_tcp_speed_ms": 1.5,
+    "speed": 1.5,
+    "acceleration": "15 m/s²",
+    "mounting": [
+      "Horizontal",
+      "Vertical",
+      "Any angle"
+    ],
+    "hollow_wrist": true,
+    "flange_standard": "ISO 9409-1-50-4-M6 (hollow — tool/vision cabling through flange)",
+    "ip_rating": "IP65",
+    "operating_temp_min": "0",
+    "operating_temp_max": 45,
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Force-controlled compliant operation; complies with international HRI safety standards",
+    "controller": "Flexiv Hesper — 12 kg, 500 W, IP20, 423×230×230 mm, 16 DI / 16 DO, PROFINET + Modbus TCP/IP",
+    "teach_pendant": "Optional Teach Pendant (Flexiv Elements) + Motion Bar; supports teaching by jogging and floating",
+    "programming": [
+      "Flexiv Elements visual programming",
+      "Flexiv RDK",
+      "Jogging / floating teach"
+    ],
+    "programming_langs": [
+      "C++",
+      "Python"
+    ],
+    "industrial_protocols": [
+      "PROFINET",
+      "Modbus TCP/IP"
+    ],
+    "fieldbus": "PROFINET / Modbus TCP/IP",
+    "plc_integration": true,
+    "digital_io": "Hesper controller: 16 in / 16 out",
+    "power_source": "100–240 VAC via Hesper controller",
+    "power_consumption_w": 500,
+    "ethernet": "Via Hesper controller",
+    "sdk": true,
+    "sdk_langs": [
+      "C++",
+      "Python"
+    ],
+    "api": "Flexiv RDK",
+    "app_companion": "Flexiv Elements",
+    "collision_detection": true,
+    "estop": "Motion Bar e-stop + software stop",
+    "ce": true,
+    "other_certs": [
+      "ETL"
+    ],
+    "safety_rating": "CE & ETL certified — inherently safe HRI",
+    "datasheet": "https://www.flexiv.com/product/moonlight"
   },
   {
     "id": "jaka-jaka-all-in-one-series",
@@ -45176,37 +45237,38 @@
     "cat": "Industrial",
     "sub": "Robotic Hand / Gripper",
     "tags": [
-      "flexiv",
-      "robotic",
-      "hand",
       "gripper",
-      "industrial",
-      "payload 20kg",
-      "2 dof",
-      "2021"
+      "end-effector",
+      "flexiv",
+      "grav",
+      "force-control",
+      "gecko",
+      "ip67",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/szjRT2XrPW4ToFH02k8D/image.jpg",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Flexiv's Grav is part of the company's adaptive-robotics portfolio emphasising force-aware manipulation. (Detailed payload/reach specifications for this record are limited and worth verifying against Flexiv.)",
+    "desc": "The Flexiv Grav is a force-controlled robotic gripper announced in February 2023 and shipping from Q2 2023, bringing the same industrial-grade force control as Flexiv's Rizon adaptive arms to the end effector. Its composite sensor module senses resistive forces in the sub-gram region, letting it hold a constant, precisely modulated grip on delicate or fragile objects at speed, while a gecko-foot-inspired adhesive material adds contigutive grasping for oddly shaped or uneven-surfaced items — including spheres that defeat conventional parallel grippers. Rated IP67 against dust and water immersion, meeting or exceeding ISO/TS 15066 collaborative safety standards, and rated for tens of millions of open/close cycles, it attaches plug-and-play to Flexiv's universal end-of-arm socket with no coding required, and was adapted for standard cobots after customer demand. Control runs through Flexiv Elements primitives, a dedicated Grav UI, or Modbus RTU.",
     "highlights": [],
     "perf": false,
-    "origin": "China",
-    "year": 2021,
+    "origin": "USA / China",
+    "year": 2023,
     "status": "Active",
-    "released": "2021",
+    "released": "Q2 2023",
     "weight_kg": 0.8,
     "payload_kg": 20,
     "dof": 2,
     "ros": true,
     "use_cases": [
-      "Force-controlled assembly",
-      "Polishing & surface finishing",
-      "Adaptive manipulation"
+      "Micro-component insertion",
+      "Delicate object transfer",
+      "Machine tending",
+      "Mixed-object handling"
     ],
-    "manufacturer_url": "https://www.flexiv.com",
+    "manufacturer_url": "https://www.flexiv.com/products/grav",
     "height_mm": 155,
     "width_mm": 85,
     "depth_mm": 85,
@@ -45220,7 +45282,7 @@
       "position feedback"
     ],
     "operating_temp_c": "-10 to 50",
-    "made_in": "China / USA",
+    "made_in": "China",
     "os": "Flexiv",
     "gallery": [
       "https://oss-flexiv-web-com.flexiv.com/image/product/grav/specialty-6.jpg",
@@ -45228,33 +45290,59 @@
       "https://oss-flexiv-web-com.flexiv.com/image/product/grav/bg-grav-enhanced.jpg?x-oss-process=image/resize,w_2000,limit_0/format,jpg/interlace,1/quality,Q_90",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ10aXdNKiQsaQZ6yl7g0b4nlJaokpwXOIYWU3ab9OmOgbq5S5teJ5Zs5E&s=10"
     ],
-    "video": "https://youtu.be/3i2mwTt2OQk"
+    "video": "https://youtu.be/3i2mwTt2OQk",
+    "regions": [
+      "Global"
+    ],
+    "announced": "February 2023",
+    "ip_rating": "IP67",
+    "iso_certs": [
+      "ISO/TS 15066"
+    ],
+    "ce": true,
+    "industrial_protocols": [
+      "Modbus RTU"
+    ],
+    "fieldbus": "Modbus RTU",
+    "power_source": "Via robot tool flange or external supply",
+    "collaborative": true,
+    "force_limiting": true,
+    "datasheet": "https://www.flexiv.com/products/grav",
+    "gripper_type": "Force-controlled parallel 2-finger gripper with gecko-inspired adhesive pads",
+    "ft_force_range_n": "Sub-gram resistive force sensing",
+    "controller": "Plug-and-play on Flexiv adaptive robots (universal end-of-arm socket); compatible with standard cobots",
+    "programming": [
+      "Flexiv Elements primitives",
+      "Grav User Interface",
+      "Modbus RTU register control"
+    ]
   },
   {
     "id": "flexiv-rizon-10s",
     "name": "Rizon 10s",
     "brand": "Flexiv",
     "cat": "Industrial",
-    "sub": "6-Axis Articulated Arm",
+    "sub": "7-Axis Adaptive Robot (Cobot)",
     "tags": [
+      "cobot",
+      "adaptive-robot",
       "flexiv",
-      "axis",
-      "articulated",
-      "arm",
-      "industrial",
-      "payload 10kg",
-      "7 dof",
-      "2022"
+      "rizon-10s",
+      "7-axis",
+      "force-control",
+      "ft-sensor",
+      "10kg",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733426/myrobot/ovhpvsh0lguncrdaukx6.png",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Flexiv's Rizon 10s is a higher-payload (~10 kg class) 7-axis adaptive robot with the company's signature force-control technology for robust contact-rich manipulation such as grinding, polishing and assembly.",
+    "desc": "The Flexiv Rizon 10s pairs the 10 kg-class adaptive platform with a flange-mounted 6-DoF force/torque sensor, combining the Rizon 10's whole-body torque sensing with dedicated end-effector force feedback for precision contact tasks at payload. It offers the longest reach in the Rizon family at 984 mm (39 kg mass, ±0.05 mm ISO 9283 repeatability, 0.2 N force sensing accuracy, 350 N max TCP force) and shares the line's core architecture: 7-DoF human-arm kinematics holding an optimised force-control posture, IP65 protection, any-angle or AMR/AGV mounting, and ISO 13849 PL=d dual-channel safety with CE & ETL certification. Deployment runs through the Hesper controller with Flexiv Elements visual programming, hand-guided teaching, and the C++/Python RDK, with official flexiv_ros/flexiv_ros2 bridges for research and integration work.",
     "highlights": [],
     "perf": false,
-    "origin": "China",
+    "origin": "USA / China",
     "year": 2022,
     "status": "Active",
     "released": "2022",
@@ -45267,15 +45355,17 @@
     "depth_sensing": true,
     "cameras": "Built-in vision system with depth perception",
     "use_cases": [
-      "Force-controlled assembly",
-      "Polishing & surface finishing",
-      "Adaptive manipulation"
+      "Force-critical heavy assembly",
+      "Precision insertion at high payload",
+      "Finishing",
+      "Research",
+      "Automotive component assembly"
     ],
-    "manufacturer_url": "https://www.flexiv.com",
+    "manufacturer_url": "https://www.flexiv.com/product/rizon",
     "height_mm": 1020,
     "width_mm": 180,
     "depth_mm": 180,
-    "speed_ms": 2,
+    "speed_ms": 1,
     "os": "Flexiv",
     "wifi": true,
     "bluetooth": false,
@@ -45283,39 +45373,110 @@
     "lidar": false,
     "warranty_months": 12,
     "product_url": "https://www.flexiv.com/rizon",
-    "made_in": "China / USA",
+    "made_in": "China",
     "gallery": [
       "https://i.ebayimg.com/images/g/tPkAAeSw01lqBzLO/s-l960.webp",
       "https://i.ebayimg.com/images/g/~kQAAeSwrclqBzLR/s-l960.webp",
       "https://i.ebayimg.com/images/g/bkMAAeSwlKlqBzLM/s-l1600.webp"
-    ]
+    ],
+    "regions": [
+      "Global"
+    ],
+    "axes_config": "7-axis serial adaptive robot",
+    "collaborative": true,
+    "payload": 10,
+    "reach": 984,
+    "arm_weight_kg": 39,
+    "repeatability_mm": 0.05,
+    "repeatability": 0.05,
+    "mounting": [
+      "Any angle",
+      "AMR/AGV platform"
+    ],
+    "max_tcp_speed_ms": 1,
+    "speed": 1,
+    "ft_sensor": "Torque sensors in all 7 axes — whole-body force sensing + 6-DoF flange-mounted F/T sensor",
+    "ft_force_range_n": "Force sensing accuracy 0.2 N; max TCP force 350 N",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "ISO 13849 PL=d (dual-channel redundancy)",
+    "safety_functions": "Torque-based whole-body collision detection; dual-channel safety architecture; Motion Bar emergency stop",
+    "flange_standard": "ISO 9409-1-50-4-M6",
+    "digital_io": "Hesper controller: 16 in / 16 out",
+    "controller": "Flexiv Hesper — 12 kg, 500 W, IP20, 423×230×230 mm, 16 DI / 16 DO, PROFINET + Modbus TCP/IP",
+    "teach_pendant": "Optional Teach Pendant running Flexiv Elements + handheld Motion Bar (mode switch / task start / e-stop)",
+    "programming": [
+      "Flexiv Elements — drag-and-drop visual programming with primitive function blocks",
+      "Flexiv RDK (Robot Development Kit)",
+      "Hand-guided teaching"
+    ],
+    "programming_langs": [
+      "C++",
+      "Python"
+    ],
+    "ros_industrial": "Official flexiv_ros / flexiv_ros2 bridges via RDK",
+    "industrial_protocols": [
+      "PROFINET",
+      "Modbus TCP/IP"
+    ],
+    "fieldbus": "PROFINET / Modbus TCP/IP",
+    "plc_integration": true,
+    "power_consumption_w": 500,
+    "ip_rating": "IP65",
+    "operating_temp_min": "0",
+    "operating_temp_max": 45,
+    "noise_db": 70,
+    "power_source": "100–240 VAC via Hesper controller",
+    "ethernet": "Via Hesper controller",
+    "sdk": true,
+    "sdk_langs": [
+      "C++",
+      "Python"
+    ],
+    "api": "Flexiv RDK (real-time + non-real-time control)",
+    "app_companion": "Flexiv Elements",
+    "collision_detection": true,
+    "estop": "Handheld Motion Bar e-stop + software stop",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218",
+      "ISO 13849 PL=d"
+    ],
+    "other_certs": [
+      "ETL"
+    ],
+    "safety_rating": "Inherently safe adaptive robot — CE & ETL certified, fenceless HRI",
+    "datasheet": "https://www.flexiv.com/product/rizon",
+    "ai_model": "Flexiv hierarchical intelligence — AI-driven vision + force-guided manipulation"
   },
   {
     "id": "flexiv-rizon-4s",
     "name": "Rizon 4s",
     "brand": "Flexiv",
     "cat": "Industrial",
-    "sub": "6-Axis Articulated Arm",
+    "sub": "7-Axis Adaptive Robot (Cobot)",
     "tags": [
+      "cobot",
+      "adaptive-robot",
       "flexiv",
-      "axis",
-      "articulated",
-      "arm",
-      "industrial",
-      "payload 4kg",
-      "7 dof",
-      "2019"
+      "rizon-4s",
+      "7-axis",
+      "force-control",
+      "ft-sensor",
+      "precision",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733426/myrobot/fry689ab0jwfkunivzm6.webp",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Flexiv's Rizon 4s is a 7-axis adaptive robot (~4 kg payload class) built around industry-leading force-torque sensing and hierarchical force control, excelling at contact-rich tasks like polishing, assembly and surface finishing.",
+    "desc": "The Flexiv Rizon 4s is the high-sensitivity variant of the Rizon 4 adaptive robot, adding a 6-DoF flange-mounted force/torque sensor on top of the series' torque sensing in all seven joints. The result is 0.03 N force sensing accuracy — sensitivity Flexiv describes as surpassing human touch — enabling multi-contact force control for delicate work like FPC/FFC insertion and micro-component placement where end-effector feedback is critical. It keeps the 4 kg payload while extending reach to 919 mm (21 kg mass, ±0.05 mm ISO 9283 repeatability, 150 N max TCP force), retains IP65 protection with any-angle or AMR/AGV mounting, and shares the series' ISO 13849 PL=d dual-channel safety architecture with CE & ETL certification. Control runs through the Hesper controller with Flexiv Elements visual programming, hand-guided teaching, and the C++/Python RDK, with official ROS bridges available.",
     "highlights": [],
     "perf": false,
     "year": 2019,
-    "origin": "China",
+    "origin": "USA / China",
     "status": "Active",
     "released": "2019",
     "payload_kg": 4,
@@ -45324,11 +45485,13 @@
     "weight_kg": 21,
     "ros": true,
     "use_cases": [
-      "Force-controlled assembly",
-      "Polishing & surface finishing",
-      "Adaptive manipulation"
+      "FPC/FFC insertion",
+      "Micro-component placement",
+      "Precision electronics assembly",
+      "Force-critical finishing",
+      "Research"
     ],
-    "manufacturer_url": "https://www.flexiv.com",
+    "manufacturer_url": "https://www.flexiv.com/product/rizon",
     "repeatability_mm": 0.05,
     "joint_velocities": "180°/s",
     "protection_rating": "IP65",
@@ -45337,9 +45500,8 @@
     "programming_interface": "Flexiv Elements",
     "safety_features": "Collision detection, force limitation",
     "mounting": [
-      "Floor",
-      "ceiling",
-      "wall"
+      "Any angle",
+      "AMR/AGV platform"
     ],
     "warranty_months": 12,
     "certifications": [
@@ -45352,16 +45514,81 @@
     "height_mm": 750,
     "width_mm": 180,
     "depth_mm": 180,
-    "speed_ms": 2,
+    "speed_ms": 1,
     "wifi": true,
     "bluetooth": true,
     "depth_sensing": true,
-    "made_in": "China / USA",
+    "made_in": "China",
     "os": "Flexiv",
     "gallery": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuh63mCxBekOlsZ5-P-6EIyW1Xla-GbEwrXsU7_QYs5w&s=10"
     ],
-    "video": "https://youtu.be/p6niEdAp-78"
+    "video": "https://youtu.be/p6niEdAp-78",
+    "regions": [
+      "Global"
+    ],
+    "axes_config": "7-axis serial adaptive robot",
+    "collaborative": true,
+    "payload": 4,
+    "reach": 919,
+    "arm_weight_kg": 21,
+    "repeatability": 0.05,
+    "max_tcp_speed_ms": 1,
+    "speed": 1,
+    "ft_sensor": "Torque sensors in all 7 axes — whole-body force sensing + 6-DoF flange-mounted F/T sensor",
+    "ft_force_range_n": "Force sensing accuracy 0.03 N; max TCP force 150 N",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "ISO 13849 PL=d (dual-channel redundancy)",
+    "safety_functions": "Torque-based whole-body collision detection; dual-channel safety architecture; Motion Bar emergency stop",
+    "flange_standard": "ISO 9409-1-50-4-M6",
+    "digital_io": "Hesper controller: 16 in / 16 out",
+    "controller": "Flexiv Hesper — 12 kg, 500 W, IP20, 423×230×230 mm, 16 DI / 16 DO, PROFINET + Modbus TCP/IP",
+    "teach_pendant": "Optional Teach Pendant running Flexiv Elements + handheld Motion Bar (mode switch / task start / e-stop)",
+    "programming": [
+      "Flexiv Elements — drag-and-drop visual programming with primitive function blocks",
+      "Flexiv RDK (Robot Development Kit)",
+      "Hand-guided teaching"
+    ],
+    "programming_langs": [
+      "C++",
+      "Python"
+    ],
+    "ros_industrial": "Official flexiv_ros / flexiv_ros2 bridges via RDK",
+    "industrial_protocols": [
+      "PROFINET",
+      "Modbus TCP/IP"
+    ],
+    "fieldbus": "PROFINET / Modbus TCP/IP",
+    "plc_integration": true,
+    "power_consumption_w": 500,
+    "ip_rating": "IP65",
+    "operating_temp_min": "0",
+    "operating_temp_max": 45,
+    "noise_db": 70,
+    "power_source": "100–240 VAC via Hesper controller",
+    "ethernet": "Via Hesper controller",
+    "sdk": true,
+    "sdk_langs": [
+      "C++",
+      "Python"
+    ],
+    "api": "Flexiv RDK (real-time + non-real-time control)",
+    "app_companion": "Flexiv Elements",
+    "collision_detection": true,
+    "estop": "Handheld Motion Bar e-stop + software stop",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218",
+      "ISO 13849 PL=d"
+    ],
+    "other_certs": [
+      "ETL"
+    ],
+    "safety_rating": "Inherently safe adaptive robot — CE & ETL certified, fenceless HRI",
+    "datasheet": "https://www.flexiv.com/product/rizon",
+    "ai_model": "Flexiv hierarchical intelligence — AI-driven vision + force-guided manipulation"
   },
   {
     "id": "jaka-jaka-lumi",
@@ -58192,36 +58419,38 @@
     "cat": "Industrial",
     "sub": "Robotic Hand / Gripper",
     "tags": [
-      "flexiv",
-      "robotic",
-      "hand",
       "gripper",
-      "industrial",
-      "payload 5kg",
-      "2 dof",
-      "2023"
+      "end-effector",
+      "flexiv",
+      "grav-enhanced",
+      "bi-modal",
+      "gecko",
+      "5kg",
+      "ip67",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733699/myrobot/whnxnhc7fjglildizi1g.png",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "Flexiv's Grav Enhanced is an upgraded configuration in the Grav line of adaptive manipulation products. (Detailed specifications worth verifying against Flexiv.)",
+    "desc": "The Flexiv Grav Enhanced is a two-in-one force-controlled gripper that operates in two grasping modes: a precision two-finger force-control pinch (P-mode) for small items like M1 bolts and coins, and a gecko-inspired superfriction grasp (V-mode) whose passive adhesive film lifts objects up to 5 kg — basketballs, magnums, boxes, sneakers — with minimal squeezing force and no vacuum pumps or energy input. Built on the Grav's single-driver, composite-sensor architecture with sub-gram force sensing, it can hold a water balloon without rupture yet handle mixed-SKU pallet loads, making it a genuine multi-role end effector that cuts tool-change frequency. IP67-rated, ISO/TS 15066 compliant and rated for tens of millions of cycles, it mounts plug-and-play on Flexiv's universal socket (standard cobots supported) and pairs with the automated Cleaning Station (April 2024) that restores the gecko film's grip after dusty handling. Control is via Flexiv Elements primitives, the Grav UI, or Modbus RTU.",
     "highlights": [],
     "perf": false,
-    "origin": "China",
+    "origin": "USA / China",
     "year": 2023,
     "status": "Active",
-    "released": "2023",
+    "released": "Q2 2023",
     "dof": 2,
     "payload_kg": 5,
     "ros": true,
     "use_cases": [
-      "Force-controlled assembly",
-      "Polishing & surface finishing",
-      "Adaptive manipulation"
+      "Mixed-SKU pallet loading",
+      "Grocery & e-commerce picking",
+      "Automotive parts handling",
+      "Delicate object handling"
     ],
-    "manufacturer_url": "https://www.flexiv.com",
+    "manufacturer_url": "https://www.flexiv.com/products/grav",
     "weight_kg": 2.5,
     "grip_force_n": 300,
     "opening_width_mm": 140,
@@ -58240,9 +58469,36 @@
     "depth_sensing": false,
     "bluetooth": false,
     "wifi": false,
-    "made_in": "China / USA",
+    "made_in": "China",
     "os": "Flexiv",
-    "video": "https://youtu.be/1nqmrDnT16w"
+    "video": "https://youtu.be/1nqmrDnT16w",
+    "regions": [
+      "Global"
+    ],
+    "announced": "February 2023",
+    "ip_rating": "IP67",
+    "iso_certs": [
+      "ISO/TS 15066"
+    ],
+    "ce": true,
+    "industrial_protocols": [
+      "Modbus RTU"
+    ],
+    "fieldbus": "Modbus RTU",
+    "power_source": "Via robot tool flange or external supply",
+    "collaborative": true,
+    "force_limiting": true,
+    "datasheet": "https://www.flexiv.com/products/grav",
+    "payload": 5,
+    "gripper_type": "Bi-modal: force-controlled 2-finger pinch (P-mode) + gecko superfriction grasp (V-mode)",
+    "ft_force_range_n": "Sub-gram resistive force sensing; lifts 5 kg via passive gecko film with minimal squeeze force",
+    "controller": "Plug-and-play on Flexiv adaptive robots (universal end-of-arm socket); compatible with standard cobots",
+    "programming": [
+      "Flexiv Elements primitives",
+      "Grav User Interface",
+      "Modbus RTU register control"
+    ],
+    "quick_change": "Optional automated Cleaning Station maintains gecko film (adhesive-tape + silicone roller, April 2024)"
   },
   {
     "id": "flexiv-grav-gripper",
@@ -149430,5 +149686,223 @@
       "https://m.media-amazon.com/images/I/71lcplpDSlL._AC_SL1500_.jpg"
     ],
     "video": "https://youtu.be/uGIRBDqJSPE"
+  },
+  {
+    "id": "flexiv-rizon-4",
+    "name": "Rizon 4",
+    "brand": "Flexiv",
+    "cat": "Industrial",
+    "sub": "7-Axis Adaptive Robot (Cobot)",
+    "origin": "USA / China",
+    "made_in": "China",
+    "status": "Active",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.flexiv.com/product/rizon",
+    "axes_config": "7-axis serial adaptive robot",
+    "dof": 7,
+    "collaborative": true,
+    "payload_kg": 4,
+    "payload": 4,
+    "reach_mm": 876,
+    "reach": 876,
+    "weight_kg": 20,
+    "arm_weight_kg": 20,
+    "repeatability_mm": 0.05,
+    "repeatability": 0.05,
+    "mounting": [
+      "Any angle",
+      "AMR/AGV platform"
+    ],
+    "max_tcp_speed_ms": 1,
+    "speed_ms": 1,
+    "speed": 1,
+    "ft_sensor": "Torque sensors in all 7 axes — whole-body force sensing",
+    "ft_force_range_n": "Force sensing accuracy 0.1 N; max TCP force 200 N",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "ISO 13849 PL=d (dual-channel redundancy)",
+    "safety_functions": "Torque-based whole-body collision detection; dual-channel safety architecture; Motion Bar emergency stop",
+    "flange_standard": "ISO 9409-1-50-4-M6",
+    "digital_io": "Hesper controller: 16 in / 16 out",
+    "controller": "Flexiv Hesper — 12 kg, 500 W, IP20, 423×230×230 mm, 16 DI / 16 DO, PROFINET + Modbus TCP/IP",
+    "teach_pendant": "Optional Teach Pendant running Flexiv Elements + handheld Motion Bar (mode switch / task start / e-stop)",
+    "programming": [
+      "Flexiv Elements — drag-and-drop visual programming with primitive function blocks",
+      "Flexiv RDK (Robot Development Kit)",
+      "Hand-guided teaching"
+    ],
+    "programming_langs": [
+      "C++",
+      "Python"
+    ],
+    "ros_industrial": "Official flexiv_ros / flexiv_ros2 bridges via RDK",
+    "industrial_protocols": [
+      "PROFINET",
+      "Modbus TCP/IP"
+    ],
+    "fieldbus": "PROFINET / Modbus TCP/IP",
+    "plc_integration": true,
+    "power_consumption_w": 500,
+    "ip_rating": "IP65",
+    "operating_temp_min": "0",
+    "operating_temp_max": 45,
+    "noise_db": 70,
+    "power_source": "100–240 VAC via Hesper controller",
+    "ethernet": "Via Hesper controller",
+    "ros": true,
+    "sdk": true,
+    "sdk_langs": [
+      "C++",
+      "Python"
+    ],
+    "api": "Flexiv RDK (real-time + non-real-time control)",
+    "app_companion": "Flexiv Elements",
+    "collision_detection": true,
+    "estop": "Handheld Motion Bar e-stop + software stop",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218",
+      "ISO 13849 PL=d"
+    ],
+    "other_certs": [
+      "ETL"
+    ],
+    "safety_rating": "Inherently safe adaptive robot — CE & ETL certified, fenceless HRI",
+    "datasheet": "https://www.flexiv.com/product/rizon",
+    "ai_model": "Flexiv hierarchical intelligence — AI-driven vision + force-guided manipulation",
+    "year": 2019,
+    "announced": "April 2019 (Hannover Messe)",
+    "use_cases": [
+      "Precision assembly",
+      "Polishing & surface finishing",
+      "Insertion tasks",
+      "Machine tending",
+      "Massage & human-contact applications"
+    ],
+    "tags": [
+      "cobot",
+      "adaptive-robot",
+      "flexiv",
+      "rizon",
+      "7-axis",
+      "force-control",
+      "4kg",
+      "active"
+    ],
+    "desc": "The Flexiv Rizon 4 is the world's first adaptive robot — unveiled at Hannover Messe in April 2019 — and the founding model of Flexiv's Rizon series. Unlike position-controlled cobots, the Rizon 4 is built around force control: torque sensors in all seven axes give it whole-body force sensitivity (0.1 N sensing accuracy, up to 200 N TCP force), letting it perform contact-rich tasks like polishing, insertion and assembly while tolerating positional uncertainty that would defeat conventional arms. Its human-arm-inspired 7-DoF kinematics (4 kg payload, 876 mm reach, ±0.05 mm ISO 9283 repeatability, 20 kg mass) keep an optimised force-control posture through the workspace, and the IP65 body mounts at any angle including on AMR/AGV platforms. Built to ISO 13849 PL=d with dual-channel redundancy and CE & ETL certified, it runs from the compact Hesper controller and is programmed via Flexiv Elements drag-and-drop primitives or the C++/Python RDK. Founded by Stanford robotics researchers, Flexiv positioned the Rizon 4 as a third robot category beyond industrial and collaborative arms.",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "flexiv-rizon-10",
+    "name": "Rizon 10",
+    "brand": "Flexiv",
+    "cat": "Industrial",
+    "sub": "7-Axis Adaptive Robot (Cobot)",
+    "origin": "USA / China",
+    "made_in": "China",
+    "status": "Active",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.flexiv.com/product/rizon",
+    "axes_config": "7-axis serial adaptive robot",
+    "dof": 7,
+    "collaborative": true,
+    "payload_kg": 10,
+    "payload": 10,
+    "reach_mm": 941,
+    "reach": 941,
+    "weight_kg": 38,
+    "arm_weight_kg": 38,
+    "repeatability_mm": 0.05,
+    "repeatability": 0.05,
+    "mounting": [
+      "Any angle",
+      "AMR/AGV platform"
+    ],
+    "max_tcp_speed_ms": 1,
+    "speed_ms": 1,
+    "speed": 1,
+    "ft_sensor": "Torque sensors in all 7 axes — whole-body force sensing",
+    "ft_force_range_n": "Force sensing accuracy 0.2 N; max TCP force 350 N",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "ISO 13849 PL=d (dual-channel redundancy)",
+    "safety_functions": "Torque-based whole-body collision detection; dual-channel safety architecture; Motion Bar emergency stop",
+    "flange_standard": "ISO 9409-1-50-4-M6",
+    "digital_io": "Hesper controller: 16 in / 16 out",
+    "controller": "Flexiv Hesper — 12 kg, 500 W, IP20, 423×230×230 mm, 16 DI / 16 DO, PROFINET + Modbus TCP/IP",
+    "teach_pendant": "Optional Teach Pendant running Flexiv Elements + handheld Motion Bar (mode switch / task start / e-stop)",
+    "programming": [
+      "Flexiv Elements — drag-and-drop visual programming with primitive function blocks",
+      "Flexiv RDK (Robot Development Kit)",
+      "Hand-guided teaching"
+    ],
+    "programming_langs": [
+      "C++",
+      "Python"
+    ],
+    "ros_industrial": "Official flexiv_ros / flexiv_ros2 bridges via RDK",
+    "industrial_protocols": [
+      "PROFINET",
+      "Modbus TCP/IP"
+    ],
+    "fieldbus": "PROFINET / Modbus TCP/IP",
+    "plc_integration": true,
+    "power_consumption_w": 500,
+    "ip_rating": "IP65",
+    "operating_temp_min": "0",
+    "operating_temp_max": 45,
+    "noise_db": 70,
+    "power_source": "100–240 VAC via Hesper controller",
+    "ethernet": "Via Hesper controller",
+    "ros": true,
+    "sdk": true,
+    "sdk_langs": [
+      "C++",
+      "Python"
+    ],
+    "api": "Flexiv RDK (real-time + non-real-time control)",
+    "app_companion": "Flexiv Elements",
+    "collision_detection": true,
+    "estop": "Handheld Motion Bar e-stop + software stop",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218",
+      "ISO 13849 PL=d"
+    ],
+    "other_certs": [
+      "ETL"
+    ],
+    "safety_rating": "Inherently safe adaptive robot — CE & ETL certified, fenceless HRI",
+    "datasheet": "https://www.flexiv.com/product/rizon",
+    "ai_model": "Flexiv hierarchical intelligence — AI-driven vision + force-guided manipulation",
+    "use_cases": [
+      "Heavy assembly",
+      "Material handling",
+      "Machine tending",
+      "Surface finishing of large parts",
+      "Palletizing"
+    ],
+    "tags": [
+      "cobot",
+      "adaptive-robot",
+      "flexiv",
+      "rizon-10",
+      "7-axis",
+      "force-control",
+      "10kg",
+      "active"
+    ],
+    "desc": "The Flexiv Rizon 10 scales the adaptive-robot formula to the 10 kg payload class while keeping the series' defining trait: whole-body force control from torque sensors in all seven axes (0.2 N sensing accuracy, up to 350 N TCP force). Its 7-DoF human-arm kinematics deliver 941 mm reach at ±0.05 mm ISO 9283 repeatability from a 38 kg body, letting it take on heavier contact-rich work — large-part finishing, forceful insertion, machine tending — that position-controlled cobots handle poorly under positional uncertainty. The IP65-rated arm mounts at any angle or on AMR/AGV platforms, is built to ISO 13849 PL=d with dual-channel redundancy, and carries CE & ETL certification for fenceless collaboration. It runs from Flexiv's compact Hesper controller (PROFINET/Modbus, 16/16 I/O) and is programmed via Flexiv Elements drag-and-drop primitives, hand-guiding, or the C++/Python RDK with official ROS bridges.",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
   }
 ]
