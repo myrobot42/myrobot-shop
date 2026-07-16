@@ -130668,21 +130668,23 @@
     "price": "POA",
     "dof": 6,
     "id": "abb-gofa-12",
-    "name": "GoFa 12",
+    "name": "GoFa 12 (CRB 15000)",
     "brand": "ABB",
-    "sub": "Collaborative Robot (6-axis cobot)",
+    "sub": "Collaborative Robot (Cobot)",
     "year": 2023,
-    "origin": "Switzerland",
+    "origin": "Switzerland / Sweden",
     "status": "Active",
     "payload_kg": 12,
-    "desc": "The heavy-duty member of ABB's GoFa (CRB 15000) collaborative-robot family — model CRB 15000-12/1.27 — with a 12 kg payload and 1,270 mm reach in a compact footprint. Like its GoFa siblings it puts integrated torque and position sensors in all six joints for power-and-force limiting, bringing the arm to an immediate stop on contact so it can work fence-free beside people (SafeMove, PL d Cat. 3). It runs a maximum TCP speed of 2.2 m/s with best-in-class 0.02 mm repeatability, is powered by ABB's OmniCore controller, and is set up via lead-through (grab-anywhere) motion, Wizard easy programming and the FlexPendant, with RobotStudio offline programming matching reality to ~99%. An optional Ultra Accuracy feature adds 0.03 mm path / 0.1 mm absolute accuracy for gluing, sealing, laser welding and cutting.",
+    "desc": "The ABB GoFa 12 is the payload flagship of the CRB 15000 collaborative family — 12 kg across 1,270 mm wrist reach (1,370 mm flange) at the line's ±0.02 mm repeatability and 2.2 m/s TCP speed, from a 48 kg IP67-sealed arm that actually undercuts the longer GoFa 10 on mass. It carries the complete GoFa architecture: torque and position sensors in all six joints, PL d Cat. 3 SafeMove power-and-force limiting with up to 16 safety zones, rounded no-pinch geometry, interaction status light, and the OmniCore controller running RobotWare 7. Programming spans grab-anywhere lead-through, Wizard Easy Programming blocks on the FlexPendant, RAPID, and RobotStudio offline with ~99% simulation fidelity; the Ultra Accuracy option brings 0.03 mm path accuracy for sealing and laser work at full payload. ISO Class 4 cleanroom rated, any-direction mounting, Pro variant with PROFINET.",
     "tags": [
-      "industrial",
       "cobot",
-      "ABB",
-      "GoFa 12",
-      "material handling",
-      "palletizing"
+      "abb",
+      "gofa-12",
+      "crb-15000",
+      "6-axis",
+      "12kg",
+      "ip67",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
@@ -130695,7 +130697,7 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWaMXi4tspUG2IWPCfnek6ASTSMiBzRhgKCuazWh7WAg&s=10"
     ],
     "video": "https://youtu.be/_4qBGoqFGyA",
-    "made_in": "Sweden",
+    "made_in": "China (Shanghai) / global ABB plants",
     "payload": 12,
     "reach_mm": 1270,
     "axes": 6,
@@ -130703,26 +130705,80 @@
     "speed": 2.2,
     "repeatability": 0.02,
     "force_sensing": true,
-    "controller": "OmniCore",
-    "ip_rating": "IP54 (IP67 option)",
+    "controller": "ABB OmniCore — best-in-class motion control",
+    "ip_rating": "IP67",
     "safety_rating": "SafeMove, PL d Cat. 3",
     "programming_interface": "Lead-through + Wizard + FlexPendant; RobotStudio offline",
-    "mounting": "Any orientation (floor / wall)",
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any direction"
+    ],
     "ultra_accuracy": "Optional (0.03 mm path, 0.1 mm absolute)",
     "collaborative": true,
     "variants": [
-      "GoFa 5 (5kg/950mm)",
-      "GoFa 10 (10kg/1520mm)",
-      "GoFa 12 (12kg/1270mm)"
+      "Standard",
+      "Pro (adds PROFINET + extended functions)",
+      "Ultra Accuracy option"
     ],
     "use_cases": [
+      "Heavier collaborative handling",
       "Machine tending",
-      "Welding",
       "Palletizing",
-      "Assembly / screwdriving",
-      "Material handling / packaging"
+      "Polishing",
+      "Assembly"
     ],
-    "manufacturer_url": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa"
+    "manufacturer_url": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa",
+    "regions": [
+      "Global"
+    ],
+    "axes_config": "6-axis collaborative arm (CRB 15000 family)",
+    "reach": 1270,
+    "weight_kg": 48,
+    "arm_weight_kg": 48,
+    "repeatability_mm": 0.02,
+    "position_accuracy_mm": "Ultra Accuracy option: 0.03 mm path / 0.1 mm absolute",
+    "max_tcp_speed_ms": 2.2,
+    "footprint_mm": "≈200 × 200 mm",
+    "operating_temp_min": "5",
+    "operating_temp_max": 40,
+    "cleanroom_class": "ISO Class 4",
+    "power_consumption_w": 250,
+    "ft_sensor": "Integrated torque + position sensors in all 6 joints",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 (SafeMove Collaborative — up to 16 configurable safety zones)",
+    "safety_functions": "SafeMove power & force limiting; rounded no-pinch geometry; interaction status light (white/green/yellow/red); lead-through by grabbing anywhere on the arm",
+    "teach_pendant": "ABB FlexPendant with Wizard Easy Programming + SafeMove Configurator app; Arm-Side Interface on axis 6",
+    "programming": [
+      "Wizard Easy Programming (graphical blocks)",
+      "Lead-through",
+      "RAPID",
+      "RobotStudio offline programming (≈99% sim-to-real match)"
+    ],
+    "programming_langs": [
+      "RAPID",
+      "Wizard blocks"
+    ],
+    "offline_programming": "ABB RobotStudio",
+    "simulation_software": "ABB RobotStudio",
+    "industrial_protocols": [
+      "EtherNet/IP",
+      "PROFINET (Pro variant)",
+      "TCP/IP"
+    ],
+    "plc_integration": true,
+    "collision_detection": true,
+    "estop": "FlexPendant e-stop + SafeMove safe stop",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1",
+      "ISO Class 4 cleanroom"
+    ],
+    "os": "ABB RobotWare 7",
+    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa"
   },
   {
     "cat": "Industrial",
@@ -146282,39 +146338,64 @@
     "name": "GoFa 5 (CRB 15000)",
     "brand": "ABB",
     "cat": "Industrial",
-    "sub": "Collaborative Robot Arm",
+    "sub": "Collaborative Robot (Cobot)",
     "year": 2021,
-    "origin": "Switzerland",
+    "origin": "Switzerland / Sweden",
     "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/geUzRJMfSZ3MfQ9ZrR3e/image.jpg",
-    "desc": "ABB's GoFa cobot family starter: 5 kg payload, 950 mm reach, joint torque sensing in every axis, lead-through programming and Wizard easy-programming blocks.",
-    "tags": [],
+    "desc": "The ABB GoFa 5 is the founding model of ABB's GoFa CRB 15000 collaborative family — 5 kg payload across 950 mm wrist reach (1,050 mm to flange) with best-in-class ±0.02 mm repeatability and TCP speeds to 2.2 m/s, which ABB bills as roughly 50% faster than same-class cobots. Torque and position sensors in every joint drive SafeMove power-and-force limiting certified PL d Cat. 3 with up to 16 configurable safety zones, wrapped in rounded no-pinch geometry with an interaction status light. The 28 kg, IP54 arm on a 165×165 mm base mounts in any direction and runs from ABB's OmniCore controller with RobotWare 7 — programmed by grabbing the arm anywhere (lead-through), Wizard graphical blocks on the FlexPendant, RAPID, or RobotStudio offline with ~99% sim-to-real fidelity. The Ultra Accuracy option cuts path accuracy to 0.03 mm — over 10× tighter than rival cobots — for gluing, sealing and laser applications. ISO Class 4 cleanroom rated; Pro variant adds PROFINET.",
+    "tags": [
+      "cobot",
+      "abb",
+      "gofa",
+      "crb-15000",
+      "6-axis",
+      "5kg",
+      "safemove",
+      "active"
+    ],
     "payload_kg": 5,
     "reach_mm": 950,
     "dof": 6,
     "ce": true,
     "use_cases": [
-      "Machine tending",
-      "Assembly",
-      "Lab automation"
+      "Light handling",
+      "Small assembly",
+      "Electronics",
+      "Screwdriving",
+      "Inspection support"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "repeatability": 0.05,
+    "repeatability": 0.02,
     "speed_ms": 2.2,
-    "speed": "2.2 m/s TCP",
-    "axes_config": "6-axis",
+    "speed": 2.2,
+    "axes_config": "6-axis collaborative arm (CRB 15000 family)",
     "repeatability_mm": 0.02,
     "ip_rating": "IP54",
-    "controller": "ABB OmniCore C30",
-    "teach_pendant": "FlexPendant",
-    "programming": "Wizard / RobotStudio / lead-through",
+    "controller": "ABB OmniCore — best-in-class motion control",
+    "teach_pendant": "ABB FlexPendant with Wizard Easy Programming + SafeMove Configurator app; Arm-Side Interface on axis 6",
+    "programming": [
+      "Wizard Easy Programming (graphical blocks)",
+      "Lead-through",
+      "RAPID",
+      "RobotStudio offline programming (≈99% sim-to-real match)"
+    ],
     "collision_detection": true,
-    "ft_sensor": true,
-    "industrial_protocols": "PROFINET, EtherNet/IP, Modbus",
-    "mounting": "Any angle",
+    "ft_sensor": "Integrated torque + position sensors in all 6 joints",
+    "industrial_protocols": [
+      "EtherNet/IP",
+      "PROFINET (Pro variant)",
+      "TCP/IP"
+    ],
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any direction"
+    ],
     "gallery": [
       "https://media-d.global.abb/is/image/abbc/GoFa%20image%20gallery-2-1:16x9-L",
       "https://media-d.global.abb/is/image/abbc/GoFa%20image%20gallery-3-1:16x9-L",
@@ -146322,57 +146403,160 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FABB-CRB-15000-RS-1_7ba6abe7.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FABB-CRB-15000-RS-3-_bd1f82e9.png"
     ],
-    "video": "https://youtu.be/npOCofThQ7o"
+    "video": "https://youtu.be/npOCofThQ7o",
+    "made_in": "China (Shanghai) / global ABB plants",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa",
+    "collaborative": true,
+    "payload": 5,
+    "reach": 950,
+    "weight_kg": 28,
+    "arm_weight_kg": 28,
+    "position_accuracy_mm": "Ultra Accuracy option: 0.03 mm path / 0.1 mm absolute",
+    "max_tcp_speed_ms": 2.2,
+    "footprint_mm": "165 × 165 mm",
+    "operating_temp_min": "5",
+    "operating_temp_max": 40,
+    "cleanroom_class": "ISO Class 4",
+    "power_consumption_w": 250,
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 (SafeMove Collaborative — up to 16 configurable safety zones)",
+    "safety_functions": "SafeMove power & force limiting; rounded no-pinch geometry; interaction status light (white/green/yellow/red); lead-through by grabbing anywhere on the arm",
+    "programming_langs": [
+      "RAPID",
+      "Wizard blocks"
+    ],
+    "offline_programming": "ABB RobotStudio",
+    "simulation_software": "ABB RobotStudio",
+    "plc_integration": true,
+    "variants": [
+      "Standard",
+      "Pro (adds PROFINET + extended functions)",
+      "Ultra Accuracy option"
+    ],
+    "estop": "FlexPendant e-stop + SafeMove safe stop",
+    "iso_certs": [
+      "ISO 10218-1",
+      "ISO Class 4 cleanroom"
+    ],
+    "os": "ABB RobotWare 7",
+    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa"
   },
   {
     "id": "abb-gofa-10",
-    "name": "GoFa 10",
+    "name": "GoFa 10 (CRB 15000)",
     "brand": "ABB",
     "cat": "Industrial",
-    "sub": "Collaborative Robot Arm",
+    "sub": "Collaborative Robot (Cobot)",
     "year": 2023,
-    "origin": "Switzerland",
+    "origin": "Switzerland / Sweden",
     "status": "Active",
     "price": "POA",
     "img": "https://www.zimmer-group.com/fileadmin/_processed_/7/1/csm_ZIM_BIL_ART_ABB-GOFA-10KG__SALL__AIN__V1_a19e58ec38.png",
-    "desc": "Higher-payload GoFa: 10 kg capacity with a class-leading 1,620 mm reach for palletizing and machine tending, keeping full-speed collaborative operation.",
+    "desc": "The ABB GoFa 10 extends the CRB 15000 collaborative family to a 1,520 mm wrist reach (1,620 mm flange — 14% longer than comparable cobots per ABB) with 10 kg payload, keeping the family's ±0.02 mm repeatability and 2.2 m/s TCP ceiling. Its IP67 sealing — a step above the GoFa 5's IP54 — suits dusty and moisture-prone floors across a 5–45 °C range, and the 51 kg arm on a ~200×200 mm base mounts in any orientation. The platform is pure GoFa: joint-integrated torque/position sensing feeding PL d Cat. 3 SafeMove with 16 configurable zones, interaction status light, grab-anywhere lead-through, Wizard blocks, RAPID and RobotStudio offline programming on the OmniCore controller. The Ultra Accuracy option (0.03 mm path / 0.1 mm absolute) opens sealing, laser welding and precision cutting across its wide envelope. ISO Class 4 cleanroom; Pro variant adds PROFINET.",
     "tags": [
       "cobot",
-      "industrial",
       "abb",
       "gofa-10",
+      "crb-15000",
       "6-axis",
+      "10kg",
       "long-reach",
+      "ip67",
       "active"
     ],
     "payload_kg": 10,
-    "reach_mm": 1620,
+    "reach_mm": 1520,
     "dof": 6,
     "ce": true,
     "use_cases": [
+      "Long-reach machine tending",
       "Palletizing",
-      "Machine tending",
-      "Polishing"
+      "Welding support",
+      "Polishing",
+      "Parts handling"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "axes_config": "6-axis",
+    "axes_config": "6-axis collaborative arm (CRB 15000 family)",
     "repeatability_mm": 0.02,
-    "ip_rating": "IP54",
-    "controller": "ABB OmniCore C30",
-    "teach_pendant": "FlexPendant",
-    "programming": "Wizard / RobotStudio / lead-through",
+    "ip_rating": "IP67",
+    "controller": "ABB OmniCore — best-in-class motion control",
+    "teach_pendant": "ABB FlexPendant with Wizard Easy Programming + SafeMove Configurator app; Arm-Side Interface on axis 6",
+    "programming": [
+      "Wizard Easy Programming (graphical blocks)",
+      "Lead-through",
+      "RAPID",
+      "RobotStudio offline programming (≈99% sim-to-real match)"
+    ],
     "collision_detection": true,
-    "ft_sensor": true,
-    "industrial_protocols": "PROFINET, EtherNet/IP, Modbus",
-    "mounting": "Any angle",
+    "ft_sensor": "Integrated torque + position sensors in all 6 joints",
+    "industrial_protocols": [
+      "EtherNet/IP",
+      "PROFINET (Pro variant)",
+      "TCP/IP"
+    ],
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any direction"
+    ],
     "gallery": [
       "https://media-d.global.abb/is/image/abbc/GoFa%20image%20gallery-2-1:16x9-L",
       "https://media-d.global.abb/is/image/abbc/GoFa%20image%20gallery-3-1:16x9-L",
       "https://media-d.global.abb/is/image/abbc/GoFa%20image%20gallery-4-1:16x9-L"
     ],
-    "video": "https://youtu.be/_4qBGoqFGyA"
+    "video": "https://youtu.be/_4qBGoqFGyA",
+    "made_in": "China (Shanghai) / global ABB plants",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa",
+    "collaborative": true,
+    "payload": 10,
+    "reach": 1520,
+    "weight_kg": 51,
+    "arm_weight_kg": 51,
+    "repeatability": 0.02,
+    "position_accuracy_mm": "Ultra Accuracy option: 0.03 mm path / 0.1 mm absolute",
+    "max_tcp_speed_ms": 2.2,
+    "speed_ms": 2.2,
+    "speed": 2.2,
+    "footprint_mm": "≈200 × 200 mm",
+    "operating_temp_min": "5",
+    "operating_temp_max": 45,
+    "cleanroom_class": "ISO Class 4",
+    "power_consumption_w": 250,
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 (SafeMove Collaborative — up to 16 configurable safety zones)",
+    "safety_functions": "SafeMove power & force limiting; rounded no-pinch geometry; interaction status light (white/green/yellow/red); lead-through by grabbing anywhere on the arm",
+    "programming_langs": [
+      "RAPID",
+      "Wizard blocks"
+    ],
+    "offline_programming": "ABB RobotStudio",
+    "simulation_software": "ABB RobotStudio",
+    "plc_integration": true,
+    "variants": [
+      "Standard",
+      "Pro (adds PROFINET + extended functions)",
+      "Ultra Accuracy option"
+    ],
+    "estop": "FlexPendant e-stop + SafeMove safe stop",
+    "iso_certs": [
+      "ISO 10218-1",
+      "ISO Class 4 cleanroom"
+    ],
+    "os": "ABB RobotWare 7",
+    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa"
   },
   {
     "id": "abb-swifti-crb-1100",
@@ -146381,37 +146565,60 @@
     "cat": "Industrial",
     "sub": "Industrial-Speed Cobot",
     "year": 2021,
-    "origin": "Switzerland",
+    "origin": "Switzerland / Sweden",
     "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/BpFcwaZUD3HQeYOx53rv/image.jpg",
-    "desc": "ABB's industrial-speed cobot: up to 5 m/s TCP speed with a 4 kg payload and 580 mm reach, using a safety laser scanner to blend full industrial speed with human-safe collaboration.",
-    "tags": [],
+    "desc": "The ABB SWIFTI CRB 1100 collapses the cobot/industrial-robot divide: built on the IRB 1100 industrial platform, it delivers a TCP speed above 5 m/s — five times faster than typical 4 kg cobots — and ±0.01 mm repeatability, up to ten times tighter than the collaborative norm, while remaining fenceless. Safety is speed-and-separation rather than contact-based: SafeMove paired with a safety laser scanner slows or halts the arm before a human can reach it, with an interaction light signalling status, certified PL d Cat. 3. The 4 kg / 580 mm arm (a 475 mm / 4.32 m/s variant exists) carries four integrated air supplies for vacuum grippers and runs from the OmniCore controller, programmed via a clip-on lead-through device, Wizard graphical blocks, the SafeMove Configurator app, RAPID or RobotStudio. It targets intermittent-collaboration tasks — assembly, kitting, polishing — where industrial speed matters but a human must occasionally step in.",
+    "tags": [
+      "cobot",
+      "abb",
+      "swifti",
+      "crb-1100",
+      "6-axis",
+      "4kg",
+      "high-speed",
+      "5ms",
+      "laser-scanner",
+      "active"
+    ],
     "payload_kg": 4,
     "reach_mm": 580,
     "dof": 6,
     "ce": true,
     "use_cases": [
-      "Assembly",
-      "Pick and place",
-      "Screwdriving"
+      "High-speed pick & place",
+      "Small-parts assembly",
+      "Kitting",
+      "Polishing & sanding",
+      "Bolting",
+      "Machine tending"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "repeatability": 0.01,
     "speed_ms": 5,
-    "speed": "5 m/s TCP",
-    "axes_config": "6-axis",
+    "speed": 5,
+    "axes_config": "6-axis industrial-speed collaborative arm (IRB 1100-based)",
     "repeatability_mm": 0.01,
     "ip_rating": "IP54",
-    "controller": "ABB OmniCore C30",
-    "teach_pendant": "FlexPendant",
-    "programming": "Wizard / RobotStudio / lead-through",
+    "controller": "ABB OmniCore",
+    "teach_pendant": "FlexPendant + SafeMove Configurator app; clip-on lead-through device",
+    "programming": [
+      "Wizard Easy Programming",
+      "Clip-on lead-through",
+      "RAPID",
+      "RobotStudio offline"
+    ],
     "collision_detection": true,
-    "ft_sensor": true,
+    "ft_sensor": "SafeMove + external safety laser scanner (speed-and-separation monitoring — slows/stops on human approach)",
     "industrial_protocols": "PROFINET, EtherNet/IP, Modbus",
-    "mounting": "Any angle",
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling"
+    ],
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FABB-CRB-1100-RS-2_2c0cfc59.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FABB-CRB-1100-RS-4_3ab0eb70.png",
@@ -146419,7 +146626,39 @@
       "https://www.rga.eu/robotica/ABB_SWIFTI_CRB1100_EN.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG_Y6zSizVVy8DH49JPh6MBAdfSWanpjpvkSU4W1pQtMnqIt8wpfgO39cP&s=10"
     ],
-    "video": "https://youtu.be/vhIiklIHT7Q"
+    "video": "https://youtu.be/vhIiklIHT7Q",
+    "made_in": "China (Shanghai) / global ABB plants",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots",
+    "collaborative": true,
+    "payload": 4,
+    "reach": 580,
+    "max_tcp_speed_ms": 5,
+    "variants": [
+      "SWIFTI CRB 1100 4/0.58 (580 mm)",
+      "SWIFTI CRB 1100 4/0.475 (475 mm, 4.32 m/s)"
+    ],
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 (SafeMove + safety laser scanner, fenceless)",
+    "safety_functions": "Safe stop before human contact; automatic slow-down on zone entry; interaction status light",
+    "tool_io": "4 integrated air supplies for vacuum grippers",
+    "os": "ABB RobotWare 7",
+    "programming_langs": [
+      "RAPID",
+      "Wizard blocks"
+    ],
+    "offline_programming": "ABB RobotStudio",
+    "simulation_software": "ABB RobotStudio",
+    "plc_integration": true,
+    "estop": "FlexPendant e-stop + SafeMove safe stop",
+    "iso_certs": [
+      "ISO 10218-1"
+    ],
+    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots"
   },
   {
     "id": "abb-powa",
