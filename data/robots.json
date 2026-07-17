@@ -132343,7 +132343,51 @@
     "made_in": "China (Shenzhen)",
     "manufacturer_url": "https://www.limxdynamics.com/en/products/luna",
     "arm_torque_nm": 200,
-    "dexterous_hand": true
+    "dexterous_hand": true,
+    "battery_wh": 588,
+    "raw_specs": {
+      "cooling": "Main control air cooling",
+      "battery_capacity_mah": 10000,
+      "battery_modules": "Slide-out battery module (x2)",
+      "charger_input_voltage": "110V-220V",
+      "charger_output": "58.8V 10A",
+      "recharging_method": "Direct charging / battery swapping",
+      "joint_range": {
+        "neck": "P±30°, Y±45°",
+        "shoulder": "P-60°~175°, R-5°~110°, Y-90°~145°",
+        "elbow": "P-30°~137°",
+        "wrist": "Y±90°",
+        "waist": "P-45°~30°, R±30°, Y±90°",
+        "hip": "P-90°~175°, R-60°~90°, Y±90°",
+        "knee": "P+5°~140°",
+        "ankle": "P-35°~58°, R±25°"
+      },
+      "end_effector_options": [
+        "Palm-shaped hand",
+        "Fist-shaped hand",
+        "5-finger dexterous hand (6 DoF) [optional]"
+      ],
+      "software": {
+        "platform": "LimX UP",
+        "dance_routines": 20,
+        "motion_actions": 20,
+        "studio": "LimX Studio — cloud-based motion-capture training platform (subscription)"
+      },
+      "interaction": [
+        "Facial interaction screen",
+        "Microphone",
+        "Speaker",
+        "LED light strip"
+      ],
+      "controller": "Remote controller (with charging cable) + tablet",
+      "accessories": [
+        "Portable transport case",
+        "Exclusive skin"
+      ],
+      "compute_detail": "Motion Control: RK3588/16G/256G; Perception: RK3588/8G/32G",
+      "max_motor_torque_nm": 200
+    },
+    "ai_model": "LimX UP platform (20 dance routines, 20 motion actions); LimX Studio cloud motion-capture training (subscription)"
   },
   {
     "id": "fourier-n1",
