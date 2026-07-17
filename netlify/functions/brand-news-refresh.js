@@ -133,21 +133,24 @@ exports.handler = async function(){
   }
   if (!brands.length) return { statusCode: 500, body: "No brands to query (check allowlist)." };
 
-  // 2) Query Google News RSS per brand (sequential, gentle; a failing brand is skipped).
+  // 2) Query Google News RSS per brand IN PARALLEL BATCHES (fast; avoids HTTP timeout).
   const out = {};
   let total = 0;
-  for (const brand of brands){
+  async function fetchBrand(brand){
     try {
       const r = await fetch(googleNewsRss(brand), { headers: { "User-Agent": "myrobot-shop-brandnews/1.0" } });
-      if (!r.ok) { out[brand] = []; continue; }
+      if (!r.ok) { out[brand] = []; return; }
       let items = parseFeed(await r.text(), "Google News");
       items.sort((a, b) => new Date(b.published) - new Date(a.published));
-      // dedupe by url, cap per brand
       const seen = new Set(); const kept = [];
       for (const it of items){ if (seen.has(it.url)) continue; seen.add(it.url); kept.push(it); if (kept.length >= MAX_PER_BRAND) break; }
       out[brand] = kept;
       total += kept.length;
     } catch (e) { out[brand] = []; }
+  }
+  const CONCURRENCY = 8;
+  for (let i=0; i<brands.length; i+=CONCURRENCY){
+    await Promise.all(brands.slice(i, i+CONCURRENCY).map(fetchBrand));
   }
 
   // 3) Commit data/brand-news.json with [skip ci]
