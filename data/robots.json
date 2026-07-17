@@ -147808,35 +147808,54 @@
     "name": "COBOTTA",
     "brand": "Denso Robotics",
     "cat": "Industrial",
-    "sub": "Compact Collaborative Robot",
+    "sub": "All-in-One Desktop Cobot",
     "year": 2018,
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
     "img": "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FDenso_Cobotta_1_afbdf121.jpg",
-    "desc": "Denso's ultra-compact tabletop cobot: 0.5 kg payload and 342 mm reach in a 4 kg portable body — designed for labs, education and light benchtop automation.",
-    "tags": [],
+    "desc": "The DENSO COBOTTA, launched in 2018, is an all-in-one desktop collaborative robot built around portability and out-of-the-box simplicity — a 4 kg unit with the controller integrated into the arm, a 0.5 kg payload (0.7 kg with axis 5 vertical) and 342.5 mm reach, small enough to carry between benches. It targets labs, life-sciences and education, where its visually-oriented COBOTTA World tablet app lets non-programmers build pick-and-place tasks in minutes, while experts can use PacScript through the Remote TP virtual pendant or Python via ORiN/b-CAP. Safety is inherent-by-design with proprietary torque sensors monitoring torque and speed continuously on every axis, certified to ISO 10218-1 / ISO/TS 15066, and an electric gripper and 2D camera integrate directly onto the arm for force-controlled gripping and image-recognition tasks. Developed as an open platform, it slots readily into existing systems and has become a common research and laboratory-automation arm.",
+    "tags": [
+      "cobot",
+      "denso",
+      "cobotta",
+      "6-axis",
+      "desktop",
+      "all-in-one",
+      "500g",
+      "lab",
+      "active"
+    ],
     "payload_kg": 0.5,
-    "reach_mm": 342,
+    "reach_mm": 342.5,
     "dof": 6,
     "weight_kg": 4,
     "ce": true,
     "use_cases": [
       "Lab automation",
-      "Education",
-      "Light assembly"
+      "Research & education",
+      "Light pick & place",
+      "Desktop assembly",
+      "Life sciences"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "repeatability": 0.05,
-    "axes_config": "6-axis",
+    "axes_config": "6-axis all-in-one desktop cobot (integrated controller)",
     "repeatability_mm": 0.05,
-    "controller": "Built-in (all-in-one)",
+    "controller": "Integrated controller (built into arm — no external cabinet)",
     "collision_detection": true,
-    "programming": "COBOTTA World / RC8",
+    "programming": [
+      "COBOTTA World (visual/tablet)",
+      "PacScript (Remote TP)",
+      "Python (b-CAP / ORiN)"
+    ],
     "made_in": "Japan",
-    "mounting": "Portable",
+    "mounting": [
+      "Desktop",
+      "Any orientation"
+    ],
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FDenso_Cobotta_2_7204529e.jpg",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FDenso_Cobotta_3_da2fc281.jpg",
@@ -147844,26 +147863,59 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiN-FkVXVrAeKbxAfZ7VQl5YvuHHKQoJlHfq5cWXl-SxbdcmqGllY_ROI&s=10",
       "https://www.denso-wave.com/imageupd/21002/38391_addblock5r_0.png"
     ],
-    "video": "https://youtu.be/clMfw4r77pE"
+    "video": "https://youtu.be/clMfw4r77pE",
+    "regions": [
+      "Global"
+    ],
+    "announced": "2018",
+    "manufacturer_url": "https://www.densorobotics.com/products/collaborative/cobotta/",
+    "collaborative": true,
+    "payload": 0.5,
+    "payload_peak_kg": 0.7,
+    "reach": 342.5,
+    "arm_weight_kg": 4,
+    "ft_sensor": "Proprietary torque sensors at each axis (functional safety)",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Inherently safe design; continuous torque & speed monitoring on all axes",
+    "teach_pendant": "COBOTTA World app (tablet, visual) + Remote TP virtual pendant",
+    "programming_langs": [
+      "PacScript",
+      "Python"
+    ],
+    "cameras": "Integrated camera option (2D image recognition on-arm)",
+    "ros": true,
+    "ros_industrial": "Denso ROS driver (b-CAP)",
+    "sdk": true,
+    "api": "ORiN 2 / b-CAP",
+    "estop": "Integrated safety",
+    "iso_certs": [
+      "ISO 10218-1",
+      "ISO/TS 15066"
+    ],
+    "datasheet": "https://www.densorobotics.com/products/collaborative/cobotta/"
   },
   {
     "id": "denso-cobotta-pro-900",
     "name": "COBOTTA PRO 900",
     "brand": "Denso Robotics",
     "cat": "Industrial",
-    "sub": "Collaborative Robot Arm",
-    "year": 2022,
+    "sub": "High-Speed Collaborative Robot",
+    "year": 2023,
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
     "img": "https://www.densorobotics.com/wp-content/uploads/2023/02/COBOTTA-PRO1300_gray_kageari_06-web2-e1684764893571.png",
-    "desc": "Denso's production-grade cobot: 6 kg payload, 900 mm reach, running collaborative tasks at up to 2.5 m/s with integrated safety sensing for fast human-robot cycles.",
+    "desc": "The DENSO COBOTTA PRO 900 is the smaller of DENSO's high-speed PRO cobots — 6 kg payload, 900 mm reach, ±0.03 mm repeatability and a 2,100 mm/s TCP speed that puts it on par with 5- and 6-axis industrial robots during high-speed operation (the larger PRO 1300 pushes 12 kg and 2,500 mm/s). Its productivity-and-safety balance comes from proprietary high-rigidity torque sensors on lightweight slim axes for continuous torque/speed/area monitoring, plus a distinctive touch-sensing soft cover — silicon cushioning with embedded high-sensitivity contact sensors — that further cuts collision risk; with an added safety scanner it can safely ramp to industrial speeds when no one is near. DENSO reworked direct teaching so complex precision tasks like assembly can be memorised by track and fine-tuned to 0.1 mm, and paired it with a Blockly visual environment so novices can build high-precision applications. Pneumatic and I/O wiring route internally to the flange. NOTE: reach recorded as 900 mm per model designation; some aggregators list 1066 mm — flagged for datasheet confirmation.",
     "tags": [
       "cobot",
-      "industrial",
       "denso",
       "cobotta-pro",
       "6-axis",
+      "6kg",
+      "high-speed",
+      "touch-cover",
       "active"
     ],
     "payload_kg": 6,
@@ -147871,18 +147923,25 @@
     "dof": 6,
     "ce": true,
     "use_cases": [
-      "Assembly",
+      "High-speed assembly",
       "Inspection",
+      "3D-vision bin picking",
+      "Multi-process HRC tasks",
       "Machine tending"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "axes_config": "6-axis",
+    "axes_config": "6-axis high-speed collaborative arm",
     "repeatability_mm": 0.03,
     "collision_detection": true,
-    "ft_sensor": true,
-    "programming": "WINCAPS / drag-teach",
+    "ft_sensor": "Proprietary high-rigidity torque sensors at each axis + touch-sensing soft cover (silicon-embedded contact sensors)",
+    "programming": [
+      "Blockly (visual)",
+      "Direct teaching",
+      "PacScript",
+      "Python (ORiN/b-CAP)"
+    ],
     "made_in": "Japan",
     "gallery": [
       "https://ifdalivestorage.blob.core.windows.net/user-uploads/101474/mid-size/349200/00000000-0000-0000-0000-000000000000/141264.jpg",
@@ -147891,7 +147950,51 @@
       "https://ifdalivestorage.blob.core.windows.net/user-uploads/101474/mid-size/349200/00000000-0000-0000-0000-000000000000/141210.jpg",
       "https://ifdalivestorage.blob.core.windows.net/user-uploads/101474/mid-size/349200/00000000-0000-0000-0000-000000000000/141212.jpg"
     ],
-    "video": "https://youtu.be/TTdKK4_qWM0"
+    "video": "https://youtu.be/TTdKK4_qWM0",
+    "regions": [
+      "Global"
+    ],
+    "announced": "June 2023 (automatica)",
+    "manufacturer_url": "https://www.densorobotics.com/products/collaborative/cobotta-pro/",
+    "collaborative": true,
+    "payload": 6,
+    "reach": 900,
+    "repeatability": 0.03,
+    "max_tcp_speed_ms": 2.1,
+    "speed_ms": 2.1,
+    "speed": 2.1,
+    "mounting": [
+      "Floor",
+      "Ceiling",
+      "Wall",
+      "Any angle"
+    ],
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Continuous torque/speed/area monitoring; touch-sensing soft cover; safety-scanner speed boost to industrial levels when clear",
+    "controller": "DENSO controller",
+    "teach_pendant": "Direct teaching (0.1 mm fine-tuning) + Blockly visual environment",
+    "programming_langs": [
+      "PacScript",
+      "Python",
+      "Blockly"
+    ],
+    "tool_io": "Pneumatic + I/O wiring routed internally to flange",
+    "ros": true,
+    "ros_industrial": "Denso ROS driver",
+    "sdk": true,
+    "api": "ORiN 2 / b-CAP",
+    "estop": "Controller e-stop + safety monitoring",
+    "iso_certs": [
+      "ISO 10218-1",
+      "ISO/TS 15066"
+    ],
+    "variants": [
+      "COBOTTA PRO 900 (6 kg, 2100 mm/s)",
+      "COBOTTA PRO 1300 (12 kg, 1300 mm reach class, 2500 mm/s, ±0.04 mm)"
+    ],
+    "datasheet": "https://www.densorobotics.com/products/collaborative/cobotta-pro/"
   },
   {
     "id": "mitsubishi-melfa-assista",
@@ -148483,41 +148586,92 @@
     "name": "Meca500",
     "brand": "Mecademic",
     "cat": "Industrial",
-    "sub": "Micro Industrial Robot Arm",
+    "sub": "Ultra-Compact Industrial Arm",
     "year": 2019,
     "origin": "Canada",
     "status": "Active",
     "price": "POA",
     "img": "https://storage.googleapis.com/bucket-two-leobotics/product/robot-6-axes-industriel-mecademic-meca500-1.webp",
-    "desc": "The world's smallest and most precise six-axis industrial arm: 0.5 kg payload, 330 mm reach and ±0.005 mm repeatability — palm-sized precision for micro-assembly, testing and photonics.",
-    "tags": [],
+    "desc": "The Mecademic Meca500 is, by the maker's account, the smallest and most compact six-axis industrial robot arm — and one of the most precise, with ±0.005 mm repeatability (five microns) that few arms of any size match. Reach is 330 mm from the flange (260 mm from wrist) with a 500 g rated payload (1 kg maximum under conditions), from a 4.6 kg body with the controller built inside. Its design philosophy is what sets it apart: rather than a stand-alone system with a pendant and its own software suite, the Meca500 is a plug-and-work slave component that integrates into any PC or PLC over Ethernet with no training courses, installs or add-on purchases — controlled by simple TCP/IP ASCII commands, a Python API, a web interface, or industrial fieldbuses (EtherCAT, PROFINET, EtherNet/IP) on the relevant variants. Powered by the PS200 module (90–250 VAC), offered in R3 and R4 revisions, it's a staple of precision electronics, semiconductor, lab-automation and micro-manipulation cells where footprint and accuracy dominate.",
+    "tags": [
+      "robot-arm",
+      "mecademic",
+      "meca500",
+      "6-axis",
+      "ultra-compact",
+      "precision",
+      "5-micron",
+      "plug-and-work",
+      "active"
+    ],
     "payload_kg": 0.5,
     "reach_mm": 330,
     "dof": 6,
     "repeatability": 0.005,
     "ce": true,
     "use_cases": [
-      "Micro-assembly",
-      "Photonics alignment",
-      "Testing"
+      "Precision assembly",
+      "Electronics & semiconductor",
+      "Lab & test automation",
+      "Micro-manipulation",
+      "Quality inspection"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "weight_kg": 4.6,
-    "axes_config": "6-axis",
+    "axes_config": "6-axis ultra-compact industrial arm",
     "repeatability_mm": 0.005,
-    "made_in": "Canada",
-    "industrial_protocols": "EtherCAT, EtherNet/IP, TCP/IP",
-    "programming": "Web interface / API",
-    "mounting": "Any angle",
+    "made_in": "Canada (Montréal)",
+    "industrial_protocols": [
+      "TCP/IP (ASCII)",
+      "EtherCAT",
+      "PROFINET",
+      "EtherNet/IP"
+    ],
+    "programming": [
+      "Web interface",
+      "Python / TCP-IP text commands",
+      "EtherCAT / PROFINET / EtherNet/IP (fieldbus variants)"
+    ],
+    "mounting": [
+      "Any orientation"
+    ],
     "gallery": [
       "https://mecademic.com/wp-content/uploads/2024/08/meca-500-with-calibration-crosshair.png",
       "https://mecademic.com/wp-content/uploads/2024/08/black-meca500-robot-45-degree-veiw-cutout.png",
       "https://mecademic.com/wp-content/uploads/2024/08/two-meca500-robots-facing-each-other-clean.webp",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtECYKH2-p37SOc46tFJKiiDKuvWtjrz19T-5LZPXW2yZSKMm1bJiV_5s&s=10"
     ],
-    "video": "https://youtu.be/MeRaYVntxMk"
+    "video": "https://youtu.be/MeRaYVntxMk",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://mecademic.com/products/meca500-industrial-robot-arm/",
+    "payload": 0.5,
+    "payload_peak_kg": 1,
+    "reach": 330,
+    "arm_weight_kg": 4.6,
+    "power_source": "PS200 power module — 90–250 VAC, 50–60 Hz",
+    "controller": "Integrated controller (inside the arm) — plug-and-work slave component",
+    "programming_langs": [
+      "Python",
+      "Any (raw TCP/IP ASCII)"
+    ],
+    "fieldbus": "EtherCAT / PROFINET / EtherNet/IP (module-dependent)",
+    "ethernet": "Ethernet (native control interface)",
+    "ros": true,
+    "sdk": true,
+    "sdk_langs": [
+      "Python"
+    ],
+    "api": "TCP/IP ASCII command set + Python API",
+    "estop": "Via I/O / integrator",
+    "variants": [
+      "Meca500 R3",
+      "Meca500 R4"
+    ],
+    "datasheet": "https://mecademic.com/products/meca500-industrial-robot-arm/"
   },
   {
     "id": "ufactory-xarm-6",
@@ -148696,41 +148850,100 @@
     "name": "Gen3",
     "brand": "Kinova",
     "cat": "Industrial",
-    "sub": "Research Robot Arm",
+    "sub": "Ultra-Lightweight Research Arm",
     "year": 2019,
     "origin": "Canada",
     "status": "Active",
     "price": "POA",
     "img": "https://www.kinovarobotics.com/uploads/_2000xAUTO_crop_center-center_none/22037/Gen3-robot-img-Cover-img-is-loaded-block-1B.webp",
-    "desc": "Kinova's flagship research manipulator: 7 DoF, 4 kg payload, 902 mm reach with integrated 2D/3D vision and full ROS support — a standard platform in academic manipulation research.",
-    "tags": [],
+    "desc": "The Kinova Gen3 is one of the most widely used research manipulators in the world — an ultra-lightweight 7-axis arm (8.2 kg, 4 kg mid-workspace payload, 902 mm reach) chosen by hundreds of universities, startups and corporate labs for its portability and sub-30-minute setup. Its distinguishing features are research-grade: 1 kHz closed-loop low-level control, infinite-rotation joints, and Kinova smart actuators with integrated torque sensors plus current, voltage and temperature sensing for precise force control and rich state feedback. An optional Kinova Vision module integrates an Intel RealSense RGB-plus-depth camera directly at the end effector (30 cm–∞ colour, 18 cm–∞ depth) for perception work. It's driven through the Kortex API in C++ or Python with official ROS/ROS 2 kortex drivers, over Gigabit Ethernet from 24 VDC, and offered in 7-DoF, 6-DoF (891 mm) and Gen3 lite forms — the combination of light weight, torque sensing and open software making it a default arm for mobile-manipulation and imitation-learning research.",
+    "tags": [
+      "robot-arm",
+      "kinova",
+      "gen3",
+      "7-axis",
+      "research",
+      "ultra-lightweight",
+      "infinite-rotation",
+      "realsense",
+      "1khz",
+      "active"
+    ],
     "payload_kg": 4,
     "reach_mm": 902,
     "dof": 7,
     "ros": true,
-    "cameras": "Optional 2D/3D vision module",
+    "cameras": "Optional Kinova Vision module — Intel RealSense: RGB (colour) + depth, 30 cm–∞ colour focal, 18 cm–∞ depth",
     "use_cases": [
-      "Research",
-      "Manipulation",
-      "Human-robot interaction"
+      "Robotics research",
+      "Mobile manipulation",
+      "Imitation / RL data collection",
+      "Education",
+      "Assistive robotics"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "weight_kg": 8.2,
-    "axes_config": "7-axis",
-    "ft_sensor": true,
+    "axes_config": "7-axis (or 6-axis) ultra-lightweight arm, infinite-rotation joints",
+    "ft_sensor": "Integrated joint torque sensors (all actuators) + current/voltage/temperature sensing",
     "ft_sensor_type": "Integrated joint torque sensors",
-    "programming": "Kortex API (C++/Python/MATLAB/ROS 2)",
+    "programming": [
+      "Kortex API (C++/Python)",
+      "ROS / ROS 2 (kortex driver)",
+      "Web app UI"
+    ],
     "collision_detection": true,
-    "made_in": "Canada",
+    "made_in": "Canada (Boisbriand, Québec)",
     "gallery": [
       "https://www.kinovarobotics.com/uploads/_2000xAUTO_crop_center-center_none/22066/Gen3-robot-img-Cover-img-is-loaded-block-4B.webp",
       "https://www.kinovarobotics.com/uploads/_2000xAUTO_crop_center-center_none/419439/Kinova_Gen3.webp",
       "https://www.kinovarobotics.com/uploads/_2000xAUTO_crop_center-center_none/89429/Kinova-Gen3-machine-tending-1920-x-1080_optimized.webp",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6y9d9u09n0aF6tzs5vz5-hqHGNZ_74iTR-KbBORw3nhIm2hdlrW0eqC4&s=10"
     ],
-    "video": "https://youtu.be/8MTuTNIQUqA?list=PLz1XwEYRuku4J6cnDF58PGL3RVzWxf6GV"
+    "video": "https://youtu.be/8MTuTNIQUqA?list=PLz1XwEYRuku4J6cnDF58PGL3RVzWxf6GV",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.kinovarobotics.com/",
+    "collaborative": true,
+    "payload": 4,
+    "reach": 902,
+    "arm_weight_kg": 8.2,
+    "max_tcp_speed_ms": 0.4,
+    "speed_ms": 0.4,
+    "speed": 0.4,
+    "mounting": [
+      "Table",
+      "Mobile platform",
+      "Any orientation"
+    ],
+    "actuator_type": "Kinova smart actuators — integrated torque sensors, infinite joint rotation",
+    "force_limiting": true,
+    "hand_guiding": true,
+    "control_frequency_hz": 1000,
+    "depth_sensing": true,
+    "controller": "Onboard (integrated) — 1 kHz low-level closed-loop control",
+    "programming_langs": [
+      "Python",
+      "C++"
+    ],
+    "ros_industrial": "Official ros_kortex / ros2_kortex packages",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "api": "Kinova Kortex API (gRPC)",
+    "ethernet": "Gigabit Ethernet",
+    "power_source": "24 VDC",
+    "variants": [
+      "Gen3 7-DoF (902 mm)",
+      "Gen3 6-DoF (891 mm)",
+      "Gen3 lite (entry)"
+    ],
+    "ce": true,
+    "datasheet": "https://www.kinovarobotics.com/"
   },
   {
     "id": "productive-robotics-ob7",
