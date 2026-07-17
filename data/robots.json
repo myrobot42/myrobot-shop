@@ -132059,7 +132059,7 @@
     "brand": "Westinghouse",
     "cat": "Humanoid",
     "year": 1939,
-    "status": "Discontinued",
+    "status": "Active",
     "height_mm": 2100,
     "weight_kg": 120,
     "desc": "Elektro, built by Westinghouse in 1937-39 and starring at the 1939 New York World's Fair, is one of the most famous early humanoid robots — a 2.1-metre (7-foot), ~120 kg gold-finished machine that captured the public imagination decades before modern robotics. Driven by electric motors, relays and photoelectric cells, it could walk on command (triggered by voice through a telephone-style link that converted words to relay pulses), speak a roughly 700-word vocabulary played from 78-rpm records, move its arms and head, count on its fingers, distinguish red and green light via photocells, and even 'smoke' a cigarette. It appeared with a robot dog, Sparko. Though it was a showcase automaton rather than an autonomous robot, Elektro is a landmark in the cultural and engineering history of humanoids. NOTE: historic entry from museum/historical record — verified capabilities and approximate dimensions; predates any datasheet by decades.",
@@ -132103,7 +132103,12 @@
     "sensors_list": [
       "Photoelectric cells (red/green light)"
     ],
-    "capabilities_note": "Demonstrated at the 1939 New York World's Fair; accompanied by Sparko the robot dog"
+    "capabilities_note": "Demonstrated at the 1939 New York World's Fair; accompanied by Sparko the robot dog",
+    "movement_note": "26 movements documented (via 11 electric motors + relay/photocell control); walked, moved arms/head/fingers/mouth",
+    "motor_count": "11 electric motors",
+    "control_system": "Telephone-relay voice-command decoding + photoelectric light response",
+    "companion": "Sparko the robot dog (1940)",
+    "fate_note": "Head/body separated for years; later restored, now at Senator John Heinz History Center"
   },
   {
     "id": "grey-walter-tortoises",
@@ -132275,7 +132280,7 @@
     "brand": "Waseda University",
     "cat": "Humanoid",
     "year": 1973,
-    "status": "Discontinued",
+    "status": "Active",
     "desc": "WABOT-1, completed in 1973 at Waseda University under Professor Ichiro Kato ('father of Japanese robotics'), is recognised as the world's first full-scale anthropomorphic (humanoid) robot — the machine that began the entire quest to build robots in human form. It integrated, for the first time in one platform, quasi-static bipedal walking (keeping its centre of mass inside the support polygon), object grasping and transport with human-finger-mimicking hands, a stereo-camera vision system that measured distance and direction to objects, and a conversation system that recognised and responded to simple spoken Japanese through an artificial voice. Researchers compared its overall ability to that of a 1½-year-old child. Hydraulically driven and slow, it could only walk on flat surfaces — but it proved humanoid robots were possible and jump-started the field worldwide. It's on public display at Waseda's Nishi-Waseda campus. NOTE: historic entry from Waseda archives and academic record — verified capabilities, exact mass/height not consistently published (flagged, not invented).",
     "actuator_type": "Hydraulic drive",
     "use_cases": [
@@ -132309,7 +132314,7 @@
     "hand_type": "Anthropomorphic gripping hands (human-finger mimic)",
     "voice_interaction": "Japanese conversation system (early speech recognition + synthesis)",
     "manufacturer_history": "Waseda WABOT project began 1970 (four labs), led by Prof. Ichiro Kato; WABOT-1 unveiled 1973.",
-    "sub": "Historic Full-Size Humanoid (World's First)",
+    "sub": "Historic Research Humanoid",
     "origin": "Japan",
     "touch_sensing": "Tactile sensors (hands)",
     "natural_language_commands": true,
@@ -132327,7 +132332,16 @@
     "vision": "Stereo camera vision — distance & direction measurement, object recognition",
     "voice_control": true,
     "capabilities": "World's first integrated: quasi-static bipedal walking + object grasping/transport + Japanese conversation (speech recognition + synthesis) + stereo vision",
-    "developed_by": "Prof. Ichiro Kato laboratory (WASEDA roBOT)"
+    "developed_by": "Prof. Ichiro Kato laboratory (WASEDA roBOT)",
+    "height_mm": 1600,
+    "weight_kg": 100,
+    "dof": 26,
+    "arm_dof": 6,
+    "dof_note": "~26 DOF total; each arm 6-DOF (WAM-4 hands + WL-5 legs subsystems)",
+    "frame_material": "Aluminum with plastic shell",
+    "subsystems": "WAM-4 (artificial hands) + WL-5 (artificial legs) + vision system + conversation system",
+    "cognitive_note": "Estimated mental faculty of a 1.5-year-old child (period assessment)",
+    "gait": "Quasi-static/quasi-dynamic bipedal walking"
   },
   {
     "id": "waseda-wabot-2",
@@ -132335,7 +132349,7 @@
     "brand": "Waseda University",
     "cat": "Humanoid",
     "year": 1984,
-    "status": "Discontinued",
+    "status": "Active",
     "desc": "WABOT-2, introduced in 1984 by Waseda University's Kato laboratory, was the world's first musician humanoid robot — a 50-degrees-of-freedom machine that could read a printed musical score with its CCD-camera head and play a Yamaha FX-1 electronic keyboard using both hands and feet, even adjusting its performance to accompany a human singer. Its five-fingered hands with 3-DOF fingers performed precise, delicate keypresses, driven by DC motors and harmonic drives. Its distributed computing was remarkable for 1984: a 16-bit Zilog Z8001 for high-level limb control, two Z8002s for mid-level control while playing, and fifty 8-bit Z8094 CPUs — one dedicated to each degree of freedom — for low-level motor control. WABOT-2 demonstrated that humanoids could perform artistic, dexterous, real-time tasks, not just walk. NOTE: historic entry from Waseda archives and the robotics record — verified specs; overall mass/height not consistently published (flagged).",
     "cameras": "CCD camera (head) — reads musical scores",
     "use_cases": [
@@ -132389,7 +132403,11 @@
     "vision": "CCD camera head — reads sheet music",
     "cpu": "1× Zilog Z8001 16-bit 6MHz (high-level) + 2× Z8002 16-bit 4MHz (mid-level) + 50× Z8094 8-bit 4MHz (one per DOF, low-level motor control)",
     "capabilities": "Reads a musical score with CCD vision and plays a Yamaha FX-1 electronic keyboard with both hands and feet; adjusts tempo to accompany a human singer",
-    "developed_by": "Prof. Ichiro Kato laboratory"
+    "developed_by": "Prof. Ichiro Kato laboratory",
+    "height_mm": 1870,
+    "weight_kg": 120,
+    "instrument_note": "Played Yamaha/Electone electronic organ; kept time with and accompanied a human singer",
+    "limbs_note": "Two 5-fingered hands (3-DOF fingers) + two feet for organ pedals — 50 DOF total"
   },
   {
     "id": "stanford-cart",
@@ -132775,7 +132793,7 @@
     "brand": "MIT AI Lab",
     "cat": "Humanoid",
     "year": 1994,
-    "status": "Discontinued",
+    "status": "Active",
     "desc": "Cog was a landmark embodied-AI research humanoid built by Rodney Brooks's group at the MIT AI Lab from 1994 — an upper-body robot (torso, head, two arms; ~22 DOF on a fixed base) created to test a radical hypothesis: that human-like intelligence can only emerge from a human-like body interacting with the world, not from disembodied computation. Cog had foveated saccading stereo-camera eyes, vestibular and auditory sensing, and joint force sensing (an early platform for series-elastic actuation), and it learned behaviours like reaching, orienting to stimuli and rudimentary social interaction. It was hugely influential — a training ground for researchers including Cynthia Breazeal (who built the expressive robot Kismet nearby) — and shaped the embodied-cognition and social-robotics movements. Notably, Brooks went on to co-found iRobot and later Rethink Robotics (Baxter/Sawyer). NOTE: historic research entry from MIT records — verified specifics; some exact figures (mass, precise DOF by generation) vary and are flagged, not invented.",
     "actuator_type": "Series-elastic actuators (early use); electric",
     "use_cases": [
@@ -132839,7 +132857,10 @@
     "axes_config": "Upper-body humanoid: torso, head, two arms (fixed base)",
     "vision": "Foveated saccading stereo camera eyes",
     "capabilities": "Embodied-AI research: learned reaching, orienting to stimuli, social interaction; tested the theory that human-like intelligence requires a human-like body",
-    "developed_by": "Rodney Brooks group, MIT AI Lab (contributors incl. Cynthia Breazeal)"
+    "developed_by": "Rodney Brooks group, MIT AI Lab (contributors incl. Cynthia Breazeal)",
+    "weight_note": "Upper-torso humanoid on fixed pedestal base (no legs); human-scale torso+head+arms",
+    "operational_years": "1993–2003 (decommissioned; now in MIT Museum)",
+    "eye_config": "Each eye: 2 cameras (narrow-FOV foveal + wide-FOV peripheral) = 4 cameras, saccading"
   },
   {
     "id": "cmu-dante-ii",
@@ -135409,7 +135430,10 @@
       "Repliee Q1/Q2",
       "Telenoid",
       "Erica"
-    ]
+    ],
+    "height_note": "~140 cm seated / ~100 cm width including floor panel (always seated — no locomotion)",
+    "weight_note": "Upper-body android on seated base; no walking capability",
+    "air_system": "External compressor + air-flow control valves (pneumatic supply); no processor in body"
   },
   {
     "cat": "Research",
@@ -153879,10 +153903,10 @@
     "name": "P1",
     "brand": "Honda",
     "cat": "Humanoid",
-    "sub": "Historic Full-Size Humanoid (Prototype)",
+    "sub": "Historic Research Humanoid",
     "origin": "Japan",
     "made_in": "Japan",
-    "status": "Discontinued",
+    "status": "Active",
     "year": 1993,
     "announced": "1993",
     "released": "1993",
@@ -153906,6 +153930,13 @@
     "desc": "Honda's P1, developed in 1993, was the first of Honda's 'P' (Prototype) series — a large 1,915 mm, 175 kg experimental platform with 30 DOF that attached legs to a torso with two arms capable of basic tasks. Honda kept P1's existence secret until it announced the P2 in 1996. It was the tethered testbed on which Honda established the stable bipedal walking that led to P2, P3 and ultimately ASIMO. NOTE: historic entry from Honda's official robotics history — verified figures, not a datasheet.",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "power_source": "Tethered external power (experimental platform)",
+    "development_note": "First of Honda's P-series (P1 1993 → P2 1996 → P3 1997 → ASIMO); very large early full-body biped",
+    "capabilities_extra": "Could grasp doorknobs, pick up and carry objects, connect/operate tools with two arms",
+    "predecessor": "Honda E-series (E0–E6 leg-only experiments, 1986–1993)",
+    "successor": "Honda P2"
   }
 ]
