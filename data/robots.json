@@ -134561,7 +134561,7 @@
     "id": "dexforce-w1-pro",
     "name": "W1 Pro",
     "brand": "DexForce",
-    "sub": "Wheeled Humanoid",
+    "sub": "Wheeled Dual-Arm Humanoid",
     "year": 2025,
     "origin": "China",
     "status": "Active",
@@ -134570,7 +134570,7 @@
     "payload_kg": 10,
     "battery_life": 480,
     "hand_type": "Dual 7-DoF arms",
-    "ai_model": "DexVerse Sim2Real embodied-intelligence engine (large-scale synthetic 3D training data)",
+    "ai_model": "AI perception + high-precision manipulation stack",
     "learning_methods": [
       "Sim-to-real",
       "3D generative AI synthetic data"
@@ -134578,23 +134578,26 @@
     "cameras": "3D vision",
     "tags": [
       "humanoid",
-      "DexForce",
+      "dexforce",
+      "w1-pro",
       "wheeled",
-      "industrial",
-      "Sim2Real"
+      "dual-arm",
+      "mobile-manipulator",
+      "precision",
+      "china",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "Industrial automation",
-      "Service",
-      "Bin-picking",
+      "Industrial manipulation",
+      "Service tasks",
       "Research"
     ],
     "made_in": "China",
     "website": "https://www.dexforce.com",
-    "desc": "DexForce's second-generation wheeled humanoid: 34 powered joints, dual 7-DoF arms lifting up to 10 kg, and ~8-hour runtime. Built on DexForce's DexVerse Sim2Real engine, which generates large-scale synthetic 3D training data for robust real-world manipulation. Shenzhen-based, founded 2021, backed by Lenovo Capital.",
+    "desc": "The DexForce W1 Pro is a wheeled dual-arm humanoid platform from DexForce Technology, blending mobile autonomy with high-precision manipulation for industrial, service and research applications. Its human-like upper body mimics human arm motion for dexterous tasks while a wheeled base ensures reliable indoor travel, and adjustable-height mechanics let its arms work at different levels — the now-common 'wheeled mobile manipulator' architecture also seen in Galbot G1, CASBOT W1 and RobotEra Q5. NOTE: DexForce publishes limited hard specs for the W1 Pro (exact height/weight/DOF/payload/reach not prominently released) — those fields are flagged for outreach rather than guessed; architecture, mobility approach and target applications confirmed from DexForce.",
     "arm_config": "Dual 7-DoF arms on wheeled base",
     "manufacturer_full": "DexForce (Shenzhen, founded 2021; Lenovo Capital-backed)",
     "note": "Second-generation wheeled humanoid; DexVerse engine generates synthetic training data for robust manipulation",
@@ -134610,7 +134613,19 @@
     ],
     "video": "https://youtu.be/ddI4U6dlxxM",
     "arm_dof": 7,
-    "bimanual": true
+    "bimanual": true,
+    "announced": "2025",
+    "released": "2025",
+    "manufacturer_url": "https://www.dexforce.com/",
+    "biped": false,
+    "locomotion": "Wheeled base (reliable indoor travel) + adjustable-height upper body",
+    "autonomous": true,
+    "sensors_list": [
+      "AI perception sensors",
+      "Vision"
+    ],
+    "capabilities": "Wheeled humanoid platform blending mobile autonomy with high-precision dual-arm manipulation; upper body mimics human arm motion; industrial, service & research use",
+    "developed_by": "DexForce Technology"
   },
   {
     "cat": "Humanoid",
@@ -136315,26 +136330,25 @@
     "name": "Yuanqi Zai (元气仔)",
     "brand": "Honor",
     "cat": "Humanoid",
-    "sub": "Service Humanoid",
+    "sub": "Service/Companion Humanoid",
     "year": 2026,
     "origin": "China",
-    "status": "Active",
+    "status": "Development",
     "score": 75,
     "price": "POA",
     "actuator_type": "Electric",
     "tags": [
       "humanoid",
-      "yuanqi-zai",
-      "spirit-kid",
       "honor",
+      "yuanqi-zai",
+      "biped",
+      "service",
       "companion",
-      "retail",
-      "social",
-      "compact",
-      "china",
-      "active"
+      "mwc-2026",
+      "embodied-ai",
+      "development"
     ],
-    "desc": "Yuanqi Zai (元气仔, 'Spirit Kid') is Honor's compact consumer-facing humanoid — the product it actually intends to commercialise, versus its flagship Lightning racer. At 136.9 cm with a friendly silver design, it is built for human-robot interaction and companionship, with Honor planning to deploy it across ~5,000 of its own retail stores as an in-store greeter and shopping guide. It ran the 2026 Beijing E-Town Humanoid Half Marathon alongside Lightning and took the event's Best Gait Award. Perception uses an ORBBEC Gemini 330 binocular 3D camera with the MX6800 depth engine for reliable indoor/outdoor depth sensing; AAC Technologies supplied its head and legs.",
+    "desc": "Yuanqi Zai (元气仔) is smartphone maker Honor's first humanoid robot, debuted on stage at MWC 2026 in Barcelona (March 1) alongside its Robot Phone — a matte-black service humanoid with a head-mounted camera and a glowing chest strip, demonstrated walking, dancing, posing and interacting with Honor's CEO on stage. Honor positions it for shopping assistance, workplace inspections and companionship, part of the company's broader push beyond smartphones into physical/embodied AI under its 'Augmented Human Intelligence' strategy, backed by a reported $10 billion AI investment. It represents the wave of Chinese consumer-electronics giants (alongside Xiaomi's CyberOne and Xpeng) entering humanoid robotics. NOTE: Honor deliberately disclosed NO formal specifications, pricing or commercial timeline at the reveal — height, weight, DOF, payload, battery and actuators are all UNpublished and flagged for outreach, NOT invented. This is a development-stage reveal; only confirmed design features and stated purpose are recorded.",
     "fig": "🤖",
     "rating": 4,
     "cats": [
@@ -136342,24 +136356,24 @@
       "Social"
     ],
     "also_known_as": "Spirit Kid / Energetic Boy",
-    "announced": "2026-04",
+    "announced": "2026-03",
     "height_mm": 1369,
     "colors": [
       "Silver"
     ],
-    "cameras": "ORBBEC Gemini 330 binocular 3D camera",
+    "cameras": "Head-mounted camera",
     "depth_sensing": "Active-passive fusion (ORBBEC MX6800 depth engine)",
     "natural_language_commands": true,
     "awards": [
       "2026 Beijing E-Town Humanoid Robot Half Marathon — Best Gait Award"
     ],
     "use_cases": [
-      "In-store retail guidance",
+      "Shopping assistance",
+      "Workplace inspection",
       "Companionship",
-      "Human-robot interaction",
-      "Home"
+      "Service"
     ],
-    "made_in": "China (Honor, Shenzhen)",
+    "made_in": "China",
     "manufacturer_history": "Honor's mass-market humanoid, unveiled alongside Lightning in April 2026; commercialisation anchored in Honor's own retail channel (~5,000 stores). Built on Honor's phone supply chain (AAC Technologies: head + legs).",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/04/vYoT8oasxi1EzfxoqByG/image.jpg",
     "gallery": [
@@ -136369,14 +136383,27 @@
       "https://plain-eeur-prod-public.komododecks.com/202607/04/QB1qLOA8aBtv4q80ooN7/image.jpg",
       "https://i.ytimg.com/vi/xpGFrFbahc8/sddefault.jpg"
     ],
-    "ai_model": "MagicOS on-device model + YOYO intelligent agent",
+    "ai_model": "Honor 'Augmented Human Intelligence' AI (embodied); backed by Honor's $10B AI investment",
     "os": "MagicOS (on-device model + YOYO agent)",
     "autonomous": true,
     "navigation": "Autonomous perception & navigation",
     "speech": "Multimodal voice interaction",
     "intended_setting": "Retail stores / home service",
     "target_user": "Consumers, retail visitors",
-    "manufacturer_url": "https://www.honor.com"
+    "manufacturer_url": "https://www.honor.com/global/",
+    "released": "2026",
+    "biped": true,
+    "sensors_list": [
+      "Head-mounted camera"
+    ],
+    "display_face": "Glowing chest strip (status/interaction)",
+    "shell_material": "Matte-black finish",
+    "capabilities": "First Honor humanoid (MWC 2026 Barcelona debut): demonstrated walking, dancing, posing, on-stage interaction; designed for shopping assistance, workplace inspections and companionship",
+    "developed_by": "Honor (smartphone maker's move into embodied AI)",
+    "related_models": [
+      "Honor Robot Phone",
+      "Honor Lightning"
+    ]
   },
   {
     "id": "tiangong-ultra-2025",
@@ -136887,42 +136914,42 @@
     "name": "Onero H1",
     "brand": "SwitchBot",
     "cat": "Humanoid",
-    "sub": "Household Humanoid (Wheeled)",
+    "sub": "Wheeled Home Robot (Dual-Arm)",
     "year": 2026,
     "origin": "China",
     "status": "Active",
-    "price": 9999,
+    "price": "~$1,500",
     "img": "https://cdn.shopify.com/s/files/1/0648/1569/4057/files/H1_1x_1.png?v=1767593476",
     "tags": [
       "humanoid",
-      "household",
-      "wheeled",
       "switchbot",
-      "onero",
-      "smart-home",
-      "ces-2026",
-      "butler"
+      "onero-h1",
+      "home-robot",
+      "wheeled",
+      "dual-arm",
+      "22-dof",
+      "omnisense-vla",
+      "affordable",
+      "active"
     ],
     "height_mm": 1300,
     "dof": 22,
     "bimanual": true,
     "hand_type": "Articulated grippers",
     "terrain": "Indoor flat (wheeled base)",
-    "ai_model": "OmniSense VLA (Vision-Language-Action)",
+    "ai_model": "Self-developed OmniSense VLA (vision-language-action) — processes visual, depth & tactile data; learns/adapts across household scenarios",
     "ai_inference_local": true,
     "natural_language_commands": true,
-    "depth_sensing": "Vision + depth + tactile",
+    "depth_sensing": true,
     "force_sensing": true,
     "battery_life_typical": 240,
     "use_cases": [
-      "Laundry folding",
-      "Dishwashing",
-      "Coffee & meal prep",
-      "Window cleaning",
-      "Object organizing",
-      "Smart-home orchestration"
+      "Home chores",
+      "Laundry & dishes",
+      "Smart-home orchestration",
+      "Domestic assistance"
     ],
-    "desc": "The SwitchBot Onero H1 is SwitchBot's first humanoid robot, unveiled at CES 2026 as the centrepiece of its 'Smart Home 2.0' ecosystem. Rather than a bipedal form, the Onero H1 takes a pragmatic approach: two articulated arms and a head on a wheeled cylindrical base (about 1.3 m tall), built for the flat indoor surfaces of real homes. It carries 22 degrees of freedom across its arms and is driven by SwitchBot's self-developed OmniSense Vision-Language-Action model, which fuses visual, depth and tactile sensing to grasp, push, open, fold and organise — demonstrated folding laundry, making coffee, washing dishes and cleaning windows. Crucially, it's designed as an orchestrator of SwitchBot's wider device ecosystem (vacuums, locks, hubs) rather than doing everything itself, and runs roughly four hours per charge. A separate companion robotic arm, the Onero A1, is sold alongside it. Pricing is listed around US$9,999 with pre-orders and a mid-2026 beta program.",
+    "desc": "The SwitchBot Onero H1, unveiled at CES 2026, is a wheeled dual-arm home robot from SwitchBot — the smart-home-gadget maker's boldest move into humanoids, pitched as 'the most accessible AI household robot' at around $1,500. Standing 1.3 m on a wheeled base (chosen for stability and cost over legs), it has two articulated arms with 22 degrees of freedom — in Atlas's ballpark (29 DOF) for a fraction of the price — driven by SwitchBot's self-developed OmniSense VLA (vision-language-action) model that fuses visual, depth and tactile data to handle small, contact-heavy household tasks without meticulous pre-programming. Demos show it folding laundry, washing dishes, serving coffee, washing windows and loading washing machines, doing some tasks itself while delegating complex ones to task-specific devices in SwitchBot's Smart Home 2.0 ecosystem. It poses a genuine strategic question: specialised single-purpose devices, or one adaptable generalist? A companion A1 standalone robotic-arm product accompanies it. NOTE: 22 DOF, height, OmniSense VLA and price from SwitchBot official + CES coverage; exact payload/battery/reach not yet published, flagged.",
     "fig": "🤖",
     "score": 75,
     "rating": 4,
@@ -136933,7 +136960,29 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6964b24c64dbdeb5ad2f3e1e_onero%20H1_04.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6964b254db70a391900fba51_Onero%20H1_Hero.webp"
     ],
-    "video": "https://youtu.be/xqLRDWNzzZ8"
+    "video": "https://youtu.be/xqLRDWNzzZ8",
+    "made_in": "China",
+    "announced": "2026-01",
+    "released": "2026",
+    "manufacturer_url": "https://us.switch-bot.com/products/onero-h1",
+    "biped": false,
+    "dof_note": "22 DOF across articulated arms",
+    "locomotion": "Wheeled base (stability + cost-efficiency)",
+    "sensors_list": [
+      "Visual perception",
+      "Depth sensing",
+      "Tactile feedback"
+    ],
+    "touch_sensing": true,
+    "vision": "Visual + depth + tactile fusion (OmniSense)",
+    "smart_home": "Integrates with SwitchBot Smart Home 2.0 ecosystem; delegates complex tasks to task-specific devices",
+    "app_control": true,
+    "voice_control": true,
+    "capabilities": "Accessible home robot butler: laundry folding, dishwashing, coffee serving, window washing, grasping/pushing/opening/organizing; learns contact-heavy tasks via OmniSense VLA; orchestrates SwitchBot ecosystem",
+    "developed_by": "SwitchBot (smart-home device maker)",
+    "related_models": [
+      "SwitchBot A1 (standalone robotic arms)"
+    ]
   },
   {
     "id": "switchbot-kata-friends",
@@ -144882,28 +144931,28 @@
     "name": "Hea",
     "brand": "Haier",
     "cat": "Humanoid",
-    "sub": "Home Humanoid (wheeled)",
-    "year": 2026,
+    "sub": "Service/Home Humanoid",
+    "year": 2025,
     "origin": "China",
-    "status": "Active",
+    "status": "Development",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/kdNVYyjd3XU2EEk8RdN2/image.jpg",
     "dof": 44,
     "use_cases": [
-      "Domestic help",
-      "Cooking and cleaning",
-      "Laundry (ironing, folding)",
-      "Operating smart home appliances"
+      "Home service",
+      "Smart-home integration",
+      "Domestic assistance"
     ],
-    "desc": "Haier's home humanoid robot, developed as an advanced domestic helper that integrates with and operates the company's smart home appliances. It is a ~165 cm wheeled humanoid with 44 degrees of freedom and dexterous hands, designed to handle a wide range of chores — from cooking and cleaning to complex laundry tasks like ironing and folding — leveraging Haier's appliance ecosystem.",
+    "desc": "Hea is home-appliance giant Haier's humanoid robot, developed for home and service scenarios and positioned to leverage Haier's vast smart-home appliance ecosystem — part of the broader trend of Chinese consumer-hardware majors (Xiaomi, Honor, Midea) entering embodied AI. NOTE: Haier publishes very limited public specifications for Hea at this development stage — height, weight, DOF, payload, sensors, actuators and battery are all UNpublished and flagged for outreach rather than invented. Only the manufacturer, category and stated purpose are confirmed; this is deliberately a thin-but-honest entry pending Haier releasing real spec data.",
     "tags": [
       "humanoid",
       "haier",
       "hea",
-      "wheeled",
       "service",
+      "home",
+      "smart-home",
       "china",
-      "active"
+      "development"
     ],
     "fig": "🤖",
     "score": 75,
@@ -144913,7 +144962,7 @@
     "chassis": "Wheeled",
     "hand_type": "Dexterous hands",
     "bimanual": true,
-    "manufacturer_url": "https://www.haier.com/",
+    "manufacturer_url": "https://www.haier.com/global/",
     "os": "RobotEra ERA platform (Q5 derivative)",
     "arm_dof": 7,
     "payload_kg": 10,
@@ -144924,7 +144973,13 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/688b845e46130b959314c1d0_HIVA%20Haiwa_02.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/688b845e80671f5545406f2a_HIVA%20Haiwa_03.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/688b845e80671f5545406ed2_HIVA%20Haiwa_04.webp"
-    ]
+    ],
+    "announced": "2025",
+    "released": "2025",
+    "biped": true,
+    "ai_model": "Haier embodied-AI / smart-home integration",
+    "capabilities": "Haier's humanoid for home/service scenarios; leverages Haier's smart-home appliance ecosystem",
+    "developed_by": "Haier (home-appliance giant)"
   },
   {
     "id": "prosper-alfie",
@@ -144988,28 +145043,26 @@
     "name": "Memo",
     "brand": "Sunday Robotics",
     "cat": "Humanoid",
-    "sub": "Wheeled Home Humanoid",
-    "year": 2026,
+    "sub": "Home Robot (Pre-Commercial)",
+    "year": 2025,
     "origin": "USA",
-    "status": "Active",
-    "price": "POA",
+    "status": "Development",
+    "price": "~$20,000 (hand-built now); target <$10,000 at scale",
     "img": "https://cdn.sanity.io/images/1omys9i3/production/b78f8f43e34c54a813fecc3de4f9f65e45765fc4-1920x2400.jpg",
     "use_cases": [
-      "Clearing / wiping tables",
-      "Loading the dishwasher",
-      "Folding laundry",
-      "Tidying",
-      "Espresso preparation"
+      "Home / domestic tasks",
+      "Household assistance (beta)"
     ],
-    "desc": "A household humanoid from Sunday Robotics (founded by Tony Zhao and Cheng Chi; a $1.15B valuation reached March 2026), announced November 2025. Memo is a ~1.7 m wheeled robot with a torso, two multi-DoF arms and dual grippers, able to reach from floor level to about 2.1 m. Rather than chasing a bipedal form, Sunday prioritises safety and stability for busy family homes, and trains Memo's embodied AI on millions of real home routines so it can reliably handle chores like clearing tables, loading the dishwasher, folding laundry, tidying and even espresso preparation.",
+    "desc": "Memo, from Sunday Robotics, is a pre-commercial home robot positioned as a high-end domestic appliance rather than a factory machine, powered by Sunday's proprietary ACT-1 manipulation model. As of late 2025 it's in a '2026 Founding Family' beta: about 50 households receive individually numbered, hand-built units (each costing roughly $20,000 to build today) while Sunday iterates on reliability, safety and service, targeting a future retail price under $10,000 once it can manufacture at scale. Sunday is betting on a large installed base of home robots trained by its ACT-1 model over the coming decade — the same 'useful in the home first' thesis driving Weave, 1X and Prosper. NOTE: Sunday publishes minimal hardware specs for Memo at this pre-commercial stage (height/weight/DOF/payload not formally released) — those are flagged for outreach, not invented; program structure, pricing strategy and ACT-1 model confirmed from Sunday.",
     "tags": [
       "humanoid",
       "sunday-robotics",
       "memo",
-      "home",
-      "domestic",
-      "usa",
-      "prototype"
+      "home-robot",
+      "act-1",
+      "pre-commercial",
+      "beta",
+      "development"
     ],
     "fig": "🤖",
     "score": 75,
@@ -145019,11 +145072,11 @@
     "chassis": "Wheeled",
     "bimanual": true,
     "hand_type": "Dual grippers",
-    "ai_model": "Embodied AI (trained on millions of real home routines)",
+    "ai_model": "Sunday ACT-1 model (home-task manipulation; large installed-base learning strategy)",
     "learning_methods": [
       "Imitation Learning"
     ],
-    "manufacturer_url": "https://www.sundayrobotics.com/",
+    "manufacturer_url": "https://www.sunday.ai/",
     "gallery": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm40Qsn5Lk-pI5W1NBLor2VKxzEe29rNwmKJAhHROntcG-oe1YJHLBKw&s=10",
       "https://media.wired.me/photos/698b7bc6a7269b25ff7d9b26/16:9/w_1872,h_1053,c_limit/New-Home-Robot-Business-FB7DDC00-5A09-40CE-AB66-C3EF1E3524BF.jpg",
@@ -145031,7 +145084,13 @@
       "https://i.ytimg.com/vi/ERH-tMUHV1E/maxresdefault.jpg",
       "https://pbs.twimg.com/profile_images/1989557061135568896/RzyIGCMr_400x400.jpg"
     ],
-    "video": "https://youtu.be/ERH-tMUHV1E"
+    "video": "https://youtu.be/ERH-tMUHV1E",
+    "announced": "2025-11",
+    "released": "2026",
+    "biped": false,
+    "autonomous": true,
+    "capabilities": "Pre-commercial home robot for domestic tasks; hand-built beta units; iterating on reliability, safety & service via 'Founding Family' program (~50 households, individually numbered)",
+    "developed_by": "Sunday Robotics"
   },
   {
     "id": "oversonic-robee",
