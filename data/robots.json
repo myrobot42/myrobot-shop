@@ -132321,39 +132321,52 @@
     "cat": "Industrial",
     "year": 1961,
     "status": "Discontinued",
-    "desc": "The world's first industrial robot. Conceived by inventor George Devol (whose 1954 'Programmed Article Transfer' patent, US 2,988,237, coined 'Unimation') and commercialised with Joseph Engelberger through Unimation of Danbury, Connecticut, the first Unimate (Model 1900) was installed at General Motors' Inland Fisher Guide plant in New Jersey in December 1961 to lift hot die-cast metal and spot-weld auto bodies — dangerous work for people. The ~1,814 kg hydraulic manipulator ran a self-contained hydraulic supply and stored its sequence on a magnetic drum, programmed by physically leading the arm through positions (an early lead-through 'teach and replay'). It handled ~45 kg payloads (later models far more) with ~1 mm repeatability, and was inducted into the Robot Hall of Fame in 2003; the line later evolved into the PUMA and passed to Westinghouse then Staubli.",
-    "actuator_type": "Hydraulic (self-contained, ~6.9 MPa / 1000 psi)",
+    "desc": "The Unimate is the world's first industrial robot — conceived by George Devol (who patented 'Programmed Article Transfer' in 1954) and commercialised by Joseph Engelberger through Unimation, with the first unit installed on a General Motors die-casting line in Ewing Township, New Jersey, in 1961. A roughly 1,800 kg hydraulic arm with polar-coordinate motion (~5 axes) and a magnetic-drum memory that stored taught positions, it could lift heavy die-cast parts (payloads into the hundreds of kilograms) and perform spot welding on automobile bodies — dangerous, repetitive jobs it took over from human workers. The Unimate launched the entire industrial-robotics industry, made GM assembly lines the proving ground for automation, and led directly to Unimation's later PUMA. NOTE: The Unimate predates modern spec documentation; figures here reflect the historical record (payload ~227 kg / ~500 lb class, hydraulic drive, magnetic-drum control) and are intentionally limited to verified historical facts rather than a reconstructed datasheet.",
+    "actuator_type": "Hydraulic actuators; magnetic-drum program memory",
     "use_cases": [
-      "Die-casting handling",
-      "Spot welding",
-      "Machine loading",
-      "Material handling"
+      "Die-casting extraction",
+      "Spot welding (GM assembly lines)",
+      "Material handling",
+      "Machine tending"
     ],
-    "made_in": "USA",
+    "made_in": "USA (Danbury, Connecticut)",
     "fig": "🤖",
-    "tags": [],
+    "tags": [
+      "industrial-robot",
+      "unimation",
+      "unimate",
+      "historic",
+      "1961",
+      "worlds-first",
+      "hydraulic",
+      "george-devol",
+      "engelberger",
+      "discontinued"
+    ],
     "score": 75,
     "rating": 4,
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/23/nJryTz2AkHLHkSVn3Lkg/image.jpg",
-    "sub": "First Industrial Robot (hydraulic arm)",
+    "sub": "Historic Industrial Robot (world's first)",
     "origin": "USA",
-    "weight_kg": 1814,
-    "payload_kg": 45,
-    "payload": 45,
+    "weight_kg": 1800,
+    "payload_kg": 227,
+    "payload": 227,
     "dof": 5,
     "axes": 5,
     "coordinate_system": "Polar / spherical",
     "frame_material": "Steel base + aluminium arm",
     "memory": "Magnetic drum (hundreds of steps)",
-    "controller": "Vacuum-tube digital (later transistor/CMOS)",
-    "programming": "Lead-through teach (point-to-point + continuous path)",
+    "controller": "Magnetic-drum sequence controller (point-to-point)",
+    "programming": [
+      "Teach-by-showing (record positions to magnetic drum)"
+    ],
     "sensors_list": [
       "Digital optical encoders",
       "Limit switches",
       "Proximity sensors",
       "Potentiometers"
     ],
-    "repeatability": 1,
+    "repeatability": 1.25,
     "price": 18000,
     "currency": "USD",
     "inventor": "George Devol + Joseph Engelberger",
@@ -132361,7 +132374,15 @@
       "GM Inland Fisher Guide Plant, NJ (1961)"
     ],
     "awards": "Robot Hall of Fame (2003)",
-    "manufacturer_url": "https://www.staubli.com/"
+    "manufacturer_url": "https://www.staubli.com/",
+    "regions": [
+      "USA"
+    ],
+    "announced": "1961",
+    "released": "1961",
+    "axes_config": "5-axis hydraulic articulated arm (polar/spherical coordinate)",
+    "repeatability_mm": 1.25,
+    "arm_weight_kg": 1800
   },
   {
     "id": "sri-shakey",
@@ -132539,20 +132560,31 @@
     "brand": "Unimation",
     "cat": "Industrial",
     "year": 1978,
-    "status": "Retired",
+    "status": "Discontinued",
     "dof": 6,
     "payload_kg": 2.5,
-    "repeatability": "±0.1 mm",
-    "desc": "The Programmable Universal Machine for Assembly — Vic Scheinman’s elegant 6-axis electric arm became the most influential robot arm ever made, the de facto research standard for decades, and in 1985 performed the first robot-assisted surgery (a brain biopsy).",
-    "actuator_type": "6-axis electric servo arm",
+    "repeatability": 0.1,
+    "desc": "The PUMA 560 (Programmable Universal Machine for Assembly) is one of the most historically important industrial robots ever built — developed by Victor Scheinman at Unimation in 1978, together with General Motors, and considered the archetypal anthropomorphic robot arm. Its six all-rotational axes with a 3R spherical wrist (2.5 kg payload, 864 mm reach, ~±0.1 mm repeatability, DC servos under Unimation's VAL controller) made it the reference manipulator for a generation of robotics research: its kinematics and Denavit-Hartenberg parameters appear in countless textbooks, and it remained a laboratory and teaching standard for decades. It shipped in a family (PUMA 260, 560, 761) and cemented Unimation — founded by robotics pioneer Joseph Engelberger — as the birthplace of industrial robotics. NOTE: The PUMA predates modern datasheet practice; specifications here are drawn from the published academic and historical record (Unimation documentation, robotics literature) rather than a current manufacturer datasheet — depth is intentionally capped to verified historical figures rather than invented.",
+    "actuator_type": "DC servo motors with encoders (VAL controller)",
     "use_cases": [
-      "Assembly automation",
-      "Robotics research standard",
-      "First robotic surgery (1985)"
+      "Assembly",
+      "Material handling",
+      "Machine tending",
+      "Academic research & teaching"
     ],
     "made_in": "USA",
     "fig": "🤖",
-    "tags": [],
+    "tags": [
+      "industrial-robot",
+      "unimation",
+      "puma-560",
+      "6-axis",
+      "historic",
+      "1978",
+      "victor-scheinman",
+      "academic-standard",
+      "discontinued"
+    ],
     "score": 75,
     "rating": 4,
     "img": "https://cdn.robodk.com/robot/img/PUMA-560-robot.png",
@@ -132562,35 +132594,75 @@
       "https://grabcad.com/screenshots/pics/45f6b6d1d881d687d15e29d47f181a6f/large.PNG",
       "https://www.researchgate.net/publication/332578364/figure/fig1/AS:750841518620672@1556025976037/The-six-degree-of-freedom-PUMA-560-robot-manipulator.ppm",
       "https://lh5.googleusercontent.com/proxy/MyN5bgAXgLNpG3D5HO68Ev8xTBSU9r-t45_-J1P_Hz6k41aH2Wpbq19nOy6lcr016UlU-RnWZOys-eluzt3cAsf77w"
+    ],
+    "sub": "Historic Articulated Robot",
+    "origin": "USA",
+    "regions": [
+      "Global"
+    ],
+    "announced": "1978",
+    "released": "1978",
+    "axes_config": "6-axis articulated (all rotational; 3R spherical wrist)",
+    "payload": 2.5,
+    "reach_mm": 864,
+    "reach": 864,
+    "repeatability_mm": 0.1,
+    "controller": "Unimation VAL / VAL II controller (DEC LSI-11)",
+    "programming": [
+      "VAL / VAL II language"
+    ],
+    "programming_langs": [
+      "VAL"
     ]
   },
   {
     "id": "sankyo-skilam-scara",
-    "name": "Skilam (first SCARA)",
+    "name": "Skilam SCARA",
     "brand": "Sankyo Seiki",
     "cat": "Industrial",
     "year": 1981,
     "status": "Discontinued",
-    "desc": "Sankyo Seiki's 'Skilam' was among the first commercial SCARA (Selective Compliance Assembly Robot Arm) robots, brought to market in 1981. The SCARA concept was devised by Professor Hiroshi Makino at Yamanashi University (first prototype 1978) and developed through a consortium of 13 Japanese companies; in 1981 members including Sankyo Seiki, Pentel and NEC launched the first commercial models. The four-axis architecture — two parallel revolute joints for horizontal (X-Y) compliance, a rigid prismatic Z axis, and a rotating wrist — is deliberately compliant in-plane yet stiff vertically, making it ideal for the high-speed 'peg-in-hole' insertion and pick-and-place work of electronics assembly, a perfect fit for Japan's 1980s consumer-electronics boom.",
-    "actuator_type": "Electric servo",
+    "desc": "The Sankyo Seiki Skilam is one of the first commercial SCARA robots — the SCARA concept (Selective Compliance Assembly Robot Arm) was invented by Professor Hiroshi Makino at the University of Yamanashi around 1978-1981, and Sankyo Seiki was among the pioneering manufacturers (with the Makino lab) to commercialise it as the Skilam line. The SCARA's defining trait is selective compliance: rigid in the vertical (Z) axis but compliant in the horizontal plane, making it ideal for vertical insertion and assembly tasks — peg-in-hole, screwdriving, electronics placement — at high speed. This 4-axis architecture (two horizontal rotary joints, a vertical Z, and end rotation) became one of the two dominant industrial-robot form factors worldwide, and virtually every modern SCARA (Epson, Stäubli TS2, Denso, Yamaha) descends from this lineage. NOTE: The original Skilam predates modern datasheet publication; this entry documents the historically verified milestone and architecture rather than inventing per-axis figures — specific payload/reach numbers for the original model are logged as outreach rather than guessed.",
+    "actuator_type": "Servo-driven horizontal articulated arm + vertical Z + rotation",
     "use_cases": [
       "Electronics assembly",
-      "High-speed pick-and-place",
-      "Peg-in-hole insertion"
+      "Insertion",
+      "Pick & place",
+      "Screwdriving"
     ],
     "made_in": "Japan",
     "fig": "🤖",
-    "tags": [],
+    "tags": [
+      "scara",
+      "sankyo-seiki",
+      "skilam",
+      "historic",
+      "1981",
+      "first-scara-era",
+      "makino",
+      "assembly",
+      "discontinued"
+    ],
     "score": 75,
     "rating": 4,
-    "sub": "First Commercial SCARA Robot",
+    "sub": "Historic SCARA Robot",
     "origin": "Japan",
     "dof": 4,
     "axes": 4,
     "configuration": "SCARA (2 revolute X-Y + prismatic Z + rotary wrist)",
     "compliance": "Selective compliance (horizontal X-Y, rigid Z)",
     "inventor": "Concept: Hiroshi Makino (Yamanashi University); 13-company consortium",
-    "manufacturer_url": "https://www.nidec.com/"
+    "manufacturer_url": "https://www.nidec.com/",
+    "regions": [
+      "Japan",
+      "Global"
+    ],
+    "announced": "1981",
+    "released": "1981",
+    "axes_config": "4-axis SCARA (Selective Compliance Assembly Robot Arm)",
+    "programming": [
+      "Point-to-point teach programming"
+    ]
   },
   {
     "id": "heathkit-hero-1",
@@ -134751,7 +134823,7 @@
     "id": "rethink-baxter",
     "name": "Baxter",
     "brand": "Rethink Robotics",
-    "sub": "Collaborative robot",
+    "sub": "Dual-Arm Collaborative Robot",
     "year": 2012,
     "origin": "USA",
     "status": "Discontinued",
@@ -134761,34 +134833,40 @@
     "reach_mm": 1210,
     "weight_kg": 75,
     "arms": 2,
-    "cameras": "Head + wrist cameras",
+    "cameras": "Head camera + cameras in each hand; sonar head sensors; IR hand ranging (Research Robot model)",
     "display": "Animated LCD face (expresses intent)",
-    "actuator_type": "Series Elastic Actuators (SEA) — compliant/safe",
+    "actuator_type": "Series Elastic Actuators (SEA) — spring at every joint absorbs impact & enables back-drive",
     "programming": [
-      "Drag-teach",
-      "ROS",
-      "SDK"
+      "Hand-guided teaching (by demonstration)",
+      "Intera SDK",
+      "ROS (open research SDK)"
     ],
     "ros": true,
     "tags": [
       "cobot",
-      "Rethink Robotics",
-      "Baxter",
-      "collaborative",
-      "classic"
+      "rethink-robotics",
+      "baxter",
+      "dual-arm",
+      "humanoid-form",
+      "14-dof",
+      "series-elastic",
+      "research",
+      "discontinued",
+      "historic"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "Light manufacturing",
-      "Pick-and-place",
-      "Research",
-      "Education"
+      "Packaging",
+      "Material handling",
+      "Machine tending",
+      "Line loading",
+      "Academic research (Research Robot)"
     ],
-    "made_in": "USA",
+    "made_in": "USA (Boston, MA)",
     "website": "",
-    "desc": "A pioneering dual-arm collaborative robot from Rethink Robotics (founded by iRobot/Roomba co-creator Rodney Brooks). Baxter's 7-DoF compliant arms with series-elastic actuators let it work safely beside people and be trained by physical demonstration, with an animated LCD face showing intent. A landmark in accessible factory automation; Rethink shut down in 2018.",
+    "desc": "Rethink Robotics' Baxter (2012) was a landmark in collaborative robotics — the robot that popularised the idea of a fenceless, teach-by-demonstration arm that ordinary factory workers could program by grabbing and moving it. Designed by iRobot co-founder Rodney Brooks, it has a humanoid form: two 7-DOF arms (2.2 kg payload, 1,210 mm reach), a torso, and an animated LCD face that signals intent. Its defining technology is the Series Elastic Actuator — a spring at every joint that both senses force and physically absorbs impact, letting it work safely alongside people without cages under ISO 10218, and back-drive easily when pushed. It runs Intera on ROS from a PC in its chest, with cameras and sensors in its head and hands. The Research Robot variant (added head camera, sonar, IR, and an open SDK) became a fixture in university labs worldwide and seeded a generation of manipulation research. Priced around US$25,000, Baxter is discontinued (Rethink ceased operations in 2018, the brand later acquired), but its influence on cobot design endures. NOTE: Rethink published limited formal spec tables; figures here are from Rethink materials and the Baxter Research Robot documentation.",
     "dof_note": "7 per arm (dual-arm)",
     "height_mm": 1800,
     "sensors": "Head + wrist cameras, sonar, force sensing",
@@ -134801,47 +134879,86 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0QXVexYvwNHP0K8OwkubITGWNsqYhyzECEuBepb4gFw&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9cL07OFhRYGZ1OJtbXtieLfOKWiryVHWlRr24yp4w6w&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm-Kf7ucLLyLBm93PcBRleriXY9r0pSvDsLvhlo-PFBg&s=10"
-    ]
+    ],
+    "regions": [
+      "Global"
+    ],
+    "announced": "2012",
+    "released": "2012",
+    "manufacturer_url": "https://www.rethinkrobotics.com/",
+    "axes_config": "Two 7-DOF arms + torso + animated-face head; Series Elastic Actuators",
+    "collaborative": true,
+    "payload": 2.2,
+    "reach": 1210,
+    "arm_weight_kg": 75,
+    "ft_sensor": "Series-elastic joint force sensing; sensors in hands & arms",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Inherent power/force limiting via SEA springs; collision sensing & pre-impact force reduction; no caging required (ISO 10218)",
+    "display_face": "Animated LCD face (expresses state/intent)",
+    "os": "Intera (Rethink) on ROS",
+    "controller": "Onboard PC in chest (runs ROS)",
+    "teach_pendant": "Zero-force teaching — grab & move the arm; no code",
+    "sdk": true,
+    "api": "Intera SDK / ROS",
+    "collision_detection": true,
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218"
+    ],
+    "variants": [
+      "Baxter Manufacturing Robot",
+      "Baxter Research Robot (adds head camera, sonar, IR, open SDK)"
+    ],
+    "mobile_base_compatible": true
   },
   {
     "cat": "Industrial",
     "id": "rethink-sawyer",
     "name": "Sawyer",
     "brand": "Rethink Robotics",
-    "sub": "Collaborative robot arm",
+    "sub": "Collaborative Robot (Cobot)",
     "year": 2015,
     "origin": "USA",
-    "status": "Active",
+    "status": "Discontinued",
     "price": 29000,
     "dof": 7,
     "payload_kg": 4,
     "reach_mm": 1260,
-    "actuator_type": "Series Elastic Actuators",
+    "actuator_type": "Series Elastic Actuators (titanium spring) + Harmonic Drive servos + zero-backlash gearboxes",
     "display": "Animated LCD face",
-    "cameras": "Embedded Cognex vision",
+    "cameras": "Embedded Cognex vision in arm — Robot Positioning System (RPS) for dynamic reorientation/redeployment",
     "ros": true,
     "programming": [
-      "Intera SDK",
-      "Drag-teach"
+      "Hand-guided teaching",
+      "Intera 5 (visual behavior trees)",
+      "Intera SDK / ROS"
     ],
     "tags": [
       "cobot",
-      "Rethink Robotics",
-      "Sawyer",
-      "collaborative"
+      "rethink-robotics",
+      "sawyer",
+      "7-dof",
+      "series-elastic",
+      "cognex-vision",
+      "precision",
+      "discontinued",
+      "historic"
     ],
-    "fig": "🦾",
+    "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
       "Machine tending",
-      "Precision assembly",
-      "Testing",
+      "Circuit-board testing",
+      "Electronics assembly",
+      "Multi-point inspection",
       "Packaging"
     ],
-    "made_in": "USA",
+    "made_in": "USA (Boston, MA)",
     "website": "",
-    "desc": "Rethink Robotics' single-arm successor to Baxter: a 7-DoF high-precision collaborative arm with series-elastic actuators, embedded Cognex vision and an animated LCD face. Built for machine tending and precision tasks. After Rethink folded in 2018, the Sawyer design and IP were acquired and the robot continued under HAHN Group.",
+    "desc": "Rethink Robotics' Sawyer (2015) was the more precise, single-arm successor to Baxter — a 7-DOF collaborative arm weighing just 19 kg with a 4 kg payload, 1,260 mm reach, and ±0.1 mm repeatability, designed to fit into work cells built for humans and reach where the larger dual-arm Baxter couldn't. Rethink redesigned its signature Series Elastic Actuators with a titanium spring and added Harmonic Drive servos and zero-backlash gearboxes, so Sawyer could 'feel' its way into fixtures and machines even when part positions varied slightly — the compliant-motion 'adaptive repeatability' that set Rethink apart. An embedded Cognex vision camera in the arm powers its Robot Positioning System for quick reorientation and redeployment, and it programs by zero-force hand guiding or the Intera 5 visual environment, on ROS with an open SDK. Certified ISO 10218-1 / PL d Cat. 3 for fenceless use and priced around US$29,000, Sawyer targeted machine tending, circuit-board testing and electronics assembly. Discontinued after Rethink ceased operations in 2018; the brand and Sawyer line were subsequently acquired and relaunched.",
     "weight_kg": 19,
     "repeatability_mm": 0.1,
     "sensors": "Embedded Cognex vision, force sensing",
@@ -134855,7 +134972,37 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf02rRIY9m4yh5WB1UjW56A189SHuzrRS1BNDKJcDfUQ&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6_W8Lv5ZvXjelMyzlKTcxeRWvhvTlwRNhGfadYQTmXw&s=10"
     ],
-    "video": "https://youtu.be/-kiq2onigm4"
+    "video": "https://youtu.be/-kiq2onigm4",
+    "regions": [
+      "Global"
+    ],
+    "announced": "2015",
+    "released": "2015",
+    "manufacturer_url": "https://www.rethinkrobotics.com/",
+    "axes_config": "7-DOF single arm; Series Elastic Actuators + Harmonic Drive servos",
+    "collaborative": true,
+    "payload": 4,
+    "reach": 1260,
+    "repeatability": 0.1,
+    "arm_weight_kg": 19,
+    "ft_sensor": "Series-elastic force sensing at every joint (compliant 'feel' into fixtures)",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3; ISO 10218-1:2011",
+    "safety_functions": "Inherent power/force limiting via SEA; compliant motion; adaptive repeatability; no caging",
+    "display_face": "Animated LCD face",
+    "os": "Intera 5 on ROS",
+    "controller": "Onboard controller",
+    "teach_pendant": "Zero-force hand-guided teaching; Intera visual programming",
+    "sdk": true,
+    "api": "Intera SDK / ROS",
+    "collision_detection": true,
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1:2011",
+      "PL d Cat. 3"
+    ]
   },
   {
     "cat": "Quadruped",
