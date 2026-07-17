@@ -102967,22 +102967,26 @@
   {
     "id": "iit-walkman-2017",
     "name": "WALK-MAN",
-    "brand": "IIT (Italian Institute of Technology)",
+    "brand": "IIT",
     "cat": "Humanoid",
-    "sub": "Disaster Response Humanoid",
+    "sub": "Disaster-Response Research Humanoid",
     "tags": [
-      "bipedal",
-      "disaster-humanoid",
-      "european",
+      "humanoid",
+      "iit",
+      "walk-man",
+      "disaster-response",
+      "biped",
+      "series-elastic",
+      "torque-controlled",
       "research",
-      "DARPA-DRC-derived"
+      "discontinued"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781687224/myrobot/sx8t34heubmnndh70wda.jpg",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "WALK-MAN is a full-size humanoid disaster-response robot from IIT, standing ~1.85 m and weighing ~102 kg. Designed for DARPA-Robotics-Challenge-style tasks, it walks on two legs and uses two arms to open doors, operate valves and tools, and has been demonstrated performing firefighting tasks (locating and extinguishing a fire) in a smoke-filled mock environment.",
+    "desc": "WALK-MAN, from the Istituto Italiano di Tecnologia (IIT), is a rugged full-size disaster-response research humanoid developed under an EU project launched in the wake of the Fukushima nuclear accident to explore humanoids that could intervene in hazardous, human-engineered environments. Standing about 1.85 m and 100 kg with roughly 33 DOF, it uses high-power series-elastic, torque-controlled actuators for compliant, forceful whole-body motion, with a stereo/depth perception head, force-torque sensing and an IMU. It was demonstrated performing DARPA-Robotics-Challenge-class tasks: walking over rubble, turning valves, removing debris, drilling and operating equipment in damaged settings. WALK-MAN advanced IIT's expertise in powerful compliant actuation that later fed into the institute's broader humanoid work. NOTE: specs from IIT/EU WALK-MAN project publications; verified research-grade figures, some flagged where sources vary.",
     "highlights": [
       "33 DoF",
       "Disaster humanoid",
@@ -102991,8 +102995,8 @@
     ],
     "perf": false,
     "year": 2017,
-    "status": "Active",
-    "weight_kg": 102,
+    "status": "Discontinued",
+    "weight_kg": 100,
     "battery_life": 60,
     "origin": "Italy",
     "cameras": 4,
@@ -103006,7 +103010,7 @@
       "https://res.cloudinary.com/djrojgec1/image/upload/v1780734320/myrobot/iz7z6bb28v2y6qg3dkfg.jpg"
     ],
     "height_mm": 1850,
-    "made_in": "Italy",
+    "made_in": "Italy (Istituto Italiano di Tecnologia)",
     "robot_form": "Full-size humanoid",
     "manipulator_arms": 2,
     "dof": 33,
@@ -103020,8 +103024,9 @@
       "Disaster-response researchers"
     ],
     "use_cases": [
-      "Humanoid disaster intervention",
-      "Manipulation & locomotion research"
+      "Disaster response research",
+      "Hazardous-environment manipulation",
+      "Post-earthquake / industrial-accident intervention"
     ],
     "video": "https://youtu.be/kZzwVwzAWME",
     "cats": [
@@ -103032,7 +103037,22 @@
     "hand_type": "Pisa/IIT SoftHand",
     "payload": 10,
     "payload_kg": 10,
-    "actuator_type": "Series-elastic (SEA)"
+    "actuator_type": "Series-elastic torque-controlled actuators (high power, compliant)",
+    "announced": "2015",
+    "released": "2017",
+    "manufacturer_url": "https://www.iit.it/",
+    "biped": true,
+    "dof_note": "~33 DOF whole body (torque-controlled)",
+    "force_sensing": true,
+    "sensors_list": [
+      "Stereo vision + depth head",
+      "Force-torque sensors",
+      "IMU"
+    ],
+    "vision": "Stereo + depth perception head",
+    "imu": true,
+    "capabilities": "Rugged disaster-response humanoid: locomotion over rubble, valve turning, debris removal, drilling, driving; developed for EU post-Fukushima disaster-response research (DRC-class tasks)",
+    "developed_by": "IIT (EU WALK-MAN project, post-Fukushima disaster-response research)"
   },
   {
     "id": "iit-centauro-2018",
@@ -135563,44 +135583,47 @@
     "id": "inria-poppy",
     "name": "Poppy",
     "brand": "INRIA / Poppy Project",
-    "sub": "Open-source humanoid",
+    "sub": "Open-Source 3D-Printed Research Humanoid",
     "year": 2014,
     "origin": "France",
     "status": "Active",
     "dof": 25,
     "height_mm": 840,
-    "actuator_type": "Dynamixel MX servos",
-    "frame_material": "3D-printed PLA",
-    "os": "Python / ROS",
+    "actuator_type": "Robotis Dynamixel servomotors (compliant control)",
+    "frame_material": "3D-printed skeleton (conventional 3D printers)",
+    "os": "PyPot (Python) + Snap web interface",
     "ros": true,
     "api": true,
     "open_source": true,
     "tags": [
       "humanoid",
-      "Poppy",
-      "INRIA",
+      "inria",
+      "poppy",
       "open-source",
-      "3D-printed",
-      "education"
+      "3d-printed",
+      "biped",
+      "25-dof",
+      "dynamixel",
+      "education",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "Education",
-      "Research",
-      "Art",
-      "3D-printed robotics"
+      "Robotics research",
+      "STEM education / vocational training",
+      "Art installations",
+      "Embodiment & sensorimotor-learning research"
     ],
-    "made_in": "France",
+    "made_in": "France (INRIA Flowers, Bordeaux)",
     "website": "https://www.poppy-project.org",
-    "desc": "An open-source, 3D-printed humanoid platform from France's INRIA (2014). At 84 cm with Dynamixel servos and a Python/ROS stack, Poppy is fully fabricable and modifiable — widely used in classrooms, labs and art projects as an accessible entry into humanoid robotics.",
+    "desc": "Poppy, created by INRIA's Flowers team in Bordeaux (born 2012 out of Matthieu Lapeyre's PhD under Pierre-Yves Oudeyer, funded by an ERC grant), is the first complete open-source, 3D-printed humanoid robot — a platform designed so scientists, students, engineers and artists can fast and flexibly explore robot morphologies. About 840 mm tall and only ~3.5 kg, it has 25 DOF driven by Robotis Dynamixel servos, including a distinctive 5-DOF articulated trunk that gives it lumbar-spine-like motion unusual among humanoids. Both hardware (Creative Commons, 3D-printed skeleton, Arduino/Raspberry-Pi electronics) and software (GPL, the Python PyPot library plus a Snap block-based web interface, with V-REP simulation) are fully open, so its mechanical design can be freely modified — it was even reproduced in a two-day workshop at a Paris science museum. Widely adopted in schools and universities across science, education and art, Poppy's compliant Dynamixel control enables soft, safe human-robot interaction. The team later spun out Pollen Robotics, creators of the Reachy open-source humanoid torso. NOTE: specs from INRIA/Poppy Project official + academic papers — museum-grade open-source sourcing (v1 figures; the platform is intentionally variable).",
     "weight_kg": 3.5,
     "software": "Python (pypot library), ROS, Snap!/visual programming, Jupyter",
     "programming": [
-      "Python",
-      "Snap!",
-      "ROS"
+      "Python (PyPot)",
+      "Snap (block-based)"
     ],
     "sensors": "Camera, position feedback per joint",
     "note": "Open-source 3D-printed humanoid from INRIA Flowers lab; bent-knee biped; classroom/research/art",
@@ -135621,7 +135644,20 @@
     "leg_dof": 6,
     "waist_dof": 5,
     "head_dof": 2,
-    "ai_open_source": true
+    "ai_open_source": true,
+    "announced": "2012",
+    "released": "2014",
+    "manufacturer_url": "https://www.poppy-project.org/en/robots/poppy-humanoid/",
+    "biped": true,
+    "dof_note": "25 DOF including a 5-DOF articulated trunk (lumbar-spine-like motion)",
+    "controller": "Arduino-based / Raspberry Pi electronics",
+    "sim_platform": "V-REP / CoppeliaSim",
+    "sdk": true,
+    "sdk_langs": [
+      "Python"
+    ],
+    "capabilities": "First complete open-source 3D-printed humanoid platform: fully hackable/modifiable morphology (3D-printed skeleton), compliant control, soft human-robot interaction; used in science, education and art; unique articulated-trunk lumbar motion",
+    "developed_by": "INRIA Flowers Team (Matthieu Lapeyre PhD, sup. Pierre-Yves Oudeyer; ERC Grant); Pollen Robotics (Reachy) spun out of the team"
   },
   {
     "cat": "Educational",
@@ -140172,7 +140208,7 @@
     "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/04/5HBoyAqSUtrnQKWrjxHj/image.png",
-    "desc": "A collaborative humanoid assistant for industrial maintenance, developed at KIT's High Performance Humanoid Technologies lab (Prof. Tamim Asfour) under the EU Horizon 2020 'SecondHands' project. Mounted on a wheeled mobile base with a torque-controlled bimanual upper body, ARMAR-6 recognises when a human worker needs help and offers it proactively — using human tools like power drills, doing vision-based grasping, fluent object handovers, activity recognition and natural dialog. Four onboard computers run the ArmarX software framework; it was demonstrated 50+ times at CEBIT 2018.",
+    "desc": "ARMAR-6, from the Karlsruhe Institute of Technology's High Performance Humanoid Technologies (H2T) lab led by Tamim Asfour, is a high-performance collaborative research humanoid built for human-robot collaboration in real-world scenarios — famously demonstrated proactively assisting maintenance workers, recognising when a coworker needs a tool and handing it over. It's a torque-controlled humanoid upper body with dexterous five-finger hands, a stereo/RGB-D perception head and force-torque sensing, mounted on a wheeled mobile platform, and it runs on KIT's ArmarX robot software framework for perception, grasp and manipulation planning. ARMAR-6 is the latest widely-published member of the long-running Karlsruhe ARMAR humanoid family, which also includes the earlier ARMAR-III and the 63-DOF torque-controlled biped ARMAR-4. NOTE: ARMAR-6's exact per-limb DOF and mass aren't uniformly published across sources; core configuration and capabilities are verified from KIT/ARMAR-6 papers (the ICRA/Humanoids literature) — figures flagged where they vary rather than guessed.",
     "height_mm": 1920,
     "weight_kg": 160,
     "arm_dof": 16,
@@ -140181,23 +140217,22 @@
     "cameras": "Stereo vision (grasping, activity recognition)",
     "force_sensing": true,
     "natural_language_commands": true,
-    "ai_model": "ArmarX (activity recognition, dialog, learning)",
-    "os": "ArmarX",
+    "ai_model": "ArmarX robot software framework; grasp/manipulation planning; recognises when to help human workers",
+    "os": "ArmarX framework",
     "use_cases": [
-      "Industrial maintenance",
-      "Human-robot collaboration",
-      "Research"
+      "Human-robot collaboration research",
+      "Industrial maintenance assistance",
+      "Bimanual manipulation research"
     ],
     "manufacturer_history": "KIT H²T lab (Prof. Tamim Asfour); EU SecondHands / Horizon 2020 project.",
     "tags": [
       "humanoid",
-      "armar-6",
       "kit",
+      "armar-6",
       "research",
       "collaborative",
-      "industrial-maintenance",
-      "bimanual",
-      "tool-use",
+      "armarx",
+      "torque-controlled",
       "germany",
       "active"
     ],
@@ -140214,7 +140249,29 @@
     ],
     "video": "https://youtu.be/AYWtBlE0z7c",
     "fingers": 5,
-    "hand_type": "Five-finger"
+    "hand_type": "Dexterous five-finger hands",
+    "announced": "2018",
+    "released": "2018",
+    "manufacturer_url": "https://h2t.iar.kit.edu/english/index.php",
+    "biped": false,
+    "dof": 27,
+    "dof_note": "Humanoid upper body on mobile platform (dual arms, hands, head, torso)",
+    "actuator_type": "Torque-controlled joints",
+    "locomotion": "Wheeled mobile platform",
+    "sensors_list": [
+      "Stereo camera head",
+      "Force-torque sensors",
+      "RGB-D vision"
+    ],
+    "vision": "Stereo + RGB-D head for perception",
+    "imu": true,
+    "capabilities": "High-performance collaborative humanoid for human-robot collaboration in real-world industrial scenarios: proactively assists maintenance workers, hands tools, bimanual manipulation; part of the Karlsruhe ARMAR family",
+    "developed_by": "KIT High Performance Humanoid Technologies (H2T) Lab, Tamim Asfour (ARMAR family)",
+    "related_models": [
+      "ARMAR-III",
+      "ARMAR-4 (63-DOF biped)",
+      "ARMAR-DE"
+    ]
   },
   {
     "id": "dlr-rollin-justin",
@@ -140226,38 +140283,38 @@
       "Research"
     ],
     "sub": "Mobile Manipulation Research Humanoid",
-    "year": 2008,
+    "year": 2009,
     "origin": "Germany",
-    "made_in": "Germany (German Aerospace Center, DLR)",
+    "made_in": "Germany (DLR — German Aerospace Center)",
     "status": "Active",
     "price": "POA",
     "img": "https://cdn.sanity.io/images/7p2whiua/production/bafc3b5ce3ee1c88a28c78235518293a5a4d4f3c-1200x1000.jpg",
-    "desc": "A dexterous mobile humanoid from the German Aerospace Center (DLR) Institute of Robotics and Mechatronics, first shown publicly in 2008. Two compliant, torque-controlled DLR-Lightweight-Robot-III arms with four-fingered DLR Hand-II hands sit on a 3-DOF torso and a four-wheel spring-borne mobile base, giving ~51 degrees of freedom for sensitive two-handed manipulation — it can catch balls, make coffee and handle soft objects like paper. In a 2017 experiment an astronaut aboard the ISS teleoperated Justin in a simulated Mars scenario, underscoring its space-servicing research role.",
+    "desc": "Rollin' Justin, from the German Aerospace Center (DLR), is a landmark mobile-manipulation research humanoid: a torque-controlled humanoid upper body — two 7-DOF DLR-Lightweight-Robot-III arms, two dexterous DLR-Hand-II hands and a 3-DOF movable torso — mounted on an omnidirectional wheeled platform with a variable, extendable base. The whole system weighs 199 kg and rolls on four independent hub-motor steering wheels (30 N·m each, 1.5 m/s, climbing 40 mm steps and 17° ramps). Its defining technology is DLR's modular drive concept: brushless-DC motors with harmonic-drive gears and link-side joint torque sensors on every joint, giving back-drivable behaviour and highly sensitive impedance control — the basis for safe physical interaction with people and delicate two-armed manipulation (famously demonstrated serving tea). It's a premier platform for autonomous dexterous mobile manipulation in human environments, with envisioned use in households and space (astronaut assistance), and sits in DLR's humanoid family alongside Agile Justin, the biped TORO and neoDavid. NOTE: specs from DLR official + the Rollin' Justin design papers (ICRA 2009) — verified research-grade sourcing; a mobile manipulator, recorded honestly as wheeled not biped.",
     "dof": 51,
     "arm_dof": 7,
     "waist_dof": 3,
-    "hand_type": "2x DLR Hand-II (4-finger)",
+    "hand_type": "DLR-Hand-II (dexterous)",
     "fingers": 4,
-    "actuator_type": "Torque-controlled (SEA)",
+    "actuator_type": "Modular: brushless-DC motors + harmonic-drive gears + link-side joint torque sensors (back-drivable, impedance control)",
     "cameras": "Stereo cameras",
     "imu": true,
     "collision_detection": true,
     "chipset": "4x Mini-ITX (Intel Core i7 quad-core)",
     "use_cases": [
       "Dexterous mobile manipulation research",
-      "Household-task research",
-      "Space / satellite-servicing research",
-      "Teleoperation"
+      "Household assistance",
+      "Space robotics / astronaut assistance"
     ],
     "manufacturer_history": "DLR Institute of Robotics & Mechatronics (Prof. Alin Albu-Schäffer); upper body 2006, mobile 'Rollin'' version 2008; ISS-teleoperated Mars sim in 2017.",
     "tags": [
       "humanoid",
-      "rollin-justin",
       "dlr",
+      "rollin-justin",
+      "mobile-manipulator",
       "research",
-      "mobile-manipulation",
-      "compliant-arms",
-      "space",
+      "lwr-iii",
+      "torque-controlled",
+      "omnidirectional",
       "germany",
       "active"
     ],
@@ -140273,7 +140330,33 @@
     ],
     "video": "https://youtu.be/3HaK9BQo40o",
     "hand_dof": 12,
-    "force_sensing": true
+    "force_sensing": true,
+    "announced": "2009",
+    "released": "2009",
+    "manufacturer_url": "https://www.dlr.de/en/rm/research/robotic-systems/humanoids",
+    "biped": false,
+    "bimanual": true,
+    "weight_kg": 199,
+    "body_length_mm": 1220,
+    "dof_note": "Humanoid upper body: 2× DLR-LWR-III 7-DOF arms + 2× DLR-Hand-II + 3-DOF movable torso, on wheeled variable-base platform",
+    "locomotion": "4 independent hub-motor steering wheels (omnidirectional), 30 N·m each, 216 mm rubber tires; variable/extendable base",
+    "max_tcp_speed_ms": 1.5,
+    "speed_ms": 1.5,
+    "speed": 1.5,
+    "max_step_height_mm": 40,
+    "max_incline_deg": 17,
+    "sensors_list": [
+      "Stereo vision head",
+      "Joint torque sensors (all joints)"
+    ],
+    "vision": "Stereo visual system for scene analysis",
+    "capabilities": "Autonomous dexterous mobile manipulation in human environments: two-armed manipulation, tea-serving-class household tasks, telepresence; omnidirectional variable-base for stability; compliant impedance control for safe interaction",
+    "developed_by": "DLR Institute of Robotics and Mechatronics (based on DLR-LWR-III + DLR-Hand-II)",
+    "related_models": [
+      "Agile Justin",
+      "TORO (biped)",
+      "neoDavid"
+    ]
   },
   {
     "id": "wandercraft-calvin-40",
@@ -145987,28 +146070,32 @@
   {
     "id": "iit-ergocub",
     "name": "ergoCub",
-    "brand": "IIT (Italian Institute of Technology)",
+    "brand": "IIT",
     "cat": "Humanoid",
-    "sub": "Ergonomics Research Humanoid",
-    "year": 2025,
+    "sub": "Ergonomic Collaborative Humanoid",
+    "year": 2023,
     "origin": "Italy",
     "status": "Active",
     "price": "POA",
     "img": "https://www.uisdc.com/wp-content/uploads/2026/04/robot-img-ergoCub.webp",
     "use_cases": [
-      "Ergonomics research",
-      "Human-robot collaboration"
+      "Ergonomic human-robot collaboration",
+      "Reducing workplace musculoskeletal injury",
+      "Industrial lifting assistance",
+      "Real-time health monitoring / rehabilitation"
     ],
-    "desc": "IIT's research humanoid (an iCub-lineage platform) purpose-built to study workplace ergonomics and physical human-robot collaboration to reduce human strain and injury.",
+    "desc": "ergoCub, from the Istituto Italiano di Tecnologia (IIT), is an ergonomically-designed collaborative humanoid — an evolution of IIT's famous iCub — built specifically to reduce musculoskeletal injuries among workers. Standing 1.5 m and 55.7 kg and able to carry about 10 kg, its geometry was optimised during design to minimise the combined energy/joint effort of human-robot lifting tasks. It incorporates an Intel RealSense depth camera and LiDAR for navigation, new-generation force-torque sensors that let it respond intuitively to external forces, and a flexible OLED 2K face screen for expressive interaction, all powered by an NVIDIA Jetson AGX Xavier alongside an 11th-gen Intel i7. It's the centrepiece of the ergoCub project, a collaboration between IIT and INAIL (Italy's workplace-accident insurer, which funded €5M over three years) aimed at cutting biomechanical risk for future workers through humanoids, wearables and AI. NOTE: full specs from IIT's official ergoCub page — museum-grade sourcing; Jetson AGX Xavier + i7 compute is real and published.",
     "tags": [
       "humanoid",
       "iit",
       "ergocub",
-      "icub",
-      "research",
-      "ergonomics",
-      "italy",
-      "research"
+      "icub-evolution",
+      "collaborative",
+      "ergonomic",
+      "biped",
+      "force-torque",
+      "jetson-xavier",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
@@ -146021,18 +146108,43 @@
     "payload": 10,
     "payload_kg": 10,
     "lidar": true,
-    "depth_sensing": true,
+    "depth_sensing": "Intel RealSense",
     "force_sensing": true,
-    "chipset": "NVIDIA Jetson AGX Xavier + Intel i7 (11th gen)",
-    "display_face": "Flexible OLED 2K",
-    "actuator_type": "Series-elastic (SEA)",
+    "chipset": "NVIDIA Jetson AGX Xavier + 11th-gen Intel i7",
+    "display_face": "Flexible OLED 2K screen (expressive interaction)",
+    "actuator_type": "Torque-controlled joints; new-generation force-torque sensors",
     "gallery": [
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68278e35a2139f0afdff55d4_ergoCub_03.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68278e364000510db0256414_ergoCub_04.jpeg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68278e4377505f18d0578871_ergoCub_tn.jpg",
       "https://www.ansa.it/webimages/img_621x414/2023/9/21/2da0878a70b3403b0538d033be8f42a6.jpg",
       "https://ergocub.eu/images/ergocub-images/ifeel/ergoCub_workshop_machine.jpg"
-    ]
+    ],
+    "made_in": "Italy (Istituto Italiano di Tecnologia)",
+    "announced": "2023",
+    "released": "2023",
+    "manufacturer_url": "https://ami.iit.it/human-robot-collaboration",
+    "biped": true,
+    "npu": "NVIDIA Volta",
+    "sensors_list": [
+      "Intel RealSense depth camera",
+      "LiDAR (navigation)",
+      "New-gen force-torque sensors",
+      "IMU"
+    ],
+    "vision": "Intel RealSense depth + LiDAR navigation",
+    "bionic_face": true,
+    "capabilities": "Ergonomically-designed collaborative humanoid (evolution of iCub): geometry minimizes human+robot joint effort during lifting; intuitive response to external forces; carries ~10 kg; targets reducing musculoskeletal injury risk for workers",
+    "developed_by": "IIT (with INAIL, Italian workplace-injury insurer; €5M project) — evolution of iCub",
+    "related_models": [
+      "iCub",
+      "iCub3"
+    ],
+    "os": "YARP (iCub middleware)",
+    "ros": true,
+    "imu": true,
+    "ai_model": "iCub/ergoCub control-planning-estimation stack (ergonomic collaboration)",
+    "dof_note": "Whole-body DOF per iCub-derived architecture (existing dof/arm_dof/leg_dof fields preserved by upsert; not overwritten)"
   },
   {
     "id": "robotis-op3",
