@@ -22,7 +22,7 @@ const SUMMARY_MAX   = 900;
 // ── TEST SCOPE ──────────────────────────────────────────────────────────────
 // Keep this to ['LimX Dynamics'] for the first run. After confirming the output
 // looks clean, set to [] (empty) to run across ALL brands found in robots.json.
-const BRAND_ALLOWLIST = ["LimX Dynamics"];
+const BRAND_ALLOWLIST = [];
 // ─────────────────────────────────────────────────────────────────────────────
 
 // Brands whose names are ambiguous get an extra qualifier so Google News stays on-topic.
