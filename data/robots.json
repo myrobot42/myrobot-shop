@@ -131753,7 +131753,7 @@
     "joint_ranges": "Neck P-30~45°/Y±45°; Shoulder P±160°/R-5~185°/Y-90~195°; Elbow P-66~137°; Wrist P±90°/R±90°/Y-45~135°; Waist P-30~45°/R±30°/Y±150°; Hip P±150°/R-50~120°/Y±150°; Knee P+5~148°; Ankle P-35~58°/R±25°",
     "software": "Secondary development; controller & sensor APIs; low- & high-level motion-control APIs (walking, mobile manipulation, teleoperation); OTA; Studio package; voice, light interaction, status monitoring, basic motion library",
     "warranty": "12 months",
-    "announced": "2026",
+    "announced": "2025-07",
     "website": "https://www.limxdynamics.com/en/products/oli",
     "datasheet": "https://limxdynamics.com/pdf/LimX_Oli_Brochure_20260625.pdf",
     "shoulder_width_mm": 550,
@@ -131763,15 +131763,15 @@
     "arm_dof": 7,
     "waist_dof": 3,
     "neck_dof": 2,
-    "speed_ms": 1.4,
+    "speed_ms": 1.39,
     "torque_nm": 150,
-    "chipset": "RK3588 motion control + Orin NX 157 TOPS perception (Super/175cm)",
+    "chipset": "RK3588 motion + Orin NX 157 TOPS perception (Super/175cm)",
     "ai_chip": "NVIDIA Orin NX (EDU/Super)",
     "ai_chip_tops": 157,
     "depth_sensing": "Multiple RGBD",
     "lidar": true,
     "imu_axes": 6,
-    "hand_type": "2-finger gripper (1 DoF) / 3-finger (4 DoF) / 5-finger dexterous (6 DoF)",
+    "hand_type": "2-finger (1 DoF) / 3-finger (4 DoF) / 5-finger dexterous (6 DoF)",
     "hand_interchangeable": true,
     "hand_variants": "2-finger (1 DoF) / 3-finger (4 DoF) / 5-finger dexterous (6 DoF)",
     "hand_dof": 6,
@@ -131780,10 +131780,10 @@
     "quick_release": "Drawer-type module",
     "wifi": "Wi-Fi 6",
     "bluetooth": true,
-    "ethernet": "Gigabit RJ45 x2",
-    "usb_ports": "USB 3.0/3.2 + Type-C",
+    "ethernet": "Gigabit RJ45 (x2 on higher variants)",
+    "usb_ports": "USB 3.0/3.2 + Type-C (USB hub supported)",
     "cellular": "5G (higher variants)",
-    "ros": "Yes",
+    "ros": true,
     "sdk": true,
     "sdk_langs": [
       "Python",
@@ -131794,9 +131794,7 @@
     "use_cases": [
       "Scientific research",
       "Manufacturing",
-      "Commercial applications",
-      "Mobile manipulation",
-      "Teleoperation R&D"
+      "Commercial applications"
     ],
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999245/myrobot/unkfnm3n1v42jwwvzdu0.jpg",
     "gallery": [
@@ -131808,7 +131806,7 @@
     ],
     "payload": 3,
     "speed": 1.4,
-    "actuator_type": "Electric joint motors; 150 N·m (250 N·m on 175cm variant)",
+    "actuator_type": "Electric; 150 N·m (250 N·m on 175cm variant)",
     "video": "https://youtu.be/x9ZF3fq2Ccs",
     "biped": true,
     "has_hands": true,
@@ -131842,7 +131840,7 @@
     ],
     "imu": true,
     "imu_note": "6-axis (165cm models) / 9-axis (175cm)",
-    "cameras": "Head/chest/wrist/hip depth cameras (by variant)",
+    "cameras": "Head/chest/wrist/hip depth cameras",
     "lidar_note": "LiDAR on higher variants",
     "battery_type": "Slide-out module (9,500mAh)",
     "battery_mah": 9500,
@@ -131850,12 +131848,15 @@
     "battery_life_note": "~2h (Lite/EDU) / ~1.5h (Super/175cm)",
     "charge_type": "58.8V 10A charger",
     "hot_swap": true,
-    "estop": "Handheld e-stop",
+    "estop": true,
     "safety_note": "Remote controller + e-stop",
     "api": "Remote control API, sensor API, low-level + high-level motion control API",
     "voice_control": true,
     "led_indicator": "LED indicators",
-    "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024."
+    "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024.",
+    "released": "2025",
+    "arm_torque_nm": 150,
+    "dexterous_hand": true
   },
   {
     "id": "limx-dynamics-tron-1",
@@ -131900,7 +131901,7 @@
     "battery": "46.8V ternary lithium, 4.5 Ah, 1,000 W max; ≤2 h; quick-swap; <1 h (20-80%) / 1.5 h full",
     "connectivity": "USB 3.0 ×1, Gigabit Ethernet ×1; 24V/100W (peak 200W) peripheral power; peripheral mounting points",
     "controller": "Handheld remote controller",
-    "announced": "2024-10-16",
+    "announced": "2024-10",
     "website": "https://www.limxdynamics.com/en/products/tron1",
     "datasheet": "https://www.limxdynamics.com/pdf/Tron1_1_b803c2ea26.pdf",
     "variants": [
@@ -131936,7 +131937,7 @@
     "charge_time_fast": 60,
     "hot_swap": true,
     "usb_ports": "USB 3.0 x1",
-    "ethernet": "GbE x1",
+    "ethernet": "Gigabit (GbE) x1",
     "sdk": true,
     "warranty_months": 12,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999246/myrobot/hqzvy1ark1iqlpgmmmiz.png",
@@ -131981,19 +131982,21 @@
       "Python",
       "C++"
     ],
-    "estop": "Handheld remote e-stop",
+    "estop": true,
     "remote_range_m": 50,
     "sim_platform": "NVIDIA Isaac, MuJoCo, Gazebo",
     "ai_model": "Built-in high-performance RL motion-control algorithms",
     "use_cases": [
       "Humanoid motion-control onboarding",
-      "Reinforcement-learning research",
-      "Embodied-intelligence testbed",
-      "All-terrain mobility R&D"
+      "RL research",
+      "Embodied-intelligence testbed"
     ],
     "peripheral_power": "24V, 100W (peak 200W) expansion port",
     "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024.",
-    "battery_life_typical": 120
+    "battery_life_typical": 120,
+    "max_grade_pct": 58,
+    "arm_torque_nm": 60,
+    "wifi": true
   },
   {
     "id": "limx-dynamics-tron-2",
@@ -132066,8 +132069,8 @@
     "charge_time": 54,
     "charge_time_fast": 30,
     "hot_swap": true,
-    "ethernet": "Ethernet + 2x EtherCAT",
-    "usb_ports": "USB 3.0",
+    "ethernet": "1x Ethernet + 2x EtherCAT",
+    "usb_ports": "USB 3.0 x1",
     "industrial_protocols": [
       "EtherCAT",
       "RS485"
@@ -132100,7 +132103,7 @@
     "availability": "Global (order consultation)",
     "warranty": "12 months",
     "manufacturer_url": "https://www.limxdynamics.com/en/products/tron2",
-    "datasheet": "https://www.limxdynamics.com/pdf/LimX_TRON2_英文宣传册_20241218.pdf",
+    "datasheet": "https://www.limxdynamics.com/pdf/LimX_TRON2_20241218.pdf",
     "locomotion": "Multi-form: dual-arm + bipedal / sole / wheeled (one body, three configurations)",
     "payload_note": "30kg flat-ground / 20kg stair-climbing (mobility); 5kg per arm max (3kg extended)",
     "max_speed_ms": 5,
@@ -132140,12 +132143,15 @@
     "use_cases": [
       "VLA research",
       "Mobile manipulation",
-      "Full-body motion control",
-      "Embodied-AI development",
-      "Desktop dual-arm tasks"
+      "Full-body motion control"
     ],
     "sim_platform": "LimX simulation platform",
-    "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024."
+    "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024.",
+    "warranty_months": 12,
+    "max_grade_pct": 58,
+    "hand_repeatability_mm": 0.5,
+    "dexterous_hand": true,
+    "wifi": true
   },
   {
     "id": "limx-dynamics-p1",
@@ -132269,7 +132275,7 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "announced": "2026",
+    "announced": "2026-05",
     "website": "https://www.limxdynamics.com/en/products/luna",
     "datasheet": "https://www.limxdynamics.com/pdf/LimX_Luna_Brochure_20260525.pdf",
     "shoulder_width_mm": 470,
@@ -132280,13 +132286,13 @@
     "arm_dof": 5,
     "waist_dof": 3,
     "neck_dof": 2,
-    "speed_ms": 1.4,
+    "speed_ms": 1.39,
     "torque_nm": 200,
-    "chipset": "2x RK3588 — motion control (16GB/256GB) + perception (8GB/32GB)",
+    "chipset": "2x RK3588 (motion 16GB/256GB + perception 8GB/32GB)",
     "imu_axes": 6,
     "cameras": "RGB camera",
-    "hand_type": "Palm/fist standard; optional 5-finger dexterous hand (6 DoF)",
-    "hand_interchangeable": "Yes",
+    "hand_type": "Palm/fist standard; optional 5-finger dexterous hand",
+    "hand_interchangeable": true,
     "hand_variants": [
       "Palm-shaped",
       "Fist-shaped",
@@ -132317,7 +132323,7 @@
     ],
     "payload": 3,
     "speed": 1.4,
-    "actuator_type": "Electric joint motors; 200 N·m peak (strongest joint)",
+    "actuator_type": "Electric joint motors",
     "video": "https://youtu.be/-lgo5xqgVko",
     "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024.",
     "max_speed_ms": 1.39,
@@ -132332,7 +132338,12 @@
       "Python"
     ],
     "has_hands": true,
-    "has_legs": true
+    "has_legs": true,
+    "released": "2026",
+    "made_in": "China (Shenzhen)",
+    "manufacturer_url": "https://www.limxdynamics.com/en/products/luna",
+    "arm_torque_nm": 200,
+    "dexterous_hand": true
   },
   {
     "id": "fourier-n1",
