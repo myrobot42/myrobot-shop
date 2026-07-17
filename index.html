@@ -16,8 +16,8 @@
 <link rel="dns-prefetch" href="https://i.ytimg.com">
 <link rel="manifest" href="/site.webmanifest">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-T (DETAILED humanoid-grade spec sheets for ALL categories: 71-field universal core + deep domain sections, 88-135 rows/page; Consumer 4-type; Humanoid dedicated build-R menu) -->
-<meta name="mrs-build" content="build-T">
+<!-- BUILD-TAG: build-U (DETAILED humanoid-grade spec sheets for ALL categories: 71-field universal core + deep domain sections, 88-135 rows/page; Consumer 4-type; Humanoid dedicated build-R menu) -->
+<meta name="mrs-build" content="build-U">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,880+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -2791,7 +2791,7 @@ function buildSpecTable(r) {
   if (r.speed || r.speed_ms) html += row('Max speed', r.speed || r.speed_ms, 'm/s');
   if (r.run_speed || r.run_speed_ms) html += row('Running speed', r.run_speed || r.run_speed_ms, 'm/s');
   if (r.dof) html += row('Total DOF', r.dof);
-  if (isHumanoid) {
+  if (isHumanoid && r.has_legs !== false) {
     if (r.leg_dof) html += row('Leg DOF (each)', r.leg_dof);
     if (r.arm_dof) html += row('Arm DOF (each)', r.arm_dof);
     if (r.waist_dof) html += row('Waist DOF', r.waist_dof);
@@ -3606,7 +3606,7 @@ function buildSpecTable(r) {
   if (r.force_sensing && !(isHumanoid || r.hand_type)) html += row('Force/torque sensing', r.force_sensing);
 
   // ── HAND / GRIPPER (humanoid) ──
-  if (isHumanoid || r.hand_type) {
+  if ((isHumanoid || r.hand_type) && r.has_hands !== false) {
     html += grp('HAND & MANIPULATION');
     if (r.hand_type) html += row('Hand type', r.hand_type);
     if (r.fingers !== undefined) html += row('Fingers per hand', r.fingers);
