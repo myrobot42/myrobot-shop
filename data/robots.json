@@ -31674,24 +31674,31 @@
   },
   {
     "id": "franka-fr3",
-    "name": "Franka FR3",
+    "name": "FR3 (Franka Research 3)",
     "brand": "Franka Robotics",
-    "year": 2023,
+    "year": 2022,
     "status": "Active",
     "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
+    "sub": "7-Axis Force-Sensitive Research Cobot",
     "tags": [
-      "Latest Generation",
-      "AI Enhanced",
-      "Collaborative",
-      "Precision"
+      "cobot",
+      "franka",
+      "fr3",
+      "research-3",
+      "7-axis",
+      "force-sensitive",
+      "torque-sensors",
+      "fci",
+      "1khz",
+      "research",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733236/myrobot/jbklyjrnndsp1fcvhka3.jpg",
     "score": 75,
     "rating": 4,
     "price": 22900,
-    "desc": "Next-generation collaborative robot with enhanced AI capabilities and improved precision for advanced manufacturing and research applications.",
+    "desc": "The Franka Research 3 (FR3) is the reference force-sensitive robot of the AI and robot-learning research world — the successor to the Franka Emika Panda, engineered and made in Germany, and adopted by leading universities and labs worldwide. Its foundation is a 7-DoF torque-controlled arm with a link-side torque sensor in every joint, giving fine estimation of external contact forces, compliant hand-guiding at ~2.5 N, and the sensitivity to be stopped by a balloon. The 3 kg / 855 mm arm (17.8 kg, IP40) exposes both easy and deep control: the browser-based Desk UI with no-code Apps for rapid setup, and the 1 kHz Franka Control Interface (FCI) via libfranka for real-time torque control that made it the standard research platform — with official franka_ros/ros2 and MATLAB/Simulink integration. It's TÜV SÜD-certified to PL d Cat. 3 with a full safe-motion function set (SLP, SLS, SLD, SEEPO), runs from a compact 80 W controller, and continuously improves via free OTA system images. Franka Hand and vacuum grippers integrate plug-and-use.",
     "highlights": [
       "Enhanced AI",
       "Improved precision",
@@ -31701,12 +31708,12 @@
     "height_mm": 1285,
     "width_mm": 1000,
     "depth_mm": 1000,
-    "weight_kg": 18.5,
+    "weight_kg": 17.8,
     "frame_material": "Carbon fiber reinforced aluminum",
     "shell_material": "Advanced polymer",
-    "ip_rating": "IP54",
-    "operating_temp_min": 0,
-    "operating_temp_max": 50,
+    "ip_rating": "IP40",
+    "operating_temp_min": "5",
+    "operating_temp_max": 45,
     "colors": [
       "Pearl White"
     ],
@@ -31746,23 +31753,22 @@
     "wifi": true,
     "bluetooth": true,
     "ros": true,
-    "sdk": "Franka Control Interface 5.0",
+    "sdk": true,
     "sdk_langs": [
       "C++",
-      "Python",
-      "JavaScript",
-      "ROS2"
+      "Python"
     ],
-    "api": "GraphQL API",
+    "api": "FCI (libfranka, 1 kHz) + Desk API",
     "ce": true,
     "fcc": true,
     "rohs": true,
     "warranty_months": 36,
     "use_cases": [
-      "Advanced Manufacturing",
-      "AI Research",
-      "Vision Tasks",
-      "Precision Assembly"
+      "AI & robot-learning research",
+      "Force-controlled / compliant manipulation",
+      "Imitation & reinforcement learning",
+      "Delicate assembly",
+      "Human-robot collaboration research"
     ],
     "perf": "Payload: 3kg, Reach: 855mm, Repeatability: ±0.03mm",
     "origin": "Germany",
@@ -31774,7 +31780,74 @@
       "https://assets.vention.io/parts/images/PR-FR-003-1000/franka-robotics-fr3-v2.jpg"
     ],
     "website": "https://franka.de",
-    "video": "https://youtu.be/4DYkcI1BFgU"
+    "video": "https://youtu.be/4DYkcI1BFgU",
+    "made_in": "Germany (Munich)",
+    "regions": [
+      "Global"
+    ],
+    "announced": "2022",
+    "manufacturer_url": "https://franka.de/franka-research-3",
+    "axes_config": "7-axis torque-controlled arm (redundant kinematics)",
+    "dof": 7,
+    "collaborative": true,
+    "payload_kg": 3,
+    "payload": 3,
+    "reach_mm": 855,
+    "reach": 855,
+    "arm_weight_kg": 17.8,
+    "repeatability_mm": 0.1,
+    "repeatability": 0.1,
+    "max_tcp_speed_ms": 2,
+    "speed_ms": 2,
+    "speed": 2,
+    "joint_range_deg": "A1/A3 ±166° / A2 ±105° / A4 −176° to −7° / A5 ±165° / A6 25°–265° / A7 ±175°",
+    "joint_speed_max_dps": "A1–A4 150°/s, A5–A7 301°/s (A6 239°/s under FCI)",
+    "humidity": "20–80% non-condensing",
+    "flange_standard": "DIN ISO 9409-1-A50",
+    "control_frequency_hz": 1000,
+    "ft_sensor": "Link-side torque sensor in all 7 axes; monitors joint position, velocity, torque, Cartesian position & force",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 (EN ISO 13849-1) — TÜV SÜD certified; PFH < 1×10⁻⁷",
+    "safety_functions": "SLP-C/J (safely-limited position), SLS-C/J (safely-limited speed), SLD (safely-limited distance), SEEPO (safe EE power-off); Cat 0/1/2 stops; ~2.5 N guiding force",
+    "controller": "Franka Control unit — 355×483×89 mm, 100–240 VAC, ~80 W, IP20",
+    "teach_pendant": "Franka Desk (browser-based visual UI) + Pilot grip/disc on arm (guiding button, mode selector, status light)",
+    "programming": [
+      "Desk (visual, no-code Apps)",
+      "FCI — Franka Control Interface (C++, 1 kHz real-time)",
+      "libfranka",
+      "franka_ros / franka_ros2",
+      "MATLAB & Simulink"
+    ],
+    "programming_langs": [
+      "C++",
+      "Python",
+      "MATLAB"
+    ],
+    "ros_industrial": "Official franka_ros / franka_ros2 + MoveIt",
+    "industrial_protocols": [
+      "Modbus/TCP",
+      "OPC UA",
+      "TCP/IP"
+    ],
+    "fieldbus": "Modbus/TCP · OPC UA",
+    "ethernet": "Ethernet (TCP/IP)",
+    "tool_io": "2 DI / 2 DO (24 V, isolated, EN 61131-2 type 3, 100 Hz)",
+    "collision_detection": true,
+    "estop": "Dedicated e-stop + external enabling device",
+    "iso_certs": [
+      "EN ISO 13849-1:2015 (PL d, Cat. 3)",
+      "EN ISO 10218-1:2011"
+    ],
+    "other_certs": [
+      "TÜV SÜD"
+    ],
+    "end_effectors_compatible": [
+      "Franka Hand (2-finger)",
+      "Vacuum gripper"
+    ],
+    "datasheet": "https://franka.de/franka-research-3"
   },
   {
     "id": "franka-mobile-base",
@@ -46280,44 +46353,48 @@
     "name": "AUBO-iS35",
     "brand": "AUBO",
     "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
+    "sub": "Heavy-Payload Collaborative Robot",
     "tags": [
-      "aubo",
-      "collaborative",
       "cobot",
-      "industrial",
-      "payload 35kg",
-      "6 dof",
-      "2019"
+      "aubo",
+      "is35",
+      "i-series",
+      "6-axis",
+      "35kg",
+      "heavy-payload",
+      "long-reach",
+      "2100mm",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733436/myrobot/uudtqslpo4ow6co8amqx.png",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "The AUBO-iS35 is a high-payload 35 kg 6-axis cobot for heavy palletizing and machine tending.",
+    "desc": "The AUBO-iS35 is AUBO Robotics' heaviest and longest-reaching cobot — 35 kg payload across a 2,100 mm reach, aimed at medium-duty work that most collaborative arms can't physically cover, from heavy palletizing to large-part machine tending and finishing at distance without sacrificing precision (±0.05 mm repeatability). It anchors the top of AUBO's i-Series 6-axis line and leans on the company's open-integration philosophy: an open SDK supporting C, C++, C#, Lua and Python, open communication protocols spanning TCP/IP, Modbus, EtherNet/IP and PROFINET, and Linux/Windows/ROS support, so integrators aren't locked into a proprietary stack. Collision detection and hand-guiding enable fenceless collaboration to EN ISO 13849-1 / ISO 10218-1, and the huge working envelope suits palletizing to full pallet height and tending machinery a smaller cobot would need a rail to reach.",
     "highlights": [],
     "perf": false,
-    "origin": "China",
+    "origin": "China / USA",
     "year": 2019,
     "status": "Active",
     "released": "2019",
     "weight_kg": 68,
     "payload_kg": 35,
     "dof": 6,
-    "reach_mm": 1800,
+    "reach_mm": 2100,
     "speed_ms": 1.5,
     "ros": true,
     "use_cases": [
-      "Pick-and-place",
-      "Machine tending",
-      "Assembly",
-      "Palletizing"
+      "Heavy palletizing",
+      "Large-part machine tending",
+      "Material handling",
+      "Additive manufacturing",
+      "Welding & finishing at reach"
     ],
-    "manufacturer_url": "https://www.aubo-robotics.com",
-    "made_in": "China",
-    "os": "AUBO",
-    "repeatability": 0.02,
+    "manufacturer_url": "https://aubo-usa.com/aubo-is35-2/",
+    "made_in": "China (AUBO); AUBO-USA distribution",
+    "os": "AUBOPE / ARCS",
+    "repeatability": 0.05,
     "website": "https://www.aubo-cobot.com",
     "gallery": [
       "https://aubo-usa.com/wp-content/uploads/2025/06/7a29949925c732450bca74d17f401ab-1173x660.png",
@@ -46326,13 +46403,65 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZLxEHEbiQGIRqrO65AVUmjxlG4BDaKdRAVJTlQEZGfw&s=10"
     ],
     "video": "https://www.youtube.com/shorts/uTw6wLghIr4?feature=share",
-    "axes_config": "6-axis",
-    "repeatability_mm": 0.03,
+    "axes_config": "6-axis heavy-payload collaborative arm",
+    "repeatability_mm": 0.05,
     "ip_rating": "IP54",
-    "controller": "AUBO CB",
-    "programming": "Drag-teach + graphical",
+    "controller": "AUBO control box",
+    "programming": [
+      "AUBOPE graphical",
+      "Python",
+      "C/C++",
+      "C#",
+      "Lua"
+    ],
     "collision_detection": true,
-    "mounting": "Any angle"
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any angle"
+    ],
+    "regions": [
+      "Global"
+    ],
+    "collaborative": true,
+    "payload": 35,
+    "reach": 2100,
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "teach_pendant": "AUBO teach pendant (graphical) + drag teaching",
+    "programming_langs": [
+      "Python",
+      "C",
+      "C++",
+      "C#",
+      "Lua"
+    ],
+    "industrial_protocols": [
+      "TCP/IP",
+      "Modbus",
+      "EtherNet/IP",
+      "PROFINET"
+    ],
+    "fieldbus": "Modbus / EtherNet-IP / PROFINET",
+    "ros_industrial": "Official AUBO ROS driver",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C",
+      "C++",
+      "C#",
+      "Lua"
+    ],
+    "api": "Open SDK + open comms protocols",
+    "estop": "Control-box e-stop",
+    "ce": true,
+    "iso_certs": [
+      "EN ISO 13849-1",
+      "ISO 10218-1"
+    ],
+    "datasheet": "https://aubo-usa.com/aubo-is35-2/"
   },
   {
     "id": "aubo-aubo-is20l",
@@ -57286,21 +57415,21 @@
     "cat": "Industrial",
     "sub": "Robotic Hand / Gripper",
     "tags": [
-      "franka robotics",
-      "robotic",
-      "hand",
       "gripper",
-      "industrial",
-      "payload 3kg",
-      "1 dof",
-      "2021"
+      "end-effector",
+      "franka",
+      "franka-hand",
+      "2-finger",
+      "interchangeable",
+      "research",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733680/myrobot/xanufnxkfp9eazs0z1xb.png",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "The Franka Hand 3 is a parallel-jaw gripper / end-effector for Franka Robotics arms (e.g. FR3), providing programmable-force grasping for sensitive assembly and research tasks.",
+    "desc": "The Franka Hand is the native two-finger parallel electric gripper for the Franka Research 3 arm — fully integrated into Franka's software so it works plug-and-use with Desk Apps and the libfranka API, no separate driver or controller. It offers an 80 mm stroke and roughly 70 N continuous grip force, with interchangeable fingertips that adapt to different object shapes and materials, making it the default end effector for the research and assembly tasks the FR3 platform targets. As part of Franka's Apps ecosystem, gripping actions drop into visual workflows for rapid behaviour prototyping.",
     "highlights": [],
     "perf": false,
     "year": 2021,
@@ -57314,14 +57443,15 @@
     "dof": 1,
     "ros": true,
     "use_cases": [
-      "Parallel grasping",
+      "Research pick & place",
+      "Compliant grasping",
       "Assembly",
-      "Research end-effector"
+      "Lab automation"
     ],
-    "manufacturer_url": "https://www.franka.de",
+    "manufacturer_url": "https://franka.de/",
     "height_mm": 84,
     "reach_mm": 87.5,
-    "grip_force_n": 140,
+    "grip_force_n": 70,
     "opening_width_mm": 80,
     "precision_mm": 0.1,
     "operating_temp_c": "10 to 40",
@@ -57336,7 +57466,23 @@
       "https://franka.de/hubfs/_Frank%20Robotics0464_RESIZED.jpg",
       "https://franka.de/hubfs/_Frank%20Robotics0443_RESIZED.jpg"
     ],
-    "website": "https://franka.de"
+    "website": "https://franka.de",
+    "regions": [
+      "Global"
+    ],
+    "gripper_type": "2-finger parallel electric gripper with interchangeable fingertips",
+    "gripper_stroke_mm": 80,
+    "gripper_force_n": "70 N continuous",
+    "flange_standard": "DIN ISO 9409-1-A50 (native FR3 mount)",
+    "controller": "Fully integrated into Franka arm software (plug-and-use)",
+    "programming": [
+      "Franka Desk Apps",
+      "libfranka gripper API"
+    ],
+    "sdk": true,
+    "collaborative": true,
+    "force_limiting": true,
+    "ce": true
   },
   {
     "id": "franka-robotics-tactile-mobile-robot-tmr-",
@@ -131109,20 +131255,24 @@
     "id": "doosan-e0509",
     "name": "E0509 (E-Series)",
     "brand": "Doosan Robotics",
-    "sub": "Collaborative Robot Arm",
+    "sub": "Food & Beverage Cobot",
     "year": 2023,
     "origin": "South Korea",
     "status": "Active",
     "payload_kg": 5,
     "reach_mm": 900,
-    "desc": "The Doosan E0509 is a lightweight, food-grade cobot in Doosan's E-Series (5 kg payload, 900 mm reach) with a hygienic design for food handling and light assembly, part of Doosan's A/M/H/E lineup.",
+    "desc": "The Doosan E0509 is the world's first collaborative robot built exclusively for the food & beverage industry — the sole model of Doosan's E-Series, a 6-axis 5 kg / 900 mm cobot with ±0.05 mm repeatability that is engineered around hygiene rather than adapted from a factory arm. Its NSF (US food-grade) certification and IP66 rating let operators wash it down and maintain hygiene without robot jackets or added equipment, and it ships in a box two-thirds the size of previous Doosan cobots for easy transport and install in cafés, kiosks and food counters. Purpose-built for repeatable service motions — it can pour a hand-drip coffee like a barista (three cups in 15 seconds), handle timing-sensitive cooking steps, and serve — it runs Doosan's DART-Platform software (graphical programming, DRL, Python) on a rugged real-time controller, with TÜV SÜD-certified collision detection for fenceless operation and official ROS/ROS 2 drivers. Doosan cites F&B automation ROI in as little as 14 months. NOTE: distinct model — do not conflate with the general-purpose A0509 (some aggregators merge them).",
     "tags": [
-      "industrial",
       "cobot",
-      "Doosan",
-      "E0509",
-      "food grade",
-      "light assembly"
+      "doosan",
+      "e0509",
+      "e-series",
+      "6-axis",
+      "5kg",
+      "food-beverage",
+      "nsf",
+      "ip66",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
@@ -131137,16 +131287,71 @@
     "website": "https://www.doosanrobotics.com",
     "video": "https://youtu.be/8mjXgPNZF3A",
     "video2": "https://youtu.be/4L53wFnq6aM",
-    "axes_config": "6-axis",
-    "repeatability_mm": 0.03,
-    "ip_rating": "IP54",
-    "controller": "Doosan controller",
-    "teach_pendant": "Tablet",
-    "programming": "DART Studio (drag-teach)",
+    "axes_config": "6-axis collaborative arm (F&B-dedicated)",
+    "repeatability_mm": 0.05,
+    "ip_rating": "IP66",
+    "controller": "Doosan controller (real-time control, high-speed comms)",
+    "teach_pendant": "DART-Platform (PC/pendant) + safety stop button",
+    "programming": [
+      "DART-Studio / DART-Platform (graphical)",
+      "DRL (Doosan Robot Language)",
+      "Python"
+    ],
     "collision_detection": true,
-    "ft_sensor": true,
+    "ft_sensor": "Collision detection via joint current/torque sensing",
     "made_in": "South Korea",
-    "industrial_protocols": "Modbus TCP, PROFINET"
+    "industrial_protocols": "Modbus TCP, PROFINET",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.doosanrobotics.com/en/product-solutions/product/e-series/e0509/",
+    "collaborative": true,
+    "payload": 5,
+    "reach": 900,
+    "repeatability": 0.05,
+    "max_tcp_speed_ms": 1,
+    "speed_ms": 1,
+    "speed": 1,
+    "operating_temp_min": "0",
+    "operating_temp_max": 45,
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling",
+      "Any angle"
+    ],
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 (TÜV SÜD certified)",
+    "safety_functions": "Intelligent collision detection; safety-rated monitored stop; direct teaching",
+    "os": "Doosan DART-Platform",
+    "programming_langs": [
+      "DRL",
+      "Python"
+    ],
+    "ros": true,
+    "ros_industrial": "Official doosan_robot / doosan_robot2 packages",
+    "sdk": true,
+    "api": "DRL / DRCF",
+    "estop": "Safety stop button + controller",
+    "ce": true,
+    "iso_certs": [
+      "ISO 10218-1",
+      "ISO/TS 15066"
+    ],
+    "other_certs": [
+      "NSF (US food-grade)",
+      "TÜV SÜD"
+    ],
+    "datasheet": "https://manual.doosanrobotics.com/en/user/2.11.1/3.-E-Series/e0509",
+    "use_cases": [
+      "Coffee & hand-drip / espresso",
+      "Beverage pouring",
+      "Food handling & serving",
+      "Noodle & fry stations",
+      "Ice-cream serving"
+    ]
   },
   {
     "cat": "Consumer",
