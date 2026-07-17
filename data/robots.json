@@ -147214,14 +147214,24 @@
     "name": "Racer-5 COBOT",
     "brand": "Comau",
     "cat": "Industrial",
-    "sub": "Industrial-Speed Cobot",
+    "sub": "Dual-Mode Collaborative Robot",
     "year": 2021,
     "origin": "Italy",
     "status": "Active",
     "price": "POA",
     "img": "https://img.directindustry.com/images_di/photo-mg/102039-16518093.webp",
-    "desc": "Comau's dual-mode robot: runs as a full 6 m/s industrial arm when the cell is clear and switches to collaborative speed when humans approach — 5 kg payload, 809 mm reach, 0.03 mm repeatability.",
-    "tags": [],
+    "desc": "The Comau Racer-5 COBOT is, by Comau's account, the only collaborative robot that automatically switches from full industrial speed to collaborative speed the instant a human operator enters its working area — letting one machine replace two (a fast industrial arm and a separate cobot). It pairs a 5 kg payload and 809 mm reach with ±0.03 mm repeatability and up to 6 m/s Cartesian speed in non-collaborative mode, throttling to ≤500 mm/s when collaborating, with Safe Collision Detection certified PL d Cat. 3 by TÜV Süd for fenceless operation. Made entirely in Comau's Turin plant with a rigid construction for lasting precision, it routes electrical and air connections at the forearm to avoid external harnesses, signals its mode via an LED status stripe, and offers Comau's arm-mounted MI.RA vision system for pick-and-place. A Racer-5-0.63 industrial variant (627 mm) completes the family, targeting automotive, electrification and general-industry assembly, dispensing and machine tending.",
+    "tags": [
+      "cobot",
+      "comau",
+      "racer-5",
+      "6-axis",
+      "5kg",
+      "dual-mode",
+      "fast",
+      "made-in-italy",
+      "active"
+    ],
     "payload_kg": 5,
     "reach_mm": 809,
     "dof": 6,
@@ -147229,19 +147239,21 @@
     "ce": true,
     "use_cases": [
       "Assembly",
-      "Pick and place",
-      "Quality inspection"
+      "Material handling",
+      "Machine tending",
+      "Dispensing",
+      "Pick & place"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "speed_ms": 6,
-    "speed": "6 m/s TCP (industrial mode)",
-    "axes_config": "6-axis",
+    "speed": 6,
+    "axes_config": "6-axis dual-mode cobot (collaborative ↔ industrial speed auto-switch)",
     "repeatability_mm": 0.03,
-    "made_in": "Italy",
+    "made_in": "Italy (Turin)",
     "collision_detection": true,
-    "controller": "Comau",
+    "controller": "Comau Cobot SAFE controller",
     "gallery": [
       "https://img.directindustry.com/images_di/photo-mg/102039-16518085.webp",
       "https://img.directindustry.com/images_di/photo-mg/102039-16518088.webp",
@@ -147249,7 +147261,42 @@
       "https://img.directindustry.com/images_di/photo-mg/102039-16518090.webp",
       "https://img.directindustry.com/images_di/photo-mg/102039-16518092.webp"
     ],
-    "video": "https://youtu.be/wJiX_PbQ3wQ"
+    "video": "https://youtu.be/wJiX_PbQ3wQ",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.comau.com/en/our-offer/products-and-solutions/robot-team/racer-5-0-80-cobot/",
+    "collaborative": true,
+    "payload": 5,
+    "reach": 809,
+    "max_tcp_speed_ms": 6,
+    "mounting": [
+      "Floor",
+      "Ceiling",
+      "Wall"
+    ],
+    "ft_sensor": "Joint torque sensing (Safe Collision Detection)",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_pl": "PL d Cat. 3 (Safe Collision Detection, TÜV Süd certified)",
+    "safety_functions": "Auto-switch collaborative (≤500 mm/s) ↔ full industrial speed on operator presence; LED status stripe; hand-guidance enable button",
+    "cameras": "Optional MI.RA integrated vision system (arm-mounted)",
+    "teach_pendant": "Comau teach pendant; Start&Stop + teaching configurable button",
+    "tool_io": "Electrical & air connections at forearm/wrist (no external harness)",
+    "estop": "Controller e-stop",
+    "iso_certs": [
+      "ISO 10218-1",
+      "ISO/TS 15066"
+    ],
+    "other_certs": [
+      "TÜV Süd"
+    ],
+    "variants": [
+      "Racer-5-0.80 COBOT (809 mm)",
+      "Racer-5-0.63 (627 mm industrial)"
+    ],
+    "datasheet": "https://www.comau.com/en/our-offer/products-and-solutions/robot-team/racer-5-0-80-cobot/"
   },
   {
     "id": "epson-ls6-b",
@@ -147262,23 +147309,35 @@
     "status": "Active",
     "price": "POA",
     "img": "https://i8.amplience.net/i/epsonemear/28434-productpicture-hires-en-ls6-b602c_07?$product-xlarge$&fmt=auto&img404=missing_product&v=1",
-    "desc": "Epson's best-selling SCARA class: 6 kg payload with 600/700 mm arm options, high-speed cycle times and compact footprint — from the world's #1 SCARA robot manufacturer.",
-    "tags": [],
+    "desc": "The Epson LS6-B is a value-focused 4-axis SCARA robot built for factories that need reliable high-speed assembly at a budget price — 6 kg payload, up to 600 mm reach (500/600/700 mm arm lengths available), ±0.015 mm repeatability and a 200 mm Z-stroke, with high acceleration/deceleration for fast cycle times. Epson leans on its RC+ development environment (SPEL+ 7.0 language) and low-cost RC90 controller to make it easy to program, with integrated options for Epson Vision, fieldbus interfaces, teach pendants and customizable GUIs. An ISO 4 Clean version suits dust-critical and cleanroom applications. It targets the price/performance sweet spot for mechanical and electrical assembly, pick-and-place, kitting and dispensing where throughput matters and budget is tight — part of Epson's position as one of the world's highest-volume SCARA makers.",
+    "tags": [
+      "scara",
+      "epson",
+      "ls6-b",
+      "4-axis",
+      "6kg",
+      "high-speed",
+      "budget",
+      "cleanroom",
+      "active"
+    ],
     "payload_kg": 6,
     "dof": 4,
     "ce": true,
     "use_cases": [
-      "Electronics assembly",
-      "Pick and place",
-      "Dispensing"
+      "Mechanical & electrical assembly",
+      "Pick & place",
+      "Kitting",
+      "Dispensing",
+      "High-speed cycle work"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "repeatability": 0.02,
-    "axes_config": "4-axis (SCARA)",
-    "reach_mm": 700,
-    "repeatability_mm": 0.02,
+    "repeatability": 0.015,
+    "axes_config": "4-axis SCARA (X-Y-Z-θ)",
+    "reach_mm": 600,
+    "repeatability_mm": 0.015,
     "made_in": "Japan",
     "gallery": [
       "https://i8.amplience.net/i/epsonemear/28434-productpicture-hires-en-ls6-b602c_01?$product-xlarge$&fmt=auto&img404=missing_product&v=1",
@@ -147287,7 +147346,42 @@
       "https://i8.amplience.net/i/epsonemear/28434-productpicture-hires-en-ls6-b602c_03?$product-xlarge$&fmt=auto&img404=missing_product&v=1",
       "https://i8.amplience.net/i/epsonemear/28434-productpicture-hires-en-ls6-b602c_04?$product-xlarge$&fmt=auto&img404=missing_product&v=1"
     ],
-    "video": "https://youtu.be/pzbfn3K1c_c"
+    "video": "https://youtu.be/pzbfn3K1c_c",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://epson.com/For-Work/Robots/SCARA/Epson-LS6-B-SCARA-Robot---600mm/p/RLS6B602ST9B5",
+    "payload": 6,
+    "payload_peak_kg": 6,
+    "reach": 600,
+    "mounting": [
+      "Table / bench"
+    ],
+    "cleanroom_class": "ISO 4 Clean version available",
+    "z_stroke_mm": 200,
+    "controller": "Epson RC90 controller",
+    "os": "Epson RC+ (SPEL+ 7.0)",
+    "teach_pendant": "Epson teach pendant (optional)",
+    "programming": [
+      "Epson RC+ (SPEL+ 7.0 language)",
+      "RC+ API",
+      "Blockly-style GUI"
+    ],
+    "programming_langs": [
+      "SPEL+"
+    ],
+    "cameras": "Integrated Epson Vision option",
+    "industrial_protocols": [
+      "Fieldbus options (EtherNet/IP, PROFINET, EtherCAT, DeviceNet)"
+    ],
+    "fieldbus": "Optional fieldbus interface solutions",
+    "variants": [
+      "LS6-B 500 mm",
+      "LS6-B 600 mm",
+      "LS6-B 700 mm",
+      "LS6-B ISO4 Clean"
+    ],
+    "datasheet": "https://files.support.epson.com/far/docs/ls6-b_scara_robot_product_specifications_cpd-57403.pdf"
   },
   {
     "id": "denso-cobotta",
@@ -147381,35 +147475,50 @@
   },
   {
     "id": "mitsubishi-melfa-assista",
-    "name": "MELFA ASSISTA",
+    "name": "MELFA ASSISTA (RV-5AS-D)",
     "brand": "Mitsubishi Electric",
     "cat": "Industrial",
-    "sub": "Collaborative Robot Arm",
+    "sub": "Collaborative Robot (Cobot)",
     "year": 2020,
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
     "img": "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2Fmitsubishi-cobot-RS-1_430ad5e7.png",
-    "desc": "Mitsubishi Electric's cobot: 5 kg payload, 910 mm reach, direct teaching by hand-guiding and visual programming — industrial MELFA DNA in a collaborative arm.",
-    "tags": [],
+    "desc": "The Mitsubishi Electric MELFA ASSISTA (RV-5AS-D) is Mitsubishi's collaborative robot, fusing the company's decades of industrial-robot experience with cobot-style ease of use — a 6-axis arm with 5 kg payload, 910 mm reach and a high ±0.03 mm repeatability at nominal load. It's designed to work hand-in-hand with people without fences or enclosures, using per-joint torque sensing for collision monitoring under ISO 10218-1 / ISO/TS 15066, an LED ring for at-a-glance status, and Direct Teaching buttons for point teaching without a pendant. Programming is deliberately open and intuitive via RT VisualBox's drag-and-drop visual environment (no-code), MELFA BASIC VI for depth, and RT ToolBox3, with a broad gripper and vision ecosystem including MELFA-Vision and the AI-driven MELFA SmartPlus option. Uncommon among cobots, it's engineered for food-safe environments, making it a fit for hygiene-sensitive pick-and-place, assembly, machine tending and inspection, as well as research and education.",
+    "tags": [
+      "cobot",
+      "mitsubishi",
+      "melfa-assista",
+      "rv-5as",
+      "6-axis",
+      "5kg",
+      "food-safe",
+      "active"
+    ],
     "payload_kg": 5,
     "reach_mm": 910,
     "dof": 6,
     "ce": true,
     "use_cases": [
+      "Pick & place",
       "Assembly",
       "Machine tending",
-      "Inspection"
+      "Inspection",
+      "Food-safe handling"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "repeatability": 0.03,
-    "axes_config": "6-axis",
+    "axes_config": "6-axis collaborative arm",
     "repeatability_mm": 0.03,
     "made_in": "Japan",
     "collision_detection": true,
-    "programming": "RT VisualBox (visual)",
+    "programming": [
+      "RT VisualBox (visual, no-code)",
+      "MELFA BASIC VI",
+      "RT ToolBox3"
+    ],
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2Fmitsubishi-cobot-RS-6_72b46a5c.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2Fmitsubishi-cobot-RS-CONTEXT-4_fa944ac2.png",
@@ -147417,26 +147526,63 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2Fmitsubishi-cobot-RS-7_586a83ef.png",
       "https://eu-images.contentstack.com/v3/assets/blt5412ff9af9aef77f/blt497314ff748cf596/65842ad78ce420040a18cb0b/img_assista_top.png?auto=webp&quality=100&format=png&disable=upscale"
     ],
-    "video": "https://youtu.be/lM6yjDICFFU"
+    "video": "https://youtu.be/lM6yjDICFFU",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.mitsubishielectric.com/fa/products/rbt/robot/index.html",
+    "collaborative": true,
+    "payload": 5,
+    "reach": 910,
+    "mounting": [
+      "Floor",
+      "Ceiling",
+      "Wall"
+    ],
+    "ft_sensor": "Torque sensing per joint (collision monitoring)",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Collision monitoring; direct teaching; LED ring status indicator; ISO 10218-1 / ISO/TS 15066 compliant",
+    "controller": "Mitsubishi CR800-05 (D-series)",
+    "os": "MELFA RT ToolBox3 / iQ Platform",
+    "teach_pendant": "RT VisualBox / RT ToolBox3 (drag-and-drop) + Direct Teaching buttons",
+    "programming_langs": [
+      "MELFA BASIC VI"
+    ],
+    "cameras": "MELFA-Vision / MELFA SmartPlus AI option",
+    "ai_model": "MELFA SmartPlus — AI-based force sense, calibration & predictive maintenance (option)",
+    "ros": true,
+    "ros_industrial": "Mitsubishi ROS driver",
+    "sdk": true,
+    "estop": "Controller e-stop",
+    "iso_certs": [
+      "ISO 10218-1",
+      "ISO/TS 15066"
+    ],
+    "datasheet": "https://www.mitsubishielectric.com/fa/products/rbt/robot/index.html"
   },
   {
     "id": "nachi-cz10",
     "name": "CZ10",
     "brand": "Nachi-Fujikoshi",
     "cat": "Industrial",
-    "sub": "Collaborative Robot Arm",
+    "sub": "Collaborative Robot (Cobot)",
     "year": 2019,
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
     "img": "https://img.directindustry.com/images_di/photo-mg/80117-17183809.webp",
-    "desc": "Nachi's collaborative arm: 10 kg payload, 1,300 mm reach, dust/splash-resistant design that runs without a safety fence for flexible line-side deployment.",
+    "desc": "The Nachi CZ10 is the collaborative robot from Nachi-Fujikoshi, one of Japan's oldest industrial-robot makers — a 6-axis, 10 kg-payload arm with a long 1,300 mm reach and ±0.08 mm repeatability, built on the company's welding and material-handling heritage. Its inherent-safety design maintains a 25 mm minimum clearance to prevent pinching, and torque sensors at every axis detect worker contact and stop the robot, third-party certified to ISO 10218-1 (plus TÜV and standard UL/CSA). An inline-wrist structure enables intuitive direct teaching, and wrist-integrated digital I/O (4 in / 3 out) with built-in φ4 air piping reduces installation wiring. The 61 kg arm carries IP65 protection (IP54 wire harness), operates 0–45 °C, runs at up to 180°/s joint speed (throttled to 250 mm/s in collaborative mode), and draws just 1.0 kVA with its CCZ controller. It mounts floor or inverted and targets machine tending, material handling, palletizing and dispensing.",
     "tags": [
       "cobot",
-      "industrial",
       "nachi",
       "cz10",
       "6-axis",
+      "10kg",
+      "long-reach",
+      "ip65",
+      "inline-wrist",
       "active"
     ],
     "payload_kg": 10,
@@ -147446,13 +147592,14 @@
     "use_cases": [
       "Machine tending",
       "Material handling",
-      "Assembly"
+      "Palletizing",
+      "Dispensing"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "axes_config": "6-axis",
-    "repeatability_mm": 0.05,
+    "axes_config": "6-axis articulated cobot (inline wrist), AC servo",
+    "repeatability_mm": 0.08,
     "made_in": "Japan",
     "collision_detection": true,
     "gallery": [
@@ -147461,47 +147608,143 @@
       "https://img.directindustry.com/images_di/photo-mg/80117-18203328.webp",
       "https://img.directindustry.com/pdf/repository_di/80117/cz10-986740_1mg.jpg"
     ],
-    "video": "https://youtu.be/qfgzN-21tGM"
+    "video": "https://youtu.be/qfgzN-21tGM",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.nachirobotics.com/product/cz10/",
+    "collaborative": true,
+    "payload": 10,
+    "reach": 1300,
+    "repeatability": 0.08,
+    "weight_kg": 61,
+    "arm_weight_kg": 61,
+    "joint_range_deg": "J1 ±170° / J2 −75°~+225° / J3 −77°~+227° / J4 ±180° / J5 ±170° / J6 ±360°",
+    "joint_speed_max_dps": "J1 120 / J2 120 / J3 180 / J4 180 / J5 180 / J6 180 °/s (250 mm/s max in collaborative mode)",
+    "ip_rating": "IP65 (arm; wire harness IP54, controller IP20)",
+    "operating_temp_min": "0",
+    "operating_temp_max": 45,
+    "humidity": "20–85% RH",
+    "noise_db": 70,
+    "mounting": [
+      "Floor",
+      "Inverted"
+    ],
+    "power_source": "AC servo; 1.0 kVA max (robot + controller)",
+    "power_consumption_w": 1000,
+    "flange_standard": "ISO flange option (P.C.D. 31.5)",
+    "ft_sensor": "Torque sensing at each axis; 25 mm minimum anti-pinch clearance (inherent safety)",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Per-axis torque contact detection with stop; 25 mm anti-pinch space; LED green in collaborative mode; ISO 10218-1 3rd-party certified",
+    "controller": "Nachi CCZ controller (IP20)",
+    "teach_pendant": "Nachi TP; direct teaching function",
+    "tool_io": "Wrist digital I/O (4 in / 3 out) + built-in air piping (φ4); EtherCAT internal",
+    "estop": "External e-stop input + TP",
+    "ul_listed": true,
+    "iso_certs": [
+      "ISO 10218-1"
+    ],
+    "other_certs": [
+      "TÜV",
+      "UL/CSA"
+    ],
+    "warranty_months": 12,
+    "datasheet": "https://www.nachirobotics.com/wp-content/uploads/2018/10/NRS-CZ10-StandardSpecification.pdf"
   },
   {
     "id": "hyundai-yl012",
     "name": "YL012",
     "brand": "Hyundai Robotics",
     "cat": "Industrial",
-    "sub": "Collaborative Robot Arm",
+    "sub": "Collaborative Robot (Cobot)",
     "year": 2021,
     "origin": "South Korea",
     "status": "Active",
     "price": "POA",
     "img": "https://www.cobotwebshop.com/wp-content/uploads/2020/11/YL012.png",
-    "desc": "Hyundai Robotics' 12 kg-payload cobot with 1,300 mm reach — the Korean industrial giant's entry into fenceless collaborative automation.",
+    "desc": "The Hyundai Robotics YL012 is the medium model of Hyundai's YL collaborative series — a 6-axis, 12 kg-payload cobot with a 1,305 mm reach, developed to operate directly alongside human workers. A Red Dot Design Award winner, its slim, organic, right-angle-free form isn't just aesthetic: all pneumatic, electrical and communication wiring is routed inside the arm joints for a clean profile that reduces snag points and interference in tight spaces, while cutting weight. LED flash lamps give 360° status visibility and an ergonomic handgrip with intuitive switches makes teaching quick and direct. It supports an unusually broad fieldbus set — PROFINET, EtherNet/IP, PROFIBUS, DeviceNet, CANopen, CC-Link (and IE Field), EtherCAT and Modbus TCP — for easy line integration, and its 12 kg reach suits palletizing, packaging, machine loading, polishing/deburring, gluing, injection-molding tending and inspection. A smaller YL005 (5 kg, 916 mm) completes the pair.",
     "tags": [
       "cobot",
-      "industrial",
       "hyundai",
       "yl012",
       "6-axis",
+      "12kg",
+      "long-reach",
+      "red-dot",
+      "internal-cabling",
       "active"
     ],
     "payload_kg": 12,
-    "reach_mm": 1300,
+    "reach_mm": 1305,
     "dof": 6,
     "ce": true,
     "use_cases": [
-      "Machine tending",
-      "Palletizing",
-      "Assembly"
+      "Palletizing & packaging",
+      "Pick & place",
+      "Machine loading",
+      "Polishing & deburring",
+      "Gluing & sealing",
+      "Injection-molding tending",
+      "Inspection"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "axes_config": "6-axis",
+    "axes_config": "6-axis collaborative arm (internal cabling, organic form)",
     "repeatability_mm": 0.05,
     "made_in": "South Korea",
     "collision_detection": true,
     "gallery": [
       "https://www.red-dot.org/index.php?f=167193&token=f5366f28e4f1c64b19bd43d6b48035b1b77fcdd3&eID=tx_solr_image&size=large&usage=slider"
-    ]
+    ],
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.hyundai-robotics.com/",
+    "collaborative": true,
+    "payload": 12,
+    "reach": 1305,
+    "mounting": [
+      "Floor",
+      "Wall",
+      "Ceiling"
+    ],
+    "ft_sensor": "Torque sensing per joint (collision detection)",
+    "force_limiting": true,
+    "power_force_limiting": true,
+    "hand_guiding": true,
+    "safety_functions": "Collision/crush-injury reduction; LED flash status lamps (360° visibility); ergonomic handgrip teaching",
+    "controller": "Hyundai Hi6 controller",
+    "teach_pendant": "Hi6 pendant + ergonomic handgrip switches",
+    "industrial_protocols": [
+      "PROFINET IO",
+      "EtherNet/IP",
+      "Ethernet (TCP/IP)",
+      "PROFIBUS",
+      "DeviceNet",
+      "CANopen",
+      "CC-Link",
+      "CC-Link IE Field",
+      "EtherCAT",
+      "Modbus TCP"
+    ],
+    "fieldbus": "PROFINET / EtherNet-IP / PROFIBUS / DeviceNet / CANopen / CC-Link / EtherCAT / Modbus TCP",
+    "tool_io": "Internal pneumatic + electrical + comms wiring routed through arm joints",
+    "estop": "Controller e-stop",
+    "iso_certs": [
+      "ISO 10218-1",
+      "ISO/TS 15066"
+    ],
+    "other_certs": [
+      "Red Dot Design Award"
+    ],
+    "variants": [
+      "YL005 (5 kg, 916 mm)",
+      "YL012 (12 kg, 1305 mm)"
+    ],
+    "datasheet": "https://www.hyundai-robotics.com/"
   },
   {
     "id": "dobot-cr10",
@@ -147722,41 +147965,98 @@
     "name": "ReBeL",
     "brand": "igus",
     "cat": "Industrial",
-    "sub": "Plastic Lightweight Cobot",
+    "sub": "Lightweight Plastic Cobot",
     "year": 2021,
     "origin": "Germany",
     "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/OEOnQHlIbgZTyIBbXigK/image.jpg",
-    "desc": "igus' polymer cobot: motion-plastics construction brings the arm to 8.2 kg total weight and a disruptive low price, with 2 kg payload and 664 mm reach for education and light automation.",
-    "tags": [],
+    "desc": "The igus ReBeL is the world's first cobot built around plastic strain-wave gears — a radical cost-and-weight play from the German motion-plastics specialist. At just 8.2 kg with a 2 kg payload, 664 mm reach and ±1 mm repeatability, it deliberately trades precision for affordability and low mass, using igus's self-lubricating tribo-polymer components in integrated joints (motor + strain-wave gearbox + absolute encoder) to hit a price point that opens robotics to SMEs, educators and developers. It runs from 24 V DC through the igus Robot Control (iRC) software — browser-based drag-and-drop programming — with a Python API, ROS driver and Modbus TCP/TCP-IP interfaces, and mounts on tables, mobile bases or gantries. It's not a high-accuracy industrial arm; its niche is accessible, lightweight automation for pick-and-place, inspection, lab work and light assembly where cost and simplicity matter more than sub-millimetre repeatability.",
+    "tags": [
+      "cobot",
+      "igus",
+      "rebel",
+      "6-axis",
+      "2kg",
+      "plastic",
+      "low-cost",
+      "tribo-polymer",
+      "education",
+      "active"
+    ],
     "payload_kg": 2,
     "reach_mm": 664,
     "dof": 6,
     "weight_kg": 8.2,
     "ce": true,
     "use_cases": [
-      "Education",
-      "Light automation",
-      "Research"
+      "Pick & place",
+      "Inspection",
+      "Lab automation",
+      "Light assembly",
+      "Education / SME automation"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "repeatability": 1,
-    "axes_config": "6-axis",
+    "axes_config": "6-axis lightweight cobot (tribo-polymer strain-wave gears)",
     "repeatability_mm": 1,
-    "made_in": "Germany",
-    "frame_material": "Tribo-polymer (plastic)",
-    "programming": "iRC / ROS",
-    "collision_detection": true,
+    "made_in": "Germany (Cologne)",
+    "frame_material": "Tribo-polymer (plastic) — world's first cobot with plastic strain-wave gears",
+    "programming": [
+      "iRC graphical (drag & drop)",
+      "Python API",
+      "ROS",
+      "Modbus TCP"
+    ],
+    "collision_detection": false,
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/rebel2_95b15a9c.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/rebel3_71cc4609.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/rebel4_13bccd93.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/rebel5_83af8f1e.png"
     ],
-    "video": "https://youtu.be/rJzuJPhiKCY"
+    "video": "https://youtu.be/rJzuJPhiKCY",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.igus.com/info/rebel",
+    "collaborative": true,
+    "payload": 2,
+    "reach": 664,
+    "arm_weight_kg": 8.2,
+    "mounting": [
+      "Floor",
+      "Table",
+      "Any orientation"
+    ],
+    "actuator_type": "Integrated motor + tribo-polymer strain-wave gearbox + absolute encoder per joint",
+    "power_source": "24 V DC",
+    "controller": "igus Robot Control (iRC) — integrated or external control box",
+    "os": "igus Robot Control (iRC)",
+    "teach_pendant": "iRC software (drag-and-drop, browser-based); manual teach-in",
+    "programming_langs": [
+      "Python"
+    ],
+    "industrial_protocols": [
+      "Modbus TCP",
+      "TCP/IP",
+      "DIO"
+    ],
+    "fieldbus": "Modbus TCP",
+    "ros": true,
+    "ros_industrial": "Official ROS driver",
+    "sdk": true,
+    "sdk_langs": [
+      "Python"
+    ],
+    "api": "CRI / Python API",
+    "variants": [
+      "ReBeL (6-DOF, cobot)",
+      "ReBeL on mobile/gantry bases"
+    ],
+    "datasheet": "https://www.igus.com/info/rebel"
   },
   {
     "id": "mecademic-meca500",
@@ -152176,6 +152476,83 @@
       "active"
     ],
     "desc": "The NEURA Robotics MAiRA L is the long-reach model of the cognitive MAiRA line — 1,600 mm reach with a 12 kg static rating (8–11 kg dynamic, speed-dependent), holding the family's ±0.01 mm repeatability, 4.5 m/s TCP speed and 360°/s joint speeds across seven axes. The cognitive platform carries over intact: integrated 3D vision with AI object recognition and point-cloud generation, 360° microphone array for voice interaction, 6-DoF force/torque sensing, and the 6-DoF Smart Skin for whole-arm touch and hand-guided teaching. Its reach-precision combination suits automotive assembly, large-part tending and electronics inspection across wide envelopes. No-code programming deploys in minutes; connectivity spans EtherCAT, Modbus, CAN bus, IO-Link and GPIO with triple compressed-air pass-through. IP65, 0–50 °C, any-orientation mounting.",
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "kinova-gen3-lite",
+    "name": "Gen3 lite",
+    "brand": "Kinova",
+    "cat": "Industrial",
+    "sub": "Compact Research Arm",
+    "origin": "Canada",
+    "made_in": "Canada (Boisbriand, Québec)",
+    "status": "Active",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.kinovarobotics.com/product/gen3-lite-robots",
+    "axes_config": "6-axis ultra-lightweight compact arm",
+    "dof": 6,
+    "collaborative": true,
+    "payload_kg": 0.5,
+    "payload": 0.5,
+    "payload_peak_kg": 0.5,
+    "reach_mm": 760,
+    "reach": 760,
+    "weight_kg": 5.4,
+    "arm_weight_kg": 5.4,
+    "mounting": [
+      "Table",
+      "Mobile platform",
+      "Any orientation"
+    ],
+    "actuator_type": "Kinova actuators with integrated torque sensing",
+    "control_frequency_hz": 1000,
+    "ft_sensor": "Joint torque sensing",
+    "force_limiting": true,
+    "hand_guiding": true,
+    "controller": "Onboard (integrated)",
+    "gripper_type": "Integrated 2-finger adaptive gripper (included)",
+    "programming": [
+      "Kortex API (C++/Python)",
+      "ROS / ROS 2",
+      "Web app UI"
+    ],
+    "programming_langs": [
+      "Python",
+      "C++"
+    ],
+    "ros": true,
+    "ros_industrial": "Official ros_kortex / ros2_kortex",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "api": "Kinova Kortex API",
+    "power_source": "24 V DC",
+    "ce": true,
+    "datasheet": "https://www.kinovarobotics.com/product/gen3-lite-robots",
+    "use_cases": [
+      "Academic education",
+      "Research prototyping",
+      "Light manipulation",
+      "Mobile-platform integration"
+    ],
+    "tags": [
+      "robot-arm",
+      "kinova",
+      "gen3-lite",
+      "6-axis",
+      "compact",
+      "education",
+      "affordable",
+      "kortex",
+      "active"
+    ],
+    "desc": "The Kinova Gen3 lite is the compact, cost-efficient member of Kinova's ultra-lightweight arm family — a 6-axis arm at just 5.4 kg with a 0.5 kg payload, 760 mm reach and an integrated 2-finger adaptive gripper included, aimed squarely at professional academic education and cost-sensitive research. It shares the Gen3 platform's software DNA: the robust Kortex API (C++/Python), official ROS/ROS 2 drivers, and program compatibility so code can be shared and coordinated across Gen3 lite and full Gen3 units. Ultra-lightweight and power-efficient (24 V DC), it's well suited to mobile applications and teaching labs where portability and agility matter, giving students and researchers professional-grade manipulation — torque-sensing joints, 1 kHz-class control heritage — at an accessible price point below the full Gen3.",
     "fig": "🤖",
     "score": 75,
     "rating": 4
