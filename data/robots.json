@@ -55809,7 +55809,7 @@
     "payload": 10,
     "repeatability_mm": 0.02,
     "repeatability": 0.02,
-    "ip_rating": "IP66",
+    "ip_rating": "IP54 / IP66",
     "operating_temp_min": "0",
     "operating_temp_max": 40,
     "actuator_type": "NEURA in-house motors with high-precision encoders; torque sensors in all joints",
@@ -55850,7 +55850,11 @@
       "Any orientation"
     ],
     "datasheet": "https://neura-robotics.com/products/lara/",
-    "reach": 1000
+    "reach": 1000,
+    "flange_standard": "Modular flange",
+    "tool_changer": true,
+    "duty_cycle": "Continuous 24/7 operation",
+    "arm_weight_kg": 45
   },
   {
     "id": "neura-robotics-lara-5",
@@ -55923,7 +55927,7 @@
     "collaborative": true,
     "payload": 5,
     "repeatability": 0.02,
-    "ip_rating": "IP66",
+    "ip_rating": "IP54 / IP66",
     "operating_temp_min": "0",
     "operating_temp_max": 40,
     "actuator_type": "NEURA in-house motors with high-precision encoders; torque sensors in all joints",
@@ -55963,7 +55967,12 @@
       "Ceiling",
       "Any orientation"
     ],
-    "datasheet": "https://neura-robotics.com/products/lara/"
+    "datasheet": "https://neura-robotics.com/products/lara/",
+    "flange_standard": "Modular flange",
+    "tool_changer": true,
+    "duty_cycle": "Continuous 24/7 operation",
+    "reach": 800,
+    "arm_weight_kg": 26
   },
   {
     "id": "neura-robotics-maira-m",
@@ -56073,7 +56082,10 @@
       "Ceiling",
       "Any orientation"
     ],
-    "datasheet": "https://neura-robotics.com/products/MAiRA"
+    "datasheet": "https://neura-robotics.com/products/MAiRA",
+    "safety_pl": "PL e / SIL 3 (TÜV-certified safety architecture)",
+    "voice_control": true,
+    "duty_cycle": "Industrial continuous operation"
   },
   {
     "id": "neura-robotics-4ne1-mini",
@@ -60833,7 +60845,7 @@
     "payload": 8,
     "repeatability_mm": 0.02,
     "repeatability": 0.02,
-    "ip_rating": "IP66",
+    "ip_rating": "IP54 / IP66",
     "operating_temp_min": "0",
     "operating_temp_max": 40,
     "actuator_type": "NEURA in-house motors with high-precision encoders; torque sensors in all joints",
@@ -60873,7 +60885,12 @@
       "Ceiling",
       "Any orientation"
     ],
-    "datasheet": "https://neura-robotics.com/products/lara/"
+    "datasheet": "https://neura-robotics.com/products/lara/",
+    "flange_standard": "Modular flange",
+    "tool_changer": true,
+    "duty_cycle": "Continuous 24/7 operation",
+    "reach": 1300,
+    "arm_weight_kg": 48
   },
   {
     "id": "neura-robotics-lara-3",
@@ -60941,7 +60958,7 @@
     "payload": 3,
     "repeatability_mm": 0.02,
     "repeatability": 0.02,
-    "ip_rating": "IP66",
+    "ip_rating": "IP54 / IP66",
     "operating_temp_min": "0",
     "operating_temp_max": 40,
     "actuator_type": "NEURA in-house motors with high-precision encoders; torque sensors in all joints",
@@ -60982,7 +60999,11 @@
       "Any orientation"
     ],
     "datasheet": "https://neura-robotics.com/products/lara/",
-    "reach": 590
+    "reach": 590,
+    "flange_standard": "Modular flange",
+    "tool_changer": true,
+    "duty_cycle": "Continuous 24/7 operation",
+    "arm_weight_kg": 18
   },
   {
     "id": "agile-robots-distributed-by-franka-diana-7",
@@ -152374,7 +152395,10 @@
     "desc": "The NEURA Robotics MAiRA S is the highest-payload member of the MAiRA cognitive cobot family — 18 kg static rating (15–18 kg dynamic, speed-dependent) across 1,100 mm reach at a class-leading ±0.01 mm repeatability, with TCP speeds to 4.5 m/s and joint speeds to 360°/s. What separates MAiRA from conventional cobots is perception: an integrated 3D vision sensor with AI object recognition and point-cloud generation, a 360° microphone array for 3D voice commands, a 6-DoF force/torque sensor, and NEURA's 6-DoF Smart Skin for whole-arm touch sensing and precise hand guiding — the robot sees, hears and feels. Programming is no-code and takes minutes; connectivity spans EtherCAT, Modbus, CAN bus, IO-Link and GPIO with triple compressed-air pass-through to the flange. IP65-rated across 0–50 °C, mountable in any orientation.",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "safety_pl": "PL e / SIL 3 (TÜV-certified safety architecture)",
+    "voice_control": true,
+    "duty_cycle": "Industrial continuous operation"
   },
   {
     "id": "neura-robotics-maira-l",
@@ -152467,7 +152491,10 @@
     "desc": "The NEURA Robotics MAiRA L is the long-reach model of the cognitive MAiRA line — 1,600 mm reach with a 12 kg static rating (8–11 kg dynamic, speed-dependent), holding the family's ±0.01 mm repeatability, 4.5 m/s TCP speed and 360°/s joint speeds across seven axes. The cognitive platform carries over intact: integrated 3D vision with AI object recognition and point-cloud generation, 360° microphone array for voice interaction, 6-DoF force/torque sensing, and the 6-DoF Smart Skin for whole-arm touch and hand-guided teaching. Its reach-precision combination suits automotive assembly, large-part tending and electronics inspection across wide envelopes. No-code programming deploys in minutes; connectivity spans EtherCAT, Modbus, CAN bus, IO-Link and GPIO with triple compressed-air pass-through. IP65, 0–50 °C, any-orientation mounting.",
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "safety_pl": "PL e / SIL 3 (TÜV-certified safety architecture)",
+    "voice_control": true,
+    "duty_cycle": "Industrial continuous operation"
   },
   {
     "id": "kinova-gen3-lite",
