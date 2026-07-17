@@ -134787,7 +134787,7 @@
     "id": "elephant-mycobot-280",
     "name": "myCobot 280",
     "brand": "Elephant Robotics",
-    "sub": "Desktop cobot arm",
+    "sub": "Desktop Educational Cobot",
     "year": 2021,
     "origin": "China",
     "status": "Active",
@@ -134798,29 +134798,40 @@
     "repeatability_mm": 0.5,
     "cpu": "M5Stack Basic / ESP32; Pi/Jetson Nano/Arduino versions",
     "ros": true,
-    "api": true,
-    "sdk": "Python, C++, C#, JavaScript, myBlockly",
-    "programming": "Python, Blockly, ROS",
+    "api": "pymycobot open-source API (serial/socket)",
+    "sdk": true,
+    "programming": [
+      "Python (pymycobot)",
+      "Blockly graphical",
+      "ROS / ROS 2",
+      "Arduino (variant)",
+      "myBlockly"
+    ],
     "tags": [
       "cobot",
-      "Elephant Robotics",
-      "myCobot",
+      "desktop",
+      "elephant-robotics",
+      "mycobot-280",
+      "6-axis",
       "education",
-      "desktop"
+      "open-source",
+      "smallest",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "STEM education",
-      "Pick-and-place",
-      "Vision research",
-      "Maker projects"
+      "Robotics & AI education",
+      "Research prototyping",
+      "DIY & makers",
+      "Desktop demos",
+      "Light pick & place"
     ],
-    "made_in": "China",
+    "made_in": "China (Shenzhen)",
     "website": "https://www.elephantrobotics.com",
-    "desc": "Billed as the world's smallest and lightest 6-axis collaborative arm: 280 mm reach, 250 g payload, ±0.5 mm. Available in M5Stack, Raspberry Pi, Jetson Nano and Arduino versions with drag-teach, myBlockly visual programming, Python/C++/ROS APIs. Over 10,000 sold across 50+ countries; a staple of STEM labs.",
-    "weight_kg": 0.85,
+    "desc": "The Elephant Robotics myCobot 280 is recognised by the IEEE as one of the world's smallest six-axis robot arms — an 800-gram desktop cobot with 250 g payload across a 280 mm working radius at ±0.5 mm positioning accuracy, and arguably the most influential education arm of its generation with over 10,000 units sold in 50+ countries. Its controller is built into the base — an M5Stack ESP32 in the standard model or a Raspberry Pi 4 in the Pi variant (860 g), with Arduino and Jetson Nano versions extending the family — so it runs from a 12 V USB-C supply with no cabinet. Programming spans Python via the open-source pymycobot API, Blockly, Arduino and official ROS/ROS 2 packages with MoveIt configs, and an ecosystem of grippers, suction pumps, camera flanges, AI vision kits and the myAGV mobile base builds it into full teaching cells. Official rated working lifespan is 500 hours, reflecting its education-class positioning.",
+    "weight_kg": 0.8,
     "software": "myBlockly (visual), Python, ROS (Ubuntu 18.04); myStudio platform",
     "note": "Worlds smallest/lightest 6-axis cobot; 10,000+ sold across 50+ countries",
     "img": "https://plain-eeur-prod-public.komododecks.com/202606/22/Wf9vDhzAZD23FzhgP8Ey/image.jpg",
@@ -134834,43 +134845,95 @@
     "video": "https://youtu.be/QJOWMBcTgPo",
     "video2": "https://youtu.be/2owbZGNfPWU",
     "chipset": "ESP32 + M5Stack / Raspberry Pi",
-    "axes_config": "6-axis",
-    "ai_open_source": true
+    "axes_config": "6-axis desktop collaborative arm",
+    "ai_open_source": true,
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.elephantrobotics.com/en/mycobot-280-m5-2023-specificatons-en/",
+    "collaborative": true,
+    "payload": 0.25,
+    "reach": 280,
+    "arm_weight_kg": 0.8,
+    "repeatability": 0.5,
+    "mounting": [
+      "Desktop",
+      "Flat base",
+      "G-shape clamp base"
+    ],
+    "power_source": "DC 12 V 5 A (USB Type-C)",
+    "duty_cycle": "500 h rated working lifespan (official)",
+    "variants": [
+      "myCobot 280 M5 (M5Stack, 800 g)",
+      "myCobot 280 Pi (Raspberry Pi 4, 860 g)",
+      "myCobot 280 Arduino",
+      "myCobot 280 Jetson Nano"
+    ],
+    "controller": "Onboard controller — M5Stack ESP32 (M5) or Raspberry Pi 4 (Pi variant); no external cabinet",
+    "programming_langs": [
+      "Python",
+      "C++",
+      "Blockly",
+      "Arduino"
+    ],
+    "ros_industrial": "Official ROS/ROS 2 packages + MoveIt configs",
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "ethernet": "Via Pi variant",
+    "wifi": "Wi-Fi (onboard SBC)",
+    "bluetooth": "Bluetooth (onboard SBC)",
+    "usb": "USB Type-C",
+    "collision_detection": false,
+    "ce": true,
+    "datasheet": "https://www.elephantrobotics.com/en/mycobot-280-m5-2023-specificatons-en/"
   },
   {
     "cat": "Industrial",
     "id": "elephant-mycobot-320",
     "name": "myCobot 320",
     "brand": "Elephant Robotics",
-    "sub": "Desktop cobot arm",
+    "sub": "Desktop Cobot",
     "year": 2022,
     "origin": "China",
     "status": "Active",
     "price": "POA",
     "dof": 6,
     "payload_kg": 1,
-    "reach_mm": 320,
+    "reach_mm": 350,
     "ros": true,
-    "api": true,
-    "sdk": "Python, ROS, myBlockly",
-    "programming": "Python, Blockly, ROS",
+    "api": "pymycobot open-source API",
+    "sdk": true,
+    "programming": [
+      "Python",
+      "Blockly graphical UI",
+      "ROS",
+      "C++"
+    ],
     "tags": [
       "cobot",
-      "Elephant Robotics",
-      "myCobot",
-      "education"
+      "desktop",
+      "elephant-robotics",
+      "mycobot-320",
+      "6-axis",
+      "1kg",
+      "education",
+      "open-source",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "Education",
-      "Scientific research",
-      "Drag-teach automation"
+      "Education & research",
+      "Prototyping",
+      "Light automation",
+      "Commercial demos"
     ],
-    "made_in": "China",
+    "made_in": "China (Shenzhen)",
     "website": "https://www.elephantrobotics.com",
-    "desc": "A larger 6-DoF desktop cobot: 320 mm reach, 1 kg payload. Open-source with ROS, Python and myBlockly support plus a 60-minute drag-teach record function. Offered in M5Stack and Raspberry Pi compute versions for makers and university labs.",
+    "desc": "The Elephant Robotics myCobot 320 scales the myCobot desktop formula up to a genuinely useful 1 kg payload across a 350 mm reach, bridging pure education arms and light commercial automation. Like its smaller sibling it packs the controller into the base — M5Stack or Raspberry Pi 4 depending on variant — and runs the same open software stack: Python through the open-source pymycobot API, Blockly's graphical interface for beginners, C++ and ROS. The end-effector ecosystem is its practical strength: adaptive grippers, a compressor-driven air parallel gripper for heavier grips, suction pumps and camera flanges mount to the standard interface, supported by AI vision kits for machine-learning coursework. It slots into Elephant's broader platform alongside the myAGV mobile base for mobile-manipulation teaching. Elephant's full parameter table for the 320 (weight, repeatability, joint speeds) lives in its GitBook docs — flagged for a part-2 top-up.",
     "repeatability_mm": 0.5,
     "cpu": "M5Stack / Raspberry Pi versions",
     "software": "myBlockly, Python, ROS; 60-min drag-teach record",
@@ -134884,15 +134947,45 @@
     ],
     "video": "https://youtu.be/mdhDzIwS8ZE",
     "chipset": "Raspberry Pi",
-    "axes_config": "6-axis",
-    "ai_open_source": true
+    "axes_config": "6-axis desktop collaborative arm",
+    "ai_open_source": true,
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://shop.elephantrobotics.com/",
+    "collaborative": true,
+    "payload": 1,
+    "reach": 350,
+    "mounting": [
+      "Desktop",
+      "Flat base"
+    ],
+    "variants": [
+      "myCobot 320 M5",
+      "myCobot 320 Pi (Raspberry Pi 4)"
+    ],
+    "controller": "Onboard controller — M5Stack or Raspberry Pi 4 in base; no external cabinet",
+    "programming_langs": [
+      "Python",
+      "C++",
+      "Blockly"
+    ],
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "tool_io": "Standard end-effector interface — adaptive gripper, air parallel gripper (compressor-driven), suction, camera flange",
+    "wifi": "Wi-Fi (onboard SBC)",
+    "bluetooth": "Bluetooth (onboard SBC)",
+    "ce": true,
+    "datasheet": "https://shop.elephantrobotics.com/"
   },
   {
     "cat": "Industrial",
     "id": "elephant-mecharm-270",
     "name": "mechArm 270",
     "brand": "Elephant Robotics",
-    "sub": "Desktop cobot arm",
+    "sub": "Desktop Educational Cobot",
     "year": 2022,
     "origin": "China",
     "status": "Active",
@@ -134901,26 +134994,37 @@
     "payload_kg": 0.25,
     "reach_mm": 270,
     "ros": true,
-    "api": true,
-    "sdk": "Python, ROS",
-    "programming": "Python, Blockly, ROS",
+    "api": "pymycobot open-source API",
+    "sdk": true,
+    "programming": [
+      "Python",
+      "Blockly",
+      "ROS",
+      "Arduino (M5)"
+    ],
     "tags": [
       "cobot",
-      "Elephant Robotics",
-      "mechArm",
-      "education"
+      "desktop",
+      "elephant-robotics",
+      "mecharm-270",
+      "6-axis",
+      "centrosymmetric",
+      "education",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "use_cases": [
-      "STEM education",
-      "Pick-and-place",
-      "Kinematics teaching"
+      "Robotics education",
+      "ROS curriculum",
+      "Assembly & pick-place teaching",
+      "Inspection demos",
+      "SMB prototyping"
     ],
-    "made_in": "China",
+    "made_in": "China (Shenzhen)",
     "website": "https://www.elephantrobotics.com",
-    "desc": "A centrally-symmetric 6-DoF desktop arm with a 270 mm working radius and 250 g payload, offered with Raspberry Pi 4B integration for out-of-the-box ROS development. Popular for teaching kinematics, trajectory planning and vision-guided pick-and-place.",
+    "desc": "The Elephant Robotics mechArm 270 is the industrial-styled sibling of the myCobot 280 — a 6-axis desktop arm with a centrosymmetric structure (motors balanced around the central axis, like a scaled-down industrial robot) that gives it more rigidity and stability than the myCobot's serial-link styling, at the same 250 g payload class across a 270 mm working radius and roughly 1 kg arm mass. Sold in M5Stack and Raspberry Pi 4B variants with the controller in the base, it runs Elephant's standard open stack — Python via pymycobot, Blockly, C++ and ROS with HDMI-out development on the Pi model — and shares the family's gripper, suction and camera-flange ecosystem. Its geometry makes it the preferred Elephant platform for teaching industrial-arm kinematics, and its portability suits classroom sets and SMB proof-of-concept automation.",
     "repeatability_mm": 0.5,
     "cpu": "M5Stack / Raspberry Pi 4B versions",
     "design": "Centrally-symmetric 6-DoF structure",
@@ -134934,8 +135038,36 @@
     ],
     "video": "https://youtu.be/4R-NGdwlvtk",
     "chipset": "ESP32 / Raspberry Pi",
-    "axes_config": "6-axis",
-    "ai_open_source": true
+    "axes_config": "6-axis centrosymmetric desktop arm",
+    "ai_open_source": true,
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://shop.elephantrobotics.com/",
+    "collaborative": true,
+    "payload": 0.25,
+    "reach": 270,
+    "weight_kg": 1,
+    "arm_weight_kg": 1,
+    "mounting": [
+      "Desktop"
+    ],
+    "variants": [
+      "mechArm 270 M5 (M5Stack)",
+      "mechArm 270 Pi (Raspberry Pi 4B)"
+    ],
+    "controller": "Onboard — M5Stack ESP32 or Raspberry Pi 4B in base",
+    "programming_langs": [
+      "Python",
+      "C++",
+      "Blockly"
+    ],
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "ce": true,
+    "datasheet": "https://shop.elephantrobotics.com/"
   },
   {
     "cat": "Quadruped",
@@ -148886,28 +149018,48 @@
     "status": "Active",
     "price": "POA",
     "img": "https://cdn.prod.website-files.com/66b66709c877007daff3afa9/67cefabd26ed581e2db4c2d6_1.1.webp",
-    "desc": "UFACTORY's accessible 6-axis arm: 5 kg payload, 700 mm reach, Python/ROS control at a research-friendly price — widely used in labs, startups and AI-manipulation research.",
-    "tags": [],
+    "desc": "The UFACTORY xArm 6 is the arm that made 5 kg-class manipulation affordable for labs and startups — 5 kg payload across 700 mm reach at ±0.1 mm repeatability and 1 m/s top speed, at roughly half the price of mainstream 6-axis rivals, which has made it one of the most common arms in mobile-manipulation and embodied-AI research stacks. Its aluminium and carbon-fiber structure is driven by outer-rotor brushless motors through industrial harmonic drives with 17-bit multi-turn absolute encoders, drawing a typical 200 W through the AC control box and mounting in any orientation (IP40, cleanroom-suitable). The software story is its second superpower: UFACTORY Studio's full GUI with drag-and-drop and simulation, open-source Python and C++ SDKs over Ethernet, Blockly, and official xarm_ros/ros2 packages, with a native ecosystem of grippers, vacuum tools and camera mounts. Collision detection and control-box e-stop cover safety basics for supervised light-industrial and research use.",
+    "tags": [
+      "robot-arm",
+      "ufactory",
+      "xarm-6",
+      "6-axis",
+      "5kg",
+      "research",
+      "affordable",
+      "carbon-fiber",
+      "active"
+    ],
     "payload_kg": 5,
     "reach_mm": 700,
     "dof": 6,
     "ros": true,
     "ce": true,
     "use_cases": [
-      "Research",
-      "Light automation",
-      "AI manipulation"
+      "Machine tending",
+      "Bin picking",
+      "Mobile-platform manipulation",
+      "Lab automation",
+      "Robotics research",
+      "Assembly",
+      "Dispensing"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "weight_kg": 12.2,
     "repeatability": 0.1,
-    "axes_config": "6-axis",
+    "axes_config": "6-axis lightweight arm",
     "repeatability_mm": 0.1,
-    "programming": "Python / C++ / ROS / ROS 2",
+    "programming": [
+      "UFACTORY Studio (GUI, drag-and-drop)",
+      "Python SDK",
+      "C++ SDK",
+      "ROS / ROS 2",
+      "Blockly"
+    ],
     "ai_open_source": true,
-    "made_in": "China",
+    "made_in": "China (Shenzhen)",
     "gallery": [
       "https://cdn.prod.website-files.com/66b64592c985adcf598f1ee1/67b38c5d951fd82c624f8602_6ecf7fc49ece45ad4dddbf587a453a1a_1.2.avif",
       "https://cdn.prod.website-files.com/66b64592c985adcf598f1ee1/67b38c5e80c9f1633ccacdeb_b936404504f4874d2f571b901456226c_1.3.avif",
@@ -148915,39 +149067,94 @@
       "https://top3dshop.com/image/cache/catalog/products/robots/ufactory/xarm/xarm_image8-370x455.jpg",
       "https://www.robotshop.com/cdn/shop/files/xarm-6-dof-robotic-arm-04.webp?v=1771264433&width=1024"
     ],
-    "video": "https://youtu.be/xaOWXSACNXs"
+    "video": "https://youtu.be/xaOWXSACNXs",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.ufactory.us/product/ufactory-xarm-6",
+    "collaborative": true,
+    "payload": 5,
+    "reach": 700,
+    "max_tcp_speed_ms": 1,
+    "speed_ms": 1,
+    "speed": 1,
+    "mounting": [
+      "Any orientation"
+    ],
+    "ip_rating": "IP40",
+    "frame_material": "Aluminium & carbon fiber",
+    "actuator_type": "Outer-rotor BLDC motors + industrial harmonic drives + 17-bit multi-turn absolute encoders",
+    "power_consumption_w": 200,
+    "power_source": "AC control box (500 W supply recommended)",
+    "controller": "UFACTORY AC control box (xArm controller) — Ethernet, I/O",
+    "programming_langs": [
+      "Python",
+      "C++",
+      "Blockly"
+    ],
+    "offline_programming": "UFACTORY Studio simulation",
+    "ros_industrial": "Official xarm_ros / xarm_ros2 packages",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "api": "Open SDK over Ethernet (xArm-Python-SDK, open source)",
+    "ethernet": "Ethernet (control box)",
+    "collision_detection": true,
+    "estop": "Control-box e-stop",
+    "force_limiting": true,
+    "datasheet": "https://www.ufactory.us/product/ufactory-xarm-6"
   },
   {
     "id": "ufactory-lite-6",
     "name": "Lite 6",
     "brand": "UFACTORY",
     "cat": "Industrial",
-    "sub": "Compact Robot Arm",
+    "sub": "Desktop Robot Arm",
     "year": 2022,
     "origin": "China",
     "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/15/0ViZjYUEozZf9OskzzLJ/image.jpg",
-    "desc": "Ultra-compact UFACTORY arm: 0.6 kg payload, 440 mm reach, 8.7 kg total weight — a desktop 6-axis for education, prototyping and embodied-AI experiments.",
-    "tags": [],
+    "desc": "The UFACTORY Lite 6 is a compact 6-axis tabletop arm built for benches where footprint and setup speed matter more than precision — 600 g payload across 440 mm reach at ±0.5 mm repeatability and 500 mm/s top speed, with the controller integrated so the whole system is arm-plus-Ethernet-cable. Its aluminium and carbon-fiber structure pairs direct-drive motors with harmonic drives to balance durability against cost (typical draw 150 W), and it inherits UFACTORY's full open software stack: Studio's drag-and-drop GUI, open-source Python and C++ SDKs, Blockly, and official ROS/ROS 2 support — which has made it a staple in university labs, imitation-learning rigs and light-automation pilots. UFACTORY itself notes the Lite 6 is not certified as a collaborative robot despite its safe desktop scale, an honest distinction most competitors skip. A Kit variant bundles the Lite Gripper and Lite Vacuum Gripper.",
+    "tags": [
+      "robot-arm",
+      "ufactory",
+      "lite-6",
+      "6-axis",
+      "desktop",
+      "600g",
+      "affordable",
+      "research",
+      "active"
+    ],
     "payload_kg": 0.6,
     "reach_mm": 440,
     "dof": 6,
     "ros": true,
     "use_cases": [
+      "R&D and demos",
       "Education",
-      "Prototyping",
-      "Research"
+      "Light desktop automation",
+      "Machine-tending pilots",
+      "End-effector testing"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
     "weight_kg": 8.7,
-    "axes_config": "6-axis",
+    "axes_config": "6-axis tabletop arm (integrated controller)",
     "repeatability_mm": 0.5,
-    "programming": "Python / Blockly / ROS",
+    "programming": [
+      "UFACTORY Studio (drag-and-drop GUI)",
+      "Python SDK",
+      "C++ SDK",
+      "ROS / ROS 2",
+      "Blockly"
+    ],
     "ai_open_source": true,
-    "made_in": "China",
+    "made_in": "China (Shenzhen)",
     "gallery": [
       "https://top3dshop.com/image/cache/catalog/products/robots/ufactory/lite_6/ufactory_lite_6_image_3-800x600.jpg",
       "https://www.ufactory.cc/wp-content/uploads/2023/02/Collision-detection.png",
@@ -148955,7 +149162,46 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRR_q_qIeiFKOwYY2n15XgcXlOnaCMVlRomcsaz5nol8SzbxTJqPlobV1w&s=10",
       "https://static.wixstatic.com/media/d0c036_f3b76021c6b946a9b0d13fbf1f213cbd~mv2.png/v1/fill/w_523,h_686,al_c,lg_1,q_85,enc_avif,quality_auto/d0c036_f3b76021c6b946a9b0d13fbf1f213cbd~mv2.png"
     ],
-    "video": "https://youtu.be/tWI_CC7Xpyw"
+    "video": "https://youtu.be/tWI_CC7Xpyw",
+    "regions": [
+      "Global"
+    ],
+    "manufacturer_url": "https://www.ufactory.us/product/lite-6",
+    "payload": 0.6,
+    "reach": 440,
+    "repeatability": 0.5,
+    "max_tcp_speed_ms": 0.5,
+    "speed_ms": 0.5,
+    "speed": 0.5,
+    "mounting": [
+      "Desktop",
+      "Any orientation"
+    ],
+    "frame_material": "Aluminium & carbon fiber",
+    "actuator_type": "Direct-drive motors + harmonic drives (durability/cost balance)",
+    "power_consumption_w": 150,
+    "power_source": "Integrated control box (350 W supply recommended)",
+    "controller": "Integrated control box — Ethernet",
+    "programming_langs": [
+      "Python",
+      "C++",
+      "Blockly"
+    ],
+    "ros_industrial": "Official xarm_ros / xarm_ros2 packages (Lite 6 supported)",
+    "sdk": true,
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "api": "Open SDK over Ethernet (open source)",
+    "ethernet": "Ethernet (integrated box)",
+    "estop": "Control-box stop",
+    "ce": true,
+    "variants": [
+      "Lite 6 (arm only)",
+      "Lite 6 Kit (+ Lite Gripper + Lite Vacuum Gripper)"
+    ],
+    "datasheet": "https://www.ufactory.us/product/lite-6"
   },
   {
     "id": "standard-bots-ro1",
