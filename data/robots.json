@@ -129311,17 +129311,21 @@
     "id": "deep-robotics-dr01",
     "name": "DR01",
     "brand": "DEEP Robotics",
-    "sub": "Locomotion Humanoid",
+    "sub": "Full-Size Biped (Embodied AI)",
     "year": 2024,
     "origin": "China",
     "status": "Active",
-    "desc": "The DR01 is DEEP Robotics' first humanoid, positioned as an 'embodied intelligence explorer' from the Hangzhou company best known for its industrial quadrupeds (Lite3, X20, X30). Standing about 1.7 m and weighing ~80 kg, the DR01 is a locomotion-focused biped with 12 degrees of freedom driven by DEEP's self-developed lightweight J60 and high-power J100 joints. It walks at over 1.6 m/s, clears 18 cm steps and 25-degree slopes, and uses a fusion-perception stack of environmental sensors to stay balanced on slippery or uneven ground and recover after slips or shoves. Through AI and big-data training it can autonomously acquire new locomotion skills. Aimed at research and industrial use, the DR01 is a development/research platform (its all-weather IP66 successor, the DR02, is a separate, newer model).",
+    "desc": "The DEEP Robotics DR01 (Dr.01) is a full-size bipedal humanoid from Hangzhou's DEEP Robotics — the quadruped specialist (Lynx, X30) that entered the humanoid race positioning DR01 as an 'embodied intelligence explorer,' a platform to accelerate AI and big-data training for embodied intelligence. It walks at over 1.6 m/s and navigates 18 cm steps, 25° slopes and uneven, discrete terrain, swiftly recovering balance under unknown disturbances like slippery surfaces and external forces — demonstrations include stair climbing, walking across steel bars, and staying upright while pushed or pulled. It's built on DEEP Robotics' self-developed J60 lightweight joints and J100 high-torque joints, and its 'Fusion Perception' integrates self-perception with environmental perception through a learning algorithm that couples sensing and control, rather than relying on scripted gaits. Through AI and big-data training, DR01 can autonomously generate new behavioural skills as environments and tasks change. NOTE: locomotion specs from DEEP Robotics official; exact height/weight/DOF/payload not prominently published for DR01 and are flagged for outreach rather than guessed.",
     "tags": [
       "humanoid",
-      "DEEP Robotics",
-      "DR01",
-      "bipedal",
-      "locomotion"
+      "deep-robotics",
+      "dr01",
+      "biped",
+      "embodied-ai",
+      "fusion-perception",
+      "j60-j100-joints",
+      "terrain",
+      "active"
     ],
     "fig": "🤖",
     "score": 75,
@@ -129338,14 +129342,13 @@
     "speed_ms": 1.6,
     "max_step_height_mm": 180,
     "max_incline_deg": 25,
-    "actuator_type": "Self-developed J60 / J100 joints",
+    "actuator_type": "Self-developed J60 lightweight joints + J100 high-torque joints",
     "use_cases": [
-      "Research",
-      "Locomotion research",
-      "Industrial inspection",
-      "All-terrain navigation"
+      "Embodied-AI research",
+      "Industrial productivity",
+      "Data/skill training platform"
     ],
-    "made_in": "China",
+    "made_in": "China (Hangzhou)",
     "website": "https://www.deeprobotics.cn",
     "speed": 1.6,
     "dof": 12,
@@ -129353,8 +129356,26 @@
     "stair_climbing": true,
     "wifi": "Wi-Fi",
     "imu": true,
-    "ai_model": "Fusion perception + adaptive learning",
-    "lidar": true
+    "ai_model": "Learning algorithm combining sensing + control; AI/big-data training generates new skills autonomously",
+    "lidar": true,
+    "announced": "2024",
+    "released": "2024",
+    "manufacturer_url": "https://www.deeprobotics.cn/en/",
+    "biped": true,
+    "max_tcp_speed_ms": 1.6,
+    "walk_speed_note": ">1.6 m/s",
+    "sensors_list": [
+      "Self-perception + environmental perception (Fusion Perception)"
+    ],
+    "vision": "Fusion Perception — combines self + environmental perception for discrete-terrain traversal",
+    "learning_methods": [
+      "Reinforcement Learning",
+      "Sensing-control fusion",
+      "Autonomous skill generation"
+    ],
+    "autonomous": true,
+    "capabilities": "Robust biped: >1.6 m/s walking, 18 cm steps, 25° slopes, uneven/discrete terrain; balance recovery under slippery surfaces & external push/pull; walks across steel bars; autonomous skill generation via training",
+    "developed_by": "DEEP Robotics (Hangzhou Yunshenchu Technology) — also makes Lynx/X30 quadrupeds"
   },
   {
     "cat": "Humanoid",
@@ -139695,44 +139716,43 @@
       "Humanoid",
       "Research"
     ],
-    "sub": "Open-Source Humanoid",
+    "sub": "Open-Source Full-Size Humanoid",
     "year": 2025,
     "origin": "USA",
-    "made_in": "USA (Palo Alto, CA)",
+    "made_in": "USA (Palo Alto, California)",
     "status": "Active",
     "price": 8999,
     "currency": "USD",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/04/PLMJ83akQkoq9cP9QYUn/image.jpg",
-    "desc": "Billed as the first open-source humanoid robot manufactured in America, K-Bot is a full-size ~1.4 m, 34 kg bipedal platform from Palo Alto startup K-Scale Labs (Y Combinator W24). Priced at $8,999 for the first 100 units, it open-sources nearly the entire robot — hardware under CERN-OHL-S, software under GPL v3 — to spark a 'personal robotics' movement. Skills are trained in the Genesis physics simulator (sim-to-real), with vision-language-action AI on the roadmap.",
+    "desc": "K-Bot, from K-Scale Labs (Palo Alto), is billed as America's first open-source full-size humanoid robot — a developer- and community-driven platform in deliberate contrast to closed commercial humanoids. At launch its software provides the fundamentals: standing, walking, balancing and obeying simple commands, controllable via a mobile app or voice. Because it's internet-connected and fully open-source, K-Bot is designed to gain new skills continuously through software updates from K-Scale and the open community, with the company committing to free upgrades for early buyers until the robot reaches full autonomy — defined as handling most tasks independently with under one human intervention per day. K-Scale's roadmap integrates vision-language-action AI so K-Bot can follow complex natural-language instructions, targeting broad autonomy by around 2028. It's aimed at developers, makers, educators and autonomy researchers who want an open platform to build on. NOTE: K-Scale publishes an open-source spec/hardware repo; exact height/weight/DOF/actuator figures vary by build and are flagged for outreach rather than guessed here — open-source status, control methods and roadmap confirmed from K-Scale.",
     "height_mm": 1400,
     "weight_kg": 34,
     "actuator_type": "Electric",
     "ai_open_source": true,
     "sim_platform": "Genesis",
     "learning_methods": [
-      "Sim-to-real Reinforcement Learning",
-      "Vision-Language-Action (roadmap)"
+      "Open-source community skill updates",
+      "VLA (planned)"
     ],
     "os": "Linux",
     "ros": true,
     "sdk": true,
     "use_cases": [
-      "Developers",
-      "Research",
+      "Open-source robotics R&D",
+      "Developers / makers",
       "Education",
-      "Home tasks (roadmap)"
+      "Autonomy research"
     ],
     "manufacturer_history": "K-Scale Labs (YC W24), founded by Benjamin Bolte; garage-built in Palo Alto. Name references the Kardashev Scale.",
     "tags": [
       "humanoid",
       "k-scale",
-      "kbot",
+      "k-bot",
       "open-source",
-      "made-in-usa",
+      "biped",
+      "america-first-open-source",
+      "vla",
       "developer",
-      "research",
-      "bipedal",
-      "yc",
       "active"
     ],
     "website": "https://kscale.dev/",
@@ -139745,7 +139765,22 @@
       "https://external-preview.redd.it/k-scale-labs-new-podcast-episode-your-questions-v0-Z2Uwa2hwNHY4NHpmMSRQTjO9dcv0kjOyLlw4sKpOfStwQQtvQyVPlMkfJdFa.png?format=pjpg&auto=webp&s=c29c43e5426c863690edf7cf26fd11576c32405c",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs7Vhf_u-8p3yR-JUlwx4oye3jQi-A5T3nlcVOXY3SqilWcU2P3eEVea9F&s=10"
     ],
-    "video": "https://youtu.be/IU--YylT3Mk"
+    "video": "https://youtu.be/IU--YylT3Mk",
+    "announced": "2025",
+    "released": "2025",
+    "manufacturer_url": "https://www.kscale.dev/",
+    "biped": true,
+    "open_source": true,
+    "control_methods": [
+      "Mobile app",
+      "Voice commands"
+    ],
+    "voice_control": true,
+    "natural_language_commands": true,
+    "ota": true,
+    "ai_model": "Open-source stack; VLA (vision-language-action) AI integration planned 2025-2028 toward full autonomy",
+    "capabilities": "America's first open-source full-size humanoid: standing, walking, balancing, simple commands at launch; internet-connected + open-source so skills grow via K-Scale + community updates; free upgrades to early buyers until full autonomy reached",
+    "developed_by": "K-Scale Labs (Palo Alto)"
   },
   {
     "id": "foundation-phantom-mk1",
@@ -139756,40 +139791,41 @@
       "Humanoid",
       "Military"
     ],
-    "sub": "Industrial / Defense Humanoid",
-    "year": 2024,
+    "sub": "Industrial/Defense Humanoid",
+    "year": 2025,
     "origin": "USA",
-    "made_in": "USA (San Francisco) / Germany (Munich)",
+    "made_in": "USA (San Francisco)",
     "status": "Active",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/qNhuAvfN3xkwa7SKSzZm/image.png",
-    "desc": "A full-stack general-purpose humanoid from Foundation (founded May 2023 by ex-Synapse CEO Sankaet Pathak), aimed at industrial labor and — controversially — defense. Roughly 1.75 m and ~80 kg, Phantom uses proprietary rolling-contact / cycloidal gearboxes claimed at 90–95% efficiency with backdrivable compliance, a ~20 kg payload, and a camera-only (no-LiDAR) perception stack paired with a hybrid imitation-learning + physics-model AI. Early units are tethered; the company targets manufacturing and logistics first, with stated defense ambitions (recon, EOD) under a human-in-the-loop model.",
+    "desc": "The Foundation Phantom MK1 is a camera-first industrial and defense humanoid from San Francisco startup Foundation Robotics (founded 2024 by CEO Sankaet Pathak). Standing 1,750 mm at ~80 kg, it carries 20 kg continuously (up to 36 kg peak) and walks at 1.7 m/s. Its core differentiator is a proprietary cycloidal actuator — up to ~160 N·m, back-drivable and impact-resistant, offering hydraulic-like torque with electric efficiency and human-safe compliance — technology inherited when Foundation acquired Boardwalk Robotics in December 2024 (Boardwalk's upper-body 'Alex' platform became the Phantom). Rather than LiDAR, it uses an 8-camera camera-first perception system feeding an LLM-driven task-to-motion stack: large language models reason over natural-language commands like 'pick that up,' proprietary physics-action models generate the motion, and a shared world graph coordinates fleets. With 19 upper-body DOF and anthropomorphic five-fingered hands, it targets assembly, inspection, logistics and reconnaissance in near-24/7 operation. Over 40 units were built by December 2025, and in February 2026 two units were sent to the Ukrainian frontline — believed to be the first deployment of a humanoid to an active combat zone. An MK2 with ~30% more payload is slated for 2026. NOTE: 19 DOF is the published upper-body figure; full-body count and finger DOF/IP rating not yet public (flagged).",
     "also_known_as": "Phantom",
     "height_mm": 1750,
     "weight_kg": 80,
     "arm_dof": 19,
     "payload": 20,
     "payload_kg": 20,
-    "actuator_type": "Proprietary rolling-contact / cycloidal gearboxes (backdrivable, ~90–95% efficiency)",
-    "cameras": "Camera-only perception (no LiDAR)",
-    "ai_model": "Hybrid: imitation learning + state-based physics models",
+    "actuator_type": "Proprietary cycloidal actuators (high torque density ~160 N·m, back-drivable, impact-resistant — hydraulic-like force, electric efficiency)",
+    "cameras": "8 cameras — camera-first perception (no LiDAR)",
+    "ai_model": "LLM-driven task-to-motion stack: LLMs reason, proprietary physics-action models generate motion, shared world graph for fleet coordination",
     "power_source": "Tethered (battery version planned)",
     "use_cases": [
-      "Manufacturing",
-      "Logistics",
-      "Defense / reconnaissance",
-      "Bomb disposal"
+      "Industrial automation",
+      "Warehouse logistics",
+      "Assembly & inspection",
+      "Defense / reconnaissance"
     ],
     "manufacturer_history": "Founded May 2023 by Sankaet Pathak; offices in San Francisco and Munich. Openly targets both commercial and defense/combat-adjacent roles with a human-in-the-loop control model.",
     "tags": [
       "humanoid",
       "foundation",
-      "phantom",
-      "industrial",
+      "phantom-mk1",
+      "biped",
+      "cycloidal-actuator",
+      "camera-first",
+      "llm",
       "defense",
-      "camera-only",
-      "cycloidal-actuators",
-      "usa",
+      "industrial",
       "active"
     ],
     "website": "https://foundation.bot/",
@@ -139805,7 +139841,38 @@
     "video": "https://youtu.be/Y0XgYSIFqWA",
     "bimanual": true,
     "learning_methods": [
-      "Imitation Learning"
+      "LLM reasoning",
+      "Physics-action models",
+      "Human-in-the-loop training"
+    ],
+    "announced": "2025-02",
+    "released": "2025",
+    "manufacturer_url": "https://foundation.bot/",
+    "biped": true,
+    "dof": 19,
+    "dof_note": "19 upper-body DOF (full-body count higher)",
+    "payload_peak_kg": 36,
+    "payload_note": "20 kg continuous, up to 36 kg max",
+    "max_tcp_speed_ms": 1.7,
+    "speed_ms": 1.7,
+    "speed": 1.7,
+    "arm_torque_nm": 160,
+    "hand_type": "Anthropomorphic five-fingered hands",
+    "fingers": 5,
+    "frame_material": "Steel / plastic",
+    "duty_cycle": "Near-24/7 operation",
+    "sensors_list": [
+      "8 cameras (camera-first, no LiDAR)"
+    ],
+    "ai_inference_local": true,
+    "natural_language_commands": true,
+    "fleet_management": true,
+    "capabilities": "Camera-first industrial+defense humanoid; natural-language 'pick that up' → whole-body motion; assembly, inspection, logistics, reconnaissance; 40+ units built by Dec 2025; 2 units sent to Ukraine frontline Feb 2026 (first humanoid in active combat zone)",
+    "developed_by": "Foundation Robotics (CEO Sankaet Pathak; acquired Boardwalk Robotics Dec 2024 — inherited Alex platform + cycloidal actuators)",
+    "predecessor": "Boardwalk Robotics Alex (rebranded/developed into Phantom)",
+    "variants": [
+      "Phantom MK1",
+      "Phantom MK2 (2026, +30% payload)"
     ]
   },
   {
@@ -139817,14 +139884,14 @@
       "Humanoid",
       "Social"
     ],
-    "sub": "Companion Humanoid",
+    "sub": "Friendly Companion Humanoid",
     "year": 2025,
     "origin": "USA",
-    "made_in": "USA (Nevada)",
-    "status": "Active",
+    "made_in": "USA",
+    "status": "Development",
     "price": "POA",
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/04/eUZmSGKtNq9MU5vJ8dyx/image.jpg",
-    "desc": "A deliberately friendly, character-like companion humanoid from Nevada startup Cartwheel Robotics, which emerged from stealth in 2025. The ~76 cm prototype carries 50+ degrees of freedom for expressive gestures and lifelike locomotion, custom actuators, a hollow skeleton for cooling, and soft medical-grade silicone skin. With a large head, rounded eyes and slightly chubby, Casper-like styling, Yogi is designed to read as 'a presence you can feel' rather than a machine. Founder Scott LaValley previously led mechanical design on Boston Dynamics' early bipeds (PETMAN) and Disney's Project Kiwi (Baby Groot).",
+    "desc": "Yogi, from Cartwheel Robotics, is a deliberately small, friendly, emotionally expressive companion humanoid — a conscious counterpoint to the industrial, utilitarian humanoids dominating the field. Founded by Scott LaValley (a veteran of Disney Imagineering and Boston Dynamics, where he worked on Atlas), Cartwheel designs Yogi for warmth and human connection rather than factory labour, emphasising expressive, characterful movement meant to make people feel at ease in homes and public spaces. It represents the 'companion/emotional' branch of humanoid design alongside makers like Engineered Arts. NOTE: Cartwheel publishes limited hard specs for Yogi (height/weight/DOF/battery not formally released — it's development-stage) — those fields are flagged for outreach rather than invented; design intent and pedigree confirmed from Cartwheel.",
     "height_mm": 760,
     "dof": 50,
     "actuator_type": "Custom actuators",
@@ -139833,10 +139900,9 @@
     "emotion_detection": true,
     "emotional_expression": true,
     "use_cases": [
-      "Companionship",
-      "Hospitality",
-      "Healthcare",
-      "Research"
+      "Home companionship",
+      "Public engagement",
+      "Entertainment / emotional connection"
     ],
     "manufacturer_history": "Nevada startup out of stealth in 2025; founder Scott LaValley (ex-Boston Dynamics PETMAN/RHex; ex-Disney Imagineering Project Kiwi).",
     "tags": [
@@ -139844,10 +139910,9 @@
       "cartwheel",
       "yogi",
       "companion",
-      "social",
+      "biped",
       "expressive",
-      "silicone-skin",
-      "usa",
+      "friendly",
       "development"
     ],
     "website": "https://www.cartwheelrobotics.com/",
@@ -139860,7 +139925,14 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHo-0bp1RpretxzpIO8VYbzlALhOgNgql7fETJSO8S9jfO2tCkVJUlJ-AH&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqqyVAEKs3tDUV5agieQzUKEKmjWW2-T2PTh6m84PIQRAnRrYZWUGXTWWc&s=10"
     ],
-    "video": "https://youtu.be/XaSXltB_I1A"
+    "video": "https://youtu.be/XaSXltB_I1A",
+    "announced": "2025",
+    "released": "2025",
+    "manufacturer_url": "https://www.cartwheelrobotics.com/",
+    "biped": true,
+    "design_philosophy": "Small, friendly, emotionally expressive humanoid — deliberately warm/approachable vs industrial humanoids",
+    "capabilities": "Compact bipedal companion humanoid designed for emotional warmth and human connection in homes/public spaces; expressive movement",
+    "developed_by": "Cartwheel Robotics (founded by Scott LaValley, ex-Disney Imagineering & Boston Dynamics)"
   },
   {
     "id": "kit-armar-6",
@@ -145259,37 +145331,38 @@
     "name": "Alex",
     "brand": "Boardwalk Robotics",
     "cat": "Humanoid",
-    "sub": "Humanoid Upper-Torso (fixed base)",
+    "sub": "Upper-Body Manipulation Humanoid",
     "year": 2024,
     "origin": "USA",
-    "status": "Active",
+    "status": "Discontinued",
     "price": "POA",
     "img": "https://spectrum.ieee.org/media-library/a-black-humanoid-robot-uses-a-sanding-tool-on-a-piece-of-black-carbon-fiber.jpg?id=53489912&width=2400&height=1600",
     "use_cases": [
       "Manufacturing",
-      "Logistics / package sorting",
-      "Maintenance",
-      "Food processing",
-      "Aviation"
+      "Logistics",
+      "Maintenance automation",
+      "Factory cleaning & organizing"
     ],
-    "desc": "A commercial humanoid upper-torso robot from Boardwalk Robotics (spun out of Florida's IHMC, of DARPA Robotics Challenge fame), announced August 2024. Alex deliberately omits legs — mounted on a stable base, it can't fall or face-plant, letting it work safely close to people and move its arms far faster than a balancing biped. It has 19 DOF and a 10 kg payload, driven entirely by custom in-house actuators: low-gear-ratio backdriveable joints with bespoke cycloidal transmissions (~96% efficient, up to 9 rad/s) that achieve open-loop torque control without expensive torque sensors. Vision and force sensing support high-speed manipulation for logistics, food processing and aviation, and it's sold for both commercial pilots and research.",
+    "desc": "Alex, from Boardwalk Robotics (Pensacola, Florida), is a 19-DOF upper-body manipulation humanoid unveiled August 2024 — deliberately legless, mounting on a stable or mobile base to prioritise safety and high-speed dexterity over bipedal locomotion. Its custom in-house actuators drive rapid joints at up to 9 rad/s with a 10 kg continuous payload, paired with vision and force sensing and onboard real-time control, for tasks like cleaning, organizing, pick-and-place and factory work. Boardwalk developed Alex's manipulation systems leveraging its collaboration with the Institute for Human Machine Cognition (IHMC), renowned for bipedal robotics (the two also built the Nadia research humanoid together). In December 2024 Foundation Robotics acquired Boardwalk, inheriting the engineering team and the Alex hardware — which was rebranded and further developed into the Foundation Phantom MK1, with Boardwalk's years of cycloidal-actuator work becoming Phantom's core differentiator. NOTE: not to be confused with IHMC's separate 29-DOF fully-electric bipedal 'Alex' research robot; this is Boardwalk's commercial upper-body Alex. Specs verified from Boardwalk/databases.",
     "tags": [
       "humanoid",
-      "boardwalk",
+      "boardwalk-robotics",
       "alex",
       "upper-body",
       "manipulation",
-      "usa",
-      "active"
+      "19-dof",
+      "ihmc",
+      "acquired-by-foundation",
+      "discontinued"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "made_in": "USA",
+    "made_in": "USA (Pensacola, Florida)",
     "dof": 19,
     "payload_kg": 10,
     "payload": 10,
-    "actuator_type": "Custom backdriveable actuators, cycloidal transmissions (~96% eff., up to 9 rad/s)",
+    "actuator_type": "Custom in-house actuators — rapid joints up to 9 rad/s",
     "bimanual": true,
     "hand_type": "PSYONIC Ability Hand (6-DOF, 5-finger)",
     "force_sensing": true,
@@ -145302,7 +145375,21 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68361a1d6f95e9350861501d_Alex_01-p-2000.jpeg",
       "https://video.squarespace-cdn.com/content/v1/59e6e3a99f8dceb811b71c4b/21be9f3f-663f-41f4-8580-4459d7aa49c5/thumbnail"
     ],
-    "video": "https://youtu.be/tD3FNZUG2kQ"
+    "video": "https://youtu.be/tD3FNZUG2kQ",
+    "announced": "2024-08",
+    "released": "2024",
+    "biped": false,
+    "dof_note": "19-DOF humanoid upper torso (no legs)",
+    "payload_note": "10 kg continuous",
+    "joint_speed_max_rads": 9,
+    "sensors_list": [
+      "Vision sensors",
+      "Force sensors"
+    ],
+    "controller": "Proprietary high-speed manipulation control; onboard compute (real-time control + sensor fusion)",
+    "capabilities": "High-speed upper-body manipulation humanoid (no legs — mounts on stable/mobile base); cleaning, organizing, pick-and-place, factory work; developed with IHMC bipedal expertise",
+    "developed_by": "Boardwalk Robotics (collaborated with IHMC on Nadia; acquired by Foundation Robotics Dec 2024)",
+    "successor": "Foundation Phantom MK1 (Alex platform rebranded & developed into Phantom)"
   },
   {
     "id": "samsung-bot-handy",
