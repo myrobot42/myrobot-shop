@@ -16,8 +16,8 @@
 <link rel="dns-prefetch" href="https://i.ytimg.com">
 <link rel="manifest" href="/site.webmanifest">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-V (DETAILED humanoid-grade spec sheets for ALL categories: 71-field universal core + deep domain sections, 88-135 rows/page; Consumer 4-type; Humanoid dedicated build-R menu) -->
-<meta name="mrs-build" content="build-V">
+<!-- BUILD-TAG: build-W (DETAILED humanoid-grade spec sheets for ALL categories: 71-field universal core + deep domain sections, 88-135 rows/page; Consumer 4-type; Humanoid dedicated build-R menu) -->
+<meta name="mrs-build" content="build-W">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,880+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -2323,10 +2323,11 @@ function _hval(r, key, kind){
 }
 function rowF(label, val, unit, kind, opts){
   opts = opts || {};
-  var na = opts.na || 'Info not found';
-  var empty = (val===null || val===undefined || val==='' || (Array.isArray(val) && val.filter(Boolean).length===0));
+  var na = 'Info not found';
+  var _nf = (typeof val==='string' && /^\s*(info not found|not found|n\/?a|unknown|tbd)\s*$/i.test(val));
+  var empty = (val===null || val===undefined || val==='' || _nf || (Array.isArray(val) && val.filter(Boolean).length===0));
   var display, collectVal;
-  if (empty){ display = '<span style="color:var(--mut);font-style:italic">'+na+'</span>'; collectVal = na; unit=''; }
+  if (empty){ display = '<span style="color:var(--mut);font-style:italic;font-size:11px;opacity:.6">'+na+'</span>'; collectVal = na; unit=''; }
   else if (val===true){ display='✓ Yes'; collectVal='Yes'; }
   else if (val===false){ display='✗ No'; collectVal='No'; }
   else if (Array.isArray(val)){ display=val.filter(Boolean).join(', '); collectVal=display; }
