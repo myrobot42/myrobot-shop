@@ -131831,7 +131831,7 @@
     "storage_gb": "64 / 256 (175cm) motion; 1-2TB perception (Super/175)",
     "npu_tops": 157,
     "compute_backpack": "Optional: NVIDIA AGX Orin, 64GB RAM, 275 TOPS",
-    "ai_model": "LimX embodied-AI; FluxVLA engine; basic motion library (interaction/gestures/dance)",
+    "ai_model": "LimX embodied-AI; basic motion library (interaction/gestures/dance); low-level + high-level motion control API",
     "learning_methods": [
       "Video imitation",
       "Manual teaching",
@@ -131856,7 +131856,42 @@
     "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024.",
     "released": "2025",
     "arm_torque_nm": 150,
-    "dexterous_hand": true
+    "dexterous_hand": true,
+    "battery_wh": 558,
+    "raw_specs": {
+      "cooling": "Air-cooled main control area (optimized on Super, enhanced on 175cm)",
+      "variants": {
+        "Oli Lite": "165cm/≤55kg/31-DOF/150N·m/RK3588",
+        "Oli EDU": "165cm/≤55kg/31-DOF/150N·m/RK3588",
+        "Oli Super": "165cm/≤55kg/33-DOF/150N·m/+Orin NX 157TOPS 16G/1T",
+        "Oli 175cm": "175cm/≤60kg/43-DOF/250N·m/5kg payload/9-axis IMU/+Orin NX 16G/2T"
+      },
+      "battery_capacity_mah": 9500,
+      "battery_range": "~2h (Lite/EDU), ~1.5h (Super/175cm)",
+      "charger": "58.8V 10A",
+      "imu_detail": "6-axis (165cm models) / 9-axis (175cm)",
+      "compute_backpack": "Optional: NVIDIA AGX Orin, 64GB RAM, 275 TOPS",
+      "joint_range": {
+        "neck": "P-30°~45°, Y±45°",
+        "shoulder": "P±160°, R-5°~185°, Y-90°~195°",
+        "elbow": "P-66°~137°",
+        "wrist": "P±90°, R±90°, Y-45°~135°",
+        "waist": "P-30°~45°, R±30°, Y±150°",
+        "hip": "P±150°, R-50°~120°, Y±150°",
+        "knee": "P+5°~148°",
+        "ankle": "P-35°~58°, R±25°"
+      },
+      "end_effector_options": [
+        "Self-developed 2-finger gripper (1 DoF)",
+        "3-finger gripper (4 DoF)",
+        "5-finger hand (6 DoF)"
+      ],
+      "communication_ports": "USB 3.0/3.2, Gigabit Ethernet RJ45 x2, Type-C, 5G (higher variants)",
+      "power_ports": "24V 5A, 12V 5A (x2-x4 by variant)",
+      "sensors_extra": "Head/chest/wrist/hip depth cameras + LiDAR (higher variants)",
+      "developer_tools": "SDK, remote-control API, sensor API, low/high-level motion control API, Studio package",
+      "payload_note": "3kg single-arm (165cm) / 5kg (175cm)"
+    }
   },
   {
     "id": "limx-dynamics-tron-1",
@@ -131985,7 +132020,7 @@
     "estop": true,
     "remote_range_m": 50,
     "sim_platform": "NVIDIA Isaac, MuJoCo, Gazebo",
-    "ai_model": "Built-in high-performance RL motion-control algorithms",
+    "ai_model": "Built-in RL motion-control algorithms; SDK for secondary development (EDU); Isaac/MuJoCo/Gazebo sim",
     "use_cases": [
       "Humanoid motion-control onboarding",
       "RL research",
@@ -131996,7 +132031,28 @@
     "battery_life_typical": 120,
     "max_grade_pct": 58,
     "arm_torque_nm": 60,
-    "wifi": true
+    "wifi": true,
+    "raw_specs": {
+      "modular_foot_ends": [
+        "Point-foot (<1 m/s)",
+        "Sole (<1 m/s)",
+        "Wheeled (≤3 m/s)"
+      ],
+      "design": "Three-in-One modular foot-end; quick-swap; automatic hardware recognition & software adaptation",
+      "battery_supply_voltage": "46.8V",
+      "max_battery_power_w": 1000,
+      "battery_capacity_ah": 4.5,
+      "charger": "Battery charging dock",
+      "charging_time_detail": "<1h (20-80%), 1.5h (100%)",
+      "actuator_detail": "Rated 48V, 30 N·m rated / 60 N·m peak, 15 rad/s peak",
+      "peripheral_ports": "USB 3.0 x1, GbE x1",
+      "peripheral_power": "24V, 100W (peak 200W)",
+      "remote_control": "Handheld remote controller, 50m range, remote e-stop",
+      "developer_tools": "SDK, data visualization, data record/playback, joint control algorithm, simulation platform",
+      "sensors_extra": "Optional RGBD camera (0 standard); IMU",
+      "pricing": "$15,000 Standard Ed / $25,000 Education Ed",
+      "editions": "Std Ed (no secondary dev) / EDU Ed (SDK secondary development)"
+    }
   },
   {
     "id": "limx-dynamics-tron-2",
@@ -132124,7 +132180,7 @@
     "bimanual": true,
     "chipset": "AI Computing Box: 11th Gen Intel Core i7-1165G7 @2.8GHz",
     "storage_note": "2TB (AI computing box)",
-    "ai_model": "VLA research platform; FluxVLA-capable; teleoperation data collection",
+    "ai_model": "VLA research platform; VR teleoperation (Oculus Quest 3, 100ms); data collection & storage",
     "teleoperation": "VR device (Oculus Quest 3), 100ms delay",
     "learning_methods": [
       "VLA research",
@@ -132151,7 +132207,40 @@
     "max_grade_pct": 58,
     "hand_repeatability_mm": 0.5,
     "dexterous_hand": true,
-    "wifi": true
+    "wifi": true,
+    "raw_specs": {
+      "configurations": [
+        "Dual-arm",
+        "Bipedal (sole)",
+        "Wheeled"
+      ],
+      "form_note": "One body, three configurations (dual-arm / bipedal / wheeled)",
+      "dual_arm": {
+        "single_arm_dof": 7,
+        "reach": "70cm (largest in class)",
+        "wrist": "spherical human-like",
+        "max_payload": "5kg/arm max, 3kg extended",
+        "end_effector_speed": "5 m/s",
+        "end_effector_accel": "36 m/s²",
+        "repeat_accuracy": "±0.5mm",
+        "teleoperation": "VR (Oculus Quest 3), 100ms delay",
+        "safety": "boundary protection, dual-redundant power"
+      },
+      "mobility": {
+        "sole_speed": "2-3 m/s",
+        "wheeled_speed": "3-5 m/s",
+        "climb": "sole 15°, wheeled 30°",
+        "step": "20cm",
+        "load": "30kg flat-ground / 20kg stair-climbing"
+      },
+      "gripper": "Gripping force 20N max, width 85mm",
+      "battery": "46.8V, 2800W max, 9Ah ternary lithium; 542W charge; 30min (20-80%), 54min (20-100%)",
+      "compute": "AI box: i7-1165G7, 2TB; 4x ETH, 4x USB 3.0, 24V in / 12V out",
+      "communication_ports": "Ethernet x1, EtherCAT x2, USB 3.0 x1, RS485 x1",
+      "power_ports": "12V/24V/48V output ports + external power supply port",
+      "software": "SDK, robot management platform, data platform, simulation platform; Python/C++, ROS1/ROS2",
+      "editions": "TRON 2 Standard / TRON 2 EDU"
+    }
   },
   {
     "id": "limx-dynamics-p1",
