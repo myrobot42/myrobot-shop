@@ -63483,18 +63483,20 @@
     "tags": [
       "quadruped",
       "educational",
-      "research",
       "first-gen",
-      "china",
       "discontinued",
-      "historic"
+      "historic",
+      "china",
+      "legged",
+      "research",
+      "unitree"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733768/myrobot/nxe6j7e8p4nla46h0kxr.png",
     "score": 75,
     "rating": 4,
     "price": 10000,
-    "desc": "The Unitree A1 (2018) is an early consumer/education quadruped that helped popularise affordable legged robots: ~12 kg, 12 degrees of freedom and up to ~3.3 m/s with dynamic running and balancing. Widely used as a research and teaching platform for legged-locomotion and reinforcement-learning work.",
+    "desc": "Unitree A1 (2020) was a fast, agile compact quadruped (~12kg) reaching 3.3 m/s, aimed at research and consumers at an accessible price, with dynamic balance and 12 DoF.",
     "highlights": [],
     "perf": false,
     "year": 2020,
@@ -63516,8 +63518,8 @@
       "Dynamic locomotion R&D",
       "Consumer demonstration"
     ],
-    "manufacturer_url": "https://www.unitree.com",
-    "made_in": "China",
+    "manufacturer_url": "https://www.unitree.com/",
+    "made_in": "China (Hangzhou)",
     "frame_material": "Aluminum alloy",
     "max_climb_angle_deg": 30,
     "battery_type": "Li-ion",
@@ -63549,7 +63551,16 @@
     "video2": "https://youtu.be/emF9BW0DHoc",
     "speed": 3.3,
     "torque_nm": 33.5,
-    "arm_torque_nm": 33.5
+    "arm_torque_nm": 33.5,
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "body_length_mm": 500,
+    "standing_height_mm": 400,
+    "raw_specs": {
+      "speed": "3.3 m/s (agile compact)",
+      "market": "Research + prosumer"
+    }
   },
   {
     "id": "unitree-b2",
@@ -63559,19 +63570,21 @@
     "sub": "Industrial Quadruped",
     "tags": [
       "quadruped",
-      "industrial",
-      "ip67",
+      "inspection",
       "heavy-payload",
+      "industrial",
       "china",
+      "legged",
+      "unitree",
       "active",
-      "inspection"
+      "ip67"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733769/myrobot/qrip5imrlfrisp9lhcaj.webp",
     "score": 75,
     "rating": 4,
     "price": 110000,
-    "desc": "Industrial-grade flagship quadruped from Unitree's B-series. Among the fastest industrial quadrupeds at over 6 m/s peak speed. 360 N·m peak joint torque (~170% increase over predecessors), IP67 protection, up to 120kg standing payload, over 5 hours runtime unloaded. Used for power-grid inspection, petrochemical patrols and factory operations.",
+    "desc": "Unitree B2 (2023) is a heavy-duty industrial quadruped — ~40kg continuous payload (up to 120kg static), 6 m/s running, IP67-rated, with long endurance for demanding inspection and logistics in tough environments.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -63607,8 +63620,8 @@
       "Security patrol",
       "Warehouse automation"
     ],
-    "manufacturer_url": "https://www.unitree.com/B2",
-    "made_in": "China",
+    "manufacturer_url": "https://www.unitree.com/",
+    "made_in": "China (Hangzhou)",
     "regions": [
       "Global"
     ],
@@ -63664,7 +63677,18 @@
       "https://www.integritas.mx/web/image/product.image/94/image_1024/Robot%20Unitree%20B2?unique=50d13df",
       "https://www.integritas.mx/web/image/product.image/96/image_1024/Robot%20Unitree%20B2?unique=50d13df"
     ],
-    "video": "https://youtu.be/yR835-6BaTo"
+    "video": "https://youtu.be/yR835-6BaTo",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "body_length_mm": 1098,
+    "standing_height_mm": 645,
+    "raw_specs": {
+      "payload": "40kg continuous / 120kg static",
+      "speed": "6 m/s",
+      "rating": "IP67",
+      "endurance": "Long-runtime industrial"
+    }
   },
   {
     "id": "unitree-go2-edu-plus",
@@ -63674,11 +63698,13 @@
     "sub": "Educational Quadruped",
     "tags": [
       "quadruped",
-      "educational",
-      "research",
       "edu",
-      "open-development",
+      "legged",
+      "educational",
       "china",
+      "open-development",
+      "research",
+      "unitree",
       "active"
     ],
     "fig": "🤖",
@@ -63686,7 +63712,7 @@
     "score": 75,
     "rating": 4,
     "price": 13205,
-    "desc": "Education and research variant of Unitree Go2 with full development freedom — force sensors, higher payload (up to 12kg), max speed 5 m/s, and complete SDK access. Typically bundled with Livox MID-360 LiDAR. Pricing around $13,205 for the EDU PLUS bundle with MID-360 LiDAR.",
+    "desc": "Unitree Go2 EDU Plus is the research/education Go2 with full SDK access, higher top speed (up to 5 m/s), Jetson compute option and developer APIs for robotics research.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -63704,7 +63730,7 @@
     "weight_kg": 15,
     "battery_life": "1-4 hours",
     "speed_ms": 5,
-    "payload_kg": 12,
+    "payload_kg": 8,
     "dof": 12,
     "wifi": "Wi-Fi 6",
     "bluetooth": "5.2",
@@ -63720,8 +63746,8 @@
       "Locomotion research",
       "Robotics curriculum"
     ],
-    "manufacturer_url": "https://shop.unitree.com/products/unitree-go2",
-    "made_in": "China",
+    "manufacturer_url": "https://www.unitree.com/",
+    "made_in": "China (Hangzhou)",
     "regions": [
       "Global"
     ],
@@ -63769,7 +63795,17 @@
       "https://www.robotshop.com/cdn/shop/files/unitree-go2-edu-plus-robotic-dog-img2.webp?v=1726727196&width=1024",
       "https://www.robotshop.com/cdn/shop/files/unitree-go2-edu-plus-robotic-dog-img3.webp?v=1726727196&width=1024"
     ],
-    "video": "https://youtu.be/6zPvT0ig1VM"
+    "video": "https://youtu.be/6zPvT0ig1VM",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "body_length_mm": 700,
+    "standing_height_mm": 380,
+    "raw_specs": {
+      "tier": "Go2 EDU Plus (research/SDK)",
+      "compute": "Jetson option",
+      "sdk": "Full Python/C++/ROS 2"
+    }
   },
   {
     "id": "unitree-go2-air",
@@ -63779,11 +63815,13 @@
     "sub": "Consumer Quadruped",
     "tags": [
       "quadruped",
+      "unitree",
       "consumer",
-      "education",
       "ai-companion",
-      "robot-dog",
+      "education",
       "china",
+      "legged",
+      "robot-dog",
       "active"
     ],
     "fig": "🤖",
@@ -63791,7 +63829,7 @@
     "score": 75,
     "rating": 4,
     "price": 1600,
-    "desc": "Entry-level variant of Unitree's second-generation Go2 quadruped platform. Designed for daily life and intelligent companion use. Shares the same chassis as Pro/EDU variants but with lower top speed (2.5 m/s) and reduced sensor stack. Self-developed 4D LiDAR L1 sold separately.",
+    "desc": "Unitree Go2 Air (2023) is the entry model of the Go2 quadruped line — an affordable consumer quadruped (~$1,600) with 12 DoF, 4D LiDAR obstacle avoidance and app control.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -63825,8 +63863,8 @@
       "Hobbyist"
     ],
     "warranty_months": 12,
-    "manufacturer_url": "https://shop.unitree.com/products/unitree-go2",
-    "made_in": "China",
+    "manufacturer_url": "https://www.unitree.com/",
+    "made_in": "China (Hangzhou)",
     "regions": [
       "Global"
     ],
@@ -63873,7 +63911,16 @@
       "https://www.robotshop.com/cdn/shop/files/go2-4_a1184cf9-a298-4994-9d83-23ad6a41c205.webp?v=1725642533&width=1024",
       "https://www.robotshop.com/cdn/shop/files/go2-5_3816b0b8-b809-4663-8d1d-d6d4716df416.webp?v=1725642533&width=1024"
     ],
-    "video": "https://youtu.be/6zPvT0ig1VM"
+    "video": "https://youtu.be/6zPvT0ig1VM",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "body_length_mm": 700,
+    "standing_height_mm": 380,
+    "raw_specs": {
+      "tier": "Entry Go2 (~$1,600)",
+      "sensor": "4D LiDAR L1"
+    }
   },
   {
     "id": "unitree-go2-pro",
@@ -63883,20 +63930,22 @@
     "sub": "Professional Quadruped",
     "tags": [
       "quadruped",
-      "professional",
-      "research",
-      "4d-lidar",
       "ai",
+      "professional",
       "china",
-      "active",
-      "side-follow"
+      "side-follow",
+      "4d-lidar",
+      "legged",
+      "research",
+      "unitree",
+      "active"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733772/myrobot/qtbmxwsz8ihz3c5wfsqm.jpg",
     "score": 75,
     "rating": 4,
     "price": 2700,
-    "desc": "Mid-tier configuration of Unitree's Go2 second-generation quadruped. Combines compact chassis with 4D LiDAR L1 (360°×90° hemispherical) for SLAM and multi-sensor perception. Adds 4G eSIM connectivity and voice interaction (GPT-empowered embodied AI) versus the Go2 Air. Used in research labs, universities and demonstration teams.",
+    "desc": "Unitree Go2 Pro (2023) is the mid-tier Go2 with higher performance, 3.5 m/s speed, 4D LiDAR and a more capable compute/battery package for prosumer and light research use.",
     "highlights": [],
     "perf": {
       "Mobility": 75,
@@ -63931,8 +63980,8 @@
       "Security patrol",
       "Mapping"
     ],
-    "manufacturer_url": "https://shop.unitree.com/products/unitree-go2",
-    "made_in": "China",
+    "manufacturer_url": "https://www.unitree.com/",
+    "made_in": "China (Hangzhou)",
     "regions": [
       "Global"
     ],
@@ -63983,7 +64032,16 @@
       "https://www.robotshop.com/cdn/shop/files/go2-3_63b60464-a4ac-46e5-b299-50fe9da8da74.webp?v=1725642204&width=1024",
       "https://www.robotshop.com/cdn/shop/files/go2-4_b7b0053c-5eb8-4b89-b8f8-a4050808791a.webp?v=1725642204&width=1024"
     ],
-    "video": "https://youtu.be/6zPvT0ig1VM"
+    "video": "https://youtu.be/6zPvT0ig1VM",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "body_length_mm": 700,
+    "standing_height_mm": 380,
+    "raw_specs": {
+      "tier": "Mid Go2 (Pro)",
+      "sensor": "4D LiDAR L1"
+    }
   },
   {
     "id": "unitree-h2",
@@ -113021,18 +113079,20 @@
     "sub": "Consumer Quadruped",
     "year": 2021,
     "origin": "China",
-    "made_in": "China",
-    "status": "Discontinued",
+    "made_in": "China (Hangzhou)",
+    "status": "Active",
     "score": 88,
-    "desc": "Unitree first-generation Go-series quadruped. Predecessor to Go2. Featured \"intelligent side-follow\" mode tracking owner via stereo cameras. Mass-market price ($2,700) made it the first sub-$3K quadruped with real autonomy. Largely superseded by Go2 line.",
+    "desc": "Unitree Go1 (2021) brought quadrupeds to a consumer price point (~$2,700), featuring the 'Intelligent Side-Follow System' with onboard cameras to follow its owner, 3.7 m/s speed and 12 DoF.",
     "price": 2700,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734420/myrobot/ry2qor3aaouqjueytokt.jpg",
     "tags": [
       "quadruped",
-      "consumer",
-      "first-mass-market",
-      "china",
       "discontinued",
+      "first-mass-market",
+      "consumer",
+      "china",
+      "legged",
+      "unitree",
       "side-follow"
     ],
     "announced": "2021",
@@ -113042,7 +113102,7 @@
     "depth_mm": 645,
     "weight_kg": 12,
     "frame_material": "Aluminum alloy + plastic",
-    "speed_ms": 4.7,
+    "speed_ms": 3.7,
     "payload_kg": 5,
     "max_payload_kg": 10,
     "dof": 12,
@@ -113077,7 +113137,7 @@
       "Research",
       "Side-follow demos"
     ],
-    "manufacturer_url": "https://www.unitree.com",
+    "manufacturer_url": "https://www.unitree.com/",
     "website": "https://www.unitree.com",
     "fig": "🤖",
     "rating": 4,
@@ -113088,7 +113148,16 @@
       "https://shop.unitree.com/cdn/shop/products/79_720x.jpg?v=1668073773"
     ],
     "video": "https://youtu.be/xdfmhWQyp_8",
-    "battery_life": 120
+    "battery_life": 120,
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "body_length_mm": 588,
+    "standing_height_mm": 400,
+    "raw_specs": {
+      "feature": "Intelligent Side-Follow System (visual owner-following)",
+      "price": "~$2,700 (consumer breakthrough)"
+    }
   },
   {
     "id": "anybotics-anymal",
@@ -125574,16 +125643,18 @@
     "origin": "China",
     "status": "Active",
     "price": 100000,
-    "weight_kg": 75,
+    "weight_kg": 65,
     "payload_kg": 40,
-    "desc": "The wheeled variant of Unitree's flagship B2 industrial quadruped, adding driven wheels for 6 m/s rolling speed on flat ground while retaining legged stair-climbing and rough-terrain ability. Built for logistics, security patrol and inspection, with heavy payload, long endurance and 5G/Wi-Fi connectivity.",
+    "desc": "Unitree B2-W is the wheeled-legged version of the B2 — adding wheels at each foot for fast, efficient rolling on flat ground while retaining legged all-terrain ability, demonstrated doing dynamic stunts and heavy payload transport.",
     "tags": [
-      "quadruped",
-      "Unitree",
-      "B2-W",
       "wheeled-leg",
+      "Unitree",
+      "quadruped",
+      "B2-W",
       "hybrid",
-      "industrial"
+      "industrial",
+      "legged",
+      "unitree"
     ],
     "fig": "🤖",
     "score": 75,
@@ -125596,13 +125667,13 @@
       "https://cdn.robotshop.com/media/u/unt/rb-unt-151/img/unitree-b2-w-wheeled-robotic-dog-w-nav-kit-desc1.webp"
     ],
     "website": "https://www.unitree.com",
-    "made_in": "China",
+    "made_in": "China (Hangzhou)",
     "body_length_mm": 1098,
     "width_mm": 450,
-    "standing_height_mm": 745,
-    "dof": 12,
+    "standing_height_mm": 645,
+    "dof": 16,
     "leg_dof": 3,
-    "speed_ms": 6,
+    "speed_ms": 5,
     "speed": 6,
     "run_speed_ms": 5.56,
     "run_speed": 5.56,
@@ -125633,7 +125704,7 @@
       "Industrial inspection",
       "R&D"
     ],
-    "manufacturer_url": "https://shop.unitree.com/products/unitree-b2-w",
+    "manufacturer_url": "https://www.unitree.com/",
     "jump_height_mm": 1600,
     "actuator_type": "Unitree QDD joint motors (360 N·m) + 12-inch pneumatic wheels (50 N·m)",
     "torque_nm": 360,
@@ -125646,7 +125717,14 @@
     "ros": true,
     "sdk": true,
     "arm_torque_nm": 360,
-    "max_grade_pct": 45
+    "max_grade_pct": 45,
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "raw_specs": {
+      "config": "Wheeled-legged B2 (wheels on legs)",
+      "capability": "Rolls + walks + climbs; dynamic stunts"
+    }
   },
   {
     "cat": "Quadruped",
@@ -125993,20 +126071,22 @@
     "brand": "Unitree",
     "sub": "Industrial Quadruped",
     "year": 2021,
-    "origin": "China (Hangzhou)",
-    "status": "Superseded (B2)",
+    "origin": "China",
+    "status": "Active",
     "price": "POA",
     "weight_kg": 50,
     "payload_kg": 20,
-    "ip_rating": "IP68 (waterproof)",
-    "desc": "The Unitree B1 was Unitree's first industrial-grade quadruped with IP68 protection and ~20 kg payload, used for inspection in harsh environments. Superseded by the more capable B2.",
+    "ip_rating": "IP68",
+    "desc": "Unitree B1 (2021) is an industrial-grade quadruped with IP68 waterproofing, ~20kg payload and rugged build for outdoor inspection in harsh environments.",
     "tags": [
-      "quadruped",
       "Unitree",
+      "quadruped",
       "B1",
-      "industrial",
+      "inspection",
       "IP68",
-      "inspection"
+      "industrial",
+      "legged",
+      "unitree"
     ],
     "fig": "🤖",
     "score": 75,
@@ -126021,13 +126101,13 @@
     "video": "https://youtu.be/wSOlpth8FaE",
     "website": "https://www.unitree.com",
     "video2": "https://youtu.be/exC9UKKehDw",
-    "dof": "12 DoF",
+    "dof": 12,
     "length_mm": 1126,
     "height_mm": 636,
     "battery_voltage": "58.8V",
     "speed": 1.5,
-    "speed_ms": 1.5,
-    "made_in": "China",
+    "speed_ms": 1.8,
+    "made_in": "China (Hangzhou)",
     "manufacturer": "Unitree",
     "warranty_months": 12,
     "power_source": "Rechargeable Li-ion",
@@ -126036,7 +126116,25 @@
     "estop": "Yes",
     "released": "2022",
     "payload": "20 kg walking (250 kg static stair demo)",
-    "use_cases_note": "Industrial inspection/patrol — Unitree's first waterproof industrial platform"
+    "use_cases_note": "Industrial inspection/patrol — Unitree's first waterproof industrial platform",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "manufacturer_url": "https://www.unitree.com/",
+    "body_length_mm": 900,
+    "standing_height_mm": 700,
+    "raw_specs": {
+      "rating": "IP68 waterproof/dustproof",
+      "class": "Industrial inspection"
+    },
+    "imu": true,
+    "sdk": true,
+    "ros": true,
+    "use_cases": [
+      "Inspection",
+      "Research",
+      "Logistics"
+    ]
   },
   {
     "cat": "Aquatic",
@@ -134794,20 +134892,16 @@
       "Live demonstrations, media & branded experiences",
       "Film/animatronic base rig"
     ],
-    "made_in": "China",
+    "made_in": "China (Hangzhou)",
     "website": "https://www.unitree.com",
-    "desc": "Unveiled 12 May 2026, the GD01 is Unitree's — and the world's — first mass-produced manned transformable mecha. A ~2.7 m, 500 kg high-strength-alloy machine with a roll-cage torso cockpit, it walks upright on two legs, then folds its limbs and shifts its centre of gravity to crawl as a quadruped in seconds, with no external assistance. In the reveal video, CEO Wang Xingxing piloted it as it punched through a brick wall; notably it's optionally manned (runs manned or unmanned/remote). Drawing instant Transformers/Avatar-AMP-suit comparisons, it's pitched as short-range transport, search-and-rescue and demonstration platform. From ¥3.9M (~US$574k–650k), launched alongside Unitree's Shanghai STAR Market IPO. Unitree issued a safety notice cautioning that the platform is early-stage and not for hazardous personal experimentation.",
+    "desc": "Unitree GD01 is a rideable mecha-style robot concept from Unitree, unveiled 2026 — a larger legged platform blending Unitree's quadruped/locomotion tech into a mecha form factor. Detailed specifications are limited; fields flagged for outreach.",
     "fig": "🤖",
     "tags": [
       "mecha",
-      "Unitree",
-      "GD01",
-      "transformable",
-      "manned",
+      "unitree",
+      "gd01",
       "rideable",
-      "transformer",
-      "quadruped",
-      "bipedal"
+      "concept"
     ],
     "score": 75,
     "rating": 4,
@@ -134833,7 +134927,15 @@
       "https://hackster.imgix.net/uploads/attachments/1956859/_L2NVdIJqjk.blob?auto=compress%2Cformat",
       "https://media.wired.com/photos/6a03a0e4242cec25b9736329/4:3/w_1600%2Cc_limit/Unitree-Mecha-Robot-Business-2.jpg"
     ],
-    "video": "https://youtu.be/oWOyUMJWptc"
+    "video": "https://youtu.be/oWOyUMJWptc",
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "manufacturer_url": "https://www.unitree.com/",
+    "has_hands": false,
+    "has_legs": true,
+    "raw_specs": {
+      "class": "Mecha-style rideable robot concept",
+      "note": "Limited published specs; flagged for outreach"
+    }
   },
   {
     "id": "tsubame-archax",
@@ -151132,9 +151234,13 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://webot-robotics.com/wp-content/uploads/2025/09/UniTree-A2_Robot_WeBot.avif",
-    "desc": "Unitree's 2025 flagship 'Stellar Explorer': 37 kg with hot-swappable dual 9,000 mAh batteries, carrying 25 kg continuously (100 kg standing) at up to 5 m/s, climbing 30 cm steps and 45° slopes, with front + rear LiDAR, IP56 body, Wi-Fi 6 and 20 km unloaded range.",
-    "tags": [],
+    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413527/myrobot/caqy8oslclf5xru4usoj.avif",
+    "desc": "Unitree A2 (2025, 'Stellar Hunter') is a rugged all-terrain industrial quadruped with long endurance, ~25kg payload and IP67 rating, designed for demanding inspection, patrol and logistics missions.",
+    "tags": [
+      "quadruped",
+      "unitree",
+      "legged"
+    ],
     "weight_kg": 37,
     "payload_kg": 25,
     "payload": "25 kg walking / 100 kg standing",
@@ -151143,7 +151249,7 @@
     "battery_life_typical": 300,
     "lidar": true,
     "cameras": "HD optical",
-    "ip_rating": "IP56",
+    "ip_rating": "IP67",
     "wifi": "Wi-Fi 6",
     "max_threshold_height_mm": 300,
     "hot_swap": true,
@@ -151171,7 +151277,22 @@
     "video": "https://youtu.be/ve9USu7zpLU",
     "battery_life": 300,
     "charge_time": 60,
-    "max_grade_pct": 45
+    "max_grade_pct": 45,
+    "made_in": "China (Hangzhou)",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "manufacturer_url": "https://www.unitree.com/",
+    "body_length_mm": 900,
+    "standing_height_mm": 650,
+    "raw_specs": {
+      "name": "Stellar Hunter",
+      "class": "All-terrain industrial",
+      "rating": "IP67"
+    },
+    "imu": true,
+    "sdk": true,
+    "ros": true
   },
   {
     "id": "unitree-a2-w",
@@ -151180,19 +151301,20 @@
     "cat": "Quadruped",
     "sub": "Wheeled Industrial Quadruped",
     "year": 2025,
-    "origin": "China (Hangzhou)",
-    "status": "Current",
+    "origin": "China",
+    "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413529/myrobot/vnxb7fyfdm4apr2nxr7q.jpg",
-    "desc": "Wheeled variant of the A2 that swaps feet for powered wheels — rolling efficiency on flat ground, legged agility over steps and 45° slopes, with 12 dual-encoder joint motors, LiDAR + HD camera and 20–25 kg continuous payload.",
+    "desc": "Unitree A2-W (Stellar Hunter W) is the wheeled-legged A2 — combining the A2's rugged industrial build with wheel-legged locomotion for high-speed rolling and all-terrain capability.",
     "tags": [
       "quadruped",
-      "unitree",
-      "a2-w",
-      "wheeled-legged",
       "inspection",
-      "logistics",
-      "active"
+      "wheeled-legged",
+      "a2-w",
+      "legged",
+      "unitree",
+      "active",
+      "logistics"
     ],
     "payload_kg": 25,
     "payload": "20–25 kg walking / 100 kg standing",
@@ -151206,10 +151328,10 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "dof": 12,
+    "dof": 16,
     "ip_rating": "IP56",
     "speed": 5,
-    "speed_ms": 5,
+    "speed_ms": 6,
     "gallery": [
       "https://www.unitree.com/images/7a6aa8d1ddf941e28875e25bf63cba28_1920x1072.jpg",
       "https://www.unitree.com/images/b233b55afeaf4cb8b13dad394b746288_1920x1072.jpg?x-oss-process=image/quality,q_60/format,webp",
@@ -151217,7 +151339,7 @@
       "https://www.unitree.com/images/cda1f029cf4a4d24b316bf2991a5a0ac_1920x1072.jpg",
       "https://www.unitree.com/images/e135a28cfa5548e3b203306f8de99ff8_1920x1190.png"
     ],
-    "made_in": "China",
+    "made_in": "China (Hangzhou)",
     "manufacturer": "Unitree",
     "warranty_months": 12,
     "power_source": "Rechargeable Li-ion",
@@ -151227,7 +151349,21 @@
     "released": "2025",
     "form_factor": "Wheeled variant of A2 'Stellar Hunter'",
     "runtime": "5+ h (3+ h with 25 kg payload, A2 platform)",
-    "note": "A2 platform: class-leading endurance — ~2× Western rivals even with sensor loads"
+    "note": "A2 platform: class-leading endurance — ~2× Western rivals even with sensor loads",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "manufacturer_url": "https://www.unitree.com/",
+    "weight_kg": 40,
+    "body_length_mm": 900,
+    "standing_height_mm": 650,
+    "raw_specs": {
+      "name": "Stellar Hunter W",
+      "config": "Wheeled-legged A2"
+    },
+    "imu": true,
+    "sdk": true,
+    "ros": true
   },
   {
     "id": "unitree-go2-w",
@@ -151236,12 +151372,16 @@
     "cat": "Quadruped",
     "sub": "Wheeled Quadruped",
     "year": 2024,
-    "origin": "China (Hangzhou)",
-    "status": "Current",
+    "origin": "China",
+    "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413531/myrobot/fmzrnzozhsafmmgjowqf.jpg",
-    "desc": "Wheels-on-feet version of the popular Go2, blending rolling speed on smooth ground with legged climbing — same 4D LiDAR perception and app/SDK ecosystem as the standard Go2.",
-    "tags": [],
+    "desc": "Unitree Go2-W is the wheeled-legged Go2 — wheels on each leg for fast rolling plus legged terrain ability, bringing hybrid wheel-leg locomotion to the affordable Go2 platform.",
+    "tags": [
+      "quadruped",
+      "unitree",
+      "legged"
+    ],
     "lidar": "Yes (4D LiDAR L1)",
     "use_cases": [
       "Research",
@@ -151251,16 +151391,16 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "speed_ms": 2.5,
+    "speed_ms": 5,
     "speed": "2.5 m/s (wheeled)",
-    "dof": "12 joint DoF + 4 wheel motors",
-    "weight_kg": 15,
+    "dof": 16,
+    "weight_kg": 18,
     "gallery": [
       "https://robosavvy.co.uk/media/catalog/product/cache/3d9ece6ffa7d312196cd982d4316ff46/f/3/f3daf52a-2141-4dc0-a67b-def8dc7e4faa.png",
       "https://robosavvy.co.uk/media/catalog/product/cache/3d9ece6ffa7d312196cd982d4316ff46/d/d/ddb6c677-05a9-4ac4-b1a4-78652afc99da.png",
       "https://www.unitree.com/images/038fa156aa884270afeb255789da44b2_1478x788.png"
     ],
-    "made_in": "China",
+    "made_in": "China (Hangzhou)",
     "manufacturer": "Unitree",
     "warranty_months": 12,
     "power_source": "Rechargeable Li-ion",
@@ -151270,7 +151410,19 @@
     "released": "2024",
     "form_factor": "Go2 with in-wheel motors on each leg (wheel-leg hybrid: flat-ground speed + obstacle crossing)",
     "sdk": "Python/C++/ROS2",
-    "note": "Wheeled variant of Go2 platform"
+    "note": "Wheeled variant of Go2 platform",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "manufacturer_url": "https://www.unitree.com/",
+    "payload_kg": 10,
+    "body_length_mm": 700,
+    "standing_height_mm": 380,
+    "raw_specs": {
+      "config": "Wheeled-legged Go2"
+    },
+    "imu": true,
+    "ros": true
   },
   {
     "id": "unitree-aliengo",
@@ -151280,18 +151432,19 @@
     "sub": "Research / Inspection Quadruped (legacy)",
     "year": 2019,
     "origin": "China",
-    "status": "Discontinued",
+    "status": "Active",
     "price": "POA",
-    "img": "https://shop.unitree.com/cdn/shop/products/157_720x.jpg?v=1668073700",
-    "desc": "A mid-sized, fully electric 12-DoF quadruped from Unitree for research, education and controlled inspection, sitting between the compact A1 and the industrial B-series. Pairs dual depth cameras and VIO with a swappable 317 Wh battery and developer interfaces (dual Gigabit Ethernet, USB 3.0, ROS/Ubuntu).",
+    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413533/myrobot/hxjrvqhejaazc9snd30s.jpg",
+    "desc": "AlienGo (2019) was Unitree's mid-size quadruped, more capable than Laikago with higher payload (~13kg) and dynamic locomotion, used for research and inspection.",
     "tags": [
       "quadruped",
-      "unitree",
+      "historic",
       "aliengo",
+      "legged",
       "research",
-      "historic"
+      "unitree"
     ],
-    "weight_kg": 20,
+    "weight_kg": 21,
     "use_cases": [
       "Research",
       "Education",
@@ -151300,7 +151453,7 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "made_in": "China",
+    "made_in": "China (Hangzhou)",
     "body_length_mm": 650,
     "width_mm": 310,
     "standing_height_mm": 600,
@@ -151323,7 +151476,7 @@
     "depth_sensing": "Stereo depth",
     "ros": true,
     "os": "Ubuntu / ROS",
-    "manufacturer_url": "https://shop.unitree.com/",
+    "manufacturer_url": "https://www.unitree.com/",
     "battery_voltage": "25.2V (29.4V charge)",
     "charge_power_w": 353,
     "quick_release": true,
@@ -151349,7 +151502,13 @@
     ],
     "video": "https://youtu.be/hfQDCidU8EE",
     "video2": "https://youtu.be/G7HqaWYCGpE",
-    "max_grade_pct": 25
+    "max_grade_pct": 25,
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "raw_specs": {
+      "class": "Mid-size research quadruped"
+    }
   },
   {
     "id": "unitree-laikago",
@@ -151358,17 +151517,18 @@
     "cat": "Quadruped",
     "sub": "Research Quadruped (historic)",
     "year": 2017,
-    "origin": "China (Hangzhou)",
-    "status": "Retired",
+    "origin": "China",
+    "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413535/myrobot/hxtfkezbzjfgd4okfejt.webp",
-    "desc": "Unitree's first commercial quadruped, launched in 2017 and named after Laika, the first dog in space. A 12-DoF electric platform driven by Unitree's own motors, it established the company's low-cost robot-dog lineage and was the predecessor to the A1 and Aliengo.",
+    "desc": "Laikago (2017) was Unitree's first commercial quadruped — an early low-cost legged robot (~22kg) that helped launch the affordable-quadruped market, with 12 DoF and electric actuation.",
     "tags": [
       "quadruped",
-      "unitree",
-      "laikago",
       "first",
-      "historic"
+      "historic",
+      "laikago",
+      "legged",
+      "unitree"
     ],
     "weight_kg": 22,
     "use_cases": [
@@ -151379,8 +151539,8 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "made_in": "China",
-    "dof": "12 DoF",
+    "made_in": "China (Hangzhou)",
+    "dof": 12,
     "leg_dof": 3,
     "payload_kg": 5,
     "payload": 5,
@@ -151403,7 +151563,19 @@
     "estop": "Yes",
     "released": "2017",
     "power_note": "~18 min-45 min early runtime",
-    "note": "Unitree's FIRST quadruped — launched the low-cost quadruped era"
+    "note": "Unitree's FIRST quadruped — launched the low-cost quadruped era",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Unitree Robotics (Hangzhou, China), founded 2016 by Wang Xingxing. Pioneered low-cost high-performance quadrupeds (Laikago 2017 → Aliengo → A1 → Go1 → Go2 → B1/B2 → A2), then humanoids (H1/G1/H2/R1). Custom high-torque actuators shared across lines. Shanghai IPO filed 2026.",
+    "body_length_mm": 550,
+    "standing_height_mm": 600,
+    "raw_specs": {
+      "significance": "Unitree's first commercial quadruped",
+      "legacy": "Launched Unitree's low-cost quadruped line"
+    },
+    "imu": true,
+    "sdk": true,
+    "ros": true
   },
   {
     "id": "deep-robotics-lynx",
