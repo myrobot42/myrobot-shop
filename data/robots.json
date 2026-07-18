@@ -129748,7 +129748,7 @@
     "power_consumption_w": "INFO NOT FOUND",
     "ota": true,
     "sim_platform": "NVIDIA Isaac Sim / MuJoCo / Gazebo (LimX dev toolchain)",
-    "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024.",
+    "manufacturer_history": "LimX Dynamics (Shenzhen), incubated 2022. X1 quadruped prototype (2022) → W1 wheeled-legged (Sept 2023) → CL-1 humanoid (Dec 2023) → TRON 1 (Oct 2024) → TRON 2 (Dec 2024) → Oli (Jul 2025) → Luna + COSA OS (2026). Backed by Alibaba, JD.com; iF Design 2024.",
     "bimanual": "INFO NOT FOUND",
     "bionic_face": false,
     "display_face": "Not applicable (no face screen)",
@@ -129781,7 +129781,13 @@
     "thermal_camera": "Info not found",
     "end_effector": "Simple paddle end-effectors (grip totes/boxes) — no articulated hand; CL-1 was purely a locomotion research platform",
     "has_hands": false,
-    "has_legs": true
+    "has_legs": true,
+    "raw_specs": {
+      "notable": "First LimX humanoid; first public dynamic test Dec 2023",
+      "demo": "Continuous heavy-object loading (Aug 2024)",
+      "role": "Full-size humanoid for research, logistics/warehouse, industrial inspection",
+      "lineage": "CL-1 (2023) → successor humanoids Oli (2025), Luna (2026)"
+    }
   },
   {
     "cat": "Humanoid",
@@ -132291,14 +132297,14 @@
     "name": "P1",
     "brand": "LimX Dynamics",
     "cat": "Humanoid",
-    "sub": "Point-Foot Biped (RL Research Platform)",
+    "sub": "Point-Foot Biped (RL research prototype)",
     "perf": false,
     "price": "POA",
-    "status": "Active",
+    "status": "Discontinued",
     "year": 2024,
-    "origin": "China",
+    "origin": "China (Shenzhen)",
     "feature": "Point-foot bipedal locomotion; RL testbed; robust untethered walking across unstructured outdoor terrain (grass, slopes, woodland)",
-    "desc": "The LimX Dynamics P1 is an innovative point-foot biped robot — legs only, with no feet — that serves as LimX's platform for systematic development and modular testing of reinforcement-learning locomotion. Deliberately minimal, its point-foot design makes balance and control maximally challenging, which is exactly why it's valuable for RL research: mastering it proves the underlying algorithms. P1 famously conquered unstructured forest terrain and recovers from kicks and pushes, carrying up to 10 kg at around 0.5 m/s, demonstrating the robustness of LimX's reinforcement-learning approach that later fed into the full humanoid CL series. NOTE: core specs from LimX/official and secondary coverage; P1 is a research testbed so some spec fields (height, weight, DOF) aren't formally published and are flagged rather than invented.",
+    "desc": "The LimX P1 is LimX Dynamics' point-foot biped research robot, first shown March 2024 — the one-off experimental predecessor to the commercial TRON 1. Built as a platform for systematic reinforcement-learning development, P1 famously navigated the wild terrain of Shenzhen's Tanglang Mountain using zero-shot learning (trained purely in simulation, with no forest/hiking data), demonstrating dynamic locomotion and push/kick recovery over unpredictable ground. It moves up to 0.5 m/s, carries ~10 kg, and runs an Intel Core embedded computer with an RGBD camera and IMU, supporting Gazebo, MuJoCo and Isaac Gym simulation. As an internal research prototype it has limited published specifications; unpublished fields are flagged for outreach rather than guessed. Verified from LimX's official P1 materials.",
     "tags": [
       "humanoid",
       "limx-dynamics",
@@ -132307,13 +132313,12 @@
       "biped",
       "reinforcement-learning",
       "research",
-      "terrain",
-      "active"
+      "discontinued"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "announced": "2024",
+    "announced": "2024-03",
     "gait_modes": [
       "Point-foot"
     ],
@@ -132325,24 +132330,24 @@
       "https://shop.limxdynamics.com/cdn/shop/articles/P1.png?v=1737602342",
       "https://cdn.shopify.com/s/files/1/0676/8535/1597/files/1_oNJCI17LYrkHr6zwDrbljw.webp?v=1737528115"
     ],
-    "website": "https://www.limxdynamics.com",
+    "website": "https://www.limxdynamics.com/en",
     "platform_type": "Point-foot biped research platform",
     "ros": true,
     "open_source": true,
-    "sdk": "LimX SDK",
+    "sdk": true,
     "research_areas": [
       "Reinforcement learning locomotion",
       "Bipedal balance",
       "Sim-to-real"
     ],
     "simulation_support": "Isaac Gym, MuJoCo",
-    "video": "https://youtu.be/UpNid_rWDnI",
+    "video": "https://youtu.be/tEYLccxFuns",
     "cats": [
       "Humanoid",
       "Research"
     ],
     "leg_dof": 6,
-    "actuator_type": "Proprietary actuators",
+    "actuator_type": "Electric joint actuators",
     "made_in": "China (Shenzhen)",
     "released": "2024",
     "manufacturer_url": "https://www.limxdynamics.com/en",
@@ -132355,9 +132360,38 @@
     "speed": 0.5,
     "fall_recovery": true,
     "capabilities": "Point-foot bipedal locomotion research platform; kick/push recovery; conquered forest/uneven terrain via reinforcement learning; modular RL testing",
-    "ai_model": "Reinforcement-learning locomotion (systematic R&D platform)",
+    "ai_model": "Reinforcement learning (zero-shot terrain generalization); multi-sensor fusion terrain mapping",
     "developed_by": "LimX Dynamics (founded 2022, Shenzhen)",
-    "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024."
+    "manufacturer_history": "LimX Dynamics (Shenzhen), incubated 2022. X1 quadruped prototype (2022) → W1 wheeled-legged (Sept 2023) → CL-1 humanoid (Dec 2023) → TRON 1 (Oct 2024) → TRON 2 (Dec 2024) → Oli (Jul 2025) → Luna + COSA OS (2026). Backed by Alibaba, JD.com; iF Design 2024.",
+    "has_hands": false,
+    "has_legs": true,
+    "status_note": "Research prototype; one-off predecessor to the commercial TRON 1",
+    "locomotion": "Point-foot bipedal (RL-driven dynamic locomotion)",
+    "chipset": "Intel Core embedded computer",
+    "imu": true,
+    "cameras": "RGBD camera",
+    "depth_sensing": "RGBD",
+    "sdk_langs": [
+      "Python",
+      "C++"
+    ],
+    "use_cases": [
+      "Reinforcement-learning research",
+      "Bipedal locomotion R&D",
+      "Modular RL testing"
+    ],
+    "raw_specs": {
+      "role": "RL research platform (systematic + modular reinforcement-learning testing)",
+      "notable_demo": "Zero-shot traversal of Tanglang Mountain, Shenzhen (430m peak) — no terrain data in training",
+      "robustness": "Recovers from external pushes and kicks (RL-based balance)",
+      "simulation": [
+        "NVIDIA Isaac Gym",
+        "MuJoCo",
+        "Gazebo"
+      ],
+      "perception": "Multi-sensor fusion → high-quality topographic terrain maps",
+      "lineage": "One-off P1 prototype → commercialized as TRON 1 (Oct 2024)"
+    }
   },
   {
     "id": "limx-dynamics-luna",
@@ -150744,7 +150778,13 @@
     "chipset": "Info not found",
     "imu": "Info not found",
     "lidar": "Info not found",
-    "manufacturer_history": "LimX Dynamics (Shenzhen), founded/incubated 2022. Timeline: X1 quadruped prototype (Aug 2022, achieved forward stair-climbing Sept 2022); W1 wheeled-legged robot (Sept 2023); CL-1 humanoid first public dynamic test (Dec 2023); TRON 1 multi-modal biped (Oct 2024); TRON 2 multi-form embodied robot (Dec 2024); Oli general-purpose humanoid (Jul 2025); Luna interactive humanoid + COSA agentic OS (2026). Backed by Alibaba, JD.com, and others; ~200M RMB angel/pre-A. Awards incl. iF Design 2024."
+    "manufacturer_history": "LimX Dynamics (Shenzhen), incubated 2022. X1 quadruped prototype (2022) → W1 wheeled-legged (Sept 2023) → CL-1 humanoid (Dec 2023) → TRON 1 (Oct 2024) → TRON 2 (Dec 2024) → Oli (Jul 2025) → Luna + COSA OS (2026). Backed by Alibaba, JD.com; iF Design 2024.",
+    "raw_specs": {
+      "notable": "LimX's first wheeled-legged robot (Sept 2023)",
+      "locomotion_detail": "Skates on wheels, stands/walks/climbs on legs (hybrid wheel-legged)",
+      "lineage": "Followed X1 quadruped prototype (2022); early platform, now superseded",
+      "status": "Superseded R&D platform — not in current LimX lineup"
+    }
   },
   {
     "id": "tencent-max",
