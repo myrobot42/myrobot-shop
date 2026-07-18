@@ -133613,7 +133613,7 @@
     ],
     "score": 75,
     "rating": 4,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413065/myrobot/dusnglv5m0dlgodudyts.png",
+    "img": "https://cdn.robodk.com/robot/img/PUMA-560-robot.png",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/23/6hSA2KbH2I6e1YBdtmaz/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/23/FrFrsJPAqoHsfCddTXzo/image.jpg",
@@ -133639,7 +133639,8 @@
     ],
     "programming_langs": [
       "VAL"
-    ]
+    ],
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "sankyo-skilam-scara",
@@ -134734,7 +134735,7 @@
     "rating": 4,
     "released": "2025",
     "battery": "Smart swappable",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413102/myrobot/oxxieb7uxen0dnfzkig4.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202606/24/ePGUvBIMncIrbpWhknG5/image.jpg",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/24/9vvztvvqbXcMkJdNckRh/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/24/FFff3Z5pwmNxVOsXNonV/image.jpg",
@@ -134753,7 +134754,8 @@
     "sub": "Compact Humanoid (dual-arm config)",
     "hot_swap": "Yes",
     "compute": "8-core CPU + GPU",
-    "note": "R1 platform variant emphasizing bimanual manipulation"
+    "note": "R1 platform variant emphasizing bimanual manipulation",
+    "hand_repeatability_mm": "±0.1 mm (end gripper)"
   },
   {
     "id": "persona-ai-humanoid",
@@ -134884,7 +134886,7 @@
     "speed": 1.5,
     "battery": 120,
     "actuator_type": "Straight-knee walking drive",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413106/myrobot/eutbdslxdgxb0sxebrbf.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202606/29/KEGs6ZCJIghErQmFBvrC/image.jpg",
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/DOBOT_Atom_PB1_12fd1dae.png",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1747800943/robots/ooplo06gxueqqtqzj3qw.jpg",
@@ -134903,7 +134905,8 @@
     "gait": "'Straight-knee' gait — claimed 42% walking-energy reduction",
     "price_note": "US$79,000 official US store (add-to-cart); ¥199,000 (~$27.5k) China — 3× gap",
     "deployments": "Three mass-delivery batches since Nagoya global handover (Jun 2025); industrial assembly validation + Shenzhen cinema service floor",
-    "note": "Runtime and payload unpublished — outreach items"
+    "note": "Runtime and payload unpublished — outreach items",
+    "hand_repeatability_mm": "±0.05 mm (claimed, inherited from Dobot cobot arms)"
   },
   {
     "cat": "Humanoid",
@@ -134964,7 +134967,7 @@
     "speed": 1.5,
     "battery": 120,
     "actuator_type": "Electric",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413108/myrobot/mfhov1v6tlg4rbxczy41.webp",
+    "img": "https://www.mzxrobotics.com/img/96483/DBT-ATOM-MAX/1000x1000/DBT-ATOM-MAX.webp?time=1776940293",
     "gallery": [
       "https://www.mzxrobotics.com/img/96483/DBT-ATOM-MAX_altpic_1/1000x1000/DBT-ATOM-MAX.webp?time=1776940293",
       "https://www.mzxrobotics.com/img/96483/DBT-ATOM-MAX_altpic_2/1000x1000/DBT-ATOM-MAX.webp?time=1776940293",
@@ -134979,7 +134982,8 @@
     "manufacturer": "DOBOT",
     "released": "2026",
     "hands": "Five-fingered dexterous hands",
-    "note": "Larger Atom trim; official per-model specs sparse — verified platform only"
+    "note": "Larger Atom trim; official per-model specs sparse — verified platform only",
+    "hand_repeatability_mm": 0.05
   },
   {
     "cat": "Humanoid",
@@ -135191,14 +135195,15 @@
       "Pro (200 TOPS)"
     ],
     "announced": "2023",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413114/myrobot/jkr6rqbc6vbkxecnjnh4.webp",
+    "img": "https://www.booster.tech/_astro/specification-k1.CqLuX2Lk_2pgwi9.webp",
     "gallery": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSknA5i1Pbxt_X3zW8dcblC6bqUQLAoGd38MLRSIv7NsHNnAH0rH_AIqenZ&s=10",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68d3bd3c81748ca4a9a876e2_K1_01.webp",
       "https://cdn-reichelt.de/bilder/web/xxl_ws/A300%2FBR_BOOSTER_K1_01.png?type=ProductXxl&",
       "https://cdn.robotshop.com/media/b/boo/rb-boo-10/img/booster-robotics-k1-edu-humanoid-robot-structure.webp"
     ],
-    "video": "https://youtu.be/SiXZYbIDvRw"
+    "video": "https://youtu.be/SiXZYbIDvRw",
+    "arm_torque_nm": 60
   },
   {
     "cat": "Humanoid",
@@ -135387,7 +135392,7 @@
     "weight_kg": 0.8,
     "software": "myBlockly (visual), Python, ROS (Ubuntu 18.04); myStudio platform",
     "note": "Worlds smallest/lightest 6-axis cobot; 10,000+ sold across 50+ countries",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413124/myrobot/tjhe4gjzeytmsrsjxtbt.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202606/22/Wf9vDhzAZD23FzhgP8Ey/image.jpg",
     "gallery": [
       "https://shop.elephantrobotics.com/cdn/shop/collections/cobot_collaborative-robot_6dof-robitc-arm_6-axis-robot-arm-for-education_ROS-robot_6-DoF-collaborative-robot-M5stack-1.jpg?v=1689736736",
       "https://static.elephantrobotics.com/wp-content/uploads/2022/02/%E8%B4%AD%E4%B9%B0%E5%8C%BA%E4%BA%A7%E5%93%81.png",
@@ -135440,7 +135445,8 @@
     "usb": "USB Type-C",
     "collision_detection": false,
     "ce": true,
-    "datasheet": "https://www.elephantrobotics.com/en/mycobot-280-m5-2023-specificatons-en/"
+    "datasheet": "https://www.elephantrobotics.com/en/mycobot-280-m5-2023-specificatons-en/",
+    "hand_repeatability_mm": 0.5
   },
   {
     "cat": "Industrial",
@@ -136058,7 +136064,7 @@
     "launch_event": "Unveiled at 2026 NADA Show, Las Vegas (Feb 2026)",
     "product_line": "Bionic quadruped in FF first embodied-AI wave (with FF Futurist + FF Master humanoids)",
     "spec_notes": "Just-announced — detailed technical specifications not yet publicly disclosed by Faraday Future.",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413142/myrobot/syiyajkracmaaafhbwow.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202606/25/UNbhxcRKFbkbXA8LrJnI/image.jpg",
     "gallery": [
       "https://genesis-cdn.ff.com/BruceLee/neweb/0614/new0614-2/FX-Aegis-default.jpg",
       "https://genesis-cdn.ff.com/ff-robot/fx-aegis-3-default.jpg",
@@ -136073,7 +136079,9 @@
     "wifi": "Wi-Fi",
     "cellular": "5G",
     "fcc": true,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "arm_torque_nm": 48,
+    "max_grade_pct": 40
   },
   {
     "cat": "Industrial",
@@ -136221,7 +136229,7 @@
     "sensors": "Embedded Cognex vision, force sensing",
     "software": "Intera SDK, ROS; drag-teach",
     "note": "Single-arm successor to Baxter; high-precision; continued under HAHN Group after Rethink closed",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413149/myrobot/cycvqmzcihustwlwpe54.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/T3kRXLNwlV8pHvOE67oo/image.jpg",
     "gallery": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUfzpCVjsJ96bExTQZEGD08g1yZhfOV1xyJqevkmoN5g&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSPOx3DUuRMa0a-vhaf8f38aoSY3627Kt2_E-bqJc0pQ&s=10",
@@ -136259,7 +136267,8 @@
     "iso_certs": [
       "ISO 10218-1:2011",
       "PL d Cat. 3"
-    ]
+    ],
+    "hand_repeatability_mm": 0.1
   },
   {
     "cat": "Quadruped",
@@ -136296,7 +136305,7 @@
     "height_mm": 760,
     "funding": "DARPA-funded (2005)",
     "note": "Stayed upright when kicked/on ice; loud, never fielded; led to Spot",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413151/myrobot/alvoomhbazcscjwuj4kh.jpg",
+    "img": "https://cdn.sanity.io/images/7p2whiua/production/5c5f98c767f4d84d23f1028cccb30ba5f2b313e0-1200x1000.jpg",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/29/ZfxDP10OdAVnM5zU74He/image.jpg",
       "https://cdn.sanity.io/images/7p2whiua/production/139ed93ca5f5b206b9f75e83f8acc7218ff8cb58-2048x1536.jpg",
@@ -136307,7 +136316,8 @@
     "dof": 12,
     "max_incline_deg": 35,
     "os": "QNX RTOS",
-    "lidar": true
+    "lidar": true,
+    "max_grade_pct": 35
   },
   {
     "cat": "Quadruped",
@@ -136746,7 +136756,7 @@
     "warranty": "2-year",
     "mounting": "Wheelchair-mountable (assistive); also research manipulator",
     "note": "Carbon-fibre assistive arm; per-actuator sensing; widely used as research manipulator",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413166/myrobot/keqq0tnnmgf1vr2fnoue.webp",
+    "img": "https://www.kinovarobotics.com/uploads/_2000xAUTO_crop_center-center_none/418574/Kinova_Jaco.webp",
     "gallery": [
       "https://www.kinovarobotics.com/uploads/_2000xAUTO_crop_center-center_none/410626/Untitled-design-64.webp",
       "https://www.kinovarobotics.com/uploads/_2000xAUTO_crop_center-center_none/410630/Untitled-design-63.webp",
@@ -136754,7 +136764,8 @@
       "https://www.kinovarobotics.com/uploads/_2000xAUTO_crop_center-center_none/410686/Untitled-design-63_2024-11-28-155624_ynwo.webp",
       "https://www.kinovarobotics.com/uploads/_2000xAUTO_crop_center-center_none/421813/Jaco_product-specs-1600-x-1100-px.webp"
     ],
-    "video": "https://youtu.be/va0moMnSl-k"
+    "video": "https://youtu.be/va0moMnSl-k",
+    "warranty_months": "2-year"
   },
   {
     "cat": "Quadruped",
@@ -137365,7 +137376,7 @@
     "score": 75,
     "rating": 4,
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413187/myrobot/y1qcmoz8zyxphz4fibre.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202606/24/Bfr7AseZdHgel7NPwTNl/image.jpg",
     "desc": "TORA-ONE is a wheeled humanoid robot from Shenzhen-based PaXini Tech, a tactile-sensing specialist backed by a 100-million-yuan strategic investment from BYD. Built around PaXini's 6D Hall-array tactile technology, it carries roughly 1,956 tactile sensors (7,824 channels) alongside five RGB monocular cameras, two depth cameras, fisheye vision and LiDAR with laser SLAM. With an adjustable height of 1.46-1.86 m, 47 degrees of freedom (21 in the body, 26 across its four-fingered bionic hands), plus or minus 0.05 mm arm-positioning accuracy and up to 8 kg per arm, it targets precision assembly, logistics, healthcare and service tasks. TORA-ONE debuted at CES 2026 demonstrating autonomous workflows from ice-cream making to pallet handling, and runs about eight hours per charge.",
     "announced": "January 2026 (CES 2026)",
     "height_mm": 1860,
@@ -137415,7 +137426,8 @@
     ],
     "video": "https://youtu.be/jwGz_x1xASI",
     "touch_sensing": "Multi-dimensional tactile (PaXini DTactile)",
-    "fingertip_force_sensors": true
+    "fingertip_force_sensors": true,
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "ubtech-u1-pro",
@@ -137717,7 +137729,7 @@
     "desc": "Lightning (闪电) is a high-speed bipedal humanoid from Chinese smartphone maker Honor that stunned the field by winning the 2026 Beijing E-Town Humanoid Robot Half Marathon on 19 April 2026 — completing the 21.1 km course autonomously in a net 50:26, faster than the human half-marathon world record of 57:20 (a second, remote-controlled Lightning ran 48:19). Standing 169 cm with a cool mecha-style red chassis, it uses joints rated to 400 N·m and a smartphone-derived liquid-cooling system (water-cooled motors) for sustained high-output running. Perception fuses multiple sensors including Hesai JT-series 360° LiDAR, and its brain is Honor's on-device MagicOS model paired with the YOYO agent, offering both fully-autonomous-navigation and remote-control variants. Honor built it in under a year by repurposing its phone supply chain (image-stabilisation, attitude and gyro algorithms for balance; BMS and SoC compute). It is a flagship locomotion showcase rather than a general-purpose worker.",
     "fig": "🤖",
     "rating": 4,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413197/myrobot/r8ubfnzkqapkwizifzjl.png",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202606/30/AW3cky5i2Ck6nh5qNnjI/image.png",
     "gallery": [
       "https://mezha.net/wp-content/uploads/2026/04/19/honor-s-robot-lightning-outran.webp",
       "https://stuff.co.za/wp-content/uploads/2026/04/Honor-Lightning.png",
@@ -137746,7 +137758,8 @@
       "Athletic / marathon demonstration"
     ],
     "made_in": "China (Honor, Shenzhen)",
-    "manufacturer_history": "Honor (荣耀), Shenzhen — former Huawei sub-brand, independent since 2020. Entered robotics via its 'Alpha Strategy' (MWC Barcelona, Mar 2025); Lightning developed in <1 year by a 2,600+ team using phone-supply-chain partners (Lingyi iTech, Lens/Lansheng, AAC Technologies, Huake Lengxin liquid-cooling pumps). Honor is also planning a quadruped 'Anzai' and a 'Luban' dexterous hand."
+    "manufacturer_history": "Honor (荣耀), Shenzhen — former Huawei sub-brand, independent since 2020. Entered robotics via its 'Alpha Strategy' (MWC Barcelona, Mar 2025); Lightning developed in <1 year by a 2,600+ team using phone-supply-chain partners (Lingyi iTech, Lens/Lansheng, AAC Technologies, Huake Lengxin liquid-cooling pumps). Honor is also planning a quadruped 'Anzai' and a 'Luban' dexterous hand.",
+    "arm_torque_nm": 400
   },
   {
     "id": "honor-yuanqi-zai-2026",
@@ -138037,7 +138050,8 @@
       "https://www.booster.tech/_astro/elbow.DMDYQZj9_19oOtA.webp",
       "https://www.booster.tech/_astro/t2-modal-en-poster.DLI8ya99_27T8bI.webp"
     ],
-    "video": "https://youtu.be/yyAgPHg4VS4"
+    "video": "https://youtu.be/yyAgPHg4VS4",
+    "arm_torque_nm": 130
   },
   {
     "id": "yobotics-xingzhe-taishan",
@@ -138145,7 +138159,7 @@
     "origin": "China (Beijing Noetix Robotics)",
     "status": "Current",
     "price": 5500,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413209/myrobot/klvks9ig7tncwpbuabao.png",
+    "img": "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/682827f26e137595e1503f7a_N2_04.png",
     "tags": [
       "humanoid",
       "bipedal",
@@ -138235,7 +138249,8 @@
     "achievements": "2nd place, world's first humanoid half-marathon (Apr 2025); Paris Fashion Week 2025 catwalk",
     "price_note": "US$5.5k–9k launch (¥39,900); Noetix targets ~$700 future models",
     "customers_note": "CATL-backed",
-    "use_cases_note": "K-12 STEM, family, elder-care, education"
+    "use_cases_note": "K-12 STEM, family, elder-care, education",
+    "arm_torque_nm": 150
   },
   {
     "id": "agibot-lingxi-x2",
@@ -138349,7 +138364,7 @@
     "origin": "China",
     "status": "Active",
     "price": "~$1,500",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413213/myrobot/gn6jhw6obms1iicjqp8m.png",
+    "img": "https://cdn.shopify.com/s/files/1/0648/1569/4057/files/H1_1x_1.png?v=1767593476",
     "tags": [
       "humanoid",
       "switchbot",
@@ -138412,7 +138427,8 @@
     "developed_by": "SwitchBot (smart-home device maker)",
     "related_models": [
       "SwitchBot A1 (standalone robotic arms)"
-    ]
+    ],
+    "battery_life": 240
   },
   {
     "id": "switchbot-kata-friends",
@@ -138473,7 +138489,7 @@
     "year": 2026,
     "status": "Active",
     "price": 2499,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413220/myrobot/kc8k22vxwzo8tagccxjh.webp",
+    "img": "https://interglobixmagazine.b-cdn.net/wp-content/uploads/2025/10/issue19-56-2-910x512.webp",
     "models": [
       "S10"
     ],
@@ -138515,7 +138531,8 @@
     "video": "https://youtu.be/gpWOWgrGmd4",
     "navigation": "Vision tracking + follow",
     "serving_capacity": "Tennis ball collection / feeding",
-    "made_in": "China"
+    "made_in": "China",
+    "battery_life": 180
   },
   {
     "id": "qinetiq-dragon-runner-20",
@@ -138688,7 +138705,7 @@
     "made_in": "Canada (Rheinmetall Canada)",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413227/myrobot/vzswptmm2hqdlvvpiyya.png",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/vcVu5iJeRHMAtn9IswFN/image.png",
     "desc": "Rugged 4x4 high-mobility A-UGV based on the Zeal Motor Fat Truck platform, carrying up to 1,000 kg without compromising amphibious capability and offering a 750 km range. Integrated Li-ion batteries give around six hours of silent-watch endurance, and the design follows NATO STANAGs and US MIL-STD-6017 for battle-management interoperability. Can be parachute-delivered and underslung by CH-53/CH-47, with built-in cyber and electronic-warfare resilience.",
     "payload": 1000,
     "payload_kg": 1000,
@@ -138763,7 +138780,8 @@
       "https://fragoutmag.com/wp-content/uploads/2021/06/Mission-Master-XT_3.jpg",
       "https://i.ytimg.com/vi/TvNQPG9xGwY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLD_0y2TTszChEKn43JIJ-QhwB_oLg"
     ],
-    "video": "https://youtu.be/y5exKJD_n9o"
+    "video": "https://youtu.be/y5exKJD_n9o",
+    "max_grade_pct": 35
   },
   {
     "id": "hdt-hunter-wolf",
@@ -138776,7 +138794,7 @@
     "made_in": "USA (HDT Global)",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413228/myrobot/ddg2isyjuoojt6d9nbyo.png",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/UsbCvmenXSwC8BtJdtRH/image.png",
     "desc": "Rugged 6x6 hybrid-electric squad support UGV (Wheeled Offload Logistics Follower) built to carry heavy loads, evacuate casualties and mount a remote weapon station for overwatch. Fielded by US Army units including the 101st Airborne Division, where it has been operated with a remotely-controlled .50-calibre machine gun during combat training. Designed for last-tactical-mile resupply and dismounted-squad support in GPS-degraded environments.",
     "payload": 1270,
     "payload_kg": 1270,
@@ -138845,7 +138863,8 @@
       "https://www.army-technology.com/wp-content/uploads/sites/3/2017/11/1l-image-HDT-Hunter-Wolf.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ4nWMbAnf-o1sU7MPxROry4Llfje1Rd8t5ffjCDuVNocebOdcfk5vekb1&s=10"
     ],
-    "video": "https://youtu.be/iXVz96RPTmg"
+    "video": "https://youtu.be/iXVz96RPTmg",
+    "max_grade_pct": 31
   },
   {
     "id": "gd-mutt-s-met",
@@ -139536,7 +139555,7 @@
     "made_in": "China (NORINCO)",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413248/myrobot/eexwb8za51r23o7jzsoy.png",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/u8tXXQClHtQrkfhVUWSU/image.png",
     "desc": "Larger 6x6 electrically-powered UGV with a combat weight up to 1,000 kg and a 50 km range over a four-hour period, able to carry and deploy the smaller Sharp Claw 1 to extend operational reach. Features independent suspension for high cross-country mobility (climbs 0.35 m obstacles, 30% gradients), a 7.62 mm machine gun and a mast-mounted surveillance package, plus autonomous path-tracking on a digital map.",
     "armament": "7.62mm machine gun; mast-mounted sensor package",
     "weight_kg": 1000,
@@ -139597,7 +139616,8 @@
       "https://www.armyrecognition.com/images/stories/asia/china/unmanned_systems/sharp_claw_2/Sharp_Claw_2_UGV_Unmanned_Ground_Vehicle_NORINCO_China_Chinese_defense_industry_military_equipment_rear_view_001.jpg",
       "https://www.armyrecognition.com/images/stories/asia/china/unmanned_systems/sharp_claw_2/Sharp_Claw_2_UGV_Unmanned_Ground_Vehicle_NORINCO_China_Chinese_defense_industry_military_equipment_left_side_view_001.jpg",
       "https://www.armyrecognition.com/images/stories/asia/china/unmanned_systems/sharp_claw_2/Sharp_Claw_2_UGV_Unmanned_Ground_Vehicle_NORINCO_China_Chinese_defense_industry_military_equipment_right_side_view_001.jpg"
-    ]
+    ],
+    "max_grade_pct": 17
   },
   {
     "id": "norinco-sharp-claw-vu-t2",
@@ -140079,7 +140099,8 @@
       "IED location & render-safe",
       "Door breaching",
       "NBC contamination survey"
-    ]
+    ],
+    "max_grade_pct": 40
   },
   {
     "id": "drdo-daksh-mini",
@@ -141163,7 +141184,7 @@
     "made_in": "Japan (Kawada Robotics)",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413285/myrobot/luyivjmhuzlkochazehq.jpg",
+    "img": "https://cdn.sanity.io/images/7p2whiua/production/2f36326ff2d7e5cd3a92c2c7a0d053757fb1afa4-500x500.jpg",
     "desc": "NEXTAGE, from Kawada Robotics (developed out of the HRP program), is a dual-arm production humanoid designed to work alongside people on assembly and production lines. Rather than a walking biped, it's a human-upper-body form on a fixed base: two 6-DOF arms, a 2-DOF head and a 1-DOF torso (15 DOF total), with stereo cameras in its head and a camera in each hand for vision-guided precision assembly. Built for collaborative deployment in the same spaces as human workers — no fences — it targets electronics assembly, precision production, machine tending and kitting, and became one of Japan's most recognisable factory humanoids. It shares engineering DNA with the Kawada/AIST HRP walking robots but is aimed squarely at practical manufacturing. NOTE: core config from Kawada; exact per-model reach/repeatability/weight vary by NEXTAGE generation and are flagged for outreach rather than guessed.",
     "dof": 15,
     "arm_dof": 6,
@@ -141220,7 +141241,8 @@
       "Hand cameras (per arm)"
     ],
     "capabilities": "Fixed-base dual-arm humanoid for precision assembly/production alongside humans; works in human line spaces without fences",
-    "controller": "Kawada NEXTAGE controller"
+    "controller": "Kawada NEXTAGE controller",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "tosy-topio",
@@ -141694,7 +141716,7 @@
     "made_in": "Germany (DLR — German Aerospace Center)",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413299/myrobot/rcskeln1wunrog8ebzb2.jpg",
+    "img": "https://cdn.sanity.io/images/7p2whiua/production/bafc3b5ce3ee1c88a28c78235518293a5a4d4f3c-1200x1000.jpg",
     "desc": "Rollin' Justin, from the German Aerospace Center (DLR), is a landmark mobile-manipulation research humanoid: a torque-controlled humanoid upper body — two 7-DOF DLR-Lightweight-Robot-III arms, two dexterous DLR-Hand-II hands and a 3-DOF movable torso — mounted on an omnidirectional wheeled platform with a variable, extendable base. The whole system weighs 199 kg and rolls on four independent hub-motor steering wheels (30 N·m each, 1.5 m/s, climbing 40 mm steps and 17° ramps). Its defining technology is DLR's modular drive concept: brushless-DC motors with harmonic-drive gears and link-side joint torque sensors on every joint, giving back-drivable behaviour and highly sensitive impedance control — the basis for safe physical interaction with people and delicate two-armed manipulation (famously demonstrated serving tea). It's a premier platform for autonomous dexterous mobile manipulation in human environments, with envisioned use in households and space (astronaut assistance), and sits in DLR's humanoid family alongside Agile Justin, the biped TORO and neoDavid. NOTE: specs from DLR official + the Rollin' Justin design papers (ICRA 2009) — verified research-grade sourcing; a mobile manipulator, recorded honestly as wheeled not biped.",
     "dof": 51,
     "arm_dof": 7,
@@ -141762,7 +141784,8 @@
       "Agile Justin",
       "TORO (biped)",
       "neoDavid"
-    ]
+    ],
+    "max_grade_pct": 17
   },
   {
     "id": "wandercraft-calvin-40",
@@ -142082,7 +142105,7 @@
     "made_in": "China",
     "status": "Active",
     "price": 1499,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413308/myrobot/lgz6y9nfv0a54u5lewfn.jpg",
+    "img": "https://m.media-amazon.com/images/I/61zqoW1tO6L._AC_SX679_.jpg",
     "suction_pa": 28000,
     "navigation": "Retractable DToF LiDAR + dual-laser 3D structured light + RGB AI + side-edge laser",
     "desc": "MOVA's flagship robot vacuum with 28,000 Pa suction, anti-tangle DuoBrush dual rollers, HydroForce 12-nozzle real-time mop washing, a 25.6 cm MaxiReach extending roller mop, and StepMaster 2.0 chassis that climbs 80 mm thresholds. All-in-one dock self-empties, hot-washes and hot-air dries.",
@@ -142164,7 +142187,8 @@
       "https://m.media-amazon.com/images/I/81WccEOylJL._AC_SX679_.jpg",
       "https://m.media-amazon.com/images/I/81okgZDR6-L._AC_SL1500_.jpg"
     ],
-    "video": "https://youtu.be/ly9PJKOrjs4"
+    "video": "https://youtu.be/ly9PJKOrjs4",
+    "charge_time": 240
   },
   {
     "id": "mova-v50-ultra-complete",
@@ -142291,7 +142315,7 @@
     "made_in": "China",
     "status": "Current",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413311/myrobot/xfdymeqmshxpcavodk9b.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/10/2wZG58Qw2piSysFXRQSr/image.jpg",
     "suction_pa": 19000,
     "desc": "Popular mid-premium MOVA with 19,000 Pa suction, an extending side brush and mop for edge-to-edge cleaning, anti-tangle main brush, dirt detection, obstacle avoidance and auto dock maintenance.",
     "tags": [
@@ -142382,7 +142406,8 @@
     "suction_modes": "Quiet / Standard / Strong / Turbo",
     "brush_type": "Anti-tangle main brush",
     "mop_type": "Removable + liftable dual mop",
-    "hot_water_mop": "Yes (167°F)"
+    "hot_water_mop": "Yes (167°F)",
+    "charge_time": 210
   },
   {
     "id": "mova-p50-ultra",
@@ -143497,7 +143522,7 @@
     "made_in": "China",
     "status": "Current",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413338/myrobot/gub5wlbbylb7qjadaboh.jpg",
+    "img": "https://m.media-amazon.com/images/I/71SbF-sbTtL._AC_SX679_.jpg",
     "desc": "Aiper's flagship cordless pool robot with a front-facing AI camera (VisionPath navigation + dToF) that recognizes 20+ debris types, JetAssist horizontal waterline cleaning, dual brushes at 4,800 GPH suction, MicroMesh multi-layer filtration and a wireless charging dock. From the world's #1-selling pool-robot brand.",
     "tags": [
       "pool-cleaner",
@@ -143554,7 +143579,8 @@
     "cleaning_coverage": "Floor + walls + waterline",
     "camera": "AI Vision",
     "obstacle_avoidance": "AI camera",
-    "pool_type": "In-ground"
+    "pool_type": "In-ground",
+    "charge_time": 270
   },
   {
     "id": "aiper-scuba-s3",
@@ -144186,7 +144212,7 @@
     "made_in": "China",
     "status": "Current",
     "price": 399,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413360/myrobot/laoavltl1k1ybrwd5vli.jpg",
+    "img": "https://m.media-amazon.com/images/I/616wxCR9SPL._AC_SL1500_.jpg",
     "desc": "Ofuzzi's flagship cordless robotic pool cleaner, focused on affordable, floor-only cleaning for flat-bottom pools up to 1,076 sq ft. Dual 50 W motors and twin suction inlets give 1.5x the pickup of earlier models, while a dual-path navigation system with adjustable 0–40° thrust nozzles and a 'halfway-turn-back' routine keeps the pool centre from becoming a dead zone. A 6,600 mAh battery runs up to ~130 minutes on a 3-hour charge, and it auto-parks at the wall for hook retrieval. No wall climbing (max 15° slope), no app — a status LED ring and power knob are the only controls.",
     "tags": [
       "pool-cleaner",
@@ -144243,7 +144269,8 @@
     "manufacturer": "Ofuzzi",
     "cleaning_coverage": "Floor (+ partial wall)",
     "app_control": "No (button)",
-    "pool_type": "In-ground/above-ground"
+    "pool_type": "In-ground/above-ground",
+    "max_grade_pct": 15
   },
   {
     "id": "winny-clear-uv",
@@ -144738,7 +144765,7 @@
     "made_in": "China",
     "status": "Current",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413375/myrobot/xa0cxrzwtvh6spptbco8.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/10/IvbQr4uDB8Fy7scTd2pb/image.jpg",
     "suction_pa": 7000,
     "height_mm": 85,
     "navigation": "Point-laser (slim profile)",
@@ -144810,7 +144837,8 @@
     "mop_lift": "Yes",
     "obstacle_avoidance": "AI",
     "dock_type": "Wash-and-dry Omni dock",
-    "auto_refill": "Yes"
+    "auto_refill": "Yes",
+    "battery_life": 132
   },
   {
     "id": "eufy-e20",
@@ -145659,7 +145687,7 @@
     "made_in": "China",
     "status": "Current",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413405/myrobot/bfwc8dl4e2znflytmnkf.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/10/wVEjWfLfHelxYnJMJ1bD/image.jpg",
     "navigation": "TrueMapping LiDAR + AIVI 3D",
     "lidar": "Yes",
     "ai_obstacle_avoidance": true,
@@ -145742,7 +145770,8 @@
     "brush_type": "Anti-tangle main brush",
     "mop": "Yes",
     "mop_lift": "Yes",
-    "hot_water_mop": "Yes"
+    "hot_water_mop": "Yes",
+    "battery_life": 320
   },
   {
     "id": "dolphin-explorer-e50",
@@ -145895,7 +145924,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413410/myrobot/xjbmtfujx6wqqozykksg.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/rk8QK85SfQGYWT20gjer/image.jpg",
     "height_mm": 1700,
     "weight_kg": 65,
     "dof": 42,
@@ -145945,7 +145974,8 @@
       "https://humanoidroboticstechnology.com/wp-content/uploads/2024/12/pudu-d9-humanoid.jpg",
       "https://cdn.robotshop.com/media/p/pud/rb-pud-27/img/pudu-d9-full-sized-humanoid-robot-desc.webp"
     ],
-    "video": "https://youtu.be/gd5DdfJX_RM"
+    "video": "https://youtu.be/gd5DdfJX_RM",
+    "arm_torque_nm": 352
   },
   {
     "id": "pudu-d7",
@@ -145957,7 +145987,7 @@
     "origin": "China",
     "status": "Active",
     "price": 70000,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413412/myrobot/zqohtgebznx7mmz8kpbe.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/v7dIIOT27bBysiNmYDx4/image.jpg",
     "hand_dof": 11,
     "use_cases": [
       "Elevator operation",
@@ -146023,7 +146053,9 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68282f7a5f4c9f8033c5b1dc_D7_05-p-2000.jpg",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1767782178/robots/d7-by-pudu-robotics/ozxtt7y9bw9j7oyofzsk.webp"
     ],
-    "video": "https://youtu.be/CbA9wA9etGA"
+    "video": "https://youtu.be/CbA9wA9etGA",
+    "max_grade_pct": 10,
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "kawasaki-kaleido-9",
@@ -146340,7 +146372,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413420/myrobot/te76ymhofjpf8hfr26tl.png",
+    "img": "https://www.ghostysky.com/wp-content/uploads/2025/11/GH_Robotera_Q5_2.png",
     "dof": 44,
     "use_cases": [
       "Commercial services",
@@ -146421,7 +146453,8 @@
     "sdk": true,
     "ros": true,
     "capabilities": "Wheeled service humanoid: squats to pick, twists waist, shakes hands, 10 kg single-arm lift; LiDAR-visual navigation; learns from demo video; 37+ languages; guidance, commentary, delivery",
-    "developed_by": "Beijing ROBOTERA Technology (shares components with STAR1)"
+    "developed_by": "Beijing ROBOTERA Technology (shares components with STAR1)",
+    "battery_life": 240
   },
   {
     "id": "hisense-harley",
@@ -146860,7 +146893,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413433/myrobot/hyqqgstohs9awdl7tpce.jpg",
+    "img": "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/u/n/unix-ai-wanda-2.jpg",
     "use_cases": [
       "Reception and hospitality",
       "Security patrol",
@@ -146927,7 +146960,8 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68ded263b39c01d5abbae4c1_2f292aae-0d47-4b96-b96b-9690e57e8f61.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68ded26a7311cbe5c4522bac_9530ce74-a8a8-45ff-96da-1fdd7a813938.webp"
     ],
-    "video": "https://youtu.be/zRpYN1YMRIo"
+    "video": "https://youtu.be/zRpYN1YMRIo",
+    "hand_repeatability_mm": 0.5
   },
   {
     "id": "chery-mornine",
@@ -147225,7 +147259,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413445/myrobot/zcioholhdrazbtitq2n2.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/TJB41OfiPxNGUOA8zh3A/image.jpg",
     "use_cases": [
       "Security patrol",
       "Industrial inspection",
@@ -147281,7 +147315,8 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68e77ecf990da88502a60604_DR%2002_05.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68e77ecfaa973e3956b8a421_DR%2002_02.webp"
     ],
-    "video": "https://youtu.be/e0cIZgkTn4M"
+    "video": "https://youtu.be/e0cIZgkTn4M",
+    "max_grade_pct": 20
   },
   {
     "id": "ti5-t1",
@@ -147293,7 +147328,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413446/myrobot/u6srfptbg8cs2cggmj0k.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/zT8vKlFGGroy8bbiwabH/image.jpg",
     "use_cases": [
       "Laboratory research",
       "Administrative support",
@@ -147349,7 +147384,8 @@
     ],
     "vision": "LiDAR + binocular cameras (environment & obstacle understanding)",
     "capabilities": "Lightweight agile biped (high strength-to-weight): single-leg jumps via high torque-density leg joints; dynamic movement; real-time Jetson AGX Orin AI; lab research + administrative support",
-    "developed_by": "Ti5 Robot"
+    "developed_by": "Ti5 Robot",
+    "arm_torque_nm": 490
   },
   {
     "id": "bxi-elf",
@@ -147361,7 +147397,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413448/myrobot/jya86a9dwtds9p7nute8.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/gDLgMjzGoTukKs9ZkFd2/image.jpg",
     "use_cases": [
       "Embodied-AI research",
       "Sim-2-real algorithm testing",
@@ -147419,7 +147455,8 @@
     "variants": [
       "Elf",
       "Elf 3"
-    ]
+    ],
+    "arm_torque_nm": 150
   },
   {
     "id": "joyin-bumblebee",
@@ -147810,7 +147847,7 @@
     "origin": "Denmark",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413459/myrobot/iqy1zkzxps7mqrfddrzk.png",
+    "img": "https://a.storyblok.com/f/169662/1072x1364/52a7e4d915/ur15_product_4-3.png/m/fit-in/1104x1472",
     "desc": "The Universal Robots UR15 is the newest member of UR's flagship UR Series (alongside UR20 and UR30) and UR's fastest cobot yet — a 5 m/s maximum TCP speed paired with a 17.5 kg payload and 1,300 mm reach in a remarkably light 40.7 kg body. It hits a market sweet spot: high payload and long reach at high speed while staying collaborative, cutting cycle times for palletizing, machine tending and packaging. Its standout technology is OptiMove — an intuitive motion-programming system that simplifies setup while improving repeatability and delivering the smoothest high-speed, high-payload motion in UR's line — running on the AI-ready PolyScope platform. TÜV and UL 1740 certified and suited to higher-IP environments, the UR15 keeps UR's signature ease of use, small footprint and rapid redeployment. It complements the tried-and-tested e-Series with the extra speed and payload the flagship UR Series is built for.",
     "tags": [
       "cobot",
@@ -147925,7 +147962,8 @@
       "TÜV",
       "UL"
     ],
-    "datasheet": "https://www.universal-robots.com/"
+    "datasheet": "https://www.universal-robots.com/",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "universal-robots-ur7e",
@@ -147937,7 +147975,7 @@
     "origin": "Denmark",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413461/myrobot/bztznhmlebb5y2sfqqn7.png",
+    "img": "https://a.storyblok.com/f/169662/1072x1364/5c5715ca71/ur7e_product_4-3.png/m/fit-in/1104x1472",
     "desc": "The Universal Robots UR7e is the medium-duty member of UR's proven e-Series, delivering a 7.5 kg payload and 850 mm reach at ±0.03 mm repeatability from a compact 20.6 kg arm on a Ø151 mm footprint. Introduced in 2025 as a renamed, payload-upgraded successor to the UR5e (UR's best-selling size), it fills the gap between the UR3e and UR12e while keeping the e-Series' defining strengths: a built-in tool-flange force/torque sensor (±50 N / ±10 Nm, precision ±3.5 N), 21 configurable safety functions certified PL d Cat. 3, 4 m/s TCP speed, IP54 sealing, and any-orientation mounting. It runs UR's industry-standard PolyScope software on a 12-inch touchscreen with freedrive teaching and the vast UR+ ecosystem of certified end-effectors and apps, plus Modbus TCP, EtherNet/IP, PROFINET/PROFIsafe and ROS/ROS2. With over 100,000 UR cobots delivered worldwide, the e-Series is the reference platform for collaborative automation; the UR7e targets machine tending, assembly, screwdriving and inspection where reach and accuracy matter in tight cells.",
     "tags": [
       "cobot",
@@ -148052,7 +148090,8 @@
       "TÜV",
       "UL"
     ],
-    "datasheet": "https://www.universal-robots.com/"
+    "datasheet": "https://www.universal-robots.com/",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "universal-robots-ur12e",
@@ -148064,7 +148103,7 @@
     "origin": "Denmark",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413463/myrobot/bqabywhl0yohpnwruqdj.jpg",
+    "img": "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FUniversalRobots_UR10e_1_6873764d.jpg",
     "desc": "The Universal Robots UR12e is the renamed, payload-upgraded successor to UR's best-selling UR10e — a 6-axis e-Series cobot now rated at 12.5 kg payload across a 1,300 mm reach with ±0.03 mm repeatability. It keeps the full e-Series platform: a built-in force/torque sensor (±50 N / ±10 Nm), 21 configurable PL d Cat. 3 safety functions, 4 m/s TCP speed, IP54 sealing, and any-orientation mounting, all programmed through PolyScope on a 12-inch touchscreen with freedrive teaching and the UR+ accessory ecosystem. The extra payload targets palletizing, machine tending and packaging of heavier items without sacrificing UR's hallmark ease of deployment and small footprint. Backed by the largest cobot install base in the world (100,000+ units) and the deepest third-party ecosystem, the UR12e is a workhorse for medium-to-heavy collaborative automation across industries.",
     "tags": [
       "cobot",
@@ -148179,7 +148218,8 @@
       "TÜV",
       "UL"
     ],
-    "datasheet": "https://www.universal-robots.com/"
+    "datasheet": "https://www.universal-robots.com/",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "fanuc-crx-5ia",
@@ -148191,7 +148231,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413465/myrobot/qvkfhurnadjqunbewfra.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/go4a1Z1PxKnvLYyU61oE/image.jpg",
     "desc": "The FANUC CRX-5iA is the entry model of FANUC's CRX collaborative family — 5 kg payload, 994 mm reach, ±0.03 mm repeatability from a 25 kg arm light enough to install without a crane. Like every CRX it carries FANUC's signature reliability claim: 8 years of zero maintenance, backed by the company's industrial track record. Built-in torque sensing in every joint gives sensitive contact detection for fenceless ISO 10218-1 collaboration, and programming is deliberately novice-friendly — drag-and-drop icons on the Tablet Teach Pendant plus lead-through teaching, running on the compact R-30iB Mini Plus controller from standard single-phase power. Two J6 connection ports quick-change end-of-arm tooling, and the FANUC ecosystem (iRVision, force sensors, ROBOGUIDE simulation, ROS-Industrial) plugs straight in. A food-grade variant adds NSF-H1 grease, white epoxy paint and rust/chemical-resistant plating.",
     "tags": [
       "cobot",
@@ -148277,7 +148317,8 @@
     "max_tcp_speed_ms": 1,
     "speed_ms": 1,
     "speed": 1,
-    "power_source": "Single-phase 100–120 V / 200–240 V AC"
+    "power_source": "Single-phase 100–120 V / 200–240 V AC",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "fanuc-crx-10ia",
@@ -148289,7 +148330,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413467/myrobot/sdoemt3qikfbmlgekcpb.jpg",
+    "img": "https://d16ohktstcjvly.cloudfront.net/image/513891251684/image_lscsa25ntt1ff7u5gshdea8001/-T3%3A2s-FJPG,Q85",
     "desc": "The FANUC CRX-10iA/L is the long-reach variant of the 10 kg CRX — 1,418 mm reach with a unique underflip motion that swings the arm beneath its own base, maximising flexibility in tight cells where a conventional wrist path can't fit. It shares the family DNA: ±0.04 mm repeatability, 40 kg installable-by-hand mass, joint torque sensing for fenceless contact-stop collaboration, 8-years-zero-maintenance design, Tablet TP drag-and-drop programming, and the R-30iB Mini Plus controller on standard single-phase power. It's the basis of two notable specials: the CRX-10iA/L Paint — the first and only cobot approved for painting under U.S. safety standards, serving liquid/powder coating and fiberglass dispensing — and a food-grade version with NSF-H1 grease, white epoxy paint and rust/chemical-resistant plating.",
     "tags": [
       "cobot",
@@ -148376,7 +148417,8 @@
     "power_source": "Single-phase 100–120 V / 200–240 V AC",
     "footprint_mm": 190,
     "joint_range_deg": "Motion range (total travel): J1 360° / J2 360° / J3 540° / J4 380° / J5 360° / J6 380–450° (rev.-dependent); wrist moments J4 34.8 N·m / J5 26 N·m / J6 11 N·m",
-    "joint_speed_max_dps": 180
+    "joint_speed_max_dps": 180,
+    "hand_repeatability_mm": 0.04
   },
   {
     "id": "fanuc-crx-20ia-l",
@@ -148388,7 +148430,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413470/myrobot/bvi8kb2juxjfrolj9bb7.png",
+    "img": "https://cdn.craft.cloud/6166486b-1eb4-43d5-990c-ea573de4e750/assets/products/crx-20ia-l/crx-20ia-l.png?fit=cover&trim%5Bborder%5D%5Btolerance%5D=40&trim%5Bborder%5D%5Bkeep%5D=20&format=auto&width=768&s=QiG5mvvCC5g5Qn0FqTqyBss8dEqajmcySotNJfpifbE",
     "desc": "The FANUC CRX-20iA/L doubles the long-reach CRX's payload to 20 kg while keeping the same 1,418 mm reach, underflip motion and — remarkably — nearly the same mass at 41 kg, one of the best payload-to-weight ratios in the cobot market. Repeatability holds at ±0.04 mm, joint-level torque sensing provides the family's sensitive contact detection for fenceless ISO 10218-1 operation, and the 8-years-zero-maintenance design carries over. Programming stays drag-and-drop on the Tablet Teach Pendant with lead-through teaching, on the compact R-30iB Mini Plus controller. Dual J6 tooling ports, iRVision/force-sensor integration, ROBOGUIDE and ROS-Industrial complete the ecosystem, and a food-grade version (NSF-H1 grease, white epoxy, rust/chemical-resistant plating) serves wet and hygiene-critical environments.",
     "tags": [
       "cobot",
@@ -148476,7 +148518,8 @@
     "max_tcp_speed_ms": 1,
     "speed_ms": 1,
     "speed": 1,
-    "power_source": "Single-phase 100–120 V / 200–240 V AC"
+    "power_source": "Single-phase 100–120 V / 200–240 V AC",
+    "hand_repeatability_mm": 0.04
   },
   {
     "id": "fanuc-crx-30ia",
@@ -148488,7 +148531,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413472/myrobot/y9ky0cdl6zjgh5fknecm.jpg",
+    "img": "https://d16ohktstcjvly.cloudfront.net/image/513891251684/image_9jlnv0qs3t2hj2e18deh74re1n/-T3%3A2s-FJPG,Q85",
     "desc": "The FANUC CRX-30iA tops the CRX collaborative family at the 30 kg payload class, and is notable for shipping in a purpose-built food-grade configuration: NSF-H1 food-grade grease, white epoxy paint and rust/chemical-resistant plating for food handling, wet environments and strict-hygiene production. It inherits the full CRX platform — joint torque sensing with sensitive contact detection for fenceless ISO 10218-1 collaboration, the 8-years-zero-maintenance design, drag-and-drop Tablet Teach Pendant with lead-through teaching, dual J6 tooling ports, and FANUC's iRVision/force-sensor/ROBOGUIDE/ROS-Industrial ecosystem. FANUC's published English pages confirm the model and payload class; the full parameter table (reach, weight, repeatability, joint speeds) is logged for manufacturer outreach rather than estimated here.",
     "tags": [
       "cobot",
@@ -148568,7 +148611,8 @@
     "max_tcp_speed_ms": 1,
     "speed_ms": 1,
     "speed": 1,
-    "power_source": "Single-phase 100–120 V / 200–240 V AC"
+    "power_source": "Single-phase 100–120 V / 200–240 V AC",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kuka-lbr-iisy-3-r760",
@@ -148580,7 +148624,7 @@
     "origin": "Germany",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413475/myrobot/an2tx3sogu9l0qnlitvd.png",
+    "img": "https://assets.kuka.com/asset/71cba608-de59-4b26-ab3a-b21282b1cd76/Marketplace_Image/KUKA_Rob_LBR_iisy-11.png",
     "desc": "The KUKA LBR iisy 3 R760 is KUKA's accessible, plug-and-produce cobot — a 3 kg / 760 mm 6-axis arm at ±0.1 mm repeatability and 22.8 kg, built to get non-experts from unboxing to a running basic application in about 30 minutes. Integrated joint torque sensors make it sensitive enough for fenceless collaboration with hand guiding, certified PL d Cat. 3, and it's the entry point to a family spanning 3, 6, 8, 11 and 15 kg payloads. Its real platform advance is software: the LBR iisy runs KUKA's newest operating system, iiQKA.OS, on the compact KR C5 micro control box with the smartPAD-Pro, and the iiQKA 'Robotics Republic' ecosystem lets users bolt on grippers, vision and other components app-store style for rapid repurposing. KUKA leans on decades of industrial componentry for the durability claim, positioning the iisy as reliable industrial technology in an approachable collaborative package.",
     "tags": [
       "cobot",
@@ -148663,7 +148707,8 @@
       "LBR iisy 11",
       "LBR iisy 15 (family payloads 3–15 kg)"
     ],
-    "datasheet": "https://www.kuka.com/en-us/products/robotics-systems/industrial-robots/lbr-iisy"
+    "datasheet": "https://www.kuka.com/en-us/products/robotics-systems/industrial-robots/lbr-iisy",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "kuka-lbr-iiwa-14-r820",
@@ -148675,7 +148720,7 @@
     "origin": "Germany",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413476/myrobot/djcfwrileo2hjnjd2ntm.png",
+    "img": "https://assets.kuka.com/asset/9d488027-2418-419b-adac-83194ac81ce3/Marketplace_Image/lbr-iiwa-frontal-tif.png",
     "desc": "The KUKA LBR iiwa 14 R820 is the world's first series-produced sensitive robot — 'LBR' for Leichtbauroboter (lightweight robot), 'iiwa' for intelligent industrial work assistant — and one of the most influential research and HRC platforms ever made. Its defining feature is joint torque sensors in all seven axes, giving instant whole-arm contact detection with axis-specific torque accuracy of ±2% of maximum torque, so it can perform force-controlled contour-finding, delicate joining and compliant insertion without crushing or shearing hazards, fenceless, certified to PL d Cat. 3. The 14 kg / 820 mm redundant 7-axis arm weighs 29.9 kg, carries IP54 sealing, mounts in any orientation, and routes pneumatic and electrical supply internally to a DIN ISO 9409-1-50-7-M6 media flange. It runs from the KUKA Sunrise Cabinet, programmed in Java via Sunrise.Workbench or by hand guiding — and its 1 kHz Fast Robot Interface (FRI) made it the de-facto standard arm for robotics-research labs worldwide. A 7 kg / 800 mm sibling (LBR iiwa 7 R800) shares the platform.",
     "tags": [
       "cobot",
@@ -148764,7 +148809,8 @@
       "EN ISO 13849-1 (PL d, Cat. 3)",
       "ISO 10218-1"
     ],
-    "datasheet": "https://www.kuka.com/en-us/products/robotics-systems/industrial-robots/lbr-iiwa"
+    "datasheet": "https://www.kuka.com/en-us/products/robotics-systems/industrial-robots/lbr-iiwa",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "abb-gofa-5",
@@ -148776,7 +148822,7 @@
     "origin": "Switzerland / Sweden",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413482/myrobot/blzhw2e68r0ccwquvihu.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/geUzRJMfSZ3MfQ9ZrR3e/image.jpg",
     "desc": "The ABB GoFa 5 is the founding model of ABB's GoFa CRB 15000 collaborative family — 5 kg payload across 950 mm wrist reach (1,050 mm to flange) with best-in-class ±0.02 mm repeatability and TCP speeds to 2.2 m/s, which ABB bills as roughly 50% faster than same-class cobots. Torque and position sensors in every joint drive SafeMove power-and-force limiting certified PL d Cat. 3 with up to 16 configurable safety zones, wrapped in rounded no-pinch geometry with an interaction status light. The 28 kg, IP54 arm on a 165×165 mm base mounts in any direction and runs from ABB's OmniCore controller with RobotWare 7 — programmed by grabbing the arm anywhere (lead-through), Wizard graphical blocks on the FlexPendant, RAPID, or RobotStudio offline with ~99% sim-to-real fidelity. The Ultra Accuracy option cuts path accuracy to 0.03 mm — over 10× tighter than rival cobots — for gluing, sealing and laser applications. ISO Class 4 cleanroom rated; Pro variant adds PROFINET.",
     "tags": [
       "cobot",
@@ -148877,7 +148923,8 @@
       "ISO Class 4 cleanroom"
     ],
     "os": "ABB RobotWare 7",
-    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa"
+    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "abb-gofa-10",
@@ -148889,7 +148936,7 @@
     "origin": "Switzerland / Sweden",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413484/myrobot/f105h8r2yw9xpnc2f1hh.png",
+    "img": "https://www.zimmer-group.com/fileadmin/_processed_/7/1/csm_ZIM_BIL_ART_ABB-GOFA-10KG__SALL__AIN__V1_a19e58ec38.png",
     "desc": "The ABB GoFa 10 extends the CRB 15000 collaborative family to a 1,520 mm wrist reach (1,620 mm flange — 14% longer than comparable cobots per ABB) with 10 kg payload, keeping the family's ±0.02 mm repeatability and 2.2 m/s TCP ceiling. Its IP67 sealing — a step above the GoFa 5's IP54 — suits dusty and moisture-prone floors across a 5–45 °C range, and the 51 kg arm on a ~200×200 mm base mounts in any orientation. The platform is pure GoFa: joint-integrated torque/position sensing feeding PL d Cat. 3 SafeMove with 16 configurable zones, interaction status light, grab-anywhere lead-through, Wizard blocks, RAPID and RobotStudio offline programming on the OmniCore controller. The Ultra Accuracy option (0.03 mm path / 0.1 mm absolute) opens sealing, laser welding and precision cutting across its wide envelope. ISO Class 4 cleanroom; Pro variant adds PROFINET.",
     "tags": [
       "cobot",
@@ -148989,7 +149036,8 @@
       "ISO Class 4 cleanroom"
     ],
     "os": "ABB RobotWare 7",
-    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa"
+    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots/gofa",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "abb-swifti-crb-1100",
@@ -149001,7 +149049,7 @@
     "origin": "Switzerland / Sweden",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413486/myrobot/cpulfbs62fubdfqdj49i.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/BpFcwaZUD3HQeYOx53rv/image.jpg",
     "desc": "The ABB SWIFTI CRB 1100 collapses the cobot/industrial-robot divide: built on the IRB 1100 industrial platform, it delivers a TCP speed above 5 m/s — five times faster than typical 4 kg cobots — and ±0.01 mm repeatability, up to ten times tighter than the collaborative norm, while remaining fenceless. Safety is speed-and-separation rather than contact-based: SafeMove paired with a safety laser scanner slows or halts the arm before a human can reach it, with an interaction light signalling status, certified PL d Cat. 3. The 4 kg / 580 mm arm (a 475 mm / 4.32 m/s variant exists) carries four integrated air supplies for vacuum grippers and runs from the OmniCore controller, programmed via a clip-on lead-through device, Wizard graphical blocks, the SafeMove Configurator app, RAPID or RobotStudio. It targets intermittent-collaboration tasks — assembly, kitting, polishing — where industrial speed matters but a human must occasionally step in.",
     "tags": [
       "cobot",
@@ -149091,7 +149139,8 @@
     "iso_certs": [
       "ISO 10218-1"
     ],
-    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots"
+    "datasheet": "https://www.abb.com/global/en/areas/robotics/products/robots/collaborative-robots",
+    "hand_repeatability_mm": 0.01
   },
   {
     "id": "abb-powa",
@@ -149168,7 +149217,7 @@
     "origin": "Italy",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413490/myrobot/oswljvjff60vm9royl1d.webp",
+    "img": "https://img.directindustry.com/images_di/photo-mg/102039-16518093.webp",
     "desc": "The Comau Racer-5 COBOT is, by Comau's account, the only collaborative robot that automatically switches from full industrial speed to collaborative speed the instant a human operator enters its working area — letting one machine replace two (a fast industrial arm and a separate cobot). It pairs a 5 kg payload and 809 mm reach with ±0.03 mm repeatability and up to 6 m/s Cartesian speed in non-collaborative mode, throttling to ≤500 mm/s when collaborating, with Safe Collision Detection certified PL d Cat. 3 by TÜV Süd for fenceless operation. Made entirely in Comau's Turin plant with a rigid construction for lasting precision, it routes electrical and air connections at the forearm to avoid external harnesses, signals its mode via an LED status stripe, and offers Comau's arm-mounted MI.RA vision system for pick-and-place. A Racer-5-0.63 industrial variant (627 mm) completes the family, targeting automotive, electrification and general-industry assembly, dispensing and machine tending.",
     "tags": [
       "cobot",
@@ -149245,7 +149294,8 @@
       "Racer-5-0.80 COBOT (809 mm)",
       "Racer-5-0.63 (627 mm industrial)"
     ],
-    "datasheet": "https://www.comau.com/en/our-offer/products-and-solutions/robot-team/racer-5-0-80-cobot/"
+    "datasheet": "https://www.comau.com/en/our-offer/products-and-solutions/robot-team/racer-5-0-80-cobot/",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "epson-ls6-b",
@@ -149257,7 +149307,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413492/myrobot/ucuttr1epwizvhk6oulv.png",
+    "img": "https://i8.amplience.net/i/epsonemear/28434-productpicture-hires-en-ls6-b602c_07?$product-xlarge$&fmt=auto&img404=missing_product&v=1",
     "desc": "The Epson LS6-B is a value-focused 4-axis SCARA robot built for factories that need reliable high-speed assembly at a budget price — 6 kg payload, up to 600 mm reach (500/600/700 mm arm lengths available), ±0.015 mm repeatability and a 200 mm Z-stroke, with high acceleration/deceleration for fast cycle times. Epson leans on its RC+ development environment (SPEL+ 7.0 language) and low-cost RC90 controller to make it easy to program, with integrated options for Epson Vision, fieldbus interfaces, teach pendants and customizable GUIs. An ISO 4 Clean version suits dust-critical and cleanroom applications. It targets the price/performance sweet spot for mechanical and electrical assembly, pick-and-place, kitting and dispensing where throughput matters and budget is tight — part of Epson's position as one of the world's highest-volume SCARA makers.",
     "tags": [
       "scara",
@@ -149330,7 +149380,8 @@
       "LS6-B 700 mm",
       "LS6-B ISO4 Clean"
     ],
-    "datasheet": "https://files.support.epson.com/far/docs/ls6-b_scara_robot_product_specifications_cpd-57403.pdf"
+    "datasheet": "https://files.support.epson.com/far/docs/ls6-b_scara_robot_product_specifications_cpd-57403.pdf",
+    "hand_repeatability_mm": 0.015
   },
   {
     "id": "denso-cobotta",
@@ -149342,7 +149393,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413494/myrobot/fgskz7xf1fwqikhaj8ql.jpg",
+    "img": "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FDenso_Cobotta_1_afbdf121.jpg",
     "desc": "The DENSO COBOTTA, launched in 2018, is an all-in-one desktop collaborative robot built around portability and out-of-the-box simplicity — a 4 kg unit with the controller integrated into the arm, a 0.5 kg payload (0.7 kg with axis 5 vertical) and 342.5 mm reach, small enough to carry between benches. It targets labs, life-sciences and education, where its visually-oriented COBOTTA World tablet app lets non-programmers build pick-and-place tasks in minutes, while experts can use PacScript through the Remote TP virtual pendant or Python via ORiN/b-CAP. Safety is inherent-by-design with proprietary torque sensors monitoring torque and speed continuously on every axis, certified to ISO 10218-1 / ISO/TS 15066, and an electric gripper and 2D camera integrate directly onto the arm for force-controlled gripping and image-recognition tasks. Developed as an open platform, it slots readily into existing systems and has become a common research and laboratory-automation arm.",
     "tags": [
       "cobot",
@@ -149423,7 +149474,8 @@
       "ISO 10218-1",
       "ISO/TS 15066"
     ],
-    "datasheet": "https://www.densorobotics.com/products/collaborative/cobotta/"
+    "datasheet": "https://www.densorobotics.com/products/collaborative/cobotta/",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "denso-cobotta-pro-900",
@@ -149435,7 +149487,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413496/myrobot/j4ikywehlu1j8xwksx0l.png",
+    "img": "https://www.densorobotics.com/wp-content/uploads/2023/02/COBOTTA-PRO1300_gray_kageari_06-web2-e1684764893571.png",
     "desc": "The DENSO COBOTTA PRO 900 is the smaller of DENSO's high-speed PRO cobots — 6 kg payload, 900 mm reach, ±0.03 mm repeatability and a 2,100 mm/s TCP speed that puts it on par with 5- and 6-axis industrial robots during high-speed operation (the larger PRO 1300 pushes 12 kg and 2,500 mm/s). Its productivity-and-safety balance comes from proprietary high-rigidity torque sensors on lightweight slim axes for continuous torque/speed/area monitoring, plus a distinctive touch-sensing soft cover — silicon cushioning with embedded high-sensitivity contact sensors — that further cuts collision risk; with an added safety scanner it can safely ramp to industrial speeds when no one is near. DENSO reworked direct teaching so complex precision tasks like assembly can be memorised by track and fine-tuned to 0.1 mm, and paired it with a Blockly visual environment so novices can build high-precision applications. Pneumatic and I/O wiring route internally to the flange. NOTE: reach recorded as 900 mm per model designation; some aggregators list 1066 mm — flagged for datasheet confirmation.",
     "tags": [
       "cobot",
@@ -149523,7 +149575,8 @@
       "COBOTTA PRO 900 (6 kg, 2100 mm/s)",
       "COBOTTA PRO 1300 (12 kg, 1300 mm reach class, 2500 mm/s, ±0.04 mm)"
     ],
-    "datasheet": "https://www.densorobotics.com/products/collaborative/cobotta-pro/"
+    "datasheet": "https://www.densorobotics.com/products/collaborative/cobotta-pro/",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "mitsubishi-melfa-assista",
@@ -149535,7 +149588,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413498/myrobot/pzh4fsljamzqy8nrjqgs.png",
+    "img": "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2Fmitsubishi-cobot-RS-1_430ad5e7.png",
     "desc": "The Mitsubishi Electric MELFA ASSISTA (RV-5AS-D) is Mitsubishi's collaborative robot, fusing the company's decades of industrial-robot experience with cobot-style ease of use — a 6-axis arm with 5 kg payload, 910 mm reach and a high ±0.03 mm repeatability at nominal load. It's designed to work hand-in-hand with people without fences or enclosures, using per-joint torque sensing for collision monitoring under ISO 10218-1 / ISO/TS 15066, an LED ring for at-a-glance status, and Direct Teaching buttons for point teaching without a pendant. Programming is deliberately open and intuitive via RT VisualBox's drag-and-drop visual environment (no-code), MELFA BASIC VI for depth, and RT ToolBox3, with a broad gripper and vision ecosystem including MELFA-Vision and the AI-driven MELFA SmartPlus option. Uncommon among cobots, it's engineered for food-safe environments, making it a fit for hygiene-sensitive pick-and-place, assembly, machine tending and inspection, as well as research and education.",
     "tags": [
       "cobot",
@@ -149612,7 +149665,8 @@
       "ISO 10218-1",
       "ISO/TS 15066"
     ],
-    "datasheet": "https://www.mitsubishielectric.com/fa/products/rbt/robot/index.html"
+    "datasheet": "https://www.mitsubishielectric.com/fa/products/rbt/robot/index.html",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "nachi-cz10",
@@ -149624,7 +149678,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413500/myrobot/cevpdzcqqmqidfkcci3v.webp",
+    "img": "https://img.directindustry.com/images_di/photo-mg/80117-17183809.webp",
     "desc": "The Nachi CZ10 is the collaborative robot from Nachi-Fujikoshi, one of Japan's oldest industrial-robot makers — a 6-axis, 10 kg-payload arm with a long 1,300 mm reach and ±0.08 mm repeatability, built on the company's welding and material-handling heritage. Its inherent-safety design maintains a 25 mm minimum clearance to prevent pinching, and torque sensors at every axis detect worker contact and stop the robot, third-party certified to ISO 10218-1 (plus TÜV and standard UL/CSA). An inline-wrist structure enables intuitive direct teaching, and wrist-integrated digital I/O (4 in / 3 out) with built-in φ4 air piping reduces installation wiring. The 61 kg arm carries IP65 protection (IP54 wire harness), operates 0–45 °C, runs at up to 180°/s joint speed (throttled to 250 mm/s in collaborative mode), and draws just 1.0 kVA with its CCZ controller. It mounts floor or inverted and targets machine tending, material handling, palletizing and dispensing.",
     "tags": [
       "cobot",
@@ -149703,7 +149757,8 @@
       "UL/CSA"
     ],
     "warranty_months": 12,
-    "datasheet": "https://www.nachirobotics.com/wp-content/uploads/2018/10/NRS-CZ10-StandardSpecification.pdf"
+    "datasheet": "https://www.nachirobotics.com/wp-content/uploads/2018/10/NRS-CZ10-StandardSpecification.pdf",
+    "hand_repeatability_mm": 0.08
   },
   {
     "id": "hyundai-yl012",
@@ -149808,7 +149863,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413504/myrobot/zdor7gqryyvtifjbeq0m.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/CBQcBAFgo0Cp04LuFVLQ/image.jpg",
     "desc": "The Dobot CR10 is the high-reach model of Dobot's CR collaborative series — 10 kg payload across a long 1,525 mm reach with ±0.03 mm repeatability, from Dobot, China's #1 cobot exporter. Built for affordability and fast deployment (about 20 minutes to set up, one hour to production), it uses a plug-and-play design with simple wiring and quick accessory access, running on DC 48 V with a 4 m/s TCP speed and all joints spanning ±360°. Safety is a strength: 22 built-in features certified to ISO 13849 and ISO/TS 15066, five adjustable levels of collision detection, and optional DOBOT SafeSkin technology giving 15 cm proximity sensing and active protection. It's programmed through DobotStudio Pro (graphical and script), with Modbus/PROFINET/EtherNet-IP connectivity and a 32,000-hour MTBF. Part of a CR family spanning CR3 to CR16, the CR10 targets palletizing, loading/unloading and heavy material handling. NOTE: reach recorded as Dobot's official 1,525 mm; some aggregators list 1,300 mm (an earlier-gen figure).",
     "tags": [
       "cobot",
@@ -149911,7 +149966,8 @@
       "CR12",
       "CR16 (CR series 3–16 kg)"
     ],
-    "datasheet": "https://www.dobot-robots.com/products/cr-series/cr10.html"
+    "datasheet": "https://www.dobot-robots.com/products/cr-series/cr10.html",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "dobot-nova-5",
@@ -149923,7 +149979,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413506/myrobot/sgnlbr3m0cns9ggjux8h.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/UpRuxBS2mkTr674DppFN/image.jpg",
     "desc": "The Dobot Nova 5 is a compact 6-axis collaborative robot with a 5 kg payload, 850 mm reach and a fine ±0.02 mm repeatability, designed by Dobot (China's #1 cobot exporter) for service, retail and light-industrial automation — it's a common choice for robotic coffee and beverage stations as well as light assembly and pick-and-place. It shares the Dobot cobot toolkit: adjustable collision detection with optional SafeSkin proximity sensing, IP54 sealing, electromagnetic brakes, and safety aligned to ISO 13849 / ISO/TS 15066, all programmed through the graphical DobotStudio Pro (plus script and Blockly) with Modbus, PROFINET and EtherNet/IP connectivity and a ROS driver. Its compact form and service-friendly design make it a fixture in customer-facing automation and education. NOTE: Dobot publishes core specs (payload/reach/repeatability); exact weight, joint speeds and power draw for the Nova 5 are logged as outreach rather than guessed.",
     "tags": [
       "cobot",
@@ -150010,7 +150066,8 @@
       "Nova 2 (2 kg)",
       "Nova 5 (5 kg)"
     ],
-    "datasheet": "https://www.dobot-robots.com/products/nova-series/nova5.html"
+    "datasheet": "https://www.dobot-robots.com/products/nova-series/nova5.html",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "igus-rebel",
@@ -150022,7 +150079,7 @@
     "origin": "Germany",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413508/myrobot/e1avasfrufdgfg4nvuar.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/14/OEOnQHlIbgZTyIBbXigK/image.jpg",
     "desc": "The igus ReBeL is the world's first cobot built around plastic strain-wave gears — a radical cost-and-weight play from the German motion-plastics specialist. At just 8.2 kg with a 2 kg payload, 664 mm reach and ±1 mm repeatability, it deliberately trades precision for affordability and low mass, using igus's self-lubricating tribo-polymer components in integrated joints (motor + strain-wave gearbox + absolute encoder) to hit a price point that opens robotics to SMEs, educators and developers. It runs from 24 V DC through the igus Robot Control (iRC) software — browser-based drag-and-drop programming — with a Python API, ROS driver and Modbus TCP/TCP-IP interfaces, and mounts on tables, mobile bases or gantries. It's not a high-accuracy industrial arm; its niche is accessible, lightweight automation for pick-and-place, inspection, lab work and light assembly where cost and simplicity matter more than sub-millimetre repeatability.",
     "tags": [
       "cobot",
@@ -150108,7 +150165,8 @@
       "ReBeL (6-DOF, cobot)",
       "ReBeL on mobile/gantry bases"
     ],
-    "datasheet": "https://www.igus.com/info/rebel"
+    "datasheet": "https://www.igus.com/info/rebel",
+    "hand_repeatability_mm": 1
   },
   {
     "id": "mecademic-meca500",
@@ -150120,7 +150178,7 @@
     "origin": "Canada",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413510/myrobot/of3ainokggqav0adihn4.webp",
+    "img": "https://storage.googleapis.com/bucket-two-leobotics/product/robot-6-axes-industriel-mecademic-meca500-1.webp",
     "desc": "The Mecademic Meca500 is, by the maker's account, the smallest and most compact six-axis industrial robot arm — and one of the most precise, with ±0.005 mm repeatability (five microns) that few arms of any size match. Reach is 330 mm from the flange (260 mm from wrist) with a 500 g rated payload (1 kg maximum under conditions), from a 4.6 kg body with the controller built inside. Its design philosophy is what sets it apart: rather than a stand-alone system with a pendant and its own software suite, the Meca500 is a plug-and-work slave component that integrates into any PC or PLC over Ethernet with no training courses, installs or add-on purchases — controlled by simple TCP/IP ASCII commands, a Python API, a web interface, or industrial fieldbuses (EtherCAT, PROFINET, EtherNet/IP) on the relevant variants. Powered by the PS200 module (90–250 VAC), offered in R3 and R4 revisions, it's a staple of precision electronics, semiconductor, lab-automation and micro-manipulation cells where footprint and accuracy dominate.",
     "tags": [
       "robot-arm",
@@ -150200,7 +150258,8 @@
       "Meca500 R3",
       "Meca500 R4"
     ],
-    "datasheet": "https://mecademic.com/products/meca500-industrial-robot-arm/"
+    "datasheet": "https://mecademic.com/products/meca500-industrial-robot-arm/",
+    "hand_repeatability_mm": 0.005
   },
   {
     "id": "ufactory-xarm-6",
@@ -150212,7 +150271,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413512/myrobot/igve9j8nzvwqzfn5wwpa.webp",
+    "img": "https://cdn.prod.website-files.com/66b66709c877007daff3afa9/67cefabd26ed581e2db4c2d6_1.1.webp",
     "desc": "The UFACTORY xArm 6 is the arm that made 5 kg-class manipulation affordable for labs and startups — 5 kg payload across 700 mm reach at ±0.1 mm repeatability and 1 m/s top speed, at roughly half the price of mainstream 6-axis rivals, which has made it one of the most common arms in mobile-manipulation and embodied-AI research stacks. Its aluminium and carbon-fiber structure is driven by outer-rotor brushless motors through industrial harmonic drives with 17-bit multi-turn absolute encoders, drawing a typical 200 W through the AC control box and mounting in any orientation (IP40, cleanroom-suitable). The software story is its second superpower: UFACTORY Studio's full GUI with drag-and-drop and simulation, open-source Python and C++ SDKs over Ethernet, Blockly, and official xarm_ros/ros2 packages, with a native ecosystem of grippers, vacuum tools and camera mounts. Collision detection and control-box e-stop cover safety basics for supervised light-industrial and research use.",
     "tags": [
       "robot-arm",
@@ -150299,7 +150358,8 @@
     "collision_detection": true,
     "estop": "Control-box e-stop",
     "force_limiting": true,
-    "datasheet": "https://www.ufactory.us/product/ufactory-xarm-6"
+    "datasheet": "https://www.ufactory.us/product/ufactory-xarm-6",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "ufactory-lite-6",
@@ -150311,7 +150371,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413514/myrobot/zgiwclwsvc1dirvorhq9.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/15/0ViZjYUEozZf9OskzzLJ/image.jpg",
     "desc": "The UFACTORY Lite 6 is a compact 6-axis tabletop arm built for benches where footprint and setup speed matter more than precision — 600 g payload across 440 mm reach at ±0.5 mm repeatability and 500 mm/s top speed, with the controller integrated so the whole system is arm-plus-Ethernet-cable. Its aluminium and carbon-fiber structure pairs direct-drive motors with harmonic drives to balance durability against cost (typical draw 150 W), and it inherits UFACTORY's full open software stack: Studio's drag-and-drop GUI, open-source Python and C++ SDKs, Blockly, and official ROS/ROS 2 support — which has made it a staple in university labs, imitation-learning rigs and light-automation pilots. UFACTORY itself notes the Lite 6 is not certified as a collaborative robot despite its safe desktop scale, an honest distinction most competitors skip. A Kit variant bundles the Lite Gripper and Lite Vacuum Gripper.",
     "tags": [
       "robot-arm",
@@ -150396,7 +150456,8 @@
       "Lite 6 (arm only)",
       "Lite 6 Kit (+ Lite Gripper + Lite Vacuum Gripper)"
     ],
-    "datasheet": "https://www.ufactory.us/product/lite-6"
+    "datasheet": "https://www.ufactory.us/product/lite-6",
+    "hand_repeatability_mm": 0.5
   },
   {
     "id": "standard-bots-ro1",
@@ -150408,7 +150469,7 @@
     "origin": "USA",
     "status": "Active",
     "price": 37000,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413516/myrobot/dchinagjxvhzdrex9hlw.png",
+    "img": "https://cdn.robodk.com/robot/img/Standard-Bots-RO1-robot.png",
     "desc": "The Standard Bots RO1 is an AI-native American-made cobot (built in Glen Cove, New York) that pairs class-leading hardware with GPT-level no-code programming — a best-in-class 18 kg payload across 1,300 mm reach at ±0.025 mm repeatability, positioned at roughly half the price of comparable arms with leasing from about $5/hour. Its arm uses six CAN-bus joints, each with two encoders, two independent torque-sensing methods and fail-safe brakes that engage on power loss — the basis of built-in collision detection and force limiting for fenceless work. Uniquely in its class it ships with an onboard 3D machine-vision system for object detection, screen reading and pick-without-programming, and can be programmed by natural language, a no-code touchscreen, or a Python API/SDK, learning new tasks from a single demonstration. It mounts without bolting into concrete for fast redeployment. Practical limits are documented openly: default tooltip speed 0.75 m/s, with speed reduced to 25% above 16 kg payload. Standard Bots (GE Appliances partner; $63M Series B) targets high-mix machine tending, inspection and palletizing up to 30 cases/min.",
     "tags": [
       "cobot",
@@ -150486,7 +150547,8 @@
     "tool_io": "Standard network + I/O ports; pneumatic accessory support; 7th-axis / linear-actuator integration",
     "estop": "Controller e-stop + fail-safe brakes",
     "ce": true,
-    "datasheet": "https://standardbots.com/ro1"
+    "datasheet": "https://standardbots.com/ro1",
+    "hand_repeatability_mm": 0.025
   },
   {
     "id": "kinova-gen3",
@@ -150598,7 +150660,7 @@
     "origin": "USA",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413519/myrobot/t6f4exq7uwhvd2w3u6gt.png",
+    "img": "https://cdn11.bigcommerce.com/s-oc1oaj0to2/images/stencil/2048x2048/products/9341/16069/OB7-stretch-new__28298.1684956911.png?c=2",
     "desc": "The Productive Robotics OB7 is an American-made (Carpinteria, California) 7-axis collaborative robot whose defining features are its extra joint and its no-code philosophy. The seventh axis gives it human-like dexterity to reach around obstacles and work in confined spaces that 6-axis arms can't, at a 5 kg payload and 1,000 mm reach. Its bigger differentiator is programming: OB7 is taught by demonstration — 'show, don't program' — so operators physically guide it through tasks with no code, no scripting and minimal training, which Productive Robotics markets as the simplest cobot to deploy. An optional OB7 Vision system adds camera-based part detection. Certified for fenceless collaboration (ISO 10218-1 / ISO/TS 15066), it targets CNC machine tending, assembly, pick-and-place, packaging and finishing for small and mid-size manufacturers, and comes in a family including longer-reach Stretch and higher-payload Max8/Max12 variants. NOTE: Productive Robotics publishes payload/reach/axis count and capability detail; exact weight, repeatability, joint speeds and IP rating are logged as outreach rather than invented.",
     "tags": [
       "cobot",
@@ -150672,7 +150734,8 @@
       "OB7-Max12 (12 kg)",
       "OB7-Max8"
     ],
-    "datasheet": "https://www.productiverobotics.com/"
+    "datasheet": "https://www.productiverobotics.com/",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "yaskawa-hc20dtp",
@@ -150684,7 +150747,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413525/myrobot/qj2078p4drdlmlliksd3.jpg",
+    "img": "https://www.motoman.com/getmedia/2b8ceb38-a4fe-4896-bd4d-b564912b490e/HC20XP_500.jpg.aspx",
     "desc": "The Yaskawa MOTOMAN HC20DTP is the largest cobot in Yaskawa's HC human-collaborative family — 20 kg payload across a 1,900 mm absolute reach (1,700 mm effective) at ±0.05 mm repeatability, from a rugged 140 kg aluminium-cast arm driven by Yaskawa's 200 V industrial servo drives. Built for fenceless palletizing and end-of-line packaging, it also handles harsh work — machine-tool loading, welding — thanks to IP67 sealing with a special drip-proof coating against coolants and dust, plus food-grade grease for food and pharma use. High-resolution torque sensors in each of its six joints enable fenceless human collaboration certified to PL d Cat. 3 with 25 distinct safety functions, including configurable envelopes, dual retract moves (Retract & Clamp-Release) and a Pushback function to move the arm aside during operation. Yaskawa targets easy entry: the tablet-based Smart Pendant guides programming and safety config with hand-guiding and Smart Frame, backed by Wizard programming, a plug-and-play accessory ecosystem, MotoSim offline simulation, and a choice of YRC1000 or compact YRC1000micro controllers.",
     "tags": [
       "cobot",
@@ -150780,7 +150843,8 @@
     "other_certs": [
       "Food-grade grease (food & pharma applications)"
     ],
-    "datasheet": "https://www.yaskawa.eu.com/products/robots/human-collaborative-hc"
+    "datasheet": "https://www.yaskawa.eu.com/products/robots/human-collaborative-hc",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "unitree-a2",
@@ -150792,7 +150856,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413527/myrobot/caqy8oslclf5xru4usoj.avif",
+    "img": "https://webot-robotics.com/wp-content/uploads/2025/09/UniTree-A2_Robot_WeBot.avif",
     "desc": "Unitree's 2025 flagship 'Stellar Explorer': 37 kg with hot-swappable dual 9,000 mAh batteries, carrying 25 kg continuously (100 kg standing) at up to 5 m/s, climbing 30 cm steps and 45° slopes, with front + rear LiDAR, IP56 body, Wi-Fi 6 and 20 km unloaded range.",
     "tags": [],
     "weight_kg": 37,
@@ -150828,7 +150892,10 @@
       "https://img.originofbots.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1774303014/robots/unitree-a2-by-unitree-robotics/tt3zpngwjxgkbgqmwueu.webp",
       "https://futurology.tech/cdn/shop/files/a1_b3d13060-e1ae-4fa1-861c-208e723765dd.png?v=1755870692&width=750"
     ],
-    "video": "https://youtu.be/ve9USu7zpLU"
+    "video": "https://youtu.be/ve9USu7zpLU",
+    "battery_life": 300,
+    "charge_time": 60,
+    "max_grade_pct": 45
   },
   {
     "id": "unitree-a2-w",
@@ -150939,7 +151006,7 @@
     "origin": "China",
     "status": "Discontinued",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413533/myrobot/hxjrvqhejaazc9snd30s.jpg",
+    "img": "https://shop.unitree.com/cdn/shop/products/157_720x.jpg?v=1668073700",
     "desc": "A mid-sized, fully electric 12-DoF quadruped from Unitree for research, education and controlled inspection, sitting between the compact A1 and the industrial B-series. Pairs dual depth cameras and VIO with a swappable 317 Wh battery and developer interfaces (dual Gigabit Ethernet, USB 3.0, ROS/Ubuntu).",
     "tags": [
       "quadruped",
@@ -151005,7 +151072,8 @@
       "https://oss-global-cdn.unitree.com/static/6cef52d22bb0472ea1d1a608e359416e_1148x1424.jpg"
     ],
     "video": "https://youtu.be/hfQDCidU8EE",
-    "video2": "https://youtu.be/G7HqaWYCGpE"
+    "video2": "https://youtu.be/G7HqaWYCGpE",
+    "max_grade_pct": 25
   },
   {
     "id": "unitree-laikago",
@@ -151145,7 +151213,7 @@
     "origin": "China",
     "status": "Active",
     "price": 61200,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413539/myrobot/riterswj2qfdofapsxqj.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/15/E8RIhiZr3JTys0iIeKyX/image.jpg",
     "desc": "The world's first industrial wheeled-legged quadruped: 33 kg, 15 kg payload, 5 m/s lab speed (3 m/s operating), IP66, 96-line LiDAR with omnidirectional avoidance, 25 cm continuous stairs, 80 cm single obstacles and −20 to 55°C endurance — built for power-line inspection, mining and disaster response. M20 Pro from US$61,200.",
     "tags": [],
     "weight_kg": 33,
@@ -151183,7 +151251,9 @@
       "https://img.originofbots.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1774273650/robots/lynx-m20-by-deep-robotics/xl2ndiobe2rtsnsngfon.webp",
       "https://img.originofbots.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1774273661/robots/lynx-m20-by-deep-robotics/t7g1tnpvbhdi6gb6n8l0.webp"
     ],
-    "video": "https://youtu.be/zMDHABkwUCw"
+    "video": "https://youtu.be/zMDHABkwUCw",
+    "charge_time": 90,
+    "max_grade_pct": 45
   },
   {
     "id": "magiclab-magicdog",
@@ -151195,7 +151265,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413541/myrobot/rv3wxpg0sems5a93uhvb.png",
+    "img": "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68282229832a7c880528ca61_MagicDog_Hero.png",
     "desc": "MagicLab's agile consumer-and-education quadruped — a Go2-class robot dog with AI interaction, gymnastic locomotion demos and an SDK for developers, from the Chinese embodied-AI startup also building humanoids.",
     "tags": [],
     "use_cases": [
@@ -151229,7 +151299,9 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6828223908c1b2fdce218695_MagicDog_08.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68282237b4214810df140d8f_MagicDog_07.jpg"
     ],
-    "video": "https://youtu.be/OJL0XBo0b1c"
+    "video": "https://youtu.be/OJL0XBo0b1c",
+    "battery_life": 150,
+    "max_grade_pct": 40
   },
   {
     "id": "magiclab-magicdog-w",
@@ -151241,7 +151313,7 @@
     "origin": "China",
     "status": "Current",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413542/myrobot/oqyn7pmpa6gykhp7kowu.png",
+    "img": "https://sonnyrobotics.com/cdn/shop/files/MagicDog-W.webp?v=1767842863&width=1200",
     "desc": "Wheeled-legged version of the MagicDog, adding hub-motor wheels for fast rolling travel while keeping legged obstacle negotiation.",
     "tags": [],
     "use_cases": [
@@ -151278,7 +151350,8 @@
     "estop": "Yes",
     "released": "2025",
     "form_factor": "Wheeled quadruped (MagicLab/MagicBot family)",
-    "note": "Per-model specs sparse — verified platform only"
+    "note": "Per-model specs sparse — verified platform only",
+    "battery_life": 240
   },
   {
     "id": "limx-w1",
@@ -151923,7 +151996,7 @@
     "origin": "Switzerland",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413565/myrobot/waldwpfc27dtj9wuwt8c.webp",
+    "img": "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/687fb79151e4c8e551aab56c_ANYaml%20X_Hero.webp",
     "desc": "The explosion-proof member of the ANYmal family, certified for hazardous (Ex) zones such as oil, gas and chemical plants. Built on the ANYmal D platform with an Ex-rated sealed housing, it performs fully autonomous inspection in potentially explosive atmospheres where other legged robots cannot operate. Shares the D platform's dual-Intel compute, 360° LiDAR navigation and pan-tilt inspection payload.",
     "tags": [
       "quadruped",
@@ -151996,7 +152069,8 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/687fb7e5a54dd227ca244633_ANYmal%20X_04.webp",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/687fb7e53994b1b81b9e630b_ANYmal%20X_05.webp"
     ],
-    "video": "https://youtu.be/CVjjNRA9Fno?list=PL22adRtGDGxcuwJgsuAOtQ5oVGB0Hw0lT"
+    "video": "https://youtu.be/CVjjNRA9Fno?list=PL22adRtGDGxcuwJgsuAOtQ5oVGB0Hw0lT",
+    "max_grade_pct": 30
   },
   {
     "id": "boston-dynamics-littledog",
@@ -152171,7 +152245,7 @@
     "origin": "USA",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413573/myrobot/p7f1pf35ndduxxxow4f4.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/15/H4KexQoMXjbuFNCGEV9r/image.jpg",
     "desc": "The Legged Squad Support System (also called AlphaDog), a militarised, ruggedised evolution of BigDog developed with DARPA and the US Marine Corps. Designed as a robotic pack mule to carry gear alongside soldiers over rough terrain, it could haul 181 kg for 32 km, follow a human leader and respond to voice commands, though the program was ultimately shelved.",
     "tags": [
       "quadruped",
@@ -152210,7 +152284,8 @@
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Legged_Squad_Support_System_robot_prototype.jpg/330px-Legged_Squad_Support_System_robot_prototype.jpg",
       "https://i.ytimg.com/vi/arIJm2lAfR8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDTbPbfROT-u-t88peaQoBUW7bpSg"
     ],
-    "video": "https://youtu.be/R7ezXBEBE6U"
+    "video": "https://youtu.be/R7ezXBEBE6U",
+    "max_grade_pct": 35
   },
   {
     "id": "iit-hyq",
@@ -152568,7 +152643,7 @@
     "origin": "USA",
     "status": "Prototype",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413586/myrobot/t2acqlsdjgumyv2jmbgp.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/8wAj9S2VTBKymIYM9ua3/image.jpg",
     "desc": "Archer's piloted four-passenger eVTOL air taxi in FAA certification: 12 tilt-propellers, ~160 km range, 240 km/h cruise, designed for rapid back-to-back urban hops with minimal charge between flights.",
     "tags": [
       "drone",
@@ -152596,7 +152671,8 @@
       "https://a-us.storyblok.com/f/1018175/3502x2532/4ef6f8c402/midnight_in_dubai_day-vf-high-res.jpg"
     ],
     "video": "https://youtu.be/TuoenNGAyT0",
-    "video2": "https://youtu.be/cojfeI9cVLg"
+    "video2": "https://youtu.be/cojfeI9cVLg",
+    "speed_ms": "240 km/h"
   },
   {
     "id": "wisk-gen-6",
@@ -152608,7 +152684,7 @@
     "origin": "USA",
     "status": "Prototype",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413587/myrobot/wqdxmx8uh2r5frv0iw4f.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/freaechm1znceW722Bc4/image.jpg",
     "desc": "Boeing-backed Wisk's self-flying four-seat air taxi — the first candidate for autonomous, uncrewed passenger eVTOL flight in the US, with human supervisors on the ground.",
     "tags": [],
     "autonomous": true,
@@ -152628,7 +152704,8 @@
       "https://evtol.news/__media/Aircraft%20Directory%20Images/Wisk%20Aero%20Unnamed%20(Generation%206)/Wisk_Aero_Generation-6-sideview.jpg"
     ],
     "video": "https://youtu.be/Pade0XWVrak",
-    "video2": "https://youtu.be/vqp0nSfpbL0"
+    "video2": "https://youtu.be/vqp0nSfpbL0",
+    "speed_ms": "~220 km/h (120 kt cruise)"
   },
   {
     "id": "beta-alia",
@@ -152699,7 +152776,7 @@
     "origin": "United Kingdom",
     "status": "Prototype",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413589/myrobot/r2gq5mgeayw51g0voxtg.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/SqgQrRiRns9dpJ6pJYW8/image.jpg",
     "desc": "British four-passenger-plus-pilot eVTOL prototype: eight tilt-rotors, ~160 km range target at up to 240 km/h, backed by pre-orders from airlines and lessors.",
     "tags": [
       "drone",
@@ -152726,7 +152803,8 @@
       "https://vertical-aerospace.com/wp-content/uploads/2024/11/7L9A9727-3-1800x1000.jpg",
       "https://www.aerotime.aero/images/VerticalAerospace-AC2-July2024-16-copy.jpeg"
     ],
-    "video": "https://youtu.be/Nd4RoaA-W5Y"
+    "video": "https://youtu.be/Nd4RoaA-W5Y",
+    "speed_ms": "240 km/h"
   },
   {
     "id": "lilium-jet",
@@ -152738,7 +152816,7 @@
     "origin": "Germany",
     "status": "Retired",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413591/myrobot/tspdfsrcqzmupefbuzmy.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/bVQzLK4kp3R7sSPSZjtM/image.jpg",
     "desc": "The 36-ducted-fan seven-seat eVTOL jet that pursued regional electric flight — a landmark program that flew full-scale demonstrators before Lilium's insolvency ended operations in 2025.",
     "tags": [],
     "motor_count": 36,
@@ -152755,7 +152833,8 @@
       "https://evtol.news/__media/Aircraft%20Directory%20Images/Lilium%207-Seater/Lilium-Jet-7-seater-6-seats-configuration.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM4zMUTjQ5vQmnh7EJXmMH60eq_k_WCXEYn_OFhdjl7woYaq91Xsvz0L3v&s=10"
     ],
-    "video": "https://youtu.be/mjAJWrraTKs"
+    "video": "https://youtu.be/mjAJWrraTKs",
+    "speed_ms": "280 km/h (design)"
   },
   {
     "id": "xpeng-aeroht-x2",
@@ -152767,7 +152846,7 @@
     "origin": "China",
     "status": "Development",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413593/myrobot/yujknmjqbrafr4qqod84.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/0Zw0XTiBOeKB4oS0OIy7/image.jpg",
     "desc": "A two-seat manned electric vertical-take-off aircraft from XPeng AeroHT (the flying-car affiliate of Chinese automaker XPeng), publicly flown in Dubai in 2022. The Voyager X2 is a closed-cockpit octacopter — eight rotors in a distributed-electric layout for stability and fail-safe redundancy — built around a lightweight carbon-fibre structure. It weighs about 560 kg empty, cruises around 130 km/h at low altitude (up to ~1,000 m), and offers roughly 35 minutes of flight. Sensing combines LiDAR, radar and ultrasonics with AI obstacle avoidance, and safety features include multi-rotor redundancy and a ballistic parachute. It's an early step in XPeng AeroHT's push toward a road-and-air 'flying car'.",
     "tags": [
       "drone",
@@ -152815,7 +152894,8 @@
       "https://c2.gasgoo.com/autonews/moblogo/News/UEditor/image/20230130/6381068640771712219697323.png",
       "https://s-cdn.xpeng.com/xp-ams/2022-10-11/xp/12/0183c6efe041828c1f732c9e2975059a.jpg"
     ],
-    "video": "https://youtu.be/VcdPyzCgkZk"
+    "video": "https://youtu.be/VcdPyzCgkZk",
+    "speed_ms": "130 km/h"
   },
   {
     "id": "dji-flycart-30",
@@ -152827,7 +152907,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413594/myrobot/dyouriqtrgnwjzduv6gi.jpg",
+    "img": "https://www.w3shopping.com/cdn/shop/files/DJI-FlyCart-30-W3-Shopping-75493788.jpg?v=1713535281",
     "desc": "DJI's first delivery drone: carries 30 kg (dual-battery) or 40 kg (single-battery) up to 16 km loaded, at 20 m/s, with a 20 m winch system, dual radar + vision sensing and O3 transmission — bringing DJI reliability to heavy-lift logistics.",
     "tags": [],
     "payload_kg": 30,
@@ -152861,7 +152941,8 @@
       "https://enterprise-insights.dji.com/hs-fs/hubfs/Blog%20Images/30%20Things%20to%20Know%20About%20DJI%20FlyCart%2030/FlyCart%2030%20-%20Cargo%20Mode.jpeg?width=1260&height=675&name=FlyCart%2030%20-%20Cargo%20Mode.jpeg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8nVJokToquUpGN1LpKEfJvbFC-GNyCzy--0G1Qrx13YOnmkyYtTQF_y8&s=10"
     ],
-    "video": "https://youtu.be/Hhp11I-vGHA"
+    "video": "https://youtu.be/Hhp11I-vGHA",
+    "speed_ms": "20 m/s"
   },
   {
     "id": "elroy-air-chaparral",
@@ -153061,7 +153142,7 @@
     "origin": "USA",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413603/myrobot/mzrtqgasmcyls5uyov8g.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/N5oqv07w50e0Ry5e2k2x/image.jpg",
     "desc": "General Atomics' medium-altitude, long-endurance 'hunter-killer' - the first UAV engineered from the start for persistent strike as well as reconnaissance, and a backbone of US and allied airpower. A big evolution of the Predator, its carbon-composite, high-aspect-ratio (~20:1) 20 m wing (79 ft / 24 m on the MQ-9B) is driven by a 900 shp Honeywell TPE331-10GD turboprop, giving ~480 km/h top speed and 27 hours of ISR endurance (34+ on Extended Range) up to 50,000 ft, with ~1,850 km range. Empty weight is ~2,223 kg against a ~4,760 kg max takeoff weight, carrying up to ~1,700 kg of payload (360 kg internal plus 1,400 kg external across seven hardpoints). It fields an MTS-B EO/IR turret, synthetic aperture radar and a laser rangefinder/designator, relaying data over satellite links to a ground control station with triple-redundant avionics, and can employ precision-guided munitions (Hellfire-class missiles plus laser- and GPS-guided bombs). First flown in 2001 and operational since 2007 (~200+ built), it serves the USAF, DHS, NASA and allies including the UK, Italy, France, Spain, the Netherlands and Japan, with SkyGuardian/SeaGuardian maritime variants.",
     "tags": [],
     "cats": [
@@ -153118,7 +153199,8 @@
       "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/MQ-9_Reaper_UAV_%28cropped%29.jpg/960px-MQ-9_Reaper_UAV_%28cropped%29.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/MQ-9_Reaper_in_flight_%282007%29.jpg/500px-MQ-9_Reaper_in_flight_%282007%29.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCgTOH4FEab_275pcGn94COYX4yyzXTlu4RrAHrD-bQY7qCNuBUkwWI5s&s=10"
-    ]
+    ],
+    "speed_ms": "480 km/h (260 kn)"
   },
   {
     "id": "ga-mq-1-predator",
@@ -153130,7 +153212,7 @@
     "origin": "USA",
     "status": "Retired",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413605/myrobot/eamukgjevhtma4pwn4kq.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/rXlxkbkaYzzkXR0PTPyL/image.jpg",
     "desc": "General Atomics' pioneering medium-altitude, long-endurance drone - the aircraft that defined armed ISR. Evolved from Abraham Karem's Amber/Gnat, the Predator entered US service in the mid-1990s as the RQ-1 reconnaissance platform and later, as the armed MQ-1, became the archetype of the persistent hunter-killer UAV. A composite, mid-wing pusher (48.7 ft / 14.8 m span, 8.2 m long, ~1,020 kg max takeoff weight) powered by a turbocharged Rotax 914 piston engine, it loitered 14-24 hours at up to ~25,000 ft with a ~1,250 km operational range, cruising around 135 km/h. It carried the AN/AAS-52 Multi-spectral Targeting System (EO/IR), synthetic aperture radar and a nose camera, relaying full-motion video over a satellite datalink to a ground station, and could mount precision-guided munitions on two hardpoints. Roughly 360 were built (unit cost ~$4M); the USAF retired the type from front-line service in 2018, though its lineage continues in the MQ-1C Gray Eagle and MQ-9 Reaper.",
     "tags": [],
     "cats": [
@@ -153184,7 +153266,8 @@
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/MQ-1B_Predator_unmanned_aircraft.jpg/250px-MQ-1B_Predator_unmanned_aircraft.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/MQ-1_Predator%2C_armed_with_AGM-114_Hellfire_missiles.jpg/960px-MQ-1_Predator%2C_armed_with_AGM-114_Hellfire_missiles.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/MQ-1_Predator_P1230014.jpg/500px-MQ-1_Predator_P1230014.jpg"
-    ]
+    ],
+    "speed_ms": "217 km/h (135 mph)"
   },
   {
     "id": "baykar-bayraktar-tb2",
@@ -153196,7 +153279,7 @@
     "origin": "Turkey",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413607/myrobot/p3x2em8lroxucrhqsotn.png",
+    "img": "https://cdn.baykartech.com/media/upload/userFormUpload/mXLrE6FC2YFLyb2jpDT5EeHoIcZy0VVX.png",
     "desc": "Baykar's medium-altitude, long-endurance armed drone and the aircraft that put Turkey on the global UCAV map. A twin-boom design with an inverted-V tail, a straight high-aspect-ratio 12 m wing and a rear pusher prop, its carbon-composite airframe (6.5 m long, ~650 kg max takeoff weight) is driven by a 100 hp Rotax piston engine for 27 hours of endurance (it holds a 27h 3m record) at up to ~18,000-27,000 ft. It cruises around 130 km/h (top speed ~222 km/h), flies fully autonomously - including taxi, takeoff and landing - on a triple-redundant autopilot, and carries a nose EO/IR turret with laser designator (optional AESA radar) plus up to 150 kg of precision-guided munitions across four hardpoints. Combat-proven in conflicts from Nagorno-Karabakh to Ukraine, Libya and Syria, it has been exported to more than 20 countries with 355+ built.",
     "tags": [],
     "cats": [
@@ -153244,7 +153327,8 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFELbI-QYfPZpcD80bF_Ddb0nUqJ2GM5dUFlA4ilgDszFG2XaB7_usaZs&s=10",
       "https://www.defensenews.com/resizer/Smd_QFGXGl5esXm5jEXIN0FR5OI=/arc-photo-archetype/arc3-prod/public/KHXKZS3PFNDUNNSXYSGU2JMXDY.jpg"
     ],
-    "video": "https://youtu.be/N1OnZ6p0Lcs"
+    "video": "https://youtu.be/N1OnZ6p0Lcs",
+    "speed_ms": "222 km/h (120 kn)"
   },
   {
     "id": "baykar-akinci",
@@ -153256,7 +153340,7 @@
     "origin": "Turkey",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413609/myrobot/nss5lvlwudaadcltn9v1.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/0k0wM9vTMSNXmOagpEqp/image.jpg",
     "desc": "Baykar's flagship high-altitude, long-endurance unmanned combat aircraft (Bayraktar Akinci), a much larger sibling to the TB2. It's a twin-turboprop design - typically 450 hp AI-450T engines (with PD-170 and TP-395 variants) - spanning about 20 m with a ~12.2 m length and ~5,500 kg max takeoff weight, able to carry roughly 1,350 kg of payload across six hardpoints (internal and external). Published figures give it about 40,000 ft service ceiling, 24+ hours of endurance and ~361 km/h top speed. It runs AI-supported, triple-redundant avionics with satellite (beyond-line-of-sight) datalinks, can mount an AESA radar and EO/IR sensors, and carries precision-guided munitions and stand-off missiles for combined ISR and strike roles. In service with Turkey and exported to several operators.",
     "tags": [],
     "cats": [
@@ -153303,7 +153387,8 @@
       "https://cdn.baykartech.com/media/upload/userFormUpload/eDCX1OrHTRbMvW3gNkGNV3Z9UlnPHnBl.JPG",
       "https://cdn.baykartech.com/media/upload/userFormUpload/WxN2VHfxR76lQGcPAqGFqYpOhIzDDlkA.jpg"
     ],
-    "video": "https://youtu.be/hn465DdKocE"
+    "video": "https://youtu.be/hn465DdKocE",
+    "speed_ms": "361 km/h"
   },
   {
     "id": "northrop-rq-4-global-hawk",
@@ -153315,7 +153400,7 @@
     "origin": "USA",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413611/myrobot/pitqrj7bit0oevr5eekl.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/SOl76ufMlxHOzgr2U9zK/image.jpg",
     "desc": "Northrop Grumman's high-altitude, long-endurance strategic reconnaissance drone - the military's 'eye in the sky' that took over much of the U-2's mission. Powered by a single Rolls-Royce AE 3007H turbofan, the carbon-composite airframe with its very high-aspect-ratio wing and V-tail (RQ-4B: 39.9 m span, 14.5 m long, ~14,600 kg max takeoff weight) climbs above 60,000 ft and loiters 32-34+ hours (a record 33.1 h), ranging some 22,800 km at up to ~629 km/h. It carries a wide-area multi-sensor suite - synthetic aperture radar with ground-moving-target indication, EO/IR imaging and signals intelligence - relayed to ground stations over a Ku-band SATCOM link, and is unarmed. First flown in 1998 and in USAF service since 2001 (~50 built, ~$131M each), it spawned the RQ-4A/B, the NATO RQ-4D Phoenix, the German EuroHawk and the US Navy's maritime MQ-4C Triton.",
     "tags": [],
     "cats": [
@@ -153371,7 +153456,8 @@
       "https://nationalinterest.org/wp-content/uploads/2025/11/rq-4-global-hawk-111925-SS.jpg",
       "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/MQ-4C_Triton_flight_testing.jpg/500px-MQ-4C_Triton_flight_testing.jpg"
     ],
-    "video": "https://youtu.be/trq0D4vqWbo"
+    "video": "https://youtu.be/trq0D4vqWbo",
+    "speed_ms": "629 km/h (390 mph)"
   },
   {
     "id": "insitu-scaneagle",
@@ -153383,7 +153469,7 @@
     "origin": "USA",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413613/myrobot/frpxkuyrvxpj1kqrulxq.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/Xv4eh7rbbPZh1tBzqZw8/image.jpg",
     "desc": "A small, long-endurance ISR drone from Insitu (a Boeing subsidiary), derived from the commercial SeaScan fish-spotting UAV and in service since the mid-2000s. Its composite, high-aspect-ratio flying wing (3.1 m span, ~1.7 m long, ~26.5 kg) rides a small ~1.1 kW two-stroke, heavy-fuel-capable piston engine driving a pusher prop, giving 18-24 hours of endurance (a Block D set a 22h 8m record) at ~90 km/h cruise up to ~19,500 ft, with a 100 km line-of-sight datalink and SATCOM for beyond-line-of-sight work. It needs no runway: a pneumatic 'SuperWedge' catapult launches it and the patented 'SkyHook' wingtip-capture recovers it (an optional FLARES kit adds VTOL). It carries a stabilized EO/IR turret plus modular payloads (NanoSAR radar, ViDAR wide-area optics, laser targeting). Battle-proven with over 1.3 million operational hours since 2004 across US and allied forces (Australia, Canada, Poland, Brazil and more), it has flown ScanEagle 1, 2 and 3 variants.",
     "tags": [],
     "cats": [
@@ -153438,7 +153524,8 @@
       "https://upload.wikimedia.org/wikipedia/commons/4/4d/US_Navy_1005268-N-RC844-159_A_Scan_Eagle_Unmanned_Aerial_Vehicle_%28UAV%29.jpg",
       "https://www.insitu.com/wp-content/uploads/2024/01/ScanEagleVTOL_AutoLaunch_72623_ZZ103467-2048x1365.jpg"
     ],
-    "video": "https://youtu.be/fkpRsVqXQ3w"
+    "video": "https://youtu.be/fkpRsVqXQ3w",
+    "speed_ms": "148 km/h (80 kn)"
   },
   {
     "id": "av-switchblade-600",
@@ -153558,7 +153645,7 @@
     "origin": "USA",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413619/myrobot/as5xyoxyfdhhy21qp2dl.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/ojsjvutPVRgxZQYkrT7t/image.jpg",
     "desc": "Kratos's low-cost, stealthy 'attritable' unmanned combat aircraft, developed for the US Air Force Research Laboratory's Low-Cost Attritable Strike Demonstrator program and designed to fly as a loyal wingman to crewed fighters (F-35, F-22, F-15EX, F/A-18). A trapezoidal, chined fuselage with a V-tail and S-shaped intake gives it a low radar signature; it's ~9.1 m long with an 8.2 m wingspan and ~2,948 kg max launch weight, powered by a single Williams FJ33 turbofan for high-subsonic speed (cruise Mach 0.72, up to ~Mach 0.85) out beyond 5,500 km at up to 45,000 ft. It's fully runway-independent - rocket-assisted rail launch and parachute/airbag recovery, with trolley- and landing-gear variants - and can launch from ships, containers or trucks. It carries ~272 kg internally plus wing stations, has released a smaller ALTIUS-600 drone from its bay, and flies under Skyborg AI autonomy. First flew March 2019; unit cost ~$4-6M (target sub-$2M at scale), producible at 250-500/year. The USMC selected it (with Northrop) for its first CCA in 2026; an electronic-attack MQ-58B and an Airbus/Bundeswehr variant are in work.",
     "tags": [],
     "cats": [
@@ -153609,7 +153696,8 @@
       "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Valkyrie_deploys_Altius-600.JPG/250px-Valkyrie_deploys_Altius-600.JPG",
       "https://www.twz.com/wp-content/uploads/2024/07/xq-58-trolly-grand-sky.jpg"
     ],
-    "video": "https://youtu.be/pIU5DOPiteA"
+    "video": "https://youtu.be/pIU5DOPiteA",
+    "speed_ms": "Mach 0.85 (cruise Mach 0.72)"
   },
   {
     "id": "northrop-x-47b",
@@ -153621,7 +153709,7 @@
     "origin": "USA",
     "status": "Retired",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413621/myrobot/iyvbi6cwa447hviux38k.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/ByuZD8ygRIVKfIqWH47R/image.jpg",
     "desc": "Northrop Grumman's carrier-based unmanned combat air vehicle technology demonstrator, built for the US Navy's UCAS-D program to prove that a stealthy, tailless jet could operate autonomously from an aircraft carrier. A B-2-inspired blended-wing-body flying wing powered by a single Pratt & Whitney F100-220U turbofan, it spans 18.9 m (folding to 9.4 m for the deck), is 11.6 m long, and has a ~20,185 kg max takeoff weight. It flew at high-subsonic speed (~Mach 0.9) out beyond 3,900 km at up to ~40,000 ft, with two internal bays rated for ~2,040 kg (the demonstrators flew unarmed) and EO/IR, SAR and ESM sensors under GPS/vision-based semi-autonomous control. Two were built (Salty Dog 501/502); first flight February 2011. It logged aviation firsts - the first UAV carrier catapult launch and autonomous arrested carrier landing (2013) and the first fully autonomous aerial refueling (2015) - before the test program concluded and it retired, serving as the basis for later carrier-UAV efforts (UCLASS/MQ-25).",
     "tags": [],
     "cats": [
@@ -153668,7 +153756,8 @@
       "https://upload.wikimedia.org/wikipedia/commons/d/d4/X-47B_operating_in_the_Atlantic_Test_Range_%28modified%29.jpg",
       "https://media.defense.gov/2014/Apr/16/2000858731/2000/2000/0/111010-O-SW468-006.JPG"
     ],
-    "video": "https://youtu.be/WC8U5_4lo2c"
+    "video": "https://youtu.be/WC8U5_4lo2c",
+    "speed_ms": "~Mach 0.9 (high subsonic)"
   },
   {
     "id": "boeing-mq-25-stingray",
@@ -153844,7 +153933,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413628/myrobot/pljlmkngg7w2fpw7oicg.png",
+    "img": "https://raptordynamic.com/cdn/shop/files/P100Pro_RevoSpray_-_Front_View_1_e9ab2f6f-b367-474d-92b4-39b605a65610.png?v=1698697594&width=2048",
     "desc": "XAG's flagship agri drone (DJI Agras' main rival): 50 kg spray/spread capacity with RevoSpray 3 atomization, RealTerra RTK terrain following and fully autonomous field operations.",
     "tags": [
       "drone",
@@ -153891,7 +153980,8 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWg6D44vA_cVYqUjEL2cJw8sVEkdwJlub16o4bqXsU2yi65atrFUiHY8g&s=10",
       "https://i.ytimg.com/vi/FtW3OPC5RFk/maxresdefault.jpg"
     ],
-    "video": "https://youtu.be/7928dhrD0qs"
+    "video": "https://youtu.be/7928dhrD0qs",
+    "speed_ms": 13.8
   },
   {
     "id": "hylio-ag-272",
@@ -153966,7 +154056,7 @@
     "origin": "Japan",
     "status": "Active",
     "price": 9000,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413632/myrobot/md2zbpbmntpbl1don4r9.jpg",
+    "img": "https://static.bhphoto.com/images/images500x500/1623324938_1617585.jpg",
     "desc": "Sony's first professional drone (announced June 2021) and the world's smallest quadcopter able to carry a full-frame Sony Alpha mirrorless camera. Its four 17-inch props and Sony-designed brushless motors give it up to 55.9 mph (25 m/s) top speed, 0-50 mph in 3.5 s, 180 deg/s angular velocity, a 55-degree attitude angle and wind resistance to 44.7 mph. It flies ~22 minutes unloaded (about 12 with a heavy payload) on hot-swappable batteries and lifts a camera-plus-gimbal payload up to 2.5 kg (Gremsy T3 or GBL-PX1 gimbals, sold separately), compatible with Alpha bodies from the a7S/FX3 to the 8K a1. Five directional stereo cameras plus two IR range sensors feed Sony's Vision Sensing Processor for obstacle avoidance and GNSS-denied positioning; retractable landing gear keeps the shot clear, and a nose FPV camera, Airpeak Flight (iOS) app and cloud-based Airpeak Base enable Mission/Repeat automated flight and dual-operator control. Body-only price around $9,000.",
     "tags": [],
     "weight_kg": 3.1,
@@ -154013,7 +154103,8 @@
       "https://static.bhphoto.com/images/multiple_images/images500x500/1754320164_IMG_1548685.jpg",
       "https://static.bhphoto.com/images/multiple_images/images500x500/1637586123_IMG_1646695.jpg"
     ],
-    "video": "https://youtu.be/U8KA55Vu07c"
+    "video": "https://youtu.be/U8KA55Vu07c",
+    "speed_ms": "90 km/h (25 m/s)"
   },
   {
     "id": "fimi-x8-pro",
@@ -154025,7 +154116,7 @@
     "origin": "China",
     "status": "Active",
     "price": 449,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413633/myrobot/wbm8my00vlnylciipnyb.png",
+    "img": "https://www.fimi.com/static/images/drone/x8p-600-500.png",
     "desc": "A folding consumer camera drone from FIMI (Xiaomi ecosystem), positioned as a value DJI alternative. It carries a 1/1.3-inch 48 MP CMOS sensor (f/1.7, dual native ISO, HDR) on a 3-axis mechanical gimbal shooting 4K/30fps, and folds to 204 x 106 x 73 mm at ~780 g. FIMI's RokLink 4.0 transmission reaches up to 15 km with ~130 ms latency, tri-directional dual-camera obstacle sensing detects out to 15 m, and flight time runs 37 min (Intelligent Flight Battery) or up to 47 min with the Battery Plus. Multi-GNSS (GPS/Galileo/BeiDou/GLONASS), Grade-7 wind resistance, Remote ID and rain/snow resistance round it out, plus optional megaphone and release-and-drop payload modules.",
     "tags": [
       "drone",
@@ -154082,7 +154173,8 @@
       "https://cdn.shopify.com/s/files/1/0582/5904/6580/files/800-800-2_f1b071c1-624e-4b9e-9acd-cc9d5b08b4d2_480x480.jpg?v=1702543880",
       "https://funyat.com/cdn/shop/files/FIMIX8PRO4KDroneProfesionalGPS15KM1_1.3-inchCMOS3-AxisGimbalTri-DirectionalObstacleAvoidanceRCQuadcopter_8.jpg?v=1741595985&width=1445"
     ],
-    "video": "https://youtu.be/QOXN-cTiXZ4"
+    "video": "https://youtu.be/QOXN-cTiXZ4",
+    "speed_ms": 18
   },
   {
     "id": "hoverair-x1-pro-max",
@@ -154538,7 +154630,7 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413652/myrobot/clfq4qtvttvqr4jebi8o.png",
+    "img": "https://s3.us-east-1.amazonaws.com/cn-qviro/FLEXIV-RIZON-400x400.png",
     "gallery": [
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQItgEI1ZwZBQtdPuGs4uf8gqCEMyY43iqggKPY_abZUYR4Us_KSF1u3hM&s=10",
       "https://www.robotics247.com/images/article/2024-04-10_Flexiv_EsVata_EsVata_worker_and_Rizon_4-3.jpg",
@@ -154546,7 +154638,8 @@
       "https://www.robotics247.com/images/article/2024-04-23_Flexiv_Grav_Enhanced_Cleaning_Station.jpg"
     ],
     "video": "https://youtu.be/MTk3G7iQ9_A",
-    "video2": "https://youtu.be/ruMVpa75Mjg"
+    "video2": "https://youtu.be/ruMVpa75Mjg",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "flexiv-rizon-10",
@@ -154655,13 +154748,14 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413657/myrobot/fixdvrqzzn7fbkagygch.png",
+    "img": "https://oss-flexiv-web-com.flexiv.com/image/product/rizon/integration.png",
     "gallery": [
       "https://s3.us-east-1.amazonaws.com/cn-qviro/product/_productMain/242506/RIA-p-6095-Rizon-10-RIA.webp",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4BFgHXTvFTzohVQn13k9hsAeqmfs7ItewgaIMudftYdSkKagaci3XvV1b&s=10",
       "https://i.ytimg.com/vi/mppL4l7NsMQ/maxresdefault.jpg"
     ],
-    "video": "https://youtu.be/mppL4l7NsMQ"
+    "video": "https://youtu.be/mppL4l7NsMQ",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "hanwha-robotics-hcr-5w",
@@ -154842,7 +154936,7 @@
     "safety_pl": "PL e / SIL 3 (TÜV-certified safety architecture)",
     "voice_control": true,
     "duty_cycle": "Industrial continuous operation",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413661/myrobot/wzsgzhsgmhf3vqxxxsed.png",
+    "img": "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/MAIRA_PB2_dd485792.png",
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/MAIRA_PB1_5c2c7107.png",
       "https://neura-robotics.com/wp-content/uploads/2026/02/maira-trans-e1771167116478-1-2048x1812.webp",
@@ -154850,7 +154944,8 @@
       "https://neura-robotics.com/wp-content/uploads/2025/06/Website_Applications_Assembly_2.jpg",
       "https://neura-robotics.com/wp-content/uploads/2025/06/MAiRA_NEURA_Robotics_Industry_Image001.jpeg"
     ],
-    "video": "https://youtu.be/z88DYigePoU"
+    "video": "https://youtu.be/z88DYigePoU",
+    "hand_repeatability_mm": 0.01
   },
   {
     "id": "neura-robotics-maira-l",
@@ -154947,7 +155042,7 @@
     "safety_pl": "PL e / SIL 3 (TÜV-certified safety architecture)",
     "voice_control": true,
     "duty_cycle": "Industrial continuous operation",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413663/myrobot/drtyqrswyklszve4htqm.png",
+    "img": "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/MAIRA_PB2_a3278be4.png",
     "gallery": [
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/MAIRA_PB1_11d65fb7.png",
       "https://s3.us-east-1.amazonaws.com/cn-qviro/product/_productMain/302110/index-1.webp",
@@ -154955,7 +155050,8 @@
       "https://s3.us-east-1.amazonaws.com/cn-qviro/product/_productMain/302111/index.webp",
       "https://s3.us-east-1.amazonaws.com/cn-qviro/product/_productMain/302075/maxresdefault.webp"
     ],
-    "video": "https://youtu.be/5BsdgQ2o_fI"
+    "video": "https://youtu.be/5BsdgQ2o_fI",
+    "hand_repeatability_mm": 0.01
   },
   {
     "id": "kinova-gen3-lite",
@@ -155134,7 +155230,7 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413667/myrobot/t6yvwrbdycqbbr5pmfo9.jpg",
+    "img": "https://d16ohktstcjvly.cloudfront.net/image/513891251684/image_2jpmakctih2bd5pq8eo0d5l60d/-T3%3A2s-FJPG,Q85",
     "gallery": [
       "https://d16ohktstcjvly.cloudfront.net/image/513891251684/image_tlliolfp514df5eagmcfm63s7t/-T3%3A2s-FJPG,Q85",
       "https://d16ohktstcjvly.cloudfront.net/image/513891251684/image_7anmsr4ag97v77ccfv7b45pb1c/-T3%3A2s-FJPG,Q85",
@@ -155142,7 +155238,8 @@
       "https://cdn.craft.cloud/6166486b-1eb4-43d5-990c-ea573de4e750/assets/products/crx-10ia-l/CRX-10iA_L-Battery-Inspection.jpg?fit=cover&trim%5Bborder%5D%5Btolerance%5D=40&trim%5Bborder%5D%5Bkeep%5D=20&format=auto&width=768&s=_Md2u_EDmcGq5mloDXjZyFaoiRMY75nWH8CiK3y9zlw",
       "https://cdn.craft.cloud/6166486b-1eb4-43d5-990c-ea573de4e750/assets/products/crx-10ia-l/CRX-steering-wheel-inspection.jpg?fit=cover&trim%5Bborder%5D%5Btolerance%5D=40&trim%5Bborder%5D%5Bkeep%5D=20&format=auto&width=768&s=-esWRIzK7ffzf32UHgbZ3Y4BE_uGzKUHzZw9PCbLe10"
     ],
-    "video": "https://youtu.be/BbxoA-OXRN4"
+    "video": "https://youtu.be/BbxoA-OXRN4",
+    "hand_repeatability_mm": 0.04
   },
   {
     "id": "honda-p1",
