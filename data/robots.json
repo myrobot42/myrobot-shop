@@ -3860,7 +3860,8 @@
     "actuator_type": "Unitree proprietary high-torque joint motors",
     "arm_dof": 4,
     "leg_dof": 5,
-    "torque_nm": 360
+    "torque_nm": 360,
+    "arm_torque_nm": 360
   },
   {
     "id": "unitree-g1",
@@ -3995,7 +3996,8 @@
     "force_sensing": true,
     "arm_dof": 5,
     "leg_dof": 6,
-    "torque_nm": 90
+    "torque_nm": 90,
+    "arm_torque_nm": 90
   },
   {
     "id": "unitree-avatar",
@@ -5014,7 +5016,8 @@
     "reach_mm": 500,
     "repeatability": 0.03,
     "website": "https://www.universal-robots.com",
-    "video": "https://youtu.be/oPh2TBnhX-s"
+    "video": "https://youtu.be/oPh2TBnhX-s",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "ur5e",
@@ -5121,7 +5124,8 @@
     "reach_mm": 850,
     "repeatability": 0.03,
     "website": "https://www.universal-robots.com",
-    "video": "https://youtu.be/XaZoTlgjdIg"
+    "video": "https://youtu.be/XaZoTlgjdIg",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "ur10e",
@@ -5228,7 +5232,8 @@
     "repeatability": 0.05,
     "website": "https://www.universal-robots.com",
     "video": "https://youtu.be/0GjYHbd1V88",
-    "video2": "https://youtu.be/tLopEvGd2VI"
+    "video2": "https://youtu.be/tLopEvGd2VI",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "ur16e",
@@ -5335,7 +5340,8 @@
     "reach_mm": 900,
     "repeatability": 0.05,
     "website": "https://www.universal-robots.com",
-    "video": "https://youtu.be/hdlC1o-3ceo"
+    "video": "https://youtu.be/hdlC1o-3ceo",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "ur20",
@@ -5443,7 +5449,8 @@
     "repeatability": 0.05,
     "website": "https://www.universal-robots.com",
     "video": "https://youtu.be/UjhGfRCQ0jg",
-    "video2": "https://youtu.be/tLopEvGd2VI"
+    "video2": "https://youtu.be/tLopEvGd2VI",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "ur30",
@@ -5549,7 +5556,8 @@
       "https://a.storyblok.com/f/169662/4000x4000/f6292fe1bb/ur30_cobot_13.png/m/328x328",
       "https://a.storyblok.com/f/169662/1540x866/56e0e006cd/website-version_umbraco-11_2022_ur20-06.jpg/m/328x328"
     ],
-    "video": "https://youtu.be/VtBtTT8PsNY"
+    "video": "https://youtu.be/VtBtTT8PsNY",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "ur3",
@@ -5652,7 +5660,8 @@
     "reach_mm": 500,
     "repeatability": 0.1,
     "website": "https://www.universal-robots.com",
-    "video": "https://youtu.be/NGlTRErHkPs"
+    "video": "https://youtu.be/NGlTRErHkPs",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "fanuc-m-10id",
@@ -5754,7 +5763,8 @@
       "https://cdn.craft.cloud/6166486b-1eb4-43d5-990c-ea573de4e750/assets/products/m-10id-12/Each-Pick-Fulfillment-demo-Modex-2022.jpg?fit=cover&trim%5Bborder%5D%5Btolerance%5D=40&trim%5Bborder%5D%5Bkeep%5D=20&format=auto&width=768&s=qaYqqrBFd1eXucOFOxwYBM-pwG8lNC2JC44fpq0kxcs",
       "https://cdn.craft.cloud/6166486b-1eb4-43d5-990c-ea573de4e750/assets/products/m-10id-12/M-10iD12-Flat-Sorter.jpg?fit=cover&trim%5Bborder%5D%5Btolerance%5D=40&trim%5Bborder%5D%5Bkeep%5D=20&format=auto&width=768&s=48nbprw-WCgEGYQgGInetdZI2D51vK35mITKNuqcEb0"
     ],
-    "video": "https://youtu.be/-91SMXBJ7Uc"
+    "video": "https://youtu.be/-91SMXBJ7Uc",
+    "hand_repeatability_mm": 0.08
   },
   {
     "id": "fanuc-lr-mate-200id",
@@ -5860,7 +5870,8 @@
     "payload_kg": 7,
     "reach_mm": 717,
     "website": "https://www.fanuc.com",
-    "video": "https://youtu.be/u7cBzMtEB1g"
+    "video": "https://youtu.be/u7cBzMtEB1g",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "fanuc-m-900ia",
@@ -5961,7 +5972,8 @@
     "payload_kg": 700,
     "reach_mm": 2832,
     "website": "https://www.fanuc.com",
-    "video": "https://youtu.be/mhmMnr4wMBM"
+    "video": "https://youtu.be/mhmMnr4wMBM",
+    "hand_repeatability_mm": 0.5
   },
   {
     "id": "fanuc-r-2000ic",
@@ -6065,7 +6077,8 @@
     "payload_kg": 210,
     "reach_mm": 2655,
     "website": "https://www.fanuc.com",
-    "video": "https://youtu.be/WIwbrhj75J0"
+    "video": "https://youtu.be/WIwbrhj75J0",
+    "hand_repeatability_mm": 0.06
   },
   {
     "id": "fanuc-cr-15ia",
@@ -6171,7 +6184,8 @@
       "https://cdn.craft.cloud/6166486b-1eb4-43d5-990c-ea573de4e750/assets/images/download.jpg?fit=cover&format=webp&width=1120&s=vhcwXNIh1asr31TTOsAmRG8OCq06_1X96AgLSff2Hro",
       "https://cdn.craft.cloud/6166486b-1eb4-43d5-990c-ea573de4e750/assets/images/fea-ro-pr-cr15ia-r-09.jpg?fit=cover&format=webp&width=1120&s=XrqXLrnoUmvjd0LmxPxmFNUJgoL7YXCDhgN9ejtb910"
     ],
-    "video": "https://youtu.be/vAWWqKwzy6k"
+    "video": "https://youtu.be/vAWWqKwzy6k",
+    "hand_repeatability_mm": 0.04
   },
   {
     "id": "fanuc-m-20id",
@@ -6272,7 +6286,8 @@
       "https://d16ohktstcjvly.cloudfront.net/asset/513891251684/image_ccq4k6m9ih3hp0qipavkfrrc5k",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5wgkZmWRdFbWx6jP5pUAZ4NYHrsJ6-d2RaAbtc_0r2GGxeBOfzoP0GTo&s=10"
     ],
-    "video": "https://youtu.be/oi0kgAPkc4g"
+    "video": "https://youtu.be/oi0kgAPkc4g",
+    "hand_repeatability_mm": 0.06
   },
   {
     "id": "fanuc-m-710ic",
@@ -6373,7 +6388,8 @@
     "payload_kg": 70,
     "reach_mm": 2050,
     "website": "https://www.fanuc.com",
-    "video": "https://youtu.be/MftiZfdl1HE"
+    "video": "https://youtu.be/MftiZfdl1HE",
+    "hand_repeatability_mm": 0.08
   },
   {
     "id": "dji-mavic-3-pro",
@@ -7300,7 +7316,8 @@
     "payload_kg": 200,
     "reach_mm": 3200,
     "website": "https://new.abb.com/products/robotics",
-    "video": "https://youtu.be/hX8Rueg7t-A"
+    "video": "https://youtu.be/hX8Rueg7t-A",
+    "hand_repeatability_mm": 0.06
   },
   {
     "id": "abb-irb-1200",
@@ -7405,7 +7422,8 @@
     "reach_mm": 900,
     "website": "https://new.abb.com/products/robotics",
     "video": "https://youtu.be/LrIfG5257WY",
-    "video2": "https://youtu.be/rXz07gGary4"
+    "video2": "https://youtu.be/rXz07gGary4",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "abb-irb-4600",
@@ -7422,7 +7440,7 @@
       "versatile"
     ],
     "fig": "🤖",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412761/myrobot/aa6kxn41dwrbczeb6pk6.jpg",
+    "img": "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/IRB_4600_PB1_77184c37.png",
     "score": 75,
     "rating": 4,
     "price": 52000,
@@ -7508,7 +7526,8 @@
     "payload_kg": 60,
     "reach_mm": 2550,
     "website": "https://new.abb.com/products/robotics",
-    "video": "https://youtu.be/YfqGitcMSgk"
+    "video": "https://youtu.be/YfqGitcMSgk",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "abb-irb-910sc",
@@ -7610,7 +7629,8 @@
       "https://meccanica-plus.it/wp-content/uploads/sites/4/2016/04/ABB-IRB-910SC.jpg",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1N_tL-V4634O7WE5AIrN251ud-_lhnXp7wVv3EREh2AHa-OOOCkIsE-w&s=10"
     ],
-    "video": "https://youtu.be/97KX-j8Onu0"
+    "video": "https://youtu.be/97KX-j8Onu0",
+    "hand_repeatability_mm": 0.01
   },
   {
     "id": "abb-irb-8700",
@@ -7627,7 +7647,7 @@
       "harsh environment"
     ],
     "fig": "🤖",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412763/myrobot/f3924be5ctppcwhpvlis.jpg",
+    "img": "https://api.one.robotics.abb.com/medias/515Wx515H-IRB-8700-1-main.jpg?context=bWFzdGVyfHJvYm90c3wyNzIwM3xpbWFnZS9qcGVnfGFEQmxMMmhtT1M4NE9EQTBOalk0TkRjek16YzBMelV4TlZkNE5URTFTRjlKVWtJZ09EY3dNRjh4WDIxaGFXNHVhbkJufDI2NzljZDFkNGI3MjU5ODI2MWYxMGViOGI2OTE1Mjc1ZGU1YTMyOTA4MWUzNjFjMWQzM2U4YzAzYjdlYmEzMmE",
     "score": 75,
     "rating": 4,
     "price": 125000,
@@ -7714,7 +7734,8 @@
       "https://i.ytimg.com/vi/D8rE__LVcH4/maxresdefault.jpg"
     ],
     "video": "https://youtu.be/RJcuz6yorvk",
-    "video2": "https://youtu.be/cVaFG9kSksU"
+    "video2": "https://youtu.be/cVaFG9kSksU",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "abb-irb-1600",
@@ -7816,7 +7837,8 @@
       "https://assets.robots.com/transforms/robots/ABB/IRB-1000-Series/3050/ABB_IRB_1600ID_cutout_da1029d02066c1e29c536f8e5c8f9200.png",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3zhUpxHm9N-4KCehQ7hpaxAcJ0s-QCVMtsjHTIPgbiawO7bs9yWveu3c&s=10"
     ],
-    "video": "https://youtu.be/_4CTZfrbYDo"
+    "video": "https://youtu.be/_4CTZfrbYDo",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "abb-irb-14000-yumi",
@@ -7923,7 +7945,8 @@
     "payload_kg": 0.5,
     "reach_mm": 559,
     "website": "https://new.abb.com/products/robotics",
-    "video": "https://youtu.be/g10PmHwPzXI"
+    "video": "https://youtu.be/g10PmHwPzXI",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "digit-v5",
@@ -9088,7 +9111,7 @@
       "waitlist"
     ],
     "fig": "🤖",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412771/myrobot/rqg3geej7udt1qwjf2lu.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/01/AhBVl4QEG7LnkI2R4MvW/image.jpg",
     "score": 75,
     "rating": 4,
     "price": 25000,
@@ -9187,7 +9210,8 @@
     "video": "https://youtu.be/DrNcXgoFv20",
     "dof": 28,
     "speed": 2.2,
-    "speed_ms": 2.2
+    "speed_ms": 2.2,
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "apptronik-apollo-gen1",
@@ -13615,7 +13639,7 @@
       "manufacturing"
     ],
     "fig": "🤖",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412783/myrobot/ov42ekvcn52ukhmhzekp.png",
+    "img": "https://assets.kuka.com/asset/9de40f9c-22c2-43e9-8620-1192436d0a02/Marketplace_Image/kr-agilus_r-900sixx_-rechts-2907f-tif.png",
     "score": 75,
     "rating": 4,
     "price": 45000,
@@ -13703,7 +13727,8 @@
     "reach_mm": 900,
     "repeatability": 0.03,
     "speed_ms": 2.5,
-    "website": "https://www.kuka.com"
+    "website": "https://www.kuka.com",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "kuka-kr16-r2010",
@@ -13906,7 +13931,8 @@
     "gallery": [
       "https://assets.kuka.com/asset/09056157-125a-4665-b763-6e888080ecff/Marketplace_Image/KUKA-quantec-2019mod-poserechts-02-cmyk-190409-1-1ebene-tif.png",
       "https://assets.kuka.com/asset/3a97c480-1455-4b5d-984d-c3784ced161d/Marketplace_Image/KUKA-quantec-2019mod-poselinks-01-cmyk-190409-08-1ebene-tif.png"
-    ]
+    ],
+    "hand_repeatability_mm": 0.15
   },
   {
     "id": "kuka-kr3-r540",
@@ -14211,7 +14237,8 @@
     "reach_mm": 1100,
     "repeatability": 0.05,
     "speed_ms": 2.2,
-    "website": "https://www.kuka.com"
+    "website": "https://www.kuka.com",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kuka-kr30-r2100",
@@ -14316,7 +14343,8 @@
     "reach_mm": 2100,
     "repeatability": 0.08,
     "speed_ms": 1.8,
-    "website": "https://www.kuka.com"
+    "website": "https://www.kuka.com",
+    "hand_repeatability_mm": 0.08
   },
   {
     "id": "kuka-kr120-r2700-2",
@@ -14422,7 +14450,8 @@
       "https://maverickindustrialsales.com/cdn/shop/files/57_86960922-b098-4ad4-9089-c3b9e319fbc1.png?v=1749890262&width=1200",
       "https://www.kuka.com/cdn-cgi/image/fit=scale-down,width=1300,height=1300/https://assets.kuka.com/asset/dc9a2d9d-c760-4d04-a6af-04be1a5b7754/Marketplace_Image/Used_Circle_1078721.png",
       "https://my.kuka.com/sfc/servlet.shepherd/version/download/068QF00000tcje2YAA"
-    ]
+    ],
+    "hand_repeatability_mm": 0.12
   },
   {
     "id": "ym-gp8",
@@ -14523,7 +14552,8 @@
       "https://www.yaskawa.eu.com/Global%20Assets/Pictures/Products/Robotics/Robots/4815/image-thumb__4815__content-swiper-contain/Yaskawa_Motoman_GP8_Detail_X7A7448@2x.a899855f.avif"
     ],
     "website": "https://www.motoman.com",
-    "video": "https://youtu.be/k9SC5sf3O1M"
+    "video": "https://youtu.be/k9SC5sf3O1M",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "ym-hc10dt",
@@ -14628,7 +14658,8 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQU4NAHzhy8kjPKPOkmk2yzrBOis8ZYSqbolK94SRZZQ&s=10"
     ],
     "website": "https://www.motoman.com",
-    "video": "https://youtu.be/QVkwWi7pZpk"
+    "video": "https://youtu.be/QVkwWi7pZpk",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "ym-ma1440",
@@ -14731,7 +14762,8 @@
       "https://assets.robots.com/robots/Motoman/Arc-Welding/_1200x630_crop_center-center_82_none/Motoman_MA1440_cutout.png?mtime=1569462714"
     ],
     "website": "https://www.motoman.com",
-    "video": "https://youtu.be/jDFb4abhcL8"
+    "video": "https://youtu.be/jDFb4abhcL8",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "ym-gp25",
@@ -14832,7 +14864,8 @@
       "https://www.yaskawa.eu.com/yaskawa.de/News/Kirschenhofer/12546/image-thumb__12546__content-swiper-contain/Yaskawa_Kirschenhofer_Klein_0806-1@2x.8f601ef0.avif"
     ],
     "website": "https://www.motoman.com",
-    "video": "https://youtu.be/Vm1gKYu16sk"
+    "video": "https://youtu.be/Vm1gKYu16sk",
+    "hand_repeatability_mm": 0.04
   },
   {
     "id": "ym-mh50",
@@ -14933,7 +14966,8 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTutEDxAUq5PLvukrVFKZfVyuvcGg1Ou_jcGZPs2zP-Bg&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkEQOe01feKl7xNxETrgO5b65o_0yymT96LCnJcSGP1g&s=10"
     ],
-    "video": "https://youtu.be/jwzzsS_h0Q4"
+    "video": "https://youtu.be/jwzzsS_h0Q4",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "ym-ar1440",
@@ -15035,7 +15069,8 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_w4jiQ05KuZ5s8WH-4jLWVkCitPvRFodCznUqJEa5Kw&s=10"
     ],
     "website": "https://www.motoman.com",
-    "video": "https://youtu.be/028AmgQ4E54"
+    "video": "https://youtu.be/028AmgQ4E54",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "ym-gp7",
@@ -15137,7 +15172,8 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM-1JN3bLBWO-ecWZyIhc6pUCLxBvJC3XuZQjB7IY2Ig&s=10"
     ],
     "website": "https://www.motoman.com",
-    "video": "https://youtu.be/FWmIUvTvV0U"
+    "video": "https://youtu.be/FWmIUvTvV0U",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "doosan-robotics-m0609",
@@ -15242,7 +15278,8 @@
       "https://www.ellisontechnologies.com/sites/default/files/styles/container_640x640/public/2023-06/ellison_doosan_cobot_m0609_1.jpg?itok=biI9ueGD"
     ],
     "website": "https://www.doosanrobotics.com",
-    "video": "https://youtu.be/OGXhhQ2r4DQ"
+    "video": "https://youtu.be/OGXhhQ2r4DQ",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "doosan-robotics-m1013",
@@ -15348,7 +15385,8 @@
       "https://doosanrobotics.hu/wp-content/uploads/2021/03/doosan-m1013-01.jpg"
     ],
     "website": "https://www.doosanrobotics.com",
-    "video": "https://youtu.be/hX9ydVj5b7Y"
+    "video": "https://youtu.be/hX9ydVj5b7Y",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "doosan-robotics-a0912",
@@ -15453,7 +15491,8 @@
       "https://www.crossco.com/wp-content/uploads/elementor/thumbs/Doosan-Robotics-A0912-Cobot_2-prmma4o0k9p05kp1sxckhedgpeznkiywkfp04hkd1c.png"
     ],
     "website": "https://www.doosanrobotics.com",
-    "video": "https://youtu.be/rbZ9T5FqqPQ"
+    "video": "https://youtu.be/rbZ9T5FqqPQ",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "doosan-robotics-h2017",
@@ -15560,7 +15599,8 @@
     ],
     "website": "https://www.doosanrobotics.com",
     "video": "https://youtu.be/reNAjG_tPlk",
-    "video2": "https://youtu.be/YWU9IGy9MNk"
+    "video2": "https://youtu.be/YWU9IGy9MNk",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "doosan-robotics-a0509",
@@ -15665,7 +15705,8 @@
       "https://www.crossco.com/wp-content/uploads/2022/07/Doosan-Robotics-A0509s-Cobot_3.png"
     ],
     "website": "https://www.doosanrobotics.com",
-    "video": "https://youtu.be/HWHh1B2_xsA"
+    "video": "https://youtu.be/HWHh1B2_xsA",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "doosan-robotics-m1509",
@@ -15769,7 +15810,8 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FDOOSAN-M1509_2_7edf4060.jpg",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FDOOSAN-M1509_3_5ddda01a.jpg"
     ],
-    "website": "https://www.doosanrobotics.com"
+    "website": "https://www.doosanrobotics.com",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "doosan-robotics-p3020",
@@ -15877,7 +15919,8 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/P30_Pb5_43b2f9b7.png"
     ],
     "website": "https://www.doosanrobotics.com",
-    "video": "https://youtu.be/PQF00j-iysM"
+    "video": "https://youtu.be/PQF00j-iysM",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "tm5-700",
@@ -15982,7 +16025,8 @@
       "https://robotics.omron.com/wp-content/uploads/TM5-700_Gallery_2-1.jpg?w=1000",
       "https://robotics.omron.com/wp-content/uploads/OMRON-TM5-700_product_age.png?w=344"
     ],
-    "website": "https://www.tm-robot.com"
+    "website": "https://www.tm-robot.com",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "tm5-900",
@@ -16087,7 +16131,8 @@
       "https://robotics.omron.com/wp-content/uploads/TM5-900-robotiq-gripper.png?w=499",
       "https://techman.lg-motion.co.uk/wp-content/uploads/2023/01/TM5A-900-19G-12.webp",
       "https://robotics.omron.com/wp-content/uploads/OMRON-TM-5-900_food-graded-OMRON_Robotics.png?w=660"
-    ]
+    ],
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "tm12",
@@ -16194,7 +16239,8 @@
       "https://robotics.omron.com/wp-content/uploads/Omron_TM12_Transparent.png?w=535",
       "https://techman.lg-motion.co.uk/wp-content/uploads/2023/01/TM12-19G-01.webp",
       "https://tm-robot.oss-cn-hongkong.aliyuncs.com/wp-content/uploads/2022/06/heavy_payload_section1_img-1.png"
-    ]
+    ],
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "tm14",
@@ -16300,7 +16346,8 @@
       "https://techman.lg-motion.co.uk/wp-content/uploads/2023/01/TM14-19G-02.webp",
       "https://img.directindustry.com/images_di/photo-mg/203643-15035409.jpg"
     ],
-    "website": "https://www.tm-robot.com"
+    "website": "https://www.tm-robot.com",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "tm25",
@@ -16402,7 +16449,8 @@
     "repeatability": 0.03,
     "speed_ms": 2.5,
     "reach_mm": 1300,
-    "website": "https://www.tm-robot.com"
+    "website": "https://www.tm-robot.com",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "tm3-300",
@@ -16499,7 +16547,8 @@
     "repeatability": 0.02,
     "speed_ms": 5,
     "reach_mm": 300,
-    "website": "https://www.tm-robot.com"
+    "website": "https://www.tm-robot.com",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "kassow-kr810",
@@ -16601,7 +16650,8 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Edge_Base_PB_57b829af.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Edge_PB2_adc37f05.png"
     ],
-    "video": "https://youtu.be/1oJ3x428VSw"
+    "video": "https://youtu.be/1oJ3x428VSw",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kassow-kr1205",
@@ -16703,7 +16753,8 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Edge_Base_PB_f2dd072b.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Edge_PB2_415a18a1.png"
     ],
-    "video": "https://youtu.be/NlqVeA9WIWc"
+    "video": "https://youtu.be/NlqVeA9WIWc",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kassow-kr1807",
@@ -16803,7 +16854,8 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FKR1805-RESIZED_ff9a88a5.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FKR1805RS4-1_281ae48d.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FKR1805RS5_9e4e1d37.png"
-    ]
+    ],
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kassow-kr710",
@@ -16898,7 +16950,8 @@
     "origin": "Denmark",
     "reach_mm": 700,
     "payload_kg": 10,
-    "repeatability": 0.05
+    "repeatability": 0.05,
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kassow-kr1410",
@@ -17000,7 +17053,8 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FKR1410RS5_ace9ae14.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FKR1410RS6_c34ea602.png"
     ],
-    "video": "https://youtu.be/wJVxBql6uYI"
+    "video": "https://youtu.be/wJVxBql6uYI",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kassow-kr505",
@@ -17095,7 +17149,8 @@
     "origin": "Denmark",
     "reach_mm": 505,
     "payload_kg": 5,
-    "repeatability": 0.05
+    "repeatability": 0.05,
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kassow-kr1018",
@@ -17198,7 +17253,8 @@
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FKR1018RS3_6a7a0992.png",
       "https://unchainedrobotics.de/cdn-cgi/image/width=1920,quality=80/https://uploads.unchainedrobotics.de/media/products/Product_images2FKR1018RS5_b08e5be6.png"
     ],
-    "video": "https://youtu.be/GKNB_nDoqro"
+    "video": "https://youtu.be/GKNB_nDoqro",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kassow-kr1507",
@@ -17293,7 +17349,8 @@
     "origin": "Denmark",
     "reach_mm": 1500,
     "payload_kg": 7,
-    "repeatability": 0.05
+    "repeatability": 0.05,
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "omron-tm5-900",
@@ -18152,7 +18209,8 @@
     "max_tooltip_speed_mm_s": 11000,
     "gallery": [
       "https://img.directindustry.com/images_di/photo-m2/18836-20295526.webp"
-    ]
+    ],
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "kawa-rs010n",
@@ -18251,7 +18309,8 @@
       "https://m.shgongboshi.com/photo/pc149386147-simplified_use_high_speed_6_axis_kawasaki_robot_rs010n_with_welding_torch.jpg",
       "https://www.usedsecondhand.com/wp-content/uploads/2020/03/kawasaki-rs010n-a-grinding-cell-6-axis-robot-0.jpg"
     ],
-    "video": "https://youtu.be/5Qry2UImb5k"
+    "video": "https://youtu.be/5Qry2UImb5k",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "kawa-rs020n",
@@ -18351,7 +18410,8 @@
       "https://i.machineryhost.com/eecca5b6365d9607ee5a9d336962c534/6fb15463914e757d86afc22dc7cd6577/large-used-kawasaki-rs-020-n-6-axis-20-kg-x-1725-mm-reach-robots-with-e01-controllers-and-cubic-s.jpg",
       "https://i.machinio.com/medium/a1b1201d50e8151e3de62a9bfa8330da/original_compressed-used/ddf6/kawasaki-rs020n.jpg"
     ],
-    "video": "https://youtu.be/wK6Zz86f5d4"
+    "video": "https://youtu.be/wK6Zz86f5d4",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "kawa-rs050n",
@@ -18449,7 +18509,8 @@
       "https://ecdn6-nc.globalso.com/upload/p/2430/image_other/2025-06/img_20220303_142816.jpg",
       "https://sc04.alicdn.com/kf/Hcef3633a47b2494fa246029ab75e7158V.png",
       "https://ecdn6-nc.globalso.com/upload/p/2430/image_other/2025-06/img_20220303_142749.jpg"
-    ]
+    ],
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "kawa-ba006n",
@@ -18548,7 +18609,8 @@
       "https://img.youtube.com/vi/OMtX0xbvB0A/hqdefault.jpg"
     ],
     "max_tooltip_speed_mm_s": 11000,
-    "video": "https://youtu.be/SFR0IBFVDWE"
+    "video": "https://youtu.be/SFR0IBFVDWE",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "kawa-cp180l",
@@ -18647,7 +18709,8 @@
       "https://maszyneria.com/wp-content/uploads/2023/09/4-19.jpg"
     ],
     "max_tooltip_speed_mm_s": 6500,
-    "video": "https://youtu.be/4ZBQ8LjmhTA"
+    "video": "https://youtu.be/4ZBQ8LjmhTA",
+    "hand_repeatability_mm": 0.5
   },
   {
     "id": "kawa-mx350l",
@@ -18746,7 +18809,8 @@
       "https://m.robotsarms.com/photo/pt155911578-kawasaki_mx350l_industrial_robot_arm_6_axis_handling_robotic_arm.jpg",
       "https://cdn.robodk.com/robot/img/Kawasaki-MX350L-robot.png"
     ],
-    "video": "https://youtu.be/lXbaCYXOmmA"
+    "video": "https://youtu.be/lXbaCYXOmmA",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "autel-evo-max-4t",
@@ -29453,7 +29517,8 @@
     "origin": "USA",
     "speed_ms": 2.5,
     "coverage_ha_day": 8,
-    "repeatability": 10
+    "repeatability": 10,
+    "hand_repeatability_mm": 10
   },
   {
     "id": "aigen-e2",
@@ -29470,7 +29535,7 @@
       "AI-driven"
     ],
     "fig": "🤖",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412812/myrobot/icosjedl6r1mq8uv7lj7.png",
+    "img": "https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_675/https://www.futurefarming.com/app/uploads/2025/04/bowles-1-1.png",
     "score": 75,
     "rating": 4,
     "price": 95000,
@@ -29558,7 +29623,8 @@
       "https://www.aigen.io/assets/icons/poweredbythesun-1.jpg",
       "https://www.aigen.io/assets/images/about/app2-p-2000.jpg"
     ],
-    "video": "https://youtu.be/u7uVvPGonMw"
+    "video": "https://youtu.be/u7uVvPGonMw",
+    "hand_repeatability_mm": 5
   },
   {
     "id": "ghost-vision-60",
@@ -31962,7 +32028,8 @@
       "Franka Hand (2-finger)",
       "Vacuum gripper"
     ],
-    "datasheet": "https://franka.de/franka-research-3"
+    "datasheet": "https://franka.de/franka-research-3",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "franka-mobile-base",
@@ -33492,7 +33559,8 @@
     "speed": 1.4,
     "battery": 60,
     "hand_dof": 11,
-    "leg_dof": 6
+    "leg_dof": 6,
+    "arm_torque_nm": 300
   },
   {
     "id": "carbon-robotics-laserweeder",
@@ -33644,7 +33712,8 @@
       "https://images1.farms.com/farms-production-images/Portals/0/Images/News/174924.jpg",
       "https://imageio.forbes.com/specials-images/imageserve/61815a27ff3ea366e33ab291/0x0.jpg?format=jpg&crop=2060,1159,x8,y125,safe&height=600&width=1200&fit=bounds"
     ],
-    "website": "https://carbonrobotics.com"
+    "website": "https://carbonrobotics.com",
+    "hand_repeatability_mm": 1
   },
   {
     "id": "carbon-robotics-laserweeder-compact",
@@ -33760,7 +33829,8 @@
     "top_speed_kmh": 6,
     "coverage_ha_day": 5,
     "repeatability": 1,
-    "website": "https://carbonrobotics.com"
+    "website": "https://carbonrobotics.com",
+    "hand_repeatability_mm": 1
   },
   {
     "id": "milrem-themis-adder",
@@ -35308,7 +35378,8 @@
     ],
     "perf": false,
     "origin": "USA",
-    "repeatability": 98
+    "repeatability": 98,
+    "hand_repeatability_mm": 98
   },
   {
     "id": "naio-technologies-orio",
@@ -42587,7 +42658,8 @@
     "api": "Open API — JSON over Ethernet",
     "ethernet": "Peripheral communication interface + Ethernet",
     "power_source": "Onboard battery (charging port; ~20 h standby)",
-    "audio": "Audio module (status + interaction)"
+    "audio": "Audio module (status + interaction)",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "realman-eco65-aa-",
@@ -42761,7 +42833,8 @@
     "variants": [
       "GEN72-B",
       "GEN72-II"
-    ]
+    ],
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "realman-rml63-6f",
@@ -42874,7 +42947,8 @@
     "ft_sensor": "Integrated six-axis force/torque sensor",
     "currency": "USD",
     "mtbf_hours": 30000,
-    "duty_cycle": "30,000 h continuous service life at rated load — MTBF-certified by Shanghai National Robot Testing Center"
+    "duty_cycle": "30,000 h continuous service life at rated load — MTBF-certified by Shanghai National Robot Testing Center",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "realman-rml63-b",
@@ -42986,7 +43060,8 @@
     "variants": [
       "RML63-B",
       "RML63-6F (six-axis force)"
-    ]
+    ],
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "realman-eco65-6f",
@@ -43101,7 +43176,8 @@
     "ft_sensor": "Integrated six-axis force/torque sensor",
     "payload_peak_kg": 9,
     "currency": "USD",
-    "joint_speed_max_dps": 225
+    "joint_speed_max_dps": 225,
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "realman-eco65-b",
@@ -43207,7 +43283,8 @@
     "variants": [
       "ECO65-B",
       "ECO65-6F (six-axis force)"
-    ]
+    ],
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "realman-rm75-6f",
@@ -43327,7 +43404,8 @@
     "max_tcp_speed_ms": 1.8,
     "speed_ms": 1.8,
     "speed": 1.8,
-    "ft_force_range_n": "200 N / 7 N·m, ±0.5% full scale"
+    "ft_force_range_n": "200 N / 7 N·m, ±0.5% full scale",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "realman-rm75-b",
@@ -43448,7 +43526,8 @@
     "variants": [
       "RM75-B",
       "RM75-6F (six-axis force)"
-    ]
+    ],
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "realman-rm65-b",
@@ -43576,7 +43655,8 @@
       "RM65-B",
       "RM65-6F (six-axis force)",
       "RM65-B-V (depth-camera vision)"
-    ]
+    ],
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "flexiv-moonlight",
@@ -43595,7 +43675,7 @@
       "active"
     ],
     "fig": "🤖",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412850/myrobot/xhnbyyh147c1kvk2mslj.jpg",
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-WcLD8BUMrgzSOz00mvIMklXFvr5ztYgkwaVSwGPSog&s=10",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -43694,7 +43774,8 @@
       "ETL"
     ],
     "safety_rating": "CE & ETL certified — inherently safe HRI",
-    "datasheet": "https://www.flexiv.com/product/moonlight"
+    "datasheet": "https://www.flexiv.com/product/moonlight",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "jaka-jaka-all-in-one-series",
@@ -43833,7 +43914,8 @@
     "flange_standard": "ISO 9409-1-50",
     "programming": "Drag-and-teach + graphical app",
     "industrial_protocols": "TCP/IP, Modbus",
-    "collision_detection": true
+    "collision_detection": true,
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "jaka-jaka-pro16",
@@ -43911,7 +43993,8 @@
     "os": "JAKA",
     "repeatability": 0.03,
     "website": "https://www.jaka.com",
-    "video": "https://youtu.be/0w7MmIS4Ksc"
+    "video": "https://youtu.be/0w7MmIS4Ksc",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "jaka-jaka-pro12",
@@ -43996,7 +44079,9 @@
     "os": "JAKA",
     "repeatability": 0.03,
     "website": "https://www.jaka.com",
-    "video": "https://youtu.be/tOlSg__7w9E"
+    "video": "https://youtu.be/tOlSg__7w9E",
+    "speed_ms": 3.2,
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "jaka-jaka-pro5",
@@ -44063,7 +44148,8 @@
       "https://www.robotindustries.com/web/image/product.image/95/image_1024/JAKA%20Pro%205%20Collaborative%20Robot?unique=29c8607",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB37BTkeTszIzEEmyODD06BWGRhAToUgjpQIk7EFjEPAzc4eR5yyiNeCIh&s=10"
     ],
-    "video": "https://youtu.be/KUCjnPqbCTg"
+    "video": "https://youtu.be/KUCjnPqbCTg",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "jaka-jaka-zu35",
@@ -44129,7 +44215,8 @@
     "flange_standard": "ISO 9409-1-50",
     "programming": "Drag-and-teach + graphical app",
     "industrial_protocols": "TCP/IP, Modbus",
-    "mounting": "Any angle"
+    "mounting": "Any angle",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "jaka-jaka-zu30",
@@ -44199,7 +44286,8 @@
     "programming": "Drag-and-teach + graphical app",
     "industrial_protocols": "TCP/IP, Modbus",
     "collision_detection": true,
-    "mounting": "Any angle"
+    "mounting": "Any angle",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "jaka-jaka-zu20",
@@ -44279,7 +44367,8 @@
     "made_in": "China",
     "repeatability": 0.03,
     "website": "https://www.jaka.com",
-    "video": "https://youtu.be/cAdx_Yb2aP0?list=PLEKOQED0KMiQqdbEFv4sUZmqvDhnnX0Gp"
+    "video": "https://youtu.be/cAdx_Yb2aP0?list=PLEKOQED0KMiQqdbEFv4sUZmqvDhnnX0Gp",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "jaka-jaka-zu18",
@@ -44353,7 +44442,8 @@
     "programming": "Drag-and-teach + graphical app",
     "industrial_protocols": "TCP/IP, Modbus",
     "collision_detection": true,
-    "mounting": "Any angle"
+    "mounting": "Any angle",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "jaka-jaka-zu12",
@@ -44453,7 +44543,8 @@
     "os": "JAKA",
     "repeatability": 0.03,
     "website": "https://www.jaka.com",
-    "video": "https://youtu.be/Dllkxar7Vus"
+    "video": "https://youtu.be/Dllkxar7Vus",
+    "hand_repeatability_mm": 0.03
   },
   {
     "id": "jaka-jaka-zu7",
@@ -44533,7 +44624,8 @@
     "os": "JAKA",
     "repeatability": 0.02,
     "website": "https://www.jaka.com",
-    "video": "https://youtu.be/5BBDBwDzDmM"
+    "video": "https://youtu.be/5BBDBwDzDmM",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "jaka-jaka-zu5",
@@ -44608,7 +44700,8 @@
     "made_in": "China",
     "os": "JAKA",
     "repeatability": 0.02,
-    "website": "https://www.jaka.com"
+    "website": "https://www.jaka.com",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "jaka-jaka-zu3",
@@ -44673,7 +44766,8 @@
     "flange_standard": "ISO 9409-1-50",
     "programming": "Drag-and-teach + graphical app",
     "industrial_protocols": "TCP/IP, Modbus",
-    "collision_detection": true
+    "collision_detection": true,
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "jaka-jaka-mini-2",
@@ -44748,7 +44842,8 @@
     "programming": "Drag-and-teach + graphical app",
     "industrial_protocols": "TCP/IP, Modbus",
     "collision_detection": true,
-    "mounting": "Any angle"
+    "mounting": "Any angle",
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "jaka-jaka-s5",
@@ -44823,7 +44918,8 @@
     "flange_standard": "ISO 9409-1-50",
     "programming": "Drag-and-teach + graphical app",
     "industrial_protocols": "TCP/IP, Modbus",
-    "collision_detection": true
+    "collision_detection": true,
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "jaka-jaka-zu-5s",
@@ -44950,7 +45046,7 @@
       "active"
     ],
     "fig": "🤖",
-    "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412854/myrobot/mqivlbp2sn2kw0hxkk40.jpg",
+    "img": "https://plain-eeur-prod-public.komododecks.com/202607/03/szjRT2XrPW4ToFH02k8D/image.jpg",
     "score": 75,
     "rating": 4,
     "price": 0,
@@ -45030,7 +45126,8 @@
     "flange_standard": "ISO 9409-1-50-4-M6",
     "operating_temp_min": "-20",
     "operating_temp_max": 45,
-    "ethernet": "Communication integrated into robot arm"
+    "ethernet": "Communication integrated into robot arm",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "flexiv-rizon-10s",
@@ -45163,7 +45260,8 @@
     ],
     "safety_rating": "Inherently safe adaptive robot — CE & ETL certified, fenceless HRI",
     "datasheet": "https://www.flexiv.com/product/rizon",
-    "ai_model": "Flexiv hierarchical intelligence — AI-driven vision + force-guided manipulation"
+    "ai_model": "Flexiv hierarchical intelligence — AI-driven vision + force-guided manipulation",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "flexiv-rizon-4s",
@@ -45303,7 +45401,8 @@
     ],
     "safety_rating": "Inherently safe adaptive robot — CE & ETL certified, fenceless HRI",
     "datasheet": "https://www.flexiv.com/product/rizon",
-    "ai_model": "Flexiv hierarchical intelligence — AI-driven vision + force-guided manipulation"
+    "ai_model": "Flexiv hierarchical intelligence — AI-driven vision + force-guided manipulation",
+    "hand_repeatability_mm": 0.05
   },
   {
     "id": "jaka-jaka-lumi",
@@ -45430,7 +45529,8 @@
     "flange_standard": "ISO 9409-1-50",
     "programming": "Drag-and-teach + graphical app",
     "industrial_protocols": "TCP/IP, Modbus",
-    "collision_detection": true
+    "collision_detection": true,
+    "hand_repeatability_mm": 0.02
   },
   {
     "id": "jaka-jaka-minicobo",
@@ -45582,7 +45682,8 @@
     "fieldbus": "Modbus TCP / Modbus RTU / PROFINET / EtherNet/IP",
     "plc_integration": true,
     "datasheet": "https://www.jakarobotics.com/resources/download/technical-information/",
-    "app_companion": "JAKA APP (Android / Windows)"
+    "app_companion": "JAKA APP (Android / Windows)",
+    "hand_repeatability_mm": 0.1
   },
   {
     "id": "aubo-aubo-is35",
