@@ -25,7 +25,7 @@ exports.handler = async (event) => {
   catch (e) { return { statusCode: 400, headers, body: JSON.stringify({ error: { message: 'Invalid JSON body' } }) }; }
 
   const body = {
-    model: payload.model || 'claude-sonnet-4-5',
+    model: payload.model || 'claude-sonnet-4-6',
     max_tokens: Math.min(payload.max_tokens || 1024, 2048),
     system: payload.system || '',
     messages: Array.isArray(payload.messages) ? payload.messages.slice(-12) : [],
