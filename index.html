@@ -16,8 +16,8 @@
 <link rel="dns-prefetch" href="https://i.ytimg.com">
 <link rel="manifest" href="/site.webmanifest">
 <title>myrobot.shop — World's #1 Robot Database</title>
-<!-- BUILD-TAG: build-Y (DETAILED humanoid-grade spec sheets for ALL categories: 71-field universal core + deep domain sections, 88-135 rows/page; Consumer 4-type; Humanoid dedicated build-R menu) -->
-<meta name="mrs-build" content="build-Y">
+<!-- BUILD-TAG: build-AA (ACCESSORIES with per-accessory images; DETAILED humanoid-grade spec sheets for ALL categories: 71-field universal core + deep domain sections, 88-135 rows/page; Consumer 4-type; Humanoid dedicated build-R menu) -->
+<meta name="mrs-build" content="build-AA">
 <meta name="description" content="The world's largest robot database — detailed specs, comparisons, rankings and videos for 1,880+ robots: humanoids, quadrupeds, industrial arms, drones, space robots and more.">
 <link rel="canonical" href="https://myrobot.shop/">
 <meta property="og:site_name" content="myrobot.shop">
@@ -2415,6 +2415,39 @@ function buildHumanoidFullTable(r){
         } else {
           html += rowF(label, Array.isArray(v)?v.filter(Boolean).join(', '):v, '', 'text');
         }
+      });
+    }
+  }
+
+  // ── ACCESSORIES (components: hands, grippers, batteries, tools) ───────────
+  // Auto-render any r.accessories array. Each accessory is {name, type, specs:{}}.
+  // Components that aren't standalone SKUs (dexterous hands, grippers, etc.)
+  // live here on the parent robot instead of as separate catalogue entries.
+  if (Array.isArray(r.accessories) && r.accessories.length){
+    var _acc = r.accessories.filter(function(a){ return a && (a.name || a.type); });
+    if (_acc.length){
+      html += grp('ACCESSORIES');
+      _acc.forEach(function(a){
+        var accName = a.name || a.type || 'Accessory';
+        var accType = a.type ? (' \u2014 ' + a.type) : '';
+        // accessory name as a sub-header row
+        html += rowF(accName + accType, '', '', 'text');
+        // accessory image (if provided) — renders in the value cell with mascot fallback
+        if (a.img){
+          html += '<tr><td style="color:var(--mut);font-size:12px;padding:7px 12px;white-space:nowrap;width:42%">\u2003Image</td>'+
+                  '<td style="font-size:12px;padding:7px 12px"><img src="'+a.img+'" alt="'+accName+'" '+
+                  'style="max-width:120px;max-height:120px;object-fit:contain;border-radius:6px;background:#fff;border:1px solid var(--bdr)" '+
+                  'loading="lazy" onerror="this.style.display=\'none\'"></td></tr>';
+        }
+        if (a.specs && typeof a.specs === 'object'){
+          Object.keys(a.specs).forEach(function(sk){
+            var sv=a.specs[sk]; if(sv===null||sv===undefined||sv==='') return;
+            if(Array.isArray(sv)&&sv.filter(Boolean).length===0) return;
+            var slabel = '\u2003' + sk.replace(/_/g,' ').replace(/\b\w/g,function(c){return c.toUpperCase();});
+            html += rowF(slabel, Array.isArray(sv)?sv.filter(Boolean).join(', '):sv, '', 'text');
+          });
+        }
+        if (a.desc){ html += rowF('\u2003Description', a.desc, '', 'text'); }
       });
     }
   }
