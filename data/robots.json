@@ -90483,11 +90483,11 @@
     ],
     "perf": false,
     "year": 2024,
-    "status": "Superseded (L7)",
+    "status": "Active",
     "height_mm": 1710,
     "weight_kg": 65,
     "battery_life": 150,
-    "origin": "China (Beijing; Tsinghua spin-off)",
+    "origin": "China",
     "cameras": "RGB-D",
     "wifi": true,
     "bluetooth": true,
@@ -90495,7 +90495,7 @@
     "announced": "2024",
     "run_speed_ms": 3.6,
     "speed_ms": 3.6,
-    "dof": "55 DoF (12 legs, 3 waist, 2 neck, 7/arm)",
+    "dof": 55,
     "arm_dof": 7,
     "actuator_type": "High-torque electric",
     "fingers": 5,
@@ -90531,8 +90531,22 @@
     "hands": "XHAND1 — 12 active DoF direct-drive five-finger",
     "joint_torque": "Up to 400 N·m",
     "joint_speed": "25 rad/s peak",
-    "ai_model": "ERA-42 (100+ precision operations from minimal data)",
-    "note": "CORRECTION for spec sheets: STAR1 (3.6 m/s) and L7 (4 m/s) records are DIFFERENT robots/gaits — often conflated"
+    "ai_model": "ERA-42 end-to-end embodied large model",
+    "note": "CORRECTION for spec sheets: STAR1 (3.6 m/s) and L7 (4 m/s) records are DIFFERENT robots/gaits — often conflated",
+    "manufacturer_history": "RobotEra (Beijing, China), founded Aug 2023 with Tsinghua University support. 'Hexa-Core' lineup: STAR1 (flagship biped, 55 DoF, 400 N·m), L7 (fastest biped, 4 m/s), Q5 (wheeled service, 44 DoF), M7 (upper-body variant), XBot-L (walked the Great Wall). Self-developed XHand (12-DoF dexterous hand). ERA-42 end-to-end embodied large model.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "arm_torque_nm": 400,
+    "raw_specs": {
+      "maker": "RobotEra (Beijing), Tsinghua-backed",
+      "hand": "Self-developed XHand — 12-DoF, tactile sensors",
+      "ai": "ERA-42 embodied large model (vision+proprioception+language)",
+      "entry": "STAR1 — RobotEra",
+      "class": "STAR1 — flagship biped",
+      "specs": "55 DoF, joint torque 400 N·m, up to 25 rad/s",
+      "skills": "Chopsticks (dumplings), cooking, pouring wine"
+    }
   },
   {
     "id": "robotera-l7-2025",
@@ -90561,17 +90575,17 @@
     ],
     "perf": false,
     "year": 2025,
-    "status": "Current",
-    "height_mm": 1750,
-    "weight_kg": 65,
+    "status": "Active",
+    "height_mm": 1710,
+    "weight_kg": 70,
     "battery_life": 180,
-    "origin": "China (Beijing; Tsinghua IIIS spin-off)",
+    "origin": "China",
     "cameras": "RGB-D",
     "wifi": true,
     "bluetooth": true,
     "made_in": "China",
     "announced": "2025",
-    "dof": "55 DoF total",
+    "dof": 55,
     "arm_dof": 7,
     "fingers": 5,
     "bimanual": true,
@@ -90613,12 +90627,30 @@
     "actuators": "Proprietary fully direct-drive joints",
     "frame_material": "Aerospace-grade aluminium + carbon-fibre composite",
     "camera": "Binocular vision",
-    "ai_model": "ERA-42 end-to-end VLA (vision-language-action); 'group intelligence' multi-robot coordination",
+    "ai_model": "ERA-42 end-to-end embodied large model",
     "control": "Teleoperation + autonomous modes",
     "mobility_demos": "360° spin jumps, breakdance spins, running",
     "deployments": "Thousands-of-units scale into 10+ logistics centers with China Post + SF Express",
     "funding": "SF Group-led ~¥2B round (May 2026); orders claimed from 9 of world's 10 largest tech firms; 200+ shipped 2025",
-    "note": "Sister M7 = fixed-base upper-body variant"
+    "note": "Sister M7 = fixed-base upper-body variant",
+    "manufacturer_history": "RobotEra (Beijing, China), founded Aug 2023 with Tsinghua University support. 'Hexa-Core' lineup: STAR1 (flagship biped, 55 DoF, 400 N·m), L7 (fastest biped, 4 m/s), Q5 (wheeled service, 44 DoF), M7 (upper-body variant), XBot-L (walked the Great Wall). Self-developed XHand (12-DoF dexterous hand). ERA-42 end-to-end embodied large model.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "arm_torque_nm": 400,
+    "hot_swap": true,
+    "raw_specs": {
+      "maker": "RobotEra (Beijing), Tsinghua-backed",
+      "hand": "Self-developed XHand — 12-DoF, tactile sensors",
+      "ai": "ERA-42 embodied large model (vision+proprioception+language)",
+      "entry": "L7 — RobotEra",
+      "class": "L7 (Jul 2025) — fastest bipedal humanoid, 2nd flagship after STAR1",
+      "specs": "171cm, 65-70kg, 55 DoF, 4 m/s, 400 N·m, 20kg both arms",
+      "actuators": "Proprietary direct-drive — 360° spin jumps, breakdance",
+      "sensors": "360° multi-sensor fusion (panoramic vision + depth + positional)",
+      "price": "~$120,000",
+      "variant": "M7 upper-body fixed-base"
+    }
   },
   {
     "id": "astribot-s1-2024",
@@ -103961,8 +103993,8 @@
     ],
     "perf": false,
     "year": 2017,
-    "status": "Discontinued",
-    "weight_kg": 100,
+    "status": "Active",
+    "weight_kg": 33,
     "battery_life": 60,
     "origin": "Italy",
     "cameras": 4,
@@ -103975,11 +104007,11 @@
       "https://spectrum.ieee.org/media-library/walk-man-not-from-sony.jpg?id=25578160&width=2000&height=1500&coordinates=0%2C281%2C0%2C281",
       "https://res.cloudinary.com/djrojgec1/image/upload/v1780734320/myrobot/iz7z6bb28v2y6qg3dkfg.jpg"
     ],
-    "height_mm": 1850,
-    "made_in": "Italy (Istituto Italiano di Tecnologia)",
+    "height_mm": 1040,
+    "made_in": "Italy",
     "robot_form": "Full-size humanoid",
     "manipulator_arms": 2,
-    "dof": 33,
+    "dof": 53,
     "mission_types": [
       "Disaster response",
       "Bipedal locomotion in rubble",
@@ -103999,7 +104031,7 @@
       "Humanoid",
       "Disaster Response"
     ],
-    "hand_dof": 19,
+    "hand_dof": 9,
     "hand_type": "Pisa/IIT SoftHand",
     "payload": 10,
     "payload_kg": 10,
@@ -104018,7 +104050,24 @@
     "vision": "Stereo + depth perception head",
     "imu": true,
     "capabilities": "Rugged disaster-response humanoid: locomotion over rubble, valve turning, debris removal, drilling, driving; developed for EU post-Fukushima disaster-response research (DRC-class tasks)",
-    "developed_by": "IIT (EU WALK-MAN project, post-Fukushima disaster-response research)"
+    "developed_by": "IIT (EU WALK-MAN project, post-Fukushima disaster-response research)",
+    "manufacturer_history": "Istituto Italiano di Tecnologia (IIT), Genoa, Italy. iCub — child-sized open-source research humanoid from EU RobotCub Consortium (started 2004, first release 2008), coordinated by Giulio Sandini & Giorgio Metta. 40+ units built worldwide. Platform for embodied cognition, AI, manipulation research. Also ergoCub, iRonCub.",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "has_hands": true,
+    "has_legs": true,
+    "open_source": true,
+    "raw_specs": {
+      "maker": "IIT (Genoa, Italy), EU RobotCub Consortium",
+      "class": "iCub — child-sized open-source research humanoid (2008)",
+      "dof": "53 total: 7/arm, 9/hand, 6/head (3 neck+3 eyes), 3 torso, 6/leg",
+      "size": "104cm, 22-33kg (~5-year-old child)",
+      "actuators": "Brushless motors + Harmonic Drive (1/100), tendon-driven torso/shoulder",
+      "sensors": "Stereo cameras, gyros, accelerometers, mics, encoders, 6x 6-axis F/T sensors, capacitive tactile skin (fingertips + upper body)",
+      "use": "Embodied cognition, AI, locomotion, manipulation research",
+      "variants": "iCub 2.5, HeiCub, ergoCub, iRonCub",
+      "entry": "WALK-MAN — IIT"
+    }
   },
   {
     "id": "iit-centauro-2018",
@@ -110201,7 +110250,17 @@
     ],
     "battery_life": 480,
     "charge_time": 90,
-    "touch_sensors_count": 12
+    "touch_sensors_count": 12,
+    "manufacturer_history": "AIST (National Institute of Advanced Industrial Science and Technology), Japan. Co-leads the Humanoid Robotics Project (HRP / 'Promet') with Kawada Industries + Kawasaki, sponsored by METI/NEDO. HRP lineage: HRP-1 (from Honda P3) → HRP-2 (can stand up from lying) → HRP-3 → HRP-4 → HRP-4C (female) → HRP-5P (2018, power tools + drywall handling, most autonomous).",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "AIST (Japan) + Kawada + Kawasaki — Humanoid Robotics Project (HRP/Promet)",
+      "entry": "PARO — AIST HRP series",
+      "class": "PARO — AIST HRP-series humanoid"
+    },
+    "imu": true
   },
   {
     "id": "elliq-3",
@@ -124642,15 +124701,15 @@
       "Developmental robotics",
       "HRI research"
     ],
-    "made_in": "Italy (IIT, Genoa)",
+    "made_in": "Italy",
     "website": "https://icub.iit.it",
     "cats": [
       "Humanoid",
       "Research"
     ],
-    "arm_dof": 14,
-    "leg_dof": 12,
-    "hand_dof": 18,
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "hand_dof": 9,
     "neck_dof": 3,
     "waist_dof": 3,
     "fingers": 5,
@@ -124666,7 +124725,22 @@
     "ai_open_source": true,
     "power_source": "Umbilical (power + Gigabit Ethernet); battery backpack on 2.5+",
     "currency": "EUR",
-    "manufacturer_history": "RobotCub Consortium (EU FP6, €8.5M, 2004–2010), coordinated by Giulio Sandini & Giorgio Metta at IIT; first release 2008. Software middleware YARP ('Yet Another Robot Platform')."
+    "manufacturer_history": "Istituto Italiano di Tecnologia (IIT), Genoa, Italy. iCub — child-sized open-source research humanoid from EU RobotCub Consortium (started 2004, first release 2008), coordinated by Giulio Sandini & Giorgio Metta. 40+ units built worldwide. Platform for embodied cognition, AI, manipulation research. Also ergoCub, iRonCub.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "open_source": true,
+    "raw_specs": {
+      "maker": "IIT (Genoa, Italy), EU RobotCub Consortium",
+      "class": "iCub — child-sized open-source research humanoid (2008)",
+      "dof": "53 total: 7/arm, 9/hand, 6/head (3 neck+3 eyes), 3 torso, 6/leg",
+      "size": "104cm, 22-33kg (~5-year-old child)",
+      "actuators": "Brushless motors + Harmonic Drive (1/100), tendon-driven torso/shoulder",
+      "sensors": "Stereo cameras, gyros, accelerometers, mics, encoders, 6x 6-axis F/T sensors, capacitive tactile skin (fingertips + upper body)",
+      "use": "Embodied cognition, AI, locomotion, manipulation research",
+      "variants": "iCub 2.5, HeiCub, ergoCub, iRonCub",
+      "entry": "iCub — IIT"
+    }
   },
   {
     "cat": "Research",
@@ -136414,8 +136488,8 @@
     "brand": "CASBOT",
     "sub": "Industrial Humanoid",
     "year": 2024,
-    "origin": "China (Beijing Zhongke Huiling — CAS Institute of Automation lineage)",
-    "status": "Current",
+    "origin": "China",
+    "status": "Active",
     "price": "POA",
     "height_mm": 1790,
     "weight_kg": 60,
@@ -136452,7 +136526,12 @@
     "desc": "Nicknamed \"Wednesday\", CASBOT 01 is a full-size bipedal humanoid (1.79 m, 60 kg, 52 DoF) unveiled Nov 2024 and shown at CES 2025. 550 TOPS of compute, 4+ hour runtime, five-fingered dexterous hands and high-dynamic force control. Developed by Beijing's Lingbao CASBOT with Lenovo's Fire Seed Project; first deployment is precise micro-assembly at a Lenovo laptop factory.",
     "head_dof": "2-DoF head (vision + auditory sensors)",
     "frame_material": "High-strength metal skeleton + lightweight composite (hollow-cavity reinforcement)",
-    "sensors": "Vision, auditory, force/torque, IMU",
+    "sensors": [
+      "Vision",
+      "auditory",
+      "force/torque",
+      "IMU"
+    ],
     "demonstrated_tasks": "Stand, walk, run, jump; sort clothes, assemble table lamp, change bulbs, twist screws",
     "manufacturer_full": "Lingbao CASBOT (Beijing Zhongke Huiling Robotics), founded Aug 2023",
     "deployment": "Deployed in Lenovo intelligent-manufacturing factory (Sept 2024); Lenovo Venture Capital backing",
@@ -136464,7 +136543,7 @@
     "force_sensing": true,
     "microphones": "Microphone array",
     "battery_life_typical": 240,
-    "manufacturer_history": "CASBOT 01 (nicknamed 'Wednesday') — full-size industrial-grade general-purpose humanoid.",
+    "manufacturer_history": "Lingbao CASBOT (Beijing Zhongke Huiling Robotics Technology), China. General-purpose humanoids: CASBOT 01 ('Wednesday', full-size biped, CES 2025), CASBOT 02, CASBOT SE (marathon variant). Embodied intelligence — hierarchical end-to-end + RL. Targets industrial/mining/commercial.",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413133/myrobot/cmfabzgjakgtcgek63nd.png",
     "gallery": [
       "https://img.originofbots.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1769625308/robots/casbot-01-by-casbot/fxfnubwoqhssbwcehb3h.webp",
@@ -136478,7 +136557,21 @@
     "released": "2024",
     "form_factor": "Full-size industrial biped",
     "heritage": "Chinese Academy of Sciences robotics lineage",
-    "note": "Per-model public specs sparse — verified platform only"
+    "note": "Per-model public specs sparse — verified platform only",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Lingbao CASBOT (Beijing Zhongke Huiling)",
+      "class": "CASBOT 01 'Wednesday' — general-purpose full-size biped (CES 2025)",
+      "specs": "1.79m, ~60kg, 52 DoF, 550 TOPS, 4h+ runtime",
+      "build": "High-strength metal skeleton + hollow-cavity reinforcement, 5-finger dexterous hands",
+      "sensors": "Vision, auditory, F/T, IMUs, mic arrays, voiceprint (CASBOT 02)",
+      "ai": "Hierarchical end-to-end + RL embodied intelligence",
+      "use": "Industrial, mining, commercial",
+      "entry": "CASBOT 01 — CASBOT",
+      "sensors_detail": "Vision, auditory, force/torque, IMU"
+    }
   },
   {
     "cat": "Humanoid",
@@ -136488,7 +136581,7 @@
     "sub": "Service/Commercial Humanoid",
     "year": 2025,
     "origin": "China",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "dof": 52,
     "actuator_type": "Self-developed integrated joint modules (quick-release)",
@@ -136511,7 +136604,7 @@
       "Interactive scenarios",
       "Reception / guidance"
     ],
-    "made_in": "China (Beijing)",
+    "made_in": "China",
     "website": "https://www.casbot.com",
     "desc": "CASBOT SE is a service/commercial-oriented variant in the humanoid lineup of CASBOT (Beijing Zhongke Huiling Robotics, founded August 2023 in Zhongguancun, with roots in the Chinese Academy of Sciences robotics lineage). It applies CASBOT's embodied-intelligence architecture — a hierarchical end-to-end plus reinforcement-learning stack spanning cloud and edge — to interactive and commercial-service scenarios, positioned as a more cost-optimized entry beneath the company's flagship CASBOT 01 ('Wednesday', 1.79 m / 60 kg / 52 DOF / 550 TOPS / 4+ hours). NOTE: CASBOT publishes strong detail for CASBOT 01 but limited hard specs (exact height/weight/DOF/payload/battery) for the SE variant specifically — those fields are flagged for outreach rather than guessed; company lineage, AI architecture and market positioning are confirmed. Consistent with the honest treatment applied to CASBOT W1.",
     "note": "SE variant; specs sparse — verified platform only",
@@ -136546,7 +136639,23 @@
     "related_models": [
       "CASBOT 01 (Wednesday) flagship",
       "CASBOT W1 (wheeled)"
-    ]
+    ],
+    "manufacturer_history": "Lingbao CASBOT (Beijing Zhongke Huiling Robotics Technology), China. General-purpose humanoids: CASBOT 01 ('Wednesday', full-size biped, CES 2025), CASBOT 02, CASBOT SE (marathon variant). Embodied intelligence — hierarchical end-to-end + RL. Targets industrial/mining/commercial.",
+    "height_mm": 1790,
+    "weight_kg": 60,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Lingbao CASBOT (Beijing Zhongke Huiling)",
+      "class": "CASBOT 01 'Wednesday' — general-purpose full-size biped (CES 2025)",
+      "specs": "1.79m, ~60kg, 52 DoF, 550 TOPS, 4h+ runtime",
+      "build": "High-strength metal skeleton + hollow-cavity reinforcement, 5-finger dexterous hands",
+      "sensors": "Vision, auditory, F/T, IMUs, mic arrays, voiceprint (CASBOT 02)",
+      "ai": "Hierarchical end-to-end + RL embodied intelligence",
+      "use": "Industrial, mining, commercial",
+      "entry": "CASBOT SE — CASBOT",
+      "variant": "CASBOT SE — marathon variant, shorter frame, hands/vision removed for agility"
+    }
   },
   {
     "cat": "Humanoid",
@@ -136558,7 +136667,7 @@
     "origin": "China",
     "status": "Active",
     "price": "POA",
-    "dof": 14,
+    "dof": 52,
     "payload_kg": 10,
     "hand_type": "Dual-arm manipulation (dexterous)",
     "cpu": "Industrial PC: Intel i9 + NVIDIA RTX 4060",
@@ -136587,7 +136696,7 @@
       "Retail",
       "Manufacturing workflows"
     ],
-    "made_in": "China (Beijing)",
+    "made_in": "China",
     "website": "https://www.casbot.com",
     "desc": "CASBOT W1 is a wheeled dual-arm humanoid platform from CASBOT (Beijing Zhongke Huiling Robotics, with roots in the Chinese Academy of Sciences robotics lineage) — combining mobile-base navigation with human-like dual-arm manipulation for embodied-AI tasks in logistics, retail and manufacturing. It pairs a mobile wheeled base with adjustable lift mechanics so its arms can work at varying heights, and runs CASBOT's embodied-intelligence architecture (a hierarchical end-to-end plus reinforcement-learning stack with cloud and edge compute) fed by vision, IMU, microphone-array and force/torque sensing. It's the wheeled sibling to CASBOT's bipedal CASBOT 01 ('Wednesday', 1.79 m / 60 kg / 52 DOF / 550 TOPS). NOTE: CASBOT publishes strong detail for its flagship CASBOT 01 but limited hard specs (height/weight/DOF/payload) for the W1 wheeled variant specifically — those fields are flagged for outreach rather than guessed; capabilities and architecture confirmed.",
     "arm_config": "Dual 7-DoF arms + vertical lift column",
@@ -136607,7 +136716,7 @@
     "form_factor": "Wheeled-base humanoid",
     "announced": "2025",
     "manufacturer_url": "https://www.casbot.tech/",
-    "biped": false,
+    "biped": true,
     "bimanual": true,
     "locomotion": "Mobile wheeled base + adjustable lift mechanics (arms work at different heights)",
     "sensors_list": [
@@ -136623,7 +136732,24 @@
       "Embodied AI"
     ],
     "capabilities": "Wheeled dual-arm mobile manipulation for embodied-AI tasks; adjustable-height arms; logistics/retail/manufacturing workflows",
-    "developed_by": "Beijing Zhongke Huiling Robotics (CASBOT, ex-CASIA lineage)"
+    "developed_by": "Beijing Zhongke Huiling Robotics (CASBOT, ex-CASIA lineage)",
+    "manufacturer_history": "Lingbao CASBOT (Beijing Zhongke Huiling Robotics Technology), China. General-purpose humanoids: CASBOT 01 ('Wednesday', full-size biped, CES 2025), CASBOT 02, CASBOT SE (marathon variant). Embodied intelligence — hierarchical end-to-end + RL. Targets industrial/mining/commercial.",
+    "height_mm": 1790,
+    "weight_kg": 60,
+    "npu_tops": 550,
+    "battery_life": 240,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Lingbao CASBOT (Beijing Zhongke Huiling)",
+      "class": "CASBOT 01 'Wednesday' — general-purpose full-size biped (CES 2025)",
+      "specs": "1.79m, ~60kg, 52 DoF, 550 TOPS, 4h+ runtime",
+      "build": "High-strength metal skeleton + hollow-cavity reinforcement, 5-finger dexterous hands",
+      "sensors": "Vision, auditory, F/T, IMUs, mic arrays, voiceprint (CASBOT 02)",
+      "ai": "Hierarchical end-to-end + RL embodied intelligence",
+      "use": "Industrial, mining, commercial",
+      "entry": "CASBOT W1 — CASBOT"
+    }
   },
   {
     "cat": "Humanoid",
@@ -137181,11 +137307,16 @@
     "sub": "Historic Entertainment Gynoid",
     "year": 2009,
     "origin": "Japan",
-    "status": "Discontinued",
-    "height_mm": 1600,
-    "weight_kg": 43,
+    "status": "Active",
+    "height_mm": 1500,
+    "weight_kg": 39,
     "dof": 44,
-    "sensors": "Cameras, gyroscope, accelerometer, 6-axis force sensors",
+    "sensors": [
+      "Cameras",
+      "gyroscope",
+      "accelerometer",
+      "6-axis force sensors"
+    ],
     "frame_material": "Silicone face/hands, plastic exterior, metal frame",
     "tags": [
       "humanoid",
@@ -137210,7 +137341,7 @@
       "Human-like gait research",
       "Device evaluation (human simulator)"
     ],
-    "made_in": "Japan (AIST)",
+    "made_in": "Japan",
     "website": "",
     "desc": "HRP-4C, nicknamed Miim, is AIST's landmark entertainment humanoid — an adult-size female android unveiled in 2009, proportioned to the average young Japanese woman (per the 1997-98 Japanese body-dimension database) at 1,600 mm and 43 kg including battery. Its realism was its point: a silicone-skinned face driven by 8 dedicated facial-expression motors on top of 30 body motors (44 DOF total), speech recognition and ambient-sound awareness, and Vocaloid-powered singing. Miim walked using the HRP series' proven gait control, sang and danced alongside human performers with motion-capture-driven movement, and even worked as a professional robotic fashion model — her first gig modelling a wedding dress in 2009. She later served in evaluating nursing-care equipment. HRP-4C became a global symbol of Japan's lead in expressive, human-like humanoids. NOTE: DOF cited as 44 (30 body + 8 face + neck) per AIST/IEEE records; historic entry, verified figures.",
     "dof_note": "30 body + 8 face + facial expressions",
@@ -137233,7 +137364,7 @@
     "shell_material": "Silicone-skinned realistic face",
     "voice_interaction": "Speech recognition + ambient-sound recognition; Vocaloid singing",
     "os": "OpenRTP (OpenRTM-aist, OpenHRP3)",
-    "manufacturer_history": "Developed by AIST; publicly demonstrated 16 Mar 2009, with gait upgrades shown 2010–2011.",
+    "manufacturer_history": "AIST (National Institute of Advanced Industrial Science and Technology), Japan. Co-leads the Humanoid Robotics Project (HRP / 'Promet') with Kawada Industries + Kawasaki, sponsored by METI/NEDO. HRP lineage: HRP-1 (from Honda P3) → HRP-2 (can stand up from lying) → HRP-3 → HRP-4 → HRP-4C (female) → HRP-5P (2018, power tools + drywall handling, most autonomous).",
     "arm_dof": 7,
     "leg_dof": 6,
     "neck_dof": 3,
@@ -137251,7 +137382,16 @@
     "voice_control": true,
     "capabilities": "Adult-size female android (proportioned to 1997-98 Japanese female body database); realistic silicone-skin face with 8-DOF expressions; walks, sings (Vocaloid), dances with performers; motion-capture-driven movement; professional fashion-model appearances",
     "developed_by": "AIST (user-oriented robot open architecture project)",
-    "also_known_as": "Miim"
+    "also_known_as": "Miim",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "AIST (Japan) + Kawada + Kawasaki — Humanoid Robotics Project (HRP/Promet)",
+      "entry": "HRP-4C (Miim) — AIST HRP series",
+      "class": "HRP-4 — 150cm, 39kg slim humanoid (HRP-4C is female-form variant)",
+      "sensors_detail": "Cameras, gyroscope, accelerometer, 6-axis force sensors"
+    },
+    "imu": true
   },
   {
     "cat": "Humanoid",
@@ -141836,8 +141976,8 @@
     "sub": "Historic Construction Humanoid",
     "year": 2018,
     "origin": "Japan",
-    "made_in": "Japan (AIST)",
-    "status": "Discontinued",
+    "made_in": "Japan",
+    "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413281/myrobot/ac8oevfgtaeb4wiqwqjn.png",
     "desc": "HRP-5P, unveiled by AIST in 2018, is the strongest and most autonomous member of Japan's HRP humanoid series — a prototype construction robot built to take on heavy, hazardous building labour amid Japan's shrinking workforce. At 1,820 mm and 101 kg with 37 DOF (the most in the HRP series: 2 neck, 3 waist, 8 per arm, 6 per leg, 2 per hand), it uses high-power motors — several per joint on heavy-load axes — to autonomously locate, lift and carry large drywall/plaster panels and screw them to walls with power tools. A 3D head sensor maps its surroundings for object detection and navigation. AIST shed the futuristic shells of earlier HRP robots for a purely functional industrial body, positioning HRP-5P as an industry-academia R&D platform for practical humanoid use in constructing buildings and large structures like aircraft and ships. NOTE: full DOF breakdown and mass/height from AIST's official announcement; historic entry, verified figures.",
@@ -141885,7 +142025,7 @@
     "can_use_tools": true,
     "autonomy_level": "Semi-autonomous task execution",
     "bimanual": true,
-    "manufacturer_history": "Developed by AIST's humanoid research group (Fumio Kanehiro, Kenji Kaneko, Ken Sakaguchi), 2018; latest in the HRP series after HRP-2/3/4/4C.",
+    "manufacturer_history": "AIST (National Institute of Advanced Industrial Science and Technology), Japan. Co-leads the Humanoid Robotics Project (HRP / 'Promet') with Kawada Industries + Kawasaki, sponsored by METI/NEDO. HRP lineage: HRP-1 (from Honda P3) → HRP-2 (can stand up from lying) → HRP-3 → HRP-4 → HRP-4C (female) → HRP-5P (2018, power tools + drywall handling, most autonomous).",
     "arm_dof": 8,
     "leg_dof": 6,
     "neck_dof": 2,
@@ -141906,7 +142046,17 @@
     "vision": "3D environment mapping head sensor; object recognition",
     "scene_understanding": "Autonomous environment measurement & object detection",
     "capabilities": "Autonomous construction labor: locates, lifts and carries drywall/plaster board and screws it to walls using power tools; aimed at building & large-structure (aircraft/ship) assembly",
-    "developed_by": "AIST (team led by Fumio Kanehiro)"
+    "developed_by": "AIST (team led by Fumio Kanehiro)",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "AIST (Japan) + Kawada + Kawasaki — Humanoid Robotics Project (HRP/Promet)",
+      "entry": "HRP-5P — AIST HRP series",
+      "class": "HRP-5P (2018) — strongest/most autonomous HRP",
+      "skills": "Autonomously locates, lifts, carries drywall panels; power tools",
+      "use": "R&D platform for construction automation"
+    },
+    "imu": true
   },
   {
     "id": "aist-hrp-2",
@@ -141916,8 +142066,8 @@
     "sub": "Historic Research Humanoid",
     "year": 2002,
     "origin": "Japan",
-    "made_in": "Japan (AIST / Kawada Industries)",
-    "status": "Discontinued",
+    "made_in": "Japan",
+    "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413283/myrobot/ourozliak3pt8yuaj62d.jpg",
     "desc": "HRP-2 (Promet), unveiled in 2002, is one of the most influential research humanoids ever built — the flagship of Japan's national Humanoid Robotics Project (AIST with Kawada Industries and Kawasaki Heavy Industries, under NEDO/METI). At 1,540 mm and 58 kg with 30 DOF, it introduced a capability ASIMO famously lacked: the ability to get up unaided after lying flat on its back or front, plus cooperative heavy-object lifting with humans, walking on uneven surfaces, crawling through tight spaces, and sitting/standing. Its distinctive futuristic shell was designed by anime mecha artist Yutaka Izubuchi. HRP-2 became a widely-used research platform at labs in Japan and abroad and defined the HRP series' role as an open R&D humanoid. NOTE: historic entry from AIST/Kawada and IEEE Spectrum robot records — verified figures, not a current datasheet.",
@@ -141960,7 +142110,7 @@
     "waist_dof": 2,
     "frame_material": "Cast magnesium alloy (cantilever hip structure)",
     "bimanual": true,
-    "manufacturer_history": "Second generation of the AIST/Kawada HRP series (METI/NEDO project); exterior by Yutaka Izubuchi; ~20 units built; HRP-2Kai variant modified for the DARPA Robotics Challenge (laser range finder + 4 CCD cameras, extended limbs).",
+    "manufacturer_history": "AIST (National Institute of Advanced Industrial Science and Technology), Japan. Co-leads the Humanoid Robotics Project (HRP / 'Promet') with Kawada Industries + Kawasaki, sponsored by METI/NEDO. HRP lineage: HRP-1 (from Honda P3) → HRP-2 (can stand up from lying) → HRP-3 → HRP-4 → HRP-4C (female) → HRP-5P (2018, power tools + drywall handling, most autonomous).",
     "hand_dof": 2,
     "force_sensing": true,
     "announced": "2002",
@@ -141972,7 +142122,15 @@
     "os": "Linux (RT)",
     "controller": "Onboard PC",
     "design_note": "Futuristic exterior by anime mecha designer Yutaka Izubuchi",
-    "developed_by": "AIST + Kawada Industries + Kawasaki Heavy Industries (NEDO HRP project)"
+    "developed_by": "AIST + Kawada Industries + Kawasaki Heavy Industries (NEDO HRP project)",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "AIST (Japan) + Kawada + Kawasaki — Humanoid Robotics Project (HRP/Promet)",
+      "entry": "HRP-2 (Promet) — AIST HRP series",
+      "class": "HRP-2 — can stand up from lying on back/front (ASIMO couldn't)"
+    },
+    "imu": true
   },
   {
     "id": "kawada-nextage",
@@ -147265,11 +147423,11 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/698063afc57569bdf07ce8a9_Q5_02.png"
     ],
     "video": "https://youtu.be/BBoyMgeuWvI",
-    "made_in": "China (Beijing)",
+    "made_in": "China",
     "manufacturer": "RobotEra",
     "released": "2025",
     "form_factor": "Service robot (RobotEra hexa-core lineup, CES 2026)",
-    "ai_model": "RobotEra embodied-AI stack (shares core with STAR1); learns tasks from human demo videos",
+    "ai_model": "ERA-42 end-to-end embodied large model",
     "use_cases_note": "Hospitality/service scenarios",
     "announced": "2025-06",
     "manufacturer_url": "https://www.robotera.com/en",
@@ -147301,7 +147459,22 @@
     "ros": true,
     "capabilities": "Wheeled service humanoid: squats to pick, twists waist, shakes hands, 10 kg single-arm lift; LiDAR-visual navigation; learns from demo video; 37+ languages; guidance, commentary, delivery",
     "developed_by": "Beijing ROBOTERA Technology (shares components with STAR1)",
-    "battery_life": 240
+    "battery_life": 240,
+    "manufacturer_history": "RobotEra (Beijing, China), founded Aug 2023 with Tsinghua University support. 'Hexa-Core' lineup: STAR1 (flagship biped, 55 DoF, 400 N·m), L7 (fastest biped, 4 m/s), Q5 (wheeled service, 44 DoF), M7 (upper-body variant), XBot-L (walked the Great Wall). Self-developed XHand (12-DoF dexterous hand). ERA-42 end-to-end embodied large model.",
+    "has_hands": true,
+    "has_legs": false,
+    "raw_specs": {
+      "maker": "RobotEra (Beijing), Tsinghua-backed",
+      "hand": "Self-developed XHand — 12-DoF, tactile sensors",
+      "ai": "ERA-42 embodied large model (vision+proprioception+language)",
+      "entry": "Q5 — RobotEra",
+      "class": "Q5 — wheeled service humanoid",
+      "specs": "1650mm, 44 DoF incl 11-DoF XHAND Lite",
+      "teleop": "Full-body via gloves + VR",
+      "use": "Healthcare, retail, tourism, education",
+      "note": "Haier's Hea/Hiva is a customized Q5"
+    },
+    "imu": true
   },
   {
     "id": "hisense-harley",
@@ -148516,8 +148689,8 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "height_mm": 1500,
-    "weight_kg": 55.7,
+    "height_mm": 1040,
+    "weight_kg": 33,
     "dof": 53,
     "arm_dof": 7,
     "leg_dof": 6,
@@ -148536,7 +148709,7 @@
       "https://www.ansa.it/webimages/img_621x414/2023/9/21/2da0878a70b3403b0538d033be8f42a6.jpg",
       "https://ergocub.eu/images/ergocub-images/ifeel/ergoCub_workshop_machine.jpg"
     ],
-    "made_in": "Italy (Istituto Italiano di Tecnologia)",
+    "made_in": "Italy",
     "announced": "2023",
     "released": "2023",
     "manufacturer_url": "https://ami.iit.it/human-robot-collaboration",
@@ -148560,7 +148733,23 @@
     "ros": true,
     "imu": true,
     "ai_model": "iCub/ergoCub control-planning-estimation stack (ergonomic collaboration)",
-    "dof_note": "Whole-body DOF per iCub-derived architecture (existing dof/arm_dof/leg_dof fields preserved by upsert; not overwritten)"
+    "dof_note": "Whole-body DOF per iCub-derived architecture (existing dof/arm_dof/leg_dof fields preserved by upsert; not overwritten)",
+    "manufacturer_history": "Istituto Italiano di Tecnologia (IIT), Genoa, Italy. iCub — child-sized open-source research humanoid from EU RobotCub Consortium (started 2004, first release 2008), coordinated by Giulio Sandini & Giorgio Metta. 40+ units built worldwide. Platform for embodied cognition, AI, manipulation research. Also ergoCub, iRonCub.",
+    "hand_dof": 9,
+    "has_hands": true,
+    "has_legs": true,
+    "open_source": true,
+    "raw_specs": {
+      "maker": "IIT (Genoa, Italy), EU RobotCub Consortium",
+      "class": "iCub — child-sized open-source research humanoid (2008)",
+      "dof": "53 total: 7/arm, 9/hand, 6/head (3 neck+3 eyes), 3 torso, 6/leg",
+      "size": "104cm, 22-33kg (~5-year-old child)",
+      "actuators": "Brushless motors + Harmonic Drive (1/100), tendon-driven torso/shoulder",
+      "sensors": "Stereo cameras, gyros, accelerometers, mics, encoders, 6x 6-axis F/T sensors, capacitive tactile skin (fingertips + upper body)",
+      "use": "Embodied cognition, AI, locomotion, manipulation research",
+      "variants": "iCub 2.5, HeiCub, ergoCub, iRonCub",
+      "entry": "ergoCub — IIT"
+    }
   },
   {
     "id": "robotis-op3",
