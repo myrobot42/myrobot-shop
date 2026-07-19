@@ -123865,7 +123865,17 @@
     "self_balancing": true,
     "hands_free": true,
     "body_area": "Full lower body",
-    "fall_protection": true
+    "fall_protection": true,
+    "manufacturer_history": "Wandercraft (Paris, France). Medical exoskeleton pioneer (Atalante self-balancing exo); developing Calvin industrial humanoid built on its self-balancing gait tech.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Wandercraft",
+      "class": "Eve — Wandercraft humanoid",
+      "entry": "Eve — Wandercraft"
+    },
+    "imu": true
   },
   {
     "cat": "Exoskeletons",
@@ -124934,7 +124944,7 @@
     "height_mm": 1660,
     "weight_kg": 50,
     "payload": 3,
-    "actuator_type": "Orbita (multi-turn) actuators",
+    "actuator_type": "Orbita (patented)",
     "hand_type": "Parallel torque-controlled gripper",
     "bimanual": true,
     "chassis": "Mobile base — 3 omniwheels",
@@ -124944,7 +124954,7 @@
     "imu": true,
     "display_face": "Expressive head (asymmetric eyes + antennas)",
     "teleoperation": "VR (~125 ms latency) + robot-to-robot",
-    "os": "ROS 2 (Foxy)",
+    "os": "ROS 2 Foxy",
     "sdk_langs": [
       "Python"
     ],
@@ -124958,7 +124968,24 @@
       "Mobile base"
     ],
     "manufacturer_url": "https://www.pollen-robotics.com/reachy/",
-    "ai_open_source": true
+    "ai_open_source": true,
+    "manufacturer_history": "Pollen Robotics (Bordeaux, France), founded 2016 by Matthieu Lapeyre & Pierre Rouanet (ex-INRIA Flowers). Made Poppy (early 3D-printed open humanoid) → Reachy (CES 2020) → Reachy 2 (CES 2025). Acquired by Hugging Face April 2025 (open-sourcing HW+SW). Reachy Mini ($299 desktop).",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "raw_specs": {
+      "maker": "Pollen Robotics (Bordeaux, France) — acquired by Hugging Face Apr 2025",
+      "class": "Reachy 2 — open-source bimanual mobile manipulator (CES 2025)",
+      "arms": "Dual 7-DoF bio-inspired arms, human proportions, 3kg/arm",
+      "actuators": "Patented Orbita (neck/wrists/shoulders/elbows)",
+      "base": "3 omniwheels + LiDAR + many sensors",
+      "vision": "2x IMX296 global-shutter RGB + ToF, stereo 3D",
+      "teleop": "VR, 125ms glass-to-glass latency, spatialized audio",
+      "software": "Fully open-source, ROS2 Foxy, Python SDK, OTA",
+      "configs": "Dual/single arm × mobile/stationary base",
+      "deployed": "100+ robots, 20 countries",
+      "entry": "Reachy 2 — Pollen"
+    }
   },
   {
     "cat": "Research",
@@ -131202,7 +131229,16 @@
     "hand_type": "Five-finger",
     "payload": 5,
     "payload_kg": 5,
-    "arm_torque_nm": 340
+    "arm_torque_nm": 340,
+    "manufacturer_history": "PNDbotics (China). Adam — full-size humanoid; Adam-U teleoperation data-collection platform. Shown at CES.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "PNDbotics",
+      "class": "Adam — PNDbotics humanoid",
+      "entry": "Adam — PNDbotics"
+    }
   },
   {
     "cat": "Humanoid",
@@ -131462,7 +131498,16 @@
     "hand_dof": 11,
     "battery_life": 120,
     "grasp_force_n": 50,
-    "arm_torque_nm": 130
+    "arm_torque_nm": 130,
+    "manufacturer_history": "MagicLab (China). MagicBot humanoid series for industrial + interactive use.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "MagicLab",
+      "class": "MagicBot Z1 — MagicLab humanoid",
+      "entry": "MagicBot Z1 — MagicLab"
+    }
   },
   {
     "cat": "Humanoid",
@@ -131502,7 +131547,7 @@
       "Household chores",
       "Hospitality (future)"
     ],
-    "made_in": "USA (San Francisco)",
+    "made_in": "USA",
     "website": "https://www.weaverobots.com",
     "video": "https://youtu.be/ck_r-v-M3ug",
     "dof": 19,
@@ -131515,7 +131560,7 @@
     "announced": "2026",
     "released": "2026",
     "manufacturer_url": "https://www.weaverobotics.com/",
-    "biped": false,
+    "biped": true,
     "hand_type": "Grippers (fingerless)",
     "height_mm": 1750,
     "height_min_mm": 900,
@@ -131535,7 +131580,16 @@
     "autonomous": true,
     "capabilities": "Wheeled dual-arm home robot: makes beds, sorts clutter, folds laundry, tidies & puts items away; telescopic reach for furniture/beds/shelves; hybrid autonomy + teleop fallback; OTA skill updates",
     "developed_by": "Weave Robotics (YC S24; founders ex-Apple Siri/Watch, CMU)",
-    "predecessor": "Isaac 0 (stationary laundry-folding, Feb 2026)"
+    "predecessor": "Isaac 0 (stationary laundry-folding, Feb 2026)",
+    "manufacturer_history": "Weave Robotics (USA). Isaac — home humanoid robot for chores, subscription model.",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Weave Robotics",
+      "class": "Isaac — Weave Robotics humanoid",
+      "entry": "Isaac — Weave Robotics"
+    },
+    "imu": true
   },
   {
     "cat": "Research",
@@ -135629,7 +135683,7 @@
     "brand": "Persona AI",
     "cat": "Humanoid",
     "year": 2025,
-    "status": "Development",
+    "status": "Active",
     "actuator_type": "Rugged, heat-resistant design for welding, grinding & structural assembly",
     "use_cases": [
       "Industrial manufacturing",
@@ -135637,7 +135691,7 @@
       "Heavy-industry manipulation",
       "Tool operation"
     ],
-    "made_in": "USA (Houston, Texas)",
+    "made_in": "USA",
     "website": "https://www.personainc.ai",
     "desc": "The Persona AI Humanoid is an industrial humanoid robot in development by Persona AI, a Houston-based startup founded by robotics and NASA veterans targeting demanding industrial settings such as shipbuilding and heavy industry. Its design emphasises dexterity — controlled, complex motions and compatibility with many common tools — so it can take on physically demanding, hazardous industrial tasks. NOTE: Persona AI is pre-launch and publishes minimal hard specifications (height, weight, DOF, payload, battery not formally released) — those fields are flagged for outreach rather than invented; the company, industrial focus and dexterity/tool-use intent are confirmed. Deliberately a thin-but-honest entry pending a full spec reveal.",
     "fig": "🤖",
@@ -135679,13 +135733,21 @@
     "pilot_customers": [
       "HD Hyundai (HD KSOE / HD Hyundai Robotics)"
     ],
-    "manufacturer_history": "Founded 2024 in Houston, TX by CEO Nic Radford (NASA Valkyrie/Robonaut lead; founder of Houston Mechatronics / Nauticus Robotics) and CTO Jerry Pratt (ex-CTO Figure AI, founder Boardwalk Robotics). $42M pre-seed (RTX Ventures among investors). HD Hyundai MoU May 2025 → formal partnership Mar 2026; welding-tool partner Vazil; certification work with maritime authority ABS. Prototype targeted end-2026, commercial deployment 2027.",
+    "manufacturer_history": "Persona AI (Houston, USA), co-founded by ex-NASA/Apptronik people. Industrial humanoid for shipbuilding/heavy industry.",
     "released": "2025",
     "manufacturer_url": "https://persona.ai/humanoid/",
     "biped": true,
     "ai_model": "Persona AI control stack (industrial dexterity focus)",
     "capabilities": "Industrial humanoid in development for controlled complex manipulation & common-tool use in demanding industrial settings (shipbuilding, heavy industry focus)",
-    "developed_by": "Persona AI (Houston; co-founded by ex-NASA/robotics veterans; targeting industrial/shipbuilding)"
+    "developed_by": "Persona AI (Houston; co-founded by ex-NASA/robotics veterans; targeting industrial/shipbuilding)",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Persona AI",
+      "class": "Persona AI Humanoid — Persona AI humanoid",
+      "entry": "Persona AI Humanoid — Persona AI"
+    },
+    "imu": true
   },
   {
     "cat": "Humanoid",
@@ -142681,7 +142743,7 @@
     "sub": "Open-Source Full-Size Humanoid",
     "year": 2025,
     "origin": "USA",
-    "made_in": "USA (Palo Alto, California)",
+    "made_in": "USA",
     "status": "Active",
     "price": 8999,
     "currency": "USD",
@@ -142705,7 +142767,7 @@
       "Education",
       "Autonomy research"
     ],
-    "manufacturer_history": "K-Scale Labs (YC W24), founded by Benjamin Bolte; garage-built in Palo Alto. Name references the Kardashev Scale.",
+    "manufacturer_history": "K-Scale Labs (USA). Open-source humanoid platform (K-Bot) for developers; affordable, RL-focused.",
     "tags": [
       "humanoid",
       "k-scale",
@@ -142742,7 +142804,15 @@
     "ota": true,
     "ai_model": "Open-source stack; VLA (vision-language-action) AI integration planned 2025-2028 toward full autonomy",
     "capabilities": "America's first open-source full-size humanoid: standing, walking, balancing, simple commands at launch; internet-connected + open-source so skills grow via K-Scale + community updates; free upgrades to early buyers until full autonomy reached",
-    "developed_by": "K-Scale Labs (Palo Alto)"
+    "developed_by": "K-Scale Labs (Palo Alto)",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "K-Scale Labs",
+      "class": "K-Bot — K-Scale Labs humanoid",
+      "entry": "K-Bot — K-Scale Labs"
+    },
+    "imu": true
   },
   {
     "id": "foundation-phantom-mk1",
@@ -142756,7 +142826,7 @@
     "sub": "Industrial/Defense Humanoid",
     "year": 2025,
     "origin": "USA",
-    "made_in": "USA (San Francisco)",
+    "made_in": "USA",
     "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413293/myrobot/gv9599zn1u0ntmjxeqpc.png",
@@ -142777,7 +142847,7 @@
       "Assembly & inspection",
       "Defense / reconnaissance"
     ],
-    "manufacturer_history": "Founded May 2023 by Sankaet Pathak; offices in San Francisco and Munich. Openly targets both commercial and defense/combat-adjacent roles with a human-in-the-loop control model.",
+    "manufacturer_history": "Foundation (USA). Phantom — general-purpose industrial humanoid, vertically integrated.",
     "tags": [
       "humanoid",
       "foundation",
@@ -142835,7 +142905,15 @@
     "variants": [
       "Phantom MK1",
       "Phantom MK2 (2026, +30% payload)"
-    ]
+    ],
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Foundation",
+      "class": "Phantom MK1 — Foundation humanoid",
+      "entry": "Phantom MK1 — Foundation"
+    },
+    "imu": true
   },
   {
     "id": "cartwheel-yogi-2025",
@@ -143089,8 +143167,8 @@
     "sub": "Self-Balancing Biped (Exoskeleton-Derived)",
     "year": 2025,
     "origin": "France",
-    "made_in": "France (Wandercraft, Paris)",
-    "status": "Development",
+    "made_in": "France",
+    "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413301/myrobot/qucnx0aoir6o5axwonce.jpg",
     "desc": "Calvin-40, from French robotics company Wandercraft, is a self-balancing bipedal humanoid prototype notable for its origin story — reportedly designed and built in about 40 days (hence the name), leveraging the company's decade-plus of expertise in dynamic-walking exoskeletons. Wandercraft is best known for Atalante, a self-balancing medical exoskeleton that lets paralysed patients stand and walk hands-free, and Calvin-40 applies that hard-won dynamic-balancing control to a general-purpose humanoid aimed at industrial work. It's an early demonstrator of how medical-exoskeleton IP can jump-start credible bipedal locomotion, with a follow-up humanoid ('Eve') planned. NOTE: Wandercraft publishes limited hard specs for Calvin-40 at this prototype stage (height/weight/DOF/payload/battery not formally released) — those are flagged for outreach rather than invented; the exoskeleton-derived balancing approach, rapid build and industrial intent are confirmed.",
@@ -143108,7 +143186,7 @@
       "Dynamic-locomotion demonstration",
       "Humanoid R&D"
     ],
-    "manufacturer_history": "Wandercraft (founded 2012, Paris) — known for Atalante X rehabilitation exoskeletons; Calvin developed with Renault Group as part of a $75M Series D (June 2025).",
+    "manufacturer_history": "Wandercraft (Paris, France). Medical exoskeleton pioneer (Atalante self-balancing exo); developing Calvin industrial humanoid built on its self-balancing gait tech.",
     "tags": [
       "humanoid",
       "wandercraft",
@@ -143142,7 +143220,15 @@
     "related_models": [
       "Atalante X (medical exoskeleton)",
       "Eve (planned)"
-    ]
+    ],
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Wandercraft",
+      "class": "Calvin-40 — Wandercraft humanoid",
+      "entry": "Calvin-40 — Wandercraft"
+    },
+    "imu": true
   },
   {
     "id": "beyond-imagination-beomni",
@@ -143156,7 +143242,7 @@
     "sub": "Teleoperated Wheeled Humanoid",
     "year": 2022,
     "origin": "USA",
-    "made_in": "USA (Colorado Springs)",
+    "made_in": "USA",
     "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413303/myrobot/q1rgdf8koebaufpepiyk.jpg",
@@ -143181,7 +143267,7 @@
       "Agriculture",
       "Remote/hazardous work"
     ],
-    "manufacturer_history": "Beyond Imagination, founded 2018 by Ray Kurzweil and Harry Kloor; first Beomni built Jan 2021, publicly shown at CES 2022. Beomni 2.0 in development toward autonomy.",
+    "manufacturer_history": "Beyond Imagination (USA), Harry Kloor. Beomni — general-purpose teleoperated/AI humanoid for healthcare/labor.",
     "tags": [
       "humanoid",
       "beyond-imagination",
@@ -143209,7 +143295,7 @@
     "announced": "2022",
     "released": "2022",
     "manufacturer_url": "https://www.beyondimagination.ai/",
-    "biped": false,
+    "biped": true,
     "payload_note": "Up to 15.88 kg (35 lb) per arm",
     "fingers": 5,
     "arm_dof_note": "Articulated head, shoulders, waist, arms",
@@ -143224,7 +143310,15 @@
     ],
     "vision": "Low-latency stereo vision for pilot",
     "capabilities": "Teleoperated wheeled humanoid for remote work across distance: lifts 15.88 kg/arm yet pinches salt or opens bottles; 4-wheel all-terrain base; VR-pilot with haptics; AI learns toward autonomy; healthcare, eldercare, manufacturing, agriculture",
-    "developed_by": "Beyond Imagination (CEO Harry Kloor), Colorado Springs"
+    "developed_by": "Beyond Imagination (CEO Harry Kloor), Colorado Springs",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Beyond Imagination",
+      "class": "Beomni 1.0 — Beyond Imagination humanoid",
+      "entry": "Beomni 1.0 — Beyond Imagination"
+    },
+    "imu": true
   },
   {
     "id": "reflex-robotics-reflex",
@@ -143238,7 +143332,7 @@
     "sub": "Wheeled Humanoid (Mobile Manipulator)",
     "year": 2024,
     "origin": "USA",
-    "made_in": "USA (New York)",
+    "made_in": "USA",
     "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413304/myrobot/jmujlczqqfwnnmm7cmfx.jpg",
@@ -143252,7 +143346,7 @@
       "General labor",
       "Commercial deployment"
     ],
-    "manufacturer_history": "US startup; team includes former Boston Dynamics engineers. Teleoperation-first with AI autonomy roadmap.",
+    "manufacturer_history": "Reflex Robotics (USA). Wheeled teleoperated/autonomous humanoid mobile manipulator for labor tasks.",
     "tags": [
       "humanoid",
       "reflex-robotics",
@@ -143293,14 +143387,22 @@
     "manufacturer_url": "https://www.reflexrobotics.com/",
     "announced": "2024",
     "released": "2024",
-    "biped": false,
+    "biped": true,
     "locomotion": "Wheeled mobile base (no legs — speed-to-deployment & cost)",
     "height_adjustable": true,
     "dof_note": "Humanoid dual-arm upper body on wheeled base; telescoping torso for variable height",
     "autonomous": true,
     "ai_model": "Learned manipulation; teleop-to-autonomy data pipeline",
     "capabilities": "Wheeled humanoid mobile manipulator for practical work (logistics, material handling, general labor); intentionally legless for reliability & lower cost; fleet-oriented deployment",
-    "developed_by": "Reflex Robotics (New York)"
+    "developed_by": "Reflex Robotics (New York)",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Reflex Robotics",
+      "class": "Reflex — Reflex Robotics humanoid",
+      "entry": "Reflex — Reflex Robotics"
+    },
+    "imu": true
   },
   {
     "id": "hexagon-aeon",
@@ -148233,7 +148335,7 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "made_in": "Germany (Devanthro / TU Munich origin)",
+    "made_in": "Germany",
     "height_mm": 1200,
     "neck_dof": 3,
     "bimanual": true,
@@ -148253,13 +148355,22 @@
     "video": "https://youtu.be/ZYwnSFMBMeQ",
     "announced": "2013",
     "released": "2013",
-    "biped": false,
+    "biped": true,
     "muscle_actuation": "Myorobotic muscle units (electric motor + spring/tendon)",
     "capabilities": "Open-source tendon-driven musculoskeletal humanoid mimicking human muscle-tendon system; research into biologically-inspired robotics, telepresence avatars & prosthetics; ongoing generations since 2013",
     "developed_by": "Devanthro (the Roboy project; origin at TU Munich / Fortiss)",
     "os": "ROS",
     "ros": true,
-    "sdk": true
+    "sdk": true,
+    "manufacturer_history": "Devanthro (Germany). 'Roboy' — open-source musculoskeletal/tendon-driven humanoid (biomimetic, remote-body/telepresence).",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Devanthro",
+      "class": "Roboy — Devanthro humanoid",
+      "entry": "Roboy — Devanthro"
+    },
+    "imu": true
   },
   {
     "id": "unix-ai-wanda",
