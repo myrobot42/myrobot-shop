@@ -52571,10 +52571,12 @@
     "cat": "Service",
     "sub": "Commercial Cleaning Robot",
     "tags": [
-      "agibot",
       "vacuum",
+      "agibot",
+      "2023",
       "consumer",
-      "2023"
+      "zhiyuan",
+      "service"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733574/myrobot/fnxnqqeg2suhonencwfc.jpg",
@@ -52584,7 +52586,7 @@
     "desc": "The C5 is a robot vacuum from AGIBOT that autonomously navigates and cleans home floors, returning to its dock to recharge.",
     "highlights": [],
     "perf": false,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "year": 2023,
     "status": "Current",
     "released": "2024",
@@ -52611,9 +52613,9 @@
       "https://www.robotshop.com/cdn/shop/files/pp_4501069.webp?v=1774977690&width=750",
       "https://www.robotshop.com/cdn/shop/files/pp_4501309.webp?v=1775137277&width=750"
     ],
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "autonomous": "Yes",
-    "manufacturer_url": "https://www.agibot.com",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "website": "https://www.agibot.com",
     "price_band": "$",
     "video": "https://youtu.be/LH3OM9iLuf8",
@@ -52626,7 +52628,15 @@
     "cleaning_functions": "Sweeping + scrubbing + dust mopping (combined)",
     "auto_charge": "Yes",
     "water_system": "Auto water filling + drainage; self-cleaning sewage tank",
-    "use_cases_note": "Airports, malls, event venues (large-area commercial floor care)"
+    "use_cases_note": "Airports, malls, event venues (large-area commercial floor care)",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": false,
+    "has_hands": false,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "Autonomous robot vacuum",
+      "note": "Consumer cleaning robot, distinct from humanoid line"
+    }
   },
   {
     "id": "agibot-d1-pro",
@@ -52636,10 +52646,11 @@
     "sub": "Industrial Quadruped",
     "tags": [
       "quadruped",
-      "industrial",
       "agibot",
+      "active",
+      "zhiyuan",
       "china",
-      "active"
+      "industrial"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733575/myrobot/endpwmk0iar2docv4arb.png",
@@ -52650,7 +52661,7 @@
     "highlights": [],
     "perf": false,
     "year": 2023,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "weight_kg": 15,
     "speed_ms": 3.7,
@@ -52665,8 +52676,8 @@
     "use_cases": [
       "Entertainment & education quadruped (~CN¥13,000)"
     ],
-    "manufacturer_url": "https://www.agibot.com",
-    "made_in": "China",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
+    "made_in": "China (Shanghai)",
     "os": "AimRT middleware",
     "payload_kg": 8,
     "payload": 8,
@@ -52692,7 +52703,14 @@
     "released": "2025",
     "speed": "3.7 m/s (~8 mph)",
     "terrain": "Harsh outdoor terrain",
-    "use_cases_note": "Patrol, logistics, load-carrying, data collection"
+    "use_cases_note": "Patrol, logistics, load-carrying, data collection",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": false,
+    "has_hands": false,
+    "has_legs": true,
+    "raw_specs": {
+      "class": "Compact industrial quadruped, 12 DoF"
+    }
   },
   {
     "id": "agibot-d1-ultra",
@@ -52701,12 +52719,13 @@
     "cat": "Quadruped",
     "sub": "Industrial Quadruped",
     "tags": [
+      "high-end",
       "quadruped",
-      "industrial",
       "agibot",
-      "china",
       "active",
-      "high-end"
+      "zhiyuan",
+      "china",
+      "industrial"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733576/myrobot/ysjf0ew2ass2exddyy0g.png",
@@ -52717,7 +52736,7 @@
     "highlights": [],
     "perf": false,
     "year": 2024,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "height_mm": 600,
     "weight_kg": 45,
@@ -52734,8 +52753,8 @@
     "use_cases": [
       "Industrial quadruped: security patrol, emergency response, inspection (35 cm jump, all-terrain RL gait)"
     ],
-    "manufacturer_url": "https://www.agibot.com",
-    "made_in": "China",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
+    "made_in": "China (Shanghai)",
     "os": "AimRT middleware",
     "dof": 12,
     "payload": 8,
@@ -52765,7 +52784,14 @@
     "released": "2025",
     "terrain": "Harsh outdoor terrain",
     "use_cases_note": "Patrol + inspection (top D1 trim)",
-    "max_grade_pct": 30
+    "max_grade_pct": 30,
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": false,
+    "has_hands": false,
+    "has_legs": true,
+    "raw_specs": {
+      "variant": "D1 rugged industrial quadruped (RL all-terrain)"
+    }
   },
   {
     "id": "agibot-g2",
@@ -52774,11 +52800,14 @@
     "cat": "Humanoid",
     "sub": "Industrial Wheeled Humanoid",
     "tags": [
-      "wheeled",
-      "industrial",
+      "agibot",
       "GR00T",
+      "2026-launch",
+      "wheeled",
       "precision",
-      "2026-launch"
+      "zhiyuan",
+      "humanoid",
+      "industrial"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733577/myrobot/f0yx7db1essj2pputfnl.jpg",
@@ -52794,7 +52823,7 @@
     ],
     "perf": false,
     "year": 2024,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "released": "2025 (Oct)",
     "height_mm": 1650,
@@ -52812,7 +52841,7 @@
     "use_cases": [
       "Industrial precision tasks & flexible production"
     ],
-    "manufacturer_url": "https://www.agibot.com",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "ai_model": "GO-1 + GE-1 (VLA, <10 ms decision latency); Genie RL rapid deployment",
     "gallery": [
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/a/g/agibot-g2-2.jpg",
@@ -52821,7 +52850,7 @@
       "https://www.robotshop.com/cdn/shop/files/pp_4501632_1200x1200.webp?v=1775478306",
       "https://www.agibot.com/public/static/index/en/images/G2/G2Two-img1.jpg"
     ],
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "os": "AimRT middleware",
     "payload_kg": 5,
     "reach_mm": 650,
@@ -52859,11 +52888,21 @@
     "compute": "NVIDIA Jetson Thor T5000 (2,070 TFLOPS FP4) + Rhino R1 (500 TOPS) — first mass-produced Thor robot",
     "npu_tops": 2070,
     "camera": "RGB-D + wrist depth + fisheye array",
-    "sensors": "8 ultrasonic + full-arm torque",
+    "sensors": [
+      "8 ultrasonic + full-arm torque"
+    ],
     "build": "100% automotive-grade components (130+ industrial qualification tests)",
     "interaction": "Expressive facial animations + eye-gaze tracking, multilingual",
     "deployments": "Longcheer Technology tablet line — first humanoid at scale on a live consumer-electronics production line; ~1,000-unit electronics order",
-    "use_cases_note": "Assembly (RAM insertion, seatbelt cylinders), parcel sorting, guided tours"
+    "use_cases_note": "Assembly (RAM insertion, seatbelt cylinders), parcel sorting, guided tours",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": false,
+    "has_hands": true,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "Industrial wheeled humanoid (2025, G2 Genie)",
+      "sensor_detail": "8 ultrasonic + full-arm torque"
+    }
   },
   {
     "id": "agibot-g1",
@@ -52872,14 +52911,16 @@
     "cat": "Humanoid",
     "sub": "Wheeled General-Purpose Platform",
     "tags": [
-      "agibot",
       "embodied",
-      "intelligence",
-      "platform",
-      "research",
-      "payload 3kg",
       "20 dof",
-      "2024"
+      "platform",
+      "agibot",
+      "research",
+      "2024",
+      "payload 3kg",
+      "zhiyuan",
+      "humanoid",
+      "intelligence"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733578/myrobot/pagupjvonggahq5eb178.webp",
@@ -52895,7 +52936,7 @@
       "Durability": 75
     },
     "year": 2024,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "height_mm": 1800,
     "dof": 20,
@@ -52914,14 +52955,14 @@
     "bluetooth": true,
     "ros": true,
     "lidar": true,
-    "manufacturer_url": "https://www.agibot.com",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "gallery": [
       "https://www.ghostysky.com/wp-content/uploads/2026/01/GH_Agibot_G1_2.png",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6825acb0ebe08fc7813821f4_G1_Hero.png",
       "https://i.ytimg.com/vi/zwde6JYyQTc/maxresdefault.jpg",
       "https://humanoid.guide/wp-content/uploads/2026/03/AgiBot-GO-1-Genie-Operator-1-Foundation-Model-Humanoid-Guide.webp"
     ],
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "os": "AimRT middleware",
     "actuator_type": "Wheeled dual-arm platform",
     "ai_model": "GO-1 embodied foundation model",
@@ -52941,7 +52982,14 @@
     "ota": "Yes",
     "released": "2024",
     "form_factor": "Wheeled general-purpose robot",
-    "use_cases_note": "Data collection + model inference platform (training-data generation for embodied AI)"
+    "use_cases_note": "Data collection + model inference platform (training-data generation for embodied AI)",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "note": "Research/development platform; limited public specs; flagged"
+    }
   },
   {
     "id": "agibot-x2-ultra",
@@ -52952,6 +53000,7 @@
     "tags": [
       "agibot",
       "compact",
+      "zhiyuan",
       "humanoid",
       "31 dof",
       "2024"
@@ -52965,7 +53014,7 @@
     "highlights": [],
     "perf": false,
     "year": 2024,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "height_mm": 1310,
     "weight_kg": 39,
@@ -52982,7 +53031,7 @@
       "Perception-rich service",
       "Entertainment"
     ],
-    "manufacturer_url": "https://www.agibot.com",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "ai_model": "GO-1 embodied foundation model + WorkGPT",
     "gallery": [
       "https://store.agibot.com/cdn/shop/files/2_11e1912e-424b-48c6-9f21-84c2bf742b19.png?v=1765524333&width=800",
@@ -52990,7 +53039,7 @@
       "https://store.agibot.com/cdn/shop/files/4_3ccddb30-9d58-45e6-94da-a37a0bc74153.png?v=1765524332&width=800",
       "https://store.agibot.com/cdn/shop/files/75f297965427c6c6c31b317dc7853cc0_ccdc52d3-b9c1-4f21-8635-c6fb2d5021e0.png?v=1765524332&width=800"
     ],
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "os": "AimRT middleware (proprietary, ROS-alternative)",
     "released": "2025",
     "website": "https://www.agibot.com",
@@ -53020,7 +53069,14 @@
     "end_effectors": "OmniHand / OmniPicker compatible",
     "vr_teleoperation": "Yes (zero-delay AV sync)",
     "sdk": "Secondary development supported",
-    "service": "18-month maintenance"
+    "service": "18-month maintenance",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "variant": "Lingxi X2 sensor-rich developer member"
+    }
   },
   {
     "id": "agibot-x1",
@@ -53029,12 +53085,14 @@
     "cat": "Humanoid",
     "sub": "Open-Source Research Humanoid",
     "tags": [
-      "agibot",
-      "open",
       "source",
-      "research",
+      "open",
       "payload 0.5kg",
       "34 dof",
+      "agibot",
+      "research",
+      "zhiyuan",
+      "humanoid",
       "2024"
     ],
     "fig": "🤖",
@@ -53051,13 +53109,13 @@
       "Durability": 75
     },
     "year": 2024,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "ros": true,
     "use_cases": [
       "Open-source developer humanoid (Lingxi series, Aug 2024)"
     ],
-    "manufacturer_url": "https://www.agibot.com",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "height_mm": 1300,
     "weight_kg": 33,
     "dof": 34,
@@ -53073,13 +53131,13 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6825ac9ce9793d6f0a69fb28_X1_Hero.png",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1764330029/robots/agibot-x1-by-agibot/wjw0a5ya8pi1pgwgoivd.jpg"
     ],
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "os": "AimRT middleware",
     "speed_ms": 1,
     "payload_kg": 0.5,
     "battery_life": 120,
     "battery_life_typical": 120,
-    "open_source": "Yes (design + AimRT framework open-sourced)",
+    "open_source": true,
     "sdk": "Yes (AimRT, GitHub)",
     "website": "https://www.agibot.com",
     "cats": [
@@ -53101,7 +53159,15 @@
     "released": "2024 (Aug)",
     "form_factor": "Compact open-source humanoid",
     "use_cases_note": "Research & education; basis of AgiBot open-source ecosystem + AgiBot World dataset",
-    "arm_torque_nm": 200
+    "arm_torque_nm": 200,
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "class": "Fully open-source modular humanoid (Lingxi X1)",
+      "open_source": "Hardware + software open-sourced"
+    }
   },
   {
     "id": "agibot-a2-w",
@@ -53110,13 +53176,15 @@
     "cat": "Humanoid",
     "sub": "Heavy Payload Arm",
     "tags": [
-      "agibot",
-      "heavy",
-      "payload",
       "arm",
-      "industrial",
-      "payload 5kg",
       "7 dof",
+      "payload 5kg",
+      "heavy",
+      "agibot",
+      "payload",
+      "zhiyuan",
+      "humanoid",
+      "industrial",
       "2024"
     ],
     "fig": "🤖",
@@ -53128,7 +53196,7 @@
     "highlights": [],
     "perf": false,
     "year": 2024,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "dof": 7,
     "ros": true,
@@ -53138,7 +53206,7 @@
     "use_cases": [
       "Flexible manufacturing & logistics"
     ],
-    "manufacturer_url": "https://www.agibot.com",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "height_mm": 1600,
     "payload_kg": 5,
     "reach_mm": 900,
@@ -53146,7 +53214,7 @@
     "wifi": "Wi-Fi",
     "bluetooth": "Yes",
     "lidar": true,
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "os": "AimRT middleware (proprietary, ROS-alternative)",
     "autonomous": "Yes",
     "gallery": [
@@ -53171,7 +53239,14 @@
     "battery": "Extended (5 h)",
     "hands": "Dexterous hands",
     "navigation": "HIMUS 3D-SLAM",
-    "use_cases_note": "Industrial: workpiece loading, quality-inspection load/unload, pallet transport (BYD, SAIC deployments)"
+    "use_cases_note": "Industrial: workpiece loading, quality-inspection load/unload, pallet transport (BYD, SAIC deployments)",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": false,
+    "has_hands": true,
+    "has_legs": false,
+    "raw_specs": {
+      "variant": "A2 wheeled dual-arm (mobile base, not legged)"
+    }
   },
   {
     "id": "agibot-a2-lite",
@@ -53180,12 +53255,13 @@
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "tags": [
-      "humanoid",
+      "cost-reduced",
       "agibot",
-      "service",
       "active",
+      "zhiyuan",
       "china",
-      "cost-reduced"
+      "humanoid",
+      "service"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733588/myrobot/i48wrskqphhhtbdtscn9.jpg",
@@ -53196,7 +53272,7 @@
     "highlights": [],
     "perf": false,
     "year": 2025,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "height_mm": 1750,
     "weight_kg": 65,
@@ -53206,8 +53282,8 @@
       "Marketing & exhibitions",
       "Cost-efficient HRI"
     ],
-    "manufacturer_url": "https://www.agibot.com",
-    "made_in": "China",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
+    "made_in": "China (Shanghai)",
     "released": "2025",
     "fingers": 5,
     "bimanual": true,
@@ -53247,7 +53323,14 @@
     "ota": "Yes",
     "company_note": "World's #1 humanoid maker by volume (5,100+ units 2025, ~39% share, Omdia)",
     "vr_teleoperation": "Yes (VR control system)",
-    "use_cases_note": "Service/interaction entry trim of A2 platform"
+    "use_cases_note": "Service/interaction entry trim of A2 platform",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "variant": "A2 cost-efficient service member"
+    }
   },
   {
     "id": "kepler-exploration-robotics-kepler-forerunner-d1",
@@ -61078,11 +61161,12 @@
     "sub": "Industrial Quadruped",
     "tags": [
       "quadruped",
-      "industrial",
       "agibot",
-      "china",
+      "flagship",
       "active",
-      "flagship"
+      "zhiyuan",
+      "china",
+      "industrial"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733734/myrobot/wtj2xw0pm1xlrnwcvdfb.jpg",
@@ -61093,7 +61177,7 @@
     "highlights": [],
     "perf": false,
     "year": 2024,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "released": "2026",
     "payload_kg": 15,
@@ -61118,8 +61202,8 @@
     "bluetooth": true,
     "os": "AimRT middleware",
     "warranty_months": 12,
-    "manufacturer_url": "https://www.agibot.com",
-    "made_in": "China",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
+    "made_in": "China (Shanghai)",
     "payload": 15,
     "autonomous": "Yes",
     "ip_rating": "IP54",
@@ -61140,7 +61224,14 @@
     "ai_model": "GO-1 embodied foundation model",
     "ota": "Yes",
     "terrain": "All-terrain",
-    "use_cases_note": "Heavy-duty quadruped trim (D2 Max class successor line)"
+    "use_cases_note": "Heavy-duty quadruped trim (D2 Max class successor line)",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": false,
+    "has_hands": false,
+    "has_legs": true,
+    "raw_specs": {
+      "variant": "D1 heavy-duty member"
+    }
   },
   {
     "id": "agibot-d1-edu",
@@ -61149,12 +61240,13 @@
     "cat": "Quadruped",
     "sub": "Educational Quadruped",
     "tags": [
+      "stem",
       "quadruped",
-      "educational",
       "agibot",
-      "china",
       "active",
-      "stem"
+      "zhiyuan",
+      "china",
+      "educational"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733735/myrobot/abe6yr0e77fxocoritdo.png",
@@ -61165,7 +61257,7 @@
     "highlights": [],
     "perf": false,
     "year": 2023,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "released": "2025",
     "height_mm": 350,
@@ -61181,8 +61273,8 @@
     "use_cases": [
       "Education quadruped (~CN¥36,000)"
     ],
-    "manufacturer_url": "https://www.agibot.com",
-    "made_in": "China",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
+    "made_in": "China (Shanghai)",
     "os": "AimRT middleware",
     "payload": 8,
     "lidar": true,
@@ -61206,7 +61298,14 @@
     "wifi": "Wi-Fi",
     "ota": "Yes",
     "use_cases_note": "Education & research quadruped (D1 platform)",
-    "sdk": "Yes"
+    "sdk": "Yes",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": false,
+    "has_hands": false,
+    "has_legs": true,
+    "raw_specs": {
+      "variant": "D1 education/research quadruped"
+    }
   },
   {
     "id": "neura-robotics-lara-8",
@@ -88929,12 +89028,13 @@
     "cat": "Humanoid",
     "sub": "Industrial Humanoid (first gen)",
     "tags": [
-      "humanoid",
-      "agibot",
       "a1",
+      "first-gen",
+      "agibot",
       "active",
+      "zhiyuan",
       "china",
-      "first-gen"
+      "humanoid"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734103/myrobot/jyge9qzjmkwcucnl5er6.png",
@@ -88953,14 +89053,14 @@
     "height_mm": 1750,
     "weight_kg": 53,
     "battery_life": 120,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "cameras": "RGB-D + RGB",
     "wifi": "Wi-Fi",
     "bluetooth": true,
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "announced": "2023-08",
     "released": "2023 (Aug)",
-    "dof": "49 DoF",
+    "dof": 49,
     "arm_dof": 7,
     "fingers": 5,
     "bimanual": true,
@@ -88982,7 +89082,7 @@
     "payload_kg": 80,
     "lidar": "Yes",
     "ros": true,
-    "manufacturer_url": "https://www.agibot.com",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "reach_mm": 650,
     "payload": "80 kg load handling",
     "speed": 1.9,
@@ -88999,7 +89099,15 @@
     "speed_kmh": 7,
     "camera": "RGBD",
     "form_factor": "Full-size bipedal (first AGIBOT humanoid)",
-    "use_cases_note": "Bolt tightening, vehicle inspection, lab tasks"
+    "use_cases_note": "Bolt tightening, vehicle inspection, lab tasks",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "significance": "AGIBOT's first humanoid (RAISE A1, Aug 2023)",
+      "founder_demo": "Zhihui Jun's debut humanoid"
+    }
   },
   {
     "id": "agibot-a2-2025",
@@ -89008,16 +89116,16 @@
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "tags": [
-      "humanoid",
       "agibot",
-      "zhiyuan",
-      "service",
-      "active",
-      "china",
-      "guinness",
+      "ces-2026",
       "go-1",
+      "guinness",
+      "active",
+      "zhiyuan",
       "high-volume",
-      "ces-2026"
+      "china",
+      "humanoid",
+      "service"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734104/myrobot/hmpha3lw0ttrfyhhugbc.jpg",
@@ -89034,14 +89142,14 @@
     "perf": false,
     "year": 2025,
     "status": "Current",
-    "height_mm": 1690,
-    "weight_kg": 69,
+    "height_mm": 1750,
+    "weight_kg": 55,
     "battery_life": 600,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "cameras": "RGB + RGB-D + fisheye",
     "wifi": "Wi-Fi",
     "bluetooth": "Yes",
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "announced": "2024-08",
     "released": "2024",
     "width_mm": 600,
@@ -89049,7 +89157,7 @@
     "ip_rating": "IP54",
     "operating_temp_min": 0,
     "operating_temp_max": 45,
-    "dof": "40+ active DoF",
+    "dof": 49,
     "arm_dof": "7 per arm",
     "hand_dof": 12,
     "actuator_type": "Integrated joint (512 N·m peak torque)",
@@ -89117,7 +89225,10 @@
     "hands": "19-DoF dexterous hands (tactile)",
     "joint_torque": "512 Nm peak (integrated joints)",
     "camera": "RGBD + fisheye",
-    "sensors": "Force/torque, MEMS multimodal tactile",
+    "sensors": [
+      "Force/torque",
+      "MEMS multimodal tactile"
+    ],
     "microphone": "Array",
     "speaker": "Yes",
     "interactive_screen": "Yes",
@@ -89126,7 +89237,17 @@
     "records": "106.286 km continuous-walking record",
     "price_band": "US$100k–190k",
     "charge_time": 120,
-    "arm_torque_nm": 512
+    "arm_torque_nm": 512,
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "class": "Flagship full-size humanoid (Yuanzheng A2)",
+      "family": "A2 base — Lite/Ultra/Max/W variants exist",
+      "sensor_detail": "Force/torque, MEMS multimodal tactile"
+    }
   },
   {
     "id": "agibot-a3-2025",
@@ -89135,11 +89256,12 @@
     "cat": "Humanoid",
     "sub": "Agility/Performance Humanoid",
     "tags": [
-      "humanoid",
       "agibot",
-      "a3",
       "development",
-      "china"
+      "a3",
+      "zhiyuan",
+      "china",
+      "humanoid"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734106/myrobot/q0gljkbw6vd5hkfb2bwp.jpg",
@@ -89158,11 +89280,11 @@
     "height_mm": 1730,
     "weight_kg": 65,
     "battery_life": 600,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "cameras": "RGB-D + RGB + fisheye",
     "wifi": "Wi-Fi",
     "bluetooth": true,
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "announced": "2025",
     "dof": 40,
     "arm_dof": 7,
@@ -89185,7 +89307,7 @@
     "use_cases": [
       "Next-gen Expedition humanoid (Aug 2025): industrial work, martial-arts agility demos, 10-hour endurance"
     ],
-    "manufacturer_url": "https://www.agibot.com",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "battery": 600,
     "actuator_type": "Electric (integrated joint modules)",
     "leg_dof": 6,
@@ -89201,7 +89323,14 @@
     "height_cm": 173,
     "runtime": "10 h endurance",
     "mobility_demos": "Aerial flying kicks, mid-air martial arts (real-world, no CGI); AGIBOT Night gala performer",
-    "use_cases_note": "Retail assistance, brand promotion, live entertainment"
+    "use_cases_note": "Retail assistance, brand promotion, live entertainment",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "class": "Newer full-size humanoid (Expedition A3, 2025)"
+    }
   },
   {
     "id": "ubtech-walker-s1-2024",
@@ -116456,22 +116585,23 @@
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "year": 2025,
-    "origin": "China (Shanghai)",
-    "made_in": "China",
+    "origin": "China",
+    "made_in": "China (Shanghai)",
     "status": "Current",
     "score": 75,
     "desc": "AGIBOT's A2 Ultra is the perception-rich variant of the full-size Yuanzheng A2, with 40 DOF, dexterous hands and a sensor stack of 3D LiDAR, RGB-D and multiple cameras for mapping, obstacle awareness and crowd-safe audience interaction in service and research deployments.",
     "price": 95000,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780813627/myrobot/mmxouoznenleggoxsrni.jpg",
     "tags": [
-      "humanoid",
+      "long-walking",
       "agibot",
-      "ultra",
-      "service",
-      "active",
-      "flagship",
       "certified",
-      "long-walking"
+      "ultra",
+      "flagship",
+      "active",
+      "zhiyuan",
+      "humanoid",
+      "service"
     ],
     "released": "2025",
     "height_mm": 1750,
@@ -116536,7 +116666,15 @@
     "navigation": "HIMUS 3D-SLAM + VectorFlux",
     "vr_teleoperation": "Yes (VR control system)",
     "awards": "2025 iF Design Award + 2025 Red Dot Award",
-    "arm_torque_nm": 270
+    "arm_torque_nm": 270,
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "variant": "A2 perception-rich member (sensor-heavy)"
+    }
   },
   {
     "id": "agibot-a2-max-2025",
@@ -116545,21 +116683,22 @@
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "year": 2025,
-    "origin": "China (Shanghai)",
-    "made_in": "China",
+    "origin": "China",
+    "made_in": "China (Shanghai)",
     "status": "Announced",
     "score": 75,
     "desc": "AGIBOT's A2 Max is the heavy-duty industrial member of the A2 family - larger and heavier at 175 cm and ~85 kg - presented for material handling and palletizing, a step beyond the service orientation of A2 Lite/Ultra.",
     "price": 0,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780813629/myrobot/hrlf7irvln8w8ijz5plg.jpg",
     "tags": [
-      "humanoid",
-      "agibot",
       "max",
-      "industrial",
-      "pre-order",
+      "agibot",
       "heavy-duty",
-      "palletizing"
+      "palletizing",
+      "pre-order",
+      "zhiyuan",
+      "humanoid",
+      "industrial"
     ],
     "announced": "2024-08",
     "height_mm": 1750,
@@ -116585,7 +116724,7 @@
     "perf": false,
     "fig": "🤖",
     "rating": 4,
-    "manufacturer_url": "https://www.agibot.com",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202606/23/frWcFwnjtLohuq5g6Xxj/image.jpg",
       "https://plain-eeur-prod-public.komododecks.com/202606/23/le7jPgVASwYju8Is3mBv/image.jpg",
@@ -116616,7 +116755,14 @@
     "hands": "19-DoF dexterous hands (12 active)",
     "legs": "6-DoF legs (linear actuators, 8,800 N thrust) + 3-DoF waist (squat/bend)",
     "use_cases_note": "Heavy-duty industrial: material handling, palletizing (40 kg aviation box demo)",
-    "arm_torque_nm": 450
+    "arm_torque_nm": 450,
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "variant": "A2 heavy-duty industrial member"
+    }
   },
   {
     "id": "eufy-omni-s1-pro",
@@ -138406,24 +138552,24 @@
     "cat": "Humanoid",
     "sub": "Compact Humanoid",
     "year": 2025,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "price": 13800,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413211/myrobot/jdjqkhvwhqkvcxrenlzb.jpg",
     "tags": [
-      "humanoid",
       "bipedal",
-      "compact",
       "agibot",
-      "zhiyuan",
       "lingxi",
       "go-1",
+      "compact",
       "dynamic",
-      "china"
+      "zhiyuan",
+      "china",
+      "humanoid"
     ],
     "height_mm": 1310,
     "weight_kg": 35,
-    "dof": "28 DoF",
+    "dof": 28,
     "speed_ms": 2,
     "actuator_type": "Self-developed Powerflow joints",
     "shell_material": "Flexible soft exterior",
@@ -138473,7 +138619,7 @@
       "X2 Ultra",
       "X2-N (wheel-foot)"
     ],
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "announced": "2025",
     "website": "https://www.agibot.com/products/X2",
     "gallery": [
@@ -138499,7 +138645,16 @@
     "compute": "Silicon photonic VLM (sub-ms vision) + WorkGPT LLM",
     "mobility_demos": "Bicycle riding, scooter, hoverboard balance (unique among compact humanoids)",
     "use_cases_note": "Retail, healthcare, education service",
-    "price_band": "~US$30k–50k (enterprise)"
+    "price_band": "~US$30k–50k (enterprise)",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "class": "Compact general-purpose humanoid (~1.31m/35kg)",
+      "note": "Canonical Lingxi X2 entry (duplicate agibot-x2 deleted)"
+    }
   },
   {
     "id": "switchbot-onero-h1",
@@ -146343,7 +146498,7 @@
     "cat": "Humanoid",
     "sub": "Hybrid Bipedal-Wheel Humanoid",
     "year": 2025,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "status": "Current",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413416/myrobot/tyxhorn4mgwnycesoqjc.jpg",
@@ -146360,19 +146515,20 @@
     ],
     "desc": "A hybrid-mobility variant of AGIBOT's compact Lingxi X2 (AGIBOT / Zhiyuan Robotics, Shanghai; the world's #1 humanoid producer by 2025 shipments), debuted at CES 2026 with a Tai Chi demonstration. The X2-N transforms its feet into wheels to switch between bipedal walking and wheeled rolling, using proprioceptive feedback — joint torque, pressure sensors and gyros rather than cameras — to adapt in real time, climb stairs and traverse ramps with light loads. It shares the X2 chassis (~1.31 m, ~35 kg, ~28 DoF) with AGIBOT's Xyber-Edge 'cerebellum' controller and Xyber-DCU decision unit, and is programmable through the ROS2-based AimDK_X2 framework in Python or C++.",
     "tags": [
-      "humanoid",
+      "hybrid",
       "agibot",
       "lingxi",
-      "x2-n",
       "wheeled",
-      "hybrid",
+      "active",
+      "x2-n",
+      "zhiyuan",
       "china",
-      "active"
+      "humanoid"
     ],
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "made_in": "China",
+    "made_in": "China (Shanghai)",
     "chassis": "Hybrid bipedal + foot-wheel (transformable)",
     "stair_climbing": true,
     "speed_ms": 1.5,
@@ -146396,7 +146552,7 @@
       "C++"
     ],
     "ai_model": "GO-1 embodied foundation model + WorkGPT",
-    "manufacturer_url": "https://www.agibot.com/products/X2",
+    "manufacturer_url": "https://www.zhiyuan-robot.com/",
     "arm_dof": 7,
     "waist_dof": 3,
     "neck_dof": 1,
@@ -146419,7 +146575,14 @@
     "released": "2025",
     "height_cm": 130,
     "form_factor": "X2 variant for light logistics + inspection (mixed indoor)",
-    "use_cases_note": "Light logistics, inspection"
+    "use_cases_note": "Light logistics, inspection",
+    "manufacturer_history": "AGIBOT / Zhiyuan Robotics (Shanghai), founded Feb 2023 by 'Zhihui Jun' (Peng Zhihui, ex-Huawei) and others. Rapid humanoid + quadruped lineup: RAISE A1 (2023) → Yuanzheng A2 family (2025) → Lingxi X1/X2 (open-source) → D1 quadrupeds → G-series industrial. Known for open-sourcing (X1) and aggressive iteration. Backed by major Chinese investors; among China's most-funded embodied-AI startups.",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "variant": "Lingxi X2 hybrid-mobility variant"
+    }
   },
   {
     "id": "noetix-bumi",
