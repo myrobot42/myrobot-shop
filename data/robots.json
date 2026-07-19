@@ -34685,7 +34685,7 @@
     "name": "Ameca",
     "brand": "Engineered Arts",
     "year": 2021,
-    "status": "Current",
+    "status": "Active",
     "cat": "Humanoid",
     "sub": "Social Humanoid",
     "tags": [
@@ -34702,7 +34702,7 @@
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781304195/myrobot/aoy01yu1tmsar6qfpfgd.webp",
     "score": 75,
     "rating": 4,
-    "price": "POA (quote/rental only; circulating $100k–500k figures are guesses)",
+    "price": 100000,
     "desc": "Advanced humanoid robot with realistic facial expressions and natural human-robot interaction capabilities for research and entertainment.",
     "highlights": [
       "Realistic facial expressions",
@@ -34714,12 +34714,12 @@
       "Tritium OS",
       "Event/exhibition star"
     ],
-    "height_mm": 1800,
-    "width_mm": 600,
-    "depth_mm": 400,
+    "height_mm": 1870,
+    "width_mm": 470,
+    "depth_mm": 850,
     "weight_kg": 62,
     "frame_material": "Aluminum alloy",
-    "shell_material": "Silicone skin",
+    "shell_material": "Grey silicone/rubber skin (genderless)",
     "ip_rating": "IP54",
     "operating_temp_min": 5,
     "operating_temp_max": 35,
@@ -34745,7 +34745,7 @@
     "hot_swap": false,
     "quick_release": true,
     "cycle_life": 1000,
-    "ai_model": "LLM-integrated (GPT-class; speech recognition + NLP + TTS pipeline)",
+    "ai_model": "Tritium AI + GPT integration; Mesmer expression tech",
     "ai_model_type": "LLM",
     "learning_methods": [
       "Machine Learning",
@@ -34753,9 +34753,9 @@
     ],
     "ai_cloud_required": true,
     "ota": true,
-    "cameras": "Multiple HD cameras",
-    "lidar": false,
-    "depth_sensing": true,
+    "cameras": "Dual 8MP eye cameras + chest camera",
+    "lidar": true,
+    "depth_sensing": "Depth sensors",
     "imu": true,
     "touch_sensing": false,
     "wifi": "Wi-Fi 6",
@@ -34779,9 +34779,9 @@
       "Customer service"
     ],
     "perf": false,
-    "origin": "UK (Engineered Arts; restructured as US entity)",
+    "origin": "UK",
     "released": "2021 (CES 2022 debut); Gen 3 at ICRA 2025",
-    "dof": "61 actuated DoF (official)",
+    "dof": 61,
     "manufacturer_url": "https://www.engineeredarts.co.uk",
     "product_url": "https://www.engineeredarts.co.uk/robot/ameca",
     "gallery": [
@@ -34797,8 +34797,8 @@
     "payload": 5,
     "speed": 0.5,
     "battery": 240,
-    "actuator_type": "Electric servo",
-    "made_in": "UK / USA",
+    "actuator_type": "Electric + pneumatic",
+    "made_in": "UK (Cornwall)",
     "manufacturer": "Engineered Arts",
     "height_cm": 187,
     "facial_expressions": "50+ pre-programmed realistic expressions (Mesmer facial actuators)",
@@ -34813,7 +34813,27 @@
     "cloud": "Cloud-connected (remote avatar/telepresence, global data access)",
     "operating_temp": "Indoor only, 10–30°C",
     "deployments": "National Robotarium Edinburgh; Museum of the Future Dubai; Computer History Museum; Heinz Nixdorf (ChatGPT-integrated); Copernicus Science Centre",
-    "note": "'World's most expressive humanoid' — interaction specialist, not a laborer"
+    "note": "'World's most expressive humanoid' — interaction specialist, not a laborer",
+    "manufacturer_history": "Engineered Arts Ltd (Falmouth, Cornwall, UK), founded 2004 by Will Jackson. Social/expressive humanoid pioneer: RoboThespian (world's first theatre robot) → Mesmer (hyper-realistic animatronic faces) → Ameca (2021/CES 2022, 'world's most advanced' expressive humanoid) → Ameca Gen 3 + Ami (ICRA 2025). Runs Tritium AI software. All are stationary (no bipedal locomotion — on development roadmap).",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "arm_span_mm": 1800,
+    "currency": "USD",
+    "raw_specs": {
+      "dof_total": "61 actuated DoF",
+      "dof_head": "27 in head/face (highest facial DoF of any commercial robot)",
+      "dof_body": "34 upper body (no legs)",
+      "expressions": "50+ pre-programmed facial expressions, real-time micro-expressions",
+      "tech": "Mesmer — silicone skin + precision actuators",
+      "sensors": "Dual 8MP eye cameras (binocular gaze), 4-ch chest mic array + 2 ear mics (spatial audio), LiDAR, depth, proximity, position encoders",
+      "ai": "Tritium web platform + ChatGPT/GPT; 50+ languages",
+      "dims": "1.87m tall, 0.47m wide, 0.85m deep, 1.80m arm span, 0.60m base",
+      "actuators": "Electric + pneumatic, high-torque silent",
+      "design": "Grey rubber skin, exposed joints, transparent LED skull — deliberately non-uncanny",
+      "locomotion": "Stationary on weighted base (no walking; on roadmap)",
+      "price": "$100,000+"
+    }
   },
   {
     "id": "kepler-forerunner-k1",
@@ -53484,12 +53504,12 @@
     "desc": "Engineered Arts' Ameca Generation 3 is the latest of the world's most advanced expressive humanoid for human-robot interaction - its grey, deliberately non-human face uses Mesmer technology for remarkably lifelike micro-expressions and gestures, with integrated conversational AI (LLM-driven) for natural dialogue. Used widely for research, exhibitions and AI demonstrations.",
     "highlights": [],
     "perf": false,
-    "origin": "UK/USA (Engineered Arts)",
+    "origin": "UK",
     "year": 2025,
-    "status": "Current",
+    "status": "Active",
     "height_mm": 1870,
     "weight_kg": 62,
-    "dof": "61 actuated DoF class (enhanced facial actuators vs Gen 1/2)",
+    "dof": 61,
     "os": "Tritium 3 (GPT-4/Claude/Gemini LLM integration)",
     "wifi": true,
     "bluetooth": true,
@@ -53503,7 +53523,7 @@
       "AI conversation demos"
     ],
     "manufacturer_url": "https://www.engineeredarts.co.uk",
-    "made_in": "USA",
+    "made_in": "UK (Cornwall)",
     "announced": "2025",
     "released": "2025 (ICRA)",
     "bionic_face": true,
@@ -53517,19 +53537,29 @@
     "speech_synthesis": true,
     "natural_language_commands": true,
     "llm_model": "GPT-class integration",
-    "ai_model": "Tritium (GPT / Claude / Gemini)",
+    "ai_model": "Tritium AI + Mesmer",
     "website": "https://www.engineeredarts.co.uk",
     "gallery": [
       "https://cdn.prod.website-files.com/67ea6793adf74f7d3087e4e4/697d473cd1b6d7e7f6931a58_697d468ee6eb94e0b4011db5_ameca-robot-review-2026.png"
     ],
-    "actuator_type": "Electric servo",
+    "actuator_type": "Electric + pneumatic",
     "gesture_control": true,
     "shell_material": "Grey rubber skin (face/hands)",
     "manufacturer": "Engineered Arts",
     "height_cm": 187,
     "hands": "More articulated fingers + force feedback (Gen 3)",
     "latency": "Reduced sensory→expression latency",
-    "note": "Current generation; FLAG — may duplicate 'ea-ameca-001' (same product line, verify whether to merge as generations or keep)"
+    "note": "Current generation; FLAG — may duplicate 'ea-ameca-001' (same product line, verify whether to merge as generations or keep)",
+    "manufacturer_history": "Engineered Arts Ltd (Falmouth, Cornwall, UK), founded 2004 by Will Jackson. Social/expressive humanoid pioneer: RoboThespian (world's first theatre robot) → Mesmer (hyper-realistic animatronic faces) → Ameca (2021/CES 2022, 'world's most advanced' expressive humanoid) → Ameca Gen 3 + Ami (ICRA 2025). Runs Tritium AI software. All are stationary (no bipedal locomotion — on development roadmap).",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "raw_specs": {
+      "generation": "Ameca Generation 3 (ICRA 2025) — showcased with Ami",
+      "improvements": "Latest-gen expression/interaction",
+      "tech": "Mesmer + Tritium",
+      "note": "Iteration of flagship Ameca"
+    }
   },
   {
     "id": "kepler-robotics-forerunner-s1",
@@ -53626,7 +53656,7 @@
       "Autonomy": 70,
       "Durability": 75
     },
-    "origin": "United Kingdom",
+    "origin": "UK",
     "year": 2024,
     "status": "Active",
     "height_mm": 1700,
@@ -53640,7 +53670,7 @@
     "wifi": true,
     "bluetooth": true,
     "manufacturer_url": "https://www.engineeredarts.co.uk/",
-    "made_in": "United Kingdom (Falmouth, Cornwall)",
+    "made_in": "UK (Cornwall)",
     "os": "Tritium (Engineered Arts OS)",
     "website": "https://www.engineeredarts.co.uk",
     "cats": [
@@ -53658,9 +53688,18 @@
     "gesture_control": true,
     "actuator_type": "Engineered Arts Mesmer actuators (facial expression)",
     "ai_cloud_required": true,
-    "ai_model": "Cloud conversational AI (LLM integration, GPT-class); telepresence-capable",
+    "ai_model": "Tritium AI",
     "voice_control": true,
-    "capabilities": "Expressive conversational robot head/bust for HRI; realistic Mesmer facial expressions; designed for reception, information and research settings"
+    "capabilities": "Expressive conversational robot head/bust for HRI; realistic Mesmer facial expressions; designed for reception, information and research settings",
+    "manufacturer_history": "Engineered Arts Ltd (Falmouth, Cornwall, UK), founded 2004 by Will Jackson. Social/expressive humanoid pioneer: RoboThespian (world's first theatre robot) → Mesmer (hyper-realistic animatronic faces) → Ameca (2021/CES 2022, 'world's most advanced' expressive humanoid) → Ameca Gen 3 + Ami (ICRA 2025). Runs Tritium AI software. All are stationary (no bipedal locomotion — on development roadmap).",
+    "has_hands": true,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "Quinn — Engineered Arts humanoid",
+      "tech": "Mesmer/Tritium platform",
+      "note": "Expressive social humanoid; limited public spec detail"
+    },
+    "imu": true
   },
   {
     "id": "engineered-arts-ami-and-azi-desktop",
@@ -53701,7 +53740,7 @@
       "Engagement"
     ],
     "manufacturer_url": "https://www.engineeredarts.co.uk",
-    "made_in": "UK",
+    "made_in": "UK (Cornwall)",
     "announced": "2024",
     "released": 2024,
     "bionic_face": true,
@@ -53712,7 +53751,7 @@
     "natural_language_commands": true,
     "head_dof": 12,
     "neck_dof": 3,
-    "ai_model": "Tritium",
+    "ai_model": "Tritium AI + Mesmer",
     "website": "https://www.engineeredarts.co.uk",
     "gallery": [
       "https://media.engineeredarts.com/wp-content/uploads/2025/09/Azi-Desktop-Social-Humanoid-Robot-Black-Shell-Grey-Skin-Happy-Expression-Engineered-Arts.webp",
@@ -53722,7 +53761,18 @@
     ],
     "os": "Tritium / Engineered Arts",
     "video": "https://youtu.be/oN3Y_iKmgZA",
-    "actuator_type": "Electric servo"
+    "actuator_type": "Electric servo",
+    "manufacturer_history": "Engineered Arts Ltd (Falmouth, Cornwall, UK), founded 2004 by Will Jackson. Social/expressive humanoid pioneer: RoboThespian (world's first theatre robot) → Mesmer (hyper-realistic animatronic faces) → Ameca (2021/CES 2022, 'world's most advanced' expressive humanoid) → Ameca Gen 3 + Ami (ICRA 2025). Runs Tritium AI software. All are stationary (no bipedal locomotion — on development roadmap).",
+    "has_hands": false,
+    "has_legs": false,
+    "biped": false,
+    "raw_specs": {
+      "class": "Ami & Azi Desktop — Mesmer Desktop series expressive heads",
+      "form": "Compact desktop",
+      "tech": "Mesmer + Tritium",
+      "use": "Workspace interaction"
+    },
+    "imu": true
   },
   {
     "id": "engineered-arts-robothespian",
@@ -53742,7 +53792,7 @@
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781218246/myrobot/ujf4wqaodqd6ltstbufn.png",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 79000,
     "desc": "The pioneering 'robot actor' from England's Engineered Arts (founded 2004), first built in 2005 and now installed at 250+ venues worldwide including NASA Kennedy Space Center and museums. RoboThespian is a life-size (1.75 m, 33 kg) interactive humanoid designed for public display: an aluminium chassis and PET body shell house an actuated upper body, arms, hands, head and jaw driven by Festo pneumatic actuators plus brushed DC motors across 26 DoF (30+ axes). LCD-screen eyes, RGB cheeks and a synchronised jaw bring expression; it speaks 30+ languages with 90 TTS voices, and runs Engineered Arts' Tritium software (Gentoo/Ubuntu) with scripted, API and TinMan telepresence control. It performed in the stage play 'Spillikin' and hosted the 2015 NatGeo film Robots 3D.",
     "highlights": [],
     "perf": {
@@ -53753,7 +53803,7 @@
     },
     "year": 2005,
     "origin": "UK",
-    "status": "Current",
+    "status": "Active",
     "released": "2005 (multiple generations)",
     "height_mm": 1750,
     "weight_kg": 33,
@@ -53766,7 +53816,7 @@
       "Corporate events"
     ],
     "manufacturer_url": "https://engineeredarts.com/robot/robothespian/",
-    "made_in": "UK",
+    "made_in": "UK (Cornwall)",
     "os": "Tritium platform",
     "gallery": [
       "https://storage.googleapis.com/bucket-two-leobotics/product/robot-humanoide-mouvements-et-depacement-autonome-robothespian-engineered-arts-1-1.webp",
@@ -53780,10 +53830,10 @@
       "Humanoid",
       "Service"
     ],
-    "actuator_type": "Festo pneumatic actuators + brushed DC motors",
+    "actuator_type": "Pneumatic + electric",
     "frame_material": "Aluminium alloy",
     "shell_material": "PET plastic",
-    "display_face": "2 LCD-screen eyes + RGB cheeks + servo jaw",
+    "display_face": "LCD/projected face",
     "cameras": "Cameras + IR depth sensors (gesture/pose)",
     "languages": "30+ (90 TTS voices)",
     "natural_language_commands": true,
@@ -53806,7 +53856,21 @@
     "manufacturer": "Engineered Arts",
     "form_factor": "Full-size stationary performer humanoid",
     "use_cases_note": "Theatre, museums, exhibitions — 10+ yrs of installs worldwide; predecessor platform to Ameca",
-    "modular": "Yes"
+    "modular": "Yes",
+    "manufacturer_history": "Engineered Arts Ltd (Falmouth, Cornwall, UK), founded 2004 by Will Jackson. Social/expressive humanoid pioneer: RoboThespian (world's first theatre robot) → Mesmer (hyper-realistic animatronic faces) → Ameca (2021/CES 2022, 'world's most advanced' expressive humanoid) → Ameca Gen 3 + Ami (ICRA 2025). Runs Tritium AI software. All are stationary (no bipedal locomotion — on development roadmap).",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "currency": "USD",
+    "raw_specs": {
+      "class": "RoboThespian — world's first theatre/performance robot",
+      "use": "Entertainment, museums, science centres, education",
+      "speaks": "30+ languages",
+      "actuators": "Pneumatic motors",
+      "price": "~$79,000+ (2018)",
+      "legacy": "Engineered Arts' original product line"
+    },
+    "imu": true
   },
   {
     "id": "engineered-arts-mesmer",
@@ -53839,7 +53903,7 @@
     "perf": false,
     "year": 2018,
     "origin": "UK",
-    "status": "Current",
+    "status": "Active",
     "released": "2018",
     "height_mm": 1800,
     "dof": 32,
@@ -53856,7 +53920,7 @@
     "manufacturer_url": "https://www.engineeredarts.co.uk",
     "product_url": "https://www.engineeredarts.co.uk/mesmer",
     "weight_kg": 50,
-    "made_in": "UK",
+    "made_in": "UK (Cornwall)",
     "announced": "2018",
     "bionic_face": true,
     "head_dof": 18,
@@ -53875,11 +53939,23 @@
     "video": "https://youtu.be/fM1xme3-42w",
     "video2": "https://youtu.be/PAMYPjySY9g",
     "actuator_type": "Electric servo",
-    "shell_material": "Silicone skin",
+    "shell_material": "Hyper-realistic silicone skin",
     "manufacturer": "Engineered Arts",
     "form_factor": "Hyper-realistic human replica platform (silicone skin, human-modeled)",
     "technology": "Mesmer actuation — dozens of individually actuated facial motors",
-    "note": "Platform/technology line underpinning Ameca's face; sold as custom realistic figures"
+    "note": "Platform/technology line underpinning Ameca's face; sold as custom realistic figures",
+    "manufacturer_history": "Engineered Arts Ltd (Falmouth, Cornwall, UK), founded 2004 by Will Jackson. Social/expressive humanoid pioneer: RoboThespian (world's first theatre robot) → Mesmer (hyper-realistic animatronic faces) → Ameca (2021/CES 2022, 'world's most advanced' expressive humanoid) → Ameca Gen 3 + Ami (ICRA 2025). Runs Tritium AI software. All are stationary (no bipedal locomotion — on development roadmap).",
+    "has_hands": false,
+    "has_legs": false,
+    "biped": false,
+    "display_face": "Animatronic face",
+    "raw_specs": {
+      "class": "Mesmer — hyper-realistic animatronic humanoid/face system",
+      "tech": "3D-scanned real people, silicone skin, precise facial actuators",
+      "use": "Realistic character robots, attractions",
+      "note": "Foundation tech for Ameca expressions"
+    },
+    "imu": true
   },
   {
     "id": "engineered-arts-ameca-desktop",
@@ -53908,7 +53984,7 @@
     "highlights": [],
     "perf": false,
     "year": 2021,
-    "origin": "United Kingdom",
+    "origin": "UK",
     "status": "Active",
     "released": "2021",
     "dof": 17,
@@ -53936,7 +54012,7 @@
       "https://media.engineeredarts.com/wp-content/uploads/2026/06/Ameca-Desktop-Black-Shell-Gen-3-Embodied-AI-Social-Humanoid-Robot-Side-View-Engineered-Arts.webp",
       "https://media.engineeredarts.com/wp-content/uploads/2026/05/Ami-Desktop-White-Shell-Gen-3-Front-Left-View-Engineered-Arts.webp"
     ],
-    "made_in": "United Kingdom (Falmouth, Cornwall)",
+    "made_in": "UK (Cornwall)",
     "website": "https://www.engineeredarts.co.uk",
     "video": "https://youtu.be/k8Ku6IDHLqU",
     "actuator_type": "Engineered Arts Mesmer actuators (lifelike facial/upper-body articulation)",
@@ -53945,7 +54021,7 @@
     "emotion_detection": true,
     "speech_synthesis": true,
     "shell_material": "Grey rubber skin",
-    "ai_model": "Cloud AI — integrates OpenAI GPT models; telepresence/avatar operation",
+    "ai_model": "Tritium AI + Mesmer",
     "announced": "2021-02",
     "biped": false,
     "bionic_face": true,
@@ -53968,7 +54044,16 @@
       "Ameca half-body",
       "Head-only module",
       "Ami companion (Gen 3)"
-    ]
+    ],
+    "manufacturer_history": "Engineered Arts Ltd (Falmouth, Cornwall, UK), founded 2004 by Will Jackson. Social/expressive humanoid pioneer: RoboThespian (world's first theatre robot) → Mesmer (hyper-realistic animatronic faces) → Ameca (2021/CES 2022, 'world's most advanced' expressive humanoid) → Ameca Gen 3 + Ami (ICRA 2025). Runs Tritium AI software. All are stationary (no bipedal locomotion — on development roadmap).",
+    "has_hands": false,
+    "has_legs": false,
+    "display_face": "Expressive Mesmer face",
+    "raw_specs": {
+      "form": "Desktop head/bust version of Ameca (Mesmer Desktop series)",
+      "use": "Compact workspace interaction",
+      "tech": "Mesmer expressions + Tritium AI"
+    }
   },
   {
     "id": "engineered-arts-ami",
@@ -53992,9 +54077,9 @@
     "desc": "Ami is a desktop interactive robot from Engineered Arts - a smaller expressive head/face platform built for natural conversation and engagement, bringing the company's HRI and animation technology to an accessible tabletop unit.",
     "highlights": [],
     "perf": false,
-    "year": 2024,
-    "origin": "UK/USA",
-    "status": "Current",
+    "year": 2025,
+    "origin": "UK",
+    "status": "Active",
     "wifi": true,
     "bluetooth": true,
     "cameras": "Eye + face cameras",
@@ -54008,7 +54093,7 @@
     "ros": true,
     "depth_sensing": true,
     "warranty_months": 12,
-    "made_in": "USA",
+    "made_in": "UK (Cornwall)",
     "announced": "2024",
     "released": "2025 (ICRA, with Ameca Gen 3)",
     "bionic_face": true,
@@ -54029,10 +54114,20 @@
     ],
     "os": "Tritium",
     "actuator_type": "Electric servo",
-    "ai_model": "Tritium (GPT / Claude / Gemini)",
+    "ai_model": "Tritium AI + Mesmer",
     "manufacturer": "Engineered Arts",
     "form_factor": "Smaller, more affordable companion on Ameca tech",
-    "note": "FLAG — 'engineered-arts-ami-and-azi-desktop' + 'engineered-arts-ameca-desktop' may overlap with this (desktop line); verify SKUs"
+    "note": "FLAG — 'engineered-arts-ami-and-azi-desktop' + 'engineered-arts-ameca-desktop' may overlap with this (desktop line); verify SKUs",
+    "manufacturer_history": "Engineered Arts Ltd (Falmouth, Cornwall, UK), founded 2004 by Will Jackson. Social/expressive humanoid pioneer: RoboThespian (world's first theatre robot) → Mesmer (hyper-realistic animatronic faces) → Ameca (2021/CES 2022, 'world's most advanced' expressive humanoid) → Ameca Gen 3 + Ami (ICRA 2025). Runs Tritium AI software. All are stationary (no bipedal locomotion — on development roadmap).",
+    "has_hands": false,
+    "has_legs": false,
+    "biped": false,
+    "raw_specs": {
+      "class": "Ami — desktop expressive robot (shown at ICRA 2025 w/ Ameca Gen3)",
+      "form": "Compact desktop head",
+      "tech": "Mesmer + Tritium"
+    },
+    "imu": true
   },
   {
     "id": "milrem-robotics-type-x-rcv",
