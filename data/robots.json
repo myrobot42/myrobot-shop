@@ -90771,8 +90771,8 @@
     "wifi": true,
     "bluetooth": true,
     "sdk": true,
-    "made_in": "USA",
-    "announced": "2026-01",
+    "made_in": "USA (New York)",
+    "announced": "2026-01-27",
     "dof": 29,
     "arm_dof": 6,
     "fingers": 5,
@@ -90798,7 +90798,7 @@
     "battery": 180,
     "actuator_type": "Back-drivable motors, compliant control, limited joint torques (safety-first)",
     "video": "https://youtu.be/pO9MEqs7H2s",
-    "shell_material": "Soft deformable exterior (safe collaboration)",
+    "shell_material": "Soft-bodied exterior, minimized pinch points",
     "manufacturer_url": "https://www.faunarobotics.com/",
     "biped": true,
     "leg_dof": 5,
@@ -90822,14 +90822,24 @@
     "stair_climbing": false,
     "teleoperation": "VR-based teleoperation",
     "voice_control": true,
-    "ai_model": "Whole-body control + manipulation; unified HW/SW stack",
+    "ai_model": "Modular embodied-AI platform (Fauna)",
     "learning_methods": [
       "Learned control",
       "Imitation",
       "VR teleoperation"
     ],
     "capabilities": "Safe, expressive developer humanoid: mapping, navigation, voice interaction, walking, kneeling, crawling, jumping, dancing, fall recovery, high-five; soft exterior + dedicated safety subsystem for shared human spaces",
-    "developed_by": "Fauna Robotics (published full technical report Jan 2026)"
+    "developed_by": "Fauna Robotics (published full technical report Jan 2026)",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "launch": "Out of stealth Jan 27, 2026 — shipping as 'Creator Edition'",
+      "design": "Lightweight soft-bodied, 1.07m/22.7kg, low kinetic energy, safe in shared spaces",
+      "safety": "Can sit on a chair / stand at a desk — no gantry or cage needed (vs heavy rigid industrial humanoids)",
+      "customers": "Disney, Boston Dynamics, UC San Diego, NYU (retail, entertainment, home services)",
+      "founder": "Rob Cochran (ex-CTRL-labs)",
+      "positioning": "Developer platform for embodied-intelligence apps in people-friendly spaces"
+    }
   },
   {
     "id": "toyota-tro-2017",
@@ -141888,7 +141898,7 @@
     "sub": "Friendly Companion Humanoid",
     "year": 2025,
     "origin": "USA",
-    "made_in": "USA",
+    "made_in": "USA (Reno, Nevada)",
     "status": "Development",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413295/myrobot/qyftwydjg2s814uovu8q.jpg",
@@ -141897,7 +141907,7 @@
     "dof": 50,
     "actuator_type": "Custom actuators",
     "frame_material": "Hollow skeletal structure (cooling)",
-    "shell_material": "Soft medical-grade silicone skin",
+    "shell_material": "Medical-grade silicone skin + soft protective materials",
     "emotion_detection": true,
     "emotional_expression": true,
     "use_cases": [
@@ -141933,7 +141943,21 @@
     "biped": true,
     "design_philosophy": "Small, friendly, emotionally expressive humanoid — deliberately warm/approachable vs industrial humanoids",
     "capabilities": "Compact bipedal companion humanoid designed for emotional warmth and human connection in homes/public spaces; expressive movement",
-    "developed_by": "Cartwheel Robotics (founded by Scott LaValley, ex-Disney Imagineering & Boston Dynamics)"
+    "developed_by": "Cartwheel Robotics (founded by Scott LaValley, ex-Disney Imagineering & Boston Dynamics)",
+    "has_hands": true,
+    "has_legs": true,
+    "hot_swap": true,
+    "ai_model": "Motion Language Model — real-time emotionally-resonant responses + natural language",
+    "imu": true,
+    "raw_specs": {
+      "philosophy": "Emotional companion, not factory robot — 'toddler proportions', Baymax/Casper-like",
+      "founder": "Scott LaValley (ex-Boston Dynamics 2009-16, lead mech eng on RHex/PETMAN; ex-Disney Project Kiwi/Baby Groot)",
+      "design": "~76cm, 50+ DoF, custom actuators, hollow skeleton (cooling), medical-grade silicone skin, swappable modular battery",
+      "ai": "Motion Language Model — expressive gestures + natural language",
+      "market": "Home, hospitality, healthcare, entertainment",
+      "sibling": "'Speedy' — simpler near-term commercial platform",
+      "hq": "Reno, Nevada"
+    }
   },
   {
     "id": "kit-armar-6",
