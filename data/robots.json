@@ -143691,7 +143691,7 @@
     "sub": "Industrial Humanoid",
     "year": 2025,
     "origin": "Sweden",
-    "made_in": "Sweden (Hexagon AB)",
+    "made_in": "Sweden",
     "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413306/myrobot/sr0sixeneb5ectyhgrxm.jpg",
@@ -143706,7 +143706,7 @@
     "payload": 15,
     "payload_kg": 15,
     "actuator_type": "High-precision rotary actuators (Schaeffler Tier-1 supply)",
-    "chipset": "NVIDIA Jetson Orin",
+    "chipset": "NVIDIA Jetson Orin + IGX Thor (safety)",
     "ai_model": "On-device spatial AI + edge LLM reasoning (NVIDIA Isaac stack)",
     "sim_platform": "NVIDIA Isaac Sim / Isaac Lab / Omniverse",
     "cameras": "Metrology-grade sensor suite (RGB)",
@@ -143733,7 +143733,7 @@
       "Manufacturing QC",
       "Aerospace & automotive"
     ],
-    "manufacturer_history": "Hexagon Robotics (division launched 2025); developed with NVIDIA; named an NVIDIA GR00T ecosystem partner (GTC 2026); Schaeffler committed to 1,000+ units by 2032 and supplies AEON's actuators.",
+    "manufacturer_history": "Hexagon AB (Sweden), metrology/reality-capture leader. AEON — its industrial humanoid (developed w/ NVIDIA), for inspection/reality-capture/metrology tasks in industry. Unveiled 2025.",
     "tags": [
       "humanoid",
       "aeon",
@@ -143759,7 +143759,21 @@
     ],
     "video": "https://youtu.be/ytPGe63TtOg",
     "arm_dof": 7,
-    "leg_dof": 6
+    "leg_dof": 6,
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Hexagon AB (Sweden), w/ NVIDIA",
+      "source": "Hexagon AEON published specs",
+      "class": "AEON — industrial humanoid AI worker",
+      "specs": "34 DoF, 8.6 km/h (2.4 m/s), 15 kg payload",
+      "compute": "NVIDIA Jetson Orin + IGX Thor functional-safety",
+      "battery": "~4h hot-swap",
+      "use": "Industrial inspection, reality capture, metrology (Hexagon's core domain)",
+      "note": "Leverages Hexagon's measurement/scanning expertise",
+      "entry": "AEON — Hexagon"
+    }
   },
   {
     "id": "mova-z60-ultra-roller",
@@ -148733,7 +148747,7 @@
     "brand": "Chery",
     "cat": "Humanoid",
     "sub": "Full-Size Service Humanoid",
-    "year": 2025,
+    "year": 2026,
     "origin": "China",
     "status": "Active",
     "price": 41860,
@@ -148772,7 +148786,7 @@
     "hand_type": "Dexterous hands",
     "bimanual": true,
     "cameras": "2x depth + 1x wide-angle",
-    "depth_sensing": "2x depth cameras",
+    "depth_sensing": "2× depth cameras",
     "lidar": true,
     "sensors_list": [
       "3D LiDAR",
@@ -148782,7 +148796,7 @@
     ],
     "navigation": "3D LiDAR + depth (mapping, obstacle avoidance)",
     "mapping": true,
-    "ai_model": "Conversational AI (ChatGPT integration)",
+    "ai_model": "DeepSeek (V2/V3/R1) + CheryGPT",
     "natural_language_commands": true,
     "languages": "10+",
     "teleoperation": "VR remote control",
@@ -148794,7 +148808,28 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1761319129/robots/auxkjyiavikfkqrzfnb9.jpg",
       "https://www.drivencarguide.co.nz/media/mgqdl2dv/omodajaecoo-intelligent-sales-consultant.jpg?width=1028&v=1dbbe4374a09990",
       "https://dotyumzonirqv.cloudfront.net/publish/wp-content/uploads/2025/04/Robot-seller-scaled.jpg"
-    ]
+    ],
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "hand_dof": 12,
+    "ce": true,
+    "manufacturer_history": "AiMOGA Robotics, subsidiary of Chery Automobile (China). Mornine M1 launched Apr 13 2026 on JD.com at RMB 285,800 (~$41,860) — among first humanoids sold direct via major e-commerce. Also Argos X1 robodog. 300+ distributors signed.",
+    "raw_specs": {
+      "maker": "AiMOGA Robotics (Chery Automobile subsidiary)",
+      "source": "AiMOGA/Chery Mornine M1 spec sheet (JD.com listing, Apr 2026)",
+      "class": "Mornine M1 (AiMOGA) — commercial sales-consultant humanoid",
+      "specs": "167cm, 70kg, 40 DoF (+ 12-DoF hands each), 1 m/s, 1.5kg/arm payload",
+      "battery": "0.7 kWh, ~2h runtime, 2h charge",
+      "sensors": "1× 3D LiDAR, 2× depth cameras, 1× wide-angle, 4× ultrasonic; ±5cm nav accuracy",
+      "ai": "DeepSeek V2/V3/R1 + CheryGPT, dual-core local compute, multimodal",
+      "languages": "10-11, up to 95% accuracy; learns industry expertise in ~1h",
+      "abilities": "Dual-arm coordination, autonomous car-door opening, VR teleop, showroom tours, serve drinks",
+      "deployed": "Chery 4S dealership Kuala Lumpur; 220 units to dealers 2026",
+      "price": "$41,860",
+      "entry": "Mornine M1 — Chery/AiMOGA"
+    },
+    "imu": true
   },
   {
     "id": "orionstar-andi",
