@@ -49488,9 +49488,9 @@
     "speed": 1.2,
     "battery": 120,
     "actuator_type": "Electric",
-    "ai_model": "Galbot AstraBrain — 'brain-cerebellum-neural control' integrated AI (full-body + full-hand coordination)",
+    "ai_model": "AstraBrain ('brain-cerebellum-neural control') — full-body/full-hand coordination",
     "announced": "2025-03",
-    "manufacturer_url": "https://www.galbot.com/en",
+    "manufacturer_url": "https://www.galbot.com/",
     "biped": false,
     "reach_mm": 2400,
     "reach": 2400,
@@ -49518,7 +49518,21 @@
       "Imitation Learning"
     ],
     "capabilities": "Autonomous mobile manipulation: 95-97% grasp success; rolled walnuts in palm, picked glass fragments live on 2026 CCTV Spring Festival Gala (679M viewers); retail/warehouse/hospital/factory deployment",
-    "developed_by": "Galaxy General Robot / Beijing Galbot AI Co."
+    "developed_by": "Galaxy General Robot / Beijing Galbot AI Co.",
+    "has_hands": true,
+    "has_legs": false,
+    "dexterous_hand": true,
+    "raw_specs": {
+      "company": "Galaxy General Robot / Beijing Galbot AI",
+      "form": "Semi-humanoid: human-scale upper body + dual dexterous arms on 360° omni wheeled base",
+      "dof": "47 total (incl. 12-DoF dexterous hand)",
+      "battery": "~10h runtime (wheeled efficiency vs 2-4h bipedal)",
+      "grasp": "95-97% grasp success across materials",
+      "ai": "AstraBrain integrated system; teleoperation data flywheel",
+      "funding": "RMB 2.5B Series B (Alibaba + Meituan); 500 units target 2026",
+      "partners": "CATL, Bosch, Toyota, Hyundai, Alibaba logistics",
+      "fame": "2026 CCTV Spring Festival Gala (679M viewers) — walnut rolling, glass-fragment pickup"
+    }
   },
   {
     "id": "galbot-galbot-g1-wheeled-bionic-robot",
@@ -135470,7 +135484,7 @@
     "sdk": true,
     "ros": true,
     "api": true,
-    "ai_model": "Doubao LLM (6-month license, Pro edition)",
+    "ai_model": "AI vision + voice command; obstacle avoidance + autonomous navigation",
     "tags": [
       "humanoid",
       "Booster Robotics",
@@ -135499,7 +135513,7 @@
     "head_dof": 2,
     "chipset": "NVIDIA Jetson Orin NX 8GB / AGX Orin",
     "npu_tops": 200,
-    "depth_sensing": true,
+    "depth_sensing": "3D depth camera",
     "imu_axes": 9,
     "touch_sensing": "Touch sensors",
     "microphones": "Mic array",
@@ -135531,7 +135545,15 @@
       "https://cdn.robotshop.com/media/b/boo/rb-boo-10/img/booster-robotics-k1-edu-humanoid-robot-structure.webp"
     ],
     "video": "https://youtu.be/SiXZYbIDvRw",
-    "arm_torque_nm": 60
+    "arm_torque_nm": 60,
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "sensors": "3D depth camera, 9-axis IMU, microphone array, touch sensors",
+      "class": "Compact humanoid for education, research, robotics competitions",
+      "ai": "Vision + voice, obstacle avoidance, real-time nav"
+    }
   },
   {
     "cat": "Humanoid",
