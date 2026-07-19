@@ -138226,7 +138226,7 @@
     "name": "Nadine",
     "brand": "Nanyang Technological University",
     "sub": "Social Android (Gynoid)",
-    "year": 2015,
+    "year": 2013,
     "origin": "Singapore",
     "status": "Active",
     "dof": 27,
@@ -138255,10 +138255,13 @@
       "Human-robot interaction research",
       "Virtual-human research"
     ],
-    "made_in": "Singapore (NTU) / Japan (Kokoro hardware)",
+    "made_in": "Japan",
     "website": "",
     "desc": "Nadine, unveiled in 2015 at Singapore's Nanyang Technological University, is a lifelike social android modelled on Professor Nadia Magnenat Thalmann — a pioneer of 'virtual humans' who directed NTU's Institute for Media Innovation and founded the University of Geneva's MIRALab. Its realistic hardware (silicone skin, articulated hands for natural grasping) was built by Japanese animatronics firm Kokoro, while Thalmann's NTU team created the software that gives Nadine her defining qualities: a personality and emotional range, the ability to make eye contact and shake hands, and — unusually — a memory that lets her recognise people she's met and recall previous conversations. Designed as a receptionist or a social companion for people with special needs and the elderly, Nadine became a widely-cited example of socially intelligent androids, conceptually akin to Ishiguro's Geminoids in being modelled on its own creator. NOTE: specs from NTU + IEEE/press sources; recorded honestly as a seated social android; exact DOF/actuator counts not uniformly published and flagged rather than guessed.",
-    "sensors": "Cameras (face + emotion recognition), microphones",
+    "sensors": [
+      "Cameras (face + emotion recognition)",
+      "microphones"
+    ],
     "note": "NTU Singapore (Nadia Thalmann); remembers past conversations; deployed as receptionist",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413170/myrobot/yctdihyarlztxnm99soa.jpg",
     "gallery": [
@@ -138275,13 +138278,13 @@
       "Social"
     ],
     "hand_type": "Articulated hands (natural grasping)",
-    "shell_material": "Silicone skin, modelled on Prof. Nadia Magnenat Thalmann",
+    "shell_material": "Silicone skin + real hair",
     "facial_recognition": true,
     "emotion_detection": true,
     "emotional_expression": true,
     "natural_language_commands": true,
     "languages_spoken": "Multiple",
-    "manufacturer_history": "Hardware by Kokoro (2013); social-AI software by NTU Singapore (Prof. Nadia Magnenat Thalmann), continued at University of Geneva / MIRALab.",
+    "manufacturer_history": "Nadine — gynoid social robot modelled on Prof. Nadia Magnenat Thalmann (NTU Singapore / MIRALab). Built by Kokoro (Japan) 2013. Successor to Eva head (Hanson, 2008). Used as world-first humanoid customer-service agent (AIA insurance).",
     "speech_synthesis": true,
     "force_sensing": true,
     "depth_sensing": true,
@@ -138304,7 +138307,21 @@
     "developed_by": "Prof. Nadia Magnenat Thalmann's team, NTU Institute for Media Innovation (software); Kokoro (hardware)",
     "related_models": [
       "Modelled after creator (like Ishiguro's Geminoid)"
-    ]
+    ],
+    "has_hands": true,
+    "has_legs": false,
+    "display_face": "Facial emotion simulation",
+    "raw_specs": {
+      "maker": "NTU Singapore (Prof. Nadia Magnenat Thalmann) + Kokoro (Japan)",
+      "class": "Nadine (2013) — realistic gynoid social robot",
+      "appearance": "Modelled on Nadia Magnenat Thalmann; natural skin, hair, realistic hands",
+      "abilities": "Greets, eye contact, remembers past conversations, recognises returning people, answers in several languages, simulates emotions facially + in gesture",
+      "software": "MIRALab (Univ. Geneva) heritage; successor to Eva head (Hanson 2008)",
+      "milestone": "World-first humanoid used as customer-service agent (AIA Singapore)",
+      "entry": "Nadine — NTU",
+      "sensors_detail": "Cameras (face + emotion recognition), microphones"
+    },
+    "imu": true
   },
   {
     "cat": "Social",
@@ -138360,8 +138377,8 @@
     "status": "Active",
     "dof": 25,
     "height_mm": 840,
-    "actuator_type": "Robotis Dynamixel servomotors (compliant control)",
-    "frame_material": "3D-printed skeleton (conventional 3D printers)",
+    "actuator_type": "ROBOTIS DYNAMIXEL",
+    "frame_material": "3D-printed",
     "os": "PyPot (Python) + Snap web interface",
     "ros": true,
     "api": true,
@@ -138387,7 +138404,7 @@
       "Art installations",
       "Embodiment & sensorimotor-learning research"
     ],
-    "made_in": "France (INRIA Flowers, Bordeaux)",
+    "made_in": "France",
     "website": "https://www.poppy-project.org",
     "desc": "Poppy, created by INRIA's Flowers team in Bordeaux (born 2012 out of Matthieu Lapeyre's PhD under Pierre-Yves Oudeyer, funded by an ERC grant), is the first complete open-source, 3D-printed humanoid robot — a platform designed so scientists, students, engineers and artists can fast and flexibly explore robot morphologies. About 840 mm tall and only ~3.5 kg, it has 25 DOF driven by Robotis Dynamixel servos, including a distinctive 5-DOF articulated trunk that gives it lumbar-spine-like motion unusual among humanoids. Both hardware (Creative Commons, 3D-printed skeleton, Arduino/Raspberry-Pi electronics) and software (GPL, the Python PyPot library plus a Snap block-based web interface, with V-REP simulation) are fully open, so its mechanical design can be freely modified — it was even reproduced in a two-day workshop at a Paris science museum. Widely adopted in schools and universities across science, education and art, Poppy's compliant Dynamixel control enables soft, safe human-robot interaction. The team later spun out Pollen Robotics, creators of the Reachy open-source humanoid torso. NOTE: specs from INRIA/Poppy Project official + academic papers — museum-grade open-source sourcing (v1 figures; the platform is intentionally variable).",
     "weight_kg": 3.5,
@@ -138396,7 +138413,10 @@
       "Python (PyPot)",
       "Snap (block-based)"
     ],
-    "sensors": "Camera, position feedback per joint",
+    "sensors": [
+      "Camera",
+      "position feedback per joint"
+    ],
     "note": "Open-source 3D-printed humanoid from INRIA Flowers lab; bent-knee biped; classroom/research/art",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413173/myrobot/lpkqkuvqbm2jqep8wkpm.webp",
     "gallery": [
@@ -138428,7 +138448,23 @@
       "Python"
     ],
     "capabilities": "First complete open-source 3D-printed humanoid platform: fully hackable/modifiable morphology (3D-printed skeleton), compliant control, soft human-robot interaction; used in science, education and art; unique articulated-trunk lumbar motion",
-    "developed_by": "INRIA Flowers Team (Matthieu Lapeyre PhD, sup. Pierre-Yves Oudeyer; ERC Grant); Pollen Robotics (Reachy) spun out of the team"
+    "developed_by": "INRIA Flowers Team (Matthieu Lapeyre PhD, sup. Pierre-Yves Oudeyer; ERC Grant); Pollen Robotics (Reachy) spun out of the team",
+    "has_hands": false,
+    "has_legs": true,
+    "manufacturer_history": "Poppy Project — open-source humanoid initiated at INRIA Flowers Lab (France, ~2012). 3D-printed + ROBOTIS actuators. Fully open hardware+software for artists/educators/scientists. Distributed by Génération Robots.",
+    "raw_specs": {
+      "maker": "INRIA Flowers Lab / Poppy Project (France)",
+      "source": "Poppy Project official page",
+      "class": "Poppy Humanoid — open-source 3D-printed research/education humanoid",
+      "design": "Modular, fully hackable — 3D-printed parts + ROBOTIS DYNAMIXEL actuators",
+      "philosophy": "Open hardware+software; specs are baseline, meant to be modified/upgraded",
+      "users": "Artists, educators, developers, scientists",
+      "note": "Biomechanics-inspired (e.g. bent thigh, multi-articulated spine)",
+      "distributor": "Génération Robots",
+      "entry": "Poppy — INRIA",
+      "sensors_detail": "Camera, position feedback per joint"
+    },
+    "imu": true
   },
   {
     "cat": "Educational",
@@ -149509,8 +149545,8 @@
     "rating": 4,
     "height_mm": 510,
     "weight_kg": 3.5,
-    "actuator_type": "DYNAMIXEL XM430 (current-based control)",
-    "chipset": "Intel NUC i3",
+    "actuator_type": "DYNAMIXEL XM-430 (Protocol 2.0)",
+    "chipset": "Intel NUC Core i3",
     "made_in": "South Korea",
     "leg_dof": 6,
     "arm_dof": 3,
@@ -149521,7 +149557,7 @@
     "storage_gb": 128,
     "storage_type": "M.2 SSD",
     "rtos": "OpenCR (ARM Cortex-M7)",
-    "os": "ROS 2 (Linux)",
+    "os": "Linux (64-bit)",
     "ros": true,
     "imu": true,
     "imu_axes": 9,
@@ -149545,7 +149581,27 @@
       "https://www.generationrobots.com/blog/wp-content/uploads/2020/01/robotis-op3-robot-humanoide-polyvalent.jpg",
       "https://i.ytimg.com/vi/vIGx3hVRono/maxresdefault.jpg"
     ],
-    "video": "https://youtu.be/HqZa0LVjk2Y"
+    "video": "https://youtu.be/HqZa0LVjk2Y",
+    "has_hands": false,
+    "has_legs": true,
+    "biped": true,
+    "fall_recovery": true,
+    "manufacturer_history": "ROBOTIS (South Korea) — global robotics hardware maker, exclusive producer of DYNAMIXEL smart servos. OP3 (2017) succeeds DARWIN-OP (OP) and OP2. K-12 to pro education pipeline.",
+    "raw_specs": {
+      "maker": "ROBOTIS (South Korea)",
+      "source": "ROBOTIS OP3 official e-manual",
+      "class": "ROBOTIS OP3 (DARWIN-OP3) — open-source miniature research humanoid",
+      "lineage": "Succeeds DARWIN-OP → OP2 → OP3",
+      "specs": "510mm, 20 DoF (2×6-DoF legs, 2×3-DoF arms, 2-DoF neck)",
+      "actuators": "20× DYNAMIXEL XM-430 (Protocol 2.0, current-based control, higher torque vs OP2's MX-28)",
+      "compute": "Intel NUC Core i3, 8GB DDR4, 128GB M.2 SSD, 64-bit OS, Bluetooth",
+      "vision": "Full HD camera — face tracking, colour/shape recognition",
+      "sensors": "3-axis gyro + 3-axis accel + 3-axis magnetometer, 2 mics, speaker, 4 buttons",
+      "battery": "1800mAh LiPo (~30min), hot-swappable via external power",
+      "software": "ROS (Kinetic/Ubuntu), full docs + GitHub",
+      "use": "University research — bipedal walking, CV, SLAM, HRI",
+      "entry": "OP3 — ROBOTIS"
+    }
   },
   {
     "id": "aheadform-origin",
