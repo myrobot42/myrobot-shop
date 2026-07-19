@@ -133154,7 +133154,7 @@
   },
   {
     "perf": false,
-    "price": "POA",
+    "price": 120000,
     "id": "humanoid-hmnd-01",
     "name": "HMND 01",
     "brand": "Humanoid",
@@ -133162,8 +133162,8 @@
     "sub": "Modular Industrial Humanoid",
     "year": 2025,
     "origin": "United Kingdom",
-    "status": "Development",
-    "height_mm": 1750,
+    "status": "Active",
+    "height_mm": 1790,
     "dof": 41,
     "payload_kg": 15,
     "desc": "HMND 01, from London-based startup Humanoid, is a modular next-generation labor-automation humanoid engineered for industrial deployment with an explicit focus on low total cost of ownership. Standing 175 cm and 70 kg with 41 DOF, a 15 kg payload and 1.5 m/s walking speed, its standout trait is manipulation speed — hands that can move faster than a human's, via high-torque, high-speed self-developed actuators. Modularity is central: the upper body, lower body and end-effectors are interchangeable (a 12-DOF five-finger hand or a 1-DOF parallel gripper), and it comes in two Alpha forms — a bipedal version with an RL-trained whole-body controller (walking straight and curved, turning in place, sidestepping, backwards walking, squatting, hopping, running, with omnidirectional push recovery) and an omnidirectional wheeled version (up to 7.2 km/h). It runs Humanoid's KinetIQ framework (VLM + VLA based) for autonomous or teleoperated operation, with RGB plus dual depth cameras, a 6-mic array, and a head display with LEDs for multimodal interaction, and interchangeable protective garments for contamination control. Humanoid completed a bin-picking proof-of-concept with Schaeffler at its Erlangen site. NOTE: full specs from Humanoid official + humanoid.guide/QVIRO — verified; development-stage (Alpha prototypes 2025).",
@@ -133189,7 +133189,7 @@
       "https://thehumanoid.ai/wp-content/uploads/2025/12/10-3-2.jpg",
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/69302ed90c8e77e571daded6_HMND%20Bipedal_04.webp"
     ],
-    "weight_kg": 70,
+    "weight_kg": 90,
     "battery_life": 240,
     "use_cases": [
       "Logistics & warehousing",
@@ -133197,7 +133197,7 @@
       "Goods handling / picking / packing",
       "Industrial cleaning"
     ],
-    "made_in": "United Kingdom (London)",
+    "made_in": "United Kingdom",
     "website": "https://thehumanoid.ai",
     "payload": 15,
     "battery": 240,
@@ -133221,7 +133221,7 @@
       "HMND 01 Alpha Wheeled",
       "HMND 01 Alpha Bipedal"
     ],
-    "ai_model": "Humanoid KinetIQ framework — VLM + VLA based; RL-trained Whole-Body Controller",
+    "ai_model": "KinetIQ (VLM + VLA, 4-layer cross-timescale)",
     "ai_inference_local": true,
     "natural_language_commands": true,
     "sensors_list": [
@@ -133239,7 +133239,41 @@
     "developed_by": "Humanoid (London-based)",
     "pilot_customers": [
       "Schaeffler (bin-picking PoC, Erlangen)"
-    ]
+    ],
+    "has_hands": true,
+    "has_legs": true,
+    "width_mm": 600,
+    "depth_mm": 400,
+    "currency": "USD",
+    "force_sensing": true,
+    "manufacturer_history": "Humanoid (SKL Robotics Ltd.), UK, founded 2024 by Artem Sokolov. Teams in London/Boston/Vancouver. HMND 01 Alpha Wheeled (built in 7 months, 'fastest-developed humanoid') + Alpha Bipedal. KinetIQ AI framework. Uses RobotEra XHAND1 hands. Deployed at Siemens, Schaeffler, Martur Fompak.",
+    "raw_specs": {
+      "maker": "Humanoid / SKL Robotics Ltd. (UK), founder Artem Sokolov (founded 2024)",
+      "sources": "Humanoid official site; Humanoids Daily; Notebookcheck; Aparobot; OriginOfBots; Humanoid.press",
+      "product": "HMND 01 — modular general-purpose humanoid",
+      "variants": "Alpha Wheeled + Alpha Bipedal",
+      "dev_claim": "Alpha built in 7 months — 'fastest-developed humanoid in history'; teams in London, Boston, Vancouver",
+      "bipedal_height": "179 cm (Alpha Bipedal); 220 cm (Alpha Wheeled prototype, 7'2\")",
+      "bipedal_dimensions": "179 x 60 x 40 cm (H x L x W)",
+      "bipedal_weight": "90 kg",
+      "general_weight": "70 kg (early HMND 01 figure)",
+      "walking_speed": "1.5 m/s (5.4 km/h); wheeled 7.2 km/h",
+      "battery_life": "3-5 hours (bipedal); avg 4h runtime",
+      "payload": "15 kg (33 lbs) rated; lifted up to 8kg in factory pilot",
+      "hands": "Modular: 12-DoF 5-finger hand (RobotEra XHAND1) OR 1-DoF parallel-jaw gripper with pad",
+      "xhand1_detail": "12 active DoF/hand, ±15° index lateral, 270° fingertip tactile array, detects 0.05N, one-handed grip up to 80N",
+      "actuators": "High-torque actuators, whole-body control algorithms",
+      "sensors": "Force sensors + temperature monitoring; RGB + depth cameras, LiDAR, IMUs, F/T, tactile arrays (via KinetIQ)",
+      "ai": "KinetIQ framework — VLM + VLA, 4-layer cross-timescale (fleet goal assignment → ms joint control), RL whole-body policies, fleet orchestration across embodiments",
+      "modularity": "Interchangeable upper-body/lower-body/end-effector; interchangeable protective garments; low TCO for mass commercialization",
+      "modes": "Autonomous + teleoperated",
+      "price": "$120,000 (Alpha Bipedal)",
+      "deployments": "Siemens, Schaeffler, Martur Fompak (automotive supplier, Jan-Feb 2026 pilot: autonomous pallet location/pick/deliver in live order fulfilment)",
+      "use_cases": "Industrial first — goods handling, picking/packing, kitting, part handling; then service + home",
+      "bipedal_target": "Bipedal version targeted ~October",
+      "entry": "HMND 01 — Humanoid (UK)"
+    },
+    "imu": true
   },
   {
     "perf": false,
