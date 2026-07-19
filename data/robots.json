@@ -136135,7 +136135,12 @@
     "arm_config": "Dual 7-DoF arms (B1 torso) on wheeled mobile base",
     "actuator_type": "Self-developed Power-Spring harmonic modules (brakes + hollow cable routing, up to 20Nm); carbon-fibre arm shells",
     "mobility": "Direct-drive wheeled base; 1.2 m/s, climbs 2cm obstacles, 15 degree inclines",
-    "sensors": "LiDAR, ultrasonic radar, 2D/3D vision, microphones",
+    "sensors": [
+      "LiDAR",
+      "ultrasonic radar",
+      "2D/3D vision",
+      "microphones"
+    ],
     "software": "ROS, Moveit, Gazebo, Mujoco; myBlockly; open-source ecosystem",
     "display": "Touchscreen head (expressive face)",
     "gripper": "myCobot Pro Adaptive Gripper compatible (M8 aviation connector)",
@@ -136150,9 +136155,26 @@
     "payload": 1,
     "speed": 1.2,
     "battery": 480,
-    "npu_tops": 32,
-    "chipset": "NVIDIA Jetson Orin Nano SUPER 8GB",
-    "bimanual": true
+    "npu_tops": 40,
+    "chipset": "NVIDIA Jetson Orin Nano 8GB",
+    "bimanual": true,
+    "manufacturer_history": "Elephant Robotics (Shenzhen, China). Open-source-friendly. Mercury series: A1 (arm), B1 (dual-arm semi-humanoid), X1 (wheeled humanoid). Also myCobot/mechArm cobot arms and MarsCat (bionic robot cat). Jetson Orin Nano compute.",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "open_source": true,
+    "raw_specs": {
+      "maker": "Elephant Robotics (Shenzhen)",
+      "class": "Mercury X1 — wheeled/semi humanoid",
+      "compute": "Jetson Orin Nano SUPER 8GB, up to 40 TOPS",
+      "battery": "8-hour endurance",
+      "software": "Open-source ecosystem, mainstream languages",
+      "entry": "Mercury X1 — Elephant",
+      "specs": "1.18m, 55kg, 19 DoF, 1kg payload, 24V, 8h",
+      "base": "Wheeled mobile base — lidar + ultrasonic + 2D vision, 1.2 m/s, 15° climb",
+      "note": "= Mercury B1 dual-arm + mobile base",
+      "sensors_detail": "LiDAR, ultrasonic radar, 2D/3D vision, microphones"
+    }
   },
   {
     "cat": "Humanoid",
@@ -136213,17 +136235,31 @@
     "video": "https://youtu.be/qmS_d0bbmCs",
     "video2": "https://youtu.be/Xb-Lbf9AM3g",
     "payload": 1,
-    "npu_tops": 32,
-    "chipset": "NVIDIA Jetson Orin Nano SUPER 8GB",
+    "npu_tops": 40,
+    "chipset": "NVIDIA Jetson Orin Nano 8GB",
     "arm_dof": 7,
-    "bimanual": true
+    "bimanual": true,
+    "manufacturer_history": "Elephant Robotics (Shenzhen, China). Open-source-friendly. Mercury series: A1 (arm), B1 (dual-arm semi-humanoid), X1 (wheeled humanoid). Also myCobot/mechArm cobot arms and MarsCat (bionic robot cat). Jetson Orin Nano compute.",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "battery_life": 480,
+    "open_source": true,
+    "raw_specs": {
+      "maker": "Elephant Robotics (Shenzhen)",
+      "class": "Mercury B1 — dual-arm semi-humanoid (torso + 2 arms)",
+      "compute": "Jetson Orin Nano SUPER 8GB, up to 40 TOPS",
+      "battery": "8-hour endurance",
+      "software": "Open-source ecosystem, mainstream languages",
+      "entry": "Mercury B1 — Elephant"
+    }
   },
   {
     "cat": "Industrial",
     "id": "elephant-mycobot-280",
     "name": "myCobot 280",
     "brand": "Elephant Robotics",
-    "sub": "Desktop Educational Cobot",
+    "sub": "Collaborative Robot Arm",
     "year": 2021,
     "origin": "China",
     "status": "Active",
@@ -136264,7 +136300,7 @@
       "Desktop demos",
       "Light pick & place"
     ],
-    "made_in": "China (Shenzhen)",
+    "made_in": "China",
     "website": "https://www.elephantrobotics.com",
     "desc": "The Elephant Robotics myCobot 280 is recognised by the IEEE as one of the world's smallest six-axis robot arms — an 800-gram desktop cobot with 250 g payload across a 280 mm working radius at ±0.5 mm positioning accuracy, and arguably the most influential education arm of its generation with over 10,000 units sold in 50+ countries. Its controller is built into the base — an M5Stack ESP32 in the standard model or a Raspberry Pi 4 in the Pi variant (860 g), with Arduino and Jetson Nano versions extending the family — so it runs from a 12 V USB-C supply with no cabinet. Programming spans Python via the open-source pymycobot API, Blockly, Arduino and official ROS/ROS 2 packages with MoveIt configs, and an ecosystem of grippers, suction pumps, camera flanges, AI vision kits and the myAGV mobile base builds it into full teaching cells. Official rated working lifespan is 500 hours, reflecting its education-class positioning.",
     "weight_kg": 0.8,
@@ -136324,14 +136360,25 @@
     "collision_detection": false,
     "ce": true,
     "datasheet": "https://www.elephantrobotics.com/en/mycobot-280-m5-2023-specificatons-en/",
-    "hand_repeatability_mm": 0.5
+    "hand_repeatability_mm": 0.5,
+    "manufacturer_history": "Elephant Robotics (Shenzhen, China). Open-source-friendly. Mercury series: A1 (arm), B1 (dual-arm semi-humanoid), X1 (wheeled humanoid). Also myCobot/mechArm cobot arms and MarsCat (bionic robot cat). Jetson Orin Nano compute.",
+    "has_hands": false,
+    "has_legs": false,
+    "biped": false,
+    "raw_specs": {
+      "maker": "Elephant Robotics",
+      "class": "myCobot 280 — Elephant cobot arm (myCobot/mechArm series)",
+      "note": "Cobot arm, not humanoid",
+      "entry": "myCobot 280 — Elephant"
+    },
+    "imu": true
   },
   {
     "cat": "Industrial",
     "id": "elephant-mycobot-320",
     "name": "myCobot 320",
     "brand": "Elephant Robotics",
-    "sub": "Desktop Cobot",
+    "sub": "Collaborative Robot Arm",
     "year": 2022,
     "origin": "China",
     "status": "Active",
@@ -136368,7 +136415,7 @@
       "Light automation",
       "Commercial demos"
     ],
-    "made_in": "China (Shenzhen)",
+    "made_in": "China",
     "website": "https://www.elephantrobotics.com",
     "desc": "The Elephant Robotics myCobot 320 scales the myCobot desktop formula up to a genuinely useful 1 kg payload across a 350 mm reach, bridging pure education arms and light commercial automation. Like its smaller sibling it packs the controller into the base — M5Stack or Raspberry Pi 4 depending on variant — and runs the same open software stack: Python through the open-source pymycobot API, Blockly's graphical interface for beginners, C++ and ROS. The end-effector ecosystem is its practical strength: adaptive grippers, a compressor-driven air parallel gripper for heavier grips, suction pumps and camera flanges mount to the standard interface, supported by AI vision kits for machine-learning coursework. It slots into Elephant's broader platform alongside the myAGV mobile base for mobile-manipulation teaching. Elephant's full parameter table for the 320 (weight, repeatability, joint speeds) lives in its GitBook docs — flagged for a part-2 top-up.",
     "repeatability_mm": 0.5,
@@ -136415,14 +136462,25 @@
     "wifi": "Wi-Fi (onboard SBC)",
     "bluetooth": "Bluetooth (onboard SBC)",
     "ce": true,
-    "datasheet": "https://shop.elephantrobotics.com/"
+    "datasheet": "https://shop.elephantrobotics.com/",
+    "manufacturer_history": "Elephant Robotics (Shenzhen, China). Open-source-friendly. Mercury series: A1 (arm), B1 (dual-arm semi-humanoid), X1 (wheeled humanoid). Also myCobot/mechArm cobot arms and MarsCat (bionic robot cat). Jetson Orin Nano compute.",
+    "has_hands": false,
+    "has_legs": false,
+    "biped": false,
+    "raw_specs": {
+      "maker": "Elephant Robotics",
+      "class": "myCobot 320 — Elephant cobot arm (myCobot/mechArm series)",
+      "note": "Cobot arm, not humanoid",
+      "entry": "myCobot 320 — Elephant"
+    },
+    "imu": true
   },
   {
     "cat": "Industrial",
     "id": "elephant-mecharm-270",
     "name": "mechArm 270",
     "brand": "Elephant Robotics",
-    "sub": "Desktop Educational Cobot",
+    "sub": "Collaborative Robot Arm",
     "year": 2022,
     "origin": "China",
     "status": "Active",
@@ -136459,7 +136517,7 @@
       "Inspection demos",
       "SMB prototyping"
     ],
-    "made_in": "China (Shenzhen)",
+    "made_in": "China",
     "website": "https://www.elephantrobotics.com",
     "desc": "The Elephant Robotics mechArm 270 is the industrial-styled sibling of the myCobot 280 — a 6-axis desktop arm with a centrosymmetric structure (motors balanced around the central axis, like a scaled-down industrial robot) that gives it more rigidity and stability than the myCobot's serial-link styling, at the same 250 g payload class across a 270 mm working radius and roughly 1 kg arm mass. Sold in M5Stack and Raspberry Pi 4B variants with the controller in the base, it runs Elephant's standard open stack — Python via pymycobot, Blockly, C++ and ROS with HDMI-out development on the Pi model — and shares the family's gripper, suction and camera-flange ecosystem. Its geometry makes it the preferred Elephant platform for teaching industrial-arm kinematics, and its portability suits classroom sets and SMB proof-of-concept automation.",
     "repeatability_mm": 0.5,
@@ -136504,17 +136562,28 @@
       "C++"
     ],
     "ce": true,
-    "datasheet": "https://shop.elephantrobotics.com/"
+    "datasheet": "https://shop.elephantrobotics.com/",
+    "manufacturer_history": "Elephant Robotics (Shenzhen, China). Open-source-friendly. Mercury series: A1 (arm), B1 (dual-arm semi-humanoid), X1 (wheeled humanoid). Also myCobot/mechArm cobot arms and MarsCat (bionic robot cat). Jetson Orin Nano compute.",
+    "has_hands": false,
+    "has_legs": false,
+    "biped": false,
+    "raw_specs": {
+      "maker": "Elephant Robotics",
+      "class": "mechArm 270 — Elephant cobot arm (myCobot/mechArm series)",
+      "note": "Cobot arm, not humanoid",
+      "entry": "mechArm 270 — Elephant"
+    },
+    "imu": true
   },
   {
-    "cat": "Quadruped",
+    "cat": "Social",
     "id": "elephant-marscat",
     "name": "MarsCat",
     "brand": "Elephant Robotics",
-    "sub": "Companion Robot Cat",
+    "sub": "Bionic Robot Cat",
     "year": 2021,
-    "origin": "China (Shenzhen)",
-    "status": "Current",
+    "origin": "China",
+    "status": "Active",
     "price": 800,
     "dof": "16 DoF",
     "cameras": "Vision system",
@@ -136538,7 +136607,11 @@
     "made_in": "China",
     "website": "https://www.elephantrobotics.com",
     "desc": "A bionic robot cat with 16 DoF that walks, plays and develops its own personality based on interaction. Vision and touch sensing let it respond to people and avoid obstacles; no app required. One of Elephant's companion-pet line alongside metaCat and metaDog.",
-    "sensors": "Vision (obstacle avoidance), touch sensing, microphones",
+    "sensors": [
+      "Vision (obstacle avoidance)",
+      "touch sensing",
+      "microphones"
+    ],
     "note": "FLAG — it's a robot CAT (companion), quadruped form; verify preferred category (Companion vs Quadruped)",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413130/myrobot/nmbdvl5nwpiwv755y790.jpg",
     "gallery": [
@@ -136562,7 +136635,19 @@
     "released": "2020",
     "compute": "Raspberry Pi",
     "sdk": "Open source (Python)",
-    "form_factor": "Bionic companion cat (fully autonomous personality)"
+    "form_factor": "Bionic companion cat (fully autonomous personality)",
+    "manufacturer_history": "Elephant Robotics (Shenzhen, China). Open-source-friendly. Mercury series: A1 (arm), B1 (dual-arm semi-humanoid), X1 (wheeled humanoid). Also myCobot/mechArm cobot arms and MarsCat (bionic robot cat). Jetson Orin Nano compute.",
+    "has_hands": false,
+    "has_legs": true,
+    "biped": false,
+    "raw_specs": {
+      "maker": "Elephant Robotics",
+      "class": "MarsCat — bionic robot cat (companion)",
+      "note": "Quadruped companion pet, not humanoid",
+      "entry": "MarsCat — Elephant",
+      "sensors_detail": "Vision (obstacle avoidance), touch sensing, microphones"
+    },
+    "imu": true
   },
   {
     "cat": "Humanoid",
@@ -138864,14 +138949,14 @@
     "quick_release": true,
     "navigation": "UWB wireless navigation + autonomous path planning",
     "uwb": true,
-    "made_in": "China (Beijing Humanoid Robot Innovation Center / X-Humanoid)",
+    "made_in": "China",
     "announced": "2025",
     "use_cases": [
       "Locomotion research",
       "Athletic/endurance",
       "Industrial (family)"
     ],
-    "manufacturer_history": "Developed with UBTech; won the world's first humanoid half-marathon (Beijing, 19 Apr 2025, 2:40:42) and a 21.50 s 100 m sprint at the 2025 World Humanoid Robot Games.",
+    "manufacturer_history": "Beijing Humanoid Robot Innovation Center (X-Humanoid), China. Makes Tiangong — a fully electric running humanoid (Tiangong Ultra won the Beijing humanoid half-marathon Apr 2025). Open-source 'Huisi Kaiwu' platform. Tiangong 3.0 latest.",
     "website": "https://x-humanoid.com/",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413201/myrobot/tnrh5fanxcjvg0prkx6z.jpg",
     "gallery": [
@@ -138885,7 +138970,17 @@
     "frame_material": "Aluminum-composite",
     "dof": 42,
     "leg_dof": 6,
-    "waist_dof": 1
+    "waist_dof": 1,
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Beijing Humanoid Robot Innovation Center (X-Humanoid)",
+      "class": "Tiangong Ultra — fully-electric running humanoid",
+      "milestone": "Tiangong Ultra WON Beijing humanoid half-marathon (Apr 2025)",
+      "platform": "Open-source 'Huisi Kaiwu'",
+      "entry": "Tiangong Ultra — Beijing Humanoid Center"
+    }
   },
   {
     "id": "tiangong-3-2026",
@@ -138962,7 +139057,19 @@
     ],
     "manufacturer_url": "https://www.x-humanoid.com/",
     "leg_dof": 6,
-    "waist_dof": 1
+    "waist_dof": 1,
+    "manufacturer_history": "Beijing Humanoid Robot Innovation Center (X-Humanoid), China. Makes Tiangong — a fully electric running humanoid (Tiangong Ultra won the Beijing humanoid half-marathon Apr 2025). Open-source 'Huisi Kaiwu' platform. Tiangong 3.0 latest.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "run_speed_ms": 3.3,
+    "raw_specs": {
+      "maker": "Beijing Humanoid Robot Innovation Center (X-Humanoid)",
+      "class": "Tiangong 3.0 — fully-electric running humanoid",
+      "milestone": "Tiangong Ultra WON Beijing humanoid half-marathon (Apr 2025)",
+      "platform": "Open-source 'Huisi Kaiwu'",
+      "entry": "Tiangong 3.0 — Beijing Humanoid Center"
+    }
   },
   {
     "id": "booster-robotics-t2",
@@ -147140,10 +147247,10 @@
     "sub": "Full-Size Humanoid (RHP7/9)",
     "year": 2025,
     "origin": "Japan",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413414/myrobot/hqsb0np93rgnkcbuclwq.jpg",
-    "payload_kg": 30,
+    "payload_kg": 60,
     "payload": 30,
     "use_cases": [
       "Factory tasks (2030 target)",
@@ -147168,7 +147275,7 @@
     "score": 75,
     "rating": 4,
     "height_mm": 1900,
-    "made_in": "Japan (Kawasaki Heavy Industries)",
+    "made_in": "Japan",
     "weight_kg": 99,
     "speed_ms": 1.1,
     "speed": 1.1,
@@ -147208,7 +147315,20 @@
     "autonomous": true,
     "scene_understanding": "3D environment mapping for autonomous navigation in dynamic settings",
     "capabilities": "9th-gen Kaleido: reinforced lower body for balance under load; lifts 30 kg; learns to operate cleaning/other tools; LiDAR+stereo autonomous navigation; VR-teleop for disaster response",
-    "developed_by": "Kawasaki Heavy Industries (debuted iREX 2025, Tokyo)"
+    "developed_by": "Kawasaki Heavy Industries (debuted iREX 2025, Tokyo)",
+    "manufacturer_history": "Kawasaki Heavy Industries (Japan). Built Japan's first domestic industrial robot (1969, w/ Unimation). Humanoid R&D since 2015: Kaleido / RHP (Robust Humanoid Platform) — Gen1 2017 → RHP7 (iREX2022) → Kaleido 9 (iREX2025). Also CORLEO (rideable robotic horse concept) and Bex (rideable robotic goat/ibex).",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Kawasaki Heavy Industries (Japan), industrial robots since 1969",
+      "class": "Kaleido / RHP (Robust Humanoid Platform)",
+      "heritage": "Humanoid R&D since 2015; contributed to Japan's HRP project",
+      "sensors": "LiDAR + stereo cameras (3D mapping)",
+      "payload": "Up to 60kg industrial upper-body strength",
+      "learning": "Simulation-based",
+      "entry": "Kaleido 9 — Kawasaki",
+      "generation": "Kaleido 9 (iREX 2025) — 190cm, 99kg, better balance/sensing/control"
+    }
   },
   {
     "id": "kawasaki-kaleido-x",
@@ -147218,7 +147338,7 @@
     "sub": "Full-Size Humanoid (RHP Kaleido)",
     "year": 2022,
     "origin": "Japan",
-    "status": "Development",
+    "status": "Active",
     "price": "POA",
     "img": "",
     "actuator_type": "Electric servo; magnesium-alloy skeleton + 3D-printed resin exterior (weight-saving)",
@@ -147246,7 +147366,7 @@
     "weight_kg": 85,
     "dof": 32,
     "frame_material": "Magnesium alloy",
-    "made_in": "Japan (Kawasaki Heavy Industries)",
+    "made_in": "Japan",
     "announced": "2022",
     "released": "2022",
     "manufacturer_url": "https://kawasakirobotics.com/asia-oceania/blog/category/kaleido-humanoid-robot/",
@@ -147262,7 +147382,22 @@
     "vision": "Stereo cameras; basic object recognition",
     "stair_climbing": true,
     "capabilities": "Untethered bipedal walking on onboard battery; stand-up motions; pull-ups; two-handed grasping; heavy upper-body strength",
-    "developed_by": "Kawasaki Heavy Industries (RHP — Robust Humanoid Platform, since 2015)"
+    "developed_by": "Kawasaki Heavy Industries (RHP — Robust Humanoid Platform, since 2015)",
+    "manufacturer_history": "Kawasaki Heavy Industries (Japan). Built Japan's first domestic industrial robot (1969, w/ Unimation). Humanoid R&D since 2015: Kaleido / RHP (Robust Humanoid Platform) — Gen1 2017 → RHP7 (iREX2022) → Kaleido 9 (iREX2025). Also CORLEO (rideable robotic horse concept) and Bex (rideable robotic goat/ibex).",
+    "has_hands": true,
+    "has_legs": true,
+    "lidar": true,
+    "raw_specs": {
+      "maker": "Kawasaki Heavy Industries (Japan), industrial robots since 1969",
+      "class": "Kaleido / RHP (Robust Humanoid Platform)",
+      "heritage": "Humanoid R&D since 2015; contributed to Japan's HRP project",
+      "sensors": "LiDAR + stereo cameras (3D mapping)",
+      "payload": "Up to 60kg industrial upper-body strength",
+      "learning": "Simulation-based",
+      "entry": "Kaleido X — Kawasaki",
+      "generation": "Kaleido lineage (Gen1 2017: 178cm, 85kg, 32 DoF → RHP7 2022 → Kaleido X)"
+    },
+    "imu": true
   },
   {
     "id": "agibot-lingxi-x2-n",
@@ -152811,11 +152946,11 @@
     "id": "kawasaki-corleo",
     "name": "CORLEO",
     "brand": "Kawasaki",
-    "cat": "Quadruped",
-    "sub": "Rideable Quadruped Concept",
+    "cat": "Entertainment",
+    "sub": "Rideable Robotic Horse",
     "year": 2025,
     "origin": "Japan",
-    "status": "Concept",
+    "status": "Development",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413551/myrobot/ocymmmcoyzugigjah7dr.jpg",
     "desc": "A hydrogen-powered, rideable robotic-horse concept unveiled at Expo 2025 Osaka, blending Kawasaki's motorcycle DNA with legged robotics. Four independently articulating legs with slip-resistant split rubber hooves are driven by electricity from a compact 150cc hydrogen engine; the rider steers by shifting weight and using handlebars. The Expo prototype can stand and adjust posture — dynamic footage is CGI — with a market vision decades out.",
@@ -152860,17 +152995,28 @@
     "estop": "Yes",
     "released": "2025 (Osaka Expo concept)",
     "form_factor": "Rideable four-legged 'horse' concept (rider steers by weight shift)",
-    "note": "Osaka Expo 2025 showcase — 2050 mobility vision; CGI-heavy reveal, working prototype shown statically"
+    "note": "Osaka Expo 2025 showcase — 2050 mobility vision; CGI-heavy reveal, working prototype shown statically",
+    "manufacturer_history": "Kawasaki Heavy Industries (Japan). Built Japan's first domestic industrial robot (1969, w/ Unimation). Humanoid R&D since 2015: Kaleido / RHP (Robust Humanoid Platform) — Gen1 2017 → RHP7 (iREX2022) → Kaleido 9 (iREX2025). Also CORLEO (rideable robotic horse concept) and Bex (rideable robotic goat/ibex).",
+    "has_hands": false,
+    "has_legs": true,
+    "biped": false,
+    "raw_specs": {
+      "maker": "Kawasaki Heavy Industries",
+      "class": "CORLEO — rideable 4-legged robotic horse concept (iREX 2025)",
+      "note": "Rideable quadruped concept, not humanoid",
+      "entry": "CORLEO — Kawasaki"
+    },
+    "imu": true
   },
   {
     "id": "kawasaki-bex",
     "name": "Bex",
     "brand": "Kawasaki",
-    "cat": "Quadruped",
-    "sub": "Rideable Quadruped Concept",
+    "cat": "Entertainment",
+    "sub": "Rideable Robotic Ibex",
     "year": 2022,
     "origin": "Japan",
-    "status": "Concept",
+    "status": "Development",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413553/myrobot/rsvooonyalafn0b7xnav.jpg",
     "desc": "A rideable, goat-inspired quadruped unveiled at the 2022 International Robot Exhibition in Tokyo, part of Kawasaki's Robust Humanoid Platform (RHP) initiative — the same program behind the Kaleido humanoid. Bex walks on four legs or rolls on retractable knee wheels, has a modular upper body, and is aimed at cargo carrying on farms and construction sites.",
@@ -152912,7 +153058,18 @@
     "estop": "Yes",
     "released": "2022",
     "form_factor": "Ibex-inspired RIDEABLE quadruped (kneels to wheel-drive mode)",
-    "note": "iREX 2022 concept — walks on legs, drives on wheels when kneeling"
+    "note": "iREX 2022 concept — walks on legs, drives on wheels when kneeling",
+    "manufacturer_history": "Kawasaki Heavy Industries (Japan). Built Japan's first domestic industrial robot (1969, w/ Unimation). Humanoid R&D since 2015: Kaleido / RHP (Robust Humanoid Platform) — Gen1 2017 → RHP7 (iREX2022) → Kaleido 9 (iREX2025). Also CORLEO (rideable robotic horse concept) and Bex (rideable robotic goat/ibex).",
+    "has_hands": false,
+    "has_legs": true,
+    "biped": false,
+    "raw_specs": {
+      "maker": "Kawasaki Heavy Industries",
+      "class": "Bex — rideable robotic goat/ibex (RHP-based quadruped)",
+      "note": "Rideable quadruped, not humanoid",
+      "entry": "Bex — Kawasaki"
+    },
+    "imu": true
   },
   {
     "id": "xiaomi-cyberdog",
