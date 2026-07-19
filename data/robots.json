@@ -156706,5 +156706,146 @@
       "variants": "Alice, Alice M1"
     },
     "rating": 4
+  },
+  {
+    "id": "psibot-psi-v1",
+    "name": "Psi V1",
+    "brand": "PsiBot",
+    "cat": "Humanoid",
+    "sub": "Full-Size Industrial Humanoid",
+    "year": 2025,
+    "status": "Active",
+    "made_in": "China",
+    "origin": "China",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "fig": "🤖",
+    "score": 75,
+    "height_mm": 1750,
+    "dof": 42,
+    "hand_dof": 22,
+    "dexterous_hand": true,
+    "cameras": "Comprehensive camera system",
+    "imu": true,
+    "manufacturer_url": "https://psibot.ai/",
+    "website": "https://psibot.ai/",
+    "use_cases": [
+      "Light industrial tasks",
+      "Industrial automation",
+      "Object handling",
+      "Structured environments"
+    ],
+    "tags": [
+      "psibot",
+      "psi-v1",
+      "humanoid",
+      "biped",
+      "industrial"
+    ],
+    "desc": "Psi V1 is a full-size bipedal humanoid from PsiBot (China, in production) — 1.75m tall with 42 total DoF including 22-DoF hands for human-like reach and dexterity. It emphasizes perception-driven operation via a comprehensive camera system for environment analysis, navigation and precise object handling, targeting light industrial automation in structured settings. PsiBot's lineup also includes Psi E1, Psi H1 and the ψ-SynRobot. Specs captured into additional specs pending a datasheet.",
+    "raw_specs": {
+      "dof": "42 total, 22-DoF hands",
+      "perception": "Comprehensive camera system, perception-driven",
+      "lineup": "Psi E1, Psi H1, Psi V1, ψ-SynRobot",
+      "market": "Light industrial automation, structured settings",
+      "status": "In production (not yet retail)",
+      "note": "Full specs pending datasheet"
+    },
+    "rating": 4
+  },
+  {
+    "id": "perceptyne-pr-34d",
+    "name": "PR-34D",
+    "brand": "Perceptyne",
+    "cat": "Humanoid",
+    "sub": "Dual-Arm Semi-Humanoid (industrial)",
+    "year": 2024,
+    "status": "Active",
+    "made_in": "India (Hyderabad)",
+    "origin": "India",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "fig": "🤖",
+    "score": 75,
+    "arm_dof": 7,
+    "bimanual": true,
+    "dexterous_hand": true,
+    "ai_model": "AI-driven no-code trainability; multimodal tactile + force + vision perception",
+    "manufacturer_url": "https://perceptyne.com/",
+    "website": "https://perceptyne.com/",
+    "use_cases": [
+      "Electronics assembly",
+      "Automotive manufacturing",
+      "Complex assembly automation"
+    ],
+    "tags": [
+      "perceptyne",
+      "pr-34d",
+      "semi-humanoid",
+      "dual-arm",
+      "industrial",
+      "india",
+      "tactile"
+    ],
+    "desc": "PR-34D is a dual-arm semi-humanoid from Perceptyne (Hyderabad, India, founded 2021) — two 7-DoF arms (3-DoF shoulder, etc.) equipped with multimodal tactile, force and vision sensors plus AI-driven no-code trainability, designed to be 'as flexible and adaptable as humans' for complex assembly in electronics and automotive manufacturing. Part of a 'Make in India' robotics push, in commercial pilots / early production. Its sibling PR-9D is a single-arm variant. Specs captured into additional specs.",
+    "raw_specs": {
+      "founder": "Raviteja Chivukula (CEO/co-CTO), Hyderabad, India, founded 2021",
+      "form": "Dual 7-DoF arms (semi-humanoid, no legs)",
+      "sensing": "Multimodal tactile + force + vision (vs traditional position-only)",
+      "training": "AI-driven no-code trainability",
+      "siblings": "PR-9D (single-arm), PR OMNI",
+      "market": "Electronics + automotive assembly; commercial pilots/early production",
+      "funding": "~$3.28M seed"
+    },
+    "rating": 4
+  },
+  {
+    "id": "roboligent-robin",
+    "name": "Robin",
+    "brand": "Roboligent",
+    "cat": "Humanoid",
+    "sub": "Mobile Dual-Arm Manipulator",
+    "year": 2025,
+    "status": "Development",
+    "made_in": "USA",
+    "origin": "USA",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "fig": "🤖",
+    "score": 75,
+    "bimanual": true,
+    "hand_type": "Compliant dual arms",
+    "dexterous_hand": true,
+    "imu": true,
+    "ai_model": "Imitation-learning task acquisition; fleet management",
+    "manufacturer_url": "https://www.roboligent.com/",
+    "website": "https://www.roboligent.com/",
+    "use_cases": [
+      "Material handling",
+      "Machine tending",
+      "Logistics",
+      "Loading automation",
+      "Smart factory"
+    ],
+    "tags": [
+      "roboligent",
+      "robin",
+      "mobile-manipulator",
+      "dual-arm",
+      "compliant",
+      "industrial"
+    ],
+    "desc": "Robin by Roboligent is a mobile dual-arm manipulator blending compliant manipulators, AI imitation learning and autonomous navigation to automate material handling, machine tending and logistics in smart factories. Its compliant arms and mobile base let it adapt to changing factory layouts, with fleet management for multi-robot loading tasks. Specs captured into additional specs pending a datasheet.",
+    "raw_specs": {
+      "form": "Mobile base + compliant dual arms (not bipedal)",
+      "learning": "AI-based imitation-learning task acquisition",
+      "features": "Fleet management, navigation, compliant manipulation",
+      "use": "Material handling, machine tending, logistics, loading in smart factories",
+      "note": "Specs pending datasheet"
+    },
+    "rating": 4
   }
 ]
