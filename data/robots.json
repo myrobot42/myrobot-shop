@@ -157985,5 +157985,139 @@
       "note": "Early deployment; limited public specs"
     },
     "rating": 4
+  },
+  {
+    "id": "aidol-lab-aidol",
+    "name": "AIDOL",
+    "brand": "AIDOL Lab",
+    "cat": "Humanoid",
+    "sub": "Emotion-Recognition Humanoid",
+    "year": 2025,
+    "status": "Development",
+    "made_in": "Russia",
+    "origin": "Russia",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "fig": "🤖",
+    "score": 75,
+    "display_face": "Animated face with 19 servo motors",
+    "imu": true,
+    "ai_model": "Emotion recognition (12+ basic emotions); 7-microphone array",
+    "manufacturer_url": "",
+    "use_cases": [
+      "Interaction",
+      "Companionship",
+      "Demonstration",
+      "Research"
+    ],
+    "tags": [
+      "aidol",
+      "humanoid",
+      "biped",
+      "russia",
+      "emotion-recognition"
+    ],
+    "desc": "AIDOL (by Artificial Intelligence Dynamic Organism Lab) is billed as Russia's first humanoid robot — notable for its debut where it stumbled and fell on stage, sparking wide coverage. Its face uses 19 servo motors and it has a 7-microphone array, enabling recognition of at least 12 basic emotions. It uses ~77% domestic components with a stated goal of raising local content to 93%. Detailed public specifications are limited; captured into additional specs pending a datasheet.",
+    "raw_specs": {
+      "maker": "Artificial Intelligence Dynamic Organism Lab (Russia)",
+      "claim": "Russia's first humanoid robot",
+      "face": "19 servo motors, animated expressions",
+      "audio": "7 microphones",
+      "emotion": "Recognizes 12+ basic emotions",
+      "localization": "~77% domestic components (target 93%)",
+      "note": "Famously fell at debut; limited public specs"
+    },
+    "rating": 4
+  },
+  {
+    "id": "casivision-casivibot",
+    "name": "CASIVIBOT",
+    "brand": "CasiVision",
+    "cat": "Humanoid",
+    "sub": "Compact Service Humanoid",
+    "year": 2025,
+    "status": "Development",
+    "made_in": "China",
+    "origin": "China",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "fig": "🤖",
+    "score": 75,
+    "bimanual": true,
+    "dexterous_hand": true,
+    "cameras": "Smart vision",
+    "imu": true,
+    "manufacturer_url": "",
+    "use_cases": [
+      "Research",
+      "Healthcare",
+      "Commercial service",
+      "Guiding",
+      "Delivery"
+    ],
+    "tags": [
+      "casivision",
+      "casivibot",
+      "humanoid",
+      "service",
+      "dual-arm",
+      "china"
+    ],
+    "desc": "CASIVIBOT is a compact humanoid service robot from CasiVision — dual-arm manipulation, smart vision and flexible mobility for research, healthcare and commercial use, designed for smooth interaction and safe indoor operation beside humans. Its balanced form works in open and crowded spaces, with a modular structure supporting upgrades. Detailed public specifications are limited; captured into additional specs pending a datasheet.",
+    "raw_specs": {
+      "maker": "CasiVision",
+      "form": "Compact dual-arm service humanoid, flexible mobility",
+      "focus": "Smooth interaction, safe indoor operation beside humans",
+      "use": "Research, healthcare, commercial — guiding, delivery, support",
+      "design": "Modular, upgradeable",
+      "note": "Limited public specs; flagged for outreach"
+    },
+    "rating": 4
+  },
+  {
+    "id": "wl-robotics-totan-o1",
+    "name": "Totan O1",
+    "brand": "WL Robotics",
+    "cat": "Humanoid",
+    "sub": "Compact Research Humanoid",
+    "year": 2025,
+    "status": "Development",
+    "origin": "China",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "fig": "🤖",
+    "score": 75,
+    "height_mm": 1340,
+    "dof": 69,
+    "dexterous_hand": true,
+    "imu": true,
+    "manufacturer_url": "",
+    "use_cases": [
+      "Research",
+      "Universities",
+      "Embodied-AI development",
+      "Manipulation"
+    ],
+    "tags": [
+      "wl-robotics",
+      "totan-o1",
+      "titan-o1",
+      "humanoid",
+      "biped",
+      "research"
+    ],
+    "desc": "Totan O1 (also styled Titan O1) is a compact research-grade humanoid from WL Robotics — ~134cm with up to 69 degrees of freedom, strong knee torque and modular AI integration. It combines strong lower-body actuation with flexible arm motion (moderate per-arm payloads for grasping tools/light objects) for labs, universities and advanced robotics teams doing mobility, manipulation and embodied-AI research. Supports sensing and onboard-compute upgrades. Specs captured into additional specs.",
+    "raw_specs": {
+      "maker": "WL Robotics (WL Robo)",
+      "form": "~134cm compact research humanoid, up to 69 DoF",
+      "strengths": "Strong knee torque, flexible arms, modular AI integration",
+      "use": "Labs, universities, embodied-AI research; mobility + manipulation",
+      "upgrades": "Sensing + onboard-compute expandable",
+      "note": "Detailed specs pending datasheet"
+    },
+    "rating": 4
   }
 ]
