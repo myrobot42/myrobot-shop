@@ -50404,8 +50404,8 @@
     "desc": "Clone Alpha, from Clone Robotics (Warsaw, Poland and the US Bay Area), is a musculoskeletal home android that takes a radically different approach from motor-and-gear humanoids — it mechanically replicates human anatomy. It's built on a polymer skeleton of 206 synthetic bones with articulated joints, moved by around 1,000 of Clone's proprietary 'Myofiber' artificial muscles that contract using water pressure (a single 3-gram fiber generates about 1 kg of force and contracts 30% of its length in under 50 ms), fed by a hydraulic 'vascular system' driven by a compact 500-watt electric pump likened to a heart. Its 'nervous system' comprises 4 depth cameras, 70 inertial sensors for joint proprioception and 320 pressure sensors for muscle-force feedback, with an NVIDIA Jetson Thor running Clone's Cybernet visuomotor model. Clone advertises a limited first batch of 279 units. IMPORTANT REALITY-FLAG: as of 2026 nothing has shipped, no price is confirmed, and the promised home chores are aspirations — the related Protoclone prototype has been demonstrated only suspended from wires and cannot yet stand or walk unaided. DOF (164) and component counts are company claims. Recorded as verified-manufacturer-claim with development status; no capabilities asserted as demonstrated that aren't.",
     "highlights": [],
     "perf": false,
-    "origin": "Poland / USA",
-    "year": 2025,
+    "origin": "Poland",
+    "year": 2024,
     "status": "Development",
     "dof": 164,
     "use_cases": [
@@ -50414,17 +50414,17 @@
       "Musculoskeletal AI development"
     ],
     "manufacturer_url": "https://clonerobotics.com/",
-    "height_mm": 1830,
+    "height_mm": 1700,
     "weight_kg": 35,
     "battery_life": 120,
     "wifi": true,
     "bluetooth": true,
-    "cameras": "Multiple RGB cameras for vision and navigation",
+    "cameras": "4 depth cameras",
     "imu": true,
     "depth_sensing": "4 depth cameras",
-    "made_in": "Poland (Warsaw) / USA (Bay Area)",
+    "made_in": "Poland",
     "announced": "2024-12",
-    "actuator_type": "Myofiber water-actuated artificial muscles (contract via water pressure; 3g fiber generates ~1kg force; 30% contraction in <50ms)",
+    "actuator_type": "Myofiber water-powered artificial muscles",
     "frame_material": "206 polymer bones",
     "fingers": 5,
     "opposable_thumb": true,
@@ -50467,6 +50467,49 @@
       "Neo",
       "Clone Hand",
       "Clone Torso"
+    ],
+    "manufacturer_history": "Clone Robotics (Poland), pioneers of Myofiber water-powered artificial muscle tech (since 2021). Builds musculoskeletal androids from synthetic human skeletons (206 bones) + Myofiber muscles instead of motors. Protoclone (Feb 2025, first full android, 1000+ muscles, 200+ DoF) → Clone Alpha (announced Dec 2024, planned 279-unit first batch). Aims at home chores. Demos so far rig-suspended (not free-standing).",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "muscle_tech": "Myofiber — water-powered artificial muscles (pioneered 2021), monolithic musculotendon units",
+      "myofiber_perf": "Contract 30% in <50ms; ≥1kg force per 3-gram fiber; faster than human skeletal muscle",
+      "skeleton": "206 synthetic bones (full human anatomy) + artificial ligaments/connective tissue, 3D-printed polymer",
+      "dof": "200+ total; upper torso 164 DoF (20 shoulder, 6/vertebra spine, 26 per hand+wrist+elbow)",
+      "muscle_count": "1000+ Myofibers (Protoclone)",
+      "sensors": "70 inertial sensors + 320 pressure sensors + 4 depth cameras",
+      "vascular": "Hydraulic water system; 500W pump ('heart'), 40 L/min at 100 PSI; Aquajet valves (1W each)",
+      "compute": "NVIDIA Jetson Thor GPU running Clone 'Cybernet' visuomotor model",
+      "cooling": "Water-based bio-inspired 'sweating' cooling",
+      "design": "Faceless black visor (dodges uncanny valley, simplifies sensors)",
+      "status_note": "Demos rig-suspended; not yet free-standing/walking",
+      "batch": "Clone Alpha — planned 279-unit first batch, pre-orders 2025"
+    },
+    "accessories": [
+      {
+        "name": "Clone Hand",
+        "type": "Dexterous Myofiber Hand",
+        "specs": {
+          "dof": "Full human-hand articulation (26 DoF per hand-wrist-elbow)",
+          "muscles": "Myofiber water-powered artificial muscles",
+          "strength": "Human-level strength, even in fingers",
+          "tech": "Anatomically accurate — actuates synthetic bones via musculotendon units"
+        },
+        "desc": "Clone's dexterous robotic hand — an early standalone demo of the Myofiber muscle system, now part of the Clone Alpha android.",
+        "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733507/myrobot/m9abv2hy3ufynv9fqvfy.jpg"
+      },
+      {
+        "name": "Clone Torso",
+        "type": "Musculoskeletal Torso",
+        "specs": {
+          "dof": "164 DoF in upper torso (20 shoulder, 6/vertebra spine)",
+          "muscles": "Myofiber water-powered muscles on synthetic spine + ribcage",
+          "vascular": "Hydraulic water actuation, 500W pump",
+          "tech": "Anatomically accurate skeletal torso"
+        },
+        "desc": "Clone's musculoskeletal torso prototype — demonstrated the spine/shoulder Myofiber actuation now integral to Clone Alpha.",
+        "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999113/myrobot/nvdawuovvb0vo5ao9uwb.jpg"
+      }
     ]
   },
   {
