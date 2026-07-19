@@ -9151,7 +9151,7 @@
       "role": "Internal Tesla factory deployment (battery-cell, material handling)",
       "fleet": "~1,000 units",
       "purpose": "Reliability validation + training-data generation",
-      "note": "Same Gen 2 hardware, deployment-specific entry"
+      "note": "Factory-deployed Optimus fleet (~1,000 units). NOTE: a distinct 'Gen 2.5' (Sep 2025 'golden' cosmetic refresh, shown at Tesla Diner) exists — consider whether to add as separate entry."
     }
   },
   {
@@ -88751,10 +88751,10 @@
     "status": "Development",
     "height_mm": 1730,
     "weight_kg": 57,
-    "battery_life": 540,
+    "battery_life": 480,
     "origin": "USA",
     "cameras": "Tesla Autopilot vision stack",
-    "ai_model": "Vision-Language-Action model + xAI Grok voice",
+    "ai_model": "End-to-end vision-action neural net + xAI Grok voice (AI5)",
     "npu_tops": 2000,
     "wifi": true,
     "bluetooth": true,
@@ -88772,7 +88772,7 @@
     "can_use_tools": true,
     "imu": true,
     "ai_model_type": "End-to-end vision-action",
-    "chipset": "Tesla AI5 chip",
+    "chipset": "Tesla AI5 inference chip (~5x AI4 compute)",
     "natural_language_commands": true,
     "new_task_learning": true,
     "battery_type": "Li-ion",
@@ -88795,7 +88795,7 @@
     "payload": 20,
     "speed": 1.7,
     "battery": 480,
-    "hand_type": "Five-finger, tendon-driven (forearm-actuated)",
+    "hand_type": "Five-finger tendon-driven (25 actuators/hand relocated to forearm)",
     "hand_actuation": "Tendon-driven; 25 actuators per hand relocated into the forearm",
     "manipulation_level": "Advanced (22-DOF, near-human dexterity)",
     "tactile_type": "Capacitive fingertip force-feedback",
@@ -88810,10 +88810,21 @@
     "raw_specs": {
       "clarification": "'Gen 3' = HANDS upgrade, NOT new body (body still Gen 2 frame)",
       "hands": "22 DoF/hand, 50 actuators total, 3,000+ tasks (vs Gen 2 ~500)",
-      "compute": "Tesla AI5 chip",
+      "compute": "AI5 inference chip taped out April 2026, ~5x AI4",
       "ai": "VLA model + xAI Grok voice",
       "pending": "Full V3 body redesign not yet revealed/specced",
-      "hand_gain": "4.5x actuator increase over Gen 2"
+      "hand_gain": "4.5x actuator increase over Gen 2",
+      "naming": "'Gen 3' = 22-DoF hands on Gen 2 body. 'V3' = full new body (reveal ~summer 2026).",
+      "hands_detail": "22 DoF/hand, 50 actuators total (25/hand), tendon-driven relocated to forearm, 3,000+ tasks",
+      "battery": "~2.3 kWh (~52V), ~8h runtime; Gen 3 targets ~40% better efficiency (not bigger pack)",
+      "voice": "xAI Grok integration",
+      "deployment": "1,000+ units at Fremont (battery assembly, cell handling, connector seating, HV cable routing)",
+      "production": "Low-volume production targeted summer 2026; external B2B late 2026; consumer ~2027-2028",
+      "price_reality": "$20-30k is long-term target requiring multi-million volume; early units far pricier",
+      "lift_reported": "~68kg (150 lb) lift reported (unofficial) — vs 20kg sustained carry payload",
+      "task_progression": "Discrete tasks: Gen 2 ~500 → Gen 2.5 ~800 → Gen 3 3,000+",
+      "top_speed": "~5 mph (~2.2 m/s, estimated)",
+      "gen_comparison": "vs Gen 2 (Dec 2023, 11-DoF hands, FSD chip) and Gen 2.5 (Sep 2025 cosmetic 'golden' refresh)"
     }
   },
   {
