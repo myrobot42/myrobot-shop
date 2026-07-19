@@ -34838,7 +34838,7 @@
   {
     "id": "kepler-forerunner-k1",
     "name": "Forerunner K1",
-    "brand": "Kepler Robotics",
+    "brand": "Kepler",
     "year": 2023,
     "status": "Active",
     "cat": "Humanoid",
@@ -34871,7 +34871,7 @@
       "White",
       "Silver"
     ],
-    "os": "KeplerOS 3.0",
+    "os": "Kepler OS",
     "chipset": "Kepler Neural K100",
     "cpu": "ARM Cortex-A78",
     "ram_gb": 16,
@@ -34890,7 +34890,7 @@
     "hot_swap": false,
     "quick_release": true,
     "cycle_life": 2000,
-    "ai_model": "KeplerGPT",
+    "ai_model": "Cloud cognitive model + embodied control; imitation + RL",
     "ai_model_type": "Multimodal LLM",
     "learning_methods": [
       "Supervised",
@@ -34924,14 +34924,33 @@
     "perf": "Advanced mobility and manipulation",
     "origin": "China",
     "released": "2023",
-    "dof": 40,
+    "dof": 52,
     "website": "https://www.gotokepler.com",
     "battery": 480,
-    "actuator_type": "Electric",
+    "actuator_type": "In-house roller-screw + rotary",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412825/myrobot/gfiugxkrltd3s21fytwz.jpg",
     "gallery": [
       "https://plain-eeur-prod-public.komododecks.com/202607/04/K7DC6r9oAZMKUZ8e6gne/image.jpg"
-    ]
+    ],
+    "made_in": "China",
+    "manufacturer_history": "Shanghai Kepler Robotics Co. China. Forerunner humanoid line: K1 (original, CES 2024, Optimus rival) → K2 (5th-gen, commercial-tailored). In-house roller-screw actuators (arms/legs) + custom rotary (waist/shoulder). Kepler OS. Cloud cognitive model + imitation/RL. Industrial-first.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "payload_kg": 25,
+    "raw_specs": {
+      "maker": "Shanghai Kepler Robotics",
+      "class": "Forerunner Forerunner K1 — general-purpose industrial-first humanoid",
+      "dof": "52 (some configs 40)",
+      "hands": "Dexterous, 96 sensors per fingertip, up to 15kg/hand (25kg total)",
+      "battery": "2.33 kWh, 8-hour shift",
+      "actuators": "In-house roller-screw (arms/legs) + custom rotary (waist/shoulder)",
+      "os": "Kepler OS (customizable)",
+      "ai": "Cloud cognitive + embodied control, imitation + RL",
+      "use": "Manufacturing, warehousing, logistics, high-risk, research/edu",
+      "entry": "Forerunner K1 — Kepler",
+      "generation": "K1 — original Forerunner (CES 2024)"
+    }
   },
   {
     "id": "iron-ox-angus",
@@ -53327,20 +53346,20 @@
     "desc": "Kepler's Forerunner D1 is a variant in the Shanghai Kepler Forerunner humanoid family. (Detailed specifications for this variant are limited and worth verifying against Kepler.)",
     "highlights": [],
     "perf": false,
-    "origin": "China (Shanghai)",
+    "origin": "China",
     "year": 2023,
-    "status": "Superseded",
+    "status": "Active",
     "released": "2023",
     "height_mm": 1780,
     "weight_kg": 85,
-    "dof": 40,
+    "dof": 52,
     "use_cases": [
       "Industrial / commercial humanoid tasks",
       "Research"
     ],
     "battery_life": 480,
     "speed_ms": 1.4,
-    "payload_kg": 20,
+    "payload_kg": 25,
     "cameras": "Multiple RGB cameras for vision and navigation",
     "imu": true,
     "depth_sensing": true,
@@ -53356,8 +53375,8 @@
     "payload": 20,
     "speed": 1.4,
     "battery": 480,
-    "actuator_type": "Planetary roller screw + rotary",
-    "ai_model": "NEBULA",
+    "actuator_type": "In-house roller-screw + rotary",
+    "ai_model": "Cloud cognitive model + embodied control; imitation + RL",
     "hand_actuation": "Rope-driven (tendon)",
     "arm_dof": 7,
     "leg_dof": 6,
@@ -53365,7 +53384,23 @@
     "npu_tops": 100,
     "manufacturer": "Kepler",
     "form_factor": "Forerunner-series variant (first-gen family)",
-    "note": "Specs sparse — verified platform only. FLAG: two different brand-id conventions ('kepler-robotics-' vs 'kepler-exploration-robotics-') — normalize."
+    "note": "Specs sparse — verified platform only. FLAG: two different brand-id conventions ('kepler-robotics-' vs 'kepler-exploration-robotics-') — normalize.",
+    "manufacturer_history": "Shanghai Kepler Robotics Co. China. Forerunner humanoid line: K1 (original, CES 2024, Optimus rival) → K2 (5th-gen, commercial-tailored). In-house roller-screw actuators (arms/legs) + custom rotary (waist/shoulder). Kepler OS. Cloud cognitive model + imitation/RL. Industrial-first.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Shanghai Kepler Robotics",
+      "class": "Forerunner Forerunner D1 — general-purpose industrial-first humanoid",
+      "dof": "52 (some configs 40)",
+      "hands": "Dexterous, 96 sensors per fingertip, up to 15kg/hand (25kg total)",
+      "battery": "2.33 kWh, 8-hour shift",
+      "actuators": "In-house roller-screw (arms/legs) + custom rotary (waist/shoulder)",
+      "os": "Kepler OS (customizable)",
+      "ai": "Cloud cognitive + embodied control, imitation + RL",
+      "use": "Manufacturing, warehousing, logistics, high-risk, research/edu",
+      "entry": "Forerunner D1 — Kepler"
+    }
   },
   {
     "id": "engineered-arts-ameca-generation-3",
@@ -53470,9 +53505,9 @@
     "desc": "Kepler's Forerunner S1 is a variant in the Shanghai Kepler full-size humanoid family aimed at commercial and industrial deployment. (Detailed specifications for this variant are limited and worth verifying against Kepler.)",
     "highlights": [],
     "perf": false,
-    "origin": "China (Shanghai, Kepler Exploration Robot Co.)",
+    "origin": "China",
     "year": 2025,
-    "status": "Superseded (K2)",
+    "status": "Active",
     "released": "2023",
     "height_mm": 1780,
     "weight_kg": 80,
@@ -53490,7 +53525,7 @@
     "manufacturer_url": "https://www.kepler-robotics.com",
     "made_in": "China",
     "announced": "2025",
-    "payload_kg": 18,
+    "payload_kg": 25,
     "arm_dof": 7,
     "hand_dof": 12,
     "fingers": 5,
@@ -53504,14 +53539,30 @@
     "payload": 18,
     "battery": 480,
     "battery_life": 480,
-    "actuator_type": "Planetary roller screw + rotary",
+    "actuator_type": "In-house roller-screw + rotary",
     "hand_actuation": "Rope-driven (tendon)",
     "leg_dof": 6,
     "npu_tops": 100,
-    "ai_model": "NEBULA",
+    "ai_model": "Cloud cognitive model + embodied control; imitation + RL",
     "manufacturer": "Kepler",
     "form_factor": "First-gen Forerunner full-size industrial biped",
-    "note": "Predecessor to K2 (the current 'order-today' volume model)"
+    "note": "Predecessor to K2 (the current 'order-today' volume model)",
+    "manufacturer_history": "Shanghai Kepler Robotics Co. China. Forerunner humanoid line: K1 (original, CES 2024, Optimus rival) → K2 (5th-gen, commercial-tailored). In-house roller-screw actuators (arms/legs) + custom rotary (waist/shoulder). Kepler OS. Cloud cognitive model + imitation/RL. Industrial-first.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Shanghai Kepler Robotics",
+      "class": "Forerunner Forerunner S1 — general-purpose industrial-first humanoid",
+      "dof": "52 (some configs 40)",
+      "hands": "Dexterous, 96 sensors per fingertip, up to 15kg/hand (25kg total)",
+      "battery": "2.33 kWh, 8-hour shift",
+      "actuators": "In-house roller-screw (arms/legs) + custom rotary (waist/shoulder)",
+      "os": "Kepler OS (customizable)",
+      "ai": "Cloud cognitive + embodied control, imitation + RL",
+      "use": "Manufacturing, warehousing, logistics, high-risk, research/edu",
+      "entry": "Forerunner S1 — Kepler"
+    }
   },
   {
     "id": "engineered-arts-quinn",
@@ -89841,14 +89892,14 @@
     "cameras": "RGB-D",
     "wifi": "Wi-Fi",
     "bluetooth": true,
-    "made_in": "China (Shanghai)",
+    "made_in": "China",
     "announced": "2024",
     "released": "2024",
-    "payload_kg": 15,
+    "payload_kg": 25,
     "dof": 52,
     "arm_dof": 7,
     "hand_dof": 11,
-    "actuator_type": "Planetary roller-screw actuators (Tesla-style hybrid)",
+    "actuator_type": "In-house roller-screw + rotary",
     "fingers": 5,
     "opposable_thumb": true,
     "bimanual": true,
@@ -89856,7 +89907,7 @@
     "depth_sensing": true,
     "imu": true,
     "lidar": true,
-    "ai_model": "Cloud cognitive model + embodied control (imitation + reinforcement learning)",
+    "ai_model": "Cloud cognitive model + embodied control; imitation + RL",
     "natural_language_commands": true,
     "battery_life_typical": 480,
     "use_cases": [
@@ -89889,18 +89940,19 @@
     "currency": "USD",
     "manufacturer_url": "https://www.gotokepler.com/",
     "raw_specs": {
-      "generation": "5th-gen (K2 Bumblebee)",
-      "sensors": "80+ integrated sensors",
-      "compute": "100 TOPS onboard",
-      "payload": "15 kg per arm (30 kg dual)",
-      "runtime": "~8h on 1h charge; 2.33 kWh battery",
-      "actuators": "Planetary roller-screw (Tesla-style hybrid architecture)",
-      "in_house": "80%+ core hardware in-house",
-      "price": "RMB 248,000 (~$34,000)",
-      "production": "Mass production + shipping from Sep 26, 2025; framework deals for several thousand units",
-      "deployments": "SAIC-GM plant (Apr 2025), Chunmi appliance factory (LNY 2026)",
-      "value": "~1.5 FTE-equivalent per Kepler"
-    }
+      "maker": "Shanghai Kepler Robotics",
+      "class": "Forerunner K2 — general-purpose industrial-first humanoid",
+      "dof": "52 (some configs 40)",
+      "hands": "Dexterous, 96 sensors per fingertip, up to 15kg/hand (25kg total)",
+      "battery": "2.33 kWh, 8-hour shift",
+      "actuators": "In-house roller-screw (arms/legs) + custom rotary (waist/shoulder)",
+      "os": "Kepler OS (customizable)",
+      "ai": "Cloud cognitive + embodied control, imitation + RL",
+      "use": "Manufacturing, warehousing, logistics, high-risk, research/edu",
+      "entry": "K2 — Kepler",
+      "generation": "K2 — 5th-generation (despite name), commercial-tailored"
+    },
+    "manufacturer_history": "Shanghai Kepler Robotics Co. China. Forerunner humanoid line: K1 (original, CES 2024, Optimus rival) → K2 (5th-gen, commercial-tailored). In-house roller-screw actuators (arms/legs) + custom rotary (waist/shoulder). Kepler OS. Cloud cognitive model + imitation/RL. Industrial-first."
   },
   {
     "id": "neura-4ne1-2024",
@@ -130673,7 +130725,19 @@
     "manufacturer_url": "https://www.booster.tech/",
     "speed": 1.2,
     "speed_ms": 1.2,
-    "arm_torque_nm": 130
+    "arm_torque_nm": 130,
+    "manufacturer_history": "Booster Robotics (Beijing, China). Makes the T1 — a compact humanoid popular for RL research, robot soccer (RoboCup), and developer/education use; and K1. Emphasis on agile bipedal locomotion + open developer platform.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "ai_model": "RL locomotion; open developer platform",
+    "raw_specs": {
+      "maker": "Booster Robotics (Beijing)",
+      "class": "T1 — compact humanoid for RL research + robot soccer (RoboCup) + education",
+      "focus": "Agile bipedal locomotion, open developer SDK",
+      "entry": "T1 — Booster",
+      "model": "T1 — popular RL/RoboCup research humanoid"
+    }
   },
   {
     "cat": "Humanoid",
@@ -130930,7 +130994,7 @@
       "Industrial productivity",
       "Data/skill training platform"
     ],
-    "made_in": "China (Hangzhou)",
+    "made_in": "China",
     "website": "https://www.deeprobotics.cn",
     "speed": 1.6,
     "dof": 12,
@@ -130938,7 +131002,7 @@
     "stair_climbing": true,
     "wifi": "Wi-Fi",
     "imu": true,
-    "ai_model": "Learning algorithm combining sensing + control; AI/big-data training generates new skills autonomously",
+    "ai_model": "Autonomous adaptive learning",
     "lidar": true,
     "announced": "2024",
     "released": "2024",
@@ -130958,7 +131022,16 @@
     "autonomous": true,
     "capabilities": "Robust biped: >1.6 m/s walking, 18 cm steps, 25° slopes, uneven/discrete terrain; balance recovery under slippery surfaces & external push/pull; walks across steel bars; autonomous skill generation via training",
     "developed_by": "DEEP Robotics (Hangzhou Yunshenchu Technology) — also makes Lynx/X30 quadrupeds",
-    "max_grade_pct": 25
+    "max_grade_pct": 25,
+    "manufacturer_history": "DEEP Robotics (Hangzhou, China). Known for Jueying quadruped robots; DR01 (Lynx) is their bipedal humanoid 'embodied intelligence explorer' — advanced mobility over challenging terrain, autonomous learning.",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "DEEP Robotics (Hangzhou)",
+      "class": "DR01 — bipedal humanoid 'embodied intelligence explorer'",
+      "features": "Advanced mobility on challenging terrain, lightweight joints, autonomous learning",
+      "entry": "DR01 — DEEP Robotics"
+    }
   },
   {
     "cat": "Humanoid",
@@ -135872,7 +135945,7 @@
     "sdk": true,
     "ros": true,
     "api": true,
-    "ai_model": "AI vision + voice command; obstacle avoidance + autonomous navigation",
+    "ai_model": "RL locomotion; open developer platform",
     "tags": [
       "humanoid",
       "Booster Robotics",
@@ -135890,7 +135963,7 @@
       "RoboCup competition",
       "Human-robot interaction"
     ],
-    "made_in": "China (Booster Robotics)",
+    "made_in": "China",
     "website": "https://www.booster.tech/",
     "desc": "Booster Robotics' compact entry-level humanoid: ~95 cm, 19.5 kg, 22 DoF (6-DoF legs, 4-DoF arms). RoboCup 2025 KidSize champion, powered by Booster GYM 2.0 for stable agile bipedal motion. Sold in compute tiers (48/117/200 TOPS — Geek/EDU/Pro) on NVIDIA Jetson, ROS2-compatible with Isaac Sim models. From the Tsinghua Robot Control Lab team; from $4,999. Companion to the larger T1.",
     "speed": 0.4,
@@ -135938,10 +136011,13 @@
     "has_legs": true,
     "biped": true,
     "raw_specs": {
-      "sensors": "3D depth camera, 9-axis IMU, microphone array, touch sensors",
-      "class": "Compact humanoid for education, research, robotics competitions",
-      "ai": "Vision + voice, obstacle avoidance, real-time nav"
-    }
+      "maker": "Booster Robotics (Beijing)",
+      "class": "K1 — compact humanoid for RL research + robot soccer (RoboCup) + education",
+      "focus": "Agile bipedal locomotion, open developer SDK",
+      "entry": "K1 — Booster",
+      "model": "K1 — Booster humanoid"
+    },
+    "manufacturer_history": "Booster Robotics (Beijing, China). Makes the T1 — a compact humanoid popular for RL research, robot soccer (RoboCup), and developer/education use; and K1. Emphasis on agile bipedal locomotion + open developer platform."
   },
   {
     "cat": "Humanoid",
@@ -138894,7 +138970,18 @@
       "https://www.booster.tech/_astro/t2-modal-en-poster.DLI8ya99_27T8bI.webp"
     ],
     "video": "https://youtu.be/yyAgPHg4VS4",
-    "arm_torque_nm": 130
+    "arm_torque_nm": 130,
+    "manufacturer_history": "Booster Robotics (Beijing, China). Makes the T1 — a compact humanoid popular for RL research, robot soccer (RoboCup), and developer/education use; and K1. Emphasis on agile bipedal locomotion + open developer platform.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "ai_model": "RL locomotion; open developer platform",
+    "raw_specs": {
+      "maker": "Booster Robotics (Beijing)",
+      "class": "T2 — compact humanoid for RL research + robot soccer (RoboCup) + education",
+      "focus": "Agile bipedal locomotion, open developer SDK",
+      "entry": "T2 — Booster"
+    }
   },
   {
     "id": "yobotics-xingzhe-taishan",
@@ -148279,7 +148366,14 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/68e77ecfaa973e3956b8a421_DR%2002_02.webp"
     ],
     "video": "https://youtu.be/e0cIZgkTn4M",
-    "max_grade_pct": 20
+    "max_grade_pct": 20,
+    "manufacturer_history": "DEEP Robotics (Hangzhou, China). Known for Jueying quadruped robots; DR01 (Lynx) is their bipedal humanoid 'embodied intelligence explorer' — advanced mobility over challenging terrain, autonomous learning.",
+    "raw_specs": {
+      "maker": "DEEP Robotics (Hangzhou)",
+      "class": "DR02 — DEEP Robotics platform (known for Jueying quadrupeds)",
+      "entry": "DR02 — DEEP Robotics"
+    },
+    "imu": true
   },
   {
     "id": "ti5-t1",
