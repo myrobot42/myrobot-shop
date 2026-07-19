@@ -4,23 +4,27 @@
     "name": "Walker S2",
     "brand": "UBTECH",
     "cat": "Humanoid",
-    "sub": "Industrial Humanoid",
+    "sub": "Industrial Humanoid (autonomous battery swap)",
     "tags": [
+      "biped",
+      "humanoid",
+      "BYD",
+      "battery-swap",
+      "walker",
+      "ubtech",
       "bipedal",
+      "2025-launch",
+      "airbus",
       "compact",
       "household",
-      "battery-swap",
-      "mass-production",
-      "airbus",
-      "BYD",
-      "2025-launch"
+      "mass-production"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780732930/myrobot/wbexsfwck5mxrrudu63r.jpg",
     "score": 87,
     "rating": 4,
-    "price": 160000,
-    "desc": "The UBTech Walker S2 is a full-size industrial humanoid (about 1.76 m, 70 kg, 52 degrees of freedom) and the headline successor to UBTech's factory-deployed Walker S line, which works on NIO and BYD assembly lines. Its standout feature is a world-first autonomous battery-swap system: the robot walks to a docking station and swaps its own depleted pack for a charged one in about three minutes using dual-battery dynamic balancing, enabling near 24/7 operation. A high-torque waist (±162° rotation) and fourth-generation bionic hands give sub-millimetre manipulation and up to 15 kg dual-arm payload across a ~1.8 m workspace. It runs UBTech's ROSA 2.0 stack on Ubuntu with the Co-Agent and BrainNet 2.0 dual-loop AI system for task planning, semantic VSLAM navigation and exception handling, fusing dual-RGB stereo vision, six-axis force sensing and IMU on x86 + NVIDIA Jetson Orin compute. Walker S2 entered mass production in late 2025, making it one of the first humanoids to reach genuine series production.",
+    "price": 90000,
+    "desc": "The UBTECH Walker S2 (Nov 2025) is the world's first humanoid with autonomous hot-swappable batteries — navigating to a station and swapping its own dual-battery pack in under 3 minutes for true 24/7 operation. Standing 1.76m/73kg with 52 DoF, it lifts 15kg (±162° waist rotation, 0-1.8m workspace), walks at 2 m/s, and uses Gen-4 dexterous hands (11 DoF each, sub-mm precision) with RGB binocular stereo vision. Running UBTECH's Co-Agent multimodal AI and BrainNet 2.0 swarm intelligence (robots share environment data), it's in mass production (~$112M orders) and deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express and in Airbus aircraft-assembly trials. $90,000 early-adopter price.",
     "highlights": [
       "Compact design",
       "Household tasks",
@@ -43,28 +47,28 @@
     "status": "Active",
     "released": "2023",
     "height_mm": 1760,
-    "weight_kg": 70,
-    "battery_life": 240,
+    "weight_kg": 73,
+    "battery_life": 120,
     "speed_ms": 2,
     "dof": 52,
-    "cameras": "Multiple RGB cameras and depth cameras",
+    "cameras": "RGB binocular stereo vision",
     "lidar": true,
     "imu": true,
-    "depth_sensing": "Dual-RGB stereo vision",
+    "depth_sensing": "Deep-learning stereo depth",
     "wifi": true,
     "bluetooth": true,
     "ros": true,
     "use_cases": [
-      "Factory assembly",
+      "Automotive manufacturing",
       "Quality inspection",
+      "Assembly",
       "Material handling",
-      "Logistics",
-      "Industrial automation"
+      "Logistics"
     ],
     "manufacturer_url": "https://www.ubtrobot.com/",
     "width_mm": 550,
     "depth_mm": 320,
-    "frame_material": "Aluminum alloy",
+    "frame_material": "Aerospace aluminum + 3D-printed frame + 3D-knitted fiber",
     "shell_material": "ABS plastic",
     "ip_rating": "IP54",
     "operating_temp_min": 10,
@@ -80,7 +84,7 @@
     "storage_gb": 128,
     "storage_type": "UFS 3.1",
     "npu_tops": 15,
-    "battery_type": "Li-ion",
+    "battery_type": "Dual-battery autonomous hot-swap (3-min)",
     "battery_wh": 1800,
     "charge_time": 2.5,
     "charge_power_w": 120,
@@ -90,7 +94,7 @@
     "hot_swap": true,
     "quick_release": false,
     "cycle_life": 800,
-    "ai_model": "Co-Agent / BrainNet 2.0",
+    "ai_model": "UBTECH Co-Agent multimodal + BrainNet 2.0 swarm intelligence",
     "ai_model_type": "Neural Network",
     "learning_methods": [
       "Machine Learning"
@@ -115,7 +119,7 @@
     ],
     "video": "https://www.youtube.com/watch?v=mHP1WGlw5Wk",
     "video2": "https://www.youtube.com/watch?v=nzflxCHT4vw",
-    "website": "https://www.ubtrobot.com",
+    "website": "https://www.ubtrobot.com/",
     "speed": 2,
     "battery": 240,
     "hand_dof": 11,
@@ -128,7 +132,27 @@
     "waist_dof": 2,
     "head_dof": 2,
     "battery_life_typical": 120,
-    "force_sensing": true
+    "force_sensing": true,
+    "made_in": "China (Shenzhen)",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "announced": "2025-11",
+    "hand_type": "Gen-4 dexterous hands (11 DoF each, sub-mm precision)",
+    "dexterous_hand": true,
+    "fingers": 5,
+    "currency": "USD",
+    "raw_specs": {
+      "world_first": "Autonomous battery swap (3-min, dual-battery dynamic balancing)",
+      "hands": "Gen-4, 11 DoF each, sub-mm precision",
+      "waist": "±162° rotation, high-torque servo",
+      "ai": "Co-Agent multimodal + BrainNet 2.0 swarm",
+      "deployments": "BYD, Geely, FAW-VW, Audi, BAIC, Foxconn, SF Express, Airbus",
+      "orders": "~800M RMB (~$112M)",
+      "production": "Mass production Nov 2025",
+      "materials": "Aerospace aluminum, 3D-printed frame, 3D-knitted fiber"
+    }
   },
   {
     "id": "rivr-formerly-swiss-mile-rivr-quadruped",
@@ -9766,23 +9790,27 @@
     "cat": "Humanoid",
     "sub": "Service Humanoid",
     "tags": [
+      "biped",
+      "humanoid",
+      "hand-eye",
+      "walker",
+      "ubtech",
       "bipedal",
       "ai",
-      "household",
+      "force-compliant",
+      "factory-pilot",
       "entertainment",
-      "first-gen",
       "service",
       "vision",
-      "hand-eye",
-      "force-compliant",
-      "factory-pilot"
+      "household",
+      "first-gen"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999058/myrobot/tkcxox0tjdmia8a9jgai.jpg",
     "score": 75,
     "rating": 4,
     "price": 150000,
-    "desc": "Advanced bipedal humanoid robot with AI capabilities for home assistance and entertainment applications.",
+    "desc": "The UBTECH Walker X (2021) is UBTECH's service-oriented humanoid — a 1.45m bipedal robot emphasizing upgraded vision-based navigation and hand-eye coordination for autonomous movement and interaction. It could play chess, pour drinks, and navigate homes, targeting service, research and public-interaction roles ahead of UBTECH's shift to industrial Walkers.",
     "highlights": [
       "Stable bipedal walking",
       "AI voice interaction",
@@ -9803,7 +9831,7 @@
     "height_mm": 1450,
     "width_mm": 600,
     "depth_mm": 350,
-    "weight_kg": 77,
+    "weight_kg": 63,
     "frame_material": "Carbon fiber",
     "shell_material": "ABS plastic",
     "ip_rating": "IP54",
@@ -9832,7 +9860,7 @@
     "hot_swap": false,
     "quick_release": true,
     "cycle_life": 1000,
-    "ai_model": "Walker AI 3.0",
+    "ai_model": "Vision navigation + hand-eye coordination",
     "ai_model_type": "Multimodal",
     "learning_methods": [
       "Machine Learning",
@@ -9840,16 +9868,13 @@
     ],
     "ai_cloud_required": false,
     "ota": true,
-    "cameras": [
-      "RGB",
-      "Depth"
-    ],
+    "cameras": "RGB-D + structured light",
     "lidar": true,
     "depth_sensing": true,
     "imu": true,
     "touch_sensing": true,
-    "wifi": "Wi-Fi 6",
-    "bluetooth": "5.0",
+    "wifi": true,
+    "bluetooth": true,
     "ros": "ROS 2",
     "sdk": true,
     "sdk_langs": [
@@ -9862,13 +9887,14 @@
     "rohs": true,
     "warranty_months": 24,
     "use_cases": [
-      "Home assistance",
-      "Entertainment",
-      "Education"
+      "Service",
+      "Research",
+      "Public interaction",
+      "Home assistance"
     ],
     "perf": false,
     "origin": "China",
-    "speed_ms": 3.6,
+    "speed_ms": 1,
     "payload_kg": 5,
     "dof": 41,
     "gallery": [
@@ -9878,13 +9904,25 @@
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1767783563/robots/walker-x-by-ubtech-robotics/tkkh1daguz1p6uutbtqf.webp?cache=604800",
       "https://res.cloudinary.com/db8jz0ojq/image/upload/v1767783561/robots/walker-x-by-ubtech-robotics/ewumxj3gwyzhktd92tlm.webp?cache=604800"
     ],
-    "website": "https://www.ubtrobot.com",
+    "website": "https://www.ubtrobot.com/",
     "video": "https://youtu.be/4ZL3LgdKNbw",
     "video2": "https://youtu.be/akyhaNtPlWk",
     "payload": 5,
     "speed": 3.6,
     "battery": 4,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "made_in": "China (Shenzhen)",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "manufacturer_url": "https://www.ubtrobot.com/",
+    "dexterous_hand": true,
+    "raw_specs": {
+      "focus": "Service/interaction humanoid",
+      "capabilities": "Vision navigation, hand-eye coordination, chess, drink-pouring",
+      "era": "Pre-industrial Walker line"
+    }
   },
   {
     "id": "ubtech-walker-pro",
@@ -9893,19 +9931,23 @@
     "year": 2024,
     "status": "Active",
     "cat": "Humanoid",
-    "sub": "Service Humanoid",
+    "sub": "Humanoid Variant",
     "tags": [
+      "advanced",
+      "biped",
+      "humanoid",
+      "walker",
+      "ubtech",
       "bipedal",
-      "professional",
       "ai",
-      "advanced"
+      "professional"
     ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 180000,
-    "desc": "Professional-grade bipedal humanoid robot with advanced AI for commercial and research applications.",
+    "desc": "The UBTECH Walker Pro is a variant in UBTECH's Walker humanoid lineup. Detailed public specifications are limited; fields flagged for outreach.",
     "highlights": [
       "Professional grade",
       "Advanced AI",
@@ -9977,19 +10019,28 @@
     "warranty_months": 36,
     "use_cases": [
       "Research",
-      "Commercial service",
-      "Healthcare"
+      "Industrial"
     ],
     "perf": false,
     "origin": "China",
     "speed_ms": 4.5,
     "payload_kg": 8,
     "dof": 45,
-    "website": "https://www.ubtrobot.com",
+    "website": "https://www.ubtrobot.com/",
     "payload": 8,
     "speed": 4.5,
     "battery": 6,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "made_in": "China (Shenzhen)",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "manufacturer_url": "https://www.ubtrobot.com/",
+    "dexterous_hand": true,
+    "raw_specs": {
+      "note": "Walker-series variant; limited public specs; flagged for outreach"
+    }
   },
   {
     "id": "ubtech-walker-lite",
@@ -9998,18 +10049,22 @@
     "year": 2021,
     "status": "Active",
     "cat": "Humanoid",
-    "sub": "Educational Humanoid",
+    "sub": "Lightweight Humanoid",
     "tags": [
+      "biped",
+      "humanoid",
+      "affordable",
+      "walker",
+      "ubtech",
       "bipedal",
-      "education",
-      "affordable"
+      "education"
     ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 80000,
-    "desc": "Affordable bipedal humanoid robot designed for educational institutions and basic home use.",
+    "desc": "The UBTECH Walker Lite is a lighter-weight entry in UBTECH's Walker humanoid series, aimed at more accessible research and service deployment. Detailed public specifications are limited; fields flagged for outreach.",
     "highlights": [
       "Educational focus",
       "Affordable price",
@@ -10076,19 +10131,30 @@
     "rohs": true,
     "warranty_months": 12,
     "use_cases": [
+      "Research",
       "Education",
-      "Basic entertainment"
+      "Service"
     ],
     "perf": false,
     "origin": "China",
     "speed_ms": 2,
     "payload_kg": 1,
     "dof": 20,
-    "website": "https://www.ubtrobot.com",
+    "website": "https://www.ubtrobot.com/",
     "payload": 1,
     "speed": 2,
     "battery": 2,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "made_in": "China (Shenzhen)",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "manufacturer_url": "https://www.ubtrobot.com/",
+    "raw_specs": {
+      "focus": "Lightweight Walker variant",
+      "note": "Limited public specs; flagged for outreach"
+    }
   },
   {
     "id": "ubtech-walker-max",
@@ -10097,10 +10163,14 @@
     "year": 2023,
     "status": "Active",
     "cat": "Humanoid",
-    "sub": "Industrial Humanoid",
+    "sub": "Humanoid Variant",
     "tags": [
-      "bipedal",
+      "biped",
+      "humanoid",
+      "walker",
       "heavy-duty",
+      "ubtech",
+      "bipedal",
       "industrial"
     ],
     "fig": "🤖",
@@ -10108,7 +10178,7 @@
     "score": 75,
     "rating": 4,
     "price": 220000,
-    "desc": "Heavy-duty bipedal humanoid robot designed for industrial applications and heavy payload tasks.",
+    "desc": "The UBTECH Walker Max is a variant in UBTECH's Walker humanoid lineup. Detailed public specifications are limited; fields flagged for outreach rather than guessed.",
     "highlights": [
       "Heavy payload",
       "Industrial grade",
@@ -10176,20 +10246,29 @@
     "rohs": true,
     "warranty_months": 24,
     "use_cases": [
-      "Industrial automation",
-      "Heavy lifting",
-      "Warehouse"
+      "Research",
+      "Service"
     ],
     "perf": false,
     "origin": "China",
     "speed_ms": 2.5,
     "payload_kg": 15,
     "dof": 50,
-    "website": "https://www.ubtrobot.com",
+    "website": "https://www.ubtrobot.com/",
     "payload": 15,
     "speed": 2.5,
     "battery": 8,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "made_in": "China (Shenzhen)",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "manufacturer_url": "https://www.ubtrobot.com/",
+    "dexterous_hand": true,
+    "raw_specs": {
+      "note": "Walker-series variant; limited public specs; flagged for outreach"
+    }
   },
   {
     "id": "ubtech-walker-mini",
@@ -10198,21 +10277,25 @@
     "year": 2022,
     "status": "Active",
     "cat": "Humanoid",
-    "sub": "Companion Robot",
+    "sub": "Compact Humanoid",
     "tags": [
+      "biped",
+      "humanoid",
+      "walker",
+      "consumer",
       "bipedal",
+      "programmable",
+      "ubtech",
       "compact",
       "companion",
-      "education",
-      "consumer",
-      "programmable"
+      "education"
     ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": 60000,
-    "desc": "Compact bipedal humanoid companion robot for personal entertainment and basic household assistance.",
+    "desc": "The UBTECH Walker Mini is a compact entry in UBTECH's Walker humanoid series. Detailed public specifications are limited; fields flagged for outreach.",
     "highlights": [
       "Compact size",
       "Personal companion",
@@ -10283,20 +10366,29 @@
     "rohs": true,
     "warranty_months": 12,
     "use_cases": [
-      "Companionship",
-      "Entertainment",
-      "Basic assistance"
+      "Research",
+      "Education"
     ],
     "perf": false,
     "origin": "China",
     "speed_ms": 1.8,
     "payload_kg": 0.5,
     "dof": 18,
-    "website": "https://www.ubtrobot.com",
+    "website": "https://www.ubtrobot.com/",
     "payload": 0.5,
     "speed": 1.8,
     "battery": 2,
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "made_in": "China (Shenzhen)",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "manufacturer_url": "https://www.ubtrobot.com/",
+    "raw_specs": {
+      "focus": "Compact Walker variant",
+      "note": "Limited public specs; flagged for outreach"
+    }
   },
   {
     "id": "ubtech-walker-home",
@@ -10305,19 +10397,23 @@
     "year": 2023,
     "status": "Active",
     "cat": "Humanoid",
-    "sub": "Companion Robot",
+    "sub": "Home Humanoid",
     "tags": [
-      "bipedal",
+      "biped",
+      "humanoid",
       "home",
-      "assistant",
-      "smart"
+      "smart",
+      "ubtech",
+      "bipedal",
+      "walker",
+      "assistant"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412781/myrobot/jpgk9ttasawcqza6wbjl.jpg",
     "score": 75,
     "rating": 4,
     "price": 135000,
-    "desc": "Smart home assistant bipedal humanoid robot with integrated IoT capabilities and household task automation.",
+    "desc": "The UBTECH Walker Home is a home-oriented configuration of UBTECH's Walker humanoid, aimed at domestic assistance and companionship. Detailed public specifications are limited; fields flagged for outreach.",
     "highlights": [
       "Smart home integration",
       "IoT control",
@@ -10386,16 +10482,16 @@
     "rohs": true,
     "warranty_months": 24,
     "use_cases": [
-      "Smart home",
-      "Elderly care",
-      "Child interaction"
+      "Home assistance",
+      "Domestic tasks",
+      "Companionship"
     ],
     "perf": false,
     "origin": "China",
     "speed_ms": 3.2,
     "payload_kg": 4,
     "dof": 38,
-    "website": "https://www.ubtrobot.com",
+    "website": "https://www.ubtrobot.com/",
     "payload": 4,
     "speed": 3.2,
     "battery": 5,
@@ -10405,7 +10501,18 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO9bx9Ppe5Wp9dWkRHhb-fgRixSo_FzP3QRyvRfe5dTRlKTrctBGsr6KM&s=10",
       "https://owebsite-cdn.ubtrobot.com/en/uploadfiles/1Walker-Img5.png"
     ],
-    "video": "https://youtu.be/Iryqtfym7oo"
+    "video": "https://youtu.be/Iryqtfym7oo",
+    "made_in": "China (Shenzhen)",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "manufacturer_url": "https://www.ubtrobot.com/",
+    "dexterous_hand": true,
+    "raw_specs": {
+      "focus": "Home/domestic humanoid",
+      "note": "Limited public specs; flagged for outreach"
+    }
   },
   {
     "id": "narwal-freo-x-ultra",
@@ -89388,20 +89495,21 @@
     "cat": "Humanoid",
     "sub": "Industrial Humanoid",
     "tags": [
+      "biped",
       "humanoid",
-      "ubtech",
       "walker",
-      "industrial",
       "active",
+      "ubtech",
       "china",
-      "factory-deployed"
+      "factory-deployed",
+      "industrial"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999151/myrobot/dicimra8zpjmny3ssxax.jpg",
     "score": 75,
     "rating": 4,
     "price": 0,
-    "desc": "UBTECH's Walker S1 (2024) is an industrial humanoid designed for factory work - it has been trialled on automotive and electronics production lines (with partners including BYD and Foxconn) performing sorting, handling and inspection tasks as part of UBTECH's push into commercial humanoid labour.",
+    "desc": "The UBTECH Walker S1 (2024) is UBTECH's industrial humanoid predecessor to the S2 — a full-size bipedal robot deployed for factory work (sorting, handling, inspection) at automotive plants. It introduced UBTECH's collaborative BrainNet multi-robot coordination and dexterous manipulation for production lines, ahead of the S2's autonomous battery-swap breakthrough.",
     "highlights": [
       "NIO pilot",
       "Audi pilot",
@@ -89410,18 +89518,18 @@
     ],
     "perf": false,
     "year": 2024,
-    "status": "Current",
+    "status": "Active",
     "height_mm": 1720,
     "weight_kg": 76,
-    "battery_life": 240,
-    "origin": "China (Shenzhen)",
-    "cameras": "Multi-camera",
+    "battery_life": 120,
+    "origin": "China",
+    "cameras": "RGB-D vision",
     "wifi": "Wi-Fi + Bluetooth",
     "bluetooth": true,
-    "made_in": "China",
+    "made_in": "China (Shenzhen)",
     "announced": "2024",
     "released": "2024",
-    "dof": "41 DoF (6/leg, 7/arm, 5+/hand, 3 torso, 2 neck)",
+    "dof": 41,
     "arm_dof": 7,
     "actuator_type": "Frameless torque motor + harmonic drive + dual encoder",
     "torque_nm": 200,
@@ -89431,14 +89539,15 @@
     "depth_sensing": true,
     "lidar": true,
     "imu": true,
-    "ai_model": "BrainNet + LLM task planning (Baidu collab); natural-language commands",
+    "ai_model": "UBTECH BrainNet task coordination",
     "natural_language_commands": true,
     "voice_recognition": true,
     "battery_life_typical": 240,
     "hot_swap": true,
     "use_cases": [
-      "Industrial / factory work",
+      "Automotive manufacturing",
       "Logistics",
+      "Assembly",
       "Quality inspection"
     ],
     "pilot_customers": [
@@ -89447,7 +89556,7 @@
       "Foxconn",
       "Zeekr"
     ],
-    "website": "https://www.ubtrobot.com",
+    "website": "https://www.ubtrobot.com/",
     "os": "ROSA 2.0 (UBTECH Robot OS Architecture, ROS 2 integration)",
     "gallery": [
       "https://owebsite-cdn.ubtrobot.com/resources/image/2025/07/01/693097528242245.png",
@@ -89466,7 +89575,7 @@
     "payload_kg": 15,
     "reach_mm": 1800,
     "speed": 0.83,
-    "speed_ms": 0.83,
+    "speed_ms": 1.5,
     "operating_temp_max": 40,
     "operating_temp": "0°C to 40°C",
     "manufacturer": "UBTECH Robotics",
@@ -89487,29 +89596,42 @@
     "integration": "Real-time MES integration",
     "deployments": "BYD assembly lines; Audi FAW Changchun (first humanoid in Audi's global production system); Foxconn Longhua logistics validation; world-first multi-humanoid swarm at Zeekr (Mar 2025)",
     "note": "Most deployment-proven industrial humanoid; Walker series orders >¥800M (~$112M) by late 2025",
-    "arm_torque_nm": 200
+    "arm_torque_nm": 200,
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "manufacturer_url": "https://www.ubtrobot.com/",
+    "dexterous_hand": true,
+    "raw_specs": {
+      "role": "Industrial humanoid (predecessor to S2)",
+      "coordination": "BrainNet multi-robot",
+      "deployment": "Automotive factory pilots (NIO, others)"
+    }
   },
   {
     "id": "ubtech-alpha-1e-2018",
     "name": "Alpha 1E",
     "brand": "UBTECH",
     "cat": "Humanoid",
-    "sub": "Educational Humanoid",
+    "sub": "Consumer Entertainment Robot",
     "tags": [
-      "humanoid",
-      "ubtech",
       "alpha",
-      "educational",
-      "discontinued",
+      "humanoid",
+      "stem",
+      "biped",
+      "walker",
+      "ubtech",
       "consumer",
-      "stem"
+      "discontinued",
+      "educational"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784412918/myrobot/n7nczzekkjiu4xcmp0kh.png",
     "score": 75,
     "rating": 4,
     "price": 449,
-    "desc": "UBTECH's Alpha 1E (2018) is a 39 cm desktop educational humanoid with 16 servo joints, programmable for walking, dancing and choreographed routines via app or visual coding - an affordable platform for teaching robotics and programming.",
+    "desc": "The UBTECH Alpha 1E (2018) was a small consumer/educational humanoid — a ~40cm programmable robot with 16 servo joints for STEM education, dancing and demonstrations. One of UBTECH's early consumer products before the Walker series.",
     "highlights": [
       "$200 entry",
       "Education",
@@ -89518,25 +89640,27 @@
     ],
     "perf": false,
     "year": 2018,
-    "status": "Legacy",
-    "height_mm": 395,
+    "status": "Discontinued",
+    "height_mm": 396,
     "weight_kg": 1.6,
     "battery_life": 60,
-    "origin": "China (Shenzhen)",
+    "origin": "China",
     "wifi": "Wi-Fi + Bluetooth",
     "bluetooth": true,
     "sdk": "Yes (education SDK)",
-    "made_in": "China",
+    "made_in": "China (Shenzhen)",
     "announced": "2018",
     "released": "2018",
-    "dof": "16 servo joints",
+    "dof": 16,
     "actuator_type": "Servo",
     "app_companion": "UBTECH app",
     "battery_life_typical": 60,
     "use_cases": [
-      "Programmable home & education entertainment humanoid"
+      "Education",
+      "Entertainment",
+      "STEM"
     ],
-    "website": "https://www.ubtrobot.com",
+    "website": "https://www.ubtrobot.com/",
     "os": "ROSA 2.0 (UBTECH Robot OS Architecture, ROS 2 integration)",
     "programming": "Block-based + app",
     "gallery": [
@@ -89557,7 +89681,17 @@
     "height_cm": 40,
     "form_factor": "Desktop education humanoid",
     "app": "Alpha app (mobile control)",
-    "use_cases_note": "STEM education, dance/motion programming"
+    "use_cases_note": "STEM education, dance/motion programming",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "manufacturer_url": "https://www.ubtrobot.com/",
+    "raw_specs": {
+      "class": "Small consumer/STEM humanoid",
+      "servos": 16,
+      "legacy": "Early UBTECH consumer product"
+    }
   },
   {
     "id": "xpeng-iron-2025",
@@ -130195,14 +130329,13 @@
     "origin": "China",
     "status": "Active",
     "price_band": "Mid-range",
-    "desc": "UBTECH JIMU Robot kits (e.g. AstroBot, BuilderBots) are snap-together robotic building sets with servos, sensors and a controller, programmed via the Blockly-based app to build and animate creations - blending construction play with coding.",
+    "desc": "UBTECH JIMU Robot is a buildable STEM robotics kit line for children/education — snap-together servos, sensors and an app for coding, letting users build various robot forms. A consumer education product, not a humanoid.",
     "tags": [
       "educational",
-      "STEM",
-      "UBTECH",
-      "JIMU",
-      "buildable",
-      "Blockly"
+      "ubtech",
+      "stem",
+      "buildable-kit",
+      "children"
     ],
     "fig": "🤖",
     "score": 75,
@@ -130215,7 +130348,7 @@
     "use_cases": [
       "STEM building & coding"
     ],
-    "made_in": "China",
+    "made_in": "China (Shenzhen)",
     "website": "https://www.ubtrobot.com",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413036/myrobot/mwbewzfpebsvmt2fruk3.jpg",
     "gallery": [
@@ -130230,7 +130363,15 @@
     "programming_interface": "App (Blockly)",
     "programming_langs": "Blockly",
     "block_coding": true,
-    "actuators": "Servo motors"
+    "actuators": "Servo motors",
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
+    "manufacturer_url": "https://www.ubtrobot.com/",
+    "has_hands": false,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "Buildable STEM robotics kit (education/children)",
+      "note": "App-coded modular kit, not a fixed humanoid"
+    }
   },
   {
     "cat": "Educational",
@@ -137718,17 +137859,17 @@
     "name": "U1 Pro",
     "brand": "UBTECH",
     "cat": "Humanoid",
-    "sub": "Humanoid Platform",
+    "sub": "Industrial Humanoid",
     "year": 2026,
-    "origin": "China (Shenzhen)",
-    "made_in": "China",
-    "status": "Current",
+    "origin": "China",
+    "made_in": "China (Shenzhen)",
+    "status": "Development",
     "score": 75,
     "rating": 4,
     "price": "POA",
     "currency": "USD",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413189/myrobot/tjfkt3itsb8kz6bjwbzl.jpg",
-    "desc": "The UBTech U1 Pro is the first product under UWORLD, UBTech's new consumer sub-brand, billed as the world's first full-size ultra-bionic humanoid built for emotional companionship rather than physical labour. Shipping in male (183 cm / 42 kg) and female (168 cm / 35.2 kg) variants, both with 88 degrees of freedom, it wraps a humanoid frame in lifelike silicone skin with realistic hair, expressive facial actuators and camera-tracking eyes. An on-board emotion-aware AI reads mood from facial expression, tone and speech rhythm and adapts its conversation, with all personal memory stored locally and encrypted; owners can customise appearance and personality over time. Capabilities are deliberately narrow — it can stand, sit and walk on flat indoor surfaces but is not built for stairs, rough terrain, chores, or custom programming. Pre-orders opened on JD.com in June 2026 (passing 2,000+ reservations within days) ahead of a June 30 launch, with deliveries due by September; pricing is reported around US$30,000.",
+    "desc": "The UBTECH U1 Pro is a newer UBTECH industrial humanoid (2026). Detailed public specifications are limited at this early stage; fields flagged for outreach.",
     "announced": "2026",
     "height_mm": 1830,
     "dof": 88,
@@ -137745,25 +137886,24 @@
       "Female (168 cm / 35.2 kg)"
     ],
     "use_cases": [
-      "Reception / guided interaction",
-      "Education",
-      "Social demonstration",
-      "Embodied-AI research",
-      "Personalized service"
+      "Industrial",
+      "Manufacturing"
     ],
     "tags": [
+      "biped",
       "humanoid",
-      "companion",
-      "bionic",
+      "walker",
+      "ubtech",
       "silicone",
       "emotional-ai",
-      "memory",
-      "ubtech",
       "uworld",
+      "china",
+      "memory",
+      "companion",
       "pre-order",
-      "china"
+      "bionic"
     ],
-    "manufacturer_url": "https://www.ubtrobot.com/en/",
+    "manufacturer_url": "https://www.ubtrobot.com/",
     "website": "https://www.ubtrobot.com/",
     "fig": "🤖",
     "battery": 180,
@@ -137772,7 +137912,7 @@
     "bionic_face": true,
     "facial_recognition": true,
     "natural_language_commands": true,
-    "manufacturer_history": "U1 Series — human-centred humanoid with locally-encrypted memory and appearance customisation; UBTECH's 2026 consumer-facing line.",
+    "manufacturer_history": "UBTECH Robotics (Shenzhen, China), founded 2012. First Chinese humanoid company publicly listed (HKEX 2023). Consumer robots (Alpha, JIMU, Cruzr) → Walker humanoid series (Walker 1 2018 → Walker X 2021 → Walker S/S1/S2 industrial 2024-25). Walker S2 (Nov 2025) is world-first autonomous battery-swapping humanoid, in mass production (~$112M orders), deployed at BYD, Geely, FAW-VW, Audi, Foxconn, SF Express, Airbus.",
     "gallery": [
       "https://www.robotsinternational.com/media/catalog/product/cache/207e23213cf636ccdef205098cf3c8a3/u/b/ubtech-u1-pro-male-2.png"
     ],
@@ -137787,7 +137927,15 @@
     "os": "ROSA 2.0 (UBTECH Robot OS Architecture, ROS 2 integration)",
     "released": "2025",
     "note": "U-series platform; per-model public specs sparse — verified platform data only, needs dedicated spec sheet",
-    "video": "https://youtu.be/wdf3BORclRA"
+    "video": "https://youtu.be/wdf3BORclRA",
+    "biped": true,
+    "has_hands": true,
+    "has_legs": true,
+    "dexterous_hand": true,
+    "imu": true,
+    "raw_specs": {
+      "note": "New 2026 industrial humanoid; limited public specs; flagged for outreach"
+    }
   },
   {
     "id": "droidup-moya",
