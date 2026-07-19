@@ -9503,7 +9503,7 @@
     "hot_swap": true,
     "quick_release": true,
     "cycle_life": 2000,
-    "ai_model": "Sanctuary Carbon",
+    "ai_model": "Carbon AI (simulates human brain subsystems)",
     "ai_model_type": "Multimodal Foundation Model",
     "learning_methods": [
       "Reinforcement Learning",
@@ -9552,7 +9552,7 @@
     "payload": 25,
     "speed": 1.2,
     "battery": 8,
-    "hand_dof": 21,
+    "hand_dof": 20,
     "actuator_type": "Hydraulic (miniaturized valves)",
     "video": "https://youtu.be/-HizP4UQvug",
     "fingers": 5,
@@ -9561,7 +9561,19 @@
     "tactile_type": "Proprietary tactile, ~5 mN sensitivity (near-human)",
     "fingertip_force_sensors": true,
     "force_sensing": true,
-    "hand_actuation": "Miniaturized hydraulic"
+    "hand_actuation": "Miniaturized hydraulic",
+    "made_in": "Canada",
+    "manufacturer_history": "Sanctuary AI (Vancouver, Canada), founded 2018. Builds general-purpose humanoids driven by its Carbon AI control system (simulates human brain subsystems — memory, sensory perception). Phoenix generations Gen6 (2023) → Gen7 (2024) → Gen8, with rapid iteration. Partners: NVIDIA, Microsoft, Accenture, Magna. Known for industry-leading dexterous hydraulic hands + tactile sensing.",
+    "dexterous_hand": true,
+    "raw_specs": {
+      "generation": "Phoenix Gen 7 (2024)",
+      "ai": "Carbon AI control system — memory + sensory perception simulation",
+      "hands": "20-DoF hydraulic hands + proprietary haptic/tactile — industry-leading dexterity",
+      "size": "170cm, 70kg, 25kg payload",
+      "control": "Direct pilot / pilot-assist / autonomous-under-supervision",
+      "partners": "NVIDIA, Microsoft, Accenture, Magna",
+      "strength": "#3-4 globally in relevant patents"
+    }
   },
   {
     "id": "sanctuary-ai-phoenix-gen-6",
@@ -9596,10 +9608,10 @@
       "Hydraulic actuators",
       "Cognitive arch."
     ],
-    "height_mm": 1650,
+    "height_mm": 1700,
     "width_mm": 580,
     "depth_mm": 380,
-    "weight_kg": 65,
+    "weight_kg": 70,
     "frame_material": "Aluminum alloy",
     "shell_material": "ABS composite",
     "ip_rating": "IP54",
@@ -9628,7 +9640,7 @@
     "hot_swap": false,
     "quick_release": true,
     "cycle_life": 1800,
-    "ai_model": "Carbon",
+    "ai_model": "Carbon AI (simulates human brain subsystems)",
     "ai_model_type": "Multimodal AI",
     "learning_methods": [
       "Reinforcement Learning",
@@ -9673,8 +9685,20 @@
     "gallery": [
       "https://sanctuary.ai/wp-content/uploads/2023/05/main-image-phoenix-annoucement-1.webp"
     ],
-    "hand_dof": 21,
-    "hand_actuation": "Miniaturized hydraulic"
+    "hand_dof": 20,
+    "hand_actuation": "Miniaturized hydraulic",
+    "made_in": "Canada",
+    "manufacturer_history": "Sanctuary AI (Vancouver, Canada), founded 2018. Builds general-purpose humanoids driven by its Carbon AI control system (simulates human brain subsystems — memory, sensory perception). Phoenix generations Gen6 (2023) → Gen7 (2024) → Gen8, with rapid iteration. Partners: NVIDIA, Microsoft, Accenture, Magna. Known for industry-leading dexterous hydraulic hands + tactile sensing.",
+    "dexterous_hand": true,
+    "raw_specs": {
+      "generation": "Phoenix Gen 6 (2023)",
+      "ai": "Carbon AI control system — memory + sensory perception simulation",
+      "hands": "20-DoF hydraulic hands + proprietary haptic/tactile — industry-leading dexterity",
+      "size": "170cm, 70kg, 25kg payload",
+      "control": "Direct pilot / pilot-assist / autonomous-under-supervision",
+      "partners": "NVIDIA, Microsoft, Accenture, Magna",
+      "strength": "#3-4 globally in relevant patents"
+    }
   },
   {
     "id": "sanctuary-ai-phoenix-pilot",
@@ -9701,10 +9725,10 @@
       "Advanced sensors",
       "Custom modifications"
     ],
-    "height_mm": 1680,
+    "height_mm": 1700,
     "width_mm": 620,
     "depth_mm": 420,
-    "weight_kg": 75,
+    "weight_kg": 70,
     "frame_material": "Titanium alloy",
     "shell_material": "Carbon fiber",
     "ip_rating": "IP42",
@@ -9733,7 +9757,7 @@
     "hot_swap": true,
     "quick_release": true,
     "cycle_life": 2500,
-    "ai_model": "Carbon",
+    "ai_model": "Carbon AI (simulates human brain subsystems)",
     "ai_model_type": "Experimental Foundation Model",
     "learning_methods": [
       "Deep RL",
@@ -9778,8 +9802,20 @@
     "speed": 1.5,
     "battery": 10,
     "actuator_type": "Hydraulic",
-    "hand_dof": 21,
-    "hand_actuation": "Miniaturized hydraulic"
+    "hand_dof": 20,
+    "hand_actuation": "Miniaturized hydraulic",
+    "made_in": "Canada",
+    "manufacturer_history": "Sanctuary AI (Vancouver, Canada), founded 2018. Builds general-purpose humanoids driven by its Carbon AI control system (simulates human brain subsystems — memory, sensory perception). Phoenix generations Gen6 (2023) → Gen7 (2024) → Gen8, with rapid iteration. Partners: NVIDIA, Microsoft, Accenture, Magna. Known for industry-leading dexterous hydraulic hands + tactile sensing.",
+    "dexterous_hand": true,
+    "raw_specs": {
+      "generation": "Phoenix Pilot (2023)",
+      "ai": "Carbon AI control system — memory + sensory perception simulation",
+      "hands": "20-DoF hydraulic hands + proprietary haptic/tactile — industry-leading dexterity",
+      "size": "170cm, 70kg, 25kg payload",
+      "control": "Direct pilot / pilot-assist / autonomous-under-supervision",
+      "partners": "NVIDIA, Microsoft, Accenture, Magna",
+      "strength": "#3-4 globally in relevant patents"
+    }
   },
   {
     "id": "ubtech-walker-x",
@@ -90935,7 +90971,7 @@
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780999168/myrobot/okizt3lafmg6xtda61ew.jpg",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 2500000,
     "desc": "Honda's ASIMO (2000-2018) was the world's most famous bipedal humanoid for two decades - 130 cm tall, it could walk, run at ~9 km/h, climb stairs, hop and recognise faces and gestures. A landmark in dynamic bipedal locomotion, it was retired in 2018 with its technology feeding Honda's later robotics work.",
     "highlights": [
       "Historic icon",
@@ -90945,19 +90981,19 @@
     ],
     "perf": false,
     "year": 2000,
-    "status": "Retired (2018 development end; farewell 2022)",
+    "status": "Discontinued",
     "height_mm": 1300,
     "weight_kg": 48,
     "battery_life": 60,
-    "origin": "Japan (Honda)",
+    "origin": "Japan",
     "cameras": "Stereo vision",
     "wifi": true,
     "bluetooth": true,
     "made_in": "Japan",
     "announced": "2000-10",
     "released": "2000 (final gen 2011)",
-    "speed_ms": 2.5,
-    "dof": "57 DoF (final 2011 gen)",
+    "speed_ms": 1.7,
+    "dof": 34,
     "stair_climbing": true,
     "actuator_type": "Servo motor",
     "battery_type": "Li-ion",
@@ -90992,7 +91028,22 @@
     "runtime": "~1 h",
     "hands": "Multi-fingered (sign language capable, final gen)",
     "achievements": "World's most famous humanoid for two decades; first credible dynamic bipedal walking/running at scale",
-    "note": "Historic benchmark robot — encyclopedic anchor entry"
+    "note": "Historic benchmark robot — encyclopedic anchor entry",
+    "run_speed_ms": 1.7,
+    "manufacturer_history": "Honda Motor Co. began humanoid R&D in 1986 (E0 prototype). E-series (E0-E6, 1986-93) were leg-only walking testbeds. P-series added torso+arms: P1 (1993), P2 (1996, world's first self-regulating wireless bipedal humanoid), P3 (1997, first fully independent). ASIMO (2000) miniaturized to 120cm for human living spaces; updated 2005/2011. Honda ended ASIMO development in 2018 (unprofitable). E2-DR (2017) was a later disaster-response humanoid.",
+    "currency": "USD",
+    "raw_specs": {
+      "generation": "ASIMO (2000, updated 2005/2011) — Honda's iconic humanoid",
+      "size": "120cm (2000) → 130cm (2005+), 43-54kg — sized for household switches/doorknobs",
+      "abilities": "Run (up to 9 km/h), climb stairs, kick soccer ball, dance, recognize objects/sounds/gestures",
+      "dof": "26 (2000) → 34 (2005+)",
+      "runtime": "~1h walking",
+      "control": "Portable controller",
+      "price": "~$2.5M/unit (largely theoretical — low market acceptance)",
+      "end": "Development terminated 2018 (unprofitable)",
+      "fame": "World's most famous humanoid robot"
+    },
+    "imu": true
   },
   {
     "id": "softbank-pepper-2014",
@@ -134351,7 +134402,7 @@
     "force_sensing": true,
     "bimanual": true,
     "power_source": "Onboard battery (fully wireless)",
-    "manufacturer_history": "Second of Honda's 'P' prototype series (program began 1986; P-series 1993); preceded the E-series and led to the ASIMO line. IEEE Milestone (2026).",
+    "manufacturer_history": "Honda Motor Co. began humanoid R&D in 1986 (E0 prototype). E-series (E0-E6, 1986-93) were leg-only walking testbeds. P-series added torso+arms: P1 (1993), P2 (1996, world's first self-regulating wireless bipedal humanoid), P3 (1997, first fully independent). ASIMO (2000) miniaturized to 120cm for human living spaces; updated 2005/2011. Honda ended ASIMO development in 2018 (unprofitable). E2-DR (2017) was a later disaster-response humanoid.",
     "dof": 30,
     "arm_dof": 7,
     "leg_dof": 6,
@@ -134382,7 +134433,18 @@
     "fall_recovery": false,
     "capabilities": "Autonomous wireless bipedal walking, stair climbing, cart pushing, bolt tightening via master-arm teleoperation",
     "controller": "Onboard computer (in torso)",
-    "teleoperation": "Master-arm (force-reflecting)"
+    "teleoperation": "Master-arm (force-reflecting)",
+    "raw_specs": {
+      "generation": "P2 (Dec 1996) — world's first self-regulating wireless bipedal walking humanoid",
+      "size": "182cm, 210kg",
+      "milestone": "First to conceal battery+control+wireless on-body; wireless remote control",
+      "capabilities": "Walk up/down stairs, push carts",
+      "payload": "5kg/hand",
+      "runtime": "15 min",
+      "dof": "30",
+      "speed": "2 km/h"
+    },
+    "imu": true
   },
   {
     "id": "honda-p3",
@@ -134427,7 +134489,7 @@
     "stair_climbing": true,
     "bimanual": true,
     "power_source": "Onboard battery (fully independent)",
-    "manufacturer_history": "Third Honda 'P' prototype; loaned to AIST in 1998 to seed Japan's Humanoid Robotics Project (HRP); immediate predecessor to ASIMO (2000).",
+    "manufacturer_history": "Honda Motor Co. began humanoid R&D in 1986 (E0 prototype). E-series (E0-E6, 1986-93) were leg-only walking testbeds. P-series added torso+arms: P1 (1993), P2 (1996, world's first self-regulating wireless bipedal humanoid), P3 (1997, first fully independent). ASIMO (2000) miniaturized to 120cm for human living spaces; updated 2005/2011. Honda ended ASIMO development in 2018 (unprofitable). E2-DR (2017) was a later disaster-response humanoid.",
     "dof": 28,
     "arm_dof": 7,
     "leg_dof": 6,
@@ -134456,7 +134518,17 @@
       "Accelerometer"
     ],
     "capabilities": "Fully independent bipedal walking, stair climbing, cart pushing — first completely self-contained biped",
-    "controller": "Distributed control system; workstation-controlled"
+    "controller": "Distributed control system; workstation-controlled",
+    "raw_specs": {
+      "generation": "P3 (Sep 1997) — first completely independent bipedal humanoid",
+      "size": "160cm, 130kg (slimmed via decentralized control + better materials)",
+      "payload": "2kg/hand",
+      "runtime": "25 min",
+      "dof": "28",
+      "speed": "2 km/h",
+      "control": "Workstation-controlled (ASIMO later used portable controller)"
+    },
+    "imu": true
   },
   {
     "id": "mit-kismet",
@@ -141649,7 +141721,7 @@
     "year": 2017,
     "origin": "Japan",
     "made_in": "Japan",
-    "status": "Prototype",
+    "status": "Development",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413289/myrobot/w8h5gdyjcssor7xzrtr3.png",
     "desc": "Honda R&D's experimental disaster-response and plant-inspection humanoid, revealed at IROS 2017 as a more rugged, practical successor direction to ASIMO after the Fukushima disaster. At 1.68 m and 85 kg (including a 1,000-Wh lithium-ion battery good for ~90 minutes), E2-DR is only 25 cm 'thick', letting it turn sideways and squeeze through 30 cm gaps common in factories. It has 33 degrees of freedom (8 per arm, 6 per leg, plus torso, hands and head) and can rotate its torso 180° to reverse its knees for climbing steep stairs and ladders. It was designed to walk rough terrain, climb, and inspect hazardous industrial environments.",
@@ -141710,13 +141782,21 @@
     "battery_life": 90,
     "battery_life_typical": 90,
     "imu": true,
-    "manufacturer_history": "Honda R&D experimental prototype; presented at IROS 2017 ('Development of Experimental Legged Robot for Inspection and Disaster Response in Plants'), building on post-Fukushima humanoid research.",
+    "manufacturer_history": "Honda Motor Co. began humanoid R&D in 1986 (E0 prototype). E-series (E0-E6, 1986-93) were leg-only walking testbeds. P-series added torso+arms: P1 (1993), P2 (1996, world's first self-regulating wireless bipedal humanoid), P3 (1997, first fully independent). ASIMO (2000) miniaturized to 120cm for human living spaces; updated 2005/2011. Honda ended ASIMO development in 2018 (unprofitable). E2-DR (2017) was a later disaster-response humanoid.",
     "manufacturer": "Honda",
     "released": "2017",
     "height_cm": 168,
     "runtime": "~90 min",
     "capabilities": "Ladder/stair climbing, ledge traversal, 90° gap pass-through (rotating torso)",
-    "use_cases_note": "Disaster-site inspection research"
+    "use_cases_note": "Disaster-site inspection research",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "class": "E2-DR (2017) — Honda disaster-response humanoid (post-ASIMO research)",
+      "purpose": "Disaster response / rough-terrain",
+      "note": "Research prototype; limited public specs"
+    }
   },
   {
     "id": "k-scale-kbot-2025",
@@ -155720,7 +155800,7 @@
     "sub": "Historic Research Humanoid",
     "origin": "Japan",
     "made_in": "Japan",
-    "status": "Active",
+    "status": "Discontinued",
     "year": 1993,
     "announced": "1993",
     "released": "1993",
@@ -155751,7 +155831,17 @@
     "development_note": "First of Honda's P-series (P1 1993 → P2 1996 → P3 1997 → ASIMO); very large early full-body biped",
     "capabilities_extra": "Could grasp doorknobs, pick up and carry objects, connect/operate tools with two arms",
     "predecessor": "Honda E-series (E0–E6 leg-only experiments, 1986–1993)",
-    "successor": "Honda P2"
+    "successor": "Honda P2",
+    "manufacturer_history": "Honda Motor Co. began humanoid R&D in 1986 (E0 prototype). E-series (E0-E6, 1986-93) were leg-only walking testbeds. P-series added torso+arms: P1 (1993), P2 (1996, world's first self-regulating wireless bipedal humanoid), P3 (1997, first fully independent). ASIMO (2000) miniaturized to 120cm for human living spaces; updated 2005/2011. Honda ended ASIMO development in 2018 (unprofitable). E2-DR (2017) was a later disaster-response humanoid.",
+    "raw_specs": {
+      "generation": "P1 (1993) — first Honda P-series with upper body (E-series were legs only)",
+      "size": "191.5cm, 175kg (a giant)",
+      "power": "External power supply + control computer (off-body)",
+      "capabilities": "Open/close doors, grasp/transport objects",
+      "dof": "30",
+      "lineage": "E0-E6 (1986-93) → P1 → P2 → P3 → ASIMO"
+    },
+    "imu": true
   },
   {
     "id": "unitree-avatar",
