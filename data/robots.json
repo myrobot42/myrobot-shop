@@ -49964,11 +49964,11 @@
     "perf": false,
     "year": 2004,
     "origin": "South Korea",
-    "status": "Active",
+    "status": "Legacy",
     "released": "2004",
     "height_mm": 1250,
     "weight_kg": 45,
-    "dof": 40,
+    "dof": 41,
     "ros": true,
     "cameras": "Stereo + RGB-D",
     "imu": true,
@@ -50002,7 +50002,16 @@
     "waist_dof": 1,
     "force_sensing": true,
     "speed": 0.35,
-    "speed_ms": 0.35
+    "speed_ms": 0.35,
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "significance": "KAIST HUBO — Korea's pioneering humanoid (2004), foundation of Rainbow Robotics",
+      "lineage": "HUBO → HUBO-2 → DRC-HUBO (2015 DARPA winner)",
+      "control": "PODO software framework"
+    }
   },
   {
     "id": "clone-robotics-clone-torso",
@@ -50467,11 +50476,11 @@
     "perf": false,
     "year": 2011,
     "origin": "South Korea",
-    "status": "Discontinued",
+    "status": "Legacy",
     "released": "2011",
     "height_mm": 1250,
     "weight_kg": 45,
-    "dof": 40,
+    "dof": 38,
     "ros": true,
     "imu": true,
     "cameras": "2 CCD cameras (head) — facial-expression & object recognition",
@@ -50481,7 +50490,7 @@
       "Locomotion & manipulation research"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com/en_main?_l=en",
-    "made_in": "South Korea (Rainbow Robotics)",
+    "made_in": "South Korea",
     "announced": "2011",
     "arm_dof": 7,
     "fingers": 5,
@@ -50496,7 +50505,7 @@
       "Google",
       "research institutions worldwide"
     ],
-    "manufacturer_history": "HUBO 2 — one of the first commercialised humanoid research platforms; developed at KAIST, manufactured by Rainbow Robotics; known for straight-leg walking.",
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
     "leg_dof": 6,
     "hand_dof": 5,
     "neck_dof": 3,
@@ -50520,13 +50529,19 @@
     "related_models": [
       "DRC-HUBO+ (DARPA 2015 winner)",
       "FX-2"
-    ]
+    ],
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "generation": "HUBO-2 Plus — upgraded HUBO-2",
+      "note": "Research humanoid platform"
+    }
   },
   {
     "id": "rainbow-robotics-rb-y1-bimanual-mobile-manipulator",
-    "name": "RB-Y1 Bimanual Mobile Manipulator",
+    "name": "RB-Y1",
     "brand": "Rainbow Robotics",
-    "cat": "Industrial",
+    "cat": "Humanoid",
     "sub": "Dual-Arm Mobile Manipulator",
     "tags": [
       "mobile-manipulator",
@@ -50544,7 +50559,7 @@
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733515/myrobot/dduqiba19askwtjcpzdu.jpg",
     "score": 75,
     "rating": 4,
-    "price": 0,
+    "price": 150000,
     "desc": "The Rainbow Robotics RB-Y1 is Korea's first bimanual mobile manipulator — a humanoid-type dual-arm system (two 7-DOF arms) mounted, via a 6-DOF single leg that raises the body more than 50 cm, on a high-speed wheeled base, for 24 total DOF under 20-axis whole-body control. Built by the KAIST-founded, publicly traded (KRX: 277810) company behind the DARPA-Challenge-winning HUBO humanoid, it reuses proven RB-cobot and AMR core components — BLDC/DC motors with harmonic-drive reducers — to deliver industrial-grade reliability rather than prototype fragility, with sub-millimetre repeatability and 3 kg payload per arm. The wheeled base travels at up to 2.5 m/s with high-speed turning and sudden acceleration stabilised by continuous centre-of-gravity control. Standing 1,400 mm tall on a 600×690 mm footprint at 131 kg, powered by a 50 V/25 Ah battery, it targets the embodied-AI era: programmed by master-slave demonstration (linking a data arm as master) with self-collision prevention, real-time teleoperation, LiDAR navigation and a simulation environment for AI learning. Rainbow positions it as a bridge between fixed cobots and full humanoids.",
     "highlights": [],
     "perf": false,
@@ -50570,7 +50585,7 @@
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com/en_ry",
     "made_in": "South Korea",
-    "os": "Rainbow Robotics",
+    "os": "ROS/ROS2",
     "autonomous": true,
     "website": "https://www.rainbow-robotics.com",
     "gallery": [
@@ -50591,11 +50606,11 @@
     "payload": 3,
     "payload_peak_kg": 6,
     "repeatability_mm": 0.05,
-    "repeatability": 0.05,
+    "repeatability": 0.1,
     "width_mm": 600,
     "depth_mm": 690,
     "max_tcp_speed_ms": 2.5,
-    "speed_ms": 2.5,
+    "speed_ms": 1.5,
     "speed": 2.5,
     "actuator_type": "BLDC + DC motors with harmonic-drive reducers (shared with RB cobots & HUBO)",
     "battery_type": "Li-ion",
@@ -50626,7 +50641,26 @@
     "estop": "Safety stop",
     "ce": true,
     "datasheet": "https://www.rainbow-robotics.com/en_ry",
-    "hand_repeatability_mm": 0.05
+    "hand_repeatability_mm": 0.05,
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "arm_dof": 7,
+    "leg_dof": 6,
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "bimanual": true,
+    "currency": "USD",
+    "raw_specs": {
+      "class": "Korea's first bimanual mobile manipulator (2024, CES 2026)",
+      "form": "Humanoid dual-arm upper body + 6-DoF leg on wheeled high-speed base",
+      "dof": "24 total: 7/arm + 6-DoF leg",
+      "vertical": "50cm+ vertical travel (single 6-DoF leg)",
+      "control": "20-axis whole-body control, CoG safety, master-slave data-arm teaching",
+      "speed": "1.5-2.5 m/s wheeled",
+      "payload": "3kg/arm, sub-mm repeatability",
+      "heritage": "Built on HUBO DARPA-winning tech",
+      "listing": "KRX: 277810"
+    }
   },
   {
     "id": "rainbow-robotics-milk-tea-barista-robot",
@@ -50679,13 +50713,18 @@
     "os": "Rainbow Robotics",
     "website": "https://www.rainbow-robotics.com",
     "serving_capacity": "Automated beverage preparation",
-    "video": "https://youtu.be/dTNvwjZWJg4"
+    "video": "https://youtu.be/dTNvwjZWJg4",
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "raw_specs": {
+      "class": "Milk Tea Barista Robot — Rainbow service/commercial robot",
+      "note": "Service application (barista/serving); built on Rainbow cobot/AMR tech"
+    }
   },
   {
     "id": "rainbow-robotics-fx-2",
     "name": "FX-2",
     "brand": "Rainbow Robotics",
-    "cat": "Humanoid",
+    "cat": "Service",
     "sub": "Rideable Giant Humanoid (Piloted)",
     "tags": [
       "humanoid",
@@ -50719,7 +50758,7 @@
       "Teleoperated manipulation"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com/en_main?_l=en",
-    "made_in": "South Korea (KAIST HUBO Lab / Rainbow Robotics)",
+    "made_in": "South Korea",
     "announced": "2017",
     "arm_dof": 7,
     "actuator_type": "High-power electric actuators (human-riding bipedal locomotion)",
@@ -50745,7 +50784,12 @@
     "teleoperation": "Onboard human pilot: control levers/interface drive two manipulator arms + fingers; operator rides in seat",
     "capabilities": "Large-scale rideable/piloted bipedal humanoid: walks with a person aboard; two arm manipulators mimic operator's hand movements via control interface; successor to human-riding FX-1 (2013); relayed the 2018 PyeongChang Winter Olympics torch",
     "developed_by": "KAIST HUBO Lab + Rainbow Robotics",
-    "predecessor": "HUBO FX-1 (2013)"
+    "predecessor": "HUBO FX-1 (2013)",
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "raw_specs": {
+      "class": "FX-2 — Rainbow service/commercial robot",
+      "note": "Service application (barista/serving); built on Rainbow cobot/AMR tech"
+    }
   },
   {
     "id": "rainbow-robotics-hubo2",
@@ -50769,13 +50813,13 @@
     "desc": "HUBO2 is a record of the KAIST/Rainbow Robotics second-generation research humanoid (~125 cm, ~45 kg), a platform for bipedal locomotion and manipulation research. (Appears to duplicate the HUBO-2 record.)",
     "highlights": [],
     "perf": false,
-    "origin": "South Korea (KAIST)",
-    "year": 2006,
-    "status": "Retired",
+    "origin": "South Korea",
+    "year": 2009,
+    "status": "Legacy",
     "released": "2008",
     "height_mm": 1250,
     "weight_kg": 45,
-    "dof": 40,
+    "dof": 38,
     "use_cases": [
       "Humanoid research",
       "Bipedal locomotion R&D",
@@ -50815,7 +50859,16 @@
     "force_sensing": true,
     "manufacturer": "Rainbow Robotics / KAIST",
     "form_factor": "Full-size research biped (HUBO lineage, successor to KHR-3 HUBO 2005)",
-    "note": "FLAG — THREE HUBO-2 entries exist ('hubo2', 'hubo-2', 'hubo-2-plus'); HUBO 2 and HUBO 2 Plus are distinct generations but 'hubo2' vs 'hubo-2' = DUPLICATE; merge."
+    "note": "FLAG — THREE HUBO-2 entries exist ('hubo2', 'hubo-2', 'hubo-2-plus'); HUBO 2 and HUBO 2 Plus are distinct generations but 'hubo2' vs 'hubo-2' = DUPLICATE; merge.",
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "generation": "HUBO 2 (2009) — 38 DoF",
+      "actuators": "BLDC/DC motors + harmonic reduction gears",
+      "note": "Refined KAIST humanoid, faster walking"
+    }
   },
   {
     "id": "leju-robotics-roban",
@@ -50982,7 +51035,7 @@
     "id": "rainbow-robotics-amr-serving-robot",
     "name": "RB Serving Robot",
     "brand": "Rainbow Robotics",
-    "cat": "AGV/AMR",
+    "cat": "Service",
     "sub": "Hospitality Serving AMR",
     "tags": [
       "serving",
@@ -51038,13 +51091,19 @@
       "https://www.rainbow-robotics.com/storage/app/public/plugin/product_spec/b6847911-0989-4b44-b93d-1bdb3453febb/01/ea/20240530201004ea86731bd72a70dc99cf20e18dc62fa1bed4ac4c.png",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCD4JxkkMvaGbwL-ZholrN9ii1mH6S66Ke11W_LmZrK5RVJSdcUS8xKjZW&s=10"
     ],
-    "video": "https://youtu.be/P4gww31itMc"
+    "video": "https://youtu.be/P4gww31itMc",
+    "made_in": "South Korea",
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "raw_specs": {
+      "class": "RB Serving Robot — Rainbow service/commercial robot",
+      "note": "Service application (barista/serving); built on Rainbow cobot/AMR tech"
+    }
   },
   {
     "id": "rainbow-robotics-astro",
     "name": "ASTRO",
     "brand": "Rainbow Robotics",
-    "cat": "Research",
+    "cat": "Service",
     "sub": "Astronomical / Scientific",
     "tags": [
       "rainbow robotics",
@@ -51089,7 +51148,12 @@
     "website": "https://www.rainbow-robotics.com",
     "gallery": [
       "https://www.rainbow-robotics.com/storage/app/public/plugin/product_info/30a22e5f-97df-11ec-9874-6805cae14dd4/cf/57/20230210101437a6f0df672acb02de77a59a78f2ba89a6fb92dd4b.png"
-    ]
+    ],
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "raw_specs": {
+      "class": "ASTRO — Rainbow service/commercial robot",
+      "note": "Service application (barista/serving); built on Rainbow cobot/AMR tech"
+    }
   },
   {
     "id": "rainbow-robotics-drc-hubo",
@@ -51118,8 +51182,8 @@
       "Durability": 75
     },
     "year": 2015,
-    "origin": "South Korea (KAIST)",
-    "status": "Retired",
+    "origin": "South Korea",
+    "status": "Legacy",
     "released": "2015",
     "height_mm": 1750,
     "weight_kg": 80,
@@ -51168,7 +51232,16 @@
     "manufacturer": "Rainbow Robotics / KAIST",
     "achievement": "WON the 2015 DARPA Robotics Challenge ($2M first prize) — transformable biped/wheeled-knee design",
     "form_factor": "Full-size research humanoid (kneel-to-wheel conversion)",
-    "note": "Historic milestone robot; foundation of Rainbow Robotics"
+    "note": "Historic milestone robot; foundation of Rainbow Robotics",
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "significance": "DRC-HUBO — WON the 2015 DARPA Robotics Challenge Finals",
+      "capabilities": "Walk, drive vehicle, use tools, open doors, climb — disaster response",
+      "innovation": "Transformable: walks bipedally OR kneels to wheeled mode"
+    }
   },
   {
     "id": "rainbow-robotics-hubo-2",
@@ -51199,11 +51272,11 @@
     "perf": false,
     "origin": "South Korea",
     "year": 2009,
-    "status": "Discontinued",
+    "status": "Legacy",
     "released": "2009",
     "height_mm": 1250,
     "weight_kg": 45,
-    "dof": 40,
+    "dof": 38,
     "ros": true,
     "cameras": "Vision cameras (head)",
     "imu": true,
@@ -51213,7 +51286,7 @@
       "Education"
     ],
     "manufacturer_url": "https://www.rainbow-robotics.com/en",
-    "made_in": "South Korea (KAIST / Rainbow Robotics)",
+    "made_in": "South Korea",
     "announced": "2008",
     "arm_dof": 7,
     "fingers": 5,
@@ -51249,14 +51322,22 @@
     ],
     "capabilities": "Straight-leg walking gait (energy-efficient vs bent-knee bipeds); walk, run, dance, grasp; precursor to DRC-HUBO+ (won DARPA Robotics Challenge 2015)",
     "developed_by": "Prof. Jun-Ho Oh, KAIST HUBO Lab (commercialised via Rainbow Robotics)",
-    "also_known_as": "Jaemi HUBO / KHR-4"
+    "also_known_as": "Jaemi HUBO / KHR-4",
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "generation": "HUBO-2 (KHR-4, 2009)",
+      "dof": "38",
+      "lineage": "KAIST KHR series → HUBO"
+    }
   },
   {
     "id": "rainbow-robotics-rb20-1900",
     "name": "RB20-1900",
     "brand": "Rainbow Robotics",
     "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
+    "sub": "Collaborative Robot Arm",
     "tags": [
       "cobot",
       "rainbow-robotics",
@@ -51383,14 +51464,26 @@
     ],
     "cable_management": "5 m robot-arm cable",
     "datasheet": "https://www.rainbow-robotics.com/en_rb",
-    "hand_repeatability_mm": 0.05
+    "hand_repeatability_mm": 0.05,
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": false,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "RB-series collaborative robot arm (cobot)",
+      "payload": "20kg",
+      "reach": "1900mm",
+      "dof": "6",
+      "cert": "NSF food-safe certified line",
+      "note": "Cobot arm, not humanoid"
+    },
+    "imu": true
   },
   {
     "id": "rainbow-robotics-rb16-900",
     "name": "RB16-900",
     "brand": "Rainbow Robotics",
     "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
+    "sub": "Collaborative Robot Arm",
     "tags": [
       "rainbow robotics",
       "collaborative",
@@ -51450,14 +51543,26 @@
     "teach_pendant": "Tablet pendant",
     "controller": "Rainbow controller",
     "mounting": "Any angle",
-    "hand_repeatability_mm": 0.03
+    "hand_repeatability_mm": 0.03,
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": false,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "RB-series collaborative robot arm (cobot)",
+      "payload": "16kg",
+      "reach": "900mm",
+      "dof": "6",
+      "cert": "NSF food-safe certified line",
+      "note": "Cobot arm, not humanoid"
+    },
+    "imu": true
   },
   {
     "id": "rainbow-robotics-rb10-1300",
     "name": "RB10-1300",
     "brand": "Rainbow Robotics",
     "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
+    "sub": "Collaborative Robot Arm",
     "tags": [
       "cobot",
       "rainbow-robotics",
@@ -51567,14 +51672,26 @@
     ],
     "cable_management": "5 m robot-arm cable",
     "datasheet": "https://www.rainbow-robotics.com/en_rb",
-    "hand_repeatability_mm": 0.05
+    "hand_repeatability_mm": 0.05,
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": false,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "RB-series collaborative robot arm (cobot)",
+      "payload": "10kg",
+      "reach": "1300mm",
+      "dof": "6",
+      "cert": "NSF food-safe certified line",
+      "note": "Cobot arm, not humanoid"
+    },
+    "imu": true
   },
   {
     "id": "rainbow-robotics-rb5-850",
     "name": "RB5-850",
     "brand": "Rainbow Robotics",
     "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
+    "sub": "Collaborative Robot Arm",
     "tags": [
       "rainbow robotics",
       "collaborative",
@@ -51635,14 +51752,25 @@
     "teach_pendant": "Tablet pendant",
     "controller": "Rainbow controller",
     "mounting": "Any angle",
-    "hand_repeatability_mm": 0.03
+    "hand_repeatability_mm": 0.03,
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": false,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "RB-series collaborative robot arm (cobot)",
+      "payload": "5kg",
+      "reach": "850mm",
+      "dof": "6",
+      "cert": "NSF food-safe certified line",
+      "note": "Cobot arm, not humanoid"
+    }
   },
   {
     "id": "rainbow-robotics-rb3-1200",
     "name": "RB3-1200",
     "brand": "Rainbow Robotics",
     "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
+    "sub": "Collaborative Robot Arm",
     "tags": [
       "rainbow robotics",
       "collaborative",
@@ -51703,14 +51831,26 @@
     "teach_pendant": "Tablet pendant",
     "controller": "Rainbow controller",
     "mounting": "Any angle",
-    "hand_repeatability_mm": 0.03
+    "hand_repeatability_mm": 0.03,
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": false,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "RB-series collaborative robot arm (cobot)",
+      "payload": "3kg",
+      "reach": "1200mm",
+      "dof": "6",
+      "cert": "NSF food-safe certified line",
+      "note": "Cobot arm, not humanoid"
+    },
+    "imu": true
   },
   {
     "id": "rainbow-robotics-rb3-730",
     "name": "RB3-730",
     "brand": "Rainbow Robotics",
     "cat": "Industrial",
-    "sub": "Collaborative Robot (Cobot)",
+    "sub": "Collaborative Robot Arm",
     "tags": [
       "rainbow robotics",
       "collaborative",
@@ -51772,7 +51912,18 @@
     "teach_pendant": "Tablet pendant",
     "controller": "Rainbow controller",
     "mounting": "Any angle",
-    "hand_repeatability_mm": 0.03
+    "hand_repeatability_mm": 0.03,
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": false,
+    "has_legs": false,
+    "raw_specs": {
+      "class": "RB-series collaborative robot arm (cobot)",
+      "payload": "3kg",
+      "reach": "730mm",
+      "dof": "6",
+      "cert": "NSF food-safe certified line",
+      "note": "Cobot arm, not humanoid"
+    }
   },
   {
     "id": "leju-robotics-aelos-1s",
@@ -61010,14 +61161,19 @@
     "made_in": "South Korea",
     "os": "Rainbow Robotics",
     "website": "https://www.rainbow-robotics.com",
-    "video": "https://youtu.be/dTNvwjZWJg4"
+    "video": "https://youtu.be/dTNvwjZWJg4",
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "raw_specs": {
+      "class": "Milk Tea Barista — Rainbow service/commercial robot",
+      "note": "Service application (barista/serving); built on Rainbow cobot/AMR tech"
+    }
   },
   {
     "id": "rainbow-robotics-rbq",
     "name": "RBQ",
     "brand": "Rainbow Robotics",
     "cat": "Quadruped",
-    "sub": "Industrial Quadruped",
+    "sub": "Quadruped Robot",
     "tags": [
       "quadruped",
       "industrial",
@@ -61065,7 +61221,16 @@
     ],
     "website": "https://www.rainbow-robotics.com",
     "video": "https://youtu.be/n7dpm7HHQw4",
-    "actuator_type": "Electric"
+    "actuator_type": "Electric",
+    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "has_hands": false,
+    "has_legs": true,
+    "biped": false,
+    "raw_specs": {
+      "class": "RBQ — Rainbow quadruped platform",
+      "use": "Research, inspection",
+      "note": "Quadruped, not humanoid"
+    }
   },
   {
     "id": "agibot-d1-maxpro",
