@@ -120956,7 +120956,7 @@
     "score": 75,
     "desc": "Second humanoid robot in space (after Robonaut 2) and the first robot to hold a conversation in space. Tiny 34 cm humanoid developed by Toyota, University of Tokyo, Dentsu, and JAXA. Launched to the ISS on the Kounotori 4 cargo vehicle in August 2013 to serve as a communication companion for Japanese astronaut Koichi Wakata. Conducted Japan's first 'robot conversation in space' on 7 August 2013.",
     "price": "POA",
-    "status": "Active",
+    "status": "Legacy",
     "announced": "2013",
     "released": "2013-08-04",
     "also_known_as": "Kibo Robot, Kirobo Mini (Earth variant)",
@@ -121025,7 +121025,32 @@
     "deployed_at": [
       "ISS (2013)"
     ],
-    "cameras": "Face-recognition camera"
+    "cameras": "Face-recognition camera",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "manufacturer_history": "Kibo Robot Project — Dentsu Inc. + University of Tokyo RCAST + Robo Garage (Tomotaka Takahashi) + Toyota Motor Corp, assisted by JAXA. Kirobo = first robot astronaut. Based on Robi hobby-kit form. Twin 'Mirata' stayed on Earth as backup.",
+    "raw_specs": {
+      "maker": "Kibo Robot Project (Dentsu + Univ Tokyo RCAST + Robo Garage + Toyota + JAXA)",
+      "sources": "Toyota official global.toyota spec sheet; Dentsu; Asian Scientist; Space.com; Wikipedia; New Atlas",
+      "product": "Kirobo — Japan's first robot astronaut (humanoid communication robot)",
+      "name_meaning": "Portmanteau of 'kibō' (希望, 'hope') + 'robot'; Kibo also = Japanese ISS module",
+      "designer": "Tomotaka Takahashi (ROBO-GARAGE / Univ Tokyo RCAST) — also Panasonic EVOLTA robot",
+      "dimensions": "Height ~34 cm, Width ~18 cm, Depth ~15 cm",
+      "weight": "~1 kg (1,000 g)",
+      "language": "Japanese",
+      "main_features": "Voice recognition, natural language processing, voice synthesis, telecommunications, communication actions/gestures, facial recognition camera, recording camera, emotion recognition",
+      "based_on": "Robi commercially-available hobby robot kit (34cm)",
+      "tech_split": "Univ Tokyo + Robo Garage = hardware + motion generation; Toyota = voice recognition; Dentsu = conversation content + project mgmt; Hoya VoiceText = speech synthesis",
+      "twin": "Mirata — identical twin, stayed on Earth as backup crew member",
+      "launch": "Left Japan 4 Aug 2013 aboard Kounotori 4 (HTV-4) from Tanegashima; arrived ISS 10 Aug 2013",
+      "milestone_first_words": "21 Aug 2013: 'On August 21, 2013, a robot took one small step toward a brighter future for all.'",
+      "milestone_conversation": "6 Dec 2013 — world's first human-robot conversation in space, with JAXA astronaut Koichi Wakata",
+      "duration": "18 months on ISS; returned to Earth on SpaceX CRS-5 Dragon (splashdown Pacific, Feb 2015)",
+      "purpose": "Companion for astronaut in Kibo module; study human-robot interaction in space; relay info Kibo→Earth",
+      "entry": "Kirobo — JAXA / Kibo Robot Project"
+    },
+    "imu": true
   },
   {
     "id": "astroscale-elsa-d-2021",
