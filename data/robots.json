@@ -140070,7 +140070,7 @@
     "sub": "Wheeled Home Robot (Dual-Arm)",
     "year": 2026,
     "origin": "China",
-    "status": "Active",
+    "status": "Announced",
     "price": "~$1,500",
     "img": "https://cdn.shopify.com/s/files/1/0648/1569/4057/files/H1_1x_1.png?v=1767593476",
     "tags": [
@@ -140090,10 +140090,10 @@
     "bimanual": true,
     "hand_type": "Articulated grippers",
     "terrain": "Indoor flat (wheeled base)",
-    "ai_model": "Self-developed OmniSense VLA (vision-language-action) — processes visual, depth & tactile data; learns/adapts across household scenarios",
+    "ai_model": "OmniSense VLA (on-device Vision-Language-Action)",
     "ai_inference_local": true,
     "natural_language_commands": true,
-    "depth_sensing": true,
+    "depth_sensing": "Intel RealSense (head/arms/hands/abdomen)",
     "force_sensing": true,
     "battery_life_typical": 240,
     "use_cases": [
@@ -140114,7 +140114,7 @@
       "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/6964b254db70a391900fba51_Onero%20H1_Hero.webp"
     ],
     "video": "https://youtu.be/xqLRDWNzzZ8",
-    "made_in": "China",
+    "made_in": "China (Shenzhen)",
     "announced": "2026-01",
     "released": "2026",
     "manufacturer_url": "https://us.switch-bot.com/products/onero-h1",
@@ -140136,7 +140136,28 @@
     "related_models": [
       "SwitchBot A1 (standalone robotic arms)"
     ],
-    "battery_life": 240
+    "battery_life": 240,
+    "has_hands": true,
+    "has_legs": false,
+    "tactile": true,
+    "manufacturer_history": "SwitchBot (Shenzhen) Co., Ltd. — smart-home device maker. Onero H1 = first general-purpose household humanoid, unveiled CES 2026 under 'Smart Home 2.0'. Detachable arm module 'A1'. Pre-orders on switch-bot.com.",
+    "raw_specs": {
+      "maker": "SwitchBot (Shenzhen) Co., Ltd., China",
+      "sources": "SwitchBot official (us.switch-bot.com); Interesting Engineering; AIBase; Aparobot; Autonomy Global; Mashable",
+      "product": "Onero H1 — general-purpose household humanoid robot",
+      "unveiled": "CES 2026 (booth #52655, Venetian Expo) — part of SwitchBot 'Smart Home 2.0'",
+      "dof": "22 degrees of freedom (vs Boston Dynamics Atlas 29 upper-body)",
+      "form_factor": "Non-traditional — face + oblong/rectangular body, articulated arms + hands, NO legs; mounted on cylindrical wheeled base",
+      "rationale": "Wheeled base for flat single-level homes (no stairs); conserves power vs legged locomotion",
+      "sensors": "Multiple Intel RealSense cameras across head, arms, hands, abdomen — real-time visual perception; depth sensing + tactile feedback",
+      "ai": "Self-developed OmniSense VLA (Vision-Language-Action) model, on-device — learns + adapts across household scenarios, recognizes object shapes/positions; handles grasping, door-opening, organizing without meticulous pre-programming",
+      "capabilities": "Serve coffee, wash dishes, do laundry (sort/load/fold), interact with coffee/washing machines, clean + tidy, reposition items",
+      "ecosystem_role": "Orchestrator — does some tasks itself, delegates complex duties to task-specific SwitchBot devices (vacuums, purifiers, humidifiers)",
+      "arm_module": "Robotic arm 'A1' available separately",
+      "availability": "Pre-orders on SwitchBot official site; price not yet announced; concept/direction-signal, not mass-ready",
+      "entry": "Onero H1 — SwitchBot"
+    },
+    "imu": true
   },
   {
     "id": "switchbot-kata-friends",
