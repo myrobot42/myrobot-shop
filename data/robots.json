@@ -138807,7 +138807,7 @@
     "sub": "Wheeled Humanoid",
     "year": 2026,
     "origin": "China",
-    "made_in": "China (Shenzhen)",
+    "made_in": "China",
     "status": "Active",
     "score": 75,
     "rating": 4,
@@ -138830,7 +138830,7 @@
     "force_sensing": true,
     "lidar": true,
     "cameras": "5x RGB monocular + 2x depth + fisheye",
-    "depth_sensing": "Dual depth cameras",
+    "depth_sensing": "2× depth cameras",
     "navigation": "Laser SLAM + LiDAR",
     "use_cases": [
       "Precision assembly",
@@ -138863,7 +138863,30 @@
     "video": "https://youtu.be/jwGz_x1xASI",
     "touch_sensing": "Multi-dimensional tactile (PaXini DTactile)",
     "fingertip_force_sensors": true,
-    "hand_repeatability_mm": 0.05
+    "hand_repeatability_mm": 0.05,
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "hand_dof": 26,
+    "speed_ms": 1,
+    "bimanual": true,
+    "manufacturer_history": "PaXini Tech (China). Specialist in multi-dimensional tactile sensing (ITPU/PX-6AX). TORA-ONE wheeled humanoid unveiled CES 2026 — tactile-driven dexterous manipulation.",
+    "raw_specs": {
+      "maker": "PaXini Tech (China)",
+      "source": "PaXini TORA ONE spec sheet (CES 2026)",
+      "class": "TORA ONE — wheeled tactile-manipulation humanoid",
+      "height": "Adjustable 1.46-1.86 m",
+      "dof": "47 total (21 body + 26 in four-fingered bionic hands)",
+      "payload": "6-8 kg per arm, ±0.05mm arm repeatability",
+      "tactile": "ITPU-based — 1,956 tactile sensors across 7,824 channels; senses force/pressure/texture/material",
+      "vision": "5 monocular + 2 depth cameras + LiDAR, Laser-SLAM 360° nav + 3D mapping",
+      "mobility": "Wheeled chassis, 1 m/s",
+      "battery": "8h",
+      "demos": "Ice-cream production, industrial pallet handling (CES 2026)",
+      "use": "Logistics, elderly care, manufacturing, hospitality",
+      "entry": "TORA ONE — PaXini"
+    },
+    "imu": true
   },
   {
     "id": "ubtech-u1-pro",
@@ -148431,7 +148454,7 @@
     "brand": "Oversonic Robotics",
     "cat": "Humanoid",
     "sub": "Cognitive Industrial Humanoid (wheeled base)",
-    "year": 2023,
+    "year": 2020,
     "origin": "Italy",
     "status": "Active",
     "price": "POA",
@@ -148483,7 +148506,7 @@
     "navigation": "Autonomous indoor navigation",
     "mapping": true,
     "obstacle_avoidance": "Autonomous (depth vision)",
-    "ai_model": "Cognitive AI (computer vision, face/object recognition, emotion adaptation)",
+    "ai_model": "Oversonic cognitive AI platform (perception + real-time decision + multimodal)",
     "facial_recognition": true,
     "natural_language_commands": true,
     "teleoperation": "Joystick + browser console",
@@ -148501,7 +148524,23 @@
       "https://humanoidroboticstechnology.com/wp-content/uploads/2025/12/oversonic-agreement-STMicroelectronics.png",
       "https://www.oversonicrobotics.com/images/robee-r-03.png"
     ],
-    "video": "https://youtu.be/DJI0qUxzke0"
+    "video": "https://youtu.be/DJI0qUxzke0",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "manufacturer_history": "Oversonic Robotics (Italy), founded 2020 — first Italian company making cognitive-AI humanoids. RoBee — R Series (industrial) + M Series (healthcare). 'Made in Italy' cognitive robotics.",
+    "raw_specs": {
+      "maker": "Oversonic Robotics (Italy), founded 2020",
+      "source": "Oversonic official site",
+      "class": "RoBee — Italian cognitive humanoid (R Series industrial / M Series healthcare)",
+      "ai": "Cognitive platform — AI perception, real-time decision-making, multimodal interaction",
+      "abilities": "Sees/recognises objects+people, adapts behaviour, voice interaction, pick-and-place, load carrying, machine tending",
+      "fleet": "Multi-robot fleet coordination",
+      "mission": "Handles repetitive/strenuous/hazardous tasks; human wellbeing focus",
+      "note": "First Italian cognitive-AI humanoid maker",
+      "entry": "RoBee — Oversonic"
+    },
+    "imu": true
   },
   {
     "id": "enchanted-tools-mirokai",
@@ -149178,7 +149217,7 @@
     "bimanual": true,
     "cpu": "YAOGUANG controller",
     "cameras": "5x Intel RealSense depth (360 degrees)",
-    "depth_sensing": true,
+    "depth_sensing": "5× Intel RealSense",
     "lidar": true,
     "manufacturer_url": "https://www.ti5robot.com/",
     "torque_nm": 490,
@@ -149192,7 +149231,7 @@
     "announced": "2025",
     "released": "2025",
     "biped": true,
-    "chipset": "NVIDIA Jetson AGX Orin",
+    "chipset": "YAOGUANG controller",
     "npu": "NVIDIA Ampere",
     "sensors_list": [
       "LiDAR",
@@ -149201,7 +149240,23 @@
     "vision": "LiDAR + binocular cameras (environment & obstacle understanding)",
     "capabilities": "Lightweight agile biped (high strength-to-weight): single-leg jumps via high torque-density leg joints; dynamic movement; real-time Jetson AGX Orin AI; lab research + administrative support",
     "developed_by": "Ti5 Robot",
-    "arm_torque_nm": 490
+    "arm_torque_nm": 490,
+    "has_hands": true,
+    "has_legs": true,
+    "manufacturer_history": "Ti5 Robot / Sichuan Tianlian Robot Co. (China). T170A 'Yao Guang' humanoid — ultra-light EBLM joint modules, high power-to-weight. For hazardous-environment work, research, logistics.",
+    "raw_specs": {
+      "maker": "Ti5 Robot / Sichuan Tianlian Robot Co. (China)",
+      "source": "Ti5 T170A published specs",
+      "class": "T170A 'Yao Guang' — lightweight high-torque humanoid",
+      "specs": "1.7m, 50kg (48kg cited), 44 DoF, 7-DoF arms",
+      "joints": "Proprietary EBLM ultra-light joint modules, up to 490 N·m torque (high power-to-weight)",
+      "compute": "YAOGUANG controller, high compute",
+      "vision": "5× Intel RealSense depth cameras (360°) + long-range LiDAR, dual-vision",
+      "hands": "Dexterous bionic",
+      "use": "Manufacturing, logistics, research, hazardous environments",
+      "entry": "T170A Yao Guang — Ti5"
+    },
+    "imu": true
   },
   {
     "id": "bxi-elf",
