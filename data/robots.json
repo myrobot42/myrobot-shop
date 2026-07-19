@@ -78137,7 +78137,19 @@
     "payload": 0.5,
     "speed": 1.2,
     "battery": 60,
-    "actuator_type": "Electric (BEAR back-drivable actuators)"
+    "actuator_type": "BEAR proprioceptive",
+    "made_in": "USA (California)",
+    "manufacturer_history": "Westwood Robotics (California, USA), spin-off from UCLA's Robotics & Mechanisms Laboratory (RoMeLa) — the lab behind soccer-playing ARTEMIS. Founded by Xiaoguang Zhang. Makes THEMIS (full-size general-purpose humanoid) + BRUCE (kid-sized open STEAM/research platform), all driven by proprietary BEAR (Back-drivable Electromechanical Actuators for Robotics) proprioceptive actuators with torque sensing, compliance control, liquid cooling.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "actuator": "BEAR (Back-drivable Electromechanical Actuators for Robotics) — proprioceptive, torque-sensing, compliance control, some liquid-cooled",
+      "heritage": "UCLA RoMeLa spin-off (ARTEMIS soccer humanoid lineage)",
+      "control": "Model-based controllers + reinforcement learning for real-time adaptation",
+      "entry": "BRUCE — Westwood Robotics",
+      "class": "BRUCE — kid-sized open-platform humanoid for STEAM education + research"
+    }
   },
   {
     "id": "wr-bear-actuator-humanoid",
@@ -78239,7 +78251,19 @@
     "payload": 2,
     "speed": 1,
     "battery": 90,
-    "actuator_type": "Electric (BEAR back-drivable actuators)"
+    "actuator_type": "BEAR proprioceptive",
+    "made_in": "USA (California)",
+    "manufacturer_history": "Westwood Robotics (California, USA), spin-off from UCLA's Robotics & Mechanisms Laboratory (RoMeLa) — the lab behind soccer-playing ARTEMIS. Founded by Xiaoguang Zhang. Makes THEMIS (full-size general-purpose humanoid) + BRUCE (kid-sized open STEAM/research platform), all driven by proprietary BEAR (Back-drivable Electromechanical Actuators for Robotics) proprioceptive actuators with torque sensing, compliance control, liquid cooling.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "actuator": "BEAR (Back-drivable Electromechanical Actuators for Robotics) — proprioceptive, torque-sensing, compliance control, some liquid-cooled",
+      "heritage": "UCLA RoMeLa spin-off (ARTEMIS soccer humanoid lineage)",
+      "control": "Model-based controllers + reinforcement learning for real-time adaptation",
+      "entry": "BEAR Actuator Humanoid Platform — Westwood Robotics",
+      "note": "BEAR-platform demonstrator (actuator/upper-body/mini) — Westwood proprioceptive actuator showcase"
+    }
   },
   {
     "id": "wr-bruce-x",
@@ -78343,7 +78367,19 @@
     "payload": 0.8,
     "speed": 1.5,
     "battery": 75,
-    "actuator_type": "Electric (BEAR back-drivable actuators)"
+    "actuator_type": "BEAR proprioceptive",
+    "made_in": "USA (California)",
+    "manufacturer_history": "Westwood Robotics (California, USA), spin-off from UCLA's Robotics & Mechanisms Laboratory (RoMeLa) — the lab behind soccer-playing ARTEMIS. Founded by Xiaoguang Zhang. Makes THEMIS (full-size general-purpose humanoid) + BRUCE (kid-sized open STEAM/research platform), all driven by proprietary BEAR (Back-drivable Electromechanical Actuators for Robotics) proprioceptive actuators with torque sensing, compliance control, liquid cooling.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "actuator": "BEAR (Back-drivable Electromechanical Actuators for Robotics) — proprioceptive, torque-sensing, compliance control, some liquid-cooled",
+      "heritage": "UCLA RoMeLa spin-off (ARTEMIS soccer humanoid lineage)",
+      "control": "Model-based controllers + reinforcement learning for real-time adaptation",
+      "entry": "BRUCE X — Westwood Robotics",
+      "class": "BRUCE — kid-sized open-platform humanoid for STEAM education + research"
+    }
   },
   {
     "id": "wr-bear-mini-humanoid",
@@ -78444,7 +78480,19 @@
     "payload": 0.3,
     "speed": 0.6,
     "battery": 45,
-    "actuator_type": "Electric (BEAR back-drivable actuators)"
+    "actuator_type": "BEAR proprioceptive",
+    "made_in": "USA (California)",
+    "manufacturer_history": "Westwood Robotics (California, USA), spin-off from UCLA's Robotics & Mechanisms Laboratory (RoMeLa) — the lab behind soccer-playing ARTEMIS. Founded by Xiaoguang Zhang. Makes THEMIS (full-size general-purpose humanoid) + BRUCE (kid-sized open STEAM/research platform), all driven by proprietary BEAR (Back-drivable Electromechanical Actuators for Robotics) proprioceptive actuators with torque sensing, compliance control, liquid cooling.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "actuator": "BEAR (Back-drivable Electromechanical Actuators for Robotics) — proprioceptive, torque-sensing, compliance control, some liquid-cooled",
+      "heritage": "UCLA RoMeLa spin-off (ARTEMIS soccer humanoid lineage)",
+      "control": "Model-based controllers + reinforcement learning for real-time adaptation",
+      "entry": "BEAR Mini Humanoid — Westwood Robotics",
+      "note": "BEAR-platform demonstrator (actuator/upper-body/mini) — Westwood proprioceptive actuator showcase"
+    }
   },
   {
     "id": "wr-panda-humanoid",
@@ -78474,7 +78522,7 @@
       "Whole-body loco-manipulation",
       "High torque density"
     ],
-    "height_mm": 1650,
+    "height_mm": 1600,
     "width_mm": 550,
     "depth_mm": 350,
     "weight_kg": 60,
@@ -78494,7 +78542,7 @@
     "ram_type": "LPDDR5",
     "storage_gb": 512,
     "storage_type": "NVMe SSD",
-    "npu_tops": 275,
+    "npu_tops": 200,
     "battery_type": "LiPo",
     "battery_wh": 1000,
     "battery_life": 120,
@@ -78542,13 +78590,31 @@
     ],
     "perf": false,
     "origin": "USA",
-    "dof": 32,
-    "speed_ms": 1.2,
-    "payload_kg": 5,
+    "dof": 40,
+    "speed_ms": 1.4,
+    "payload_kg": 15,
     "payload": 5,
     "speed": 1.2,
     "battery": 120,
-    "actuator_type": "Electric (BEAR back-drivable actuators)"
+    "actuator_type": "BEAR proprioceptive",
+    "made_in": "USA (California)",
+    "manufacturer_history": "Westwood Robotics (California, USA), spin-off from UCLA's Robotics & Mechanisms Laboratory (RoMeLa) — the lab behind soccer-playing ARTEMIS. Founded by Xiaoguang Zhang. Makes THEMIS (full-size general-purpose humanoid) + BRUCE (kid-sized open STEAM/research platform), all driven by proprietary BEAR (Back-drivable Electromechanical Actuators for Robotics) proprioceptive actuators with torque sensing, compliance control, liquid cooling.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "arm_dof": 7,
+    "run_speed_ms": 2.8,
+    "raw_specs": {
+      "actuator": "BEAR (Back-drivable Electromechanical Actuators for Robotics) — proprioceptive, torque-sensing, compliance control, some liquid-cooled",
+      "heritage": "UCLA RoMeLa spin-off (ARTEMIS soccer humanoid lineage)",
+      "control": "Model-based controllers + reinforcement learning for real-time adaptation",
+      "entry": "PANDA Humanoid — Westwood Robotics",
+      "specs": "1.6m, 40 DoF, 7-DoF arms (>5kg/arm peak), 7-DoF end-effectors, up to 15kg payload",
+      "speed": "walks human speed, runs 10 km/h (6.2 mph)",
+      "compute": "up to 200 TOPS onboard",
+      "sensors": "stereo cameras + vision + force sensors, MicroStrain 3DM-CV7-AHRS IMU",
+      "gen25": "Gen2.5: +40% impact resistance, Mountain BEAR hip actuators (+120% torque, -80% heat), simultaneous walk+manipulate"
+    }
   },
   {
     "id": "wr-bruce-arms",
@@ -78650,7 +78716,19 @@
     "payload": 1,
     "speed": 1.2,
     "battery": 60,
-    "actuator_type": "Electric (BEAR back-drivable actuators)"
+    "actuator_type": "BEAR proprioceptive",
+    "made_in": "USA (California)",
+    "manufacturer_history": "Westwood Robotics (California, USA), spin-off from UCLA's Robotics & Mechanisms Laboratory (RoMeLa) — the lab behind soccer-playing ARTEMIS. Founded by Xiaoguang Zhang. Makes THEMIS (full-size general-purpose humanoid) + BRUCE (kid-sized open STEAM/research platform), all driven by proprietary BEAR (Back-drivable Electromechanical Actuators for Robotics) proprioceptive actuators with torque sensing, compliance control, liquid cooling.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "actuator": "BEAR (Back-drivable Electromechanical Actuators for Robotics) — proprioceptive, torque-sensing, compliance control, some liquid-cooled",
+      "heritage": "UCLA RoMeLa spin-off (ARTEMIS soccer humanoid lineage)",
+      "control": "Model-based controllers + reinforcement learning for real-time adaptation",
+      "entry": "BRUCE with Arms — Westwood Robotics",
+      "class": "BRUCE — kid-sized open-platform humanoid for STEAM education + research"
+    }
   },
   {
     "id": "wr-bear-upper-body",
@@ -78750,7 +78828,19 @@
     "dof": 14,
     "payload_kg": 3,
     "payload": 3,
-    "actuator_type": "Electric (BEAR back-drivable actuators)"
+    "actuator_type": "BEAR proprioceptive",
+    "made_in": "USA (California)",
+    "manufacturer_history": "Westwood Robotics (California, USA), spin-off from UCLA's Robotics & Mechanisms Laboratory (RoMeLa) — the lab behind soccer-playing ARTEMIS. Founded by Xiaoguang Zhang. Makes THEMIS (full-size general-purpose humanoid) + BRUCE (kid-sized open STEAM/research platform), all driven by proprietary BEAR (Back-drivable Electromechanical Actuators for Robotics) proprioceptive actuators with torque sensing, compliance control, liquid cooling.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "actuator": "BEAR (Back-drivable Electromechanical Actuators for Robotics) — proprioceptive, torque-sensing, compliance control, some liquid-cooled",
+      "heritage": "UCLA RoMeLa spin-off (ARTEMIS soccer humanoid lineage)",
+      "control": "Model-based controllers + reinforcement learning for real-time adaptation",
+      "entry": "BEAR Upper Body Humanoid — Westwood Robotics",
+      "note": "BEAR-platform demonstrator (actuator/upper-body/mini) — Westwood proprioceptive actuator showcase"
+    }
   },
   {
     "id": "husqvarna-automower-430x",
