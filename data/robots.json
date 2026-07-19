@@ -91346,11 +91346,11 @@
     "cameras": "2x RGB + 3D depth + IR",
     "wifi": "Wi-Fi 4",
     "bluetooth": true,
-    "made_in": "France / Japan",
+    "made_in": "Japan",
     "announced": "2014-06",
     "released": 2014,
     "dof": 20,
-    "speed_ms": 1,
+    "speed_ms": 0.83,
     "actuator_type": "Servo motor",
     "depth_sensing": true,
     "imu": true,
@@ -91372,7 +91372,7 @@
       "Research & education"
     ],
     "website": "https://www.softbankrobotics.com",
-    "os": "NAOqi",
+    "os": "NAOqi OS",
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/a/a1/SoftBank_pepper.JPG",
       "https://us.softbankrobotics.com/hubfs/SBR_Pepper-Hero_FullRobot.png",
@@ -91441,7 +91441,26 @@
     "video": "https://youtu.be/kr05reBxVRs",
     "arm_dof": 5,
     "head_dof": 2,
-    "charge_time": 480
+    "charge_time": 480,
+    "manufacturer_history": "SoftBank Robotics (Japan/France). Pepper unveiled 2014 by Masayoshi Son (built with French Aldebaran, maker of NAO) — world's first full-scale humanoid offered to consumers (2015, ¥198,000). NAOqi OS. In 2022 United Robotics Group acquired SoftBank Robotics Europe, reverting to Aldebaran name.",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "battery_ah": 30,
+    "display_face": "LED eyes + 10.1\" chest tablet",
+    "raw_specs": {
+      "maker": "SoftBank Robotics (built w/ Aldebaran)",
+      "class": "Pepper (2014) — world's first full-scale consumer humanoid",
+      "dof": "20 (17 joints + 3 omni wheels)",
+      "sensors": "2x 5MP HD cameras, 3D depth, 4 mics, touch sensors, lasers, sonars, gyro",
+      "os": "NAOqi OS (Python/C++/Java/Choregraphe)",
+      "languages": "20+",
+      "battery": "30Ah Li-ion, ~12h",
+      "mobility": "Omnidirectional wheels, 3 km/h, climbs 1.5cm step / 5° slope",
+      "price": "¥198,000 (~$2000) + subscription",
+      "use": "Retail, education, healthcare, hospitality",
+      "entry": "Pepper — SoftBank"
+    }
   },
   {
     "id": "softbank-nao-2008",
@@ -91475,15 +91494,15 @@
     "perf": false,
     "year": 2008,
     "status": "Active",
-    "height_mm": 574,
-    "weight_kg": 5.4,
+    "height_mm": 580,
+    "weight_kg": 5.6,
     "battery_life": 90,
-    "origin": "France",
+    "origin": "Japan",
     "cameras": "2x HD",
     "wifi": "Wi-Fi 5",
     "bluetooth": true,
     "sdk": true,
-    "made_in": "France",
+    "made_in": "Japan",
     "announced": "2008",
     "released": 2008,
     "dof": 25,
@@ -91513,7 +91532,7 @@
       "Healthcare engagement"
     ],
     "website": "https://www.softbankrobotics.com",
-    "os": "NAOqi",
+    "os": "NAOqi OS",
     "gallery": [
       "https://upload.wikimedia.org/wikipedia/commons/4/47/Nao_Robot_%28Robocup_2016%29.jpg",
       "https://lookingglassxr.com/wp-content/uploads/2025/01/Robots-_-Humanoids-_-Quadrupeds-_-Overview-12_27_2024-Sheet1-1-20.png",
@@ -91576,7 +91595,19 @@
     "arm_dof": 5,
     "leg_dof": 6,
     "head_dof": 2,
-    "charge_time": 360
+    "charge_time": 360,
+    "manufacturer_history": "SoftBank Robotics (Japan/France). Pepper unveiled 2014 by Masayoshi Son (built with French Aldebaran, maker of NAO) — world's first full-scale humanoid offered to consumers (2015, ¥198,000). NAOqi OS. In 2022 United Robotics Group acquired SoftBank Robotics Europe, reverting to Aldebaran name.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Aldebaran / SoftBank Robotics",
+      "class": "NAO — small bipedal humanoid (education/research standard)",
+      "specs": "58cm, 5.6kg, 25 DoF",
+      "os": "NAOqi OS",
+      "use": "Education, research, RoboCup",
+      "entry": "NAO — SoftBank/Aldebaran"
+    }
   },
   {
     "id": "starship-delivery-robot-gen5-2018",
@@ -120429,7 +120460,7 @@
       "ISS partners"
     ],
     "operating_agency": "NASA Johnson Space Center / General Motors",
-    "made_in": "USA (NASA JSC + GM)",
+    "made_in": "USA",
     "height_mm": 1010,
     "weight_kg": 150,
     "frame_material": "Aluminum, composites",
@@ -120445,7 +120476,7 @@
     "fingers": 5,
     "opposable_thumb": true,
     "grasp_force_n": 22,
-    "actuator_type": "Series elastic actuators with springs (force-sensing)",
+    "actuator_type": "Series Elastic Actuators (SEA)",
     "force_sensing": true,
     "target_body": "ISS interior (Earth orbit)",
     "mission_type": "Humanoid astronaut assistant",
@@ -120499,7 +120530,18 @@
     ],
     "neck_dof": 3,
     "waist_dof": 3,
-    "hand_actuation": "Tendon-driven"
+    "hand_actuation": "Tendon-driven",
+    "manufacturer_history": "NASA (USA). Robonaut (R1/R2, with GM) — dexterous humanoid for ISS/space tasks. Valkyrie (R5, 2013, JSC) — first bipedal NASA humanoid, series-elastic actuators (SEA), modular limbs (single-connector removal), for disaster response + future planetary missions.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "NASA (Johnson Space Center)",
+      "entry": "Robonaut 2 (R2) — NASA",
+      "class": "Robonaut (R1/R2) — NASA+GM dexterous humanoid for space/ISS",
+      "note": "R2 flew to ISS; upper-body dexterous humanoid"
+    },
+    "imu": true
   },
   {
     "id": "nasa-r5-valkyrie",
@@ -120520,7 +120562,7 @@
       "USA"
     ],
     "operating_agency": "NASA Johnson Space Center",
-    "made_in": "USA (NASA JSC)",
+    "made_in": "USA",
     "height_mm": 1880,
     "weight_kg": 136,
     "frame_material": "Aluminum, carbon fiber composites",
@@ -120539,7 +120581,7 @@
     "fingers": 4,
     "opposable_thumb": true,
     "grasp_force_n": 50,
-    "actuator_type": "Series elastic actuators (rotary + linear)",
+    "actuator_type": "Series Elastic Actuators (SEA)",
     "force_sensing": true,
     "stair_climbing": true,
     "fall_recovery": false,
@@ -120601,7 +120643,22 @@
     "waist_dof": 3,
     "hot_swap": true,
     "fingertip_force_sensors": true,
-    "tactile_type": "38 sensors per 3-finger hand"
+    "tactile_type": "38 sensors per 3-finger hand",
+    "manufacturer_history": "NASA (USA). Robonaut (R1/R2, with GM) — dexterous humanoid for ISS/space tasks. Valkyrie (R5, 2013, JSC) — first bipedal NASA humanoid, series-elastic actuators (SEA), modular limbs (single-connector removal), for disaster response + future planetary missions.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "NASA (Johnson Space Center)",
+      "entry": "Valkyrie (R5) — NASA",
+      "class": "Valkyrie (R5, 2013) — NASA's first bipedal humanoid",
+      "actuators": "Rotary + linear Series Elastic Actuators, frameless brushless DC motors",
+      "dof": "44 (21 actuators: 9 rigid + 12 tendon-driven in hands); 3-DoF SEA waist, 6-DoF legs, 7-DoF arms",
+      "design": "Modular limbs — each arm/leg/pelvis removable with single connector",
+      "heritage": "Based partly on Robonaut 2 (Turbodriver motor controller)",
+      "use": "Disaster response, future planetary missions"
+    },
+    "imu": true
   },
   {
     "id": "roscosmos-skybot-fedor",
@@ -129382,7 +129439,7 @@
     ],
     "weight_kg": 32,
     "battery_life": 180,
-    "os": "BrainOS autonomous navigation",
+    "os": "NAOqi OS",
     "lidar": true,
     "use_cases": [
       "Commercial vacuum cleaning (up to 1,500 m² per charge)"
@@ -129391,7 +129448,14 @@
     "website": "https://www.softbankrobotics.com",
     "navigation": "BrainOS (vision SLAM)",
     "cleaning_function": "Commercial vacuum sweeping",
-    "auto_charge": true
+    "auto_charge": true,
+    "manufacturer_history": "SoftBank Robotics (Japan/France). Pepper unveiled 2014 by Masayoshi Son (built with French Aldebaran, maker of NAO) — world's first full-scale humanoid offered to consumers (2015, ¥198,000). NAOqi OS. In 2022 United Robotics Group acquired SoftBank Robotics Europe, reverting to Aldebaran name.",
+    "raw_specs": {
+      "maker": "SoftBank Robotics",
+      "class": "Whiz — SoftBank/Aldebaran robot",
+      "entry": "Whiz — SoftBank"
+    },
+    "imu": true
   },
   {
     "cat": "Service",
