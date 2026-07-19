@@ -149406,7 +149406,7 @@
     "year": 2024,
     "origin": "China",
     "status": "Active",
-    "price": "POA",
+    "price": 25000,
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/13/gDLgMjzGoTukKs9ZkFd2/image.jpg",
     "use_cases": [
       "Embodied-AI research",
@@ -149430,7 +149430,7 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "made_in": "China (BXI Robotics)",
+    "made_in": "China (Shanghai)",
     "height_mm": 1450,
     "weight_kg": 32,
     "dof": 25,
@@ -149466,7 +149466,31 @@
       "Elf",
       "Elf 3"
     ],
-    "arm_torque_nm": 150
+    "arm_torque_nm": 150,
+    "has_hands": false,
+    "has_legs": true,
+    "currency": "USD",
+    "manufacturer_history": "BXI Robotics (半醒科技 / Banxing Technology), Shanghai, China. Makes humanoid robots + high-performance joint motors for embodied AI; custom ODM/OEM. Elf (human-sized bipedal, open-source) + Elf 3.",
+    "raw_specs": {
+      "maker": "BXI Robotics (半醒科技), Shanghai, China",
+      "sources": "BXI Robotics official product page (bxirobotics.com); BXI X/@bxirobotics; ProjectsOfAI",
+      "product": "BXI Elf — human-sized bipedal humanoid, open-source programming",
+      "purpose": "Ideal for sim-2-real deployment + algorithm testing; research & education",
+      "height": "1.45 m (just under human size)",
+      "weight": "32 kg (easy to carry) — [some sources list ~57 lb/26kg]",
+      "total_dof": "25 total: legs 2×6, arms 5×2, waist 3",
+      "leg_dof": "6 per leg: hip z, hip y, hip x, knee y, ankle y, ankle x",
+      "arm_dof": "5 per arm (×2)",
+      "waist_dof": "3",
+      "joint_torque": "Max torque on hips & knees 150 N·m",
+      "payload": ">25 kg (some sources ~44 lb/20kg)",
+      "software": "Open-source programming, open SDK, ready-to-deploy architecture",
+      "price": "$25,000",
+      "variants": "Elf + Elf 3 (high-torque joints, ready-to-deploy for embodied AI research)",
+      "company_products": "Also high-performance joint motors + custom robot design/ODM/OEM",
+      "entry": "Elf — BXI Robotics"
+    },
+    "imu": true
   },
   {
     "id": "joyin-bumblebee",
