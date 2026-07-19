@@ -156847,5 +156847,97 @@
       "note": "Specs pending datasheet"
     },
     "rating": 4
+  },
+  {
+    "id": "akinrobotics-akinci-5",
+    "name": "AKINCI-5",
+    "brand": "AKINROBOTICS",
+    "cat": "Humanoid",
+    "sub": "Turkey's Humanoid Robot (5th gen)",
+    "year": 2025,
+    "status": "Active",
+    "made_in": "Turkey (Konya)",
+    "origin": "Turkey",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "fig": "🤖",
+    "score": 75,
+    "height_mm": 1600,
+    "weight_kg": 85,
+    "fingers": 5,
+    "dexterous_hand": true,
+    "imu": true,
+    "cameras": "Stereo vision",
+    "depth_sensing": "Stereo depth",
+    "battery_life": 120,
+    "ai_model": "Object/human recognition + tracking; perception engine; Turkish speech",
+    "manufacturer_url": "https://www.akinrobotics.com/",
+    "website": "https://www.akinrobotics.com/",
+    "use_cases": [
+      "Service",
+      "Interaction",
+      "Demonstration",
+      "Museum/exhibition"
+    ],
+    "tags": [
+      "akinrobotics",
+      "akinci",
+      "humanoid",
+      "biped",
+      "turkey"
+    ],
+    "desc": "AKINCI-5 is a humanoid from AKINROBOTICS (Konya, Turkey) — the latest in the AKINCI series, billed as Turkey's first humanoid robot line (R&D since 2009). AKINROBOTICS built what it calls the world's first humanoid robot factory (Konya, 2015). The AKINCI robots walk on two legs, speak Turkish, recognize and track objects/humans, maintain balance against external forces via balance sensors, and grasp with 5-fingered hands. Earlier prototypes: AKINCI-P (2010), AKINCI-1 (2011), AKINCI-2 (2013, ~65kg), AKINCI-3 (~85kg/160cm/2h). Specs captured into additional specs pending an AKINCI-5 datasheet.",
+    "raw_specs": {
+      "heritage": "AKINCI series — Turkey's first humanoid line, R&D since 2009 (AKINSOFT/AKINROBOTICS)",
+      "factory": "World's-first humanoid robot factory claim (Konya, 2015)",
+      "predecessors": "AKINCI-P (2010, 48kg/135cm), AKINCI-1 (2011, 45kg/145cm), AKINCI-2 (2013, 65kg/160cm), AKINCI-3 (85kg/160cm, 2h service)",
+      "capabilities": "Bipedal walking, Turkish speech, balance sensor, stereo vision, object/human recognition & tracking, 5-finger grasp",
+      "display": "Istanbul Robot Museum",
+      "note": "AKINCI-5-specific specs limited; series data captured"
+    },
+    "rating": 4
+  },
+  {
+    "id": "ultra-robotics-operator-op1",
+    "name": "Operator (OP1)",
+    "brand": "Ultra Robotics",
+    "cat": "Humanoid",
+    "sub": "Stationary Dual-Arm AI Robot",
+    "year": 2026,
+    "status": "Active",
+    "origin": "USA",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "fig": "🤖",
+    "score": 75,
+    "bimanual": true,
+    "dexterous_hand": true,
+    "imu": true,
+    "manufacturer_url": "",
+    "use_cases": [
+      "Warehouse packaging",
+      "Sorting",
+      "Kitting",
+      "24/7 operation"
+    ],
+    "tags": [
+      "ultra-robotics",
+      "operator",
+      "op1",
+      "dual-arm",
+      "stationary",
+      "warehouse",
+      "plug-and-play"
+    ],
+    "desc": "Operator (OP1) by Ultra Robotics is a stationary dual-arm AI robot for warehouse packaging, sorting and kitting — plug-and-play, designed for 24/7 operation. As a fixed dual-arm manipulator (no mobile base or legs), it targets high-throughput repetitive fulfillment tasks. Specs limited in public materials; captured into additional specs pending a datasheet.",
+    "raw_specs": {
+      "form": "Stationary dual-arm (no legs/mobile base)",
+      "use": "Warehouse packaging, sorting, kitting",
+      "operation": "Plug-and-play, 24/7",
+      "note": "Limited public specs; flagged for outreach"
+    },
+    "rating": 4
   }
 ]
