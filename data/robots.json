@@ -90179,9 +90179,9 @@
     "made_in": "Hong Kong",
     "announced": "2016-02",
     "released": "2016",
-    "shell_material": "Frubber (patented actuated skin) + carbon fiber, CNC aluminum, steel, Delrin, polycarbonate, 3D-printed",
+    "shell_material": "Frubber (patented artificial skin)",
     "bionic_face": true,
-    "display_face": false,
+    "display_face": "60+ facial expressions",
     "facial_recognition": true,
     "emotion_detection": true,
     "voice_recognition": true,
@@ -90228,7 +90228,7 @@
     "imu": true,
     "force_sensing": true,
     "touch_sensing": true,
-    "ai_model": "Hanson AI SDK + OpenCog (general reasoning); decision-tree dialogue; deep neural nets for expressions",
+    "ai_model": "Hanson AI SDK + OpenCog + NLP + chat",
     "ai_cloud_required": true,
     "voice_control": true,
     "sdk": true,
@@ -90240,7 +90240,24 @@
       "Albert HUBO",
       "BINA48",
       "Han"
-    ]
+    ],
+    "manufacturer_history": "Hanson Robotics (Hong Kong), founded by David Hanson. Sophia (2016) — world's most famous humanoid, first robot granted citizenship (Saudi Arabia 2017). Patented Frubber skin. Also Little Sophia, Han, Grace (healthcare).",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "chipset": "Intel Core i7 3GHz",
+    "raw_specs": {
+      "maker": "Hanson Robotics (Hong Kong), David Hanson",
+      "significance": "World's most famous humanoid; FIRST robot to receive citizenship (Saudi Arabia, 2017)",
+      "skin": "Frubber (patented) — face modeled partly on Audrey Hepburn, 60+ expressions",
+      "dof": "83 total: 36 head/neck, 15/arm+hand, 3 torso, 14 mobile base",
+      "compute": "Intel i7 3GHz, 32GB RAM, GPU, Ubuntu Linux",
+      "ai": "Hanson AI SDK + OpenCog general reasoning + NLP + scripting/chat",
+      "sensors": "Intel RealSense eye cameras, 1080p chest camera, mic arrays + audio localization, joint force sensors, fingertip touch, IMU",
+      "servos": "Dynamixel XM430/MX64/MX106, Xpert, Hitec HS-65MG",
+      "use": "Research, education, entertainment, AI-ethics discussion",
+      "entry": "Sophia — Hanson"
+    }
   },
   {
     "id": "pal-tiago-2018",
@@ -90478,9 +90495,9 @@
     "torque_nm": 300,
     "arm_dof": 7,
     "actuator_type": "Servo motor",
-    "depth_sensing": true,
+    "depth_sensing": "Mi-Sense depth module",
     "imu": true,
-    "ai_model": "Mi-Sense",
+    "ai_model": "Mi-Sense AI + emotion/sound recognition",
     "voice_recognition": true,
     "emotion_detection": true,
     "facial_recognition": true,
@@ -90505,7 +90522,21 @@
     "payload": 1.5,
     "payload_kg": 1.5,
     "force_sensing": true,
-    "arm_torque_nm": 300
+    "arm_torque_nm": 300,
+    "manufacturer_history": "Xiaomi (Beijing, China). CyberOne (2022) — full-size humanoid showcasing Xiaomi AI/robotics; Mi-Sense depth vision; deployed on Xiaomi's own production lines. Also CyberDog quadruped.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Xiaomi (Beijing)",
+      "class": "CyberOne (2022) — Xiaomi's full-size humanoid",
+      "specs": "177cm, 52kg, 21 DoF",
+      "ai": "Mi-Sense depth vision + AI interaction",
+      "recognition": "85 environmental sounds, 45 human emotions, 3D spatial perception",
+      "deployment": "Xiaomi's own production lines",
+      "use": "Home care, companionship",
+      "entry": "CyberOne — Xiaomi"
+    }
   },
   {
     "id": "robotera-star1-2024",
@@ -91171,7 +91202,7 @@
     ],
     "perf": false,
     "year": 2017,
-    "status": "Development",
+    "status": "Active",
     "height_mm": 1540,
     "weight_kg": 75,
     "origin": "Japan",
@@ -91212,7 +91243,15 @@
     "teleoperation": "Master Maneuvering System — operator wears wearable exoskeleton + HMD; robot mirrors operator, operator feels force feedback",
     "capabilities": "Whole-body teleoperated mirroring with bidirectional force feedback; self-balancing; designed for home, healthcare, disaster-relief, and remote-presence use",
     "controller": "Toyota T-HR3 control system",
-    "display_face": "Camera + HMD relay"
+    "display_face": "Camera + HMD relay",
+    "manufacturer_history": "Toyota (Japan). T-HR3 (teleoperated humanoid), Partner Robots, CUE basketball robot.",
+    "has_hands": true,
+    "has_legs": true,
+    "raw_specs": {
+      "maker": "Toyota",
+      "class": "T-HR3 — Toyota robot",
+      "entry": "T-HR3 — Toyota"
+    }
   },
   {
     "id": "honda-asimo-2000",
@@ -135286,7 +135325,7 @@
       "Companion / interaction research",
       "Technology demonstration"
     ],
-    "made_in": "Japan (Sony)",
+    "made_in": "Japan",
     "fig": "🤖",
     "tags": [
       "humanoid",
@@ -135324,12 +135363,22 @@
     "fall_recovery": true,
     "facial_recognition": true,
     "os": "Sony OPEN-R architecture",
-    "manufacturer_history": "Developed by Sony's Intelligence Dynamics Laboratory; first sustained-running humanoid (Guinness 2005); project cancelled 2006.",
+    "manufacturer_history": "Sony (Japan). Robotics heritage: QRIO (bipedal entertainment humanoid, early 2000s), AIBO robot dog, Pooro.",
     "microphones": "7-mic array",
     "cpu": "3x 64-bit RISC",
     "speech_synthesis": true,
     "force_sensing": true,
-    "battery_life": 60
+    "battery_life": 60,
+    "origin": "Japan",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Sony",
+      "class": "QRIO — Sony robot",
+      "entry": "QRIO — Sony"
+    },
+    "imu": true
   },
   {
     "id": "unitree-gd01",
@@ -148576,7 +148625,17 @@
       "https://p.turbosquid.com/ts-thumb/no/2uXRyN/ef/r_viewport_005/png/1611496011/1920x1080/fit_q87/db2ea95366f90a6f0f439b228d92bf6515cd8292/r_viewport_005.jpg",
       "https://cdn.codeground.org/resources/a446422e8b/AX4oEbWIAEX4u6lH.jpg"
     ],
-    "video": "https://youtu.be/qrPsa7JsPBU"
+    "video": "https://youtu.be/qrPsa7JsPBU",
+    "manufacturer_history": "Samsung (South Korea). Bot-family concepts (Bot Handy, Bot Care), Ballie companion; humanoid R&D.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Samsung",
+      "class": "Bot Handy — Samsung robot",
+      "entry": "Bot Handy — Samsung"
+    },
+    "imu": true
   },
   {
     "id": "deep-robotics-dr02",
