@@ -149754,7 +149754,17 @@
     ],
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "raw_specs": {
+      "maker": "JOYIN (as recorded in DB) — UNVERIFIED against this product name",
+      "sources": "Web research July 2026 — see data-integrity note",
+      "DATA_INTEGRITY_FLAG": "Brand/name mismatch found during enrichment. DB records 'JOYIN' + 'Bumblebee', but research does not confirm a JOYIN humanoid called Bumblebee.",
+      "finding_joyin": "JoyIn = real Chinese embodied-AI startup, founded Dec 2024, backed by Ant Group/IDG Capital/Eastern Bell (~CNY500M/USD73.6M raised). Products: M1 home companion (launched Nanjing WIMC Nov 2024, 30,000+ orders), Jupiter full-size humanoid + N1 home helper (under new 'Zeroth' brand). NO product named 'Bumblebee' found.",
+      "finding_bumblebee": "The humanoid actually nicknamed 'Bumblebee' = Kepler Robotics K2 'Bumblebee' (Shanghai Kepler; 30kg payload, roller-screw linear actuators, hybrid-architecture gait, VLA+ platform, 1h charge/8h run, 80%+ in-house). Different company.",
+      "resolution_needed": "Shane to decide: (a) if entry = JoyIn → rename to a real JoyIn product (M1/Jupiter/N1) + re-enrich; (b) if entry = Kepler K2 Bumblebee → change brand to Kepler + re-enrich; (c) if erroneous → delete.",
+      "action": "NOT enriched with invented specs — flagged pending Shane's call to avoid corrupting DB with a wrong match.",
+      "entry": "Bumblebee — JOYIN (FLAGGED: needs brand/name resolution)"
+    }
   },
   {
     "id": "keenon-xman-r1",
