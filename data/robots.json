@@ -137859,7 +137859,7 @@
     "origin": "Japan",
     "status": "Active",
     "dof": 12,
-    "actuator_type": "12 pneumatic actuators (vs 50 on Geminoid HI-1 — efficient facial design)",
+    "actuator_type": "Pneumatic (air servo)",
     "frame_material": "Fibre-reinforced-plastic skull; metal & plastic internal frame",
     "tags": [
       "humanoid",
@@ -137883,7 +137883,7 @@
       "Theatre & performance",
       "Android science"
     ],
-    "made_in": "Japan (ATR / Osaka University / Kokoro)",
+    "made_in": "Japan",
     "website": "",
     "desc": "Geminoid F ('F' for female), unveiled in 2010 by roboticist Hiroshi Ishiguro (ATR and Osaka University) with animatronics firm Kokoro, is one of the world's most famous ultra-realistic androids — a copy of a real woman in her twenties, with silicone skin and real human hair over a fiber-reinforced-plastic skull. Its design breakthrough was efficiency: where the earlier Geminoid HI-1 (Ishiguro's own copy) used about 50 actuators and a large external compressor box, Geminoid F achieves a convincing 'toothy' smile and a frown with just 12 pneumatic actuators concentrated in the face. It autonomously breathes and blinks, but to fully 'come alive' it's teleoperated: motion-capture software tracks a human operator's facial expressions and head movements and mimics them on the android in real time. It cannot walk — it's always seated — and exists to study human-robot interaction and the nature of 'human presence,' even appearing in theatre productions. It sits within Ishiguro's celebrated android family (Geminoid HI series, Repliee Q1/Q2, Telenoid, Erica). NOTE: specs from IEEE Spectrum + Ishiguro Lab primary sources — museum-grade; recorded honestly as a seated teleoperated android, not a walking biped.",
     "control": "Teleoperated (mirrors remote operator); autonomous breathing + blinking",
@@ -137896,9 +137896,9 @@
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKphbVZSyd-3qHXgeQqMg21IqZuNxpJIRndl3vOKXoxtE0rlmgPlx9Bk&s=10",
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6PrwNt8EZX3ruxWa_FW0gRK2NAxbDGUXOtj_BKSzNTH-2FKzZflOB-I0W&s=10"
     ],
-    "shell_material": "Silicone rubber skin + real human hair; fiber-reinforced plastic skull; metal/plastic internal frame",
+    "shell_material": "Silicone skin + FRP skull + real human hair",
     "emotional_expression": true,
-    "manufacturer_history": "Hiroshi Ishiguro Laboratory (ATR) with Kokoro; sibling to Geminoid HI-1 (2006).",
+    "manufacturer_history": "Hiroshi Ishiguro Laboratories (Osaka University / ATR), with Kokoro Co. (animatronics). Geminoid series (HI-1 2006 → F 2010 → HI-2/HI-6). Ultra-realistic teleoperated androids for HRI / android-science research.",
     "speech_synthesis": true,
     "announced": "2010-03",
     "released": "2010",
@@ -137919,7 +137919,22 @@
     ],
     "height_note": "~140 cm seated / ~100 cm width including floor panel (always seated — no locomotion)",
     "weight_note": "Upper-body android on seated base; no walking capability",
-    "air_system": "External compressor + air-flow control valves (pneumatic supply); no processor in body"
+    "air_system": "External compressor + air-flow control valves (pneumatic supply); no processor in body",
+    "has_hands": false,
+    "has_legs": false,
+    "display_face": "Autonomous breathing + blinking",
+    "raw_specs": {
+      "maker": "Hiroshi Ishiguro Lab (Osaka Univ/ATR) + Kokoro Co.",
+      "class": "Geminoid F (2010) — female teleoperated android (HRI research)",
+      "dof": "12 DoF (vs 50 in Geminoid HI-1) — same expressiveness w/ fewer actuators",
+      "actuators": "12 pneumatic air servos (valves + control embedded in body, small external compressor)",
+      "materials": "Silicone rubber skin, FRP skull, metal+plastic frame, real human hair",
+      "face": "Toothy smile, frown, autonomous breathing/blinking; face-tracking teleoperation",
+      "compute": "No processor in body — remote-controlled",
+      "fame": "Co-starred in 2015 film 'Sayonara' (first android acting opposite human)",
+      "entry": "Geminoid F — Ishiguro Lab"
+    },
+    "imu": true
   },
   {
     "cat": "Research",
@@ -143150,14 +143165,14 @@
     "sub": "Collaborative Research Humanoid",
     "year": 2018,
     "origin": "Germany",
-    "made_in": "Germany (Karlsruhe Institute of Technology)",
+    "made_in": "Germany",
     "status": "Active",
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413297/myrobot/erqkzjqfxxi7bqb3vxtm.png",
     "desc": "ARMAR-6, from the Karlsruhe Institute of Technology's High Performance Humanoid Technologies (H2T) lab led by Tamim Asfour, is a high-performance collaborative research humanoid built for human-robot collaboration in real-world scenarios — famously demonstrated proactively assisting maintenance workers, recognising when a coworker needs a tool and handing it over. It's a torque-controlled humanoid upper body with dexterous five-finger hands, a stereo/RGB-D perception head and force-torque sensing, mounted on a wheeled mobile platform, and it runs on KIT's ArmarX robot software framework for perception, grasp and manipulation planning. ARMAR-6 is the latest widely-published member of the long-running Karlsruhe ARMAR humanoid family, which also includes the earlier ARMAR-III and the 63-DOF torque-controlled biped ARMAR-4. NOTE: ARMAR-6's exact per-limb DOF and mass aren't uniformly published across sources; core configuration and capabilities are verified from KIT/ARMAR-6 papers (the ICRA/Humanoids literature) — figures flagged where they vary rather than guessed.",
     "height_mm": 1920,
     "weight_kg": 160,
-    "arm_dof": 16,
+    "arm_dof": 8,
     "bimanual": true,
     "can_use_tools": true,
     "cameras": "Stereo vision (grasping, activity recognition)",
@@ -143170,7 +143185,7 @@
       "Industrial maintenance assistance",
       "Bimanual manipulation research"
     ],
-    "manufacturer_history": "KIT H²T lab (Prof. Tamim Asfour); EU SecondHands / Horizon 2020 project.",
+    "manufacturer_history": "KIT (Karlsruhe Institute of Technology), High Performance Humanoid Technologies Lab (H²T), Prof. Tamim Asfour. ARMAR humanoid family since 2000s. ARMAR-6 (2018) for industrial human-robot collaboration.",
     "tags": [
       "humanoid",
       "kit",
@@ -143200,7 +143215,7 @@
     "released": "2018",
     "manufacturer_url": "https://h2t.iar.kit.edu/english/index.php",
     "biped": false,
-    "dof": 27,
+    "dof": 22,
     "dof_note": "Humanoid upper body on mobile platform (dual arms, hands, head, torso)",
     "actuator_type": "Torque-controlled joints",
     "locomotion": "Wheeled mobile platform",
@@ -143217,7 +143232,21 @@
       "ARMAR-III",
       "ARMAR-4 (63-DOF biped)",
       "ARMAR-DE"
-    ]
+    ],
+    "has_hands": true,
+    "has_legs": false,
+    "reach_mm": 1000,
+    "payload_kg": 10,
+    "raw_specs": {
+      "maker": "KIT (Karlsruhe Institute of Technology), H²T Lab, Prof. Tamim Asfour",
+      "class": "ARMAR-6 — high-performance humanoid for industrial human-robot collaboration (2018)",
+      "dof": "Arms 8-DoF each + 3-DoF head + torso; wheeled platform",
+      "reach": ">1 m arm reach",
+      "payload": ">10 kg at full arm extension (uniquely combined w/ >1m reach)",
+      "use": "Maintenance in industrial settings, tool use, collaborative assembly",
+      "note": "Advances kinematics/workspace/workload state of the art",
+      "entry": "ARMAR-6 — KIT"
+    }
   },
   {
     "id": "dlr-rollin-justin",
@@ -143229,9 +143258,9 @@
       "Research"
     ],
     "sub": "Mobile Manipulation Research Humanoid",
-    "year": 2009,
+    "year": 2008,
     "origin": "Germany",
-    "made_in": "Germany (DLR — German Aerospace Center)",
+    "made_in": "Germany",
     "status": "Active",
     "price": "POA",
     "img": "https://cdn.sanity.io/images/7p2whiua/production/bafc3b5ce3ee1c88a28c78235518293a5a4d4f3c-1200x1000.jpg",
@@ -143241,7 +143270,7 @@
     "waist_dof": 3,
     "hand_type": "DLR-Hand-II (dexterous)",
     "fingers": 4,
-    "actuator_type": "Modular: brushless-DC motors + harmonic-drive gears + link-side joint torque sensors (back-drivable, impedance control)",
+    "actuator_type": "DLR Lightweight Robot III (torque-controlled)",
     "cameras": "Stereo cameras",
     "imu": true,
     "collision_detection": true,
@@ -143251,7 +143280,7 @@
       "Household assistance",
       "Space robotics / astronaut assistance"
     ],
-    "manufacturer_history": "DLR Institute of Robotics & Mechatronics (Prof. Alin Albu-Schäffer); upper body 2006, mobile 'Rollin'' version 2008; ISS-teleoperated Mars sim in 2017.",
+    "manufacturer_history": "DLR (German Aerospace Center), Institute of Robotics and Mechatronics, Wessling — led by Prof. Alin Albu-Schäffer. Lightweight arms/hands since 1995. Rollin' Justin (2008/2009). Also Agile Justin, TORO, neoDavid, DLR-Hand II.",
     "tags": [
       "humanoid",
       "dlr",
@@ -143303,7 +143332,21 @@
       "TORO (biped)",
       "neoDavid"
     ],
-    "max_grade_pct": 17
+    "max_grade_pct": 17,
+    "has_hands": true,
+    "has_legs": false,
+    "raw_specs": {
+      "maker": "DLR (German Aerospace Center), Inst. of Robotics & Mechatronics",
+      "class": "Rollin' Justin — mobile two-arm dexterous humanoid research platform (2008)",
+      "dof": "51 total (arms + 3-DoF torso + mobile platform)",
+      "arms": "2× DLR Lightweight Robot III, compliant torque-controlled",
+      "hands": "2× DLR-Hand II, four fingers each",
+      "base": "Variable-geometry wheeled mobile platform, long-range autonomous",
+      "sensors": "Stereo cameras + motion detection → 3D environment reconstruction",
+      "capabilities": "Catches balls, makes coffee, manipulates soft objects, teleoperation + autonomous, collision detection",
+      "space": "Designed toward on-orbit satellite servicing + astronaut assist",
+      "entry": "Rollin' Justin — DLR"
+    }
   },
   {
     "id": "wandercraft-calvin-40",
