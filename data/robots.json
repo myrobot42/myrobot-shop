@@ -157663,5 +157663,147 @@
       "note": "Limited public specs; flagged for outreach"
     },
     "rating": 4
+  },
+  {
+    "id": "o-id-modular",
+    "name": "Modular",
+    "brand": "O-ID",
+    "cat": "Humanoid",
+    "sub": "Modular Wheeled Humanoid",
+    "year": 2026,
+    "status": "Development",
+    "made_in": "Japan",
+    "origin": "Japan",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "fig": "🤖",
+    "score": 75,
+    "height_mm": 1720,
+    "weight_kg": 70,
+    "dof": 30,
+    "payload_kg": 16,
+    "bimanual": true,
+    "dexterous_hand": true,
+    "tool_changer": true,
+    "imu": true,
+    "manufacturer_url": "",
+    "use_cases": [
+      "Warehouse",
+      "Factory automation",
+      "Commercial spaces",
+      "Material handling",
+      "24/7 operation"
+    ],
+    "tags": [
+      "o-id",
+      "modular",
+      "humanoid",
+      "wheeled",
+      "modular",
+      "japan",
+      "industrial"
+    ],
+    "desc": "The O-ID 'Modular' is a modular wheeled humanoid from Japan — 172cm/70kg with 30 DoF and 16kg payload, built around interchangeable modules so operators can reconfigure it for many tasks. A wheeled base (not legs) gives stable, efficient movement across flat floors for warehouses, factories and commercial spaces, with 24/7 uptime. Its capable dual-arm upper body lifts, moves and manipulates objects, and the modular design lets teams add or swap components as needs change. Specs captured into additional specs.",
+    "raw_specs": {
+      "origin": "Japan",
+      "form": "Modular wheeled humanoid (interchangeable modules, not bipedal)",
+      "specs": "172cm/70kg, 30 DoF, 16kg payload, 24/7 uptime",
+      "design": "Reconfigurable via swappable modules",
+      "use": "Warehouses, factories, commercial (flat/smooth floors)",
+      "note": "Detailed specs pending datasheet"
+    },
+    "rating": 4
+  },
+  {
+    "id": "cyan-robotics-orca",
+    "name": "Orca",
+    "brand": "Cyan Robotics",
+    "cat": "Humanoid",
+    "sub": "Accessible Companion Humanoid",
+    "year": 2025,
+    "status": "Development",
+    "origin": "China",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "fig": "🤖",
+    "score": 75,
+    "dexterous_hand": true,
+    "display_face": "OLED screen head (emotions/notifications/info)",
+    "imu": true,
+    "ai_model": "Human-robot interaction focus; scalable app ecosystem",
+    "manufacturer_url": "",
+    "use_cases": [
+      "Home companion",
+      "Research",
+      "Training",
+      "Early industrial",
+      "Interaction"
+    ],
+    "tags": [
+      "cyan-robotics",
+      "orca",
+      "humanoid",
+      "biped",
+      "companion",
+      "accessible"
+    ],
+    "desc": "Orca is a versatile bipedal humanoid from Cyan Robotics, focused on accessible, cost-effective, scalable humanoids for everyday adoption. It offers stable locomotion, reliable perception and flexible manipulation for research, training and early industrial use, plus a companion angle: an OLED-screen head that expresses emotions, delivers notifications and provides information for human-robot interaction at home. A lightweight frame + efficient compute keep energy low and uptime high, with a modular build for easy upgrades. Specs captured into additional specs.",
+    "raw_specs": {
+      "positioning": "Accessible, cost-effective, scalable humanoid platform + app ecosystem",
+      "face": "OLED-screen head — emotions, notifications, info (companion angle)",
+      "design": "Lightweight frame, efficient compute, modular/upgradeable",
+      "use": "Home companion, research, training, early industrial",
+      "note": "Limited public specs; flagged for outreach"
+    },
+    "rating": 4
+  },
+  {
+    "id": "isento-pib-pro",
+    "name": "pib.Pro",
+    "brand": "isento robotics",
+    "cat": "Humanoid",
+    "sub": "Open-Source 3D-Printed Humanoid",
+    "year": 2026,
+    "status": "Development",
+    "made_in": "Germany",
+    "origin": "Germany",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "fig": "🤖",
+    "score": 75,
+    "open_source": true,
+    "dexterous_hand": true,
+    "imu": true,
+    "ai_model": "Open-source; AI/voice integration",
+    "manufacturer_url": "https://pib.rocks/",
+    "website": "https://pib.rocks/",
+    "use_cases": [
+      "Education",
+      "Research",
+      "DIY/maker",
+      "Open-source development"
+    ],
+    "tags": [
+      "isento",
+      "pib",
+      "pib-pro",
+      "humanoid",
+      "open-source",
+      "3d-printed",
+      "germany",
+      "education"
+    ],
+    "desc": "pib.Pro is a professional edition of the open-source, 3D-printable humanoid robot 'pib' from isento robotics (Germany) — a build-it-yourself humanoid upper body (pib.rocks) aimed at education, research and makers, letting users print and assemble their own AI-enabled humanoid. The Pro edition targets more capable/reliable use. Detailed public specifications are limited; captured into additional specs pending a datasheet.",
+    "raw_specs": {
+      "maker": "isento robotics GmbH (Germany)",
+      "class": "Open-source, 3D-printable humanoid (pib.rocks)",
+      "edition": "pib.Pro — professional edition of open-source pib",
+      "use": "Education, research, DIY/maker, open-source development",
+      "note": "Limited public specs; flagged for outreach"
+    },
+    "rating": 4
   }
 ]
