@@ -120860,7 +120860,7 @@
     "score": 75,
     "desc": "Russian humanoid robot, originally developed as FEDOR (Final Experimental Demonstration Object Research) for rescue and emergency operations by the Russian Ministry of Emergency Situations. Adapted for space testing as Skybot F-850. Launched to the ISS on the uncrewed Soyuz MS-14 in August 2019. Conducted brief manipulation experiments before returning to Earth in September 2019. Mixed results — struggled in microgravity.",
     "price": "POA",
-    "status": "Active",
+    "status": "Legacy",
     "announced": "2014",
     "released": "2019-08-22",
     "also_known_as": "FEDOR, F-850, Skybot",
@@ -120868,7 +120868,7 @@
       "Russia"
     ],
     "operating_agency": "Roscosmos / NPO Androidnaya Tekhnika",
-    "made_in": "Russia (Magnitogorsk)",
+    "made_in": "Russia",
     "height_mm": 1800,
     "weight_kg": 160,
     "frame_material": "Steel, aluminum",
@@ -120925,7 +120925,25 @@
     "can_use_tools": true,
     "deployed_at": [
       "ISS (Soyuz MS-14, 2019)"
-    ]
+    ],
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "manufacturer_history": "Developed by Androidnaya Tekhnika (Android Technologies) + Foundation for Advanced Research Projects for Roscosmos. FEDOR series since 2014 (preceded by SAR-400/401 torsos). Skybot F-850 flew to ISS aboard Soyuz MS-14, Aug 2019 — Russia's first humanoid in space.",
+    "raw_specs": {
+      "maker": "Androidnaya Tekhnika + Roscosmos",
+      "class": "Skybot F-850 (FEDOR) — space humanoid, ISS 2019",
+      "acronym": "FEDOR = Final Experimental Demonstration Object Research",
+      "specs": "1.8m (6ft), ~160kg (350lb), sits in standard Soyuz seat",
+      "modes": "Autonomous OR avatar/telepresence (mimics human operator)",
+      "milestone": "First Russian humanoid in space (Soyuz MS-14, Aug 22 2019); rode in commander's seat",
+      "earth_demos": "Drove car + quad bike, walked, turned valves, fired two pistols (one per hand)",
+      "ai": "Predefined program + AI elements; balance, motion decomposition, conversation (Russian)",
+      "lineage": "SAR-400/401 → FEDOR series (2014)",
+      "purpose": "Stand-in for humans in EVA/hazardous space tasks",
+      "entry": "Skybot F-850 (FEDOR) — Roscosmos"
+    },
+    "imu": true
   },
   {
     "id": "jaxa-kirobo-2013",
@@ -134190,8 +134208,8 @@
     "brand": "Westinghouse",
     "cat": "Humanoid",
     "year": 1939,
-    "status": "Active",
-    "height_mm": 2100,
+    "status": "Legacy",
+    "height_mm": 2130,
     "weight_kg": 120,
     "desc": "Elektro, built by Westinghouse in 1937-39 and starring at the 1939 New York World's Fair, is one of the most famous early humanoid robots — a 2.1-metre (7-foot), ~120 kg gold-finished machine that captured the public imagination decades before modern robotics. Driven by electric motors, relays and photoelectric cells, it could walk on command (triggered by voice through a telephone-style link that converted words to relay pulses), speak a roughly 700-word vocabulary played from 78-rpm records, move its arms and head, count on its fingers, distinguish red and green light via photocells, and even 'smoke' a cigarette. It appeared with a robot dog, Sparko. Though it was a showcase automaton rather than an autonomous robot, Elektro is a landmark in the cultural and engineering history of humanoids. NOTE: historic entry from museum/historical record — verified capabilities and approximate dimensions; predates any datasheet by decades.",
     "actuator_type": "Electric motors + relays; photoelectric & voice-command relays",
@@ -134199,7 +134217,7 @@
       "World's Fair exhibition",
       "Museum / heritage"
     ],
-    "made_in": "USA (Westinghouse, Mansfield OH)",
+    "made_in": "USA",
     "fig": "🤖",
     "tags": [
       "humanoid",
@@ -134223,7 +134241,7 @@
     "cameras": "Photoelectric 'eyes' (distinguish red/green light)",
     "voice_interaction": "~700-word playback via 78-rpm record player; voice/relay command control",
     "power_source": "Tethered (relays and motors)",
-    "manufacturer_history": "Built 1937–1938 (lead engineer J.M. Barnett); star of the Westinghouse Pavilion at the 1939 NY World's Fair; survives at the Senator John Heinz History Center.",
+    "manufacturer_history": "Westinghouse Electric (USA). Elektro built 1937-1939 at Mansfield, Ohio — debuted 1939 New York World's Fair. One of the earliest celebrity humanoid robots.",
     "speech_synthesis": "700-word vocabulary via 78-rpm records",
     "sub": "Historic Showcase Humanoid",
     "origin": "USA",
@@ -134239,7 +134257,21 @@
     "motor_count": "11 electric motors",
     "control_system": "Telephone-relay voice-command decoding + photoelectric light response",
     "companion": "Sparko the robot dog (1940)",
-    "fate_note": "Head/body separated for years; later restored, now at Senator John Heinz History Center"
+    "fate_note": "Head/body separated for years; later restored, now at Senator John Heinz History Center",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Westinghouse Electric (Mansfield, Ohio)",
+      "class": "Elektro (1939) — one of the earliest humanoid robots, 1939 NY World's Fair star",
+      "specs": "~7ft (2.1m), ~120kg (265lb), aluminum skin over steel frame",
+      "capabilities": "Walked (via voice command/telephone relay), spoke ~700 words (78-rpm record player), smoked cigarettes, moved head+arms, counted on fingers",
+      "control": "Voice-command relay system (word-count triggers)",
+      "companion": "Later joined by robot dog 'Sparko' (1940)",
+      "fame": "Toured for decades; appeared in 1960 film 'Sex Kittens Go to College'",
+      "entry": "Elektro — Westinghouse"
+    },
+    "imu": true
   },
   {
     "id": "grey-walter-tortoises",
@@ -134953,15 +134985,15 @@
     "brand": "MIT AI Lab",
     "cat": "Humanoid",
     "year": 1994,
-    "status": "Active",
+    "status": "Legacy",
     "desc": "Cog was a landmark embodied-AI research humanoid built by Rodney Brooks's group at the MIT AI Lab from 1994 — an upper-body robot (torso, head, two arms; ~22 DOF on a fixed base) created to test a radical hypothesis: that human-like intelligence can only emerge from a human-like body interacting with the world, not from disembodied computation. Cog had foveated saccading stereo-camera eyes, vestibular and auditory sensing, and joint force sensing (an early platform for series-elastic actuation), and it learned behaviours like reaching, orienting to stimuli and rudimentary social interaction. It was hugely influential — a training ground for researchers including Cynthia Breazeal (who built the expressive robot Kismet nearby) — and shaped the embodied-cognition and social-robotics movements. Notably, Brooks went on to co-found iRobot and later Rethink Robotics (Baxter/Sawyer). NOTE: historic research entry from MIT records — verified specifics; some exact figures (mass, precise DOF by generation) vary and are flagged, not invented.",
-    "actuator_type": "Series-elastic actuators (early use); electric",
+    "actuator_type": "Series elastic actuators",
     "use_cases": [
       "Embodied-cognition research",
       "Developmental robotics",
       "HRI research"
     ],
-    "made_in": "USA (MIT AI Lab)",
+    "made_in": "USA",
     "fig": "🤖",
     "tags": [
       "humanoid",
@@ -135009,7 +135041,7 @@
       "Joint force sensing"
     ],
     "bimanual": true,
-    "manufacturer_history": "Cog project led by Rodney Brooks (1993–2003); contributors incl. Cynthia Breazeal (Kismet), Brian Scassellati (Yale), Aaron Edsinger (Meka/Hello Robot). Now in the MIT Museum.",
+    "manufacturer_history": "MIT AI Lab (now CSAIL), Humanoid Robotics Group led by Rodney Brooks, 1990s. Cog — landmark upper-torso humanoid exploring embodied cognition/developmental robotics. Sibling project Kismet (Cynthia Breazeal) explored social/emotional interaction.",
     "sub": "Historic Research Humanoid (Upper Body)",
     "origin": "USA",
     "announced": "1994",
@@ -135020,7 +135052,21 @@
     "developed_by": "Rodney Brooks group, MIT AI Lab (contributors incl. Cynthia Breazeal)",
     "weight_note": "Upper-torso humanoid on fixed pedestal base (no legs); human-scale torso+head+arms",
     "operational_years": "1993–2003 (decommissioned; now in MIT Museum)",
-    "eye_config": "Each eye: 2 cameras (narrow-FOV foveal + wide-FOV peripheral) = 4 cameras, saccading"
+    "eye_config": "Each eye: 2 cameras (narrow-FOV foveal + wide-FOV peripheral) = 4 cameras, saccading",
+    "has_hands": true,
+    "has_legs": false,
+    "biped": false,
+    "raw_specs": {
+      "maker": "MIT AI Lab (CSAIL), Rodney Brooks' Humanoid Robotics Group",
+      "class": "Cog (1990s) — landmark upper-torso humanoid for embodied-cognition research",
+      "design": "Head, torso, arms (no legs) — fixed base",
+      "approach": "Behavior-based/embodied AI, developmental robotics (learn like an infant)",
+      "sensors": "Saccading cameras (foveal+peripheral), microphones, tactile, vestibular",
+      "actuators": "Series elastic actuators (SEA) — pioneered here",
+      "legacy": "Influenced humanoid + social robotics broadly; sibling Kismet (Breazeal)",
+      "entry": "Cog — MIT"
+    },
+    "imu": true
   },
   {
     "id": "cmu-dante-ii",
