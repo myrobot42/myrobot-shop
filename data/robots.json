@@ -90751,11 +90751,11 @@
     ],
     "perf": false,
     "year": 2024,
-    "status": "Current",
+    "status": "Active",
     "height_mm": 1700,
     "weight_kg": 60,
     "battery_life": 150,
-    "origin": "China (Shenzhen)",
+    "origin": "China",
     "cameras": "RGB",
     "wifi": "Wi-Fi",
     "bluetooth": true,
@@ -90788,7 +90788,18 @@
     "battery_type": "Li-ion",
     "autonomous": "Yes",
     "ota": "Yes",
-    "note": "Earlier EngineAI full-size platform (pre-SE01); per-model specs not published — verified platform only"
+    "note": "Earlier EngineAI full-size platform (pre-SE01); per-model specs not published — verified platform only",
+    "manufacturer_history": "EngineAI Robotics (Shenzhen, China), founded Oct 2023 by Zhao Tongyang (led XPeng's PX5 humanoid program). Lineup: SA01 (research/edu), SE01 (full-size flagship), PM01 (lightweight open general-purpose). Headline: first humanoid with natural human-like gait via end-to-end neural network. Self-developed harmonic/planetary/ball-screw joints. ~100M yuan angel funding.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "origin_note": "Shenzhen",
+    "raw_specs": {
+      "maker": "EngineAI (Shenzhen), founder ex-XPeng PX5",
+      "gait": "First humanoid with natural human-like gait (end-to-end neural network)",
+      "joints": "Self-developed harmonic/planetary/ball-screw modules, in-joint wiring, dual encoders",
+      "entry": "EM02 — EngineAI"
+    }
   },
   {
     "id": "deep-robotics-dr01-2024",
@@ -90876,11 +90887,11 @@
     ],
     "perf": false,
     "year": 2024,
-    "status": "Superseded",
+    "status": "Active",
     "height_mm": 1600,
     "weight_kg": 50,
     "battery_life": 90,
-    "origin": "China (Beijing)",
+    "origin": "China",
     "cameras": "RGB",
     "wifi": true,
     "bluetooth": true,
@@ -90904,11 +90915,19 @@
     "learning_methods": [
       "Deep Reinforcement Learning"
     ],
-    "manufacturer_history": "First-generation Noetix short humanoid, unveiled at WAIC 2024; predecessor to the N2.",
+    "manufacturer_history": "Noetix Robotics (officially Songyan Dynamics Beijing Technology Co.), founded Sep 2023 by Jiang Zheyuan (27, left Tsinghua PhD). In-house control boards + motor drivers. N2 (child-sized, finished 2nd in world's first humanoid half-marathon Apr 2025, 2500+ orders) → Bumi (Oct 2025, world's first sub-¥10,000/$1,370 humanoid). Pre-B ~¥300M ($41M) led by Vertex Ventures, ~$200M valuation.",
     "leg_dof": 6,
     "manufacturer": "Noetix Robotics",
     "form_factor": "First-gen short humanoid (predecessor to N2)",
-    "note": "Debuted WAIC 2024"
+    "note": "Debuted WAIC 2024",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Noetix Robotics / Songyan Dynamics (Beijing), founder ex-Tsinghua",
+      "integration": "In-house control boards + motor drivers",
+      "entry": "N1 — Noetix"
+    }
   },
   {
     "id": "promobot-v4-2018",
@@ -131001,9 +131020,9 @@
     "brand": "EngineAI",
     "sub": "Compact Humanoid",
     "year": 2025,
-    "origin": "China (Shenzhen)",
-    "status": "Current",
-    "height_mm": 1380,
+    "origin": "China",
+    "status": "Active",
+    "height_mm": 1388,
     "desc": "EngineAI’s lightweight open humanoid platform (CES 2025). At 1.38 m and 40 kg with 24 DoF and 320° waist rotation, the PM01 pairs an Intel N97 with NVIDIA Jetson Orin and ships fully open-source (ROS/ONNX, MuJoCo, Isaac) for developers. Founded by Zhao Tongyang, former lead of XPENG’s humanoid program.",
     "tags": [
       "humanoid",
@@ -131061,7 +131080,7 @@
     "arm_dof": 5,
     "leg_dof": 6,
     "torque_nm": 300,
-    "chipset": "Intel N97 + NVIDIA Jetson Orin (dual-chip)",
+    "chipset": "X86 + NVIDIA Jetson Orin",
     "manufacturer": "EngineAI",
     "warranty_months": 12,
     "power_source": "Rechargeable Li-ion",
@@ -131072,19 +131091,36 @@
     "height_cm": 138,
     "records": "World's first humanoid standing front flip (Feb 2025)",
     "note": "Compact performance/research platform",
-    "arm_torque_nm": 300
+    "arm_torque_nm": 300,
+    "manufacturer_history": "EngineAI Robotics (Shenzhen, China), founded Oct 2023 by Zhao Tongyang (led XPeng's PX5 humanoid program). Lineup: SA01 (research/edu), SE01 (full-size flagship), PM01 (lightweight open general-purpose). Headline: first humanoid with natural human-like gait via end-to-end neural network. Self-developed harmonic/planetary/ball-screw joints. ~100M yuan angel funding.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "origin_note": "Shenzhen",
+    "raw_specs": {
+      "maker": "EngineAI (Shenzhen), founder ex-XPeng PX5",
+      "gait": "First humanoid with natural human-like gait (end-to-end neural network)",
+      "joints": "Self-developed harmonic/planetary/ball-screw modules, in-joint wiring, dual encoders",
+      "entry": "PM01 — EngineAI",
+      "class": "PM01 (Dec 2024) — lightweight open general-purpose",
+      "specs": "1.38m, 40kg, 24 DoF, 2 m/s",
+      "waist": ">300-320° waist rotation",
+      "compute": "X86 + NVIDIA Jetson Orin",
+      "dof_breakdown": "single arm 5 DoF, single leg 6 DoF",
+      "open": "Fully open-source; interactive chest display"
+    }
   },
   {
     "cat": "Humanoid",
     "perf": false,
-    "price": 12000,
+    "price": 20000,
     "id": "engineai-se01",
     "name": "SE01",
     "brand": "EngineAI",
     "sub": "Full-Size Humanoid",
     "year": 2025,
-    "origin": "China (Shenzhen)",
-    "status": "Current",
+    "origin": "China",
+    "status": "Active",
     "height_mm": 1700,
     "desc": "EngineAI’s flagship full-size humanoid, unveiled October 2024 — claimed as the first humanoid to achieve a natural human-like gait via an end-to-end neural network. At 170 cm and 55 kg with 32 DoF, it uses self-developed harmonic/planetary/ball-screw joints rated to 186 N·m, an aerospace-aluminum 10-year frame, and quick-swap batteries. Founded by Zhao Tongyang (ex-XPENG PX5 lead).",
     "tags": [
@@ -131099,7 +131135,7 @@
     "score": 75,
     "rating": 4,
     "weight_kg": 55,
-    "dof": "32 DoF",
+    "dof": 32,
     "speed_ms": 2,
     "battery": "Quick-release",
     "perception": "Engine Sense 360 deg LiDAR + depth camera",
@@ -131126,7 +131162,7 @@
     "lidar": true,
     "imu": true,
     "frame_material": "Aluminum alloy",
-    "battery_type": "Li-ion",
+    "battery_type": "10000mAh quick-swap",
     "hot_swap": "Yes",
     "ai_model": "End-to-end neural network (RL + imitation learning) — first humanoid with natural human-like gait",
     "ros": true,
@@ -131143,10 +131179,30 @@
     "ota": "Yes",
     "wifi": "Wi-Fi",
     "released": "2024 (Dec)",
-    "currency": "USD (¥88,000 launch)",
+    "currency": "USD",
     "height_cm": 170,
     "gait": "Bio-inspired neural-network gait (among most natural in class)",
-    "note": "One of most aggressive full-size launch prices ever (unified commercial/edu)"
+    "note": "One of most aggressive full-size launch prices ever (unified commercial/edu)",
+    "manufacturer_history": "EngineAI Robotics (Shenzhen, China), founded Oct 2023 by Zhao Tongyang (led XPeng's PX5 humanoid program). Lineup: SA01 (research/edu), SE01 (full-size flagship), PM01 (lightweight open general-purpose). Headline: first humanoid with natural human-like gait via end-to-end neural network. Self-developed harmonic/planetary/ball-screw joints. ~100M yuan angel funding.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "origin_note": "Shenzhen",
+    "chipset": "Intel N97 + NVIDIA Jetson Orin",
+    "raw_specs": {
+      "maker": "EngineAI (Shenzhen), founder ex-XPeng PX5",
+      "gait": "First humanoid with natural human-like gait (end-to-end neural network)",
+      "joints": "Self-developed harmonic/planetary/ball-screw modules, in-joint wiring, dual encoders",
+      "entry": "SE01 — EngineAI",
+      "class": "SE01 — full-size flagship (Oct 2024, CCTV gala debut)",
+      "specs": "170cm, 55kg, 32 DoF",
+      "knee_torque": "186 N·m, force-control 0.2 N·m",
+      "compute": "Intel N97 + NVIDIA Jetson Orin",
+      "perception": "Intel RealSense D435i, mic arrays, LiDAR 360° ('Engine Sense')",
+      "battery": "10000mAh quick-swap",
+      "life": "10-year design life, aluminum chassis",
+      "price": "$20,000-30,000"
+    }
   },
   {
     "cat": "Humanoid",
@@ -132617,8 +132673,8 @@
     "cat": "Humanoid",
     "sub": "Full-Size Humanoid (flagship)",
     "year": 2026,
-    "origin": "China (Shenzhen)",
-    "status": "Current",
+    "origin": "China",
+    "status": "Active",
     "height_mm": 1730,
     "weight_kg": 75,
     "dof": "29 DoF (excl. hands)",
@@ -132667,7 +132723,19 @@
     "released": "2025 (Dec)",
     "height_cm": 173,
     "joint_torque": "450 N·m",
-    "note": "Flagship; viral martial-arts video (CEO took kick on camera to rebut CGI claims)"
+    "note": "Flagship; viral martial-arts video (CEO took kick on camera to rebut CGI claims)",
+    "manufacturer_history": "EngineAI Robotics (Shenzhen, China), founded Oct 2023 by Zhao Tongyang (led XPeng's PX5 humanoid program). Lineup: SA01 (research/edu), SE01 (full-size flagship), PM01 (lightweight open general-purpose). Headline: first humanoid with natural human-like gait via end-to-end neural network. Self-developed harmonic/planetary/ball-screw joints. ~100M yuan angel funding.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "origin_note": "Shenzhen",
+    "raw_specs": {
+      "maker": "EngineAI (Shenzhen), founder ex-XPeng PX5",
+      "gait": "First humanoid with natural human-like gait (end-to-end neural network)",
+      "joints": "Self-developed harmonic/planetary/ball-screw modules, in-joint wiring, dual encoders",
+      "entry": "T800 — EngineAI"
+    },
+    "imu": true
   },
   {
     "perf": false,
@@ -138176,9 +138244,9 @@
     "cat": "Humanoid",
     "sub": "Realistic Robotic Head",
     "year": 2025,
-    "origin": "China (Beijing)",
+    "origin": "China",
     "made_in": "China",
-    "status": "Current",
+    "status": "Active",
     "score": 75,
     "rating": 4,
     "price": "POA",
@@ -138236,7 +138304,17 @@
     "manufacturer": "Noetix Robotics",
     "released": "2024",
     "form_factor": "Hyper-realistic robotic head (facial expressions + movements)",
-    "use_cases_note": "HRI research, expression replication"
+    "use_cases_note": "HRI research, expression replication",
+    "manufacturer_history": "Noetix Robotics (officially Songyan Dynamics Beijing Technology Co.), founded Sep 2023 by Jiang Zheyuan (27, left Tsinghua PhD). In-house control boards + motor drivers. N2 (child-sized, finished 2nd in world's first humanoid half-marathon Apr 2025, 2500+ orders) → Bumi (Oct 2025, world's first sub-¥10,000/$1,370 humanoid). Pre-B ~¥300M ($41M) led by Vertex Ventures, ~$200M valuation.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "raw_specs": {
+      "maker": "Noetix Robotics / Songyan Dynamics (Beijing), founder ex-Tsinghua",
+      "integration": "In-house control boards + motor drivers",
+      "entry": "Hobbs W1 — Noetix"
+    },
+    "imu": true
   },
   {
     "id": "aheadform-elf-xuan-2",
@@ -138761,8 +138839,8 @@
     "cat": "Humanoid",
     "sub": "Compact Agility Humanoid",
     "year": 2025,
-    "origin": "China (Beijing Noetix Robotics)",
-    "status": "Current",
+    "origin": "China",
+    "status": "Active",
     "price": 5500,
     "img": "https://cdn.prod.website-files.com/67e2a642c1cc92a3140c2707/682827f26e137595e1503f7a_N2_04.png",
     "tags": [
@@ -138775,9 +138853,9 @@
       "marathon",
       "china"
     ],
-    "height_mm": 1180,
+    "height_mm": 1200,
     "weight_kg": 30,
-    "dof": "18 DoF (5/leg, 4/arm)",
+    "dof": 18,
     "leg_torque_nm": 150,
     "run_speed_ms": 3.2,
     "actuator_type": "Electric, force-controlled (low-inertia limb design)",
@@ -138787,7 +138865,7 @@
     "depth_sensing": "Dual-camera 3D perception",
     "battery_voltage": "48V",
     "battery_life_typical": 120,
-    "hot_swap": "Yes",
+    "hot_swap": true,
     "os": "Linux (RK3588s)",
     "ros": true,
     "sdk": "High + low-level motion APIs; Python/C++/ROS/Linux",
@@ -138855,7 +138933,22 @@
     "price_note": "US$5.5k–9k launch (¥39,900); Noetix targets ~$700 future models",
     "customers_note": "CATL-backed",
     "use_cases_note": "K-12 STEM, family, elder-care, education",
-    "arm_torque_nm": 150
+    "arm_torque_nm": 150,
+    "manufacturer_history": "Noetix Robotics (officially Songyan Dynamics Beijing Technology Co.), founded Sep 2023 by Jiang Zheyuan (27, left Tsinghua PhD). In-house control boards + motor drivers. N2 (child-sized, finished 2nd in world's first humanoid half-marathon Apr 2025, 2500+ orders) → Bumi (Oct 2025, world's first sub-¥10,000/$1,370 humanoid). Pre-B ~¥300M ($41M) led by Vertex Ventures, ~$200M valuation.",
+    "has_hands": true,
+    "has_legs": true,
+    "biped": true,
+    "currency": "USD",
+    "raw_specs": {
+      "maker": "Noetix Robotics / Songyan Dynamics (Beijing), founder ex-Tsinghua",
+      "integration": "In-house control boards + motor drivers",
+      "entry": "N2 — Noetix",
+      "class": "N2 — child-sized humanoid",
+      "specs": "~120cm, 18 DoF, top speed 12.6 km/h, 2h swappable battery",
+      "compute": "RK3588s, open Linux stack",
+      "milestone": "2nd in world's first humanoid half-marathon (Beijing Apr 2025, 21km in 3h37m), 2500+ orders",
+      "price": "$5,500-9,000"
+    }
   },
   {
     "id": "agibot-lingxi-x2",
@@ -146944,7 +147037,7 @@
     "year": 2025,
     "origin": "China",
     "status": "Active",
-    "price": 1400,
+    "price": 1370,
     "currency": "USD",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413418/myrobot/nk3ugofywnj1cxr4wyn4.jpg",
     "use_cases": [
@@ -146969,8 +147062,8 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "height_mm": 980,
-    "weight_kg": 17,
+    "height_mm": 940,
+    "weight_kg": 12,
     "dof": 21,
     "speed_ms": 0.5,
     "speed": "0.5 m/s",
@@ -146986,7 +147079,7 @@
       "https://www.ghostysky.com/wp-content/uploads/2026/04/GH_Noetix_MKT_1-1024x576.webp",
       "https://cdn.prod.website-files.com/663e2d5c1f3e68f94da70063/696c7a99556a3a0264e5ef78_noetix-robotics-bumi-huamanoid-robot.jpg"
     ],
-    "made_in": "China (Beijing)",
+    "made_in": "China",
     "manufacturer": "Noetix Robotics",
     "released": "2025",
     "form_factor": "Small consumer companion humanoid",
@@ -146996,7 +147089,7 @@
     "biped": true,
     "actuator_type": "Proprietary Noetix force-controlled joint modules (N-shaped TIX joints); up to 70 N·m peak knee torque",
     "leg_torque_nm": 70,
-    "battery_life": 150,
+    "battery_life": 90,
     "battery_life_note": "2–3 hours",
     "sensors_list": [
       "Structured-light depth camera",
@@ -147021,7 +147114,23 @@
       "EDU-Pro",
       "EDU-Max (Jetson Orin)"
     ],
-    "developed_by": "Noetix Robotics (Beijing)"
+    "developed_by": "Noetix Robotics (Beijing)",
+    "manufacturer_history": "Noetix Robotics (officially Songyan Dynamics Beijing Technology Co.), founded Sep 2023 by Jiang Zheyuan (27, left Tsinghua PhD). In-house control boards + motor drivers. N2 (child-sized, finished 2nd in world's first humanoid half-marathon Apr 2025, 2500+ orders) → Bumi (Oct 2025, world's first sub-¥10,000/$1,370 humanoid). Pre-B ~¥300M ($41M) led by Vertex Ventures, ~$200M valuation.",
+    "has_hands": true,
+    "has_legs": true,
+    "battery_voltage": "48V",
+    "raw_specs": {
+      "maker": "Noetix Robotics / Songyan Dynamics (Beijing), founder ex-Tsinghua",
+      "integration": "In-house control boards + motor drivers",
+      "entry": "Bumi — Noetix",
+      "class": "Bumi (Oct 2025) — world's first sub-¥10,000 ($1,370) humanoid",
+      "specs": "94cm, 12kg, 21 DoF",
+      "battery": "48V >3.5Ah, 1-2h runtime",
+      "materials": "Lightweight composite",
+      "programming": "Drag-and-drop graphical (for children) + voice",
+      "sales": "100 units in first hour, 500 in 2 days",
+      "market": "Education + home (mass-market)"
+    }
   },
   {
     "id": "robotera-q5",
