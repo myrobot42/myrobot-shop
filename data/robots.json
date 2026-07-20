@@ -50890,7 +50890,7 @@
     "name": "HUBO-2 Plus",
     "brand": "Rainbow Robotics",
     "cat": "Humanoid",
-    "sub": "Commercial Research Humanoid",
+    "sub": "Commercial Research Humanoid (historical)",
     "tags": [
       "humanoid",
       "rainbow-robotics",
@@ -50912,11 +50912,11 @@
     "perf": false,
     "year": 2011,
     "origin": "South Korea",
-    "status": "Legacy",
+    "status": "Active",
     "released": "2011",
     "height_mm": 1250,
     "weight_kg": 45,
-    "dof": 38,
+    "dof": 40,
     "ros": true,
     "imu": true,
     "cameras": "2 CCD cameras (head) — facial-expression & object recognition",
@@ -50933,15 +50933,15 @@
     "bimanual": true,
     "stair_climbing": true,
     "website": "https://www.rainbow-robotics.com/",
-    "os": "Windows XP SP2 + Ardence RTX 6.5",
-    "actuator_type": "40 Maxon brushless DC motors (200W/100W/11W/0.75W); harmonic drive reducers",
+    "os": "Windows XP SP2 + RTX 6.5 real-time extensions",
+    "actuator_type": "40 brushless DC motors (200W/100W/11W/0.75W ratings); aluminum skeleton + polycarbonate frame; straight-leg walking gait; 5 independently-moving fingers per hand",
     "hand_type": "Adaptive five-finger hands",
     "deployed_at": [
       "MIT",
       "Google",
       "research institutions worldwide"
     ],
-    "manufacturer_history": "Rainbow Robotics (Daejeon, South Korea), founded 2011 by Prof. Oh Jun-ho and KAIST HUBO Lab researchers. Publicly traded (KRX: 277810). Its DRC-HUBO won the 2015 DARPA Robotics Challenge Finals — a landmark in disaster-response humanoids. Product lines: HUBO humanoids, RB-series collaborative arms (NSF food-safe certified), RBQ quadrupeds, and the RB-Y1 dual-arm mobile manipulator. Emphasizes 'Physical AI'.",
+    "manufacturer_history": "Rainbow Robotics - the KAIST HUBO Lab spin-off founded in 2011 by Prof. Jun-Ho Oh + Dr. Jungho Lee (Daedeok Innopolis, Daejeon; KRX: 277810; acquired by Samsung Electronics in March 2025). HUBO-2 Plus is the mass-produced version of HUBO 2 (KHR-4) and the world's first commercialized full-size humanoid platform: 15 units were produced by 2012, with 4 sold to domestic teams and 11 exported to research groups in the US, Japan, Singapore and China (MIT, Google, etc.). Lineage: KHR-3/HUBO (2005) -> HUBO 2 -> HUBO-2 Plus -> DRC-HUBO (2015 DARPA Robotics Challenge winner).",
     "leg_dof": 6,
     "hand_dof": 5,
     "neck_dof": 3,
@@ -50952,7 +50952,7 @@
     "run_speed_note": "Max ~3.6 km/h",
     "frame_material": "Aluminum endoskeleton",
     "shell_material": "Polycarbonate frame",
-    "cpu": "2× Intel Pentium III (head PCM-3372 + body PCM-3370)",
+    "cpu": "Two PC/104 embedded computers (Pentium III; head PCM-3372 + body PCM-3370), SSDs",
     "controller": "Two PC/104 embedded computers with SSD",
     "sensors_list": [
       "2 CCD head cameras",
@@ -50969,9 +50969,31 @@
     "has_hands": true,
     "has_legs": true,
     "raw_specs": {
-      "generation": "HUBO-2 Plus — upgraded HUBO-2",
-      "note": "Research humanoid platform"
-    }
+      "Type": "Commercialized full-size research humanoid (mass-produced HUBO 2 / KHR-4)",
+      "Height": "120-125 cm",
+      "Weight": "43-45 kg",
+      "Total DOF": "~40 - neck 3, arms 7x2, hands 5x2 (independent fingers), torso 1, legs 6x2",
+      "Walking": "Straight-leg walking gait (improvement over bent-knee bipeds); ~1.25 km/h; running to ~3.6 km/h (HUBO 2)",
+      "Motors": "40 brushless DC motors (200W, 100W, 11W, 0.75W)",
+      "Compute": "Two PC/104 embedded computers with SSDs (Pentium III; head PCM-3372, body PCM-3370)",
+      "OS": "Windows XP SP2 + Ardence RTX 6.5 real-time extensions",
+      "Sensors": "2x CCD head cameras (face/object recognition), 6-axis F/T + tilt sensors in ankles, 3-axis F/T in wrists, inertial sensor on pelvis",
+      "Materials": "Aluminum skeleton + polycarbonate frame",
+      "Battery": "~2 hours operation",
+      "Capabilities": "Walk (forward/back/side/turn), run, dance with humans, grasp objects, sign language (5 independent fingers), recognize facial expressions + objects, understand + speak",
+      "Company": "Rainbow Robotics (KAIST HUBO Lab spin-off, founded 2011; Daejeon; KRX 277810)",
+      "Ownership": "Acquired by Samsung Electronics, March 2025",
+      "Production": "15 HUBO-2 Plus units by 2012 (4 domestic + 11 overseas: US/Japan/Singapore/China; buyers incl. MIT, Google)",
+      "Lineage": "KHR-3/HUBO (2005) -> HUBO 2/KHR-4 -> HUBO-2 Plus -> DRC-HUBO (2015 DARPA winner)",
+      "Use cases": "Humanoid research platform (locomotion + manipulation), education",
+      "Source": "Rainbow Robotics official + Wikipedia (Rainbow Robotics) + IEEE robotsguide + aparobot + Nathan Peterman. Low-trust Grokipedia IGNORED."
+    },
+    "run_speed": 1,
+    "run_speed_ms": 1,
+    "battery_life": 120,
+    "battery_life_typical": 120,
+    "depth_sensing": "2x CCD head cameras (face + object recognition)",
+    "ai_model": "Real-time control (RTX); motion planning + sensor fusion; vision processing + force feedback; recognizes facial expressions + objects, understands + speaks; sign language"
   },
   {
     "id": "rainbow-robotics-rb-y1-bimanual-mobile-manipulator",
@@ -92159,7 +92181,7 @@
     "name": "N1",
     "brand": "Noetix Robotics",
     "cat": "Humanoid",
-    "sub": "Compact Humanoid",
+    "sub": "First-Gen Athletic Humanoid Prototype",
     "tags": [
       "humanoid",
       "noetix",
@@ -92195,7 +92217,7 @@
     "made_in": "China",
     "announced": "2024 (WAIC 2024)",
     "dof": 24,
-    "actuator_type": "Electric",
+    "actuator_type": "Lightweight bionic structural design; high-performance joint actuators; motion-control algorithms + reinforcement learning (first-gen prototype)",
     "arm_dof": 7,
     "imu": true,
     "ros": true,
@@ -92211,7 +92233,7 @@
     "learning_methods": [
       "Deep Reinforcement Learning"
     ],
-    "manufacturer_history": "Noetix Robotics (officially Songyan Dynamics Beijing Technology Co.), founded Sep 2023 by Jiang Zheyuan (27, left Tsinghua PhD). In-house control boards + motor drivers. N2 (child-sized, finished 2nd in world's first humanoid half-marathon Apr 2025, 2500+ orders) → Bumi (Oct 2025, world's first sub-¥10,000/$1,370 humanoid). Pre-B ~¥300M ($41M) led by Vertex Ventures, ~$200M valuation.",
+    "manufacturer_history": "Noetix Robotics (Beijing Noetix Robotics Technology / Songyan Dynamics; founded Sept 2023 by Jiang Zheyuan, ex-Tsinghua; core team from Tsinghua + Zhejiang University + CAS). N1 was Noetix's first-generation humanoid robot - structural design completed rapidly after founding (43 days from concept to manufacturing), and the prototype passed bipedal-walking stability tests. It was publicly introduced at WAIC 2024 (World AI Conference, July 2024) and is the direct precursor to the athletic N2 (118 cm, 30 kg, 18 DOF). Product line evolved N1 -> N2 -> E1, Dora, Hobbs (bionic head), Bumi (consumer).",
     "leg_dof": 6,
     "manufacturer": "Noetix Robotics",
     "form_factor": "First-gen short humanoid (predecessor to N2)",
@@ -92220,10 +92242,19 @@
     "has_legs": true,
     "biped": true,
     "raw_specs": {
-      "maker": "Noetix Robotics / Songyan Dynamics (Beijing), founder ex-Tsinghua",
-      "integration": "In-house control boards + motor drivers",
-      "entry": "N1 — Noetix"
-    }
+      "Type": "First-generation short/athletic humanoid prototype (predecessor to N2)",
+      "Debut": "WAIC 2024 (World Artificial Intelligence Conference, July 2024) - the first iteration of Noetix's short humanoid line",
+      "Development": "Structural design completed rapidly after the company's Sept 2023 founding; 43 days from concept design to manufacturing; prototype passed bipedal-walking stability tests (a key development milestone)",
+      "Design focus": "Lightweight bionic structural design; joint mechanisms; motion-control algorithms; reinforcement learning",
+      "Successor": "N2 (2025) - 118 cm, 30 kg, 18 DOF, 150 N.m knee torque, continuous backflips (enriched separately)",
+      "Company": "Noetix Robotics (Beijing; founded Sept 2023 by Jiang Zheyuan, ex-Tsinghua)",
+      "Product line": "N1 (2024, first prototype) -> N2 (2025 athletic) -> E1, Dora, Hobbs (bionic head), Bumi (consumer ~$1,370), Hobbs W1",
+      "Note": "N1 was a first-gen prototype quickly superseded by the N2; exact height/weight/DOF for N1 were not separately published (SPECS PENDING - not invented)",
+      "Use cases": "Research, development, demonstration (foundation for Noetix's athletic humanoid line)",
+      "Source": "Mike Kalil + Noetix Robotics (noetixrobotics.com) + Robots Asia + TMTPOST + Interesting Engineering"
+    },
+    "bimanual": true,
+    "ai_model": "Reinforcement learning + motion-control algorithms; bipedal walking stability (first-gen prototype)"
   },
   {
     "id": "promobot-v4-2018",
@@ -145786,7 +145817,7 @@
       "Humanoid",
       "Service"
     ],
-    "sub": "Wheeled Humanoid (Mobile Manipulator)",
+    "sub": "Wheeled Teleoperated Mobile Manipulator",
     "year": 2024,
     "origin": "USA",
     "made_in": "USA",
@@ -145794,7 +145825,7 @@
     "price": "POA",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413304/myrobot/jmujlczqqfwnnmm7cmfx.jpg",
     "desc": "Reflex, from New York's Reflex Robotics, is a wheeled humanoid mobile manipulator — a dual-arm humanoid upper body on a wheeled base rather than legs, a deliberate choice (shared with Weave, Galbot and others) to reach real deployments faster and cheaper while sidestepping the reliability and cost burdens of bipedal balance. With a telescoping torso for variable working height, it targets practical tasks like logistics, material handling and general labor, and uses a teleoperation-to-autonomy pipeline: human operators guide the robot while the collected data trains increasing autonomy. Reflex positions the platform for fleet deployment in commercial settings. NOTE: Reflex publishes limited formal spec tables (exact DOF/payload/reach/battery) — those are flagged for outreach rather than guessed; the wheeled mobile-manipulator architecture, telescoping design and teleop-to-autonomy approach are confirmed.",
-    "actuator_type": "Electric",
+    "actuator_type": "Torso on a compact wheeled base (under 2ft x 2ft, zero-degree turns); adjustable 'spine' extends torso vertically (ground to high shelves); dual arms (25+ lb / 11+ kg per arm); ~2x human arm strength",
     "mobility": "Wheeled base (low centre of gravity)",
     "bimanual": true,
     "use_cases": [
@@ -145803,7 +145834,7 @@
       "General labor",
       "Commercial deployment"
     ],
-    "manufacturer_history": "Reflex Robotics (USA). Wheeled teleoperated/autonomous humanoid mobile manipulator for labor tasks.",
+    "manufacturer_history": "Reflex Robotics (New York) - its founding team previously shipped production hardware at Boston Dynamics, Tesla, Oculus and ASML. Reflex is a wheeled humanoid mobile manipulator built as a teleoperation-first alternative to legged humanoids: a vertical torso + dual arms + sensor head on a compact wheeled base, avoiding the mechanical/software challenges of bipedal locomotion. Shown at Modex 2024 (Gen 2), it has run pilots with GXO. Human operators drive it immediately while AI learns from the demonstrations.",
     "tags": [
       "humanoid",
       "reflex-robotics",
@@ -145830,7 +145861,7 @@
     "chassis": "Wheeled base (<2 ft x 2 ft, zero-radius) + telescoping spine",
     "payload_kg": 22.7,
     "payload": 22.7,
-    "hand_type": "Dual arms (25+ lbs each) + grippers",
+    "hand_type": "Swappable three-finger grippers with suction",
     "cameras": "Multiple RGB + 180-degree articulated neck",
     "teleoperation": "Teleoperation + increasing autonomy",
     "battery_life": 960,
@@ -145849,17 +145880,32 @@
     "height_adjustable": true,
     "dof_note": "Humanoid dual-arm upper body on wheeled base; telescoping torso for variable height",
     "autonomous": true,
-    "ai_model": "Learned manipulation; teleop-to-autonomy data pipeline",
+    "ai_model": "Teleoperation-first (human-in-the-loop, remote via Wi-Fi up to 3,000 miles, video-game-like low-latency interface); AI learns from demonstrations toward future autonomy",
     "capabilities": "Wheeled humanoid mobile manipulator for practical work (logistics, material handling, general labor); intentionally legless for reliability & lower cost; fleet-oriented deployment",
     "developed_by": "Reflex Robotics (New York)",
     "has_hands": true,
     "has_legs": true,
     "raw_specs": {
-      "maker": "Reflex Robotics",
-      "class": "Reflex — Reflex Robotics humanoid",
-      "entry": "Reflex — Reflex Robotics"
+      "Type": "Wheeled humanoid mobile manipulator (teleoperation-first; NOT bipedal)",
+      "Form": "Vertical torso + two arms + sensor head on a compact wheeled base (under 2 ft x 2 ft; zero-degree turns; tight spaces)",
+      "Height": "Adjustable - 'spine' mechanism extends the torso vertically (ground level to high shelves)",
+      "Payload": "50+ lb combined (25+ lb / ~11 kg per arm; ~2x human arm strength)",
+      "Battery": "16+ hours",
+      "Deployment": "Rapid 60-minute deployment",
+      "Head": "Multiple RGB sensors + 180deg articulated neck",
+      "Hands": "Swappable three-finger grippers with suction",
+      "Control": "Teleoperation-first - human operators remote from up to 3,000 miles via Wi-Fi (low-latency, video-game-like interface); human-in-the-loop; AI learns from demonstrations for future autonomy; cloud connectivity",
+      "Capabilities": "Beverage packaging, wood-shop cutting, warehouse palletizing, box closing, picking totes from shelves, ground pickup",
+      "Company": "Reflex Robotics (New York) - founders shipped hardware at Boston Dynamics, Tesla, Oculus, ASML",
+      "Shown": "Modex 2024, Atlanta (Gen 2)",
+      "Pilots": "GXO (2024)",
+      "Design rationale": "Wheeled base avoids mechanical + software challenges of legged locomotion; maneuverability over legs",
+      "Use cases": "Warehouse automation, materials handling, logistics, teleoperation + autonomy R&D",
+      "Source": "The Robot Report (RBR50) + Thomasnet + aparobot + originofbots + arXiv (Ramos et al., wheeled-humanoid teleoperation)"
     },
-    "imu": true
+    "imu": true,
+    "omnidirectional": true,
+    "depth_sensing": "Head with multiple RGB sensors + 180deg articulated neck"
   },
   {
     "id": "hexagon-aeon",
@@ -160303,12 +160349,12 @@
   },
   {
     "id": "midea-miro",
-    "name": "MIRO",
+    "name": "MIRO / MIRO U",
     "brand": "Midea",
     "cat": "Humanoid",
-    "sub": "Industrial Humanoid",
+    "sub": "Wheeled Industrial Humanoid (six-arm MIRO U)",
     "year": 2025,
-    "status": "Development",
+    "status": "Active",
     "made_in": "China",
     "origin": "China",
     "has_hands": true,
@@ -160318,7 +160364,7 @@
     "score": 75,
     "manufacturer_url": "https://www.midea.com/",
     "website": "https://www.midea.com/",
-    "ai_model": "Midea in-house robotics stack (KUKA heritage)",
+    "ai_model": "Integrated AI agent system coordinated by a centralized 'factory brain'; autonomous task execution + real-time decision-making; multimodal sensing + world model; 'execution agent' in Midea's smart-manufacturing framework",
     "imu": true,
     "use_cases": [
       "Industrial manufacturing",
@@ -160335,16 +160381,31 @@
     ],
     "desc": "MIRO is Midea Group's industrial humanoid robot, part of the Chinese appliance giant's humanoid matrix (built on its 2017 KUKA acquisition and its Humanoid Robot Innovation Centre). It targets manipulation, navigation and automated industrial tasks. Midea's lineup also includes the lighter bipedal 'Meila' service series (retail store guides, 2026) and the radical six-armed wheeled 'MIRO U' super-humanoid. Specs are limited in public materials; captured into additional specs pending a datasheet.",
     "raw_specs": {
-      "company": "Midea Group — Chinese appliance giant; acquired KUKA (2017); Humanoid Robot Innovation Centre (2024)",
-      "matrix": "MIRO (industrial humanoid) + Meila series (bipedal service, retail guides 2026) + MIRO U (six-armed wheeled super-humanoid)",
-      "miro_u": "MIRO U: six fully-actuated bionic arms, wheeled chassis, 360° rotation, 3 simultaneous tasks, +30% changeover — pilot at Midea Wuxi factory Dec 2025",
-      "note": "Limited public specs for base MIRO; flagged for outreach"
+      "Type": "Wheeled industrial humanoid series (humanoid head + torso on a wheel-legged base; NOT bipedal)",
+      "MIRO U (3rd gen)": "'Super humanoid' with SIX fully-actuated bionic mechanical arms (3 per side) - performs three tasks simultaneously (exceeds human physiological limits); 'does the work of three pairs of hands'",
+      "Base MIRO": "Two-armed wheeled version - material transport, tub handling, inspection",
+      "Mobility": "Wheel-legged chassis - vertical lifting (match workstation heights) + full 360deg in-place rotation",
+      "Arms/hands": "High-precision control; fast-switching end-effector modules; lower limbs handle heavy lifting, upper limbs do intricate tasks (assembly, fastening)",
+      "AI": "Integrated AI agent system coordinated by a centralized 'factory brain'; autonomous task execution + real-time decision-making; multimodal sensing + world model",
+      "Tech stack": "Fully developed in-house",
+      "Company": "Midea Group (China; founded 1968; owns KUKA since 2017); VP + CTO Wei Chang",
+      "MIRO U unveiled": "Dec 5, 2025 (Greater Bay Area New Economy Forum, Guangzhou)",
+      "Deployment": "MIRO U -> Midea Wuxi High-end Washing Machine Factory by end-Dec 2025 (pilot); KPI +30% production-line changeover/adjustment efficiency",
+      "Roadmap": "MIRO series (industrial, 3 iterations); Mila/Meila series (commercial + residential, lighter-duty bipedal, retail stores 2026)",
+      "Note": "Exact height/weight/DOF not published (SPECS PENDING - not invented)",
+      "Use cases": "Industrial manufacturing, assembly/fastening, material transport, inspection, high-end appliance production",
+      "Source": "Gizmochina + Humanoids Daily + Mike Kalil + Interesting Engineering + humanoid.guide + TechEBlog"
     },
     "rating": 4,
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/20/6Qsxp8tmjBhWU0FV2flB/image.jpg",
     "gallery": [
       "https://media.licdn.com/dms/image/v2/D5605AQH1DsSAGIpkFw/videocover-high/B56Zl1ne2NJ4B8-/0/1758614936831?e=2147483647&v=beta&t=ZUKM3aCR3wDzGWM4isEEO-ALGOUAmucqWIoTvlXUBt8"
-    ]
+    ],
+    "bimanual": true,
+    "omnidirectional": true,
+    "depth_sensing": "Multimodal sensing + world model (factory-brain coordinated)",
+    "actuator_type": "Wheel-legged chassis (vertical lifting + 360deg in-place rotation); MIRO U has SIX bionic mechanical arms (3 per side) with fast-switching end-effector modules; base MIRO is two-armed",
+    "manufacturer_history": "Midea Group (China; founded 1968) - one of the world's largest home-appliance makers (air conditioners, washing machines; 63 production bases, 150,000+ staff; acquired German robotics firm KUKA in 2017). MIRO is Midea's industrial humanoid series; the two-armed MIRO already does material transport, tub handling + inspection at Midea's Jingzhou factory. MIRO U (3rd gen, unveiled Dec 5, 2025 at the Greater Bay Area New Economy Forum, Guangzhou) is a 'super humanoid' with six bionic arms + a wheel-legged chassis - performing three tasks at once. It enters Midea's Wuxi high-end washing-machine factory by end-Dec 2025, targeting +30% line-changeover efficiency."
   },
   {
     "id": "siasun-duco",
