@@ -164175,7 +164175,7 @@
     "name": "Operator (OP1)",
     "brand": "Ultra Robotics",
     "cat": "Humanoid",
-    "sub": "Stationary Dual-Arm AI Robot",
+    "sub": "Stationary Dual-Arm Warehouse Robot",
     "year": 2026,
     "status": "Active",
     "origin": "USA",
@@ -164205,10 +164205,17 @@
     ],
     "desc": "Operator (OP1) by Ultra Robotics is a stationary dual-arm AI robot for warehouse packaging, sorting and kitting — plug-and-play, designed for 24/7 operation. As a fixed dual-arm manipulator (no mobile base or legs), it targets high-throughput repetitive fulfillment tasks. Specs limited in public materials; captured into additional specs pending a datasheet.",
     "raw_specs": {
-      "form": "Stationary dual-arm (no legs/mobile base)",
-      "use": "Warehouse packaging, sorting, kitting",
-      "operation": "Plug-and-play, 24/7",
-      "note": "Limited public specs; flagged for outreach"
+      "Type": "Stationary dual-arm AI warehouse robot (NOT a walking humanoid - fixed work-cell)",
+      "Work cell": "~10 x 10 ft",
+      "Setup": "Rolls up to a workstation, plugs into a standard 120 V outlet, installs in hours - no fixed infrastructure, no expensive integration, no battery swaps",
+      "Operation": "Always-on 24/7 (no charging downtime; eliminates the tipping risk of walking humanoids)",
+      "AI": "Onboard neural networks that adapt to new items on the fly",
+      "Capabilities": "Order packaging, sorting, kitting (repetitive warehouse work)",
+      "Company": "Ultra Robotics Corp - 'designed in the field, built in NYC'",
+      "Design ethos": "Built around real warehouse conditions, not lab demos (setup in hours, not weeks)",
+      "Note": "Exact DOF/dimensions not published (SPECS PENDING - not invented)",
+      "Use cases": "US warehouses - fulfillment, packaging, sorting, kitting",
+      "Source": "humanoid.guide (Operator OP1) + Ultra Robotics (ultra.tech)"
     },
     "rating": 4,
     "img": "https://cdn.sanity.io/images/cyk6luo4/production/853ead33e099b31b7e37be30d5c6a45ead3ec3dd-4672x7008.webp?w=1600",
@@ -164218,7 +164225,12 @@
       "https://www.ultra.tech/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fcyk6luo4%2Fproduction%2Fbf590912bc0d49b7a0311cad508b379dc8d5bfda-7008x4672.jpg%3Frect%3D0%2C365%2C7008%2C3942%26w%3D3840%26h%3D2160%26q%3D100&w=1200&q=75"
     ],
     "video": "https://youtu.be/PQf36jTPeN8",
-    "video2": "https://youtu.be/67AMjxwGOZE"
+    "video2": "https://youtu.be/67AMjxwGOZE",
+    "depth_sensing": "Onboard vision (neural networks adapt to new items)",
+    "auto_charge": false,
+    "actuator_type": "Stationary dual-arm work-cell robot (~10 x 10 ft); rolls to a workstation, plugs into a standard 120 V outlet, installs in hours; always-on (no battery swaps, no tipping risk)",
+    "ai_model": "Onboard neural networks that adapt to new items on the fly (order packaging, sorting, kitting)",
+    "manufacturer_history": "Ultra Robotics Corp (designed in the field, built in NYC) builds Operator (OP1), a stationary dual-arm AI robot purpose-built for US warehouses. Rather than a walking humanoid, OP1 is a plug-and-play work-cell robot: it rolls up to a workstation, plugs into a standard 120 V outlet, and installs in hours with no fixed infrastructure, integration or battery swaps - running 24/7 within a ~10x10 ft cell for order packaging, sorting + kitting."
   },
   {
     "id": "vinmotion-motion-2",
@@ -165114,7 +165126,7 @@
     "name": "Syntro",
     "brand": "WorkFar Technologies",
     "cat": "Humanoid",
-    "sub": "Teleoperated 'Sentient' Humanoid",
+    "sub": "Teleoperated Wheeled Industrial Humanoid (USA)",
     "year": 2024,
     "status": "Active",
     "made_in": "USA (Delaware)",
@@ -165128,7 +165140,7 @@
     "dexterous_hand": true,
     "imu": true,
     "warranty_months": 6,
-    "ai_model": "Teleoperation (VR + eye-tracking + haptic/force feedback) + onboard AI",
+    "ai_model": "Onboard AI (learn/think/adapt in real time) + human teleoperation; SLAM + GPS + obstacle avoidance; VR/eye-tracking operator sees AR-overlaid remote scene; haptic + force feedback gloves; AI handles grasping/shape ID",
     "manufacturer_url": "https://www.workfar.com/",
     "website": "https://www.workfar.com/",
     "use_cases": [
@@ -165150,12 +165162,19 @@
     ],
     "desc": "Syntro by WorkFar Technologies (Dover, Delaware) is a teleoperated 'sentient' humanoid leased as a human-robot team on a monthly basis (robot-as-a-service) to logistics and manufacturing businesses. A remote operator wears VR goggles with AR overlays; eye tracking, VR and haptic/force feedback transmit the robot's environment back in real time, supplemented by onboard AI. Offered in Base, Telepresence and Intelligent series for machine tending, material handling, cleanrooms and healthcare. Specs captured into additional specs.",
     "raw_specs": {
-      "maker": "WorkFar Technologies, Dover, Delaware, USA",
-      "model": "Robot-as-a-service (monthly human-robot team lease)",
-      "teleoperation": "VR goggles + AR overlays + eye tracking + haptic/force feedback + onboard AI",
-      "series": "Syntro Base / Telepresence / Intelligent",
-      "use": "Manufacturing, logistics, machine tending, cleanrooms, healthcare",
-      "lead_time": "6mo (Base) / 12mo (Telepresence/Intelligent)"
+      "Type": "Teleoperated 'sentient' wheeled industrial humanoid (Made in USA)",
+      "Total DOF": "45 (industry-leading, per WorkFar); compact form",
+      "Mobility": "Wheeled lower body (V17 revision = complete wheeled-lower-body overhaul)",
+      "Teleoperation ('sentience')": "VR + eye tracking + haptic/force-feedback gloves - operator sees remote scene in VR with AR overlays highlighting reachable objects; haptic (contact vibration) + force feedback (surface pressure); AI handles grasping/shape identification (operator just directs)",
+      "AI/autonomy": "Onboard AI (learn, think, adapt real-time); SLAM + GPS + obstacle avoidance; machine learning; real-time environment mapping; safe cageless human collaboration",
+      "Series": "Syntro 'Base' (perception/navigation/safety), 'Telepresence' (+teleoperation), 'Intelligent' (+AI/manipulation/fleet/IoT) - all customizable",
+      "Business model": "Leases a human-robot team to logistics + manufacturing monthly (RaaS-like)",
+      "Company": "WorkFar Technologies / WorkFar Robotics (USA; built at Advantage Plastics, Louisville, KY)",
+      "Unveiled": "Aug 2024; V17 wheeled-lower-body overhaul 2026",
+      "Price": "starting at $29K",
+      "Capabilities": "Heavy lifting, box/tote/raw-material handling, delicate manipulation",
+      "Use cases": "Manufacturing, logistics, medical, hospitality, retail",
+      "Source": "WorkFar official (workfar.com) + PR Newswire + RoboticsTomorrow + humanoid.guide"
     },
     "rating": 4,
     "img": "https://www.workfar.com/wp-content/uploads/2026/01/store_1_alt2.png",
@@ -165165,7 +165184,13 @@
       "https://www.workfar.com/wp-content/uploads/2026/01/store_6_3.png",
       "https://www.workfar.com/wp-content/uploads/2026/01/store_7_4.png",
       "https://www.workfar.com/wp-content/uploads/2026/01/store_5.png"
-    ]
+    ],
+    "dof": 45,
+    "omnidirectional": true,
+    "depth_sensing": "Onboard perception + SLAM (VR/eye-tracking for operator)",
+    "teleoperation": true,
+    "actuator_type": "Wheeled lower body (V17 overhaul); human-form upper body with strong limbs; teleoperated via VR + eye tracking + haptic/force-feedback gloves; Made in USA (Advantage Plastics, Louisville, KY)",
+    "manufacturer_history": "WorkFar Technologies / WorkFar Robotics (USA; robots built at Advantage Plastics, Louisville, KY; the company also does aerospace metal fabrication + CNC machining). Syntro - unveiled Aug 2024 - is a teleoperated 'sentient' humanoid that WorkFar leases as a human-robot team to logistics + manufacturing businesses on a monthly basis. It blends onboard AI with immersive VR/haptic teleoperation (operators feel what the robot touches). Sold in Base / Telepresence / Intelligent series, from $29K; the V17 (2026) revision fully overhauls the wheeled lower body."
   },
   {
     "id": "tangible-robots-eggie",
@@ -165238,9 +165263,9 @@
     "name": "Modular",
     "brand": "O-ID",
     "cat": "Humanoid",
-    "sub": "Modular Wheeled Humanoid",
+    "sub": "Modular Wheeled Industrial Humanoid",
     "year": 2026,
-    "status": "Development",
+    "status": "Active",
     "made_in": "Japan",
     "origin": "Japan",
     "has_hands": true,
@@ -165275,12 +165300,20 @@
     ],
     "desc": "The O-ID 'Modular' is a modular wheeled humanoid from Japan — 172cm/70kg with 30 DoF and 16kg payload, built around interchangeable modules so operators can reconfigure it for many tasks. A wheeled base (not legs) gives stable, efficient movement across flat floors for warehouses, factories and commercial spaces, with 24/7 uptime. Its capable dual-arm upper body lifts, moves and manipulates objects, and the modular design lets teams add or swap components as needs change. Specs captured into additional specs.",
     "raw_specs": {
-      "origin": "Japan",
-      "form": "Modular wheeled humanoid (interchangeable modules, not bipedal)",
-      "specs": "172cm/70kg, 30 DoF, 16kg payload, 24/7 uptime",
-      "design": "Reconfigurable via swappable modules",
-      "use": "Warehouses, factories, commercial (flat/smooth floors)",
-      "note": "Detailed specs pending datasheet"
+      "Type": "Modular wheeled humanoid robot for industrial automation (NOT bipedal)",
+      "Height": "172 cm",
+      "Weight": "70 kg",
+      "Total DOF": "30",
+      "Payload": "up to 16 kg",
+      "Uptime": "24/7",
+      "Mobility": "Wheeled base (human-friendly 172 cm height)",
+      "Modularity": "Interchangeable modules - reconfigure for many different tasks; add/swap components as needs change (longer working life than single-purpose machines)",
+      "Capabilities": "Lift, move + manipulate objects across a wide range of industrial scenarios",
+      "Company": "O-ID (Japan)",
+      "Design ethos": "Flexible, wheeled, module-based automation platform (adaptability shapes the entire design)",
+      "Note": "A capable upper body paired with strong dexterity (30 DOF)",
+      "Use cases": "Industrial automation, logistics, manipulation, reconfigurable factory tasks",
+      "Source": "humanoid.guide (O-ID Modular) + O-ID (Japan)"
     },
     "rating": 4,
     "gallery": [
@@ -165289,7 +165322,14 @@
       "https://framerusercontent.com/images/g8CQK9aSuzvllSTvzjOf2spA4vI.png?width=1536&height=2752",
       "https://framerusercontent.com/images/ceifi7dVZ1rWrI9X3yIhTe7msk.png?scale-down-to=2048",
       "https://framerusercontent.com/images/fO0VoAa5vrKgbCLaLsLZv5ezFhM.png?scale-down-to=2048"
-    ]
+    ],
+    "payload": 16,
+    "omnidirectional": true,
+    "modular": true,
+    "depth_sensing": "Onboard perception suite",
+    "actuator_type": "Wheeled base; capable upper body; interchangeable/swappable modules (reconfigurable for many tasks); 24/7 uptime",
+    "ai_model": "Industrial automation control (reconfigurable modular platform); perception + manipulation for lift/move/manipulate tasks",
+    "manufacturer_history": "O-ID (Japan) makes 'Modular', a modular wheeled humanoid robot for industrial automation. Rather than locking users into one fixed setup, it's built around interchangeable modules so operators can reconfigure it for different tasks and add/swap components as needs change - giving it a longer working life than single-purpose machines. It stands 172 cm and moves on a wheeled base, pairing a capable upper body with 30 DOF + 16 kg payload for 24/7 industrial work."
   },
   {
     "id": "cyan-robotics-orca",
@@ -165781,9 +165821,9 @@
     "name": "CASIVIBOT",
     "brand": "CasiVision",
     "cat": "Humanoid",
-    "sub": "Compact Service Humanoid",
+    "sub": "Industrial Inspection Humanoid",
     "year": 2025,
-    "status": "Development",
+    "status": "Active",
     "made_in": "China",
     "origin": "China",
     "has_hands": true,
@@ -165813,12 +165853,15 @@
     ],
     "desc": "CASIVIBOT is a compact humanoid service robot from CasiVision — dual-arm manipulation, smart vision and flexible mobility for research, healthcare and commercial use, designed for smooth interaction and safe indoor operation beside humans. Its balanced form works in open and crowded spaces, with a modular structure supporting upgrades. Detailed public specifications are limited; captured into additional specs pending a datasheet.",
     "raw_specs": {
-      "maker": "CasiVision",
-      "form": "Compact dual-arm service humanoid, flexible mobility",
-      "focus": "Smooth interaction, safe indoor operation beside humans",
-      "use": "Research, healthcare, commercial — guiding, delivery, support",
-      "design": "Modular, upgradeable",
-      "note": "Limited public specs; flagged for outreach"
+      "Type": "Embodied industrial-inspection humanoid (CASIVISION's first) - built on its AOI/machine-vision heritage",
+      "Form": "Compact humanoid; dual-arm manipulation; smart machine vision; flexible mobility; modular structure (future upgrades); friendly design, no sharp edges (safe indoor operation beside humans)",
+      "Primary purpose": "'Intelligent inspection' - industrial quality inspection (AOI, automated optical inspection)",
+      "Company": "CASIVISION (Zhongke Huiyuan Vision / 中科慧远视觉) - a leading domestic AOI equipment manufacturer",
+      "Unveiled": "Aug 19, 2025",
+      "Secondary use": "Research, healthcare, commercial support tasks (dual-arm manipulation + smart vision + flexible mobility)",
+      "Note": "Exact height/weight/DOF not published (SPECS PENDING - not invented)",
+      "Use cases": "Industrial quality inspection, quality control, research, healthcare, commercial",
+      "Source": "CMRA/CNMRA (China Mobile Robot Association product catalog) + humanoid.guide + CASIVISION (zhongkehuiyuan.com)"
     },
     "rating": 4,
     "img": "https://plain-eeur-prod-public.komododecks.com/202607/20/oMU4CueIX7amIErrlM9t/image.jpg",
@@ -165827,7 +165870,12 @@
       "https://img.originofbots.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1773781247/robots/casivibot-by-casivision/wbm3dbop3yu5hwuoqskz.webp",
       "https://img.originofbots.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1773781246/robots/casivibot-by-casivision/td6wml9biq0xd2nhzggu.webp",
       "https://img.originofbots.com/db8jz0ojq/image/upload/c_thumb,w_400,h_300,q_80/v1773781248/robots/casivibot-by-casivision/zizc17efghqdsmvm0lae.webp"
-    ]
+    ],
+    "modular": true,
+    "depth_sensing": "Smart machine-vision system (AOI heritage)",
+    "actuator_type": "Compact humanoid with dual-arm manipulation + flexible mobility; modular structure (future upgrades); no sharp edges (safe indoor operation)",
+    "ai_model": "Embodied 'intelligent inspection' - machine-vision-driven industrial quality inspection; smart vision + dual-arm manipulation",
+    "manufacturer_history": "CASIVISION (Zhongke Huiyuan Vision / 中科慧远视觉), a leading Chinese manufacturer of automated optical inspection (AOI) equipment. On Aug 19, 2025 it unveiled CASIVIBOT - its first embodied industrial-inspection humanoid robot - bringing its AOI/machine-vision heritage into a mobile humanoid form to usher in 'intelligent inspection' for industrial quality control. It's also positioned for research, healthcare + commercial support tasks with a friendly, modular design."
   },
   {
     "id": "wl-robotics-totan-o1",
