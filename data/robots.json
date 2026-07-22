@@ -71358,28 +71358,33 @@
   },
   {
     "id": "irobot-terra-robot-mower",
-    "name": "Terra Robot Mower",
+    "name": "iRobot Terra Robot Mower",
     "brand": "iRobot",
     "cat": "Consumer",
-    "sub": "Robot Lawn Mower",
+    "sub": "Robot Lawn Mower (Wire-Free, Beacon - Cancelled)",
     "tags": [
       "lawn-mower",
+      "robotic-mower",
+      "wire-free",
+      "beacon",
+      "vslam",
       "irobot",
-      "discontinued",
-      "historic",
-      "first-attempt"
+      "terra",
+      "2020",
+      "cancelled",
+      "historical"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733815/myrobot/q6ui7q9nnesdlsfffaek.jpg",
     "score": 75,
     "rating": 4,
     "price": 1500,
-    "desc": "The Terra Robot Mower is a robotic lawn mower from iRobot that autonomously cuts and maintains lawns on a schedule using guided navigation, returning to its dock to recharge.",
+    "desc": "iRobot's ambitious robot mower (Terra t7), announced 2019 - it used wireless beacons plus vSLAM mapping to mow without any boundary wire, from the makers of the Roomba. Development was PAUSED in 2020 as iRobot refocused during the pandemic, and the Terra never reached full market release - a notable 'what-if' in robotic-mower history.",
     "highlights": [],
     "perf": false,
     "year": 2020,
     "origin": "USA",
-    "status": "Active",
+    "status": "Discontinued",
     "released": "2020",
     "battery_life": "Up to 75 minutes",
     "charge_time": "3 hours",
@@ -71412,7 +71417,21 @@
     "anti_theft": true,
     "autonomous": true,
     "max_slope_pct": 45,
-    "website": "https://www.irobot.com"
+    "website": "https://www.irobot.com",
+    "raw_specs": {
+      "Brand": "iRobot (makers of the Roomba robot vacuum)",
+      "Released": "announced 2019; development PAUSED 2020 (never fully released)",
+      "Product type": "robotic lawn mower (wire-free; beacon + vSLAM)",
+      "Model": "Terra t7",
+      "Navigation": "WIRELESS BEACONS + vSLAM (visual mapping) - mowed without a boundary wire (place beacons around the yard; the mower maps + navigates between them); app-based",
+      "Cutting": "cut in tidy back-and-forth rows (unusual for the era)",
+      "Status": "PAUSED / effectively CANCELLED - iRobot paused Terra development in 2020 to refocus on core business (vacuums) during the COVID-19 period; a small beta ran in Germany + a US pilot; never reached wide retail",
+      "Historical significance": "an early (2019-2020) attempt at wire-free beacon navigation from a major consumer-robotics brand - predated the RTK/LiDAR/vision wire-free wave that arrived 2023-2026",
+      "Price": "was to be POA (never widely priced/sold)",
+      "Company": "iRobot",
+      "Note": "iRobot Terra = cancelled/paused historical robot mower (beacon+vSLAM, 2019-2020); status Discontinued; important encyclopedic entry as an early wire-free pioneer; granular hardware specs never fully published - SPECS PENDING/never released",
+      "Source": "iRobot Terra t7 announcements (2019) + press on the 2020 development pause (beacon+vSLAM wire-free/back-and-forth rows/Germany beta/paused for core-business focus)"
+    }
   },
   {
     "id": "fourier-intelligence-gr-3c-cosmo",
@@ -95291,23 +95310,23 @@
     "name": "MOVA LiDAX Ultra 1000",
     "brand": "MOVA",
     "cat": "Consumer",
-    "sub": "Robotic Lawn Mower (LiDAR, Wire-Free)",
+    "sub": "Robot Lawn Mower (Wire-Free, LiDAR)",
     "tags": [
       "lawn-mower",
       "robotic-mower",
-      "lidar",
       "wire-free",
+      "lidar",
+      "no-rtk",
       "mova",
-      "2026",
       "lidax",
-      "dreame-subbrand"
+      "2026"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734083/myrobot/gejyhzq2pq1synwfonvy.jpg",
     "score": 75,
     "rating": 4,
-    "price": 1599,
-    "desc": "MOVA's LiDAX Ultra 1000 - a wire-free robotic LAWN MOWER using LiDAR-based navigation (part of the LiDAX Ultra 1000 / Ultra 2000 / Pro 800 mower series), NOT a robot vacuum. Flagged: this entry is currently under Consumer but is a lawn mower and belongs with the mower category work.",
+    "price": 1500,
+    "desc": "MOVA's wire-free LiDAR robot mower (LiDAX Ultra 1000) - a LiDAR-navigated, no-wire/no-RTK mower for lawns around 1,000 m². MOVA is a Dreame sub-brand, and the LiDAX shares the LiDAR-mapping wire-free approach of Dreame's OmniSense mower line. RE-TAGGED from vacuum to mower (it was mis-filed during the vacuum pass).",
     "highlights": [
       "LiDAR navigation",
       "Affordable",
@@ -95361,14 +95380,16 @@
     "raw_specs": {
       "Brand": "MOVA (Dreame sub-brand)",
       "Released": "2026",
-      "Product type": "ROBOTIC LAWN MOWER (not a robot vacuum)",
-      "Navigation": "LiDAR-based wire-free navigation (no perimeter/boundary wire)",
-      "Series": "MOVA LiDAX mowers - LiDAX Ultra 1000 / LiDAX Ultra 2000 / LiDAX Pro 800",
-      "Positioning": "MOVA's smart-garden / robotic-mower line (alongside MOVA's PaceMate self-propelled mowers, chainsaws, blowers)",
-      "Company": "MOVA / Dreame",
-      "CATEGORY / DATA-QUALITY FLAG": "This is a LAWN MOWER, not a robot vacuum. It sits in the DB under 'Consumer' but should be enriched with LAWN-MOWER schema (cutting width/height, lawn size m2, slope %, RTK/LiDAR nav, blade type, rain sensor, anti-theft) during the mower category push - NOT the vacuum tail. Most mower-specific specs are SPECS PENDING here; captured minimally + flagged for the mower pass.",
-      "Note": "brand casing normalized to 'MOVA'; move/re-tag to a Lawn Mowers sub-category when the mower push happens",
-      "Source": "us.mova.tech (LiDAX Ultra 1000 - listed under MOVA's robotic mower/garden line, LiDAR wire-free) - full mower specs deferred to mower push"
+      "Product type": "robotic lawn mower (wire-free; LiDAR)",
+      "Working area": "~1,000 m² (per 'Ultra 1000' model number)",
+      "Navigation": "LiDAR-based wire-free mapping (no perimeter wire, no RTK station) - shares the LiDAR approach of Dreame's OmniSense mower line (MOVA = Dreame sub-brand)",
+      "Cutting": "cutting disc + blades",
+      "App": "MOVA/Dreamehome-class app",
+      "Price": "~$1,300-1,500",
+      "Company": "MOVA",
+      "CATEGORY / RE-TAG FLAG": "This entry was previously MIS-FILED as a robot VACUUM during the vacuum-enrichment pass. It is actually a LiDAR robotic LAWN MOWER. RE-TAGGED here: sub -> 'Robot Lawn Mower', mower tags applied. Confirm the re-tag on import (Smart merge onto the existing id).",
+      "Note": "MOVA LiDAX Ultra 1000 = wire-free LiDAR mower (~1000m²), Dreame sub-brand; re-tagged from vacuum -> mower; granular specs (slope/cut width/height/battery/runtime) partial SPECS PENDING",
+      "Source": "MOVA (LiDAX Ultra 1000 - wire-free LiDAR mower ~1000m²; MOVA=Dreame sub-brand, shares OmniSense-class LiDAR nav) - re-tag from vacuum push"
     }
   },
   {
@@ -95801,24 +95822,24 @@
   },
   {
     "id": "keenon-keenmow-k1-2026",
-    "name": "KEENMOW K1",
+    "name": "KEENON KEENMOW K1",
     "brand": "KEENON Robotics",
     "cat": "Consumer",
-    "sub": "Robot Lawn Mower",
+    "sub": "Robot Lawn Mower (Commercial)",
     "tags": [
       "lawn-mower",
+      "robotic-mower",
+      "commercial",
       "keenon",
-      "wire-free",
-      "active",
-      "2026",
-      "commercial"
+      "keenmow",
+      "2026"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734088/myrobot/xf7wymviaprdvug0evke.jpg",
     "score": 75,
     "rating": 4,
     "price": 1999,
-    "desc": "The KEENMOW K1 is a robotic lawn mower from KEENON Robotics that autonomously cuts and maintains lawns on a schedule using guided navigation, returning to its dock to recharge.",
+    "desc": "KEENON Robotics' entry into robotic mowing - the KEENMOW K1 (2026). KEENON is an established Chinese commercial service-robot maker (delivery and cleaning robots), and the KEENMOW K1 extends that commercial-robotics expertise to autonomous lawn care.",
     "highlights": [
       "3D LiDAR + Vision",
       "Autonomous 3D mapping",
@@ -95868,7 +95889,18 @@
     ],
     "max_slope_pct": 45,
     "website": "https://www.keenon.com",
-    "video": "https://youtu.be/dgUack_G38g"
+    "video": "https://youtu.be/dgUack_G38g",
+    "raw_specs": {
+      "Brand": "KEENON Robotics (established Chinese commercial service-robot maker - delivery + cleaning robots)",
+      "Released": "2026",
+      "Product type": "robotic lawn mower (commercial; brand's first mower)",
+      "Navigation": "wire-free autonomous (RTK/vision/LiDAR class - exact stack to verify)",
+      "Positioning": "leverages KEENON's commercial service-robot fleet expertise - likely commercial/facility grounds",
+      "Price": "POA",
+      "Company": "KEENON Robotics",
+      "Note": "KEENMOW K1 = KEENON's first robotic mower (2026); KEENON is better known for delivery/cleaning service robots; newest/niche - granular specs (nav stack/area/slope/cut width/battery/runtime/dimensions) largely SPECS PENDING",
+      "Source": "KEENON Robotics (KEENMOW K1 - 2026 mower from commercial service-robot maker) - full specs pending"
+    }
   },
   {
     "id": "lymow-one-plus-2026",
@@ -96139,23 +96171,25 @@
   },
   {
     "id": "robotplusplus-goko-m6-2026",
-    "name": "Goko M6",
+    "name": "RobotPlusPlus Goko M6",
     "brand": "RobotPlusPlus",
     "cat": "Consumer",
-    "sub": "Robot Lawn Mower",
+    "sub": "Robot Lawn Mower (Wire-Free, 4WD)",
     "tags": [
       "lawn-mower",
-      "robotplusplus",
+      "robotic-mower",
       "wire-free",
-      "active",
+      "4wd",
+      "goko",
+      "robotplusplus",
       "2026"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734092/myrobot/k2yqjhqf4hubjpv7fuw0.webp",
     "score": 75,
     "rating": 4,
-    "price": 1199,
-    "desc": "The Goko M6 is a robotic lawn mower from RobotPlusPlus that autonomously cuts and maintains lawns on a schedule using guided navigation, returning to its dock to recharge.",
+    "price": 1800,
+    "desc": "A mid-size 4WD robot mower (CES 2026) - the GOKO M6 targets the 0.25-0.75 acre range with four-wheel drive for steep and complex terrain (45%+ slopes). Sold direct-to-consumer.",
     "highlights": [
       "RTK + VSLAM",
       "4WD",
@@ -96202,7 +96236,21 @@
     ],
     "max_slope_pct": 45,
     "video": "https://youtu.be/oUZ6dsf1x1Q",
-    "video2": "https://youtu.be/wKHT2H4dLZw"
+    "video2": "https://youtu.be/wKHT2H4dLZw",
+    "raw_specs": {
+      "Brand": "RobotPlusPlus (GOKO brand)",
+      "Released": "2026 (CES 2026)",
+      "Product type": "robotic lawn mower (wire-free; 4WD; mid-size)",
+      "Working area": "0.25-0.75 acre (mid-range sweet spot)",
+      "Drive/slope": "four-wheel drive - for steep + complex terrain (45%+ slopes)",
+      "Navigation": "wire-free (RTK/vision class - exact stack to verify)",
+      "Sales": "direct-to-consumer",
+      "App": "GOKO app",
+      "Price": "~$1,500-1,800",
+      "Company": "RobotPlusPlus",
+      "Note": "GOKO M6 = mid-size 4WD mower (0.25-0.75 acre, steep terrain); newest CES 2026 D2C brand - granular specs (nav stack/exact slope/cut width/height/battery/runtime) largely SPECS PENDING",
+      "Source": "The Gadgeteer CES 2026 buyer's guide (GOKO M6 - medium 0.25-0.75 acre, 4WD steep/complex terrain 45%+, direct-to-consumer) - full specs pending"
+    }
   },
   {
     "id": "yarbo-lawn-m1-2026",
@@ -96302,15 +96350,17 @@
   },
   {
     "id": "pandag-g1-autonomous-2026",
-    "name": "G1 Autonomous Mower",
+    "name": "Pandag G1 Autonomous Mower",
     "brand": "Pandag",
     "cat": "Consumer",
-    "sub": "Robot Lawn Mower",
+    "sub": "Robot Lawn Mower (Commercial, Large-Area)",
     "tags": [
       "lawn-mower",
+      "robotic-mower",
+      "commercial",
+      "large-area",
+      "autonomous",
       "pandag",
-      "wire-free",
-      "active",
       "2026"
     ],
     "fig": "🤖",
@@ -96318,7 +96368,7 @@
     "score": 75,
     "rating": 4,
     "price": 1399,
-    "desc": "The G1 Autonomous Mower is a robotic lawn mower from Pandag that autonomously cuts and maintains lawns on a schedule using guided navigation, returning to its dock to recharge.",
+    "desc": "A dedicated commercial autonomous mower - the Pandag G1 is built for large grounds, rated to mow up to 12 acres per day. It sits in the commercial (1.5+ acre) tier of the 2026 robotic-mower market, aimed at contractors and large-property/municipal maintenance rather than residential yards.",
     "highlights": [
       "12 acres/day",
       "RTK + 4WD",
@@ -96364,7 +96414,20 @@
       "https://cdn.sanity.io/images/tmxi5ngh/production/7901c80e4b923ca315a6a0a166e9908ac4b52bb9-902x394.png",
       "https://mma.prnewswire.com/media/2854012/2.jpg?p=twitter"
     ],
-    "video": "https://youtu.be/DzNHxbeMr3s"
+    "video": "https://youtu.be/DzNHxbeMr3s",
+    "raw_specs": {
+      "Brand": "Pandag",
+      "Released": "2026 (CES 2026 era)",
+      "Product type": "COMMERCIAL autonomous robotic lawn mower (large-area)",
+      "Daily capacity": "up to 12 acres per day",
+      "Tier": "commercial (1.5+ acres) - dedicated commercial unit (per CES 2026 buyer guides, alongside Segway Terranox 3-6 acres)",
+      "Navigation": "autonomous wire-free (RTK/vision class - exact stack to verify)",
+      "Positioning": "contractors, large estates, municipal/commercial grounds",
+      "Price": "POA (commercial)",
+      "Company": "Pandag",
+      "Note": "Pandag G1 = commercial large-area autonomous mower (12 acres/day); newest/niche - granular specs (nav stack/slope/cut width/battery/runtime/dimensions) largely SPECS PENDING",
+      "Source": "The Gadgeteer CES 2026 buyer's guide (Pandag G1 - commercial 1.5+ acre tier, 12 acres/day) - full specs pending"
+    }
   },
   {
     "id": "figure-03-2025",
