@@ -33890,24 +33890,28 @@
   },
   {
     "id": "dyson-360-eye",
-    "name": "360 Eye",
+    "name": "Dyson 360 Eye",
     "brand": "Dyson",
     "year": 2016,
-    "status": "Active",
+    "status": "Discontinued",
     "cat": "Consumer",
     "sub": "Robot Vacuum",
     "tags": [
       "vacuum",
-      "robotic",
-      "mapping",
-      "cyclone"
+      "360-camera",
+      "tank-tracks",
+      "cyclone",
+      "slam",
+      "dyson",
+      "2016",
+      "first-commercial"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733244/myrobot/cpxatnjepcdbkr1yussr.jpg",
     "score": 75,
     "rating": 4,
-    "price": 999,
-    "desc": "The Dyson 360 Eye (2016) was Dyson's first robot vacuum - a tall, tank-tracked design with a 360° panoramic camera for vSLAM navigation and a full-width brush bar. Discontinued.",
+    "price": 1000,
+    "desc": "Dyson's first commercial robot vacuum (announced 2014, on sale from 2016) - the fruit of 16 years and $47M of R&D. It navigates with a 360-degree panoramic camera (infrared-sensitive, 30fps, SLAM), rides on tank tracks instead of wheels, and uses a Dyson V2 digital motor + Root Cyclone for the most powerful suction of any robot of its era (particles down to 0.5 microns).",
     "highlights": [
       "360-degree camera",
       "Radial Root Cyclone technology",
@@ -33992,7 +33996,27 @@
     "smart_home": [
       "true"
     ],
-    "video": "https://youtu.be/EjvXrZEEQH0"
+    "video": "https://youtu.be/EjvXrZEEQH0",
+    "raw_specs": {
+      "Brand": "Dyson (UK)",
+      "Announced": "Sept 2014 (formerly 'Project N223'); on sale Japan Spring 2015, wider rollout 2016",
+      "Status": "discontinued (superseded by the 360 Heurist)",
+      "Development": "16 years, ~$47M, 200+ engineers; 'the most powerful suction of any robot' of its time",
+      "Suction/motor": "Dyson digital motor V2 (high-speed) + Root Cyclone technology; captures particles down to 0.5 microns; the most powerful suction of any robot vacuum at launch",
+      "Navigation": "unique 360-degree panoramic camera vision system (top-mounted lens) - sees the whole room at once, triangulates position, uses landmarks + 30 fps to build a floor plan (SLAM); infrared sensors for low light (cleans in the dark)",
+      "Mobility": "continuous TANK TRACKS (not wheels) - steady speed across floor types/thresholds",
+      "Brush bar": "full-width brush bar running the entire ~9 in body length; two brush types - patented carbon-fiber (hard floors) + stiff nylon bristles (carpet)",
+      "Weight": "~5 lb (2.4 kg)",
+      "Form": "taller + narrower than a Roomba",
+      "Dock": "self-charging dock; recharge + resume (returns to finish where it left off)",
+      "App": "Dyson Link app - scheduling, remote start (even away from home), maps",
+      "Battery": "high power consumption + limited internal space = shorter runtime than rivals (offset by recharge-and-resume)",
+      "Price": "~GBP 700-750 / ~$1,000+ (premium)",
+      "Company": "Dyson",
+      "Colors": "Nickel/Blue",
+      "Note": "first Dyson robot to reach consumers; the tank-tracks + top-camera design is iconic; predecessor to the 360 Heurist (20% more suction); codename Project N223",
+      "Source": "IEEE Spectrum + TechCrunch + Cool Hunting + TechRadar + RobotReviews (360 Eye - 360 camera/30fps/SLAM/tank tracks/V2 motor/Root Cyclone/0.5 micron/5lb/N223/16yr-$47M)"
+    }
   },
   {
     "id": "dyson-360-heurist",
@@ -34257,24 +34281,25 @@
   },
   {
     "id": "dyson-robot-prototype-a",
-    "name": "Robot Vacuum Prototype A",
+    "name": "Dyson Robot Vacuum Prototype A",
     "brand": "Dyson",
     "year": 2014,
-    "status": "Active",
+    "status": "Development",
     "cat": "Consumer",
-    "sub": "Robot Vacuum",
+    "sub": "Robot Vacuum (Prototype)",
     "tags": [
-      "vacuum",
-      "robotic",
-      "prototype",
-      "development"
+      "robot-prototype",
+      "development",
+      "dyson",
+      "2014",
+      "historic"
     ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": null,
-    "desc": "A Dyson robot-vacuum development prototype. Historical/experimental unit; specifications limited.",
+    "desc": "An internal Dyson robot-vacuum development prototype from the long program (1998-2014) between the abandoned DC06 concept and the first commercial 360 Eye. Part of the 16-year, $47M effort by 200+ engineers to perfect Dyson's 360-degree vision navigation and cyclone-in-a-robot packaging.",
     "highlights": [
       "Early cyclone tech",
       "Basic navigation",
@@ -34348,28 +34373,40 @@
     "app_companion": "Dyson app",
     "smart_home": [
       "true"
-    ]
+    ],
+    "raw_specs": {
+      "Brand": "Dyson (UK)",
+      "Era": "~2014 (development phase leading up to the 360 Eye reveal in Sept 2014)",
+      "Status": "internal development PROTOTYPE - not a commercial product",
+      "Program context": "one of many test rigs/prototypes in Dyson's 16-year (~1998-2014), $47M, 200+-engineer robotics program between the DC06 (2001 concept) and the 360 Eye (first commercial)",
+      "Focus": "maturing the 360-degree panoramic-camera vision + SLAM navigation and fitting Dyson digital-motor + cyclone tech into a robot body",
+      "Company": "Dyson",
+      "Note": "encyclopedic prototype entry; Dyson did not publish consumer specs for internal prototypes - SPECS PENDING on details; distinct from the DC06 concept (2001) and the shipping 360 Eye (2016)",
+      "Source": "Dyson robotics-program history (Fast Company/IEEE Spectrum - 16 years/$47M/200+ engineers of prototypes between DC06 and 360 Eye)"
+    }
   },
   {
     "id": "dyson-dc06-concept",
-    "name": "DC06 Robot Concept",
+    "name": "Dyson DC06 Robot Concept",
     "brand": "Dyson",
     "year": 2001,
-    "status": "Active",
+    "status": "Development",
     "cat": "Consumer",
-    "sub": "Robot Vacuum",
+    "sub": "Robot Vacuum (Concept, Unreleased)",
     "tags": [
-      "vacuum",
-      "robotic",
-      "concept",
-      "early"
+      "robot-concept",
+      "unreleased",
+      "prototype",
+      "dyson",
+      "2001",
+      "historic"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733248/myrobot/loemxoj6wm8ef2qfsskb.jpg",
     "score": 75,
     "rating": 4,
     "price": null,
-    "desc": "The Dyson DC06 (2001) was Dyson's famous unreleased robot vacuum concept - packed with sensors but shelved as too heavy and expensive to bring to market. A historical prototype.",
+    "desc": "Dyson's first-ever robot vacuum - the DC06, announced in 2001 (a year before the Roomba). It packed 80 onboard sensors for mapping and navigation but weighed a daunting ~20lb (3x a typical robovac), vacuumed poorly, and carried a projected $3,000-6,000 price, so Dyson never released it. It began a 16-year robotics program.",
     "highlights": [
       "Original concept",
       "Basic cyclone",
@@ -34448,28 +34485,46 @@
     "app_companion": "Dyson app",
     "smart_home": [
       "true"
-    ]
+    ],
+    "raw_specs": {
+      "Brand": "Dyson (James Dyson Ltd; UK)",
+      "Announced": "2001 (a year before iRobot's Roomba)",
+      "Status": "NEVER RELEASED - concept/prototype only; Dyson wasn't happy with vacuuming performance + the price was untenable",
+      "Program start": "a robot-cleaner team was established at Dyson in 1998; the DC06 was the first result",
+      "Sensors": "80 onboard sensors (for mapping + navigating its environment)",
+      "Weight": "~20 lb (9 kg) - about 3x an average robot vacuum (too heavy)",
+      "Cleaning": "vacuum (Dyson cyclone); vacuumed poorly per Dyson's own assessment",
+      "Design": "distinctly 'Dyson' industrial design",
+      "Projected price": "~$3,000-6,000 (tentative; a key reason it never shipped)",
+      "No dock": "no self-charging station (unlike the later 360 Eye)",
+      "Legacy": "kicked off ~15-16 years of Dyson developing the 360-degree vision navigation that became the 360 Eye",
+      "Company": "Dyson",
+      "Note": "historic concept - the origin of Dyson's robot-vacuum program; never a commercial product; specs are limited to what Dyson disclosed publicly (SPECS PENDING on internals)",
+      "Source": "Fast Company + Campaign + Cool Hunting (DC06 - 2001/20lb/80 sensors/$3000-6000/never released/1998 team)"
+    }
   },
   {
     "id": "dyson-n223-prototype",
-    "name": "N223 Development Unit",
+    "name": "Dyson N223 Development Unit",
     "brand": "Dyson",
     "year": 2017,
-    "status": "Active",
+    "status": "Development",
     "cat": "Consumer",
-    "sub": "Robot Vacuum",
+    "sub": "Robot Vacuum (Development Unit)",
     "tags": [
-      "vacuum",
-      "robotic",
+      "robot-prototype",
       "development",
-      "testing"
+      "n223",
+      "dyson",
+      "2017",
+      "historic"
     ],
     "fig": "🤖",
     "img": "",
     "score": 75,
     "rating": 4,
     "price": null,
-    "desc": "The Dyson N223 was an internal Dyson robot-vacuum development unit - a pre-production prototype in the lineage leading to the 360 Eye. Historical/prototype.",
+    "desc": "A development unit from Dyson 'Project N223' - the internal codename for the 360 Eye robot-vacuum program. These pre-production units matured the 360-degree camera navigation, tank-track drive and cyclone packaging that shipped in the 360 Eye and, later, the 360 Heurist.",
     "highlights": [
       "Experimental tech",
       "Bridge design",
@@ -34546,7 +34601,17 @@
     "app_companion": "Dyson app",
     "smart_home": [
       "true"
-    ]
+    ],
+    "raw_specs": {
+      "Brand": "Dyson (UK)",
+      "Status": "development / pre-production UNIT - not a separate commercial product",
+      "Project N223": "'N223' was Dyson's internal PROJECT CODENAME for the 360 Eye robot-vacuum program (the 360 Eye was 'formerly known as Dyson Project N223')",
+      "Role": "pre-production/development units used to validate the 360-degree panoramic-camera SLAM navigation, tank-track drive, Dyson digital motor + Root Cyclone in a robot body",
+      "Relation": "directly tied to the 360 Eye (2016) and the refinement path to the 360 Heurist (2018)",
+      "Company": "Dyson",
+      "Note": "encyclopedic development-unit entry; not sold to consumers; internal specs not published - SPECS PENDING; effectively the same lineage as the 360 Eye (shares the N223 program). Consider linking/associating with dyson-360-eye.",
+      "Source": "RobotReviews + TechRadar (360 Eye 'formerly known as Dyson Project N223') - N223 = the 360 Eye development program codename"
+    }
   },
   {
     "id": "irobot-roomba-692",
