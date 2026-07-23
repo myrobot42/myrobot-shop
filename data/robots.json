@@ -85992,7 +85992,7 @@
   },
   {
     "id": "mammotion-luba-2-awdx10000h",
-    "name": "Mammotion Luba 2 AWD 10000H",
+    "name": "Mammotion LUBA 2 AWD 10000H",
     "brand": "Mammotion",
     "year": 2024,
     "status": "Active",
@@ -86007,7 +86007,13 @@
       "awd",
       "mammotion",
       "luba-2",
-      "2024"
+      "2024",
+      "luba-2-awd-10000h",
+      "luba-2-awd-10000hx",
+      "10000hx",
+      "10000h",
+      "h-version",
+      "tall-grass"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733983/myrobot/kxbvfgwpa97pgt4byt7y.jpg",
@@ -86120,8 +86126,13 @@
       "Company": "Mammotion",
       "NAMING / DUPLICATION FLAG": "Mammotion LUBA 2 SKUs overlap badly - the SAME 5,000 m² LUBA 2 appears as X ('Luba 2 AWD 5000'/awdx5000), V ('Luba 2 AWD V 5000') AND H ('Luba 2 AWD 5000H'). Model number = area; X=residential turf, H/HX=tall-grass/high-torque, V=vision. RECOMMEND verifying vs Mammotion's live catalogue + MERGING true duplicates (same area+gen) during cleanup. Per-SKU battery/runtime = SPECS PENDING.",
       "Note": "10000H = largest LUBA 2 (10000m²/2.5 acres, high-grass); overlaps 'luba-2-awdv-10000' (V 10000) - VERIFY + MERGE",
-      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)"
-    }
+      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 2 AWD 10000HX; LUBA 2 AWD 10000 H Version; Luba 2 AWD 10000H — same product, different retailer spelling.",
+      "Vision module": "3D vision module (3D vision positioning, 3D vision obstacle detection, FPV mode) backs up RTK when satellite positioning degrades. Retail 'X' SKUs ship with the UltraSense AI Vision module included; non-X units can add it separately.",
+      "Cutting height (H version)": "55-100 mm / 2.2-4 in (H version = taller cutting range; Standard cuts 25-70 mm / 1-2.7 in)"
+    },
+    "also_known_as": "LUBA 2 AWD 10000HX; LUBA 2 AWD 10000 H Version; Luba 2 AWD 10000H"
   },
   {
     "id": "mammotion-luba-2-awdx5000",
@@ -86258,7 +86269,7 @@
   },
   {
     "id": "mammotion-luba-awdv-5000",
-    "name": "Mammotion Luba AWD V 5000",
+    "name": "Mammotion LUBA AWD 5000",
     "brand": "Mammotion",
     "year": 2023,
     "status": "Active",
@@ -86272,7 +86283,13 @@
       "awd",
       "mammotion",
       "luba",
-      "2023"
+      "2023",
+      "luba-awd-5000",
+      "luba-1-awd-5000",
+      "luba-awd-x5000",
+      "x5000",
+      "5000m2",
+      "1.25-acre"
     ],
     "fig": "🤖",
     "score": 75,
@@ -86370,12 +86387,15 @@
       "Company": "Mammotion",
       "NAMING / DUPLICATION FLAG": "Mammotion's LUBA SKUs overlap heavily - the same working-area mower appears under V, X and H/HX suffixes (e.g. 'Luba AWD V 5000' vs 'Luba AWD X5000'). Model number = area (m²); X=residential-turf series, H/HX=tall-grass/high-torque series, V=vision config. RECOMMEND verifying against Mammotion's live catalogue + consolidating true duplicates (V/X of the same area/gen) during the cleanup pass. Granular battery/runtime/exact cut-width per SKU = SPECS PENDING.",
       "Note": "V-suffix 5000m² gen-1 - LIKELY overlaps 'luba-awdx5000' (X 5000m²) - VERIFY + possibly MERGE",
-      "Source": "Mammotion + TechRadar/EasyLawnMowing/BestLawnTools reviews (LUBA AWD gen1 - wire-free RTK/AWD ~80% slope/dual-disc 40cm/30-70mm; model number=area) - gen1 platform"
-    }
+      "Source": "Mammotion + TechRadar/EasyLawnMowing/BestLawnTools reviews (LUBA AWD gen1 - wire-free RTK/AWD ~80% slope/dual-disc 40cm/30-70mm; model number=area) - gen1 platform",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 1 AWD 5000; LUBA AWD X5000; LUBA AWD V 5000; Luba AWD 5000 — same product, different retailer spelling."
+    },
+    "also_known_as": "LUBA 1 AWD 5000; LUBA AWD X5000; LUBA AWD V 5000; Luba AWD 5000"
   },
   {
     "id": "mammotion-luba-awdv-3000",
-    "name": "Mammotion Luba AWD V 3000",
+    "name": "Mammotion LUBA AWD 3000",
     "brand": "Mammotion",
     "year": 2023,
     "status": "Active",
@@ -86389,7 +86409,13 @@
       "awd",
       "mammotion",
       "luba",
-      "2023"
+      "2023",
+      "luba-awd-3000",
+      "luba-1-awd-3000",
+      "luba-awd-x3000",
+      "x3000",
+      "3000m2",
+      "0.75-acre"
     ],
     "fig": "🤖",
     "score": 75,
@@ -86487,12 +86513,15 @@
       "Company": "Mammotion",
       "NAMING / DUPLICATION FLAG": "Mammotion's LUBA SKUs overlap heavily - the same working-area mower appears under V, X and H/HX suffixes (e.g. 'Luba AWD V 5000' vs 'Luba AWD X5000'). Model number = area (m²); X=residential-turf series, H/HX=tall-grass/high-torque series, V=vision config. RECOMMEND verifying against Mammotion's live catalogue + consolidating true duplicates (V/X of the same area/gen) during the cleanup pass. Granular battery/runtime/exact cut-width per SKU = SPECS PENDING.",
       "Note": "V-suffix 3000m² gen-1 - compare with any X3000 sibling for duplication",
-      "Source": "Mammotion + TechRadar/EasyLawnMowing/BestLawnTools reviews (LUBA AWD gen1 - wire-free RTK/AWD ~80% slope/dual-disc 40cm/30-70mm; model number=area) - gen1 platform"
-    }
+      "Source": "Mammotion + TechRadar/EasyLawnMowing/BestLawnTools reviews (LUBA AWD gen1 - wire-free RTK/AWD ~80% slope/dual-disc 40cm/30-70mm; model number=area) - gen1 platform",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 1 AWD 3000; LUBA AWD X3000; LUBA AWD V 3000; Luba AWD 3000 — same product, different retailer spelling."
+    },
+    "also_known_as": "LUBA 1 AWD 3000; LUBA AWD X3000; LUBA AWD V 3000; Luba AWD 3000"
   },
   {
     "id": "mammotion-luba-2-awdv-5000",
-    "name": "Mammotion Luba 2 AWD V 5000",
+    "name": "Mammotion LUBA 2 AWD 5000",
     "brand": "Mammotion",
     "year": 2024,
     "status": "Active",
@@ -86507,7 +86536,13 @@
       "awd",
       "mammotion",
       "luba-2",
-      "2024"
+      "2024",
+      "luba-2-awd-5000",
+      "luba-2-awd-5000x",
+      "5000x",
+      "5000-standard",
+      "5000m2",
+      "1.25-acre"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733990/myrobot/cvrsquas9nenxksxukwa.jpg",
@@ -86617,12 +86652,17 @@
       "Company": "Mammotion",
       "NAMING / DUPLICATION FLAG": "Mammotion LUBA 2 SKUs overlap badly - the SAME 5,000 m² LUBA 2 appears as X ('Luba 2 AWD 5000'/awdx5000), V ('Luba 2 AWD V 5000') AND H ('Luba 2 AWD 5000H'). Model number = area; X=residential turf, H/HX=tall-grass/high-torque, V=vision. RECOMMEND verifying vs Mammotion's live catalogue + MERGING true duplicates (same area+gen) during cleanup. Per-SKU battery/runtime = SPECS PENDING.",
       "Note": "V 5000m² LUBA 2 - DUPLICATE-RISK with X5000 + 5000H (three 5000m² LUBA 2 SKUs) - VERIFY + MERGE",
-      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)"
-    }
+      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 2 AWD 5000X; LUBA 2 AWD 5000 Standard; LUBA 2 AWD V 5000 — same product, different retailer spelling.",
+      "Vision module": "3D vision module (3D vision positioning, 3D vision obstacle detection, FPV mode) backs up RTK when satellite positioning degrades. Retail 'X' SKUs ship with the UltraSense AI Vision module included; non-X units can add it separately.",
+      "Cutting height (Standard version)": "25-70 mm / 1-2.7 in (Standard version; the H version cuts 55-100 mm / 2.2-4 in)"
+    },
+    "also_known_as": "LUBA 2 AWD 5000X; LUBA 2 AWD 5000 Standard; LUBA 2 AWD V 5000"
   },
   {
     "id": "mammotion-luba-2-awdv-3000",
-    "name": "Mammotion Luba 2 AWD V 3000",
+    "name": "Mammotion LUBA 2 AWD 3000",
     "brand": "Mammotion",
     "year": 2024,
     "status": "Active",
@@ -86637,7 +86677,13 @@
       "awd",
       "mammotion",
       "luba-2",
-      "2024"
+      "2024",
+      "luba-2-awd-3000",
+      "luba-2-awd-3000x",
+      "3000x",
+      "3000-standard",
+      "3000m2",
+      "0.75-acre"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733990/myrobot/csubqdn5t0eoyhicwwf3.jpg",
@@ -86747,8 +86793,13 @@
       "Company": "Mammotion",
       "NAMING / DUPLICATION FLAG": "Mammotion LUBA 2 SKUs overlap badly - the SAME 5,000 m² LUBA 2 appears as X ('Luba 2 AWD 5000'/awdx5000), V ('Luba 2 AWD V 5000') AND H ('Luba 2 AWD 5000H'). Model number = area; X=residential turf, H/HX=tall-grass/high-torque, V=vision. RECOMMEND verifying vs Mammotion's live catalogue + MERGING true duplicates (same area+gen) during cleanup. Per-SKU battery/runtime = SPECS PENDING.",
       "Note": "V 3000m² LUBA 2; the 3000X/3000 launched at CES 2025 (EUR2599) - compare for duplication",
-      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)"
-    }
+      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 2 AWD 3000X; LUBA 2 AWD 3000 Standard; LUBA 2 AWD V 3000 — same product, different retailer spelling.",
+      "Vision module": "3D vision module (3D vision positioning, 3D vision obstacle detection, FPV mode) backs up RTK when satellite positioning degrades. Retail 'X' SKUs ship with the UltraSense AI Vision module included; non-X units can add it separately.",
+      "Cutting height (Standard version)": "25-70 mm / 1-2.7 in (Standard version; the H version cuts 55-100 mm / 2.2-4 in)"
+    },
+    "also_known_as": "LUBA 2 AWD 3000X; LUBA 2 AWD 3000 Standard; LUBA 2 AWD V 3000"
   },
   {
     "id": "mammotion-luba-awdv-1000",
@@ -86986,7 +87037,7 @@
   },
   {
     "id": "mammotion-luba-2-awdv-10000",
-    "name": "Mammotion Luba 2 AWD V 10000",
+    "name": "Mammotion LUBA 2 AWD 10000",
     "brand": "Mammotion",
     "year": 2024,
     "status": "Active",
@@ -87001,7 +87052,12 @@
       "awd",
       "mammotion",
       "luba-2",
-      "2024"
+      "2024",
+      "luba-2-awd-10000",
+      "luba-2-awd-10000x",
+      "10000x",
+      "10000-standard",
+      "2.5-acre"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733993/myrobot/ueci1uwy7yh5ovmyzlvj.jpg",
@@ -87111,8 +87167,13 @@
       "Company": "Mammotion",
       "NAMING / DUPLICATION FLAG": "Mammotion LUBA 2 SKUs overlap badly - the SAME 5,000 m² LUBA 2 appears as X ('Luba 2 AWD 5000'/awdx5000), V ('Luba 2 AWD V 5000') AND H ('Luba 2 AWD 5000H'). Model number = area; X=residential turf, H/HX=tall-grass/high-torque, V=vision. RECOMMEND verifying vs Mammotion's live catalogue + MERGING true duplicates (same area+gen) during cleanup. Per-SKU battery/runtime = SPECS PENDING.",
       "Note": "V 10000m² LUBA 2 - overlaps 'luba-2-awdx10000h' (10000H) - VERIFY + MERGE",
-      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)"
-    }
+      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 2 AWD 10000X; LUBA 2 AWD 10000 Standard; LUBA 2 AWD V 10000 — same product, different retailer spelling.",
+      "Vision module": "3D vision module (3D vision positioning, 3D vision obstacle detection, FPV mode) backs up RTK when satellite positioning degrades. Retail 'X' SKUs ship with the UltraSense AI Vision module included; non-X units can add it separately.",
+      "Cutting height (Standard version)": "25-70 mm / 1-2.7 in (Standard version; the H version cuts 55-100 mm / 2.2-4 in)"
+    },
+    "also_known_as": "LUBA 2 AWD 10000X; LUBA 2 AWD 10000 Standard; LUBA 2 AWD V 10000"
   },
   {
     "id": "husqvarna-automower-310",
@@ -90073,7 +90134,13 @@
       "awd",
       "mammotion",
       "luba",
-      "2023"
+      "2023",
+      "luba-awd-1000",
+      "luba-1-awd-1000",
+      "luba-awd-x1000",
+      "x1000",
+      "1000m2",
+      "0.25-acre"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780733991/myrobot/jc2jhw7j3xvhsdp0bamq.jpg",
@@ -90175,8 +90242,11 @@
       "Company": "Mammotion",
       "NAMING / DUPLICATION FLAG": "Mammotion's LUBA SKUs overlap heavily - the same working-area mower appears under V, X and H/HX suffixes (e.g. 'Luba AWD V 5000' vs 'Luba AWD X5000'). Model number = area (m²); X=residential-turf series, H/HX=tall-grass/high-torque series, V=vision config. RECOMMEND verifying against Mammotion's live catalogue + consolidating true duplicates (V/X of the same area/gen) during the cleanup pass. Granular battery/runtime/exact cut-width per SKU = SPECS PENDING.",
       "Note": "LUBA AWD 1000 = entry gen-1 (1000m²/0.25 acre); base of the gen-1 line",
-      "Source": "Mammotion + TechRadar/EasyLawnMowing/BestLawnTools reviews (LUBA AWD gen1 - wire-free RTK/AWD ~80% slope/dual-disc 40cm/30-70mm; model number=area) - gen1 platform"
-    }
+      "Source": "Mammotion + TechRadar/EasyLawnMowing/BestLawnTools reviews (LUBA AWD gen1 - wire-free RTK/AWD ~80% slope/dual-disc 40cm/30-70mm; model number=area) - gen1 platform",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 1 AWD 1000; LUBA AWD X1000; LUBA AWD V 1000; Luba AWD 1000 — same product, different retailer spelling."
+    },
+    "also_known_as": "LUBA 1 AWD 1000; LUBA AWD X1000; LUBA AWD V 1000; Luba AWD 1000"
   },
   {
     "id": "mammotion-luba-2-awd-5000h-2024",
@@ -90193,7 +90263,13 @@
       "awd",
       "mammotion",
       "luba-2",
-      "2024"
+      "2024",
+      "luba-2-awd-5000h",
+      "luba-2-awd-5000hx",
+      "5000hx",
+      "5000h",
+      "h-version",
+      "tall-grass"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734027/myrobot/ia0ntx0ji6jb85tgw78h.jpg",
@@ -90320,8 +90396,13 @@
       "Company": "Mammotion",
       "NAMING / DUPLICATION FLAG": "Mammotion LUBA 2 SKUs overlap badly - the SAME 5,000 m² LUBA 2 appears as X ('Luba 2 AWD 5000'/awdx5000), V ('Luba 2 AWD V 5000') AND H ('Luba 2 AWD 5000H'). Model number = area; X=residential turf, H/HX=tall-grass/high-torque, V=vision. RECOMMEND verifying vs Mammotion's live catalogue + MERGING true duplicates (same area+gen) during cleanup. Per-SKU battery/runtime = SPECS PENDING.",
       "Note": "5000H = high-grass 5000m² LUBA 2; overlaps X5000 + V5000 - VERIFY + MERGE (or keep H distinct if genuinely higher-torque SKU)",
-      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)"
-    }
+      "Source": "Mammotion US + TechRadar + Notebookcheck + EasyLawnMowing/BestLawnTools (LUBA 2 AWD - RTK+UltraSense AI Vision 5 TOPS/binocular 3D/80% 38.6deg/dual-disc 400mm 15.7in/25-70mm/50mm clearance/3D lawn printing; model number=area; HX tall-grass vs X residential)",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 2 AWD 5000HX; LUBA 2 AWD 5000 H Version; Luba 2 AWD 5000H — same product, different retailer spelling.",
+      "Vision module": "3D vision module (3D vision positioning, 3D vision obstacle detection, FPV mode) backs up RTK when satellite positioning degrades. Retail 'X' SKUs ship with the UltraSense AI Vision module included; non-X units can add it separately.",
+      "Cutting height (H version)": "55-100 mm / 2.2-4 in (H version = taller cutting range; Standard cuts 25-70 mm / 1-2.7 in)"
+    },
+    "also_known_as": "LUBA 2 AWD 5000HX; LUBA 2 AWD 5000 H Version; Luba 2 AWD 5000H"
   },
   {
     "id": "mammotion-luba-3-awd-1000-2026",
@@ -90455,7 +90536,12 @@
       "awd",
       "mammotion",
       "luba-3",
-      "2026"
+      "2026",
+      "luba-3-awd-3000",
+      "luba-3-awd-3000s",
+      "3000s",
+      "3000-standard",
+      "0.75-acre"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1780734029/myrobot/j0je8un53jdvglyfe54b.jpg",
@@ -90562,8 +90648,11 @@
       "Company": "Mammotion",
       "NAMING / DUPLICATION FLAG": "LUBA 3 (2026) model number = area (1000/3000/5000). Distinct GENERATION from LUBA 2 - do NOT merge across generations. Per-SKU battery/runtime/exact cut range = SPECS PENDING (newest gen).",
       "Note": "LUBA 3 mid (3000m²)",
-      "Source": "Mammotion US (LUBA 3 AWD 2026 - UltraSense AI Vision 5 TOPS/80% 38.6deg/2.2-4.0in cut/dual-disc 15.7in; successor to LUBA 2) - owner reviews (Luba 3 5000 ~1 acre)"
-    }
+      "Source": "Mammotion US (LUBA 3 AWD 2026 - UltraSense AI Vision 5 TOPS/80% 38.6deg/2.2-4.0in cut/dual-disc 15.7in; successor to LUBA 2) - owner reviews (Luba 3 5000 ~1 acre)",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 3 AWD 3000 S; LUBA 3 AWD 3000 Standard — same product, different retailer spelling."
+    },
+    "also_known_as": "LUBA 3 AWD 3000 S; LUBA 3 AWD 3000 Standard"
   },
   {
     "id": "mammotion-luba-3-awd-5000-2026",
@@ -90582,7 +90671,12 @@
       "mammotion",
       "luba-3",
       "2026",
-      "flagship"
+      "flagship",
+      "luba-3-awd-5000",
+      "luba-3-awd-5000s",
+      "5000s",
+      "5000-standard",
+      "1.25-acre"
     ],
     "fig": "🤖",
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1781560877/myrobot/b3aeo3qq15prinztcce6.jpg",
@@ -90683,8 +90777,11 @@
       "Company": "Mammotion",
       "Colors": "Black/Green (F1-inspired)",
       "Note": "LUBA 3 AWD (2026) = flagship gen 3 (RTK+LiDAR+AI Vision, 10-TOPS, Offset Deck); do NOT merge across generations (distinct from LUBA 2); granular per-SKU battery/runtime = SPECS PENDING",
-      "Source": "Mammotion US + Robot Mower Lab + Notebookcheck (LUBA 3 AWD 2026 - RTK+360 LiDAR+AI Vision/10 TOPS/Offset Deck/80% 38.6deg/2.2-4.0in/dual-disc 15.7in; big estates)"
-    }
+      "Source": "Mammotion US + Robot Mower Lab + Notebookcheck (LUBA 3 AWD 2026 - RTK+360 LiDAR+AI Vision/10 TOPS/Offset Deck/80% 38.6deg/2.2-4.0in/dual-disc 15.7in; big estates)",
+      "Model naming (official)": "Mammotion official naming (LUBA 2 AWD User Manual V1.0/V4.0 + Mammotion support KB): STANDARD version (1000/3000/5000/10000, cut 25-70mm / 1-2.7in) and H VERSION (1000H/3000H/5000H/10000H, cut 55-100mm / 2.2-4in). 'H' = taller cutting range = a DISTINCT SKU, never a duplicate. Retail listings add an 'X' suffix (3000X/5000X/10000X/5000HX at Home Depot, Wellbots, Amazon, eBay) for the SKU shipping WITH the UltraSense AI Vision module; a vision module is sold separately for 'Non-X' units. LUBA 3 retailers use 'S' for Standard (e.g. 5000 S). 'V' appears in NO official Mammotion source. DB convention: display the official name; ALL retail SKU spellings are carried in also_known_as + tags so buyers searching the name on their receipt/box still find the page.",
+      "Retail SKU names": "Also sold as: LUBA 3 AWD 5000 S; LUBA 3 AWD 5000 Standard — same product, different retailer spelling."
+    },
+    "also_known_as": "LUBA 3 AWD 5000 S; LUBA 3 AWD 5000 Standard"
   },
   {
     "id": "mammotion-luba-mini-2-awd-2026",
