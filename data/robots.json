@@ -124091,7 +124091,7 @@
     "released": "2024",
     "suction_pa": 0,
     "weight_kg": 11.5,
-    "navigation": "WavePath 2.0",
+    "navigation": "WavePath Navigation 2.0 (optimized routes, minimal overlap/miss)",
     "battery_life_typical": 300,
     "wall_climbing": true,
     "waterline_cleaning": true,
@@ -124122,16 +124122,16 @@
     "power_source": "Rechargeable Li-ion (cordless)",
     "battery_type": "Li-ion",
     "cordless": "Yes",
-    "app_control": "Yes",
+    "app_control": "Aiper app (on smart models); OTA",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
     "suction_power": "Cordless suction (WavePath 2.0)",
     "cleaning_coverage": "Floor + walls + waterline",
-    "cleaning_modes": "4 modes",
+    "cleaning_modes": 5,
     "filter": "Dual-stage (fine filter, 2025 model)",
     "pool_type": "In-ground",
-    "battery_life": 300,
+    "battery_life": 180,
     "raw_specs": {
       "Brand": "Aiper (leading CORDLESS robotic pool-cleaner brand)",
       "Product type": "cordless robotic pool cleaner",
@@ -124152,7 +124152,16 @@
       "Price": "~$800-900",
       "Note": "Scuba S1 = mid-range floor+wall+waterline cordless (1600 sq ft, WavePath 2.0, caterpillar treads, 180min, 5 modes); granular specs (battery Wh/charge/weight/filter L) partial SPECS PENDING",
       "Source": "Amazon + Aiper US/EU (Scuba S1 - WavePath 2.0/floor+wall+waterline/caterpillar treads/1600 sq ft/dual filtration/5 modes/180min/high-precision sensors/app+OTA)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "in-ground (concrete/fiberglass/vinyl/mosaic tile/glass); NOT for infinity pools; climbs but doesn't clean steps/benches",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "filter_type": "dual filtration (large debris + fine particles)",
+    "dual_filter": true,
+    "scrubbing": true,
+    "drive_type": "Tracked (caterpillar treads)"
   },
   {
     "id": "aiper-seagull-pro",
@@ -124201,7 +124210,7 @@
     "width_mm": 406,
     "depth_mm": 280,
     "weight_kg": 9.5,
-    "navigation": "WavePath",
+    "navigation": "WavePath Navigation (acceleration + inertial sensors + algorithms; systematic N-shaped pattern)",
     "brush_type": "Dual PVC roller brushes",
     "filter": "Top-access filter basket (cartridge)",
     "suction_modes": [
@@ -124210,7 +124219,7 @@
       "Auto"
     ],
     "battery_type": "Li-ion",
-    "battery_life": "150 min",
+    "battery_life": 150,
     "charge_time": "3–4 h",
     "power_consumption_w": 200,
     "auto_charge": false,
@@ -124221,7 +124230,7 @@
     "manufacturer": "Aiper",
     "power_source": "Rechargeable Li-ion (cordless)",
     "cordless": "Yes",
-    "app_control": "Yes",
+    "app_control": "Aiper app (on smart models); OTA",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
@@ -124248,7 +124257,14 @@
       "Price": "~$800-900",
       "Note": "Seagull Pro = wall-climbing quad-motor cordless (1600 sq ft, 150min); a step above the Seagull 2000; granular specs (battery Wh/charge time/weight/filter L) partial SPECS PENDING",
       "Source": "Amazon + Aiper (Seagull Pro ZT6002 - WavePath nav/wall-climbing/quad-motor/150min/1600 sq ft/cordless)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "in-ground (concrete/fiberglass/vinyl/mosaic tile/glass); NOT for infinity pools; climbs but doesn't clean steps/benches",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "wall_climbing": true,
+    "motor_count": 4,
+    "filter_type": "filter basket + fine filtration"
   },
   {
     "id": "dreame-z1-pro-pool",
@@ -124304,11 +124320,11 @@
     "warranty_months": 24,
     "power_source": "Rechargeable Li-ion (cordless)",
     "battery_type": "Li-ion",
-    "battery_life": "180 min",
+    "battery_life": 240,
     "auto_charge": "Yes",
     "suction_power": "8,000 GPH max",
     "cleaning_coverage": "Floor + walls + waterline + steps (10–30 cm)",
-    "cleaning_modes": "Full Pool / Bottom / Wall / Efficient Waterline",
+    "cleaning_modes": 4,
     "navigation": "PoolSense (structured-light, shape-adaptive)",
     "obstacle_avoidance": "Structured light",
     "mapping": "Yes (stores 3 maps)",
@@ -124339,7 +124355,15 @@
       "Price": "~$1,299",
       "Note": "Z1 Pro = Dreame's AI cordless cleaner (8000 GPH - high suction, poolside remote world-first, 4hr, ~$1299); more affordable than Beatbot flagships; granular specs (battery Wh/coverage sq ft/weight) partial SPECS PENDING",
       "Source": "TechRadar + Amazon (Dreame Z1 Pro - 8000 GPH/dual brushless pump motors/active dual brushing/horizontal waterline/4 modes/world-first poolside remote/~4hr/poolside parking/above+recessed/salt+fresh/app/cordless/~$1299)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "above-ground + recessed; saltwater + freshwater; any shape/size",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "motor_count": 2,
+    "filtration_rate_lph": 30280,
+    "app_control": "smart app"
   },
   {
     "id": "beatbot-aquasense-pro",
@@ -124390,7 +124414,7 @@
     ],
     "perf": false,
     "video": "https://youtu.be/_07R5l4W0xg",
-    "navigation": "AI mapping + multi-sensor",
+    "navigation": "smart navigation + obstacle detection/avoidance",
     "obstacle_avoidance": "Ultrasonic obstacle detection",
     "mapping": true,
     "cpu": "Quad-core Cortex-A7 1.8 GHz (Beatbot OS)",
@@ -124418,7 +124442,7 @@
     "warranty_months": 36,
     "manufacturer": "Beatbot",
     "cordless": "Yes",
-    "app_control": "Yes",
+    "app_control": "Beatbot app (surface control; WiFi/BT)",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
     "suction_power": "5,500 GPH",
@@ -124439,7 +124463,12 @@
       "Price": "~$2,000-2,200",
       "Note": "AquaSense Pro = Beatbot's first-gen premium 5-in-1 (predecessor to the AquaSense 2 series); granular specs (runtime/battery/suction/coverage sqft/weight) partial SPECS PENDING",
       "Source": "Beatbot (AquaSense Pro/AquaSense 2 Pro - 5-in-1 surface+waterline+wall+floor+clarification/ClearWater crab-shell/smart nav/surface parking/SmartDrain/cordless app)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "obstacle_detection": "Obstacle detection/avoidance"
   },
   {
     "id": "winbot-w2-omni",
@@ -124502,7 +124531,7 @@
     "auto_charge": "Charge-while-working (station)",
     "suction_pa": 5500,
     "suction_force_n": 800,
-    "battery_life": "110 min (up to 130 min fast mode)",
+    "battery_life": 110,
     "coverage_per_charge": "55 m² (65 m² fast mode, both faces)",
     "navigation": "WIN-SLAM path planning",
     "obstacle_avoidance": "Bumper + edge sensors (crosses obstacles >4 mm)",
@@ -124516,7 +124545,7 @@
     "station_weight_kg": 5.2,
     "spray_system": "Three-nozzle wide-angle atomization",
     "cleaning_pad": "Microfiber (400% water retention)",
-    "cleaning_modes": "Fast / Deep / Thorough / Edge / Spot / Zone / Heavy-Duty",
+    "cleaning_modes": 5,
     "noise_db": 63,
     "app": "ECOVACS Home",
     "wifi": "Yes",
@@ -124555,7 +124584,18 @@
       "Price": "~$400-500",
       "Note": "Winbot W2 Omni = station-equipped window robot (base of the W2 family; W2 PRO Omni + W2S Omni are upgrades - W2S=8000Pa/TruEdge/200RPM pads); granular specs (weight/dims/water tank ml) partial SPECS PENDING",
       "Source": "Ecovacs US/global + Amazon/Walmart (Winbot W2 Omni/W2 Pro Omni - WIN-SLAM 4.0/6-in-1 station/12-stage protection 8 hardware/~5500Pa/floating cloth/synchronous-belt climbing/gravity+optocoupler sensors 0.2s/safety rope 100kg/all windows/5 modes/dual power 110min 55m²/BT app+voice 11 languages)"
-    }
+    },
+    "cleaning_pattern": "WIN-SLAM 4.0 intelligent planning - optimized cleaning pattern, efficient turning, enhanced edge detection (+30% cleaning efficiency); 2 sensors (grav",
+    "edge_detection": true,
+    "glass_types": "all types - floor-to-ceiling, small, frameless, tilting",
+    "frame_detection": true,
+    "anti_fall_sensor": "12-stage protection (8 hardware fall-safeguards); stays attached to the window 30+ min even on low power; safety rope (three-layer composite, up to 10",
+    "safety_rope": true,
+    "adhesion_type": "Vacuum suction",
+    "app_control": "Bluetooth app + button + station panel; voice notification in 11+ languages",
+    "coverage": "55 m² per charge",
+    "pad_type": "floating cleaning-cloth plate; upgraded cloth (400%+ water retention); horizontal sealing",
+    "auto_mode": true
   },
   {
     "id": "winbot-mini",
@@ -124617,8 +124657,8 @@
     "safety_system": "9-stage protection",
     "anti_slip": "Yes",
     "fall_backup": "Anti-drop protection",
-    "spray_system": "Dual-nozzle 10 μm ultrasonic atomization",
-    "cleaning_modes": "3 modes",
+    "spray_system": "dual nozzles with ULTRASONIC spray (atomized water for even wetting)",
+    "cleaning_modes": 3,
     "form_factor": "Ultra-thin compact body",
     "bluetooth": "Yes",
     "button_control": "Yes",
@@ -124639,7 +124679,12 @@
       "Price": "~$250-300",
       "Note": "Winbot Mini = compact entry window robot (dual ultrasonic nozzles/9-stage protection/3 modes); the Winbot Mini2 adds WIN-SLAM 4.0 + 5 modes; granular specs (suction Pa/weight/dims/battery/runtime) partial SPECS PENDING",
       "Source": "Amazon + Ecovacs (Winbot Mini - compact/dual nozzles ultrasonic spray/9-stage protection/intelligent path planning/3 modes/anti-slipping; Mini2=Win-SLAM 4.0/5 modes)"
-    }
+    },
+    "cleaning_pattern": "intelligent path planning",
+    "glass_types": "windows, mirrors, glass doors",
+    "anti_fall_sensor": "9-stage protection system + anti-slipping system",
+    "adhesion_type": "Vacuum suction",
+    "auto_mode": true
   },
   {
     "id": "agibot-a2-ultra",
@@ -126189,10 +126234,10 @@
     "announced": "2025",
     "released": "2025",
     "weight_kg": 10.9,
-    "navigation": "WavePath 3.0 (14 ultrasonic sensors)",
+    "navigation": "floor + wall + waterline; WaveLine 2.0 - horizontal scrubbing up to 2 in ABOVE the waterline (grease/algae/tile buildup)",
     "battery_life_typical": 480,
     "wall_climbing": true,
-    "waterline_cleaning": "Waveline 2.0 (single pass)",
+    "waterline_cleaning": true,
     "ip_rating": "IPX8",
     "max_depth_m": 5,
     "ai_obstacle_avoidance": true,
@@ -126223,7 +126268,7 @@
     "power_source": "Rechargeable Li-ion (cordless)",
     "battery_type": "Li-ion",
     "cordless": "Yes",
-    "app_control": "Yes",
+    "app_control": "Aiper app (on smart models); OTA",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
@@ -126252,7 +126297,17 @@
       "Price": "~$1,200-1,500",
       "Note": "Scuba X1 = premium quad-brushless cordless (WaveLine 2.0 2in-above-waterline, MicroMesh 3μm, dual-layer filter); Pro + Pro Max variants exist above it; granular specs (runtime/coverage sq ft/battery/weight) partial SPECS PENDING",
       "Source": "Aiper store (Scuba X1 - WaveLine 2.0 horizontal 2in above waterline/quad brushless motors/dual-layer filter/MicroMesh ~3μm/floor+wall+waterline)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "in-ground (concrete/fiberglass/vinyl/mosaic tile/glass); NOT for infinity pools; climbs but doesn't clean steps/benches",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "motor_count": 4,
+    "filter_type": "dual-layer filtration - standard filter (leaves/pebbles/sand) + MicroMesh ultra-fine (down to ~3 μm: dust/silt/algae fragments)",
+    "dual_filter": true,
+    "filter_micron": 3,
+    "scrubbing": true
   },
   {
     "id": "aiper-seagull-2000",
@@ -126303,7 +126358,7 @@
     "manufacturer": "Aiper",
     "power_source": "Rechargeable Li-ion (cordless)",
     "cordless": "Yes",
-    "app_control": "Yes",
+    "app_control": "Aiper app (on smart models); OTA",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
@@ -126334,7 +126389,13 @@
       "Price": "~$400-500",
       "Note": "Seagull 2000/SE = entry value cordless (floor-focused); below the Seagull Pro; granular specs (exact runtime/battery/coverage sq ft/weight) partial SPECS PENDING",
       "Source": "Aiper + Amazon (Seagull 2000 SE - entry cordless floor cleaner/in+above ground)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "in-ground (concrete/fiberglass/vinyl/mosaic tile/glass); NOT for infinity pools; climbs but doesn't clean steps/benches",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "wall_climbing": true,
+    "filter_type": "filter basket + fine filtration"
   },
   {
     "id": "aiper-orca-3000",
@@ -126380,7 +126441,7 @@
     "rating": 4,
     "website": "https://www.aiper.com",
     "highlights": [],
-    "navigation": "Pattern",
+    "navigation": "WavePath-class navigation",
     "brush_type": "Dual PVC roller brushes",
     "filter": "Multi-layer basket (100 / 200 / 400 micron bags)",
     "suction_modes": [
@@ -126399,7 +126460,7 @@
     "manufacturer": "Aiper",
     "battery_type": "Li-ion",
     "cordless": "Yes",
-    "app_control": "Yes",
+    "app_control": "Aiper app (on smart models); OTA",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
@@ -126412,7 +126473,7 @@
       "https://mobileimages.lowes.com/productimages/b85d208c-9b59-4f18-b03c-9e1134585848/49464836.jpg",
       "https://mobileimages.lowes.com/productimages/99e76ee0-18c5-4276-9000-39362b1a619e/49464840.jpg"
     ],
-    "battery_life": 180,
+    "battery_life": 150,
     "raw_specs": {
       "Brand": "Aiper (leading CORDLESS robotic pool-cleaner brand)",
       "Product type": "cordless robotic pool cleaner",
@@ -126430,7 +126491,13 @@
       "ID/NAME FLAG": "DB id 'aiper-orca-3000' vs display name 'Orca 2000' - mismatch; verify the correct model (Orca 2000 vs 3000) + align id/name during cleanup",
       "Note": "Orca 2000 = mid-tier cordless floor+wall cleaner; granular specs (coverage/runtime/battery/weight) partial SPECS PENDING; id/name mismatch flagged",
       "Source": "Aiper Orca line (Orca 2000 - cordless floor+wall cleaner) - id/name mismatch noted"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "in-ground (concrete/fiberglass/vinyl/mosaic tile/glass); NOT for infinity pools; climbs but doesn't clean steps/benches",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "wall_climbing": true,
+    "filter_type": "filter basket + fine filtration"
   },
   {
     "id": "yeedi-cube-pro",
@@ -141240,7 +141307,7 @@
     "rating": 4,
     "type": "Cordless",
     "coverage": "Floor, walls, waterline + surface skimming",
-    "navigation": "HybridSense AI mapping (AI camera + 27 sensors)",
+    "navigation": "HybridSense AI Pool Mapping - AI camera + dual ToF sensors + 2 infrared + 4 ultrasonic (incl 2 downward-facing) = 27 advanced sensors; linked to Cleve",
     "brushes": "Dual active",
     "filter": "5L basket; dual-layer 150um + 250um",
     "runtime_min": 210,
@@ -141261,7 +141328,7 @@
     "battery_type": "Li-ion",
     "cordless": "Yes",
     "autonomous": "Yes",
-    "app_control": "Yes",
+    "app_control": "Beatbot app (WiFi/BT)",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
@@ -141295,7 +141362,14 @@
       "Price": "~$3,000-3,500 (premium)",
       "Note": "AquaSense 2 Ultra = AI-vision flagship (HybridSense 27-sensor AI mapping/CleverNav/5-in-1+8in platforms/320m² per cycle/6 guide wheels/IP68); granular specs (runtime/battery/suction) partial SPECS PENDING",
       "Source": "Beatbot (AquaSense 2 Ultra - HybridSense 27 sensors AI cam+dual TOF+2 IR+4 ultrasonic/CleverNav/5-in-1+platform 8in/320m² 3444sqft cycle/6 guide wheels/ClearWater/saltwater <5000ppm/IP68/3yr/automotive shield/surface parking)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "underground + above-ground; concrete/vinyl/fiberglass/ceramic tile/stainless; saltwater OK (<5000 PPM)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "wall_climbing": true,
+    "cleans_waterline": true,
+    "waterline_cleaning": true
   },
   {
     "cat": "Consumer",
@@ -141372,7 +141446,15 @@
       "Price": "~$800-900",
       "Note": "Nautilus CC Plus = best-selling mid corded Dolphin (50ft/floor+wall/WiFi/~2hr); no waterline focus; granular specs (cord/weight/filter L) partial SPECS PENDING",
       "Source": "Maytronics + AquaDoc (CC Plus - corded/50ft/dual brushes floor+wall/CleverClean/~2hr/fine+ultra-fine/MyDolphin Plus WiFi)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "filter_type": "top-load fine + ultra-fine",
+    "cable_length_m": 18.3,
+    "cleaning_cycle_min": 120,
+    "pool_size_max_m": 15.2,
+    "app_control": "MyDolphin Plus (Wi-Fi)",
+    "brush_type": "active scrubbing brushes",
+    "scrubbing": true
   },
   {
     "cat": "Consumer",
@@ -141443,7 +141525,22 @@
       "Price": "~$1,000-1,200",
       "Note": "S2 Solar = world-first solar self-docking (a Solar VISION variant adds an AI camera/20x-faster floor mode, 180μm filter + 40ppi sponge); granular specs (battery Wh/suction GPH/weight) partial SPECS PENDING",
       "Source": "WYBOT + TechCrunch + Android Authority (S2 Solar - world's first solar-powered self-docking underwater dock/multi-sensor AI/dual filtration/8 modes/3230 sq ft/triple motors/auto-return <20%/app; Solar Vision = AI vision 2.5h+/3229 sq ft/180μm+40ppi)"
-    }
+    },
+    "power_type": "Solar + battery (cordless)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "wall_climbing": true,
+    "cleans_waterline": true,
+    "waterline_cleaning": true,
+    "cleaning_modes": 8,
+    "battery_life": 210,
+    "motor_count": 3,
+    "filter_type": "dual filtration (fine debris, any pool shape/material)",
+    "dual_filter": true,
+    "filter_micron": 180,
+    "navigation": "multi-sensor AI navigation",
+    "app_control": "WYBOT app - status/schedule/spot-direct",
+    "scheduling": true
   },
   {
     "cat": "Consumer",
@@ -141521,7 +141618,20 @@
       "Price": "~$250-300",
       "Note": "HOBOT-S6 Pro = ultrasonic-spray window robot (S6 line); HOBOT specializes in window robots (also the LEGEE floor line); granular specs (suction Pa/weight/dims/battery/runtime/cover m²) partial SPECS PENDING - verify",
       "Source": "HOBOT (S6/S6 Pro - ultrasonic spray window cleaner/cross-path nav/edge detection/UPS backup+safety rope/framed+frameless glass/HOBOT app) - window specialist"
-    }
+    },
+    "spray_system": "ultrasonic water misting spray (even, controlled wetting - no over-spray)",
+    "cleaning_pattern": "systematic cross / N-path cleaning route; AI path planning + edge detection",
+    "edge_detection": true,
+    "glass_types": "framed + frameless windows, mirrors, tiles, smooth surfaces",
+    "frame_detection": true,
+    "anti_fall_sensor": "multi-layer fall protection - UPS backup battery (holds suction on power loss) + safety rope/pod; anti-drop sensors",
+    "safety_rope": true,
+    "ups_battery": true,
+    "backup_battery": true,
+    "adhesion_type": "Vacuum suction",
+    "remote_control": true,
+    "app_control": "HOBOT app (Bluetooth) + remote/button",
+    "auto_mode": true
   },
   {
     "cat": "Consumer",
@@ -155470,14 +155580,14 @@
     "charge_time_min": 270,
     "filtration": "3.5 L MicroMesh multi-layer, 3 µm",
     "coverage_sqft": 1600,
-    "navigation": "AI Vision camera + path planning",
+    "navigation": "Cognitive AI Navium Mode - trained on pre-collected data from 200+ real pools over 2 years of R&D; learns + adapts to your pool's unique layout in REA",
     "cleaning_zones": "Floor, walls, waterline (JetAssist)",
     "mobility": "Caterpillar treads; dual LED headlights for night cleaning; 4 scrubbing brushes",
     "dock": "Wireless charging + Smart Surface Parking",
     "cordless": "Yes",
     "app": "Aiper",
     "filter": "3.5 L MicroMesh multi-layer, 3 µm",
-    "waterline_cleaning": true,
+    "waterline_cleaning": "JetAssist waterline care; smart waterline PARKING",
     "wall_climbing": true,
     "autonomous": "Yes",
     "app_companion": "Aiper",
@@ -155494,7 +155604,7 @@
     "warranty_months": 24,
     "power_source": "Rechargeable Li-ion (cordless)",
     "battery_type": "Li-ion",
-    "app_control": "Yes",
+    "app_control": "Aiper app (on smart models); OTA",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
@@ -155523,7 +155633,13 @@
       "Price": "~$1,400-1,600",
       "Note": "Scuba V3 AI Vision = 2026 AI-vision flagship (Navium cognitive AI trained on 200+ pools, LED AI vision, wireless dock, waterline parking); the V3 Ultra is 'AI Vision+' above it; granular specs (runtime/coverage/battery/weight) partial SPECS PENDING",
       "Source": "aiper.store + Amazon (Scuba V3 AI Vision - Cognitive AI Navium trained 200+ pools/VisionPath/LED AI vision/4800 GPH/JetAssist waterline/10x faster/24-7/wireless charging dock/smart waterline parking/MicroMesh multi-layer/featherlight)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "in-ground (concrete/fiberglass/vinyl/mosaic tile/glass); NOT for infinity pools; climbs but doesn't clean steps/benches",
+    "cleans_waterline": true,
+    "filter_type": "MicroMesh multi-layer filtration",
+    "dual_filter": true,
+    "filtration_rate_lph": 18168
   },
   {
     "id": "aiper-scuba-s3",
@@ -155559,7 +155675,7 @@
     "navigation": "WavePath (app control)",
     "cordless": "Yes",
     "app": "Aiper",
-    "waterline_cleaning": true,
+    "waterline_cleaning": "JetAssist waterline care; horizontal waterline scrubbing with 60-sec lateral movement (sunscreen/oils/grime); constant-contact",
     "wall_climbing": true,
     "autonomous": "Yes",
     "app_companion": "Aiper",
@@ -155574,7 +155690,7 @@
     "warranty_months": 24,
     "power_source": "Rechargeable Li-ion (cordless)",
     "battery_type": "Li-ion",
-    "app_control": "Yes",
+    "app_control": "Aiper app (on smart models); OTA",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
@@ -155605,7 +155721,17 @@
       "ID/NAME NOTE": "DB entry 'aiper-scuba-s3' is named 'Scuba S1 Pro / S3' - Aiper lists Scuba S3 (Cognitive AI, Premium) and Scuba S1 Pro (Advanced) as related/overlapping; verify which SKU this id maps to + align name",
       "Note": "Scuba S3 = cognitive-AI premium (VisionPath/dToF/JetAssist/4800 GPH/18lbs); shares specs with the S1 Pro; granular battery Wh partial SPECS PENDING",
       "Source": "Aiper Scuba S3 + Scuba S1 Pro pages + aiper.store (S3 - world's 1st cognitive AI/VisionPath/WavePath 2.0+dToF/JetAssist waterline/4800 GPH/18lbs/quick-drain; S1 Pro - 180min/4hr charge/2150 sq ft/66ft/5 modes/IR sensors/caterpillar/horizontal waterline)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "in-ground (concrete/fiberglass/vinyl/mosaic tile/glass); NOT for infinity pools; climbs but doesn't clean steps/benches",
+    "cleans_waterline": true,
+    "battery_life": 180,
+    "filter_type": "filter basket + fine filtration",
+    "filtration_rate_lph": 18168,
+    "cable_length_m": 20.1,
+    "pool_size_max_m": 20.1,
+    "scrubbing": true,
+    "drive_type": "Tracked (caterpillar treads)"
   },
   {
     "id": "beatbot-aquasense-2",
@@ -155646,14 +155772,14 @@
     "battery_life_walls": 210,
     "coverage_sqft": 3230,
     "filtration": "2 L, 150 µm",
-    "navigation": "CleverNav (16 sensors incl. 2 ultrasonic, quad-core CPU)",
+    "navigation": "smart navigation (entry of the AquaSense 2 series; focuses on smarter nav + user convenience)",
     "cleaning_zones": "Floor, walls, waterline (dual-pass)",
     "dock": "Wireless charging",
     "cordless": "Yes",
     "warranty_years": 3,
     "app": "Beatbot",
     "filter": "Dual-basket top-load",
-    "waterline_cleaning": "Double-pass per wall cycle",
+    "waterline_cleaning": true,
     "wall_climbing": true,
     "autonomous": "Yes",
     "warranty_months": 36,
@@ -155669,7 +155795,7 @@
     "manufacturer": "Beatbot",
     "power_source": "Rechargeable Li-ion (cordless)",
     "battery_type": "Li-ion",
-    "app_control": "Yes",
+    "app_control": "Beatbot app (WiFi/BT)",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
@@ -155697,7 +155823,12 @@
       "Price": "~$1,300-1,500",
       "Note": "AquaSense 2 = entry of the AquaSense 2 smart series (22 sensors); the Ultra adds HybridSense 27-sensor AI mapping; granular specs (runtime/suction/coverage/weight) partial SPECS PENDING",
       "Source": "Beatbot US/EU (AquaSense 2 - entry AquaSense 2 series/5-in-1/ClearWater/22 sensors incl 2 ultrasonic/obstacle recognition/surface parking/cordless)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "obstacle_detection": "Obstacle detection/avoidance"
   },
   {
     "id": "beatbot-sora-70",
@@ -155751,13 +155882,13 @@
     "manufacturer": "Beatbot",
     "power_source": "Rechargeable Li-ion (cordless)",
     "battery_type": "Li-ion",
-    "app_control": "Yes",
+    "app_control": "Beatbot app (surface control)",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
     "released": "2026",
     "cleaning_coverage": "Floor + walls + waterline",
-    "navigation": "AI multi-sensor",
+    "navigation": "SonicSense obstacle avoidance - dual ultrasonic sensors (same obstacle avoidance as the AquaSense Pro)",
     "raw_specs": {
       "Brand": "Beatbot (premium CORDLESS AI-vision robotic pool-cleaner brand; CES award winner)",
       "Released": "2026",
@@ -155775,7 +155906,13 @@
       "Price": "~$2,200-2,500",
       "Note": "Sora 70 = 2026 RoboTurtle flagship (SonicSense dual ultrasonic/JetPulse surface/6800 GPH/platform/wireless dock); more coverage-focused vs the AquaSense 2 Ultra's mapping focus; granular specs (runtime/battery/motors/coverage) partial SPECS PENDING",
       "Source": "Beatbot US/EU (Sora 70 - RoboTurtle/5-in-1 surface+floor+wall+waterline+platform/SonicSense dual ultrasonic/JetPulse surface/6800 GPH/wireless dock/surface parking) + Sora 70 vs Ultra guide"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "filtration_rate_lph": 25738,
+    "obstacle_detection": "Obstacle detection/avoidance"
   },
   {
     "id": "beatbot-sora-30",
@@ -155826,13 +155963,13 @@
     "warranty_months": 36,
     "power_source": "Rechargeable Li-ion (cordless)",
     "battery_type": "Li-ion",
-    "app_control": "Yes",
+    "app_control": "Beatbot app",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
     "released": "2026",
     "cleaning_coverage": "Floor + walls",
-    "navigation": "Multi-sensor",
+    "navigation": "SonicSense ultrasonic obstacle avoidance",
     "raw_specs": {
       "Brand": "Beatbot (premium CORDLESS AI-vision robotic pool-cleaner brand; CES award winner)",
       "Released": "2026",
@@ -155846,7 +155983,13 @@
       "Price": "~$1,500-1,800",
       "Note": "Sora 30 = accessible RoboTurtle Sora (below the Sora 70; Sora 10 sits below it); granular specs (exact suction/runtime/coverage/motors per model) partial SPECS PENDING",
       "Source": "Beatbot (Sora 30 'Cleaning Power Unlimited'/RoboTurtle/SonicSense; Sora line - 25700 LPH/8 motors/4 roller brushes) - value Sora"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "waterline_cleaning": true,
+    "obstacle_detection": "Obstacle detection/avoidance"
   },
   {
     "id": "beatbot-iskim-ultra",
@@ -155878,7 +156021,7 @@
     "rating": 4,
     "type": "Robotic pool surface skimmer",
     "power_source": "Rechargeable Li-ion (cordless)",
-    "navigation": "Smart navigation with edge optimization",
+    "navigation": "smart ultrasonic obstacle avoidance (real-time)",
     "cordless": "Yes",
     "app": "Beatbot",
     "autonomous": "Yes",
@@ -155895,7 +156038,7 @@
     "manufacturer": "Beatbot",
     "warranty_months": 36,
     "battery_type": "Li-ion",
-    "app_control": "Yes",
+    "app_control": "Wi-Fi/Bluetooth - monitor/schedule/control",
     "bluetooth": "Yes",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
@@ -155926,7 +156069,10 @@
       "Price": "~$700-900",
       "Note": "iSkim Ultra = dedicated SURFACE skimmer (distinct from floor-cleaning Sora/AquaSense) - pairs with a floor robot; runs continuously; granular specs (runtime/solar/basket L) partial SPECS PENDING",
       "Source": "Beatbot (iSkim Ultra - 24/7 water-surface skimmer/dual guided wheels/ultrasonic obstacle avoidance/anti-spill baffle/IP68/UV-salt-chlorine resistant/surface parking/WiFi+BT app/3yr)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "scheduling": true,
+    "obstacle_detection": "Obstacle detection/avoidance"
   },
   {
     "id": "wybot-c2-vision",
@@ -155981,7 +156127,7 @@
     "power_source": "Rechargeable Li-ion (cordless)",
     "cleaning_coverage": "Floor + walls + waterline",
     "camera": "AI Vision",
-    "app_control": "Yes",
+    "app_control": "WYBOT app",
     "pool_type": "In-ground",
     "raw_specs": {
       "Brand": "WYBOT (Wybotics)",
@@ -156000,7 +156146,16 @@
       "Price": "~$779-799",
       "Note": "C2 Vision = compact cordless AI-vision cleaner (cheaper deep-targeting option); the M2 Vision is the bigger 5-hr sibling; granular specs (battery Wh/coverage sq ft) partial SPECS PENDING",
       "Source": "WYBOT + Android Authority (C2 Vision - AI camera finds dirt underwater/AI Vision 20x faster floor/3hr/3592 GPH/floor+wall+waterline/brushless/dual filter 180μm+10μm/8 modes 7 paths/11.1kg/~$779)"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "cleaning_modes": 8,
+    "filter_type": "dual filtration - 180μm large-particle cartridge + 10μm ultra-fine",
+    "dual_filter": true,
+    "filter_micron": 180,
+    "filtration_rate_lph": 13596
   },
   {
     "id": "wybot-f1",
@@ -156063,7 +156218,9 @@
       "Price": "~$500-600",
       "Note": "F1 = solar surface skimmer (pairs with a floor robot for full coverage); vastly cheaper than a full cleaner + effective enough to notice; granular specs (runtime/basket L/coverage) partial SPECS PENDING",
       "Source": "WYBOT + PCWorld best-pool-robots 2026 (F1 Skimmer - solar/surface skimmer/~85% leaf capture/best skimmer tested/loud/targeted cleaning)"
-    }
+    },
+    "power_type": "Solar + battery (cordless)",
+    "app_control": "WYBOT app"
   },
   {
     "id": "dolphin-premier",
@@ -156146,7 +156303,12 @@
       "Price": "~$1,300-1,500",
       "Note": "Premier = #1-selling premium (Multi-Media 4-media + oversized leaf bag + 4500 GPH + dual stabilizers waterline); best for heavy leaves; granular specs (cord/weight/pool ft/cycle) partial SPECS PENDING",
       "Source": "Maytronics + Premier Robotic (Premier - Multi-Media 4 media cartridges/NanoFilters/leaf bag/disposable/4500 GPH/dual stabilizers waterline+tile/floor+wall+waterline/anti-tangle/3yr/#1 premium)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "filter_type": "top-load filter basket",
+    "filtration_rate_lph": 17032,
+    "brush_type": "active scrubbing brushes",
+    "scrubbing": true
   },
   {
     "id": "dolphin-sigma",
@@ -156181,7 +156343,7 @@
     "score": 75,
     "rating": 4,
     "drive": "Corded, tri-motor system",
-    "navigation": "Gyroscope + CleverClean",
+    "navigation": "gyroscope-based navigation (systematic/efficient)",
     "filtration": "Oversized cartridge filtration",
     "cleaning_zones": "Floor, walls, 360° waterline",
     "cordless": "No",
@@ -156209,9 +156371,9 @@
     "released": "2021",
     "flow_rate": "4,500 GPH",
     "motors": "Triple ProLine commercial-grade",
-    "gyroscope": "Yes",
+    "gyroscope": true,
     "app": "myDolphin Plus (Wi-Fi/BT)",
-    "app_control": "Yes",
+    "app_control": "MyDolphin Plus (Wi-Fi)",
     "wifi": "Yes",
     "scheduling": "Weekly timer",
     "use_case": "Most advanced residential / commercial-grade",
@@ -156231,7 +156393,12 @@
       "Price": "~$1,300-1,500",
       "Note": "Sigma = premium corded Dolphin (gyro nav/triple brushes/dual filter/floor+wall+waterline); granular specs (cord/weight/pool ft/cycle) partial SPECS PENDING",
       "Source": "Maytronics Dolphin Sigma (premium/gyro nav/triple active brushes/dual multi-layer filter/floor+wall+waterline/MyDolphin Plus WiFi/anti-tangle)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "filter_type": "dual cartridge multi-layer (top-load)",
+    "dual_filter": true,
+    "brush_type": "active scrubbing brushes",
+    "scrubbing": true
   },
   {
     "id": "polaris-freedom",
@@ -156295,7 +156462,11 @@
       "Price": "~$1,200-1,400",
       "Note": "Polaris Freedom = the brand's CORDLESS robotic cleaner (contrast the corded VRX iQ+); granular specs (suction/runtime/battery/coverage/nav) partial SPECS PENDING",
       "Source": "Polaris/Fluidra (Freedom - cordless robotic pool cleaner) - traditional pool brand's cordless model; full specs pending"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true
   },
   {
     "id": "ofuzzi-cyber-1200-pro",
@@ -156365,7 +156536,7 @@
     "video2": "https://youtu.be/9B1YvHpMWuA",
     "manufacturer": "Ofuzzi",
     "cleaning_coverage": "Floor (+ partial wall)",
-    "app_control": "No (button)",
+    "app_control": "Ofuzzi app (on smart variants)",
     "pool_type": "In-ground/above-ground",
     "max_grade_pct": 15,
     "raw_specs": {
@@ -156380,7 +156551,13 @@
       "Price": "~$600-700",
       "Note": "Cyber 1200 Pro = value cordless floor+wall cleaner; already correctly tagged as a pool cleaner (confirmed during vacuum push); granular specs (suction/runtime/battery/coverage/nav) partial SPECS PENDING",
       "Source": "Ofuzzi (Cyber 1200 Pro - cordless robotic pool cleaner/floor+wall/suction/dual filter) - value cordless"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "wall_climbing": true,
+    "filter_type": "dual filtration",
+    "dual_filter": true
   },
   {
     "id": "winny-clear-uv",
@@ -156439,7 +156616,10 @@
       "Price": "~$800-1,000",
       "Note": "Winny Clear UV = cordless cleaner + UV sanitization (niche differentiator); newest/niche brand - granular specs (suction/runtime/battery/UV dose/coverage/nav) largely SPECS PENDING - verify",
       "Source": "Winny Clear UV (cordless robotic pool cleaner + UV water sanitization/algae control) - full specs pending"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "cleans_floor": true,
+    "cleans_walls": true
   },
   {
     "id": "airrobo-pc10",
@@ -156581,7 +156761,13 @@
       "Price": "~$1,600-1,800+ (premium)",
       "Note": "VRX iQ+ = Polaris's premium CORDED smart robotic cleaner (70ft cord + out-of-water panel, top performance, pricey); contrast the cordless Freedom; granular specs (suction/cycle/coverage/weight/nav) partial SPECS PENDING",
       "Source": "PCWorld best-pool-robots 2026 (Polaris VRX iQ+ - 70ft insulated cord + out-of-water control panel/unrivaled performance/expensive/premium corded robotic)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "cable_length_m": 21.3,
+    "scheduling": true
   },
   {
     "id": "irobot-roomba-mini",
@@ -157536,7 +157722,7 @@
     "brushes": "Dual split brushes",
     "pool_size_max": "Up to 50 ft",
     "app": "myDolphin Plus",
-    "app_control": "Yes",
+    "app_control": "MyDolphin Plus (Wi-Fi)",
     "scheduling": "Weekly timer",
     "raw_specs": {
       "Brand": "Maytronics (Israel; Dolphin line - global leader in robotic pool cleaners)",
@@ -157554,7 +157740,13 @@
       "Price": "~$1,000-1,200",
       "Note": "Nautilus CC Supreme = waterline-capable top of the Nautilus CC line; granular specs (cord/weight/filter L/cycle) partial SPECS PENDING",
       "Source": "Maytronics Nautilus CC family (CC Supreme - corded/floor+wall+waterline/CleverClean/WiFi MyDolphin Plus)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "filter_type": "top-load fine/ultra-fine",
+    "cable_length_m": 18.3,
+    "pool_size_max_m": 15.2,
+    "brush_type": "active scrubbing brushes",
+    "scrubbing": true
   },
   {
     "id": "dolphin-explorer-e70",
@@ -157615,7 +157807,7 @@
     "motors": "Triple motors",
     "accessories": "Caddy included",
     "app": "myDolphin Plus",
-    "app_control": "Yes",
+    "app_control": "MyDolphin Plus (Bluetooth + Wi-Fi)",
     "scheduling": "Weekly timer",
     "sensors": "High-tech sensor suite",
     "raw_specs": {
@@ -157638,7 +157830,13 @@
       "TWIN / NEAR-DUPLICATE FLAG": "Explorer E70 and Dolphin M600 are essentially the SAME robot (same CleverClean+PowerStream/multi-layer filter/XL basket/3 cycles/MyDolphin Plus/60ft cord/36mo/~25lb). E70 = online channel; M600 = retail channel. Keep BOTH (distinct SKUs) + cross-note as channel twins.",
       "Note": "Explorer E70 = premium corded Dolphin; online twin of M600; granular specs (filter L/dimensions) partial SPECS PENDING",
       "Source": "Maytronics + EZ Pool & Spa + Premier Robotic (E70 99996712-XP - floor+wall+waterline/CleverClean+PowerStream/multi-layer+XL/3 cycles/MyDolphin Plus BT+WiFi/60ft/36mo/~25lb; = M600 online twin)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "filter_type": "multi-layer filter + EXTRA-LARGE top-load basket",
+    "dual_filter": true,
+    "cable_length_m": 18.3,
+    "brush_type": "active scrubbing brushes",
+    "scrubbing": true
   },
   {
     "id": "dolphin-cayman",
@@ -157674,7 +157872,7 @@
     "rating": 4,
     "weight_kg": 6.4,
     "navigation": "CleverClean smart scanning",
-    "brush_type": "HyperBrush active scrubbing (2x speed)",
+    "brush_type": "active scrubbing brushes",
     "actuator_type": "24V DC motors, HyperGrip rubber tracks",
     "suction_modes": [
       "Floor + wall"
@@ -157727,7 +157925,13 @@
       "Price": "~$700-800",
       "Note": "Cayman = mid corded Dolphin (floor+wall); granular specs (cord/cycle/weight/filter L/pool ft) partial SPECS PENDING",
       "Source": "Maytronics Dolphin (Cayman - corded/CleverClean/floor+wall/top-load/anti-tangle)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "filter_type": "top-load filter basket",
+    "cable_length_m": 18.3,
+    "cleaning_cycle_min": 120,
+    "pool_size_max_m": 15.2,
+    "scrubbing": true
   },
   {
     "id": "hayward-aquavac-650",
@@ -157791,7 +157995,13 @@
       "Price": "~$1,000-1,200",
       "Note": "AquaVac 650 = Hayward's robotic inground cleaner (corded/floor+wall+waterline); granular specs (brushes/nav/smart app/cord ft/cycle/weight/coverage) partial SPECS PENDING - verify",
       "Source": "Hayward AquaVac line (AquaVac 650 - corded robotic inground/floor+wall+waterline/top-access filter) - full specs pending"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "filter_type": "top-access filter basket (easy-empty)",
+    "scrubbing": true
   },
   {
     "id": "pentair-prowler-930",
@@ -157848,7 +158058,7 @@
     "manufacturer": "Pentair",
     "cordless": "No",
     "cleaning_coverage": "Floor + walls + waterline",
-    "scheduling": "Programmable cycles",
+    "scheduling": true,
     "app_control": "Yes (Wi-Fi)",
     "accessories": "Caddy included",
     "autonomous": "Yes",
@@ -157868,7 +158078,13 @@
       "Price": "~$1,200-1,400",
       "Note": "Prowler 930 = premium inground robotic (Dolphin-OEM, 2 brushes, tile-line, customizable filter); 930W=WiFi; the 910/920 are other Prowler variants (910=above-ground); granular specs (cord ft/cycle/weight/coverage) partial SPECS PENDING",
       "Source": "Pentair + epoolsupply + AquaQuip (Prowler 930/930W - Powered by Dolphin/corded inground/2 brushes/scrub+vacuum to tile line/top-access customizable filter/no booster pump/BT + 930W WiFi Pentair app/caddy/360540)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "cleans_waterline": true,
+    "filter_type": "top-access filter basket (fine silt to leaves); CUSTOMIZABLE filtration level",
+    "scrubbing": true
   },
   {
     "id": "dolphin-m600",
@@ -157931,7 +158147,7 @@
     "pool_size_max": "Up to 50 ft",
     "accessories": "Caddy included",
     "app": "myDolphin Plus",
-    "app_control": "Yes",
+    "app_control": "MyDolphin Plus (Bluetooth + Wi-Fi)",
     "scheduling": "Weekly timer",
     "use_case": "Top M-Line",
     "raw_specs": {
@@ -157954,7 +158170,13 @@
       "TWIN / NEAR-DUPLICATE FLAG": "Dolphin M600 and Explorer E70 are essentially the SAME robot. M600 = retail channel; E70 = online. Keep BOTH + cross-note as channel twins.",
       "Note": "M600 = flagship corded Dolphin; retail twin of E70; granular specs (filter L/dimensions) partial SPECS PENDING",
       "Source": "Maytronics (M600 99996610-US - floor+wall+waterline/CleverClean+PowerStream/multi-layer+XL/3 cycles/MyDolphin Plus BT+WiFi/60ft/36mo/~25lb; = E70 retail twin)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "filter_type": "multi-layer filter + EXTRA-LARGE top-load basket",
+    "dual_filter": true,
+    "cable_length_m": 18.3,
+    "brush_type": "active scrubbing brushes",
+    "scrubbing": true
   },
   {
     "id": "pentair-prowler-730",
@@ -158017,7 +158239,12 @@
       "Price": "~$900-1,000",
       "Note": "Prowler 730 = mid inground robotic (Dolphin-OEM), below the 930; granular specs (brushes/waterline/smart/cord/cycle/weight) partial SPECS PENDING",
       "Source": "Pentair Prowler family (730 - Powered by Dolphin/corded inground/scrub+vacuum/top-access filter/no booster pump) - mid Prowler"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "cleans_floor": true,
+    "cleans_walls": true,
+    "filter_type": "top-access filter basket",
+    "scrubbing": true
   },
   {
     "id": "mamibot-w120-t",
@@ -158076,7 +158303,9 @@
       "https://static.wixstatic.com/media/8a82ed_1ae2965580de4979b0977876af9a7d68~mv2.jpg/v1/fill/w_979,h_1207,al_c,q_85,enc_avif,quality_auto/W120-T%20iglassbot%20mamibot.jpg",
       "https://static.wixstatic.com/media/8a82ed_d291e065f173409aa36190011acdae0a~mv2.jpg/v1/fill/w_990,h_917,al_c,q_85,enc_avif,quality_auto/W120-T-marketing-English_04.jpg"
     ],
-    "video": "https://youtu.be/lkXcpR4xBl4"
+    "video": "https://youtu.be/lkXcpR4xBl4",
+    "adhesion_type": "Vacuum suction",
+    "auto_mode": true
   },
   {
     "id": "eufy-auto-empty-c10",
@@ -158368,7 +158597,7 @@
     "released": "2023",
     "pool_size_max": "Up to 50 ft",
     "app": "myDolphin Plus",
-    "app_control": "Yes",
+    "app_control": "MyDolphin Plus (Wi-Fi)",
     "scheduling": "Weekly timer",
     "raw_specs": {
       "Brand": "Maytronics (Israel; Dolphin line - global leader in robotic pool cleaners)",
@@ -158387,7 +158616,13 @@
       "Price": "~$1,000-1,200 (with caddy ~$1,647)",
       "Note": "Explorer E50 = value corded Explorer (50ft/floor+wall+waterline/WiFi); below the E70; granular specs (cord/weight/filter L/cycle) partial SPECS PENDING",
       "Source": "Maytronics (Explorer E50 99996281-XP - corded/to 50ft/floor+wall+waterline scrubber/CleverClean/MyDolphin Plus WiFi)"
-    }
+    },
+    "power_type": "Corded (mains power supply)",
+    "filter_type": "top-load filter basket",
+    "cable_length_m": 18.3,
+    "pool_size_max_m": 15.2,
+    "brush_type": "active scrubbing brushes",
+    "scrubbing": true
   },
   {
     "id": "aiper-surfer-s1",
@@ -158405,7 +158640,7 @@
     "status": "Active",
     "price": 600,
     "img": "https://res.cloudinary.com/djrojgec1/image/upload/v1784413408/myrobot/zukfzuekuhtltzdb0ebv.jpg",
-    "navigation": "Surface path",
+    "navigation": "smart navigation + obstacle avoidance",
     "autonomous": "Yes",
     "app_companion": "Aiper",
     "desc": "A cordless robotic SURFACE SKIMMER (Surfer S1) - unlike Aiper's floor cleaners, the Surfer floats and skims leaves, pollen, bugs and debris off the pool's SURFACE before they sink, with smart navigation and a debris basket. Pairs with a floor cleaner for complete coverage.",
@@ -158457,7 +158692,7 @@
     "video": "https://youtu.be/brGwA4WklkI",
     "manufacturer": "Aiper",
     "cordless": "Yes",
-    "app_control": "Yes",
+    "app_control": "Aiper app (on smart models); OTA",
     "pool_materials": "Concrete, vinyl, fiberglass, tile",
     "estop": "Yes",
     "released": "2024",
@@ -158482,7 +158717,11 @@
       "Price": "~$500-600",
       "Note": "Surfer S1 = SURFACE skimmer (distinct from Scuba floor cleaners) - pairs with a Scuba for full-pool coverage; granular specs (runtime/basket L/solar) partial SPECS PENDING",
       "Source": "Aiper Surfer/EcoSurfer line (Surfer S1 - cordless surface skimmer/skims floating debris/smart nav) - surface-skimmer type"
-    }
+    },
+    "power_type": "Cordless (rechargeable battery)",
+    "pool_types": "in-ground (concrete/fiberglass/vinyl/mosaic tile/glass); NOT for infinity pools; climbs but doesn't clean steps/benches",
+    "filter_type": "filter basket + fine filtration",
+    "obstacle_detection": "Obstacle detection/avoidance"
   },
   {
     "id": "pudu-d9",
