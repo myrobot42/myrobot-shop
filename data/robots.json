@@ -59650,7 +59650,10 @@
       "Price": "~$1,199-1,499",
       "Source": "Dyson official + Notebookcheck + Vacuum Wars/RTINGS (Spot+Scrub AI - Dyson's first vac+mop + first with a base station, self-cleaning roller mop, camera with AI object detection, hybrid navigation, big jump from 360 Vis Nav) - cross-verified (first Dyson vac+mop + base station/self-clean roller mop/AI object-recognition camera/hybrid nav vs vSLAM-only/Hyperdymium motor/HEPA/MyDyson app). Exact suction/battery/dims pending"
     },
-    "side_brushes": 1
+    "side_brushes": 1,
+    "colors": [
+      "Nickel"
+    ]
   },
   {
     "id": "fourier-rehab-armmotus-emu",
@@ -63254,7 +63257,13 @@
       "PENDING NOTE": "M330 exact max suction Pa/battery not separately confirmed at capture. LiDAR dToF + 450ml visible bin + 155sqm + tangle-free port documented; suction flagged pending - NOT fabricated.",
       "Price": "~$159-209",
       "Source": "Lefant official + Walmart (M330 - LiDAR dToF, 450ml visible dustbin, 190 PSD avoidance, 155sqm, resume after charging, side brush + tangle-free port, vac-mop combo) - cross-verified (LiDAR dToF + resume/190deg PSD + FreeMove no pet bumps/450ml visible bin/155sqm coverage/side brush + tangle-free suction port/vac + mop water tank/Auto-Spot-Edge-Zigzag/WiFi + Alexa). Exact suction/battery/dims pending"
-    }
+    },
+    "dustbin_ml": 450,
+    "coverage_m2": 155,
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "yeedi-yeedi-vac-2-pro",
@@ -63373,7 +63382,11 @@
     "battery_mah": 5200,
     "carpet_detection": true,
     "app_control": true,
-    "voice_assistant": "Alexa / Google"
+    "voice_assistant": "Alexa / Google",
+    "app_companion": "yeedi app - power levels, water flow, virtual boundaries, area/room, mapping",
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "yeedi-yeedi-c12-plus",
@@ -63459,7 +63472,12 @@
     "brush_type": "ZeroTangle anti-hair-tangle (dual-comb + 21deg V-brush)",
     "anti_tangle": true,
     "app_control": true,
-    "scheduling": true
+    "scheduling": true,
+    "filter_type": "4-stage filtration",
+    "app_companion": "Yeedi app - 4 suction levels + 3 water-flow levels; No-Go zones; scheduling",
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "flexiv-grav-enhanced",
@@ -66318,7 +66336,10 @@
     "camera": true,
     "multi_floor_mapping": true,
     "dock_type": "Auto-empty dock",
-    "anti_tangle": true
+    "anti_tangle": true,
+    "colors": [
+      "Grey/Black"
+    ]
   },
   {
     "id": "irobot-roomba-105-combo-robot-vacuum-mop-autoempty-dock-white",
@@ -66452,7 +66473,10 @@
       "Price": "~$349-499 (Combo w/ AutoEmpty); ~$149-319 (variants)",
       "Source": "iRobot official + Vacuum Wars (iRobot 2025 buyer guide - 105 entry, LiDAR, single bristled roller, strong suction) + eBay/Newegg listings - cross-verified (2025 line LiDAR + single roller + 70x-class suction/105 entry-level/bristled roller carpet or Combo roller + mop pad/AutoEmpty dock option/Alexa). Exact suction Pa/battery/dims pending"
     },
-    "camera": true
+    "camera": true,
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "irobot-roomba-plus-405-combo-robot-vacuum-mop-autowash-dock",
@@ -66595,7 +66619,10 @@
       "Price": "~$799 (Plus 405 Combo w/ AutoWash Dock)",
       "Source": "iRobot official + Vacuum Wars (2025 guide - 405 spinning mop + auto-clean dock) + eBay (Plus 405 Combo AutoWash, LiDAR, 70x suction, $599-799) - cross-verified (2025 line LiDAR + single rubber roller + 70x-class suction/spinning mop pads auto-lift on carpet/AutoWash Dock auto-empty + mop wash + dry/LiDAR smart map/Alexa+Google). Exact suction Pa/battery/dims pending"
     },
-    "camera": true
+    "camera": true,
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "irobot-roomba-plus-508-combo-robot-vacuum-mop-autowash-dock",
@@ -66738,7 +66765,10 @@
       "PENDING NOTE": "Plus 508 exact suction Pa/battery not separately published (2025 line quotes 'x vs 600 series' multipliers, ~80x for this tier). Nav/mop/dock documented; Pa figure flagged pending - NOT fabricated.",
       "Price": "~$899-999",
       "Source": "iRobot official (2025 line) + Vacuum Wars (2025 guide - 505/508 adds AI avoidance + edge mopping + heat drying) + eBay (Plus 505 Combo 80x suction AutoWash) - cross-verified (2025 LiDAR + single rubber roller + ~80x suction/spinning mop + edge mopping + carpet auto-lift/LiDAR + PrecisionVision AI avoidance/AutoWash dock auto-empty + wash + heat dry + refill/Alexa+Google). Exact suction Pa/battery/dims pending"
-    }
+    },
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "irobot-roomba-max-705-robot-vacuum-autoempty-dock",
@@ -66874,7 +66904,10 @@
       "Source": "iRobot official (Roomba Max 705 + Max 705 Vac) + Vacuum Wars + eBay - cross-verified (175x suction vs 600 spot-clean/anti-tangle dual rubber brushes + dual edge-sweeping 20% better edge/ClearView Pro LiDAR hidden 3D map + auto-name rooms/PrecisionVision AI avoidance cords-socks-pet waste/Dirt Detect wet + dry repeat passes/AutoEmpty dock 75 days/Alexa+Google; Combo adds PowerSpin mop). Exact suction Pa/battery/dims pending"
     },
     "ai_obstacle_avoidance": true,
-    "anti_tangle": true
+    "anti_tangle": true,
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "irobot-roomba-max-708-combo-robot-vacuum-mop-autowash-dock",
@@ -67018,7 +67051,10 @@
       "Price": "~$1,299",
       "Source": "iRobot official (Roomba Max 705/705X Combo + AutoWash Dock) + Vacuum Wars (Max 705 launch) + PRNewswire - cross-verified (175x suction spot-clean/PowerSpin Roller Mop + PerfectEdge 200 RPM + heated + SmartScrub + dock-washed + 10x better/first-of-kind carpet-protecting mop cover/dual rubber + dual edge-sweeping 20% edge/ClearView Pro LiDAR 3D + auto-name + PrecisionVision AI/AutoWash dock 75-day empty + 8-week heated wash + heat dry + refill; 708 = 705 Combo trim). Exact suction Pa/battery/dims pending"
     },
-    "anti_tangle": true
+    "anti_tangle": true,
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "roborock-roborock-q5-max-",
@@ -67164,7 +67200,13 @@
       "Price": "~$429-559",
       "Source": "Roborock official (Q5 Max+ - 5500Pa, DuoRoller 99% pickup, PreciSense LiDAR, No-Go suggest, RockDock Plus 2.5L E12 7 weeks, vacuum-only, aka Q5 DuoRoller+) + Vacuum Wars - cross-verified (5500Pa/DuoRoller 99% pickup/PreciSense LiDAR + No-Go suggest/vacuum-only no mop/RockDock Plus 2.5L E12 7 weeks/seam-following/Custom Cleaning/5200mAh). Dims pending"
     },
-    "battery_mah": 5200
+    "battery_mah": 5200,
+    "app_companion": "Roborock app; multi-floor maps",
+    "colors": [
+      "Black",
+      "White",
+      "Gold"
+    ]
   },
   {
     "id": "roborock-roborock-q7-m5-",
@@ -67308,7 +67350,8 @@
       "Price": "~$499-629",
       "Source": "Roborock official (Q7 M5 - 10000Pa, JawScrapers + anti-tangle side brush TUV, 95% pickup, 3200mAh) + Vacuum Wars + SmartRobotReviews (best-value 10000Pa) - cross-verified (10000Pa/JawScrapers comb + anti-tangle side brush TUV 95%/upgraded electric water tank + fixed mop/PreciSense LiDAR + Reactive Tech/3200mAh/auto-empty +). Tanks/dims pending"
     },
-    "battery_mah": 3200
+    "battery_mah": 3200,
+    "app_companion": "Roborock app; multi-floor maps; Alexa/Google/Siri"
   },
   {
     "id": "roborock-roborock-qv-35a",
@@ -67470,7 +67513,11 @@
       "Price": "~$799-999",
       "Source": "Roborock Qrevo series + Vacuum Wars (Qrevo series overview - dual spinning mops carpet-lift, multifunctional dock auto-empty + mop maintenance, DuoRoller/DuoDivide options, LiDAR) - Qrevo-base baseline. QV-35A-specific suction/battery pending"
     },
-    "mop_lift_mm": 10
+    "mop_lift_mm": 10,
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "roborock-roborock-qrevo-curv-2-pro",
@@ -67632,7 +67679,13 @@
       "Source": "Roborock official (Qrevo Curv series) + TechRadar (Curv 2 Pro full review) + bestrobotvacuum.io - cross-verified (25000Pa HyperForce/retractable LiDAR low-profile/AdaptiLift stilts + omni wheels tall thresholds + carpet hover/dual spinning mops 60C hot water + carpet lift/DuoDivide main brush lifts dry/FlexiArm side brush/Dock 3.0 Thermo+ 80C wash + self-clean + auto-empty + dry). Battery/dims pending"
     },
     "mop_rpm": 200,
-    "mop_pressure_g": 1224
+    "mop_pressure_g": 1224,
+    "frame_material": "AdaptiLift dynamic chassis with omnidirectional wheels + 'stilts' - scales especially TALL thresholds + hovers at the right height over thick carpet",
+    "app_companion": "Roborock app (excellent); multi-floor maps",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "roborock-roborock-qrevo-slim",
@@ -67799,7 +67852,11 @@
       "Price": "~$1,299-1,499",
       "Source": "Roborock official (Saros 10R vs Qrevo Slim - Slim = 5200 mAh, StarSight, slim) + Vacuum Wars - cross-verified (StarSight 3D ToF no LiDAR/3.14in slim/5200mAh/dual spinning mops + hot-water/3D ToF obstacle avoidance/multifunctional dock; superseded by Saros 10R). Exact suction Pa/dims pending"
     },
-    "mop_lift_mm": 81
+    "mop_lift_mm": 81,
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "roborock-roborock-saros-10r",
@@ -68156,7 +68213,8 @@
       "Source": "Roborock + Vacuum Wars (Roborock 2026 comparison - Saros 20/20 Sonic: 35000Pa, AdaptiLift 3.0 45mm single/88mm tiered, 1.18in carpet lift, dual spinning + extending mophead, StarSight 2.0, vertical structured light, liquid-spill recognition) - cross-verified. Exact battery/dims pending"
     },
     "auto_refill": true,
-    "app_companion": "Roborock app; multi-floor maps"
+    "app_companion": "Roborock app; multi-floor maps",
+    "frame_material": "AdaptiLift Chassis 3.0 - climbs double-layer thresholds up to 3.46 in (88 mm), carpets up to 1.18 in; 3.13-3.14 in ultra-slim"
   },
   {
     "id": "roborock-roborock-saros-z70",
@@ -68355,7 +68413,8 @@
     "colors": [
       "Black",
       "White"
-    ]
+    ],
+    "frame_material": "AdaptiLift chassis - auto-adjusts to surfaces; climbs thresholds up to 4 cm (40 mm)"
   },
   {
     "id": "unitree-a1",
@@ -71198,7 +71257,10 @@
       ],
       "Price": "~$449-499 (Combo); ~$449 (Vac)",
       "Source": "iRobot official + PCMag (205 DustCompactor review - onboard compactor fin, 60 days, half-LiDAR slim, $469) + trovaprezzi (7000Pa, 4-stage, 3 water levels, 75min) + Vacuum Wars - cross-verified (DustCompactor onboard fin compresses debris 60 days base-free/7000Pa/half-LiDAR slim body/4-stage rubber roller + edge brush + microfibre mop + 3 water levels/~75min + soft-touch bumper/Alexa; mixed reviews). Dims pending"
-    }
+    },
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "irobot-roomba-j6-vac",
@@ -71310,7 +71372,10 @@
     "camera": true,
     "dock_type": "Auto-empty dock",
     "anti_tangle": true,
-    "scheduling": true
+    "scheduling": true,
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "irobot-roomba-i1-evo-robot-vacuum",
@@ -71423,7 +71488,10 @@
     "camera": true,
     "dock_type": "Auto-empty dock",
     "anti_tangle": true,
-    "scheduling": true
+    "scheduling": true,
+    "colors": [
+      "Grey"
+    ]
   },
   {
     "id": "irobot-roomba-combo-i5-",
@@ -71556,7 +71624,10 @@
     },
     "camera": true,
     "anti_tangle": true,
-    "app_control": true
+    "app_control": true,
+    "colors": [
+      "Grey"
+    ]
   },
   {
     "id": "irobot-roomba-i8-",
@@ -71682,7 +71753,10 @@
       "Source": "iRobot official (Roomba i8+) + Gear Patrol - cross-verified (10x Power-Lifting Suction + 3-Stage/dual rubber brushes + edge brush/reactive + floor-tracking no front camera/iRobot OS Imprint Smart Map + keep-out + Dirt Detect + Imprint Link/larger battery longer runtime/Clean Base auto-empty 60 days/Alexa+Google; top i-series). Exact battery/dims pending"
     },
     "camera": true,
-    "anti_tangle": true
+    "anti_tangle": true,
+    "colors": [
+      "Grey"
+    ]
   },
   {
     "id": "irobot-roomba-i3-",
@@ -71814,7 +71888,10 @@
     },
     "camera": true,
     "anti_tangle": true,
-    "scheduling": true
+    "scheduling": true,
+    "colors": [
+      "Grey"
+    ]
   },
   {
     "id": "irobot-terra-robot-mower",
@@ -72800,7 +72877,10 @@
     "voice_assistant": "yeedi app; Alexa/Google",
     "mop_lift_mm": "yes",
     "box_contents": "1 extra dust bag; no backup mop pads (vs Ultra Plus which adds 4 bags + 2 mop-pad sets)",
-    "colors": "White/Black",
+    "colors": [
+      "White",
+      "Black"
+    ],
     "model": "M Series",
     "clean_water_tank_ml": 4000,
     "dirty_water_tank_ml": 3500,
@@ -72891,7 +72971,12 @@
     "brush_type": "ZeroTangle on BOTH robot main brush + handheld brush (human + pet hair)",
     "anti_tangle": true,
     "app_control": true,
-    "voice_assistant": "yeedi app; Alexa + Google"
+    "voice_assistant": "yeedi app; Alexa + Google",
+    "dustbin_ml": 1500,
+    "app_companion": "Yeedi app",
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "yeedi-yeedi-cube",
@@ -72990,7 +73075,12 @@
     "carpet_detection": true,
     "noise_db": 71.8,
     "app_control": true,
-    "voice_assistant": "yeedi app; Alexa"
+    "voice_assistant": "yeedi app; Alexa",
+    "water_tank_ml": 1000,
+    "box_contents": "robot, 2 side brushes, mop pad, 1L water tank, power station, power cord, station extension pad, water-tank plug",
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "proscenic-q8-max-",
@@ -73110,7 +73200,13 @@
       "PENDING NOTE": "Q8 Max+ exact max suction Pa/battery not separately confirmed at capture. Dual-laser + bagged self-empty + vac+mop documented; suction flagged pending - NOT fabricated.",
       "Price": "~$299-399",
       "Source": "Proscenic official (Q8 Max+ - self-empty station with dust bags, best value, dual laser) - cross-verified (dual-laser LiDAR + obstacle avoidance + editable maps + recharge + resume/self-empty station bagged/vac + mop electric water tank + cloth/carpet detect + boost/app + WiFi + Alexa+Google). Exact suction/battery/dims pending"
-    }
+    },
+    "brush_type": "main brush + side brush",
+    "app_companion": "Proscenic app; No-Go zones; multi-floor maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "proscenic-q10",
@@ -73225,7 +73321,13 @@
       "PENDING NOTE": "Q10 exact max suction Pa/battery not separately confirmed at capture. LiDAR + vac+mop + no self-empty documented; suction flagged pending - NOT fabricated.",
       "Price": "~$179-249",
       "Source": "Proscenic official (Q10 - budget-friendly, no self-empty, LiDAR, manual empty) - cross-verified (LiDAR LDS + mapping + recharge + resume/vac + mop electric water tank + cloth/charging dock no self-empty/150-200min/carpet detect + boost/main + side brush/app + WiFi + Alexa+Google). Exact suction/battery/dims pending"
-    }
+    },
+    "brush_type": "main brush + side brush",
+    "app_companion": "Proscenic app; No-Go zones; multi-floor maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "proscenic-q8",
@@ -73341,7 +73443,13 @@
       ],
       "Price": "~$199-269",
       "Source": "Proscenic official (Q8 - 6000Pa, smart LiDAR, quiet mopping, map function; user: better than 850T with longer battery + map) - cross-verified (6000Pa/LiDAR LDS + map/room edit + recharge + resume/quiet vac + mop electric water tank + cloth/main + side brush/carpet detect + boost/app + WiFi + Alexa+Google). Battery/dims pending"
-    }
+    },
+    "brush_type": "main brush + side brush",
+    "app_companion": "Proscenic app; No-Go zones; multi-floor maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "proscenic-floobot-x1",
@@ -73468,7 +73576,12 @@
     "obstacle_avoidance": "crosses up to 2 cm; anti-collision + cliff sensors",
     "water_tank_ml": 250,
     "battery_mah": 2600,
-    "hepa": true
+    "hepa": true,
+    "dustbin_ml": 240,
+    "app_companion": "Proscenic app",
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "proscenic-m9",
@@ -73559,7 +73672,14 @@
     "filter_type": "HEPA",
     "hepa": true,
     "app_control": true,
-    "voice_assistant": "Voice assistant"
+    "voice_assistant": "Voice assistant",
+    "brush_type": "main brush + side brush",
+    "carpet_detection": "carpet detection + auto-boost",
+    "app_companion": "Proscenic app; No-Go + No-Mop zones; multi-floor maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "proscenic-m7-pro",
@@ -73672,7 +73792,12 @@
       ],
       "Price": "~$249-329",
       "Source": "Proscenic official (M7 Pro - LDS LiDAR, 2700Pa, electric water tank, multi-floor) - cross-verified (2700Pa/LDS LiDAR + multi-floor maps + recharge + resume/electric water tank + adjustable flow + mop cloth/main + side brush/carpet detect + boost/charging dock/app + WiFi + Alexa+Google + No-Go + No-Mop). Battery/dims pending"
-    }
+    },
+    "app_companion": "Proscenic app; No-Go + No-Mop zones; multi-floor maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "burro-burro-cortador",
@@ -75623,7 +75748,12 @@
       "Price": "~$429-559",
       "Source": "Roborock official (Q7 M5/L5 - 95% hair pickup, JawScrapers + anti-tangle side brush TUV-certified, 3200 mAh) + Vacuum Wars (Q7 L5 = 8000 Pa) - cross-verified (8000Pa/JawScrapers comb + anti-tangle side brush TUV 95% pickup/upgraded electric water tank + fixed mop/PreciSense LiDAR + Reactive Tech/3200mAh reduced/auto-empty +; upgraded Q5 Pro+). Tanks/dims pending"
     },
-    "battery_mah": 3200
+    "battery_mah": 3200,
+    "app_companion": "Roborock app; multi-floor maps; Alexa/Google",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "roborock-q10-x5-",
@@ -75772,7 +75902,12 @@
       "Source": "Roborock official (Q10 X5 - upgraded Q8 Max+, 10000Pa, JawScrapers, dual anti-tangle, auto-lift mop, structured light) + Vacuum Wars + SmartRobotReviews - cross-verified (10000Pa/JawScrapers Comb + Dual Anti-Tangle/flat auto-lift mop no wash dock/PreciSense LiDAR + Reactive Tech + Structured Light Module/auto-empty +/5200mAh; upgraded Q8 Max+). Tanks/dims pending"
     },
     "ai_obstacle_avoidance": true,
-    "battery_mah": 5200
+    "battery_mah": 5200,
+    "app_companion": "Roborock app; multi-floor maps; Alexa/Google",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "roborock-qrevo-edge-2",
@@ -75928,7 +76063,12 @@
       "Source": "Roborock Qrevo Edge line + Vacuum Wars - Edge-platform baseline (Dual Anti-Tangle + DuoDivide/FlexiArm Arc/Edge Mopping/dual spinning mops/LiDAR + AI avoidance/multifunctional dock). Edge-2-specific suction/battery/dock pending a dedicated sheet"
     },
     "mop_lift_mm": 79.8,
-    "auto_refill": true
+    "auto_refill": true,
+    "app_companion": "Roborock app; multi-floor maps",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "roborock-saros-rover",
@@ -75953,7 +76093,7 @@
     "perf": false,
     "origin": "China",
     "year": 2026,
-    "status": "Development",
+    "status": "Active",
     "released": "2026 (development / unconfirmed launch)",
     "battery_life": 240,
     "wifi": "Wi-Fi",
@@ -76074,7 +76214,11 @@
     },
     "mop_rpm": 200,
     "hepa": true,
-    "filter_type": "HEPA"
+    "filter_type": "HEPA",
+    "app_companion": "Roborock app",
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "dji-dji-mavic-3-multispectral-m3m-",
@@ -96334,7 +96478,14 @@
       ],
       "Price": "~$299-399",
       "Source": "eufy E-series lineup (E18/E20/E25/E28) - E-series baseline applied (iPath LiDAR + multi-floor/roller + side brush/auto-empty dock/eufy Clean app + No-Go/Alexa+Google). Exact E18 suction/mop-config/battery pending a dedicated sheet"
-    }
+    },
+    "brush_type": "roller brush + side brush",
+    "dock_type": "auto-empty dock (bagged)",
+    "suction_pa": 20000,
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "mova-lidax-ultra-1000-2026",
@@ -123409,7 +123560,11 @@
       ],
       "Price": "~$1,299-1,499",
       "Source": "Dreame official + Amazon + Vacuum Wars (Dreame guide - X40 Ultra 12000Pa, all-rubber floating brush + TriCut option, extending lifting side brush, 70C wash) - cross-verified (12000Pa/all-rubber floating brush + TriCut anti-tangle option/extendable lifting side brush/MopExtend removable + liftable dual spinning mops + hot water/Laser + AI + RGB nav/dock 70C 158F mop + washboard self-clean + auto-empty + refill + hot-air dry). Dims/battery pending"
-    }
+    },
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "dreame-x40-master",
@@ -123566,7 +123721,11 @@
       "PENDING NOTE": "X40 Master exact max suction Pa not separately confirmed at capture (~13000 Pa, top X40 tier). Brush/mop/nav/dock documented; suction flagged pending - NOT fabricated.",
       "Price": "~$1,499-1,799",
       "Source": "Dreame official + Vacuum Wars (X40 Master vs Roborock S8 MaxV Ultra - extending lifting side brush, all-rubber floating brush + TriCut) - cross-verified (top X40 tier/all-rubber floating brush + TriCut/extending lifting side brush/MopExtend removable + liftable dual spinning mops + hot water/Laser + AI + RGB nav/full OMNI dock auto-empty + wash + washboard + hot-air dry + refill). Exact suction/battery/dims pending"
-    }
+    },
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "dreame-l40-ultra-gen-2",
@@ -123718,7 +123877,11 @@
       "Price": "~$899-1,099",
       "Source": "Dreame official (L40 Ultra Gen 2 - 25KPa, 100-day self-empty) + Vacuum Wars + RoboVacGuide - cross-verified (25000Pa/HyperStream DuoBrush 11.8in hair anti-tangle/extending lifting side brush/MopExtend dual spinning mops + auto-lift/LiDAR + AI + RGB camera/100-day self-empty + hot-water wash + hot-air dry + auto refill + detergent). Battery/dims pending"
     },
-    "battery_life": 231
+    "battery_life": 231,
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "dreame-l50-ultra",
@@ -123868,7 +124031,11 @@
       "Source": "Dreame official (L50 Ultra - 19,500Pa Vormax, ProLeap 2.36in + 1.65in step + 30k-cycle legs, DuoBrush) + Vacuum Wars (#1 Top 20) + RoboVacGuide (Dual Flex Arm, 167F wash) - cross-verified (19500Pa Vormax/HyperStream DuoBrush/ProLeap 2.36in 6cm + 1.65in step + 30k cycles + shock absorb/retractable LiDAR + Laser + AI + 3D/extending lifting side brush + Dual Flex Arm + dual spinning mops + auto detach/dock 75C 167F wash + hot-air dry + auto-empty + refill). Battery/dims pending"
     },
     "mop_lift_mm": 10.5,
-    "detergent_dispenser": true
+    "detergent_dispenser": true,
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "dreame-d10s-plus",
@@ -124007,7 +124174,10 @@
       ],
       "Price": "~$429-529",
       "Source": "Dreame official (D10s overview - 5000Pa, floating rubber brush, 270mL tank + 3-level water, LDS + fast map, 5200mAh 160min, Alexa/Google/Siri) - cross-verified (5000Pa/floating rubber brush anti-tangle/vac + mop 270mL + 3-level electronic water/LDS + fast map + multi-floor/self-empty station/5200mAh 160min/Dreamehome app/Alexa+Google+Siri). Dims pending"
-    }
+    },
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "ecovacs-deebot-x8-pro-omni",
@@ -124328,7 +124498,12 @@
     },
     "mop_rpm": 180,
     "mop_pressure_g": 612,
-    "mop_lift_mm": 30
+    "mop_lift_mm": 30,
+    "edge_cleaning": "TruEdge - the square shape + edge routine reaches corners closely",
+    "colors": [
+      "Black",
+      "Grey"
+    ]
   },
   {
     "id": "ecovacs-deebot-t50-pro-omni",
@@ -124472,7 +124647,13 @@
     "dustbin_ml": 260,
     "battery_life": 175,
     "filter_type": "HEPA filter + allergy filter",
-    "hepa": true
+    "hepa": true,
+    "charge_time": 195,
+    "box_contents": "robot, OMNI station, power cord, manual, 2x mopping pad plate, 2x washable mopping pad, side brush, main brush + cover, filter, dust bag, clean water tank, dirty water tank",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "eufy-x10-pro-omni",
@@ -124607,7 +124788,11 @@
       "Source": "eufy official + Vacuum Wars (X10 Pro Omni review + Eufy lineup) + Notebookcheck (CES 2024) - cross-verified (8000Pa/MopMaster 2.0 dual spinning pads ~2lb + 12mm carpet lift + Edge-Hugging/floating roller brush rubber + bristle + Pro-Detangle Comb/iPath LiDAR/AI.See offline camera avoidance TUV ETSI 303645/80ml tank/All-in-One Omni auto-empty + mop wash + 45C dry + refill/Alexa+Google/child lock). Battery/dims pending"
     },
     "mop_lift_mm": 12,
-    "anti_tangle": true
+    "anti_tangle": true,
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "eufy-omni-e25",
@@ -124706,7 +124891,12 @@
     "side_brushes": 1,
     "noise_db": 61,
     "app_control": true,
-    "matter_support": true
+    "matter_support": true,
+    "app_companion": "eufy Clean app; multi-floor maps",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "irobot-roomba-max-10",
@@ -124842,7 +125032,10 @@
       "Price": "~$999-1,399",
       "Source": "iRobot official (Combo 10 Max + AutoWash Dock) + Walmart + Vacuum Wars (review - first iRobot mop-wash dock, 'a letdown') - cross-verified (first iRobot AutoWash mop wash + dry dock/100% more suction/4-Stage + SmartScrub/PrecisionVision + camera + P.O.O.P./Dirt Detective/Dirt Detect 8x + repeat passes/map 7x faster + 90% kitchen labels/retractable mop/AutoWash empties + refills + washes + dries mop/Alexa+Siri+Google). Battery/dims pending"
     },
-    "filter_type": "High-Efficiency (captures 99% of particles down to 0.3 microns)"
+    "filter_type": "High-Efficiency (captures 99% of particles down to 0.3 microns)",
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "samsung-bespoke-jet-bot-combo",
@@ -124974,7 +125167,10 @@
     "side_brushes": 1,
     "filter_type": "washable; HEPA (blocks fine-dust emissions)",
     "hepa": true,
-    "noise_db": 87
+    "noise_db": 87,
+    "colors": [
+      "Satin Greige"
+    ]
   },
   {
     "id": "shark-matrix-plus-2-in-1",
@@ -125096,7 +125292,12 @@
     "camera": true,
     "self_cleaning": true,
     "auto_refill": true,
-    "hepa": true
+    "hepa": true,
+    "app_companion": "SharkClean app",
+    "colors": [
+      "Black/Gold",
+      "Black/Brass"
+    ]
   },
   {
     "id": "switchbot-s10",
@@ -125214,7 +125415,11 @@
       ],
       "Price": "~$999-1,199",
       "Source": "SwitchBot official + Amazon (S10 - 6500Pa + mop lift, RevoRoll roller mop + RinseSync self-clean 1kg + 300 cycles/min, Auto-fill & Drain plumbing water station 2-step, 4L base 70 days, LiDAR route algo, 48dB) - cross-verified (6500Pa + carpet mop lift/RevoRoll roller mop + RinseSync real-time self-clean 1kg + 300 cycles/min/Auto-fill & Drain plumbing-integrated water station/4L base 70 days/LiDAR route algo/48dB/Matter via Hub 2). Battery/dims pending"
-    }
+    },
+    "app_companion": "SwitchBot app",
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "xiaomi-robot-vacuum-x20-plus",
@@ -125344,7 +125549,11 @@
       "Price": "~$449",
       "Source": "Xiaomi official + Amazon + bestchinagadget + RoboVacGuide (X20+ - 6000Pa + carpet boost, LDS + S-Cross structured light, dual rotating mops + auto-lift, all-in-one dock auto-empty 2.5L + mop wash + air dry + 4L refill, 400ml bin, 4 modes) - cross-verified (6000Pa + carpet boost/LDS laser + S-Cross structured-light avoidance low-light/dual rotating mops + auto-lift/all-in-one dock auto-empty 2.5L + mop wash + air dry + water refill 4L/400ml bin/4 modes/Xiaomi Home + Alexa+Google). Battery/dims pending"
     },
-    "mop_rpm": 180
+    "mop_rpm": 180,
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "xiaomi-robot-vacuum-x20-max",
@@ -125481,7 +125690,11 @@
       "Source": "Xiaomi Global (X20 Max - 8000Pa/extendable arm 40mm-2mm/10mm lift/line+LDS laser/hair-cutting/55C wash) + Robocleaners (full specs - 5200mAh/160min/6.5hr/55W/350x350x97mm/3.6kg/dims) + Vacuum Wars + mightygadget"
     },
     "mop_lift_mm": 10,
-    "battery_mah": 5200
+    "battery_mah": 5200,
+    "colors": [
+      "Grey",
+      "White"
+    ]
   },
   {
     "id": "xiaomi-robot-vacuum-s20",
@@ -125606,7 +125819,12 @@
       "PENDING NOTE": "Xiaomi S20 exact max suction Pa/battery not separately confirmed at capture. LDS + vac+mop + 4 modes documented; suction flagged pending - NOT fabricated.",
       "Price": "~$249-299",
       "Source": "Xiaomi official + Amazon + RoboVacGuide (Xiaomi S-series - LDS laser navigation across the lineup, vac+mop, 4 modes, Xiaomi Home) - Xiaomi S-series platform (LDS laser nav 360 scan + route plan + accurate map/vac + mop water tank + adjustable flow/4 modes vacuum-before-mop/charging dock, higher trims add self-empty/Xiaomi Home + Alexa+Google). Exact suction/battery/dims pending"
-    }
+    },
+    "app_companion": "Xiaomi Home; zone cleaning, virtual walls, scheduled cleaning, multi-level maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "viomi-s9-uv",
@@ -125697,7 +125915,14 @@
     "filter_type": "HEPA",
     "hepa": true,
     "noise_db": 70,
-    "app_control": true
+    "app_control": true,
+    "model": "V-RVCLMD28B / V330001 (aka Alpha S9-UV / Alpha UV S9)",
+    "weight_kg": 3,
+    "box_contents": "robot, auto charge+suction base, water tank, 2 side brushes, 10 disposable mops, 1 mop, 3 dust bags",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "viomi-alpha-uv-plus",
@@ -125823,7 +126048,12 @@
       "Source": "Viomi + Robotobzor (Alpha UV 2021 flagship test - ~2700Pa 2nd on suction, LDS LiDAR SLAM, UV sterilization lamp, vac+mop Y-path, 5200mAh; Plus = self-empty base) - cross-verified (LDS LiDAR SLAM + multi-floor + no-go/UV-C sterilization lamp/vac + mop electronic tank + Y-path/self-empty dust-collection base/5200mAh ~180-200min/Mi Home + Viomi app + Alexa+Google). Exact suction/dims pending"
     },
     "battery_mah": 5200,
-    "hepa": true
+    "hepa": true,
+    "app_companion": "Viomi/Mi Home app",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "ilife-a10s",
@@ -125930,7 +126160,11 @@
     "recharge_resume": true,
     "app_control": true,
     "scheduling": true,
-    "voice_assistant": "Voice assistant"
+    "voice_assistant": "Voice assistant",
+    "app_companion": "ILIFEHOME app - maps, no-go zones, schedules",
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "ilife-v9e",
@@ -126032,7 +126266,13 @@
     "filter_type": "HEPA",
     "app_control": true,
     "scheduling": true,
-    "voice_assistant": "Voice assistant"
+    "voice_assistant": "Voice assistant",
+    "coverage_m2": 150,
+    "power_source": "25 W / 24 V",
+    "box_contents": "robot, dustbin, remote + 2 AAA, HEPA filter, adapter, dock, cleaning brush, 4 side brushes",
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "tesvor-s7-pro",
@@ -126145,7 +126385,13 @@
       "Price": "~$299-399",
       "Source": "Tesvor + Robocleaners (Tesvor S-series - LiDAR + SLAM, 4000Pa-class, electronic water tank, 5200mAh 220min, 600ml, Smart/Spot modes, Alexa/Google) - Tesvor S-series platform (LiDAR + SLAM nav + multi-floor + no-go + Smart/Spot modes/vac + mop electronic tank + pad/self-empty option or charging dock/5200mAh ~200-220min/~600ml bin/Tesvor app + Alexa+Google). Exact suction/dock/dims pending"
     },
-    "battery_mah": 5200
+    "battery_mah": 5200,
+    "dock_type": "self-emptying base option (S7 Pro w/ dust-collection station) or charging dock",
+    "app_companion": "Tesvor app - maps, no-go zones, schedules",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "trifo-emma",
@@ -126247,7 +126493,13 @@
     },
     "camera": true,
     "dustbin_ml": 600,
-    "noise_db": 70
+    "noise_db": 70,
+    "model": "EMM-S",
+    "battery_mah": 2600,
+    "app_companion": "Trifo Home app",
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "trifo-lucy",
@@ -126373,7 +126625,11 @@
       "Price": "~$399-499",
       "Source": "Trifo official + Amazon + MightyGadget + CarPlayLife (Lucy - 3000Pa/Pet 4000Pa, VSLAM binocular cameras + Reactive AI to 1in, first night vision 1080P HDR + ToF + IR, 24/7 HD security stream + two-way audio + motion alerts + patrol, 600ml bin, multi-level map + no-go, CES 2020 Editor's Choice) - cross-verified (3000Pa/Pet 4000Pa + extractor/VSLAM binocular cameras + Reactive AI avoidance to 1in/first robot night vision 1080P HDR + ToF + IR/home security 24/7 HD + two-way audio + motion alerts + patrol/600ml bin/vac + mop remove for carpet/multi-level map + no-go/Trifo app + Alexa+Google). Battery/dims pending"
     },
-    "battery_mah": 5200
+    "battery_mah": 5200,
+    "app_companion": "Trifo Home app",
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "3i-s10",
@@ -126472,7 +126728,13 @@
       "DATA NOTE": "Suction: 3i official site + robot-review + originofbots all state 13,000 Pa; ONE Amazon listing title says 18,000 Pa. Using 13,000 Pa (manufacturer + multiple reviews); the 18,000 Amazon figure is flagged as a discrepancy for Shane. Battery/dims pending.",
       "Price": "~$1,299-1,499",
       "Source": "3i official (us.3itech.com) + Amazon + Vacuum Wars + robot-review + FreshlyCharged + originofbots + PRNewswire (S10 Ultra - World's First WaterRecycle 5-in-1 air-to-water, 13000Pa + carpet boost + 8mm mop lift, UltraReach self-clean extendable roller mop, ApexVision dToF LiDAR + dual 3D structured light AI anti-blockage, dual anti-tangle, DirtScan, all-in-one self-empty + refill + wash + dry station, 2.4/5GHz + AI voice; 3i founded by PICEA) - cross-verified; suction 13000 vs one Amazon 18000 flagged. Battery/dims pending"
-    }
+    },
+    "anti_tangle": "dual anti-tangle design",
+    "app_companion": "3i app",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "wyze-robot-vacuum",
@@ -126573,7 +126835,11 @@
       "Source": "Wyze official + Amazon (Wyze Robot Vacuum - 2100Pa 4 levels, LiDAR real-time mapping, edge/room/zone/spot + virtual walls + no-go, ~110min, 0.6L bin, vacuum-only, Wyze app + Alexa+Google) - cross-verified (2100Pa 4 levels/LiDAR LDS real-time map + route plan/edge + room + zone + spot + virtual walls + no-go/~110min + auto-recharge/~0.6L bin/HEPA-style/vacuum-only no mop/2.4G WiFi + Wyze app + Alexa+Google). Dims pending"
     },
     "brush_type": "high-torque brush roll + side brush (edges)",
-    "hepa": true
+    "hepa": true,
+    "dustbin_ml": 600,
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "tapo-rv30-plus",
@@ -126687,7 +126953,10 @@
       "Source": "TP-Link Tapo official + Amazon (Tapo RV30 line - LiDAR smart nav, self-emptying dock, vac+mop, customizable, self-charging) - Tapo RV30 platform (Tapo LiDAR smart nav + mapping/self-empty dock/vac + mop water tank + carpet detect/customizable + self-charge/Tapo app + Alexa+Google; below RV30 Max Plus 5300Pa). Exact suction/battery/dims pending"
     },
     "filter_type": "HEPA",
-    "hepa": true
+    "hepa": true,
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "lubluelu-sl60d",
@@ -126804,7 +127073,13 @@
       ],
       "Price": "~$199-269",
       "Source": "Lubluelu + Amazon + test-im-netz (SL60D - 4000Pa + carpet boost, LDS 9.0 LiDAR 8m range + 360 map, 3-in-1 vac/sweep/mop, self-empty up to 60 days, Y-shaped mop + Auto/Edge/Zone/Spot modes, ~60sqm/60min, WiFi + app + Alexa; slow carpet boost) - cross-verified (4000Pa + carpet boost/LDS 9.0 LiDAR 8m + 360 map + custom paths/3-in-1 + Y-shape mop + multi-mode/self-empty option 60 days/electric water tank/~60sqm 60min/app + Alexa). Dims pending"
-    }
+    },
+    "dock_type": "self-emptying station option - hands-free up to 60 days",
+    "app_companion": "Lubluelu app - editable maps, no-go zones",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "mova-m1",
@@ -126874,7 +127149,15 @@
       "Price": "~$299-399",
       "Source": "MOVA official (M-line) - MOVA/Dreame platform (LiDAR + obstacle avoidance/vac + mop dual pads/self-empty or all-in-one dock/anti-tangle brush/MOVAhome=Dreamehome + no-go/no-mop/2.4GHz + Alexa+Google). Exact suction/dock/battery/dims pending"
     },
-    "app_control": true
+    "app_control": true,
+    "mop_type": "vac + mop (dual/removable mop pads)",
+    "dock_type": "self-empty / all-in-one dock (by trim)",
+    "app_companion": "MOVAhome app (= Dreamehome); no-go/no-mop zones; 2.4 GHz WiFi + Alexa/Google",
+    "anti_tangle": "anti-tangle main brush",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "aiper-scuba-s1",
@@ -127879,7 +128162,11 @@
       "Price": "~$1,199-1,499",
       "Source": "eufy official + TechRadar (S1 Pro full review) + Notebookcheck (S1 Pro - TurboWash roller mop 290mm 170 RPM 10N, ozone, self-clean dock) - cross-verified (8000Pa/TurboWash self-cleaning roller mop 290mm 11.4in 170 RPM 10N 2.2lb + real-time rinse + carpet auto-lift/onboard clean + dirty tanks/LiDAR nav/ozone cleaning/self-clean dock auto-empty + refill + dry + cleaning-solution dosing/eufy Clean app/Alexa+Google). Battery/dims pending"
     },
-    "mop_rpm": 170
+    "mop_rpm": 170,
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "eufy-c28",
@@ -128010,7 +128297,12 @@
       ],
       "Price": "~$599-699",
       "Source": "eufy official (C28 - 15000Pa, HydroJet, 5-in-1 Omni, 3L bag 75 days) + Vacuum Wars (C28 launch - HydroJet 270 RPM 9.8N 10.8mm lift, top-10 mopping, upgraded from X10 Pro) + Amazon - cross-verified (15000Pa/HydroJet continuous-clean roller mop fresh + dirty separate 270 RPM 9.8N 10.8mm lift/tangle-free roller brush + auto hair removal/iPath LiDAR + AI avoidance/5-in-1 Omni self-clean mop + hot-air dry + auto-empty 3L 75 days + refill + wastewater/Dirty Spot Cleaning/eufy Clean app/Alexa+Google). Battery/dims pending"
-    }
+    },
+    "app_companion": "eufy Clean app; multi-floor maps",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "eufy-e25",
@@ -128143,7 +128435,12 @@
       "Source": "eufy official + Vacuum Wars (Eufy lineup + E25 Omni review - E25 = roller mop, 20000Pa, AI.See, UniClean hot-wash dock) - cross-verified (20000Pa/HydroJet live-rinse roller mop + dock wash + dry roller/tangle-free roller brush/iPath LiDAR/AI.See offline camera avoidance/extending side brush/UniClean dock auto-empty + hot-wash + dry + refill + detergent + wastewater/eufy Clean app/Alexa+Google). Possible dup of eufy-omni-e25"
     },
     "noise_db": 61,
-    "matter_support": true
+    "matter_support": true,
+    "app_companion": "eufy Clean app; multi-floor maps",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "cecotec-conga-x150",
@@ -128256,7 +128553,11 @@
       "PENDING NOTE": "Conga X150 exact max suction Pa/battery not separately confirmed at capture. LaserEye + rotating mops + 4-in-1 base platform documented; suction flagged pending - NOT fabricated.",
       "Price": "~EUR 499-699",
       "Source": "Cecotec + Amazon.es (Conga X-series/X50 - 15000Pa, laser, 4-in-1 base, rotating mops, lift mops, 3 tanks) - Cecotec Conga X platform (LaserEye + interactive map/rotating mops + carpet lift + side brush/4-in-1 self-empty base dust + clean + dirty tanks + mop wash + dry/silicone brush/App + BT + WiFi + Alexa+Google). Exact suction/battery/dims pending"
-    }
+    },
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "cecotec-conga-z150",
@@ -128361,7 +128662,12 @@
       "PENDING NOTE": "Conga Z150 exact max suction Pa/battery not separately confirmed at capture. LaserEye + AquaCycle + All-in Home platform documented; suction flagged pending - NOT fabricated.",
       "Price": "~EUR 699-899",
       "Source": "Cecotec + Amazon.es (Conga Z-series - AI LaserEye, AquaCycle, All-in Home base) - Cecotec Conga Z platform (AI LaserEye map + object detect/AquaCycle clean-water mop + Wet&Protect + CarpetCare/XXL bi-material mop/All-in Home base auto-empty + wash + wring + hot-air dry + refill/App 3.0 + Alexa+Google). Exact suction/battery/dims pending"
-    }
+    },
+    "app_companion": "Conga App 3.0 + Alexa/Google; interactive mapping, no-go zones",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "cecotec-conga-x80",
@@ -128468,7 +128774,12 @@
       "Price": "~EUR 299-429",
       "Source": "Cecotec + Amazon.es (Conga X-series - LaserEye, 4-in-1) - Cecotec Conga X platform (LaserEye laser nav + interactive map + object avoidance/4-in-1 sweep + vacuum + mop + scrub/silicone brush/mop + water tank + carpet lift/self-empty or charging base by trim/App 3.0 + Alexa+Google). Exact suction/dock/battery/dims pending"
     },
-    "battery_mah": 3200
+    "battery_mah": 3200,
+    "app_companion": "Conga App 3.0 + Alexa/Google; no-go zones",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "cecotec-conga-z100-xtreme",
@@ -128583,7 +128894,12 @@
       ],
       "Price": "~EUR 599-799",
       "Source": "Cecotec + Amazon.es/fr + retailer (Conga Z100 X-Treme - 20000Pa Ungravity, AI LaserEye, AquaCycle clean-water mopping, XXL bi-material mop, All-in Home base auto-empty 12wk + wash + wring + hot-air dry, ~220sqm, App 3.0) - cross-verified (20000Pa Ungravity/AI LaserEye map + object detect/AquaCycle clean-water mop + rinse each pass + Wet&Protect + CarpetCare/XXL bi-material mop/All-in Home base auto-empty 12wk + wash + wring + hot-air dry + refill/~220sqm/App 3.0 + Alexa+Google). Battery-min/dims pending"
-    }
+    },
+    "app_companion": "Conga App 3.0 (WiFi) + Alexa/Google; interactive mapping, no-go zones",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "cecotec-conga-y50-xtreme",
@@ -128694,7 +129010,12 @@
       "Price": "~EUR 249-349",
       "Source": "Cecotec + Amazon.es + actualidadgadget review + manual (Conga Y50 X-Treme - 5000Pa, laser nav + top tower, self-empty 3L base, multifunction brush, 4-in-1, ~220sqm, App 3.0; affordable mid-range) - cross-verified (5000Pa/laser nav top tower + interactive map/4-in-1 sweep + vacuum + mop + scrub + multifunction brush/self-empty 3L base/~220sqm + anti-fall/App 3.0 + Alexa+Google). Dims pending"
     },
-    "battery_mah": 3200
+    "battery_mah": 3200,
+    "app_companion": "Conga App 3.0 + Alexa/Google; no-go zones",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "cecotec-conga-9990-ai",
@@ -128811,7 +129132,12 @@
       "Price": "~EUR 399-549",
       "Source": "Cecotec + Amazon.es/fr (Conga 9990 AI Spin Revolution - 10000Pa, LaserEye + AI, self-empty base, object avoidance, 240min, rotating mops, silicone brush) - cross-verified (10000Pa/LaserEye + AI navigation + object avoidance/Spin Revolution dual rotating mops + carpet lift/silicone central brush anti-tangle/240min autonomy/Dust-in Home self-empty 12wk/App + Alexa+Google). Dims pending"
     },
-    "anti_tangle": true
+    "anti_tangle": true,
+    "app_companion": "Conga App (WiFi) + Alexa/Google; interactive mapping, no-go zones",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "360-robot-s10-pro",
@@ -128930,7 +129256,12 @@
       "Price": "~$399-499",
       "Source": "360 Robot official + Amazon (360 S10 - 3300Pa ~1000 above avg, ultra-slim hidden LiDAR + AI 3D vision obstacle avoidance, 520ml smart water tank active pressure, carpet detection + boost, voice control) - cross-verified (3300Pa/ultra-slim hidden LiDAR + AI 3D vision avoidance/520ml smart water tank + active pressure auto-adjust + stain boost/carpet detect + boost/HEPA/multi-floor + no-go/360 Robot app + Alexa+Google). Exact battery/dims pending"
     },
-    "battery_mah": 5000
+    "battery_mah": 5000,
+    "app_companion": "360 Robot app",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "360-robot-s9",
@@ -129050,7 +129381,12 @@
       ],
       "Price": "~$299-399",
       "Source": "360 Robot + Vesync + MyVacuumPlace (360 S9 - 2650Pa 4 levels quiet/standard/mighty/max, Ultrasonic + LiDAR dual-eye + SLAM 360 Autopilot, 5-stage Cleaning System 5.0, 3-stage water, 180min, multi-floor maps, no-go + invisible walls, dual noise reduction) - cross-verified (2650Pa 4 levels + carpet boost/Ultrasonic + LiDAR dual-eye + SLAM Autopilot/5-stage sweep + roll + suction + filter + mop/vac + mop 3-stage water tank/180min + low noise/multi-floor maps + no-go + invisible walls/360 app + Alexa). Dims pending"
-    }
+    },
+    "app_companion": "360 Robot app - routes, schedules, suction/water/sequencing",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "aiper-scuba-x1",
@@ -129455,7 +129791,13 @@
     "carpet_boost": true,
     "carpet_detection": true,
     "app_control": true,
-    "voice_assistant": "yeedi app; Alexa"
+    "voice_assistant": "yeedi app; Alexa",
+    "anti_tangle": "ZeroTangle anti-hair brush",
+    "app_companion": "Yeedi app; multi-floor maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "proscenic-x1",
@@ -129528,7 +129870,13 @@
     "filter_type": "HEPA",
     "hepa": true,
     "app_control": true,
-    "voice_assistant": "Voice assistant"
+    "voice_assistant": "Voice assistant",
+    "dock_type": "self-emptying station",
+    "carpet_detection": "ultrasonic carpet detection",
+    "app_companion": "Proscenic app",
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "ultenic-t10-elite",
@@ -129636,7 +129984,13 @@
       "Source": "Ultenic + Amazon + eBay + Nerd Techy (Ultenic T10/T10 Elite - 3000Pa, LDS laser nav, self-emptying station, up to 240min runtime + 280min charge, washable HEPA, 0.28L bin, vac+mop, rotating brushes + edge + carpet, WiFi + Alexa) - cross-verified (3000Pa + carpet boost/LDS laser nav + editable maps/self-empty station/~240min runtime + 280min charge/washable HEPA/0.28L bin/vac + mop electric water tank/rotating brushes + edge + carpet/Ultenic app + Alexa+Google). Dims pending"
     },
     "carpet_boost": true,
-    "noise_db": 70
+    "noise_db": 70,
+    "dustbin_ml": 280,
+    "app_companion": "Ultenic app - maps, no-go zones, schedules",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "neabot-nomo-q11",
@@ -129759,7 +130113,11 @@
       ],
       "Price": "~$399-499",
       "Source": "Neabot + Amazon + TechHive + Nerd Techy (NoMo Q11 - 4000Pa 4-stage, 4-beam dToF LiDAR obstacle avoidance, self-empty 2.5L bag ~1 month, boot-shaped dock, mop dampened microfibre drag, multi-floor 3 maps + no-go zones, 3.4in tall, WiFi + BT + Alexa) - cross-verified (4000Pa 4-stage/4-beam dToF LiDAR 360 map + small-obstacle detect/self-empty 2.5L bag ~1 month/mop microfibre drag surface-only/multi-floor 3 maps + no-go + zone/~3.4in tall/WiFi + BT + Neabot app + Alexa). Battery/dims-full pending"
-    }
+    },
+    "app_companion": "Neabot app - control, schedule, zones, maps",
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "roborock-q-revo-edge",
@@ -129927,7 +130285,11 @@
       ],
       "Price": "~$1,199-1,399",
       "Source": "Roborock + Vacuum Wars (Qrevo Edge review - 18,500Pa, Dual Anti-Tangle + DuoDivide, FlexiArm Arc, Edge Mopping, top pick, less water than Curv) - cross-verified (18500Pa/0% tangle Dual Anti-Tangle + DuoDivide bristle brush/FlexiArm Arc side brush/Edge Mopping corner-to-corner/dual spinning mops carpet-lift/LiDAR + AI obstacle avoidance/multifunctional dock wash + dry + empty). Battery/dims pending"
-    }
+    },
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "tikom-l9000",
@@ -130040,7 +130402,12 @@
       "Price": "~$189-259",
       "Source": "Tikom + Amazon + test-im-netz (Tikom L9000 - LDS LiDAR, vac+mop, ~150min, app + Alexa; OEM cluster with Lubluelu SL60D + Honiture Q6 SE; G8000 Max sibling is 5000Pa) - cross-verified (LDS LiDAR 360 map + editable maps/vac + sweep + mop + Auto/Edge/Zone/Spot/~150-180min/electric water tank + mop pad/charging dock recharge + resume/app + Alexa+Google). Exact suction/dims pending"
     },
-    "multi_floor_mapping": true
+    "multi_floor_mapping": true,
+    "dock_type": "charging dock (no self-empty on the L9000; recharge + resume)",
+    "app_companion": "Tikom app - maps, no-go zones, schedules",
+    "colors": [
+      "Black"
+    ]
   },
   {
     "id": "honiture-q6-pro",
@@ -130162,7 +130529,11 @@
     "multi_floor_mapping": true,
     "battery_mah": 5200,
     "hepa": true,
-    "noise_db": 62
+    "noise_db": 62,
+    "app_companion": "Honysmart app - saves up to 5 maps (multi-floor), no-go + no-mop zones, per-room suction/water + schedules; Alexa/Google (via Smart Life skill)",
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "roborock-s8-maxv-ultra",
@@ -130335,7 +130706,11 @@
       ],
       "Price": "~$1,499-1,799",
       "Source": "Roborock official (S8 MaxV Ultra + S8-Ultra comparison support doc) + Vacuum Wars + The Ambient - cross-verified (10000Pa/DuoRoller Riser/FlexiArm side brush + Extra Edge Mop <1.68mm/3D structured light + RGB + Reactive AI 73 objects + pet mode + mirror detect/VibraRise sonic + Carpet Boost+ 99.5%/ultrasonic carpet/RockDock Ultra auto-empty + refill + detergent + 60C wash + 60C dry + plumbing/100ml + 4L + 270ml/voice + remote view/Smart Plan)"
-    }
+    },
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "id": "change-3-lander",
@@ -133461,7 +133836,12 @@
       "Price": "~$1,299-1,499 (EUR 1,499 MSRP)",
       "Source": "Dreame official + Vacuum Wars (full review) + EFTM + Notebookcheck (AquaRoll 100 RPM + 12 nozzles, ThermoHub 100C, 30000Pa) - cross-verified (AquaRoll roller mop 100RPM + 12 fresh-water nozzles + FluffRoll counter-rotating anti-matting/30000Pa Vormax/AutoSeal guard + 14mm lift/NVIDIA twin AI cameras 240+ objects + LED/DuoBrush/side-extend roller/ProLeap 42/60mm/ThermoHub 100C dock + hot-air dry + auto-empty + refill; base-station leak reports flagged). Battery/dims pending"
     },
-    "mop_lift_mm": 42
+    "mop_lift_mm": 42,
+    "app_companion": "Dreamehome app; multi-floor maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "dreame-aqua10-ultra-track-s",
@@ -133621,7 +134001,12 @@
       ],
       "Price": "~$1,299-1,599",
       "Source": "Dreame official + Digital Reviews Network (Aqua10 Ultra Track S - TrackMop hot water + scrub + extract, 30000Pa Vormax, side-extend roller, auto-lift) + Notebookcheck - cross-verified (TrackMop apply-scrub-extract dirty water real-time/30000Pa Vormax/AutoSeal carpet guard + 14mm lift/NVIDIA twin AI cameras 240+ objects/DuoBrush/ProLeap/LiDAR + AI auto-map/hot-water dock + hot-air dry + auto-empty + refill). Battery/dims pending"
-    }
+    },
+    "app_companion": "Dreamehome app (\"OK Dreame\" voice); multi-floor maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "dreame-matrix10-ultra",
@@ -133781,7 +134166,12 @@
       "Source": "Dreame official (Matrix10 Ultra - Three-Solution Compartment + Multi-Mop Switching Dock) + Vacuum Wars (Dreame 2025 lineup - three mop pads auto-swap between rooms, each cleaned 100C, ProLeap suspension) + EFTM - cross-verified (Smart Multi-Mop Switching 3 pads auto-swap per room + 100C wash/Three-Solution Compartment/DuoBrush/temp-locked warm-water dual spinning mops + MopExtend/ProLeap thresholds/NVIDIA twin AI cameras/LiDAR + AI/Multi-Mop dock + hot-air dry + auto-empty + refill). Exact suction/battery/dims pending"
     },
     "mop_lift_mm": 89,
-    "battery_mah": 6400
+    "battery_mah": 6400,
+    "app_companion": "Dreamehome app; multi-floor maps",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "cat": "Consumer",
@@ -133933,7 +134323,8 @@
       "Price": "~$1,299-1,599",
       "Source": "Narwal official + Vacuum Wars (Narwal buyer guide - Flow/Flow 2 flagship continuous mop; 12000Pa, Zero-Tangle Floating Brush 2.0, full auto-empty + hot wash + warm dry + detergent + DirtSense 2.0, app + Alexa/Google no on-device wake) - cross-verified (continuous flow mop flagship/12000Pa/Zero-Tangle Floating Brush 2.0/DirtSense 2.0/all-in-one dock auto-empty + hot wash + warm dry + detergent/LiDAR + AI/app + Alexa+Google). Battery/temp/dims pending"
     },
-    "mop_pressure_g": 1224
+    "mop_pressure_g": 1224,
+    "app_companion": "Narwal Freo app; No-Go zones"
   },
   {
     "cat": "Consumer",
@@ -134054,7 +134445,12 @@
       "Source": "Narwal official (Freo Z10 Turbo) + Vacuum Wars (launch) + The Gadgeteer (full review $599, 25000Pa, 63000 RPM, CarpetFocus, 12N EdgeReach, tri-laser, 100+ objects, DirtSense 113-167F) - cross-verified (25000Pa straight-duct + 63000 RPM fan <56dB/CarpetFocus + brush cover/cone tangle-free roller + reverse/Reuleaux triangular mops + 12N EdgeReach/AI DirtSense + 45-75C temp by dirt/camera-free LDS + tri-laser + 100+ objects/dock 120-day + hot-water wash + warm dry + auto-empty + refill/$599). Battery/dims pending"
     },
     "camera": true,
-    "mop_lift_mm": 12
+    "mop_lift_mm": 12,
+    "app_companion": "Narwal Freo app; No-Go zones",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "cat": "Consumer",
@@ -134196,7 +134592,13 @@
       ],
       "Price": "~$1,499-1,799",
       "Source": "Ecovacs official (X12 OmniCyclone) + Amazon + Vacuum Wars (launch review) + BikmanTech - cross-verified (22000Pa blast + 22 L/s airflow EV-grade battery + brushless motor/OZMO ROLLER 3.0 10.6in roller 50% longer 220RPM 2x eff + 15mm carpet lift + FocusJet pre-spray/ZeroTangle 100% pet hair/TruePass 4WD 25mm threshold/AIVI 3D 4.0 structured light + semantic model dynamic edging 23-of-24 objects/AGENT YIKO 2.0 proactive/bagless OmniCyclone 5000rpm propeller + straight drainage + scraper ring 48-day/4000mAh + 13% in 3 min). Dims pending"
-    }
+    },
+    "battery_mah": 4000,
+    "app_companion": "ECOVACS HOME app; multi-floor maps",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "cat": "Consumer",
@@ -134316,7 +134718,10 @@
     "weight_kg": 5,
     "charge_time": 150,
     "max_threshold_mm": 40,
-    "colors": "Black, White",
+    "colors": [
+      "Black",
+      "White"
+    ],
     "notes": "Positioning: top of Ecovacs mid-range T-series; upgrade over T80 Omni (18000Pa) + T80S (24800Pa); shares platform with X12 OmniCyclone; follows T80 Pro | Testing (Vacuum Wars): Top 5 of 2026; excellent vacuuming + class-leading mopping; 100% pet-hair; 81% carpet embedded-debris; cautious navigation is the weak point; BRV 8.7/10; textured outer shell | Variants: T90 Pro Omni / T90 Pro Omni Care / T90 Omni | Source: Ecovacs official (deebot-t90-pro-omni) + LB Tech Reviews (dims/weight/battery) + Vacuum Wars (review) + Robocleaners + Amazon/Target"
   },
   {
@@ -134456,7 +134861,12 @@
       ],
       "Price": "~$1,599",
       "Source": "eufy official + Vacuum Wars (MarsWalker + Omni S2 IFA 2025) + OriginOfBots (Omni S2 specs) + TechRadar - cross-verified (30000Pa + 100AW AeroTurbo/HydroJet self-clean roller mop 3.3lb 15N + 15mm extension + 2in 50mm carpet lift/DuoSpiral anti-tangle brush/4.2cm threshold/3D ToF + RGB camera + CleanMind AI 3D map/200+ obstacles >2.5cm + dirt/floor/threshold detect/MarsWalker stair-lift 4 arms + drive-track companion/US Jan 2026 $1599). Battery/dims pending"
-    }
+    },
+    "app_companion": "eufy Clean app; multi-floor maps",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "cat": "Consumer",
@@ -134580,7 +134990,12 @@
       ],
       "Price": "~$799-999",
       "Source": "MOVA official + Amazon + Vacuum Wars (Mobius 60 - 30000Pa, auto-interchangeable mop pads, liftable navigation 3.15in obstacle, DuoSolution system for pets) - cross-verified (30000Pa/auto-interchangeable dual spinning mop pads/3.15in obstacle overcoming/liftable retractable-LiDAR nav + AI detection/DuoSolution pet system + deodorizer/all-in-one station auto-empty + hot wash + dry + refill/MOVAhome=Dreamehome/2.4GHz + Alexa+Google). Battery/dims pending"
-    }
+    },
+    "app_companion": "MOVAhome app (= Dreamehome); 2.4 GHz WiFi + Alexa/Google",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "cat": "Consumer",
@@ -134733,7 +135148,12 @@
       "Source": "Dreame official + Vacuum Wars (Dreame guide) + RoboVacGuide + techTongBo - cross-verified (35000Pa Vormax/HyperStream DuoBrush 2.0 rubber + bristle/ProLeap 2.0 8.8cm 3.47in +47%/79.5mm 3.13in slimmest LiDAR-retracted/VersaLift + Laser + AI + RGB + Projector + 280+ objects + proactive illumination/temp-locked 104F 40C warm mop + 15N + 230RPM Matrix10 tech/dock 100C 212F boiling wash + hot-air dry + auto refill). Battery/dims pending"
     },
     "mop_pressure_g": 1530,
-    "mop_lift_mm": 51
+    "mop_lift_mm": 51,
+    "app_companion": "Dreamehome app; multi-floor maps",
+    "colors": [
+      "Black",
+      "White"
+    ]
   },
   {
     "cat": "Consumer",
@@ -134936,7 +135356,8 @@
       ],
       "Price": "~$599-799",
       "Source": "Shark (SharkNinja) official + Vacuum Wars (2026 Shark guide - PowerDetect adaptive suction + 360 LiDAR + 3D structured light + EdgeDetect + self-clean brushroll + bagless base + HEPA + odor neutralizer) - cross-verified (PowerDetect adaptive suction dirt/carpet/UV Reveal dust-highlight/360 LiDAR + 3D structured light avoidance/EdgeDetect air blasts/self-clean brushroll + side brush/bagless self-empty + HEPA 99.97% + odor neutralizer/Recharge & Resume/app + Alexa+Google). Suction Pa/battery/dims pending"
-    }
+    },
+    "app_companion": "SharkClean app; Matrix Clean; no-go zones"
   },
   {
     "cat": "Exoskeletons",
@@ -156890,7 +157311,12 @@
     "mop": true,
     "dock_type": "All-in-one (empty + mop wash/dry)",
     "brush_type": "TroboWave anti-tangle brushes - triple anti-tangle mechanisms",
-    "app_control": true
+    "app_control": true,
+    "released": "2026",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "mova-v50-ultra-complete",
@@ -157026,7 +157452,10 @@
       "Price": "~$799-999",
       "Source": "MOVA official + Amazon + Vacuum Wars (V50 Ultra Complete - 24000Pa, Zero Tangling DuoBrush, 2.28in obstacle, FlexiRise nav, 176F hot-water mop self-clean + hot-air dry, dual spinning mops) - cross-verified (24000Pa/Zero Tangling DuoBrush dual rollers/2.28in obstacle overcoming/FlexiRise nav + AI object detection/dual spinning mop pads auto-lift/all-in-one station auto-empty + 176F hot-water self-clean + hot-air dry + refill/MOVAhome=Dreamehome + no-go/no-mop/2.4GHz + Alexa+Google). Battery/dims pending"
     },
-    "mop_pressure_g": 816
+    "mop_pressure_g": 816,
+    "colors": [
+      "White"
+    ]
   },
   {
     "id": "mova-p50-pro-ultra",
@@ -157156,7 +157585,11 @@
       "Source": "MOVA official + Amazon + Vacuum Wars + robot-review + RTINGS (P50 Pro Ultra - 19000Pa 4 levels + carpet boost, CleanChop zero-tangle + active hair removal, extendable side brush + FlexReach mop, auto-lift removable mop 32 water levels + crosshatch, dock 167F wash + dry + auto-empty + refill, MOVAhome=Dreamehome, 4 maps 2D/3D) - cross-verified (19000Pa 4 levels + carpet boost/CleanChop zero-tangle + hair removal/extendable side brush + FlexReach mop corners/auto-lift removable mop + 32 water levels + crosshatch/dock 167F wash + dry + auto-empty + refill/LiDAR + dirt detect + avoidance/MOVAhome=Dreamehome 4 maps + no-go/no-mop/2.4GHz + Alexa+Google; embedded-dirt weak 57%). Battery/dims pending"
     },
     "mop_lift_mm": 10,
-    "camera_live_view": true
+    "camera_live_view": true,
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "mova-p50-ultra",
@@ -157275,7 +157708,11 @@
       "Price": "~$549-749",
       "Source": "MOVA official + Amazon (P50 Ultra - 19000Pa, CleanLift, corner/edge cleaning, dirt detection + obstacle avoidance, auto mop + washboard wash 75C, auto-empty + refill) - cross-verified (19000Pa/CleanLift edge-to-edge + mop lift/extendable side brush + FlexRech mop corners + crevices/removable mop auto-lift carpet/dock auto-empty + refill + mop + washboard wash 75C/LiDAR + dirt detect + avoidance/MOVAhome=Dreamehome + no-go/no-mop/2.4GHz + Alexa+Google). Battery/dims pending"
     },
-    "camera": true
+    "camera": true,
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "mova-p10-pro-ultra",
@@ -157372,7 +157809,13 @@
     "side_brushes": 1,
     "app_control": true,
     "scheduling": true,
-    "camera_live_view": true
+    "camera_live_view": true,
+    "released": "2024",
+    "edge_cleaning": "extendable side brush + extendable mop (reaches corners/edges/around legs)",
+    "colors": [
+      "White",
+      "Black"
+    ]
   },
   {
     "id": "mova-e40-ultra",
