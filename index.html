@@ -2292,6 +2292,25 @@ function resetDb(){
 
 // ════════════ GSMArena-style dynamic spec table ════════════
 let __SPEC_COLLECT=null, __SPEC_SECTION='';
+// True when a raw_specs key is already shown as a populated structured field,
+// so the ADDITIONAL block can skip it and the same spec never appears twice.
+function _addlCovered(r, k){
+  var m={ 'suction':'suction_pa','suction power':'suction_pa','suction modes':'suction_modes',
+    'navigation':'navigation','nav':'navigation','dock':'dock_type','base station':'dock_type',
+    'mop':'mop_type','mopping':'mop_type','mop type':'mop_type','brush':'brush_type',
+    'main brush':'brush_type','brushes':'brush_type','anti-tangle':'anti_tangle','filter':'filter_type',
+    'app':'app_companion','colors':'colors','color':'colors','price':'price','brand':'brand',
+    'company':'brand','released':'released','announced':'released','product type':'__sub','type':'__sub',
+    'runtime':'battery_life','weight':'weight_kg','noise':'noise_db','warranty':'warranty_months',
+    'coverage':'coverage_m2','dustbin':'dustbin_ml','bin':'dustbin_ml','dust box':'dustbin_ml',
+    'water tank':'water_tank_ml','carpet':'carpet_detection','mapping':'mapping',
+    'threshold':'max_threshold_mm','side brush':'side_brushes','side brushes':'side_brushes' };
+  var f=m[String(k).trim().toLowerCase()];
+  if(!f) return false;
+  if(f==='__sub') return true;
+  var v=r[f];
+  return v!==null && v!==undefined && v!=='' && !(Array.isArray(v)&&v.filter(Boolean).length===0);
+}
 function row(label, val, unit='', note='') {
   if (val === null || val === undefined || val === '' || val === 0 && unit) {
     if (val !== false && val !== 0) return '';
@@ -2397,7 +2416,7 @@ function buildHumanoidFullTable(r){
     var _rsKeys = Object.keys(r.raw_specs).filter(function(k){
       var v=r.raw_specs[k];
       return v!==null && v!==undefined && v!=='' &&
-             !(Array.isArray(v)&&v.filter(Boolean).length===0);
+             !(Array.isArray(v)&&v.filter(Boolean).length===0) && !_addlCovered(r,k);
     });
     if (_rsKeys.length){
       html += grp('ADDITIONAL SPECIFICATIONS');
@@ -2688,7 +2707,7 @@ function buildCategoryFullTable(r){
     var _rsKeys = Object.keys(r.raw_specs).filter(function(k){
       var v=r.raw_specs[k];
       return v!==null && v!==undefined && v!=='' &&
-             !(Array.isArray(v)&&v.filter(Boolean).length===0);
+             !(Array.isArray(v)&&v.filter(Boolean).length===0) && !_addlCovered(r,k);
     });
     if (_rsKeys.length){
       html += grp('ADDITIONAL SPECIFICATIONS');
@@ -3994,7 +4013,7 @@ function _navShort(r){
 function bandTiles(r){
   var c=((r.cat||'')+' '+(r.sub||'')).toLowerCase();function h(x){return c.indexOf(x)>=0;}
   function t(l,v,u){return {l:l,v:v,u:u||''};}var P;
-  if(h('mower'))P=[t('Navigation',r.navigation||(r.rtk?'RTK-GNSS':null),''),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Docking',(r.auto_charge||r.auto_dock)?'Auto-dock':null,''),t('Cut Width',r.cutting_width_mm,'mm'),t('Connectivity',_connShort(r),'')];
+  if(h('mower'))P=[t('Navigation',_navShort(r)||(r.rtk?'RTK-GNSS':null),''),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Docking',(r.auto_charge||r.auto_dock)?'Auto-dock':null,''),t('Cut Width',r.cutting_width_mm,'mm'),t('Connectivity',_connShort(r),'')];
   else if(h('humanoid')||h('biped'))P=[t('Height',r.height_mm,'mm'),t('DOF',r.dof,''),t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('Weight',r.weight_kg||r.weight,'kg')];
   else if(h('drone')||h('uav')||h('aerial'))P=[t('Flight',r.max_flight_time||r.flight_time_min,'min'),t('Range',r.max_range||r.range_km,'km'),t('Camera',r.camera_mp,'MP'),t('Speed',r.max_speed||r.speed_ms,'m/s'),t('Weight',r.weight_kg||r.weight,'kg')];
   else if(h('vacuum')||h('mop'))P=[t('Suction',r.suction_pa,'Pa'),t('Battery',r.battery_life_typical,'min'),t('Navigation',_navShort(r),''),t('Dustbin',r.dustbin_ml,'ml'),t('Noise',r.noise_db,'dB')];
@@ -4005,7 +4024,7 @@ function bandTiles(r){
   else if(h('agri')||h('farm')||h('tractor')||h('harvest'))P=[t('Coverage',r.coverage_ha_day,'ha/d'),t('Width',r.working_width_m,'m'),t('Speed',r.operating_speed||r.speed,'m/s'),t('GPS',r.gps_accuracy_cm,'cm'),t('Weight',r.weight_kg,'kg')];
   else P=[];
   var U=[t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('DOF',r.dof,''),t('Connectivity',_connShort(r),''),t('Year',r.year?(''+r.year):null,''),t('Origin',r.origin||r.country,''),t('Status',r.status,'')];
-  var out=[],seen={};function fmt(v){return (typeof v==='number')?v.toLocaleString():v;}
+  var out=[],seen={};function fmt(v){if(typeof v==='number')return v.toLocaleString();var s=String(v);return s.length>26?s.slice(0,24).trim()+'\u2026':s;}
   function isNumLike(v){return typeof v==='number'||(typeof v==='string'&&/^[\d.,]+$/.test(v.trim()));}
   function addList(L){for(var i=0;i<L.length&&out.length<5;i++){var x=L[i];if(x&&x.v!=null&&x.v!==''&&x.v!=='\u2014'&&!seen[x.l]){seen[x.l]=1;out.push({l:x.l,v:fmt(x.v),u:isNumLike(x.v)?x.u:''});}}}
   addList(P);addList(U);return out;
