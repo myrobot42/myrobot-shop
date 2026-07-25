@@ -2653,7 +2653,8 @@ function buildCategoryFullTable(r){
   var descWheeled=/wheel|omnidirectional|holonomic/.test(dtxt) && !(r.leg_dof>0 || r.stair_climbing===true || r.run_speed_ms>0 || r.max_step_height_mm>0);
   var pureWheeled = r.wheeled===true || r.mobility==='wheeled' || subWheeled || (genericSub && descWheeled);
   var groups=[], s;
-  for (s in SPEC_SHEET.universal) groups.push([s, SPEC_SHEET.universal[s]]);
+  var _uni = (r.cat==='Consumer' && SPEC_SHEET.consumer && SPEC_SHEET.consumer._universal) ? SPEC_SHEET.consumer._universal : SPEC_SHEET.universal;
+  for (s in _uni) groups.push([s, _uni[s]]);
   for (s in block){ if (s.charAt(0)!=='_') groups.push([s, block[s]]); }
   var html='';
   for (var g=0; g<groups.length; g++){
