@@ -263,7 +263,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="modal-field"><div class="modal-label">Brand</div><input class="modal-input" id="edit-brand" type="text"></div>
       <div class="modal-field"><div class="modal-label">Year</div><input class="modal-input" id="edit-year" type="number"></div>
       <div class="modal-field"><div class="modal-label">Category</div>
-        <select class="modal-select" id="edit-cat">
+        <select class="modal-select" id="edit-cat" onchange="toggleConsumerSpecs()">
           <option value="Aerospace">Aerospace</option>
           <option value="Agricultural">Agricultural</option>
           <option value="Aquatic">Aquatic / Underwater</option>
@@ -285,7 +285,7 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
           <option value="Telepresence">Telepresence</option>
         </select>
       </div>
-      <div class="modal-field"><div class="modal-label">Subcategory</div><input class="modal-input" id="edit-sub" type="text" placeholder="e.g. Vacuum, Cobot, Quadruped"></div>
+      <div class="modal-field"><div class="modal-label">Subcategory</div><input class="modal-input" id="edit-sub" type="text" placeholder="e.g. Vacuum, Cobot, Quadruped" oninput="toggleConsumerSpecs()"></div>
       <div class="modal-field"><div class="modal-label">Status</div>
         <select class="modal-select" id="edit-status">
           <option value="active">Active</option>
@@ -357,6 +357,93 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
       <div class="modal-field"><div class="modal-label">OS</div><input class="modal-input" id="edit-os" type="text" placeholder="ROS2, Android, Proprietary"></div>
       <div class="modal-field"><div class="modal-label">Payload (kg)</div><input class="modal-input" id="edit-payload" type="number" step="0.1"></div>
       <div class="modal-field"><div class="modal-label">Max Speed (m/s)</div><input class="modal-input" id="edit-speed" type="number" step="0.1"></div>
+    </div>
+
+    <div id="edit-consumer-wrap" style="display:none">
+      <div class="modal-section" id="ecs-all-h">BODY & LAUNCH  (all consumer)</div>
+      <div class="modal-grid" id="ecs-all">
+        <div class="modal-field"><div class="modal-label">Width (mm)</div><input class="modal-input" id="edit-cw" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Depth (mm)</div><input class="modal-input" id="edit-cd" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Diameter (mm) — round bots</div><input class="modal-input" id="edit-cdia" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Colours (comma separated)</div><input class="modal-input" id="edit-ccol" type="text" placeholder="Black, White"></div>
+        <div class="modal-field"><div class="modal-label">Frame / shell material</div><input class="modal-input" id="edit-cmat" type="text"></div>
+        <div class="modal-field"><div class="modal-label">Noise (dB)</div><input class="modal-input" id="edit-cnoise" type="number" placeholder="60"></div>
+        <div class="modal-field"><div class="modal-label">Released (date or year)</div><input class="modal-input" id="edit-crel" type="text" placeholder="2026-03-01"></div>
+        <div class="modal-field"><div class="modal-label">Made in</div><input class="modal-input" id="edit-cmade" type="text" placeholder="China"></div>
+        <div class="modal-field"><div class="modal-label">Battery (mAh)</div><input class="modal-input" id="edit-cbmah" type="number" placeholder="6400"></div>
+        <div class="modal-field"><div class="modal-label">Battery (Wh)</div><input class="modal-input" id="edit-cbwh" type="number" step="0.1"></div>
+        <div class="modal-field"><div class="modal-label">Charge time (mins)</div><input class="modal-input" id="edit-cchg" type="number" placeholder="240"></div>
+      </div>
+      <div class="modal-section" id="ecs-vac-h">CLEANING  (vacuum / mop)</div>
+      <div class="modal-grid" id="ecs-vac">
+        <div class="modal-field"><div class="modal-label">Suction (Pa)</div><input class="modal-input" id="edit-vsuc" type="number" placeholder="35000"></div>
+        <div class="modal-field"><div class="modal-label">Suction modes</div><input class="modal-input" id="edit-vmodes" type="text" placeholder="Quiet, Standard, Turbo, Max"></div>
+        <div class="modal-field"><div class="modal-label">Main brush type</div><input class="modal-input" id="edit-vbrush" type="text"></div>
+        <div class="modal-field"><div class="modal-label">Main brush width (mm)</div><input class="modal-input" id="edit-vbw" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Side brushes (count)</div><input class="modal-input" id="edit-vside" type="number" placeholder="1"></div>
+        <div class="modal-field"><div class="modal-label">Dust box (mL)</div><input class="modal-input" id="edit-vbin" type="number" placeholder="300"></div>
+        <div class="modal-field"><div class="modal-label">Filter type</div><input class="modal-input" id="edit-vfilt" type="text" placeholder="HEPA"></div>
+        <div class="modal-field"><div class="modal-label">Threshold / climb (mm)</div><input class="modal-input" id="edit-vthr" type="number" placeholder="20"></div>
+        <div class="modal-field"><div class="modal-label">Coverage (m²)</div><input class="modal-input" id="edit-vcov" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Edge cleaning</div><input class="modal-input" id="edit-vedge" type="text"></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-vtang" style="width:auto;margin:0">Anti-tangle</label></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-vcarp" style="width:auto;margin:0">Carpet boost</label></div>
+      </div>
+      <div class="modal-section" id="ecs-mop-h">MOPPING</div>
+      <div class="modal-grid" id="ecs-mop">
+        <div class="modal-field"><div class="modal-label">Mop type</div><input class="modal-input" id="edit-mtype" type="text" placeholder="Dual spinning pads"></div>
+        <div class="modal-field"><div class="modal-label">Water tank — onboard (mL)</div><input class="modal-input" id="edit-mwt" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Clean water tank (mL)</div><input class="modal-input" id="edit-mcw" type="number" placeholder="4500"></div>
+        <div class="modal-field"><div class="modal-label">Used/dirty water tank (mL)</div><input class="modal-input" id="edit-mdw" type="number" placeholder="4000"></div>
+        <div class="modal-field"><div class="modal-label">Mop lift (mm)</div><input class="modal-input" id="edit-mlift" type="number" step="0.1" placeholder="10.5"></div>
+        <div class="modal-field"><div class="modal-label">Auto mop wash</div><input class="modal-input" id="edit-mwash" type="text" placeholder="Yes (75°C)"></div>
+        <div class="modal-field"><div class="modal-label">Auto mop dry</div><input class="modal-input" id="edit-mdry" type="text" placeholder="Hot air"></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-mhot" style="width:auto;margin:0">Hot water mop</label></div>
+      </div>
+      <div class="modal-section" id="ecs-dock-h">DOCK / BASE STATION</div>
+      <div class="modal-grid" id="ecs-dock">
+        <div class="modal-field"><div class="modal-label">Dock type</div><input class="modal-input" id="edit-dtype" type="text"></div>
+        <div class="modal-field"><div class="modal-label">Dock dimensions (W x D x H mm)</div><input class="modal-input" id="edit-ddim" type="text" placeholder="340 x 456 x 590 mm"></div>
+        <div class="modal-field"><div class="modal-label">Dust bag (L)</div><input class="modal-input" id="edit-dbag" type="number" step="0.1" placeholder="3.2"></div>
+        <div class="modal-field"><div class="modal-label">Dock wash temp (°C)</div><input class="modal-input" id="edit-dwash" type="number" placeholder="75"></div>
+        <div class="modal-field"><div class="modal-label">Dock dry type</div><input class="modal-input" id="edit-ddry" type="text" placeholder="Hot air"></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-dempty" style="width:auto;margin:0">Auto-empty</label></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-drefill" style="width:auto;margin:0">Auto refill</label></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-dself" style="width:auto;margin:0">Self cleaning</label></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-ddet" style="width:auto;margin:0">Detergent dispenser</label></div>
+      </div>
+      <div class="modal-section" id="ecs-nav-h">NAVIGATION & SMART</div>
+      <div class="modal-grid" id="ecs-nav">
+        <div class="modal-field"><div class="modal-label">Navigation</div><input class="modal-input" id="edit-nnav" type="text" placeholder="LiDAR + AI obstacle avoidance"></div>
+        <div class="modal-field"><div class="modal-label">Mapping</div><input class="modal-input" id="edit-nmap" type="text" placeholder="Smart mapping"></div>
+        <div class="modal-field"><div class="modal-label">Obstacle avoidance</div><input class="modal-input" id="edit-nobs" type="text"></div>
+        <div class="modal-field"><div class="modal-label">Companion app</div><input class="modal-input" id="edit-napp" type="text" placeholder="Dreamehome"></div>
+        <div class="modal-field"><div class="modal-label">Voice assistant</div><input class="modal-input" id="edit-nvoice" type="text" placeholder="Alexa / Google"></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-nlidar" style="width:auto;margin:0">LiDAR</label></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-nmulti" style="width:auto;margin:0">Multi-floor mapping</label></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-npet" style="width:auto;margin:0">Pet mode</label></div>
+      </div>
+      <div class="modal-section" id="ecs-mow-h">MOWING  (robot mowers)</div>
+      <div class="modal-grid" id="ecs-mow">
+        <div class="modal-field"><div class="modal-label">Cutting width (mm)</div><input class="modal-input" id="edit-wcw" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Cutting height min (mm)</div><input class="modal-input" id="edit-wchmin" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Cutting height max (mm)</div><input class="modal-input" id="edit-wchmax" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Blade type</div><input class="modal-input" id="edit-wblade" type="text"></div>
+        <div class="modal-field"><div class="modal-label">Max lawn area (m²)</div><input class="modal-input" id="edit-warea" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Max slope (°)</div><input class="modal-input" id="edit-wslope" type="number"></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-wrain" style="width:auto;margin:0">Rain sensor</label></div>
+        <div class="modal-field"><div class="modal-label">Anti-theft</div><input class="modal-input" id="edit-wtheft" type="text" placeholder="PIN + GPS"></div>
+      </div>
+      <div class="modal-section" id="ecs-pool-h">POOL  (pool cleaners)</div>
+      <div class="modal-grid" id="ecs-pool">
+        <div class="modal-field"><div class="modal-label">Max pool size (m)</div><input class="modal-input" id="edit-pdepth" type="number"></div>
+        <div class="modal-field"><div class="modal-label">Pool types</div><input class="modal-input" id="edit-ptypes" type="text" placeholder="In-ground, above-ground"></div>
+        <div class="modal-field"><div class="modal-label">Cleaning cycle (mins)</div><input class="modal-input" id="edit-pcycle" type="number"></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-pwall" style="width:auto;margin:0">Cleans walls</label></div>
+        <div class="modal-field"><label class="modal-label" style="display:flex;align-items:center;gap:8px;cursor:pointer"><input type="checkbox" id="edit-pwater" style="width:auto;margin:0">Cleans waterline</label></div>
+        <div class="modal-field"><div class="modal-label">Filter capacity (L)</div><input class="modal-input" id="edit-pfilt" type="number" step="0.1"></div>
+        <div class="modal-field"><div class="modal-label">Cable length (m)</div><input class="modal-input" id="edit-pcable" type="number" step="0.1"></div>
+      </div>
     </div>
 
     <div class="modal-section">PERFORMANCE SCORES (0–100)</div>
@@ -3368,6 +3455,71 @@ function editRobotPrompt(id) {
   document.getElementById('edit-os').value = r.os || '';
   document.getElementById('edit-payload').value = r.payload || '';
   document.getElementById('edit-speed').value = r.speed || '';
+  // Consumer specs
+  document.getElementById('edit-cw').value = r.width_mm != null ? r.width_mm : '';
+  document.getElementById('edit-cd').value = r.depth_mm != null ? r.depth_mm : '';
+  document.getElementById('edit-cdia').value = r.diameter_mm != null ? r.diameter_mm : '';
+  document.getElementById('edit-ccol').value = Array.isArray(r.colors) ? r.colors.join(', ') : (r.colors || '');
+  document.getElementById('edit-cmat').value = r.frame_material != null ? r.frame_material : '';
+  document.getElementById('edit-cnoise').value = r.noise_db != null ? r.noise_db : '';
+  document.getElementById('edit-crel').value = r.released != null ? r.released : '';
+  document.getElementById('edit-cmade').value = r.made_in != null ? r.made_in : '';
+  document.getElementById('edit-cbmah').value = r.battery_mah != null ? r.battery_mah : '';
+  document.getElementById('edit-cbwh').value = r.battery_wh != null ? r.battery_wh : '';
+  document.getElementById('edit-cchg').value = r.charge_time != null ? r.charge_time : '';
+  document.getElementById('edit-vsuc').value = r.suction_pa != null ? r.suction_pa : '';
+  document.getElementById('edit-vmodes').value = r.suction_modes != null ? r.suction_modes : '';
+  document.getElementById('edit-vbrush').value = r.brush_type != null ? r.brush_type : '';
+  document.getElementById('edit-vbw').value = r.main_brush_width_mm != null ? r.main_brush_width_mm : '';
+  document.getElementById('edit-vside').value = r.side_brushes != null ? r.side_brushes : '';
+  document.getElementById('edit-vbin').value = r.dustbin_ml != null ? r.dustbin_ml : '';
+  document.getElementById('edit-vfilt').value = r.filter_type != null ? r.filter_type : '';
+  document.getElementById('edit-vthr').value = r.max_threshold_mm != null ? r.max_threshold_mm : '';
+  document.getElementById('edit-vcov').value = r.coverage_m2 != null ? r.coverage_m2 : '';
+  document.getElementById('edit-vedge').value = r.edge_cleaning != null ? r.edge_cleaning : '';
+  document.getElementById('edit-vtang').checked = !!r.anti_tangle;
+  document.getElementById('edit-vcarp').checked = !!r.carpet_boost;
+  document.getElementById('edit-mtype').value = r.mop_type != null ? r.mop_type : '';
+  document.getElementById('edit-mwt').value = r.water_tank_ml != null ? r.water_tank_ml : '';
+  document.getElementById('edit-mcw').value = r.clean_water_tank_ml != null ? r.clean_water_tank_ml : '';
+  document.getElementById('edit-mdw').value = r.dirty_water_tank_ml != null ? r.dirty_water_tank_ml : '';
+  document.getElementById('edit-mlift').value = r.mop_lift_mm != null ? r.mop_lift_mm : '';
+  document.getElementById('edit-mwash').value = r.auto_mop_wash != null ? r.auto_mop_wash : '';
+  document.getElementById('edit-mdry').value = r.auto_mop_dry != null ? r.auto_mop_dry : '';
+  document.getElementById('edit-mhot').checked = !!r.hot_water_mop;
+  document.getElementById('edit-dtype').value = r.dock_type != null ? r.dock_type : '';
+  document.getElementById('edit-ddim').value = r.dock_dimensions != null ? r.dock_dimensions : '';
+  document.getElementById('edit-dbag').value = r.dust_bag_capacity_l != null ? r.dust_bag_capacity_l : '';
+  document.getElementById('edit-dwash').value = r.dock_wash_temp_c != null ? r.dock_wash_temp_c : '';
+  document.getElementById('edit-ddry').value = r.dock_dry_type != null ? r.dock_dry_type : '';
+  document.getElementById('edit-dempty').checked = !!r.auto_empty;
+  document.getElementById('edit-drefill').checked = !!r.auto_refill;
+  document.getElementById('edit-dself').checked = !!r.self_cleaning;
+  document.getElementById('edit-ddet').checked = !!r.detergent_dispenser;
+  document.getElementById('edit-nnav').value = r.navigation != null ? r.navigation : '';
+  document.getElementById('edit-nmap').value = r.mapping != null ? r.mapping : '';
+  document.getElementById('edit-nobs').value = r.obstacle_avoidance != null ? r.obstacle_avoidance : '';
+  document.getElementById('edit-napp').value = r.app_companion != null ? r.app_companion : '';
+  document.getElementById('edit-nvoice').value = r.voice_assistant != null ? r.voice_assistant : '';
+  document.getElementById('edit-nlidar').checked = !!r.lidar;
+  document.getElementById('edit-nmulti').checked = !!r.multi_floor_mapping;
+  document.getElementById('edit-npet').checked = !!r.pet_mode;
+  document.getElementById('edit-wcw').value = r.cutting_width_mm != null ? r.cutting_width_mm : '';
+  document.getElementById('edit-wchmin').value = r.cutting_height_min_mm != null ? r.cutting_height_min_mm : '';
+  document.getElementById('edit-wchmax').value = r.cutting_height_max_mm != null ? r.cutting_height_max_mm : '';
+  document.getElementById('edit-wblade').value = r.blade_type != null ? r.blade_type : '';
+  document.getElementById('edit-warea').value = r.lawn_size_max_m2 != null ? r.lawn_size_max_m2 : '';
+  document.getElementById('edit-wslope').value = r.slope_max_deg != null ? r.slope_max_deg : '';
+  document.getElementById('edit-wrain').checked = !!r.rain_sensor;
+  document.getElementById('edit-wtheft').value = r.anti_theft != null ? r.anti_theft : '';
+  document.getElementById('edit-pdepth').value = r.pool_size_max_m != null ? r.pool_size_max_m : '';
+  document.getElementById('edit-ptypes').value = r.pool_types != null ? r.pool_types : '';
+  document.getElementById('edit-pcycle').value = r.cleaning_cycle_min != null ? r.cleaning_cycle_min : '';
+  document.getElementById('edit-pwall').checked = !!r.cleans_walls;
+  document.getElementById('edit-pwater').checked = !!r.cleans_waterline;
+  document.getElementById('edit-pfilt').value = r.filter_capacity_l != null ? r.filter_capacity_l : '';
+  document.getElementById('edit-pcable').value = r.cable_length_m != null ? r.cable_length_m : '';
+  toggleConsumerSpecs();
   // Perf
   const perf = r.perf || {};
   document.getElementById('edit-perf-mobility').value = perf.Mobility || 70;
@@ -3381,6 +3533,29 @@ function editRobotPrompt(id) {
 function closeEditModal() {
   document.getElementById('edit-modal').style.display = 'none';
   editingRobotId = null;
+}
+
+
+// Show consumer spec groups only for Consumer robots, and only the relevant sub-type
+function toggleConsumerSpecs(){
+  const catEl=document.getElementById('edit-cat'), subEl=document.getElementById('edit-sub');
+  if(!catEl) return;
+  const cat=(catEl.value||'').toLowerCase();
+  const sub=((subEl&&subEl.value)||'').toLowerCase();
+  const isConsumer = cat.indexOf('consumer')>=0 || cat.indexOf('vacuum')>=0 || cat.indexOf('lawn')>=0;
+  const wrap=document.getElementById('edit-consumer-wrap');
+  if(!wrap) return;
+  wrap.style.display = isConsumer ? '' : 'none';
+  if(!isConsumer) return;
+  const isMow  = /mow|lawn/.test(sub)||/mow|lawn/.test(cat);
+  const isPool = /pool/.test(sub);
+  const isWin  = /window/.test(sub);
+  const isVac  = !isMow && !isPool && !isWin;
+  const show=(id,on)=>{ const g=document.getElementById(id), h=document.getElementById(id+'-h');
+    if(g) g.style.display = on?'':'none'; if(h) h.style.display = on?'':'none'; };
+  show('ecs-all',true);
+  show('ecs-vac',isVac); show('ecs-mop',isVac); show('ecs-dock',isVac); show('ecs-nav',isVac||isPool);
+  show('ecs-mow',isMow); show('ecs-pool',isPool);
 }
 
 function saveEditModal() {
@@ -3426,6 +3601,70 @@ function saveEditModal() {
   if(document.getElementById('edit-os').value) r.os = document.getElementById('edit-os').value.trim();
   if(document.getElementById('edit-payload').value) r.payload = parseFloat(document.getElementById('edit-payload').value);
   if(document.getElementById('edit-speed').value) r.speed = parseFloat(document.getElementById('edit-speed').value);
+  // Consumer specs
+  { const v=document.getElementById('edit-cw').value; if(v!=='') r.width_mm = parseInt(v); }
+  { const v=document.getElementById('edit-cd').value; if(v!=='') r.depth_mm = parseInt(v); }
+  { const v=document.getElementById('edit-cdia').value; if(v!=='') r.diameter_mm = parseInt(v); }
+  { const v=document.getElementById('edit-ccol').value.trim(); if(v) r.colors = v.split(',').map(s=>s.trim()).filter(Boolean); }
+  { const v=document.getElementById('edit-cmat').value.trim(); if(v) r.frame_material = v; }
+  { const v=document.getElementById('edit-cnoise').value; if(v!=='') r.noise_db = parseInt(v); }
+  { const v=document.getElementById('edit-crel').value.trim(); if(v) r.released = v; }
+  { const v=document.getElementById('edit-cmade').value.trim(); if(v) r.made_in = v; }
+  { const v=document.getElementById('edit-cbmah').value; if(v!=='') r.battery_mah = parseInt(v); }
+  { const v=document.getElementById('edit-cbwh').value; if(v!=='') r.battery_wh = parseFloat(v); }
+  { const v=document.getElementById('edit-cchg').value; if(v!=='') r.charge_time = parseInt(v); }
+  { const v=document.getElementById('edit-vsuc').value; if(v!=='') r.suction_pa = parseInt(v); }
+  { const v=document.getElementById('edit-vmodes').value.trim(); if(v) r.suction_modes = v; }
+  { const v=document.getElementById('edit-vbrush').value.trim(); if(v) r.brush_type = v; }
+  { const v=document.getElementById('edit-vbw').value; if(v!=='') r.main_brush_width_mm = parseInt(v); }
+  { const v=document.getElementById('edit-vside').value; if(v!=='') r.side_brushes = parseInt(v); }
+  { const v=document.getElementById('edit-vbin').value; if(v!=='') r.dustbin_ml = parseInt(v); }
+  { const v=document.getElementById('edit-vfilt').value.trim(); if(v) r.filter_type = v; }
+  { const v=document.getElementById('edit-vthr').value; if(v!=='') r.max_threshold_mm = parseInt(v); }
+  { const v=document.getElementById('edit-vcov').value; if(v!=='') r.coverage_m2 = parseInt(v); }
+  { const v=document.getElementById('edit-vedge').value.trim(); if(v) r.edge_cleaning = v; }
+  if(document.getElementById('edit-vtang').checked) r.anti_tangle = true; else delete r.anti_tangle;
+  if(document.getElementById('edit-vcarp').checked) r.carpet_boost = true; else delete r.carpet_boost;
+  { const v=document.getElementById('edit-mtype').value.trim(); if(v) r.mop_type = v; }
+  { const v=document.getElementById('edit-mwt').value; if(v!=='') r.water_tank_ml = parseInt(v); }
+  { const v=document.getElementById('edit-mcw').value; if(v!=='') r.clean_water_tank_ml = parseInt(v); }
+  { const v=document.getElementById('edit-mdw').value; if(v!=='') r.dirty_water_tank_ml = parseInt(v); }
+  { const v=document.getElementById('edit-mlift').value; if(v!=='') r.mop_lift_mm = parseFloat(v); }
+  { const v=document.getElementById('edit-mwash').value.trim(); if(v) r.auto_mop_wash = v; }
+  { const v=document.getElementById('edit-mdry').value.trim(); if(v) r.auto_mop_dry = v; }
+  if(document.getElementById('edit-mhot').checked) r.hot_water_mop = true; else delete r.hot_water_mop;
+  { const v=document.getElementById('edit-dtype').value.trim(); if(v) r.dock_type = v; }
+  { const v=document.getElementById('edit-ddim').value.trim(); if(v) r.dock_dimensions = v; }
+  { const v=document.getElementById('edit-dbag').value; if(v!=='') r.dust_bag_capacity_l = parseFloat(v); }
+  { const v=document.getElementById('edit-dwash').value; if(v!=='') r.dock_wash_temp_c = parseInt(v); }
+  { const v=document.getElementById('edit-ddry').value.trim(); if(v) r.dock_dry_type = v; }
+  if(document.getElementById('edit-dempty').checked) r.auto_empty = true; else delete r.auto_empty;
+  if(document.getElementById('edit-drefill').checked) r.auto_refill = true; else delete r.auto_refill;
+  if(document.getElementById('edit-dself').checked) r.self_cleaning = true; else delete r.self_cleaning;
+  if(document.getElementById('edit-ddet').checked) r.detergent_dispenser = true; else delete r.detergent_dispenser;
+  { const v=document.getElementById('edit-nnav').value.trim(); if(v) r.navigation = v; }
+  { const v=document.getElementById('edit-nmap').value.trim(); if(v) r.mapping = v; }
+  { const v=document.getElementById('edit-nobs').value.trim(); if(v) r.obstacle_avoidance = v; }
+  { const v=document.getElementById('edit-napp').value.trim(); if(v) r.app_companion = v; }
+  { const v=document.getElementById('edit-nvoice').value.trim(); if(v) r.voice_assistant = v; }
+  if(document.getElementById('edit-nlidar').checked) r.lidar = true; else delete r.lidar;
+  if(document.getElementById('edit-nmulti').checked) r.multi_floor_mapping = true; else delete r.multi_floor_mapping;
+  if(document.getElementById('edit-npet').checked) r.pet_mode = true; else delete r.pet_mode;
+  { const v=document.getElementById('edit-wcw').value; if(v!=='') r.cutting_width_mm = parseInt(v); }
+  { const v=document.getElementById('edit-wchmin').value; if(v!=='') r.cutting_height_min_mm = parseInt(v); }
+  { const v=document.getElementById('edit-wchmax').value; if(v!=='') r.cutting_height_max_mm = parseInt(v); }
+  { const v=document.getElementById('edit-wblade').value.trim(); if(v) r.blade_type = v; }
+  { const v=document.getElementById('edit-warea').value; if(v!=='') r.lawn_size_max_m2 = parseInt(v); }
+  { const v=document.getElementById('edit-wslope').value; if(v!=='') r.slope_max_deg = parseInt(v); }
+  if(document.getElementById('edit-wrain').checked) r.rain_sensor = true; else delete r.rain_sensor;
+  { const v=document.getElementById('edit-wtheft').value.trim(); if(v) r.anti_theft = v; }
+  { const v=document.getElementById('edit-pdepth').value; if(v!=='') r.pool_size_max_m = parseInt(v); }
+  { const v=document.getElementById('edit-ptypes').value.trim(); if(v) r.pool_types = v; }
+  { const v=document.getElementById('edit-pcycle').value; if(v!=='') r.cleaning_cycle_min = parseInt(v); }
+  if(document.getElementById('edit-pwall').checked) r.cleans_walls = true; else delete r.cleans_walls;
+  if(document.getElementById('edit-pwater').checked) r.cleans_waterline = true; else delete r.cleans_waterline;
+  { const v=document.getElementById('edit-pfilt').value; if(v!=='') r.filter_capacity_l = parseFloat(v); }
+  { const v=document.getElementById('edit-pcable').value; if(v!=='') r.cable_length_m = parseFloat(v); }
   // Perf
   r.perf = {
     Mobility: parseInt(document.getElementById('edit-perf-mobility').value) || 70,
