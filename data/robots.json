@@ -2927,7 +2927,9 @@
     "side_brushes": 1,
     "released": "2022",
     "camera": "onboard camera (AIVI 3D + optional remote home monitoring)",
-    "filter_type": "advanced/hypoallergenic filtration"
+    "filter_type": "advanced/hypoallergenic filtration",
+    "dust_bag_capacity_l": 2.5,
+    "noise_db": 68
   },
   {
     "id": "ecovacs-deebot-ozmo-920",
@@ -3241,7 +3243,9 @@
     "carpet_boost": true,
     "app_control": true,
     "scheduling": true,
-    "released": "2021"
+    "released": "2021",
+    "dock_dimensions": "300 x 420 x 430 mm",
+    "noise_db": 67
   },
   {
     "id": "ecovacs-deebot-n8-pro",
@@ -3273,7 +3277,7 @@
       "Multi-floor mapping",
       "Voice control"
     ],
-    "height_mm": 93,
+    "height_mm": 94,
     "width_mm": 353,
     "depth_mm": 353,
     "weight_kg": 3.6,
@@ -3344,7 +3348,7 @@
     "suction_pa": 2600,
     "mop_type": "Flat pad",
     "navigation": "TrueMapping - laser-based dToF LiDAR (industry-leading dToF sensors); systematic paths; multi-floor mapping",
-    "battery_mah": 5200,
+    "battery_mah": 3200,
     "carpet_detection": true,
     "anti_tangle": true,
     "multi_zone": true,
@@ -3395,7 +3399,8 @@
     "app_control": true,
     "released": "2021",
     "max_threshold_mm": 20,
-    "filter_type": "3-layer filtration"
+    "filter_type": "3-layer filtration",
+    "noise_db": 67
   },
   {
     "id": "dreame-l10s-ultra",
@@ -3679,7 +3684,7 @@
     "anti_tangle": true,
     "multi_zone": true,
     "no_go_zones": true,
-    "battery_mah": 5200,
+    "battery_mah": 6400,
     "voice_assistant": [
       "Alexa",
       "Google Assistant"
@@ -3730,7 +3735,12 @@
     },
     "released": "2024",
     "side_brushes": "FIXED side brush (as in the D-series + most L-series; the extending/lifting side brush only becomes standard from the X40 up)",
-    "dock_type": "auto-empty, mop self-cleaning (hot water) + hot-air drying, auto water refill"
+    "dock_type": "auto-empty, mop self-cleaning (hot water) + hot-air drying, auto water refill",
+    "dock_dimensions": "340 x 457 x 590 mm",
+    "dustbin_ml": 350,
+    "clean_water_tank_ml": 4500,
+    "dirty_water_tank_ml": 4000,
+    "dust_bag_capacity_l": 3.5
   },
   {
     "id": "dreame-d10-plus",
@@ -3879,7 +3889,10 @@
       "Price": "~$399-499",
       "Source": "Dreame official (D10 Plus / Gen 2) + smartrobotreviews - cross-verified (4000Pa/floating rubber brush anti-tangle/vac + mop electronic water tank/LDS LiDAR + multi-floor/self-empty station/5200mAh ~150min/Dreamehome app + No-Go/Alexa+Google+Siri). Exact tanks/dims pending"
     },
-    "released": "2022"
+    "released": "2022",
+    "dock_dimensions": "303 x 403 x 399 mm",
+    "dustbin_ml": 400,
+    "dust_bag_capacity_l": 2.5
   },
   {
     "id": "dreame-l20-ultra",
@@ -3908,7 +3921,7 @@
       "Premium base station",
       "Dual rotating mops"
     ],
-    "height_mm": 97,
+    "height_mm": 103.8,
     "width_mm": 350,
     "depth_mm": 350,
     "weight_kg": 4.5,
@@ -3992,7 +4005,7 @@
     "anti_tangle": true,
     "multi_zone": true,
     "no_go_zones": true,
-    "battery_mah": 5200,
+    "battery_mah": 6400,
     "voice_assistant": [
       "Alexa",
       "Google Assistant"
@@ -4041,7 +4054,11 @@
     },
     "released": "2024",
     "side_brushes": "extendable side brush (reaches corners)",
-    "dock_type": "Ultra dock - auto-empty, hot-water mop washing, hot-air mop drying, auto water + detergent refill"
+    "dock_type": "Ultra dock - auto-empty, hot-water mop washing, hot-air mop drying, auto water + detergent refill",
+    "dock_dimensions": "426 x 499 x 606.5",
+    "dustbin_ml": 300,
+    "clean_water_tank_ml": 4500,
+    "dust_bag_capacity_l": 3.2
   },
   {
     "id": "dreame-z10-pro",
@@ -4069,9 +4086,9 @@
       "Smart mapping",
       "Voice control"
     ],
-    "height_mm": 95,
-    "width_mm": 345,
-    "depth_mm": 345,
+    "height_mm": 96.8,
+    "width_mm": 353,
+    "depth_mm": 350,
     "weight_kg": 3.7,
     "frame_material": "ABS plastic",
     "shell_material": "ABS plastic",
@@ -4197,7 +4214,9 @@
       "Source": "Dreame + smartrobotreviews (Z10 Pro vs D10 Plus - Z10 Pro adds 3D + AI obstacle avoidance) - cross-verified (4000Pa/floating rubber brush/vac + mop electronic water tank/LDS LiDAR + multi-floor/3D structured light + AI camera obstacle avoidance/self-empty station/5200mAh/Dreamehome app + No-Go/Alexa+Google). Exact tanks/dims pending"
     },
     "released": "2022",
-    "brush_type": "floating rubber brush"
+    "brush_type": "floating rubber brush",
+    "dustbin_ml": 400,
+    "dust_bag_capacity_l": 4
   },
   {
     "id": "dreame-f9",
@@ -11742,7 +11761,7 @@
       "7-week hands-free",
       "EdgeSwing technology"
     ],
-    "height_mm": 103,
+    "height_mm": 107,
     "width_mm": 350,
     "depth_mm": 350,
     "weight_kg": 4.2,
@@ -12056,10 +12075,10 @@
       "App control",
       "Multi-floor mapping"
     ],
-    "height_mm": 96,
-    "width_mm": 340,
-    "depth_mm": 340,
-    "weight_kg": 3.5,
+    "height_mm": 107,
+    "width_mm": 314,
+    "depth_mm": 345,
+    "weight_kg": 3.8,
     "frame_material": "ABS plastic",
     "shell_material": "Glossy plastic",
     "ip_rating": "IPX4",
@@ -12163,14 +12182,15 @@
     "suction_pa": 1800,
     "mop": true,
     "dock_type": "Charging dock",
-    "battery_mah": 5800,
+    "battery_mah": 5000,
     "brush_type": "dual side spinning brushes (both sides - better edge cleaning than single-brush vacs)",
     "side_brushes": 1,
     "app_control": true,
     "scheduling": true,
     "released": "2021",
     "carpet_detection": "basic carpet detection/avoidance",
-    "app_companion": "Narwal app"
+    "app_companion": "Narwal app",
+    "dock_dimensions": "400 x 358 x 437 mm"
   },
   {
     "id": "narwal-j2",
@@ -15014,8 +15034,8 @@
       "Pet detection"
     ],
     "height_mm": 99,
-    "width_mm": 340,
-    "depth_mm": 340,
+    "width_mm": 350,
+    "depth_mm": 350,
     "weight_kg": 3.7,
     "frame_material": "ABS plastic",
     "shell_material": "ABS plastic",
@@ -33067,9 +33087,9 @@
       "90-minute runtime",
       "Voice control"
     ],
-    "height_mm": 92,
+    "height_mm": 90,
     "width_mm": 340,
-    "depth_mm": 339,
+    "depth_mm": 340,
     "weight_kg": 3.6,
     "frame_material": "ABS plastic",
     "shell_material": "ABS plastic",
@@ -33405,9 +33425,9 @@
       "WiFi connected"
     ],
     "height_mm": 92,
-    "width_mm": 351,
-    "depth_mm": 339,
-    "weight_kg": 3.6,
+    "width_mm": 378,
+    "depth_mm": 378,
+    "weight_kg": 3.3,
     "frame_material": "ABS plastic",
     "shell_material": "ABS plastic",
     "ip_rating": null,
@@ -35456,9 +35476,9 @@
       "Improved performance"
     ],
     "height_mm": 87,
-    "width_mm": 339,
-    "depth_mm": 339,
-    "weight_kg": 3.4,
+    "width_mm": 348,
+    "depth_mm": 348,
+    "weight_kg": 4,
     "frame_material": "Reinforced ABS",
     "shell_material": "Premium ABS",
     "ip_rating": null,
@@ -35608,7 +35628,8 @@
       "Price": "~$899-1,199",
       "Source": "iRobot official + Walmart + Amazon + Vacuum Wars (Combo j9+ review) + BikmanTech - cross-verified (100% stronger Power-Lifting Suction vs Combo i/3 levels + Carpet Boost/4-Stage + SmartScrub 2x/PrecisionVision + camera + P.O.O.P. + obstacle photos/Dirt Detective first-of-kind/map 7x + 90% kitchen/Auto-Retract mop lifts into robot/Clean Base Auto-Fill empties 60d + refills water 30d; dock does NOT wash mop pad/dual rubber + edge brush/Alexa+Siri+Google). Battery/dims pending"
     },
-    "anti_tangle": true
+    "anti_tangle": true,
+    "dock_dimensions": "400 x 416 x 414 mm"
   },
   {
     "id": "irobot-braava-jet-m6",
@@ -41982,7 +42003,9 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "dustbin_ml": 500,
+    "dust_bag_capacity_l": 3
   },
   {
     "id": "lefant-lefant-m2s-pro",
@@ -42347,7 +42370,8 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "dustbin_ml": 280
   },
   {
     "id": "proscenic-proscenic-q20-plus",
@@ -42471,7 +42495,9 @@
     "app_companion": "Proscenic app; No-Go + No-Mop zones",
     "colors": [
       "Black"
-    ]
+    ],
+    "dust_bag_capacity_l": 4,
+    "battery_mah": 3200
   },
   {
     "id": "proscenic-proscenic-850t",
@@ -43929,7 +43955,7 @@
     "year": 2024,
     "status": "Active",
     "released": "2024",
-    "height_mm": 96,
+    "height_mm": 98,
     "width_mm": 350,
     "depth_mm": 350,
     "weight_kg": 3.6,
@@ -44047,7 +44073,8 @@
     "app_companion": "Yeedi app; multi-floor maps",
     "colors": [
       "White"
-    ]
+    ],
+    "dock_dimensions": "338 x 459 x 500 mm"
   },
   {
     "id": "yeedi-yeedi-m12-pro-",
@@ -45836,7 +45863,7 @@
     "origin": "China",
     "status": "Active",
     "released": "2025",
-    "height_mm": 96,
+    "height_mm": 98,
     "weight_kg": 3.8,
     "battery_life": 270,
     "wifi": true,
@@ -45934,7 +45961,8 @@
     "brush_type": "ZeroTangle 2.0 anti-hair-tangle main brush",
     "side_brushes": 1,
     "app_control": true,
-    "scheduling": true
+    "scheduling": true,
+    "dock_dimensions": "350 x 477 x 533 mm"
   },
   {
     "id": "yeedi-yeedi-s16-plus",
@@ -66253,9 +66281,9 @@
     "origin": "USA",
     "status": "Active",
     "released": "2022",
-    "height_mm": 92,
-    "width_mm": 342,
-    "depth_mm": 339,
+    "height_mm": 86,
+    "width_mm": 338,
+    "depth_mm": 338,
     "weight_kg": 3.4,
     "battery_life": 75,
     "charge_time": "3 hours",
@@ -66346,7 +66374,8 @@
     "anti_tangle": true,
     "colors": [
       "Grey/Black"
-    ]
+    ],
+    "dock_dimensions": "310 x 401 x 338 mm"
   },
   {
     "id": "irobot-roomba-105-combo-robot-vacuum-mop-autoempty-dock-white",
@@ -66800,9 +66829,9 @@
     "year": 2025,
     "origin": "USA (iRobot)",
     "status": "Active",
-    "height_mm": 92,
-    "width_mm": 340,
-    "depth_mm": 339,
+    "height_mm": 104,
+    "width_mm": 345,
+    "depth_mm": 350,
     "weight_kg": 3.4,
     "battery_life": 120,
     "charge_time": "3 hours",
@@ -66914,7 +66943,8 @@
     "anti_tangle": true,
     "colors": [
       "White"
-    ]
+    ],
+    "dock_dimensions": "172 x 213 x 290 mm"
   },
   {
     "id": "irobot-roomba-max-708-combo-robot-vacuum-mop-autowash-dock",
@@ -66940,10 +66970,10 @@
     "year": 2025,
     "origin": "USA (iRobot)",
     "status": "Active",
-    "height_mm": 92,
-    "width_mm": 340,
-    "depth_mm": 339,
-    "weight_kg": 4.3,
+    "height_mm": 105,
+    "width_mm": 373,
+    "depth_mm": 372,
+    "weight_kg": 6.12,
     "battery_life": 120,
     "charge_time": "3 hours",
     "wifi": "Wi-Fi (2.4 GHz)",
@@ -67061,7 +67091,8 @@
     "anti_tangle": true,
     "colors": [
       "White"
-    ]
+    ],
+    "dock_dimensions": "343 x 433 x 450 mm"
   },
   {
     "id": "roborock-roborock-q5-max-",
@@ -67566,7 +67597,7 @@
     ],
     "manufacturer_url": "https://www.roborock.com",
     "width_mm": 350,
-    "depth_mm": 350,
+    "depth_mm": 352,
     "weight_kg": 4.2,
     "charge_time": "4 hours",
     "warranty_months": 12,
@@ -67692,7 +67723,9 @@
     "colors": [
       "Black",
       "White"
-    ]
+    ],
+    "dock_dimensions": "450 x 450 x 450 mm",
+    "battery_mah": 6400
   },
   {
     "id": "roborock-roborock-qrevo-slim",
@@ -67719,10 +67752,10 @@
     "origin": "China",
     "status": "Active",
     "released": "2025",
-    "height_mm": 81,
+    "height_mm": 82,
     "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 3.2,
+    "depth_mm": 353,
+    "weight_kg": 4.1,
     "battery_life": 180,
     "charge_time": "4 hours",
     "wifi": "Wi-Fi (2.4 GHz)",
@@ -67863,7 +67896,8 @@
     "colors": [
       "Black",
       "White"
-    ]
+    ],
+    "dock_dimensions": "340 x 487 x 521 mm"
   },
   {
     "id": "roborock-roborock-saros-10r",
@@ -68090,9 +68124,9 @@
     "origin": "China",
     "status": "Active",
     "released": "2026",
-    "height_mm": 79.5,
+    "height_mm": 79.8,
     "width_mm": 350,
-    "depth_mm": 350,
+    "depth_mm": 353,
     "weight_kg": 3.8,
     "battery_life": "180 min",
     "charge_time": "~2.5 h (15→100%)",
@@ -68221,7 +68255,9 @@
     },
     "auto_refill": true,
     "app_companion": "Roborock app; multi-floor maps",
-    "frame_material": "AdaptiLift Chassis 3.0 - climbs double-layer thresholds up to 3.46 in (88 mm), carpets up to 1.18 in; 3.13-3.14 in ultra-slim"
+    "frame_material": "AdaptiLift Chassis 3.0 - climbs double-layer thresholds up to 3.46 in (88 mm), carpets up to 1.18 in; 3.13-3.14 in ultra-slim",
+    "dock_dimensions": "409 x 440 x 470 mm",
+    "battery_mah": 6400
   },
   {
     "id": "roborock-roborock-saros-z70",
@@ -71158,10 +71194,10 @@
     ],
     "released": "2025",
     "year": 2024,
-    "height_mm": 92,
-    "width_mm": 340,
-    "depth_mm": 335,
-    "weight_kg": 3.4,
+    "height_mm": 101,
+    "width_mm": 358,
+    "depth_mm": 359,
+    "weight_kg": 3.83,
     "battery_life": 75,
     "charge_time": "3 hours",
     "speed_ms": 0.3,
@@ -73213,7 +73249,10 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "dust_bag_capacity_l": 3,
+    "battery_mah": 3200,
+    "noise_db": 64
   },
   {
     "id": "proscenic-q10",
@@ -73334,7 +73373,9 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "battery_mah": 3200,
+    "noise_db": 64
   },
   {
     "id": "proscenic-q8",
@@ -73618,7 +73659,7 @@
     "year": 2023,
     "status": "Active",
     "released": "2023",
-    "height_mm": 96,
+    "height_mm": 97,
     "width_mm": 350,
     "depth_mm": 350,
     "weight_kg": 3.8,
@@ -73686,7 +73727,10 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "dust_bag_capacity_l": 2.5,
+    "battery_mah": 5200,
+    "noise_db": 62
   },
   {
     "id": "proscenic-m7-pro",
@@ -73717,7 +73761,7 @@
     "year": 2021,
     "status": "Active",
     "released": "2020",
-    "height_mm": 96,
+    "height_mm": 98,
     "width_mm": 350,
     "depth_mm": 350,
     "weight_kg": 3.8,
@@ -73804,7 +73848,9 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "dustbin_ml": 400,
+    "battery_mah": 5200
   },
   {
     "id": "burro-burro-cortador",
@@ -75942,9 +75988,9 @@
     "status": "Active",
     "released": "2025",
     "height_mm": 79.8,
-    "width_mm": 350,
-    "depth_mm": 350,
-    "weight_kg": 4.2,
+    "width_mm": 353,
+    "depth_mm": 352,
+    "weight_kg": 4.5,
     "battery_life": "180 minutes",
     "charge_time": "4 hours",
     "wifi": "Wi-Fi (2.4 GHz)",
@@ -76075,7 +76121,8 @@
     "colors": [
       "Black",
       "White"
-    ]
+    ],
+    "dock_dimensions": "340 x 487 x 521 mm"
   },
   {
     "id": "roborock-saros-rover",
@@ -96492,7 +96539,10 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "width_mm": 394,
+    "dock_dimensions": "480 x 727 x 452mm",
+    "noise_db": 56
   },
   {
     "id": "mova-lidax-ultra-1000-2026",
@@ -123294,7 +123344,7 @@
     "height_mm": 89,
     "weight_kg": 4.6,
     "suction_pa": 20000,
-    "dustbin_ml": 350,
+    "dustbin_ml": 395,
     "water_tank_ml": 80,
     "mop_type": "Dual spinning pads with edge extension (carpet lift)",
     "auto_empty": "Yes",
@@ -123309,7 +123359,7 @@
     "no_go_zones": "Yes",
     "multi_floor_mapping": "Yes",
     "battery_type": "Li-ion",
-    "battery_mah": 5200,
+    "battery_mah": 6400,
     "battery_life_typical": 220,
     "charge_time_min": 240,
     "voice_assistant": "Alexa / Google",
@@ -123423,7 +123473,11 @@
       ],
       "Price": "~$1,699",
       "Source": "Dreame official + Amazon + Vacuum Wars (X50 announce + review) + RoboVacGuide - cross-verified (world-first ProLeap retractable legs 6cm 2.36in + shock absorb + 1.65in single threshold/20000Pa 6th-gen TurboForce/HyperStream DuoBrush 11.8in hair anti-tangle/VersaLift motorized retractable LiDAR 89mm profile + 360 nav/200 obstacles Laser+AI+RGB+LED/extending lifting side brush + MopExtend/dual spinning mops 80C on-robot hot water/dock auto-empty + 80C wash + hot-air dry + washboard + auto refill). Dims/battery pending"
-    }
+    },
+    "width_mm": 350,
+    "depth_mm": 350,
+    "clean_water_tank_ml": 4500,
+    "dirty_water_tank_ml": 4000
   },
   {
     "id": "dreame-x40-ultra",
@@ -124212,7 +124266,12 @@
     },
     "colors": [
       "White"
-    ]
+    ],
+    "weight_kg": 3.24,
+    "dock_dimensions": "304 x 406 x 508 mm",
+    "dustbin_ml": 400,
+    "dust_bag_capacity_l": 4,
+    "noise_db": 63
   },
   {
     "id": "ecovacs-deebot-x8-pro-omni",
@@ -124239,7 +124298,7 @@
     ],
     "announced": "2025",
     "released": "2024",
-    "height_mm": 95,
+    "height_mm": 98,
     "weight_kg": 5.3,
     "dock_weight_kg": 7.6,
     "suction_pa": 18000,
@@ -124288,7 +124347,7 @@
       "https://m.media-amazon.com/images/I/81u2O16QmuL._AC_SL1500_.jpg"
     ],
     "price_band": "Flagship",
-    "battery_mah": 5200,
+    "battery_mah": 6400,
     "auto_charge": true,
     "multi_zone": "Yes",
     "smart_home": [
@@ -124350,7 +124409,7 @@
     "spot_clean": "Yes",
     "battery_life": 180,
     "max_step_height_mm": 20,
-    "dustbin_ml": 400,
+    "dustbin_ml": 220,
     "mop_lift_height_mm": 10,
     "filter": "Washable HEPA",
     "dock_auto_wash_temp": 75,
@@ -124379,7 +124438,14 @@
       "Price": "~$1,199-1,499",
       "Source": "Ecovacs official (X8 Pro Omni) + Amazon - cross-verified (18000Pa ultra-high-speed fan/OZMO ROLLER instant self-washing roller mop + TruEdge 2.0 + 3D/ZeroTangle 2.0 3V + 45deg V-bristle + V-spiral + V-comb/AIVI 3D 3.0 + path planning + AI Instant Re-Mop/Carpet Care/YIKO-GPT LLM chat/station 40-75C wash + 63C dry + auto-empty + cleaning solution + 150-day tray). Battery/dims pending"
     },
-    "mop_lift_mm": 10
+    "mop_lift_mm": 10,
+    "width_mm": 353,
+    "depth_mm": 351,
+    "dock_dimensions": "350 x 477 x 533 mm",
+    "clean_water_tank_ml": 4000,
+    "dirty_water_tank_ml": 4000,
+    "dust_bag_capacity_l": 3,
+    "noise_db": 65
   },
   {
     "id": "ecovacs-deebot-x2-omni",
@@ -124953,7 +125019,11 @@
     "colors": [
       "Black",
       "White"
-    ]
+    ],
+    "width_mm": 327,
+    "depth_mm": 346,
+    "height_mm": 111,
+    "dock_dimensions": "369 x 436 x 461 mm"
   },
   {
     "id": "irobot-roomba-max-10",
@@ -125164,7 +125234,7 @@
     "app": "SmartThings",
     "mapping": "Yes",
     "battery_life_typical": 180,
-    "dustbin_ml": 400,
+    "dustbin_ml": 250,
     "manufacturer": "Samsung",
     "warranty_months": 12,
     "power_source": "Rechargeable Li-ion",
@@ -125231,7 +125301,15 @@
     "noise_db": 87,
     "colors": [
       "Satin Greige"
-    ]
+    ],
+    "width_mm": 359,
+    "depth_mm": 364,
+    "height_mm": 100,
+    "weight_kg": 4.8,
+    "dock_dimensions": "444 x 545 x 510 mm",
+    "clean_water_tank_ml": 4000,
+    "dirty_water_tank_ml": 4000,
+    "dust_bag_capacity_l": 2.5
   },
   {
     "id": "shark-matrix-plus-2-in-1",
@@ -125358,7 +125436,9 @@
     "colors": [
       "Black/Gold",
       "Black/Brass"
-    ]
+    ],
+    "dock_dimensions": "280 x 401 x 517 mm",
+    "battery_mah": 2900
   },
   {
     "id": "switchbot-s10",
@@ -125809,7 +125889,7 @@
     "perf": false,
     "website": "https://www.mi.com",
     "width_mm": 325,
-    "height_mm": 97,
+    "height_mm": 98,
     "weight_kg": 3.5,
     "shape": "Round",
     "suction_modes": "4 levels / 4 modes",
@@ -125889,7 +125969,9 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "depth_mm": 325,
+    "battery_mah": 3200
   },
   {
     "id": "viomi-s9-uv",
@@ -128135,7 +128217,7 @@
     ],
     "announced": "2024",
     "released": "2025",
-    "weight_kg": 13.8,
+    "weight_kg": 5.14,
     "suction_pa": 8000,
     "mop_type": "Roller",
     "mop_pressure_n": 10,
@@ -128251,7 +128333,16 @@
     "colors": [
       "Black",
       "White"
-    ]
+    ],
+    "width_mm": 325,
+    "depth_mm": 347,
+    "height_mm": 96,
+    "dock_dimensions": "383 x 467 x 670 mm",
+    "dustbin_ml": 250,
+    "clean_water_tank_ml": 3000,
+    "dirty_water_tank_ml": 2000,
+    "dust_bag_capacity_l": 2,
+    "noise_db": 60
   },
   {
     "id": "eufy-c28",
@@ -128387,7 +128478,14 @@
     "colors": [
       "Black",
       "White"
-    ]
+    ],
+    "width_mm": 349,
+    "depth_mm": 327,
+    "weight_kg": 5.05,
+    "dock_dimensions": "436.9 x 352.6 x 430 mm",
+    "clean_water_tank_ml": 2200,
+    "dirty_water_tank_ml": 2200,
+    "dust_bag_capacity_l": 3
   },
   {
     "id": "eufy-e25",
@@ -128526,7 +128624,13 @@
     "colors": [
       "Black",
       "White"
-    ]
+    ],
+    "width_mm": 327,
+    "depth_mm": 346,
+    "height_mm": 111,
+    "clean_water_tank_ml": 2500,
+    "dirty_water_tank_ml": 1800,
+    "dust_bag_capacity_l": 3
   },
   {
     "id": "cecotec-conga-x150",
@@ -129109,7 +129213,8 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "height_mm": 110
   },
   {
     "id": "cecotec-conga-9990-ai",
@@ -134072,7 +134177,7 @@
     "edge_cleaning": "World-first fully extendable side brush & mop (4 cm extend, 27 cm reach)",
     "max_threshold": "42 mm single (ProLeap)",
     "announced": "IFA 2025",
-    "height_mm": 98,
+    "height_mm": 97.5,
     "max_step_height_mm": 60,
     "mop_lift_height_mm": 14,
     "filter": "Washable HEPA",
@@ -134113,7 +134218,15 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "width_mm": 350,
+    "depth_mm": 350,
+    "weight_kg": 5.5,
+    "dock_dimensions": "420 x 440 x 500 mm",
+    "dustbin_ml": 220,
+    "clean_water_tank_ml": 4000,
+    "dirty_water_tank_ml": 3500,
+    "battery_mah": 6400
   },
   {
     "id": "dreame-matrix10-ultra",
@@ -134612,8 +134725,8 @@
     "video": "https://youtu.be/PDnadhQlxBk",
     "website": "https://www.ecovacs.com",
     "price": "~$1,499-1,799",
-    "height_mm": 95,
-    "width_mm": 353,
+    "height_mm": 98,
+    "width_mm": 351,
     "depth_mm": 353,
     "shape": "Round",
     "suction_pa": 22000,
@@ -134716,7 +134829,13 @@
     "colors": [
       "Black",
       "White"
-    ]
+    ],
+    "weight_kg": 5.5,
+    "dock_dimensions": "380 x 493 x 465 mm",
+    "dustbin_ml": 250,
+    "clean_water_tank_ml": 3500,
+    "dirty_water_tank_ml": 2700,
+    "noise_db": 64
   },
   {
     "cat": "Consumer",
@@ -135113,7 +135232,14 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "depth_mm": 350,
+    "dock_dimensions": "416 x 467 x 589 mm",
+    "dustbin_ml": 300,
+    "clean_water_tank_ml": 5500,
+    "dirty_water_tank_ml": 4000,
+    "dust_bag_capacity_l": 3.2,
+    "battery_mah": 6400
   },
   {
     "cat": "Consumer",
@@ -157355,7 +157481,7 @@
     "mop_pressure_pa": 4100,
     "dimensions": "350 × 350 × 96 mm (119.6 mm LiDAR raised)",
     "height_mm": 96,
-    "dock_dimensions": "463 × 390 × 545 mm",
+    "dock_dimensions": "390 x 463 x 545 mm",
     "climb_mm": 80,
     "battery_life": 220,
     "battery_life_typical": 220,
@@ -157441,7 +157567,14 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "width_mm": 350,
+    "depth_mm": 350,
+    "dustbin_ml": 210,
+    "clean_water_tank_ml": 4000,
+    "dirty_water_tank_ml": 3500,
+    "dust_bag_capacity_l": 3.2,
+    "battery_mah": 6400
   },
   {
     "id": "mova-v50-ultra-complete",
@@ -157486,7 +157619,7 @@
     ],
     "voice_assistant": "Alexa / Google",
     "app": "MOVA Home",
-    "height_mm": 95,
+    "height_mm": 110.5,
     "max_threshold_height_mm": 60,
     "mop_pressure_n": 8,
     "mop_wash_temp_c": 80,
@@ -157580,7 +157713,15 @@
     "mop_pressure_g": 816,
     "colors": [
       "White"
-    ]
+    ],
+    "width_mm": 350,
+    "depth_mm": 350,
+    "dock_dimensions": "420 x 458 x 470 mm",
+    "dustbin_ml": 300,
+    "clean_water_tank_ml": 4000,
+    "dirty_water_tank_ml": 3500,
+    "dust_bag_capacity_l": 3.2,
+    "battery_mah": 6400
   },
   {
     "id": "mova-p50-pro-ultra",
@@ -157960,7 +158101,16 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "width_mm": 350,
+    "depth_mm": 350,
+    "height_mm": 97,
+    "weight_kg": 4.05,
+    "dock_dimensions": "350 x 457 x 590 mm",
+    "dustbin_ml": 300,
+    "clean_water_tank_ml": 4500,
+    "dirty_water_tank_ml": 4000,
+    "dust_bag_capacity_l": 3.2
   },
   {
     "id": "mova-e40-ultra",
@@ -158695,7 +158845,11 @@
     "camera": true,
     "colors": [
       "White"
-    ]
+    ],
+    "depth_mm": 248,
+    "weight_kg": 2.3,
+    "dustbin_ml": 200,
+    "dust_bag_capacity_l": 4
   },
   {
     "id": "switchbot-k10-plus-pro-combo",
@@ -159209,11 +159363,14 @@
     },
     "suction_pa": 8500,
     "ai_obstacle_avoidance": true,
-    "noise_db": 59,
+    "noise_db": 55,
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "width_mm": 330,
+    "depth_mm": 330,
+    "height_mm": 107
   },
   {
     "id": "aiper-scuba-v3-ai-vision",
@@ -160886,7 +161043,7 @@
     "edge_cleaning": "AutoSeal roller guard + extendable side brush & mop",
     "max_threshold": "42 mm single / 60 mm double (ProLeap)",
     "suspension": "FlexRise retractable legs",
-    "height_mm": 98,
+    "height_mm": 120,
     "max_step_height_mm": 60,
     "mop_lift_height_mm": 14,
     "filter": "Washable HEPA",
@@ -160923,7 +161080,15 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "width_mm": 350,
+    "depth_mm": 350,
+    "weight_kg": 5.5,
+    "dock_dimensions": "420 x 440 x 505 mm",
+    "dustbin_ml": 220,
+    "clean_water_tank_ml": 4000,
+    "dirty_water_tank_ml": 3500,
+    "battery_mah": 6400
   },
   {
     "id": "dreame-l60-pro-ultra",
@@ -161271,7 +161436,11 @@
     "noise_db": 60,
     "colors": [
       "White"
-    ]
+    ],
+    "width_mm": 350,
+    "depth_mm": 350,
+    "height_mm": 118.5,
+    "dock_dimensions": "250.19 x 187 x 386.7 mm"
   },
   {
     "id": "eufy-e28",
@@ -161487,7 +161656,13 @@
     "colors": [
       "White",
       "Grey"
-    ]
+    ],
+    "width_mm": 342,
+    "depth_mm": 342,
+    "height_mm": 94.5,
+    "weight_kg": 3.1,
+    "dustbin_ml": 400,
+    "battery_mah": 3000
   },
   {
     "id": "ilife-a30-pro",
@@ -162410,7 +162585,11 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "width_mm": 325,
+    "depth_mm": 323,
+    "dock_dimensions": "275 x 191 x 211.8 mm",
+    "dust_bag_capacity_l": 3
   },
   {
     "id": "ecovacs-deebot-n30-pro-omni",
