@@ -177378,7 +177378,7 @@
     "desc": "Mid-tier model in Dreame's spring-2026 L60 family (alongside Pro Ultra, Ultra PE, Ultra FE).",
     "tags": [],
     "raw_specs": {
-      "Positioning": "Higher-suction sibling in spring-2026 L60 family; slimmer 3.2in (82mm) body for under-furniture access.",
+      "Positioning": "35,000Pa flagship-suction in the slimmest (82mm) L60 body; Dual Flex Arm edge tech",
       "Suction": "35,000Pa Vormax (in-house lab)",
       "Height note": "82mm robot height - genuinely lower than L60 Ultra PE (103.8mm) and L60 Pro Ultra (89mm); distinct chassis, not a copy",
       "Main brush": "HyperStream Detangling DuoBrush (dual anti-tangle)",
@@ -177393,9 +177393,11 @@
       "Dock weight": "9,200 g (9.2 kg)",
       "Dock functions": "Auto-empty, auto mop wash (100C), auto mop dry (hot air), auto water refill, auto detergent",
       "Family": "L60 Pro Ultra (35,000Pa, ProLeap, 6,400mAh, 89mm) / L60 Ultra (35,000Pa, 5,200mAh, 82mm) / L60 Ultra PE (30,000Pa, 103.8mm) / L60 Ultra FE",
-      "Smart home": "Matter; onboard voice control; Dreamehome app",
+      "Smart home": "Matter; Dreamehome; Alexa; Google Home; onboard voice",
       "Sources": "dreametech.com L60 Ultra page; smarthomecompared (dims 351x351x82, 4.1kg, dock 340x457x590/9.2kg); Vacuum Wars Dreame guide; bestrobotvacuum",
-      "Data status": "Full-dump - cross-verified manufacturer + spec aggregator + reviews. Dustbin/tank mL not separately published for this variant - pending."
+      "Data status": "Full-dump - cross-verified manufacturer + spec aggregator + reviews. Dustbin/tank mL not separately published for this variant - pending.",
+      "Dock": "Multifunction: auto dust-empty into 3.2L bag, 100C hot-water mop wash, hot-air dry, auto water refill, auto detergent",
+      "Threshold": "50mm (2.0in) obstacle crossing"
     },
     "fig": "🤖",
     "score": 75,
@@ -177413,7 +177415,14 @@
     "dock_type": "Auto-empty / wash / dry / refill station",
     "dock_dimensions": "340 x 457 x 590 mm",
     "released": "2026",
-    "app_companion": "Dreamehome"
+    "app_companion": "Dreamehome",
+    "dust_bag_capacity_l": 3.2,
+    "self_cleaning": true,
+    "auto_empty": true,
+    "auto_refill": true,
+    "detergent_dispenser": true,
+    "voice_assistant": "Alexa / Google Home / onboard",
+    "max_threshold_mm": 50
   },
   {
     "id": "dreame-l60-ultra-pe",
@@ -177498,10 +177507,15 @@
       "Battery": "5,200mAh; up to 4,000 ft2 (372 m2) two-story coverage per charge; 30% faster charging; off-peak scheduling; recharge & resume",
       "Noise": "~60-65 dB Standard mode (whole family); L60 Pro Ultra has TUV Low Noise cert (FE does not)",
       "Dock": "Auto-empty, hot-water (100C) mop wash, hot-air dry, auto water refill (optional water hookup kit sold separately); ~100 days auto-empty",
-      "Smart home": "Dreamehome app - no-go zones, scheduling, suction adjust, cleaning history",
+      "Smart home": "Dreamehome app; Amazon Alexa; Google Home; scheduling, no-go zones, suction adjust, cleaning history",
       "Pricing context": "L60 Pro Ultra $1,399.99 flagship / L60 Ultra $1,299.99; FE is the entry price point (exact FE MSRP not stated in sources - pending)",
       "Sources": "dreametech.com L60 Ultra FE page + L60 Series-vs-L50 comparison (thresholds, batteries, detergent diff); T3 + bestrobotvacuum L60 comparison; Vacuum Wars",
-      "Data status": "Full-dump - manufacturer comparison + reviews cross-verified. Robot dims/weight not separately published for FE variant - pending (family is ~350x350mm)."
+      "Data status": "Full-dump - manufacturer comparison + reviews cross-verified. Robot dims/weight not separately published for FE variant - pending (family is ~350x350mm).",
+      "Dock architecture": "L60-family multifunction dock: auto dust-empty into 3.2L bag (~100 days), hot-water mop wash (100C PTC), hot-air dry, auto water refill",
+      "Mop lift": "10.5mm auto-lift on carpet",
+      "Robot footprint": "~350 x 350 mm (L60 family; FE-specific height not separately published)",
+      "Edge cleaning": "Extending side brush for edges/corners",
+      "Positioning vs family": "Entry FE: 28,000Pa + TriCut 3.0 + 22mm threshold; steps below Ultra PE (30,000Pa) / Ultra (35,000Pa) / Pro Ultra (35,000Pa ProLeap)"
     },
     "fig": "🤖",
     "score": 75,
@@ -177516,7 +177530,15 @@
     "brush_type": "TriCut Brush 3.0 (hair-cutting)",
     "dock_type": "Auto-empty / hot-water wash / dry / refill station",
     "released": "2026",
-    "app_companion": "Dreamehome"
+    "app_companion": "Dreamehome",
+    "dust_bag_capacity_l": 3.2,
+    "mop_lift_mm": 10.5,
+    "self_cleaning": true,
+    "auto_empty": true,
+    "auto_refill": true,
+    "width_mm": 350,
+    "depth_mm": 350,
+    "voice_assistant": "Alexa / Google Home"
   },
   {
     "id": "dreame-aero-ultra-steam",
@@ -177534,7 +177556,7 @@
       "Tri-Force cleaning": "First in class to integrate 3 modes in one system: superheated STEAM + HOT WATER + FOAMING DETERGENT. Modes: Smart / Hot Water / Steam / Suction / Eco.",
       "Suction": "30 kPa (30,000Pa) - up from Aero Pro Steam's 28 kPa; full performance upright or fully reclined (lie-flat)",
       "Steam/heat": "Heating module outlet up to 392F (200C) [internal ~716F]; steam outlets up to 210F (99C); 203F (95C) hot wash flushes roller + internal pathways; 194F alt spec; hot-air dry",
-      "Brush": "TangleCut 2.0 Resilient Scraper - intercepts pet fur / long hair before wrap; 100% tangle-free; auto-dries with 203F hot air",
+      "Brush": "Full-length roller fits snug against baseboards and under cabinet doors; edge-to-edge",
       "Smart sensing": "AutoAdapt Multispectral Sensor - detects dirt type/volume real-time, auto-adjusts suction, water level, solution ratio",
       "Battery": "Up to 100 min runtime (Eco mode); covers up to 7,534 sq ft (~700 m2) per charge",
       "Design": "Compact body; GlideWheel Power System - smart-algorithm rear-wheel assist to reduce wrist fatigue; lie-flat cleaning; triple-edge coverage; LED display (battery / floor cleanliness / mode / water / maintenance)",
@@ -177544,7 +177566,16 @@
       "Brand note": "Dreame named Cristiano Ronaldo global brand ambassador (2026)",
       "Pricing": "$799.99 MSRP (US); launch 30% off to ~$600 via promo",
       "Sources": "vacuummop.dreametech.com + ca.dreametech.com product pages; PRNewswire/Yahoo/AOL/Manila Times launch (24 Jul 2026, $799.99); Gizmodo (partner content, specs)",
-      "Data status": "Full-dump - manufacturer + launch PR + reviews cross-verified. Category: manual wet/dry stick, sub='Wet/Dry Vacuum'. Robot dimensions/weight not published (handheld form) - N/A."
+      "Data status": "Full-dump - manufacturer + launch PR + reviews cross-verified. Category: manual wet/dry stick, sub='Wet/Dry Vacuum'. Robot dimensions/weight not published (handheld form) - N/A.",
+      "Clean water tank": "1,000 mL (base-mounted)",
+      "Dual Scraper System": "Removes excess water from floors for cleaner, drier finish; TangleCut 2.0 scraper keeps roller hair-free",
+      "Multispectral sensor": "5x sharper - recognises mess type via colour temperature + brightness; auto-optimises suction/water/solution ratio",
+      "Self-clean cycle": "392F steam + 203F hot-water wash + 203F hot-air dry of roller and internal pathways/filter",
+      "Slim profile": "3.88in ultra-slim lie-flat design; slides under couches/beds",
+      "GlideWheel": "Powered rear wheels - easy push/pull even with full tank; reduces wrist fatigue",
+      "Suction claim": "'Hurricane-grade' 30 kPa; single-pass on embedded debris, sticky residue, heavy spills",
+      "Storage": "Self-standing; fairly large machine - needs storage space (reviewer note)",
+      "Filter": "Washable filter, kept fresh by hot-air dry cycle"
     },
     "fig": "🤖",
     "score": 75,
@@ -177555,7 +177586,15 @@
     "brush_type": "TangleCut 2.0 Resilient Scraper roller",
     "released": "2026-07-24",
     "app_companion": "Dreamehome",
-    "price": "$799.99"
+    "price": "$799.99",
+    "clean_water_tank_ml": 1000,
+    "dirty_water_tank_ml": 720,
+    "filter_type": "Washable",
+    "detergent_dispenser": true,
+    "self_cleaning": true,
+    "edge_cleaning": "Full-length brush, edge-to-edge",
+    "charge_time": 240,
+    "suction_modes": "Smart / Hot Water / Steam / Suction / Eco"
   },
   {
     "id": "mova-s70-roller",
@@ -177580,10 +177619,15 @@
       "Dock": "All-in-one: auto-empty into 3.2L dust bag (~100 days); roller mop wash with hot water up to 80C (176F), 4 wash-temp options; hot-air dry (~70C); auto water refill of onboard tank",
       "Water": "Dock 5L clean water tank -> up to 1,200 m2 per fill; 30% longer runtime than previous models",
       "Cleaning claim": "Captures 99% of large debris single-pass",
-      "Smart home": "'Hey MOVA' wake word; Amazon Alexa; Google Assistant; app mapping",
+      "Smart home": "MOVA Home app; 'Hey MOVA' wake word; Alexa; Google Assistant; multi-floor maps",
       "Pricing": "~$849 (US, Amazon/Best Buy). Note: S70 ULTRA Roller is ~$2,499 AUD (different model).",
       "Sources": "Amazon US + Best Buy listings (30,000Pa, HydroForce, dock); Vacuum Wars launch; mova.sg + originofbots (roller/dock detail). S70 Ultra specs from robotmowersaustralia + au.mova.tech kept separate.",
-      "Data status": "Full-dump - cross-verified; suction outlier flagged; S70 Roller vs S70 Ultra Roller separation flagged to prevent sibling contamination."
+      "Data status": "Full-dump - cross-verified; suction outlier flagged; S70 Roller vs S70 Ultra Roller separation flagged to prevent sibling contamination.",
+      "Filtration": "Multi-stage cyclonic filtration",
+      "Anti-tangle": "Double anti-tangle mechanisms; optional Tri-cut brush",
+      "Edge tech": "MaxiReach extends side brush + roller up to 4.4cm",
+      "Dock wash temps": "4 wash-temperature options up to 80C (176F)",
+      "Runtime note": "30% longer runtime than previous MOVA models; 1,200 m2 per fill"
     },
     "fig": "🤖",
     "score": 75,
@@ -177601,7 +177645,12 @@
     "released": "2026",
     "app_companion": "MOVA Home",
     "voice_assistant": "Hey MOVA / Alexa / Google",
-    "price": "~$849 (US)"
+    "price": "~$849 (US)",
+    "self_cleaning": true,
+    "auto_empty": true,
+    "auto_refill": true,
+    "filter_type": "HEPA / multi-stage",
+    "suction_modes": "Multiple (app-selectable)"
   },
   {
     "id": "roborock-f25-ace-pro",
@@ -177629,7 +177678,13 @@
       "F25 family": "F25 / F25 ACE / F25 ACE Pro / F25 ALT / F25 Combo / F25 GT / F25 RT / F25 LT / F25 Ultra (356F steam + 187F hot water - higher-end sibling). ACE Pro = 25,000Pa foam-spray flagship without steam.",
       "Pricing": "Premium tier - MSRP hundreds above the ~$300-400 wet/dry category average; foam-spray is the first Vacuum Chef/BGR had tested",
       "Sources": "us.roborock.com F25 ACE Pro + F25 series pages; Tom's Guide; BGR; Vacuum Chef; Amazon; JKE USA",
-      "Data status": "Full-dump - manufacturer + 3 reviews + retail cross-verified. Category note: this is a manual wet/dry stick vac; sub set to 'Wet/Dry Vacuum' not robot vacuum."
+      "Data status": "Full-dump - manufacturer + 3 reviews + retail cross-verified. Category note: this is a manual wet/dry stick vac; sub set to 'Wet/Dry Vacuum' not robot vacuum.",
+      "Swivel": "70 degree swivel steering; dynamic push-pull assist system",
+      "Pause mode": "'Grab & Go' upright pause (app-enabled) - no restart delay",
+      "Detergent": "100mL built-in auto-dispenser, ~30 days per fill",
+      "Wash temp": "203F (95C) self-cleaning wash of roller (no steam/heated mop while cleaning - that's F25 Ultra)",
+      "Storage dims": "1,165 x 353 x 316 mm on dock",
+      "Family": "F25 / F25 ACE / F25 ACE Pro / F25 ALT / F25 LT / F25 RT / F25 GT / F25 Combo / F25 Ultra"
     },
     "fig": "🤖",
     "score": 75,
@@ -177648,7 +177703,11 @@
     "released": "2026",
     "app_companion": "Roborock app",
     "voice_assistant": "App voice alerts",
-    "coverage_m2": 410
+    "coverage_m2": 410,
+    "filter_type": "5-layer cyclonic (micron-level)",
+    "self_cleaning": true,
+    "detergent_dispenser": true,
+    "suction_modes": "AUTO / MAX / ECO / Sponge"
   },
   {
     "id": "roborock-qrevo-curv-2-flow",
@@ -177673,12 +177732,17 @@
       "Battery": "5,200mAh; ~3h charge from 15% to full",
       "Noise": "62-65 dB vac+mop; 56-57 dB mop wash/dry; 70 dB during dust empty (<1 min)",
       "Onboard dirty water": "~100mL wastewater tank; NOT for standing water / spills over 50mL",
-      "Carpet": "87% carpet deep-clean (Vacuum Wars, above average)",
+      "Carpet": "Auto suction boost + 15mm mop lift + Roller Shield water guard",
       "Weaknesses (tested)": "Dried-stain mopping dramatically below average despite roller innovation; airflow/suction unimpressive on bench; obstacle avoidance behind CurvX; battery efficiency and height are drawbacks",
       "Accessories": "Replacement kit: mop rollers, main brushes, side brushes, activated-carbon dust bags, HEPA filters",
       "Pricing": "MSRP ~$1,000; frequently ~$850",
       "Sources": "us.roborock.com + therobotdirect (dock/mop/nav detail); Vacuum Wars announce + review; Notebookcheck (lineage, 270mm/220rpm, temps); Amazon; 9to5toys",
-      "Data status": "Full-dump - manufacturer + 3 reviews + retail cross-verified."
+      "Data status": "Full-dump - manufacturer + 3 reviews + retail cross-verified.",
+      "Roller mop RPM": "220 rpm; extra-wide 270mm roller",
+      "Dry-wet strategy": "Auto-switches to mop-only for liquid spills, lifts brushes to avoid spreading",
+      "Smart home": "Roborock app - room-by-room, virtual barriers, scheduling, water-flow control; Alexa / Siri Shortcuts / Google Home",
+      "Dock temps": "167F (75C) hot-water roller wash; 131F (55C) warm-air dry",
+      "China origin": "Global version of P20 Living Water Edition (China, Sep 2025)"
     },
     "fig": "🤖",
     "score": 75,
@@ -177695,7 +177759,11 @@
     "charge_time": 180,
     "released": "2026",
     "app_companion": "Roborock app",
-    "voice_assistant": "Alexa / Siri Shortcuts / Google Home"
+    "voice_assistant": "Alexa / Siri Shortcuts / Google Home",
+    "self_cleaning": true,
+    "auto_empty": true,
+    "auto_refill": true,
+    "suction_modes": "Multiple (app)"
   },
   {
     "id": "ecovacs-deebot-x11-omnicyclone",
@@ -177773,7 +177841,7 @@
       "Suction": "19,500Pa BLAST; 100W fan; 18 L/s (38 CFM) airflow",
       "Main brush": "ZeroTangle 3.0 (Cyclone-Directed Roller + ARClean side brush); 100% tangle-free",
       "Mopping": "OZMO Roller 2.0 extendable nylon roller @ 200 rpm; TruEdge 3.0 edge extension; 10mm lift; AI Stain Detection + Deep Re-mop; hot-water (75C/167F) wash; dual solution tanks",
-      "Charging": "GaN Super Burst PowerBoost - ~6% in 3 min mid-clean ('perpetual runtime')",
+      "Charging": "GaN Super Burst PowerBoost - ~6% in 3 min",
       "Battery": "6,400mAh; ~206 min runtime",
       "Climbing": "TruePass Adaptive 4WD; thresholds to 2.4cm (0.95in)",
       "Robot dimensions": "353 x 351 x 98 mm; 5.3 kg (same chassis as OmniCyclone)",
@@ -177781,7 +177849,12 @@
       "Warranty": "2.5 years",
       "Sibling note": "Do NOT merge with X11 OmniCyclone - different dock/SKU. Shares robot-body specs only.",
       "Sources": "Vacuum Wars X11 Pro Omni launch (bagged vs bagless); ecovacs.com X11 family pages; The Gadgeteer; MacRumors",
-      "Data status": "Full-dump - robot specs shared with verified OmniCyclone; dock difference documented. Station dimensions/weight for bagged dock not separately published - pending."
+      "Data status": "Full-dump - robot specs shared with verified OmniCyclone; dock difference documented. Station dimensions/weight for bagged dock not separately published - pending.",
+      "Airflow": "18 L/s (38 CFM); 100W fan",
+      "Mop RPM": "200 rpm OZMO Roller 2.0; continuous water infusion",
+      "AI": "AGENT YIKO on-device; AI Stain Detection + Deep Re-mop (cross-pattern passes)",
+      "Coverage": "Up to 10,764 sq ft (~1,000 m2) even at max settings",
+      "Smart home": "Matter; HomeKit; Video Manager; Ecovacs Home app"
     },
     "fig": "🤖",
     "score": 75,
@@ -177802,7 +177875,13 @@
     "hepa": true,
     "released": "2026",
     "app_companion": "Ecovacs Home",
-    "voice_assistant": "AGENT YIKO"
+    "voice_assistant": "AGENT YIKO",
+    "self_cleaning": true,
+    "auto_empty": true,
+    "auto_refill": true,
+    "coverage_m2": 1000,
+    "suction_modes": "Multiple (app)",
+    "warranty_months": 30
   },
   {
     "id": "segway-navimow-i2-lidar",
@@ -177830,7 +177909,17 @@
       "Series context": "Navimow 2026: X4 (X430/X450, 1-1.5 acre AWD), i2 AWD (i206/i210), i2 LiDAR, H2 (H206/H210/H215/H230, triple-fusion), Terranox (large lawns)",
       "Pricing": "i2 AWD from ~$999; H2 series EUR 1,599-2,499; i2 LiDAR US pricing varies by model",
       "Sources": "navimow.com + navimow.segway.com i2 LiDAR product pages (cutting/slope/nav/noise); Amazon i215 LiDAR listing; Mowing Magic review; Engadget/PRNewswire CES2026; Notebookcheck",
-      "Data status": "Full-dump - manufacturer + retail + reviews cross-verified. Battery capacity/charge time and exact robot dimensions/weight not published on spec pages - pending."
+      "Data status": "Full-dump - manufacturer + retail + reviews cross-verified. Battery capacity/charge time and exact robot dimensions/weight not published on spec pages - pending.",
+      "Cutting height adjust": "Manual (app-controlled electronic adjust not available - reviewer wishlist)",
+      "Grass clippings": "Mulching - fine clippings decompose, feed lawn; no collection needed",
+      "Isolated Zone Mapping": "Auto-maps disconnected lawn areas, integrates into existing map",
+      "Doodle patterns": "In-app custom mowing pattern designer",
+      "Weather": "Auto-docks in extreme weather; rain handling",
+      "Dog-waste recognition": "Depends on obstacle size/shape and lighting (partial)",
+      "Install location": "Edge of lawn near power source; drop-and-go, no wire/antenna",
+      "i2 series": "i206 AWD / i210 AWD (vision, ~$999, 0.15-0.25 acre) and i2 LiDAR / i215 LiDAR (this) / i2 LiDAR Pro (AWD 55% slope)",
+      "Blades": "Replaceable pivoting razor blades on 6-blade disc",
+      "Edge trim": "Ride-on cutting to 5cm from boundary for clean edges"
     },
     "fig": "🤖",
     "score": 75,
@@ -177847,7 +177936,8 @@
     "anti_theft": "GPS + geo-fence + lift detection + Apple Find My",
     "released": "2026",
     "app_companion": "Navimow App",
-    "voice_assistant": "Alexa / Google Home"
+    "voice_assistant": "Alexa / Google Home",
+    "wheeled": true
   },
   {
     "id": "segway-navimow-terranox-series",
@@ -177872,9 +177962,20 @@
       "Charging": "CM120M1 ~145 min charge; CM240M1 ~180 min charge (time-to-mow-max includes charging)",
       "Shipping note": "LTL freight only due to battery regulations (large commercial unit)",
       "Series context": "Part of Navimow's 2026 launch (X4 / i2 AWD / i2 LiDAR / H2 / Terranox). Terranox = commercial tier.",
-      "Warranty": "Commercial warranty (terms via dealer)",
+      "Warranty": "Commercial warranty (dealer terms)",
       "Sources": "navimow.com + navimow.segway.com Terranox commercial pages (models/area/slope/nav/noise); PCWorld CES2026; multiple authorized dealers (Brennan, Seacoast, Midwest Turf, NPELA - CM120M1/CM240M1 detail, blades, charge/run times)",
-      "Data status": "Full-dump - manufacturer + PR + 4 dealer listings cross-verified. Record covers the series; CM120M1 vs CM240M1 split documented. Exact robot dimensions/weight/battery kWh not published - pending."
+      "Data status": "Full-dump - manufacturer + PR + 4 dealer listings cross-verified. Record covers the series; CM120M1 vs CM240M1 split documented. Exact robot dimensions/weight/battery kWh not published - pending.",
+      "Mowing speed": "Up to 2.2 mph (~1.0 m/s)",
+      "Steering": "Dual independent steering motors (zero-turn capable)",
+      "Suspension": "Heavy-duty suspension for rugged/uneven ground",
+      "Obstacle crossing": "Up to 2.8 in (~71 mm)",
+      "Fleet software": "Navimow Fleet Management - 1 operator manages 100+ units; location/performance/status, remote task + map editing; GeoSketch mapping",
+      "Emissions/eco": "Fully electric, zero direct emissions vs fuel mowers (up to 1,770 kg CO2/quarter, 100+ dB)",
+      "Network RTK": "Included free (cellular data provided); falls back to LRTK if NRTK unavailable",
+      "Use cases": "Sports fields, golf courses, municipal parks, corporate campuses, large estates, apartment complexes",
+      "Shipping": "LTL freight only (battery regulations)",
+      "CM120M1": "Up to 3 acres / ~12,000 m2; ~40h for max area; 145 min run + 145 min charge; ~0.37 acre/charge",
+      "CM240M1": "Up to 6 acres / ~24,000 m2; ~72h for max area; 180 min run + 180 min charge; ~0.5 acre/charge; mows a football field/day"
     },
     "fig": "🤖",
     "score": 75,
@@ -177890,6 +177991,8 @@
     "charge_time": 180,
     "released": "2026",
     "app_companion": "Navimow App + Fleet Management",
-    "anti_theft": "GPS + NRTK + fleet tracking"
+    "anti_theft": "GPS + NRTK + fleet tracking",
+    "wheeled": true,
+    "rain_sensor": true
   }
 ]
