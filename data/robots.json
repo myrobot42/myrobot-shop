@@ -177220,5 +177220,223 @@
     "anti_theft": "GPS + NRTK + fleet tracking",
     "wheeled": true,
     "rain_sensor": true
+  },
+  {
+    "id": "noetix-n2-openharmony-edition",
+    "name": "N2 OpenHarmony Edition",
+    "brand": "NOETIX",
+    "cat": "Humanoid",
+    "sub": "Humanoid",
+    "status": "Active",
+    "year": 2026,
+    "desc": "NOETIX's first consumer-grade humanoid, unveiled 15 June 2026 at Huawei Developer Conference; runs on the OpenHarmony OS. Child-sized agile biped capable of running, jumping and continuous backflips.",
+    "tags": [
+      "humanoid",
+      "2026"
+    ],
+    "height_mm": 1180,
+    "weight_kg": 30,
+    "dof": 18,
+    "battery_life": 120,
+    "battery_voltage": "48V",
+    "npu_tops": 67,
+    "speed_ms": 3.5,
+    "chipset": "RK3588s + NVIDIA Jetson Orin",
+    "ros": true,
+    "raw_specs": {
+      "Height": "118 cm",
+      "Weight": "30 kg",
+      "DOF": "18",
+      "Peak torque": "150 Nm (some sources 120 Nm)",
+      "Top speed": "3.5 m/s (12.6 km/h)",
+      "Battery": "48V/7Ah quick-swap, ~2h / 2.5km, <5s swap",
+      "Compute": "Edge AI up to 67 TOPS; NVIDIA Jetson Orin (8GB/40 TOPS) + RK3588s open Linux stack",
+      "Abilities": "Continuous backflips, somersaults, running, dancing; 3D vision; LLM speech",
+      "OS": "OpenHarmony (this edition); base N2 is Linux",
+      "Price": "base N2 ~¥39,900 (~$5.5-9k)",
+      "Note": "OpenHarmony Edition = consumer variant of the N2 (Paris Fashion Week 2025, humanoid half-marathon 2025)",
+      "Source": "CMRA (HDC 2026-06-15); humanoid.press; aparobot; RBTX",
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+    },
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "apptronik-apollo-2",
+    "name": "Apollo 2",
+    "brand": "Apptronik",
+    "cat": "Humanoid",
+    "sub": "Humanoid",
+    "status": "Active",
+    "year": 2026,
+    "desc": "Apptronik's next-generation general-purpose humanoid, launched 28 June 2026. Modular design: bipedal for human environments or wheeled base for warehouse throughput. Runs Google Gemini Robotics.",
+    "tags": [
+      "humanoid",
+      "2026"
+    ],
+    "payload_kg": 25,
+    "actuator_type": "Linear actuators (muscle-mimicking)",
+    "ai_model": "Google Gemini Robotics",
+    "ai_model_type": "VLA",
+    "raw_specs": {
+      "Design": "Modular - bipedal humanoid OR wheeled base configuration",
+      "Predecessor": "Apollo (Apollo 1)",
+      "AI": "Google Gemini Robotics (partnership); shared 90,000 sq ft 'Robot Park' training facility (Austin)",
+      "Actuation": "Linear actuators mimicking human muscle; force-control architecture; flexible safety-zone perimeter",
+      "Payload": "~25 kg (55 lb) on Apollo 1 lineage",
+      "Deployment": "Warehouse/logistics; GXO, Mercedes lineage",
+      "Launched": "28 June 2026",
+      "Note": "Apptronik also opened Robot Park data/training facility Jun 2026",
+      "Source": "The Robot Report (Jul 2026); CMRA (2026-06-28)",
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+    },
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "unitree-h2-plus",
+    "name": "H2 Plus",
+    "brand": "Unitree",
+    "cat": "Humanoid",
+    "sub": "Humanoid",
+    "status": "Active",
+    "year": 2026,
+    "desc": "Top-end Unitree humanoid stretched above the H2, revealed June 2026. An NVIDIA Isaac GR00T reference platform with 75 DOF and Jetson AGX Thor compute; tactile five-finger hands. Due late 2026.",
+    "tags": [
+      "humanoid",
+      "2026"
+    ],
+    "dof": 75,
+    "chipset": "NVIDIA Jetson AGX Thor",
+    "hand_type": "Tactile five-finger",
+    "ai_model": "NVIDIA Isaac GR00T",
+    "price": "~$100,000",
+    "raw_specs": {
+      "DOF": "75",
+      "Compute": "NVIDIA Jetson AGX Thor",
+      "Hands": "Tactile five-finger",
+      "Platform": "NVIDIA Isaac GR00T reference platform",
+      "Price": "~$100,000",
+      "Availability": "due late 2026",
+      "Family": "Above the standard Unitree H2",
+      "Note": "Unitree targeting 10,000-20,000 humanoid units in 2026",
+      "Source": "RoboZaps (Jul 2026); NVIDIA",
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+    },
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "ubtech-walker-c1",
+    "name": "Walker C1",
+    "brand": "UBTECH",
+    "cat": "Humanoid",
+    "sub": "Humanoid",
+    "status": "Active",
+    "year": 2026,
+    "desc": "New UBTECH commercial service humanoid, unveiled 22 June 2026 at the Fourth China International Supply Chain Expo (CISCE), where it served as the expo's first 'silicon-based spokesperson' and part of the world's first group of humanoid robot volunteers (tours, welcoming, hosting).",
+    "tags": [
+      "humanoid",
+      "2026"
+    ],
+    "voice_assistant": "AI LINKY (UBTECH foundation model, multilingual)",
+    "raw_specs": {
+      "Role": "Commercial service humanoid - guided tours, greeting, event hosting",
+      "Debut": "CISCE, 22 June 2026",
+      "Mascot/AI": "AI LINKY, multilingual, powered by UBTECH AI foundation model",
+      "Positioning": "Below UBTECH's Walker S industrial line; service/hospitality focus",
+      "Note": "UBTECH's service-tier Walker",
+      "Source": "CMRA (CISCE 2026-06-22)",
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+    },
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "ubtech-uworld-u1",
+    "name": "UWORLD U1",
+    "brand": "UBTECH",
+    "cat": "Humanoid",
+    "sub": "Humanoid",
+    "status": "Active",
+    "year": 2026,
+    "desc": "UBTECH UWORLD U1 companion robot series, reported July 2026 with thousands of pre-orders; consumer shipments targeted from September 2026.",
+    "tags": [
+      "humanoid",
+      "2026"
+    ],
+    "raw_specs": {
+      "Type": "Consumer companion humanoid series",
+      "Demand": "Thousands of pre-orders reported Jul 2026",
+      "Shipping": "targeted from September 2026",
+      "Note": "UBTECH consumer/companion line (distinct from Walker industrial)",
+      "Source": "TechNode (Jul 2026); humanoid.press",
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+    },
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "galaxea-ai-kengo",
+    "name": "Kengo",
+    "brand": "Galaxea AI",
+    "cat": "Humanoid",
+    "sub": "Humanoid",
+    "status": "Active",
+    "year": 2026,
+    "desc": "Galaxea AI's bipedal humanoid, unveiled 2 June 2026. Comes in three colour schemes with interchangeable dexterous hands (and boxing gloves). Uses a 'motor cerebellum' + 'embodied brain' two-module architecture to power all joints.",
+    "tags": [
+      "humanoid",
+      "2026"
+    ],
+    "actuator_type": "Two-module: 'motor cerebellum' + 'embodied brain'",
+    "arm_torque_nm": 130,
+    "hand_type": "Interchangeable dexterous hands",
+    "raw_specs": {
+      "Launched": "2 June 2026",
+      "Single-joint torque": ">130 N·m",
+      "Modules": "'Motor cerebellum' + 'embodied brain' drive all joints",
+      "Variants": "Three colour schemes; swappable dexterous hands + boxing gloves",
+      "Abilities": "Dancing, user interaction",
+      "Maker": "Galaxea AI (also makes the A1 already in DB)",
+      "Note": "Bipedal - distinct from Galaxea A1",
+      "Source": "CMRA (2026-06-02)",
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+    },
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
+  },
+  {
+    "id": "sunrising-ai-phibot-x1",
+    "name": "PhiBot X1",
+    "brand": "Sunrising AI",
+    "cat": "Humanoid",
+    "sub": "Humanoid",
+    "status": "Active",
+    "year": 2026,
+    "desc": "Industrial self-evolving embodied-AI humanoid launched 10 June 2026 in Beijing. Billed as the industry's first industrial-grade self-evolving embodied-AI robot, designed for high-cadence manufacturing lines (automotive, 3C electronics) rather than home service.",
+    "tags": [
+      "humanoid",
+      "2026"
+    ],
+    "ai_model_type": "Self-evolving embodied AI",
+    "raw_specs": {
+      "Launched": "10 June 2026, Beijing",
+      "Positioning": "Industry's first industrial-grade SELF-EVOLVING embodied-AI robot",
+      "Target": "High-cadence manufacturing - automotive, 3C electronics lines",
+      "Maker": "Sunrising AI",
+      "Note": "Industrial focus, not home/service",
+      "Source": "CMRA (2026-06-10)",
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+    },
+    "fig": "🤖",
+    "score": 75,
+    "rating": 4
   }
 ]
