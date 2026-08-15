@@ -2831,7 +2831,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 72,
     "battery_life": 195,
-    "charge_time": "6 hours",
+    "charge_time": 360,
     "charge_power_w": 30,
     "charge_type": "dock",
     "wireless_charging": false,
@@ -2935,8 +2935,11 @@
     "released": "2022",
     "camera": "onboard camera (AIVI 3D + optional remote home monitoring)",
     "filter_type": "advanced/hypoallergenic filtration",
-    "dust_bag_capacity_l": 2.5,
-    "noise_db": 68
+    "dust_bag_capacity_l": 2,
+    "noise_db": 68,
+    "dustbin_ml": 400,
+    "brush_type": "Floating Main Brush",
+    "dock_dimensions": "365 x 483 x 350 mm"
   },
   {
     "id": "ecovacs-deebot-ozmo-920",
@@ -2991,7 +2994,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 43.2,
     "battery_life": "110 min",
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "charge_power_w": 20,
     "charge_type": "dock",
     "wireless_charging": false,
@@ -3084,7 +3087,9 @@
     "carpet_boost": true,
     "noise_db": 66,
     "app_control": true,
-    "released": "2020"
+    "released": "2020",
+    "filter_type": "High Efficiency Filter",
+    "side_brushes": 4
   },
   {
     "id": "ecovacs-deebot-t9-plus",
@@ -3307,7 +3312,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 57.6,
     "battery_life": "110 min",
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "charge_power_w": 25,
     "charge_type": "dock",
     "wireless_charging": false,
@@ -3798,7 +3803,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 62,
     "battery_life": "2.5 hours",
-    "charge_time": "5 hours",
+    "charge_time": 300,
     "charge_power_w": 30,
     "charge_type": "Auto dock",
     "wireless_charging": false,
@@ -3899,7 +3904,8 @@
     "released": "2022",
     "dock_dimensions": "303 x 403 x 399 mm",
     "dustbin_ml": 400,
-    "dust_bag_capacity_l": 2.5
+    "dust_bag_capacity_l": 2,
+    "max_threshold_mm": 20
   },
   {
     "id": "dreame-l20-ultra",
@@ -4117,7 +4123,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 68,
     "battery_life": "150 min",
-    "charge_time": "6-8 h",
+    "charge_time": 360,
     "charge_power_w": 40,
     "charge_type": "Auto dock",
     "wireless_charging": false,
@@ -11794,7 +11800,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 86.4,
     "battery_life": 210,
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "charge_power_w": 25,
     "charge_type": "Auto-dock",
     "wireless_charging": false,
@@ -11961,7 +11967,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 72,
     "battery_life": 210,
-    "charge_time": "3.5 hours",
+    "charge_time": 210,
     "charge_power_w": 20,
     "charge_type": "Auto-dock",
     "wireless_charging": false,
@@ -12052,7 +12058,8 @@
     "carpet_detection": "ultrasonic carpet sensor (front-mounted) - marks carpet on the map; options to no-go / boost / cross-over / avoid / ignore",
     "app_companion": "Narwal Freo app; No-Go zones",
     "dock_dimensions": "415 x 370 x 435 mm",
-    "battery_mah": 5200
+    "battery_mah": 5200,
+    "dustbin_ml": 480
   },
   {
     "id": "narwal-t10",
@@ -12107,7 +12114,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 64.8,
     "battery_life": "120 min",
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "charge_power_w": 18,
     "charge_type": "Auto-dock",
     "wireless_charging": false,
@@ -12254,7 +12261,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 75.6,
     "battery_life": "140 min",
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "charge_power_w": 22,
     "charge_type": "Auto-dock",
     "wireless_charging": false,
@@ -12344,7 +12351,13 @@
     "released": "2021",
     "suction_pa": 3000,
     "carpet_detection": "carpet detection/avoidance",
-    "app_companion": "Narwal app; scheduling; No-Go zones"
+    "app_companion": "Narwal app; scheduling; No-Go zones",
+    "noise_db": 65,
+    "dustbin_ml": 430,
+    "clean_water_tank_ml": 2500,
+    "dirty_water_tank_ml": 2500,
+    "mapping": "Yes",
+    "battery_mah": 5000
   },
   {
     "id": "narwal-j1",
@@ -12399,7 +12412,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 68.4,
     "battery_life": "110 min",
-    "charge_time": "4.5 hours",
+    "charge_time": 270,
     "charge_power_w": 18,
     "charge_type": "Auto-dock",
     "wireless_charging": false,
@@ -12530,7 +12543,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 81,
     "battery_life": "160 min",
-    "charge_time": "3.5 hours",
+    "charge_time": 210,
     "charge_power_w": 24,
     "charge_type": "Auto-dock",
     "wireless_charging": false,
@@ -13004,7 +13017,7 @@
     "auto_empty": true,
     "video": "https://youtu.be/Ire53aZlf6E",
     "app": "SharkClean",
-    "mapping": true,
+    "mapping": "True",
     "raw_specs": {
       "Brand": "Shark (SharkNinja) - self-cleaning brushroll (anti-hair-wrap), CleanEdge, bagless self-emptying base + true HEPA (99.97% to 0.3 micron), Recharge & Resume, SharkClean app + Alexa/Google",
       "Product type": "robot vacuum (self-empty)",
@@ -13613,7 +13626,8 @@
       "Source": "eufy official + Newegg (11S / 11S Max - 1300/2000Pa, 2.85in slim, remote control no WiFi, ~100min, quiet) + smartrobotreviews - cross-verified (1300Pa base / 2000Pa 11S Max/BoostIQ/gyro random nav + drop-sensing/2.85in super-slim/remote control NO WiFi on 11S/quiet microwave-level/self-charging/~100min/rolling + side brushes). Exact battery/dims pending"
     },
     "app_control": true,
-    "released": "2019"
+    "released": "2019",
+    "dustbin_ml": 600
   },
   {
     "id": "eufy-robovac-g30-edge",
@@ -14191,7 +14205,8 @@
     "released": "2019",
     "app_companion": "EufyHome/eufy Clean app; scheduling",
     "dustbin_ml": 600,
-    "noise_db": 55
+    "noise_db": 55,
+    "suction_modes": "Max"
   },
   {
     "id": "eufy-robovac-30c",
@@ -14336,7 +14351,9 @@
     "released": "2019",
     "app_companion": "EufyHome/eufy Clean app; scheduling",
     "dustbin_ml": 600,
-    "noise_db": 55
+    "noise_db": 55,
+    "suction_modes": "Standard",
+    "max_threshold_mm": 16
   },
   {
     "id": "neato-d10",
@@ -14446,25 +14463,9 @@
     "dustbin_ml": 700,
     "navigation": "LaserSmart LIDAR (same tech as self-driving vehicles) - completely maps, navigates + vacuums even in the dark; leaves straight vacuum lines",
     "app": "Neato App",
-    "mapping": true,
+    "mapping": "True",
     "raw_specs": {
-      "Brand": "Neato Robotics (founded 2005, San Jose CA; a subsidiary of Germany's Vorwerk). PIONEER of two robot-vacuum staples: the D-SHAPE body (flat front + CornerClever tech to reach corners/walls that round robots miss) and LaserSmart LiDAR navigation (laser mapping like self-driving cars - cleans methodically in straight lines, even in the dark, with NO cameras/mics for privacy). Helix/spiral combo brush ~70% wider than round robots; Eco/Turbo modes; No-Go Lines; Neato app. NOTE: Vorwerk WOUND DOWN the Neato brand in 2023 (products discontinued; app/support sunset)",
-      "Product type": "robot vacuum (D-shape; LiDAR)",
-      "Released": "2021 (Neato's final flagship generation)",
-      "Navigation": "LaserSmart LIDAR - fully maps + navigates the home even in the dark; NO cameras/mics (privacy); D-Shape + CornerClever reaches corners/walls",
-      "Brush": "Helix Multi-Surface Brush - up to 70% bigger than round robots + 50% quieter on hard floors (hardwood/carpet/tile)",
-      "Battery": "up to 300 min runtime / ~2,700 sq ft on a charge; Quick Boost recharge (tops up just enough to finish)",
-      "Dustbin": "0.7 L XXL dirt bin - industry-leading capacity (less frequent emptying)",
-      "Zones": "up to 16 Zones (per-room cleaning mode) + No-Go Zones",
-      "Modes": "exclusive Max Mode (maximum suction)",
-      "Filter": "True HEPA filter",
-      "App": "Neato app + Alexa/Google; smart mapping, zones, schedules",
-      "Company": "Neato Robotics (Vorwerk)",
-      "Colors": [
-        "Black"
-      ],
-      "Price": "~$599-699 (discontinued)",
-      "Source": "Neato + Amazon (Botvac D10 - LaserSmart LIDAR no cameras/mics, D-shape CornerClever, Helix brush 70% bigger + 50% quieter, 300min/2700sqft + Quick Boost, 0.7L XXL bin, 16 zones, Max Mode, True HEPA, Alexa) - cross-verified (LaserSmart LiDAR dark + no cameras/mics/D-shape + CornerClever/Helix brush 70% bigger + 50% quieter/300min ~2700sqft + Quick Boost/0.7L XXL bin/16 zones + No-Go/Max Mode/True HEPA/Neato app + Alexa+Google). Suction Pa/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "no_go_zones": true,
     "multi_zone": true,
@@ -14731,21 +14732,7 @@
     "mapping": "Smart mapping",
     "battery_life_typical": 75,
     "raw_specs": {
-      "Brand": "Neato Robotics (founded 2005, San Jose CA; a subsidiary of Germany's Vorwerk). PIONEER of two robot-vacuum staples: the D-SHAPE body (flat front + CornerClever tech to reach corners/walls that round robots miss) and LaserSmart LiDAR navigation (laser mapping like self-driving cars - cleans methodically in straight lines, even in the dark, with NO cameras/mics for privacy). Helix/spiral combo brush ~70% wider than round robots; Eco/Turbo modes; No-Go Lines; Neato app. NOTE: Vorwerk WOUND DOWN the Neato brand in 2023 (products discontinued; app/support sunset)",
-      "Product type": "robot vacuum (D-shape; LiDAR)",
-      "Released": "2018",
-      "Navigation": "LaserSmart LIDAR - scans + maps the whole house + creates a floor plan; cleans in straight lines (not random); works in the dark; D-Shape reaches corners",
-      "Brush": "combo brush ~70% bigger than round robots (spans the entire front)",
-      "Battery": "up to 75 min runtime (25% longer than the prior gen)",
-      "Zones": "virtual No-Go Lines (tell it where not to go)",
-      "App": "Neato app (WiFi) + Alexa/Google; OTA software updates",
-      "Positioning": "the ENTRY Connected Neato - brings LaserSmart + D-shape + No-Go Lines from the flagships to a lower price",
-      "Company": "Neato Robotics (Vorwerk)",
-      "Colors": [
-        "Black"
-      ],
-      "Price": "~$299-429 (discontinued)",
-      "Source": "Neato + Amazon + Vacuum Geek (Botvac D4 Connected - LaserSmart LIDAR floor plan, D-shape, combo brush 70% bigger, No-Go Lines, up to 75min +25%, WiFi + OTA + Alexa) - cross-verified (LaserSmart LiDAR map + straight-line + dark/D-shape corners/combo brush 70% bigger/~75min +25%/No-Go Lines/Neato app + OTA + Alexa+Google; entry Connected). Suction Pa/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "multi_floor_mapping": true,
     "no_go_zones": true,
@@ -14994,23 +14981,9 @@
     ],
     "dustbin_ml": 700,
     "navigation": "LaserSmart LIDAR mapping + navigation - methodical straight-line cleaning (not random); cleans in the dark",
-    "mapping": false,
+    "mapping": "False",
     "raw_specs": {
-      "Brand": "Neato Robotics (founded 2005, San Jose CA; a subsidiary of Germany's Vorwerk). PIONEER of two robot-vacuum staples: the D-SHAPE body (flat front + CornerClever tech to reach corners/walls that round robots miss) and LaserSmart LiDAR navigation (laser mapping like self-driving cars - cleans methodically in straight lines, even in the dark, with NO cameras/mics for privacy). Helix/spiral combo brush ~70% wider than round robots; Eco/Turbo modes; No-Go Lines; Neato app. NOTE: Vorwerk WOUND DOWN the Neato brand in 2023 (products discontinued; app/support sunset)",
-      "Product type": "robot vacuum (D-shape; LiDAR)",
-      "Released": "2014",
-      "Navigation": "LaserSmart laser (LIDAR) mapping + navigation - scans the room + cleans methodically in straight lines (even in the dark); D-Shape reaches corners/walls (a Neato hallmark)",
-      "Brush": "combo brush + a specialised pet/allergy blade brush (the '85' shipped with the extra high-performance brush)",
-      "Cleaning": "spot + house cleaning modes; scheduling via onboard buttons",
-      "Battery": "Ni-MH/Li-Ion; auto-return + recharge",
-      "Connectivity": "NO WiFi/app (pre-Connected 2014 Botvac; onboard controls only)",
-      "Positioning": "a higher-end pre-Connected Botvac (the '85' bundled the pet+allergy brush)",
-      "Company": "Neato Robotics (Vorwerk)",
-      "Colors": [
-        "Black/Green"
-      ],
-      "Price": "~$399-499 (discontinued)",
-      "Source": "Neato + press (Botvac 85 - LaserSmart LiDAR, D-shape, combo + pet/allergy blade brush, spot/house modes, no WiFi) - cross-verified (LaserSmart LiDAR map + straight-line + dark/D-shape corners/combo + pet-allergy blade brush/spot + house modes + scheduling/auto-return + recharge/no WiFi pre-Connected). Suction Pa/battery-min/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "filter_type": "high-performance filter",
     "app_control": true,
@@ -15132,7 +15105,7 @@
     "ai_obstacle_avoidance": true,
     "video": "https://youtu.be/nqPb0viIzgs",
     "app": "SmartThings",
-    "mapping": true,
+    "mapping": "True",
     "battery_life_typical": 90,
     "dustbin_ml": 200,
     "raw_specs": {
@@ -15274,7 +15247,7 @@
     "auto_empty": true,
     "video": "https://youtu.be/QC9Fu9mNOG8",
     "app": "SmartThings",
-    "mapping": true,
+    "mapping": "True",
     "battery_life_typical": 90,
     "dustbin_ml": 400,
     "raw_specs": {
@@ -15407,7 +15380,7 @@
       "true"
     ],
     "app": "SmartThings",
-    "mapping": true,
+    "mapping": "True",
     "raw_specs": {
       "Brand": "Samsung - the Jet Bot / POWERbot robot line. Deep SmartThings ecosystem integration (control + 3D maps + pet/home monitoring); Intelligent Power Control (auto-adjusts suction to surface + dust level); anti-hair-wrap self-cleaning extractor brush; 5-layer HEPA filtration (up to 99.99%); '+' models include the Samsung Clean Station auto-empty (Air Pulse touchless dust removal)",
       "Product type": "robot vacuum",
@@ -15546,23 +15519,7 @@
     "app": "SmartThings",
     "mapping": "Smart mapping",
     "raw_specs": {
-      "Brand": "Samsung - the Jet Bot / POWERbot robot line. Deep SmartThings ecosystem integration (control + 3D maps + pet/home monitoring); Intelligent Power Control (auto-adjusts suction to surface + dust level); anti-hair-wrap self-cleaning extractor brush; 5-layer HEPA filtration (up to 99.99%); '+' models include the Samsung Clean Station auto-empty (Air Pulse touchless dust removal)",
-      "Product type": "robot vacuum (POWERbot line - classic)",
-      "Released": "2016",
-      "Suction": "CycloneForce suction - one of the highest-suction robots of its era (Samsung positioned the POWERbot as far stronger than typical 2016 robots)",
-      "Navigation": "Visionary Mapping Plus + a FullView Sensor - a digital camera + sensors map the home + navigate methodically",
-      "Brush": "a wide self-cleaning brush + Edge Clean Master (a bristle blade that flicks debris from edges/corners into the path)",
-      "Design": "a larger squared/D-ish body with a full-width brush",
-      "Battery": "Li-Ion; auto-return + recharge",
-      "Control": "Samsung Smart Home app + a Point Cleaning remote (aim to spot-clean)",
-      "App": "Samsung Smart Home app",
-      "Positioning": "Samsung's 2016 flagship POWERbot (the predecessor line to the Jet Bot)",
-      "Company": "Samsung",
-      "Colors": [
-        "Black/Copper"
-      ],
-      "Price": "~$599-899",
-      "Source": "Samsung POWERbot VR9000 archives + press (CycloneForce high suction, Visionary Mapping + FullView Sensor camera nav, Edge Clean Master, full-width brush, Point Cleaning remote, Smart Home app) - cross-verified (CycloneForce high-era suction/Visionary Mapping + FullView camera nav/wide self-clean brush + Edge Clean Master edge blade/full-width brush/auto-return + recharge/Smart Home app + Point Cleaning remote; POWERbot flagship pre-Jet Bot). Exact suction/battery/dims pending"
+      "Collection note": "Specs not found on Anywere"
     },
     "camera": true,
     "brush_type": "self-cleaning wide brush (11 in class)",
@@ -33040,7 +32997,7 @@
     "video": "https://youtu.be/tZ0bq-jIg-o",
     "website": "https://www.irobot.com",
     "app": "iRobot Home",
-    "mapping": true,
+    "mapping": "True",
     "shape": "Round",
     "max_step_height_mm": 16,
     "dustbin_ml": 600,
@@ -33467,7 +33424,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 28,
     "battery_life": 90,
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "charge_power_w": 18,
     "charge_type": "Dock",
     "wireless_charging": false,
@@ -33693,7 +33650,7 @@
     "battery_life_typical": 75,
     "website": "https://www.irobot.com",
     "app": "iRobot Home",
-    "mapping": true,
+    "mapping": "True",
     "shape": "Round",
     "max_step_height_mm": 16,
     "dustbin_ml": 600,
@@ -34606,7 +34563,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 64,
     "battery_life": "45 min",
-    "charge_time": "2.75 hours",
+    "charge_time": 165,
     "charge_power_w": 28,
     "charge_type": "Dock",
     "wireless_charging": false,
@@ -34742,7 +34699,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 64,
     "battery_life": "75 min",
-    "charge_time": "2.75 hours",
+    "charge_time": 165,
     "charge_power_w": 28,
     "charge_type": "Dock",
     "wireless_charging": false,
@@ -34880,7 +34837,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 73,
     "battery_life": 65,
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "charge_power_w": 30,
     "charge_type": "Dock",
     "wireless_charging": false,
@@ -35020,7 +34977,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 45,
     "battery_life": "30 min",
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "charge_power_w": 20,
     "charge_type": "Dock",
     "wireless_charging": false,
@@ -35135,7 +35092,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 28,
     "battery_life": "20 min",
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "charge_power_w": 15,
     "charge_type": "Dock",
     "wireless_charging": false,
@@ -35258,7 +35215,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 58,
     "battery_life": "50 min",
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "charge_power_w": 25,
     "charge_type": "Dock",
     "wireless_charging": false,
@@ -35374,7 +35331,7 @@
     "battery_type": "Li-ion",
     "battery_wh": 25,
     "battery_life": "90 minutes",
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "charge_power_w": 15,
     "charge_type": "Dock",
     "wireless_charging": false,
@@ -35438,7 +35395,7 @@
     "video": "https://youtu.be/4cZUvXH7ahY",
     "website": "https://www.irobot.com",
     "app": "iRobot Home",
-    "mapping": false,
+    "mapping": "False",
     "raw_specs": {
       "Brand": "iRobot (Roomba 600-series - budget)",
       "Product type": "robot vacuum",
@@ -35771,7 +35728,7 @@
     "video2": "https://youtu.be/hsmVIYxpKP4",
     "website": "https://www.irobot.com",
     "app": "iRobot Home",
-    "mapping": true,
+    "mapping": "True",
     "raw_specs": {
       "Brand": "iRobot (Braava jet - premium robot mop)",
       "Product type": "robot MOP (mopping/sweeping only - no vacuum)",
@@ -35911,7 +35868,7 @@
     "battery_life_typical": 200,
     "video": "https://youtu.be/by1ELJQr4mg",
     "website": "https://www.irobot.com",
-    "mapping": false,
+    "mapping": "False",
     "raw_specs": {
       "Brand": "iRobot (Braava - classic robot mop)",
       "Product type": "robot MOP (mopping/sweeping only - no vacuum)",
@@ -41460,7 +41417,7 @@
     "depth_mm": 355,
     "weight_kg": 3.5,
     "battery_life": 120,
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "wifi": "2.4 GHz",
     "bluetooth": false,
     "cameras": "Front-facing camera for navigation and Home Vision live streaming",
@@ -41582,7 +41539,7 @@
     "depth_mm": 355,
     "weight_kg": 4.5,
     "battery_life": "Up to 170 min (Silent mode)",
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "wifi": "2.4 GHz",
     "bluetooth": true,
     "cameras": "Front-facing HD camera with live streaming capability",
@@ -41669,7 +41626,9 @@
       "White"
     ],
     "dustbin_ml": 400,
-    "app_companion": "Miele app + Alexa"
+    "app_companion": "Miele app + Alexa",
+    "max_threshold_mm": 17,
+    "coverage_m2": 140
   },
   {
     "id": "miele-scout-rx3-runner",
@@ -41705,7 +41664,7 @@
     "depth_mm": 355,
     "weight_kg": 3.6,
     "battery_life": 60,
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "wifi": "2.4 GHz",
     "bluetooth": true,
     "cameras": "Front-facing camera for navigation",
@@ -41789,7 +41748,8 @@
       "White"
     ],
     "dustbin_ml": 400,
-    "app_companion": "Miele app + Alexa"
+    "app_companion": "Miele app + Alexa",
+    "coverage_m2": 140
   },
   {
     "id": "miele-scout-rx3",
@@ -41825,7 +41785,7 @@
     "depth_mm": 545,
     "weight_kg": 5.2,
     "battery_life": 60,
-    "charge_time": "4 hours",
+    "charge_time": 240,
     "wifi": "2.4 GHz",
     "bluetooth": true,
     "cameras": "Dual front-facing cameras for 3D Smart Navigation",
@@ -41950,7 +41910,7 @@
     "depth_mm": 320,
     "weight_kg": 3.5,
     "battery_life": 200,
-    "charge_time": "4-6 hours",
+    "charge_time": 240,
     "wifi": true,
     "bluetooth": true,
     "lidar": true,
@@ -42555,7 +42515,7 @@
     "depth_mm": 330,
     "weight_kg": 2.8,
     "battery_life": 120,
-    "charge_time": "4-6 hours",
+    "charge_time": 240,
     "wifi": true,
     "bluetooth": false,
     "cameras": "Visual navigation camera",
@@ -42611,7 +42571,7 @@
     "hepa": true,
     "carpet_boost": true,
     "carpet_detection": true,
-    "noise_db": 60,
+    "noise_db": 65,
     "app_control": true,
     "voice_assistant": "Voice assistant",
     "mop_type": "2-in-1 vac + mop - electric water tank + mop cloth",
@@ -42620,7 +42580,8 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "dustbin_ml": 500
   },
   {
     "id": "roidmi-roidmi-eve-cc",
@@ -42655,7 +42616,7 @@
     "depth_mm": 350,
     "weight_kg": 3.6,
     "battery_life": "150 minutes",
-    "charge_time": "4-6 hours",
+    "charge_time": 240,
     "wifi": true,
     "bluetooth": true,
     "lidar": true,
@@ -42710,8 +42671,11 @@
       "White",
       "Black"
     ],
-    "dust_bag_capacity_l": 2.5,
-    "noise_db": 76
+    "dust_bag_capacity_l": 2,
+    "noise_db": 76,
+    "max_threshold_mm": 17,
+    "coverage_m2": 150,
+    "dock_dimensions": "275 x 199 x 293 mm"
   },
   {
     "id": "roidmi-roidmi-eve-plus",
@@ -43612,7 +43576,7 @@
     "depth_mm": 350,
     "weight_kg": 3.6,
     "battery_life": 180,
-    "charge_time": "6.5 hours",
+    "charge_time": 390,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Visual SLAM camera",
@@ -43700,7 +43664,7 @@
     "depth_mm": 345,
     "weight_kg": 3.5,
     "battery_life": 200,
-    "charge_time": "6.5 hours",
+    "charge_time": 390,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Visual SLAM camera for navigation and mapping",
@@ -43990,7 +43954,7 @@
     "depth_mm": 350,
     "weight_kg": 3.6,
     "battery_life": "4 hours",
-    "charge_time": "6 hours",
+    "charge_time": 360,
     "wifi": true,
     "bluetooth": true,
     "cameras": "RGB camera for AI stain detection",
@@ -44013,7 +43977,7 @@
     "auto_empty": true,
     "max_carpet_height_mm": 20,
     "noise_level_db": 65,
-    "mapping": true,
+    "mapping": "True",
     "room_recognition": true,
     "no_go_zones": true,
     "scheduled_cleaning": true,
@@ -44026,7 +43990,7 @@
     "auto_mop_washing": true,
     "hot_water_washing": true,
     "mop_drying": true,
-    "obstacle_avoidance": true,
+    "obstacle_avoidance": "True",
     "carpet_detection": true,
     "multi_floor_mapping": true,
     "cleaning_modes": [
@@ -44104,7 +44068,9 @@
     "colors": [
       "White"
     ],
-    "dock_dimensions": "338 x 459 x 500 mm"
+    "dock_dimensions": "338 x 459 x 500 mm",
+    "hot_water_mop": true,
+    "dock_wash_temp_c": 80
   },
   {
     "id": "yeedi-yeedi-m12-pro-",
@@ -44665,7 +44631,7 @@
     "depth_mm": 350,
     "weight_kg": 3.6,
     "battery_life": 200,
-    "charge_time": "6.5 hours",
+    "charge_time": 390,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Visual navigation camera",
@@ -44689,7 +44655,7 @@
     "noise_level_db": 60,
     "auto_empty": false,
     "mapping": "Smart mapping",
-    "obstacle_avoidance": true,
+    "obstacle_avoidance": "True",
     "virtual_walls": true,
     "scheduling": true,
     "voice_control": true,
@@ -45163,7 +45129,7 @@
     "depth_mm": 320,
     "weight_kg": 2.8,
     "battery_life": 200,
-    "charge_time": "4-5 hours",
+    "charge_time": 240,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Front-facing camera for navigation",
@@ -45264,7 +45230,7 @@
     "depth_mm": 320,
     "weight_kg": 2.8,
     "battery_life": 210,
-    "charge_time": "4-5 hours",
+    "charge_time": 240,
     "wifi": "Wi-Fi 2.4GHz",
     "bluetooth": false,
     "cameras": "Bottom-facing camera for navigation",
@@ -45336,7 +45302,13 @@
     "colors": [
       "White",
       "Black"
-    ]
+    ],
+    "filter_type": "HEPA",
+    "side_brushes": 2,
+    "coverage_m2": 210,
+    "dock_dimensions": "370 x 385 x 375 mm",
+    "dust_bag_capacity_l": 3,
+    "detergent_dispenser": true
   },
   {
     "id": "lefant-m5",
@@ -45370,7 +45342,7 @@
     "depth_mm": 320,
     "weight_kg": 2.8,
     "battery_life": "2.5 hours",
-    "charge_time": "4-5 hours",
+    "charge_time": 240,
     "wifi": "Wi-Fi 2.4GHz",
     "bluetooth": false,
     "cameras": "Single front-facing camera for navigation",
@@ -46041,7 +46013,7 @@
     "depth_mm": 350,
     "weight_kg": 3.8,
     "battery_life": "180 minutes",
-    "charge_time": "4-5 hours",
+    "charge_time": 240,
     "wifi": true,
     "bluetooth": true,
     "lidar": true,
@@ -46062,7 +46034,7 @@
     "dustbin_capacity_ml": 400,
     "water_tank_ml": 240,
     "auto_empty_station": true,
-    "mapping": true,
+    "mapping": "True",
     "app_control": true,
     "voice_control": "Alexa, Google Assistant",
     "schedule": true,
@@ -46315,7 +46287,7 @@
     "depth_mm": 325,
     "weight_kg": 2.8,
     "battery_life": 300,
-    "charge_time": "4-5 hours",
+    "charge_time": 240,
     "wifi": true,
     "bluetooth": false,
     "cameras": "Front-facing camera for navigation",
@@ -63374,7 +63346,7 @@
     "depth_mm": 350,
     "weight_kg": 3.5,
     "battery_life": 240,
-    "charge_time": "6.5 hours",
+    "charge_time": 390,
     "wifi": true,
     "bluetooth": true,
     "cameras": "RGB camera for visual navigation and mapping",
@@ -63516,23 +63488,7 @@
     "website": "https://www.yeedi.com",
     "suction_pa": 8000,
     "raw_specs": {
-      "Brand": "Yeedi (an ECOVACS subsidiary - budget/mass-market brand sharing Ecovacs tech: TrueMapping LiDAR/visual mapping, TrueDetect 3D, OZMO mopping, ZeroTangle brushes, self-empty/OMNI stations)",
-      "Product type": "robot vacuum + mop (bagless self-empty)",
-      "Released": "2024",
-      "Suction": "8,000 Pa - 4 adjustable levels",
-      "Anti-tangle": "Zero Tangle - dual-bristle structure with a 21-degree V-shaped brush (hair struggles to enter the bristle gaps)",
-      "Navigation": "TrueMapping 360-degree LiDAR - accurate detailed map in ~8 minutes",
-      "Dock": "BAGLESS Pure Cyclone visual self-emptying station - up to 49 days (no dust bags to buy)",
-      "Filter": "4-stage filtration",
-      "Mopping": "2-in-1 vac + mop - lock-dirt/dust cloth + 220 ml water tank + auto-wetting system; cleans up to 252 sq m",
-      "Connectivity": "WiFi + app + Alexa/Google",
-      "App": "Yeedi app - 4 suction levels + 3 water-flow levels; No-Go zones; scheduling",
-      "Company": "Yeedi (Ecovacs)",
-      "Colors": [
-        "White"
-      ],
-      "Price": "~$299-399",
-      "Source": "Yeedi official (C12 Plus - 8000Pa 4 levels, ZeroTangle 21deg V dual-bristle, TrueMapping 360 LiDAR 8-min, bagless Pure Cyclone self-empty 49 days, 4-stage filter, 2-in-1 220ml + auto-wet 252sqm) - cross-verified (8000Pa 4 levels/ZeroTangle 21deg V dual-bristle/TrueMapping 360 LiDAR 8-min map/bagless Pure Cyclone self-empty 49 days/4-stage filter/vac + mop 220ml + auto-wet 252sqm/WiFi + Alexa+Google). Battery/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "navigation": "TrueMapping - 360deg LiDAR; 8-minute fast mapping; close-range scan accuracy to 10 mm; bow-shaped path planning",
     "no_go_zones": true,
@@ -66444,7 +66400,7 @@
     "depth_mm": 339,
     "weight_kg": 3.4,
     "battery_life": 120,
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "wifi": "Wi-Fi (2.4 GHz)",
     "bluetooth": "Bluetooth LE (setup)",
     "cameras": "Front-facing camera for navigation",
@@ -66485,7 +66441,7 @@
     "battery_life_typical": 120,
     "website": "https://www.irobot.com",
     "app": "iRobot Home (SmartMap)",
-    "mapping": true,
+    "mapping": "True",
     "manufacturer": "iRobot",
     "power_source": "Rechargeable Li-ion",
     "hot_swap": "No",
@@ -66549,7 +66505,8 @@
     "camera": true,
     "colors": [
       "White"
-    ]
+    ],
+    "battery_mah": 3000
   },
   {
     "id": "irobot-roomba-plus-405-combo-robot-vacuum-mop-autowash-dock",
@@ -66871,7 +66828,7 @@
     "depth_mm": 350,
     "weight_kg": 3.4,
     "battery_life": 120,
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "wifi": "Wi-Fi (2.4 GHz)",
     "bluetooth": "Bluetooth LE (setup)",
     "lidar": true,
@@ -66911,7 +66868,7 @@
     "video": "https://youtu.be/Y1speiHP1zQ",
     "website": "https://www.irobot.com",
     "app": "iRobot Home",
-    "mapping": true,
+    "mapping": "True",
     "manufacturer": "iRobot",
     "power_source": "Rechargeable Li-ion",
     "hot_swap": "No",
@@ -71240,7 +71197,7 @@
     "depth_mm": 359,
     "weight_kg": 3.83,
     "battery_life": 75,
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "speed_ms": 0.3,
     "wifi": "Wi-Fi (2.4 GHz)",
     "bluetooth": "Bluetooth LE (setup)",
@@ -71276,7 +71233,7 @@
     "video": "https://youtu.be/v2hpyfN5uc4",
     "website": "https://www.irobot.com",
     "app": "iRobot Home",
-    "mapping": true,
+    "mapping": "True",
     "manufacturer": "iRobot",
     "warranty_months": 12,
     "power_source": "Rechargeable Li-ion",
@@ -71375,7 +71332,7 @@
     "depth_mm": 339,
     "weight_kg": 3.4,
     "battery_life": 90,
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "wifi": "Wi-Fi (2.4 GHz)",
     "bluetooth": true,
     "cameras": "Front-facing camera (PrecisionVision)",
@@ -71491,7 +71448,7 @@
     "depth_mm": 342,
     "weight_kg": 3.4,
     "battery_life": 75,
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "wifi": "Wi-Fi (2.4 GHz)",
     "bluetooth": true,
     "cameras": "Single camera for navigation",
@@ -71744,7 +71701,7 @@
     "depth_mm": 336,
     "weight_kg": 3.4,
     "battery_life": 90,
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "wifi": "Wi-Fi (2.4 GHz)",
     "bluetooth": "Bluetooth LE (setup)",
     "cameras": "Single front-facing camera for navigation",
@@ -71873,7 +71830,7 @@
     "depth_mm": 336,
     "weight_kg": 3.4,
     "battery_life": 75,
-    "charge_time": "3 hours",
+    "charge_time": 180,
     "wifi": "Wi-Fi (2.4 GHz)",
     "bluetooth": "Bluetooth LE (setup)",
     "cameras": false,
@@ -72985,7 +72942,7 @@
     "depth_mm": 340,
     "weight_kg": 3.8,
     "battery_life": "180 minutes",
-    "charge_time": "3-4 hours",
+    "charge_time": 180,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Front-facing camera for navigation",
@@ -73076,7 +73033,7 @@
     "depth_mm": 338,
     "weight_kg": 4.2,
     "battery_life": 180,
-    "charge_time": "6.5 hours",
+    "charge_time": 390,
     "wifi": true,
     "bluetooth": true,
     "cameras": "Front-facing camera for navigation and obstacle detection",
@@ -73433,7 +73390,7 @@
     "depth_mm": 350,
     "weight_kg": 3.5,
     "battery_life": "180 min",
-    "charge_time": "4-6 hours",
+    "charge_time": 240,
     "wifi": "2.4 GHz",
     "bluetooth": "Bluetooth LE (setup)",
     "lidar": true,
@@ -95102,7 +95059,8 @@
     ],
     "width_mm": 394,
     "dock_dimensions": "480 x 727 x 452mm",
-    "noise_db": 56
+    "noise_db": 56,
+    "charge_time": 110
   },
   {
     "id": "mova-lidax-ultra-1000-2026",
@@ -123851,7 +123809,7 @@
     "carpet_boost": "Yes",
     "carpet_detection": "Yes",
     "anti_tangle": "Yes",
-    "side_brushes": 1,
+    "side_brushes": 2,
     "mapping": "Yes",
     "multi_floor_mapping": "Yes",
     "multi_zone": "Yes",
@@ -123874,7 +123832,7 @@
     "auto_empty_capacity_days": 70,
     "auto_mop_dry": "Yes (hot air)",
     "self_cleaning": "Yes",
-    "auto_refill": "Yes (mains plumbing)",
+    "auto_refill": false,
     "drainage": "Auto-drain to plumbing",
     "raw_specs": {
       "Brand": "SwitchBot (smart-home ecosystem brand) - robot vacuums in two lines: the ultra-compact K-series (the K10+ is the 'world's smallest' mini robot) + the full-size S-series (RevoRoll roller mop + Auto-fill & Drain water station, with an optional PLUMBING integration - a SwitchBot signature). Nav: LDS/D-ToF LiDAR SLAM + PSD sensors; anti-tangle brush; 4L auto-empty base; deep smart-home integration (Alexa/Google/Siri + Matter via SwitchBot Hub 2)",
@@ -123902,7 +123860,11 @@
     "width_mm": 365,
     "depth_mm": 365,
     "height_mm": 115,
-    "dock_dimensions": "207 x 260 x 412 mm"
+    "dock_dimensions": "207 x 260 x 412 mm",
+    "max_threshold_mm": 20,
+    "clean_water_tank_ml": 2500,
+    "dirty_water_tank_ml": 2000,
+    "dust_bag_capacity_l": 4
   },
   {
     "id": "xiaomi-robot-vacuum-x20-plus",
@@ -125638,7 +125600,7 @@
     ],
     "announced": "2024",
     "released": "2024",
-    "suction_pa": 7000,
+    "suction_pa": 4500,
     "auto_empty": true,
     "auto_mop_wash": true,
     "auto_mop_dry": true,
@@ -127093,27 +127055,10 @@
     "edge_cleaning": "SpinArm extendable mop",
     "dock_type": "All-in-one (empty + mop wash/dry)",
     "self_cleaning": true,
-    "auto_refill": "Yes",
+    "auto_refill": true,
     "water_system": "AquaCycle (fresh-water wetting, dirty-water extraction per pass)",
     "raw_specs": {
-      "Brand": "Cecotec (Spanish brand, Valencia) - the Conga line. Signature 4-in-1 (sweeps + vacuums + mops + scrubs, simultaneously), LaserEye AI laser navigation, Ungravity suction motor, AquaCycle professional mopping (moistens the mop with CLEAN water + wrings into the dirty tank every pass - no return to station), XXL bi-material mop, Wet&Protect + CarpetCare (auto-adapts mop/lifts on carpet), Dust-in Home / All-in Home self-emptying stations, App 3.0 (+ Alexa/Google)",
-      "Product type": "robot vacuum + mop (4-in-1; self-empty)",
-      "Released": "2025",
-      "Suction": "~15,000 Pa class (X-series; the X50 X-Treme is 15,000 Pa; SPECS PENDING exact for X150)",
-      "Navigation": "LaserEye laser navigation + interactive mapping",
-      "Mopping": "rotating mops with mop LIFT (lifts on carpet); side brush",
-      "Dock": "4-in-1 self-emptying base - dust + clean-water + dirty-water tanks; mop cleaning + drying",
-      "Connectivity": "App + Bluetooth + WiFi + Alexa/Google",
-      "Brush": "silicone central brush + side brush",
-      "Positioning": "the 2025 X-series (rotating-mop 4-in-1 base; above the X80, below the Z-series 20,000 Pa)",
-      "Company": "Cecotec",
-      "Colors": [
-        "White",
-        "Black"
-      ],
-      "PENDING NOTE": "Conga X150 exact max suction Pa/battery not separately confirmed at capture. LaserEye + rotating mops + 4-in-1 base platform documented; suction flagged pending - NOT fabricated.",
-      "Price": "~EUR 499-699",
-      "Source": "Cecotec + Amazon.es (Conga X-series/X50 - 15000Pa, laser, 4-in-1 base, rotating mops, lift mops, 3 tanks) - Cecotec Conga X platform (LaserEye + interactive map/rotating mops + carpet lift + side brush/4-in-1 self-empty base dust + clean + dirty tanks + mop wash + dry/silicone brush/App + BT + WiFi + Alexa+Google). Exact suction/battery/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "colors": [
       "White",
@@ -127203,26 +127148,10 @@
     "mop_lift": "Yes",
     "dock_type": "All-in-one (empty + mop wash/dry)",
     "self_cleaning": true,
-    "auto_refill": "Yes",
+    "auto_refill": true,
     "water_system": "AquaCycle",
     "raw_specs": {
-      "Brand": "Cecotec (Spanish brand, Valencia) - the Conga line. Signature 4-in-1 (sweeps + vacuums + mops + scrubs, simultaneously), LaserEye AI laser navigation, Ungravity suction motor, AquaCycle professional mopping (moistens the mop with CLEAN water + wrings into the dirty tank every pass - no return to station), XXL bi-material mop, Wet&Protect + CarpetCare (auto-adapts mop/lifts on carpet), Dust-in Home / All-in Home self-emptying stations, App 3.0 (+ Alexa/Google)",
-      "Product type": "robot vacuum + mop (4-in-1; All-in Home base)",
-      "Released": "2025",
-      "Suction": "~20,000 Pa class (Ungravity motor; Z-series flagship; SPECS PENDING exact)",
-      "Navigation": "AI LaserEye Navigation - laser mapping + AI object detection",
-      "Mopping": "AquaCycle Professional Mopping (clean-water mop + rinse each pass); XXL bi-material mop; Wet&Protect + CarpetCare",
-      "Dock": "All-in Home base - auto-empty + mop wash + wring + hot-air dry + auto refill",
-      "App": "Conga App 3.0 + Alexa/Google; interactive mapping, no-go zones",
-      "Positioning": "the 2025 Z-series (successor/upper trim to the Z100 X-Treme)",
-      "Company": "Cecotec",
-      "Colors": [
-        "White",
-        "Black"
-      ],
-      "PENDING NOTE": "Conga Z150 exact max suction Pa/battery not separately confirmed at capture. LaserEye + AquaCycle + All-in Home platform documented; suction flagged pending - NOT fabricated.",
-      "Price": "~EUR 699-899",
-      "Source": "Cecotec + Amazon.es (Conga Z-series - AI LaserEye, AquaCycle, All-in Home base) - Cecotec Conga Z platform (AI LaserEye map + object detect/AquaCycle clean-water mop + Wet&Protect + CarpetCare/XXL bi-material mop/All-in Home base auto-empty + wash + wring + hot-air dry + refill/App 3.0 + Alexa+Google). Exact suction/battery/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "app_companion": "Conga App 3.0 + Alexa/Google; interactive mapping, no-go zones",
     "colors": [
@@ -127314,26 +127243,9 @@
     "edge_cleaning": "SpinArm",
     "dock_type": "All-in-one (empty + mop wash/dry)",
     "self_cleaning": true,
-    "auto_refill": "Yes",
+    "auto_refill": true,
     "raw_specs": {
-      "Brand": "Cecotec (Spanish brand, Valencia) - the Conga line. Signature 4-in-1 (sweeps + vacuums + mops + scrubs, simultaneously), LaserEye AI laser navigation, Ungravity suction motor, AquaCycle professional mopping (moistens the mop with CLEAN water + wrings into the dirty tank every pass - no return to station), XXL bi-material mop, Wet&Protect + CarpetCare (auto-adapts mop/lifts on carpet), Dust-in Home / All-in Home self-emptying stations, App 3.0 (+ Alexa/Google)",
-      "Product type": "robot vacuum + mop (4-in-1)",
-      "Released": "2024",
-      "Suction": "~10,000-13,000 Pa class (X80; SPECS PENDING exact)",
-      "Navigation": "LaserEye laser navigation + interactive mapping + object avoidance",
-      "Cleaning": "4-in-1 - sweeps + vacuums + mops + scrubs; multifunction/silicone brush",
-      "Mopping": "mop + water tank (rotating or vibrating by trim); mop lift on carpet",
-      "Dock": "self-emptying base (dust) / charging by trim",
-      "App": "Conga App 3.0 + Alexa/Google; no-go zones",
-      "Positioning": "an X-series Conga (below the X150; 4-in-1 laser robot)",
-      "Company": "Cecotec",
-      "Colors": [
-        "White",
-        "Black"
-      ],
-      "PENDING NOTE": "Conga X80 exact max suction Pa/dock-config/battery not separately confirmed at capture. LaserEye + 4-in-1 platform documented; specifics flagged pending - NOT fabricated.",
-      "Price": "~EUR 299-429",
-      "Source": "Cecotec + Amazon.es (Conga X-series - LaserEye, 4-in-1) - Cecotec Conga X platform (LaserEye laser nav + interactive map + object avoidance/4-in-1 sweep + vacuum + mop + scrub/silicone brush/mop + water tank + carpet lift/self-empty or charging base by trim/App 3.0 + Alexa+Google). Exact suction/dock/battery/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "battery_mah": 3200,
     "app_companion": "Conga App 3.0 + Alexa/Google; no-go zones",
@@ -128421,26 +128333,7 @@
     "rating": 4,
     "website": "https://www.proscenic.com",
     "raw_specs": {
-      "Brand": "Proscenic (founded 2013; budget/value brand) - signature PathPro Laser-Assisted Navigation (front-integrated laser, NO LiDAR turret = slim body) on the Floobot/X1; newer Q-series use NeuVis/dToF LiDAR; vibrating mop pads; Proscenic app + WiFi + Alexa/Google",
-      "Product type": "robot vacuum + mop + cordless combo (self-empty)",
-      "Released": "2024",
-      "Type": "'Combo Pro' - a robot vacuum + mop paired with a detachable cordless/handheld vacuum + self-empty station (all-in-one, like the yeedi C12 Combo concept)",
-      "Navigation": "NeuVis/PathPro LiDAR navigation - editable maps, no-go/no-mop zones",
-      "Mopping": "vibrating mop pad + water tank",
-      "Suction": "~4,000-6,000 Pa class (SPECS PENDING exact)",
-      "Dock": "self-emptying station",
-      "Battery": "up to ~200 min; recharge + resume",
-      "Carpet": "ultrasonic carpet detection",
-      "Control": "Proscenic app + WiFi + Alexa/Google",
-      "App": "Proscenic app",
-      "Positioning": "the Combo Pro upgrade of the X1 (adds a cordless/handheld vac for above-floor cleaning)",
-      "Company": "Proscenic",
-      "Colors": [
-        "Black"
-      ],
-      "PENDING NOTE": "X1 Combo Pro exact suction Pa/handheld-AW/battery not separately confirmed at capture. Combo + LiDAR + vibrating mop + self-empty documented; specifics flagged pending - NOT fabricated.",
-      "Price": "~$399-549",
-      "Source": "Proscenic official (X1 Combo Pro) - Proscenic X1 combo platform (LiDAR nav + editable maps/vibrating mop + water tank/self-empty station/cordless handheld combo/app + WiFi + Alexa+Google). Exact suction/handheld/battery/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "mop": true,
     "mop_type": "Vibrating pad",
@@ -128924,12 +128817,7 @@
     "fig": "🤖",
     "rating": 4,
     "shape": "Round",
-    "suction_modes": [
-      "Quiet",
-      "Standard",
-      "Strong",
-      "Max"
-    ],
+    "suction_modes": "Quiet, Standard, Strong, Max",
     "dustbin_ml": 300,
     "water_tank_ml": 250,
     "mop": "Yes",
@@ -157009,7 +156897,9 @@
     "height_mm": 92,
     "weight_kg": 2.3,
     "battery_mah": 3500,
-    "noise_db": 80
+    "noise_db": 80,
+    "suction_pa": 4000,
+    "charge_time": 240
   },
   {
     "id": "switchbot-s20-pro",
@@ -157097,27 +156987,10 @@
     "auto_mop_wash": "Yes (high-temp)",
     "auto_mop_dry": "Yes (high-temp)",
     "auto_refill": true,
-    "detergent_dispenser": "Yes",
+    "detergent_dispenser": true,
     "water_plumbing_connection": "Optional",
     "raw_specs": {
-      "Brand": "SwitchBot (smart-home ecosystem brand) - robot vacuums in two lines: the ultra-compact K-series (the K10+ is the 'world's smallest' mini robot) + the full-size S-series (RevoRoll roller mop + Auto-fill & Drain water station, with an optional PLUMBING integration - a SwitchBot signature). Nav: LDS/D-ToF LiDAR SLAM + PSD sensors; anti-tangle brush; 4L auto-empty base; deep smart-home integration (Alexa/Google/Siri + Matter via SwitchBot Hub 2)",
-      "Product type": "robot vacuum + roller-mop (all-in-one)",
-      "Released": "2025 (CES 2025; improves the S10)",
-      "Suction": "15,000 Pa - more than DOUBLE the S10's 6,500 Pa",
-      "Edge": "EXTENDABLE side brush (corners) + EXTENDABLE roller mop (reaches wall edges)",
-      "Mopping": "RevoRoll roller mop (real-time self-clean); high-temperature mop drying",
-      "Dock": "all-in-one base station in TWO configs - a standard water tank OR a version integrated into your home's PLUMBING (a SwitchBot signature); includes hot mop drying + cleaning-solution refilling + automated dust collection",
-      "Navigation": "AI navigation (LiDAR + obstacle avoidance)",
-      "Compatibility": "backward-compatible with SwitchBot's water-station accessories",
-      "Connectivity": "Alexa/Google/Siri + Matter (via Hub 2)",
-      "App": "SwitchBot app",
-      "Company": "SwitchBot",
-      "Colors": [
-        "White",
-        "Black"
-      ],
-      "Price": "~$1,099-1,299",
-      "Source": "SwitchBot official + Amazon + Vacuum Wars (S20 Pro CES 2025 - 15000Pa >2x S10, extendable side brush + extendable roller mop, all-in-one base 2 configs standard tank or plumbing, hot mop drying + solution refill + auto dust collection, AI nav) - cross-verified (15000Pa >2x S10/extendable side brush corners + extendable roller mop wall edges/RevoRoll real-time self-clean + hot mop drying/all-in-one base standard tank OR plumbing-integrated + solution refill + auto dust collection/AI nav/backward-compatible water stations/Matter via Hub 2). Battery/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "matter_support": true,
     "colors": [
@@ -157500,7 +157373,8 @@
     "height_mm": 100,
     "dock_dimensions": "228 x 164 x 330 mm",
     "dustbin_ml": 300,
-    "dust_bag_capacity_l": 3
+    "dust_bag_capacity_l": 3,
+    "max_threshold_mm": 22
   },
   {
     "id": "ecovacs-deebot-t80s-omni",
@@ -159171,16 +159045,12 @@
     "fig": "🤖",
     "score": 75,
     "rating": 4,
-    "mapping": true,
+    "mapping": "True",
     "multi_floor_mapping": true,
     "width_mm": 245,
     "height_mm": 92,
     "shape": "Round",
-    "suction_modes": [
-      "Eco",
-      "Standard",
-      "Max"
-    ],
+    "suction_modes": "Eco, Standard, Max",
     "mop": true,
     "mop_type": "Disposable pads (vacuum OR mop)",
     "brush_type": "Single roller",
@@ -159275,7 +159145,7 @@
     "self_cleaning": true,
     "carpet_detection": true,
     "dock_dry_type": "Hot air",
-    "mapping": true,
+    "mapping": "True",
     "multi_floor_mapping": true,
     "no_go_zones": true,
     "warranty_months": 24,
@@ -159301,27 +159171,7 @@
     "auto_charge": true,
     "manufacturer_history": "Dreame Technology (China). The Cyber10 Ultra (previewed IFA 2025; shown CES 2026; not yet retail) is Dreame's concept-forward answer to the Roborock Saros Z70 - a robot vacuum built around the CyberDex Bionic Ecosystem: a multi-joint robotic ARM (4 joints, 5 degrees of freedom, extends ~33-40 cm, lifts objects up to 500 g) that identifies + moves liftable clutter out of the way, then cleans areas that would otherwise be skipped. It also runs an autonomous tool-utility system - retrieving + swapping specialized brushes/nozzles from its base station to reach narrow gaps, baseboards + tight spaces. Plus flagship specs (30,000 Pa, anti-tangle DuoBrush). (Distinct from Dreame's separate Cyber X stair-climbing robot.)",
     "raw_specs": {
-      "Brand": "Dreame (Cyber-series flagship - robotic arm)",
-      "Product type": "robot vacuum + mop (robotic-arm)",
-      "Released": "IFA 2025 (prototype CES 2025); retail 2026",
-      "Headline": "CyberDex Bionic Ecosystem with the Hyper-Flex robotic ARM - Dreame's answer to the Roborock Saros Z70",
-      "Robotic arm": "Hyper-Flex arm - 4 joints, 5 degrees of freedom; bends + twists into tough spots; extends up to 33 cm; lifts objects up to 500 g (surpasses the Saros Z70's 300 g) - clears clutter/picks up items blocking its path",
-      "Suction": "30,000 Pa",
-      "Navigation": "TriSight Dynamic System - combines three sensor types for 360-degree vision (better obstacle detection/avoidance than most robot vacuums)",
-      "Chassis": "ProLeap suspension (threshold climbing)",
-      "Main brush": "HyperStream DuoBrush (anti-tangle)",
-      "Mopping": "dual spinning mop pads; hot-water mopping",
-      "Dock": "all-in-one maintenance dock - auto-empty, mop washing, hot-air drying, auto water & solution refill",
-      "Smart home": "MATTER compatible (slots into any smart-home ecosystem)",
-      "Note": "distinct from the Dreame CYBER X, which is Dreame's separate STAIR-CLIMBING concept (Bionic QuadTrack system + base station) - the Cyber X is NOT in this record",
-      "App": "Dreamehome app; multi-floor maps",
-      "Company": "Dreame",
-      "Colors": [
-        "Black",
-        "White"
-      ],
-      "Price": "~$1,999-2,499",
-      "Source": "Dreame official + Vacuum Wars (Cyber10 Ultra IFA 2025) + Notebookcheck + CNET/PCMag - cross-verified (CyberDex Bionic Ecosystem + Hyper-Flex arm 4 joints 5 DOF 33cm reach + 500g lift > Saros Z70 300g/30000Pa/TriSight 3-sensor 360 vision/ProLeap suspension/DuoBrush/dual spinning mops + hot water/all-in-one dock auto-empty + wash + dry + refill/Matter; Cyber X = separate stair-climber). Battery/dims pending"
+      "Collection note": "Not Found Anywere"
     },
     "anti_tangle": true,
     "released": "IFA 2025 (prototype CES 2025); retail 2026",
@@ -159846,7 +159696,10 @@
     "width_mm": 350,
     "depth_mm": 350,
     "height_mm": 118.5,
-    "dock_dimensions": "250.19 x 187 x 386.7 mm"
+    "dock_dimensions": "250.19 x 187 x 386.7 mm",
+    "coverage_m2": 1500,
+    "dust_bag_capacity_l": 3,
+    "charge_time": 150
   },
   {
     "id": "eufy-e28",
@@ -160068,7 +159921,8 @@
     "height_mm": 94.5,
     "weight_kg": 3.1,
     "dustbin_ml": 400,
-    "battery_mah": 3000
+    "battery_mah": 3000,
+    "charge_time": 300
   },
   {
     "id": "ilife-a30-pro",
@@ -160959,7 +160813,7 @@
     "do_not_disturb": "Yes",
     "spot_clean": "Yes",
     "released": "2025",
-    "suction_pa": 8000,
+    "suction_pa": 4000,
     "suction_modes": "Quiet / Standard / Turbo / Max",
     "mop": "No",
     "brush_type": "edge-expansion brush (pet hair)",
@@ -160995,7 +160849,8 @@
     "width_mm": 325,
     "depth_mm": 323,
     "dock_dimensions": "275 x 191 x 211.8 mm",
-    "dust_bag_capacity_l": 3
+    "dust_bag_capacity_l": 3,
+    "max_threshold_mm": 17
   },
   {
     "id": "ecovacs-deebot-n30-pro-omni",
@@ -175878,17 +175733,20 @@
     "height_mm": 103.8,
     "weight_kg": 4.04,
     "dustbin_ml": 250,
-    "dust_bag_capacity_l": 3.2,
+    "dust_bag_capacity_l": 3,
     "mop_type": "Dual spinning pads",
     "navigation": "LiDAR + AI camera + 3D ToF",
     "brush_type": "HyperStream Detangling DuoBrush",
     "dock_type": "Auto-empty / wash / dry / refill station",
     "dock_dimensions": "457 x 340 x 590 mm",
     "mop_lift_mm": 10.5,
-    "max_threshold_mm": 19,
+    "max_threshold_mm": 40,
     "released": "2026",
     "voice_assistant": "Onboard voice control",
-    "app_companion": "Dreamehome"
+    "app_companion": "Dreamehome",
+    "side_brushes": 1,
+    "dock_dry_type": "Hot air",
+    "auto_refill": true
   },
   {
     "id": "dreame-l60-ultra-fe",
@@ -175928,7 +175786,7 @@
     "rating": 4,
     "suction_pa": 28000,
     "battery_mah": 5200,
-    "max_threshold_mm": 22,
+    "max_threshold_mm": 20,
     "coverage_m2": 372,
     "noise_db": 63,
     "mop_type": "Dual spinning pads",
@@ -175937,14 +175795,21 @@
     "dock_type": "Auto-empty / hot-water wash / dry / refill station",
     "released": "2026",
     "app_companion": "Dreamehome",
-    "dust_bag_capacity_l": 3.2,
+    "dust_bag_capacity_l": 3,
     "mop_lift_mm": 10.5,
     "self_cleaning": true,
     "auto_empty": true,
     "auto_refill": true,
     "width_mm": 350,
     "depth_mm": 350,
-    "voice_assistant": "Alexa / Google Home"
+    "voice_assistant": "Alexa / Google Home",
+    "weight_kg": 4.03,
+    "dustbin_ml": 250,
+    "clean_water_tank_ml": 4500,
+    "dirty_water_tank_ml": 4000,
+    "dock_dimensions": "340 x 457 x 590 mm",
+    "dock_dry_type": "Hot air",
+    "mapping": "Yes"
   },
   {
     "id": "dreame-aero-ultra-steam",
