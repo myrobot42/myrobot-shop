@@ -176304,21 +176304,31 @@
     "raw_specs": {
       "Height": "118 cm",
       "Weight": "30 kg",
-      "DOF": "18",
+      "DOF": "18 (4 per arm, 5 per leg)",
       "Peak torque": "150 Nm (some sources 120 Nm)",
       "Top speed": "3.5 m/s (12.6 km/h)",
-      "Battery": "48V/7Ah quick-swap, ~2h / 2.5km, <5s swap",
-      "Compute": "Edge AI up to 67 TOPS; NVIDIA Jetson Orin (8GB/40 TOPS) + RK3588s open Linux stack",
-      "Abilities": "Continuous backflips, somersaults, running, dancing; 3D vision; LLM speech",
-      "OS": "OpenHarmony (this edition); base N2 is Linux",
-      "Price": "base N2 ~¥39,900 (~$5.5-9k)",
+      "Battery": "48V/7Ah quick-swap, ~2h / 2.5km walking, <5s swap",
+      "Compute": "Edge AI up to 67 TOPS; RK3588s open Linux + optional Jetson Orin",
+      "Abilities": "Continuous backflips, running, jumping; DRL anthropomorphic gait; LLM speech + visual interaction",
+      "OS": "OpenHarmony (this edition); base N2 Linux",
+      "Price": "~$5,500-9,000 (base N2 ~¥39,900)",
       "Note": "OpenHarmony Edition = consumer variant of the N2 (Paris Fashion Week 2025, humanoid half-marathon 2025)",
       "Source": "CMRA (HDC 2026-06-15); humanoid.press; aparobot; RBTX",
-      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB",
+      "Dimensions": "118 x 47 x 29 cm",
+      "Peak joint torque": "150 N·m",
+      "Vision": "Two depth cameras, 3D perception",
+      "SDK": "Python, C++, ROS, Linux; hi/low-level motion APIs",
+      "Lead time": "90-day early units",
+      "Roles": "Home, classroom, elder-care, R&D"
     },
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "peak_torque_nm": 150,
+    "origin": "China",
+    "price": "$5,500-9,000",
+    "depth_cameras": 2
   },
   {
     "id": "apptronik-apollo-2",
@@ -176334,24 +176344,42 @@
       "2026"
     ],
     "payload_kg": 25,
-    "actuator_type": "Linear actuators (muscle-mimicking)",
+    "actuator_type": "Electric linear actuators (force-controlled)",
     "ai_model": "Google Gemini Robotics",
     "ai_model_type": "VLA",
     "raw_specs": {
       "Design": "Modular - bipedal humanoid OR wheeled base configuration",
       "Predecessor": "Apollo (Apollo 1)",
-      "AI": "Google Gemini Robotics (partnership); shared 90,000 sq ft 'Robot Park' training facility (Austin)",
-      "Actuation": "Linear actuators mimicking human muscle; force-control architecture; flexible safety-zone perimeter",
-      "Payload": "~25 kg (55 lb) on Apollo 1 lineage",
+      "AI": "Google Gemini Robotics (partnership)",
+      "Actuation": "Electric linear actuators, force-control for safe collaboration",
+      "Payload": "25 kg (55 lb)",
       "Deployment": "Warehouse/logistics; GXO, Mercedes lineage",
       "Launched": "28 June 2026",
       "Note": "Apptronik also opened Robot Park data/training facility Jun 2026",
       "Source": "The Robot Report (Jul 2026); CMRA (2026-06-28)",
-      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB",
+      "Height": "~1.73 m (carried from Apollo 1; Apollo 2 not separately reconfirmed)",
+      "Weight": "~72.6 kg (carried from Apollo 1)",
+      "Runtime": "~4 h per hot-swap pack; 7x22 operation via swappable batteries",
+      "Battery swap": "<5 min",
+      "Charging": "Hot-swap packs + opportunity charging + tethering",
+      "Interaction": "Expressive LED mouth, coordinated lighting, speech + listening, chest status display",
+      "Mobility": "Modular - stationary, wheeled base, or fully bipedal",
+      "DOF": "SPECS PENDING - Apptronik has not published Apollo 2 DOF; online figures (28/71) are unsourced carryover from Apollo 1",
+      "Speed": "~1.5 m/s (Apollo 1 figure; Apollo 2 unconfirmed)",
+      "Deployments": "Mercedes-Benz, GXO, Jabil (Apollo program)",
+      "Funding": "$935M Series A Feb 2026 (Google, Mercedes, AT&T, QIA)",
+      "Lineage": "15+ prior platforms incl. NASA Valkyrie",
+      "Data note": "Apollo 2 debuted Jun 2026; several specs carried from Apollo 1 and flagged as such per manufacturer silence"
     },
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "height_mm": 1730,
+    "weight_kg": 72.6,
+    "battery_life": 240,
+    "origin": "USA",
+    "speed_ms": 1.5
   },
   {
     "id": "unitree-h2-plus",
@@ -176367,25 +176395,43 @@
       "2026"
     ],
     "dof": 75,
-    "chipset": "NVIDIA Jetson AGX Thor",
-    "hand_type": "Tactile five-finger",
+    "chipset": "NVIDIA Jetson AGX Thor (T5000)",
+    "hand_type": "Dual Sharpa Wave tactile five-finger (22 actuated DoF each)",
     "ai_model": "NVIDIA Isaac GR00T",
-    "price": "~$100,000",
+    "price": "$100,000",
     "raw_specs": {
       "DOF": "75",
-      "Compute": "NVIDIA Jetson AGX Thor",
-      "Hands": "Tactile five-finger",
-      "Platform": "NVIDIA Isaac GR00T reference platform",
-      "Price": "~$100,000",
-      "Availability": "due late 2026",
+      "Compute": "NVIDIA Jetson AGX Thor T5000, 2070 TOPS",
+      "Hands": "Dual Sharpa Wave tactile five-finger, 22 actuated DoF each, 1000+ tactile pixels/fingertip",
+      "Platform": "NVIDIA first official Isaac GR00T reference humanoid",
+      "Price": "$100,000 (H2 Plus); base H2 $29,900 China / $40,900 NA",
+      "Availability": "Shipping late 2026",
       "Family": "Above the standard Unitree H2",
-      "Note": "Unitree targeting 10,000-20,000 humanoid units in 2026",
+      "Note": "Unitree added to Pentagon 1260H list Jun 2026 (US-buyer consideration)",
       "Source": "RoboZaps (Jul 2026); NVIDIA",
-      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB",
+      "Height": "182 cm",
+      "Weight": "~70 kg with battery",
+      "Total DOF": "75 (31 body joints + dual 22-DoF tactile hands)",
+      "Battery": "972 Wh (75.6V) quick-release smart, ~3 h runtime",
+      "Torque": "360 N·m legs / 120 N·m arms",
+      "Chassis": "Aircraft-grade aluminum + titanium alloy",
+      "Vision": "Binocular + wrist cameras",
+      "Safety": "Remote e-stop",
+      "Announced": "Computex 2026 (with Jensen Huang)",
+      "vs H2": "Same chassis; Plus adds Jetson Thor + tactile hands (75 vs 31 DoF)"
     },
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "height_mm": 1820,
+    "weight_kg": 70,
+    "npu_tops": 2070,
+    "origin": "China",
+    "battery_wh": 972,
+    "battery_life": 180,
+    "arm_torque_nm": 120,
+    "leg_torque_nm": 360
   },
   {
     "id": "ubtech-walker-c1",
@@ -176402,17 +176448,24 @@
     ],
     "voice_assistant": "AI LINKY (UBTECH foundation model, multilingual)",
     "raw_specs": {
-      "Role": "Commercial service humanoid - guided tours, greeting, event hosting",
-      "Debut": "CISCE, 22 June 2026",
+      "Role": "Wayfinding, greeting, guided tours, visitor escort",
+      "Debut": "CISCE, 22 June 2026 (first \"silicon-based spokesperson\", humanoid volunteer program)",
       "Mascot/AI": "AI LINKY, multilingual, powered by UBTECH AI foundation model",
-      "Positioning": "Below UBTECH's Walker S industrial line; service/hospitality focus",
+      "Positioning": "Service/hospitality tier, below Walker S industrial",
       "Note": "UBTECH's service-tier Walker",
       "Source": "CMRA (CISCE 2026-06-22)",
-      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB",
+      "Type": "Full-size bipedal humanoid service robot",
+      "Environments": "Hospitality, exhibitions, visitor centers, office lobbies",
+      "Interaction": "Multilingual, natural gestures, venue mapping",
+      "Focus": "Navigation, route-following, obstacle avoidance (not heavy manipulation)",
+      "Vision": "Integrated vision sensing",
+      "Height/Weight/DOF/Battery": "SPECS PENDING - UBTECH has not published Walker C1 hardware specs; distinct from Walker S industrial line"
     },
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "origin": "China"
   },
   {
     "id": "ubtech-uworld-u1",
@@ -176433,7 +176486,8 @@
       "Shipping": "targeted from September 2026",
       "Note": "UBTECH consumer/companion line (distinct from Walker industrial)",
       "Source": "TechNode (Jul 2026); humanoid.press",
-      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB",
+      "Enrichment note": "Full hardware specs not yet published by manufacturer as of Jul 2026; record captures verified announced details. Revisit when spec sheet released."
     },
     "fig": "🤖",
     "score": 75,
@@ -176464,7 +176518,8 @@
       "Maker": "Galaxea AI (also makes the A1 already in DB)",
       "Note": "Bipedal - distinct from Galaxea A1",
       "Source": "CMRA (2026-06-02)",
-      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB",
+      "Enrichment note": "Full hardware specs not yet published by manufacturer as of Jul 2026; record captures verified announced details. Revisit when spec sheet released."
     },
     "fig": "🤖",
     "score": 75,
@@ -176491,7 +176546,8 @@
       "Maker": "Sunrising AI",
       "Note": "Industrial focus, not home/service",
       "Source": "CMRA (2026-06-10)",
-      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB"
+      "Discovery": "Jul-2026 new humanoid sweep; verified not in DB",
+      "Enrichment note": "Full hardware specs not yet published by manufacturer as of Jul 2026; record captures verified announced details. Revisit when spec sheet released."
     },
     "fig": "🤖",
     "score": 75,
@@ -176767,7 +176823,8 @@
       "Use": "Specialized manufacturing, production-line inspection, equipment maintenance",
       "Origin": "China",
       "Source": "Interesting Engineering (WAIC 2026)",
-      "Discovery": "Jul-2026 deep humanoid pass; verified not in DB"
+      "Discovery": "Jul-2026 deep humanoid pass; verified not in DB",
+      "Enrichment note": "Full hardware specs not yet published by manufacturer as of Jul 2026; record captures verified announced details. Revisit when spec sheet released."
     },
     "fig": "🤖",
     "score": 75,
