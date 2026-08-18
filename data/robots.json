@@ -177924,16 +177924,24 @@
       "replenishment"
     ],
     "raw_specs": {
-      "Model": "Robots-to-goods (R2G) - robot goes to stationary inventory, picks in-aisle",
+      "Model": "Robots-to-goods (R2G) - robots travel to stationary inventory and pick/replenish within the aisle",
       "Automates": "Up to 90% of shelf picking/replenishment",
       "Debut": "MODEX 2026, Atlanta (Booth B10704)",
       "Context": "Locus's 10-year roadmap culmination; maximizes vertical space, reduces manual touches",
       "Source": "The Robot Report; Modern Materials Handling; Automate.org (2026)",
-      "Discovery": "Jul-2026 AGV/AMR sweep; verified not in DB"
+      "Discovery": "Jul-2026 AGV/AMR sweep; verified not in DB",
+      "Manufacturer": "Locus Robotics (USA)",
+      "Automation coverage": "Up to 90% of shelf picking and replenishment work",
+      "Company context": "Culmination of a 10-year roadmap; Locus has deployed 17,000+ AMRs and recorded 7B+ picks",
+      "Related products": "Locus Vector and Locus Max (both already in DB)",
+      "Benefits": "Maximises vertical space utilisation, reduces manual touches",
+      "Sources": "Locus Robotics (tier 1); The Robot Report, Modern Materials Handling, Automate.org (tier 3)",
+      "SPECS NOT PUBLISHED BY MANUFACTURER": "Robot dimensions, weight, payload, pick rate, reach height, battery, runtime, charge time, navigation sensors, fleet software, price. Locus has not published an Array datasheet as of Jul 2026."
     },
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "origin": "USA"
   },
   {
     "id": "amazon-robotics-sparrow",
@@ -177957,13 +177965,20 @@
     "raw_specs": {
       "Type": "Item-picking robotic arm",
       "Tech": "Computer vision + suction end-effector, handles individual items",
-      "Fleet context": "Amazon operates 750,000+ robots; Sparrow is the newest picking arm",
+      "Fleet context": "Amazon operates 750,000+ robots; Sparrow is its newest picking arm",
       "Source": "TheRoboWire (2026)",
-      "Discovery": "Jul-2026 AGV/AMR sweep; verified not in DB"
+      "Discovery": "Jul-2026 AGV/AMR sweep; verified not in DB",
+      "Manufacturer": "Amazon Robotics (USA)",
+      "Technology": "Computer vision plus suction end-effector; identifies and handles individual products",
+      "Distinction": "Handles individual items rather than totes or packages",
+      "Related Amazon robots": "Proteus, Hercules, Pegasus (mobile AMRs, already in DB)",
+      "Sources": "Amazon Robotics (tier 1); TheRoboWire (tier 3)",
+      "SPECS NOT PUBLISHED BY MANUFACTURER": "Reach, payload, DOF, cycle rate (picks/hour), footprint, weight, item-catalogue coverage, deployment count, sensors, controller. Amazon does not publish datasheets for internal robots."
     },
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "origin": "USA"
   },
   {
     "id": "boston-dynamics-stretch",
@@ -177972,28 +177987,52 @@
     "cat": "AGV/AMR",
     "sub": "Case-Handling Robot",
     "status": "Active",
-    "year": 2026,
-    "desc": "Boston Dynamics' mobile warehouse robot for truck/container unloading and palletizing. A mobile base with a heavy-duty arm and smart-gripper vacuum end-effector that autonomously unloads boxes; deployed with DHL and others.",
+    "year": 2022,
+    "desc": "Boston Dynamics' warehouse-specific mobile robot for case handling - a pallet-sized omnidirectional base carrying a 7-DOF telescoping arm and a sensor-packed suction gripper. Autonomously unloads floor-loaded trailers and containers at 600-800 cases per hour, handling boxes up to 23kg, and runs up to 16 hours on a high-capacity battery. A descendant of the Handle research robot.",
     "tags": [
       "agv-amr",
       "warehouse",
-      "logistics",
       "boston-dynamics",
       "stretch",
       "truck-unloading",
-      "palletizing"
+      "case-handling",
+      "logistics",
+      "vacuum-gripper"
     ],
     "raw_specs": {
-      "Type": "Mobile box-handling robot",
-      "Function": "Truck/container unloading + palletizing",
-      "Design": "Mobile omnidirectional base + 7-DOF arm + smart vacuum gripper",
-      "Deployments": "DHL and others",
-      "Source": "TheRoboWire; The Robot Report (2026)",
-      "Discovery": "Jul-2026 AGV/AMR sweep; verified not in DB"
+      "Arm": "Multi-jointed telescoping robotic arm with seven degrees of freedom (7-axis)",
+      "Arm design": "Newly designed lightweight arm that can pivot on its own - enables safe grabbing and moving at higher speeds",
+      "Gripper": "Smart gripper - suction pad \"hand\" with an array of suction cups, packed with sensors",
+      "Gripper control": "Advanced sensing and controls to handle a large variety of box types and sizes",
+      "Payload": "Boxes weighing up to 50 lb (23 kg)",
+      "Base": "Pallet-sized square wheeled omnidirectional mobile base",
+      "Perception": "Perception mast with cameras and sensors; advanced computer vision",
+      "Throughput": "Approximately 600-800 cases per hour (Boston Dynamics figure); comparable to an experienced human worker but sustained all day",
+      "Battery": "More than a full shift on a single charge; up to 16 hours with the high-capacity battery option; described as up to two full shifts",
+      "Autonomy": "Autonomous navigation around existing warehouse floors; AI algorithms detect cartons, detect box orientation automatically, recover dropped packages without human intervention, operate with minimal supervision",
+      "Deployment advantage": "Moves freely in existing warehouses - no new fixed infrastructure required, faster and more cost-effective than fixed automation",
+      "Current tasks": "Unloading floor-loaded trailers and shipping containers; moving cartons to conveyors or pallets",
+      "Planned/potential tasks": "Unload boxes from pallets, put boxes on shelves, build orders from multiple boxes, ultimately load trucks (harder than unloading due to planning and precision)",
+      "Commercial launch": "Available for commercial purchase 28 March 2022; production version unveiled at MODEX Atlanta",
+      "First introduced": "Spring 2021; pilot testing with select customers through 2021",
+      "Early demand": "All units scheduled for 2022 delivery sold out; reservations then taken for 2023 and 2024",
+      "Named customers": "DHL Supply Chain, Gap, H&M, Performance Team (a Maersk company)",
+      "Origin story": "Developed after interest generated by a video of the Atlas humanoid moving boxes",
+      "Lineage": "Descendant of Handle - a research robot combining wheels with legs; Handle was too slow, Stretch built partly from Atlas and Spot components before productionisation through 2021",
+      "Portfolio position": "One of Boston Dynamics three products alongside Spot (quadruped) and Atlas (humanoid); its first warehouse-specific robot",
+      "Strategic role": "Part of Boston Dynamics strategy to commercialise its robots, starting in logistics and material handling",
+      "DB disambiguation": "NOT the same robot as Hello Robot Stretch 3 (a research mobile manipulator) already in the database",
+      "Sources": "bostondynamics.com product page + press release (tier 1); IEEE Spectrum Robots Guide (tier 3); Engadget, DirectIndustry, Slashdot (tier 3/4)",
+      "SPECS NOT PUBLISHED BY MANUFACTURER": "Robot weight, dimensions, arm reach, top speed, battery capacity (kWh), charge time, IP rating, operating temperature, price."
     },
     "fig": "🤖",
     "score": 75,
-    "rating": 4
+    "rating": 4,
+    "origin": "USA",
+    "payload": 23,
+    "payload_kg": 23,
+    "dof": 7,
+    "battery_life": 960
   },
   {
     "id": "ecovacs-lilmilo",
