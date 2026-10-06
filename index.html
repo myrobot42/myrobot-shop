@@ -6261,13 +6261,13 @@ function runFinderSearch(){
     try{
       var resp=await fetch('/api/chat',{
         method:'POST',headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:1024,system:systemPrompt(),messages:history.slice(-10)})
+        body:JSON.stringify({messages:history.slice(-10)})
       });
       var data=await resp.json();
-      if(data.error){ throw new Error(data.error.message||data.error); }
+      if(data.error){ var e=new Error(data.error.message||data.error); e.limit=(resp.status===429); throw e; }
       var reply=(data.content||[]).filter(function(b){return b.type==='text';}).map(function(b){return b.text;}).join('\n').trim()||"Sorry — I couldn't generate a response. Try rephrasing?";
       typing(false);addAI(reply);history.push({role:'assistant',content:reply});
-    }catch(err){typing(false);addAI("I hit a connection problem. Please try again in a moment.");console.error('Concierge error:',err);}
+    }catch(err){typing(false);addAI(err&&err.limit?err.message:"I hit a connection problem. Please try again in a moment.");console.error('Concierge error:',err);}
     finally{busy=false;$('rc-send').disabled=false;$('rc-input').focus();}
   };
 
