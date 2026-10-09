@@ -3,6 +3,8 @@ const fs = require('fs'), path = require('path');
 const { readSession } = require('./lib/session');
 const esc = (s) => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
+const CLIENT_ID = process.env.GOOGLE_CLIENT_ID || '397633796152-j1oom6vvm5odqv8mcd30j9m9v7k0e6d2.apps.googleusercontent.com';
+
 function loginPage() {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex"><title>myrobot.shop — Admin sign-in</title>
@@ -15,7 +17,7 @@ h1{font-size:18px;margin:0 0 6px}p{color:#8b93a7;font-size:13px;margin:0 0 22px}
 <script>
 window.onload=function(){
   var t=setInterval(function(){ if(!window.google||!google.accounts) return; clearInterval(t);
-    google.accounts.id.initialize({client_id:${JSON.stringify(process.env.GOOGLE_CLIENT_ID || '')},callback:function(r){
+    google.accounts.id.initialize({client_id:${JSON.stringify(CLIENT_ID)},callback:function(r){
       fetch('/api/auth-google',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({credential:r.credential})})
       .then(function(x){return x.json().then(function(d){return [x.ok,d]})})
       .then(function(a){ if(a[0]) location.reload(); else document.getElementById('err').textContent=a[1].error||'Sign-in failed'; })
