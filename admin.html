@@ -1134,8 +1134,19 @@ body{font-family:'Instrument Sans',sans-serif;background:var(--bg);color:var(--t
 
 <script>
 // ════ CONFIG ════
-const ADMIN_PASSWORD = 'robo2026';
-const WORKER_PASSWORD_DEFAULT = 'worker2026';
+// Passwords are no longer stored in this file. Admin + legacy worker passwords are
+// checked server-side by /api/admin-login (Netlify env vars ADMIN_PASSWORD / WORKER_PASSWORD).
+let _srvRole = null;
+async function serverCheck(pw){
+  try{
+    const r = await fetch('/api/admin-login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({pw:pw})});
+    const d = await r.json().catch(()=>({}));
+    if (r.status===429){ _srvRole='limited'; return 'limited'; }
+    _srvRole = (d && d.role) || null;
+  }catch(e){ _srvRole = null; }
+  return _srvRole;
+}
+const WORKER_PASSWORD_DEFAULT = '';
 // Worker permissions (admin-only editable). Stored in localStorage as mrsh_worker_perms.
 // Each key = page id; value = boolean for access. Defaults are conservative.
 const WORKER_PERM_DEFAULTS = {
@@ -1157,7 +1168,7 @@ function getWorkerPerms(){
   catch(e){ return Object.assign({}, WORKER_PERM_DEFAULTS); }
 }
 function setWorkerPerms(p){ localStorage.setItem('mrsh_worker_perms', JSON.stringify(p)); }
-function getWorkerPassword(){ return localStorage.getItem('mrsh_worker_pw') || WORKER_PASSWORD_DEFAULT; }
+function getWorkerPassword(){ return ''; }
 function getRole(){ return localStorage.getItem('mrsh_role') || 'admin'; }
 function isWorker(){ return getRole() === 'worker'; }
 function isAdmin(){ return getRole() === 'admin'; }
@@ -1168,7 +1179,7 @@ function isAdmin(){ return getRole() === 'admin'; }
 // add/edit/delete. Workers fetch on login.
 //
 // Each worker has: { id, username, name, password_hash, active, created, last_login }
-// Migration: legacy shared password (worker2026 / mrsh_worker_pw) still works
+// Migration: legacy shared password (server-side WORKER_PASSWORD) still works
 // until mrsh_legacy_disabled_at exists OR 12 hours after first Phase B login.
 const PHASE_B_VERSION = 2;
 const LEGACY_GRACE_HOURS = 12;
@@ -1487,15 +1498,18 @@ function enterApp(role){
   });
 }
 
-function tryLogin() {
+async function tryLogin() {
   const userEl = document.getElementById('user-input');
   const username = userEl ? userEl.value.trim() : '';
   const pw = document.getElementById('pw-input').value;
-  const adminStored = localStorage.getItem('mrsh_pw') || ADMIN_PASSWORD;
+  localStorage.removeItem('mrsh_pw');
+  loginError('');
+  const _chk = await serverCheck(pw);
+  if (_chk==='limited'){ loginError('Too many attempts. Wait 10 minutes.'); return; }
 
   // No username = admin attempt (legacy behaviour preserved)
   if (!username) {
-    if (pw === adminStored) {
+    if (_chk === 'admin') {
       localStorage.setItem('mrsh_role', 'admin');
       // Clear any stale worker identity from this browser
       localStorage.removeItem('mrsh_worker_id');
@@ -1505,7 +1519,7 @@ function tryLogin() {
       return;
     }
     // Legacy: empty username + worker password (during grace period)
-    if (legacyEnabled() && pw === getWorkerPassword()) {
+    if (legacyEnabled() && _srvRole === 'worker') {
       startLegacyGrace();
       localStorage.setItem('mrsh_role', 'worker');
       localStorage.setItem('mrsh_worker_id', 'legacy');
@@ -1530,6 +1544,7 @@ async function tryWorkerLogin(username, pw){
   // For workers, we need to fetch the workers list from GitHub first.
   // (Admin's browser may already have it cached, worker's browser will not.)
   loginError(''); // clear prior
+  if (_srvRole === null || _srvRole === 'admin') { _srvRole = null; }
   const loginErr = document.getElementById('login-err');
   if (loginErr) loginErr.textContent = 'Checking credentials…';
 
@@ -1539,7 +1554,7 @@ async function tryWorkerLogin(username, pw){
     // No token = first-time worker. They need to do setup, but we can't verify them yet.
     // We'll let them through to the setup screen IF the legacy password matches
     // (so they can still get in during migration). Otherwise tell them they need a token.
-    if (legacyEnabled() && pw === getWorkerPassword()){
+    if (legacyEnabled() && _srvRole === 'worker'){
       // Treat as legacy login — let them set up their environment first
       startLegacyGrace();
       localStorage.setItem('mrsh_role', 'worker');
@@ -1557,7 +1572,7 @@ async function tryWorkerLogin(username, pw){
   const list = await fetchWorkersFromGitHub({silent: true});
   if (list === null){
     // Network/token failure. Try legacy fallback so workers aren't locked out by GitHub being slow.
-    if (legacyEnabled() && pw === getWorkerPassword()){
+    if (legacyEnabled() && _srvRole === 'worker'){
       startLegacyGrace();
       localStorage.setItem('mrsh_role', 'worker');
       localStorage.setItem('mrsh_worker_id', 'legacy-' + username);
@@ -1575,7 +1590,7 @@ async function tryWorkerLogin(username, pw){
   const w = list.find(x => x.username.toLowerCase() === u && x.active);
   if (!w){
     // Username not found in GitHub workers.json. Try legacy fallback.
-    if (legacyEnabled() && pw === getWorkerPassword()){
+    if (legacyEnabled() && _srvRole === 'worker'){
       startLegacyGrace();
       localStorage.setItem('mrsh_role', 'worker');
       localStorage.setItem('mrsh_worker_id', 'legacy-' + username);
@@ -4360,7 +4375,7 @@ function renderLegacyStatus(){
   const hours = legacyHoursRemaining();
   const started = !!localStorage.getItem('mrsh_legacy_grace_started_at');
   el.innerHTML = '<div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">'
-    + '<div><strong style="color:#f59e0b">⚠️ Legacy password still active.</strong> Workers can still use the old shared password <code>worker2026</code>. '
+    + '<div><strong style="color:#f59e0b">⚠️ Legacy password still active.</strong> Workers can still use the old shared password. '
     + (started ? 'Auto-disables in <strong>' + hours + ' hour' + (hours===1?'':'s') + '</strong>.' : 'Will auto-disable 12 hours after first legacy use.')
     + '</div>'
     + '<button class="save-btn" style="background:#ef4444" onclick="disableLegacyNow()">Disable now</button>'
@@ -4602,15 +4617,7 @@ function saveGHRepo() {
 }
 
 function changePassword() {
-  const v = document.getElementById('pw-change-input').value;
-  if (v && v.length >= 6) {
-    localStorage.setItem('mrsh_pw', v);
-    document.getElementById('pw-change-input').value = '';
-    addLog('success', 'Admin password changed');
-    alert('✓ Password changed!');
-  } else {
-    alert('Password must be at least 6 characters.');
-  }
+  alert('The admin password is now set in Netlify: Project configuration > Environment variables > ADMIN_PASSWORD (then redeploy). It is no longer stored in this page.');
 }
 
 document.getElementById('pw-input').addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
