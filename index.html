@@ -944,11 +944,11 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .band-thumbs{display:none!important}
 /* pass7: photo-first light hero, blue only as accent */
 .band-wrap{background:#fff;border:1px solid var(--bdr);box-shadow:0 1px 3px rgba(16,24,40,.06)}
-.robot-band{grid-template-columns:minmax(0,5fr) minmax(0,6fr);color:var(--txt)}
-.robot-band .band-img{background:radial-gradient(ellipse at 50% 45%,#fff 0%,#eef1f6 100%);min-height:400px;padding:24px;border-right:1px solid var(--bdr)}
-.robot-band .band-img img{max-height:380px;width:100%;filter:drop-shadow(0 14px 18px rgba(16,24,40,.18))}
-.band-info{padding:28px 30px}
-.band-name{color:var(--txt);font-size:32px}
+.robot-band{grid-template-columns:minmax(0,3fr) minmax(0,2fr);color:var(--txt)}
+.robot-band .band-img{background:#fff;min-height:420px;padding:0;border-right:1px solid var(--bdr);overflow:hidden}
+.robot-band .band-img img{width:100%;height:100%;max-height:none;min-height:420px;object-fit:contain;filter:none}
+.band-info{padding:24px 22px}
+.band-name{color:var(--txt);font-size:28px}
 .band-top .badge{background:var(--acc-l);color:var(--acc)}
 .band-brand{color:var(--acc);opacity:1;font-weight:700}
 .band-desc{opacity:1;color:#374151}
@@ -980,7 +980,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
   .robot-band .band-img{min-height:200px}
   .band-name{font-size:24px}
   .robot-band .band-img{min-height:260px;border-right:none;border-bottom:1px solid var(--bdr)}
-  .robot-band .band-img img{max-height:240px}
+  .robot-band .band-img img{min-height:260px;max-height:300px}
   .band-tiles{grid-template-columns:repeat(2,1fr)}
   .band-tiles .bt:nth-child(2n){border-right:none}
 }
