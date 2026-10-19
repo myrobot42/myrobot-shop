@@ -149,9 +149,19 @@ h1 em{color:var(--acc);font-style:normal}
 .db-hero-sub{font-size:12px;font-weight:700;opacity:.92}
 .db-hero-tag{position:absolute;top:14px;right:14px;z-index:2;background:rgba(255,255,255,.2);backdrop-filter:blur(4px);color:#fff;font-size:10px;font-weight:800;letter-spacing:.5px;padding:5px 11px;border-radius:20px}
 .db-hero-montage{position:absolute;inset:0;display:flex;gap:2px;background:#1a1a1a}
+.db-hero.db-hero-compact{min-height:76px;margin-bottom:12px}
+.db-hero.db-hero-compact .db-hero-body{padding:14px 18px}
+.db-hero.db-hero-compact .db-hero-title{font-size:19px;margin:2px 0 1px}
+.db-hero.db-hero-compact .db-hero-kicker{display:none}
 .db-hero-tile{flex:1;background-size:cover;background-position:center;background-color:#fff}
 @media(max-width:600px){.db-hero{min-height:138px}.db-hero-title{font-size:19px}}
 .rc-specs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px}
+.rc-kv{display:flex;gap:12px;margin:2px 0 8px;flex-wrap:wrap}
+.rc-sp{display:flex;flex-direction:column;min-width:0}
+.rc-sp b{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:12px;font-weight:800;color:var(--txt);white-space:nowrap}
+.rc-sp b i{font-style:normal;font-size:9px;color:var(--mut);margin-left:2px;font-weight:600}
+.rc-sp span{font-size:9px;letter-spacing:.5px;text-transform:uppercase;color:var(--mut);margin-top:1px}
+.rc-price{font-size:12px;font-weight:800;color:var(--acc);margin-bottom:2px}
 .pill{padding:2px 7px;background:var(--bg2);border:1px solid var(--bdr);border-radius:4px;font-size:10px;color:var(--mut);font-weight:500}
 .rc-footer{display:flex;justify-content:space-between;align-items:center;padding-top:9px;border-top:1px solid var(--bdr)}
 .rc-rating{display:flex;align-items:center;gap:3px;font-size:11px;color:var(--mut)}
@@ -925,7 +935,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .bstat-fan.faned .heart{color:#fff}
 .bstat-fan #profile-fancount{font-variant-numeric:tabular-nums}
 .band-desc.expanded{-webkit-line-clamp:unset;display:block;overflow:visible}
-.band-tiles{display:grid;grid-template-columns:repeat(5,1fr);background:transparent;border-top:1px solid rgba(255,255,255,.16);overflow:hidden}
+.band-tiles{display:grid;grid-template-columns:repeat(var(--n,5),1fr);background:transparent;border-top:1px solid rgba(255,255,255,.16);overflow:hidden}
 .band-tiles .bt{padding:16px 10px;text-align:center;color:#fff;border-right:1px solid rgba(255,255,255,.16)}
 .band-tiles .bt:last-child{border-right:none}
 .band-tiles .bt-v{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:18px;font-weight:800;line-height:1.1}
@@ -2193,6 +2203,8 @@ function renderDbHero(){
   var host=document.getElementById('db-hero');if(!host)return;
   var selCats=[].slice.call(document.querySelectorAll('#db-cat-filters [data-cat]:checked')).map(function(e){return e.dataset.cat;});
   var selBrands=[].slice.call(document.querySelectorAll('#db-brand-filters [data-brand]:checked')).map(function(e){return e.dataset.brand;});
+  var _sq=document.getElementById('db-search');
+  if(_sq&&_sq.value.trim()){host.style.display='none';host.innerHTML='';return;} // searching: results first, no banner
   var type=null,val=null;
   if(selBrands.length===1){type='brand';val=selBrands[0];}
   else if(selCats.length===1&&selBrands.length===0){type='cat';val=selCats[0];}
@@ -2200,7 +2212,7 @@ function renderDbHero(){
     var tiles=_heroMontage();
     if(!tiles.length){host.style.display='none';host.innerHTML='';return;}
     var nCats=new Set(ROBOTS.map(function(r){return r.cat;}).filter(Boolean)).size;
-    host.style.display='flex';host.onclick=null;
+    host.style.display='flex';host.onclick=null;host.classList.add('db-hero-compact');
     host.innerHTML='<div class="db-hero-montage">'+tiles.map(function(u){return '<div class="db-hero-tile" style="background-image:url(\''+u+'\')"></div>';}).join('')+'</div>'+
       '<div class="db-hero-shade"></div>'+
       '<div class="db-hero-body"><div class="db-hero-kicker">Database</div><div class="db-hero-title">Robot Database</div><div class="db-hero-sub">'+ROBOTS.length.toLocaleString()+' robots \u00b7 '+nCats+' categories</div></div>';
@@ -2215,7 +2227,7 @@ function renderDbHero(){
     if(!win){host.style.display='none';host.innerHTML='';return;}
     var tag=(src==='views'&&(win.views||0)>=50)?('\u25B2 '+(win.views).toLocaleString()+' views'):'\uD83D\uDD25 Trending';
     var title=_hEsc(val)+(type==='cat'?' Robots':'');
-    host.style.display='flex';
+    host.style.display='flex';host.classList.remove('db-hero-compact');
     host.onclick=function(){openProfile(win.id);};
     host.innerHTML=
       '<div class="db-hero-img" style="background-image:url(\''+(win.img||MASCOT_URL)+'\')"></div>'+
@@ -2273,7 +2285,7 @@ function renderDb(){
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
         <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" loading="lazy" onerror="this.src='${MASCOT_URL}'">`:`<div class="rc-ph"><img src="${MASCOT_URL}" alt=""><span>Photo coming soon</span></div>`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
-        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>
+        <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}${cardSpecsHTML(r)}</div>
       </div>`).join('')}</div>`;
   }
   renderCompareTray();
@@ -4032,24 +4044,32 @@ function _navShort(r){
   var s=n.split(/\s*[+,(\u2013\u2014]/)[0].trim();
   return s.length>18?s.slice(0,16).trim()+'\u2026':s;
 }
+function cardSpecsHTML(r){
+  var t=[];try{t=bandTiles(r).filter(function(x){return x.l!=='Released'&&x.l!=='Origin';}).slice(0,3);}catch(e){}
+  var price=(typeof r.price==='number'&&r.price>0)?'<div class="rc-price">$'+r.price.toLocaleString()+'</div>':'';
+  if(!t.length) return '<div class="rc-specs">'+(r.tags||[]).slice(0,2).map(function(x){return '<span class="pill">'+x+'</span>';}).join('')+'</div>'+price;
+  return '<div class="rc-kv">'+t.map(function(x){return '<div class="rc-sp"><b>'+x.v+(x.u?'<i>'+x.u+'</i>':'')+'</b><span>'+x.l+'</span></div>';}).join('')+'</div>'+price;
+}
 function bandTiles(r){
   var c=((r.cat||'')+' '+(r.sub||'')).toLowerCase();function h(x){return c.indexOf(x)>=0;}
   function t(l,v,u){return {l:l,v:v,u:u||''};}var P;
   if(h('mower'))P=[t('Navigation',_navShort(r)||(r.rtk?'RTK-GNSS':null),''),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Docking',(r.auto_charge||r.auto_dock)?'Auto-dock':null,''),t('Cut Width',r.cutting_width_mm,'mm'),t('Connectivity',_connShort(r),'')];
   else if(h('humanoid')||h('biped'))P=[t('Height',r.height_mm,'mm'),t('DOF',r.dof,''),t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('Weight',r.weight_kg||r.weight,'kg')];
   else if(h('drone')||h('uav')||h('aerial'))P=[t('Flight',r.max_flight_time||r.flight_time_min,'min'),t('Range',r.max_range||r.range_km,'km'),t('Camera',r.camera_mp,'MP'),t('Speed',r.max_speed||r.speed_ms,'m/s'),t('Weight',r.weight_kg||r.weight,'kg')];
-  else if(h('vacuum')||h('mop'))P=[t('Suction',r.suction_pa,'Pa'),t('Battery',r.battery_life_typical,'min'),t('Navigation',_navShort(r),''),t('Dustbin',r.dustbin_ml,'ml'),t('Noise',r.noise_db,'dB')];
+  else if(h('vacuum')||h('mop'))P=[t('Suction',r.suction_pa,'Pa'),t('Battery',r.battery_life_typical,'min'),t('Navigation',_navShort(r),''),t('Dustbin',r.dustbin_ml,'ml'),t('Water tank',r.clean_water_tank_ml,'ml'),t('Weight',r.weight_kg||r.weight,'kg'),t('Noise',r.noise_db,'dB')];
   else if(h('quadruped')||h('legged'))P=[t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.run_speed_ms||r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg,'kg'),t('Runtime',r.battery_life_typical,'min'),t('DOF',r.dof,'')];
   else if(h('cobot')||h('manipulator'))P=[t('Payload',r.payload_kg||r.payload,'kg'),t('Reach',r.reach_mm||r.reach,'mm'),t('DOF',r.dof,''),t('Repeatability',r.repeatability,'mm'),t('Speed',r.speed_ms||r.speed,'m/s')];
   else if(h('aquatic')||h('underwater')||h('rov')||h('auv')||h('usv'))P=[t('Max Depth',r.max_depth_m||r.depth_rating_m,'m'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Endurance',r.endurance_hours,'h'),t('Payload',r.payload_kg||r.payload,'kg'),t('Weight',r.weight_kg,'kg')];
   else if(h('surgical')||h('medical'))P=[t('Arms',r.arms||r.arm_count,''),t('Instr. DOF',r.instrument_dof,''),t('Incision',r.incision_size_mm,'mm'),t('Setup',r.setup_time_min,'min'),t('Weight',r.weight_kg,'kg')];
   else if(h('agri')||h('farm')||h('tractor')||h('harvest'))P=[t('Coverage',r.coverage_ha_day,'ha/d'),t('Width',r.working_width_m,'m'),t('Speed',r.operating_speed||r.speed,'m/s'),t('GPS',r.gps_accuracy_cm,'cm'),t('Weight',r.weight_kg,'kg')];
   else P=[];
-  var U=[t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('DOF',r.dof,''),t('Connectivity',_connShort(r),''),t('Year',r.year?(''+r.year):null,''),t('Origin',r.origin||r.country,''),t('Status',r.status,'')];
+  var U=[t('Payload',r.payload_kg||r.payload,'kg'),t('Speed',r.speed_ms||r.speed,'m/s'),t('Weight',r.weight_kg||r.weight,'kg'),t('Battery',r.battery_life_typical||r.battery_life,'min'),t('DOF',r.dof,''),t('Connectivity',_connShort(r),'')];
   var out=[],seen={};function fmt(v){if(typeof v==='number')return v.toLocaleString();var s=String(v);return s.length>26?s.slice(0,24).trim()+'\u2026':s;}
   function isNumLike(v){return typeof v==='number'||(typeof v==='string'&&/^[\d.,]+$/.test(v.trim()));}
   function addList(L){for(var i=0;i<L.length&&out.length<5;i++){var x=L[i];if(x&&x.v!=null&&x.v!==''&&x.v!=='\u2014'&&!seen[x.l]){seen[x.l]=1;out.push({l:x.l,v:fmt(x.v),u:isNumLike(x.v)?x.u:''});}}}
-  addList(P);addList(U);return out;
+  addList(P);addList(U);
+  if(out.length<3)addList([t('Released',r.year?(''+r.year):null,''),t('Origin',r.origin||r.country,'')]); // last resort only
+  return out;
 }
 function renderRailPrices(r){
   var host=document.getElementById('profile-rail-prices');if(!host)return;
@@ -4278,7 +4298,8 @@ function _renderProfile(id){
     {l:'OS',v:r.os||'—',u:''},
     {l:'WARRANTY',v:r.warranty_months||'—',u:r.warranty_months?'mo':''},
   ].filter(s => s.v !== '—' && s.v !== '' && s.v != null);
-  document.getElementById('profile-quick-specs').innerHTML=bandTiles(r).map(s=>'<div class="bt"><div class="bt-v">'+s.v+(s.u?'<span class="bt-u">'+s.u+'</span>':'')+'</div><div class="bt-l">'+s.l+'</div></div>').join('');
+  var _bt=bandTiles(r);var _btEl=document.getElementById('profile-quick-specs');_btEl.style.setProperty('--n',Math.max(1,_bt.length));_btEl.style.display=_bt.length?'':'none';
+  document.getElementById('profile-quick-specs').innerHTML=_bt.map(s=>'<div class="bt"><div class="bt-v">'+s.v+(s.u?'<span class="bt-u">'+s.u+'</span>':'')+'</div><div class="bt-l">'+s.l+'</div></div>').join('');
   // (Performance Scores removed — placeholder values, not real spec data)
   // Specs table
   document.getElementById('profile-specs').innerHTML = renderSpecsGSM(r);
@@ -5287,7 +5308,7 @@ function robotRowHTML(r,i,ranks){
 function robotCardHTML(r,i){
   return `<div class="robot-card" onclick="openProfile('${r.id}')">`
     + `<div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" loading="lazy" onerror="this.src='${MASCOT_URL}'">`:`<div class="rc-ph"><img src="${MASCOT_URL}" alt=""><span>Photo coming soon</span></div>`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>`
-    + `<div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${(r.tags||[]).slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>`
+    + `<div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}${cardSpecsHTML(r)}</div>`
     + `</div>`;
 }
 function renderFinder(){
