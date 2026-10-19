@@ -1148,7 +1148,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
       <div class="search-row">
         <div class="db-search"><input type="text" id="db-search" placeholder="Search robots by name, brand or category..." oninput="renderDb()"><button onclick="renderDb()">Search</button></div>
         <select class="sort-sel" id="db-sort" onchange="renderDb()">
-          <option value="score">Highest Rated</option>
+          <option value="score">Most complete specs</option>
           <option value="price_asc">Price Low–High</option>
           <option value="price_desc">Price High–Low</option>
           <option value="name">A–Z</option>
@@ -1434,7 +1434,7 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
         <div class="finder-count">Showing <em id="finder-count">0</em> robots</div>
         <div class="fr-right">
           <select class="fssel" id="finder-sort" onchange="renderFinder()">
-            <option value="score">Best Rated</option>
+            <option value="score">Most complete specs</option>
             <option value="price_asc">Price ↑</option>
             <option value="price_desc">Price ↓</option>
             <option value="name">A–Z</option>
@@ -2262,7 +2262,7 @@ function renderDb(){
   renderSubcatFilter();
   const sort=document.getElementById('db-sort')?.value||'score';
   let list=getDbFiltered();
-  list=[...list].sort((a,b)=>sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):sort==='payload'?b.payload-a.payload:(robotSortKey(b)-robotSortKey(a)||a.name.localeCompare(b.name)));
+  list=[...list].sort((a,b)=>sort==='score'?(specDepth(b)-specDepth(a)||String(a.name).localeCompare(String(b.name))):sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):sort==='payload'?b.payload-a.payload:(robotSortKey(b)-robotSortKey(a)||a.name.localeCompare(b.name)));
   document.getElementById('db-count').textContent=`Showing ${list.length} robot${list.length!==1?'s':''}`;
   // Active filter tags
   const tags=[];
@@ -4061,6 +4061,18 @@ function _navShort(r){
   var s=n.split(/\s*[+,(\u2013\u2014]/)[0].trim();
   return s.length>18?s.slice(0,16).trim()+'\u2026':s;
 }
+// Real data-depth signal (the stored score/rating are defaults: 95%/98% of robots share one value).
+var _SD_META={id:1,name:1,brand:1,cat:1,cats:1,sub:1,desc:1,tags:1,img:1,gallery:1,fig:1,perf:1,score:1,rating:1,status:1,year:1,origin:1,made_in:1,website:1,manufacturer_url:1,price:1,price_band:1,currency:1,video:1,video2:1,highlights:1,use_cases:1,announced:1,released:1,raw_specs:1};
+function _sdNE(v){return v!=null&&v!==''&&!(Array.isArray(v)&&!v.length)&&!(typeof v==='object'&&!Array.isArray(v)&&!Object.keys(v).length);}
+function specDepth(r){
+  if(!r) return 0;
+  if(r._sd!=null) return r._sd;
+  var n=0,k;
+  for(k in r){ if(k.charAt(0)==='_'||_SD_META[k]) continue; if(_sdNE(r[k])) n++; }
+  if(r.raw_specs&&typeof r.raw_specs==='object'){ for(k in r.raw_specs){ if(_sdNE(r.raw_specs[k])) n++; } }
+  try{ Object.defineProperty(r,'_sd',{value:n,enumerable:false,writable:true}); }catch(e){}
+  return n;
+}
 function cardSpecsHTML(r){
   var t=[];try{t=bandTiles(r).filter(function(x){return x.l!=='Released'&&x.l!=='Origin';}).slice(0,3);}catch(e){}
   var price=(typeof r.price==='number'&&r.price>0)?'<div class="rc-price">$'+r.price.toLocaleString()+'</div>':'';
@@ -4494,7 +4506,7 @@ function renderRobotSelector(query){
       return text.includes(q);
     });
   } else {
-    list = [...ROBOTS].sort((a, b) => (b.score||0) - (a.score||0)).slice(0, 50);
+    list = [...ROBOTS].sort((a, b) => specDepth(b) - specDepth(a)).slice(0, 50);
   }
   const grid = document.getElementById('rs-grid');
   const countEl = document.getElementById('rs-count');
@@ -5347,7 +5359,7 @@ function renderFinder(){
   var sort=document.getElementById('finder-sort')?document.getElementById('finder-sort').value:'score';
   var list=getFinderFiltered();
   list=[...list].sort(function(a,b){
-    return sort==='score'?b.score-a.score:sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):(robotSortKey(b)-robotSortKey(a)||a.name.localeCompare(b.name));
+    return sort==='score'?(specDepth(b)-specDepth(a)||String(a.name).localeCompare(String(b.name))):sort==='price_asc'?(a.price||999999)-(b.price||999999):sort==='price_desc'?(b.price||0)-(a.price||0):sort==='name'?a.name.localeCompare(b.name):(robotSortKey(b)-robotSortKey(a)||a.name.localeCompare(b.name));
   });
   var countEl=document.getElementById('finder-count');
   if(countEl)countEl.textContent=list.length;
