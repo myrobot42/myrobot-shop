@@ -1640,6 +1640,9 @@ function goPage(p, opts){
   else if (p === 'db' && opts.cat){
     hash = 'db/cat/' + encodeURIComponent(opts.cat);
   }
+  else if (p === 'db' && opts.brand){
+    hash = 'db/brand/' + encodeURIComponent(opts.brand);
+  }
   else if (p === 'compare' && opts.ids && opts.ids.length){
     hash = 'compare/' + opts.ids.map(encodeURIComponent).join('+');
   }
@@ -1663,7 +1666,12 @@ function _renderPage(p, opts){
   if(nav) nav.classList.add('active');
   window.scrollTo(0,0);
   if(p==='home'){renderHome();}
-  if(p==='db'){ if(opts.cat){ _pendingDbCat = opts.cat; } buildDbFilters();renderDb();}
+  if(p==='db'){ if(opts.cat){ _pendingDbCat = opts.cat; }
+    if(opts.brand){ // brand page: clear everything else, then select exactly this manufacturer
+      var _sb=document.getElementById('db-search'); if(_sb) _sb.value='';
+      document.querySelectorAll('[data-cat],[data-sub],[data-brand],[data-price],[data-feat],[data-status]').forEach(function(el){if(el.type==='checkbox')el.checked=false;});
+      _pendingDbBrand = opts.brand; }
+    buildDbFilters();renderDb();}
   if(p==='compare'){ if(opts.ids&&opts.ids.length){ loadCompareIds(opts.ids); if(typeof refreshCompareUI==='function')refreshCompareUI(); } renderCompare(); if(typeof syncCompareHash==='function')syncCompareHash(); renderCatMenu('compare-menu'); }
   if(p==='rankings'){renderRankings('all');}
   if(p==='finder'){buildFinderTabs();buildFinderFP();showFinderEmpty();renderCatMenu('finder-menu');}
@@ -1693,6 +1701,9 @@ function parseHash(){
   const page = parts[0];
   if (page === 'profile' && parts[1]){
     return {page: 'profile', opts: {id: parts[1]}};
+  }
+  if (page === 'db' && parts[1] === 'brand' && parts[2]){
+    return {page: 'db', opts: {brand: decodeURIComponent(parts.slice(2).join('/'))}};
   }
   if (page === 'db' && parts[1] === 'cat' && parts[2]){
     return {page: 'db', opts: {cat: decodeURIComponent(parts.slice(2).join('/'))}};
@@ -1877,8 +1888,9 @@ function heroSearch(){
 }
 
 function searchBrand(b){
-  document.getElementById('db-search').value=b;
-  goPage('db');
+  // Exact manufacturer filter (a text search for "Dreame" also pulled in MOVA robots). Deep-linkable: #db/brand/<name>
+  var real=(typeof ALL_BRANDS!=='undefined'&&ALL_BRANDS.find(function(x){return x&&x.replace(/'/g,'')===b;}))||b;
+  goPage('db',{brand:real});
 }
 
 function filterCat(cat){
@@ -1886,6 +1898,7 @@ function filterCat(cat){
 }
 
 // ════════════ DATABASE ════════════
+var _pendingDbBrand = null;
 var _pendingDbCat = null;  // set by breadcrumb/category links; applied when DB filters are ready
 function buildDbFilters(){
   const catF=document.getElementById('db-cat-filters');
@@ -1898,6 +1911,9 @@ function buildDbFilters(){
   }
   // Apply a pending category filter (from a breadcrumb/category click), even if the
   // filters were already built on a previous visit.
+  if(_pendingDbBrand){
+    BRANDS_EXPANDED=false; renderSubcatFilter(); renderBrandFilter(); _pendingDbBrand=null;
+  }
   if(_pendingDbCat){
     const want=_pendingDbCat; _pendingDbCat=null;
     document.querySelectorAll('#db-cat-filters input[data-cat]').forEach(function(cb){
@@ -1940,6 +1956,7 @@ function renderBrandFilter(){
   if(!brandF)return;
   const selCats=[...document.querySelectorAll('[data-cat]:checked')].map(el=>el.dataset.cat);
   const selBrands=new Set([...document.querySelectorAll('[data-brand]:checked')].map(el=>el.dataset.brand));
+  if(_pendingDbBrand) selBrands.add(_pendingDbBrand);
   // Determine which brands are relevant given the category selection
   let relevantBrands;
   if(selCats.length===0){
