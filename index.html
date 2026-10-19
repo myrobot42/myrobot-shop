@@ -382,6 +382,14 @@ footer{background:var(--bg2);border-top:1px solid var(--bdr)}
 .specs-table .spec-grp td.spec-cat{vertical-align:top;width:150px;padding:13px 14px 13px 0;font-size:12px;font-weight:800;letter-spacing:.03em;text-transform:uppercase;color:var(--acc)}
 .specs-table .spec-grp td.spec-fields{padding:7px 0;font-weight:400}
 .sf-row{display:flex;gap:14px;padding:6px 0;align-items:baseline}
+.specs-table:not(.show-empty) .sf-empty,.specs-table:not(.show-empty) .spec-grp-empty{display:none}
+.specs-table .spec-toggle-row td{padding:14px 0 6px;border-top:1px solid var(--bdr)}
+.spec-toggle{background:none;border:1px solid var(--bdr2);border-radius:8px;padding:7px 14px;font-size:12px;font-weight:600;color:var(--acc);cursor:pointer}
+.spec-toggle:hover{background:var(--bg2)}
+.spec-note{font-size:12px;color:var(--mut);padding:0 0 8px}
+.rc-ph{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;width:100%;height:100%;background:var(--bg2)}
+.rc-ph img{width:34%!important;height:auto!important;opacity:.35;filter:grayscale(1)}
+.rc-ph span{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--mut)}
 .sf-row .sf-label{flex:0 0 38%;color:var(--mut);font-size:12px;font-weight:500}
 .sf-row .sf-val{flex:1;font-size:12.5px;color:var(--txt);font-weight:600;line-height:1.5}
 @media(max-width:560px){.specs-table .spec-grp td.spec-cat{width:92px;font-size:10px;padding-right:8px}.sf-row{flex-direction:column;gap:2px}.sf-row .sf-label{flex:none}}
@@ -2264,7 +2272,7 @@ function renderDb(){
   } else {
     c.innerHTML=`<div class="grid-view">${list.map((r,i)=>`
       <div class="robot-card" onclick="openProfile('${r.id}')">
-        <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" loading="lazy" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
+        <div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" loading="lazy" onerror="this.src='${MASCOT_URL}'">`:`<div class="rc-ph"><img src="${MASCOT_URL}" alt=""><span>Photo coming soon</span></div>`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>
         <div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${r.tags.slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>
       </div>`).join('')}</div>`;
   }
@@ -2501,14 +2509,28 @@ function renderSpecsGSM(r){
     var m=tr.match(/<td\b[^>]*>([\s\S]*?)<\/td>\s*<td\b[^>]*>([\s\S]*?)<\/td>/);
     if(!m) return;
     if(!cur){cur={section:'',rows:[]};groups.push(cur);}
-    cur.rows.push({label:m[1],value:m[2]});
+    var _vt=m[2].replace(/<[^>]+>/g,'').trim();
+    cur.rows.push({label:m[1],value:m[2],empty:/^(info not found|not applicable.*)$/i.test(_vt)});
   });
   groups=groups.filter(function(g){return g.rows.length;});
   if(!groups.length) return '<tr><td style="padding:14px;color:var(--mut);font-size:12px">Detailed specifications coming soon.</td></tr>';
-  return groups.map(function(g){
-    var fields=g.rows.map(function(rw){return '<div class="sf-row"><span class="sf-label">'+rw.label+'</span><span class="sf-val">'+rw.value+'</span></div>';}).join('');
-    return '<tr class="spec-grp"><td class="spec-cat">'+g.section+'</td><td class="spec-fields">'+fields+'</td></tr>';
+  // GSMArena-style: only published specs show; unpublished rows are kept but hidden behind one toggle.
+  var _empty=0,_total=0;
+  var out=groups.map(function(g){
+    var allEmpty=g.rows.every(function(rw){return rw.empty;});
+    var fields=g.rows.map(function(rw){_total++; if(rw.empty)_empty++; return '<div class="sf-row'+(rw.empty?' sf-empty':'')+'"><span class="sf-label">'+rw.label+'</span><span class="sf-val">'+rw.value+'</span></div>';}).join('');
+    return '<tr class="spec-grp'+(allEmpty?' spec-grp-empty':'')+'"><td class="spec-cat">'+g.section+'</td><td class="spec-fields">'+fields+'</td></tr>';
   }).join('');
+  if(_empty>0){
+    out='<tr class="spec-note-row"><td colspan="2" class="spec-note">'+(_total-_empty)+' of '+_total+' fields published</td></tr>'+out
+      +'<tr class="spec-toggle-row"><td colspan="2"><button type="button" class="spec-toggle" data-n="'+_empty+'" onclick="toggleEmptySpecs(this)">Show '+_empty+' unpublished fields</button></td></tr>';
+  }
+  return out;
+}
+function toggleEmptySpecs(btn){
+  var t=btn.closest('table'); if(!t) return;
+  var on=t.classList.toggle('show-empty');
+  btn.textContent=on?'Hide unpublished fields':'Show '+btn.getAttribute('data-n')+' unpublished fields';
 }
 
 // Compute the date a robot should sort by for "Newest":
@@ -5264,7 +5286,7 @@ function robotRowHTML(r,i,ranks){
 }
 function robotCardHTML(r,i){
   return `<div class="robot-card" onclick="openProfile('${r.id}')">`
-    + `<div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" loading="lazy" onerror="this.src='${MASCOT_URL}'">`:`<img src="${MASCOT_URL}" alt="${r.name}">`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>`
+    + `<div class="rc-img">${r.img?`<img src="${r.img}" alt="${r.name}" loading="lazy" onerror="this.src='${MASCOT_URL}'">`:`<div class="rc-ph"><img src="${MASCOT_URL}" alt=""><span>Photo coming soon</span></div>`}<div style="position:absolute;top:7px;left:7px;width:20px;height:20px;border-radius:50%;background:var(--txt);color:#fff;font-size:9px;font-weight:800;display:flex;align-items:center;justify-content:center;z-index:2">${i+1}</div><label class="cmp-badge" onclick="event.stopPropagation()"><input type="checkbox" class="cmp-check" data-id="${r.id}" ${compareSlots.some(s=>s&&s.id===r.id)?'checked':''} onclick="toggleCompare('${r.id}',event)">Compare</label>${r.badge?`<div class="rc-badge ${r.bc}" style="z-index:2">${r.badge}</div>`:''}</div>`
     + `<div class="rc-info"><div class="rc-brand">${r.brand}</div><div class="rc-name">${r.name}</div>${r.year?`<div class="rc-year">${r.year}</div>`:''}<div class="rc-specs">${(r.tags||[]).slice(0,2).map(t=>`<span class="pill">${t}</span>`).join('')}</div></div>`
     + `</div>`;
 }
