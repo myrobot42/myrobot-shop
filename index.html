@@ -4329,9 +4329,24 @@ function _renderProfile(id){
   })();
   // Similar — brand siblings first (most related), then same category / shared tags
   const _rt=r.tags||[];
-  const sameBrand=ROBOTS.filter(x=>x.id!==r.id&&x.brand&&x.brand===r.brand);
-  const byCat=ROBOTS.filter(x=>x.id!==r.id&&x.brand!==r.brand&&(rCatsOverlap(x,r)||(x.tags||[]).some(t=>_rt.includes(t))));
-  const sim=sameBrand.concat(byCat).slice(0,4);
+  // Ranked by how alike the robots really are: same type > shared type words > same category > shared tags > similar price > same brand.
+  const _stop={robot:1,with:1,and:1,the:1,for:1,self:1,empty:1,pro:1,plus:1,ultra:1,max:1,mini:1,series:1,type:1,base:1,system:1};
+  const _tok=function(v){return String(v||'').toLowerCase().split(/[^a-z0-9]+/).filter(function(w){return w.length>2&&!_stop[w];});};
+  const _rsub=String(r.sub||'').trim().toLowerCase(), _rtok=_tok(r.sub), _rp=(typeof r.price==='number'&&r.price>0)?r.price:0;
+  const _scored=ROBOTS.filter(function(x){return x.id!==r.id;}).map(function(x){
+    var sc=0, xs=String(x.sub||'').trim().toLowerCase();
+    if(_rsub&&xs===_rsub) sc+=6;
+    var ov=_tok(x.sub).filter(function(w){return _rtok.indexOf(w)>=0;}).length; sc+=Math.min(ov,2)*2;
+    if(rCatsOverlap(x,r)) sc+=2;
+    sc+=Math.min(3,(x.tags||[]).filter(function(t){return _rt.indexOf(t)>=0;}).length);
+    var xp=(typeof x.price==='number'&&x.price>0)?x.price:0;
+    if(_rp&&xp&&xp/_rp<=2.5&&_rp/xp<=2.5) sc+=1;
+    if(x.brand&&x.brand===r.brand) sc+=2;
+    if(x.img&&String(x.img).trim()) sc+=1;
+    return {x:x,sc:sc};
+  }).filter(function(o){return o.sc>=3;}).sort(function(a,b){return b.sc-a.sc;});
+  const sim=[]; var _bn={};
+  for(var _i=0;_i<_scored.length&&sim.length<4;_i++){ var _o=_scored[_i].x, _b=_o.brand||''; if((_bn[_b]||0)>=2) continue; _bn[_b]=(_bn[_b]||0)+1; sim.push(_o); }
   try{ renderProfileNews(r); }catch(e){}
   document.getElementById('profile-similar').innerHTML=sim.map(s=>{
     const imgHtml = (s.img && s.img.trim())
