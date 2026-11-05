@@ -156,7 +156,13 @@ h1 em{color:var(--acc);font-style:normal}
 .db-hero-tile{flex:1;background-size:cover;background-position:center;background-color:#fff}
 @media(max-width:600px){.db-hero{min-height:138px}.db-hero-title{font-size:19px}}
 .rc-specs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:9px}
-.rc-kv{display:flex;gap:12px;margin:2px 0 8px;flex-wrap:wrap}
+.rc-kv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 6px;margin:2px 0 8px}
+.robot-card{display:flex;flex-direction:column}
+.robot-card .rc-info{display:flex;flex-direction:column;flex:1}
+.robot-card .rc-name{min-height:2.6em;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;line-height:1.3}
+.robot-card .rc-price{margin-top:auto;padding-top:4px}
+.rc-sp b{font-size:11.5px}
+.rc-sp span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rc-sp{display:flex;flex-direction:column;min-width:0}
 .rc-sp b{font-family:'JetBrains Mono','SF Mono',ui-monospace,monospace;font-size:12px;font-weight:800;color:var(--txt);white-space:nowrap}
 .rc-sp b i{font-style:normal;font-size:9px;color:var(--mut);margin-left:2px;font-weight:600}
